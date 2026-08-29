@@ -192,3 +192,248 @@ hand-authored inertia/decay term bolted onto a single scalar. Whether it *also* 
 associative-accessibility term (Phase 2) to explain substitution and habit is exactly the open
 question Phase 2 exists to answer, and Phase 1's harness (the counterfactual runner, the
 determinism-replay check, the trace log) is reusable as-is for that comparison once Phase 2 lands.
+
+---
+
+## Phase 2 — Associative Accessibility & Episodic Memory
+
+**Status:** Complete for the scope described below (associative graph, spreading activation,
+accessibility-filtered candidate generation, episodic memory with recency/frequency accessibility).
+Not yet gated for Phase 3 by a second implementer/reviewer — this is a first pass, same caveat as
+Phase 0+1's entry.
+
+### Psychological findings
+
+**Habit forms exactly as predicted, but saturates at half strength for a structural reason worth
+generalizing.** Repeated evening visits to Glen (`experiments/habit.ts`) grow
+`W[context.evening][action.visit_glen]` from 0 toward a stable value — but that value is **exactly
+1/2**, not 1, and the row sum `Σ_j W[context.evening][j]` reaches exactly 1 (row-substochastic cap
+engaged) after only two repetitions. The reason is structural, not a tuning artifact: every one of
+these Experiences tags itself with the Context concept AND two other concepts at once — the Action
+concept (`action.visit_glen`) and the Person concept (`person.glen`, the Action's `subject`) — so
+Context's fixed row budget of 1 gets split, roughly evenly, between two competing edges rather than
+concentrating entirely on one. Confirmed by direct probe: spreading activation from a Need-free,
+Context-only base vector (`{context.evening: 1}`) reaches Glen's action concept at exactly **2/5**
+(with β=1/2), while Priya's action concept stays at exactly **0** — zero leakage, confirming the
+isolation from Need-satisfaction learning is clean. The generalizable finding: **the ceiling any
+single learned association can reach is not just a function of η/λ_a tuning — it is capped by how
+many OTHER concepts share the same co-activation event**, exactly mirroring Phase 1's Need-level
+ceiling-saturation finding but for a different resource (row budget instead of a bounded scalar).
+An Experience's "semantic footprint" (how many concepts `cycle.ts` tags it with) is therefore not a
+free authoring choice — it directly determines the achievable strength of any pairwise association
+born from it.
+
+**Substitution is a negative result, exactly as the Phase 1 entry's next-phase justification
+predicted it might be.** `experiments/substitution.ts` builds up Glen's Habit and NeedExpectation
+through 8 repeated visits, then compares Priya's accessibility (her own action concept's spreading-
+activation value) with Glen's world flag present vs. absent, using one shared activation vector for
+both comparisons. The two values are **bit-for-bit identical** (`0/1` in both cases, since Priya
+was never associated with anything in this run) — which must be true by construction, since
+`solveActivation` has no world-flags parameter at all (Brief §16's formula is a pure function of
+Needs, active Context, and the learned graph). What changes between "Glen available" and "Glen
+unavailable" is only which Actions survive `ActionDef.preconditionHolds` — a mechanism Phase 1
+already had, unchanged. **Reported per Brief §36 as DERIVED, not REQUIRES MECHANISM:** any
+redirection toward a substitute when a habitual target becomes unavailable in this architecture
+comes entirely from precondition filtering plus whatever NeedExpectation the substitute has
+independently earned — spreading activation does not implement "reach for what's still available,"
+and nothing in Brief §16 asked it to. This sharpens (rather than closes) Phase 1's own framing of
+the Substitution experiment: "does associative proximity redirect preference before independent
+experience exists" now has a concrete answer — no, not in this architecture, and the reason is
+locatable in one line of `model/actions.ts` (`candidateActionsWithAccessibility`'s precondition
+filter runs before, and independently of, its accessibility filter).
+
+**Avoidance is DERIVED from Phase 1's NeedExpectation alone — no Inhibition primitive (§27)
+needed — but only within a "clean" window before the same boundary-saturation phenomenon Phase 1
+found recurs at the opposite boundary.** `experiments/avoidance.ts` forces repeated visits to Glen
+under a reliably negative Rest outcome (−0.08, `scenario.ts`'s `aversiveOutcomeTable`) and evaluates
+Pr(this action) against a neutral baseline after each repetition using nothing but
+`evaluateAction`/`buildChoiceDistribution` (§23–24). For the first 5 repetitions — while Rest's
+level stays off its `[0,1]` floor — μ holds exactly at the true effect (−0.08, unchanged across all
+5 steps since every observed `r_n` matches it exactly), confidence rises monotonically from 0.40 to
+0.78, and Pr(the aversive action) falls monotonically from 49.90% to 48.17%. Extending to 7
+repetitions reproduces Phase 1's ceiling-saturation finding as a mirror-image floor artifact: once
+Rest clamps to 0, the observed `r_n` collapses to 0 (nothing left to subtract), and μ is pulled back
+toward 0 (−0.0637, then −0.0528) rather than staying at the true −0.08 — Pr(the aversive action)
+correspondingly ticks back up (48.47%, then 48.69%). The general finding from Phase 1 — "any bounded
+scalar Need combined with a fixed additive per-tick effect saturates under continuous stimulation" —
+turns out to bind in BOTH directions, and a scenario author repurposing an existing Need for a new
+experiment (as this one repurposes Rest, originally tuned only as Glen's minor side effect) has to
+re-derive a clean repetition window rather than assume one; `aversiveOutcomeTable`'s magnitude and
+the "5 repetitions" figure above are not arbitrary, they are the largest clean window this specific
+Need/magnitude/passive-rate combination allows (documented in `scenario.ts`'s own comment).
+
+**Episodic memory's recency, frequency, and decay formulas behave exactly as specified, verified by
+hand.** `experiments/memoryAccessibility.ts` and `test/memory.test.ts` confirm `Base_m(t) =
+Σ 1/(1+λ_m(t-r))^d_m` against hand-computed fractions at every step (e.g. two memories encoded one
+tick apart have Base values of exactly `10/11` and `1/1` immediately afterward — recency alone,
+despite identical retrieval-history length), that retrieval strictly increases a memory's later
+Base relative to the same memory never having been retrieved again (`49/58` vs. `10/29` at a
+matched future tick), and that `retrieveTopK`'s canonical tie-break and reinforcement side effect
+touch only the selected memories, never the rest.
+
+**What still did not appear, because it still is not built.** Obsession, grief, and rumination
+(§28's remaining experiment list) still require Phase 3's belief/appraisal layer — see Next-phase
+justification below; episodic memory alone can *record* an entity's disappearance but has no
+mechanism for that disappearance to become psychologically meaningful (there is no "this matters
+and it's gone" appraisal step, only an accessibility score).
+
+### Mathematical findings
+
+**Fraction-free linear algebra — identified as a genuine Phase-0 gap in the previous entry — is now
+built and validated against the two obligations that actually matter.** `kernel/linalg.ts`
+implements exact Gaussian elimination over auto-reduced `Rational`s (module comment explains why
+this satisfies Brief §16's "fraction-free" requirement without literal Bareiss integer arithmetic)
+with a fixed pivot rule (scan rows `k+1..n-1` in increasing index order) and a typed
+`SingularMatrixError` naming the failing column. `test/linalg.test.ts` confirms both: every
+hand-derived small system solves to the exact expected rationals, AND every solution independently
+satisfies `A·x = b` exactly via `matVecMul` (§32's "prove it, don't assert it" standard) — including
+a case that requires the documented row-swap.
+
+**(I − βW) is strictly diagonally dominant in practice, not just "generically invertible" —
+confirmed by stress test, not just by the algebraic argument in `model/activation.ts`'s module
+comment.** `test/activation.test.ts` builds a densely cross-activated 6-concept graph through 15
+real `updateAssociations` steps (the actual mutation path, not a hand-authored matrix), then calls
+`solveActivation` against it for five different β values and six different seed concepts — 30 solves
+total, zero `SingularMatrixError`s. This matters because it means the "activation uniqueness" proof
+obligation (§32) is not merely satisfied in theory; it has never been observed to be *close* to
+failing under any state this codebase can actually produce, which is the stronger and more useful
+claim for a research tool.
+
+**Quantization at commit means `solveActivation`'s stored result is close to, but not exactly, the
+true linear-algebra solution — worth stating explicitly since it reads differently from Phase 1's
+scalar quantization.** Every Phase-1 quantized value (a Need level, a μ) is quantized independently
+at each step, so "the stored value is within `1/(2D)` of the exact computed value" was the whole
+story. Here, `solveActivation` quantizes the *entries of a solved vector*, so
+`(I - βW)·a_quantized = b` does NOT hold exactly in general — only `(I - βW)·a_exact = b` does, and
+`a_quantized` is within the lattice bound of `a_exact` entry-by-entry (this distinction is what
+`test/activation.test.ts`'s exactness test actually checks, after an initial draft of that test
+wrongly assumed bit-exact closure and had to be corrected against the real contract). This has not
+been stress-tested for compounding across many cycles the way Phase 1 flagged for scalar
+quantization — same open item, now doubly relevant since Phase 2 quantizes both a matrix-solved
+vector (activation) AND the association weights that matrix is built from, each cycle.
+
+**Largest-remainder normalization (§15.1) produces an EXACT row sum of 1 on overflow, not merely a
+sum close to 1** — verified directly (`test/associations.test.ts`) with a hand-picked overflow case
+at a small integer scale (D=12) chosen so the remainder allocation is checkable by hand, and
+separately stress-tested at the production scale (D=10⁶) across 25 repeated overflow-triggering
+steps on a 5-concept universe with every concept co-activated every step (the adversarial case for
+the row budget) — every row stayed within `[0,1]` and every weight stayed non-negative throughout.
+
+### Architectural findings
+
+**The decision to exclude Needs from Hebbian co-activation (documented in `associations.ts`, made
+before this experiment suite existed) was load-bearing for Habit's experimental isolation, not just
+a tidiness choice.** Had Needs co-activated alongside Actions/People/Context, the Habit experiment's
+"Need-free, Context-only" activation probe would not exist as a clean isolation tool — Need urgency
+would already be baked into the learned graph itself, and "how much of Glen's accessibility comes
+from Habit vs. Need-satisfaction learning" would no longer be a question with a crisp answer. The
+zero measured leakage to Priya in the substitution/habit experiments is the concrete evidence this
+design choice is actually doing its job, not just a documented intention.
+
+**Self-association exclusion (no `W_ii`) has no observed pathology and simply redirects the entire
+row budget to inter-concept edges** — confirmed directly (`test/associations.test.ts`) rather than
+just asserted; a concept activated alone still learns nothing on its own diagonal, exactly as
+`associations.ts` intends.
+
+**The "shared row budget" finding above generalizes into a concrete, previously-unasked Vivarium-
+relevant design question: how many concepts should one Experience tag?** This build's `cycle.ts`
+tags every ordinary Experience with the Action, its subject, its Location (if any), and every active
+Context concept — a defensible but authored choice, not something Brief §14–15 pins down uniquely.
+Habit's 1/2-not-1 ceiling is a direct, measurable consequence of that specific choice (three
+concepts co-activate with Context here: the action, the person, and nothing else, since this
+scenario has no Location tagged in the Habit run) — a different tagging policy (e.g., also tagging
+the Need most urgent at the time, or omitting the subject when it's identical to the action's own
+implied target) would produce a different, calculable ceiling. This is now a parameterizable,
+testable question rather than an implicit one.
+
+**The NeedId/ConceptKey unification tension flagged in the Phase 1 entry was deliberately deferred,
+not resolved, and that deferral has a visible cost.** `asConceptKey` (Brief §13-shape-compatible
+re-branding, `kernel/canonical.ts`) lets a `NeedId` or `CanonicalActionKey` participate as a graph
+node without a real type unification — cheap to build, and sufficient for everything Phase 2 needed
+(Needs seed the activation base vector; Actions are graph nodes for accessibility). The visible
+cost: there is no reverse lookup from a bare `ConceptKey` back to "this was originally a NeedDef, so
+here is its `setPoint`/`coreImportance`" — every call site that needs both a concept's graph
+identity and its Phase-1-specific fields (e.g. `buildBaseActivation` in `cycle.ts`) has to be handed
+both representations separately by its caller, rather than being able to look one up from the
+other. This has not yet caused a real problem because nothing in Phase 2 needed that reverse lookup,
+but Phase 3's belief/appraisal layer (§18–19, which reasons about *people* as concepts with
+attached Value/appraisal state) looks likely to want exactly this kind of "get the rich object behind
+this graph node" operation, which the current re-branding approach does not provide for free.
+
+### Vivarium comparison
+
+**Does Vivarium's "is this available" (world/precondition state) and "is this on my mind"
+(relevance/salience) already live in separate mechanisms, the way this build's precondition filter
+and accessibility filter do?** The Substitution negative result only holds *because* those two
+checks are structurally independent here — accessibility literally cannot see world flags. If
+Vivarium's existing relevance or interest-scoring system reads from the same state as its
+availability checks (e.g., an NPC that's "unavailable" is also demoted in relevance scoring by the
+same code path), that conflation could be silently producing behavior that looks like associative
+substitution but is actually indistinguishable, in Vivarium's own architecture, from precondition
+filtering — exactly the ambiguity this build's clean separation was built to resolve. Worth checking
+by inspection of Vivarium's actual code before Phase 3, the same way Phase 1's entry recommended
+checking NeedExpectation's (mean, precision) split against Vivarium's preference representation.
+
+**Does Vivarium tag an in-game event with an explicit, bounded set of "concepts it involved," and if
+so, has anyone measured whether that tagging policy caps how strong any single learned association
+between two entities can become?** The shared-row-budget finding above is a concrete, checkable
+question for Vivarium's own event/memory tagging: an event tagged with many participants/objects
+will, under any row-substochastic-style association rule, produce weaker pairwise learning per
+participant than a narrowly-tagged event — which may or may not match designer intuition about how
+strongly two entities that were "both there" should end up associated.
+
+### Next-phase justification
+
+Phase 2 was justified (per the Phase 1 entry) by one narrow, sharp question: can associative
+proximity alone drive substitution before independent experience exists? The answer, now
+established, is no — not in this architecture, not without a mechanism this build deliberately
+doesn't have. That answer sharpens rather than removes the case for Phase 3: obsession, grief, and
+rumination remain untested, and unlike Substitution, none of them reduce to "well, Phase 1 already
+covered this." Grief specifically needs an entity's absence to become *appraised as significant*,
+not merely recorded — episodic memory (§17, built here) supplies the recording (a memory of Glen
+persists, decaying in accessibility, after Glen stops appearing in any Experience), but nothing in
+this build's Score(a) or choice mechanics reacts differently to "an entity I valued is now gone"
+versus "an entity I never met." That reaction requires Phase 3's belief/appraisal layer (§18–19) —
+specifically, some representation of *how much this entity mattered* that can be checked against
+*current absence* to produce a distinguishable state. Obsession and rumination look similarly
+Phase-3-shaped: both plausibly require something like a belief that keeps getting re-appraised
+rather than settling, which (μ, τ) alone does not represent (τ only grows toward certainty, it
+never captures "I keep coming back to this without resolution"). The concrete Phase 3 build item
+this creates, mirroring how Phase 1's entry identified fraction-free linear algebra as Phase 2's
+prerequisite: Phase 3 cannot start with "add belief revision" as its first line of work either — it
+needs a representation of *appraisal* (how much something matters, separable from whether it's
+currently true) validated on its own before grief or obsession can be tested against it.
+
+### Three-part output (Brief §36) for the combined Habit/Substitution/Avoidance findings
+
+**Psychological finding.** Associative accessibility, modeled as nothing more than Hebbian
+co-activation with atrophy and a row-substochastic budget, is sufficient to produce habit-like
+behavior (a repeatedly co-occurring Context cue makes a target action reachable through the graph
+alone, with zero Need-urgency contribution) — but is NOT sufficient, and was never claimed to be
+sufficient, for substitution driven purely by associative proximity: that remains fully explained by
+mechanisms Phase 1 already had (precondition filtering, independent NeedExpectation). Avoidance,
+likewise, requires no new Phase 2 (or Phase 1-era Inhibition, §27) primitive — declining preference
+for a repeatedly punishing action falls directly out of NeedExpectation's existing math, within the
+same boundary conditions (Need level must stay off its floor/ceiling) that Phase 1 already
+identified as load-bearing.
+
+**Computational finding.** A row-substochastic association matrix under Hebbian learning has an
+achievable per-edge ceiling determined jointly by the learning-rate/atrophy-rate ratio (η vs. λ_a,
+authored) AND by how many other concepts share the same co-activation event (structural, a function
+of how Experiences are tagged) — the two factors are not interchangeable, and this build's default
+scenario demonstrates a case (1/2, not 1) where the structural factor dominates. Separately: solving
+`(I - βW)a = b` exactly and THEN quantizing at commit is a meaningfully different exactness contract
+than quantizing every step of a scalar computation — proof obligations written for one do not
+automatically transfer to the other, as this codebase's own first-draft test (later corrected)
+demonstrates.
+
+**Architectural implication.** A production model wanting both Habit-like accessibility effects and
+Substitution behavior should not expect the accessibility mechanism to produce Substitution as a
+side effect — they answer different questions ("what's on my mind" vs. "what's available and
+learned-good") and, per the Vivarium-comparison question above, keeping them structurally separate
+(rather than letting availability influence a relevance/accessibility score directly) is what makes
+each mechanism's contribution to observed behavior stay individually falsifiable. Separately: any
+system authoring "how many things did this event involve" as a tagging policy is implicitly also
+authoring a ceiling on how strong any resulting pairwise association can become, whether or not that
+consequence is intended — this is a concrete design lever, not an incidental implementation detail,
+and worth exposing to Vivarium's own designers rather than leaving implicit in tagging code.

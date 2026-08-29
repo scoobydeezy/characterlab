@@ -1,13 +1,13 @@
 /**
- * Character state — the Phase 1 subset of S_t = (P, N_t, W_t, E_t, B_t, M_t)
+ * Character state — the Phase 1+2 subset of S_t = (P, N_t, W_t, E_t, B_t, M_t)
  * from Brief §8.
  *
- * Phase 1 populates only N_t (Need state) and E_t (learned Need-
- * satisfaction expectations). P (latent personality, §9), W_t (associative
- * structure, §14, Phase 2), B_t (beliefs about people, §18, Phase 3), and
- * M_t (episodic memory, §17, Phase 2) are not represented here — adding
- * them is exactly what later phases are for, and Score(a) in this phase is
- * documented (model/actions.ts) as the Need term alone for that reason.
+ * This build populates N_t (Need state), E_t (learned Need-satisfaction
+ * expectations), W_t (associative structure, §14, Phase 2), and M_t
+ * (episodic memory, §17, Phase 2). P (latent personality, §9) and B_t
+ * (beliefs about people, §18, Phase 3) are still not represented — Score(a)
+ * remains documented (model/actions.ts) as the Need term alone until
+ * Phase 3/4 add the mechanisms those terms depend on.
  */
 
 import { ConceptKey, NeedId } from '../kernel/canonical';
@@ -15,6 +15,8 @@ import { ExpectationSubject } from './types';
 import { NeedDef, NeedState, advanceNeedLevel, initialNeedState } from './needs';
 import { NeedExpectation, initialExpectation } from './expectation';
 import { Rational } from '../kernel/rational';
+import { AssociationGraph, emptyGraph } from './associations';
+import { MemoryStore, emptyMemoryStore } from './memory';
 
 function expectationKey(subject: ExpectationSubject, needId: NeedId): string {
   return `${subject}|${needId}`;
@@ -26,12 +28,15 @@ export interface CharacterState {
   readonly needDefs: ReadonlyMap<NeedId, NeedDef>;
   readonly needStates: ReadonlyMap<NeedId, NeedState>;
   readonly expectations: ReadonlyMap<string, NeedExpectation>;
+  readonly associations: AssociationGraph;
+  readonly memory: MemoryStore;
 }
 
 export function createCharacter(
   characterId: ConceptKey,
   needDefs: readonly NeedDef[],
   initialLevels: ReadonlyMap<NeedId, Rational>,
+  conceptUniverse: readonly ConceptKey[] = [],
 ): CharacterState {
   const defsMap = new Map(needDefs.map((d) => [d.needId, d]));
   const states = new Map(
@@ -43,7 +48,17 @@ export function createCharacter(
     needDefs: defsMap,
     needStates: states,
     expectations: new Map(),
+    associations: emptyGraph(conceptUniverse),
+    memory: emptyMemoryStore(),
   };
+}
+
+export function withAssociations(state: CharacterState, associations: AssociationGraph): CharacterState {
+  return { ...state, associations };
+}
+
+export function withMemory(state: CharacterState, memory: MemoryStore): CharacterState {
+  return { ...state, memory };
 }
 
 export function getExpectation(

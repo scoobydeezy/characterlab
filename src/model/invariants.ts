@@ -8,6 +8,7 @@
 
 import { CharacterState } from './character';
 import { Rational } from '../kernel/rational';
+import { rowSum, getWeight } from './associations';
 
 export interface InvariantViolation {
   readonly code: string;
@@ -32,6 +33,26 @@ export function checkInvariants(state: CharacterState): InvariantViolation[] {
         code: 'negative_precision',
         message: `Expectation ${key} has negative precision τ=${exp.tau.toString()}`,
       });
+    }
+  }
+
+  // Brief §14/§32 "Association invariant": W_ij >= 0 and Σ_j W_ij <= 1 for
+  // every row, after every legal mutation. Checked directly against live
+  // state every cycle, not just in unit tests against updateAssociations
+  // in isolation — this is what would catch a future bug in any new
+  // caller that bypassed updateAssociations.
+  for (const i of state.associations.concepts) {
+    const sum = rowSum(state.associations, i);
+    if (sum.gt(Rational.ONE)) {
+      violations.push({
+        code: 'association_row_oversum',
+        message: `Association row ${i} sums to ${sum.toString()}, exceeding 1`,
+      });
+    }
+    for (const j of state.associations.concepts) {
+      if (getWeight(state.associations, i, j).isNegative()) {
+        violations.push({ code: 'association_negative_weight', message: `W[${i}][${j}] is negative` });
+      }
     }
   }
 

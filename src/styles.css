@@ -409,6 +409,165 @@ button.button--danger {
   text-align: left;
 }
 
+.assoc-heatmap-wrap {
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.assoc-heatmap {
+  border-collapse: collapse;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.assoc-heatmap th,
+.assoc-heatmap td {
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.assoc-heatmap thead th {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.assoc-heatmap tbody th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.assoc-heatmap__cell {
+  color: var(--text);
+}
+
+.assoc-heatmap__sum {
+  font-weight: 600;
+}
+
+.assoc-heatmap__sum--full {
+  color: var(--warn);
+}
+
+.accessibility-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  margin: 0.4rem 0;
+}
+
+.accessibility-table th,
+.accessibility-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.25rem 0.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.accessibility-table th:first-child,
+.accessibility-table td:first-child {
+  text-align: left;
+}
+
+.accessibility-table__row--selected {
+  color: var(--good);
+}
+
+.memory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.memory-list__item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.75rem;
+}
+
+.memory-list__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.memory-list__id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+}
+
+.memory-list__meta {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.memory-list__tags {
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.memory-list__scores {
+  margin-top: 0.3rem;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.exp-table-wrap {
+  overflow-x: auto;
+}
+
+.exp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  margin: 0.4rem 0;
+}
+
+.exp-table th,
+.exp-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.25rem 0.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.exp-table th:first-child,
+.exp-table td:first-child {
+  text-align: left;
+}
+
+.exp-result-block {
+  font-size: 0.8rem;
+  margin: 0.4rem 0;
+}
+
+.exp-badge {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+}
+
+.exp-badge--good {
+  color: var(--good);
+}
+
+.exp-badge--warn {
+  color: var(--danger);
+}
+
 @media (max-width: 1100px) {
   .app__grid {
     grid-template-columns: 1fr;

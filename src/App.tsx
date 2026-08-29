@@ -7,6 +7,9 @@ import { ModelParamsPanel } from './ui/components/ModelParamsPanel';
 import { DeterminismPanel } from './ui/components/DeterminismPanel';
 import { TraceViewer } from './ui/components/TraceViewer';
 import { CounterfactualPanel } from './ui/components/CounterfactualPanel';
+import { AssociationPanel } from './ui/components/AssociationPanel';
+import { MemoryPanel } from './ui/components/MemoryPanel';
+import { Phase2ExperimentsPanel } from './ui/components/Phase2ExperimentsPanel';
 
 export default function App() {
   const engine = useEngine();
@@ -17,7 +20,7 @@ export default function App() {
         <h1>CharacterLab</h1>
         <p>
           Deterministic cognitive reference model — Phase 0 (mathematical kernel) + Phase 1 (Need-satisfaction
-          learning). Tick {engine.currentTick()}.
+          learning) + Phase 2 (associative accessibility &amp; episodic memory). Tick {engine.currentTick()}.
         </p>
       </header>
 
@@ -25,11 +28,14 @@ export default function App() {
         <div className="app__col">
           <ModelParamsPanel engine={engine} />
           <NeedPanel engine={engine} />
+          <AssociationPanel engine={engine} />
+          <MemoryPanel engine={engine} />
         </div>
         <div className="app__col">
           <ActionPanel engine={engine} />
           <ExpectationPanel engine={engine} />
           <CounterfactualPanel engine={engine} />
+          <Phase2ExperimentsPanel engine={engine} />
           <DeterminismPanel engine={engine} />
         </div>
         <div className="app__col app__col--trace">

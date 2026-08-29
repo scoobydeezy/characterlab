@@ -40,6 +40,21 @@ export function needId(value: string): NeedId {
 }
 
 /**
+ * Re-brand an already-validated NeedId/CanonicalActionKey/etc. as a
+ * ConceptKey. Safe because all of these branded identifiers share the same
+ * `namespace.slug` shape (assertKeyShape) — the brand is a compile-time
+ * distinction between "identifier used for X's bookkeeping" and
+ * "identifier used as a graph node," not a different string format. Used
+ * by Phase 2 (model/associations.ts) to let Needs and Actions participate
+ * as concepts in the associative graph (Brief §13, §16) without requiring
+ * every call site elsewhere to juggle two parallel identifiers for the
+ * same thing.
+ */
+export function asConceptKey(value: NeedId | CanonicalActionKey | ConceptKey): ConceptKey {
+  return value as unknown as ConceptKey;
+}
+
+/**
  * Canonical string ordering — plain code-point comparison. This is the one
  * tie-break rule used everywhere in the model (association normalization
  * remainder allocation §15.1, memory retrieval ordering §17, action
