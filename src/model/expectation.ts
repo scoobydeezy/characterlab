@@ -67,19 +67,108 @@ export interface ExpectationUpdateResult {
   readonly next: NeedExpectation;
   /** α = ρ / (τ⁻ + ρ) — exposed so tests can verify the prediction-error
    * equivalence μ' = μ + α(r − μ) directly against the precision-weighted
-   * form (Brief §32 "Prediction-error equivalence"). */
+   * form (Brief §32 "Prediction-error equivalence"). Note: for a REJECTED
+   * censored update (see EvidenceKind below), alpha still reports the
+   * weight the naive candidate would have used — it does not mean "μ
+   * actually moved by α(r-μ)" in that case. */
   readonly alpha: Rational;
   readonly tauMinus: Rational;
+  /** True when a censored bound carried no information the current belief
+   * didn't already have — μ stays at its prior value AND τ stays at its
+   * (merely decayed) τ⁻, gaining nothing from this observation. Always
+   * false for 'point' evidence. See the "Correction 2" revision of Phase
+   * 2.5a's original rule below: an earlier version of this function still
+   * grew τ on a rejected bound, which is the bug this revision fixes. */
+  readonly censoredRejected: boolean;
 }
 
 /**
- * Precision-weighted belief update (§12):
+ * Phase 2.5a — Brief §19/§27's censored-evidence classification. A
+ * realized Need effect that was clipped by `applyBoundedEffect` is not a
+ * point observation of the satisfier's true effect: a ceiling-clipped
+ * ('lower_bound') effect only proves the truth was AT LEAST what was
+ * applied; a floor-clipped ('upper_bound') effect only proves the truth
+ * was AT MOST what was applied. 'point' (unsaturated) effects are
+ * unchanged — full, exact information as always.
+ */
+export type EvidenceKind = 'point' | 'lower_bound' | 'upper_bound';
+
+/**
+ * Precision-weighted belief update (§12), extended in Phase 2.5a with an
+ * exact, non-Gaussian one-sided censored-update rule (§19/§27), REVISED
+ * ("Correction 2" in RESEARCH.md's Phase 2.5a entry — post-2.5c review) to
+ * fix a real bug the original rule had: growing τ on every observation,
+ * accepted or rejected, even when a rejected observation is by definition
+ * uninformative (it contradicted nothing — the current belief already
+ * satisfies the bound). Selected by `evidenceKind` (defaults to 'point' —
+ * every pre-2.5 call site, and every 'point' call site regardless of phase,
+ * is byte-for-byte unaffected by any of this):
  *
  *   τ⁻  = δ_q(Δt)·τ
- *   μ'  = (τ⁻·μ + ρ·r) / (τ⁻ + ρ)
- *   τ'  = τ⁻ + ρ
+ *   μ_naive = (τ⁻·μ + ρ·r) / (τ⁻ + ρ)
  *
- * Both μ' and τ' are quantized onto the lattice at commit (§5.2, §6).
+ *   'point':       μ' = μ_naive              always            τ' = τ⁻ + ρ
+ *   'lower_bound': μ' = μ_naive               if μ_naive > μ    τ' = τ⁻ + ρ
+ *                                                                (INFORMATIVE
+ *                                                                — the bound
+ *                                                                proves the
+ *                                                                truth is
+ *                                                                strictly
+ *                                                                higher than
+ *                                                                we believed;
+ *                                                                treated
+ *                                                                exactly like
+ *                                                                a point
+ *                                                                observation)
+ *                  μ' = μ (REJECTED)          otherwise         τ' = τ⁻
+ *                                                                (UNINFORMATIVE
+ *                                                                — "the truth
+ *                                                                is at least
+ *                                                                r" when
+ *                                                                r <= μ proves
+ *                                                                nothing the
+ *                                                                current
+ *                                                                belief didn't
+ *                                                                already
+ *                                                                establish, so
+ *                                                                confidence
+ *                                                                must not grow
+ *                                                                from it —
+ *                                                                Brief §27)
+ *   'upper_bound': μ' = μ_naive               if μ_naive < μ    τ' = τ⁻ + ρ
+ *                                                                (symmetric)
+ *                  μ' = μ (REJECTED)          otherwise         τ' = τ⁻
+ *
+ * The strict inequality (not `>=`/`<=`) is deliberate and load-bearing, not
+ * an arbitrary tie-break: an observation whose naive candidate lands EXACTLY
+ * on the current μ is exactly as uninformative as one that would have pulled
+ * μ the wrong way — both are "consistent with, but not more specific than,
+ * what I already believed." Without the strict inequality, a long run of
+ * IDENTICAL repeated bounds (e.g. "effect >= 0.10" observed many times once
+ * μ has already reached 0.10) would keep landing exactly on μ and, under a
+ * non-strict `>=`, would count as "accepted" every time — silently
+ * regrowing exactly the artificial-confidence bug this revision exists to
+ * remove, just relocated to the boundary case instead of the interior. See
+ * RESEARCH.md's Phase 2.5a Correction section (point 1) for the original
+ * bug report and the four validation Cases A-D this revision was built to
+ * satisfy, and `phase2_5aRepresentation.test.ts` for those cases encoded as
+ * tests.
+ *
+ * This remains a deliberate exact simplification of literal truncated-normal
+ * inference (which would need the transcendental normal CDF, incompatible
+ * with the exact-rational-arithmetic contract) — not offered as the one
+ * true Bayesian answer, exactly as `associations.ts` documents its own
+ * self-association-exclusion as a deliberate simplification. An accepted
+ * (informative) bound still grows τ by the full ρ, exactly as a point
+ * observation would — over-crediting precision somewhat relative to a
+ * literal censored-likelihood treatment, which is the specific,
+ * already-documented corner this build cuts to stay exact-rational; what
+ * this revision fixes is strictly the OTHER corner (an uninformative bound
+ * wrongly credited with any precision at all), not that one. The result is
+ * still monotonic and deterministic: a censored observation can never move
+ * μ to the wrong side of what it actually proves, and can never manufacture
+ * confidence from evidence that didn't discriminate. Both μ' and τ' are
+ * quantized onto the lattice at commit (§5.2, §6).
  */
 export function updateExpectation(
   prior: NeedExpectation,
@@ -88,6 +177,7 @@ export function updateExpectation(
   observationRho: Rational,
   actualResult: Rational,
   occurredAt: number,
+  evidenceKind: EvidenceKind = 'point',
 ): ExpectationUpdateResult {
   const tauMinus = decayedPrecision(prior.tau, params.lambdaQ, deltaT);
   const denom = tauMinus.add(observationRho);
@@ -100,16 +190,39 @@ export function updateExpectation(
       next: { mu: muQ, tau: tauQ, lastUpdatedAt: occurredAt },
       alpha: Rational.ZERO,
       tauMinus,
+      censoredRejected: false,
     };
   }
-  const muRaw = tauMinus.mul(prior.mu).add(observationRho.mul(actualResult)).div(denom);
-  const tauRaw = denom;
+  const muNaive = tauMinus.mul(prior.mu).add(observationRho.mul(actualResult)).div(denom);
   const alpha = observationRho.div(denom);
+
+  // Default: informative evidence (every 'point' observation, and any
+  // 'lower_bound'/'upper_bound' observation that strictly contradicts the
+  // current belief) is accepted and grows precision by the full ρ, exactly
+  // like an ordinary point observation.
+  let muRaw = muNaive;
+  let tauRaw = denom;
+  let censoredRejected = false;
+
+  if (evidenceKind === 'lower_bound' && !muNaive.gt(prior.mu)) {
+    // Uninformative: "the truth is at least r" with r <= mu contradicts
+    // nothing already believed — reject the mean change AND freeze
+    // precision at its merely-decayed tau-minus (Correction 2: the original
+    // rule grew tau here too, manufacturing confidence from a non-
+    // discriminating observation).
+    muRaw = prior.mu;
+    tauRaw = tauMinus;
+    censoredRejected = true;
+  } else if (evidenceKind === 'upper_bound' && !muNaive.lt(prior.mu)) {
+    muRaw = prior.mu;
+    tauRaw = tauMinus;
+    censoredRejected = true;
+  }
 
   const { value: mu } = quantize(muRaw, D);
   const { value: tau } = quantize(tauRaw, D);
 
-  return { next: { mu, tau, lastUpdatedAt: occurredAt }, alpha, tauMinus };
+  return { next: { mu, tau, lastUpdatedAt: occurredAt }, alpha, tauMinus, censoredRejected };
 }
 
 /**

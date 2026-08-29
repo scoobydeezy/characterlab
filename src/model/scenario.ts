@@ -19,7 +19,8 @@ import { WorldOutcomeTable } from './outcome';
 import { CharacterState, createCharacter } from './character';
 import { ChoiceParams } from './choice';
 import { NeedExpectationParams } from './expectation';
-import { CycleParams, ExperienceContext } from './cycle';
+import { CycleParams, ExperienceContext, SaturationParams } from './cycle';
+import { SalienceParams } from './salience';
 import { ActivationParams } from './activation';
 import { AssociationLearningParams } from './associations';
 import { MemoryCycleParams } from './memory';
@@ -53,6 +54,15 @@ export const WORLD_FLAG_PRIYA_AVAILABLE = 'priya_available';
  * graph nodes and model/associations.ts's fixed-universe design. */
 export const CONTEXT_EVENING: ConceptKey = conceptKey('context.evening');
 export const LOCATION_HOME: ConceptKey = conceptKey('location.home');
+
+/** Phase 2.5b — Brief §13 Scenario C/D's "object/location becomes
+ * causal" concepts. Not part of `conceptUniverse()` below: the Semantic
+ * Salience experiments (experiments/semanticSalience.ts) exercise
+ * `computeSemanticSalience` directly rather than running a full
+ * associative-learning cycle against these, so they never need a fixed
+ * association-graph row/column the way ordinary scenario concepts do. */
+export const OBJECT_LAMP: ConceptKey = conceptKey('object.lamp');
+export const LOCATION_BAKERY: ConceptKey = conceptKey('location.bakery');
 
 /**
  * The full set of concepts that participate in the associative graph
@@ -119,24 +129,36 @@ export function defaultNeedDefs(): NeedDef[] {
   ];
 }
 
+/** Phase 2.5c — each Action's `subjectRole` is a semantic fact about that
+ * Action's own event structure (see `ActionDef.subjectRole`'s doc comment),
+ * not a per-character weight. Visiting/staying are ordinary social/
+ * activity participation — Conversation-like — so their subjects bind as
+ * `'Participant'`; Betrayal is the one Action in this scenario whose
+ * subject directly causes a sharp negative Need effect, so it binds as
+ * `'Cause'` (Attack-like — the agent responsible for what happened), not
+ * the generic `'Target'` every subject used to get regardless of what kind
+ * of interaction it was. */
 export function defaultActions(): ActionDef[] {
   return [
     {
       actionKey: ACTION_VISIT_GLEN,
       displayName: 'Visit Glen',
       subject: PERSON_GLEN,
+      subjectRole: 'Participant',
       preconditionHolds: (flags) => flags.has(WORLD_FLAG_GLEN_AVAILABLE),
     },
     {
       actionKey: ACTION_VISIT_PRIYA,
       displayName: 'Visit Priya',
       subject: PERSON_PRIYA,
+      subjectRole: 'Participant',
       preconditionHolds: (flags) => flags.has(WORLD_FLAG_PRIYA_AVAILABLE),
     },
     {
       actionKey: ACTION_STAY_HOME,
       displayName: 'Stay Home',
       subject: ACTIVITY_STAY_HOME,
+      subjectRole: 'Participant',
       preconditionHolds: () => true,
     },
   ];
@@ -147,6 +169,7 @@ export function betrayalAction(): ActionDef {
     actionKey: ACTION_BETRAYAL_GLEN,
     displayName: 'Betrayal (Glen)',
     subject: PERSON_GLEN,
+    subjectRole: 'Cause',
     preconditionHolds: () => true,
   };
 }
@@ -250,6 +273,64 @@ export function defaultMemoryParams(): MemoryCycleParams {
   return { lambdaM: ratOf(1, 10), dM: 1, omegaB: ratOf(7, 10), omegaA: ratOf(3, 10), retrievalK: 3 };
 }
 
+/**
+ * Phase 2.5e — RE-BASELINED. `'censored'` (Phase 2.5a's one-sided update
+ * rule, corrected in "Correction 2") is now CharacterLab's canonical
+ * default: post-2.5d review classified Brief §24 DERIVED and closed Phase
+ * 2.5, at which point running the *known-worse*, superseded `'naive'` rule
+ * by default stopped being defensible as "the compatibility baseline" and
+ * started being "the bug we already found and fixed, left switched on."
+ * `'naive'` is not deleted — see `legacySaturationParams()` below — it is
+ * retired from ordinary execution to an explicitly-named experimental
+ * control, for exactly the comparisons (Brief §21/§22's sweep and
+ * counterfactual) that need to show canonical-vs-superseded side by side.
+ * κ=1/2 is unchanged: still an arbitrary, clearly-labeled placeholder for
+ * the trace-only Experienced-Reward quantity; see RESEARCH.md's Phase
+ * 2.5a entry for why no authored value is "the" right one yet.
+ */
+export function defaultSaturationParams(): SaturationParams {
+  return { learningMode: 'censored', kappa: ratOf(1, 2) };
+}
+
+/**
+ * Phase 2.5e — the RETIRED naive/pre-2.5a learning rule, kept alive under
+ * its own name for exactly two purposes: (1) the required Brief §21/§22
+ * experiments, which must still show what the superseded rule does so the
+ * corrected rule's improvement stays demonstrable, not just asserted; and
+ * (2) any future "canonical vs. FlatSalienceBaseline"-style control
+ * comparison. Nothing in ordinary CharacterLab execution reaches for this
+ * function anymore — `defaultSaturationParams()` above does.
+ */
+export function legacySaturationParams(): SaturationParams {
+  return { learningMode: 'naive', kappa: ratOf(1, 2) };
+}
+
+/** Phase 2.5b default: `budgetMode: 'independent'` (Brief §12 Model A) is
+ * the simplest starting hypothesis — no shared-budget competition, so no
+ * `budget`/`hybridThreshold` tuning is needed to get a first result.
+ * αN=αS=1 give Need relevance and surprise equal, unscaled weight in the
+ * §11 raw-salience product. All arbitrary, clearly-labeled placeholders —
+ * see RESEARCH.md's Phase 2.5b entry for what varying them changes. This
+ * table is consulted only when `salienceMode: 'derived'` — Phase 2.5e's
+ * canonical default, see `defaultCycleParams` below — is also set. */
+export function defaultSalienceParams(): SalienceParams {
+  return { alphaN: ratOf(1), alphaS: ratOf(1), budgetMode: 'independent', budget: ratOf(1), hybridThreshold: ratOf(1, 2) };
+}
+
+/**
+ * Phase 2.5e — RE-BASELINED. `salienceMode: 'derived'` (Phase 2.5b/c's
+ * fully-mechanical causal-role/attention/evidence-aware-surprise pipeline)
+ * is now CharacterLab's canonical default, alongside `'censored'` learning
+ * above — together, "the canonical CharacterLab model" this phase
+ * consolidates Phases 0-2.5d's surviving findings into (see RESEARCH.md's
+ * Phase 2.5e entry for the full pipeline diagram and the historical-finding
+ * re-baseline this default change required). `'legacy'` (flat co-activation
+ * weight 1.0 for every engaged concept, hand-authored-input-shaped
+ * WorldEventDescriptor) is retired from ordinary execution the same way
+ * `'naive'` is — not deleted, kept as `legacyCycleParams()`'s identity, for
+ * exactly the same two reasons: required historical-baseline comparisons,
+ * and any future FlatSalienceBaseline-style control condition.
+ */
 export function defaultCycleParams(): CycleParams {
   return {
     deltaT: ratOf(1),
@@ -258,7 +339,24 @@ export function defaultCycleParams(): CycleParams {
     activation: defaultActivationParams(),
     associationLearning: defaultAssociationLearningParams(),
     memoryParams: defaultMemoryParams(),
+    saturation: defaultSaturationParams(),
+    salienceMode: 'derived',
+    salience: defaultSalienceParams(),
   };
+}
+
+/**
+ * Phase 2.5e — the RETIRED flat/naive baseline, bundled as one named
+ * `CycleParams` identity so a comparison experiment can request "the old
+ * architecture" in one call rather than hand-assembling the override. This
+ * reproduces every Phase 0-2.5a finding byte-for-byte (the dual-mode
+ * compatibility contract Phases 2.5a-c were built under) — it is what
+ * "CharacterLab's behavior" meant before Phase 2.5e's re-baseline, and
+ * stays available under this name for exactly that historical-comparison
+ * role, not as a co-equal way to run CharacterLab day to day.
+ */
+export function legacyCycleParams(): CycleParams {
+  return { ...defaultCycleParams(), saturation: legacySaturationParams(), salienceMode: 'legacy' };
 }
 
 export function defaultScenario(seed = 'characterlab-default-seed'): ScenarioConfig {

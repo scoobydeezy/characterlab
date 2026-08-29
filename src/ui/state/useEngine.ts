@@ -6,7 +6,7 @@
  */
 
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { Rational } from '../../kernel/rational';
+import { Rational, ratOf } from '../../kernel/rational';
 import { CanonicalActionKey, NeedId } from '../../kernel/canonical';
 import { EventClock } from '../../kernel/event';
 import { CognitiveCycleTrace, traceHash } from '../../kernel/trace';
@@ -19,7 +19,8 @@ import { NeedExpectationParams } from '../../model/expectation';
 import { ActivationParams, ActivationVector } from '../../model/activation';
 import { AssociationLearningParams } from '../../model/associations';
 import { MemoryCycleParams, ScoredMemory } from '../../model/memory';
-import { CycleParams, CycleResult, ExperienceContext, runAutonomousCycle, runIdleTick, runScriptedExperience } from '../../model/cycle';
+import { CycleParams, CycleResult, ExperienceContext, SaturationAnalysisEntry, SaturationParams, runAutonomousCycle, runIdleTick, runScriptedExperience } from '../../model/cycle';
+import { SalienceParams, SemanticSalienceResult } from '../../model/salience';
 import { Experience } from '../../model/experience';
 import {
   ACTION_BETRAYAL_GLEN,
@@ -43,6 +44,8 @@ import {
   defaultMemoryParams,
   defaultNeedDefs,
   defaultOutcomeTables,
+  defaultSaturationParams,
+  defaultSalienceParams,
   defaultScenario,
   defaultWorldFlags,
 } from '../../model/scenario';
@@ -51,6 +54,13 @@ import { runHabitExperiment, HabitExperimentResult } from '../../experiments/hab
 import { runSubstitutionExperiment, SubstitutionResult } from '../../experiments/substitution';
 import { runAvoidanceExperiment, AvoidanceResult } from '../../experiments/avoidance';
 import { runMemoryAccessibilityExperiment, MemoryAccessibilityResult } from '../../experiments/memoryAccessibility';
+import { runSaturatedSatisfactionExperiment, SaturatedSatisfactionResult } from '../../experiments/saturatedSatisfaction';
+import { runSaturationCounterfactual, SaturationCounterfactualResult } from '../../experiments/saturationCounterfactual';
+import { runAllSemanticSalienceScenarios } from '../../experiments/semanticSalience';
+
+/** Aggregate result shape for the UI's "run all six scenarios" button —
+ * mirrors runAllSemanticSalienceScenarios's own return shape. */
+export type SemanticSalienceScenarioSuite = ReturnType<typeof runAllSemanticSalienceScenarios>;
 
 export type HistoryKind = 'idle' | 'scripted' | 'autonomous' | 'betrayal';
 
@@ -83,6 +93,9 @@ export interface EngineSnapshot {
   readonly activationParams: ActivationParams;
   readonly associationLearningParams: AssociationLearningParams;
   readonly memoryParams: MemoryCycleParams;
+  readonly saturationParams: SaturationParams;
+  readonly salienceMode: 'legacy' | 'derived';
+  readonly salienceParams: SalienceParams;
   readonly deltaT: Rational;
   readonly worldFlags: ReadonlySet<string>;
   readonly eveningActive: boolean;
@@ -93,10 +106,15 @@ export interface EngineSnapshot {
   readonly lastActivation: ActivationVector | null;
   readonly lastAccessibilityFilter: AccessibilityFilterResult | null;
   readonly lastRetrievedMemories: readonly ScoredMemory[];
+  readonly lastSaturationAnalysis: readonly SaturationAnalysisEntry[];
+  readonly lastSemanticSalience: SemanticSalienceResult | null;
+  readonly semanticSalienceScenarioResult: SemanticSalienceScenarioSuite | null;
   readonly habitResult: HabitExperimentResult | null;
   readonly substitutionResult: SubstitutionResult | null;
   readonly avoidanceResult: AvoidanceResult | null;
   readonly memoryAccessibilityResult: MemoryAccessibilityResult | null;
+  readonly saturatedSatisfactionResult: SaturatedSatisfactionResult | null;
+  readonly saturationCounterfactualResult: SaturationCounterfactualResult | null;
 }
 
 const HISTORY_LIMIT = 40;
@@ -126,6 +144,9 @@ export function useEngine() {
       activationParams: config.cycleParams.activation,
       associationLearningParams: config.cycleParams.associationLearning,
       memoryParams: config.cycleParams.memoryParams,
+      saturationParams: config.cycleParams.saturation,
+      salienceMode: config.cycleParams.salienceMode,
+      salienceParams: config.cycleParams.salience,
       deltaT: config.cycleParams.deltaT,
       worldFlags: defaultWorldFlags(),
       eveningActive: false,
@@ -136,10 +157,15 @@ export function useEngine() {
       lastActivation: null,
       lastAccessibilityFilter: null,
       lastRetrievedMemories: [],
+      lastSaturationAnalysis: [],
+      lastSemanticSalience: null,
+      semanticSalienceScenarioResult: null,
       habitResult: null,
       substitutionResult: null,
       avoidanceResult: null,
       memoryAccessibilityResult: null,
+      saturatedSatisfactionResult: null,
+      saturationCounterfactualResult: null,
     };
   });
 
@@ -151,6 +177,9 @@ export function useEngine() {
       activation: s.activationParams,
       associationLearning: s.associationLearningParams,
       memoryParams: s.memoryParams,
+      saturation: s.saturationParams,
+      salienceMode: s.salienceMode,
+      salience: s.salienceParams,
     }),
     [],
   );
@@ -212,6 +241,8 @@ export function useEngine() {
           history: [entry, ...prev.history].slice(0, HISTORY_LIMIT),
           lastActivation: result.activation,
           lastRetrievedMemories: result.retrievedMemories,
+          lastSaturationAnalysis: result.saturationAnalysis,
+          lastSemanticSalience: result.semanticSalience,
         };
       });
     },
@@ -264,6 +295,8 @@ export function useEngine() {
         lastActivation: result.activation,
         lastAccessibilityFilter: result.accessibilityFilter,
         lastRetrievedMemories: result.retrievedMemories,
+        lastSaturationAnalysis: result.saturationAnalysis,
+        lastSemanticSalience: result.semanticSalience,
       };
     });
   }, [cycleParams, experienceContext]);
@@ -409,6 +442,69 @@ export function useEngine() {
     setSnapshot((prev) => ({ ...prev, memoryAccessibilityResult: runMemoryAccessibilityExperiment(prev.memoryParams) }));
   }, []);
 
+  /**
+   * Phase 2.5a — Brief §21's sweep: fixed satisfier (ACTION_VISIT_GLEN's
+   * existing +0.40 Connection effect — the same "true effect" Phase 0-2
+   * already established, not a new authored number), Need-before Level
+   * swept across the boundary. Read-only probe, exactly like the four
+   * Phase-2 experiments above.
+   */
+  const runSaturatedSatisfactionExperimentUI = useCallback(() => {
+    setSnapshot((prev) => {
+      const glen = prev.actionDefs.find((a) => a.actionKey === ACTION_VISIT_GLEN)!;
+      const stayHome = prev.actionDefs.find((a) => a.actionKey === ACTION_STAY_HOME)!;
+      const glenOutcome = prev.outcomeTables.get(ACTION_VISIT_GLEN)!;
+      const levels = [ratOf(1, 10), ratOf(4, 10), ratOf(7, 10), ratOf(9, 10), ratOf(1)];
+      const result = runSaturatedSatisfactionExperiment(
+        PERSON_MINA,
+        prev.character,
+        glen,
+        glenOutcome,
+        stayHome,
+        NEED_CONNECTION,
+        levels,
+        cycleParams(prev),
+        prev.seed,
+      );
+      return { ...prev, saturatedSatisfactionResult: result };
+    });
+  }, [cycleParams]);
+
+  /**
+   * Phase 2.5a — Brief §22's required counterfactual: Timeline A (mostly
+   * low Connection) vs. Timeline B (mostly near-saturation, with one
+   * deliberate dip — see saturationCounterfactual.ts's module comment for
+   * why "mostly, not always" matters), same satisfier, same true effect.
+   */
+  const runSaturationCounterfactualUI = useCallback(() => {
+    setSnapshot((prev) => {
+      const glen = prev.actionDefs.find((a) => a.actionKey === ACTION_VISIT_GLEN)!;
+      const glenOutcome = prev.outcomeTables.get(ACTION_VISIT_GLEN)!;
+      const timelineA = [ratOf(1, 10), ratOf(15, 100), ratOf(1, 10), ratOf(2, 10), ratOf(1, 10), ratOf(15, 100)];
+      const timelineB = [ratOf(17, 20), ratOf(9, 10), ratOf(17, 20), ratOf(1, 2), ratOf(22, 25), ratOf(17, 20)];
+      const result = runSaturationCounterfactual(
+        PERSON_MINA,
+        prev.character,
+        glen,
+        glenOutcome,
+        NEED_CONNECTION,
+        timelineA,
+        timelineB,
+        cycleParams(prev),
+        prev.seed,
+      );
+      return { ...prev, saturationCounterfactualResult: result };
+    });
+  }, [cycleParams]);
+
+  /** Phase 2.5b — Brief §13's six required Semantic Footprint scenarios,
+   * run directly against `computeSemanticSalience` (see
+   * experiments/semanticSalience.ts's module comment for why these are
+   * standalone salience computations rather than full cycles). */
+  const runSemanticSalienceExperimentsUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, semanticSalienceScenarioResult: runAllSemanticSalienceScenarios(prev.salienceParams) }));
+  }, []);
+
   const reset = useCallback(() => {
     setSnapshot((prev) => {
       const config = { ...defaultScenario(prev.seed), cycleParams: cycleParams(prev) };
@@ -424,10 +520,15 @@ export function useEngine() {
         lastActivation: null,
         lastAccessibilityFilter: null,
         lastRetrievedMemories: [],
+        lastSaturationAnalysis: [],
+        lastSemanticSalience: null,
+        semanticSalienceScenarioResult: null,
         habitResult: null,
         substitutionResult: null,
         avoidanceResult: null,
         memoryAccessibilityResult: null,
+        saturatedSatisfactionResult: null,
+        saturationCounterfactualResult: null,
       };
     });
   }, [cycleParams]);
@@ -493,6 +594,18 @@ export function useEngine() {
     setSnapshot((prev) => ({ ...prev, memoryParams: { ...prev.memoryParams, ...patch } }));
   }, []);
 
+  const updateSaturationParams = useCallback((patch: Partial<SaturationParams>) => {
+    setSnapshot((prev) => ({ ...prev, saturationParams: { ...prev.saturationParams, ...patch } }));
+  }, []);
+
+  const updateSalienceParams = useCallback((patch: Partial<SalienceParams>) => {
+    setSnapshot((prev) => ({ ...prev, salienceParams: { ...prev.salienceParams, ...patch } }));
+  }, []);
+
+  const updateSalienceMode = useCallback((mode: 'legacy' | 'derived') => {
+    setSnapshot((prev) => ({ ...prev, salienceMode: mode }));
+  }, []);
+
   const updateDeltaT = useCallback((deltaT: Rational) => {
     setSnapshot((prev) => ({ ...prev, deltaT }));
   }, []);
@@ -513,6 +626,9 @@ export function useEngine() {
       runSubstitutionExperimentUI,
       runAvoidanceExperimentUI,
       runMemoryAccessibilityExperimentUI,
+      runSaturatedSatisfactionExperimentUI,
+      runSaturationCounterfactualUI,
+      runSemanticSalienceExperimentsUI,
       reset,
       setSeed,
       toggleWorldFlag,
@@ -524,6 +640,9 @@ export function useEngine() {
       updateActivationParams,
       updateAssociationLearningParams,
       updateMemoryParams,
+      updateSaturationParams,
+      updateSalienceParams,
+      updateSalienceMode,
       updateDeltaT,
       conceptUniverse: conceptUniverse(),
       getExpectation: (subject: Parameters<typeof getExpectation>[1], needId: NeedId) => getExpectation(snapshot.character, subject, needId),
@@ -540,6 +659,9 @@ export function useEngine() {
       runSubstitutionExperimentUI,
       runAvoidanceExperimentUI,
       runMemoryAccessibilityExperimentUI,
+      runSaturatedSatisfactionExperimentUI,
+      runSaturationCounterfactualUI,
+      runSemanticSalienceExperimentsUI,
       reset,
       setSeed,
       toggleWorldFlag,
@@ -551,6 +673,9 @@ export function useEngine() {
       updateActivationParams,
       updateAssociationLearningParams,
       updateMemoryParams,
+      updateSaturationParams,
+      updateSalienceParams,
+      updateSalienceMode,
       updateDeltaT,
     ],
   );

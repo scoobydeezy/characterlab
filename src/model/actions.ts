@@ -28,6 +28,7 @@ import { ExpectationSubject } from './types';
 import { NeedExpectation, confidence } from './expectation';
 import { NeedDef } from './needs';
 import { ActivationVector } from './activation';
+import { CausalRole } from './salience';
 
 export interface ActionDef {
   readonly actionKey: CanonicalActionKey;
@@ -35,6 +36,19 @@ export interface ActionDef {
   /** The concept this Action's outcome is learned against in
    * NeedExpectation — e.g. `person.glen` for "spend time with Glen." */
   readonly subject: ExpectationSubject;
+  /**
+   * Phase 2.5c — the semantic role `subject` plays in THIS Action's own
+   * event structure, e.g. Conversation-like Actions bind their subject as
+   * `'Participant'`, an Attack-like Action would bind its subject as
+   * `'Target'`. This is a semantic fact about the Action's argument
+   * structure (what part does the interaction partner play), analogous to
+   * a verb's fixed argument structure — NOT a psychological weight on the
+   * specific concept filling that slot (Brief §5.1's distinction). Read by
+   * `cycle.ts` to build this Experience's `EffectProvenance`
+   * (model/salience.ts) instead of hardcoding every subject to the same
+   * role regardless of what kind of Action it is.
+   */
+  readonly subjectRole: CausalRole;
   /** World precondition — Phase 1 preconditions are simple booleans
    * (e.g. "is Glen available"), authored directly rather than derived from
    * simulated world state, since CharacterLab's world model is out of

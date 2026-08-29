@@ -5,6 +5,16 @@ completed phase. Update this file at the end of each phase rather than starting 
 the brief's own stopping condition (§35) is a classification exercise across phases, and that only
 works if findings accumulate in one place.
 
+**Standing methodological correction (added after Phase 2.5a review):** earlier entries in this log
+occasionally ask "is this common enough in Vivarium's actual play patterns to be worth resolving" —
+that framing is backwards and is retired as of this correction. CharacterLab's job is to discover
+the epistemically/architecturally correct model on its own terms; whether Vivarium's current tuning
+happens to exercise a given regime is a separate, later, production-cost question that never gates
+whether CharacterLab resolves the underlying question. A Vivarium-comparison question should ask
+"what does Vivarium's architecture actually do here, and what would it need to preserve this
+finding" — never "is this worth fixing given how Vivarium happens to be tuned today." See Phase
+2.5a's Correction section for the concrete case that surfaced this.
+
 ---
 
 ## Phase 0 + Phase 1 — Mathematical Kernel & Need-Satisfaction Learning
@@ -437,3 +447,1325 @@ system authoring "how many things did this event involve" as a tagging policy is
 authoring a ceiling on how strong any resulting pairwise association can become, whether or not that
 consequence is intended — this is a concrete design lever, not an incidental implementation detail,
 and worth exposing to Vivarium's own designers rather than leaving implicit in tagging code.
+
+---
+
+## Phase 2.5a — Saturated Satisfaction & Censored Learning
+
+**Status: RESOLVED — see "Correction 2" near the end of this entry.** The Capacity/Applied/Overflow
+decomposition and the dual-mode compatibility strategy were solid from the start and are kept
+unchanged. The one-sided censored-evidence update rule below was originally a useful *baseline* that
+falsifies naive point-learning from clipped deltas, but external review (recorded in the Correction
+section immediately below) found it was not the right final model: it grew confidence from
+observations that carried no discriminating information, which likely explained why its
+counterfactual result stalled well short of the true effect. That open question — deferred at the
+time, pending Phase 2.5b/2.5c — is resolved in Correction 2: `updateExpectation`'s gating logic was
+the bug, not the `(μ, τ)` representation itself, and the fix is validated against the four cases
+Correction point 6 specified plus real updated counterfactual numbers. Not yet gated by a second
+implementer/reviewer, same caveat as every prior entry.
+
+This phase originates from a collaborator-authored follow-up brief responding directly to two
+findings already on record above: Phase 1's Connection ceiling artifact and Phase 2's Avoidance
+floor artifact are the same phenomenon at both boundaries of a bounded scalar Need, and this phase
+asks whether a learning rule can be built that does not fall into it.
+
+### Correction (post-implementation review, before Phase 2.5b)
+
+The findings below were written immediately after implementation and are kept as originally
+recorded (CharacterLab's convention: correct forward, don't quietly rewrite history — see the
+avoidance-experiment redesign in the Phase 2 entry for the precedent). A review of this entry before
+starting Phase 2.5b identified a real problem with the censored-update rule as built, deeper than
+the "17% divergence reduction, not a full fix" framing originally given it credit for.
+
+1. **Growing precision (τ) on every observation — accepted or rejected — is not epistemically
+   justified, and this is a bug, not a rounding error.** Consider Mina with an established belief
+   μ≈0.40 who then experiences a saturated Experience where only Applied=+0.10 lands. The rule as
+   built keeps μ at 0.40 (correct — it must not slide the wrong way) but still grows τ as if this
+   were ordinary evidence *for* 0.40. It is not: the observation says only "the effect was at least
+   +0.10," which is equally consistent with a true effect of +0.42 or +0.90. Nothing about this
+   observation discriminates in favor of 0.40 specifically, so confidence in 0.40 should not rise
+   from it. The failure is starker at the extreme: if μ=0 and the Need is already at its ceiling
+   (Applied=0, fully saturated), the observation carries essentially **zero** magnitude information
+   — yet the rule as built raises τ anyway, mechanically becoming *more confident in zero* from an
+   observation that says nothing about the true effect at all. That is backwards.
+
+2. **This is almost certainly why the counterfactual's censored Timeline B stalled at μ≈0.22
+   instead of climbing further toward the true ~0.42 effect.** One genuine unclipped observation
+   established μ≈0.22; the five subsequent censored (rejected) observations then piled precision
+   onto that estimate without contradicting OR supporting it — cementing a weak estimate rather than
+   correctly reflecting that confidence in it should not have grown from evidence that never tested
+   it. The 17% divergence reduction reported below is real, but it is very likely an understatement
+   of what a correctly-specified censored model would achieve, not evidence that censoring itself has
+   limited power.
+
+3. **Retracted: do not build the "magnitude-aware, uses Overflow's size" update this entry
+   originally floated as the natural next step (see the struck text in Next-phase justification
+   below).** `Overflow` is a simulator-omniscient quantity — the authored ground-truth effect minus
+   what actually landed — not necessarily something the character's Experience gives her access to.
+   From Need-state movement alone, Mina can observe only "the effect was at least Applied"; she
+   cannot distinguish a true effect of +0.11 from +0.42 from +0.90, since all three would saturate
+   her identically. Feeding Overflow's magnitude into `NeedExpectation`'s update would leak
+   authored world-truth across the Experience boundary Brief §11 establishes ("no subsystem gets a
+   private interpretation of what happened" cuts both ways — it also means no subsystem gets
+   information beyond what the Experience actually contains). Overflow remains fully valid to trace,
+   and may be legitimate input to a future, explicitly-justified perceptual mechanism if one is ever
+   built and demonstrated to be something the character can actually access — but not as direct
+   learning evidence, absent that demonstration.
+
+4. **The success criterion this entry originally used was itself wrong, and is now corrected.**
+   "Does censored learning converge close to the true effect even when most observations are
+   clipped" asks for something information-theoretically impossible: a sequence of observations
+   reading "effect ≥ 0.10," "effect ≥ 0.08," "effect ≥ 0.05" is equally consistent with a true effect
+   of 0.15, 0.42, or 0.90, and no learning rule — censored or otherwise — can resolve that ambiguity
+   from this evidence alone without smuggling in information the character doesn't have. Remaining
+   uncertain in that situation is *correct* inference, not a shortfall. **The corrected criterion:**
+   does the model retain exactly the uncertainty warranted by the evidence it actually received,
+   without mistaking "this observation was clipped" for "the effect is weak"? Under this criterion,
+   the built rule still fails (point 1 above), even though it already succeeds on the narrower
+   "never slide μ the wrong way" criterion this entry originally credited it for.
+
+5. **Open research question, deferred to a return visit after Phase 2.5b:** is `(μ, τ)` a
+   sufficient representation for both point evidence ("effect ≈ x") and one-sided evidence
+   ("effect ≥ x" / "effect ≤ x"), or does `NeedExpectation` need a representation that keeps
+   confidence-in-a-point-estimate and confidence-in-an-inequality-constraint as distinct quantities —
+   something in the shape of a `Mean`/`PointPrecision` pair plus separate accumulated
+   `LowerBoundEvidence`/`UpperBoundEvidence` state, or another representation entirely? This is not
+   pre-decided; it is now the concrete research question Phase 2.5a leaves open. The finding worth
+   carrying forward regardless of which representation wins: **what happened** (the realized effect),
+   **what could be observed** (Applied, bounded by the Need's capacity), and **what that observation
+   logically permits the character to believe** (a point estimate vs. an inequality constraint) are
+   three separable things, and the original `(μ, τ)` update conflated the second and third.
+
+6. **Four validation cases to run before this question is considered resolved** (specified now,
+   deliberately not yet run — this phase does not stop to rebuild the rule; see Next-phase
+   justification):
+   - **Case A — established belief, weak lower bound.** High-precision μ=0.40, then one new
+     observation "effect ≥ 0.10." Expected: must not materially raise confidence in 0.40 — it fails
+     to contradict the belief, it does not reinforce it.
+   - **Case B — belief inconsistent with the bound.** μ=0.05, then "effect ≥ 0.10." Expected: the
+     model MUST update — the current belief is logically inconsistent with the observation (this
+     case should already pass under the built rule's accept branch; worth confirming directly rather
+     than assuming).
+   - **Case C — zero-information saturation.** Need already at its ceiling, Applied=0 ("effect ≥ 0,"
+     true of every non-negative real number). Expected: essentially no change in confidence about
+     the efficacy estimate. The built rule currently fails this case (see point 1) and raises τ
+     regardless.
+   - **Case D — genuine evidence after a long censored history.** Many "effect ≥ 0.10"-style
+     observations, then one genuine unclipped "effect = 0.42." Expected: the accumulated (and, per
+     point 1, currently unjustified) precision from the censored run must not artificially suppress
+     how much this new genuine observation moves the belief.
+
+### Psychological findings
+
+**A single fresh-prior observation makes censoring provably a no-op — and that null result is
+itself the finding that motivates the counterfactual design.** Sweeping `ACTION_VISIT_GLEN`'s
+existing +0.40 Connection effect against five starting Need levels (0.10 → 1.00), naive and censored
+learningMode produce **bit-for-bit identical** μ, confidence, Applied, and Overflow at every single
+level (`experiments/saturatedSatisfaction.ts`, `test/phase2_5Saturation.test.ts`). The reason is
+structural, not a bug: a brand-new `NeedExpectation` starts at μ=0, and every Applied value this
+satisfier can produce is non-negative, so the naive candidate is always ≥ the fresh prior and the
+one-sided rule's "reject only a decrease" condition never fires. **Censoring has nothing to protect
+until a real expectation has already been established from prior evidence** — a distinction the
+sweep alone cannot demonstrate and the counterfactual below was specifically designed to isolate.
+Separately, the sweep reproduces Phase 1/Phase 2's boundary-saturation finding a third time, now
+through the named Capacity/Applied/Overflow decomposition rather than an inferred μ shift: Applied
+falls from 0.4204 (Level 0.10, unsaturated) to 0.3000 (Level 0.70) to 0.1000 (Level 0.90) to exactly
+0.0000 (Level 1.00, zero headroom) — Overflow rising in exact lockstep (0 → 0.1205 → 0.3205 →
+0.4204) — confirming `applyBoundedEffect`'s identity `Applied + Overflow = effect` holds on real
+outcome-table data, not just hand-picked test cases.
+
+**Once a real prior exists, censoring measurably narrows — but does not eliminate — a naive
+learning rule's exposure-timing artifact (Brief §22).** The required counterfactual
+(`experiments/saturationCounterfactual.ts`) runs the identical satisfier through two timelines that
+share the exact same true effect: Timeline A always visits while Connection is comfortably
+unsaturated; Timeline B is MOSTLY near the ceiling (5 of 6 repetitions clip) with one deliberate
+unsaturated dip, so genuine information about the true effect exists in both timelines but is rare
+in B. Naive converges to μ≈0.3999 in Timeline A (correctly tracking the true ~0.42 effect) but only
+μ≈0.1855 in Timeline B — a **naiveDivergence of 0.2145** purely attributable to when the satisfier
+happened to be tried, exactly the failure mode Brief §27 names. Censored narrows this to
+**0.1780** (`censoredDivergence`, about 17% smaller) by refusing to let the five clipped
+observations pull μ down from the level the one genuine observation established. This is a real,
+reproducible improvement, but it is **partial, not a fix**: censored Timeline B still converges to
+μ≈0.2219, well below the true ~0.42 — the rule can only *protect* an already-good belief from
+erosion by systematically-clipped evidence, it cannot *recover* the true effect's magnitude from
+Overflow alone, since the update rule only ever compares the naive candidate's *direction* against
+the current prior, never uses the clipped observation's *size* as a lower-bound magnitude in its own
+right. Reported honestly rather than rounded up: this is a meaningful but incomplete answer to
+Brief §22's question.
+
+### Mathematical findings
+
+**The Capacity/Applied/Overflow decomposition is an exact algebraic identity, not an approximation,
+confirmed against both hand-picked and real outcome-table cases.** `applyBoundedEffect`
+(`model/needs.ts`) computes `Applied = Clamp(effect, -L, 1-L)` and `Overflow = effect - Applied`
+directly from exact-rational inputs already on the D=10⁶ lattice, so `Applied + Overflow === effect`
+holds bit-for-bit (`test/needs.test.ts`), and the quantized `after` Level this produces is
+identical, cycle-for-cycle, to the inline clamp `cycle.ts` used before this phase — confirmed by the
+full 76-test pre-2.5 suite passing unchanged.
+
+**The one-sided censored update rule is monotonic, deterministic, and needs no transcendental
+math** — deliberately, since a textbook truncated-Gaussian treatment of censored evidence needs the
+normal CDF, incompatible with the exact-rational-arithmetic contract (Brief §3.1). The rule
+(`model/expectation.ts::updateExpectation`, new `evidenceKind` parameter) computes the ordinary
+precision-weighted candidate first, then accepts or rejects only the *mean* change based on its
+*direction* relative to the current prior — precision (τ) always grows by the same amount
+regardless of acceptance, since a real observation, even a rejected one, still adds confidence that
+the truth is at least what was already believed. **Retracted — see the Correction section above
+(point 1): this is exactly the epistemically wrong step.** τ growing regardless of whether the
+observation discriminated among hypotheses is not a harmless simplification; it is measurably why
+the counterfactual result below undershoots. This is a deliberate, named simplification (documented
+in `expectation.ts`'s module comment, same spirit as `associations.ts`'s self-association-exclusion
+note) rather than a claimed "correct Bayesian censored update" — and the counterfactual finding
+above is direct evidence of exactly where the simplification's power ends: it is a one-bit
+accept/reject decision, not a magnitude-aware one, AND it grows confidence on evidence that may
+carry no magnitude information at all.
+
+### Architectural findings
+
+**Dual-mode compatibility held exactly as designed: every one of the 76 pre-2.5 tests passed
+unchanged, with zero adjustment, because every new parameter defaults to today's exact behavior.**
+`updateExpectation`'s new `evidenceKind` parameter defaults to `'point'`; `CycleParams.saturation`
+defaults to `{learningMode: 'naive', kappa: 1/2}`; `'naive'` mode's expectation update is
+byte-for-byte the pre-2.5 computation (`applyBoundedEffect`'s `Applied` is algebraically identical
+to the old inline clamp's delta). This is the load-bearing property that let 15 new tests be added
+without touching a single pre-existing assertion — the same "opt-in, default-legacy" pattern this
+brief's Phase 2.5 request specifically asked for, now validated rather than assumed.
+
+**Experienced Reward (`Applied + κ·Overflow`) is wired as trace-only, exactly as instructed, and
+this phase deliberately does not classify it as necessary.** Every cycle now traces Applied,
+Overflow, `saturated`, and Reward for every Need effect (`cycle.ts`'s new `saturation_analysis` step
+and `CycleResult.saturationAnalysis`), visible live in the new `SaturationPanel`, but Reward is never
+added to Need state, Score(a), or any learning update. No experiment in this phase tests whether
+Reward changes any observable behavior, so — per the brief's explicit caution against assuming
+Model C's necessity — it is classified **DEFERRED**, not DERIVED or REQUIRES MECHANISM: the question
+"does a character need something like Experienced Reward to explain any behavior CharacterLab can't
+already explain" remains genuinely open, not quietly answered by giving it a slider and a trace
+column.
+
+### Vivarium comparison
+
+**Does Vivarium's stat/need system separate "what happened" from "what the character believes a
+satisfier does," or does it — like this codebase before Phase 2.5a — implicitly conflate them via a
+shared clamp?** Phase 1 and Phase 2's ceiling/floor artifacts and this phase's Timeline-B finding are
+all one underlying bug pattern: any system that learns from a bounded stat's *observed* delta rather
+than the *interaction's* true effect will silently mis-learn whenever the stat is near a boundary
+when the interaction happens. If Vivarium's own preference/relationship learning (if any) reads
+directly from a clamped stat delta the same way this codebase's pre-2.5a `NeedExpectation` did, it
+likely has an undetected version of exactly this artifact — worth checking directly, the same way
+prior entries recommended checking NeedExpectation's representation and the precondition/
+accessibility separation against Vivarium's actual code.
+
+**Struck (see the standing methodological correction at the top of this file):** this entry
+originally asked whether "mostly, not always" saturating exposure is common enough in Vivarium's
+actual play patterns to make resolving this worth it, and suggested checking real playtraces before
+treating censored learning as "worth porting." That question is retired — it gates CharacterLab's
+own research on Vivarium's current tuning, exactly backwards from this project's purpose.
+CharacterLab's job is to resolve what the epistemically correct learning model is when a bounded
+Need creates censored observations, on its own terms; only once that model exists does it become
+Vivarium's question whether its own architecture needs to change to support it, and separately, a
+production-cost question whether that's worth doing given how often the regime actually occurs. The
+question worth asking instead: **once CharacterLab has a validated censored-evidence representation,
+what would Vivarium's Need/stat system need to expose (e.g., a way to represent "at least X" belief
+state, distinct from a point estimate) to host it?** — a question about what the architecture must
+provide, not whether the problem is worth having an architecture for.
+
+### Next-phase justification
+
+**Struck:** this entry originally proposed a "magnitude-aware" censored update using Overflow's
+size as the natural next step. That is retracted — see Correction point 3: Overflow is not
+established to be something the character can perceive, and using it directly would leak authored
+world-truth across the Experience boundary. It is not the next step.
+
+The actual next step for saturated-satisfaction research is the representation question Correction
+point 5 leaves open — whether `(μ, τ)` can correctly host both point and one-sided evidence, or
+whether inequality evidence needs its own accumulator distinct from point-estimate confidence —
+validated against the four cases in Correction point 6. This is deliberately **not** undertaken
+immediately: Phase 2.5b (Semantic Salience) is a largely independent problem from the same brief and
+proceeds first, per the brief's own sequencing and the "answer one well-scoped question at a time"
+discipline this log has followed since Phase 0. Phase 2.5a is explicitly left PARTIAL rather than
+closed, and is revisited after Phase 2.5b ships with its own real traced numbers.
+
+**Resolved in Correction 2 (near the end of this entry), after Phase 2.5b/2.5c shipped:** the answer
+turned out to be "yes, `(μ, τ)` is sufficient for the censored-evidence behaviors tested so far" — see
+that section for the fix, the validation numbers, and the one deliberately-still-open simplification
+(the accepted-bound branch's precision crediting) that phrasing is careful not to paper over.
+
+### Three-part output (Brief §36) for the Saturated Satisfaction / Censored Learning findings
+
+*(Revised per the Correction section above — the original version of this section credited the
+built rule with more than it earned; this version reflects the corrected understanding.)*
+
+**Psychological finding.** What happened (a satisfier's true effect), what could be observed (the
+Need's Applied delta, bounded by its remaining capacity), and what that observation logically
+permits a character to believe (a point estimate vs. a mere inequality constraint) are three
+separable things that a naive learning rule collapses into one — and, this phase discovered, an
+under-specified "censored" rule can still collapse two of them even while correctly handling the
+third: refusing to let μ slide the wrong way (handled) is a different, weaker property than
+correctly declining to grow confidence in an estimate the evidence never actually tested (not yet
+handled). A character reasoning correctly under saturation should end up MORE uncertain, not falsely
+more confident, when most of its evidence about a satisfier is boundary-clipped — remaining
+appropriately uncertain is the correct outcome, not a failure to converge.
+
+**Computational finding.** A single scalar precision (τ) is not obviously the right currency for
+both point evidence ("effect ≈ x") and one-sided evidence ("effect ≥ x"): the two make different,
+non-interchangeable epistemic claims, and accumulating both into one number let this phase's rule
+grow spuriously confident from evidence that never discriminated between hypotheses. Whether
+`NeedExpectation` needs a richer representation — separate accumulators for point-precision and
+bound-evidence — or whether a more careful, but still `(μ, τ)`-shaped, update can respect the
+distinction is now an open, concretely testable research question (Correction points 5-6), not a
+solved one.
+
+**Architectural implication.** A "dual-mode, opt-in, default-legacy" parameter design (new
+`evidenceKind`/`SaturationParams` fields defaulting to prior behavior) let this phase's entire new
+mechanism ship alongside 76 pre-existing findings with zero regressions — validating, not just
+assuming, the compatibility strategy this brief's own Phase 2.5 request specified, and that part of
+the phase's delivery is unaffected by the Correction above. Separately: a trace-only speculative
+quantity (Experienced Reward) can be fully instrumented and made visible to a researcher (traced
+every cycle, shown live in the UI) without being prematurely wired into any behavior-affecting
+pathway — keeping "is this mechanism necessary" answerable by future evidence rather than settled by
+its mere presence in the codebase. And, more generally: a research log entry's own success framing
+can itself be wrong in a way that only a second reader catches — this phase's real lesson may be
+methodological as much as technical, which is exactly why this correction is recorded in place
+rather than silently folded into a rewritten "clean" version of the original findings.
+
+### Correction 2 (post-Phase-2.5c review) — the (μ, τ) representation question, resolved
+
+Phase 2.5c's own review ("Experience Interpretation," see below) closed its three targeted gaps and
+then returned to this entry's still-open question: is `(μ, τ)` sufficient for both point and
+one-sided evidence, or does `NeedExpectation` need a richer representation? Correction point 6's four
+validation cases were run, and the finding is: **`(μ, τ)` is sufficient for the censored-evidence
+behaviors tested so far. The bug was in the informativeness gate that decided when τ was allowed to
+grow, not in what the two-number representation could express.**
+
+That phrasing is deliberately narrower than "sufficient all along." The accepted-bound branch (an
+informative `lower_bound`/`upper_bound` observation) still credits itself with the full observation
+precision ρ, exactly as if the bound were a point measurement — but a genuine inequality is a weaker
+claim than a point value, and a *sequence* of distinct inequality bounds ("effect ≥ 0.10," then later
+"effect ≥ 0.20," then "effect ≥ 0.30") is not mathematically identical to three point observations at
+those values, even though the corrected rule currently treats each accepted one that way. `(μ, τ)`
+cannot represent the exact posterior that sequence of inequalities actually implies. Per this
+project's "don't generalize until an experiment demands it" principle: none of the four validation
+cases, nor the Brief §21/§22 experiments, currently behave incorrectly because of this — so it stays
+a documented approximation, not a TODO, until some future experiment's behavior actually depends on
+the distinction.
+
+**The fix.** `updateExpectation` (`model/expectation.ts`) now grows τ by the full observation
+precision ρ only when a censored bound is genuinely informative — its naive candidate strictly moves
+past the current μ in the direction the bound asserts (`lower_bound`: `μ_naive > μ`; `upper_bound`:
+`μ_naive < μ`). Otherwise the bound is uninformative — "the truth is at least r" when r is already ≤
+the current belief proves nothing new — and τ freezes at its merely-decayed τ⁻, gaining zero
+precision, exactly like μ gaining zero movement. The strict inequality (not `≥`/`≤`) is load-bearing:
+a naive candidate landing EXACTLY on the current μ is classified as uninformative too, which is what
+stops a long run of *identical* repeated bounds from being treated as fresh confirming evidence every
+single time (see Case D below). Point evidence, and every pre-existing call site, is completely
+unaffected — this touches only the `lower_bound`/`upper_bound` gating logic.
+
+**All four validation cases pass, encoded directly as tests** (`test/phase2_5aRepresentation.test.ts`):
+
+- **Case A (established belief, weak lower bound).** μ=0.40 at high precision (τ=50), then one new
+  observation "effect ≥ 0.10" (well below the belief). Result: exactly zero change to both μ and τ —
+  not merely "not material," which is what the original wording asked for; the corrected rule
+  achieves the stronger exact-no-op property.
+- **Case B (belief inconsistent with the bound).** μ=0.05, then "effect ≥ 0.10" (above the belief).
+  Result: the model updates — μ rises above 0.05 and τ grows from the decayed prior, exactly as Case
+  B required.
+- **Case C (zero-information saturation).** A Need at its ceiling, Applied=0 exactly ("effect ≥ 0" —
+  true of every non-negative belief). Result: exactly zero change in both μ and τ, whether starting
+  from a fresh μ=0 prior or an already-established positive belief — "essentially no change" from the
+  original wording is, again, achieved exactly rather than approximately.
+- **Case D (genuine evidence after a long censored history).** Six identical "effect ≥ 0.10"
+  observations from a fresh prior, then one genuine unclipped "effect = 0.42" point observation.
+  Under the OLD rule (reproduced inline in the test for direct comparison, since the buggy code no
+  longer exists to call), τ grows by ρ on every single repetition regardless of informativeness,
+  reaching 6ρ by the end; under the CORRECTED rule, τ grows once (the first, genuinely informative
+  observation) and then plateaus at exactly 1ρ, because every subsequent identical bound lands
+  exactly on the already-established μ=0.10 and is correctly read as adding nothing. Applying the
+  same genuine 0.42 observation afterward: the corrected trajectory's α (`ρ/(τ+ρ)`) is markedly larger
+  than the buggy trajectory's, and the corrected μ lands measurably closer to the true 0.42 than the
+  buggy one does — precisely the "accumulated precision must not artificially suppress how much a new
+  genuine observation moves the belief" property Case D was written to demand.
+
+**Real consequences, measured by re-running the exact Brief §21/§22 experiments this entry already
+reported on.** The sweep (`experiments/saturatedSatisfaction.ts`) previously read as "naive and
+censored produce bit-for-bit identical output at every level" — under the corrected rule this is true
+everywhere **except exactly at total saturation** (Level=1.00, Applied=0 exactly): naive's confidence
+still rises to 0.4000 there (it always uses `'point'` evidence regardless of saturation, so it
+treats "effect was exactly 0" as if it were a genuine measurement), while censored's confidence
+correctly stays at 0.0000 — Case C demonstrated live inside the sweep, not just in a unit test. The
+counterfactual (`experiments/saturationCounterfactual.ts`) shows the larger effect: naive is
+untouched by this fix (`naiveDivergence` is still exactly **0.2145**, unchanged from the original
+recording, since 'naive' mode never exercises the corrected gating logic at all), but
+`censoredDivergence` drops from the originally-recorded **0.1780** (~17% smaller than naive) to
+**0.1108** — a **~48% reduction** versus naive, not 17%. Timeline B's censored `finalMu` rises from
+the original ≈0.2219 to **≈0.2891** against the true ~0.40-0.42 effect — substantially closer, though
+still an honest undershoot, not a full recovery (see "what remains open" below). The corrected rule
+did not just fix an edge case; it materially changed the phase's own headline result.
+
+**What remains open, stated plainly rather than rounded up.** This correction fixes the
+*uninformative-bound* half of the rule; the *informative-bound* half is unchanged and still credits
+an accepted censored observation with the full ρ, exactly as if it were an ordinary point
+observation — a deliberate, already-documented simplification relative to a literal truncated-normal
+treatment (still avoiding the transcendental normal CDF the exact-rational-arithmetic contract
+forbids), not something this correction claims to have solved. And Timeline B's censored estimate
+still undershoots the true effect: the rule *protects* an established belief from erosion by
+systematically-clipped evidence and, as of this correction, no longer manufactures false confidence
+from that same evidence — but it still cannot *recover* magnitude information that Overflow alone
+would carry, since Correction point 3 (above) already ruled out using Overflow directly as leaking
+simulator-omniscient information across the Experience boundary. That retraction still stands; a
+genuinely magnitude-aware update remains a documented non-goal, not a future TODO.
+
+#### Three-part output (Brief §36) for Correction 2
+
+**Psychological finding.** A character reasoning correctly under saturation should grow confident
+only in proportion to how much a censored observation actually discriminated between competing
+beliefs — an observation fully compatible with what she already believed, however many times it
+repeats, teaches her nothing new and must leave her exactly as uncertain as before. The original
+rule's mistake was treating "I received an observation" as inherently confidence-building, when the
+correct standard is "I received an observation that could have gone differently and didn't" —
+compatibility with an existing belief is not the same thing as evidence for it.
+
+**Computational finding.** The representation `(μ, τ)` was never the bottleneck; the update rule
+attached to it was. This is worth stating as its own finding because the natural assumption, when a
+model under-performs, is "the representation is too poor to express what's needed" — here, a much
+smaller, more surgical fix (a strict-inequality informativeness gate on when τ is allowed to grow)
+recovered most of the missing performance (naive-relative divergence reduction: 17% → 48%) without
+adding a single new field to `NeedExpectation` or a new accumulator type. Reaching for a richer
+representation before checking whether the existing one's update rule was even correctly specified
+would have been the more complex, and in this case wrong, fix.
+
+**Architectural implication.** Encoding the four validation cases as literal, named tests
+(`phase2_5aRepresentation.test.ts`) — rather than trusting that "the counterfactual numbers look
+better now" was sufficient evidence — is what makes this correction falsifiable by a future change
+the same way every other claim in this log is: any future edit to `updateExpectation` that
+regresses Case A, C, or D fails a named test immediately, not just a downstream experiment's
+aggregate number. Writing the validation cases down at review time (Correction point 6, months
+before this fix) and only then implementing against them is the same "specify success before
+building" discipline this project used for Brief §13's six salience scenarios and Brief §14's eight
+success criteria — deferred specification, not skipped specification.
+
+## Phase 2.5b — Semantic Salience
+
+**Status: PARTIAL, corrected by Phase 2.5c below.** The core mechanism — role dominating category,
+Need relevance and surprise both moving encoding in the predicted direction, all three budget models
+bounded and exact — is validated and kept. External review (recorded in the Correction section
+immediately below) found this entry still hand-authored three of the pipeline's own *inputs* even
+though the *weights* were genuinely derived: causal role was set directly on each scenario's
+`PerceivedConcept` rather than following from what actually, causally happened; attention was gated
+by an authored `unattended: true` flag rather than derived from role and scene composition; and
+surprise used the raw `|r-μ|` prediction error even when that observation was boundary-clipped,
+disagreeing with Phase 2.5a's own censored-evidence semantics. Phase 2.5c closes all three gaps
+without touching the validated multiplicative core. Every result below is written from actual
+`computeSemanticSalience` output (`experiments/semanticSalience.ts`'s six scenarios) and one real
+20-step-cycle comparison, not predicted numbers, and is kept as originally recorded (correct
+forward, don't quietly rewrite history) even where Phase 2.5c's rebuilt scenarios now produce
+different numbers for the same qualitative claims. Not yet gated by a second implementer/reviewer,
+same caveat as every prior entry — and, per the standing methodological correction at the top of
+this file, every Vivarium-facing claim below is phrased as "what would Vivarium's architecture need
+to expose this," never "is this common enough in Vivarium to be worth it."
+
+This phase answers the other half of the same brief that produced Phase 2.5a: Phase 2's own
+RESEARCH.md entry found that `W[context.evening][action.visit_glen]` caps at exactly 1/2 because
+every Experience tagged its concepts with a flat co-activation weight of 1.0, letting them compete
+for the same row-substochastic budget regardless of how central each concept actually was to what
+happened. That flat 1.0 was an artifact of `cycle.ts`'s original `semanticConcepts` construction, not
+a deliberate psychological claim. This phase replaces it with a derived encoding strength z_i,
+computed from a fixed, global, non-scenario-specific set of rules (Brief §5.1: "The system must not
+require authored instructions such as 'Glen = 0.92, Bakery = 0.24, Lamp = 0.03.'").
+
+### Correction (post-implementation review, before Phase 2.5c)
+
+The findings below were written immediately after implementation and are kept as originally
+recorded. A review of this entry before starting Phase 2.5c found that the pipeline's *weights*
+(BASE_SALIENCE, ROLE_WEIGHT, DEFAULT_ATTENTION_BY_ROLE) were genuinely derived — a real, validated
+result — but three of the pipeline's own *inputs to those weights* were still hand-authored per
+scenario, which is the same class of mistake Brief §5.1 rules out, just one level upstream of where
+2.5b actually looked:
+
+1. **Causal role was authored directly, not derived from what causally happened.** 2.5b's
+   `WorldEventDescriptor` required whoever wrote a scenario to set `role: 'Cause'` on the Lamp by
+   hand once it started the injury. That is a real fact about the event, but nothing in the code
+   *derived* it from anything — a scenario author could just as easily have typed `'Incidental'` for
+   the same falling lamp and nothing would have caught it. **Fixed in 2.5c**: a new `EffectProvenance`
+   type describes only what physically/causally happened (who acted, on whom, with what, what
+   actually caused the observed effect); `deriveWorldEventDescriptor` is now the *only* place in the
+   codebase permitted to assign a `CausalRole`, and it does so mechanically from which provenance
+   slot named a concept. Separately, `ActionDef.subjectRole` now declares an Action's own semantic
+   argument structure (Conversation-like Actions bind their subject as `'Participant'`; an
+   Attack-like or Betrayal-like Action binds it as `'Cause'`) as a fact about the verb, not a
+   psychological weight on whichever specific Person fills that slot this time.
+2. **Attention was authored per concept via `unattended: true`, not derived.** This correctly
+   demonstrated that perception ≠ attention (a real finding, kept), but it moved the hand-authoring
+   problem rather than eliminating it — "Lamp salience = 0.02" became "Lamp unattended = true,"
+   still a per-scenario toggle. **Fixed in 2.5c**: non-Incidental roles keep a fixed default
+   attention value; Incidental-role concepts now derive their attention by splitting a fixed residual
+   pool among however many Incidental concepts the Experience actually has — attention competition is
+   now a computation over how many things are in the scene, not a flag any caller sets.
+3. **Surprise used the raw prediction error even for boundary-clipped observations, disagreeing with
+   Phase 2.5a's own semantics.** A saturated/censored observation being far from μ does not mean
+   something surprising happened — it means the observation couldn't measure the full effect — and
+   Phase 2.5a's censored-learning correction (this file, above) already established that distinction
+   for *learning*; 2.5b's salience computation used `|r-μ|` regardless, silently disagreeing with it
+   for *encoding*. **Fixed in 2.5c**: surprise now branches on the same `EvidenceKind` vocabulary
+   (`point`/`lower_bound`/`upper_bound`) Phase 2.5a's `expectation.ts` already defines — `point` keeps
+   `|r-μ|`; `lower_bound` (a ceiling-saturated positive effect) uses `max(0, L-μ)`, i.e. "did the
+   evidence prove something incompatible with my belief"; `upper_bound` is the mirror. Need relevance
+   is deliberately left unchanged — it is a genuinely different question ("how much did this matter to
+   the Need I was experiencing," using the realized regulatory effect) from efficacy/surprise, and the
+   review confirmed that boundary does not need correcting.
+
+One further open item the review raised without treating as a defect: the salience-budget model
+(independent/shared/hybrid) was left a three-way choice. The review locks `'independent'` (Model A)
+as the reference default going forward — see Phase 2.5c's Mathematical findings for the reasoning —
+until a dedicated attention-capacity experiment specifically motivates the shared/hybrid models.
+
+### Psychological findings
+
+**A concept's causal role in a specific event, not its ontological category, is what should
+dominate its salience — and the model now demonstrates this quantitatively, not just structurally.**
+The same `object.lamp` concept, same category (`Object`, base salience prior B=0.30) throughout:
+tagged `Incidental` at an ordinary dinner (Scenario A) it lands at raw=0.006, z≈0.006 — genuinely
+negligible next to Glen's z≈0.44 or the dinner Action's z≈0.52. Tag the *identical* concept `Cause`
+once it causally injures Mina (Scenario C) and it jumps to raw=0.602, z≈0.376 — a roughly 63×
+increase in raw salience from a single-field change (role, not category), with the concept's base
+salience prior held byte-for-byte identical both times. The same swing reproduces for a Location
+(Scenario D: `location.bakery`, `Cause` role, z≈0.434 versus an ordinary `Location`-role Home's
+z≈0.088 in Scenario A) — confirming Brief §7's claim ("the same Object category must be capable of
+receiving dramatically different salience because its causal role changed") generalizes across
+categories, not just for the brief's own worked Table example.
+
+**Need relevance and surprise both move salience in the predicted direction, and do so without any
+scenario-specific tuning of Glen, Mina, or any other named entity.** Ordinary dinner (Scenario A: a
+positive delta=0.30, urgency=0.60, low prediction error=0.05) gives Glen z≈0.439. The *identical*
+descriptor and causal-role assignment, only with a larger, more surprising negative delta (Scenario
+B, "argument": delta=-0.60, prediction error=0.90) raises Glen to z≈0.547 and the Action concept to
+z≈0.627 — Brief §14 criterion 4 ("Need-relevant concepts receive greater salience") and criterion 3
+("prediction error increases encoding") both hold. Isolating surprise alone (Scenario E, holding the
+descriptor, roles, and Need impact fixed and varying only the prediction error from 0.01 to 0.95):
+Glen's z rises from ≈0.430 to ≈0.526, and the Action's from ≈0.512 to ≈0.607 — a clean, monotonic
+effect of the *one* factor that changed, with nothing else in the computation touched.
+
+**Attention gating is a real, separate mechanism from perception, and the model distinguishes "never
+perceived" from "perceived but not registered."** Scenario F places three concepts (`location.home`,
+`object.lamp`, `object.painting`) as objectively present (`perceived: true`) but explicitly
+`unattended` alongside an ordinary Glen interaction: all three land at raw=0, z=0 exactly — not
+merely small, but exactly zero, because `unattended` forces attention A_i to 0 and every downstream
+factor is multiplicative. This is deliberately a *different* mechanism from Scenario A's "negligible"
+Lamp, which reaches z≈0.006 through its low category/role product alone, with ordinary (not
+zero-forced) attention. Both land near zero, by different routes — which is itself informative: a
+system can suppress an irrelevant-but-noticed concept (low B·R) and an unnoticed-but-present concept
+(A=0) through the same multiplicative pipeline without needing two different suppression mechanisms.
+
+### Mathematical findings
+
+**The raw-salience product `B_i·R_i·A_i·(1+α_N·N_i)·(1+α_S·S_i)` (Brief §11) is exact-rational
+throughout and every factor survives independently in the trace** — `salience.test.ts` checks the
+formula against a hand-computed product directly, and the `'semantic_salience'` trace step
+(`phase2_5Salience.test.ts`'s criterion-8 test) round-trips every one of B, R, A, N, S, Raw, and z
+back out of the recorded trace exactly, satisfying Brief §27's Trace Completeness obligation without
+approximation.
+
+**All three candidate salience-budget models (Brief §12) are bounded in [0,1] by construction, not
+by a separate clamp.** Model A (independent, `z_i=g(Raw_i)`) inherits boundedness directly from the
+existing `Rational.boundedResponse` kernel primitive (Phase 0) — no new bounding function was
+needed. Model B (shared budget, `z_i=Raw_i/max(B,ΣRaw_j)`) is bounded because, for nonnegative raw
+scores, the denominator is always at least as large as any individual numerator once that
+numerator's own term is part of the sum — an algebraic guarantee, checked directly in
+`salience.test.ts` rather than merely observed. Model C (hybrid) composes both and inherits both
+guarantees on its respective partition. Perception exclusion (Brief §27) is enforced structurally,
+not just as an emergent multiplicative near-zero: a concept with `perceived: false` is given z_i=0
+before it ever enters a budget-model computation, and is excluded from any Σ_j Raw_j the budget
+models use — Brief §8's "cannot receive semantic salience merely because it existed in the same
+world space" means such a concept never competed for encoding capacity, not merely that it lost.
+
+**A genuinely open design question was resolved by NOT reusing existing machinery, and the reasoning
+is worth recording because it could easily have gone the other way.** `associations.ts`'s
+`updateAssociations` already has a BigInt lattice-quantization + largest-remainder reallocation
+algorithm for normalizing a row of nonnegative Rationals against a shared cap (Σ_j W_ij ≤ 1 exactly)
+— structurally similar to what Salience Budget Models B/C need. This phase deliberately does *not*
+factor that machinery out for reuse here: that algorithm exists specifically to prevent quantization
+drift from compounding across thousands of future incremental updates to *persisted* state (W is
+mutated every Experience, forever). Semantic salience z is recomputed from scratch every single
+Experience — nothing about it persists or accumulates — so a plain exact `Rational` division already
+satisfies the exact-arithmetic contract (Brief §3.1) with no drift to guard against, and Brief §12
+never requires Σz_i to equal any particular total (only that each z_i is bounded). Reusing the
+lattice/BigInt path would have added real complexity in service of a persistence problem this module
+does not have — a case where the "obviously reusable" answer was the wrong one.
+
+### Architectural findings
+
+**The dual-mode, opt-in, default-legacy discipline held for a second, structurally different phase
+without needing to be reinvented.** `salienceMode: 'legacy' | 'derived'` on `CycleParams` (mirroring
+Phase 2.5a's `SaturationParams.learningMode`) means every one of the 117 tests that predate this
+phase — all of Phase 0 through 2.5a — passes byte-for-byte unchanged, because `'legacy'` reproduces
+`cycle.ts`'s exact original flat-1.0 `semanticConcepts`/`experienceActivation` construction verbatim,
+just moved into an `else` branch. `'derived'` is purely additive.
+
+**The Action-key concept and the Experience's subject needed an explicit default causal-role mapping
+to make derived mode usable without an authored `WorldEventDescriptor` on every call site** —
+`defaultWorldEventDescriptor` assigns the chosen Action `'Cause'` (it is literally the mechanism that
+produced the observed Need effect) and the subject `'Target'` (the ordinary "acted upon" case), with
+Location→`'Location'` and active Context concepts→`'Context'`, exactly reproducing what every
+pre-2.5b Experience implicitly meant. This is a documented authoring choice, not a brief mandate —
+Brief §7's own worked examples use different role labels for illustration (`Participant` for an
+ordinary dinner companion) — but it is a *general, fixed* rule applied identically regardless of
+which Person/Action fills the slot, preserving the "no scenario-specific weights" property while
+still giving ordinary Experiences sensible defaults.
+
+**One integration measurement makes the claimed effect concrete, not merely structural.** Running
+the exact same forced Experience (visit Glen, evening Context active, same seed/character/clock)
+once under each mode: `'legacy'` gives `W[context.evening][action.visit_glen] = 0.300` and
+`W[person.glen][action.visit_glen] = 0.300` — identical weights, because both concepts got the same
+flat co-activation regardless of relevance. `'derived'` gives `W[context.evening][...] ≈ 0.0014` (a
+~212× reduction) and `W[person.glen][...] ≈ 0.092` — Glen, who is actually central to what happened,
+keeps a meaningfully larger share than the ambient evening Context, without either weight being
+hand-tuned. This is Brief §14 criterion 7 ("association strength is no longer primarily determined
+by arbitrary tag count") demonstrated with real numbers from one real cycle, not asserted from the
+formula alone.
+
+### Vivarium comparison
+
+Per the standing methodological correction: the question here is not whether Vivarium's current
+event/perception system already resembles this pipeline, or whether semantic-salience-driven
+association weighting is common/valuable enough in Vivarium's actual play patterns to be worth
+porting. Those are production-cost and prevalence questions that come after CharacterLab has a
+validated model, not before.
+
+The question worth asking now: **what would Vivarium's world-event and perception representation
+need to provide for this pipeline to run against it?** This phase's `WorldEventDescriptor` needs,
+for every perceived entity in a moment: (1) an ontological category (Vivarium likely already has an
+entity-type system that could supply this directly); (2) a causal role *specific to the event*, not
+a fixed property of the entity (Vivarium would need something that can say "this specific lamp was
+the Cause this time," not just "lamps are Objects" — i.e., causal-role assignment has to happen at
+event-resolution time, not at entity-definition time); (3) a perception/attention signal separate
+from "the entity exists in the world state" (Brief §8's exclusion principle — if Vivarium's
+event log includes everything objectively present rather than only what a character actually
+noticed, salience-driven learning would need a perception filter layered in front of it, which does
+not yet exist in this codebase's own outcome-resolution pipeline either — Phase 0-2's `WorldOutcomeTable`
+resolves effects without a distinct perception step, an open gap on *both* sides worth flagging
+rather than papering over). None of these are claims about whether Vivarium has them today — they
+are the concrete list of representational obligations this model's success surfaces.
+
+### Next-phase justification
+
+Two threads are now open simultaneously, and neither blocks the other:
+
+1. **Return to Phase 2.5a's deferred representation question** (RESEARCH.md's Correction section,
+   points 5-6): does `(μ, τ)` suffice for both point and one-sided evidence, or does
+   `NeedExpectation` need a richer `Mean`/`PointPrecision` + `LowerBoundEvidence`/`UpperBoundEvidence`
+   representation? The four validation Cases A-D specified in that Correction section are still
+   unrun and still the concrete next step there.
+2. **Brief §24's interaction question, now buildable but not yet built**: this phase and Phase 2.5a
+   were implemented independently (Phase 2.5b's salience computation never reads
+   `SaturationAnalysisEntry`, and Phase 2.5a's censored-evidence classification never reads z_i) —
+   deliberately, to keep each phase's own correctness argument clean. Brief §24 asks whether a
+   heavily-saturated (low-information) Experience should also encode *less* semantically — i.e.,
+   whether z_i should itself depend on Applied/Overflow, not just on B/R/A/N/S. This is a genuine
+   open research question, not an oversight: coupling salience to saturation before both mechanisms
+   are independently validated would make it impossible to attribute a wrong result to either one.
+   Worth a dedicated small experiment once Phase 2.5a's representation question above is resolved,
+   not before.
+
+Neither thread is Phase 2.5b's own responsibility to close — recording them here so they are not
+lost, per this project's standing discipline of writing the next question down before moving on.
+
+### Three-part output (Brief §36) for the Semantic Salience findings
+
+**Psychological finding.** Salience — how strongly an event encodes into memory and association —
+should not be a property of *what kind of thing* something is, but of *what role it played in this
+specific event*, modulated by whether it was actually noticed, whether it mattered for a current
+goal, and whether it violated expectation. A Lamp is not "low-salience"; a Lamp that merely sat on
+the table is low-salience, and the same Lamp that fell and caused harm is not — the model must
+recompute this per-event from role and context, never bake a fixed importance into the entity
+itself. This distinction — ontological kind versus causal role in a specific event — sits alongside
+Phase 2.5a's "what happened / what could be observed / what that observation permits belief to be"
+as the same family of finding: CharacterLab keeps discovering that a single collapsed quantity
+(salience, or a Need's observed delta) was hiding two or three logically separate things.
+
+**Computational finding.** A small, fixed, globally-authored set of category and role weights,
+combined multiplicatively with deterministic, bounded, already-existing per-Experience signals (Need
+relevance from `actualNeedResult`, surprise from `NeedExpectation`'s own δ=r-μ), is sufficient to
+reproduce every qualitative pattern Brief §13's six scenarios require — role overriding category,
+Need-relevance and surprise increasing encoding, attention gating suppressing unregistered concepts
+— without a single per-scenario authored number. The salience-budget question (independent vs.
+shared vs. hybrid) remains genuinely open at the level of "which model best matches an eventual
+production need"; this phase validates that all three are mathematically sound (bounded, exact,
+deterministic) candidates, not that one is correct.
+
+**Architectural implication.** The same `salienceMode: 'legacy' | 'derived'` opt-in pattern that
+Phase 2.5a used for `SaturationParams.learningMode` transferred directly to a structurally different
+mechanism (a full multi-factor derivation pipeline rather than a single evidence-classification
+branch) with zero adaptation needed to the pattern itself — evidence that this project's "new
+mechanism, opt-in, default-legacy" discipline is a reusable architectural template, not something
+that happened to fit Phase 2.5a by coincidence. Separately: choosing *not* to reuse
+`associations.ts`'s lattice-quantization machinery, after concretely identifying why it solves a
+different problem (persisted-state drift versus recomputed-every-Experience values), is itself a
+finding worth recording — this codebase's own prior work is a source of temptingly-reusable
+machinery that is not always actually the right tool, and checking that explicitly before reusing it
+is now a standing habit, not a one-off.
+
+---
+
+## Phase 2.5c — Experience Interpretation
+
+**Status: implemented, tested, and delivered.** This is deliberately a small integration phase, not
+another giant one: Phase 2.5b's own review found its multiplicative core sound but three of its
+*inputs* still hand-authored (see the Correction section under Phase 2.5b, immediately above). This
+phase closes exactly those three gaps — mechanical causal-role derivation, mechanical residual-
+attention derivation, evidence-kind-aware surprise — locks the independent salience-budget model as
+the reference default, and adds the one isolated Need-relevance test the factor-isolation suite was
+missing. Every number below is written from actual `computeSemanticSalience`/`runScriptedExperience`
+output against the rebuilt pipeline (`experiments/semanticSalience.ts`'s six scenarios, rebuilt to
+construct `EffectProvenance` instead of a hand-set `WorldEventDescriptor`), not predicted numbers.
+Not yet gated by a second implementer/reviewer, same caveat as every prior entry.
+
+### Psychological findings
+
+**A concept's role can now only ever come from what actually, causally happened — and enforcing that
+mechanically, rather than trusting a scenario author to type the right label, still reproduces every
+2.5b qualitative finding.** The same `object.lamp` concept: `incidentalConcepts` in an ordinary
+dinner's `EffectProvenance` (Scenario A) derives to `Incidental` and lands at raw=0.0060, z≈0.0060 —
+still genuinely negligible next to Glen's z≈0.2511 or the dinner Action's z≈0.5116. Naming the
+identical concept in `EffectProvenance.cause` once it injures Mina (Scenario C) derives it to
+`Cause` and it jumps to raw=0.6024, z≈0.3760 — a ≈62.7× increase in raw salience from a single
+provenance-field change, base salience prior held byte-for-byte identical both times, and this time
+no code path anywhere lets a scenario author simply mistype the role. The same swing reproduces for
+a Location (Scenario D: `location.bakery` named in `EffectProvenance.cause`, z≈0.4342) against an
+ordinary `Location`-role Home (z≈0.0876 in Scenario A) — the mechanism, not just the numbers,
+generalizes across categories.
+
+**The overly generic "subject → Target" default the review specifically flagged is gone, and the
+character-level swing it enables is real but appropriately smaller than the Lamp's.** Every ordinary
+Conversation-like Action in `defaultActions()` (`ACTION_VISIT_GLEN`, `ACTION_VISIT_PRIYA`,
+`ACTION_STAY_HOME`) now declares `subjectRole: 'Participant'`, not `'Target'` — running a full
+scripted `visit_glen` cycle in `'derived'` mode gives Glen z≈0.3204 as a `Participant`. Betrayal's
+`subjectRole: 'Cause'` (an Attack-like Action whose subject directly causes the sharp negative Need
+effect) instead gives Glen z≈0.4831 in the betrayal Experience — roughly a 1.5× swing, not the
+Lamp's 62.7×, because Person already carries a high category prior (B=0.80) and both `Participant`
+(R=0.60) and `Cause` (R=1.00) role weights are already high for people; the role component still
+moves the number in the right direction, it just has less room to work with when the category prior
+is already large. This is itself informative: causal role's leverage is largest exactly where the
+category prior is otherwise uninformative (an Object could mean anything from a lamp to a table),
+and smallest where category prior already carries most of the signal (a Person is usually going to
+matter).
+
+**Attention gating is now a computation over how crowded the scene is, not a flag any scenario
+author sets — and it produces the same qualitative suppression 2.5b's `unattended` flag did, through
+a mechanism that cannot be authored per concept.** Scenario F's residual Incidental pool
+(`DEFAULT_ATTENTION_BY_ROLE.Incidental = 0.20`) splits evenly among however many Incidental concepts
+provenance actually lists: with one Incidental object (the Lamp alone), it gets the whole pool,
+attention=0.2000, z≈0.0060; add two more Incidental fixtures to the identical scene (a Painting, a
+Coat) and the Lamp's share drops to exactly 0.0667 (a three-way split of the same 0.20 pool),
+z≈0.0020 — a 3× reduction in encoding purely from how many other background objects happened to be
+present, with nothing in any scenario file setting the Lamp's attention directly. Non-Incidental
+roles are unaffected by scene clutter: Glen (`Participant`) holds attention=0.6000 identically in
+both the one- and three-Incidental variants — confirming the derivation is scoped to exactly the
+"residual competition among Incidental concepts" the review asked for, not a global renormalization
+that would have diluted Glen too.
+
+**Evidence-kind-aware surprise reproduces the review's own worked example exactly: a saturated
+observation far from μ can be *zero* surprise, not the large surprise a naive `|r-μ|` would report.**
+Believing an effect of +0.40 and then observing a ceiling-saturated Applied=+0.05 (a `lower_bound`
+observation — the true effect is *at least* +0.05) yields `surpriseMagnitude = max(0, 0.05-0.40) = 0`
+exactly — the observation proves nothing incompatible with the existing belief, so nothing about it
+should read as surprising. Treating the identical numbers as unsaturated `point` evidence (the 2.5b
+behavior) would have reported `|0.05-0.40| = 0.35`, a large and entirely spurious "this was
+unexpected" signal driven purely by where the boundary happened to clip the observation. The mirror
+direction confirms the formula discriminates correctly rather than just always returning zero: a
+`lower_bound` observation of +0.15 against a *low* prior belief of +0.02 yields `max(0, 0.15-0.02) =
+0.13` — genuinely positive surprise, because this observation *does* prove something incompatible
+with the prior belief. `cycle.ts` now classifies this "objective evidence kind" unconditionally, from
+the same Capacity/Applied/Overflow decomposition Phase 2.5a already computes, regardless of whether
+`SaturationParams.learningMode` is `'naive'` or `'censored'` — salience's surprise measure is always
+epistemically correct about what kind of observation this was, independent of what the separate
+*learning* algorithm chooses to do with that fact.
+
+**Need relevance now has the clean factor-isolation test the review pointed out was missing, and it
+confirms the mechanism works exactly as claimed once every other factor is actually held fixed.**
+Holding causal role (`Participant`), attention (1.0000, unaffected by the isolation setup), and
+surprise (0.0099, identical low-surprise evidence in both runs) exactly constant and varying only the
+Need impact (urgency×|delta|): a low-Need-relevance run (delta=0.05, urgency=0.20) gives
+N=0.0099, z≈0.4786; a high-Need-relevance run (delta=0.90, urgency=0.90) gives N=0.4475, z≈0.5682 —
+z_B > z_A, confirming the factor drives salience upward on its own, not merely alongside surprise as
+Scenario B's combined conflict test could suggest by itself.
+
+### Mathematical findings
+
+**Mechanical derivation from a fixed slot-mapping table is exactly as exact-rational and
+deterministic as the hand-authored version it replaced, with the added property that misauthoring a
+role is no longer representable.** `deriveWorldEventDescriptor` processes a small ordered
+`ROLE_SLOTS` table (`activeContext`→Context, `sourceAction`/`cause`→Cause, `actor`→Actor,
+`target`→Target, `recipient`→Recipient, `instrument`→Instrument, `affectedEntity`→AffectedEntity,
+`location`→Location, `participants`→Participant, `incidentalConcepts`→Incidental) with first-slot-
+wins tie-breaking for a concept named by more than one field — deterministic, side-effect-free, and
+because `EffectProvenance`'s fields are typed to specific slots, there is no longer a `role: string`
+anywhere in the codebase a caller could set to an arbitrary/incorrect value.
+
+**Residual-attention derivation is exact division, not an approximation of "sharing."**
+`deriveAttention` computes `DEFAULT_ATTENTION_BY_ROLE.Incidental / count(Incidental concepts
+perceived)` using exact `Rational` division — the three-Incidental Scenario F variant's 0.0667 is
+literally `1/5 ÷ 3 = 1/15` computed exactly, not a floating-point approximation, so the "1/3 of the
+one-Incidental value" relationship holds as an exact algebraic identity
+(`lampAttentionOne.equals(lampAttentionThree.mul(ratOf(3)))`), verified directly in
+`phase2_5cExperienceInterpretation.test.ts` rather than merely observed as approximately true.
+
+**`surpriseMagnitude`'s censored-evidence formulas are provably bounded by the unsaturated formula
+they replace, never the reverse — censoring can only reduce reported surprise, never inflate it.**
+For any fixed (priorMu, observed) pair, `max(0, observed-priorMu) ≤ |observed-priorMu|` and
+`max(0, priorMu-observed) ≤ |observed-priorMu|` hold algebraically (the clamp to 0 only ever removes
+magnitude the absolute-value version would have counted), so a `lower_bound`/`upper_bound`
+classification can never manufacture surprise a `point` reading of the identical numbers would not
+already show — it can only correctly suppress surprise that was never actually warranted. This
+inequality is checked directly (`salience.test.ts`), not just asserted from the formula's shape.
+
+**Locking `budgetMode: 'independent'` as the reference default is a methodological choice with a
+concrete justification, not an arbitrary pick among three equally-plausible options.**
+`associations.ts` already enforces a competitive budget downstream of salience (`Σ_j W_ij ≤ 1` per
+row, exactly), so normalizing salience itself against a *second* shared Experience-level budget (the
+`'shared'`/`'hybrid'` models) would let an irrelevant extra concept dilute the important ones before
+they even reach association learning — quietly reintroducing, one level up the pipeline, the same
+"arbitrary tag count" problem Phase 2.5b exists to eliminate downstream. "Limited attention" (the now-
+derived residual-pool competition above) and "limited associative capacity" (already `associations.
+ts`'s job) are two different constraints that this project has not yet run an experiment
+distinguishing; conflating them by defaulting to a shared salience budget would have been premature.
+`'shared'`/`'hybrid'` remain fully implemented and tested (both are bounded, exact, deterministic —
+`salience.test.ts` checks both directly), available for exactly the dedicated attention-capacity
+experiment this finding defers, not deleted.
+
+### Architectural findings
+
+**The dual-mode, opt-in, default-legacy discipline extended cleanly to a *correction* of an already-
+opt-in mechanism, not just to new mechanisms.** No test written before this phase needed to change
+its assertions about *whether* salience is computed — `salienceMode: 'legacy' | 'derived'` is
+untouched: `'legacy'`'s exact byte-for-byte Phase 0-2.5a behavior is unaffected by any of this phase's
+changes, and every one of Phase 2.5b's own tests needed only its *inputs* rewritten (hand-set
+`PerceivedConcept.role`/`unattended` → `EffectProvenance`; raw prediction-error `Rational[]` →
+`SurpriseEvidence[]`), never its assertions about the *shape* of the derived-mode contract. All 139
+tests (117 pre-2.5c plus 22 new) pass.
+
+**`ExperienceContext.worldEventOverride` collapsed from two separate override fields to one,
+because 2.5c's own correction made the second one redundant by construction.** 2.5b's design (per
+the original implementation plan) anticipated a `worldEventOverride?: WorldEventDescriptor` plus a
+separate `causalConceptsOverride?: ReadonlySet<ConceptKey>` — two independent things a caller could
+override. Once role and causal-connectedness are BOTH mechanically derived from one `EffectProvenance`
+value (`deriveWorldEventDescriptor` and `causallyConnectedFromProvenance` are pure functions of the
+same input), a second override field would only ever invite the two to silently disagree — so
+`ExperienceContext` now carries exactly one `worldEventOverride?: EffectProvenance` field, and
+`cycle.ts` derives both descriptor and causal-connectedness from it. This is the same "collapse
+redundant state into one derived source of truth" instinct the association-weight and Need-
+expectation designs already followed elsewhere in this codebase, applied to a design that hadn't yet
+been built when the instinct would have prevented it.
+
+**The "objective evidence kind" now computed unconditionally in `cycle.ts` is a small but structurally
+important addition: it makes an epistemic fact (what kind of observation this was) independent of an
+algorithmic choice (what the learning rule does with that fact).** Before this phase, `EvidenceKind`
+classification only happened inside the `learningMode === 'censored'` branch — meaning if a user ran
+with `learningMode: 'naive'`, no `EvidenceKind` was ever computed at all, and salience (which now
+needs one for every Need observation, every Experience, regardless of learning mode) would have had
+nothing to consume. `cycle.ts`'s Step-13 loop now always classifies `objectiveEvidenceKind` from the
+Capacity/Applied/Overflow decomposition, traces it alongside the (possibly different) gated
+`learningEvidenceKind` the actual learning update uses, and feeds only the objective one to salience —
+so a user toggling `learningMode` for a learning-mechanics experiment can no longer silently change
+what salience believes about the same Experience, which is exactly the "2.5a and 2.5b privately
+disagreed about surprise" bug the review identified, closed by construction rather than by
+convention.
+
+### Vivarium comparison
+
+Per the standing methodological correction: the question is not whether Vivarium's engine already
+has an `EffectProvenance`-shaped record, or whether provenance-driven role assignment is common
+enough in Vivarium's current content to be worth porting. **The question worth asking now: what would
+a production architecture need to preserve for this phase's corrected pipeline to be portable at
+all?** Four concrete obligations, sharper than Phase 2.5b's own list because this phase's corrections
+make the gaps more specific:
+
+1. **Causal provenance as a first-class, structured record of what actually happened** — not merely
+   an event log of world-state deltas, but something with named slots for actor/target/instrument/
+   cause/etc. that a role-derivation function can read mechanically. Vivarium's outcome/effect
+   resolution would need to produce this shape, not just "Need X changed by Y."
+2. **Character-relative perception and attention as a distinct layer from world truth** — this
+   phase's residual-attention-pool derivation only works if "how many things is this character
+   currently perceiving" is itself a queryable, character-relative quantity, not a global fact about
+   the scene. A production engine that only tracks objective world state (not per-character perceptual
+   fields) would need to add this layer before any residual-competition model could run against it.
+3. **Evidence semantics (point vs. bound) surfaced at the point where any subsystem consumes an
+   observation, not just at the point where the outcome was computed.** This phase's central fix was
+   discovering that TWO subsystems (2.5a's learning, 2.5b's salience) had each independently
+   reinvented — and briefly disagreed about — what a saturated observation means. A production
+   architecture should compute evidence-kind classification once, per observation, and hand it to
+   every downstream consumer, rather than let each consumer infer it (or fail to) on its own.
+4. **A character-relative semantic Experience layer sitting between world truth and learning** — the
+   throughline across Phase 2.5a, 2.5b, and 2.5c: what a character can learn from should never be
+   "what objectively happened in the simulation," but "what this character's Experience of what
+   happened logically permits her to conclude," with causal role, attention, and evidence semantics
+   all mediating that boundary. Whether Vivarium implements this as one unified layer or several
+   coordinating subsystems is an implementation choice for later; that some such layer must exist is
+   what these three phases jointly demonstrate.
+
+### Next-phase justification
+
+With Phase 2.5c's corrections landed, the path is now clear to return to the one substantive
+question Phase 2.5a left open (its Correction section's point 5, deferred pending this phase): **is
+`(μ, τ)` a sufficient representation for both point evidence and one-sided (`lower_bound`/
+`upper_bound`) evidence, or does `NeedExpectation` need a richer representation that keeps
+confidence-in-a-point-estimate and confidence-in-an-inequality-constraint as distinct quantities?**
+The four validation Cases A-D specified in that Correction section (established belief vs. weak lower
+bound; belief inconsistent with the bound; zero-information saturation; genuine evidence after a long
+censored history) are still unrun and are the concrete next step. Phase 2.5c's own Brief §24 question
+— whether z_i should itself depend on Applied/Overflow, not just on B/R/A/N/S — remains deliberately
+deferred for the same reason Phase 2.5b left it deferred: coupling salience to saturation before
+2.5a's representation question is resolved would make it impossible to attribute a wrong result to
+either mechanism.
+
+**Both since resolved.** The representation question above was run and closed in Phase 2.5a's
+"Correction 2" section (earlier in this document) immediately after this entry shipped. Brief §24's
+salience/saturation question, sharpened by that same post-2.5c review into "does saturation provide
+any salience information not already available through realized Need relevance and evidence-aware
+surprise?", is answered directly below in Phase 2.5d.
+
+### Three-part output (Brief §36) for the Experience Interpretation findings
+
+**Psychological finding.** A believable character's encoding of an event depends on three genuinely
+separate character-relative facts — what causal role each present concept actually played (derived
+from what happened, not assigned by fiat), how much of her limited attention that concept actually
+received (a scarce, shared resource that background objects compete for, not a switch any one object
+can be flagged with), and whether the evidence she received actually contradicted what she already
+believed (which a boundary-clipped observation may not do, however far its raw number sits from her
+prior) — and collapsing any of these three into an authored per-scenario fact, even one that happens
+to be correct for that one scenario, reintroduces exactly the "Glen = 0.92" authoring problem Brief
+§5.1 rules out, just moved one level upstream of the salience weights themselves.
+
+**Computational finding.** Every one of Phase 2.5b's validated multiplicative-weight results survives
+unchanged once its *inputs* are made mechanical: role from `EffectProvenance` via a fixed slot table,
+attention from a fixed residual pool divided by a count, surprise from a fixed evidence-kind-branching
+formula. None of the three fixes required touching `rawSalience`, `BASE_SALIENCE`, `ROLE_WEIGHT`, or
+any of the three budget models — the correction was entirely about how those already-correct weights
+receive their per-Experience inputs, evidence that a phase's mathematical core and its integration
+plumbing can be validated and debugged as genuinely separate concerns.
+
+**Architectural implication.** Sharing one vocabulary (`EvidenceKind`) between a learning subsystem
+(Phase 2.5a) and an encoding subsystem (Phase 2.5b/c) — computed once, unconditionally, and handed to
+both — is what actually closed the "these two phases silently disagree" bug, not a special-case patch
+in either subsystem. This generalizes: whenever two independently-built subsystems both need to
+interpret the same underlying observation, the fix is a shared, unconditionally-computed
+classification both consume, not a bespoke reinterpretation in each. Phase 2.5a, 2.5b, and 2.5c
+jointly demonstrate that "the character's Experience of an event" is itself a coherent, reusable
+architectural layer — causal role, attention, and evidence semantics all mediate world-truth into
+character-relative belief the same way, whether the consumer is a Need-satisfaction learner or a
+salience/association-weighting mechanism — not three unrelated bolt-on features.
+
+## Phase 2.5d — Saturation/Salience Interaction
+
+**Status: RESOLVED. Brief §24's remaining Phase 2.5 question is classified DERIVED. Phase 2.5 is
+CLOSED.**
+
+Post-2.5c external review sharpened Phase 2.5c's own deferred Brief §24 question from "should
+salience z_i depend on Applied/Overflow?" to a cleaner, falsifiable form: **does saturation provide
+any salience information that is not already available through the character's experienced Need
+relevance and evidence semantics?** The reviewer's own starting hypothesis, stated before anything
+below was built or run, per this project's "specify success before building" discipline:
+
+> Saturation does not require an independent salience mechanism. Its psychologically observable
+> effects are already mediated by realized Need relevance and evidence-aware surprise. Hidden
+> Overflow must not affect salience.
+
+A static read of `model/salience.ts` already suggested this structurally: `rawSalience`'s formula
+(`Raw = BaseSalience x RoleWeight x Attention x (1+alphaN*NeedRelevance) x (1+alphaS*Surprise)`) has
+no Overflow or `SaturationFactor` term, and `cycle.ts::applyChosenAction` only ever threads Overflow
+into the trace-only `saturationAnalysis`/Experienced-Reward computation — never into `needImpacts` or
+`surpriseEvidenceRecords`, salience's only two inputs beyond role/attention. But per this project's
+"don't trust code inspection where a runnable test is possible" norm (the same reasoning that caught
+Phase 2.5a's Correction and Phase 2.5b's Correction), the hypothesis was run, not merely read off the
+source — four cases, each fixing Mina/Glen/Connection and varying exactly one thing, through the real
+`runScriptedExperience` pipeline end-to-end (`experiments/saturationSalienceInteraction.ts`), not
+`computeSemanticSalience` called directly with hand-picked inputs, which would beg the question.
+
+**All four cases pass, encoded directly as tests** (`test/phase2_5dSaturationSalienceInteraction.test.ts`):
+
+- **Case 1 — Observational equivalence.** Connection starts at 0.95 (Capacity+ = 0.05) in both
+  timelines. Timeline A's true effect is +0.10 (Overflow 0.05); Timeline B's is +0.80 (Overflow
+  0.75) — radically different hidden Overflow, identical Applied (+0.05) and evidence kind
+  (`lower_bound`). Result: Glen's Need relevance (0.000000 both — Connection's Level, 0.95, is already
+  above its 0.80 set point, so `needDeficit`'s own clamp makes Connection's urgency exactly 0 in both
+  timelines regardless of Applied), surprise (0.047619 both), raw (0.301714 both), and z (0.231782
+  both) are **byte-for-byte identical** between timelines. Mina has no epistemic access to Overflow,
+  and none leaked across the Experience boundary.
+- **Case 2 — Saturation versus unsaturated utility.** Same true effect (+0.40) both times; only
+  Mina's starting Connection Level differs. Starved (Level 0.10, high urgency, Applied lands
+  unclipped at +0.40): Need relevance = 0.234450, surprise = 0.285714, z = 0.313705. Near/over-
+  satisfied (Level 0.90, above the 0.80 set point — `needDeficit`'s own `max(0, ...)` clamp makes
+  urgency exactly 0, Applied clips to +0.10): Need relevance = **0.000000 exactly**, surprise =
+  0.090909, z = 0.239070. The starved Experience is strictly more Need-relevant and strictly more
+  salient overall — with no additional `SaturationFactor`; `needRelevance` already folds in both the
+  larger realized delta and the higher urgency multiplying it.
+- **Case 3 — Surprising censored evidence.** Connection at 0.85 (Capacity+ = 0.15); true effect +0.50
+  clips to a `lower_bound` observation of exactly +0.15 in both variants. Against an established
+  belief of only +0.02 ("surprising"): surprise = 0.115044, z = 0.243074. Against an established
+  belief of +0.20, which the same +0.15 bound does not contradict ("consistent"): surprise =
+  **0.000000 exactly**, z = 0.223602. Saturation does not merely suppress salience — an informative
+  censored bound that genuinely contradicts a character's belief stays highly salient, exactly as
+  `surpriseMagnitude`'s evidence-kind-aware formula (`max(0, L-mu)`) predicts.
+- **Case 4 — Total saturation.** Connection already at 1.0 exactly; Glen produces an otherwise
+  ordinary +0.40 effect that is entirely Overflow (Applied = 0 exactly). Need relevance and surprise
+  both land at exactly 0.000000 — but Category x Role x Attention alone (Person x Participant x
+  Participant's fixed 0.6 attention) still yields raw = 0.288000, z = 0.223602. Saturation drives the
+  Need-relevance and evidence-aware-surprise factors to zero without making the entire Experience
+  disappear, exactly as the multiplicative form (`1 + 0 = 1`, not `x 0`) guarantees by construction.
+
+**Verdict.** All four cases behave exactly as the stated hypothesis predicted, using the architecture
+that already existed going into this phase — no new field, table, or mechanism was added anywhere in
+`model/salience.ts` or `model/cycle.ts` to make these pass. Per the reviewer's own explicit branching
+instruction, Brief §24's question is classified **DERIVED**: saturation's psychologically observable
+effects on salience are fully mediated by realized Need relevance (which already consumes the Applied,
+boundary-clipped delta — never the satisfier's true, un-clipped magnitude) and evidence-aware surprise
+(which already consumes the objective `EvidenceKind` Phase 2.5a's censored-learning correction uses),
+with no direct Overflow or saturation term required or added. **Phase 2.5 is closed.**
+
+**A standing architectural prohibition, locked in for later phases.** `PotentialEffect`/`Applied`/
+`Overflow` stay fully traced — Overflow is valuable world-truth for a researcher inspecting the trace,
+and nothing above retracts that. But two paths remain, and must remain, prohibited: **Overflow ↛
+Salience** (this phase's finding) and **Overflow ↛ NeedExpectation** (Phase 2.5a's Correction point 3)
+— Overflow is simulator-omniscient information no character has epistemic access to. This matters
+beyond Phase 2.5: if a future phase (addiction/acquired Needs, Brief §26) demonstrates that a
+character experiences something beyond ordinary Need regulation — pleasure, hedonic reward,
+intoxication, a "high" that outlasts or exceeds what the regulated Need itself accounts for — that
+must be introduced as an explicit, new, experimentally-demonstrated "Experienced Reward" signal with
+its own derivation, tested the same way this phase tested salience. It must never be smuggled in as
+disguised access to Overflow just because Overflow is already sitting there in the trace, fully
+computed and numerically convenient. The distinction between "world truth we record" and "world truth
+a character can act, learn, or feel from" is this project's central discipline, and addiction is
+exactly the phase where it would be easiest to quietly violate.
+
+**What stays exactly as it was, not revisited.** Per the same review's explicit sign-off: 2.5c's
+attention mechanism (fixed values by role, residual-pool splitting for Incidental) and the `(μ, τ)`
+representation (see Correction 2 above, with its own honestly-scoped limitation) both clear every
+behavioral test asked of them so far and are not touched by this phase. This project's own meta-
+pattern, restated because it is what let this phase stay genuinely tiny: find the smallest
+deterministic representation that clears the behavioral tests, document where it's an approximation,
+and only enrich it when another phenomenon actually breaks it. Nothing here broke it.
+
+### Next-phase justification
+
+With Phase 2.5's three sub-phases (a/b/c) and this closing interaction check all landed, every
+question this brief's Phase 2.5 request raised (Brief §16-27) is now DEFERRED (Experienced Reward,
+deliberately not wired into behavior), RESOLVED (the `(μ, τ)` representation, Correction 2), or
+DERIVED (this entry). Phase 3 (personality/belief/social appraisal, per the Brief's own phase
+ordering) is the next open phase gate — not scoped here, since scoping it before Phase 2.5 actually
+closed would be exactly the "generalize before an experiment demands it" mistake this log has spent
+three sub-phases correcting itself out of.
+
+### Three-part output (Brief §36) for the Saturation/Salience Interaction findings
+
+**Psychological finding.** What determines how memorable an event is to a character is not "how much
+of the world actually changed" but "how much of that change she could actually attribute to something,
+and how much it discriminated against what she already believed" — both of which are already fully
+determined by her own Experience (realized Need effect, evidence semantics), with no separate
+accounting for how much of the world's effect she never got to register at all. A saturated character
+is not thereby a less-encoding character; she is a character whose Need relevance and surprise happen
+to be small for this particular Experience, for reasons her own Experience already fully explains.
+
+**Computational finding.** Four independently-varying cases, run through the same unmodified
+multiplicative formula, reproduced every qualitative prediction the hypothesis made — including the
+one case (Case 4) where two of the formula's three modulating factors both collapse to exactly zero
+without collapsing the raw score to zero, purely because the formula multiplies `(1 + factor)` terms
+rather than the factors themselves. That structural property — not a special-cased floor or minimum —
+is what Brief §24 asked whether saturation would need, and it turns out the multiplicative-with-1-plus
+form Phase 2.5b chose for unrelated reasons (bounding non-negative modulation) already provides it for
+free.
+
+**Architectural implication.** This is the cleanest confirmation yet of this project's core operating
+principle across all of Phase 2.5: a character-relative Experience layer (causal role, attention, Need
+relevance, evidence-aware surprise) mediating between world-truth (Capacity/Applied/Overflow) and every
+downstream consumer (learning, salience) is sufficient by itself — extending either consumer with a
+direct world-truth shortcut (a `SaturationFactor` here, direct Overflow access there) was never
+necessary, and this phase is the first in the sequence to test that absence directly rather than merely
+avoid adding the shortcut. The `Overflow ↛ Salience` / `Overflow ↛ NeedExpectation` prohibition this
+entry restates is now empirically grounded twice over, not just architecturally asserted once.
+
+## Phase 2.5e — Architecture Consolidation & Behavioral Re-baseline
+
+**Status: RESOLVED. CharacterLab has one canonical execution path. Phase 2.5 is closed on a single,
+re-baselined foundation; Phase 3 begins from here.**
+
+This entry is deliberately not new psychology. Phases 2.5a-d each discovered and corrected one piece
+of machinery (censored learning, derived salience, evidence-aware surprise, the salience/saturation
+boundary) while leaving the OLD, superseded machinery switched on by default — a defensible choice
+mid-investigation (an active research branch should not casually change what "CharacterLab's behavior"
+means while still being falsified), but a growing architectural risk once the investigation actually
+finished. With Phase 2.5d closing the last open question, the research branches themselves became the
+biggest remaining risk: three different readers asking "what does CharacterLab actually do" could get
+three different, all-correct-for-their-moment answers depending on which phase's params they reached
+for. This entry's job is narrow and mechanical: turn everything Phases 0-2.5d actually earned into one
+canonical model, retire what it superseded to explicitly-named historical/control conditions, and
+re-run every previously-claimed phenomenon through the single resulting path to find out which claims
+still hold, which hold in a different form, and which depended on machinery that no longer runs by
+default.
+
+### The canonical path
+
+```
+WORLD STATE
+    |
+Action / event resolution
+    |
+EffectProvenance
+    |
+bounded Need application
+    +-- Applied
+    +-- Overflow [trace-only]
+    +-- EvidenceKind
+    |
+character-relative perception
+    |
+derived attention
+    |
+derived causal roles
+    |
+Need relevance
+    +
+evidence-aware surprise
+    |
+SemanticExperience
+    +-- weighted concepts (ConceptEncoding[])
+    +-- observed Need effects (NeedObservation[])
+    +-- EvidenceKind
+    +-- provenance
+    |
+ +--------------+---------------+
+ v              v               v
+NeedExpectation Episodic Memory Association
+(mu, tau)                        Graph
+    |              |               |
+    +--------------+---------------+
+                   |
+             Accessibility
+                   |
+          feasible Actions
+                   |
+             evaluation
+                   |
+               choice
+```
+
+This is CharacterLab's best-supported hypothesis as of Phase 2.5e, not a claim of permanence — every
+box above is exactly as falsifiable going forward as it was before this entry, per this project's
+running discipline. What changed is that it is now the ONE path `defaultScenario()`/
+`defaultCycleParams()` actually run, not one of two co-equal options a caller had to know to select.
+
+### Retired from ordinary execution
+
+Two of these are still-present, still-fully-implemented, deliberately-not-deleted `CycleParams`
+settings — retired from being the *default* to being a named, callable historical/control condition:
+
+- **Flat `z=1` co-activation tagging** (`salienceMode: 'legacy'`) — every engaged concept got the same
+  weight regardless of causal role, attention, or relevance to what happened. `defaultCycleParams()`
+  now sets `salienceMode: 'derived'`; `legacyCycleParams()` (new, `model/scenario.ts`) reproduces the
+  old flat-weight behavior byte-for-byte for exactly the comparisons that need it.
+- **Naive clipped-delta learning, including the "precision always grows" bug** (`saturation.learningMode:
+  'naive'`) — treats a boundary-clipped observation as an exact point measurement, and (pre-Correction-2)
+  grew confidence from it regardless of whether it discriminated between hypotheses.
+  `defaultSaturationParams()` now returns `{ learningMode: 'censored', ... }`; `legacySaturationParams()`
+  (new) reproduces the old naive rule under its own name.
+
+The other two items on this phase's retirement list were never separately-toggleable `CycleParams`
+options in the first place — they were intermediate states of the salience pipeline's OWN
+implementation, fully replaced (not merely defaulted away from) when Phase 2.5c shipped, with no
+runtime switch back to them:
+
+- **Manually assigned causal roles and manually assigned attention** — Phase 2.5b's
+  `WorldEventDescriptor`/`unattended` flag required a scenario author to hand-set both per concept.
+  Phase 2.5c's `EffectProvenance`/`deriveWorldEventDescriptor` and derived residual-pool attention
+  replaced this outright; the old hand-authoring surface no longer exists in the codebase to select.
+- **Raw `|Applied-mu|` surprise for censored evidence** — Phase 2.5b's original surprise formula used
+  the clipped delta directly regardless of evidence kind; Phase 2.5c's evidence-aware
+  `surpriseMagnitude` replaced it unconditionally. There is no parameter that brings the old formula
+  back.
+
+Both non-toggleable items are recorded here for completeness (the user-facing retirement list this
+phase was asked to produce), not because this entry reintroduces a way to select them.
+
+### Kept, provisional but canonical
+
+"Canonical" does not mean "proven forever" — it means "the simplest model currently surviving all
+experiments this project has run, kept as the reference implementation and subject to falsification by
+a future one," exactly the standard every prior phase entry in this log has already applied to its own
+findings:
+
+- `(mu, tau)` `NeedExpectation`, including the accepted-bound branch's still-documented precision
+  over-crediting (Correction 2's own honestly-scoped limitation).
+- The independent salience budget (`budgetMode: 'independent'`, Brief §12 Model A).
+- The current residual-attention model (fixed values by role; Incidental concepts split a fixed pool).
+- The current informative-bound precision treatment (strict-inequality informativeness gate,
+  Correction 2).
+- The current associative graph (row-substochastic, largest-remainder reallocation, Hebbian
+  learning/atrophy).
+
+None of these were re-derived or re-validated by this phase beyond what Phases 0-2.5d already did —
+they are canonical because nothing has yet falsified them, the same status every prior finding in this
+log has always carried.
+
+### SemanticExperience, formalized
+
+Phases 2.5a-d's real, jointly-earned discovery was not censoring or salience individually — it was
+that a coherent object sits between raw world resolution and cognitive learning: what happened,
+filtered entirely through what a character could have perceived, attended to, and inferred from it.
+This phase gives that object a name and a type (`model/semanticExperience.ts`, new):
+
+```
+SemanticExperience
++-- experienceId
++-- actor
++-- occurredAt
++-- action
++-- provenance        (EffectProvenance — what causally happened)
++-- perceivedEvent     (WorldEventDescriptor — the hard perception gate)
++-- conceptEncodings[]
+|   +-- concept, category, role, perceived, attention, salience
++-- needObservations[]
+|   +-- needId, applied, evidenceKind, surprise
++-- budgetMode
+```
+
+Deliberately absent: an `overflow` field, anywhere. This is not an oversight — it is Phase 2.5d's
+finding given a permanent, structural form. `SemanticExperience` is exactly the boundary object
+mediating world-truth into character-relative belief; a type occupying that role has no legitimate slot
+for simulator-omniscient information a character never had epistemic access to. `Overflow` keeps its
+own home (`CycleResult.saturationAnalysis`, trace-only, world-truth-side) and never crosses into this
+type. `cycle.ts::applyChosenAction` builds one whenever `salienceMode === 'derived'` (now the default)
+from data it already computes — this is a packaging change, not a new computation; `semanticSalience`
+and `saturationAnalysis` remain on `CycleResult` unchanged, for research/UI granularity and the
+world-truth ledger respectively. `SemanticExperience` is what a Phase 3 belief/appraisal system should
+consume — it should never need to inspect a raw `WorldOutcomeTable`, `RealizedEffect`, or
+`saturationAnalysis` entry directly, exactly the interface boundary Brief §18's Belief system will need.
+
+### Re-running every historical finding
+
+Every previously-claimed phenomenon was re-run through the canonical path (default params, no
+overrides) and classified SURVIVES / REFINED / RETRACTED against its originally-recorded finding.
+Where a finding's original test asserted numbers or properties specific to the now-retired
+architecture, that assertion was NOT deleted — it was re-pointed at `legacyCycleParams()`/
+`legacySaturationParams()` explicitly, so it now documents the retired baseline by name instead of
+silently describing "the default" it no longer is, and a new adjacent test captures the canonical-path
+finding. Real numbers below are from the actual re-run, not predicted.
+
+**1. Need-Satisfaction Learning (primary experiment, Brief §28).** SURVIVES. 20 repeated
+Connection-satisfying Experiences with Glen: learned mu rises from a 0 prior to **0.405860**
+(Glen's authored effect is 0.40 — Connection never saturates in this scenario by construction, so
+canonical and legacy trajectories are identical here), confidence rises to **0.951273**. Unaffected by
+the re-baseline because this scenario was never saturation- or salience-sensitive to begin with — its
+own `test/determinism.test.ts` assertions (loose `>` thresholds, not exact legacy-shaped numbers)
+needed no changes at all.
+
+**2. Preferential attachment / resistance to isolated contradictory evidence.** SURVIVES. The
+resistance property (`alpha = rho/(tau+rho)`: an established, high-precision belief moves little from
+one contradicting point observation) is a mathematical fact about `updateExpectation`'s point-evidence
+formula, unconditional on `learningMode`/`salienceMode` — nothing about the re-baseline touches it.
+
+**3. Glen vs. Priya paired counterfactual (Brief §29).** SURVIVES. After 20 repetitions each: learned
+`muGlen = 0.393065`, `muPriya = 0.142723`, gap **0.250342** — Glen's larger authored effect (0.40 vs.
+0.15) still separates the two subjects' learned expectations clearly, unaffected by which salience/
+saturation mode is default (neither subject's outcome saturates in this scenario).
+
+**4. Habit (Context->Action associative accessibility, Brief §28).** REFINED — this phase's most
+consequential reclassification, predicted correctly before it was run. Under `legacyCycleParams()`
+(flat `z=1` tagging), `W[context.evening][action.visit_glen]` still converges to exactly **1/2** after
+8 repetitions, with the row summing to exactly **1.0** — a fact about flat-weight tagging, reproduced
+here as a named historical-control test. Under the canonical default (`salienceMode: 'derived'`), the
+SAME 8-repetition run instead converges toward **~0.0267** (`context.evening`'s own derived salience,
+as a low-weight `Context`-role concept, is only ~0.0079 — far below the Action's ~0.53 and the Person's
+~0.27 — so the row itself never approaches saturation the way flat tagging drove it to exactly 1.0; the
+row sum after 8 reps is **~0.0399**, nowhere near 1.0). What survives is the underlying edge RATIO:
+`W[context][action.visit_glen]` (Cause role) ends up roughly **2x** `W[context][person.glen]`
+(Participant role) under canonical salience — role-weighted, not evenly split — and the substantive
+Habit claim survives unchanged: repeated Context/Action co-Experience still makes the Action
+increasingly, and durably, accessible from Context alone (`contextOnlyActivation` reaches
+action.visit_glen at **0.020462** after 100 repetitions, while Priya — never associated with this
+Context — stays at exactly **0**). The exact "1/2" figure was always a fact about equal-weight tagging,
+never itself the finding; it is now historical trivia, correctly demoted.
+
+**5. Substitution (negative result, Brief §28-29).** SURVIVES, definitionally. Every assertion this
+experiment makes is structural (`solveActivation` has no world-flags parameter at all, so Priya's
+accessibility must be bit-for-bit identical whether or not Glen is available) rather than
+numeric-value-specific — the proof is architecture-invariant by construction, unaffected by whichever
+salience/saturation mode computed the association graph's actual learned weights.
+
+**6. Avoidance (derived from Phase 1 alone, Brief §27-28).** REFINED. The primary finding (5
+repetitions, the clean non-saturating regime) SURVIVES unchanged: mu stays pinned at exactly the true
+**-0.08** effect, confidence rises monotonically, Pr(the aversive action) falls monotonically — this
+regime never exercises saturation at all, so `learningMode` was never a variable here. The SECONDARY
+finding (extending to 7 repetitions, 2 past the clean regime, "reproduces the ceiling-saturation
+finding at the opposite boundary") is **RETRACTED as default behavior**: under `legacyCycleParams()`
+(naive learning), mu still gets pulled back toward 0 by floor-clamped observations, exactly as
+originally recorded — kept as a named historical-control test. Under the canonical default (censored
+learning), the same 7-repetition extension no longer corrupts mu at all: it stays pinned at exactly
+**-0.08** through every repetition, floor-saturated ones included, because a floor-clipped observation
+that merely confirms what is already believed is correctly recognized as uninformative (Correction 2's
+gate) rather than treated as fresh evidence pulling toward 0. Avoidance itself still holds
+(Pr(the aversive action) still ends up lower than where it started), but its own "mirrors Phase 1's
+ceiling-saturation artifact" framing was precisely the bug Phase 2.5a exists to fix — this is the
+clearest demonstration in this entry that the fix is not just theoretically motivated but changes real
+downstream behavior for the better, exactly where the original Phase 1/2 finding predicted a problem.
+
+**7. Memory accessibility — recency, frequency/reinforcement, decay, retrieval reinforcement (Brief
+§17).** SURVIVES, untouched. `runMemoryAccessibilityExperiment` operates directly on `memory.ts`'s
+formulas from authored fixture data — it never constructs a `CycleParams` or runs a cognitive cycle at
+all, so it was never reachable by this re-baseline in the first place.
+
+**8. Boundary saturation scenarios (Brief §21/§22's required sweep and counterfactual).** SURVIVES as
+findings, PROMOTED in status. Both experiments already swept `learningMode` as an explicit variable
+(`['naive', 'censored']`), independent of whatever `CycleParams` default was in effect, so their own
+numbers (documented in the Phase 2.5a entry and Correction 2) are completely unaffected by this
+re-baseline. What changed is which of the two swept conditions is now "what CharacterLab does when you
+don't ask it to do something else" — 'censored' graduates from opt-in comparison arm to canonical
+default, matching every other re-baselined default in this entry.
+
+**Summary: 6 of 8 SURVIVE unchanged, 2 are REFINED (Habit, Avoidance) — zero RETRACTED outright.** No
+previously-published psychological claim in this log turned out to be simply wrong; the two REFINED
+cases are exactly the two places this project's own architecture was, by Phases 2.5a/2.5b's own
+diagnosis, most likely to have been reporting an artifact rather than a finding — and re-running them
+confirms that diagnosis rather than surprising it.
+
+### Three-part output (Brief §36) for the Architecture Consolidation & Behavioral Re-baseline
+
+**Psychological finding.** Every substantive psychological claim this project has made since Phase 0 —
+that Mina learns to prefer a reliable satisfier, resists isolated contradiction, forms habits from
+repeated co-Experience, avoids what hurts her, substitutes nothing she hasn't independently learned to
+want, and remembers recently- and frequently-retrieved things better — survives being run through a
+strictly more careful architecture unchanged in kind, and in five of six numerically-checked cases
+unchanged in degree. The two places degree DID change (Habit's exact weight, Avoidance's floor-boundary
+behavior) are exactly the two places this project had already flagged its own older machinery as
+producing an artifact rather than a finding — re-baselining did not surprise this project about its own
+psychology; it corrected exactly the two spots it had already told itself to watch.
+
+**Computational finding.** A dual-mode, opt-in-by-default architecture is the right way to develop a
+falsifiable research model UNDER ACTIVE INVESTIGATION, and the wrong steady state once the
+investigation concludes. Every phase from 2.5a onward deliberately kept its new mechanism off by
+default so 76+ pre-existing findings couldn't silently regress while the mechanism was still being
+checked — exactly the discipline that let Phases 2.5a-d ship incrementally and get corrected in place
+without ever breaking the existing suite. But "keep the new thing opt-in" and "keep the OLD thing as
+the default forever" are different policies, and conflating them past the point where the new thing is
+actually validated (Phase 2.5d's closing DERIVED classification) is itself a form of technical debt —
+this entry's actual work was recognizing that the investigation had concluded and the compatibility
+scaffolding had become the risk it was built to prevent.
+
+**Architectural implication.** `SemanticExperience` is this project's first formalized type that names
+a genuinely new architectural LAYER rather than a mechanism within an existing one — Phases 0-2 had
+Needs, Actions, Expectations, Associations, and Memory; Phase 2.5 discovered, piece by piece, that a
+sixth thing already existed in the data flow between world-resolution and every one of those five, and
+this entry is what gives it a name, a file, and an explicit "Overflow does not belong here" boundary.
+That a boundary object could be discovered empirically — one field at a time, across four sub-phases,
+each individually motivated by a different bug or missing mechanism — rather than designed upfront, is
+itself evidence for this project's core method: build the smallest thing that clears the current
+behavioral tests, and let the architecture that was actually needed reveal itself through what keeps
+needing to be threaded through by hand until it gets a name. Phase 3 is the first phase in this project
+built to consume that layer from day one rather than discover it retroactively.
+
+### Next-phase justification
+
+Phase 2.5 is closed on a single canonical path, with every historical finding re-validated against it
+and a formalized `SemanticExperience` type ready to be Phase 3's input boundary. Phase 3
+(personality/belief/social appraisal, per the Brief's own phase ordering) can now ask a genuinely new
+question instead of continuing to repair old foundations: **given a coherent `SemanticExperience`, how
+does a character form and revise beliefs about other people, and how do those beliefs become socially
+meaningful?** That question is not scoped here — scoping it before this consolidation actually landed
+would have repeated the exact mistake this entry exists to correct, building on a foundation that was
+still two co-equal architectures pretending to be one.

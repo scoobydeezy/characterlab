@@ -41,17 +41,63 @@ import { CanonicalActionKey, ConceptKey, NeedId, asConceptKey } from '../kernel/
 import { TraceBuilder, CognitiveCycleTrace } from '../kernel/trace';
 import { EventClock, SimEvent } from '../kernel/event';
 import { CharacterState, advanceAllNeeds, getExpectation, withExpectation, withCurrentTime, withAssociations, withMemory } from './character';
-import { NeedDef, needDeficit, needUrgency } from './needs';
+import { NeedDef, needDeficit, needUrgency, applyBoundedEffect, BoundedEffectResult, SaturationKind } from './needs';
 import { ActionDef, NeedContext, ScoredAction, candidateActionsWithAccessibility, AccessibilityFilterResult, evaluateAction } from './actions';
 import { ChoiceParams, buildChoiceDistribution, selectAction, ChoiceDistribution } from './choice';
-import { NeedExpectationParams, observationPrecision, updateExpectation } from './expectation';
+import { NeedExpectationParams, EvidenceKind, observationPrecision, updateExpectation } from './expectation';
 import { Experience, actualNeedResult } from './experience';
 import { WorldOutcomeTable, resolveOutcome } from './outcome';
 import { checkInvariants, InvariantViolation } from './invariants';
 import { ActivationVector, ActivationParams, solveActivation } from './activation';
 import { AssociationLearningParams, updateAssociations } from './associations';
 import { MemoryCycleParams, NeedOutcomeRecord, PredictionErrorRecord, ScoredMemory, createMemory, addMemory, retrieveTopK } from './memory';
+import {
+  SalienceParams,
+  EffectProvenance,
+  NeedImpact,
+  SurpriseEvidence,
+  SemanticSalienceResult,
+  computeSemanticSalience,
+  deriveWorldEventDescriptor,
+  causallyConnectedFromProvenance,
+  subjectRoleSlot,
+  surpriseMagnitude,
+} from './salience';
+import { SemanticExperience, NeedObservation } from './semanticExperience';
 
+/**
+ * Phase 2.5a — Brief §19/§27's Saturated Satisfaction / Censored Learning.
+ * `'naive'` (the default — see scenario.ts::defaultSaturationParams)
+ * reproduces every Phase 0-2 finding byte-for-byte: NeedExpectation always
+ * learns from the raw (possibly boundary-clipped) realized effect as if it
+ * were an exact point observation, exactly as before this phase existed.
+ * `'censored'` instead classifies a clipped effect as one-sided evidence
+ * (see expectation.ts::EvidenceKind) so it can inform confidence (τ) without
+ * being able to pull an established expectation (μ) toward the wrong side
+ * of what it actually proves. `kappa` weights the purely descriptive,
+ * trace-only Experienced-Reward quantity (Applied + κ·Overflow) — per the
+ * brief's explicit caution, this phase does NOT assume Reward feeds back
+ * into Need state, Score(a), or learning; it is recorded so a later phase
+ * can decide whether the hypothesis is DERIVED, REQUIRES MECHANISM, or
+ * DEFERRED against real trace data instead of a guess.
+ */
+export interface SaturationParams {
+  readonly learningMode: 'naive' | 'censored';
+  readonly kappa: Rational;
+}
+
+/**
+ * Phase 2.5b — Brief §5-14/§25-27's Semantic Salience. `'legacy'` (the
+ * default — see scenario.ts::defaultCycleParams) reproduces every
+ * Phase 0-2.5a finding byte-for-byte: `applyChosenAction` builds
+ * `semanticConcepts`/`experienceActivation` exactly as it always did (flat
+ * co-activation weight of 1.0 for the Action/subject/Location/Context).
+ * `'derived'` instead runs the full Brief §25 pipeline
+ * (salience.ts::computeSemanticSalience) and uses its per-concept z_i as
+ * the co-activation weight fed to `associations.ts::updateAssociations`,
+ * replacing the flat 1.0 that Phase 2's RESEARCH.md flagged as an
+ * authoring artifact (the Habit experiment's W-caps-at-1/2 finding).
+ */
 export interface CycleParams {
   readonly deltaT: Rational;
   readonly choice: ChoiceParams;
@@ -59,6 +105,9 @@ export interface CycleParams {
   readonly activation: ActivationParams;
   readonly associationLearning: AssociationLearningParams;
   readonly memoryParams: MemoryCycleParams;
+  readonly saturation: SaturationParams;
+  readonly salienceMode: 'legacy' | 'derived';
+  readonly salience: SalienceParams;
 }
 
 /** What's "in the air" for this cycle beyond Needs and the acting
@@ -69,9 +118,37 @@ export interface CycleParams {
 export interface ExperienceContext {
   readonly activeConcepts: ReadonlySet<ConceptKey>;
   readonly location: ConceptKey | null;
+  /** Phase 2.5c — an explicit `EffectProvenance` (model/salience.ts) for
+   * this Experience — what actually, causally happened — used only when
+   * `salienceMode === 'derived'`. Omitted (the default) means cycle.ts
+   * builds the ordinary-Experience provenance itself from
+   * actionKey/`chosen.subjectRole`/location/activeConcepts — every existing
+   * scenario and test is unaffected without needing to supply one. Callers
+   * provide this for events the ordinary single-Action-and-subject shape
+   * cannot express (Brief §13 Scenario C/D: an Object or Location becoming
+   * the causal `'Cause'` rather than an ordinary participant). Causal role
+   * (`deriveWorldEventDescriptor`) and causal connectedness
+   * (`causallyConnectedFromProvenance`) are BOTH derived mechanically from
+   * this one provenance value — there is no separate override for either,
+   * per Phase 2.5c's "role comes from provenance, not from a hand-filled
+   * descriptor" correction. */
+  readonly worldEventOverride?: EffectProvenance;
 }
 
 export const EMPTY_EXPERIENCE_CONTEXT: ExperienceContext = { activeConcepts: new Set(), location: null };
+
+/** Phase 2.5a — the Capacity/Applied/Overflow decomposition and descriptive
+ * Experienced-Reward for one Need effect from the just-applied Action's
+ * outcome, exposed directly on CycleResult (not just the trace) so UI code
+ * can read it the same way it already reads `activation` — see
+ * ui/state/useEngine.ts's `lastSaturationAnalysis`. */
+export interface SaturationAnalysisEntry {
+  readonly needId: NeedId;
+  readonly applied: Rational;
+  readonly overflow: Rational;
+  readonly saturated: SaturationKind;
+  readonly reward: Rational;
+}
 
 export interface CycleResult {
   readonly nextState: CharacterState;
@@ -82,6 +159,20 @@ export interface CycleResult {
   readonly activation: ActivationVector;
   readonly accessibilityFilter: AccessibilityFilterResult | null; // null for scripted cycles (no filtering applied)
   readonly retrievedMemories: readonly ScoredMemory[];
+  readonly saturationAnalysis: readonly SaturationAnalysisEntry[];
+  /** Phase 2.5b — null when `salienceMode === 'legacy'` (nothing to
+   * report: co-activation was the flat 1.0 it always was), populated when
+   * `'derived'` with the full per-concept B/R/A/N/S/raw/z breakdown. Kept
+   * for research/UI use (the full explain-everything trace); `semanticExperience`
+   * below is the consumer-facing consolidation of this same data. */
+  readonly semanticSalience: SemanticSalienceResult | null;
+  /** Phase 2.5e — this Experience formalized as a `SemanticExperience`
+   * (model/semanticExperience.ts): the character-relative record Phase 3
+   * should consume, with world-truth Overflow deliberately excluded. Null
+   * under the same condition `semanticSalience` is (`salienceMode ===
+   * 'legacy'`) — there is no well-defined character-relative encoding to
+   * report when co-activation was the flat, non-derived 1.0. */
+  readonly semanticExperience: SemanticExperience | null;
   readonly trace: CognitiveCycleTrace;
   readonly invariantViolations: readonly InvariantViolation[];
 }
@@ -187,14 +278,20 @@ function applyChosenAction(
   const realized = resolveOutcome(outcomeTable, { seed, eventId: event.eventId });
 
   // Apply realized effects to Need levels (still within this same cycle,
-  // after the passive Need advance already applied above).
+  // after the passive Need advance already applied above). Phase 2.5a:
+  // the clamp is now `applyBoundedEffect` (needs.ts) so the
+  // Capacity/Applied/Overflow decomposition is available to both the
+  // saturation trace below and, when learningMode is 'censored', to the
+  // expectation update's evidence classification.
   let stateAfterOutcome: CharacterState = { ...stateAfterNeedAdvance, memory: memoryStoreAfterRetrieval };
+  const boundedEffects = new Map<NeedId, BoundedEffectResult>();
   for (const eff of realized) {
     const current = stateAfterOutcome.needStates.get(eff.needId);
     if (!current) continue;
-    const raw = current.level.add(eff.realized).clamp(Rational.ZERO, Rational.ONE);
+    const bounded = applyBoundedEffect(current.level, eff.realized);
+    boundedEffects.set(eff.needId, bounded);
     const nextStates = new Map(stateAfterOutcome.needStates);
-    nextStates.set(eff.needId, { needId: eff.needId, level: raw });
+    nextStates.set(eff.needId, { needId: eff.needId, level: bounded.after });
     stateAfterOutcome = { ...stateAfterOutcome, needStates: nextStates };
   }
   trace.record(
@@ -207,6 +304,35 @@ function applyChosenAction(
         noiseHalfWidth: e.noiseHalfWidth.toCanonicalString(),
         noiseDraw: e.noiseDraw.toCanonicalString(),
         realized: e.realized.toCanonicalString(),
+      })) as any,
+    },
+  );
+
+  // Phase 2.5a: always compute and trace the Capacity/Applied/Overflow
+  // decomposition and the descriptive Experienced-Reward quantity, for
+  // every Need this Action's outcome table touched — regardless of
+  // learningMode, so the "what would censoring have seen" comparison is
+  // always available in the trace even when running in 'naive' mode.
+  // Reward = Applied + κ·Overflow — trace-only (Brief §23/§27); never
+  // added to Need state or Score(a) this phase. Not assumed necessary: see
+  // RESEARCH.md's Phase 2.5a entry for classification.
+  const saturationAnalysis: SaturationAnalysisEntry[] = [...boundedEffects].map(([needId, b]) => ({
+    needId,
+    applied: b.applied,
+    overflow: b.overflow,
+    saturated: b.saturated,
+    reward: b.applied.add(params.saturation.kappa.mul(b.overflow)),
+  }));
+  trace.record(
+    'saturation_analysis',
+    { learningMode: params.saturation.learningMode, kappa: params.saturation.kappa.toCanonicalString() },
+    {
+      perNeed: saturationAnalysis.map((s) => ({
+        needId: s.needId,
+        applied: s.applied.toCanonicalString(),
+        overflow: s.overflow.toCanonicalString(),
+        saturated: s.saturated,
+        reward: s.reward.toCanonicalString(),
       })) as any,
     },
   );
@@ -245,14 +371,41 @@ function applyChosenAction(
   let nextState = stateAfterOutcome;
   const needOutcomes: NeedOutcomeRecord[] = [];
   const predictionErrors: PredictionErrorRecord[] = [];
+  const surpriseEvidenceRecords: SurpriseEvidence[] = [];
+  // Phase 2.5e: the per-Need entries of this Experience's SemanticExperience
+  // (built below, only when salienceMode === 'derived') — collected in the
+  // same loop that already computes everything each entry needs, rather
+  // than recomputed separately.
+  const needObservationsForSemanticExperience: NeedObservation[] = [];
   for (const { def, urgency } of needCtxs) {
     const r = actualNeedResult(experience, def.needId);
     const prior = getExpectation(stateAfterNeedAdvance, chosen.subject, def.needId);
     const rho = observationPrecision(params.expectation, def.coreImportance, urgency);
-    const updateResult = updateExpectation(prior, params.expectation, params.deltaT, rho, r, event.occurredAt);
+    const bounded = boundedEffects.get(def.needId);
+    // Phase 2.5c: the OBJECTIVE evidence kind — what kind of observation
+    // this actually was — is classified unconditionally from the
+    // Capacity/Applied/Overflow decomposition, independent of
+    // `params.saturation.learningMode`. Salience's surprise measure always
+    // respects this (evidence semantics are a fact about what was
+    // observed, not a choice of learning algorithm); the LEARNING update
+    // below still only acts on it when `learningMode === 'censored'` —
+    // that toggle is about what the learning rule DOES with censored
+    // evidence, not about what kind of evidence it objectively was.
+    let objectiveEvidenceKind: EvidenceKind = 'point';
+    if (bounded?.saturated === 'ceiling') objectiveEvidenceKind = 'lower_bound';
+    else if (bounded?.saturated === 'floor') objectiveEvidenceKind = 'upper_bound';
+    const learningEvidenceKind: EvidenceKind = params.saturation.learningMode === 'censored' ? objectiveEvidenceKind : 'point';
+    const updateResult = updateExpectation(prior, params.expectation, params.deltaT, rho, r, event.occurredAt, learningEvidenceKind);
     nextState = withExpectation(nextState, chosen.subject, def.needId, updateResult.next);
     needOutcomes.push({ needId: def.needId, result: r });
     predictionErrors.push({ subject: chosen.subject, needId: def.needId, error: r.sub(prior.mu) });
+    surpriseEvidenceRecords.push({ kind: objectiveEvidenceKind, priorMu: prior.mu, observed: r });
+    needObservationsForSemanticExperience.push({
+      needId: def.needId,
+      applied: r,
+      evidenceKind: objectiveEvidenceKind,
+      surprise: surpriseMagnitude({ kind: objectiveEvidenceKind, priorMu: prior.mu, observed: r }),
+    });
     trace.record(
       'expectation_update',
       {
@@ -263,10 +416,13 @@ function applyChosenAction(
         actualResult: r.toCanonicalString(),
         observationPrecision: rho.toCanonicalString(),
         alpha: updateResult.alpha.toCanonicalString(),
+        evidenceKind: learningEvidenceKind,
+        objectiveEvidenceKind,
       },
       {
         mu: updateResult.next.mu.toCanonicalString(),
         tau: updateResult.next.tau.toCanonicalString(),
+        censoredRejected: updateResult.censoredRejected,
       },
     );
   }
@@ -274,9 +430,97 @@ function applyChosenAction(
   // Step 15: create episodic Memory. Semantic concepts are exactly the
   // concepts this Experience actually engaged: the Action itself, its
   // subject, its Location (if any), and whatever Context was active.
-  const semanticConcepts: ConceptKey[] = [asConceptKey(chosen.actionKey), chosen.subject];
-  if (experienceContext.location) semanticConcepts.push(experienceContext.location);
-  semanticConcepts.push(...experienceContext.activeConcepts);
+  //
+  // Phase 2.5b/c: when salienceMode is 'derived', run the full Brief §25
+  // pipeline instead of the flat co-activation weight of 1.0 every
+  // concept got before this phase existed. semanticConcepts (used for
+  // Memory tagging) becomes exactly the descriptor's PERCEIVED concepts —
+  // "was this in the character's Experience at all" — while
+  // experienceActivation (fed to updateAssociations) uses each concept's
+  // derived z_i, so a low-attention/incidental concept can be memory-tagged
+  // yet contribute almost nothing to associative learning (success
+  // criterion §14.2/§14.7: "association strength is no longer primarily
+  // determined by arbitrary tag count").
+  let semanticConcepts: ConceptKey[];
+  let semanticSalience: SemanticSalienceResult | null = null;
+  let semanticExperience: SemanticExperience | null = null;
+  const experienceActivation = new Map<ConceptKey, Rational>();
+
+  if (params.salienceMode === 'derived') {
+    // Phase 2.5c: build this Experience's EffectProvenance — what actually
+    // happened — instead of a hand-authored WorldEventDescriptor.
+    // `chosen.subjectRole` (an authored fact about THIS ACTION's semantic
+    // argument structure, e.g. Conversation->Participant) decides which
+    // provenance slot the subject fills; role and causal-connectedness are
+    // then both derived mechanically from that one provenance value.
+    const provenance: EffectProvenance =
+      experienceContext.worldEventOverride ?? {
+        sourceAction: asConceptKey(chosen.actionKey),
+        location: experienceContext.location ?? undefined,
+        activeContext: experienceContext.activeConcepts,
+        ...subjectRoleSlot(chosen.subjectRole, chosen.subject),
+      };
+    const descriptor = deriveWorldEventDescriptor(provenance);
+    const causallyConnected = causallyConnectedFromProvenance(provenance);
+    const needImpacts: NeedImpact[] = needOutcomes.map((o) => {
+      const ctx = needCtxs.find((c) => c.def.needId === o.needId);
+      return { needId: o.needId, delta: o.result, urgency: ctx?.urgency ?? Rational.ZERO };
+    });
+
+    semanticSalience = computeSemanticSalience(descriptor, causallyConnected, needImpacts, surpriseEvidenceRecords, params.salience);
+    semanticConcepts = semanticSalience.breakdown.filter((b) => b.perceived).map((b) => b.concept);
+    for (const b of semanticSalience.breakdown) {
+      if (b.perceived) experienceActivation.set(b.concept, b.z);
+    }
+    trace.record(
+      'semantic_salience',
+      { budgetMode: semanticSalience.budgetMode },
+      {
+        breakdown: semanticSalience.breakdown.map((b) => ({
+          concept: b.concept,
+          category: b.category,
+          role: b.role,
+          perceived: b.perceived,
+          baseSalience: b.baseSalience.toCanonicalString(),
+          roleWeight: b.roleWeight.toCanonicalString(),
+          attention: b.attention.toCanonicalString(),
+          needRelevance: b.needRelevance.toCanonicalString(),
+          surprise: b.surprise.toCanonicalString(),
+          raw: b.raw.toCanonicalString(),
+          z: b.z.toCanonicalString(),
+        })) as any,
+      },
+    );
+
+    // Phase 2.5e: package this Experience as the formalized
+    // SemanticExperience (model/semanticExperience.ts) — the consolidated,
+    // character-relative view Phase 3 (belief/appraisal) should consume
+    // instead of inspecting raw world-resolution data. Built from data
+    // already computed above; nothing here is a new computation.
+    semanticExperience = {
+      experienceId: experience.experienceId,
+      actor,
+      occurredAt: event.occurredAt,
+      action: chosen.actionKey,
+      provenance,
+      perceivedEvent: descriptor,
+      conceptEncodings: semanticSalience.breakdown.map((b) => ({
+        concept: b.concept,
+        category: b.category,
+        role: b.role,
+        perceived: b.perceived,
+        attention: b.attention,
+        salience: b.z,
+      })),
+      needObservations: needObservationsForSemanticExperience,
+      budgetMode: semanticSalience.budgetMode,
+    };
+  } else {
+    semanticConcepts = [asConceptKey(chosen.actionKey), chosen.subject];
+    if (experienceContext.location) semanticConcepts.push(experienceContext.location);
+    semanticConcepts.push(...experienceContext.activeConcepts);
+    for (const c of semanticConcepts) experienceActivation.set(c, Rational.ONE);
+  }
 
   const memoryEpisode = createMemory(
     `memory:${experience.experienceId}`,
@@ -293,11 +537,12 @@ function applyChosenAction(
   trace.record('memory_created', {}, { memoryId: memoryEpisode.memoryId, semanticConcepts: semanticConcepts as any });
 
   // Step 16: update associative structure — the SOLE mutation path for W
-  // (Brief §14). z_i = 1 for exactly the concepts this Experience engaged;
-  // 0 elsewhere. Needs are deliberately excluded from this Hebbian
-  // co-activation set (see model/associations.ts's module comment).
-  const experienceActivation = new Map<ConceptKey, Rational>();
-  for (const c of semanticConcepts) experienceActivation.set(c, Rational.ONE);
+  // (Brief §14). `experienceActivation` was already built above: flat
+  // z_i=1 for every engaged concept in 'legacy' mode (Phase 0-2.5a's
+  // unchanged behavior), or the derived per-concept z_i from
+  // computeSemanticSalience in 'derived' mode (Phase 2.5b). Needs are
+  // deliberately excluded from this Hebbian co-activation set (see
+  // model/associations.ts's module comment).
   const { graph: nextGraph, trace: assocTrace } = updateAssociations(
     nextState.associations,
     experienceActivation,
@@ -324,6 +569,9 @@ function applyChosenAction(
     nextState,
     experience,
     chosenAction: chosen.actionKey,
+    saturationAnalysis,
+    semanticSalience,
+    semanticExperience,
     trace: trace.build(),
     invariantViolations: violations,
   };
