@@ -12,6 +12,7 @@ import { MemoryPanel } from './ui/components/MemoryPanel';
 import { Phase2ExperimentsPanel } from './ui/components/Phase2ExperimentsPanel';
 import { SaturationPanel } from './ui/components/SaturationPanel';
 import { SaliencePanel } from './ui/components/SaliencePanel';
+import { DecisionPanel } from './ui/components/DecisionPanel';
 
 export default function App() {
   const engine = useEngine();
@@ -41,6 +42,7 @@ export default function App() {
           <Phase2ExperimentsPanel engine={engine} />
           <SaturationPanel engine={engine} />
           <SaliencePanel engine={engine} />
+          <DecisionPanel engine={engine} />
           <DeterminismPanel engine={engine} />
         </div>
         <div className="app__col app__col--trace">

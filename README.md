@@ -7,11 +7,12 @@ inspectable, and falsifiable, so findings from it can inform (but not dictate) V
 production architecture.
 
 This build covers **Phase 0 (Mathematical Kernel)**, **Phase 1 (Need-Satisfaction Learning)**,
-**Phase 2 (Associative Accessibility & Episodic Memory)**, and **Phase 2.5 (Experience Encoding,
-Semantic Salience, and Saturated Satisfaction) — CLOSED**, in five sub-phases: **2.5a (Saturated
+**Phase 2 (Associative Accessibility & Episodic Memory)**, **Phase 2.5 (Experience Encoding,
+Semantic Salience, and Saturated Satisfaction) — CLOSED**, in six sub-phases: **2.5a (Saturated
 Satisfaction & Censored Learning — RESOLVED)**, **2.5b (Semantic Salience — PARTIAL, corrected by
 2.5c)**, **2.5c (Experience Interpretation)**, **2.5d (Saturation/Salience Interaction — RESOLVED,
-DERIVED)**, and **2.5e (Architecture Consolidation & Behavioral Re-baseline — RESOLVED)** — plus an
+DERIVED)**, **2.5e (Architecture Consolidation & Behavioral Re-baseline — RESOLVED)**, and now
+**Phase 2.9 (Decision Authorship, Acquired Identity, and the Role of Dice — RESOLVED)** — plus an
 interactive SPA for running experiments against them. Phase 2.5c is a small integration phase: it
 makes causal role (`EffectProvenance`/`deriveWorldEventDescriptor`), attention (residual-pool
 derivation), and surprise (evidence-kind-aware `SurpriseEvidence`) fully mechanical, closing the three
@@ -34,7 +35,37 @@ Habit and Avoidance's floor-boundary extension — are REFINED, zero RETRACTED o
 `SemanticExperience` (`model/semanticExperience.ts`, new) formalizes the character-relative record
 Phase 3 should consume, with Overflow deliberately excluded from it by design. See RESEARCH.md's Phase
 2.5a Correction 2, Phase 2.5b Correction, Phase 2.5c entry, Phase 2.5d entry, and Phase 2.5e entry for
-the full account. Phases 3–6 (personality/belief/
+the full account. Phase 2.9 then adds a genuinely new construct on top of that consolidated
+foundation, motivated by a gameplay loop discovered ahead of Vivarium's own use of this model: a
+`Decision` (`model/decision.ts`, new) — a small, explicitly-authored set of Options, each backed by
+dice calibrated from existing Need/accessibility/identity pressures — with an exact pre-roll
+probability calculus (Margin, Contest, Stake, AuthorshipPotential) telling us how unresolved and how
+meaningful a Decision is *before* any die is thrown, and a biographical-evidence loop
+(`model/identity.ts`, new) by which repeated meaningful choices — never an authored trait assignment —
+consolidate into durable acquired identity, which then feeds back as one more (never dictating)
+pressure on future Decisions. `runDecisionCycle` (`model/cycle.ts`) is a new, parallel entry point to
+ordinary autonomous cycles, sharing their existing outcome/learning/memory/association tail rather
+than replacing any of it. All eleven of the brief's required lettered experiments (A–K) run against
+real output; the most notable finding is a proven mathematical impossibility (identity cannot rescue
+an Option raw Need pressure has already ruled out) rather than a tuning limitation — see RESEARCH.md's
+Phase 2.9 entry for the full account, including the `winProbabilities` fair-tie-share proof, the
+die-ratio/consolidation-ceiling finding, self-stabilization and its contradiction-resisting mirror
+image, and the seed-divergence flagship demonstration. **Phase 2.95 (Reason Consolidation & Identity
+Fault Lines — RESOLVED)** then corrects two of Phase 2.9's own findings after an external review
+identified their real cause: identity's contribution was assembled into its own separately-floored
+Influence, so it could never combine with an already-present but individually sub-floor Need signal on
+the same topic to jointly clear `thetaInfluenceFloor` — Phase 2.9's own Experiment I write-up had
+already, unknowingly, proven this "all-or-nothing" behavior mathematically. `model/decision.ts`'s new
+`sumRawBySemanticChannel`/`boundAndFloorChannels`/`boundAllChannels` and `model/identity.ts`'s new
+`identityFeedbackRawInfluences` fold identity's raw per-channel pull into the SAME consolidation pool
+as Need/accessibility, bound-and-floored together exactly once, while a separate, non-floor-filtered
+map preserves Brief §23's no-double-counting rule for identity's own evidence generation. All five of
+the review's required target behaviors (A–E) — gradual influence, weak-signal combination, a real
+(narrowing, not cancelling or flipping) identity fault line, transformation under sustained
+contradiction with feedback active, and canonical trait acquisition with feedback on from zero — now
+run against real output; see RESEARCH.md's Phase 2.95 entry for the fix's architecture, every target's
+real numbers, and the honest scoping of what a five-band discrete die scale still cannot make perfectly
+continuous. Phases 3–6 (personality/belief/
 social appraisal, derived Values, acquired Needs/addiction, and distillation) are intentionally not
 built yet — see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically
 motivates Phase 3.
@@ -84,9 +115,15 @@ src/
     event.ts        EventId/EventClock — logical ticks, never wall time (§6)
     trace.ts        TraceBuilder / CognitiveCycleTrace / traceHash (§30)
     stateHash.ts    canonical JSON stringify + hash, used for trace/state fingerprints
-    linalg.ts       [Phase 2] exact Gaussian elimination, fixed pivot rule (§16, §32)
+    linalg.ts       [Phase 2] exact Gaussian elimination, fixed pivot rule (§16, §32);
+                    [Phase 2.9] dot/quadraticForm — small compositions reused by identity.ts's trait
+                    projection, and reusable verbatim by Phase 3's latent-personality projection
+    discreteDistribution.ts [Phase 2.9] exact integer-support rational-PMF primitive: uniformDie/
+                    pointMass/convolve/convolveAll, CdfTable, expectedValue/totalProbability, and
+                    winProbabilities — exact fair-tie-share pre-roll win probabilities for K
+                    independent RollScore distributions, validated against brute-force enumeration
 
-  model/         Phase 1 + Phase 2 + Phase 2.5a-e — the character
+  model/         Phase 1 + Phase 2 + Phase 2.5a-e + Phase 2.9 — the character
     types.ts        shared semantic vocabulary (Concept, ConceptCategory) (§13)
     needs.ts        Need, Level/Deficit/Urgency (§10); [Phase 2.5a] applyBoundedEffect — the
                     Capacity/Applied/Overflow decomposition (§16, §27)
@@ -104,7 +141,10 @@ src/
                     → Participant, Attack-like → Cause), read by cycle.ts to build EffectProvenance
     choice.ts       bounded choice weight, probability distribution, deterministic selection (§24)
     outcome.ts      world outcome resolution with seeded, addressed noise
-    character.ts    CharacterState (§8: N_t, E_t, [Phase 2] W_t, M_t)
+    character.ts    CharacterState (§8: N_t, E_t, [Phase 2] W_t, M_t); [Phase 2.9] identityEvidence
+                    (ReadonlyMap<IdentityExpressionChannelId, IdentityEvidenceState>, defaulting absent
+                    channels to zero support/opposition) and decisionHistory (readonly
+                    DecisionExpression[], unbounded — full inspectability, per Brief §36)
     cycle.ts        the cognitive-cycle orchestrator (§25), autonomous + scripted + idle variants;
                     doc comment tracks exactly which of the 20 steps run vs. are skipped, per phase;
                     [Phase 2.5a] SaturationParams, saturation_analysis trace step, trace-only
@@ -117,9 +157,58 @@ src/
                     [Phase 2.5e] CycleResult.semanticExperience — packages the same per-Experience data
                     as a formalized SemanticExperience (model/semanticExperience.ts) whenever
                     salienceMode is 'derived', alongside the existing semanticSalience/saturationAnalysis
-                    fields (kept for research/UI granularity and the world-truth ledger, respectively)
+                    fields (kept for research/UI granularity and the world-truth ledger, respectively);
+                    [Phase 2.9] `applyChosenAction` is now exported (the one visibility change on
+                    existing code this phase needed); new `runDecisionCycle` — a sibling entry point to
+                    `runAutonomousCycle`/`runScriptedExperience` for an explicitly-authored Decision,
+                    sharing the same exported tail once a winning Option resolves; assembles per-Option
+                    DecisionInfluences from Need urgency/accessibility/(when enabled) identity
+                    consistency, hands off to decision.ts for resolution, then folds the resulting
+                    DecisionExpression's IdentityExpressions into `state.identityEvidence` and appends
+                    it to `state.decisionHistory`; [Phase 2.95] `runDecisionCycle` rewritten around a
+                    two-map separation fixing the review's floor-rescue finding: a Need/accessibility-
+                    only bounded (not floor-filtered) map per option is built first and used
+                    EXCLUSIVELY for identity's own expression/evidence generation (no double-counting,
+                    Brief §23); separately, each option's raw Need/accessibility pool is merged with
+                    identity's raw per-channel pull (via `identity.ts::identityFeedbackRawInfluences`,
+                    when enabled) into ONE pool, bound-and-floored exactly once via
+                    `decision.ts::sumRawBySemanticChannel`/`boundAndFloorChannels` — this is what
+                    actually becomes the DecisionInfluence[] driving dice/resolution
+    decision.ts     [Phase 2.9, new] pure Decision math — Option/Decision/DecisionInfluence,
+                    DieScaleParams/DecisionParams, strengthToDie, resolveDecision (exact pre-roll
+                    win probabilities via discreteDistribution.ts, Margin/Contest/ConflictMass/Stake/
+                    AuthorshipPotential, resolution-mode classification, and — for a rolled Decision —
+                    the actual counter-addressed dice roll with deterministic tie-break),
+                    DecisionExpression (the brief's §18 biographical-evidence record). Takes
+                    already-assembled DecisionInfluence[] as input, same layering discipline choice.ts
+                    already uses; does not import activation.ts/actions.ts/character.ts;
+                    [Phase 2.95, new] RawReasonInfluence (a pre-`boundedResponse` raw pressure record
+                    tagged by SemanticReasonChannelId) + `sumRawBySemanticChannel` (sums raw pressure
+                    by channel, exposed on its own so a caller can fold MORE raw pressure — identity's
+                    own feedback — into the pool before anyone bounds or floors it) + `boundAndFloorChannels`
+                    (bounds then floor-filters — the dice-eligible result) + `boundAllChannels` (dense,
+                    bounded, NOT floor-filtered — used only where a channel's meaning must not be gated
+                    by dice-eligibility, i.e. identity's own Alignment/evidence generation)
+    identity.ts     [Phase 2.9, new] IdentityExpressionChannelId (the brief's §15 candidate channel
+                    list) + CHANNEL_ORDER (its one canonical ordering); IdentityEvidenceState +
+                    updateIdentityEvidence (Support/Opposition accumulation, quantized on commit);
+                    identityStrength/identityConfidence; IdentityTrait + projectTrait (via
+                    linalg.ts::quadraticForm) + isConsolidated; [Phase 2.95, rewritten] Alignment/
+                    TaggedPressure now read from `BoundedSemanticPressure` (dense, bounded, NOT
+                    floor-filtered — `decision.ts::boundAllChannels`'s output) keyed by
+                    SemanticReasonChannelId, against the authored `defaultSemanticReasonPolarity()`
+                    table (`scenario.ts`), rather than from floor-surviving DecisionInfluence[] as in
+                    Phase 2.9 — the fix that lets a weak Need signal and weak identity evidence on the
+                    same channel be seen as one combined pressure for Alignment purposes even before
+                    either individually clears the dice floor; `identityConsistency` kept (same
+                    exported name) purely for trace/display; new `identityFeedbackRawInfluences` is the
+                    actual Phase 2.95 mechanism — maps each channel's Alignment-weighted pull directly
+                    to a `RawReasonInfluence` tagged `identity:<channel>` for cycle.ts to fold into its
+                    shared raw pool
     invariants.ts   runtime invariant checks (§6 "VALIDATE INVARIANTS"), incl. [Phase 2] row-
-                    substochastic association invariant
+                    substochastic association invariant; [Phase 2.9] Support/Opposition
+                    non-negativity and IdentityStrength/IdentityConfidence range checks for every
+                    stored IdentityEvidenceState, checked every cycle like every other invariant here
     scenario.ts     the default Mina/Glen/Priya scenario and its authored constants; [Phase 2.5a]
                     defaultSaturationParams(); [Phase 2.5b] defaultSalienceParams(), OBJECT_LAMP,
                     LOCATION_BAKERY; [Phase 2.5c] every ActionDef now declares subjectRole
@@ -127,7 +216,17 @@ src/
                     [Phase 2.5e] defaultSaturationParams()/defaultCycleParams() now return the
                     CANONICAL settings (censored learning, derived salience) — legacySaturationParams()/
                     legacyCycleParams() (new) hold the retired naive/flat-weight baseline under its own
-                    name for historical/control comparisons
+                    name for historical/control comparisons; [Phase 2.9] defaultDecisionParams(),
+                    defaultDecisionScenario() (a second character-state
+                    factory, contested-by-construction on both new Decision axes),
+                    dinnerVsWorkDecision()/speakUpVsStayQuietDecision()/crossAxisFaultLineDecision(),
+                    decisionOutcomeTables(), and the new Achievement/Recognition/Security Need axes plus
+                    ACTION_KEEP_DINNER_PROMISE/ACTION_STAY_AT_WORK/ACTION_SPEAK_UP/ACTION_STAY_QUIET;
+                    [Phase 2.95] defaultSemanticReasonPolarity()/defaultReasonChannelMapping() are the
+                    canonical (semantic-channel-keyed) replacement for Phase 2.9's original
+                    `defaultReasonChannelPolarity()`, which is now removed — every `runDecisionCycle`
+                    call site takes both; defaultDecisionCycleParams() bundles a full CycleParams for
+                    Phase 2.95's experiments
     semanticExperience.ts [Phase 2.5e] SemanticExperience, ConceptEncoding, NeedObservation — the
                     formalized character-relative record of one Experience Phase 3 should consume;
                     deliberately has no Overflow field anywhere (see its own module doc)
@@ -166,15 +265,56 @@ src/
                                computeSemanticSalience with hand-picked inputs; no UI runner (this
                                phase's four cases are validated directly by
                                phase2_5dSaturationSalienceInteraction.test.ts — see Testing philosophy)
+    decisionResolution.ts      [Phase 2.9] Experiments A, B, C, D, K — one shared "two-option decision"
+                               harness (`runDecisionSample`) against `defaultDecisionScenario()`, each
+                               case overriding NeedExpectation/NeedLevel to land in the specific
+                               Auto/QuietRoll/PlayerFacingRoll regime its letter needs; K reuses D's
+                               contested setup plus a forcedOutcomeOverride to separate ChosenIntent
+                               from the physically executed Action
+    identityFormation.ts      [Phase 2.9] Experiments E, G, H, I, J — a "run N Decisions on one axis,
+                               record the trajectory" harness (`runRepeatedRounds`), resetting only the
+                               Need levels/NeedExpectation each round so identityEvidence/
+                               decisionHistory carry forward as a real biography would; every claim that
+                               "identity specifically causes this" is checked as a measured
+                               `identityFeedbackEnabled: true` vs. `false` difference, never assumed
+    seedDivergence.ts          [Phase 2.9] Experiment F (the flagship claim) — two independently-seeded
+                               parallel character timelines through an identical genuinely-ambiguous
+                               Decision sequence, checking every link of "different early rolls →
+                               different choices → different acquired identity → different later
+                               probabilities" against real output, the same paired-timeline discipline
+                               counterfactual.ts established for Glen-vs-Priya, applied to a different
+                               independent variable (RNG seed instead of which subject was visited)
+    reasonConsolidation.ts     [Phase 2.95, new] Targets A-E — the external review's required
+                               verification suite for the consolidation fix: gradual identity influence
+                               across a wide identity-evidence sweep, weak-signal combination (an
+                               explicit floor-rescue demonstration, with an isolated "identity alone
+                               would be too weak too" control), a real (narrowing, not cancelling or
+                               flipping) identity fault line, transformation under sustained
+                               contradiction with `identityFeedbackEnabled` left ON throughout (no
+                               ablation, unlike Experiment J), and canonical trait acquisition with
+                               feedback on from a completely fresh, zero-evidence scenario — every case
+                               against real `runDecisionCycle` output, each parameter set found by the
+                               same empirical-search discipline as every other experiment file here
 
   ui/            React SPA — visualizes and drives everything above
-    state/useEngine.ts        the only place React meets the model
+    state/useEngine.ts        the only place React meets the model; [Phase 2.9] decisionParams +
+                               updateDecisionParams, and one result-holder field + run*UI callback per
+                               Phase 2.9 experiment (A, B, C, D, K, E, G, H, I, J, F); [Phase 2.95] five
+                               more result-holder fields (targetAResult-targetEResult) + run*UI
+                               callback per reasonConsolidation.ts target, same self-contained
+                               read-only-probe shape as every other experiment callback here
     components/               NeedPanel, ExpectationPanel, ActionPanel, ModelParamsPanel,
                                DeterminismPanel, TraceViewer, CounterfactualPanel, Slider, Bar,
                                [Phase 2] AssociationPanel, MemoryPanel, Phase2ExperimentsPanel,
                                [Phase 2.5a] SaturationPanel, [Phase 2.5b/c] SaliencePanel (no
                                "unattended" column since 2.5c — Scenario F shows two Incidental-
-                               count variants instead)
+                               count variants instead), [Phase 2.9] DecisionPanel — DecisionParams
+                               sliders/toggle, grouped run-buttons and result rendering for all eleven
+                               lettered experiments, following SaturationPanel's own
+                               table/badge/Rational-rendering conventions; [Phase 2.95] DecisionPanel
+                               extended with a fifth run-button group ("Reason consolidation — Targets
+                               A-E") rendering each target's DecisionExpression(s)/repeated-round
+                               summaries alongside its own required verification flags
 
   test/          Vitest unit tests, one file per proof obligation area (§32); phase2_5Salience.test.ts
                  (Brief §14 criteria + §13 scenarios), phase2_5cExperienceInterpretation.test.ts
@@ -185,7 +325,15 @@ src/
                  Brief §24 and Phase 2.5 itself), and semanticExperience.test.ts (Phase 2.5e's
                  SemanticExperience: null under legacy mode, agrees with the granular
                  semanticSalience/saturationAnalysis fields it's packaged from, and structurally
-                 excludes Overflow)
+                 excludes Overflow), and [Phase 2.9] discreteDistribution.test.ts (winProbabilities
+                 validated against brute-force enumeration), phase2_9Decision.test.ts,
+                 phase2_9Identity.test.ts, phase2_9CycleIntegration.test.ts (runDecisionCycle's own
+                 glue, end-to-end), phase2_9DecisionResolution.test.ts,
+                 phase2_9IdentityFormation.test.ts, and phase2_9SeedDivergence.test.ts (one per
+                 experiment file, asserting every lettered experiment's brief §30 verification
+                 bullets against real run output), and [Phase 2.95]
+                 phase2_95ReasonConsolidation.test.ts (Targets A-E asserted against real
+                 reasonConsolidation.ts output, same convention as the Phase 2.9 experiment-file tests)
 ```
 
 ## Running it
@@ -238,6 +386,16 @@ No environment variables, no backend, no network calls at runtime.
   (Brief §24) rather than a reusable exploratory tool a user would want to re-run with different
   sliders, so they are asserted directly in `phase2_5dSaturationSalienceInteraction.test.ts` and
   reported with real numbers in RESEARCH.md's Phase 2.5d entry instead.
+- **Phase 2.9 experiment runners (`DecisionPanel`)** — sliders for every `DecisionParams` threshold
+  (die-scale weak/moderate/strong/veryStrong/extreme, θ_roll/θ_player/θ_trait/θ_confidence, K_I/K_C)
+  and a toggle for the `identityFeedbackEnabled` ablation, plus one run-button per lettered experiment
+  (A, B, C, D, K, E, G, H, I, J, F), each rendering the resolved DecisionExpression(s) — Options and
+  their pre-roll probabilities, Margin/Contest/Stake/AuthorshipPotential, resolution mode, any dice
+  actually rolled, chosen Option vs. chosen Intent, and Identity Expression/Update — alongside the
+  experiment's own required verification flags as pass/warn badges. [Phase 2.95] adds a fifth
+  run-button group, "Reason consolidation — Targets A-E," in the same panel: one button per external-
+  review target behavior, rendering the same DecisionExpression/repeated-round-summary views alongside
+  each target's own required verification flags.
 - **Visible state** — live Need level/deficit/urgency bars, the learned μ/τ/confidence for every
   (subject, Need) pair Mina has ever experienced, the most recent choice probability distribution,
   the full association graph as a heatmap with live row sums, the last computed spreading-
@@ -380,6 +538,72 @@ No environment variables, no backend, no network calls at runtime.
   keeps its own home (`CycleResult.saturationAnalysis`), and `semanticSalience` remains on `CycleResult`
   unchanged for research/UI granularity — `semanticExperience` is the new consumer-facing consolidation,
   and the interface Phase 3's belief/appraisal system should read instead of inspecting raw world data.
+- **Phase 2.9 deliberately builds no latent personality vector (P).** The master Brief assigns P to
+  Phase 3, bundled with beliefs/social appraisal; none of Experiments A–K need it as a
+  DecisionInfluence source. Brief §35's "no legal transition mutates the 7-dimensional personality
+  vector" obligation is recorded as **vacuously satisfied** — the vector doesn't exist yet — rather
+  than tested against nonexistent state, and Brief §23's "avoid double-counting personality" warning
+  is preserved as a documented future constraint in `decision.ts`'s own module comment for whenever
+  Phase 3 adds P and a personality-sourced Influence becomes possible.
+- **`Decision` is a new, parallel front-end to Action selection, never a replacement for
+  `choice.ts`'s softmax pipeline.** Ordinary autonomous cycles keep choosing among accessibility-
+  filtered candidates exactly as before Phase 2.9; `runDecisionCycle` is a sibling entry point used
+  only for an explicitly-authored small-Option dilemma, sharing the same `applyChosenAction` tail
+  (now exported) once a winning Option resolves — the one real visibility change this phase made to
+  pre-existing code. An Option's identity is its backing `ActionDef.actionKey` (no new branded
+  `OptionId`); a `DecisionId` reuses `SimEvent.eventId` directly, exactly how `Experience`/`Memory`
+  already reuse `event.eventId` rather than minting a parallel scheme.
+- **`identityFeedbackEnabled` is a same-seed, same-sequence ablation switch, not a final-product
+  toggle.** Because `runDecisionCycle` shares `applyChosenAction`'s tail, repeatedly choosing the same
+  Option also strengthens ordinary Hebbian association accessibility for that Option — a second,
+  pre-existing reinforcement pathway running alongside the new IdentityConsistency influence. Setting
+  `identityFeedbackEnabled: false` re-runs an identical seeded Decision sequence with the
+  IdentityConsistency influence channel omitted, so every "identity specifically causes this" claim in
+  RESEARCH.md's Phase 2.9 entry is a measured difference between two real runs, never an assumption —
+  the same paired-timeline discipline `experiments/counterfactual.ts` established for Glen-vs-Priya,
+  applied to a new independent variable.
+- **Identity's own `Alignment` formula has a proven ceiling: it can never exceed an Option's own raw
+  tagged pressure.** Because `Alignment(o,k) = boundedResponse(TaggedPressure(o,k) − Σ_others)` and
+  `boundedResponse(x) < x` for all `x > 0`, no identity strength — however large — can ever add a
+  surviving die to an Option whose own raw Need pressure already sits below `thetaInfluenceFloor`.
+  This was discovered empirically while building Experiment I (see RESEARCH.md's Phase 2.9 entry) and
+  is now a directly-checked invariant (`identityCannotRescueAFlooredOption`), not merely an assumption
+  behind that experiment's design. **Phase 2.95 narrows this claim's scope**: it was a true
+  architectural fact under Phase 2.9's independent-per-source-floor design, but Target B is a direct
+  counterexample to it as a UNIVERSAL claim — two individually-sub-floor signals CAN now jointly clear
+  the floor when they land on the same semantic channel and are consolidated together before either is
+  checked against `thetaInfluenceFloor`. Experiment I's own specific numbers are unaffected (its
+  obvious-baseline setup still resolves to `Contest=0` with or without identity feedback — verified
+  directly, not assumed, after the architecture change), because that experiment's particular
+  RiskAcceptance/Recognition combination still doesn't cross the floor even combined — but the general
+  mathematical impossibility argument itself no longer holds as an architectural invariant, only as an
+  empirical fact about that one parameter regime.
+- **Phase 2.95 folds identity's raw per-channel pull into the SAME semantic-channel consolidation pool
+  as Need/accessibility, rather than assembling it as its own separately-floored Influence** — the fix
+  for the "all-or-nothing" behavior an external review traced Phase 2.9's own floor-rescue-impossibility
+  proof to. The key design insight is a two-map separation: a Need/accessibility-only bounded (never
+  floor-filtered) map is used exclusively for identity's own expression/evidence generation (preserving
+  Brief §23's no-double-counting rule — identity's own feedback must never feed back into producing MORE
+  identity evidence for the same channel), while a separate, per-option merged raw pool (Need/
+  accessibility plus identity's raw pull, when enabled) is bound-and-floored exactly once for the
+  DecisionInfluence[] that actually drives dice and resolution. See RESEARCH.md's Phase 2.95 entry for
+  all five of the review's required target behaviors, verified against real output.
+- **Die-bracket quantization is inherent to this reference model and Phase 2.95 does not remove it.**
+  The pre-bracket consolidated Rational value is, by construction, a smooth, continuous, monotonically
+  saturating sum run through one shared `boundedResponse` call — but `strengthToDie`'s five authored
+  discrete bands (Brief §8) mean resolved PROBABILITY still jumps at bracket boundaries. What Phase 2.95
+  changes is which side of an existing boundary a combined signal lands on (making a previously-
+  unreachable combination reachable at all), never "make dice continuous" — Target A's own sweep is
+  the direct empirical demonstration of this honest limit.
+- **An established identity's resistance to behavioral contradiction (Phase 2.9's Experiment J finding)
+  survives Phase 2.95 unchanged as a general phenomenon — only the specific bias level needed to
+  overcome it changed.** Running Experiment J's own contradiction bias with feedback left on still
+  produces rising, not falling, strength under Phase 2.95 (confirmed directly, not assumed) — the
+  consolidation fix does not make identity weaker or less self-protective. What it does is let a
+  MODEST (one die-bracket, not an order-of-magnitude) increase in the contradiction's own raw pressure
+  win consistently enough to actually erode a consolidated trait with feedback active throughout, where
+  under Phase 2.9's architecture no feedback-on parameter regime achieved this at all. See RESEARCH.md's
+  Phase 2.95 entry, Target D, for the round-by-round finding.
 
 ## Testing philosophy
 
@@ -492,3 +716,52 @@ falsifiable by experiment). The test suite is organized the same way:
   structural rather than incidental; and `legacyCycleParams()`/`defaultCycleParams()` are checked
   against each other by identity (naive+legacy vs. censored+derived) so the re-baseline itself can't
   silently drift.
+- `discreteDistribution.test.ts` checks Phase 2.9's **exact discrete-distribution kernel primitive**:
+  `totalProbability` equals `Rational.ONE` exactly across a range of die convolutions (Brief §35's
+  normalization obligation, asserted directly); a hand-computed d4+d6 convolution checked bucket by
+  bucket; and — the single most important test in the phase, since it's the only place the tie-share
+  formula is checked against ground truth rather than against itself — `winProbabilities` validated
+  against **brute-force enumeration** over every combination of die faces for small K/N, plus a direct
+  check that the general K-option formula reduces algebraically to the textbook two-option formula.
+- `linalg.test.ts` (extended) checks Phase 2.9's new `dot`/`quadraticForm` compositions against
+  hand-computed values — the same shape Phase 3's latent-personality trait projection will reuse
+  verbatim.
+- `phase2_9Decision.test.ts` checks Decision resolution's **mathematical proof obligations**: die-
+  threshold boundaries and floor-dropping (`strengthToDie`), Margin/Contest/Stake/AuthorshipPotential
+  bounds (§35), resolution-mode boundary behavior at `thetaRoll`/`thetaPlayer`, and deterministic
+  replay (same address ⇒ same roll; an unrelated draw elsewhere has no effect) — the same determinism
+  style `random.test.ts` already established.
+- `phase2_9Identity.test.ts` checks `identity.ts`'s **formulas directly against hand-built fixtures**
+  (not live `runDecisionCycle` output, which the phase2_9IdentityFormation/DecisionResolution/
+  SeedDivergence files below cover): IdentityStrength/Confidence bounds, the Alignment formula's three
+  designed properties (near-zero on a low-conflict decision, positive when the chosen Option's own
+  tagged pressure wins, negative when the losing Option carried the tagged pressure instead), trait
+  consolidation threshold logic, and quantization-on-commit. [Phase 2.95, rewritten] fixtures now build
+  `BoundedSemanticPressure` (dense, semantic-channel-keyed maps) via a `pressure()` helper instead of
+  `DecisionInfluence[]`, matching Alignment/touchedChannels' new signatures; a new
+  `identityFeedbackRawInfluences` describe block covers the Phase 2.95 mechanism directly.
+- `phase2_9CycleIntegration.test.ts` checks that `cycle.ts::runDecisionCycle`'s own GLUE — assembling
+  real DecisionInfluences from live CharacterState, folding identity evidence back into
+  `state.identityEvidence`, and handing off to the shared `applyChosenAction` tail — actually works
+  end-to-end against `defaultDecisionScenario()`, complementing `phase2_9Decision.test.ts`/
+  `phase2_9Identity.test.ts`'s direct checks of `decision.ts`/`identity.ts`'s pure math against
+  hand-built fixtures.
+- `phase2_9DecisionResolution.test.ts`, `phase2_9IdentityFormation.test.ts`, and
+  `phase2_9SeedDivergence.test.ts` run the brief's own **required Experiment Suite (A–K)** as
+  assertions against real `runDecisionCycle` output, mirroring every prior phase's
+  "regression-tested claim, not demo behavior to eyeball" discipline — one file per experiment-file
+  grouping (`decisionResolution.ts`'s A/B/C/D/K, `identityFormation.ts`'s E/G/H/I/J,
+  `seedDivergence.ts`'s F), each asserting every verification bullet Brief §30 requires for its
+  lettered experiments, against the exact numbers documented in RESEARCH.md's Phase 2.9 entry.
+- `phase2_95ReasonConsolidation.test.ts` runs the external review's **five required target behaviors
+  (A-E)** as assertions against real `reasonConsolidation.ts` output, the same "regression-tested
+  claim, not demo behavior to eyeball" discipline as every phase before it: gradual, monotonic,
+  never-fully-dictating identity influence across a wide sweep (A); neither weak Need pressure nor weak
+  identity evidence alone clearing the influence floor, but doing so consolidated together, with a
+  resolution-mode change (Auto → PlayerFacingRoll) as the concrete evidence (B); Contest genuinely
+  rising without the decision reversing or collapsing (C); a consolidated trait surviving acquisition
+  and then un-consolidating under sustained contradiction with identity feedback left on throughout,
+  no ablation (D); and trait consolidation from a completely fresh, zero-evidence scenario under the
+  ordinary feedback-on loop, with an explicit check that the run has genuinely stabilized before its
+  final round rather than merely still trending (E) — against the exact numbers documented in
+  RESEARCH.md's Phase 2.95 entry.

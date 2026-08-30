@@ -20,6 +20,22 @@ import { ActivationParams, ActivationVector } from '../../model/activation';
 import { AssociationLearningParams } from '../../model/associations';
 import { MemoryCycleParams, ScoredMemory } from '../../model/memory';
 import { CycleParams, CycleResult, ExperienceContext, SaturationAnalysisEntry, SaturationParams, runAutonomousCycle, runIdleTick, runScriptedExperience } from '../../model/cycle';
+import { DecisionParams } from '../../model/decision';
+import { runExperimentA_ResidualUncertainty, ExperimentAResult, runExperimentB_ObviousChoice, ExperimentBResult, runExperimentC_TrivialUncertainty, ExperimentCResult, runExperimentD_MeaningfulConflict, ExperimentDResult, runExperimentK_IntentVersusOutcome, ExperimentKResult } from '../../experiments/decisionResolution';
+import { runExperimentE_TraitAcquisition, ExperimentEResult, runExperimentG_IdentityFeedback, ExperimentGResult, runExperimentH_SelfStabilization, ExperimentHResult, runExperimentI_IdentityFaultLine, ExperimentIResult, runExperimentJ_Contradiction, ExperimentJResult } from '../../experiments/identityFormation';
+import { runExperimentF_SeedDivergence, SeedDivergenceResult } from '../../experiments/seedDivergence';
+import {
+  runExperimentGradualIdentityInfluence,
+  ExperimentGradualIdentityInfluenceResult,
+  runExperimentWeakSignalCombination,
+  ExperimentWeakSignalCombinationResult,
+  runExperimentRealFaultLine,
+  ExperimentRealFaultLineResult,
+  runExperimentTransformationWithFeedback,
+  ExperimentTransformationWithFeedbackResult,
+  runExperimentCanonicalAcquisitionWithFeedback,
+  ExperimentCanonicalAcquisitionWithFeedbackResult,
+} from '../../experiments/reasonConsolidation';
 import { SalienceParams, SemanticSalienceResult } from '../../model/salience';
 import { Experience } from '../../model/experience';
 import {
@@ -40,6 +56,7 @@ import {
   defaultActivationParams,
   defaultAssociationLearningParams,
   defaultCycleParams,
+  defaultDecisionParams,
   defaultExperienceContext,
   defaultMemoryParams,
   defaultNeedDefs,
@@ -96,6 +113,10 @@ export interface EngineSnapshot {
   readonly saturationParams: SaturationParams;
   readonly salienceMode: 'legacy' | 'derived';
   readonly salienceParams: SalienceParams;
+  /** Phase 2.9 — present on every snapshot regardless of whether a
+   * Decision has ever been run, mirroring `saturationParams`/
+   * `salienceParams` already being unconditionally present. */
+  readonly decisionParams: DecisionParams;
   readonly deltaT: Rational;
   readonly worldFlags: ReadonlySet<string>;
   readonly eveningActive: boolean;
@@ -115,6 +136,30 @@ export interface EngineSnapshot {
   readonly memoryAccessibilityResult: MemoryAccessibilityResult | null;
   readonly saturatedSatisfactionResult: SaturatedSatisfactionResult | null;
   readonly saturationCounterfactualResult: SaturationCounterfactualResult | null;
+  /** Phase 2.9 — Brief §30's required Decision/Identity experiment suite.
+   * Optional, absent until the corresponding button is pressed (mirrors
+   * `lastSemanticSalience`-style optional-until-run fields elsewhere in this
+   * snapshot, kept `?:` rather than `| null` since there is no meaningful
+   * "explicitly cleared" state distinct from "never run"). */
+  readonly expAResult?: ExperimentAResult;
+  readonly expBResult?: ExperimentBResult;
+  readonly expCResult?: ExperimentCResult;
+  readonly expDResult?: ExperimentDResult;
+  readonly expKResult?: ExperimentKResult;
+  readonly expEResult?: ExperimentEResult;
+  readonly expGResult?: ExperimentGResult;
+  readonly expHResult?: ExperimentHResult;
+  readonly expIResult?: ExperimentIResult;
+  readonly expJResult?: ExperimentJResult;
+  readonly expFResult?: SeedDivergenceResult;
+  /** Phase 2.95 — the external review's five reason-consolidation target
+   * behaviors (experiments/reasonConsolidation.ts), same optional-until-run
+   * convention as the Phase 2.9 experiment fields above. */
+  readonly targetAResult?: ExperimentGradualIdentityInfluenceResult;
+  readonly targetBResult?: ExperimentWeakSignalCombinationResult;
+  readonly targetCResult?: ExperimentRealFaultLineResult;
+  readonly targetDResult?: ExperimentTransformationWithFeedbackResult;
+  readonly targetEResult?: ExperimentCanonicalAcquisitionWithFeedbackResult;
 }
 
 const HISTORY_LIMIT = 40;
@@ -147,6 +192,7 @@ export function useEngine() {
       saturationParams: config.cycleParams.saturation,
       salienceMode: config.cycleParams.salienceMode,
       salienceParams: config.cycleParams.salience,
+      decisionParams: config.cycleParams.decision,
       deltaT: config.cycleParams.deltaT,
       worldFlags: defaultWorldFlags(),
       eveningActive: false,
@@ -180,6 +226,7 @@ export function useEngine() {
       saturation: s.saturationParams,
       salienceMode: s.salienceMode,
       salience: s.salienceParams,
+      decision: s.decisionParams,
     }),
     [],
   );
@@ -505,6 +552,87 @@ export function useEngine() {
     setSnapshot((prev) => ({ ...prev, semanticSalienceScenarioResult: runAllSemanticSalienceScenarios(prev.salienceParams) }));
   }, []);
 
+  /**
+   * Phase 2.9 — Brief §30's eleven required Decision/Identity/Seed-
+   * divergence experiments (Experiments A-K). Every one of these, like the
+   * Phase-2 and Phase-2.5a experiments above, is a self-contained read-only
+   * probe: each function below builds its own `defaultDecisionScenario()`
+   * baseline internally and takes no arguments from the live engine
+   * snapshot (unlike e.g. `runHabitExperimentUI`, which probes from the
+   * CURRENT visible character state) — so these never touch `character`,
+   * `worldFlags`, or any other live snapshot field, only their own
+   * dedicated result slot.
+   */
+  const runExperimentAUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expAResult: runExperimentA_ResidualUncertainty() }));
+  }, []);
+
+  const runExperimentBUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expBResult: runExperimentB_ObviousChoice() }));
+  }, []);
+
+  const runExperimentCUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expCResult: runExperimentC_TrivialUncertainty() }));
+  }, []);
+
+  const runExperimentDUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expDResult: runExperimentD_MeaningfulConflict() }));
+  }, []);
+
+  const runExperimentKUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expKResult: runExperimentK_IntentVersusOutcome() }));
+  }, []);
+
+  const runExperimentEUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expEResult: runExperimentE_TraitAcquisition() }));
+  }, []);
+
+  const runExperimentGUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expGResult: runExperimentG_IdentityFeedback() }));
+  }, []);
+
+  const runExperimentHUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expHResult: runExperimentH_SelfStabilization() }));
+  }, []);
+
+  const runExperimentIUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expIResult: runExperimentI_IdentityFaultLine() }));
+  }, []);
+
+  const runExperimentJUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expJResult: runExperimentJ_Contradiction() }));
+  }, []);
+
+  const runExperimentFUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, expFResult: runExperimentF_SeedDivergence() }));
+  }, []);
+
+  /**
+   * Phase 2.95 — the external review's five reason-consolidation target
+   * behaviors. Same self-contained-read-only-probe shape as the Phase 2.9
+   * experiments above: each function builds its own scenario/state
+   * internally and only ever touches its own dedicated result slot.
+   */
+  const runTargetAUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, targetAResult: runExperimentGradualIdentityInfluence() }));
+  }, []);
+
+  const runTargetBUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, targetBResult: runExperimentWeakSignalCombination() }));
+  }, []);
+
+  const runTargetCUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, targetCResult: runExperimentRealFaultLine() }));
+  }, []);
+
+  const runTargetDUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, targetDResult: runExperimentTransformationWithFeedback() }));
+  }, []);
+
+  const runTargetEUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, targetEResult: runExperimentCanonicalAcquisitionWithFeedback() }));
+  }, []);
+
   const reset = useCallback(() => {
     setSnapshot((prev) => {
       const config = { ...defaultScenario(prev.seed), cycleParams: cycleParams(prev) };
@@ -598,6 +726,10 @@ export function useEngine() {
     setSnapshot((prev) => ({ ...prev, saturationParams: { ...prev.saturationParams, ...patch } }));
   }, []);
 
+  const updateDecisionParams = useCallback((patch: Partial<DecisionParams>) => {
+    setSnapshot((prev) => ({ ...prev, decisionParams: { ...prev.decisionParams, ...patch } }));
+  }, []);
+
   const updateSalienceParams = useCallback((patch: Partial<SalienceParams>) => {
     setSnapshot((prev) => ({ ...prev, salienceParams: { ...prev.salienceParams, ...patch } }));
   }, []);
@@ -629,6 +761,22 @@ export function useEngine() {
       runSaturatedSatisfactionExperimentUI,
       runSaturationCounterfactualUI,
       runSemanticSalienceExperimentsUI,
+      runExperimentAUI,
+      runExperimentBUI,
+      runExperimentCUI,
+      runExperimentDUI,
+      runExperimentKUI,
+      runExperimentEUI,
+      runExperimentGUI,
+      runExperimentHUI,
+      runExperimentIUI,
+      runExperimentJUI,
+      runExperimentFUI,
+      runTargetAUI,
+      runTargetBUI,
+      runTargetCUI,
+      runTargetDUI,
+      runTargetEUI,
       reset,
       setSeed,
       toggleWorldFlag,
@@ -641,6 +789,7 @@ export function useEngine() {
       updateAssociationLearningParams,
       updateMemoryParams,
       updateSaturationParams,
+      updateDecisionParams,
       updateSalienceParams,
       updateSalienceMode,
       updateDeltaT,
@@ -662,6 +811,22 @@ export function useEngine() {
       runSaturatedSatisfactionExperimentUI,
       runSaturationCounterfactualUI,
       runSemanticSalienceExperimentsUI,
+      runExperimentAUI,
+      runExperimentBUI,
+      runExperimentCUI,
+      runExperimentDUI,
+      runExperimentKUI,
+      runExperimentEUI,
+      runExperimentGUI,
+      runExperimentHUI,
+      runExperimentIUI,
+      runExperimentJUI,
+      runExperimentFUI,
+      runTargetAUI,
+      runTargetBUI,
+      runTargetCUI,
+      runTargetDUI,
+      runTargetEUI,
       reset,
       setSeed,
       toggleWorldFlag,
@@ -674,6 +839,7 @@ export function useEngine() {
       updateAssociationLearningParams,
       updateMemoryParams,
       updateSaturationParams,
+      updateDecisionParams,
       updateSalienceParams,
       updateSalienceMode,
       updateDeltaT,

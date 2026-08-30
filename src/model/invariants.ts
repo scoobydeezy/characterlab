@@ -9,6 +9,13 @@
 import { CharacterState } from './character';
 import { Rational } from '../kernel/rational';
 import { rowSum, getWeight } from './associations';
+import { identityStrength, identityConfidence } from './identity';
+
+/** Phase 2.9 constants used ONLY to sanity-check stored evidence against
+ * the bound formulas' own shape (any K_I/K_C > 0 gives the same bounds) —
+ * not the scenario's actual authored K_I/K_C, which invariants.ts has no
+ * access to and does not need for a pure "is this even in range" check. */
+const INVARIANT_CHECK_K = Rational.ONE;
 
 export interface InvariantViolation {
   readonly code: string;
@@ -53,6 +60,32 @@ export function checkInvariants(state: CharacterState): InvariantViolation[] {
       if (getWeight(state.associations, i, j).isNegative()) {
         violations.push({ code: 'association_negative_weight', message: `W[${i}][${j}] is negative` });
       }
+    }
+  }
+
+  // Phase 2.9 — IdentityEvidenceState non-negativity and the derived-bound
+  // formulas' own shape, checked every cycle exactly like the association
+  // invariants above (a guard against a future bug in the update
+  // arithmetic, not a claim that the math needs proving here — that's
+  // test/phase2_9Identity.test.ts's job). §35's "no legal transition
+  // mutates the 7-dim latent personality vector" obligation is vacuously
+  // satisfied and not checked here: that vector does not exist in this
+  // codebase (see model/decision.ts's module comment).
+  for (const [channel, evidence] of state.identityEvidence) {
+    if (evidence.support.isNegative()) {
+      violations.push({ code: 'identity_support_negative', message: `Identity channel ${channel} has negative Support=${evidence.support.toString()}` });
+    }
+    if (evidence.opposition.isNegative()) {
+      violations.push({ code: 'identity_opposition_negative', message: `Identity channel ${channel} has negative Opposition=${evidence.opposition.toString()}` });
+    }
+    const strength = identityStrength(evidence, INVARIANT_CHECK_K);
+    const negativeOne = Rational.ZERO.sub(Rational.ONE);
+    if (!(strength.gt(negativeOne) && strength.lt(Rational.ONE))) {
+      violations.push({ code: 'identity_strength_out_of_bounds', message: `Identity channel ${channel} strength ${strength.toString()} is outside (-1,1)` });
+    }
+    const conf = identityConfidence(evidence, INVARIANT_CHECK_K);
+    if (!(conf.gte(Rational.ZERO) && conf.lt(Rational.ONE))) {
+      violations.push({ code: 'identity_confidence_out_of_bounds', message: `Identity channel ${channel} confidence ${conf.toString()} is outside [0,1)` });
     }
   }
 

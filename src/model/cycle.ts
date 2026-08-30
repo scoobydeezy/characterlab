@@ -40,7 +40,18 @@ import { Rational } from '../kernel/rational';
 import { CanonicalActionKey, ConceptKey, NeedId, asConceptKey } from '../kernel/canonical';
 import { TraceBuilder, CognitiveCycleTrace } from '../kernel/trace';
 import { EventClock, SimEvent } from '../kernel/event';
-import { CharacterState, advanceAllNeeds, getExpectation, withExpectation, withCurrentTime, withAssociations, withMemory } from './character';
+import {
+  CharacterState,
+  advanceAllNeeds,
+  getExpectation,
+  withExpectation,
+  withCurrentTime,
+  withAssociations,
+  withMemory,
+  getIdentityEvidence,
+  withIdentityEvidence,
+  withDecisionExpression,
+} from './character';
 import { NeedDef, needDeficit, needUrgency, applyBoundedEffect, BoundedEffectResult, SaturationKind } from './needs';
 import { ActionDef, NeedContext, ScoredAction, candidateActionsWithAccessibility, AccessibilityFilterResult, evaluateAction } from './actions';
 import { ChoiceParams, buildChoiceDistribution, selectAction, ChoiceDistribution } from './choice';
@@ -64,6 +75,29 @@ import {
   surpriseMagnitude,
 } from './salience';
 import { SemanticExperience, NeedObservation } from './semanticExperience';
+import {
+  Decision,
+  DecisionInfluence,
+  DecisionParams,
+  DecisionExpression,
+  IdentityExpressionRecord,
+  resolveDecision,
+  REASON_CHANNEL_ACCESSIBILITY,
+  SemanticReasonChannelId,
+  RawReasonInfluence,
+  sumRawBySemanticChannel,
+  boundAndFloorChannels,
+  boundAllChannels,
+  buildConsolidatedInfluences,
+} from './decision';
+import {
+  identityFeedbackRawInfluences,
+  updateIdentityEvidence,
+  touchedChannels,
+  alignment,
+  ReasonChannelPolarityTable,
+  IdentityExpressionChannelId,
+} from './identity';
 
 /**
  * Phase 2.5a — Brief §19/§27's Saturated Satisfaction / Censored Learning.
@@ -108,6 +142,11 @@ export interface CycleParams {
   readonly saturation: SaturationParams;
   readonly salienceMode: 'legacy' | 'derived';
   readonly salience: SalienceParams;
+  /** Phase 2.9 — die-scale thresholds, resolution-mode thresholds, and
+   * trait-consolidation constants for `runDecisionCycle`. Unused by
+   * `runAutonomousCycle`/`runScriptedExperience` (their own `params.choice`/
+   * `params.activation` govern ordinary Action selection, unchanged). */
+  readonly decision: DecisionParams;
 }
 
 /** What's "in the air" for this cycle beyond Needs and the acting
@@ -260,7 +299,7 @@ function computeActivationAndRetrieveMemories(
  * funnel into this once "which Action happened" is decided, so the
  * learning math is identical regardless of how the Action was chosen.
  */
-function applyChosenAction(
+export function applyChosenAction(
   actor: ConceptKey,
   stateAfterNeedAdvance: CharacterState,
   memoryStoreAfterRetrieval: CharacterState['memory'],
@@ -763,4 +802,292 @@ export function runScriptedExperience(
   const event = clock.emit('scripted_experience', { actor, action: forcedAction.actionKey });
   const result = applyChosenAction(actor, advanced, nextMemoryStore, forcedAction, outcomeTable, ctxs, experienceContext, params, event, trace, seed);
   return { ...result, distribution: null, scoredActions: [], activation, accessibilityFilter: null, retrievedMemories: retrieved };
+}
+
+/**
+ * Phase 2.9 — Decision Authorship, Acquired Identity, and the Role of Dice
+ * (Brief §6-24). A NEW, parallel front-end to Action selection (plan
+ * scoping decision 2): steps 1–5 run exactly as `runAutonomousCycle`
+ * (unmodified `advanceAllNeeds`/`needContexts`/`computeActivationAndRetrieveMemories`),
+ * but instead of accessibility-filtered candidates feeding a softmax over
+ * however many Actions exist, a small AUTHORED `Decision` (2-3 `Option`s,
+ * each 1:1 backed by an `ActionDef`) is resolved via exact discrete
+ * probability calculus and — when Contest clears `params.decision.thetaRoll`
+ * — actual dice, addressed through the same counter-addressed RNG oracle
+ * every other draw in this codebase uses. The winning Option's chosen
+ * INTENT is recorded as a `DecisionExpression` (biographical evidence)
+ * regardless of what physically executes; `forcedOutcomeOverride` lets
+ * Experiment K substitute a different physical outcome while the recorded
+ * intent still reflects what was actually decided (Brief §14/§18).
+ *
+ * `params.activation.thetaA`/`kA` are NOT consulted on this path — a
+ * Decision's Option set is authored/fixed, not accessibility-filtered; only
+ * `params.activation.beta` (the spreading-activation solve) is shared with
+ * the ordinary `runAutonomousCycle` path.
+ */
+export function runDecisionCycle(
+  actor: ConceptKey,
+  state: CharacterState,
+  decision: Decision,
+  outcomeTables: ReadonlyMap<CanonicalActionKey, WorldOutcomeTable>,
+  params: CycleParams,
+  reasonChannelMapping: ReadonlyMap<string, SemanticReasonChannelId>,
+  semanticReasonPolarity: ReasonChannelPolarityTable,
+  clock: EventClock,
+  seed: string,
+  experienceContext: ExperienceContext = EMPTY_EXPERIENCE_CONTEXT,
+  forcedOutcomeOverride?: { readonly actionDef: ActionDef; readonly outcomeTable: WorldOutcomeTable },
+): CycleResult & { readonly decisionExpression: DecisionExpression } {
+  const trace = new TraceBuilder(`decision:${clock.now()}`, clock.now());
+
+  const advanced = advanceAllNeeds(state, params.deltaT);
+  trace.record(
+    'need_advance',
+    { deltaT: params.deltaT.toCanonicalString() },
+    {
+      levels: [...advanced.needStates.values()].map((s) => ({
+        needId: s.needId,
+        level: s.level.toCanonicalString(),
+      })) as any,
+    },
+  );
+
+  const ctxs = needContexts(advanced, trace);
+
+  const { activation, retrieved, nextMemoryStore } = computeActivationAndRetrieveMemories(
+    advanced,
+    ctxs,
+    experienceContext,
+    params,
+    clock.now(),
+    trace,
+  );
+
+  const stateForEvaluation = { ...advanced, memory: nextMemoryStore };
+
+  // Phase 2.95 — Reason Consolidation, with identity genuinely IN the pool.
+  //
+  // Step 1: collect each Option's raw (unbounded) Need/accessibility
+  // pressure, and separately sum it per semantic channel — NOT yet bounded,
+  // NOT yet floor-checked. `boundedNeedAccessByOption` is the same sum run
+  // through `boundAllChannels` (dense, bounded, but NOT floor-filtered) —
+  // this is what identity.ts's Alignment/touchedChannels consume for
+  // EVIDENCE generation, deliberately excluding identity's own feedback
+  // (Brief §23's no-double-counting rule: a Decision's identity-consistency
+  // reason is derived from existing identity, not fresh behavioral
+  // evidence, so it must never feed the computation that produces MORE
+  // evidence for the same channel).
+  const rawNeedAccessByOption = new Map<CanonicalActionKey, RawReasonInfluence[]>();
+  const rawSumByOption = new Map<CanonicalActionKey, Map<SemanticReasonChannelId, Rational>>();
+  const boundedNeedAccessByOption = new Map<CanonicalActionKey, Map<SemanticReasonChannelId, Rational>>();
+  for (const option of decision.options) {
+    const scored = evaluateAction(
+      option.actionDef,
+      ctxs,
+      (needId) => getExpectation(stateForEvaluation, option.actionDef.subject, needId),
+      params.expectation.kC,
+    );
+
+    const rawInfluences: RawReasonInfluence[] = [];
+    for (const c of scored.perNeedContributions) {
+      rawInfluences.push({
+        source: 'need_contribution',
+        reasonChannel: c.needId,
+        strength: c.contribution,
+      });
+    }
+    const accessibility = activation.get(asConceptKey(option.actionDef.actionKey)) ?? Rational.ZERO;
+    rawInfluences.push({
+      source: 'accessibility',
+      reasonChannel: REASON_CHANNEL_ACCESSIBILITY,
+      strength: accessibility,
+    });
+
+    const rawSum = sumRawBySemanticChannel(rawInfluences, reasonChannelMapping);
+    rawNeedAccessByOption.set(option.actionDef.actionKey, rawInfluences);
+    rawSumByOption.set(option.actionDef.actionKey, rawSum);
+    boundedNeedAccessByOption.set(option.actionDef.actionKey, boundAllChannels(rawSum));
+
+    trace.record(
+      'decision_influences_raw_needs_accessibility',
+      { optionKey: option.actionDef.actionKey },
+      {
+        rawInfluences: rawInfluences.map((r) => ({
+          source: r.source,
+          reasonChannel: r.reasonChannel,
+          strength: r.strength.toCanonicalString(),
+        })) as any,
+      },
+    );
+  }
+
+  // Step 2: when identity feedback is enabled, decompose each Option's
+  // identity pull into ONE raw contribution PER semantic channel (Alignment
+  // computed from `boundedNeedAccessByOption` above — never including
+  // identity's own contribution) and fold each into the SAME raw pool as
+  // that option's own Need/accessibility pressure on that channel, BEFORE
+  // the shared bound-and-floor step. This is the actual Phase 2.95
+  // mechanism: a weak Need signal and a weak identity signal sharing a
+  // semantic channel now get ONE shared chance to clear the floor together,
+  // rather than identity being a second, independently-floored influence
+  // that can never rescue (or be rescued by) a Need signal too weak on its
+  // own — see identity.ts's module comment for the full derivation.
+  const influencesByOption = new Map<CanonicalActionKey, DecisionInfluence[]>();
+  for (const option of decision.options) {
+    const key = option.actionDef.actionKey;
+    let fullRaw = rawNeedAccessByOption.get(key)!;
+    if (params.decision.identityFeedbackEnabled) {
+      const identityRaw = identityFeedbackRawInfluences(
+        key,
+        boundedNeedAccessByOption,
+        state.identityEvidence,
+        semanticReasonPolarity,
+        params.decision.kI,
+      );
+      fullRaw = [...fullRaw, ...identityRaw];
+    }
+    const consolidated = boundAndFloorChannels(sumRawBySemanticChannel(fullRaw, reasonChannelMapping), params.decision.dieScale);
+    influencesByOption.set(key, buildConsolidatedInfluences(key, consolidated, key));
+  }
+  trace.record(
+    'decision_influences_consolidated',
+    { decisionId: decision.decisionId },
+    {
+      byOption: decision.options.map((o) => ({
+        option: o.actionDef.actionKey,
+        influences: influencesByOption.get(o.actionDef.actionKey)!.map((i) => ({
+          influenceId: i.influenceId,
+          reasonChannel: i.reasonChannel,
+          rawStrength: i.rawStrength.toCanonicalString(),
+          signedStrength: i.signedStrength.toCanonicalString(),
+        })),
+      })) as any,
+    },
+  );
+
+  const resolution = resolveDecision(decision, influencesByOption, params.decision, seed);
+  trace.record(
+    'decision_resolution',
+    { decisionId: decision.decisionId, thetaRoll: params.decision.thetaRoll.toCanonicalString(), thetaPlayer: params.decision.thetaPlayer.toCanonicalString() },
+    {
+      preRollOptionProbabilities: resolution.preRollOptionProbabilities.map((p) => ({
+        option: p.optionKey,
+        probability: p.probability.toCanonicalString(),
+      })) as any,
+      margin: resolution.margin.toCanonicalString(),
+      contest: resolution.contest.toCanonicalString(),
+      conflictMass: resolution.conflictMass.toCanonicalString(),
+      stake: resolution.stake.toCanonicalString(),
+      authorshipPotential: resolution.authorshipPotential.toCanonicalString(),
+      resolutionMode: resolution.resolutionMode,
+      influenceRolls: resolution.influenceRolls.map((r) => ({
+        influenceId: r.influenceId,
+        option: r.optionKey,
+        faces: r.faces,
+        sign: r.sign,
+        rollValue: r.rollValue,
+        signedContribution: r.signedContribution,
+      })) as any,
+      tieBreak: resolution.tieBreak
+        ? {
+            candidates: resolution.tieBreak.candidates,
+            draw: resolution.tieBreak.draw.toCanonicalString(),
+            selected: resolution.tieBreak.selected,
+          }
+        : null,
+      chosenOption: resolution.chosenOption,
+    } as any,
+  );
+
+  // Identity EXPRESSION (Brief §15-18, the evidence-producing half): reads
+  // ONLY `boundedNeedAccessByOption` (Need/accessibility, never identity's
+  // own feedback — the no-double-counting rule) and the SAME semantic
+  // polarity table used for feedback, so "what did this option's content
+  // mean" is a dense, continuous function of the option's own semantic
+  // pressure, not something gated by die-eligibility.
+  const winner = resolution.chosenOption;
+  const channels = touchedChannels(boundedNeedAccessByOption, semanticReasonPolarity);
+  const identityExpressions: IdentityExpressionRecord[] = channels.map((channel) => {
+    const align = alignment(winner, channel, boundedNeedAccessByOption, semanticReasonPolarity);
+    return { channel, alignment: align, expressionStrength: align.mul(resolution.authorshipPotential) };
+  });
+  trace.record(
+    'identity_expression',
+    { decisionId: decision.decisionId, chosenOption: winner },
+    {
+      expressions: identityExpressions.map((e) => ({
+        channel: e.channel,
+        alignment: e.alignment.toCanonicalString(),
+        expressionStrength: e.expressionStrength.toCanonicalString(),
+      })) as any,
+    },
+  );
+
+  // Fold identity expressions into identityEvidence (Brief §19) before the
+  // shared tail executes, so `applyChosenAction`'s returned nextState
+  // already carries this Decision's identity update.
+  let stateWithIdentity = stateForEvaluation;
+  for (const expr of identityExpressions) {
+    const channel = expr.channel as IdentityExpressionChannelId;
+    const prior = getIdentityEvidence(stateWithIdentity, channel);
+    const next = updateIdentityEvidence(prior, expr.expressionStrength);
+    stateWithIdentity = withIdentityEvidence(stateWithIdentity, channel, next);
+  }
+
+  const decisionExpression: DecisionExpression = {
+    decisionId: decision.decisionId,
+    actor,
+    occurredAt: clock.now(),
+    chosenOption: resolution.chosenOption,
+    resolutionMode: resolution.resolutionMode,
+    preRollOptionProbabilities: resolution.preRollOptionProbabilities,
+    margin: resolution.margin,
+    contest: resolution.contest,
+    stake: resolution.stake,
+    authorshipPotential: resolution.authorshipPotential,
+    influenceRolls: resolution.influenceRolls,
+    identityExpressions,
+    chosenIntent: resolution.chosenIntent,
+  };
+  stateWithIdentity = withDecisionExpression(stateWithIdentity, decisionExpression);
+  trace.record(
+    'decision_expression_recorded',
+    {},
+    { decisionId: decisionExpression.decisionId, chosenIntent: decisionExpression.chosenIntent },
+  );
+
+  // Execute: the winning Option's own ActionDef/WorldOutcomeTable, UNLESS
+  // Experiment K's forced-outcome override is supplied — the
+  // DecisionExpression above already recorded the chosen INTENT regardless
+  // of what physically executes (Brief §14/§18's intent/outcome split).
+  const winnerOption = decision.options.find((o) => o.actionDef.actionKey === winner);
+  if (!winnerOption) throw new RangeError(`runDecisionCycle: resolved winner ${winner} is not one of this Decision's Options`);
+  const executedAction = forcedOutcomeOverride?.actionDef ?? winnerOption.actionDef;
+  const executedOutcomeTable = forcedOutcomeOverride?.outcomeTable ?? outcomeTables.get(winner);
+  if (!executedOutcomeTable) throw new RangeError(`runDecisionCycle: no WorldOutcomeTable for ${winner}`);
+
+  const event = clock.emit('decision_choice', { actor, decisionId: decision.decisionId });
+  const result = applyChosenAction(
+    actor,
+    stateWithIdentity,
+    stateWithIdentity.memory,
+    executedAction,
+    executedOutcomeTable,
+    ctxs,
+    experienceContext,
+    params,
+    event,
+    trace,
+    seed,
+  );
+
+  return {
+    ...result,
+    distribution: null,
+    scoredActions: [],
+    activation,
+    accessibilityFilter: null,
+    retrievedMemories: retrieved,
+    decisionExpression,
+  };
 }

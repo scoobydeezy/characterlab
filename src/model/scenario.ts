@@ -16,15 +16,18 @@ import { needId, conceptKey, canonicalActionKey, asConceptKey, NeedId, ConceptKe
 import { NeedDef } from './needs';
 import { ActionDef } from './actions';
 import { WorldOutcomeTable } from './outcome';
-import { CharacterState, createCharacter } from './character';
+import { CharacterState, createCharacter, withExpectation } from './character';
 import { ChoiceParams } from './choice';
-import { NeedExpectationParams } from './expectation';
+import { NeedExpectationParams, initialExpectation } from './expectation';
 import { CycleParams, ExperienceContext, SaturationParams } from './cycle';
 import { SalienceParams } from './salience';
 import { ActivationParams } from './activation';
 import { AssociationLearningParams } from './associations';
 import { MemoryCycleParams } from './memory';
 import { EventClock } from '../kernel/event';
+import { DecisionParams, Decision, Option } from './decision';
+import { ReasonChannelPolarityTable } from './identity';
+import { SemanticReasonChannelId } from './decision';
 
 export const NEED_CONNECTION: NeedId = needId('need.connection');
 export const NEED_REST: NeedId = needId('need.rest');
@@ -65,6 +68,42 @@ export const OBJECT_LAMP: ConceptKey = conceptKey('object.lamp');
 export const LOCATION_BAKERY: ConceptKey = conceptKey('location.bakery');
 
 /**
+ * Phase 2.9 — the dinner-vs-work Decision axis (Brief §36's own worked
+ * trace example) plus a second, independent speak-up-vs-stay-quiet axis
+ * (plan scoping note: Experiment I's identity fault line needs two
+ * ALREADY-established, genuinely opposing identities; recombining Options
+ * from these two independent axes into one ad-hoc Decision — see
+ * experiments/identityFormation.ts — creates that fault line without
+ * needing a third set of Actions). Achievement/Recognition/Security are
+ * new Needs, each independent of Connection/Rest, so each axis has genuine
+ * Need-sourced pressure on both sides rather than one side winning by
+ * construction. `defaultReasonChannelMapping()`/`defaultSemanticReasonPolarity()`
+ * below are what actually tie each Need (via its semantic reason channel)
+ * to the IdentityExpressionChannel(s) it evidences.
+ */
+export const NEED_ACHIEVEMENT: NeedId = needId('need.achievement');
+export const NEED_RECOGNITION: NeedId = needId('need.recognition');
+export const NEED_SECURITY: NeedId = needId('need.security');
+
+export const ACTIVITY_WORK: ConceptKey = conceptKey('activity.work');
+/** Speak Up's own subject — what NeedExpectation(x, Recognition) is learned
+ * against. */
+export const ACTIVITY_MEETING: ConceptKey = conceptKey('activity.meeting');
+/** Stay Quiet's own subject — deliberately DISTINCT from `ACTIVITY_MEETING`
+ * (an earlier draft of this scenario gave both Options the same subject,
+ * which silently made NeedExpectation(subject, *) identical for both —
+ * `evaluateAction` sums a contribution for every Need the character has
+ * against ONE subject, so two Options sharing a subject can never differ on
+ * Need-sourced pressure alone, exactly the bug `defaultActions()`'s own
+ * Glen/Priya/Stay-Home three-way split already avoids by construction). */
+export const ACTIVITY_CAUTION: ConceptKey = conceptKey('activity.caution');
+
+export const ACTION_KEEP_DINNER_PROMISE: CanonicalActionKey = canonicalActionKey('action.keep_dinner_promise');
+export const ACTION_STAY_AT_WORK: CanonicalActionKey = canonicalActionKey('action.stay_at_work');
+export const ACTION_SPEAK_UP: CanonicalActionKey = canonicalActionKey('action.speak_up');
+export const ACTION_STAY_QUIET: CanonicalActionKey = canonicalActionKey('action.stay_quiet');
+
+/**
  * The full set of concepts that participate in the associative graph
  * (Brief §13–14). Every subject, Action, Location, and Context concept any
  * scripted or autonomous Experience in this scenario can touch MUST be
@@ -88,6 +127,22 @@ export function conceptUniverse(): ConceptKey[] {
     asConceptKey(ACTION_STAY_HOME),
     CONTEXT_EVENING,
     LOCATION_HOME,
+    // Phase 2.9 additions — see the Decision axis constants above. Added to
+    // the ONE shared concept universe (rather than a separate universe just
+    // for Decision cycles) so ordinary and Decision cycles run over the
+    // same associative graph, per Brief §41's "one canonical architecture."
+    // These rows start, and stay, all-zero for every pre-2.9 experiment,
+    // which never engages them — no existing numeric result changes.
+    asConceptKey(NEED_ACHIEVEMENT),
+    asConceptKey(NEED_RECOGNITION),
+    asConceptKey(NEED_SECURITY),
+    ACTIVITY_WORK,
+    ACTIVITY_MEETING,
+    ACTIVITY_CAUTION,
+    asConceptKey(ACTION_KEEP_DINNER_PROMISE),
+    asConceptKey(ACTION_STAY_AT_WORK),
+    asConceptKey(ACTION_SPEAK_UP),
+    asConceptKey(ACTION_STAY_QUIET),
   ];
 }
 
@@ -127,6 +182,55 @@ export function defaultNeedDefs(): NeedDef[] {
       urgencyExponent: 2,
     },
   ];
+}
+
+/**
+ * Phase 2.9 — the three Needs backing the two Decision axes (see the
+ * Decision axis constants' doc comment above). Each is independent of
+ * Connection/Rest and of each other, so the dinner-vs-work and speak-up-vs-
+ * stay-quiet axes each have genuine Need-sourced pressure on both sides
+ * rather than one side winning by construction. Core importances/decay
+ * rates are chosen to land near a genuine 50/50 Contest under
+ * `defaultDecisionScenario()`'s initial levels — research knobs, not final
+ * balance, exactly like `defaultNeedDefs()` above.
+ */
+export function decisionNeedDefs(): NeedDef[] {
+  return [
+    {
+      needId: NEED_ACHIEVEMENT,
+      origin: 'Core',
+      setPoint: ratOf(4, 5), // 0.8
+      coreImportance: ratOf(1),
+      passiveRate: ratOf(-2, 5), // -0.40 per tick — mirrors Connection's own tuning
+      urgencyExponent: 2,
+    },
+    {
+      needId: NEED_RECOGNITION,
+      origin: 'Core',
+      setPoint: ratOf(7, 10), // 0.7
+      coreImportance: ratOf(4, 5), // 0.8
+      passiveRate: ratOf(-3, 10), // -0.30 per tick
+      urgencyExponent: 2,
+    },
+    {
+      needId: NEED_SECURITY,
+      origin: 'Core',
+      setPoint: ratOf(7, 10), // 0.7
+      coreImportance: ratOf(4, 5), // 0.8
+      passiveRate: ratOf(-3, 10), // -0.30 per tick
+      urgencyExponent: 2,
+    },
+  ];
+}
+
+/** All Needs any Phase 2.9 Decision experiment can require — ordinary
+ * `defaultNeedDefs()` plus `decisionNeedDefs()` — used by
+ * `defaultDecisionScenario()` below. Kept as its own function (rather than
+ * changing `defaultNeedDefs()` itself) so every pre-2.9 scenario/experiment
+ * keeps exactly its original two-Need character unless it explicitly opts
+ * into the Decision axes. */
+export function allDecisionNeedDefs(): NeedDef[] {
+  return [...defaultNeedDefs(), ...decisionNeedDefs()];
 }
 
 /** Phase 2.5c — each Action's `subjectRole` is a semantic fact about that
@@ -208,6 +312,75 @@ export function aversiveOutcomeTable(): WorldOutcomeTable {
     actionKey: ACTION_VISIT_GLEN,
     effects: [{ needId: NEED_REST, magnitude: ratOf(-8, 100), noiseHalfWidth: ratOf(0) }], // -0.08, no noise
   };
+}
+
+/**
+ * Phase 2.9 — the four Options backing the two Decision axes. Each binds
+ * its own new subject (`ACTIVITY_WORK`/`ACTIVITY_MEETING`) rather than
+ * reusing `PERSON_GLEN` for anything but Keep Dinner, so each Option's
+ * NeedExpectation is independent and must be seeded/learned on its own
+ * (`defaultDecisionScenario()` below seeds all four via `withExpectation`,
+ * mirroring `saturationSalienceInteraction.ts`'s established
+ * seed-the-prior-directly pattern rather than requiring a live learning
+ * history before any Decision experiment can run). All four are ordinary
+ * social/activity participation — Conversation-like — so `subjectRole` is
+ * `'Participant'` throughout, exactly like `defaultActions()` above.
+ */
+export function decisionActions(): ActionDef[] {
+  return [
+    {
+      actionKey: ACTION_KEEP_DINNER_PROMISE,
+      displayName: 'Keep Dinner Promise',
+      subject: PERSON_GLEN,
+      subjectRole: 'Participant',
+      preconditionHolds: () => true,
+    },
+    {
+      actionKey: ACTION_STAY_AT_WORK,
+      displayName: 'Stay At Work',
+      subject: ACTIVITY_WORK,
+      subjectRole: 'Participant',
+      preconditionHolds: () => true,
+    },
+    {
+      actionKey: ACTION_SPEAK_UP,
+      displayName: 'Speak Up',
+      subject: ACTIVITY_MEETING,
+      subjectRole: 'Participant',
+      preconditionHolds: () => true,
+    },
+    {
+      actionKey: ACTION_STAY_QUIET,
+      displayName: 'Stay Quiet',
+      subject: ACTIVITY_CAUTION,
+      subjectRole: 'Participant',
+      preconditionHolds: () => true,
+    },
+  ];
+}
+
+export function decisionOutcomeTables(): Map<CanonicalActionKey, WorldOutcomeTable> {
+  const m = new Map<CanonicalActionKey, WorldOutcomeTable>();
+  m.set(ACTION_KEEP_DINNER_PROMISE, {
+    actionKey: ACTION_KEEP_DINNER_PROMISE,
+    effects: [{ needId: NEED_CONNECTION, magnitude: ratOf(2, 5), noiseHalfWidth: ratOf(1, 20) }], // 0.40 ± 0.05 — mirrors Visit Glen
+  });
+  m.set(ACTION_STAY_AT_WORK, {
+    actionKey: ACTION_STAY_AT_WORK,
+    effects: [{ needId: NEED_ACHIEVEMENT, magnitude: ratOf(2, 5), noiseHalfWidth: ratOf(1, 20) }], // 0.40 ± 0.05
+  });
+  m.set(ACTION_SPEAK_UP, {
+    actionKey: ACTION_SPEAK_UP,
+    effects: [
+      { needId: NEED_RECOGNITION, magnitude: ratOf(2, 5), noiseHalfWidth: ratOf(1, 20) }, // 0.40 ± 0.05
+      { needId: NEED_SECURITY, magnitude: ratOf(-1, 10), noiseHalfWidth: ratOf(1, 50) }, // -0.10 ± 0.02 — speaking up carries genuine risk
+    ],
+  });
+  m.set(ACTION_STAY_QUIET, {
+    actionKey: ACTION_STAY_QUIET,
+    effects: [{ needId: NEED_SECURITY, magnitude: ratOf(1, 5), noiseHalfWidth: ratOf(1, 20) }], // 0.20 ± 0.05 — learned against ACTIVITY_CAUTION, Stay Quiet's own subject
+  });
+  return m;
 }
 
 export function defaultOutcomeTables(): Map<CanonicalActionKey, WorldOutcomeTable> {
@@ -342,6 +515,11 @@ export function defaultCycleParams(): CycleParams {
     saturation: defaultSaturationParams(),
     salienceMode: 'derived',
     salience: defaultSalienceParams(),
+    // Phase 2.9 — present on every CycleParams value regardless of mode
+    // (mirrors saturation/salience already being unconditionally present):
+    // `runAutonomousCycle`/`runScriptedExperience` never read `.decision`,
+    // exactly as they never read `.salience` when salienceMode is 'legacy'.
+    decision: defaultDecisionParams(),
   };
 }
 
@@ -357,6 +535,223 @@ export function defaultCycleParams(): CycleParams {
  */
 export function legacyCycleParams(): CycleParams {
   return { ...defaultCycleParams(), saturation: legacySaturationParams(), salienceMode: 'legacy' };
+}
+
+/**
+ * Phase 2.9 — die-scale thresholds, resolution-mode thresholds, and
+ * trait-consolidation constants for `runDecisionCycle`. Research knobs, not
+ * final balance, exactly like every other `default*Params` function in this
+ * file. Thresholds are stated directly against `|signedStrength| ∈ (0,1)`
+ * (Rational.boundedResponse's range), so "weak" through "extreme" partition
+ * that interval into five bands per Brief §8's illustrative reference
+ * scale. `thetaTrait`/`thetaConfidence`/`kI`/`kC` match the values already
+ * exercised directly in `test/phase2_9Identity.test.ts`'s consolidation
+ * cases.
+ */
+export function defaultDecisionParams(): DecisionParams {
+  return {
+    dieScale: {
+      weak: ratOf(1, 10), // 0.10
+      moderate: ratOf(1, 4), // 0.25
+      strong: ratOf(9, 20), // 0.45
+      veryStrong: ratOf(13, 20), // 0.65
+      extreme: ratOf(17, 20), // 0.85
+    },
+    thetaRoll: ratOf(3, 10), // θ_roll = 0.30 — Contest below this auto-resolves
+    thetaPlayer: ratOf(3, 10), // θ_player = 0.30 — AuthorshipPotential at/above this is player-facing
+    thetaTrait: ratOf(3, 10), // θ_trait = 0.30
+    thetaConfidence: ratOf(1, 2), // θ_confidence = 0.50
+    kI: ratOf(2), // K_I = 2
+    kC: ratOf(2), // K_C = 2
+    identityFeedbackEnabled: true,
+  };
+}
+
+/**
+ * Phase 2.95 — the one authored polarity table (identity.ts's module
+ * comment: a category/role-style table, authored once, globally, never
+ * re-tuned per named entity), keyed by SEMANTIC reason channel rather than
+ * raw NeedId — the only shape that makes sense once every raw Need/
+ * accessibility/identity pressure is unconditionally consolidated into a
+ * semantic channel before Alignment ever sees it (there is no longer a
+ * "final DecisionInfluence" carrying a raw NeedId reasonChannel for a
+ * polarity table to key against). Supersedes Phase 2.9's original
+ * `defaultReasonChannelPolarity()` (removed — a raw-NeedId-keyed table has
+ * no surviving consumer under Phase 2.95's consolidation pipeline). Each
+ * semantic channel expresses through the identity channels that feed into
+ * it (e.g., 'commitment' expresses through CommitmentFidelity and
+ * RuleAdherence since both map to the commitment channel, per
+ * `defaultReasonChannelMapping()` below). `identity_consistency`-sourced
+ * pressure is deliberately never a KEY in this table (it is tagged
+ * `identity:<channel>` and consolidated INTO a semantic channel by
+ * `cycle.ts`, not treated as its own semantic channel) — the anti-double-
+ * counting design identity.ts documents in detail.
+ */
+export function defaultSemanticReasonPolarity(): ReasonChannelPolarityTable {
+  return {
+    // 'commitment' channel: Connection need + CommitmentFidelity/RuleAdherence identities
+    'commitment': { CommitmentFidelity: 1, RuleAdherence: 1 },
+
+    // 'recognition' channel: Recognition need + RiskAcceptance/NoveltySeeking identities
+    'recognition': { RiskAcceptance: 1, NoveltySeeking: 1 },
+
+    // 'caretaking' channel: Caregiving and SelfSacrifice identities
+    'caretaking': { Caregiving: 1, SelfSacrifice: 1 },
+
+    // 'autonomy' channel: Security need + AuthorityDefiance/SelfProtection identities
+    'autonomy': { AuthorityDefiance: 1, SelfProtection: 1 },
+
+    // 'energetic' channel: Achievement/Rest + WorkPersistence identity
+    'energetic': { WorkPersistence: 1 },
+
+    // 'affiliation' channel: SocialApproach identity
+    'affiliation': { SocialApproach: 1 },
+  };
+}
+
+/**
+ * Phase 2.95 — map from raw reason sources (Need IDs, identity channels,
+ * accessibility) to semantic reason channels. Multiple weak signals mapping to
+ * the same semantic channel will consolidate BEFORE the die floor, allowing
+ * them to combine meaningfully rather than disappearing individually.
+ *
+ * This mapping is scenario-content: what a particular scenario's narrative
+ * means by "commitment" (which needs/identities feed into it) is a choice
+ * that can vary. This default version maps:
+ *
+ * - Connection need + Dependable/CommitmentFidelity → 'commitment' channel
+ * - Achievement need + WorkPersistence → 'energetic' channel
+ * - Recognition need + RiskAcceptance → 'recognition' channel
+ * - Caregiving identity → 'caretaking' channel
+ * - AuthorityDefiance identity → 'autonomy' channel
+ * - Accessibility (general feasibility) → 'energetic' channel (feasibility supports effort)
+ *
+ * Not mapped (are not part of any semantic reason):
+ * - identity_consistency itself (it's a derived, not raw, source — mapped by identity.ts)
+ */
+export function defaultReasonChannelMapping(): ReadonlyMap<string, SemanticReasonChannelId> {
+  return new Map([
+    // Needs map to primary semantic channels
+    ['need.connection', 'commitment'],
+    ['need.achievement', 'energetic'],
+    ['need.recognition', 'recognition'],
+    ['need.security', 'autonomy'],
+    ['need.rest', 'energetic'],
+    ['need.novelty', 'autonomy'],
+
+    // Identity expression channels (used during feedback) map to semantic reasons
+    // These will be prefixed when called from cycle.ts so we can distinguish raw from identity-sourced
+    ['identity:CommitmentFidelity', 'commitment'],
+    ['identity:WorkPersistence', 'energetic'],
+    ['identity:RiskAcceptance', 'recognition'],
+    ['identity:SelfProtection', 'autonomy'],
+    ['identity:Caregiving', 'caretaking'],
+    ['identity:AuthorityDefiance', 'autonomy'],
+    ['identity:NoveltySeeking', 'recognition'],
+    ['identity:SocialApproach', 'affiliation'],
+    ['identity:SelfSacrifice', 'caretaking'],
+    ['identity:RuleAdherence', 'commitment'],
+
+    // Accessibility (general competence/feasibility) supports energetic pursuits
+    ['accessibility', 'energetic'],
+  ]);
+}
+
+/** Phase 2.9 — `defaultCycleParams()` already carries `decision:
+ * defaultDecisionParams()` (every `CycleParams` value does, regardless of
+ * mode — see its own comment); this alias just names the fact that the
+ * SAME `CycleParams` value runs both ordinary and Decision cycles over one
+ * shared `CharacterState`/associative graph (Brief §41), for experiment/UI
+ * call sites that want to say so explicitly. */
+export function defaultDecisionCycleParams(): CycleParams {
+  return defaultCycleParams();
+}
+
+/** Phase 2.9 — the dinner-vs-work Decision (Brief §36's own worked trace
+ * example): `Option`s are 1:1 backed by `ACTION_KEEP_DINNER_PROMISE` /
+ * `ACTION_STAY_AT_WORK` (plan scoping decision 5 — an Option's identity IS
+ * its `actionDef.actionKey`). `decisionId` reuses whatever `SimEvent.eventId`
+ * the caller's `clock.emit`/`EventClock` produces for this Decision — callers
+ * constructing a `Decision` value directly (as every experiment file does,
+ * ahead of calling `runDecisionCycle`) supply a stable string of their own
+ * choosing instead. */
+export function dinnerVsWorkDecision(decisionId: string): Decision {
+  const actions = decisionActions();
+  const keepDinner = actions.find((a) => a.actionKey === ACTION_KEEP_DINNER_PROMISE)!;
+  const stayAtWork = actions.find((a) => a.actionKey === ACTION_STAY_AT_WORK)!;
+  const options: Option[] = [{ actionDef: keepDinner }, { actionDef: stayAtWork }];
+  return { decisionId, actor: PERSON_MINA, options };
+}
+
+/** Phase 2.9 — the second, independent speak-up-vs-stay-quiet Decision axis
+ * (see the Decision axis constants' doc comment above). */
+export function speakUpVsStayQuietDecision(decisionId: string): Decision {
+  const actions = decisionActions();
+  const speakUp = actions.find((a) => a.actionKey === ACTION_SPEAK_UP)!;
+  const stayQuiet = actions.find((a) => a.actionKey === ACTION_STAY_QUIET)!;
+  const options: Option[] = [{ actionDef: speakUp }, { actionDef: stayQuiet }];
+  return { decisionId, actor: PERSON_MINA, options };
+}
+
+/** Phase 2.9 — an ad-hoc Decision recombining one Option from EACH
+ * independent axis (Keep Dinner's CommitmentFidelity vs Speak Up's
+ * RiskAcceptance, by default) — used only by Experiment I (identity fault
+ * line, experiments/identityFormation.ts): once both axes have separately
+ * built a strong, opposing identity, this Decision is the first place both
+ * identity-consistency pressures compete on the SAME two Options. Nothing
+ * new is authored for this — it simply reuses two existing ActionDefs as a
+ * fresh Decision, exactly per plan scoping decision 5 (Option identity IS
+ * its ActionDef's actionKey; a Decision is nothing more than a named set of
+ * such Options). */
+export function crossAxisFaultLineDecision(
+  decisionId: string,
+  optionA: CanonicalActionKey = ACTION_KEEP_DINNER_PROMISE,
+  optionB: CanonicalActionKey = ACTION_SPEAK_UP,
+): Decision {
+  const actions = decisionActions();
+  const a = actions.find((act) => act.actionKey === optionA)!;
+  const b = actions.find((act) => act.actionKey === optionB)!;
+  return { decisionId, actor: PERSON_MINA, options: [{ actionDef: a }, { actionDef: b }] };
+}
+
+/**
+ * Phase 2.9 — a character-state factory analogous to `defaultScenario()`/
+ * `createInitialCharacterState()`, but over `allDecisionNeedDefs()` and the
+ * full concept universe (Decision axes included), with Need levels and
+ * seeded NeedExpectations chosen so BOTH Decision axes start genuinely
+ * contested (near-50/50, Brief §36's own worked example) rather than one
+ * side winning by construction — individual experiments then move levels/
+ * priors from this baseline to land in whichever Auto/Quiet/Player-facing
+ * regime each one specifically needs (mirroring
+ * `saturationSalienceInteraction.ts`'s `priorOverride`-from-a-shared-baseline
+ * pattern). All four Decision-axis subjects need an explicitly seeded
+ * NeedExpectation before first use: unlike Glen/Priya (which existing
+ * Phase-1 experiments learn live), `ACTIVITY_WORK`/`ACTIVITY_MEETING` are
+ * brand-new subjects with no learning history, and an unseeded (μ=0,τ=0)
+ * subject contributes exactly 0 to Score(a) (expectation.ts's own
+ * documented kernel property) — silently forcing every Decision Option to
+ * rely on accessibility/identity alone, which is not what any experiment
+ * here intends to test.
+ */
+export function defaultDecisionScenario(seed = 'characterlab-decision-seed'): CharacterState {
+  const needDefs = allDecisionNeedDefs();
+  const initialLevels = new Map<NeedId, Rational>([
+    [NEED_CONNECTION, ratOf(1, 2)],
+    [NEED_REST, ratOf(6, 10)],
+    [NEED_ACHIEVEMENT, ratOf(1, 2)],
+    [NEED_RECOGNITION, ratOf(1, 2)],
+    [NEED_SECURITY, ratOf(6, 10)],
+  ]);
+  let state = createCharacter(PERSON_MINA, needDefs, initialLevels, conceptUniverse());
+  // Seed a moderate, roughly comparable NeedExpectation for every
+  // Decision-axis subject — a stand-in for "Mina has done each of these
+  // before and has a rough sense of what each one is worth," exactly the
+  // role `withExpectation` already plays in saturationSalienceInteraction.ts.
+  state = withExpectation(state, PERSON_GLEN, NEED_CONNECTION, { ...initialExpectation(0), mu: ratOf(2, 5), tau: ratOf(3) });
+  state = withExpectation(state, ACTIVITY_WORK, NEED_ACHIEVEMENT, { ...initialExpectation(0), mu: ratOf(2, 5), tau: ratOf(3) });
+  state = withExpectation(state, ACTIVITY_MEETING, NEED_RECOGNITION, { ...initialExpectation(0), mu: ratOf(2, 5), tau: ratOf(3) });
+  state = withExpectation(state, ACTIVITY_CAUTION, NEED_SECURITY, { ...initialExpectation(0), mu: ratOf(1, 5), tau: ratOf(3) });
+  return state;
 }
 
 export function defaultScenario(seed = 'characterlab-default-seed'): ScenarioConfig {

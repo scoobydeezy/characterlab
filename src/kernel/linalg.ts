@@ -117,3 +117,25 @@ export function identity(n: number): Rational[][] {
     Array.from({ length: n }, (_, j) => (i === j ? Rational.ONE : Rational.ZERO)),
   );
 }
+
+/** a·b = Σ a_i·b_i — Phase 2.9's trait-projection quadratic form is built
+ * entirely from this and `matVecMul`, already present in this file. */
+export function dot(a: Vec, b: Vec): Rational {
+  if (a.length !== b.length) throw new RangeError('dot: vectors must have the same length');
+  return a.reduce((acc, ai, i) => acc.add(ai.mul(b[i])), Rational.ZERO);
+}
+
+/**
+ * b + w^T·x + x^T·Q·x — the trait/personality-style bounded quadratic
+ * projection form the master Brief §9.1 specifies for named-trait
+ * projections (`T_k(P) = g(b_k + w_k^T·P + P^T·Q_k·P)`) and Phase 2.9's
+ * Brief §21 reuses verbatim for named Acquired Identity Traits over the
+ * IdentityStrength vector instead of the personality vector P. Kept here
+ * rather than in a Phase-2.9-specific module so Phase 3 (latent
+ * personality) can reuse it without re-deriving the same three-term form.
+ * Callers apply `Rational.boundedResponse` to the result themselves — this
+ * function returns the raw (possibly unbounded) quadratic value.
+ */
+export function quadraticForm(b: Rational, w: Vec, Q: Matrix, x: Vec): Rational {
+  return b.add(dot(w, x)).add(dot(x, matVecMul(Q, x)));
+}

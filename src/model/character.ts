@@ -17,6 +17,8 @@ import { NeedExpectation, initialExpectation } from './expectation';
 import { Rational } from '../kernel/rational';
 import { AssociationGraph, emptyGraph } from './associations';
 import { MemoryStore, emptyMemoryStore } from './memory';
+import { IdentityExpressionChannelId, IdentityEvidenceState, EMPTY_IDENTITY_EVIDENCE } from './identity';
+import { DecisionExpression } from './decision';
 
 function expectationKey(subject: ExpectationSubject, needId: NeedId): string {
   return `${subject}|${needId}`;
@@ -30,6 +32,17 @@ export interface CharacterState {
   readonly expectations: ReadonlyMap<string, NeedExpectation>;
   readonly associations: AssociationGraph;
   readonly memory: MemoryStore;
+  /** Phase 2.9 — accumulated Support/Opposition evidence per
+   * IdentityExpressionChannel (model/identity.ts). Absent channels default
+   * to {support:0, opposition:0} via `getIdentityEvidence` below, mirroring
+   * `getExpectation`'s `?? initialExpectation(0)` fallback. */
+  readonly identityEvidence: ReadonlyMap<IdentityExpressionChannelId, IdentityEvidenceState>;
+  /** Phase 2.9 — every resolved Decision's immutable DecisionExpression, in
+   * occurrence order. Needed for Experiments F-K's "inspect prior
+   * decisions" checks and Brief §36's full-inspectability requirement.
+   * Unbounded growth is accepted, matching the brief's own "only one
+   * research character" cost argument (§9) — no cap. */
+  readonly decisionHistory: readonly DecisionExpression[];
 }
 
 export function createCharacter(
@@ -50,6 +63,8 @@ export function createCharacter(
     expectations: new Map(),
     associations: emptyGraph(conceptUniverse),
     memory: emptyMemoryStore(),
+    identityEvidence: new Map(),
+    decisionHistory: [],
   };
 }
 
@@ -103,4 +118,26 @@ export function withNeedLevel(state: CharacterState, needId: NeedId, level: Rati
 
 export function withCurrentTime(state: CharacterState, time: number): CharacterState {
   return { ...state, currentTime: time };
+}
+
+/** Phase 2.9 — mirrors `getExpectation`'s `?? initialExpectation(0)`
+ * fallback: a channel with no recorded evidence yet reads as
+ * {support:0, opposition:0} rather than requiring every channel to be
+ * pre-populated. */
+export function getIdentityEvidence(state: CharacterState, channel: IdentityExpressionChannelId): IdentityEvidenceState {
+  return state.identityEvidence.get(channel) ?? EMPTY_IDENTITY_EVIDENCE;
+}
+
+export function withIdentityEvidence(
+  state: CharacterState,
+  channel: IdentityExpressionChannelId,
+  evidence: IdentityEvidenceState,
+): CharacterState {
+  const next = new Map(state.identityEvidence);
+  next.set(channel, evidence);
+  return { ...state, identityEvidence: next };
+}
+
+export function withDecisionExpression(state: CharacterState, expression: DecisionExpression): CharacterState {
+  return { ...state, decisionHistory: [...state.decisionHistory, expression] };
 }

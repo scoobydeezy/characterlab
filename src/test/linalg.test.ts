@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { ratOf, Rational } from '../kernel/rational';
-import { solveLinearSystem, matVecMul, identity, SingularMatrixError, Matrix } from '../kernel/linalg';
+import { solveLinearSystem, matVecMul, identity, SingularMatrixError, Matrix, dot, quadraticForm, Vec } from '../kernel/linalg';
 
 describe('solveLinearSystem — exact Gaussian elimination (Brief §16, §32)', () => {
   it('solves a hand-verified 2x2 system exactly', () => {
@@ -102,5 +102,43 @@ describe('Rational stays exact through elimination (no accumulated imprecision)'
       expect(run1[i].equals(run2[i])).toBe(true);
       expect(run1[i].toString()).toBe(run2[i].toString());
     }
+  });
+});
+
+describe('dot / quadraticForm — Phase 2.9 trait-projection primitives', () => {
+  it('dot computes the exact inner product', () => {
+    const a: Vec = [ratOf(1, 2), ratOf(-3), ratOf(4)];
+    const b: Vec = [ratOf(2), ratOf(1, 3), ratOf(-1, 4)];
+    // 1/2*2 + -3*1/3 + 4*-1/4 = 1 - 1 - 1 = -1
+    expect(dot(a, b).equals(ratOf(-1))).toBe(true);
+  });
+
+  it('dot throws on mismatched lengths', () => {
+    expect(() => dot([ratOf(1)], [ratOf(1), ratOf(2)])).toThrow(RangeError);
+  });
+
+  it('quadraticForm reduces to b + w.x when Q is all-zero (pure linear trait projection)', () => {
+    const b = ratOf(1, 10);
+    const w: Vec = [ratOf(1), ratOf(0), ratOf(0)];
+    const Q: Matrix = [
+      [ratOf(0), ratOf(0), ratOf(0)],
+      [ratOf(0), ratOf(0), ratOf(0)],
+      [ratOf(0), ratOf(0), ratOf(0)],
+    ];
+    const x: Vec = [ratOf(7, 10), ratOf(-2, 10), ratOf(3, 10)];
+    // b + w.x = 1/10 + 7/10 = 8/10
+    expect(quadraticForm(b, w, Q, x).equals(ratOf(8, 10))).toBe(true);
+  });
+
+  it('quadraticForm includes the x^T Q x term exactly for a hand-verified case', () => {
+    const b = Rational.ZERO;
+    const w: Vec = [ratOf(0), ratOf(0)];
+    const Q: Matrix = [
+      [ratOf(1), ratOf(0)],
+      [ratOf(0), ratOf(2)],
+    ];
+    const x: Vec = [ratOf(3), ratOf(1, 2)];
+    // x^T Q x = 3*1*3 + (1/2)*2*(1/2) = 9 + 1/2 = 9.5
+    expect(quadraticForm(b, w, Q, x).equals(ratOf(19, 2))).toBe(true);
   });
 });

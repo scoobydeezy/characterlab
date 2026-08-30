@@ -1769,3 +1769,510 @@ does a character form and revise beliefs about other people, and how do those be
 meaningful?** That question is not scoped here — scoping it before this consolidation actually landed
 would have repeated the exact mistake this entry exists to correct, building on a foundation that was
 still two co-equal architectures pretending to be one.
+
+## Phase 2.9 — Decision Authorship, Acquired Identity, and the Role of Dice
+
+**Status: RESOLVED. All eleven lettered experiments (A-K) from the Phase 2.9 Research Brief's
+Required Experiment Suite run against real `runDecisionCycle` output, every number below taken
+directly from those runs.**
+
+This phase asked a question none of Phases 0-2.5e's machinery could answer: given a specific, named
+dilemma with a small number of psychologically live Options, how does CharacterLab decide, and what
+does the resolution of that dilemma leave behind? `model/decision.ts` and `model/identity.ts` are new;
+`model/cycle.ts::runDecisionCycle` is a new sibling entry point to `runAutonomousCycle`, sharing the
+existing outcome/learning/memory/association tail via the now-exported `applyChosenAction`; nothing
+about ordinary autonomous cycles changed. Three experiment files
+(`decisionResolution.ts`/`identityFormation.ts`/`seedDivergence.ts`) implement the brief's eleven
+lettered cases; `test/phase2_9Decision.test.ts`, `phase2_9Identity.test.ts`,
+`phase2_9DecisionResolution.test.ts`, `phase2_9IdentityFormation.test.ts`, and
+`phase2_9SeedDivergence.test.ts` assert every one of them against live output.
+
+### Scoping decisions, stated up front
+
+1. **No latent personality vector (P) this phase.** The master Brief assigns P to Phase 3; none of
+   Experiments A-K require it (Need urgency, NeedExpectation, accessibility, and the new
+   IdentityConsistency channel are sufficient sources). Brief §35's "no legal transition mutates the
+   7-dimensional personality vector" invariant is **vacuously satisfied** — the vector does not exist
+   yet — recorded here rather than tested against nonexistent state. Brief §23's "avoid
+   double-counting personality" warning is preserved as a documented future constraint in
+   `decision.ts`'s own module comment for whenever Phase 3 adds P.
+2. **`Decision` is a new, parallel front-end to Action selection**, never a replacement for
+   `choice.ts`'s softmax pipeline. `runDecisionCycle` is used only for an explicitly-authored
+   small-Option dilemma; it hands off to the same `applyChosenAction` tail every other entry point
+   already uses once a winning Option is resolved.
+3. **RNG addressing reuses `kernel/random.ts` verbatim.** `eventId = decisionId`, `purposeId =
+   'decision_roll'` (or `'decision_tie_break'` for the tie-resolution draw), `drawIndex` = the
+   Influence's canonical ordinal position among all surviving Influences in the Decision — no kernel
+   RNG changes were needed.
+4. **Exact discrete distributions are a new, Decision-agnostic kernel primitive**
+   (`kernel/discreteDistribution.ts`) — pure finite-integer-support rational-PMF math, knowing
+   nothing about Decisions, Options, or Influences.
+5. **Option/Influence/Decision identity is reused, not newly minted**: an Option's identity is its
+   backing `ActionDef.actionKey`; a `DecisionId` reuses `SimEvent.eventId` directly.
+6. **An `identityFeedbackEnabled` ablation switch on `DecisionParams`** (default `true`) lets any
+   "identity specifically causes this" claim be verified as a measured difference between two
+   same-seed, same-sequence runs rather than assumed — used throughout Experiments E/G/H/I/J below.
+7. **Influence strengths are bounded before calibration**: every `DecisionInfluence.signedStrength`
+   used for die-size lookup and `sign()` is `Rational.boundedResponse(rawStrength)`, so the die-scale
+   threshold table means the same thing regardless of which system (Need urgency, accessibility,
+   identity) produced the raw value.
+
+### The `winProbabilities` fair-tie-share proof
+
+`kernel/discreteDistribution.ts::winProbabilities` computes exact pre-roll win probabilities for K
+independent discrete `RollScore` distributions, splitting an exact tie among however many options
+share the max value. This is the single most load-bearing piece of new kernel math in the phase — if
+it were wrong, every downstream Margin/Contest/Stake/AuthorshipPotential number would be wrong too —
+so it is checked two ways in `test/discreteDistribution.test.ts`, not one: (a) the general K-option
+formula reduces algebraically, and is checked numerically, to the textbook two-option formula
+`P_1 = Sum_v pmf_1(v)*CDF_2(v-1) + (1/2)*Sum_v pmf_1(v)*pmf_2(v)` for a concrete d4-vs-d6 case; (b)
+for small K/N the formula's output is checked against **brute-force enumeration** over every possible
+combination of die faces — the only place in this phase's test suite where the tie-share math is
+checked against ground truth rather than against itself. Both checks pass exactly (exact-rational
+equality, not within-tolerance). `totalProbability(d)` is also asserted to equal `Rational.ONE` exactly
+across every convolution exercised in the suite — Brief §35's normalization obligation, checked
+directly rather than assumed.
+
+### Die-ratio and the consolidation ceiling
+
+Tuning `strongSide`/`weakSide` (the two `BiasedSide` presets used throughout `identityFormation.ts`)
+surfaced a real structural finding about how big a repeated pre-roll split has to be before repeated
+choice can ever consolidate a named trait. `Dependable`'s projection over `IdentityStrength` is bounded
+by `boundedResponse`, so a K:1 pre-roll split's own **asymptotic ceiling** — the largest
+IdentityStrength that split can ever produce, however many rounds run — is `boundedResponse((K-1)/(K+1))`.
+Empirically sweeping K against `thetaTrait = 0.30`: a 2:1 split's ceiling caps out around **0.25**, a
+3:1 split around **0.29** — both structurally short of consolidation no matter how many rounds run,
+not merely slow to reach it. A 4:1 split (`strongSide` calibrated to a die-scale "very strong" d10
+against `weakSide`'s "weak" d4) has ceiling `boundedResponse(3/5) = 0.375`, clearing `thetaTrait` with
+real margin. This is why `strongSide`/`weakSide` are calibrated to specific die brackets rather than
+arbitrary NeedExpectation values — the die-scale thresholds are not just a resolution-mode knob, they
+directly set the ceiling on what repeated choice can ever prove about a character. Experiment E (below)
+confirms this ceiling is reachable, not just asymptotically approached: 24 rounds already clear
+`thetaTrait`.
+
+### Experiments A-D, K — Decision mechanics (`decisionResolution.ts`)
+
+All five share one harness (`runDecisionSample`): `defaultDecisionScenario()`'s baseline, a
+case-specific NeedExpectation/NeedLevel override, resolved through real `runDecisionCycle` calls.
+
+**A — Residual uncertainty.** `defaultDecisionScenario()`'s own symmetric baseline: both Options land
+at exactly **P=0.5000**, `resolutionMode=PlayerFacingRoll`, two d4 dice actually rolled
+(`keep_dinner_promise:d4+1`, `stay_at_work:d4+1`, a real tie broken candidate-by-candidate by
+`winProbabilities`' own fair-share math). Neither raw Need pressure nor the (unmodeled) personality
+vector deterministically picks a winner — verified directly (`bothProbabilitiesNontrivial=true`,
+`usedDice=true`).
+
+**B — Obvious choice.** Keep Dinner given a near-certain (mu=0.95), well-established (tau=20)
+Connection expectation against a severely depleted Connection Level, versus Stay At Work's near-zero,
+equally well-established Achievement expectation against a nearly-satisfied Achievement Level: Margin
+jumps to **1.0000**, Contest to **0.0000**, `resolutionMode=Auto`, zero dice rolled
+(`marginHigh=contestLow=autoResolved=noDiceRolled=true`) — no unnecessary stochasticity when one Option
+is genuinely overwhelming.
+
+**C — Trivial uncertainty** (Brief §10's own "tea or coffee?" example). Both Options seeded with a
+genuine but tiny NeedExpectation (mu=0.03) — small enough that `boundedResponse` keeps every resulting
+Influence below `dieScale.weak` (0.10), so BOTH Options end up with **zero surviving Influences**. The
+Decision still requires a roll (a fair coin-flip tie-break among two zero-evidence Options,
+`resolutionMode=QuietRoll`, Contest=1.0 because both pre-roll probabilities are exactly 0.5 with
+nothing distinguishing them) but never becomes player-facing, and Stake stays at exactly **0.0000**
+(`ConflictMass=min(0,0)=0`) — a genuinely trivial decision produces genuinely trivial
+AuthorshipPotential, and Identity Evidence never moves (`identityEvidenceStaysSmall=true`, in fact
+exactly zero — no `identityExpressions` at all, since `AuthorshipPotential=0` zeroes every
+`ExpressionStrength`).
+
+**D — Meaningful conflict** (Brief §10's "keep promise to Glen or protect my exhausted self," modeled
+as Keep Dinner vs. Stay At Work). Both Options given a strong (mu=0.9), well-established (tau=10)
+NeedExpectation — real, comparable motivational mass on both sides. AuthorshipPotential reaches
+**0.7778**, `resolutionMode=PlayerFacingRoll`, real d6-vs-d6 dice (`keep_dinner:d6+6`,
+`stay_at_work:d6+4`), and Identity Evidence lands at **±0.2001** on the CommitmentFidelity/
+WorkPersistence channels — comfortably past the 0.10 "substantial" threshold this experiment checks
+(`highAuthorship=playerFacing=substantialIdentityEvidence=true`).
+
+**K — Intent versus physical outcome.** Reuses D's exact contested setup and seed, then forces the
+PHYSICALLY EXECUTED Action/WorldOutcomeTable to an unrelated Betrayal table while leaving the dice
+resolution itself untouched. The dice-selected Option is identical in both runs
+(`chosenIntent=action.keep_dinner_promise` in both, `intentPreserved=true`) and Identity Evidence is
+computed from that same intent in both cases — but `forced.executedAction.actionKey =
+action.betrayal_glen`, physically different from what was decided (`physicalOutcomeDiffers=true`).
+This is the existing `applyChosenAction`/`forcedOutcomeOverride` plumbing doing double duty exactly as
+planned: no new "intent vs. outcome" machinery was needed, because `DecisionExpression.chosenIntent`
+and the executed `ActionDef` were already two separately-trackable values.
+
+### Experiments E, G, H — Identity formation (`identityFormation.ts`)
+
+**E — Trait acquisition.** 24 repeated dinner-vs-work Decisions, 4:1 biased (`strongSide`/`weakSide`,
+see above), run with `identityFeedbackEnabled: false` — a deliberate acquisition-isolation ablation:
+running WITH feedback enabled would let Experiment H's self-stabilization dynamic (below) freeze
+evidence growth before consolidation is reached, confounding "does repeated behavior alone build
+evidence" with "does established identity limit its own future growth." CommitmentFidelity's
+IdentityStrength rises from **0.0537** (round 0) to **0.4807** (round 23); final accumulated evidence
+is `support=2.4993, opposition=0.2272` — real, if imperfect, discrimination (a 4:1 split still loses
+occasionally, and every loss adds real opposition evidence via `Alignment`'s subtraction term). The
+single-channel `Dependable` trait (Brief §21's own worked example: all-zero `Q`, `w`=1 at
+CommitmentFidelity) is **consolidated by the end of the run**
+(`traitConsolidatedByEnd=true`) — with no trait ever explicitly authored onto the character; consolidation
+is checked purely by projecting `DEPENDABLE_TRAIT` over the accumulated `IdentityEvidenceState`.
+
+**G — Identity feedback.** Starting from Experiment E's consolidated state, one more matching Decision
+run twice, same seed, feedback on vs. off. WITH feedback: `resolutionMode=Auto`, Margin=**0.9906**,
+P(Keep Dinner)=**0.9953** — CommitmentFidelity's own `identity_consistency` Influence (Alignment=0.3976)
+adds enough pressure to auto-resolve what would otherwise still be a real roll. WITHOUT feedback (same
+seed, same underlying Need state): `resolutionMode=QuietRoll`, Margin=**0.6000**, P(Keep Dinner)=
+**0.8000**, real d10-vs-d4 dice thrown. The compatible Option's probability is measurably higher with
+feedback (0.9953 > 0.8000, `compatibleOptionProbabilityRises=true`) — IdentityConsistency is a real,
+load-bearing reason, not a cosmetic one — while neither run collapses either probability to exactly 0
+or 1 (`neitherOptionDictated=true`): identity strengthens a reason, it never dictates the Action.
+
+**H — Self-stabilization** (Brief §24's own hypothesis). The identical repeated-Decision harness E
+uses, extended to 30 rounds with feedback left at its ordinary default (`true`). Average Contest over
+the first third of rounds is **0.3609**; over the last third, **0.0094** (`contestFell=true`) — as
+CommitmentFidelity strengthens, IdentityConsistency increasingly separates the two Options'
+probabilities, exactly as predicted. Total identity-evidence magnitude added over the first third is
+**1.3161**; over the last third, **0.0399** (`evidenceGrowthSlowed=true`) — a real, mechanically
+necessary consequence, not a separate assumption: falling Contest shrinks AuthorshipPotential
+(`Contest x Stake`), which shrinks `ExpressionStrength = Alignment x AuthorshipPotential` for every
+future round. This is a self-LIMITING loop, not a runaway one — individual rolls stay genuinely
+stochastic throughout (Brief §25's "identity must not eliminate meaningful agency"), and the comparison
+is first-third-vs-last-third rather than asserted round-over-round monotonicity for exactly that
+reason.
+
+### Experiment I — Identity fault line, and the Alignment floor-rescue impossibility (Brief §26)
+
+This experiment's shape changed during empirical verification from the plan's original framing — "raw
+Need alone makes Keep Dinner nearly automatic; an established OPPOSING identity re-contests it, Auto
+becomes PlayerFacingRoll" — because that framing is **mathematically unreachable** under the implemented
+`Alignment`/`identityConsistency` formulas, a real structural fact worth stating precisely:
+
+```
+Alignment(o,k) = boundedResponse( TaggedPressure(o,k) - Sum_over_others TaggedPressure(o',k) )
+```
+
+Since `boundedResponse(x) < x` for every `x > 0`, `Alignment(o,k)` can never exceed option `o`'s OWN
+raw tagged pressure. An "obvious choice" baseline requires the underdog Option's raw Need-sourced
+Influence to already sit BELOW `thetaInfluenceFloor` (0.10) — that is precisely how it ends up with no
+die at all. But that same sub-floor raw pressure caps the underdog's own identity Alignment strictly
+below `boundedResponse(0.10) ~= 0.0909`, itself already below the floor. Because `identityConsistency`
+sums Alignment across channels — and any opposing channel (here, CommitmentFidelity, anchored to the
+LEADING option's own pressure) only pulls the total further down — **no identity strength, however
+large (strength itself is bounded strictly below 1), can lift a floored option's identity-consistency
+Influence back up to the floor.** Identity can shift a Decision between two Options that are ALREADY
+both in the dice; it cannot resurrect one that raw Need pressure alone has already ruled out. This is
+verified directly, not assumed: an obvious-baseline setup (Speak Up's own raw Recognition pressure kept
+deliberately below the floor) resolves to `Contest=0.0000, resolutionMode=Auto` **identically** whether
+`identityFeedbackEnabled` is `true` or `false` (`identityCannotRescueAFlooredOption=true`), even with
+RiskAcceptance independently established at strength 0.4283 by that point in the run.
+
+Given that finding, the experiment verifies the strongest TRUE claim the system supports instead: two
+INDEPENDENTLY-earned, OPPOSING identities — CommitmentFidelity (a short, deliberately under-established
+4-round acquisition, ending at strength **0.0926**) and RiskAcceptance (a long, 200-round acquisition
+approaching its own ceiling, ending at strength **0.4283**) — measurably shift a Decision where BOTH
+Options already survive on raw Need alone (Keep Dinner's Connection deficit at the bare "moderate," d6,
+threshold; Speak Up's Recognition deficit just under it, d4). WITH identity: `resolutionMode=Auto`,
+Margin=**0.9844**, P(Speak Up)=**0.9922**. WITHOUT identity: `resolutionMode=PlayerFacingRoll`,
+Margin=**0.3333**, P(Speak Up)=**0.6667**, real d4-vs-d6 dice thrown. The shift is unambiguous
+(`identityMeasurablyShiftedTheContestedDecision=true`) and neither run ever collapses a probability to
+exactly 0 or 1 (`neitherRunDictatedTheContestedDecision=true`). The deliberate CF-weak/RA-strong
+asymmetry is itself a finding, not an arbitrary tuning choice: probing found that two COMPARABLY
+strong opposing identities (both run to similar strength) very nearly cancel in `identityConsistency`'s
+sum and never clear the floor on either side — **comparably-matched competing identities mostly
+neutralize each other's dice-shaping power; only a sufficiently lopsided pair actually moves the
+resolution.** And when it does move it, per the arithmetic above, it moves it as a discrete jump — a
+whole extra die crossing the floor — not a gradual one: Margin here jumps from 0.3333 to 0.9844, not
+through any intermediate value. There is no regime in this reference model where identity feedback
+produces a small, continuous shift in a Decision's resolution — it is either silent (below floor, no
+effect at all) or it adds a whole die (a potentially large, discontinuous effect).
+
+### Experiment J — Contradiction, and identity's self-protective feedback (Brief §27)
+
+After Experiment E's harness runs 50 rounds (a longer baseline than E's own default 24 — this seed
+needed the extra rounds to actually cross `thetaTrait`; a sweep at 24/30/40/50/60 rounds found the
+threshold crossed only at 50, strength **0.3365 -> 0.3361 -> 0.3819 -> 0.4733 -> 0.5154** against
+`thetaTrait/(1-thetaTrait) ~= 0.4286`), `Dependable` is solidly consolidated
+(`consolidatedAfterE=true`, `strengthAfterE=0.4733`). One HIGH-AUTHORSHIP contradicting round (Work's
+expectation now higher than Glen's, so Stay At Work usually wins, while Glen's CommitmentFidelity-tagged
+pressure remains real — so `Alignment(StayAtWork, CommitmentFidelity)` comes out negative, adding
+Opposition evidence) does NOT erase the trait (`consolidatedAfterOneContradiction=true`) — a single
+contradiction is not enough to undo an established pattern. 30 further contradicting rounds DO reduce
+strength (**0.4733 -> 0.3707**, `strengthDropped=true`) and eventually un-consolidate the trait
+(`consolidatedAfterManyContradictions=false`).
+
+Reaching that clean result required a real fix, and the fix is itself a finding worth recording:
+running the contradiction rounds with the ORDINARY default (`identityFeedbackEnabled: true`) was tried
+first, and strength stayed FLAT or even ROSE across 60+ contradiction rounds instead of declining. The
+mechanism is Experiment H's own self-stabilization dynamic, now running in reverse: once
+CommitmentFidelity is strongly established, its OWN `identity_consistency` Influence actively OPPOSES
+Stay At Work every round (a negative Alignment, weighted by CommitmentFidelity's already-high strength),
+pulling the "contradiction" bias's own dice back toward Keep Dinner and suppressing the very Opposition
+evidence the contradiction round was trying to add. **An established identity actively resists
+behavioral contradiction through the same feedback channel that built it.** The fix — disabling
+`identityFeedbackEnabled` for the contradiction rounds, exactly as Experiment E isolates pure
+behavioral acquisition — isolates "does repeated CONTRARY BEHAVIOR ALONE erode evidence" from "does
+identity's own feedback resist the erosion," which are genuinely different questions this reference
+model now answers separately.
+
+### Experiment F — Seed divergence, the flagship claim ("dice cumulatively author character identity")
+
+Two characters, Timeline A and Timeline B, start from byte-identical initial state and face the exact
+same sequence of 40 genuinely-ambiguous dinner-vs-work Decisions (`kernel/random.ts`'s counter-addressed
+oracle means changing only the seed changes every roll from round 1 onward while leaving every other
+input identical) — differing ONLY in deterministic seed. Reaching a "genuinely ambiguous" symmetric bias
+itself required three rounds of empirical tuning: a symmetric WEAK (d4/d4) bias never produces
+measurable divergence at all (raw pressure too small for IdentityConsistency's Alignment to ever clear
+the floor, so both timelines random-walk toward zero regardless of seed); a symmetric EXTREME (d12/d12)
+bias overshoots the other way (one contested round's AuthorshipPotential is already big enough to clear
+the floor for the very next round, freezing the Decision to `Auto` from round 2 onward — if the two
+seeds' first rolls happen to coincide, a real ~50% event, their whole biographies become byte-identical);
+a symmetric MODERATE (d6/d6) bias is the working choice — strong enough to eventually self-reinforce,
+weak enough that several genuinely-contested rounds happen first.
+
+The full causal chain the brief predicts holds at every link, checked against real output rather than
+assumed at the end: early dice rolls genuinely differ between seeds within the first 5 rounds
+(`firstRoundRollsDiffered=true`); that shows up in which Option gets chosen in at least one early round
+(`earlyDecisionExpressionsDiffered=true`); by round 40 the two characters have accumulated measurably
+different CommitmentFidelity evidence (IdentityStrength **-0.2315** vs. **-0.0772**,
+`acquiredIdentitiesDiffered=true`); and presented with an IDENTICAL next Decision (same raw-Need
+baseline, same third, independently-addressed seed for the roll itself), each character's own
+already-different identity answers it differently: Timeline A resolves `Auto`, P(Stay At
+Work)=**0.8625**; Timeline B resolves `PlayerFacingRoll`, real d10-vs-d10 dice, P(Stay At
+Work)=**0.5000** exactly (`laterProbabilitiesDiffered=true`). Two characters who share every authored
+fact about their world differ, durably and measurably, purely because of which way independent dice
+fell early on — this is Brief §30's flagship claim, verified end to end against a real paired
+counterfactual rather than a single anecdote.
+
+### Three-part output (Brief §36) for Decision Authorship, Acquired Identity, and the Role of Dice
+
+**Psychological finding.** A character's identity, in this reference model, is not something a scenario
+author assigns — it is a residue that specific, dice-resolved choices leave behind, and that residue
+behaves like a real research finding rather than a designed one: it consolidates only past a real
+motivational-split ceiling (Experiment E/the die-ratio finding), it self-stabilizes once established
+(Experiment H), it resists behavioral contradiction through the same channel that built it (Experiment
+J), it can shift a genuinely live decision without ever dictating one (Experiments G/I), and it cannot
+retroactively rescue a choice raw motivation had already ruled out (Experiment I's impossibility proof).
+Two characters who share an identical authored world and differ only in which way early dice fell go on
+to become measurably, durably different people (Experiment F) — acquired identity here is a genuine
+emergent consequence of stochastic choice under pressure, not a label attached to it.
+
+**Computational finding.** A dice-quantized reference model has a genuinely different failure/success
+shape than a continuous one: `thetaInfluenceFloor` and the die-size brackets mean identity's own
+feedback contribution is either completely silent (below floor, exactly as if it did not exist) or
+suddenly decisive (a whole extra die, capable of flipping a near-even Margin to near-certainty in one
+step) — there is no smoothly-graded middle regime in this system, and treating the two extremes as if
+they were points on a continuum (as the original Experiment I framing implicitly did) leads to
+predictions the actual formulas cannot honor. Finding this out required exactly this project's standing
+discipline: probe the real system's numbers before trusting a hand-derived prediction, and when a
+planned experiment turns out to be unreachable, redesign it to verify the strongest true claim instead
+of silently patching the target until the assertion passes.
+
+**Architectural implication.** `Decision`/`DecisionExpression`/`IdentityEvidenceState` slot into the
+existing cognitive cycle as a genuine sibling to ordinary autonomous action selection, not a
+replacement or a special case bolted alongside it — the same `applyChosenAction` tail, the same
+counter-addressed RNG discipline, the same NeedExpectation/accessibility inputs, with exactly one new
+Influence source (`identity_consistency`) added to the mix. `CharacterState.decisionHistory` gives any
+future system full inspectability into every Decision a character has ever faced, and
+`identityEvidence` gives it a compact, quantized summary of what that history has amounted to — exactly
+the shape of object Brief §33 says Phase 3's belief formation will need as input, built here without
+needing to guess at Phase 3's own requirements in advance.
+
+### Next-phase justification
+
+Phase 2.9 gives CharacterLab something it never had: a way for a character's biography to durably shape
+who that character is becoming, entirely through mechanisms already validated elsewhere in this project
+(exact rational arithmetic, counter-addressed determinism, the existing Need/Expectation/Accessibility
+pipeline) plus one new, carefully-scoped feedback channel. Phase 3 (personality, belief, and social
+appraisal, per the master Brief's own phase ordering) can now ask a question this phase deliberately
+left unanswered: **given a `DecisionExpression` history and a consolidated `IdentityEvidenceState`, how
+does ANOTHER character infer belief about this one** — the direct target Brief §33 names for
+`DecisionExpression` as an input to belief formation — and, separately, how does the latent personality
+vector P this phase explicitly declined to build interact with the Decision/Identity pipeline now that
+one exists to interact with, honoring Brief §23's double-counting warning from day one instead of
+discovering the need for it after the fact.
+
+## Phase 2.95 — Reason Consolidation & Identity Fault Lines
+
+**Status: RESOLVED. All five target behaviors (A-E) from an external review of the Phase 2.9 write-up
+run against real `runDecisionCycle` output, every number below taken directly from those runs.**
+
+An external review of Phase 2.9's RESOLVED write-up read the entry above and identified a single root
+structural cause behind two of its own findings that Phase 2.9 had reported as fundamental limits of a
+dice-quantized reference model rather than as implementation gaps: Experiment E only demonstrated smooth
+evidence accumulation with `identityFeedbackEnabled: false`, never under the ordinary feedback-on loop
+(the "self-stabilization would freeze it early" argument), and Experiment I never produced a genuine
+"opposing identity re-contests an otherwise near-automatic decision" outcome — only near-total
+cancellation, or a discrete whole-extra-die flip that handed the decision outright to whichever side
+identity favored. The review traced both to the same cause, and Phase 2.9's own §26 write-up had
+already, unknowingly, proven it mathematically: under that architecture, `identityConsistency` was
+assembled into its OWN separate `DecisionInfluence`, subject to its OWN independent
+`thetaInfluenceFloor` check. `Alignment(o,k) = boundedResponse(TaggedPressure(o,k) - Sum_others)` can
+never exceed an option's own raw tagged pressure, so identity's contribution was structurally
+"all-or-nothing" per option — it could never COMBINE with an already-present but individually sub-floor
+Need signal on the same topic to jointly clear the floor. This section records the architectural fix
+and the five target behaviors (A-E) the review specified to verify it actually closes the gap.
+
+### The fix: one shared consolidation pool, not two
+
+Three modules changed. `model/decision.ts` gained `sumRawBySemanticChannel` (sums raw, pre-`boundedResponse`
+pressures by semantic channel — the first half of consolidation, exposed on its own so a caller can fold
+MORE raw pressure into the same pool before anyone bounds or floors it), `boundAndFloorChannels` (bounds
+then floor-filters — the dice-eligible result), and `boundAllChannels` (dense, bounded, but NOT
+floor-filtered — used only where a channel's "meaning" must not be gated by dice-eligibility).
+`model/identity.ts` gained `identityFeedbackRawInfluences`, which decomposes identity's per-channel pull
+into separate `RawReasonInfluence`s tagged `identity:<channel>` — raw, unbounded contributions that feed
+into the SAME per-option raw pool as Need/accessibility, rather than becoming their own independently-
+floored `DecisionInfluence`. `model/cycle.ts::runDecisionCycle` was rewritten around this: it builds a
+Need/accessibility-only bounded (not floored) map per option first — used EXCLUSIVELY for identity's own
+expression/evidence generation (`touchedChannels`/`Alignment`), preserving Brief §23's "no
+double-counting" rule that identity's own feedback must never feed back into producing MORE identity
+evidence for the same channel — and separately, per option, merges that option's raw Need/accessibility
+pool with identity's raw per-channel pull (when `identityFeedbackEnabled`) into ONE pool, bound-and-
+floored exactly once, which is what actually becomes the `DecisionInfluence[]` driving dice and
+resolution. This two-map separation is the key design insight: it makes "identity's own evidence
+generation never double-counts itself" and "identity can combine with weak Need to clear the floor"
+simultaneously true, where Phase 2.9's single-map architecture could only have one or the other.
+
+One structural property survives the fix unchanged, and is worth stating plainly rather than glossing
+over: die-bracket quantization is inherent to this reference model's five authored discrete size bands.
+The underlying pre-bracket consolidated value is, by construction, a smooth, continuous, monotonically
+saturating sum of two bounded-or-boundable quantities run through one shared `boundedResponse` call —
+but resolved PROBABILITY still jumps at bracket boundaries, because `strengthToDie`'s five buckets are an
+AUTHORED discrete scale, never meant to be continuous. What Phase 2.95 changes is not "make dice
+continuous" — it is which side of an existing bracket boundary a combined signal lands on, and whether a
+combination that used to be mathematically unreachable (two independently sub-floor signals rescuing each
+other) is now reachable at all.
+
+### Target A — Gradual identity influence
+
+Sweeping established CommitmentFidelity evidence (Support only, Opposition fixed at 0) from 0 to 30 in
+0.1 steps (301 samples) against a fixed symmetric dinner-vs-work baseline: P(Keep Dinner) starts at
+**0.5000** (`PlayerFacingRoll`, support=0), rises through one real bracket transition
+(`largestSingleStepJump=0.3906`, at support 8.1 → 8.2: P **0.5000 → 0.8906**), and ends at **0.8906**
+(`resolutionMode=Auto`, support=30) — never dipping (`probabilityMonotonicNondecreasing=true`) and never
+reaching exactly 0 or 1 even at this extreme saturation level (`neverFullyDictatesEvenAtSaturation=true`).
+Honest scoping, found empirically rather than assumed: the underlying consolidated Rational value is
+provably continuous by construction, but the five-band die scale still produces one visible, localized
+jump rather than a smooth ramp — this is the die-bracket property described above, not a residual defect
+in the fix.
+
+### Target B — Weak-signal combination
+
+Keep Dinner's own raw `commitment`-channel Need pressure (Glen mu=0.25) is real but individually below
+`thetaInfluenceFloor` — alone (`identityFeedbackEnabled: false`), it gets no die at all: P(Keep
+Dinner)=**0.0000**, `resolutionMode=Auto` (`needAloneNeverClearsTheFloor=true`). The identical weak
+CommitmentFidelity evidence (Support=1) run in isolation against a near-zero-mu control is independently
+confirmed too weak to clear the floor on its own (`identityAloneWouldBeTooWeakToo=true`) — proving Target
+B genuinely tests COMBINATION, not one channel quietly doing all the work. Consolidated together on the
+shared `commitment` channel, Keep Dinner gets a real, surviving die: P(Keep Dinner)=**0.3333**,
+`resolutionMode=PlayerFacingRoll`, Contest=**0.6667**, two dice actually rolled
+(`combinedTheyClearIt=true`). This is the review's central ask, made concrete and empirically verified:
+the floor-rescue Phase 2.9's own Experiment I proved mathematically impossible under the old architecture
+now demonstrably happens.
+
+### Target C — A real identity fault line
+
+Where Phase 2.9's Experiment I could only ever produce near-total cancellation or a discrete whole-die
+flip, this case asks for the review's literal target: an opposing, previously-uninvolved identity
+(RiskAcceptance, anchored to Speak Up) turning Contest UP — making an already-favored matchup MORE
+genuinely contested — without flipping which option leads or collapsing to Auto. WITHOUT identity:
+Contest=**0.5000**, Margin=**0.5000**, P(Keep Dinner)=**0.7500**, `resolutionMode=PlayerFacingRoll`.
+WITH identity (RiskAcceptance Support=1, anchored to Speak Up): Contest rises to **0.7500**
+(`contestIncreased=true`), Margin falls to **0.2500**, P(Keep Dinner) narrows to **0.6250** — still
+favored, genuinely less so (`keepDinnerStillFavoredButLessSo=true`) — and both runs remain
+`PlayerFacingRoll` throughout (`bothRunsPlayerFacing=true`), with neither probability ever hitting exactly
+0 or 1 (`neitherProbabilityHitZeroOrOne=true`). This is the die-bracket system's own version of "identity
+re-contests an otherwise near-automatic decision" (Brief §26's original framing) — narrower than a fully
+continuous system would allow (the shift crosses exactly one bracket, not a continuum of intermediate
+values), but a real, qualitatively different outcome from Phase 2.9's cancellation-or-flip dichotomy.
+Reaching this shape required a systematic parameter search: Alignment's "own minus others" formula means
+establishing an identity anchored to one option ALSO applies a negative pull onto the competing option on
+the same channel — a "double lever" effect that made naive attempts overshoot into full reversal or Auto
+far more often than a one-sided mental model would predict.
+
+### Target D — Identity transformation with feedback active, and the persistence of self-stabilization
+
+The review asked whether Phase 2.9's Experiment J finding — an established identity's own feedback
+channel actively resists the very contradiction meant to erode it, forcing J to disable feedback to
+isolate pure behavioral counter-evidence — still holds under Phase 2.95's architecture. Reusing
+Experiment E's exact consolidated-`Dependable` starting state (strength **0.5325**,
+`consolidatedAfterAcquisition=true`) and running Experiment J's IDENTICAL contradiction bias
+(`weakSide(2/5)`/`strongSide(2)`) with feedback left ON reproduces J's finding essentially unchanged:
+Keep Dinner (the identity-aligned option) still wins the great majority of "contradiction" rounds outright,
+so strength drifts UP rather than eroding — self-stabilization is real under Phase 2.95 too, not
+eliminated by the consolidation fix, and this was confirmed directly by instrumenting the round-by-round
+run before accepting a different parameter (see this phase's own search history: at J's own bias level,
+Stay At Work won only 21 of 150 rounds and final strength rose to 0.6055).
+
+What the fix changes is WHERE the fault line sits, not whether identity resistance exists at all: a
+single die-bracket's worth more raw pressure on the contradicting side (`strongSide(9/4)` instead of
+Experiment J's `strongSide(2)` — both land in the same "very strong" pre-`boundedResponse` region, but
+`9/4` clears a threshold `2` does not once identity's own opposing pull is subtracted from the same
+shared channel) is enough to flip which side wins the sustained contradiction outright (Stay At Work now
+wins roughly 93% of the 150 rounds, not roughly 14%) — and winning consistently, not occasionally, is
+what lets `Alignment`'s negative term actually accumulate real Opposition evidence instead of being
+swamped by the rare rounds contradiction still won under the old bias. Over 150 rounds, strength falls
+from **0.5325** (consolidated) to **0.2109** (`consolidatedAfterSustainedContradiction=false`,
+`strengthDroppedWithFeedbackActive=true`) — genuine erosion, with feedback left on throughout, no
+ablation override. The honest shape of this result: Phase 2.95 does not make identity's resistance to
+contradiction weaker in general — it makes the SAME contradiction pressure that used to be swamped by
+identity's own separately-floored resistance now compete on equal footing in one shared consolidation
+pool, so a sufficiently committed (one bracket, not an order of magnitude) sustained contradiction can now
+win where before it could not.
+
+### Target E — Canonical trait acquisition with feedback ON, from zero
+
+The review's explicit instruction: prove trait consolidation under the ORDINARY feedback-on loop, not
+only via Experiment E's `identityFeedbackEnabled: false` ablation (a deliberate, documented scoping
+choice for isolating pure behavioral acquisition — never a claim that feedback-on acquisition was
+impossible). Running the same dinner-vs-work bias Experiments E/H use, from a completely fresh
+`defaultDecisionScenario()` (zero identity evidence), for 200 rounds, with feedback at its ordinary
+default (`true`) throughout: CommitmentFidelity strength rises continuously, consolidates `Dependable`
+(`traitConsolidated=true`, `evidenceAccumulatedWithoutAblation=true`), and self-stabilizes at a fixed
+strength of **0.6079** (IdentityConfidence likewise **0.6079**) by round **124 of 200** — the run
+genuinely stops moving well before its own end, rather than the plateau being an artifact of an
+insufficient round count. This is exactly Brief §24's own natural-stabilization hypothesis (Experiment H)
+playing out as a STABLE, CONSOLIDATED endpoint under the ordinary feedback loop, not a ceiling that
+prevents consolidation from ever being reached in the first place.
+
+### Three-part output (Brief §36) for Reason Consolidation & Identity Fault Lines
+
+**Psychological finding.** Two of Phase 2.9's own reported limitations turned out to be artifacts of
+where identity's contribution was computed, not facts about what a dice-resolved identity mechanism can
+do: a weak established sense of self genuinely CAN combine with weak, ordinary motivation to tip a choice
+that neither alone would have decided (Target B); an identity someone doesn't yet strongly hold CAN still
+make an otherwise-comfortable decision feel more genuinely contested without deciding it outright (Target
+C); and an identity CAN be built up, and eroded back down, entirely under the ordinary conditions a
+character actually lives in — no artificial isolation of "pure behavior" required in either direction
+(Targets D/E). At the same time, Target D shows the earlier finding wasn't simply wrong: an established
+identity really does actively resist contradiction through the same channel that built it, and that
+resistance is not a bug the fix removes — it is a real, and now more precisely characterized, part of how
+this reference model says acquired identity behaves under pressure.
+
+**Computational finding.** The review's diagnosis generalizes beyond this specific case: in a system
+where identity feedback and other pressures on the SAME topic are assembled through DIFFERENT paths
+before a floor or threshold check, that difference in path — not any difference in the underlying
+psychology being modeled — silently produces "all or nothing" behavior. The fix was never to make
+identity's influence stronger or weaker; it was to route pre-existing raw contributions through the SAME
+consolidation math, once, regardless of source. This is a general lesson about layered threshold systems,
+not one specific to `identity.ts`, and is worth carrying forward to any future channel this project adds
+alongside Need/accessibility/identity.
+
+**Architectural implication.** The two-map separation (`boundedNeedAccessByOption` for evidence/no-
+double-counting, one shared bound-and-floored raw pool per option for dice/resolution) is now the
+canonical pattern for adding any future Influence source that must both (a) participate in the same
+floor-eligible consolidation as existing sources, and (b) never contaminate the evidence base it is
+itself derived from. `RawReasonInfluence`/`sumRawBySemanticChannel`/`boundAndFloorChannels`/
+`boundAllChannels` in `decision.ts` are Decision-agnostic enough that Phase 3's eventual personality-
+sourced Influences (Brief §23's still-deferred double-counting concern) can reuse this exact machinery
+rather than re-deriving it.
+
+### Next-phase justification
+
+Phase 2.95 closes a gap between what Phase 2.9 claimed was structurally impossible and what the
+implemented system actually supported — a genuine correction driven by external review, verified the same
+way every other finding in this project is verified: real `runDecisionCycle` output, never predicted
+numbers. It leaves the Phase 2.9 architecture's actual shape unchanged (still no latent personality
+vector, still a parallel front-end to ordinary Action selection, still the same counter-addressed RNG
+discipline) while making its one new feedback channel behave the way its own design documentation always
+said it should. Phase 3 inherits the same next-phase question Phase 2.9 identified — how another character
+infers belief from a `DecisionExpression` history and a consolidated `IdentityEvidenceState` — now backed
+by an identity-feedback mechanism whose combination and erosion behavior has actually been verified under
+the ordinary feedback-on loop, not only under an ablation that isolated it from the very dynamics Phase 3
+will need to reason about.
