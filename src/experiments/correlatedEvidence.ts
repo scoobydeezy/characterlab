@@ -40,6 +40,7 @@ import { runDecisionCycle } from '../model/cycle';
 import {
   defaultDecisionScenario,
   defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultReasonChannelMapping,
   defaultSemanticReasonPolarity,
   defaultMotiveChannelMapping,
@@ -78,8 +79,14 @@ function dualDerivationBaseline() {
   return state;
 }
 
+/** Deliberately LEGACY mode (Phase 2.97 post-closure-audit re-baseline:
+ * pinned to `legacyDecisionCycleParams()` explicitly now that
+ * `defaultDecisionCycleParams()` defaults to `'reasonNuclei'`) — this round
+ * exists only to create the real Memory each experiment's later, actually-
+ * measured round retrieves via `runReasonNucleiRound`; which pipeline
+ * resolves this SETUP round is incidental to what's being tested. */
 function runOneRound(state: ReturnType<typeof dualDerivationBaseline>, decisionId: string, seed: string, clock: EventClock) {
-  const params = defaultDecisionCycleParams();
+  const params = legacyDecisionCycleParams();
   const decision = dinnerVsWorkDecision(decisionId);
   const outcomeTables = decisionOutcomeTables();
   return runDecisionCycle(state.characterId, state, decision, outcomeTables, params, legacyMapping, semanticPolarity, clock, seed);

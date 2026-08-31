@@ -3,7 +3,7 @@ import { EventClock } from '../kernel/event';
 import { Rational, ratOf } from '../kernel/rational';
 import {
   defaultDecisionScenario,
-  defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultSemanticReasonPolarity,
   defaultReasonChannelMapping,
   dinnerVsWorkDecision,
@@ -26,11 +26,18 @@ import { runDecisionCycle } from '../model/cycle';
  * check that cycle.ts's glue (assembling real Influences from live
  * CharacterState, folding identity evidence back, and handing off to the
  * shared applyChosenAction tail) actually works end-to-end.
+ *
+ * Phase 2.97 post-closure-audit re-baseline: pinned to
+ * `legacyDecisionCycleParams()` explicitly, not `defaultDecisionCycleParams()`
+ * (now `'reasonNuclei'` by default) — this file tests the Phase 2.9/2.95
+ * `SemanticReasonChannelId` pipeline specifically (note `defaultReasonChannelMapping()`
+ * above, that pipeline's own mapping table), and its plain `runDecisionCycle`
+ * calls never supply the mapping tables `'reasonNuclei'` mode requires.
  */
 describe('runDecisionCycle — integration (Phase 2.9 / 2.95)', () => {
   it('resolves a Decision, records a DecisionExpression, and advances the underlying Need/expectation/memory/association state', () => {
     const state = defaultDecisionScenario();
-    const params = defaultDecisionCycleParams();
+    const params = legacyDecisionCycleParams();
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();
     const clock = new EventClock();
@@ -53,7 +60,7 @@ describe('runDecisionCycle — integration (Phase 2.9 / 2.95)', () => {
 
   it('is deterministic: the same seed/state/decisionId reproduces the same resolution and chosen option', () => {
     const state = defaultDecisionScenario();
-    const params = defaultDecisionCycleParams();
+    const params = legacyDecisionCycleParams();
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();
     const decision = dinnerVsWorkDecision('decision:test:determinism');
@@ -77,7 +84,7 @@ describe('runDecisionCycle — integration (Phase 2.9 / 2.95)', () => {
     let state = defaultDecisionScenario();
     state = withExpectation(state, PERSON_GLEN, NEED_CONNECTION, { mu: ratOf(9, 10), tau: ratOf(10), lastUpdatedAt: 0 });
 
-    const params = defaultDecisionCycleParams();
+    const params = legacyDecisionCycleParams();
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();
     const decision = dinnerVsWorkDecision('decision:test:identity');
@@ -93,7 +100,7 @@ describe('runDecisionCycle — integration (Phase 2.9 / 2.95)', () => {
 
   it("Experiment K's shape: forcedOutcomeOverride executes a DIFFERENT ActionDef while ChosenIntent/DecisionExpression still record the dice-selected Option", () => {
     const state = defaultDecisionScenario();
-    const params = defaultDecisionCycleParams();
+    const params = legacyDecisionCycleParams();
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();
     const decision = dinnerVsWorkDecision('decision:test:forced');

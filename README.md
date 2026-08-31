@@ -65,10 +65,27 @@ the review's required target behaviors (A–E) — gradual influence, weak-signa
 contradiction with feedback active, and canonical trait acquisition with feedback on from zero — now
 run against real output; see RESEARCH.md's Phase 2.95 entry for the fix's architecture, every target's
 real numbers, and the honest scoping of what a five-band discrete die scale still cannot make perfectly
-continuous. Phases 3–6 (personality/belief/
-social appraisal, derived Values, acquired Needs/addiction, and distillation) are intentionally not
-built yet — see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically
-motivates Phase 3.
+continuous. **Phase 2.97 (Reason Nuclei, Deterministic Cognitive Compilation, and Dice Grammar —
+RESOLVED, then CLOSURE-AUDITED)** then replaces Phase 2.9/2.95's pooled semantic-channel consolidation
+with a `MotiveChannel × ReferentKey × MotiveDirection` compiler (`model/reasonNucleus.ts`/
+`cognitiveSignals.ts`/`diceCompiler.ts`, new) — several independently-intelligible motives about the
+same person, or the same motive about several people, now coexist as separately-legible Reason Nuclei
+instead of being merged or hand-authored around, with correlated evidence (a memory's dual derivation,
+identity's own overlap) discounted by measured provenance overlap rather than left to stack as if
+independent. All fourteen required experiments (A–N) ran against real output, followed by a three-round
+closure audit (a real Commitment-pressure source correctly modeled as its own `MotiveGenerating` family
+rather than a synthetic Need, a correlation-consolidator blind spot to collective redundancy, referent
+attribution generalized beyond the single-participant case, and a Commitment-lifecycle closure test) —
+see RESEARCH.md's Phase 2.97 entry for the full account, every experiment's real numbers, and the
+Auto-mode-lock finding a naive commitment-lifecycle wiring produced. A post-closure-audit re-baseline
+then promoted `'reasonNuclei'` from opt-in to `defaultDecisionParams()`'s canonical default — the same
+policy move Phase 2.5e made for `salienceMode`/`learningMode` once THEIR investigation concluded —
+retiring `'legacy'` to explicitly-named `legacyDecisionParams()`/`legacyDecisionCycleParams()` control
+conditions (mirroring `legacySaturationParams()`/`legacyCycleParams()`), with every Phase 2.9/2.95
+experiment whose published numbers are frozen-pipeline facts re-pointed at that explicit name rather than
+left to ride a default that no longer means what it used to. Phases 3–6 (personality/belief/social
+appraisal, derived Values, acquired Needs/addiction, and distillation) are intentionally not built yet —
+see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically motivates Phase 3.
 
 ## Why this architecture
 
@@ -315,7 +332,8 @@ src/
                     map + thetaReason — explicit research knobs (`experiments/calibrationSweeps.ts`
                     measures their real probability effects, see RESEARCH.md's Phase 2.97 entry);
                     `defaultDecisionCycleParams()`'s DecisionParams now always carries
-                    `compilationMode: 'legacy'` (default) and `reasonNucleus:
+                    `compilationMode` (originally `'legacy'` by default — see the post-closure-audit
+                    re-baseline entry below) and `reasonNucleus:
 defaultReasonNucleusParams()`; [Phase 2.97 closure audit, Check 1, ORIGINAL — superseded]
                     a NEED_COMMITMENT Core Need briefly lived here as the fix giving CommitmentFidelity a
                     genuine motive to modify; [Phase 2.97 closure audit, Check 1, SECOND CORRECTION —
@@ -329,7 +347,16 @@ defaultReasonNucleusParams()`; [Phase 2.97 closure audit, Check 1, ORIGINAL — 
                     `commitments` parameter (default `[]`, so every existing call site is unaffected
                     unless it opts in) — RESEARCH.md's Phase 2.97 entry has the full before/after and
                     the Auto-mode-lock finding that shaped where this source is (and deliberately is not)
-                    wired in
+                    wired in; [Phase 2.97 post-closure-audit re-baseline] `defaultDecisionParams()` now
+                    returns `compilationMode: 'reasonNuclei'` (promoted from opt-in to canonical, the same
+                    policy move Phase 2.5e made for `salienceMode`/`learningMode` above once THEIR
+                    investigation concluded); new `legacyDecisionParams()`/`legacyDecisionCycleParams()`
+                    (mirroring `legacySaturationParams()`/`legacyCycleParams()`, but a deliberately
+                    different bundle — decision-compilation is orthogonal to salience/saturation, so this
+                    pair retires only `compilationMode` while keeping current canonical salience/
+                    saturation) hold the retired `'legacy'` pipeline under its own name for
+                    `experiments/oldVsNewCompilation.ts` (Experiment M) and every Phase 2.9/2.95 decision
+                    experiment whose already-published numbers are frozen-pipeline facts
     semanticExperience.ts [Phase 2.5e] SemanticExperience, ConceptEncoding, NeedObservation — the
                     formalized character-relative record of one Experience Phase 3 should consume;
                     deliberately has no Overflow field anywhere (see its own module doc)
@@ -880,15 +907,32 @@ No environment variables, no backend, no network calls at runtime.
   under Phase 2.9's architecture no feedback-on parameter regime achieved this at all. See RESEARCH.md's
   Phase 2.95 entry, Target D, for the round-by-round finding.
 - **Phase 2.95's `SemanticReasonChannelId` consolidation is frozen as the historical baseline, never
-  replaced.** `DecisionParams.compilationMode: 'legacy' | 'reasonNuclei'` defaults to `'legacy'` — the
-  same opt-in-by-default discipline `salienceMode`/`learningMode` already established — so every
-  pre-2.97 experiment, test, and UI panel keeps running the exact old pipeline unless a call site
-  explicitly opts in. `resolveDecision`'s Margin/Contest/Stake/AuthorshipPotential/rolling logic was
+  deleted.** `DecisionParams.compilationMode: 'legacy' | 'reasonNuclei'` ran `'legacy'`-by-default
+  throughout Phase 2.97 itself — the same opt-in-by-default discipline `salienceMode`/`learningMode`
+  used during Phase 2.5 — so every pre-2.97 experiment, test, and UI panel kept running the exact old
+  pipeline unless a call site explicitly opted in, while Reason Nuclei was still under active
+  investigation. `resolveDecision`'s Margin/Contest/Stake/AuthorshipPotential/rolling logic was
   extracted, behavior-preservingly, into a shared `resolveDecisionCore` both pipelines call verbatim —
   Experiment M runs the identical input through both side by side and finds the underlying math
   genuinely unchanged (identical dice counts and Rational-exact probabilities), confirming the two
   pipelines really are alternate front-ends to the same resolution core, not two competing
-  probability models.
+  probability models. **Post-closure-audit re-baseline:** once all four Brief §64 classification
+  targets came back DERIVED and the closure audit itself concluded, `compilationMode`'s default was
+  promoted to `'reasonNuclei'` — the identical policy move Phase 2.5e made for `salienceMode`/
+  `learningMode` once THEIR investigation concluded, and for the identical stated reason ("keep the new
+  thing opt-in" and "keep the OLD thing as the default forever" are different policies, and conflating
+  them past validation is itself technical debt). `'legacy'` is retired to explicitly-named
+  `legacyDecisionParams()`/`legacyDecisionCycleParams()`, used by Experiment M's own comparison and by
+  every Phase 2.9/2.95 decision experiment (`decisionResolution.ts`, `identityFormation.ts`'s
+  `cycleParamsWith`/`runRepeatedRounds` harness — which `seedDivergence.ts` also reuses,
+  `reasonConsolidation.ts`) whose already-published numbers are frozen-pipeline facts that must keep
+  reproducing regardless of which pipeline is canonical going forward. Found the honest way: flipping
+  the default and running the full suite surfaced 32 failures on the first pass, all one root cause
+  (four files silently relying on the implicit default rather than requesting `'legacy'` by name); a
+  second pass over Phase 2.97's own files caught three more of the identical shape (two experiments'
+  own legacy-mode setup rounds, one test whose entire premise the re-baseline inverted). All fixed,
+  full 328-test suite green, `tsc`/`vite build` clean, and a Playwright smoke test confirmed the live
+  UI's toggle now renders checked by default with zero console errors.
 - **Referent and Motive attribution are exact by construction in every signal source this phase
   actually has, never fractional or threshold-based.** The Brief's general continuous-attribution
   machinery (`dominantReferent`, θ_referent/θ_dominance) is implemented and unit-tested against

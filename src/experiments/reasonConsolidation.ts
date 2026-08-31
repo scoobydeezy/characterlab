@@ -41,6 +41,13 @@
  * empirical search process (see RESEARCH.md's Phase 2.95 entry for the
  * numbers this file's parameters were found from — nothing here was
  * predicted in advance).
+ *
+ * Phase 2.97 post-closure-audit re-baseline: `decisionParamsOf`/every local
+ * params construction below is pinned to `legacyDecisionCycleParams()`
+ * explicitly, not `defaultDecisionCycleParams()` (now `'reasonNuclei'` by
+ * default) — this file's own published numbers were measured against the
+ * frozen `'legacy'` pipeline, and its `runDecisionCycle` calls never supply
+ * the mapping tables `'reasonNuclei'` mode requires.
  */
 
 import { Rational, ratOf } from '../kernel/rational';
@@ -51,7 +58,7 @@ import { runDecisionCycle } from '../model/cycle';
 import { identityStrength, isConsolidated, CHANNEL_ORDER } from '../model/identity';
 import {
   defaultDecisionScenario,
-  defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultSemanticReasonPolarity,
   defaultReasonChannelMapping,
   dinnerVsWorkDecision,
@@ -79,7 +86,7 @@ const mapping = defaultReasonChannelMapping();
 const semanticPolarity = defaultSemanticReasonPolarity();
 
 function decisionParamsOf() {
-  return defaultDecisionCycleParams().decision;
+  return legacyDecisionCycleParams().decision;
 }
 
 // ---------------------------------------------------------------------------
@@ -131,7 +138,7 @@ export interface ExperimentGradualIdentityInfluenceResult {
 export function runExperimentGradualIdentityInfluence(seed = 'phase2_95-targetA-seed'): ExperimentGradualIdentityInfluenceResult {
   const decision = dinnerVsWorkDecision('decision:targetA');
   const outcomeTables = decisionOutcomeTables();
-  const params = defaultDecisionCycleParams();
+  const params = legacyDecisionCycleParams();
 
   function baseState(): CharacterState {
     let s = defaultDecisionScenario();
@@ -212,8 +219,8 @@ export function runExperimentWeakSignalCombination(seed = 'phase2_95-targetB-see
 
   const decision = dinnerVsWorkDecision('decision:targetB');
   const outcomeTables = decisionOutcomeTables();
-  const paramsOff = { ...defaultDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: false } };
-  const paramsOn = { ...defaultDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: true } };
+  const paramsOff = { ...legacyDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: false } };
+  const paramsOn = { ...legacyDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: true } };
 
   const withoutIdentity = runDecisionCycle(
     weaklyEstablished.characterId,
@@ -320,8 +327,8 @@ export function runExperimentRealFaultLine(seed = 'phase2_95-targetC-seed'): Exp
 
   const decision = crossAxisFaultLineDecision('decision:targetC', ACTION_KEEP_DINNER_PROMISE, ACTION_SPEAK_UP);
   const outcomeTables = decisionOutcomeTables();
-  const paramsOff = { ...defaultDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: false } };
-  const paramsOn = { ...defaultDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: true } };
+  const paramsOff = { ...legacyDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: false } };
+  const paramsOn = { ...legacyDecisionCycleParams(), decision: { ...decisionParamsOf(), identityFeedbackEnabled: true } };
 
   const withoutIdentity = runDecisionCycle(
     withRiskAcceptance.characterId,

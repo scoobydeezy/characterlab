@@ -22,6 +22,7 @@ import { runDecisionCycle } from '../model/cycle';
 import {
   defaultDecisionScenario,
   defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultReasonChannelMapping,
   defaultSemanticReasonPolarity,
   defaultMotiveChannelMapping,
@@ -79,8 +80,13 @@ export interface ExperimentMOldVsNewResult {
 export function runExperimentM_OldVsNewCompilation(seed = 'phase2_97-expM-seed'): ExperimentMOldVsNewResult {
   const state = sharedBaselineState();
   const outcomeTables = decisionOutcomeTables();
-  const legacyParams = defaultDecisionCycleParams();
-  const reasonNucleiParams = { ...legacyParams, decision: { ...legacyParams.decision, compilationMode: 'reasonNuclei' as const } };
+  // Phase 2.97 post-closure-audit re-baseline: `defaultDecisionCycleParams()`
+  // now defaults to `'reasonNuclei'`, so the "old" branch must be pinned to
+  // `legacyDecisionCycleParams()` explicitly — this experiment's entire
+  // point is comparing the two pipelines side by side, which silently stops
+  // being true if both branches end up running the same one.
+  const legacyParams = legacyDecisionCycleParams();
+  const reasonNucleiParams = defaultDecisionCycleParams();
 
   const legacyDecision = dinnerVsWorkDecision('decision:phase2_97-expM');
   const legacyResult = runDecisionCycle(

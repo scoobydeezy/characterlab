@@ -471,10 +471,10 @@ export function DecisionPanel({ engine }: { engine: Engine }) {
           title="Ablation switch (scoping decision 6): when off, no identity_consistency Influence is generated."
         />
         <Toggle
-          label="Compilation mode: Reason Nuclei (Phase 2.97)"
+          label="Compilation mode: Reason Nuclei (Phase 2.97, canonical default)"
           checked={decisionParams.compilationMode === 'reasonNuclei'}
           onChange={(checked) => updateDecisionParams({ compilationMode: checked ? 'reasonNuclei' : 'legacy' })}
-          title="'legacy' (off) is Phase 2.95's frozen SemanticReasonChannelId baseline. 'reasonNuclei' (on) routes through the new MotiveChannel×Referent×Direction compiler below. All Experiments A-K/Targets A-E above always run in 'legacy' mode internally regardless of this switch — it only affects live decisions you script elsewhere in the app."
+          title="Phase 2.97 post-closure-audit re-baseline: 'reasonNuclei' (on, now the default) routes through the MotiveChannel×Referent×Direction compiler below. 'legacy' (off, opt-out) is Phase 2.95's frozen SemanticReasonChannelId baseline, kept for historical comparison — see legacyDecisionCycleParams(). All Experiments A-K/Targets A-E above always run in 'legacy' mode internally regardless of this switch (their own published numbers were measured against that pipeline) — it only affects live decisions you script elsewhere in the app."
         />
         <Slider
           label="θ_reason (Reason Nuclei activation floor)"

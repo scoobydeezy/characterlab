@@ -16,6 +16,21 @@
  * round to round (e.g. Connection refilling after a successful Keep
  * Dinner). `identityEvidence`/`decisionHistory`/associations are NEVER
  * reset — that IS the biography each experiment is measuring.
+ *
+ * Phase 2.97 post-closure-audit re-baseline: `cycleParamsWith` is pinned to
+ * `legacyDecisionCycleParams()` explicitly (not `defaultDecisionCycleParams()`,
+ * which now defaults to `'reasonNuclei'`) — every number this file's
+ * experiments (and `seedDivergence.ts`, which reuses `runRepeatedRounds`
+ * directly) has ever published was measured against the frozen `'legacy'`
+ * `SemanticReasonChannelId` pipeline, and this harness's own
+ * `runDecisionCycle` call never supplies the `needMotiveChannelMapping`/
+ * `identityMotiveChannelMapping` `'reasonNuclei'` mode requires — exactly
+ * the historical-reproducibility role `legacyDecisionCycleParams()` exists
+ * for. Phase 2.97's own `identityAsModifier.ts` reuses this file's
+ * `runRepeatedRounds` for its bootstrap helpers for the same reason (its own
+ * doc comments already say so): the bootstrap itself must stay on the
+ * legacy pipeline regardless of which pipeline is canonical, only the
+ * one-shot Decision probed AFTER bootstrapping opts into `'reasonNuclei'`.
  */
 
 import { Rational, ratOf } from '../kernel/rational';
@@ -27,6 +42,7 @@ import { identityStrength, identityConfidence, isConsolidated, IdentityTrait, CH
 import {
   defaultDecisionScenario,
   defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultSemanticReasonPolarity,
   defaultReasonChannelMapping,
   dinnerVsWorkDecision,
@@ -81,7 +97,7 @@ export interface RepeatedRun {
 }
 
 function cycleParamsWith(paramsOverride?: Partial<DecisionParams>): CycleParams {
-  const base = defaultDecisionCycleParams();
+  const base = legacyDecisionCycleParams();
   return paramsOverride ? { ...base, decision: { ...base.decision, ...paramsOverride } } : base;
 }
 

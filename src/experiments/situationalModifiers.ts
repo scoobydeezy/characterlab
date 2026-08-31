@@ -34,6 +34,7 @@ import { runDecisionCycle } from '../model/cycle';
 import {
   defaultDecisionScenario,
   defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultReasonChannelMapping,
   defaultSemanticReasonPolarity,
   defaultMotiveChannelMapping,
@@ -109,7 +110,12 @@ export function runExperimentJ_SituationalModifiers(seed = 'phase2_97-expJ-seed'
   seedState = withExpectation(seedState, PERSON_GLEN, NEED_CONNECTION, { mu: ratOf(3, 10), tau: ratOf(5), lastUpdatedAt: 0 });
   seedState = withExpectation(seedState, ACTIVITY_WORK, NEED_ACHIEVEMENT, { mu: Rational.ZERO, tau: ratOf(1), lastUpdatedAt: 0 });
   const seedDecision = dinnerVsWorkDecision('decision:phase2_97-expJ-seed');
-  const params = defaultDecisionCycleParams();
+  // Deliberately LEGACY mode (Phase 2.97 post-closure-audit re-baseline:
+  // pinned to `legacyDecisionCycleParams()` explicitly now that
+  // `defaultDecisionCycleParams()` defaults to `'reasonNuclei'`) — this round
+  // only exists to create the real supportive-history Memory; which
+  // pipeline resolves it is incidental to what Experiment J measures.
+  const params = legacyDecisionCycleParams();
   const seedRun = runDecisionCycle(
     seedState.characterId,
     seedState,

@@ -3,6 +3,7 @@ import { EventClock } from '../kernel/event';
 import {
   defaultDecisionScenario,
   defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultSemanticReasonPolarity,
   defaultReasonChannelMapping,
   defaultMotiveChannelMapping,
@@ -32,8 +33,15 @@ describe('runDecisionCycle — reasonNuclei mode integration (Phase 2.97)', () =
     return { ...legacy, decision: { ...legacy.decision, compilationMode: 'reasonNuclei' } };
   }
 
-  it('resolves a Decision through the Reason Nuclei pipeline, populates reasonNucleusTrace, and still runs the shared tail', () => {
+  it('resolves a Decision through the Reason Nuclei pipeline (now the canonical default), populates reasonNucleusTrace, and still runs the shared tail', () => {
     const state = defaultDecisionScenario();
+    // Phase 2.97 post-closure-audit re-baseline: `defaultDecisionCycleParams()`
+    // already defaults to `compilationMode: 'reasonNuclei'` now, so
+    // `reasonNucleiParams()`'s own override below is redundant here — kept
+    // only so this call reads the same way regardless of which default is
+    // canonical at any given time, and to double as a live canary: if a
+    // future change ever reverted the default, this test would still pass
+    // unchanged (see the next test for the one that WOULD catch that).
     const params = reasonNucleiParams();
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();
@@ -78,9 +86,18 @@ describe('runDecisionCycle — reasonNuclei mode integration (Phase 2.97)', () =
     expect(result.invariantViolations).toEqual([]);
   });
 
-  it('legacy mode (the default) never populates reasonNucleusTrace', () => {
-    const state = defaultDecisionScenario();
+  it('the canonical default (Phase 2.97 post-closure-audit re-baseline) is now reasonNuclei, not legacy', () => {
+    // A deliberate canary: if a future change ever silently reverted
+    // `defaultDecisionParams()`'s default back to `'legacy'`, this is the
+    // one assertion that would catch it directly, rather than relying on
+    // every other test's behavior happening to still make sense either way.
     const params = defaultDecisionCycleParams();
+    expect(params.decision.compilationMode).toBe('reasonNuclei');
+  });
+
+  it('legacy mode (now opt-in via legacyDecisionCycleParams(), the frozen historical baseline) never populates reasonNucleusTrace', () => {
+    const state = defaultDecisionScenario();
+    const params = legacyDecisionCycleParams();
     expect(params.decision.compilationMode).toBe('legacy');
     const semanticPolarity = defaultSemanticReasonPolarity();
     const mapping = defaultReasonChannelMapping();

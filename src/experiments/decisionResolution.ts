@@ -16,6 +16,12 @@
  * NeedLevel override, then resolve the dinner-vs-work Decision through
  * `runDecisionCycle`. Each case varies exactly the one thing its letter is
  * named after.
+ *
+ * Phase 2.97 post-closure-audit re-baseline: `runDecisionSample` is pinned
+ * to `legacyDecisionCycleParams()` explicitly, not `defaultDecisionCycleParams()`
+ * (now `'reasonNuclei'` by default) — this file's own published numbers were
+ * measured against the frozen `'legacy'` pipeline, and its `runDecisionCycle`
+ * call never supplies the mapping tables `'reasonNuclei'` mode requires.
  */
 
 import { ratOf } from '../kernel/rational';
@@ -27,7 +33,7 @@ import { Decision, DecisionExpression, DecisionParams } from '../model/decision'
 import { CycleParams, runDecisionCycle } from '../model/cycle';
 import {
   defaultDecisionScenario,
-  defaultDecisionCycleParams,
+  legacyDecisionCycleParams,
   defaultSemanticReasonPolarity,
   defaultReasonChannelMapping,
   dinnerVsWorkDecision,
@@ -64,8 +70,8 @@ function runDecisionSample(
   const base = defaultDecisionScenario();
   const state = stateOverride(base);
   const params: CycleParams = paramsOverride
-    ? { ...defaultDecisionCycleParams(), decision: { ...defaultDecisionCycleParams().decision, ...paramsOverride } }
-    : defaultDecisionCycleParams();
+    ? { ...legacyDecisionCycleParams(), decision: { ...legacyDecisionCycleParams().decision, ...paramsOverride } }
+    : legacyDecisionCycleParams();
   const semanticPolarity = defaultSemanticReasonPolarity();
   const decision = decisionFactory(decisionId);
   const outcomeTables = decisionOutcomeTables();

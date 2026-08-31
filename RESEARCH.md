@@ -2908,3 +2908,65 @@ deliberately leaves unresolved is not a gate failure but Experiment L's own cali
 own phrasing correction: widening the unit changes how hard a `+1` is to EARN, never what a compiled `+1`
 is worth) — explicitly scoped in the plan as a tuning question for a later pass, not a structural defect
 blocking this phase's completion.
+
+### Post-closure-audit re-baseline: `'reasonNuclei'` is now canonical
+
+Asked directly, ahead of Phase 3, whether any remaining opt-in-by-default machinery still needed
+consolidating into the main architecture — the same question this project asked itself at the end of Phase
+2.5d and answered by re-baselining `salienceMode`/`learningMode` (Phase 2.5e, above). The answer this time
+was the same shape: `defaultDecisionParams()` still shipped `compilationMode: 'legacy'` even after Reason
+Nuclei's fourteen lettered experiments and three closure-audit rounds had all come back DERIVED. Phase
+2.5e's own written policy applies verbatim — "'keep the new thing opt-in' and 'keep the OLD thing as the
+default forever' are different policies, and conflating them past the point where the new thing is
+actually validated is itself a form of technical debt" — and Reason Nuclei had clearly passed that point.
+
+**The change.** `defaultDecisionParams()` now returns `compilationMode: 'reasonNuclei'`. `'legacy'` is not
+deleted: a new `legacyDecisionParams()` (mirroring `legacySaturationParams()`) and
+`legacyDecisionCycleParams()` (mirroring `legacyCycleParams()`, but retiring only decision-compilation
+while keeping current canonical salience/saturation — a deliberately different bundle from
+`legacyCycleParams()`, which retires salience/saturation and is orthogonal to decision-compilation) keep it
+available under an explicit name for exactly the roles that still need it.
+
+**Finding it the honest way — by running the suite, not by reasoning about it.** Flipping one default and
+running the full 328-test suite surfaced 32 failures on the first pass, every one the identical
+`RangeError: runDecisionCycle: compilationMode 'reasonNuclei' requires both needMotiveChannelMapping and
+identityMotiveChannelMapping`. Tracing them found one root cause repeated across four Phase 2.9/2.95
+experiment files that had never been touched by Phase 2.97 and therefore never learned to pass those
+mapping tables: `decisionResolution.ts` (Experiments A-D/K), `identityFormation.ts`'s shared
+`cycleParamsWith`/`runRepeatedRounds` harness (Experiments E, G, H, I, J — and, transitively,
+`seedDivergence.ts`'s Experiment F, which reuses that same harness and needed no separate fix once
+`identityFormation.ts` was corrected), and `reasonConsolidation.ts` (Phase 2.95 Targets A-E). All four were
+pinned to the new `legacyDecisionCycleParams()` explicitly rather than left to ride
+`defaultDecisionCycleParams()`'s now-changed default — exactly Phase 2.5e's own "re-pointed... rather than
+silently describing 'the default' it no longer is" move, applied to decision-compilation instead of
+salience/saturation. A second, narrower pass then found three more: `correlatedEvidence.ts` and
+`situationalModifiers.ts` (Phase 2.97's own files) each use one deliberately-`'legacy'`-mode SETUP round to
+create a real Memory before their actually-measured round runs under `'reasonNuclei'` — those setup rounds
+needed the same explicit pin — and `phase2_97CycleIntegration.test.ts`'s own "legacy mode (the default)
+never populates reasonNucleusTrace" test had its premise inverted by the re-baseline and was rewritten into
+two tests: one pinning to `legacyDecisionCycleParams()` explicitly for the behavior it was actually
+checking, and a new canary asserting `defaultDecisionCycleParams().decision.compilationMode === 'reasonNuclei'`
+directly, so a future accidental revert of this exact default would fail loudly rather than silently.
+`experiments/oldVsNewCompilation.ts` (Experiment M) needed the same pin on its own "legacy" branch — without
+it, both sides of the old-vs-new comparison would have silently run the SAME pipeline, defeating the
+experiment's whole point — verified directly afterward: legacy's branch still produces flat labels
+(`action.keep_dinner_promise:commitment`), the reasonNuclei branch still produces full-triple labels
+(`action.keep_dinner_promise::Connection::person.glen::Pursue`), and both sides' pre-roll probabilities are
+unchanged (0.5000 each) from before the re-baseline.
+
+**Verification.** `npx tsc -b --noEmit` clean throughout (the missing-mapping failures are a runtime check,
+Brief-deliberately not a type error, so this needed the actual test run to surface — "run it, don't guess"
+applied to this project's own default, not just its experiments). Full suite green afterward: 328 tests
+across 43 files (327 plus the new canary). `npx vite build` clean. A Playwright smoke test against the live
+UI confirmed the `DecisionPanel`'s compilation-mode toggle now renders checked by default (`reasonNuclei`)
+with an updated tooltip, and that clicking both "Run Experiment M" and "Run Experiment N" produces populated
+results with zero console errors — the interactive default and the canned-experiment defaults were both
+exercised, not just the type-checker.
+
+**What this does NOT change.** Every Phase 2.9/2.95 experiment's own previously-published numbers are
+unaffected — they now reach the identical frozen pipeline through an explicit name instead of an implicit
+default, which is a reproducibility improvement, not a behavior change; the full suite passing byte-for-byte
+identical is the check that this held. Experiment M's comparison, Experiment N's deliberate exclusion of
+`defaultCommitments()`, and every closure-audit finding above are all unaffected — this re-baseline only
+changes what a NEW call site gets when it asks for "the default," exactly as the 2.5e re-baseline did for
+`salienceMode`/`learningMode` before it.

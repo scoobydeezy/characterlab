@@ -570,6 +570,35 @@ export function legacyCycleParams(): CycleParams {
  * exercised directly in `test/phase2_9Identity.test.ts`'s consolidation
  * cases.
  */
+/**
+ * Phase 2.97 post-closure-audit RE-BASELINE. `'reasonNuclei'` (the
+ * MotiveChannel×ReferentKey×MotiveDirection compiler) is now CharacterLab's
+ * canonical default, the same policy shift Phase 2.5e already made for
+ * `salienceMode`/`learningMode` above: Reason Nuclei ran opt-in throughout
+ * Phase 2.97 while it was under active investigation (fourteen lettered
+ * experiments, then a three-round closure audit), but by the time all four
+ * Brief §64 classification targets came back DERIVED and the closure audit's
+ * own reviewer called the phase "genuinely closed," running the
+ * *known-superseded* `'legacy'` `SemanticReasonChannelId` pipeline by default
+ * stopped being defensible as "the compatibility baseline" and started being,
+ * in this project's own words from the 2.5e re-baseline, "keep the new thing
+ * opt-in" quietly turning into "keep the OLD thing as the default forever" —
+ * a different, worse policy once the investigation has actually concluded.
+ * `'legacy'` is not deleted — see `legacyDecisionParams()`/
+ * `legacyDecisionCycleParams()` below — it is retired from ordinary
+ * execution to an explicitly-named historical/control identity, for exactly
+ * the comparison `experiments/oldVsNewCompilation.ts` (Experiment M) needs,
+ * and for every Phase 2.9/2.95 experiment (`decisionResolution.ts`,
+ * `identityFormation.ts`, `reasonConsolidation.ts`, `seedDivergence.ts` via
+ * `identityFormation.ts::runRepeatedRounds`) whose own historically-recorded
+ * numbers are frozen-pipeline facts and must keep reproducing byte-for-byte
+ * regardless of which pipeline is canonical going forward — those call sites
+ * are pinned to `legacyDecisionCycleParams()` explicitly now, rather than
+ * riding this function's default implicitly, exactly as Phase 2.5e re-
+ * pointed its own retired-architecture-specific tests at `legacyCycleParams()`/
+ * `legacySaturationParams()` rather than leaving them to assume "the
+ * default" meant what it used to.
+ */
 export function defaultDecisionParams(): DecisionParams {
   return {
     dieScale: {
@@ -586,15 +615,33 @@ export function defaultDecisionParams(): DecisionParams {
     kI: ratOf(2), // K_I = 2
     kC: ratOf(2), // K_C = 2
     identityFeedbackEnabled: true,
-    // Phase 2.97 — present on every DecisionParams value regardless of
-    // mode (mirrors dieScale/thetaRoll always being present even when a
-    // Decision never gets past Auto-resolution). 'legacy' keeps every
-    // existing experiment/test's behavior byte-identical; opting a call
-    // site into 'reasonNuclei' is the only way `runDecisionCycle` routes
-    // through cognitiveSignals.ts/diceCompiler.ts instead.
-    compilationMode: 'legacy',
+    // Phase 2.97 post-closure-audit re-baseline — see this function's own
+    // doc comment above. `'reasonNuclei'` is canonical; `runDecisionCycle`
+    // under this mode requires `needMotiveChannelMapping`/
+    // `identityMotiveChannelMapping` (see cycle.ts) — every NEW call site
+    // should supply `defaultMotiveChannelMapping()`/
+    // `defaultIdentityMotiveChannelMapping()` (and `defaultCommitments()`
+    // where relevant), the same way every experiment file added or updated
+    // since the re-baseline already does.
+    compilationMode: 'reasonNuclei',
     reasonNucleus: defaultReasonNucleusParams(),
   };
+}
+
+/**
+ * The RETIRED `SemanticReasonChannelId` decision-compilation pipeline, kept
+ * alive under its own name for exactly two purposes (mirroring
+ * `legacySaturationParams()`'s own two purposes above): (1) Experiment M's
+ * required old-vs-new side-by-side comparison, which needs a real 'legacy'
+ * identity to compare the canonical pipeline against; and (2) every
+ * Phase 2.9/2.95 decision experiment whose already-published numbers were
+ * measured against this exact pipeline and must keep reproducing them,
+ * unaffected by `defaultDecisionParams()`'s own default changing out from
+ * under them. Nothing in ordinary CharacterLab execution reaches for this
+ * function anymore — `defaultDecisionParams()` above does.
+ */
+export function legacyDecisionParams(): DecisionParams {
+  return { ...defaultDecisionParams(), compilationMode: 'legacy' };
 }
 
 /**
@@ -834,6 +881,25 @@ export function defaultReasonChannelMapping(): ReadonlyMap<string, SemanticReaso
  * call sites that want to say so explicitly. */
 export function defaultDecisionCycleParams(): CycleParams {
   return defaultCycleParams();
+}
+
+/**
+ * Phase 2.97 post-closure-audit re-baseline — the `CycleParams`-level
+ * counterpart to `legacyDecisionParams()` above, mirroring how
+ * `legacyCycleParams()` bundles `legacySaturationParams()` into a full
+ * `CycleParams`. Deliberately NOT the same identity as `legacyCycleParams()`:
+ * that function retires the Phase 0-2.5 salience/saturation baseline (a
+ * different, orthogonal axis) while leaving decision-compilation at whatever
+ * `defaultDecisionParams()` currently defaults to; this one keeps CURRENT
+ * canonical salience/saturation (`'derived'`/`'censored'`) and retires only
+ * `decision.compilationMode` to `'legacy'` — exactly the combination every
+ * Phase 2.9/2.95 decision experiment (`decisionResolution.ts`,
+ * `identityFormation.ts::cycleParamsWith`, `reasonConsolidation.ts`) was
+ * written and originally validated against, and must keep reproducing now
+ * that `defaultDecisionCycleParams()` defaults to `'reasonNuclei'`.
+ */
+export function legacyDecisionCycleParams(): CycleParams {
+  return { ...defaultCycleParams(), decision: legacyDecisionParams() };
 }
 
 /** Phase 2.9 — the dinner-vs-work Decision (Brief §36's own worked trace
