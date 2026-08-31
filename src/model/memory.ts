@@ -38,6 +38,27 @@ export interface MemoryEpisode {
   readonly participants: readonly ConceptKey[];
   readonly location: ConceptKey | null;
   readonly action: CanonicalActionKey;
+  /**
+   * Phase 2.97 closure audit, Check 3 (review agent finding) — this
+   * Experience's per-concept semantic salience (Phase 2.5b/c's `z_i`,
+   * `model/semanticExperience.ts::ConceptEncoding.salience`), carried onto
+   * the memory record itself rather than flattened away. Before this field
+   * existed, `semanticConcepts` reduced every perceived concept to bare
+   * list membership — "was Glen in this Experience at all" — which is
+   * exactly the "presence is not equivalent to psychological centrality"
+   * gap the review agent flagged: a memory with Glen highly salient and
+   * Priya merely present gave both identical referent-attribution weight.
+   * `model/cognitiveSignals.ts::situationalMemorySignals` is the consumer —
+   * it weights each of `participants`'s referent contribution by this map's
+   * entry for that concept, falling back to the pre-fix "attribute wholly
+   * to the option's own subject" behavior when this map has no entry for
+   * ANY participant (legacy `salienceMode: 'legacy'` memories, and any
+   * fixture built before this field existed, both leave it empty). Empty,
+   * never `undefined`, so every reader can treat "no salience data" and
+   * "real but zero salience" uniformly via a plain `.get(...) ?? undefined`
+   * lookup.
+   */
+  readonly conceptSalience: ReadonlyMap<ConceptKey, Rational>;
 }
 
 export interface MemoryRecord {
@@ -67,8 +88,14 @@ export function createMemory(
   participants: readonly ConceptKey[],
   location: ConceptKey | null,
   action: CanonicalActionKey,
+  // Phase 2.97 closure audit, Check 3 — trailing and defaulted (mirrors
+  // `cycle.ts::runDecisionCycle`'s own trailing-optional-params precedent)
+  // so every pre-existing positional call site (tests, experiments) keeps
+  // compiling unchanged, with the empty map triggering the documented
+  // backward-compatible fallback in `cognitiveSignals.ts`.
+  conceptSalience: ReadonlyMap<ConceptKey, Rational> = new Map(),
 ): MemoryEpisode {
-  return { memoryId, experienceId, encodedAt, semanticConcepts, needOutcomes, predictionErrors, participants, location, action };
+  return { memoryId, experienceId, encodedAt, semanticConcepts, needOutcomes, predictionErrors, participants, location, action, conceptSalience };
 }
 
 export function addMemory(store: MemoryStore, memory: MemoryEpisode): MemoryStore {

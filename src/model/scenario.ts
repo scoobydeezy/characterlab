@@ -28,6 +28,10 @@ import { EventClock } from '../kernel/event';
 import { DecisionParams, Decision, Option } from './decision';
 import { ReasonChannelPolarityTable } from './identity';
 import { SemanticReasonChannelId } from './decision';
+import { MotiveChannel } from './reasonNucleus';
+import { NeedMotiveChannelMapping, IdentityMotiveChannelMapping } from './cognitiveSignals';
+import { BaseDieThresholds, ModifierFamilyDefinition, ModifierFamilyId, ReasonNucleusCompilationParams } from './diceCompiler';
+import { CommitmentDef } from './commitment';
 
 export const NEED_CONNECTION: NeedId = needId('need.connection');
 export const NEED_REST: NeedId = needId('need.rest');
@@ -84,6 +88,19 @@ export const LOCATION_BAKERY: ConceptKey = conceptKey('location.bakery');
 export const NEED_ACHIEVEMENT: NeedId = needId('need.achievement');
 export const NEED_RECOGNITION: NeedId = needId('need.recognition');
 export const NEED_SECURITY: NeedId = needId('need.security');
+/**
+ * Phase 2.97 closure audit, Check 1 (ORIGINAL, superseded) — a
+ * `NEED_COMMITMENT` Core Need briefly lived here, satisfied by keeping the
+ * dinner promise, as the fix for CommitmentFidelity having no live
+ * MotiveGenerating source (RESEARCH.md's Phase 2.97 entry, Experiment H). A
+ * second round of review correctly identified this as solving the right
+ * problem through the wrong semantic layer — see `model/commitment.ts`'s own
+ * module doc comment for the full architectural argument. `NEED_COMMITMENT`
+ * is REMOVED; `COMMITMENT_DINNER_WITH_GLEN`/`defaultCommitments()` below are
+ * its replacement, a genuine standing-obligation `MotiveGenerating` source
+ * that is not a Need at all.
+ */
+export const COMMITMENT_DINNER_WITH_GLEN: ConceptKey = conceptKey('commitment.dinner_with_glen');
 
 export const ACTIVITY_WORK: ConceptKey = conceptKey('activity.work');
 /** Speak Up's own subject — what NeedExpectation(x, Recognition) is learned
@@ -363,6 +380,11 @@ export function decisionOutcomeTables(): Map<CanonicalActionKey, WorldOutcomeTab
   const m = new Map<CanonicalActionKey, WorldOutcomeTable>();
   m.set(ACTION_KEEP_DINNER_PROMISE, {
     actionKey: ACTION_KEEP_DINNER_PROMISE,
+    // Phase 2.97 closure audit, second correction: Commitment pressure is no
+    // longer a Need effect here at all — it is not something Keep Dinner
+    // Promise's realized OUTCOME "satisfies" (that framing was the bug). It
+    // is a constant standing obligation authored directly in
+    // `defaultCommitments()` below, independent of this outcome table.
     effects: [{ needId: NEED_CONNECTION, magnitude: ratOf(2, 5), noiseHalfWidth: ratOf(1, 20) }], // 0.40 ± 0.05 — mirrors Visit Glen
   });
   m.set(ACTION_STAY_AT_WORK, {
@@ -564,6 +586,153 @@ export function defaultDecisionParams(): DecisionParams {
     kI: ratOf(2), // K_I = 2
     kC: ratOf(2), // K_C = 2
     identityFeedbackEnabled: true,
+    // Phase 2.97 — present on every DecisionParams value regardless of
+    // mode (mirrors dieScale/thetaRoll always being present even when a
+    // Decision never gets past Auto-resolution). 'legacy' keeps every
+    // existing experiment/test's behavior byte-identical; opting a call
+    // site into 'reasonNuclei' is the only way `runDecisionCycle` routes
+    // through cognitiveSignals.ts/diceCompiler.ts instead.
+    compilationMode: 'legacy',
+    reasonNucleus: defaultReasonNucleusParams(),
+  };
+}
+
+/**
+ * Phase 2.97 — the Motive×Referent×Direction consolidation pipeline's own
+ * scenario-content mapping tables and calibration constants, kept entirely
+ * separate from Phase 2.95's `defaultReasonChannelMapping()`/
+ * `defaultSemanticReasonPolarity()` above (which remain frozen, unchanged,
+ * as the historical-baseline pipeline's own tables — see decision.ts's
+ * `DecisionParams.compilationMode` doc comment).
+ */
+
+/**
+ * NeedId -> MotiveChannel (Brief §10's controlled vocabulary). A direct,
+ * one-Need-one-channel mapping — every Need this scenario defines has an
+ * unambiguous home in the brief's vocabulary, so (unlike
+ * `defaultReasonChannelMapping()`'s many-to-one bundling into six authored
+ * "semantic reason channels") no narrower/wider regrouping is needed here.
+ */
+export function defaultMotiveChannelMapping(): NeedMotiveChannelMapping {
+  return new Map<NeedId, MotiveChannel>([
+    [NEED_CONNECTION, 'Connection'],
+    [NEED_REST, 'Rest'],
+    [NEED_ACHIEVEMENT, 'Achievement'],
+    [NEED_RECOGNITION, 'Recognition'],
+    [NEED_SECURITY, 'Safety'],
+    // Phase 2.97 closure audit, second correction — no Need maps to
+    // 'Commitment' here anymore: that channel's MotiveGenerating pressure
+    // now comes from `defaultCommitments()` (model/commitment.ts), a
+    // separate source family, not from this Need-keyed table at all. See
+    // that module's doc comment for why Commitment pressure was moved out of
+    // the Need ontology entirely rather than kept as an entry here.
+  ]);
+}
+
+/**
+ * IdentityExpressionChannelId -> MotiveChannel[] (Brief §46's "Identity as
+ * a Standing Modifier"). A FRESH authored bridge table, not a port of
+ * `defaultSemanticReasonPolarity()`: Phase 2.97's vocabulary is
+ * finer-grained than Phase 2.95's six bundled semantic channels (e.g.
+ * `AuthorityDefiance` and `SelfProtection` used to share one 'autonomy'
+ * channel; they now separate cleanly into `Autonomy` and `Safety`, since
+ * the new vocabulary has a channel for each). `NoveltySeeking` maps to
+ * BOTH `Recreation` and `Novelty` deliberately (Phase 2.97 plan, decision
+ * 5's licensed "one fact, multiple legitimate motives" case) —
+ * `cognitiveSignals.ts::standingIdentitySignals` emits one signal per
+ * listed channel, sharing one EvidenceBasis tag.
+ */
+export function defaultIdentityMotiveChannelMapping(): IdentityMotiveChannelMapping {
+  return {
+    AuthorityDefiance: ['Autonomy'],
+    Caregiving: ['Caregiving'],
+    CommitmentFidelity: ['Commitment'],
+    NoveltySeeking: ['Recreation', 'Novelty'],
+    RiskAcceptance: ['Recognition'],
+    RuleAdherence: ['Commitment'],
+    SelfProtection: ['Safety'],
+    SelfSacrifice: ['Caregiving'],
+    SocialApproach: ['Connection'],
+    WorkPersistence: ['Achievement'],
+  };
+}
+
+/**
+ * Phase 2.97 closure audit, second architectural correction — the real
+ * Commitment-pressure `MotiveGenerating` source (`model/commitment.ts`),
+ * replacing the removed `NEED_COMMITMENT`. `COMMITMENT_DINNER_WITH_GLEN` is
+ * the referent (the obligation itself), distinct from `PERSON_GLEN` (its
+ * stakeholder) — the review's own point: Mina may simultaneously hold
+ * `Commitment × DinnerWithGlen` and a hypothetical `Commitment ×
+ * CloseTheBakery`, both concerning Glen, and they must stay two independent
+ * nuclei rather than collapsing onto a shared `Commitment × Glen` reason.
+ * `activeObligationPressure` was first set to 0.30 (the SAME numeric
+ * magnitude Check 1's Need-based fix used), on the theory that matching
+ * magnitudes would isolate the architectural change from any fresh
+ * calibration choice. Real pipeline runs falsified that theory: a CONSTANT
+ * 0.30 obligation, never modulated by satisfaction/decay the way a Need is,
+ * gives Keep Dinner Promise a permanent second die (Commitment + Connection)
+ * against Stay At Work's one die (Achievement) for the *entire* length of
+ * `identityFormation.ts`'s repeated-round harnesses. That pushes Contest
+ * below `thetaRoll` and locks the Decision into deterministic `'Auto'`
+ * resolution from round 1 onward — checked directly out to 500 rounds, the
+ * lock never self-releases — which silently destroyed Experiment N's
+ * paired-seed stochastic divergence (see RESEARCH.md's Phase 2.97 entry).
+ * The value here is the corrected 0.10: still comfortably nonzero (it forms
+ * its own nucleus on its own) but weak enough on its own that it does not by
+ * itself force a second permanent die — a genuinely "weak-but-genuine"
+ * MotiveGenerating source, in the same spirit as Experiment I's floored-d4
+ * rescue case, left needing (and able to use) a real CommitmentFidelity
+ * standing modifier to grow further. Only `ACTION_KEEP_DINNER_PROMISE` is
+ * ever a `fulfillingAction` in this scenario — Stay At Work/Speak Up/Stay
+ * Quiet are unaffected by construction, exactly as `NEED_COMMITMENT`'s
+ * Glen-only seeding was. Deliberately NOT wired into
+ * `seedDivergenceReasonNuclei.ts`'s repeated-round harness at all — see that
+ * file's own module doc comment for why a constant one-time obligation does
+ * not belong replayed as permanently-live pressure inside a harness modeling
+ * the SAME recurring generic dilemma many times.
+ */
+export function defaultCommitments(): CommitmentDef[] {
+  return [
+    {
+      commitmentKey: COMMITMENT_DINNER_WITH_GLEN,
+      stakeholder: PERSON_GLEN,
+      fulfillingAction: ACTION_KEEP_DINNER_PROMISE,
+      motiveChannel: 'Commitment',
+      activeObligationPressure: ratOf(1, 10), // 0.10 — see doc comment above
+    },
+  ];
+}
+
+/**
+ * Base-die thresholds and modifier-family calibration — versioned,
+ * separately-authored constants from Phase 2.9's `dieScale` (Phase 2.97
+ * plan, decision 8: modifiers here are additive integers on top of a die,
+ * not another scaled die, so the two scales are not interchangeable even
+ * though they share a shape). Starting values loosely mirror `dieScale`'s
+ * own bracket spacing as a reasonable initial guess — `θ_reason` = 0.15,
+ * deliberately ABOVE the d4 threshold (0.10) so a genuinely sub-d4 motive
+ * needs a real (not infinitesimal) standing/situational contribution to
+ * become dice-active (Experiment I). These are explicitly research knobs:
+ * `experiments/calibrationSweeps.ts` measures their exact probability
+ * effects before RESEARCH.md recommends a final calibration, exactly as
+ * Brief's own "Offline Backward Balancing" section requires.
+ */
+export function defaultReasonNucleusParams(): ReasonNucleusCompilationParams {
+  const modifierFamilies = new Map<ModifierFamilyId, ModifierFamilyDefinition>([
+    ['StandingIdentity', { familyId: 'StandingIdentity', unit: ratOf(1, 4), maxMagnitude: 4 }],
+    ['RecentExperience', { familyId: 'RecentExperience', unit: ratOf(1, 4), maxMagnitude: 4 }],
+  ]);
+  return {
+    thresholds: {
+      d4: ratOf(1, 10), // 0.10
+      d6: ratOf(1, 4), // 0.25
+      d8: ratOf(9, 20), // 0.45
+      d10: ratOf(13, 20), // 0.65
+      d12: ratOf(17, 20), // 0.85
+    },
+    modifierFamilies,
+    thetaReason: ratOf(3, 20), // θ_reason = 0.15
   };
 }
 

@@ -80,8 +80,10 @@ import {
   DecisionInfluence,
   DecisionParams,
   DecisionExpression,
+  DecisionResolution,
   IdentityExpressionRecord,
   resolveDecision,
+  resolveReasonDiceExpressions,
   REASON_CHANNEL_ACCESSIBILITY,
   SemanticReasonChannelId,
   RawReasonInfluence,
@@ -98,6 +100,10 @@ import {
   ReasonChannelPolarityTable,
   IdentityExpressionChannelId,
 } from './identity';
+import { RawCognitiveSignal, nucleusKeyString } from './reasonNucleus';
+import { NeedMotiveChannelMapping, IdentityMotiveChannelMapping, allCognitiveSignalsForOption } from './cognitiveSignals';
+import { CompiledNucleus, compileReasonDice } from './diceCompiler';
+import { CommitmentDef } from './commitment';
 
 /**
  * Phase 2.5a — Brief §19/§27's Saturated Satisfaction / Censored Learning.
@@ -176,6 +182,14 @@ export interface ExperienceContext {
 
 export const EMPTY_EXPERIENCE_CONTEXT: ExperienceContext = { activeConcepts: new Set(), location: null };
 
+/** Phase 2.97 — every active `CompiledNucleus` per Option, from the LAST
+ * `runDecisionCycle` call made under `compilationMode: 'reasonNuclei'`.
+ * `CompiledNucleus` already carries everything a Brief §64 REASON-header
+ * trace needs (key, B_n, R_n, base die, standing/situational/final
+ * modifier, distribution, source signals, correlation trace) — this is
+ * simply that same map, named for what `CycleResult`/the UI consume it as. */
+export type ReasonNucleusTrace = ReadonlyMap<CanonicalActionKey, readonly CompiledNucleus[]>;
+
 /** Phase 2.5a — the Capacity/Applied/Overflow decomposition and descriptive
  * Experienced-Reward for one Need effect from the just-applied Action's
  * outcome, exposed directly on CycleResult (not just the trace) so UI code
@@ -212,6 +226,14 @@ export interface CycleResult {
    * 'legacy'`) — there is no well-defined character-relative encoding to
    * report when co-activation was the flat, non-derived 1.0. */
   readonly semanticExperience: SemanticExperience | null;
+  /** Phase 2.97 — every active `CompiledNucleus` per Option, from THIS
+   * `runDecisionCycle` call, non-null only when `params.decision.compilationMode
+   * === 'reasonNuclei'` (mirrors how `semanticSalience`/`semanticExperience`
+   * are non-null only under `salienceMode: 'derived'`). Null for every other
+   * entry point (`runAutonomousCycle`/`runScriptedExperience`) and for
+   * `runDecisionCycle` under `'legacy'` mode — nothing to report: that mode
+   * never compiles a Reason Nucleus. */
+  readonly reasonNucleusTrace: ReasonNucleusTrace | null;
   readonly trace: CognitiveCycleTrace;
   readonly invariantViolations: readonly InvariantViolation[];
 }
@@ -311,7 +333,7 @@ export function applyChosenAction(
   event: SimEvent,
   trace: TraceBuilder,
   seed: string,
-): Omit<CycleResult, 'distribution' | 'scoredActions' | 'activation' | 'accessibilityFilter' | 'retrievedMemories'> {
+): Omit<CycleResult, 'distribution' | 'scoredActions' | 'activation' | 'accessibilityFilter' | 'retrievedMemories' | 'reasonNucleusTrace'> {
   const before = [...stateAfterNeedAdvance.needStates.values()].map((s) => ({ needId: s.needId, level: s.level }));
 
   const realized = resolveOutcome(outcomeTable, { seed, eventId: event.eventId });
@@ -571,6 +593,12 @@ export function applyChosenAction(
     experience.participants,
     experienceContext.location,
     chosen.actionKey,
+    // Phase 2.97 closure audit, Check 3 — `experienceActivation` already IS
+    // this Experience's per-concept salience (the derived z_i in 'derived'
+    // salienceMode, or flat 1.0 for every engaged concept in 'legacy' mode
+    // — see its own assembly above): no new computation, just no longer
+    // discarding it before it reaches the memory record.
+    experienceActivation,
   );
   nextState = withMemory(nextState, addMemory(nextState.memory, memoryEpisode));
   trace.record('memory_created', {}, { memoryId: memoryEpisode.memoryId, semanticConcepts: semanticConcepts as any });
@@ -720,7 +748,7 @@ export function runAutonomousCycle(
   if (!outcomeTable) throw new RangeError(`No WorldOutcomeTable for Action ${chosen.actionKey}`);
 
   const result = applyChosenAction(actor, stateForEvaluation, nextMemoryStore, chosen, outcomeTable, ctxs, experienceContext, params, event, trace, seed);
-  return { ...result, distribution, scoredActions: scored, activation, accessibilityFilter, retrievedMemories: retrieved };
+  return { ...result, distribution, scoredActions: scored, activation, accessibilityFilter, retrievedMemories: retrieved, reasonNucleusTrace: null };
 }
 
 export interface IdleTickResult {
@@ -801,7 +829,7 @@ export function runScriptedExperience(
 
   const event = clock.emit('scripted_experience', { actor, action: forcedAction.actionKey });
   const result = applyChosenAction(actor, advanced, nextMemoryStore, forcedAction, outcomeTable, ctxs, experienceContext, params, event, trace, seed);
-  return { ...result, distribution: null, scoredActions: [], activation, accessibilityFilter: null, retrievedMemories: retrieved };
+  return { ...result, distribution: null, scoredActions: [], activation, accessibilityFilter: null, retrievedMemories: retrieved, reasonNucleusTrace: null };
 }
 
 /**
@@ -837,6 +865,22 @@ export function runDecisionCycle(
   seed: string,
   experienceContext: ExperienceContext = EMPTY_EXPERIENCE_CONTEXT,
   forcedOutcomeOverride?: { readonly actionDef: ActionDef; readonly outcomeTable: WorldOutcomeTable },
+  /** Phase 2.97 — required only when `params.decision.compilationMode ===
+   * 'reasonNuclei'`; every existing call site (`decisionResolution.ts`,
+   * `identityFormation.ts`, `reasonConsolidation.ts`, and this codebase's
+   * Phase 2.9 tests) runs `'legacy'` mode and never supplies these, which is
+   * exactly why they're trailing and optional rather than inserted into the
+   * middle of this already-long parameter list. */
+  needMotiveChannelMapping?: NeedMotiveChannelMapping,
+  identityMotiveChannelMapping?: IdentityMotiveChannelMapping,
+  /** Phase 2.97 closure audit, second correction — a scenario's standing
+   * obligations (see `model/commitment.ts`). Optional and defaulted to `[]`
+   * for the same reason `needMotiveChannelMapping`/`identityMotiveChannelMapping`
+   * are optional: every pre-existing call site runs `'legacy'` mode (which
+   * never reads this at all) or a `'reasonNuclei'` Decision with no
+   * commitment content, and an empty list is exactly "no commitment-sourced
+   * pressure," never a different code path. */
+  commitments: readonly CommitmentDef[] = [],
 ): CycleResult & { readonly decisionExpression: DecisionExpression } {
   const trace = new TraceBuilder(`decision:${clock.now()}`, clock.now());
 
@@ -880,6 +924,12 @@ export function runDecisionCycle(
   const rawNeedAccessByOption = new Map<CanonicalActionKey, RawReasonInfluence[]>();
   const rawSumByOption = new Map<CanonicalActionKey, Map<SemanticReasonChannelId, Rational>>();
   const boundedNeedAccessByOption = new Map<CanonicalActionKey, Map<SemanticReasonChannelId, Rational>>();
+  // Phase 2.97: retained alongside the SemanticReasonChannelId sums above so
+  // the 'reasonNuclei' branch of Step 2 (below) can build RawCognitiveSignals
+  // from the SAME already-computed ScoredAction/accessibility this loop
+  // produces for every Option, rather than recomputing either.
+  const scoredByOption = new Map<CanonicalActionKey, ScoredAction>();
+  const accessibilityByOption = new Map<CanonicalActionKey, Rational>();
   for (const option of decision.options) {
     const scored = evaluateAction(
       option.actionDef,
@@ -887,6 +937,7 @@ export function runDecisionCycle(
       (needId) => getExpectation(stateForEvaluation, option.actionDef.subject, needId),
       params.expectation.kC,
     );
+    scoredByOption.set(option.actionDef.actionKey, scored);
 
     const rawInfluences: RawReasonInfluence[] = [];
     for (const c of scored.perNeedContributions) {
@@ -897,6 +948,7 @@ export function runDecisionCycle(
       });
     }
     const accessibility = activation.get(asConceptKey(option.actionDef.actionKey)) ?? Rational.ZERO;
+    accessibilityByOption.set(option.actionDef.actionKey, accessibility);
     rawInfluences.push({
       source: 'accessibility',
       reasonChannel: REASON_CHANNEL_ACCESSIBILITY,
@@ -932,40 +984,97 @@ export function runDecisionCycle(
   // rather than identity being a second, independently-floored influence
   // that can never rescue (or be rescued by) a Need signal too weak on its
   // own — see identity.ts's module comment for the full derivation.
-  const influencesByOption = new Map<CanonicalActionKey, DecisionInfluence[]>();
-  for (const option of decision.options) {
-    const key = option.actionDef.actionKey;
-    let fullRaw = rawNeedAccessByOption.get(key)!;
-    if (params.decision.identityFeedbackEnabled) {
-      const identityRaw = identityFeedbackRawInfluences(
-        key,
-        boundedNeedAccessByOption,
-        state.identityEvidence,
-        semanticReasonPolarity,
-        params.decision.kI,
+  // Phase 2.97 — branch on `params.decision.compilationMode` (plan scoping
+  // decisions 1-2). 'legacy' keeps Phase 2.95's SemanticReasonChannelId
+  // consolidation exactly as it ran before this phase existed. 'reasonNuclei'
+  // instead builds typed RawCognitiveSignals per Option (cognitiveSignals.ts),
+  // compiles them into MotiveChannel x ReferentKey x MotiveDirection nuclei
+  // (diceCompiler.ts::compileReasonDice), and resolves them through the SAME
+  // shared resolution core via resolveReasonDiceExpressions — either way,
+  // Step 1 above (boundedNeedAccessByOption) already ran unconditionally, and
+  // is what identity EXPRESSION (below) reads regardless of mode.
+  let resolution: DecisionResolution;
+  let reasonNucleusTrace: ReasonNucleusTrace | null = null;
+  if (params.decision.compilationMode === 'reasonNuclei') {
+    if (!needMotiveChannelMapping || !identityMotiveChannelMapping) {
+      throw new RangeError(
+        "runDecisionCycle: compilationMode 'reasonNuclei' requires both needMotiveChannelMapping and identityMotiveChannelMapping",
       );
-      fullRaw = [...fullRaw, ...identityRaw];
     }
-    const consolidated = boundAndFloorChannels(sumRawBySemanticChannel(fullRaw, reasonChannelMapping), params.decision.dieScale);
-    influencesByOption.set(key, buildConsolidatedInfluences(key, consolidated, key));
+    const signalsByOption = new Map<CanonicalActionKey, RawCognitiveSignal[]>();
+    for (const option of decision.options) {
+      const key = option.actionDef.actionKey;
+      signalsByOption.set(
+        key,
+        allCognitiveSignalsForOption(
+          option,
+          scoredByOption.get(key)!,
+          accessibilityByOption.get(key)!,
+          retrieved,
+          state.identityEvidence,
+          params.decision.kI,
+          needMotiveChannelMapping,
+          identityMotiveChannelMapping,
+          commitments,
+        ),
+      );
+    }
+    const compiledByOption = compileReasonDice(signalsByOption, params.decision.reasonNucleus);
+    reasonNucleusTrace = compiledByOption;
+    trace.record(
+      'reason_nuclei_compiled',
+      { decisionId: decision.decisionId },
+      {
+        byOption: decision.options.map((o) => ({
+          option: o.actionDef.actionKey,
+          nuclei: (compiledByOption.get(o.actionDef.actionKey) ?? []).map((n) => ({
+            key: nucleusKeyString(n.key),
+            baseMotiveStrength: n.baseMotiveStrength.toCanonicalString(),
+            reasonRelevance: n.reasonRelevance.toCanonicalString(),
+            baseDie: n.baseDie,
+            standingModifier: n.standingModifier,
+            situationalModifier: n.situationalModifier,
+            finalModifier: n.finalModifier,
+          })),
+        })) as any,
+      },
+    );
+    resolution = resolveReasonDiceExpressions(decision, compiledByOption, params.decision.thetaRoll, params.decision.thetaPlayer, seed);
+  } else {
+    const influencesByOption = new Map<CanonicalActionKey, DecisionInfluence[]>();
+    for (const option of decision.options) {
+      const key = option.actionDef.actionKey;
+      let fullRaw = rawNeedAccessByOption.get(key)!;
+      if (params.decision.identityFeedbackEnabled) {
+        const identityRaw = identityFeedbackRawInfluences(
+          key,
+          boundedNeedAccessByOption,
+          state.identityEvidence,
+          semanticReasonPolarity,
+          params.decision.kI,
+        );
+        fullRaw = [...fullRaw, ...identityRaw];
+      }
+      const consolidated = boundAndFloorChannels(sumRawBySemanticChannel(fullRaw, reasonChannelMapping), params.decision.dieScale);
+      influencesByOption.set(key, buildConsolidatedInfluences(key, consolidated, key));
+    }
+    trace.record(
+      'decision_influences_consolidated',
+      { decisionId: decision.decisionId },
+      {
+        byOption: decision.options.map((o) => ({
+          option: o.actionDef.actionKey,
+          influences: influencesByOption.get(o.actionDef.actionKey)!.map((i) => ({
+            influenceId: i.influenceId,
+            reasonChannel: i.reasonChannel,
+            rawStrength: i.rawStrength.toCanonicalString(),
+            signedStrength: i.signedStrength.toCanonicalString(),
+          })),
+        })) as any,
+      },
+    );
+    resolution = resolveDecision(decision, influencesByOption, params.decision, seed);
   }
-  trace.record(
-    'decision_influences_consolidated',
-    { decisionId: decision.decisionId },
-    {
-      byOption: decision.options.map((o) => ({
-        option: o.actionDef.actionKey,
-        influences: influencesByOption.get(o.actionDef.actionKey)!.map((i) => ({
-          influenceId: i.influenceId,
-          reasonChannel: i.reasonChannel,
-          rawStrength: i.rawStrength.toCanonicalString(),
-          signedStrength: i.signedStrength.toCanonicalString(),
-        })),
-      })) as any,
-    },
-  );
-
-  const resolution = resolveDecision(decision, influencesByOption, params.decision, seed);
   trace.record(
     'decision_resolution',
     { decisionId: decision.decisionId, thetaRoll: params.decision.thetaRoll.toCanonicalString(), thetaPlayer: params.decision.thetaPlayer.toCanonicalString() },
@@ -1088,6 +1197,7 @@ export function runDecisionCycle(
     activation,
     accessibilityFilter: null,
     retrievedMemories: retrieved,
+    reasonNucleusTrace,
     decisionExpression,
   };
 }

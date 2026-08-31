@@ -122,6 +122,16 @@ src/
                     pointMass/convolve/convolveAll, CdfTable, expectedValue/totalProbability, and
                     winProbabilities — exact fair-tie-share pre-roll win probabilities for K
                     independent RollScore distributions, validated against brute-force enumeration
+    evidenceOverlap.ts [Phase 2.97, new] EvidenceBasis + overlap (Σmin/Σmax provenance-overlap
+                    ratio) + the Reference Correlation Consolidator, consolidateCorrelated —
+                    canonical-order sequential correlation discount (Brief §55-56); pure math, imports
+                    only rational.ts; [Phase 2.97 closure audit, Check 2] consolidateCorrelated now
+                    discounts each contribution against aggregateEvidenceBasis (new, exported) — the
+                    per-EvidenceId union-max coverage of every EARLIER contribution in canonical order —
+                    instead of the max overlap against any single earlier contribution; fixes a real
+                    collective-redundancy miss (bases {1},{2},{1,2}: the third was previously granted
+                    ~half weight it should not have had) an architectural review surfaced; unchanged for
+                    every two-contribution case (D/E/F)
 
   model/         Phase 1 + Phase 2 + Phase 2.5a-e + Phase 2.9 — the character
     types.ts        shared semantic vocabulary (Concept, ConceptCategory) (§13)
@@ -173,7 +183,69 @@ src/
                     identity's raw per-channel pull (via `identity.ts::identityFeedbackRawInfluences`,
                     when enabled) into ONE pool, bound-and-floored exactly once via
                     `decision.ts::sumRawBySemanticChannel`/`boundAndFloorChannels` — this is what
-                    actually becomes the DecisionInfluence[] driving dice/resolution
+                    actually becomes the DecisionInfluence[] driving dice/resolution;
+                    [Phase 2.97] `runDecisionCycle` gained two new trailing optional params
+                    (`needMotiveChannelMapping`, `identityMotiveChannelMapping`) and a branch on
+                    `params.decision.compilationMode`: under `'legacy'` (default) it is byte-identical
+                    to Phase 2.95's own path; under `'reasonNuclei'` it instead builds
+                    `RawCognitiveSignal[]` per option (`cognitiveSignals.ts`), compiles them
+                    (`diceCompiler.ts::compileReasonDice`), and resolves via
+                    `decision.ts::resolveReasonDiceExpressions` — identity evidence generation
+                    (Alignment/touchedChannels) is unchanged and unconditional on compilationMode, per
+                    plan scoping decision 9. `CycleResult.reasonNucleusTrace` is non-null only in
+                    `'reasonNuclei'` mode, mirroring how `semanticSalience` is non-null only in
+                    `'derived'` salienceMode
+    reasonNucleus.ts [Phase 2.97, new] the Brief's own controlled vocabulary — MotiveChannel (11
+                    entries: the brief's 10 plus 'Habit', justified in-file as
+                    REASON_CHANNEL_ACCESSIBILITY's existing associative-accessibility contributor),
+                    ReferentKey (= ConceptKey | 'Self' | 'None', reusing existing concept identity, no
+                    new namespace), MotiveDirection ('Pursue' | 'Avoid' only — derived from signed
+                    contribution, never authored), SourceRole; ReasonNucleusKey +
+                    nucleusKeyOf/groupSignalsByNucleus (the Central Consolidation Rule, exact
+                    (Option, MotiveChannel, Referent) key match) + compareNucleusKeys (canonical
+                    ordering); dominantReferent — the general continuous/threshold attribution case
+                    (Brief §27-29), implemented and unit-tested against synthetic input but unused by
+                    any real signal source this phase (every current source produces exact
+                    attribution by construction — see scoping decision 5)
+    cognitiveSignals.ts [Phase 2.97, new] the glue between existing state and reasonNucleus.ts's pure
+                    grouping math: NEED_TO_MOTIVE_CHANNEL-driven needSignals/accessibilitySignal
+                    (MotiveGenerating), standingIdentitySignals (StandingDisposition, via
+                    IDENTITY_CHANNEL_TO_MOTIVE_CHANNELS — one identity channel may emit signals to
+                    several MotiveChannels, e.g. NoveltySeeking -> Recreation+Novelty, sharing one
+                    EvidenceBasis), situationalMemorySignals/situationalExpectationNudgeSignals
+                    (SituationalEvidence, EvidenceBasis = {[memory.experienceId]: weight} — the only
+                    two signal families this phase gives real provenance, per scoping decision 6);
+                    [Phase 2.97 closure audit, Check 3] situationalMemorySignals no longer attributes
+                    every outcome wholly to the option's own subject — new attributedReferents() weights
+                    each of a memory's `participants` by that participant's `MemoryEpisode.conceptSalience`
+                    entry, NORMALIZED against the total salience present (so a single-participant memory,
+                    still the only kind this scenario's real pipeline produces, keeps its exact pre-fix
+                    weight of 1; a genuinely multi-participant memory splits weight proportional to
+                    relative salience); falls back to the pre-fix wholly-to-subject behavior when no
+                    participant has any recorded salience
+    commitment.ts   [Phase 2.97 closure audit, second correction, new] CommitmentDef (a static, authored
+                    one-time obligation — commitmentKey, stakeholder, fulfillingAction, motiveChannel,
+                    activeObligationPressure) and commitmentSignal/commitmentSignals — the real, non-Need
+                    MotiveGenerating source `NEED_COMMITMENT` should have been from the start: referented
+                    to the commitment concept itself (commitmentKey), never to its stakeholder, so two
+                    independent commitments about the same person stay two nuclei; no Need-style
+                    dynamics (no satisfaction, no decay, no expectation) — a static authored pressure,
+                    consumed by cognitiveSignals.ts's parallel commitmentStandingIdentitySignals builder
+                    (which fixes a real referent-mismatch bug: the generic standingIdentitySignals always
+                    emits at the option's own subject, which would otherwise leave CommitmentFidelity's
+                    Standing signal in a dead group that never reaches the real Commitment nucleus) and
+                    threaded through cycle.ts::runDecisionCycle's new trailing `commitments` parameter
+                    (default `[]`)
+    diceCompiler.ts [Phase 2.97, new] BaseDieThresholds/strengthToBaseDie (a versioned scale distinct
+                    from decision.ts::strengthToDie — modifiers here are additive integers on a die,
+                    not another scaled die); ModifierFamilyDefinition/strengthToIntegerModifier
+                    (truncate-toward-zero, clamped to ±maxMagnitude); CompiledNucleus (key,
+                    baseMotiveStrength B_n, reasonRelevance R_n, baseDie, standingModifier,
+                    situationalModifier, finalModifier, distribution, sourceSignals,
+                    correlationTrace); compileReasonDice — enforces Reason Activation (B_n=0 ⇒ no
+                    nucleus at all, "a modifier cannot create meaning from nothing"; R_n<thetaReason ⇒
+                    a real but non-dice-active reason) and the one-nucleus-one-die compilation
+                    invariant inline
     decision.ts     [Phase 2.9, new] pure Decision math — Option/Decision/DecisionInfluence,
                     DieScaleParams/DecisionParams, strengthToDie, resolveDecision (exact pre-roll
                     win probabilities via discreteDistribution.ts, Margin/Contest/ConflictMass/Stake/
@@ -188,7 +260,14 @@ src/
                     own feedback — into the pool before anyone bounds or floors it) + `boundAndFloorChannels`
                     (bounds then floor-filters — the dice-eligible result) + `boundAllChannels` (dense,
                     bounded, NOT floor-filtered — used only where a channel's meaning must not be gated
-                    by dice-eligibility, i.e. identity's own Alignment/evidence generation)
+                    by dice-eligibility, i.e. identity's own Alignment/evidence generation);
+                    [Phase 2.97] `resolveDecision`'s body extracted, behavior-preserving, into a private
+                    `resolveDecisionCore` (Margin/Contest/Stake/AuthorshipPotential/rolling logic,
+                    reused verbatim by both pipelines) plus a thin wrapper unchanged from Phase 2.95;
+                    new `resolveReasonDiceExpressions` builds the same `{id, distribution,
+                    motivationalMass}` map from `CompiledNucleus[]` instead of `DecisionInfluence[]`
+                    (`id = nucleusKeyString(key)`) and calls the identical core — every pre-existing
+                    `resolveDecision` test reproduces byte-identical output, checked directly
     identity.ts     [Phase 2.9, new] IdentityExpressionChannelId (the brief's §15 candidate channel
                     list) + CHANNEL_ORDER (its one canonical ordering); IdentityEvidenceState +
                     updateIdentityEvidence (Support/Opposition accumulation, quantized on commit);
@@ -226,13 +305,43 @@ src/
                     canonical (semantic-channel-keyed) replacement for Phase 2.9's original
                     `defaultReasonChannelPolarity()`, which is now removed — every `runDecisionCycle`
                     call site takes both; defaultDecisionCycleParams() bundles a full CycleParams for
-                    Phase 2.95's experiments
+                    Phase 2.95's experiments; [Phase 2.97] defaultMotiveChannelMapping() (NeedId ->
+                    MotiveChannel, one-to-one — no bundling needed, unlike the Phase 2.95 semantic-
+                    channel table) and defaultIdentityMotiveChannelMapping() (IdentityExpressionChannelId
+                    -> MotiveChannel[], a fresh authored bridge table, NOT a port of
+                    defaultSemanticReasonPolarity()) are the two new bridge tables
+                    cognitiveSignals.ts's builders take as parameters; defaultReasonNucleusParams()
+                    bundles the new, separately-versioned BaseDieThresholds + ModifierFamilyDefinition
+                    map + thetaReason — explicit research knobs (`experiments/calibrationSweeps.ts`
+                    measures their real probability effects, see RESEARCH.md's Phase 2.97 entry);
+                    `defaultDecisionCycleParams()`'s DecisionParams now always carries
+                    `compilationMode: 'legacy'` (default) and `reasonNucleus:
+defaultReasonNucleusParams()`; [Phase 2.97 closure audit, Check 1, ORIGINAL — superseded]
+                    a NEED_COMMITMENT Core Need briefly lived here as the fix giving CommitmentFidelity a
+                    genuine motive to modify; [Phase 2.97 closure audit, Check 1, SECOND CORRECTION —
+                    current] NEED_COMMITMENT is REMOVED outright (modeling a one-time obligation as a
+                    Need was the wrong semantic layer — see commitment.ts's own module doc comment);
+                    COMMITMENT_DINNER_WITH_GLEN (a ConceptKey — the commitment itself, distinct from
+                    PERSON_GLEN its stakeholder) and defaultCommitments() (a CommitmentDef[],
+                    `activeObligationPressure` 0.10, fulfilling only ACTION_KEEP_DINNER_PROMISE) are the
+                    real, static, non-Need MotiveGenerating source that replaces it, consumed by
+                    commitment.ts's builders and threaded through runDecisionCycle's new trailing
+                    `commitments` parameter (default `[]`, so every existing call site is unaffected
+                    unless it opts in) — RESEARCH.md's Phase 2.97 entry has the full before/after and
+                    the Auto-mode-lock finding that shaped where this source is (and deliberately is not)
+                    wired in
     semanticExperience.ts [Phase 2.5e] SemanticExperience, ConceptEncoding, NeedObservation — the
                     formalized character-relative record of one Experience Phase 3 should consume;
                     deliberately has no Overflow field anywhere (see its own module doc)
     associations.ts [Phase 2] associative graph W_t, sole-mutation-authority Hebbian learning (§14–15)
     activation.ts   [Phase 2] spreading activation a = (I - βW)⁻¹b (§16)
-    memory.ts       [Phase 2] episodic memory, recency/frequency accessibility, retrieval (§17)
+    memory.ts       [Phase 2] episodic memory, recency/frequency accessibility, retrieval (§17);
+                    [Phase 2.97 closure audit, Check 3] MemoryEpisode gained `conceptSalience`
+                    (ReadonlyMap<ConceptKey, Rational>, defaulting to empty) — this Experience's
+                    per-concept semantic salience (Phase 2.5b/c's z_i), threaded through by
+                    `createMemory`'s new trailing-optional parameter so every pre-existing positional
+                    call site keeps compiling; `cycle.ts` populates it from the SAME
+                    `experienceActivation` map it already computes, no new computation
     salience.ts     [Phase 2.5b] Semantic Salience — CategoryFromConceptKey, BASE_SALIENCE/
                     ROLE_WEIGHT tables, needRelevance, rawSalience, the three §12 salience-budget
                     models, computeSemanticSalience pipeline (§5-14, §25-27); [Phase 2.5c]
@@ -295,6 +404,91 @@ src/
                                feedback on from a completely fresh, zero-evidence scenario — every case
                                against real `runDecisionCycle` output, each parameter set found by the
                                same empirical-search discipline as every other experiment file here
+    reasonNucleusFormation.ts [Phase 2.97, new] Experiments A, B, C — real `runDecisionCycle` runs
+                               under `compilationMode: 'reasonNuclei'`, asserting exact nucleus COUNT
+                               and IDENTITY (which MotiveChannel/ReferentKey each one carries): a
+                               first-ever Decision forms exactly one nucleus per Option (A); one
+                               referent given several independently-mapped Needs forms several
+                               independent nuclei about that SAME referent (B); two Options given the
+                               same mapped Need against different subjects each resolve their own
+                               independent nucleus on the SAME MotiveChannel but different Referents (C)
+    correlatedEvidence.ts     [Phase 2.97, new] Experiments D, E, F — the Reference Correlation
+                               Consolidator validated at two layers: Layer 1 (F) packages
+                               evidenceOverlap.test.ts's own hand-authored Brief-spec numbers
+                               ({1,2,3} vs {3,4,5}, Overlap=1/5) as a runnable experiment; Layer 2 (D,
+                               E) runs a real Decision where one retrieved memory legitimately feeds
+                               two independently-derived situational signals sharing one EvidenceBasis
+                               (D — must fully discount) versus two separate memories with disjoint
+                               bases (E — must stack fully) on the identical (Option, MotiveChannel,
+                               Referent) triple
+    identityAsModifier.ts     [Phase 2.97, new] Experiments G, H, I — reruns
+                               identityFormation.ts's own repeated-decision bootstrapping harness
+                               (never hand-built fixtures) to establish real WorkPersistence/
+                               CommitmentFidelity identity, then one reasonNuclei-mode Decision per
+                               case: standing modifier present vs. ablated with base motive strength
+                               unaffected (G); a real but too-weak-alone motive rescued into floor-die
+                               (d4) activation by a real, weakly-established standing identity on the
+                               same channel (I); [Phase 2.97 closure audit, Check 1, original] Experiment
+                               H rewritten: pre-audit it showed real, genuinely nonzero CommitmentFidelity
+                               evidence unable to form a nucleus on a MotiveChannel with no
+                               MotiveGenerating source — H then demonstrated BOTH the (now-superseded)
+                               NEED_COMMITMENT fix and that the underlying rule survives elsewhere (real,
+                               substantial, directly-injected Caregiving evidence — a channel still
+                               genuinely ungenerated in this scenario — still forms no nucleus anywhere);
+                               [Phase 2.97 closure audit, Check 1, second correction] H further extended
+                               with bootstrapDinnerIdentity() — a mirror-image bootstrap producing a
+                               genuinely STRONG (not merely nonzero) CommitmentFidelity identity — to
+                               confirm the real, correctly-referented Commitment nucleus (from the new
+                               `defaultCommitments()` source, not a Need) receives a nonzero standing
+                               modifier, and that the nucleus's own referent is the commitment concept
+                               itself, never its stakeholder
+    situationalModifiers.ts   [Phase 2.97, new] Experiment J — Need level, NeedExpectation, and
+                               identity evidence held byte-identical across two real
+                               `runDecisionCycle` runs; only the retrieval set's one supportive memory
+                               differs, confirming baseMotiveStrength stays identical while only the
+                               situational modifier responds
+    diceGrammarRichness.ts    [Phase 2.97, new] Experiment K — one Option driven to four
+                               simultaneously-active independent nuclei (reusing the same
+                               multi-Need-against-one-subject mechanism Experiment B exercises,
+                               extended to four Needs); asserts the combined dice-pool distribution is
+                               the EXACT convolution of each nucleus's own distribution (PMF sums to 1,
+                               support matches the additive min/max range) — never an approximation
+    calibrationSweeps.ts      [Phase 2.97, new] Experiment L + the Offline Backward Balancing research
+                               — pure kernel-level, no CharacterState: runModifierSweep (fixed base
+                               die, modifier swept ±N) and runBaseDieSweep (base-die size swept at a
+                               fixed modifier), both via the identical exact `winProbabilities` every
+                               real Decision resolution uses; runExperimentL_CalibrationRecommendation
+                               reports the two headline comparisons as an explicit calibration
+                               recommendation (see RESEARCH.md's Phase 2.97 entry for the real,
+                               previously-unknown finding this produced), never silently applying it
+    oldVsNewCompilation.ts    [Phase 2.97, new] Experiment M — the identical {CharacterState,
+                               Decision, Seed} run through both the frozen legacy pipeline and the new
+                               `reasonNuclei` pipeline side by side, comparing dice count, probability
+                               deltas, and trace-label readability directly (never inferred from
+                               separate runs) — proves the shared `resolveDecisionCore` extraction
+                               left the underlying resolution math genuinely unchanged
+    seedDivergenceReasonNuclei.ts [Phase 2.97, new] Experiment N — reruns seedDivergence.ts's own
+                               flagship paired-seed harness (Phase 2.9's Experiment F) entirely under
+                               `compilationMode: 'reasonNuclei'`; the module doc comment records a
+                               real, not-assumed-in-advance finding about WHICH identity channel ends
+                               up carrying the later-decision divergence under the new vocabulary (see
+                               RESEARCH.md's Phase 2.97 entry); [Phase 2.97 closure audit, Check 1
+                               rerun, original — superseded] default `rounds` briefly moved from 40 to
+                               100, having checked empirically that the (now-removed) NEED_COMMITMENT
+                               addition shifted WorkPersistence's accumulated evidence enough that both
+                               timelines' values landed on the same side of the StandingIdentity
+                               modifier's quantization boundary at 40 rounds; [Phase 2.97 closure audit,
+                               Check 1, second correction — current] `defaultCommitments()` is
+                               deliberately NOT wired into this harness at all — doing so once (mirroring
+                               how G/H/I were extended) locked the Decision into deterministic `'Auto'`
+                               resolution mode from round 1 for 500+ rounds (a constant, non-decaying
+                               obligation gives one option a permanent second die, pushing Contest below
+                               `thetaRoll`), destroying all stochastic divergence between the two
+                               timelines — a structural finding, not a calibration one, and one no amount
+                               of recalibrating rounds or magnitude could fix; `rounds` reverted to its
+                               original default of 40, which now shows genuine divergence on all four
+                               measures again (see RESEARCH.md's Phase 2.97 entry for the real numbers
+                               and the Auto-lock discovery in full)
 
   ui/            React SPA — visualizes and drives everything above
     state/useEngine.ts        the only place React meets the model; [Phase 2.9] decisionParams +
@@ -302,7 +496,31 @@ src/
                                Phase 2.9 experiment (A, B, C, D, K, E, G, H, I, J, F); [Phase 2.95] five
                                more result-holder fields (targetAResult-targetEResult) + run*UI
                                callback per reasonConsolidation.ts target, same self-contained
-                               read-only-probe shape as every other experiment callback here
+                               read-only-probe shape as every other experiment callback here;
+                               [Phase 2.97] fourteen more result-holder fields + run*UI callbacks, one
+                               per Experiment A-N, registered in the final useMemo alongside every
+                               prior phase's — no new setter needed beyond the existing generic
+                               `updateDecisionParams` patch-merge (compilationMode and reasonNucleus
+                               are just two more DecisionParams fields it already covers)
+    components/               NeedPanel, ExpectationPanel, ActionPanel, ModelParamsPanel,
+                               DeterminismPanel, TraceViewer, CounterfactualPanel, Slider, Bar,
+                               [Phase 2] AssociationPanel, MemoryPanel, Phase2ExperimentsPanel,
+                               [Phase 2.5a] SaturationPanel, [Phase 2.5b/c] SaliencePanel (no
+                               "unattended" column since 2.5c — Scenario F shows two Incidental-
+                               count variants instead), [Phase 2.9] DecisionPanel — DecisionParams
+                               sliders/toggle, grouped run-buttons and result rendering for all eleven
+                               lettered experiments, following SaturationPanel's own
+                               table/badge/Rational-rendering conventions; [Phase 2.95] DecisionPanel
+                               extended with a fifth run-button group ("Reason consolidation — Targets
+                               A-E") rendering each target's DecisionExpression(s)/repeated-round
+                               summaries alongside its own required verification flags; [Phase 2.97]
+                               DecisionPanel extended again with a `compilationMode` toggle, six new
+                               reasonNucleus threshold/modifier-unit sliders, and a sixth run-button
+                               group ("Reason Nuclei — Phase 2.97", Experiments A-N) — plus new shared
+                               view components `CompiledNucleusView`/`ReasonNucleusTraceTable`/
+                               `CorrelationTraceTable` rendering the Brief §58 REASON-header layout
+                               (Key / Base Motive / Base Die / Standing / Situational / Final
+                               Expression / Exact Distribution) for any `CompiledNucleus`
     components/               NeedPanel, ExpectationPanel, ActionPanel, ModelParamsPanel,
                                DeterminismPanel, TraceViewer, CounterfactualPanel, Slider, Bar,
                                [Phase 2] AssociationPanel, MemoryPanel, Phase2ExperimentsPanel,
@@ -333,7 +551,64 @@ src/
                  experiment file, asserting every lettered experiment's brief §30 verification
                  bullets against real run output), and [Phase 2.95]
                  phase2_95ReasonConsolidation.test.ts (Targets A-E asserted against real
-                 reasonConsolidation.ts output, same convention as the Phase 2.9 experiment-file tests)
+                 reasonConsolidation.ts output, same convention as the Phase 2.9 experiment-file tests),
+                 and [Phase 2.97] evidenceOverlap.test.ts (overlap bounds/identity/disjoint cases,
+                 consolidateCorrelated against the Brief's own Experiment F numeric example by hand,
+                 canonical-ordering independence from input order; [closure audit, Check 2] the
+                 {1},{2},{1,2} cumulative-coverage case — the third contribution's effective value is
+                 exactly 0 post-fix, versus 3/2 under the pre-fix pairwise-max algorithm — plus
+                 aggregateEvidenceBasis's own per-id-max/empty-input cases), reasonNucleus.test.ts
+                 (Central Consolidation Rule key equality/grouping both directions, dominantReferent's
+                 threshold logic against synthetic ambiguous input; [closure audit, Check 4] an explicit
+                 "same Option/Motive/Referent, Pursue vs Avoid must produce separate nuclei" describe
+                 block — the same triple resolved oppositely across two compiles produces two
+                 non-colliding keys, differing in direction alone), phase2_97CognitiveSignals.test.ts
+                 (each builder's exact attribution against hand-computed cases; [closure audit, Check 3]
+                 a multi-participant memory's salience-weighted attribution — Glen's contribution
+                 strictly exceeds Priya's from the same memory — an incidental non-participant concept
+                 never gets attributed, and the empty-salience fallback matches the pre-fix value
+                 exactly), phase2_97DiceCompiler.test.ts (the Reason Activation rule, the
+                 one-nucleus-one-die invariant, modifier-family calibration bounds; [closure audit,
+                 Check 4] the same triple compiled Pursue in one call and Avoid in another never
+                 collides, and one compile with deliberately mixed-sign signals on one triple yields
+                 exactly one nucleus), phase2_97Decision.test.ts
+                 (resolveDecisionCore's extraction is behavior-preserving — every pre-existing
+                 resolveDecision test vector reproduces byte-identical output —
+                 and resolveReasonDiceExpressions produces the same Contest/Stake math shape),
+                 phase2_97CycleIntegration.test.ts (runDecisionCycle's own reasonNuclei-mode branch,
+                 end-to-end, plus the clear throw when the new mapping params are omitted under that
+                 mode), and one test file per Phase 2.97 experiment file
+                 (phase2_97ReasonNucleusFormation.test.ts, phase2_97CorrelatedEvidence.test.ts,
+                 phase2_97IdentityAsModifier.test.ts — [closure audit, Check 1, original] Experiment
+                 H's assertions rewritten for the (now-superseded) NEED_COMMITMENT-based fix;
+                 [closure audit, Check 1, second correction] further extended with assertions that a
+                 genuinely strong CommitmentFidelity identity produces a nonzero standing modifier on
+                 the real, correctly-referented Commitment nucleus, see identityAsModifier.ts's own
+                 entry above — phase2_97SituationalModifiers.test.ts,
+                 phase2_97DiceGrammarRichness.test.ts, phase2_97CalibrationSweeps.test.ts,
+                 phase2_97OldVsNewCompilation.test.ts, phase2_97SeedDivergenceReasonNuclei.test.ts —
+                 [closure audit, Check 1, second correction] commitments deliberately excluded from
+                 this harness (an Auto-mode-lock discovery, not a calibration issue — see
+                 seedDivergenceReasonNuclei.ts's own entry above), `rounds` back to its original
+                 default of 40, still asserting `laterProbabilitiesDiffered` — 8 files, asserting
+                 every lettered experiment's required outcome against real run output, same
+                 convention as the Phase 2.9/2.95 experiment-file tests)
+    phase2_97CommitmentLifecycle.test.ts — [closure audit, Check 1, third pass] a further review's
+                 own small closure obligation on the second correction: a `CommitmentDef` may be
+                 static authored content, but its `MotiveGenerating` pressure must be conditional on
+                 an active, applicable commitment and must disappear on retirement, and a recurring
+                 obligation must be independent concrete instances, never one immortal pressure. Four
+                 cases against real `runDecisionCycle` output: no commitment authored -> no Commitment
+                 nucleus (T0); DinnerWithGlen active on a genuinely identity-invested character -> the
+                 real nucleus appears (T1); that SAME commitment retired (simply no longer supplied)
+                 on the SAME identity-rich character -> its nucleus is absent again, isolating
+                 retirement (not weak identity) as the cause, and reapplying the Activation Rule's "a
+                 modifier cannot create meaning from nothing" wall across a lifecycle transition, not
+                 just at a nucleus that was never live (T3); a new DinnerWithGlen-shaped commitment
+                 instance -> a new nucleus at a new referent, never colliding with the retired one
+                 (T4). No new lifecycle/state machinery added — `runDecisionCycle`'s existing
+                 `commitments` parameter, supplied fresh per call rather than carried on
+                 `CharacterState`, already IS the lifecycle boundary this test proves out
 ```
 
 ## Running it
@@ -604,6 +879,138 @@ No environment variables, no backend, no network calls at runtime.
   win consistently enough to actually erode a consolidated trait with feedback active throughout, where
   under Phase 2.9's architecture no feedback-on parameter regime achieved this at all. See RESEARCH.md's
   Phase 2.95 entry, Target D, for the round-by-round finding.
+- **Phase 2.95's `SemanticReasonChannelId` consolidation is frozen as the historical baseline, never
+  replaced.** `DecisionParams.compilationMode: 'legacy' | 'reasonNuclei'` defaults to `'legacy'` — the
+  same opt-in-by-default discipline `salienceMode`/`learningMode` already established — so every
+  pre-2.97 experiment, test, and UI panel keeps running the exact old pipeline unless a call site
+  explicitly opts in. `resolveDecision`'s Margin/Contest/Stake/AuthorshipPotential/rolling logic was
+  extracted, behavior-preservingly, into a shared `resolveDecisionCore` both pipelines call verbatim —
+  Experiment M runs the identical input through both side by side and finds the underlying math
+  genuinely unchanged (identical dice counts and Rational-exact probabilities), confirming the two
+  pipelines really are alternate front-ends to the same resolution core, not two competing
+  probability models.
+- **Referent and Motive attribution are exact by construction in every signal source this phase
+  actually has, never fractional or threshold-based.** The Brief's general continuous-attribution
+  machinery (`dominantReferent`, θ_referent/θ_dominance) is implemented and unit-tested against
+  synthetic ambiguous input, but no real Need- or memory-sourced signal in this build ever needs it: a
+  Need's referent is always its own subject with weight 1. This is recorded as a deliberate deferred
+  generalization, not a gap discovered too late to fix.
+- **Closure audit, Check 3 (review agent finding): a memory's referents are attributed by
+  salience-weighted SHARE among its participants, not flat equal membership in the participant list.**
+  The original claim above — "a memory's referents are always its own recorded participant list,"
+  each implicitly weight 1 — was true of the code but wrong as psychology: a memory naming Glen and
+  Priya where only Glen is actually salient to the remembered event should not attribute equal
+  motivational weight to both just because both are named. `MemoryEpisode` gained a `conceptSalience:
+  ReadonlyMap<ConceptKey, Rational>` field (populated in `cycle.ts` from the already-computed
+  `experienceActivation` map — no new computation), and `cognitiveSignals.ts::attributedReferents`
+  now attributes each situational signal across participants with recorded nonzero salience, weighted
+  by that participant's share of the TOTAL salience present in the memory (so a lone salient
+  participant still gets weight exactly 1, preserving every pre-fix numeric result; only genuinely
+  multi-participant memories split weight proportionally, e.g. Glen 4/5-salience + Priya 1/5-salience
+  over a memory splits an outcome's signed strength 4:1, not 1:1). A participant with no recorded
+  salience data at all (or an incidental non-participant object in the same memory) falls back to no
+  attribution, and a memory with zero salient participants falls back to the pre-fix flat behavior via
+  the option's own subject at weight 1 — so this is a strict refinement of the old rule, not a
+  replacement of it, and it was arrived at only after an un-normalized first draft (raw salience used
+  directly as weight) was caught breaking Experiments D/E/J's calibrated numbers and corrected to the
+  normalized-share design actually shipped.
+- **Closure audit, Check 1 second correction: a one-time Commitment is a `MotiveGenerating` source, not a
+  Core Need.** Check 1's original fix (a `NEED_COMMITMENT` Core Need satisfied by keeping the dinner
+  promise) solved the right problem — CommitmentFidelity needed a real motive to modify — through the
+  wrong semantic layer: a Need models a recurring appetite with satisfaction and decay dynamics, while a
+  specific one-time obligation has neither, and seeding the Need only for Glen wrongly makes the
+  stakeholder the nucleus's referent rather than the obligation itself, which cannot distinguish two
+  independent commitments about the same person. `NEED_COMMITMENT` is removed; `model/commitment.ts`'s
+  `CommitmentDef`/`commitmentSignal(s)` is a real, static, non-Need `MotiveGenerating` source referented
+  to `COMMITMENT_DINNER_WITH_GLEN` (the commitment concept itself). Fixing this surfaced a genuine
+  referent-mismatch bug along the way: the existing `standingIdentitySignals` always emits every identity
+  channel's Standing signal at the option's own subject (Glen), so CommitmentFidelity's Standing signal
+  was landing in a dead group at referent=Glen that never actually reached the real Commitment nucleus —
+  fixed with a parallel `commitmentStandingIdentitySignals` builder keyed at the commitment's own
+  referent. This also proves out the Brief's own claim that `MotiveGenerating` is a genuinely open family
+  of sources (Need pressure, Commitment pressure, and later Goal/Value pressure) rather than a family of
+  one — see RESEARCH.md's Phase 2.97 entry for the real verification numbers, and for a serious,
+  structural finding this correction surfaced: wiring a constant (non-decaying) Commitment source into
+  `identityFormation.ts`'s repeated-round harnesses permanently locks Decision resolution into
+  deterministic `'Auto'` mode, so `defaultCommitments()` is deliberately excluded from
+  `seedDivergenceReasonNuclei.ts` (Experiment N) even though it is wired into `identityAsModifier.ts`
+  (Experiment H).
+- **Closure audit, Check 1 third pass: a Commitment's `MotiveGenerating` pressure is conditional on it
+  being live, not a permanent fact of having once authored it.** A further review judged the Auto-lock
+  finding above "test-scenario incompatibility, expected behavior" and the architecture itself sound, but
+  named one small remaining obligation: a `CommitmentDef` may be static authored content, but the pressure
+  it generates must disappear once the commitment reaches a terminal state (Fulfilled/Relinquished/Missed/
+  Cancelled), and a recurring obligation ("dinner Monday," "dinner Tuesday") must be independent concrete
+  instances, never one immortal pressure. No new lifecycle/state machinery was added — no experiment needs
+  a commitment that transitions mid-run, and building that ahead of a concrete need would repeat the same
+  "generalize before an experiment demands it" mistake this project keeps correcting itself out of.
+  Instead, `test/phase2_97CommitmentLifecycle.test.ts` proves, on real pipeline output, that the mechanism
+  already in place satisfies the obligation: `runDecisionCycle`'s `commitments` list is supplied fresh per
+  call rather than carried on `CharacterState`, so "live" is simply "present in this call's list." Four
+  cases: no commitment -> no nucleus; DinnerWithGlen active on an identity-invested character -> the real
+  nucleus appears; that SAME commitment retired on the SAME identity-rich character -> the nucleus is
+  absent again (isolating retirement, not weak identity, as the cause — the Activation Rule's "a modifier
+  cannot create meaning from nothing" wall holding across a lifecycle transition, not just at a nucleus
+  that was never live); a new commitment instance -> a new nucleus at a new referent, never resurrecting
+  the retired one.
+- **Two observations from the same review, recorded but explicitly not acted on this phase.** First:
+  referent attribution (Check 3 above) is proven only over a memory's `participants` — a future scenario
+  needing an arbitrary causal-object referent that is never itself a participant (e.g. "a lamp falls and
+  injures Mina" needing a `Safety × Lamp × Avoid` nucleus) isn't yet supported, and is recorded here as a
+  real future limitation rather than silently assumed away. Second: `ReasonNucleusKey` may be more
+  cleanly understood as `Option × Motive × Referent`, with `ResolvedReason = ReasonNucleusKey +
+  Direction` as a distinct, later-resolved concept — on rereading `reasonNucleus.ts`/`diceCompiler.ts`
+  in light of this, it's arguably the more honest description of what `groupSignalsByTriple`/
+  `resolvedNucleusKey` already do (Check 4's own finding). Neither was treated as required before Phase
+  3 by the review itself, and neither is acted on here — see RESEARCH.md's Phase 2.97 closure-audit
+  section for the fuller writeup of both.
+- **`EvidenceBasis` provenance is scoped to the two signal families that already carry a concrete
+  identifier, not retrofitted onto every aggregated Bayesian scalar in the codebase.** `NeedExpectation`
+  and `IdentityEvidenceState` are already-aggregated scalars with no per-source-experience list, and
+  retrofitting full provenance onto them would be a materially larger, unjustified expansion — none of
+  Experiments A-N actually needs to know which past experiences built up a given NeedExpectation's μ or
+  an identity channel's Support. Provenance is populated only for memory-sourced `SituationalEvidence`
+  signals (`{[memoryEpisode.experienceId]: weight}`, directly off real `ScoredMemory` data) and
+  identity-sourced `StandingDisposition` signals (a single-element `{'identity:<channel>': 1}` tag,
+  present purely so the consolidator's canonical-ordering machinery has a uniform input shape — overlap
+  is not meaningfully exercised there, since identity's own internal Support/Opposition aggregation is
+  Phase 2.9's separate, already-verified mechanism).
+- **The new `MotiveChannel` vocabulary is the Brief's own 10-entry controlled list, plus one justified
+  11th: `'Habit'`.** `REASON_CHANNEL_ACCESSIBILITY`'s associative-accessibility pull is a real,
+  already-validated Phase 2.9/2.95 motive-generating contributor with no honest home among the Brief's
+  10 — dropping it would silently regress the seed-divergence/biography-authorship behavior Phase Gate
+  item 15 requires to survive. `MotiveDirection` stays `'Pursue' | 'Avoid'` only; the Brief's own
+  illustrative `Preserve`/`Reject` extensions are not added, since no experiment A-N needs them and
+  generalizing ahead of an experiment that demands it is a mistake this project has corrected itself
+  out of before.
+- **Base-die thresholds and modifier-family unit/maxMagnitude are new, separately-versioned constants
+  — never inherited from Phase 2.9's `dieScale`.** Modifiers here are additive integers on top of a die,
+  not another scaled die, so the two scales are not interchangeable even though they share a shape.
+  They are explicit, unvalidated-until-measured research knobs: `experiments/calibrationSweeps.ts`
+  (Experiment L) measures their real win-probability effects via the exact same `winProbabilities`
+  math every real Decision resolution uses, and found a genuine, previously-unknown miscalibration —
+  at this build's shipped defaults (modifier-family unit = 1/4), a single +1 modifier step at d8
+  (ΔP(win)≈0.1172) is slightly LOUDER than moving a whole base-die bracket, d8→d10 (ΔP(win)≈0.1000) —
+  the opposite of "a modifier strengthens; it does not replace the die." This is recorded as an
+  explicit calibration recommendation in RESEARCH.md's Phase 2.97 entry rather than silently
+  self-corrected, so the finding stays visible; `DecisionPanel.tsx` exposes both the base-die
+  thresholds and the two modifier-family units as live sliders for exploring the fix.
+- **Standing/Situational raw contributions are NOT individually pre-bounded per-source before
+  consolidation, unlike legacy's already-per-Influence-bounded shape** — a raw Need contribution has no
+  fixed range, so `diceCompiler.ts::consolidateSigned` sums raw magnitudes within each signed partition
+  (positive support and negative modulation are never allowed to cancel before the correlation
+  discount), applies the Reference Correlation Consolidator, nets the two partitions, and only THEN
+  applies `Rational.boundedResponse` — the same "sum raw, then bound" discipline
+  `decision.ts::boundAndFloorChannels`/`identity.ts::identityConsistency` already use throughout this
+  codebase, extended to the new pipeline rather than reinvented for it.
+- **What Phase 2.97 deliberately does not build**, mirroring the Brief's own exclusion list: no
+  `ContextModulating` source role (nothing in the current scenario models fatigue/intoxication/time-
+  pressure; adding the role with no real signal source would be dead code), no `SocialAppraisal`/Belief
+  modifier families, no latent-personality interaction, no reputation/culture/status/drunkenness/
+  addiction/Observer/self-concept modifiers of any kind. These remain named, deferred hooks in code
+  comments exactly as Phase 2.9's plan deferred the personality vector — later mechanisms must earn
+  their place in this compilation grammar experimentally, not be added because the new grammar could
+  technically support them.
 
 ## Testing philosophy
 

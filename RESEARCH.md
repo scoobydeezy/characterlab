@@ -2276,3 +2276,635 @@ infers belief from a `DecisionExpression` history and a consolidated `IdentityEv
 by an identity-feedback mechanism whose combination and erosion behavior has actually been verified under
 the ordinary feedback-on loop, not only under an ablation that isolated it from the very dynamics Phase 3
 will need to reason about.
+
+## Phase 2.97 — Reason Nuclei, Deterministic Cognitive Compilation, and Dice Grammar
+
+**Status: RESOLVED, then CLOSURE-AUDITED. All fourteen required experiments (A-N) run against real
+`runDecisionCycle` output under the new `compilationMode: 'reasonNuclei'` pipeline; every number below is
+taken directly from those runs, never predicted in advance. A subsequent architectural review (see
+"Closure audit," after Experiment N) identified four targeted gaps that survived the original fourteen
+experiments — a missing Commitment-pressure input, a correlation consolidator blind spot to collective (not
+just pairwise) redundancy, referent attribution proven only in the single-participant case, and an
+unexercised Direction adversarial test — and all four are now fixed and reverified against real rerun
+output, updating Experiments H and N below.**
+
+`CharacterLab — Phase 2.97 Research Brief.md`'s complaint about Phase 2.9/2.95's `SemanticReasonChannelId`
+consolidation was precise: grouping raw pressure by one dimension (a semantic channel scoped to an Option)
+cannot express "this option carries several independently-intelligible motives about the same person" or
+"two options express the same motive about two different people" without either merging reasons that
+shouldn't merge or hand-authoring more channels per scenario. The brief's closing maxim frames the actual
+goal: "the character may contain hundreds of psychologically relevant facts. The Decision should not
+display hundreds of dice." Phase 2.97 answers two questions separately and deterministically — how many
+independent reasons does an Option have, and how strong is each — by projecting raw pressure onto a
+`(MotiveChannel × ReferentKey × MotiveDirection)` triple instead of one flat channel, consolidating
+correlated evidence via measured provenance overlap rather than letting it stack as if independent, and
+compiling the result into a base die plus two additive integer modifiers (Standing, from acquired
+identity; Situational, from recent memory) — never touching the already-verified Phase 2.9
+Margin/Contest/Stake/AuthorshipPotential/rolling math underneath, which both the frozen `'legacy'` pipeline
+and the new `'reasonNuclei'` pipeline share via one extracted `resolveDecisionCore`.
+
+### The architecture: three roles, one consolidation rule per triple
+
+Every `RawCognitiveSignal` carries a `SourceRole` — `MotiveGenerating` (why a motive exists at all: Need
+pressure, `REASON_CHANNEL_ACCESSIBILITY`'s Habit-channel pull), `StandingDisposition` (why this person
+characteristically responds more: acquired identity, via a new `defaultIdentityMotiveChannelMapping()`
+bridge table), or `SituationalEvidence` (why it's stronger right now: a specific retrieved memory's
+realized outcome or prediction-error nudge). The Central Consolidation Rule groups signals into a
+`ReasonNucleus` by an exact `(Option, MotiveChannel, Referent)` key match — never fractional, never
+threshold-based, because every signal source this phase actually has produces exact, unambiguous
+attribution by construction: a Need's referent is its own subject with weight 1; a memory's referent
+weights are the closure audit's Check 3 fix — each of its recorded `participants` with a recorded
+`SemanticExperience` salience score, normalized against the total salience present, rather than bare list
+membership (see "Closure audit" below). Reason Activation enforces two rules found in the brief and now verified
+against real accumulated evidence rather than hand-built fixtures: a nucleus cannot exist at all unless its
+consolidated `MotiveGenerating` base (`B_n`) is nonzero — "a modifier cannot create meaning from nothing"
+— and an existing-but-weak nucleus becomes dice-active only once `R_n = |B_n| + |StandingNet| +
+|SituationalNet| >= θ_reason` (0.15 by default), letting a real Standing or Situational contribution rescue
+a genuinely-present-but-underpowered motive without ever manufacturing one from zero. The Reference
+Correlation Consolidator (`kernel/evidenceOverlap.ts`) sits underneath both Standing and Situational
+consolidation: `Overlap(a,b) = Σ min(E_a,E_b) / Σ max(E_a,E_b)` over each signal's `EvidenceBasis`, and
+every contribution beyond the first is discounted by `1 -` its overlap against the AGGREGATE (per-EvidenceId
+union-max) coverage of every earlier contribution in canonical order — the closure audit's Check 2 fix,
+which replaced an original pairwise-max-only comparison that missed collective redundancy (see "Closure
+audit" below) — before being summed and passed through `Rational.boundedResponse` — the same "sum raw,
+then bound" discipline every other consolidation step in this codebase already follows.
+
+### Experiment A — Baseline nucleus formation
+
+A first-ever Decision (no associative history, so accessibility contributes nothing), one Need
+comfortably seeded per Option's own subject: Keep Dinner Promise forms exactly one nucleus,
+`action.keep_dinner_promise::Connection::person.glen::Pursue` (B_n=**0.5979**, d8), and Stay At Work forms
+exactly one, `action.stay_at_work::Achievement::activity.work::Pursue` (B_n=**0.5979**, d8) — never more,
+never fewer (`noSpuriousChannels=true`), each correctly attributed to its own Option's own subject as
+referent (`keepDinnerReferentsAreAllGlen=true`, `stayAtWorkReferentsAreAllWork=true`). The pipeline does
+not manufacture nuclei the scenario's real pressure doesn't support.
+
+### Experiment B — Same referent, several motives
+
+Glen (Keep Dinner Promise's own subject) is additionally seeded with real Achievement and Recognition
+pressure on top of his own Connection pressure — `evaluateAction` already sums a contribution for every
+Need the character has against an Option's subject, an existing general mechanism this experiment simply
+gives real content to exploit. The result is exactly three independently-intelligible nuclei, all sharing
+Glen as referent (`allShareGlenAsReferent=true`): Connection (B_n=**0.5979**, d8), Achievement
+(B_n=**0.5979**, d8), and Recognition (B_n=**0.4421**, d6) — a distinction Phase 2.95's flat channel
+consolidation could not preserve without either merging them into one reason or hand-authoring a new
+channel per case.
+
+### Experiment C — Same motive, different referents
+
+Both Keep Dinner Promise (Glen) and Stay At Work (the Work activity — deliberately unusual content, since
+Work does not ordinarily satisfy Connection, but mechanically identical to any other seeded
+NeedExpectation) get a real Connection-mapped NeedExpectation. Both resolve to their own independent
+Connection nucleus (B_n=**0.5979** each) on two different referents (`referentsDiffer=true`,
+`independentNuclei=true`) — Central Consolidation is keyed on the full Option/Channel/Referent triple, so
+two Options sharing a MotiveChannel never accidentally merge, and each nucleus is confirmed to carry its
+own nonzero base motive strength rather than being a fragment of the other.
+
+### Experiments D, E, F — Correlated evidence consolidation
+
+**D — real dual derivation.** One Keep Dinner Promise choice creates a memory; the very next Decision
+derives BOTH a `situationalMemorySignals` contribution (from that memory's realized Connection outcome,
+raw=**0.4460**) and a `situationalExpectationNudgeSignals` contribution (from that SAME memory's Connection
+prediction error, raw=**0.1460**) for the identical (Option, Connection, Glen) triple — both carrying the
+identical single-element `{[experienceId]: 1}` EvidenceBasis. The later (canonical-order) contribution is
+correctly treated as entirely redundant: `overlapWithPrior=1.0000`, `effective=0.0000`
+(`nudgeFullyOverlapsAndContributesNothing=true`), and a naive independent sum (0.5920) would indeed have
+been larger than the actual, correctly-discounted net (`naiveIndependentSumWouldHaveBeenLarger=true`),
+which lands the situational modifier at **+1** rather than whatever a naive double-count would have
+produced. This is Experiment D's kernel-level finding (already validated by hand in
+`test/evidenceOverlap.test.ts`), now shown firing on genuinely independently-derived, not hand-picked, real
+pipeline signals.
+
+**E — real independent evidence.** Two SEPARATE Keep Dinner Promise choices create two distinct memories
+with disjoint `experienceId`s; a third Decision retrieves both and derives one Connection-channel signal
+per memory (raw=**0.4300** and raw=**0.4033**). Unlike D, both stack FULLY before bounding — both
+`overlapWithPrior=0.0000` and `effective=rawMagnitude` (`bothMemorySignalsKeptFullWeight=true`), and their
+combined effect exceeds either alone (`combinedExceedsEitherAlone=true`) — real, non-hand-picked
+confirmation that independent evidence is never discounted, however coincidentally similar its magnitude.
+
+**F — the brief's own partial-overlap spec.** The brief's hand-authored worked example (basis
+`{1,2,3}`/magnitude 5 vs. basis `{3,4,5}`/magnitude 3) reproduces its own numbers exactly: Overlap=**0.2**
+(1/5), independent fraction=**0.8** (4/5), second contribution's effective value=**2.4** (12/5,
+`matchesBriefSpecExactly=true`) — a real partial overlap strictly between D's full redundancy (Overlap=1)
+and E's full independence (Overlap=0).
+
+### Experiments G, H, I — Identity as a standing modifier
+
+**G — present vs. ablated.** A genuinely-bootstrapped WorkPersistence identity (30 rounds, real repeated
+dinner-vs-work choices biased toward Work — `experiments/identityFormation.ts`'s own harness, unmodified)
+reaches strength **0.3583**. Run once with that identity intact and once with WorkPersistence's evidence
+zeroed out, Stay At Work's already-active Achievement nucleus (B_n=**0.6528**, d10 in both runs —
+`baseMotiveStrengthUnaffectedByAblation=true`, `bothActivateOnNeedAlone=true`) carries a standing modifier
+of **+1** only in the WITH-identity run and **0** in the ablated run
+(`standingModifierPresentOnlyWithIdentity=true`) — identity modifies an already-real reason; it never
+creates or removes the reason itself.
+
+**H — a modifier cannot create meaning from nothing, real bootstrap.** *(Updated by the closure audit —
+see "Closure audit" below for the full before/after. Original finding, now fixed: the bootstrapped state
+carried real, nonzero (and net-negative) CommitmentFidelity evidence, but Phase 2.97's vocabulary mapped
+CommitmentFidelity only to the `'Commitment'` MotiveChannel, a channel no Need in this scenario generated
+`MotiveGenerating` pressure for, so no `'Commitment'`-channel nucleus could ever exist — a missing-input-
+vocabulary gap, not an activation-rule bug.)* Post-fix: `scenario.ts::NEED_COMMITMENT` now gives Keep Dinner
+Promise a real, independent Commitment-pressure source, so this experiment now demonstrates BOTH halves of
+the rule on real pipeline output — the fix (`'Commitment'` now genuinely forms, `channelsThatDidForm` =
+`['Commitment', 'Connection', 'Achievement']`; CommitmentFidelity's own strength is **-0.1543**, and ablating
+it leaves the Commitment nucleus's `baseMotiveStrength` byte-identical, `commitmentBaseMotiveStrengthUnaffectedByAblation=true`
+— no double-counting) and the rule's survival elsewhere (`'Caregiving'` still has no Need-sourced
+`MotiveGenerating` source anywhere in this scenario; injecting real, substantial identity evidence there
+(support=5, strength=**0.7143**) still produces no `'Caregiving'`-channel nucleus anywhere in the trace,
+`noCaregivingChannelNucleusExistsDespiteRealEvidence=true`). The activation rule itself was never broken;
+the scenario's own motive vocabulary was simply narrower than the brief's.
+
+*Second correction (a further architectural review, after Check 1 above): `NEED_COMMITMENT` was itself
+the wrong semantic layer — modeling a specific, one-time obligation ("keep this dinner promise") as a
+Core Need conflated "an obligation exists" with "an appetite requiring periodic satisfaction," and forced
+the nucleus's referent to be the stakeholder (`PERSON_GLEN`) rather than the commitment itself, which
+breaks down the moment a person holds two independent commitments about the same stakeholder (a
+`Commitment × DinnerWithGlen` and a hypothetical `Commitment × CloseTheBakery` must stay two nuclei, not
+collapse onto a shared `Commitment × Glen`).* Fix: `NEED_COMMITMENT` is removed outright; a real,
+Commitment-backed `MotiveGenerating` source (`model/commitment.ts::CommitmentDef`/`commitmentSignal`) is
+authored directly — static, non-Need, non-decaying — and referented to
+`COMMITMENT_DINNER_WITH_GLEN` (the commitment concept itself), never to Glen. This is the brief's
+`MotiveGenerating` role proven to be a genuinely open family (Need pressure, Commitment pressure, later
+Goal/Value pressure), not a family of one, and a caution against every future motive quietly becoming a
+"fake Need" for convenience. A real referent-matching bug surfaced and was fixed along the way: the
+existing generic `standingIdentitySignals` builder always emits every identity channel's Standing signal
+at `referent: subjectReferent(option)` (Glen) — since the Central Consolidation Rule groups by EXACT
+`(Option, MotiveChannel, Referent)`, CommitmentFidelity's Standing signal was landing in a dead,
+no-op group at referent=Glen and never actually reaching the real `Commitment × DinnerWithGlen` nucleus.
+Fixed with a parallel `commitmentStandingIdentitySignals` builder that emits at
+`referent: commitment.commitmentKey` instead. Verified on real output, bootstrapping a genuinely strong
+(not merely nonzero) CommitmentFidelity identity toward keeping the promise
+(`bootstrapDinnerIdentity()`): `strongCommitmentFidelityStrength` reaches **0.3598** (1123623/3123623),
+and the real Commitment nucleus's `standingModifier` is nonzero
+(`commitmentStandingModifierNonzeroWhenIdentityIsStrong=true`) with its key's `referent` equal to
+`COMMITMENT_DINNER_WITH_GLEN`, never `PERSON_GLEN`
+(`commitmentNucleusReferentIsTheCommitmentItself=true`) — CommitmentFidelity now genuinely modifies the
+correct nucleus, at the correct referent. The weak-bootstrap half of this experiment (`channelsThatDidForm
+= ['Commitment', 'Connection', 'Achievement']`) and the Caregiving no-nucleus-despite-real-evidence half
+both continue to hold unchanged under the new source.
+
+**I — weak-but-genuine motive rescued by a real standing modifier.** The scenario's own unmodified
+Glen/Connection seed is real but, found empirically, too weak on its own to clear θ_reason once it stands
+alone in the Connection bucket rather than pooled with other legacy-mode contributors — no nucleus forms at
+all (`nucleusAbsentWithoutIdentity=true`). Adding a real but only weakly-established SocialApproach
+identity (support=1) on that SAME channel rescues it into existence: R_n rises to **0.3828** (above
+θ_reason=0.15) while B_n itself stays a modest **0.1328**, and the nucleus activates at the floor die, d4
+(`nucleusPresentAndFlooredWithIdentity=true`) — genuinely rescued, never manufactured from an absent
+motive.
+
+### Experiment J — Situational modifiers
+
+Need level, NeedExpectation (fixed at the same value in both runs), and identity evidence (untouched by
+either run) held byte-identical across two real `runDecisionCycle` calls that differ in exactly one
+respect: whether a supportive memory is in the retrieval set (`memoryRetrievedOnlyInSupportiveRun=true`).
+Both runs produce the identical base motive strength, B_n=**0.3997**, d6
+(`baseMotiveStrengthIdentical=true`) — but the situational modifier differs: **0** with no history, **+1**
+with the supportive memory present (`situationalModifierDiffers=true`,
+`supportiveRunHasLargerSituationalModifier=true`). The same underlying motive compiles to a measurably
+different die depending only on what the character actually remembers happening recently, never a
+different motive.
+
+### Experiment K — Dice grammar richness
+
+Glen is seeded with real, comfortably-clearing pressure across four Needs (Connection, Achievement,
+Recognition, Security) mapped to four distinct MotiveChannels — Keep Dinner Promise forms exactly four
+simultaneously-active, independent nuclei (`atLeastFourIndependentNuclei=true`): Connection (d8),
+Achievement (d8), Recognition (d6), Safety (d6). The combined dice-pool distribution is the exact
+convolution of all four nuclei's own distributions (25 distinct support values), its probability mass sums
+to exactly 1 (`combinedPmfSumsToExactlyOne=true`), and its support range matches the additive sum of each
+nucleus's own min/max exactly (`combinedSupportMatchesAdditiveRange=true`) — not an approximation, not a
+flattened re-summed single die. Central Consolidation caps nucleus count at the number of genuinely
+independent (Option, MotiveChannel, Referent) triples a real psychological situation actually supports —
+four facts here, four dice, never a fifth manufactured or two silently merged.
+
+### Experiment L — Base-die/modifier calibration sweeps
+
+Pure kernel-level sweeps (no `CharacterState, ` just `kernel/discreteDistribution.ts` primitives and the
+same exact `winProbabilities` every real Decision resolution already uses) measuring what a modifier step
+and a base-die-bracket step are each actually worth in win-probability terms, at the default d8 reference.
+A single +1 integer modifier at d8 shifts P(win) from 0.5000 to **0.6172** — a shift of **0.1172**.
+Moving one whole base-die bracket up, d8→d10 (both unmodified), shifts P(win) from 0.5000 to **0.6000** —
+a shift of only **0.1000**. Measured directly rather than assumed, this means
+`modifierStepIsSmallerThanBracketStep` is **FALSE** at this build's current defaults (StandingIdentity and
+RecentExperience modifier-family unit = 1/4): a single standing or situational modifier step is currently
+slightly LOUDER than the entire next base-die bracket, the opposite of what "a modifier strengthens; it
+does not replace the die" (Brief §41) would suggest is the intended qualitative shape. **Calibration
+recommendation** (this is explicitly a calibration finding, not a psychological one, per plan scoping
+decision 8): widening the modifier-family unit from 1/4 toward roughly 1/3 (or narrowing the base-die
+brackets) would restore the intended ordering — a single modifier step should sit meaningfully below a
+whole bracket step, not above it. This build's shipped defaults are left unchanged so the finding stays
+visible rather than silently self-correcting; the sliders exposed in `DecisionPanel.tsx`'s "Modifier
+family unit" controls let this be explored live.
+
+**Phrasing correction (closure audit)**: widening the modifier-family unit from 1/4 to 1/3 does NOT make an
+already-earned `+1` modifier mechanically quieter once compiled — a compiled `d8+1` is still `d8+1`, and its
+win-probability effect stays exactly the measured **0.1172**. What the unit controls is a strictly earlier
+step: how much consolidated Standing/Situational strength it takes to EARN that `+1` in the first place
+(`strengthToIntegerModifier`'s `strength.div(family.unit)` truncation). These are two different, both still
+open, calibration levers — modifier-family unit governs how much psychology it takes to earn a modifier
+point; the dice grammar (base-die brackets, `Polarity * (Die + Modifier)`) governs what that point is worth
+once earned — and this recommendation only ever adjusted the first.
+
+### Experiment M — Old vs. new compilation, side by side
+
+The identical `{CharacterState, Decision, Seed}` — a strengthened baseline where both Options survive on
+real Need pressure alone (mirroring `reasonNucleusFormation.ts::STRONG`'s own calibration level) — run
+through both the frozen legacy `SemanticReasonChannelId` pipeline and the new Reason Nuclei pipeline. Both
+pipelines produce exactly one die per Option, identical pre-roll probabilities (p(Keep Dinner)=**0.5000**
+on both sides, delta=**0.0000**), the identical chosen option and resolution mode
+(`PlayerFacingRoll`), and the identical total dice count (2 each) — the underlying Margin/Contest/Stake/
+AuthorshipPotential/rolling math genuinely did not change, exactly as the shared `resolveDecisionCore`
+extraction was designed to guarantee. What DOES change, checkably, is trace readability: legacy's
+influence label is a flat semantic-channel string
+(`action.keep_dinner_promise:commitment`/`action.stay_at_work:energetic`), while the new pipeline's label
+encodes the full triple (`action.keep_dinner_promise::Connection::person.glen::Pursue`/
+`action.stay_at_work::Achievement::activity.work::Pursue`) — strictly more specific, never less.
+
+### Experiment N — Seed divergence under the new pipeline
+
+Phase 2.9's flagship paired-seed harness (`experiments/seedDivergence.ts`), rerun with every Decision
+resolved through `compilationMode: 'reasonNuclei'` instead of legacy: two identical timelines, only the RNG
+seed differs. Early dice rolls genuinely diverge (`firstRoundRollsDiffered=true`), early decision
+expressions diverge (`earlyDecisionExpressionsDiffered=true`), and the two timelines' acquired
+CommitmentFidelity identities land at measurably different strengths (`acquiredIdentitiesDiffered=true`) —
+and a later matching Decision is genuinely answered differently by each timeline
+(`laterProbabilitiesDiffered=true`). One honest, real finding surfaced by this run and not assumed in
+advance: CommitmentFidelity maps only to the `'Commitment'` MotiveChannel, which (pre-closure-audit) this
+scenario's Needs never generated real pressure for — so however much CommitmentFidelity evidence genuinely
+diverges between the two timelines, it structurally could not be the route by which the later decision
+differs under the new pipeline. `WorkPersistence` — which DOES map to a live channel, `'Achievement'` —
+diverges between the timelines for the identical underlying reason (different seeds → different realized
+outcome noise → different NeedExpectation posteriors → different evidence each round), and that divergence
+has a real, live route into the later Decision. The general claim — "each timeline's separately-earned
+identity changes its answer to an identical later question" — survives Phase 2.97's compiler swap; WHICH
+specific identity channel carries that effect depends on which one happens to share a live MotiveChannel
+with real Need pressure, worth recording plainly rather than smoothed over.
+
+*Closure audit rerun, ORIGINAL (post-Check-1, `scenario.ts::NEED_COMMITMENT` now live) — superseded, kept
+for the historical record.* Rerunning this exact harness at its original 40-round default produced a real,
+checked-not-assumed surprise: `laterProbabilitiesDiffered` came back **FALSE**. Not a regression — Keep
+Dinner Promise's new second motive changes how often Stay At Work wins across the bootstrap rounds, which
+pushed `WorkPersistence`'s accumulated evidence negative in BOTH timelines (Work now loses more often than
+not), and at 40 rounds both timelines' values happened to land on the SAME side of the `StandingIdentity`
+modifier family's quantization boundary (unit=1/4) — both truncated to a standing modifier of 0, so the
+later probe's dice were bit-identical despite the underlying identity strengths genuinely differing.
+Checked directly at 40/60/80/100/150/200 rounds for these two seeds: 40 and 60 tie; 80 and above reliably
+diverge again. The experiment's default moved to **100 rounds** for a real margin past that boundary, and
+at that count every claim above held on real output: Timeline A's CommitmentFidelity strength **0.2994**,
+Timeline B's **0.3965** (`acquiredIdentitiesDiffered=true`), `laterProbabilitiesDiffered=true`.
+
+*Closure audit rerun, SECOND correction (`NEED_COMMITMENT` removed; `defaultCommitments()` deliberately
+NOT wired into this harness) — current.* A further architectural review (documented in full under "Closure
+audit" below) correctly identified `NEED_COMMITMENT` as the wrong semantic layer and replaced it with a
+real, non-Need `CommitmentDef`-based `MotiveGenerating` source. Wiring that source into THIS harness the
+same way G/H/I were extended (mirroring their pattern directly) produced a far more serious finding than
+Check 1's quantization tie, caught only by actually running the suite rather than assuming the swap was
+safe: a CONSTANT (non-decaying) obligation, once it clears `thetaReason`, gives Keep Dinner Promise a
+PERMANENT second die (Commitment + Connection) against Stay At Work's one die (Achievement) for the
+entire length of the run. That pushes Contest below `thetaRoll` and locks the Decision into deterministic
+`'Auto'` resolution mode from round 1 onward — checked directly out to 500 rounds, the lock never
+self-releases — making the two timelines bit-for-bit identical for the rest of any run regardless of round
+count. This is qualitatively worse than Check 1's original tie (a coincidental, round-count-fixable
+quantization artifact): no amount of recalibrating the obligation's magnitude or the round count fixes a
+structurally-permanent Auto-lock. The correct fix was architectural, not numerical: `defaultCommitments()`
+is deliberately excluded from this harness entirely — `commitments` defaults to `[]` in
+`runReasonNucleiRepeatedRounds`'s `runDecisionCycle` call, same as before Check 1. This is also the
+narratively correct choice on its own terms, independent of the bug: `MODERATE_AMBIGUOUS_BIAS`'s per-round
+reset (`resetDinnerVsWorkBaseline`) models the SAME generic recurring dilemma replayed many times, while a
+`CommitmentDef` models a genuinely one-time obligation — replaying it as permanently-live pressure across
+dozens of rounds of a recurring-dilemma harness was never the right model of it. With commitments excluded,
+the experiment's `rounds` default reverts to **40** (undoing Check 1's now-unnecessary 40→100
+recalibration, and matching `seedDivergence.ts`'s own legacy default), and at that count every claim holds
+again on freshly-verified real output: `firstRoundRollsDiffered=true`, `earlyDecisionExpressionsDiffered=true`,
+`acquiredIdentitiesDiffered=true`, `laterProbabilitiesDiffered=true` — Timeline A's CommitmentFidelity
+strength **0.18165** (306461/1687096), Timeline B's **0.46108** (2419673/5247829), diverging cleanly with
+no quantization coincidence anywhere near this boundary. Swept 40 through 500 rounds directly: every count
+in that range shows genuine divergence on all four measures once commitments are excluded — the tie at
+40/60 rounds was entirely an artifact of the since-abandoned `NEED_COMMITMENT` design, not a property of
+this harness itself.
+
+### Closure audit — four targeted checks from an architectural review
+
+An independent architectural review of the fourteen-experiment result above judged Reason Nuclei +
+base-die-plus-modifiers "the right architecture" and the core compilation idea proven, but declined to
+call all seventeen phase-gate items settled without four targeted checks first — deliberately scoped as a
+closure audit on the existing phase rather than a new one, since none of the four required new machinery.
+All four are now implemented and reverified against real output.
+
+**Check 1 — CommitmentFidelity had no Commitment motive to modify (original fix, since superseded — see
+"second correction" below).** The review's diagnosis: Experiment H
+showed `defaultIdentityMotiveChannelMapping()` mapping `CommitmentFidelity → ['Commitment']`, but no Need
+in `defaultMotiveChannelMapping()` generated a `MotiveGenerating` signal on that channel, so
+CommitmentFidelity was structurally inert — a missing motive-generating INPUT (the brief itself names
+`Need pressure / Commitment pressure / Goal pressure / Value pressure` as legitimate sources; this build
+only had `Need` and `Accessibility`), not a Reason Nuclei bug. Fix: `scenario.ts::NEED_COMMITMENT`, a real
+Core Need satisfied by Keep Dinner Promise (magnitude 0.30±0.05, independent of and smaller than
+Connection's own 0.40±0.05 effect on the same option), seeded only for Glen (so Stay At Work/Speak
+Up/Stay Quiet are unaffected by construction), mapped to the `'Commitment'` MotiveChannel. Verified: the
+full test suite (313 pre-existing tests) still passed unchanged after adding this Need — the legacy
+pipeline's own `defaultReasonChannelMapping()` has no entry for `'need.commitment'`, so it is silently (and
+correctly) dropped there, exactly like any other unmapped raw reason, leaving Experiment M's frozen
+baseline untouched. Experiments H and N (above) are the real-pipeline reruns this check specifically asked
+for.
+
+**Check 1, second correction — `NEED_COMMITMENT` was the wrong semantic layer.** A further architectural
+review, after living with the Check 1 fix above, correctly identified it as solving the right problem
+(CommitmentFidelity needed a real motive to modify) through the wrong mechanism: modeling a one-time
+obligation as a Core Need conflates "an obligation exists" with "an appetite requiring periodic
+satisfaction," and forces the nucleus's referent onto the stakeholder (Glen) rather than the obligation
+itself — a design that cannot distinguish two independent commitments about the same person. Fix:
+`NEED_COMMITMENT` removed; replaced by a real, static, non-Need `MotiveGenerating` source
+(`model/commitment.ts::CommitmentDef`) referented to the commitment concept itself
+(`COMMITMENT_DINNER_WITH_GLEN`), plus a referent-matching fix so CommitmentFidelity's own Standing signal
+actually reaches that nucleus instead of landing in a dead group at referent=Glen. Full writeup, real
+numbers, and the Auto-lock discovery that shaped Experiment N's final form are under Experiment H and
+Experiment N above and are not repeated here. This also settles the review's own architectural point in
+the affirmative: `MotiveGenerating` is now demonstrably an open family (Need pressure, Commitment
+pressure) rather than a family of one, with a real non-Need member proven out end-to-end.
+
+**Check 1, third pass — the second correction's own lifecycle obligation.** A further review of the second
+correction judged the Auto-lock finding "test-scenario incompatibility, expected behavior" (excluding
+commitments from Experiment N's repeated-generic-dilemma harness is restoring that experiment's actual
+controlled question, not a workaround) and the Reason Nuclei/dice architecture itself cleared — but flagged
+one real, small remaining obligation: a `CommitmentDef` may legitimately be static authored content, but
+the `MotiveGenerating` PRESSURE it generates cannot be semantically permanent. An active, applicable
+commitment should generate pressure; once it reaches a terminal state (Fulfilled, Relinquished, Missed,
+Cancelled), that pressure must disappear, and a recurring obligation ("dinner Monday," "dinner Tuesday") is
+a sequence of independent concrete instances, never one immortal pressure. This build deliberately adds no
+`CommitmentState`/lifecycle-transition machinery (no experiment needs a commitment that transitions
+mid-run — adding it now would be unforced generalization), but the review's point stands as an empirical
+claim about the mechanism that already exists: `runDecisionCycle`'s `commitments` parameter, supplied fresh
+per call rather than carried on `CharacterState`, already IS the lifecycle boundary — "currently live"
+is simply "present in this call's list with nonzero pressure." New tests
+(`test/phase2_97CommitmentLifecycle.test.ts`) prove this on real pipeline output rather than asserting it
+from source comments: with no commitment authored, no `Commitment`-channel nucleus exists (T0); with
+DinnerWithGlen active on a character genuinely invested in keeping it (`bootstrapDinnerIdentity()`'s real,
+strong CommitmentFidelity), the real `Commitment × DinnerWithGlen` nucleus appears (T1); with that SAME
+commitment then retired (simply no longer supplied) on the SAME identity-rich character — isolating
+retirement as the only variable, ruling out "identity happened to be weak" as an alternative explanation
+— its nucleus is absent again, the Activation Rule's "a modifier cannot create meaning from nothing" wall
+holding across a lifecycle transition, not merely at a nucleus that was never live (T3); and a NEW
+DinnerWithGlen-shaped commitment instance (a fresh `commitmentKey`, standing in for "dinner next week")
+produces a NEW nucleus at a NEW referent, never colliding with or resurrecting the retired one (T4). All
+four cases verified passing on real `runDecisionCycle` output, full suite (327 tests) green.
+
+**Check 2 — the correlation consolidator's pairwise-max blind spot.** The review's counter-example: evidence
+bases `{1}`, `{2}`, `{1,2}` — a third contribution deriving from `{1,2}` contains no genuinely new evidence
+once contributions from `{1}` and `{2}` are already represented, but the original algorithm computed
+`O_j = max_{i<j} Overlap(c_j, c_i)` (overlap against the single most-similar EARLIER contribution only),
+which sees only partial overlap against each of `{1}` and `{2}` individually (1/2 each) and so granted the
+third contribution roughly half its raw weight — a real miss of COLLECTIVE redundancy the review flagged as
+exactly the topology a future "several episodes → one broader belief summary" signal source could produce.
+Fix (`kernel/evidenceOverlap.ts::consolidateCorrelated`): compare each contribution's basis against the
+AGGREGATE (per-EvidenceId union-max) coverage of every earlier contribution in canonical order, instead of
+the single closest one. Verified directly against the review's own numbers: with magnitudes 5, 4, 3 for
+`{1}`, `{2}`, `{1,2}` respectively, the third contribution's `effective` value is now exactly **0** (fully
+redundant), where the pre-fix algorithm gave it overlap 1/2 and effective 3/2 (hand-computed against the
+un-fixed formula before the fix landed, not merely asserted) — while every existing two-contribution
+case (Experiments D, E, F) is unchanged, since aggregating a single prior basis is exactly that basis. No
+new machinery — `EvidenceBasis` itself needed no changes, per the review's own recommendation.
+
+**Check 3 — referent attribution was proven only in the single-participant case.** The review's point: a
+memory's referent-attribution correctness had only ever been demonstrated for a memory containing exactly
+one participant, where "attribute the outcome to the option's own subject" and "attribute it to whoever was
+present" happen to coincide. Phase 2.5b/c already established that presence in an Experience is not
+psychological centrality (a highly-salient Glen and a merely-present Priya are not equally central to the
+same memory), and nothing in the pre-fix `situationalMemorySignals` consumed that distinction — it always
+attributed wholly to the option's own subject, ignoring `MemoryEpisode.participants` for attribution
+entirely (participants only gated RELEVANCE). Fix: `MemoryEpisode` gained a `conceptSalience` field —
+threaded through from `cycle.ts`'s already-computed `experienceActivation` map (the same per-concept `z_i`
+`computeSemanticSalience` already derives; no new computation) — and `cognitiveSignals.ts::situationalMemorySignals`
+now attributes each participant a signal weighted by that participant's salience NORMALIZED against the
+total salience of every participant present. Normalizing (rather than using raw salience as an absolute
+weight) matters: an un-normalized first draft, actually run against the full suite, broke Experiments D/E/J,
+because a single-participant memory's own subject legitimately has salience z<1 (attention/perception is a
+different quantity from "which referent among several present ones does this belong to"), so using it
+directly would have silently shrunk every already-calibrated single-participant contribution. Normalizing
+means a single-participant memory — still the only kind this scenario's real pipeline produces, since every
+`ActionDef` here has exactly one Participant-role subject — keeps EXACTLY its pre-fix weight of 1, while a
+genuinely multi-participant memory (exercised via a hand-built fixture, since no real Action in this
+scenario yet produces one) splits weight proportionally: Glen at salience 4/5 and Priya at salience 1/5
+from the same memory (needOutcome result 2/5) contribute **8/25** and **2/25** respectively to their own
+nuclei — Glen's contribution strictly larger, as it should be — while an incidental concept (a lamp) that is
+never a `participants` member gets no referent-attribution signal at all regardless of its own salience.
+Falls back to the exact pre-fix behavior (attribute wholly to the option's own subject, weight 1) whenever
+no participant has any recorded salience (`salienceMode: 'legacy'` memories, and any pre-existing fixture).
+
+**Check 4 — Direction needed an adversarial test.** The review's concern: prose in this write-up sometimes
+described consolidation as `Option × Motive × Referent` alone, while `ReasonNucleusKey` was supposed to
+additionally key on `Direction`. Reading `reasonNucleus.ts`/`diceCompiler.ts` directly (ground truth, not
+assumed) confirmed `direction` genuinely IS part of `ReasonNucleusKey`, but `groupSignalsByTriple` groups
+WITHOUT direction and `resolvedNucleusKey` resolves exactly one direction per triple from the net sign of
+its consolidated `MotiveGenerating` strength — meaning one compile can never produce two SIMULTANEOUSLY
+active nuclei on one triple with opposite directions; the reachable adversarial case is the SAME triple
+resolving oppositely across two different compiles (a relationship read one way today, the other way after
+things soured). New regression tests (`reasonNucleus.test.ts`, `phase2_97DiceCompiler.test.ts`) check
+exactly this: the same triple with a positive vs. negative net `baseMotiveStrength` produces two keys
+identical in every field except `direction`, with distinct `nucleusKeyString`s that do not collide when
+placed in a shared id space (the same space real dice-roll addressing and cross-compile traces would use) —
+and, separately, that a single compile with deliberately mixed-sign `MotiveGenerating` signals on one
+triple produces exactly ONE nucleus (the net sign), never two. Direction was already load-bearing; this
+closes the gap between what the prose said and what the code visibly does.
+
+**Two further observations from the same review, recorded but not acted on (explicitly non-mandatory —
+"I would not block Phase 3 on it").**
+
+*Referent attribution is proven only over `participants`.* Check 3's fix (salience-weighted share among a
+memory's `participants`) correctly handles every referent this scenario's real signal sources ever
+produce, but a future scenario needing an arbitrary CAUSAL-object referent that is never itself a
+participant — the review's own example, "a lamp falls and injures Mina" needing a
+`Safety × Lamp × Avoid` nucleus — is not yet supported, since `situationalMemorySignals` only ever
+attributes across `MemoryEpisode.participants`. Recorded here as a real, named future limitation rather
+than silently assumed away; not fixed in this pass, since no experiment A–N (or its second-correction
+extensions) requires a non-participant causal referent, and building the machinery ahead of a concrete
+need would repeat exactly the "generalize before an experiment demands it" mistake this project has
+corrected itself out of before (scoping decision 4).
+
+*`ReasonNucleusKey` may be more cleanly `Option × Motive × Referent`, with `Direction` resolved
+separately.* The review suggested that `ResolvedReason = ReasonNucleusKey + Direction`, as a distinct,
+later-resolved concept, may be the cleaner interpretation of what this codebase already does — and,
+reading `reasonNucleus.ts`/`diceCompiler.ts` again in light of that suggestion, it is: Check 4 already
+established that `groupSignalsByTriple` consolidates on the triple alone and `resolvedNucleusKey` resolves
+exactly one `Direction` per triple afterward, from the net sign of consolidated `MotiveGenerating`
+strength. The current `ReasonNucleusKey` type still carries `direction` as a fourth field for convenience
+(it's what makes two oppositely-resolved compiles of the same triple produce distinct, non-colliding
+`nucleusKeyString`s, per Check 4's regression tests), but the review's framing — a three-part identity
+key, with direction resolved onto it once, separately — is arguably the more honest description of the
+actual data flow. Recorded as a naming/framing observation for a future pass, not acted on here: the
+review itself did not treat it as required before Phase 3, and splitting the type now, with no experiment
+depending on the split, would be a refactor for its own sake rather than one an experiment's result
+demands.
+
+### The Research Questions (Brief §63), answered from real data
+
+1. *Can a deterministic Motive × Referent projection reliably distinguish same-person/same-motive from
+   same-person/different-motive without language-model interpretation?* **Yes** — Experiment A shows
+   exactly one nucleus forms per genuinely single-motive case, Experiment B shows three independent nuclei
+   form for three genuinely distinct motives about the same person, all by exact key equality, no
+   interpretation step anywhere.
+2. *Can correlated evidence be prevented from stacking as though independent using only provenance
+   overlap?* **Yes** — Experiment D's real dual-derivation case is fully discounted (effective=0 for the
+   redundant signal) using nothing but `EvidenceBasis` overlap; Experiment F reproduces the brief's own
+   numeric spec exactly.
+3. *Can acquired identity function more naturally as a standing modifier on matching motives than as an
+   independent die?* **Yes** — Experiment G shows identity toggling a modifier on an already-real nucleus
+   without creating a new one or changing the nucleus's own base motive strength.
+4. *Can weak motive + strong relevant identity become behaviorally meaningful without identity
+   manufacturing motive from zero?* **Yes** — Experiment H shows identity strictly cannot create a nucleus
+   on a channel with zero base motive (a hard architectural wall, not a calibration weakness), while
+   Experiment I shows the SAME mechanism genuinely rescuing an existing-but-underpowered motive into
+   dice-eligibility.
+5. *Can the resulting dice pool remain rich while avoiding one-die-per-fact proliferation?* **Yes** —
+   Experiment K shows four genuinely independent motives correctly producing four dice (not one, not more
+   than four), with an exact convolved distribution.
+6. *Does stochastic seed divergence and identity authorship survive the new compiler?* **Yes** —
+   Experiment N reproduces Phase 2.9's flagship finding under the new pipeline, though (found empirically,
+   not assumed) via a different specific identity channel than the legacy pipeline's own mechanism.
+7. *Are the remaining discontinuities primarily calibration properties of base-die/modifier thresholds
+   rather than architectural failures?* **Yes, and Experiment L found a specific one worth naming**: the
+   default modifier-family unit (1/4) currently makes a single modifier step slightly LOUDER than a whole
+   base-die bracket step — the opposite of the intended "modifier nudges, bracket structurally jumps"
+   ordering. This is a measured calibration property, not evidence the architecture is unsound, but it is
+   a real, actionable finding this phase exists to surface.
+
+### Expected Classification Targets (Brief §64)
+
+- **Reason Nuclei: DERIVED.** Motive × Referent × Direction is sufficient to identify independent reasons
+  for every signal source this build actually has — Experiments A, B, C, and K all confirm exact,
+  correct nucleus identity and count with no additional semantic dimension required.
+- **Correlated Evidence Consolidation: DERIVED.** `EvidenceBasis` overlap alone is sufficient — Experiments
+  D, E, and F all show the Reference Correlation Consolidator producing exactly the discount (or lack of
+  one) the underlying provenance actually warrants, on both hand-authored and real pipeline-derived
+  signals.
+- **Identity-as-Modifier: DERIVED.** Standing identity modifiers preserve every required Phase 2.95
+  behavior class this phase re-tested (present-vs-ablated modulation in G, the "cannot create motive from
+  zero" wall in H, weak-motive rescue in I) with no case this phase encountered requiring identity to fall
+  back to its own independent die.
+- **Dice Grammar: DERIVED, with one calibration caveat.** Base Die + additive integer Modifiers provides
+  sufficient resolution fidelity for every experiment's real content (K's four-nucleus richness, J's
+  situational-only shift, D/E's correlation-aware combination) — no case required a different stochastic
+  representation. Experiment L's finding that the current modifier unit is calibrated slightly too loud
+  relative to a base-die bracket is a parameter-tuning fact about this build's defaults, not evidence the
+  grammar itself (die + bounded integer modifiers) is the wrong shape.
+
+### Three-part output (Brief §36 template) for Reason Nuclei & Dice Grammar
+
+**Psychological finding.** Treating "why a motive exists," "why this person responds more to it," and
+"why it's stronger right now" as three separable questions — rather than one pooled semantic-channel
+number — lets several genuinely distinct psychological facts about the same person, or the same fact
+viewed through several distinct motives, coexist as separately-legible reasons instead of being merged or
+manufactured into extra hand-authored channels. Acquired identity behaves less like "another vote" and
+more like a lens that sharpens or softens a motive that must already be real; a memory's relevance decays
+the moment a second derivation of the same event is recognized as the same event, not treated as
+independent corroboration. And a person's identity can still measurably author their later choices even
+when compiled through an entirely different vocabulary than the one that first demonstrated it — the
+mechanism generalizes, though which specific facet of someone's character ends up carrying that effect is
+itself contingent on which facet happens to have a live channel to real motivation, a genuinely new and
+non-obvious finding (Experiment N).
+
+**Computational finding.** A three-key exact-match consolidation rule plus a two-stage (activation, then
+resolution) threshold check is enough to get "several independent reasons, correctly separated and
+correctly merged where and only where they should be" without any interpretive or embedding-based
+similarity judgment — every attribution in this build is exact by construction because every current
+signal source (Need-keyed expectation, memory participant lists) already carries unambiguous identity.
+Correlated-evidence discounting is comfortably reused as a general building block: the same
+`consolidateCorrelated` function serves both a hand-authored kernel-level spec (Experiment F) and two
+different real pipeline-derived cases (D and E) with no case-specific logic. The one place this build's
+own numbers do not yet line up with the qualitative intent of the design (Experiment L) is a tuning
+constant, not a structural gap — the sum-then-bound, exact-match, overlap-discount architecture itself
+never needed adjustment to accommodate it.
+
+**Architectural implication.** `resolveDecisionCore`'s extraction proves the actual resolution math
+(Margin/Contest/Stake/AuthorshipPotential/rolling) was never coupled to how reasons get identified or
+counted — a durable seam for any future reason-compilation scheme this project or a successor invents.
+The `RawCognitiveSignal → nucleus → CompiledNucleus → Distribution` pipeline is a clean, typed contract a
+future subsystem (Phase 3's belief/social layer, per Brief §66) can emit into directly, without ever
+needing to understand dice, thresholds, or resolution modes itself — exactly the separation the brief's
+own Phase-3 Interface section asks for.
+
+### Production-Simulation Obligation (Brief §67)
+
+What a production simulation must semantically preserve, based on what this phase actually needed and
+used (not a speculative superset): typed motive channels and typed referents (both reused directly from
+existing `ConceptKey`/authored vocabulary, never invented per-scenario); character-relative signal
+attribution (a Need signal's referent is always the option's own subject, never global); evidence
+provenance sufficient to compute overlap (a single-element `{sourceId: weight}` map was sufficient for
+every real case this phase produced — memory `experienceId`s and identity channel names); Reason Nucleus
+identity as a first-class, stable, replayable key (`(Option, MotiveChannel, Referent, Direction)`) rather
+than an incidental string; the Standing-versus-Situational role distinction (both compile through the same
+modifier machinery but must remain separately traceable, since Experiment J and G each depend on isolating
+one from the other); correlation-aware consolidation as a reusable primitive, not a per-feature special
+case; and frozen historical dice expressions (`DecisionExpression`, unchanged shape) so that a decision
+made under one calibration remains exactly replayable even after calibration constants are later revised.
+This phase deliberately does not determine how a production system should store or index any of this —
+only what it must be able to express.
+
+### Next-phase justification
+
+Phase 2.97 closes the phase this project's Phase 2.9/2.95 write-ups both flagged as their own natural
+successor: the pooled semantic-channel model's own upper bound on expressiveness. It leaves the actually
+load-bearing resolution math (Margin/Contest/Stake/AuthorshipPotential/counter-addressed rolling) entirely
+untouched and behaviorally frozen for the legacy pipeline (Experiment M), while giving any future signal
+source a typed, deterministic vocabulary — `RawCognitiveSignal` with `MotiveAttribution`,
+`ReferentAttribution`, `SourceRole`, `EvidenceBasis`, `SignedStrength` — to emit into instead of inventing
+its own private interpretation of dice (Brief §66). Phase 3's still-open question (how one character infers
+belief from another's `DecisionExpression` history) now inherits a compiler that already knows how to keep
+several distinct beliefs about several distinct people, or several distinct beliefs about the same person,
+straight without merging or manufacturing them — exactly the vocabulary a belief-inference layer will need
+to consume rather than reinvent.
+
+### Phase Gate (Brief §68), scored against real results
+
+1. Cognitive signals deterministically project to Motive and Referent — **met** (A, B, C).
+2. Same Motive + same Referent coalesces without an LLM — **met** (A, B; exact key equality throughout).
+3. Same Referent + different Motive remains separate — **met** (B).
+4. Same Motive + different Referent remains separate — **met** (C).
+5. Correlated evidence is measurably prevented from naive stacking — **met** (D, F).
+6. Independent evidence stacks more strongly than correlated evidence — **met** (E vs. D, directly
+   contrasted).
+7. Every active Reason Nucleus produces at most one base die — **met**, enforced structurally (one
+   `CompiledNucleus` per key, checked in every experiment's own trace).
+8. Acquired Identity successfully compiles as a standing modifier — **met** (G).
+9. Identity cannot create a motive from zero — **met** (H; closure-audit Check 1 and its second
+   correction gave CommitmentFidelity a genuine, correctly-referented, non-Need Commitment motive to
+   modify, so the "cannot create from zero" wall is now demonstrated on `'Caregiving'` instead — still a
+   channel with no `MotiveGenerating` source anywhere in this scenario — with real, substantial,
+   directly-injected evidence still producing no nucleus).
+10. Identity can rescue a weak but genuine motive — **met** (I).
+11. Several independent motives still produce several dice — **met** (K, four nuclei/four dice, exact
+    convolution).
+12. Exact probabilities remain analytically computable — **met** (M: identical Rational-exact
+    probabilities from both pipelines on the same input).
+13. Dice and modifiers remain causally authoritative — **met**, inherited unchanged from Phase 2.9's own
+    counter-addressed RNG discipline; no pipeline branch bypasses it.
+14. Phase-2.95 identity formation, stabilization, fault-line, and transformation behavior survive —
+    **met**: every pre-existing Phase 2.9/2.95 test passed unchanged after the `resolveDecisionCore`
+    extraction (behavior-preservation checked, not assumed).
+15. Phase-2.9 seed-divergence / biography-authorship behavior survives — **met** (N), with the honest
+    caveat that the specific carrying channel differs from legacy's own mechanism, and with the further
+    finding (second correction) that a constant Commitment source must NOT be wired into this specific
+    repeated-round harness — doing so produces a permanent Auto-mode resolution lock, not a calibration
+    hiccup — so this experiment deliberately runs without one (rounds reverted to 40).
+16. All compilation is deterministic and fully traceable — **met**: every `CompiledNucleus` carries its
+    full `correlationTrace` and `sourceSignals`, rendered in `DecisionPanel.tsx`'s Reason Nuclei Trace
+    view in the brief's own REASON-header shape (Key / Base Motive / Base Die / Standing / Situational /
+    Final Expression / Exact Distribution).
+17. No language-model semantic judgment is required anywhere in runtime cognition — **met**: every
+    builder in `cognitiveSignals.ts` is exact, typed, deterministic code; no embedding or LLM call exists
+    anywhere in the new pipeline.
+
+All seventeen gate items are met, and — per the closure audit above — genuinely closed rather than merely
+asserted: an independent review's four targeted checks (a real Commitment motive-generating source,
+aggregate-coverage correlation consolidation, salience-weighted referent attribution, and a Direction
+adversarial regression test), a second-pass architectural correction to that Commitment source (removed
+from Need-shape entirely, correctly referented, its Auto-lock incompatibility with one specific harness
+diagnosed and resolved), and a third-pass lifecycle closure test (an active commitment's pressure exists
+only while it is live and disappears on retirement, with recurring obligations modeled as independent
+instances) are all implemented and reverified against real rerun output, including the seed-divergence and
+identity-modifier experiments the review specifically asked to see again. The one open item this phase
+deliberately leaves unresolved is not a gate failure but Experiment L's own calibration recommendation
+(modifier-family unit currently slightly too loud relative to a base-die bracket, with the closure audit's
+own phrasing correction: widening the unit changes how hard a `+1` is to EARN, never what a compiled `+1`
+is worth) — explicitly scoped in the plan as a tuning question for a later pass, not a structural defect
+blocking this phase's completion.

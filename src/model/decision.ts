@@ -46,6 +46,8 @@ import {
   expectedValue,
   winProbabilities,
 } from '../kernel/discreteDistribution';
+import { CompiledNucleus, ReasonNucleusCompilationParams } from './diceCompiler';
+import { nucleusKeyString } from './reasonNucleus';
 
 /** Which existing system (or the new identity-feedback channel) produced a
  * DecisionInfluence, and — for Need-sourced influences — which Need. This
@@ -152,6 +154,23 @@ export interface DecisionParams {
    * Hebbian-accessibility reinforcement `runDecisionCycle` shares with
    * every other cycle path regardless of this flag. */
   readonly identityFeedbackEnabled: boolean;
+  /** Phase 2.97 plan, scoping decision 1: which consolidation pipeline
+   * `cycle.ts::runDecisionCycle` uses to decide what gets a die at all.
+   * `'legacy'` (default) is the UNCHANGED Phase 2.9/2.95
+   * `SemanticReasonChannelId` pipeline above — frozen as the historical
+   * baseline `experiments/oldVsNewCompilation.ts` (Experiment M) compares
+   * against, and how Phase 2.9/2.95's own behaviors stay provably
+   * unregressed. `'reasonNuclei'` routes through
+   * `cognitiveSignals.ts`/`diceCompiler.ts` instead — both modes still
+   * produce a `DecisionResolution` via the SAME shared
+   * `resolveDecisionCore`. */
+  readonly compilationMode: 'legacy' | 'reasonNuclei';
+  /** Present on every `DecisionParams` value regardless of
+   * `compilationMode`, exactly like `dieScale` above is present even when
+   * a caller never rolls a single Reason Nucleus — mirrors
+   * `CycleParams.salience` being populated even when `salienceMode` is
+   * `'legacy'`. Only consulted when `compilationMode === 'reasonNuclei'`. */
+  readonly reasonNucleus: ReasonNucleusCompilationParams;
 }
 
 export function strengthToDie(signedStrength: Rational, scale: DieScaleParams): number | null {
@@ -316,6 +335,12 @@ export interface DecisionResolution {
   readonly stake: Rational; // boundedResponse(conflictMass)
   readonly authorshipPotential: Rational; // contest * stake
   readonly resolutionMode: ResolutionMode;
+  /** Legacy-pipeline-only (`resolveDecision`): every surviving
+   * `DecisionInfluence` per Option. Empty under
+   * `resolveReasonDiceExpressions` (Phase 2.97's Reason Nuclei pipeline) —
+   * the equivalent per-reason detail there is the `CompiledNucleus[]` the
+   * caller already has (`model/diceCompiler.ts::compileReasonDice`'s own
+   * return value), not re-derivable from a `DecisionInfluence` shape. */
   readonly survivingInfluencesByOption: ReadonlyMap<CanonicalActionKey, readonly DecisionInfluence[]>;
   readonly influenceRolls: readonly InfluenceRoll[]; // empty for 'Auto'
   readonly tieBreak: TieBreakDraw | null;
@@ -364,40 +389,62 @@ function drawFace(u: Rational, faces: number): number {
 }
 
 /**
- * Resolve a Decision: compute exact pre-roll probabilities, Margin/Contest,
- * ConflictMass/Stake, AuthorshipPotential, classify the resolution mode,
- * and — for a rolled Decision — actually roll the dice via the
- * counter-addressed oracle, addressed per Brief §8 as
- * `RNG(Seed, DecisionId, InfluenceId, Purpose=DecisionRoll)`, mapped onto
- * the existing `DrawAddress{seed,eventId,purposeId,drawIndex}` as
- * `eventId = decisionId`, `purposeId = 'decision_roll'`, `drawIndex` = the
- * Influence's canonical ordinal position among ALL surviving Influences in
- * this Decision (sorted by `compareCanonical` over `influenceId`) — the
- * same "bump drawIndex for a sequence of independent draws" pattern
- * `kernel/random.ts::drawAt` already documents. A tie at the max RollScore
- * uses a separately-addressed deterministic tie-resolution draw
- * (`purposeId: 'decision_tie_break'`, `drawIndex: 0`).
+ * Phase 2.97 plan, scoping decision 2 — the one real refactor of existing
+ * code. `resolveDecision`'s Contest/Stake/AuthorshipPotential/rolling logic
+ * is exactly the "exact discrete-distribution math" Brief §34 requires
+ * Phase 2.97 to reuse "unless incompatibility demonstrated"; nothing about
+ * Reason Nuclei is a probability-math change. `CoreReason` is the one
+ * generalization that lets BOTH pipelines share this logic: something a
+ * Decision's Option can roll, already reduced to a `faces`/`sign`/`addend`/
+ * `distribution` quadruple — for the legacy pipeline `addend` is always 0
+ * (a `DecisionInfluence` never had a modifier) and `distribution` is the
+ * plain signed die `resolveDecision`'s wrapper below always built; for the
+ * Reason Nuclei pipeline `faces`/`addend`/`distribution` come straight off
+ * a `CompiledNucleus` (`model/diceCompiler.ts`), whose `distribution`
+ * already encodes Brief §63's `Polarity_n · (Die_n + M_n)`. Rolling still
+ * only needs `faces`/`sign`/`addend` (the actual random draw is over the
+ * unsigned die alone, exactly as `resolveDecision` always did) —
+ * `distribution` is consulted only for the PRE-ROLL win-probability/
+ * motivational-mass computation.
  */
-export function resolveDecision(
-  decision: Decision,
-  influencesByOption: ReadonlyMap<CanonicalActionKey, readonly DecisionInfluence[]>,
-  params: DecisionParams,
-  seed: string,
-): DecisionResolution {
-  if (decision.options.length === 0) {
-    throw new RangeError('resolveDecision: a Decision needs at least one Option');
-  }
+export interface CoreReason {
+  readonly id: string; // InfluenceId equivalent — canonical roll-address/tie-break key
+  readonly optionKey: CanonicalActionKey;
+  readonly faces: number;
+  readonly sign: 1 | -1;
+  readonly addend: number; // integer added to the die's raw face before `sign` is applied to the whole sum (0 for legacy)
+  readonly distribution: Distribution; // the reason's full, already-signed contribution distribution
+}
 
-  const survivingInfluencesByOption = new Map<CanonicalActionKey, DecisionInfluence[]>();
-  for (const opt of decision.options) {
-    const all = influencesByOption.get(opt.actionDef.actionKey) ?? [];
-    const surviving = all.filter((inf) => strengthToDie(inf.signedStrength, params.dieScale) !== null);
-    survivingInfluencesByOption.set(opt.actionDef.actionKey, surviving);
+/**
+ * The shared resolution core (Phase 2.97 plan, decision 2): exact pre-roll
+ * probabilities, Margin/Contest, ConflictMass/Stake, AuthorshipPotential,
+ * resolution-mode classification, and — for a rolled Decision — the actual
+ * dice via the counter-addressed oracle, addressed per Brief §8 as
+ * `RNG(Seed, DecisionId, InfluenceId, Purpose=DecisionRoll)`, mapped onto
+ * `DrawAddress{seed,eventId,purposeId,drawIndex}` exactly as before:
+ * `eventId = decisionId`, `purposeId = 'decision_roll'`, `drawIndex` = the
+ * reason's canonical ordinal position among ALL of this Decision's reasons
+ * (sorted by `compareCanonical` over `id`). Returns everything
+ * `DecisionResolution` needs EXCEPT `survivingInfluencesByOption`, which is
+ * a legacy-`DecisionInfluence`-shaped field only `resolveDecision`'s own
+ * wrapper below can meaningfully populate.
+ */
+function resolveDecisionCore(
+  decision: Decision,
+  reasonsByOption: ReadonlyMap<CanonicalActionKey, readonly CoreReason[]>,
+  thetaRoll: Rational,
+  thetaPlayer: Rational,
+  seed: string,
+): Omit<DecisionResolution, 'survivingInfluencesByOption'> {
+  if (decision.options.length === 0) {
+    throw new RangeError('resolveDecisionCore: a Decision needs at least one Option');
   }
 
   const distByOption = new Map<CanonicalActionKey, Distribution>();
   for (const opt of decision.options) {
-    distByOption.set(opt.actionDef.actionKey, optionDistribution(survivingInfluencesByOption.get(opt.actionDef.actionKey)!, params.dieScale));
+    const reasons = reasonsByOption.get(opt.actionDef.actionKey) ?? [];
+    distByOption.set(opt.actionDef.actionKey, convolveAll(reasons.map((r) => r.distribution)));
   }
 
   const winProbs = winProbabilities(
@@ -421,17 +468,18 @@ export function resolveDecision(
   const margin = p1.sub(p2);
   const contest = Rational.ONE.sub(margin);
 
-  const mLead1 = motivationalMass(survivingInfluencesByOption.get(ranked[0].optionKey)!, params.dieScale);
-  const mLead2 =
-    ranked.length > 1 ? motivationalMass(survivingInfluencesByOption.get(ranked[1].optionKey)!, params.dieScale) : Rational.ZERO;
+  const massOf = (optionKey: CanonicalActionKey) =>
+    (reasonsByOption.get(optionKey) ?? []).reduce((acc, r) => acc.add(expectedValue(r.distribution).abs()), Rational.ZERO);
+  const mLead1 = massOf(ranked[0].optionKey);
+  const mLead2 = ranked.length > 1 ? massOf(ranked[1].optionKey) : Rational.ZERO;
   const conflictMass = mLead1.min(mLead2);
   const stake = Rational.boundedResponse(conflictMass);
   const authorshipPotential = contest.mul(stake);
 
   let resolutionMode: ResolutionMode;
-  if (contest.lt(params.thetaRoll)) {
+  if (contest.lt(thetaRoll)) {
     resolutionMode = 'Auto';
-  } else if (authorshipPotential.gte(params.thetaPlayer)) {
+  } else if (authorshipPotential.gte(thetaPlayer)) {
     resolutionMode = 'PlayerFacingRoll';
   } else {
     resolutionMode = 'QuietRoll';
@@ -448,7 +496,6 @@ export function resolveDecision(
       stake,
       authorshipPotential,
       resolutionMode,
-      survivingInfluencesByOption,
       influenceRolls: [],
       tieBreak: null,
       chosenOption: winner,
@@ -456,26 +503,24 @@ export function resolveDecision(
     };
   }
 
-  // Roll every surviving Influence's die, addressed by its canonical
-  // ordinal position among ALL surviving Influences in this Decision.
-  const allSurviving = [...survivingInfluencesByOption.values()].flat();
-  const orderedInfluenceIds = [...allSurviving.map((i) => i.influenceId)].sort(compareCanonical);
-  const drawIndexOf = new Map(orderedInfluenceIds.map((id, idx) => [id, idx]));
+  // Roll every reason's die, addressed by its canonical ordinal position
+  // among ALL of this Decision's reasons.
+  const allReasons = [...reasonsByOption.values()].flat();
+  const orderedIds = [...allReasons.map((r) => r.id)].sort(compareCanonical);
+  const drawIndexOf = new Map(orderedIds.map((id, idx) => [id, idx]));
 
   const influenceRolls: InfluenceRoll[] = [];
   const rollScoreByOption = new Map<CanonicalActionKey, number>();
   for (const opt of decision.options) {
     rollScoreByOption.set(opt.actionDef.actionKey, 0);
   }
-  for (const inf of allSurviving) {
-    const faces = strengthToDie(inf.signedStrength, params.dieScale)!;
-    const sign = signOf(inf.signedStrength);
-    const addr: DrawAddress = { seed, eventId: decision.decisionId, purposeId: 'decision_roll', drawIndex: drawIndexOf.get(inf.influenceId)! };
+  for (const r of allReasons) {
+    const addr: DrawAddress = { seed, eventId: decision.decisionId, purposeId: 'decision_roll', drawIndex: drawIndexOf.get(r.id)! };
     const u = drawUniform(addr);
-    const rollValue = drawFace(u, faces);
-    const signedContribution = sign * rollValue;
-    influenceRolls.push({ influenceId: inf.influenceId, optionKey: inf.optionKey, faces, sign, draw: u, rollValue, signedContribution });
-    rollScoreByOption.set(inf.optionKey, (rollScoreByOption.get(inf.optionKey) ?? 0) + signedContribution);
+    const rollValue = drawFace(u, r.faces);
+    const signedContribution = r.sign * (rollValue + r.addend);
+    influenceRolls.push({ influenceId: r.id, optionKey: r.optionKey, faces: r.faces, sign: r.sign, draw: u, rollValue, signedContribution });
+    rollScoreByOption.set(r.optionKey, (rollScoreByOption.get(r.optionKey) ?? 0) + signedContribution);
   }
 
   const maxScore = Math.max(...decision.options.map((o) => rollScoreByOption.get(o.actionDef.actionKey)!));
@@ -517,12 +562,79 @@ export function resolveDecision(
     stake,
     authorshipPotential,
     resolutionMode,
-    survivingInfluencesByOption,
     influenceRolls,
     tieBreak,
     chosenOption: winner,
     chosenIntent: winner,
   };
+}
+
+/**
+ * Resolve a Decision under the legacy (Phase 2.9/2.95) `DecisionInfluence`
+ * pipeline — UNCHANGED behavior, now a thin wrapper over
+ * `resolveDecisionCore` (Phase 2.97 plan, decision 2). Every existing
+ * caller/test keeps its exact prior signature and output; this is the
+ * "historical baseline" Experiment M (`experiments/oldVsNewCompilation.ts`)
+ * compares the new Reason Nuclei pipeline against.
+ */
+export function resolveDecision(
+  decision: Decision,
+  influencesByOption: ReadonlyMap<CanonicalActionKey, readonly DecisionInfluence[]>,
+  params: DecisionParams,
+  seed: string,
+): DecisionResolution {
+  const survivingInfluencesByOption = new Map<CanonicalActionKey, DecisionInfluence[]>();
+  const reasonsByOption = new Map<CanonicalActionKey, CoreReason[]>();
+  for (const opt of decision.options) {
+    const all = influencesByOption.get(opt.actionDef.actionKey) ?? [];
+    const surviving = all.filter((inf) => strengthToDie(inf.signedStrength, params.dieScale) !== null);
+    survivingInfluencesByOption.set(opt.actionDef.actionKey, surviving);
+    const reasons: CoreReason[] = surviving.map((inf) => {
+      const faces = strengthToDie(inf.signedStrength, params.dieScale)!;
+      const sign = signOf(inf.signedStrength);
+      return { id: inf.influenceId, optionKey: opt.actionDef.actionKey, faces, sign, addend: 0, distribution: uniformDie(faces, sign) };
+    });
+    reasonsByOption.set(opt.actionDef.actionKey, reasons);
+  }
+
+  const core = resolveDecisionCore(decision, reasonsByOption, params.thetaRoll, params.thetaPlayer, seed);
+  return { ...core, survivingInfluencesByOption };
+}
+
+/**
+ * Resolve a Decision under Phase 2.97's Reason Nuclei pipeline: each
+ * Option's `CompiledNucleus[]` (`model/diceCompiler.ts::compileReasonDice`)
+ * already carries its own base die, integer modifier, and fully-signed
+ * `Polarity_n · (Die_n + M_n)` distribution — this function only adapts
+ * that into `CoreReason`s and calls the SAME shared core `resolveDecision`
+ * uses, so Margin/Contest/Stake/AuthorshipPotential/rolling/tie-break
+ * behavior is byte-for-byte the same math regardless of which compiler
+ * produced the reasons (Brief §34/§37's "dice remain causally intrinsic;
+ * reuse existing exact discrete-distribution math" requirement).
+ */
+export function resolveReasonDiceExpressions(
+  decision: Decision,
+  compiledByOption: ReadonlyMap<CanonicalActionKey, readonly CompiledNucleus[]>,
+  thetaRoll: Rational,
+  thetaPlayer: Rational,
+  seed: string,
+): DecisionResolution {
+  const reasonsByOption = new Map<CanonicalActionKey, CoreReason[]>();
+  for (const opt of decision.options) {
+    const nuclei = compiledByOption.get(opt.actionDef.actionKey) ?? [];
+    const reasons: CoreReason[] = nuclei.map((n) => ({
+      id: nucleusKeyString(n.key),
+      optionKey: opt.actionDef.actionKey,
+      faces: n.baseDie,
+      sign: n.key.direction === 'Avoid' ? -1 : 1,
+      addend: n.finalModifier,
+      distribution: n.distribution,
+    }));
+    reasonsByOption.set(opt.actionDef.actionKey, reasons);
+  }
+
+  const core = resolveDecisionCore(decision, reasonsByOption, thetaRoll, thetaPlayer, seed);
+  return { ...core, survivingInfluencesByOption: new Map() };
 }
 
 /** One IdentityExpressionChannel's alignment/expression-strength for a

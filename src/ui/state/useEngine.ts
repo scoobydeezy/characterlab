@@ -36,6 +36,35 @@ import {
   runExperimentCanonicalAcquisitionWithFeedback,
   ExperimentCanonicalAcquisitionWithFeedbackResult,
 } from '../../experiments/reasonConsolidation';
+import {
+  runExperimentA_BaselineFormation,
+  ExperimentANucleusFormationResult,
+  runExperimentB_SameReferentSeveralMotives,
+  ExperimentBSameReferentResult,
+  runExperimentC_SameMotiveDifferentReferents,
+  ExperimentCSameMotiveResult,
+} from '../../experiments/reasonNucleusFormation';
+import {
+  runExperimentD_RealDualDerivation,
+  ExperimentDRealDualDerivationResult,
+  runExperimentE_RealIndependentEvidence,
+  ExperimentERealIndependentEvidenceResult,
+  runExperimentF_PartialOverlapHandAuthored,
+  ExperimentFPartialOverlapResult,
+} from '../../experiments/correlatedEvidence';
+import {
+  runExperimentG_StandingModifierPresentVsAblated,
+  ExperimentGStandingModifierResult,
+  runExperimentH_NoMeaningFromNothingRealBootstrap,
+  ExperimentHNoMeaningFromNothingResult,
+  runExperimentI_RealPipelineRescue,
+  ExperimentIRescueResult,
+} from '../../experiments/identityAsModifier';
+import { runExperimentJ_SituationalModifiers, ExperimentJSituationalModifierResult } from '../../experiments/situationalModifiers';
+import { runExperimentK_DiceGrammarRichness, ExperimentKDiceGrammarRichnessResult } from '../../experiments/diceGrammarRichness';
+import { runExperimentL_CalibrationRecommendation, ExperimentLCalibrationResult } from '../../experiments/calibrationSweeps';
+import { runExperimentM_OldVsNewCompilation, ExperimentMOldVsNewResult } from '../../experiments/oldVsNewCompilation';
+import { runExperimentN_SeedDivergenceReasonNuclei, ExperimentNSeedDivergenceResult } from '../../experiments/seedDivergenceReasonNuclei';
 import { SalienceParams, SemanticSalienceResult } from '../../model/salience';
 import { Experience } from '../../model/experience';
 import {
@@ -160,6 +189,25 @@ export interface EngineSnapshot {
   readonly targetCResult?: ExperimentRealFaultLineResult;
   readonly targetDResult?: ExperimentTransformationWithFeedbackResult;
   readonly targetEResult?: ExperimentCanonicalAcquisitionWithFeedbackResult;
+  /** Phase 2.97 — Reason Nuclei, Deterministic Cognitive Compilation, and
+   * Dice Grammar. Same optional-until-run, self-contained-read-only-probe
+   * convention as every experiment field above: each function builds its
+   * own scenario internally and only ever touches its own dedicated result
+   * slot here. */
+  readonly reasonNucleusAResult?: ExperimentANucleusFormationResult;
+  readonly reasonNucleusBResult?: ExperimentBSameReferentResult;
+  readonly reasonNucleusCResult?: ExperimentCSameMotiveResult;
+  readonly correlatedEvidenceDResult?: ExperimentDRealDualDerivationResult;
+  readonly correlatedEvidenceEResult?: ExperimentERealIndependentEvidenceResult;
+  readonly correlatedEvidenceFResult?: ExperimentFPartialOverlapResult;
+  readonly identityModifierGResult?: ExperimentGStandingModifierResult;
+  readonly identityModifierHResult?: ExperimentHNoMeaningFromNothingResult;
+  readonly identityModifierIResult?: ExperimentIRescueResult;
+  readonly situationalJResult?: ExperimentJSituationalModifierResult;
+  readonly diceRichnessKResult?: ExperimentKDiceGrammarRichnessResult;
+  readonly calibrationLResult?: ExperimentLCalibrationResult;
+  readonly oldVsNewMResult?: ExperimentMOldVsNewResult;
+  readonly seedDivergenceNResult?: ExperimentNSeedDivergenceResult;
 }
 
 const HISTORY_LIMIT = 40;
@@ -633,6 +681,67 @@ export function useEngine() {
     setSnapshot((prev) => ({ ...prev, targetEResult: runExperimentCanonicalAcquisitionWithFeedback() }));
   }, []);
 
+  /**
+   * Phase 2.97 — Reason Nuclei, Deterministic Cognitive Compilation, and
+   * Dice Grammar (Experiments A-N). Same self-contained-read-only-probe
+   * shape as every experiment callback above.
+   */
+  const runReasonNucleusAUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, reasonNucleusAResult: runExperimentA_BaselineFormation() }));
+  }, []);
+
+  const runReasonNucleusBUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, reasonNucleusBResult: runExperimentB_SameReferentSeveralMotives() }));
+  }, []);
+
+  const runReasonNucleusCUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, reasonNucleusCResult: runExperimentC_SameMotiveDifferentReferents() }));
+  }, []);
+
+  const runCorrelatedEvidenceDUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, correlatedEvidenceDResult: runExperimentD_RealDualDerivation() }));
+  }, []);
+
+  const runCorrelatedEvidenceEUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, correlatedEvidenceEResult: runExperimentE_RealIndependentEvidence() }));
+  }, []);
+
+  const runCorrelatedEvidenceFUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, correlatedEvidenceFResult: runExperimentF_PartialOverlapHandAuthored() }));
+  }, []);
+
+  const runIdentityModifierGUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, identityModifierGResult: runExperimentG_StandingModifierPresentVsAblated() }));
+  }, []);
+
+  const runIdentityModifierHUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, identityModifierHResult: runExperimentH_NoMeaningFromNothingRealBootstrap() }));
+  }, []);
+
+  const runIdentityModifierIUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, identityModifierIResult: runExperimentI_RealPipelineRescue() }));
+  }, []);
+
+  const runSituationalJUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, situationalJResult: runExperimentJ_SituationalModifiers() }));
+  }, []);
+
+  const runDiceRichnessKUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, diceRichnessKResult: runExperimentK_DiceGrammarRichness() }));
+  }, []);
+
+  const runCalibrationLUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, calibrationLResult: runExperimentL_CalibrationRecommendation() }));
+  }, []);
+
+  const runOldVsNewMUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, oldVsNewMResult: runExperimentM_OldVsNewCompilation() }));
+  }, []);
+
+  const runSeedDivergenceNUI = useCallback(() => {
+    setSnapshot((prev) => ({ ...prev, seedDivergenceNResult: runExperimentN_SeedDivergenceReasonNuclei() }));
+  }, []);
+
   const reset = useCallback(() => {
     setSnapshot((prev) => {
       const config = { ...defaultScenario(prev.seed), cycleParams: cycleParams(prev) };
@@ -777,6 +886,20 @@ export function useEngine() {
       runTargetCUI,
       runTargetDUI,
       runTargetEUI,
+      runReasonNucleusAUI,
+      runReasonNucleusBUI,
+      runReasonNucleusCUI,
+      runCorrelatedEvidenceDUI,
+      runCorrelatedEvidenceEUI,
+      runCorrelatedEvidenceFUI,
+      runIdentityModifierGUI,
+      runIdentityModifierHUI,
+      runIdentityModifierIUI,
+      runSituationalJUI,
+      runDiceRichnessKUI,
+      runCalibrationLUI,
+      runOldVsNewMUI,
+      runSeedDivergenceNUI,
       reset,
       setSeed,
       toggleWorldFlag,
@@ -827,6 +950,20 @@ export function useEngine() {
       runTargetCUI,
       runTargetDUI,
       runTargetEUI,
+      runReasonNucleusAUI,
+      runReasonNucleusBUI,
+      runReasonNucleusCUI,
+      runCorrelatedEvidenceDUI,
+      runCorrelatedEvidenceEUI,
+      runCorrelatedEvidenceFUI,
+      runIdentityModifierGUI,
+      runIdentityModifierHUI,
+      runIdentityModifierIUI,
+      runSituationalJUI,
+      runDiceRichnessKUI,
+      runCalibrationLUI,
+      runOldVsNewMUI,
+      runSeedDivergenceNUI,
       reset,
       setSeed,
       toggleWorldFlag,

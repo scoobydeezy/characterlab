@@ -73,6 +73,17 @@ export function pmfAt(d: Distribution, x: bigint): Rational {
   return d.pmf.get(x) ?? Rational.ZERO;
 }
 
+/** Negate all values in the distribution: maps each (v, p) to (-v, p).
+ * Used to flip the sign of a distribution when its context flips
+ * (e.g., Avoid vs Pursue). */
+export function negate(d: Distribution): Distribution {
+  const pmf = new Map<bigint, Rational>();
+  for (const [v, p] of d.pmf) {
+    pmf.set(-v, p);
+  }
+  return { pmf };
+}
+
 /** The distribution's support, in canonical ascending numeric order — the
  * one tie-break rule this module needs, over plain bigints rather than
  * ConceptKeys, so it doesn't depend on kernel/canonical.ts. */

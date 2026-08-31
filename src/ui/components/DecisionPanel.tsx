@@ -5,6 +5,10 @@ import { Slider, Toggle } from './Slider';
 import { DecisionExpression, OptionProbability, InfluenceRoll } from '../../model/decision';
 import { DecisionSample } from '../../experiments/decisionResolution';
 import { RepeatedRun } from '../../experiments/identityFormation';
+import { CompiledNucleus, ModifierFamilyId } from '../../model/diceCompiler';
+import { nucleusKeyString } from '../../model/reasonNucleus';
+import { ConsolidatedContribution } from '../../kernel/evidenceOverlap';
+import { ACTION_KEEP_DINNER_PROMISE, ACTION_STAY_AT_WORK } from '../../model/scenario';
 
 /**
  * Phase 2.9 — Brief §6-14's Decision Authorship / Acquired Identity / Role
@@ -182,6 +186,104 @@ function RepeatedRunSummary({ run, title }: { run: RepeatedRun; title: string })
   );
 }
 
+/**
+ * Phase 2.97 — Brief §64's REASON-header worked-example layout, rendered as
+ * a compact table: one row per correlation-trace contribution (base motive,
+ * standing, and situational contributions all concatenated in
+ * `CompiledNucleus.correlationTrace`), showing exactly how much correlation
+ * discount, if any, each raw signal actually received.
+ */
+function CorrelationTraceTable({ trace }: { trace: readonly ConsolidatedContribution[] }) {
+  if (trace.length === 0) return <p className="panel__hint">No contributions recorded.</p>;
+  return (
+    <table className="exp-table">
+      <thead>
+        <tr>
+          <th>Signal</th>
+          <th>Raw magnitude</th>
+          <th>Overlap w/ prior</th>
+          <th>Independent fraction</th>
+          <th>Effective</th>
+        </tr>
+      </thead>
+      <tbody>
+        {trace.map((c) => (
+          <tr key={c.id}>
+            <td>{c.id}</td>
+            <td>{fmt(c.rawMagnitude, 3)}</td>
+            <td>{fmt(c.overlapWithPrior, 3)}</td>
+            <td>{fmt(c.independentFraction, 3)}</td>
+            <td>{fmt(c.effective, 3)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+/** One `CompiledNucleus`, in full — Key / Base Motive / Base Die / Standing /
+ * Situational / Final Expression / Exact Distribution / Option Contribution
+ * (Brief §64), plus its own correlation trace underneath. */
+function CompiledNucleusView({ nucleus }: { nucleus: CompiledNucleus }) {
+  const support = [...nucleus.distribution.pmf.entries()].sort((a, b) => Number(a[0] - b[0]));
+  return (
+    <div className="exp-result-block">
+      <p>
+        <strong>{nucleusKeyString(nucleus.key)}</strong>
+      </p>
+      <p className="panel__hint">
+        Base motive (B_n)={fmt(nucleus.baseMotiveStrength, 3)} · Reason relevance (R_n)={fmt(nucleus.reasonRelevance, 3)} · Base
+        die=d{nucleus.baseDie} · Standing={nucleus.standingModifier >= 0 ? '+' : ''}
+        {nucleus.standingModifier} · Situational={nucleus.situationalModifier >= 0 ? '+' : ''}
+        {nucleus.situationalModifier} · Final modifier={nucleus.finalModifier >= 0 ? '+' : ''}
+        {nucleus.finalModifier}
+      </p>
+      <div className="exp-table-wrap">
+        <table className="exp-table">
+          <thead>
+            <tr>
+              <th>Face value</th>
+              <th>Pr</th>
+            </tr>
+          </thead>
+          <tbody>
+            {support.map(([value, p]) => (
+              <tr key={value.toString()}>
+                <td>{value.toString()}</td>
+                <td>{(p.toDisplayNumber() * 100).toFixed(2)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="panel__hint">Correlation trace ({nucleus.sourceSignals.length} source signal(s)):</p>
+      <div className="exp-table-wrap">
+        <CorrelationTraceTable trace={nucleus.correlationTrace} />
+      </div>
+    </div>
+  );
+}
+
+/** Every active `CompiledNucleus` for one Option — the "Decision should not
+ * display hundreds of dice" grammar (Context section) made visible: however
+ * many nuclei a real psychological situation produced, each one gets its own
+ * row, never a flattened summary. */
+function ReasonNucleusTraceTable({ nuclei, title }: { nuclei: readonly CompiledNucleus[]; title?: string }) {
+  return (
+    <div>
+      {title && (
+        <p>
+          <strong>{title}</strong> — {nuclei.length} active nucleus(es)
+        </p>
+      )}
+      {nuclei.length === 0 && <p className="panel__hint">No active nuclei (either no genuine motive, or below θ_reason).</p>}
+      {nuclei.map((n) => (
+        <CompiledNucleusView key={nucleusKeyString(n.key)} nucleus={n} />
+      ))}
+    </div>
+  );
+}
+
 export function DecisionPanel({ engine }: { engine: Engine }) {
   const {
     snapshot,
@@ -202,6 +304,20 @@ export function DecisionPanel({ engine }: { engine: Engine }) {
     runTargetCUI,
     runTargetDUI,
     runTargetEUI,
+    runReasonNucleusAUI,
+    runReasonNucleusBUI,
+    runReasonNucleusCUI,
+    runCorrelatedEvidenceDUI,
+    runCorrelatedEvidenceEUI,
+    runCorrelatedEvidenceFUI,
+    runIdentityModifierGUI,
+    runIdentityModifierHUI,
+    runIdentityModifierIUI,
+    runSituationalJUI,
+    runDiceRichnessKUI,
+    runCalibrationLUI,
+    runOldVsNewMUI,
+    runSeedDivergenceNUI,
   } = engine;
   const {
     decisionParams,
@@ -221,7 +337,31 @@ export function DecisionPanel({ engine }: { engine: Engine }) {
     targetCResult,
     targetDResult,
     targetEResult,
+    reasonNucleusAResult,
+    reasonNucleusBResult,
+    reasonNucleusCResult,
+    correlatedEvidenceDResult,
+    correlatedEvidenceEResult,
+    correlatedEvidenceFResult,
+    identityModifierGResult,
+    identityModifierHResult,
+    identityModifierIResult,
+    situationalJResult,
+    diceRichnessKResult,
+    calibrationLResult,
+    oldVsNewMResult,
+    seedDivergenceNResult,
   } = snapshot;
+
+  const updateModifierUnit = (familyId: ModifierFamilyId, unit: Rational) => {
+    const family = decisionParams.reasonNucleus.modifierFamilies.get(familyId);
+    if (!family) return;
+    const modifierFamilies = new Map(decisionParams.reasonNucleus.modifierFamilies);
+    modifierFamilies.set(familyId, { ...family, unit });
+    updateDecisionParams({ reasonNucleus: { ...decisionParams.reasonNucleus, modifierFamilies } });
+  };
+  const standingIdentityUnit = decisionParams.reasonNucleus.modifierFamilies.get('StandingIdentity')?.unit ?? Rational.ZERO;
+  const recentExperienceUnit = decisionParams.reasonNucleus.modifierFamilies.get('RecentExperience')?.unit ?? Rational.ZERO;
 
   return (
     <section className="panel">
@@ -329,6 +469,99 @@ export function DecisionPanel({ engine }: { engine: Engine }) {
           checked={decisionParams.identityFeedbackEnabled}
           onChange={(checked) => updateDecisionParams({ identityFeedbackEnabled: checked })}
           title="Ablation switch (scoping decision 6): when off, no identity_consistency Influence is generated."
+        />
+        <Toggle
+          label="Compilation mode: Reason Nuclei (Phase 2.97)"
+          checked={decisionParams.compilationMode === 'reasonNuclei'}
+          onChange={(checked) => updateDecisionParams({ compilationMode: checked ? 'reasonNuclei' : 'legacy' })}
+          title="'legacy' (off) is Phase 2.95's frozen SemanticReasonChannelId baseline. 'reasonNuclei' (on) routes through the new MotiveChannel×Referent×Direction compiler below. All Experiments A-K/Targets A-E above always run in 'legacy' mode internally regardless of this switch — it only affects live decisions you script elsewhere in the app."
+        />
+        <Slider
+          label="θ_reason (Reason Nuclei activation floor)"
+          value={decisionParams.reasonNucleus.thetaReason.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) => updateDecisionParams({ reasonNucleus: { ...decisionParams.reasonNucleus, thetaReason: Rational.fromDecimal(v) } })}
+          title="R_n below this ⇒ an existing (B_n != 0) nucleus stays a real but non-dice-active reason."
+        />
+        <Slider
+          label="Reason Nuclei base die: d4 threshold"
+          value={decisionParams.reasonNucleus.thresholds.d4.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) =>
+            updateDecisionParams({
+              reasonNucleus: { ...decisionParams.reasonNucleus, thresholds: { ...decisionParams.reasonNucleus.thresholds, d4: Rational.fromDecimal(v) } },
+            })
+          }
+        />
+        <Slider
+          label="Reason Nuclei base die: d6 threshold"
+          value={decisionParams.reasonNucleus.thresholds.d6.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) =>
+            updateDecisionParams({
+              reasonNucleus: { ...decisionParams.reasonNucleus, thresholds: { ...decisionParams.reasonNucleus.thresholds, d6: Rational.fromDecimal(v) } },
+            })
+          }
+        />
+        <Slider
+          label="Reason Nuclei base die: d8 threshold"
+          value={decisionParams.reasonNucleus.thresholds.d8.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) =>
+            updateDecisionParams({
+              reasonNucleus: { ...decisionParams.reasonNucleus, thresholds: { ...decisionParams.reasonNucleus.thresholds, d8: Rational.fromDecimal(v) } },
+            })
+          }
+        />
+        <Slider
+          label="Reason Nuclei base die: d10 threshold"
+          value={decisionParams.reasonNucleus.thresholds.d10.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) =>
+            updateDecisionParams({
+              reasonNucleus: { ...decisionParams.reasonNucleus, thresholds: { ...decisionParams.reasonNucleus.thresholds, d10: Rational.fromDecimal(v) } },
+            })
+          }
+        />
+        <Slider
+          label="Reason Nuclei base die: d12 threshold"
+          value={decisionParams.reasonNucleus.thresholds.d12.toDisplayNumber()}
+          min={0}
+          max={1}
+          step={0.01}
+          onChange={(v) =>
+            updateDecisionParams({
+              reasonNucleus: { ...decisionParams.reasonNucleus, thresholds: { ...decisionParams.reasonNucleus.thresholds, d12: Rational.fromDecimal(v) } },
+            })
+          }
+        />
+        <Slider
+          label="Modifier family unit: StandingIdentity"
+          value={standingIdentityUnit.toDisplayNumber()}
+          min={0.05}
+          max={1}
+          step={0.01}
+          onChange={(v) => updateModifierUnit('StandingIdentity', Rational.fromDecimal(v))}
+          title="Consolidated standing strength worth exactly +1 integer modifier point. Experiment L's own finding: at the default 0.25, one modifier step outweighs a whole base-die bracket step — a wider unit here narrows that gap."
+        />
+        <Slider
+          label="Modifier family unit: RecentExperience"
+          value={recentExperienceUnit.toDisplayNumber()}
+          min={0.05}
+          max={1}
+          step={0.01}
+          onChange={(v) => updateModifierUnit('RecentExperience', Rational.fromDecimal(v))}
+          title="Consolidated situational strength worth exactly +1 integer modifier point (Experiment J/L)."
         />
       </div>
 
@@ -732,6 +965,420 @@ export function DecisionPanel({ engine }: { engine: Engine }) {
             flags={[
               { label: 'Evidence accumulated without any ablation', ok: targetEResult.evidenceAccumulatedWithoutAblation },
               { label: '"Dependable" trait consolidated', ok: targetEResult.traitConsolidated },
+            ]}
+          />
+        </>
+      )}
+
+      <h3>Reason Nuclei — Phase 2.97 (Experiments A-N)</h3>
+      <p className="panel__hint">
+        A new compiler layered in front of the SAME, untouched dice/probability math above: raw pressure now projects
+        onto a (MotiveChannel × ReferentKey × MotiveDirection) triple instead of one flat semantic channel, so a
+        Decision can express "several independently-intelligible motives about the same person" or "the same motive
+        about two different people" without merging reasons that shouldn't merge. Every experiment below builds its
+        own scenario internally, always running its Decisions under <code>compilationMode: 'reasonNuclei'</code>
+        regardless of the toggle above (which only affects live decisions scripted elsewhere in the app).
+      </p>
+
+      <h4>A — Baseline nucleus formation</h4>
+      <p className="panel__hint">
+        A first-ever Decision, one Need seeded per Option's own subject: exactly one MotiveGenerating nucleus per
+        Option, never more, never fewer — the pipeline doesn't manufacture nuclei the scenario's real pressure
+        doesn't support.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runReasonNucleusAUI()}>Run Experiment A</button>
+      </div>
+      {reasonNucleusAResult && (
+        <>
+          <p className="panel__hint">
+            Keep Dinner channels: {reasonNucleusAResult.keepDinnerChannels.join(', ') || '(none)'} · Stay At Work
+            channels: {reasonNucleusAResult.stayAtWorkChannels.join(', ') || '(none)'}
+          </p>
+          <ReasonNucleusTraceTable nuclei={reasonNucleusAResult.trace.get(ACTION_KEEP_DINNER_PROMISE) ?? []} title="Keep Dinner Promise" />
+          <ReasonNucleusTraceTable nuclei={reasonNucleusAResult.trace.get(ACTION_STAY_AT_WORK) ?? []} title="Stay At Work" />
+          <FlagRow
+            flags={[
+              { label: "Keep Dinner's referents are all Glen", ok: reasonNucleusAResult.keepDinnerReferentsAreAllGlen },
+              { label: "Stay At Work's referents are all Work", ok: reasonNucleusAResult.stayAtWorkReferentsAreAllWork },
+              { label: 'No spurious channels formed', ok: reasonNucleusAResult.noSpuriousChannels },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>B — Same referent, several motives</h4>
+      <p className="panel__hint">
+        Glen (Keep Dinner Promise's subject) is seeded with real Connection, Achievement, and Recognition pressure —
+        one Option should carry three independently-intelligible nuclei about the SAME referent, a distinction
+        Phase 2.95's flat channel consolidation could not preserve.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runReasonNucleusBUI()}>Run Experiment B</button>
+      </div>
+      {reasonNucleusBResult && (
+        <>
+          <p className="panel__hint">Distinct motive channels: {reasonNucleusBResult.distinctMotiveChannels.join(', ') || '(none)'}</p>
+          <ReasonNucleusTraceTable nuclei={reasonNucleusBResult.keepDinnerNuclei} title="Keep Dinner Promise" />
+          <FlagRow
+            flags={[
+              { label: 'All share Glen as referent', ok: reasonNucleusBResult.allShareGlenAsReferent },
+              { label: 'At least three independent nuclei', ok: reasonNucleusBResult.atLeastThreeIndependentNuclei },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>C — Same motive, different referents</h4>
+      <p className="panel__hint">
+        Both Keep Dinner Promise (Glen) and Stay At Work (the Work activity) get a real Connection-mapped
+        NeedExpectation — the SAME MotiveChannel on two DIFFERENT referents, which must resolve to two independent
+        nuclei rather than one merged one (Central Consolidation is keyed on the full Option/Channel/Referent triple).
+      </p>
+      <div className="button-row">
+        <button onClick={() => runReasonNucleusCUI()}>Run Experiment C</button>
+      </div>
+      {reasonNucleusCResult && (
+        <>
+          <p className="panel__hint">
+            Keep Dinner's Connection nucleus:{' '}
+            {reasonNucleusCResult.keepDinnerConnectionNucleus ? nucleusKeyString(reasonNucleusCResult.keepDinnerConnectionNucleus.key) : '(none)'} · Stay At
+            Work's Connection nucleus:{' '}
+            {reasonNucleusCResult.stayAtWorkConnectionNucleus ? nucleusKeyString(reasonNucleusCResult.stayAtWorkConnectionNucleus.key) : '(none)'}
+          </p>
+          <FlagRow
+            flags={[
+              { label: 'Both present', ok: reasonNucleusCResult.bothPresent },
+              { label: 'Referents differ', ok: reasonNucleusCResult.referentsDiffer },
+              { label: 'Independent nuclei', ok: reasonNucleusCResult.independentNuclei },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>D — Correlated evidence: real dual derivation</h4>
+      <p className="panel__hint">
+        One retrieved memory legitimately feeds two independently-derived situational signals about the SAME
+        (Option, MotiveChannel, Referent) triple, sharing one EvidenceBasis — the Reference Correlation Consolidator
+        must treat the second as entirely redundant (Overlap=1) rather than letting it inflate the situational
+        modifier.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runCorrelatedEvidenceDUI()}>Run Experiment D</button>
+      </div>
+      {correlatedEvidenceDResult && (
+        <>
+          {correlatedEvidenceDResult.nucleus && <CompiledNucleusView nucleus={correlatedEvidenceDResult.nucleus} />}
+          <FlagRow
+            flags={[
+              { label: 'Nudge signal fully overlaps and contributes nothing', ok: correlatedEvidenceDResult.nudgeFullyOverlapsAndContributesNothing },
+              { label: 'A naive independent sum would have been larger', ok: correlatedEvidenceDResult.naiveIndependentSumWouldHaveBeenLarger },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>E — Correlated evidence: real independent evidence</h4>
+      <p className="panel__hint">
+        Two separate Keep Dinner Promise choices create two distinct memories with disjoint EvidenceBasis sets — both
+        must stack FULLY before bounding, unlike D's fully-redundant case.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runCorrelatedEvidenceEUI()}>Run Experiment E</button>
+      </div>
+      {correlatedEvidenceEResult && (
+        <>
+          {correlatedEvidenceEResult.nucleus && <CompiledNucleusView nucleus={correlatedEvidenceEResult.nucleus} />}
+          <FlagRow
+            flags={[
+              { label: 'Both memory signals kept full weight', ok: correlatedEvidenceEResult.bothMemorySignalsKeptFullWeight },
+              { label: 'Combined exceeds either alone', ok: correlatedEvidenceEResult.combinedExceedsEitherAlone },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>F — Correlated evidence: the brief's own partial-overlap spec</h4>
+      <p className="panel__hint">
+        The brief's own hand-authored worked example (basis {'{1,2,3}'} vs. {'{3,4,5}'}, magnitudes 5 and 3): a real
+        partial overlap (1/5) strictly between D's full redundancy and E's full independence.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runCorrelatedEvidenceFUI()}>Run Experiment F</button>
+      </div>
+      {correlatedEvidenceFResult && (
+        <>
+          <p className="panel__hint">
+            Overlap={fmt(correlatedEvidenceFResult.overlap, 3)} · First contribution effective=
+            {fmt(correlatedEvidenceFResult.firstContribution.effective, 3)} · Second contribution effective=
+            {fmt(correlatedEvidenceFResult.secondContribution.effective, 3)}
+          </p>
+          <FlagRow flags={[{ label: "Matches the brief's spec exactly", ok: correlatedEvidenceFResult.matchesBriefSpecExactly }]} />
+        </>
+      )}
+
+      <h4>G — Identity as a standing modifier, present vs. ablated</h4>
+      <p className="panel__hint">
+        A genuinely-bootstrapped WorkPersistence identity gives Stay At Work's already-active 'Achievement' nucleus a
+        nonzero standing modifier — ablating that same identity's evidence removes the modifier without touching the
+        nucleus's own base motive strength.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runIdentityModifierGUI()}>Run Experiment G</button>
+      </div>
+      {identityModifierGResult && (
+        <>
+          <p className="panel__hint">WorkPersistence strength={fmt(identityModifierGResult.workPersistenceStrength, 3)}</p>
+          {identityModifierGResult.withIdentityNucleus && (
+            <CompiledNucleusView nucleus={identityModifierGResult.withIdentityNucleus} />
+          )}
+          {identityModifierGResult.withoutIdentityNucleus && (
+            <CompiledNucleusView nucleus={identityModifierGResult.withoutIdentityNucleus} />
+          )}
+          <FlagRow
+            flags={[
+              { label: 'Both activate on Need alone', ok: identityModifierGResult.bothActivateOnNeedAlone },
+              { label: 'Standing modifier present only with identity', ok: identityModifierGResult.standingModifierPresentOnlyWithIdentity },
+              { label: 'Base motive strength unaffected by ablation', ok: identityModifierGResult.baseMotiveStrengthUnaffectedByAblation },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>H — A modifier cannot create meaning from nothing (closure audit, Check 1 + second correction)</h4>
+      <p className="panel__hint">
+        Pre-closure-audit finding: CommitmentFidelity's real, nonzero evidence mapped only to the 'Commitment'
+        MotiveChannel, which no Need in this scenario generated pressure for — so no 'Commitment'-channel nucleus
+        could ever exist. Check 1's original fix (`NEED_COMMITMENT`, a Core Need) was later corrected on review:
+        modeling a specific obligation as a Need conflated "an obligation exists" with "an appetite requires
+        satisfaction," and referented it to the stakeholder (Glen) rather than the obligation itself. The current
+        fix (`model/commitment.ts`, `scenario.ts::defaultCommitments()`) is a real, non-Need `MotiveGenerating`
+        source referented to the commitment itself (`COMMITMENT_DINNER_WITH_GLEN`), so the nucleus now exists,
+        CommitmentFidelity's ablation leaves its base motive strength untouched, and a genuinely strong
+        CommitmentFidelity identity produces a real, nonzero standing modifier on it. The underlying rule still
+        holds elsewhere: 'Caregiving' has no Need-sourced source in this scenario, so real, substantial,
+        directly-injected Caregiving evidence still forms no nucleus.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runIdentityModifierHUI()}>Run Experiment H</button>
+      </div>
+      {identityModifierHResult && (
+        <>
+          <p className="panel__hint">
+            CommitmentFidelity strength={fmt(identityModifierHResult.commitmentFidelityStrength, 3)} · Channels that did form:{' '}
+            {identityModifierHResult.channelsThatDidForm.join(', ') || '(none)'} · Strong-bootstrap CommitmentFidelity
+            strength={fmt(identityModifierHResult.strongCommitmentFidelityStrength, 3)}
+          </p>
+          <FlagRow
+            flags={[
+              { label: 'CommitmentFidelity evidence is genuinely nonzero', ok: identityModifierHResult.commitmentFidelityEvidenceIsGenuinelyNonzero },
+              { label: "'Commitment'-channel nucleus now exists (Check 1 fix)", ok: identityModifierHResult.commitmentChannelNucleusNowExists },
+              { label: 'Commitment base motive strength unaffected by CommitmentFidelity ablation', ok: identityModifierHResult.commitmentBaseMotiveStrengthUnaffectedByAblation },
+              { label: 'Caregiving evidence is genuinely nonzero (injected)', ok: identityModifierHResult.caregivingEvidenceIsGenuinelyNonzero },
+              { label: "No 'Caregiving'-channel nucleus exists despite real evidence", ok: identityModifierHResult.noCaregivingChannelNucleusExistsDespiteRealEvidence },
+              { label: 'Standing modifier is nonzero with a genuinely strong CommitmentFidelity identity (second correction)', ok: identityModifierHResult.commitmentStandingModifierNonzeroWhenIdentityIsStrong },
+              { label: 'Commitment nucleus referent is the commitment itself, not the stakeholder', ok: identityModifierHResult.commitmentNucleusReferentIsTheCommitmentItself },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>I — Weak-but-genuine motive rescued by a real standing modifier</h4>
+      <p className="panel__hint">
+        The scenario's own unmodified Glen/Connection seed is real but too weak to clear θ_reason on its own. A real,
+        weakly-established SocialApproach identity on the SAME channel rescues the nucleus into existence, at the
+        floor d4 base die.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runIdentityModifierIUI()}>Run Experiment I</button>
+      </div>
+      {identityModifierIResult && (
+        <>
+          {identityModifierIResult.withSocialApproachNucleus && <CompiledNucleusView nucleus={identityModifierIResult.withSocialApproachNucleus} />}
+          <FlagRow
+            flags={[
+              { label: 'Nucleus absent without identity', ok: identityModifierIResult.nucleusAbsentWithoutIdentity },
+              { label: 'Nucleus present and floored (d4) with identity', ok: identityModifierIResult.nucleusPresentAndFlooredWithIdentity },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>J — Situational modifiers</h4>
+      <p className="panel__hint">
+        Need level, NeedExpectation, and identity evidence held byte-identical across two runs — only the retrieval
+        set's supportive memory differs. Base motive strength stays identical while the situational modifier
+        responds.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runSituationalJUI()}>Run Experiment J</button>
+      </div>
+      {situationalJResult && (
+        <>
+          {situationalJResult.noHistoryNucleus && <CompiledNucleusView nucleus={situationalJResult.noHistoryNucleus} />}
+          {situationalJResult.supportiveHistoryNucleus && <CompiledNucleusView nucleus={situationalJResult.supportiveHistoryNucleus} />}
+          <FlagRow
+            flags={[
+              { label: 'Memory retrieved only in the supportive run', ok: situationalJResult.memoryRetrievedOnlyInSupportiveRun },
+              { label: 'Base motive strength identical', ok: situationalJResult.baseMotiveStrengthIdentical },
+              { label: 'Situational modifier differs', ok: situationalJResult.situationalModifierDiffers },
+              { label: 'Supportive run has the larger situational modifier', ok: situationalJResult.supportiveRunHasLargerSituationalModifier },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>K — Dice grammar richness</h4>
+      <p className="panel__hint">
+        One Option driven to four simultaneously-active, independent nuclei — the combined dice-pool PMF must be
+        EXACTLY the convolution of each nucleus's own distribution, never an approximation.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runDiceRichnessKUI()}>Run Experiment K</button>
+      </div>
+      {diceRichnessKResult && (
+        <>
+          <p className="panel__hint">Distinct motive channels: {diceRichnessKResult.distinctMotiveChannels.join(', ') || '(none)'}</p>
+          <ReasonNucleusTraceTable nuclei={diceRichnessKResult.nuclei} title="Keep Dinner Promise" />
+          <FlagRow
+            flags={[
+              { label: 'At least four independent nuclei', ok: diceRichnessKResult.atLeastFourIndependentNuclei },
+              { label: 'Combined PMF sums to exactly 1', ok: diceRichnessKResult.combinedPmfSumsToExactlyOne },
+              { label: 'Combined support matches the additive range', ok: diceRichnessKResult.combinedSupportMatchesAdditiveRange },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>L — Calibration sweeps</h4>
+      <p className="panel__hint">
+        Pure kernel-level sweeps: how much a single +1 integer modifier is worth in win-probability terms at d8,
+        versus moving a whole base-die bracket (d8 → d10) — a calibration recommendation, not a psychological
+        finding.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runCalibrationLUI()}>Run Experiment L</button>
+      </div>
+      {calibrationLResult && (
+        <>
+          <p className="panel__hint">
+            One modifier step (d8, +1) shifts P(win) by {fmt(calibrationLResult.oneModifierStepShift, 4)}. One base-die bracket step (d8→d10)
+            shifts P(win) by {fmt(calibrationLResult.oneBaseDieBracketShift, 4)}.
+          </p>
+          <div className="exp-table-wrap">
+            <table className="exp-table">
+              <thead>
+                <tr>
+                  <th>Modifier</th>
+                  <th>P(with modifier wins)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {calibrationLResult.modifierSweepAtD8.map((r) => (
+                  <tr key={r.modifier}>
+                    <td>{r.modifier >= 0 ? '+' : ''}{r.modifier}</td>
+                    <td>{(r.pWithModifierWins.toDisplayNumber() * 100).toFixed(2)}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="exp-table-wrap">
+            <table className="exp-table">
+              <thead>
+                <tr>
+                  <th>Base die</th>
+                  <th>P(wins) vs. d8</th>
+                </tr>
+              </thead>
+              <tbody>
+                {calibrationLResult.baseDieSweepAgainstD8.map((r) => (
+                  <tr key={r.dieFaces}>
+                    <td>d{r.dieFaces}</td>
+                    <td>{(r.pWins.toDisplayNumber() * 100).toFixed(2)}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <FlagRow
+            flags={[
+              {
+                label: 'A modifier step is smaller than a bracket step (currently FALSE at defaults — a real calibration finding)',
+                ok: calibrationLResult.modifierStepIsSmallerThanBracketStep,
+              },
+            ]}
+          />
+        </>
+      )}
+
+      <h4>M — Old vs. new compilation, side by side</h4>
+      <p className="panel__hint">
+        The identical CharacterState/Decision/Seed run through both the frozen legacy pipeline and the new Reason
+        Nuclei pipeline — dice counts, probabilities, and trace labels compared directly, never inferred from
+        separate runs.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runOldVsNewMUI()}>Run Experiment M</button>
+      </div>
+      {oldVsNewMResult && (
+        <>
+          <p className="panel__hint">
+            p(Keep Dinner) — legacy: {fmt(oldVsNewMResult.pKeepDinnerLegacy)}, reasonNuclei: {fmt(oldVsNewMResult.pKeepDinnerReasonNuclei)}, delta=
+            {fmt(oldVsNewMResult.probabilityDelta)}. Chosen — legacy: {shortLabel(oldVsNewMResult.legacyChosenOption)}, reasonNuclei:{' '}
+            {shortLabel(oldVsNewMResult.reasonNucleiChosenOption)}. Mode — legacy: {oldVsNewMResult.legacyResolutionMode}, reasonNuclei:{' '}
+            {oldVsNewMResult.reasonNucleiResolutionMode}.
+          </p>
+          <div className="exp-table-wrap">
+            <table className="exp-table">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Legacy dice</th>
+                  <th>Legacy labels</th>
+                  <th>ReasonNuclei dice</th>
+                  <th>ReasonNuclei labels</th>
+                </tr>
+              </thead>
+              <tbody>
+                {oldVsNewMResult.perOption.map((o) => (
+                  <tr key={o.option}>
+                    <td>{shortLabel(o.option)}</td>
+                    <td>{o.legacyDiceCount}</td>
+                    <td>{o.legacyInfluenceLabels.map(shortLabel).join(', ') || '(none)'}</td>
+                    <td>{o.reasonNucleiDiceCount}</td>
+                    <td>{o.reasonNucleiLabels.join(', ') || '(none)'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      <h4>N — Seed divergence under the Reason Nuclei pipeline</h4>
+      <p className="panel__hint">
+        Phase 2.9's flagship paired-seed harness, rerun entirely under <code>compilationMode: 'reasonNuclei'</code>:
+        two identical timelines, only the RNG seed differs — early rolls, choices, and acquired identity should still
+        genuinely diverge, and a later matching decision should still be answered differently.
+      </p>
+      <div className="button-row">
+        <button onClick={() => runSeedDivergenceNUI()}>Run Experiment N</button>
+      </div>
+      {seedDivergenceNResult && (
+        <>
+          <RepeatedRunSummary run={seedDivergenceNResult.timelineA} title="Timeline A" />
+          <RepeatedRunSummary run={seedDivergenceNResult.timelineB} title="Timeline B" />
+          <p className="panel__hint">
+            Final IdentityStrength(CommitmentFidelity) — A: {fmt(seedDivergenceNResult.identityStrengthA)}, B:{' '}
+            {fmt(seedDivergenceNResult.identityStrengthB)}
+          </p>
+          <FlagRow
+            flags={[
+              { label: 'First-round dice rolls differed', ok: seedDivergenceNResult.firstRoundRollsDiffered },
+              { label: 'Early decision expressions differed', ok: seedDivergenceNResult.earlyDecisionExpressionsDiffered },
+              { label: 'Acquired identities differed', ok: seedDivergenceNResult.acquiredIdentitiesDiffered },
+              { label: 'Later probabilities differed', ok: seedDivergenceNResult.laterProbabilitiesDiffered },
             ]}
           />
         </>
