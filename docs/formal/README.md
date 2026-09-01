@@ -1,6 +1,6 @@
 # Formal Reference Model
 
-**Status:** pre-implementation authority
+**Status:** active formal authority; Campaign 0 substrate accepted 2026-09-01
 
 **Purpose:** remove agent interpretation from every authoritative CharacterLab seam.
 
@@ -16,11 +16,13 @@ Authority inside this layer:
 Current foundation:
 
 - [Deterministic substrate](DETERMINISTIC_SUBSTRATE.md)
+- [Canonical record type registry](CANONICAL_RECORD_REGISTRY.md)
 - [State model](STATE_MODEL.md)
 - [Event ordering](EVENT_ORDERING.md)
 - [Trace and provenance](TRACE_AND_PROVENANCE.md)
 - [Authored content governance](CONTENT_GOVERNANCE.md)
 - [Formal open-decision register](OPEN_DECISIONS.md)
+- [Campaign 0 conformance vectors](CONFORMANCE_VECTORS.md)
 - [Seam contract template](SEAM_CONTRACT_TEMPLATE.md)
 - [Vivarium formula intake ledger](FORMULA_INTAKE_LEDGER.md)
 

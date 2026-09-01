@@ -23,7 +23,7 @@ The historical implementation's full documentation is preserved at [reference/IM
 
 ## Current status
 
-The conceptual architecture has been reconciled around one canonical topology. Campaign 0 of the Build & Research Campaign Plan is active: close model/content identity, addressed randomness, analytical time, event ordering, trace, and save/load before psychological implementation. The first content seam after that is world/body truth → perception/interoception → `SemanticExperience`.
+The conceptual architecture has been reconciled around one canonical topology. Campaign 0 passed on 2026-09-01: identity/encoding, governed content and registries, addressed randomness, analytical time, atomic ordering/save-load, and mutation/structural proof are accepted substrate contracts with passing [Campaign 0 conformance vectors](docs/formal/CONFORMANCE_VECTORS.md). The next eligible seam is world/body truth → perception/interoception → `SemanticExperience`; Campaign 1 remains unentered until its contract and `MATH-006` plan are opened.
 
 ## Commands
 

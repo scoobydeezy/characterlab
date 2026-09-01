@@ -20,7 +20,7 @@ Campaign 3 — prove end-to-end traversability and retained corpus replay
 Campaign 4+ — controlled reduction campaigns chosen by invalidation risk
 ```
 
-Only Campaign 0 is currently entered. Later campaigns have declared targets but remain gated.
+Campaign 0 passed its completion gate on 2026-09-01. Campaign 1 is now the next eligible campaign; it remains unentered until its seam contract and `MATH-006` plan are explicitly opened.
 
 ## 2. Global entry rules
 
@@ -41,14 +41,14 @@ Implementation is prohibited where a relevant `P0` decision remains open.
 
 **Research question:** What exact machine must every later psychological seam run on so that two implementations can be compared without ambiguity?
 
-**Entry state:** active.
+**Entry state:** complete (2026-09-01). All nine Campaign 0 P0 decisions are closed in the formal resolution record; active and preserved-reference suites pass.
 
 ### 0A — Model, content, parameter, registry, run, and corpus identity
 
 Deliver:
 
-- accepted canonical encodings for `ModelIdentity`, `RunIdentity`, and `ExperimentIdentity`;
-- `ParameterSetDigest`, `ContentVersion`, and `RegistryVersion` construction;
+- candidate canonical encodings, then vector-backed acceptance, for `ModelIdentity`, `RunIdentity`, `ExperimentIdentity`, and `ComparisonCase`;
+- `ContentIdentity`, `ParameterIdentity`, and `RegistryIdentity` schema/digest construction;
 - content manifest and validator contract resolving `CONTENT-001`;
 - aggregate corpus manifest encoding and digest;
 - fixtures proving one-field identity changes are visible without allowing corpus version to perturb execution.
@@ -69,9 +69,15 @@ Deliver an accepted random contract specifying canonical address encoding, word 
 
 Resolve `TIME-001` / `MATH-001`. Deliver integer time units, analytical remainder semantics, partition-invariance obligations, decay ordering, and adversarial `A→C` versus `A→B→C` tests.
 
-### 0D — Ordering, failure, trace, and save/load
+### 0D — Ordering, atomic settlement, failure, and save/load
 
-Resolve `ORD-003`, `ORD-004`, `TRC-001`, and `TRC-002`. Establish canonical event identity, transactional failure behavior, quiescence, pending-event serialization, mutation diffs, and first-divergence reports.
+Resolve `ORD-003` and `ORD-004`. Establish canonical event identity, `DueAt → Phase → EventSequence` ordering, same-instant quiescence, whole-instant transactional failure, terminal failed-run behavior, and exact pending-event/allocator continuation across save/load.
+
+### 0E — Transition, mutation-authority, and structural-proof substrate
+
+Resolve `TRC-001` and `TRC-002`. Establish capability-limited `ReadDomain` projections, instrumented actual reads, canonical state paths, exactly one mutation authority per writable leaf, staged structural patches, exact mutation diffs, committed-trace versus aborted-diagnostic separation, and first-divergence reports.
+
+0D and 0E may share implementation infrastructure, but each has its own gate. Event settlement is not complete merely because ordering works, and mutation ownership may not disappear inside diagnostics.
 
 `ORD-001`, `ORD-002`, `ORD-005`, `TRC-003`, and `TRC-004` may remain open only if Campaign 1 contracts prove they cannot affect its fixtures.
 
@@ -83,7 +89,9 @@ Campaign 0 completes only when:
 2. `PHEN-DET-001` has executable fixtures and passes;
 3. model/run/experiment identities are consistent across state, trace, save, and verdict schemas;
 4. active source/reference boundaries and formal-contract references are mechanically checked;
-5. the next campaign can name exact authoritative inputs without ambient defaults.
+5. illegal read-domain access and illegal mutation-authority writes fail mechanically;
+6. an aborted instant restores state, scheduler, and allocators structurally exactly; and
+7. the next campaign can name exact authoritative inputs without ambient defaults.
 
 No psychological reduction verdict is produced by Campaign 0.
 

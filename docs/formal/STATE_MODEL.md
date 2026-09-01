@@ -1,6 +1,6 @@
 # Canonical State Model
 
-**Status:** registry scaffold, version `state/0.1-draft`
+**Status:** accepted Campaign 0 substrate contract, version identifier `state/0.2-candidate` (accepted 2026-09-01)
 
 ## State classes
 
@@ -34,6 +34,78 @@ Every persistent field has exactly one registered mutation authority. Other seam
 
 “Proposed” is not permission to implement. The seam ledger must replace each unresolved row with a versioned contract before code writes that state.
 
+## 0E — Transition, mutation-authority, and structural-proof substrate
+
+### Canonical state paths
+
+Every authoritative leaf has a canonical typed path:
+
+```text
+StatePath = RootStateTypeId / FieldId (/ Selector)*
+
+Selector = TypedEntityId
+         | CanonicalMapKey
+         | StableListItemId
+```
+
+Numeric array position is not a writable identity unless the owning schema explicitly defines position as semantic state. Paths use registered numeric type/field IDs and canonical selector encodings, never property names, reflection order, or display labels.
+
+An ownership pattern is a fixed path prefix plus declared selector wildcards for one structured family. At model construction, the registry expands or proves pattern intersections over the schema. Two mutation authorities whose patterns can match the same concrete writable path are invalid; priority or “most specific wins” resolution is forbidden. Every writable leaf must match exactly one `MutationAuthorityId`.
+
+### Capability-limited reads
+
+A transition never receives the complete authoritative state:
+
+```text
+Transition(
+  ContractReadProjection,
+  Event
+) -> TransitionResult
+```
+
+The registered seam contract declares a `ReadDomain` of state-path patterns. The engine constructs a typed immutable projection containing only that domain. Forbidden state is structurally unavailable. Typed accessors record the canonical concrete paths and values actually read. The trace therefore distinguishes:
+
+- registered possible reads;
+- actual reads performed; and
+- writes proposed by the result.
+
+Derived values supplied in a projection include their source paths and transformation/version identity. A projection may redact or aggregate truth only through the registered producing seam; it may not smuggle an unavailable source value alongside the permitted result.
+
+### Staged transition result
+
+```text
+TransitionResult = (
+  SeamId,
+  SeamVersion,
+  MutationAuthorityId,
+  ActualReadRecords[],
+  StatePatch,
+  EmittedEvents[],
+  SemanticOutputs[],
+  TraceProvenance
+)
+
+PatchOperation =
+  Set(StatePath, ExpectedOldPresenceAndValue, NewValue)
+  Remove(StatePath, ExpectedOldValue)
+```
+
+`Set` with expected absence creates a keyed value. Patch operations sort by canonical encoded path. Duplicate paths, ancestor/descendant overlaps within one patch, noncanonical order, mutable aliases, or a precondition that does not structurally match staged state fail deterministically. Replacing an ordered aggregate is one explicit `Set`; implementations may not disguise multiple order-sensitive mutations as an unordered collection of operations.
+
+Before staging, the engine verifies:
+
+1. seam and contract versions are registered;
+2. every actual read belongs to `ReadDomain`;
+3. every patch path is owned by `MutationAuthorityId`;
+4. expected old values match the current staged state structurally;
+5. new values satisfy type, domain, registry, and invariant constraints;
+6. emitted events use registered schemas and legal ordering; and
+7. no output contains an undeclared authoritative dependency.
+
+Valid patches apply only to the instant's staged state. Committed state changes only after the whole-instant transaction succeeds. An aborted instant must compare structurally equal to its pre-instant state, scheduler, and allocator snapshot.
+
+Exact structural diffs are derived from patch operations and verified against pre/post staged structures. Hashes may accelerate comparison but never prove equality or authorize a write.
+
 ## Evidence-route separation
 
 Character learning evidence and automatic adaptation input are different typed routes:
@@ -50,3 +122,7 @@ Outcome evaluation reads a frozen pre-attempt snapshot containing the chosen int
 ## Identity and copying
 
 State identity uses stable typed IDs and canonical registries. Copies used for counterfactuals are deep authoritative snapshots. Shared mutable aliases between variants are forbidden. Derived caches must either be absent from equality or be reproducible and validated from authoritative state.
+
+## Candidate acceptance gate
+
+The ownership-overlap, uncovered-path, illegal read/write, stale precondition, patch-order, exact-diff, deep-copy, and whole-instant rollback vectors in [Campaign 0 Conformance Vectors](CONFORMANCE_VECTORS.md) pass. Acceptance covers only the enforcement machinery; each proposed psychological state-family authority in the table still requires its own seam contract.

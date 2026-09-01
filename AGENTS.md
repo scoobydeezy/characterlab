@@ -22,7 +22,7 @@ CharacterLab is undergoing a ground-zero architectural refoundation.
 
 The active implementation belongs in `src/`. It begins only after the relevant deterministic substrate and seam contracts exist. The first implementation target is the North-Star Reference Scaffold: a thin, deterministic, end-to-end causal topology whose candidate distinctions can be ablated, substituted, merged, derived, compressed, or retracted.
 
-Campaign 0 is active. Resolve the `P0` entries in `docs/formal/OPEN_DECISIONS.md` in the order defined by the Build & Research Campaign Plan before beginning psychological implementation.
+Campaign 0 is active. The 0A–0E candidate semantics are formalized in `substrate/0.2-candidate`, `ordering/0.2-candidate`, `state/0.2-candidate`, `trace/0.2-candidate`, and `content/0.2-candidate`. They are not accepted contracts yet. Implement only their reference/conformance machinery, execute `docs/formal/CONFORMANCE_VECTORS.md`, and close the corresponding `P0` entries in the same change that records passing evidence before beginning psychological implementation.
 
 Do not automatically resume the former Phase 3A → 3B → 3C plan.
 

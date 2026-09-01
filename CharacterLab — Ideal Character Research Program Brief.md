@@ -432,22 +432,22 @@ Trace = F(ModelIdentity,S_0,I,R)
 with exactly one possible result, where:
 
 \[
-ModelIdentity=(V_r,V_c,H(\Theta),V_n,V_{rng},V_{reg})
+ModelIdentity=(V_r,ContentIdentity,ParameterIdentity,V_n,V_{rng},RegistryIdentity)
 \]
 
 Where:
 
 - (V_r) is the simulation-rules version;
-- (V_c) is the authored-content version;
-- \(H(\Theta)\) is the canonical digest of the complete parameter set;
+- `ContentIdentity` contains the content-schema version and canonical manifest digest;
+- `ParameterIdentity` contains the parameter-schema version and canonical complete parameter-set digest;
 - (V_n) is the authoritative numeric/quantization version;
 - (V_{rng}) is the random-algorithm version;
-- (V_{reg}) is the semantic identifier/registry version;
+- `RegistryIdentity` contains the registry-schema version and canonical registry-manifest digest;
 - (S_0) is canonical initial authoritative state;
 - (I) is the canonically ordered external input/event sequence;
 - and (R) is the authoritative seed.
 
-`S_0`, `I`, and `R` identify one run of the model; they are not model-definition fields. A comparison or research verdict additionally names `CorpusVersion` and `ComparisonSpecificationVersion` through the Formal Reference Model's `ExperimentIdentity`. Corpus version must not perturb model execution or random addressing. None of these components may remain ambient or implicit.
+`S_0`, `I`, and `R` identify one run of the model; they are not model-definition fields. A comparison or research verdict additionally names corpus, comparison-specification, and harness versions through the Formal Reference Model's `ExperimentIdentity`, while a `ComparisonCase` names the ordered model/run identities and coupling specification. Corpus and experiment identity must not perturb model execution or natural random addressing. None of these components may remain ambient or implicit.
 
 Repeated execution must reproduce all authoritative:
 
@@ -867,18 +867,14 @@ The preferred reference mechanism remains counter-addressed randomness:
 \[
 r=
 H(
-Seed,
-RulesVersion,
-ContentVersion,
 RandomAlgorithmVersion,
-EventId,
-ScopeId,
-PurposeId,
-DrawIndex
+Seed,
+EffectiveRandomKey,
+InternalCandidateIndex
 )
 \]
 
-or an equivalent deterministic oracle with the same causal properties.
+where the effective key is normally a canonical semantic random address. `ModelIdentity` is deliberately excluded so paired model variants retain natural coupling. An explicit comparison key may replace the local address only through a canonical `ComparisonDrawMap` included in ordered run inputs, `RunIdentity`, and trace. The exact candidate hash, address schema, bounded mapping, fallback, and bias contract belong to the Formal Reference Model.
 
 An unrelated random event should not perturb later random results merely by consuming a value from a global stream.
 

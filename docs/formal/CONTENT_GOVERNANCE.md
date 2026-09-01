@@ -1,12 +1,21 @@
 # Authored Content Governance
 
-**Status:** deferred contract scaffold, version `content/0.1-draft`
+**Status:** accepted Campaign 0 contract, version identifier `content/0.2-candidate` (accepted 2026-09-01)
+
+The immutable candidate-era identifier is retained on acceptance because renaming an identity-bearing contract would itself change manifests and `ModelIdentity` without changing semantics.
 
 Authored content includes semantic world facts, action and communication definitions, skills, norms, goals, commitments, scenario fixtures, concept registries, and mappings from content concepts into formal seam inputs. Content supplies facts and affordances; it may not secretly perform psychological interpretation.
 
 ## Model-identity obligation
 
-Every authoritative run names `ContentVersion` and `RegistryVersion`. `ContentVersion` commits to a canonical manifest of content records and their schema versions. `RegistryVersion` commits to typed identifier namespaces, canonical ordering, and any fixed semantic vocabularies used by formal contracts. A content change that can affect execution requires a new content version or manifest digest.
+Every authoritative run names:
+
+```text
+ContentIdentity  = (ContentSchemaVersion, ContentManifestDigest)
+RegistryIdentity = (RegistrySchemaVersion, RegistryManifestDigest)
+```
+
+The schema versions define how canonical bytes are interpreted. The SHA-256 digests commit to the exact manifests encoded by `cenc/1` in the deterministic-substrate contract. Friendly release names may exist but are non-authoritative. A content or registry change that can affect execution changes its manifest digest automatically; a schema-semantics change also changes its schema version.
 
 ## Required content record properties
 
@@ -40,4 +49,4 @@ Content may author semantic argument structure—such as actor, target, instrume
 
 Before content can enter an authoritative corpus fixture or executable model, a deterministic validator must reject unknown IDs, duplicate IDs, invalid references, noncanonical ordering, out-of-domain values, illegal cycles, missing lifecycle data, and fields forbidden by the receiving seam contract.
 
-**Open decision `CONTENT-001`:** define the canonical manifest encoding, digest algorithm, schema-evolution rules, and initial registries. Until accepted, authored-content implementation beyond isolated fixtures is blocked.
+**Resolved decision `CONTENT-001`:** type 170 supplies the initial governed content schema; types 171–173 commit semantic registry entries and the canonical record-schema registry; type 174 commits the ordered phenomenon corpus independently of source-table order. Exact content, registry, and corpus manifest bytes and SHA-256 digests, every-authoritative-field sensitivity, presentation-only insensitivity, deterministic semantic-kind domain validation, unknown/duplicate reference rejection, cycle rejection, and malformed-registry controls pass in `src/test/contentGovernance.test.ts`. New content kinds still require their own registered deterministic validator and receiving seam contract; this acceptance does not authorize authored psychological interpretations.

@@ -2,6 +2,10 @@
 
 **CorpusVersion:** `corpus/0.2.0-draft`
 
+**CorpusManifestSchema:** `CorpusManifestEntry` type 174, schema version 1
+
+**CorpusManifestDigest:** `0c4f7f69c0496f90f55224e312fb00279f109909f2ec44d9057d0552925d9aca`
+
 **Status:** initial populated corpus; fixtures require formal seam contracts before implementation
 
 The corpus is the common exam for the intact architecture and every reduction. Scenarios are fixtures; phenomena are obligations. One phenomenon may require several fixtures, and one fixture may exercise several phenomena.
@@ -12,7 +16,7 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 `CorpusVersion` identifies an ordered manifest of `(PhenomenonId, Version)` pairs sorted by canonical typed ID. Adding, removing, or changing a member increments the aggregate version. Editorial changes that cannot affect setup, observation, comparison, or verdict do not.
 
-Once `CONTENT-001` defines canonical manifest encoding, the corpus release must also publish `CorpusManifestDigest`. Until then, the explicit version plus the manifest below is authoritative. A verdict records both the aggregate corpus version and the versions of all fixtures actually executed.
+`CorpusManifestDigest` is `SHA256(cenc/1 set of CorpusManifestEntry records)` and commits to the manifest below independently of source-table order. A verdict records the aggregate corpus version and digest plus the versions of all fixtures actually executed. Adding, removing, or changing an entry changes the digest and requires an intentional aggregate-version update.
 
 ## Manifest
 

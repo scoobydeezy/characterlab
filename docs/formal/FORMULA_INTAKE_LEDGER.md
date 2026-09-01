@@ -28,6 +28,8 @@ The source is a useful compilation of formulas with mixed age, purpose, and auth
 
 If the implementation applies `floor(rate × elapsed)` and re-anchors after each event, equal total elapsed time can yield different progress. Example: rate `1/2` for two units yields `1` uninterrupted, while two one-unit intervals yield `0 + 0`. CharacterLab needs exact accumulated remainder or an explicit decision that event partitioning is causal.
 
+**Accepted disposition:** `substrate/0.2-candidate` uses analytical anchors, no incidental re-anchoring, and exact bounded remainder for linear rates. All `CV-TIME-*` pass, including negative-rate and failing truncation controls. `TIME-001`/`MATH-001` closed with Campaign 0 on 2026-09-01.
+
 ### `MATH-002` Signal-field coefficient convention is ambiguous
 
 The Vivarium implementation stores each upper-triangular interaction once. The matching polynomial is:
@@ -49,6 +51,8 @@ Clamping fixed-point covariance entries independently can produce an invalid cov
 ### `MATH-005` Bounded rejection with modulo fallback has residual bias
 
 Vivarium's deterministic sampler retries rejection a finite number of times and then falls back to modulo. This guarantees termination but is not mathematically unbiased. CharacterLab must either accept and bound that bias as part of the model or choose a different total mapping.
+
+**Accepted disposition:** `substrate/0.2-candidate` restricts spans to `m <= 2^32`, uses 128-bit SHA-256-derived candidates, two rejection candidates, and a fresh modulo fallback with a declared ideal-candidate total-variation bound below `2^-290`. Exact/reduced-width `CV-RNG-*` and `PHEN-DET-001` pass. `RND-001`/`MATH-005` closed with Campaign 0 on 2026-09-01.
 
 ### `MATH-006` Authored measurement values are not a semantic compiler
 

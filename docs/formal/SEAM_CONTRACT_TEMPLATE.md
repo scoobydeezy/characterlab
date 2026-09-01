@@ -5,7 +5,7 @@ Copy this template for every authoritative edge or tightly coupled transition fa
 ```text
 # <Seam name>
 
-Status: DRAFT | ACCEPTED | SUPERSEDED
+Status: DRAFT | CANDIDATE | ACCEPTED | SUPERSEDED
 SeamId:
 Version:
 Architecture edges:
@@ -17,11 +17,12 @@ Supersedes:
 ## Required phenomena
 ## Domain and codomain
 ## Units, ranges, and applicability
-## Authoritative reads
-## Authoritative writes and sole mutation authority
+## Registered ReadDomain and capability-limited projection
+## Actual-read recording and derived-input provenance
+## Authoritative StatePatch writes and sole MutationAuthorityId
 ## Epistemic permissions and forbidden knowledge
 ## Preconditions
-## Totality, typed failures, and recovery
+## Totality, typed failures, instant rollback, and failed-run behavior
 ## Exact transformation
 ## Random addresses and distribution mapping
 ## Quantization and rounding points
@@ -34,6 +35,7 @@ Supersedes:
 ## Competing models / ablations
 ## Equivalence relation and tolerances
 ## Proof obligations and executable tests
+## Applicable Campaign 0 conformance vectors
 ## Known domain exclusions
 ## Unresolved decisions
 ## Reopen conditions
