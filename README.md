@@ -1,5 +1,9 @@
 # CharacterLab
 
+> **Active direction:** CharacterLab has begun a ground-zero architectural refoundation around the Ideal Character North Star. The active source tree is `src/`. The complete pre-refoundation implementation has moved to `reference/src/` and is historical evidence only; it must not be imported into new work. Read `AGENTS.md` before implementing. The detailed account below documents the preserved reference implementation and its findings.
+
+## Preserved reference implementation
+
 A standalone, deterministic reference implementation of the cognitive model described in
 *CharacterLab — Deterministic Cognitive Reference Model Brief*. This is a **research tool**, not a
 game and not a Vivarium prototype: its job is to make the brief's mathematics runnable,
@@ -83,9 +87,12 @@ policy move Phase 2.5e made for `salienceMode`/`learningMode` once THEIR investi
 retiring `'legacy'` to explicitly-named `legacyDecisionParams()`/`legacyDecisionCycleParams()` control
 conditions (mirroring `legacySaturationParams()`/`legacyCycleParams()`), with every Phase 2.9/2.95
 experiment whose published numbers are frozen-pipeline facts re-pointed at that explicit name rather than
-left to ride a default that no longer means what it used to. Phases 3–6 (personality/belief/social
-appraisal, derived Values, acquired Needs/addiction, and distillation) are intentionally not built yet —
-see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically motivates Phase 3.
+left to ride a default that no longer means what it used to. The former Phases 3–6
+(personality/belief/social appraisal, derived Values, acquired Needs/addiction, and distillation) are
+intentionally not built yet. Their additive sequence is now paused: the governing next deliverable is
+the thin, end-to-end **North-Star Reference Scaffold**, followed by controlled subtractive refinement.
+See [the Ideal Character Architecture North Star](./CharacterLab%20%E2%80%94%20Ideal%20Character%20Architecture%20North%20Star.md),
+[the architecture map](./CHARACTER_ARCHITECTURE.md), and [RESEARCH.md](./RESEARCH.md).
 
 ## Why this architecture
 
@@ -102,7 +109,7 @@ see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically
   reliance on object/Map iteration order anywhere in `kernel/` or `model/`.
 - **Deterministic replay is a first-class, testable claim**, not an aspiration. The random oracle
   (`kernel/random.ts`) is a pure function of `(seed, eventId, purposeId, drawIndex)` — Brief §7 —
-  with no mutable global RNG stream. `src/test/determinism.test.ts` runs the same cycle twice from
+  with no mutable global RNG stream. `reference/src/test/determinism.test.ts` runs the same cycle twice from
   identical inputs and asserts the full causal-trace hashes match; the UI's "Verify determinism"
   button (`DeterminismPanel`) does the same check live, side-effect-free, against whatever state
   you've gotten Mina into.
@@ -121,8 +128,10 @@ see [RESEARCH.md](./RESEARCH.md) for the phase-gate review and what specifically
 
 ## Project layout
 
+The layout below describes the preserved implementation. All paths are under `reference/src/`.
+
 ```
-src/
+reference/src/
   kernel/        Phase 0 — math primitives with no model-specific knowledge
     rational.ts    exact BigInt rationals (§5.1)
     lattice.ts      versioned quantization lattice Q_D, RoundEven (§5.2)

@@ -15,6 +15,16 @@ whether CharacterLab resolves the underlying question. A Vivarium-comparison que
 finding" — never "is this worth fixing given how Vivarium happens to be tuned today." See Phase
 2.5a's Correction section for the concrete case that surfaced this.
 
+**Standing research-posture correction (added after the Ideal Character Architecture North Star):**
+phase numbering no longer governs what CharacterLab builds next. The repeated 2.5/2.9/2.95/2.97
+backtracking showed that constructive minimalism can hide upstream seams until downstream work depends
+on them. CharacterLab now starts with an intentionally overcomplete but mechanically thin end-to-end
+North-Star reference scaffold, then attempts to remove, derive, merge, compress, or substitute its
+candidate distinctions. Existing phase results remain evidence and control implementations. A
+candidate reaches Vivarium only after comparison against the retained phenomenon corpus classifies it
+as RETAINED, DERIVED, MERGED, COMPRESSED, RETRACTED, or UNRESOLVED. See
+`CharacterLab — Ideal Character Architecture North Star.md` §3.1 and `CHARACTER_ARCHITECTURE.md` §11.
+
 ---
 
 ## Phase 0 + Phase 1 — Mathematical Kernel & Need-Satisfaction Learning
@@ -75,7 +85,7 @@ limited to Need-satisfaction learning itself (see Architectural findings below).
 
 **Load-bearing.** The precision-weighted update (§12) and its prediction-error-form equivalence
 (`μ' = μ + α(r − μ)`, §32) held exactly under direct algebraic test
-(`src/test/expectation.test.ts`), not just approximately — the two forms are the same computation
+(`reference/src/test/expectation.test.ts`), not just approximately — the two forms are the same computation
 restated, so this was expected, but confirming it in exact rational arithmetic (rather than floats,
 where rounding could mask a real discrepancy) is worth having as a permanent regression test before
 Phase 3 adds a second, structurally different update rule (the belief Kalman filter, §18) that
