@@ -157,7 +157,7 @@ It does **not** decide the exact current build order.
 
 ## 2.5 CharacterLab Build / Campaign Plan
 
-A separate planning document should answer:
+The active [**CharacterLab — Reference Architecture Build & Research Campaign Plan**](CharacterLab%20%E2%80%94%20Reference%20Architecture%20Build%20%26%20Research%20Campaign%20Plan.md) answers:
 
 > **What do we implement and investigate next?**
 
@@ -426,23 +426,28 @@ For:
 the complete resulting trace must satisfy:
 
 \[
-Trace = F(V_r,V_c,\Theta,V_n,V_{rng},S_0,I,R)
+Trace = F(ModelIdentity,S_0,I,R)
 \]
 
-with exactly one possible result.
+with exactly one possible result, where:
+
+\[
+ModelIdentity=(V_r,V_c,H(\Theta),V_n,V_{rng},V_{reg})
+\]
 
 Where:
 
 - (V_r) is the simulation-rules version;
 - (V_c) is the authored-content version;
-- \(\Theta\) is the complete parameter set;
+- \(H(\Theta)\) is the canonical digest of the complete parameter set;
 - (V_n) is the authoritative numeric/quantization version;
 - (V_{rng}) is the random-algorithm version;
+- (V_{reg}) is the semantic identifier/registry version;
 - (S_0) is canonical initial authoritative state;
 - (I) is the canonically ordered external input/event sequence;
 - and (R) is the authoritative seed.
 
-These components may later be packaged into one `ModelIdentity`, but none may remain ambient or implicit.
+`S_0`, `I`, and `R` identify one run of the model; they are not model-definition fields. A comparison or research verdict additionally names `CorpusVersion` and `ComparisonSpecificationVersion` through the Formal Reference Model's `ExperimentIdentity`. Corpus version must not perturb model execution or random addressing. None of these components may remain ambient or implicit.
 
 Repeated execution must reproduce all authoritative:
 
@@ -1744,6 +1749,7 @@ A campaign addresses one architectural uncertainty or tightly coupled set of sea
 
 Examples may include:
 
+- deterministic substrate, model identity, randomness, time, ordering, trace, and content governance;
 - embodied Need ownership;
 - regulatory dynamics;
 - memory lifecycle and recognition;
@@ -2241,11 +2247,11 @@ Vivarium architecture, social-model, Decision-reasoning, memory, commitment, and
 
 ---
 
-# 32. Immediate next documents
+# 32. Current sequence
 
 This brief deliberately does **not** specify the first implementation campaign.
 
-Before a Build / Campaign Plan can sequence implementation, CharacterLab needs a small formal substrate:
+The separate Build & Research Campaign Plan now sequences the prerequisite formal substrate as Campaign 0:
 
 1. a deterministic substrate contract;
 2. a canonical state and mutation-authority model;
@@ -2254,7 +2260,7 @@ Before a Build / Campaign Plan can sequence implementation, CharacterLab needs a
 5. a versioned seam-contract template and seam ledger;
 6. a classified formula-intake ledger.
 
-Only then should **CharacterLab — Reference Architecture Build & Research Campaign Plan** convert the Ideal Architecture Map into an executable research program by deciding:
+After Campaign 0, that plan converts the Ideal Architecture Map into an executable research program by deciding:
 
 1. what minimum deterministic scaffold is required for every ideal seam to exist;
 2. which previously drafted mechanisms can populate that scaffold as controls;

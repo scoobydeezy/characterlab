@@ -11,7 +11,7 @@ Every authoritative transition emits an ordered record with:
 ```text
 TraceRecord = {
   ModelIdentity,
-  RunId,
+  RunIdentity,
   EventId,
   ParentEventId?,
   DueAt,
@@ -46,6 +46,8 @@ Each projection has a canonical encoding. Redaction for UI display produces a no
 ## Comparison
 
 A replay comparison reports the first differing record and field, plus its ancestry. A model comparison declares which fields must be exactly equal, which admit a versioned tolerance/equivalence relation, and which are intentionally different. “The final behavior looked similar” is not a trace comparison.
+
+A research comparison and verdict additionally record `ExperimentIdentity`, including the exact `CorpusVersion` and comparison-specification version. Those fields classify the comparison; they do not alter the run's authoritative transitions or random addresses.
 
 ## Open obligations
 

@@ -31,6 +31,12 @@ This ledger does not restore the previous architecture wholesale. It records wha
 
 Every listed item must eventually receive a recorded outcome: accepted port and contract version, named control, corpus-only preservation, explicit supersession, or a justified retirement. Absence from the new source tree is not a verdict.
 
+### `PORT` is not `RETAINED`
+
+`PORT` is a construction and comparison obligation, not a reduction verdict. It means the earned historical mechanism must be re-expressed through the new truth/evidence, ordering, mutation, numeric, and trace contracts so the refounded architecture has a strong initial implementation and an executable control. Every ported mechanism begins `UNRESOLVED` in the active Verdict Ledger until the new corpus and counterfactual methodology support another verdict.
+
+The cluster `MEC-012` through `MEC-020` is a deliberate research bet: Phase 2.9–2.97 supplied unusually deep tests and closure audits, so omitting that pipeline would destroy more evidence than starting with it costs. Porting it does not exempt it from ablation, substitution, calibration review, or later retraction. It exempts it only from being silently discarded before those comparisons can run.
+
 ## 3. Earned deterministic and research substrate
 
 | ID | Mechanism or asset | Disposition | Preservation obligation |

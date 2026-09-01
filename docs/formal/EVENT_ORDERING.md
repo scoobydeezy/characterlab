@@ -19,7 +19,9 @@ Events are ordered lexicographically by:
 | 20 | encoding, retrieval, recognition |
 | 30 | belief and person-model evidence application |
 | 40 | workspace and control allocation |
-| 50 | appraisal, regulation impulse, affect |
+| 50 | appraisal and current affect from evidence valid at this boundary |
+| 51 | queue named regulatory impulses produced by phase-50 appraisal |
+| 52 | apply same-instant regulatory impulses in canonical order without cognitive re-entry |
 | 60 | goal and motive activation |
 | 70 | candidate option construction |
 | 80 | reasons and option appraisal |
@@ -41,6 +43,7 @@ These values are a scaffold, not proof that each row should remain one phase. A 
 4. A configured cascade ceiling produces a typed failure with the complete causal chain; it never silently drops work.
 5. Feedback that logically belongs to a later cycle is scheduled at a later `DueAt`, not smuggled backward through phases.
 6. The world outcome enters the authoritative trace at phase 110, but character learning receives only phase-120 observed/encoded consequences.
+7. Phase-52 regulatory changes may affect authoritative body/regulatory state immediately, but their newly derived interoceptive evidence is scheduled at a later `DueAt` or other explicitly defined later observation boundary. It cannot re-enter phase 50 of the current instant.
 
 ## Open obligations
 
@@ -48,3 +51,4 @@ These values are a scaffold, not proof that each row should remain one phase. A 
 - `ORD-002`: define multi-character event ordering and simultaneous interaction semantics.
 - `ORD-003`: define transactional commit/rollback behavior for typed failures.
 - `ORD-004`: prove save/load preserves pending event identity and ordering exactly.
+- `ORD-005`: specify the appraisal → regulatory impulse → later interoception mapping completely, including the minimum later observation boundary and whether any non-interoceptive world effect of the impulse may occur at the original instant.

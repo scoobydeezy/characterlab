@@ -14,14 +14,37 @@ Every run has an immutable identity:
 ModelIdentity = (
   RulesVersion,
   ContentVersion,
+  ParameterSetDigest,
   NumericProfileVersion,
   RandomAlgorithmVersion,
-  RegistryVersion,
-  CorpusVersion
+  RegistryVersion
 )
 ```
 
-A state, trace, save, comparison, or verdict is uninterpretable without this tuple. A version change creates a different model even when friendly names remain unchanged.
+A state, trace, or save is uninterpretable without this tuple. `ParameterSetDigest` canonically commits to the complete authoritative parameter set; parameters may not remain ambient merely because they are numerous. A version or digest change creates a different model even when friendly names remain unchanged.
+
+The phenomenon corpus is not part of the executable model and must not perturb random addresses or replay. Comparisons and verdicts instead use:
+
+```text
+ExperimentIdentity = (
+  ModelIdentity,
+  CorpusVersion,
+  ComparisonSpecificationVersion
+)
+```
+
+One execution is fully identified by:
+
+```text
+RunIdentity = (
+  ModelIdentity,
+  InitialStateDigest,
+  InputSequenceDigest,
+  RunSeed
+)
+```
+
+The canonical initial state and ordered input sequence remain full run inputs; their digests identify them but never replace structural storage or comparison.
 
 ## 2. Deterministic transition
 

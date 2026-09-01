@@ -65,3 +65,24 @@ Each formula entry eventually receives one status:
 - `UNRESOLVED` — potentially relevant but not yet formally classified.
 
 The ledger records provenance; the accepting seam contract owns executable meaning.
+
+## Re-intake and upstream-change process
+
+The pinned Vivarium commit is an immutable evidence snapshot, not a subscription to upstream behavior. Re-intake is required when any of the following occurs:
+
+- a CharacterLab campaign proposes to adopt or compare a Vivarium formula;
+- the Vivarium mathematical reference or its governing source code changes in an area already classified here;
+- CharacterLab updates the pinned Vivarium baseline intentionally;
+- an adopted CharacterLab contract is shown to cite an obsolete or mistranscribed Vivarium formula.
+
+Re-intake must:
+
+1. record the previous and proposed Vivarium commit hashes;
+2. diff the mathematical reference and the current authoritative Vivarium source that implements or supersedes it;
+3. identify every affected ledger row and CharacterLab seam contract;
+4. rerun or revise the row's mathematical-hazard analysis;
+5. preserve the prior classification in change history;
+6. update this document's source snapshot only after the affected rows are disposed;
+7. version any changed CharacterLab seam contract and rerun its declared corpus.
+
+An upstream Vivarium change never mutates an already accepted CharacterLab contract automatically. Until explicit re-intake completes, the pinned snapshot and current CharacterLab contract remain the reproducible comparison basis.

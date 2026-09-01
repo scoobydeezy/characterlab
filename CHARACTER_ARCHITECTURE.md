@@ -118,6 +118,63 @@ The absence of a `reference-drafted` note says nothing about architectural impor
 
 The complete ideal character should be understood as a deterministic causal network rather than a personality vector or linear decision pipeline.
 
+### 3.1 Whole-character causal loop
+
+This zoomed-out view is a semantic projection of the detailed canonical topology in §3.2, not a second architecture. It groups mechanisms for comprehension but may not introduce a causal shortcut or erase a boundary present in the detailed map. Any architectural change must leave both views consistent.
+
+```mermaid
+flowchart TB
+    World[WORLD / OTHER PEOPLE]
+    Base[CONSTITUTION + DEVELOPMENT<br/>biological • regulatory • psychological]
+    Biography[ACCUMULATED BIOGRAPHY<br/>memory • beliefs • values • relationships<br/>identity • habits • skills • goals]
+    Body[CURRENT EMBODIED STATE<br/>physiology + regulatory dynamics<br/>through interoceptive Need pressure]
+    Experience[CURRENT EXPERIENCED WORLD<br/>perception • recognition • active cognition<br/>appraisal • affect]
+    Motivation[MEANING + MOTIVATION<br/>embodied pressures • values • commitments<br/>goals • relationships • identity]
+    Choice[OPTIONS + RAW SIGNALS<br/>+ SEMANTIC REASONS]
+    Decision{DECISION BOUNDARY<br/>Is preference settled?}
+    Roll[SCOPED DICE<br/>unresolved authorship]
+    Intent[CHOSEN INTENT]
+    Expression[DECISION EXPRESSION<br/>frozen meaning + authorship qualification]
+    Execution[ACTION / COMMUNICATION<br/>plan + skill + control → attempt]
+    Outcome[AUTHORITATIVE WORLD OUTCOME]
+    Perceived[PERCEIVED OUTCOME<br/>discrepancy • attribution<br/>controllability • goal progress]
+    Learning[CHARACTER LEARNING<br/>permitted evidence + consolidation]
+    Adapt[AUTOMATIC EMBODIED / PROCEDURAL ADAPTATION<br/>exposure • practice • tolerance • load]
+
+    Base --> Body
+    Base --> Experience
+    Biography --> Experience
+    Biography --> Motivation
+    World --> Body
+    World -. observable facts .-> Experience
+    Body --> Experience
+    Body --> Motivation
+    Experience --> Motivation
+    Motivation --> Choice
+    Experience --> Choice
+    Choice --> Decision
+    Decision -->|yes| Intent
+    Decision -->|no| Roll --> Intent
+    Intent --> Expression
+    Intent --> Execution
+    Execution --> Outcome
+    World --> Outcome
+    Outcome --> World
+    Outcome -. observable consequences .-> Experience
+    Experience -. attempt-linked evidence .-> Perceived
+    Perceived --> Learning
+    Expression --> Learning
+    Learning --> Biography
+    Execution -. actual practice .-> Adapt
+    Outcome -. actual embodied exposure .-> Adapt
+    Adapt --> Body
+    Adapt --> Biography
+```
+
+The loop makes one architectural thesis especially visible: biography shapes the present Decision boundary; meaningfully unresolved choices may require dice; the resulting frozen expression can qualify as identity evidence; and accumulated identity can move later choices toward settled preference. The history of resolved uncertainty can therefore move the boundary at which future uncertainty appears.
+
+### 3.2 Detailed canonical topology
+
 ```mermaid
 flowchart TB
     World[World Truth and Events]
@@ -174,6 +231,7 @@ flowchart TB
         Prospection[Prospection / Goal Management<br/>future states, intentions,<br/>strategies, prospective reminders]
         Motives[Motivational Pressures<br/>physiological, psychological,<br/>social, goals, commitments]
         OptionGen[Candidate Option Construction<br/>affordances, plans, habits,<br/>accessible alternatives]
+        RawSignals[Raw Cognitive Signals<br/>typed source role + causal provenance]
         Reasons[Semantic Reasons / Reason Nuclei]
         OptionAppraisal[Option Appraisal<br/>strength, uncertainty,<br/>tradeoffs, conflict]
         Arbitration[Decision Arbitration<br/>settledness, significance,<br/>unresolved conflict]
@@ -181,14 +239,18 @@ flowchart TB
         Roll[Scoped Roll<br/>only where meaningful uncertainty remains]
         Intent[Chosen Intent]
         DecisionExpr[DecisionExpression<br/>frozen semantic meaning of the choice]
+        AuthorshipQual[Authorship / Identity Qualification<br/>contest, significance, cost,<br/>coercion, intervention, resolution mode]
+        IdentityEvidence[Identity Evidence<br/>qualified, contextual, provenance-bearing]
         PreAttempt[Pre-attempt Snapshot<br/>expectations, beliefs, goals,<br/>intent and relevant context]
 
         CommIntent[Communicative Intent<br/>what private state is meant to express]
         ActionPlan[Action / Communication Plan<br/>how intent will be attempted]
         PerceivedOutcome[Perceived Outcome Evidence<br/>attempt-linked character evidence only]
         OutcomeEval[Outcome Evaluation<br/>prediction discrepancy, contingency,<br/>controllability, causal attribution]
-        LearningEvidence[Learning Evidence / Candidate Updates<br/>typed, attributed, provenance-bearing]
-        Consolidation[Consolidation / Adaptation Transitions<br/>distinct candidate mechanisms<br/>behind one mutation boundary family]
+        LearningEvidence[Character Learning Evidence / Candidate Updates<br/>perceived or inferred, typed,<br/>attributed, provenance-bearing]
+        Consolidation[Character Learning / Consolidation Transitions<br/>distinct candidate mechanisms<br/>behind one mutation boundary family]
+        AdaptInput[Automatic Adaptation Input<br/>actual exposure, practice,<br/>physiological history]
+        AdaptTransition[Embodied / Procedural Adaptation Transitions<br/>truth-side inputs; never cognitive evidence]
     end
 
     Attempt[Attempted Action / Expression]
@@ -244,7 +306,6 @@ flowchart TB
     Intero --> Motives
     Values --> Motives
     Self --> Motives
-    Habits --> Motives
     Beliefs --> Motives
     Relationships --> Motives
     Appraisal --> Motives
@@ -266,25 +327,27 @@ flowchart TB
     Skill -. practiced affordance .-> OptionGen
     Control -. maintain / inhibit candidates .-> OptionGen
 
-    Motives --> Reasons
-    Appraisal --> Reasons
-    Affect --> Reasons
-    Episodic --> Reasons
-    Assoc --> Reasons
-    Expect --> Reasons
-    Person --> Reasons
-    Relationships --> Reasons
-    Self --> Reasons
-    Prospection --> Reasons
-    Beliefs --> Reasons
+    Motives --> RawSignals
+    Appraisal --> RawSignals
+    Affect --> RawSignals
+    Episodic --> RawSignals
+    Assoc --> RawSignals
+    Expect --> RawSignals
+    Person --> RawSignals
+    Relationships --> RawSignals
+    Self --> RawSignals
+    Prospection --> RawSignals
+    Beliefs --> RawSignals
 
-    OptionGen --> Reasons
+    OptionGen --> RawSignals
+    RawSignals -->|correlation / causal grouping| Reasons
     OptionGen --> OptionAppraisal
     Reasons --> OptionAppraisal --> Arbitration
     Arbitration -->|settled| Intent
     Arbitration -->|meaningfully unresolved| Roll --> Intent
 
     Intent --> DecisionExpr
+    DecisionExpr --> AuthorshipQual --> IdentityEvidence
     Intent --> PreAttempt
     Expect --> PreAttempt
     Beliefs --> PreAttempt
@@ -312,9 +375,11 @@ flowchart TB
     Outcome --> World
     Outcome --> Phys
     Outcome -. observable consequences only .-> Percept
+    Outcome -. actual embodied exposure .-> AdaptInput
     Outcome --> Signal
     Outcome -. authoritative provenance only .-> Trace
     Attempt -. authoritative provenance only .-> Trace
+    Attempt -. actual practice .-> AdaptInput
     Signal --> World
 
     SemExp -. attempt-linked evidence .-> PerceivedOutcome
@@ -322,32 +387,33 @@ flowchart TB
     PerceivedOutcome --> OutcomeEval
 
     OutcomeEval --> LearningEvidence
-    DecisionExpr --> LearningEvidence
     SemExp --> LearningEvidence
-    Reg -. exposure / recovery evidence .-> LearningEvidence
+    Reg -. exposure / recovery history .-> AdaptInput
 
     LearningEvidence --> Beliefs
     LearningEvidence --> Expect
     LearningEvidence --> Episodic
     LearningEvidence --> Person
     LearningEvidence --> Consolidation
+    IdentityEvidence --> Consolidation
+    AdaptInput --> AdaptTransition
 
     Consolidation --> Assoc
     Consolidation --> Values
     Consolidation --> Relationships
-    Consolidation --> RegAdapt
-    Consolidation --> Skill
     Consolidation --> Habits
     Consolidation --> Self
     Consolidation --> Disp
+    AdaptTransition --> RegAdapt
+    AdaptTransition --> Skill
 
 ```
 
-### 3.1 Core interpretation
+### 3.3 Core interpretation
 
 The architecture should be read as follows:
 
-> **Persistent constitution and development shape a changing body and effective disposition. Perception and interoception create character-relative evidence rather than omniscient truth. Memory, recognition, beliefs, person models, relationships, active cognition, appraisal, and affect turn evidence into experienced meaning. Motivation and prospective goals compile into semantic reasons. Option appraisal and arbitration determine whether preference is settled or requires stochastic authorship. Chosen intent remains distinct from action planning, skill, attempt, communication, and executed outcome. The character then evaluates what actually seemed to happen against what they expected, and learning updates future belief, skill, habit, identity, memory, relationships, and disposition without rewriting history.**
+> **Persistent constitution and development shape a changing body and effective disposition. Perception and interoception create character-relative evidence rather than omniscient truth. Memory, recognition, beliefs, person models, relationships, active cognition, appraisal, and affect turn evidence into experienced meaning. Motivational, historical, and contextual sources emit raw cognitive signals that consolidate into independent semantic reasons. Option appraisal and arbitration determine whether preference is settled or requires stochastic authorship. Chosen intent remains distinct from action planning, skill, attempt, communication, and executed outcome. The character then evaluates what actually seemed to happen against what they expected. Character learning updates belief, habit, identity, memory, relationships, and disposition from permitted evidence, while separately typed truth-side exposure and practice update embodied or procedural adaptation without becoming cognitive evidence.**
 
 This is a causal network, not a per-frame loop.
 
@@ -355,9 +421,9 @@ Every feedback edge must be broken by an explicit deterministic transition bound
 
 `Candidate Option Construction` is a seam, not a commitment to one universal generator. Whether habitual/procedural activation, deliberative planning, remembered alternatives, and perceived affordances share one construction mechanism is an explicit reduction question. The canonical requirement is that Options do not appear unexplained and that feasibility/availability remains distinct from preference.
 
-`Consolidation / Adaptation Transitions` is likewise a boundary family rather than one universal learning equation. Every persistent learned state must name exactly one mutation authority behind this boundary, even when different state families use different update mathematics.
+`Character Learning / Consolidation Transitions` is a boundary family rather than one universal learning equation. Every persistent learned state must name exactly one mutation authority behind this boundary, even when different state families use different update mathematics. `Embodied / Procedural Adaptation Transitions` is a separate boundary family because actual physiological exposure or practice may legitimately update tolerance or competence without becoming something the character knows.
 
-Evidence-producing arrows therefore do not write learned state directly. They terminate in `LearningEvidence`. Edges from that boundary into beliefs, expectations, memory, and person models, and edges from `Consolidation` into slower learned state, invoke the registered mutation authority for each target family. The mutation registry must keep those authorities exclusive even when one implementation services several targets.
+Character-relative evidence-producing arrows therefore do not write learned state directly. They terminate in `Character Learning Evidence`. Edges from that boundary into beliefs, expectations, memory, and person models, and edges from `Character Learning / Consolidation` into slower learned state, invoke the registered mutation authority for each target family. Truth-side `Automatic Adaptation Input` can reach only its registered embodied or procedural transition. The mutation registry must keep these routes and authorities exclusive even when one implementation services several targets.
 
 ---
 
@@ -514,10 +580,15 @@ flowchart TB
         Affect[Current Affect]
         Motive[Current Motivational Pressures]
         CandidateOptions[Current Candidate Options / Affordances]
+        RawSignals[Current Raw Cognitive Signals]
         Reasons[Current Reasons]
         Options[Current Option Appraisal]
-        LearningEvidence[Current Learning Evidence / Candidate Updates]
-        Consolidation[Current Consolidation Transition]
+        AuthorshipQual[Current Authorship / Identity Qualification]
+        IdentityEvidence[Current Identity Evidence]
+        LearningEvidence[Current Character Learning Evidence / Candidate Updates]
+        AdaptInput[Current Automatic Adaptation Input]
+        Consolidation[Current Character Consolidation Transition]
+        AdaptTransition[Current Embodied / Procedural Adaptation Transition]
     end
 
     subgraph Derived[DERIVED VIEWS]
@@ -558,7 +629,7 @@ flowchart TB
 
 1. A **constitutional parameter** is not a momentary state.
 2. A **regulatory level** is not a personality trait.
-3. A **Need** is not assumed to be stored state; it may be a derived motivational pressure.
+3. An **embodied Need pressure** is provisionally derived through physiology/regulation → interoception; any additional stored Need state must earn necessity experimentally.
 4. **Effective disposition** is derived from persistent contributors and current context rather than independently mutable truth.
 5. **Recognition** is derived from current context plus surviving memory; it is not a permanent relationship meter.
 6. **Affect** is derived and may have temporal persistence if experiments require it, but must not duplicate its appraisal/regulatory causes.
@@ -724,19 +795,29 @@ appraisal / motivation / belief
 
 Two characters with identical body truth but different interoceptive sensitivity may therefore experience different pressure.
 
-### 7.3 Need semantics remain open by design
+### 7.3 Embodied Need basis is provisionally constrained
 
 A Need is fundamentally a motivational pressure.
 
-It may be represented as:
+For embodied/homeostatic Needs, the preferred architectural hypothesis is:
 
-- stored state;
-- a derived projection of body state;
-- a derived projection of interoceptive evidence;
+```text
+PHYSIOLOGICAL / REGULATORY STATE
+        ↓
+INTEROCEPTION
+        ↓
+EMBODIED NEED PRESSURE
+```
+
+The pressure is therefore provisionally based in physiological/regulatory dynamics and mediated by character-accessible interoception. Whether that pressure additionally requires independently stored Need state remains experimental; the old independently stored meter is a named control model rather than a coequal default.
+
+Psychological, social, identity, and commitment pressures may have different causal substrates. They may be represented as:
+
 - a hybrid learned/embodied construct;
+- a derived projection of learned or prospective state;
 - or an irreducible psychological motive when no lower-level derivation is justified.
 
-The ideal architecture should support these alternatives without assuming one answer globally.
+The architecture must not force every motivational pressure into one universal Need representation.
 
 ### 7.4 Status effects are perturbations, not personality bags
 
@@ -872,15 +953,22 @@ flowchart LR
         Uncertainty[Confidence / uncertainty]
     end
 
+    History[Perceived dyadic events / attribution<br/>commitments and interaction history]
     Relationship[Directional relationship state]
+    Recognition[Recognition / familiarity]
     Lenses[Relationship appraisal lenses<br/>comfort, trust, respect, attraction,<br/>resentment, attachment, reliance, etc.]
 
     TargetTruth --> Behavior
     Behavior --> Observe --> Evidence --> Model
-    Model --> Relationship --> Lenses
+    History --> Relationship
+    Model --> Lenses
+    Relationship --> Lenses
+    Recognition --> Lenses
 ```
 
 There is deliberately **no arrow from TargetTruth directly into the observer model**.
+
+The Person Model and Relationship state are parallel learned inputs to current social appraisal. What the observer believes the target is like does not itself create the history of what has happened between them, though perceived events may update both through separately typed learning routes.
 
 ### 9.1 The identity matrix remains dispositional belief
 
@@ -1056,18 +1144,22 @@ The Decision system exists to preserve meaningful autonomy under competing reaso
 flowchart LR
     State[Current character-relative state]
     Motives[Motivational pressures]
-    Signals[Semantic signals]
+    Signals[Raw cognitive signals]
     Reasons[Reason Nuclei]
     Options[Option Appraisal]
     Arbitration[Arbitration]
     Roll[Scoped stochastic resolution]
     Intent[Chosen Intent]
     Expr[DecisionExpression]
+    Qual[Authorship / identity qualification]
+    IdentityEvidence[Identity evidence]
+    Identity[Durable identity]
 
     State --> Motives --> Signals --> Reasons --> Options --> Arbitration
     Arbitration -->|settled| Intent
     Arbitration -->|unresolved| Roll --> Intent
-    Intent --> Expr
+    Intent --> Expr --> Qual --> IdentityEvidence --> Identity
+    Identity -. matching standing modifier .-> Signals
 ```
 
 ### 12.1 Reasons are semantic compression
@@ -1142,6 +1234,8 @@ counter-addressed result when a roll is required
 One fact must not become one modifier, and one reason must not become a bag of duplicate evidence. Signals first consolidate into independently meaningful Reason Nuclei with correlation provenance. A modifier cannot create a Reason Nucleus whose base motive is absent.
 
 The associated feedback loop is also retained: meaningful resolved choices create frozen `DecisionExpression` records; qualifying expressions accumulate identity evidence; durable identity feeds back as a standing modifier on matching future reasons; and that feedback moves the boundary between settled and unresolved choice. Displayed trait names summarize the evidence and never apply a separate bonus.
+
+Qualification is not a generic reward for choosing. It deterministically considers the frozen contest, significance, accepted cost, opposing Reasons, affect/fear context, coercion, intervention, resolution mode, whether a roll occurred, and `AuthorshipPotential`. A settled choice may confirm an existing pattern; a meaningfully unresolved choice may carry greater authorship value. Exact weighting remains a formal research question.
 
 The historical equations, thresholds, die brackets, and modifier units remain subject to formal specification and counterfactual testing. Reuse means porting the mechanism and its regression experiments into the new seam contract—not granting every calibration constant permanent architectural authority.
 
@@ -1242,8 +1336,11 @@ flowchart TB
     Before[Pre-attempt expectation / belief / goal]
     Attempt[Attempt]
     Truth[Authoritative outcome]
-    Perceived[Perceived outcome]
+    Observable[Observable consequences]
+    Perception[Perception / SemanticExperience]
+    Perceived[Perceived outcome evidence]
     Eval[Outcome Evaluation]
+    Trace[Omniscient trace]
 
     Eval --> Surprise[Prediction discrepancy]
     Eval --> Contingency[Action-outcome contingency]
@@ -1252,7 +1349,10 @@ flowchart TB
     Eval --> Progress[Goal progress]
 
     Before --> Eval
-    Attempt --> Truth --> Perceived --> Eval
+    Attempt --> Truth
+    Truth --> Observable --> Perception --> Perceived --> Eval
+    Truth -. authoritative provenance only .-> Trace
+    Attempt -. authoritative provenance only .-> Trace
 ```
 
 ### 14.1 Authoritative cause is not learned cause
@@ -1316,10 +1416,16 @@ DecisionExpression
 + social feedback
 + repeated cross-context pattern
         ↓
+AUTHORSHIP / IDENTITY QUALIFICATION
+contest • significance • accepted cost • opposition
+coercion • intervention • resolution mode • roll history
+        ↓
 IDENTITY EVIDENCE
         ↓
 SELF-CONCEPT
 ```
+
+Qualification preserves the distinction between a choice that merely confirms an already settled pattern and a choice that authors a direction under meaningful unresolved conflict. It may change the evidence weight or classification; it may not rewrite the frozen `DecisionExpression`.
 
 ### 15.2 Semantic traits are recognized patterns
 
@@ -1450,10 +1556,10 @@ sequenceDiagram
     AC->>AP: Maintained context + control state
     PM->>AP: Beliefs/person model
     MR->>AP: Recognition / memory
-    AP->>PR: Queue named regulatory impulses where applicable
-    PR->>PR: Apply impulses in canonical order
-    PR->>AP: Updated interoceptive evidence at the next valid boundary
-    AP->>AP: Derive affect
+    AP->>AP: Phase 50 derives current appraisal and affect
+    AP->>PR: Phase 51 queues named regulatory impulses
+    PR->>PR: Phase 52 applies impulses without cognitive re-entry
+    Note over PR,PE: New interoceptive evidence appears only at a later observation boundary
     AP->>M: Appraisal / affect pressure
     PR->>M: Embodied pressure
     GP->>M: Goal / commitment pressure
@@ -1578,6 +1684,7 @@ A complete causal trace should be able to answer:
 - What affect arose?
 - How did affect alter later attention, retrieval, appraisal, or control?
 - What motivational pressures existed?
+- Which raw cognitive signals did each source emit, with what role and provenance?
 - Which Reasons were independent?
 - Which evidence was consolidated as correlated?
 - How did each option appraise?
@@ -1585,6 +1692,7 @@ A complete causal trace should be able to answer:
 - Why was the Decision player-facing, quiet, or automatic?
 - What random address was used if a roll occurred?
 - What did the chosen intent semantically express?
+- Why did that expression qualify—or fail to qualify—as identity evidence, and with what authorship value?
 - What plan followed?
 - What actual competence mattered?
 - What did the character attempt?
@@ -1593,6 +1701,7 @@ A complete causal trace should be able to answer:
 - What had they expected?
 - What cause did they infer?
 - What did they learn about contingency and controllability?
+- Which updates came from character-accessible evidence, and which came from truth-side exposure or practice?
 - What changed in memory, beliefs, goals, skill, habit, relationships, identity, or disposition?
 
 ### 19.1 Semantic compilation principle
@@ -1690,6 +1799,7 @@ SocialState
 
 DecisionState
 ├── candidate options
+├── rawCognitiveSignals with source role / provenance
 ├── reasons
 ├── option appraisal
 ├── uncertainty / settledness
@@ -1703,6 +1813,13 @@ DecisionExpression
 ├── contest / cost / significance
 ├── intervention provenance
 └── semantic identity / value / commitment expressions
+
+IdentityQualification
+├── decisionExpressionRef
+├── contest / significance / accepted cost
+├── coercion / intervention / resolution mode
+├── authorshipPotential / roll occurrence
+└── qualified identity evidence or typed rejection
 
 ActionAttempt
 ├── chosenIntentRef
@@ -1720,6 +1837,12 @@ OutcomeEvaluation
 ├── controllability
 ├── causalAttribution
 └── goalProgress
+
+AutomaticAdaptationInput
+├── physiological exposure / recovery history
+├── actual practice history
+├── target adaptation authority
+└── truth-side provenance inaccessible to cognition by default
 ```
 
 The important rule is not these names.
@@ -1951,7 +2074,7 @@ A primitive earns survival only when cases like these demonstrate a distinction 
 
 These are unresolved questions inside the ideal topology, not reasons to omit the corresponding seams.
 
-1. **Need ownership:** Which Needs are stored, derived, hybrid, or irreducible psychological motives?
+1. **Need ownership:** For embodied Needs, does the interoceptively mediated pressure require any independently stored Need state beyond physiological/regulatory dynamics? Which psychological or social pressures are derived, hybrid, or irreducible?
 2. **Interoception:** What bodily facts can a person access, with what noise, latency, and individual differences?
 3. **Regulatory topology:** Are stress/reward/arousal-like axes adequate, or is a coupled network required?
 4. **Development:** Which changing age/life-stage variables warrant explicit state rather than contextual modifiers?
@@ -1975,8 +2098,9 @@ These are unresolved questions inside the ideal topology, not reasons to omit th
 22. **Communication:** Which semantic output fields are sufficient for deception, concealment, disclosure, and misunderstanding without natural-language authority?
 23. **Identity vs adaptation:** When does repeated biography require changing effective disposition rather than self-concept alone?
 24. **Habits vs skills:** Which learning updates belong to action selection versus execution competence?
-25. **Addiction:** Which whole-system distinctions survive once reward, habit, control, relief, and identity are all present?
-26. **Scale:** Which ideal distinctions can later be compressed or derived while preserving the required causal counterfactuals?
+25. **Adaptation input:** Which physiological and practice histories update automatically, and which require character-accessible learning evidence?
+26. **Addiction:** Which whole-system distinctions survive once reward, habit, control, relief, and identity are all present?
+27. **Scale:** Which ideal distinctions can later be compressed or derived while preserving the required causal counterfactuals?
 
 The planning/building brief should choose research order based on dependency and invalidation risk; this architecture document deliberately does not.
 
@@ -1989,6 +2113,7 @@ The following shortcuts should be treated as architecture violations unless Char
 - regulator level → emotion;
 - regulator level → personality;
 - body truth → character knowledge;
+- automatic adaptation input → character learning evidence;
 - evidence → belief without update semantics;
 - belief → appraisal;
 - appraisal → action command;
@@ -1996,6 +2121,7 @@ The following shortcuts should be treated as architecture violations unless Char
 - motive → action command;
 - goal → action command;
 - believed skill → actual skill;
+- habit → motive merely because the response is learned;
 - habit → skill;
 - private state → observer knowledge;
 - intended communication → successful communication;
@@ -2005,6 +2131,7 @@ The following shortcuts should be treated as architecture violations unless Char
 - accessibility → recognition;
 - familiarity → liking;
 - social identity belief → target true identity;
+- person model → relationship history;
 - relationship history → one universal scalar;
 - self-concept → dispositional adaptation;
 - named trait → independent causal stat when it already derives from lower-level state;
@@ -2019,7 +2146,7 @@ The following shortcuts should be treated as architecture violations unless Char
 
 Adopt the following as the working ideal:
 
-> **A character has persistent constitutional parameters, developmental state, dynamic embodied state, plastic learned state, character-relative knowledge and memory, active bounded cognition, prospective goals, observer-relative person models, directional relationships, autobiographical identity, and learned competence. Current effective disposition is derived from persistent and acquired contributors. Perception, recognition, belief, person models, interoception, active cognition, appraisal, and affect determine what circumstances mean to the character. Embodied, psychological, social, prospective, and historical pressures compile into independent semantic reasons. Option appraisal and arbitration roll only where meaningful uncertainty remains. Chosen intent independently produces frozen DecisionExpression and an action/communication plan; skill, body, control, environment, and interference determine execution. The character then evaluates perceived outcome against prior expectation, learning about capability, contingency, controllability, causes, other people, and self. Repeated history consolidates into memory, beliefs, relationships, habits, skills, identity, and potentially bounded dispositional adaptation without rewriting the past.**
+> **A character has persistent constitutional parameters, developmental state, dynamic embodied state, plastic learned state, character-relative knowledge and memory, active bounded cognition, prospective goals, observer-relative person models, directional relationships, autobiographical identity, and learned competence. Current effective disposition is derived from persistent and acquired contributors. Perception, recognition, belief, person models, interoception, active cognition, appraisal, and affect determine what circumstances mean to the character. Embodied, psychological, social, prospective, and historical sources emit raw cognitive signals that consolidate into independent semantic reasons. Option appraisal and arbitration roll only where meaningful uncertainty remains. Chosen intent independently produces a frozen DecisionExpression and an action/communication plan; authorship qualification determines what identity evidence the expression carries. Skill, body, control, environment, and interference determine execution. The character then evaluates perceived outcome against prior expectation, learning about capability, contingency, controllability, causes, other people, and self. Character-relative learning and truth-side embodied/procedural adaptation remain separate update routes. Repeated history consolidates into memory, beliefs, relationships, habits, skills, identity, and potentially bounded dispositional adaptation without rewriting the past.**
 
 CharacterLab should make this complete topology executable before trying to make it small.
 

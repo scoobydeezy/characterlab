@@ -8,16 +8,21 @@ Read this file before planning or implementing work in this repository.
 2. `CHARACTER_ARCHITECTURE.md` is the sole canonical topology: boxes, edges, state ownership, and causal ordering.
 3. `CharacterLab — Ideal Character Research Program Brief.md` defines the research method, proof burden, and campaign rules.
 4. `docs/formal/` defines versioned executable semantics beneath those conceptual authorities. An implementation must name the seam-contract version it implements.
-5. `docs/planning/` records active seam status, phenomena, and verdict evidence.
-6. Phase briefs, historical findings, and implementation plans under `reference/` are hypothesis and control sources only.
+5. `CharacterLab — Reference Architecture Build & Research Campaign Plan.md` owns active sequence without overriding accepted formal readiness gates.
+6. `docs/planning/` records active seam status, phenomena, preservation obligations, and verdict evidence.
+7. Phase briefs, historical findings, and implementation plans under `reference/` are hypothesis and control sources only.
 
 When documents conflict, resolve the conflict upward through this hierarchy. Do not silently choose whichever formula or diagram is easiest to implement.
+
+Authority is also scoped by subject. The Research Program Brief outranks formal documents on research method, proof burden, and campaign admissibility; it does **not** override an accepted seam contract's exact mathematics, domains, quantization, ordering, or trace schema. Conversely, a formal seam contract may instantiate the North Star and Architecture Map but may not redefine their required phenomena, causal boxes, or epistemic boundaries. A genuine cross-scope conflict must be resolved by amending the higher conceptual document or the lower formal contract explicitly, never by local implementation choice.
 
 ## Active direction
 
 CharacterLab is undergoing a ground-zero architectural refoundation.
 
 The active implementation belongs in `src/`. It begins only after the relevant deterministic substrate and seam contracts exist. The first implementation target is the North-Star Reference Scaffold: a thin, deterministic, end-to-end causal topology whose candidate distinctions can be ablated, substituted, merged, derived, compressed, or retracted.
+
+Campaign 0 is active. Resolve the `P0` entries in `docs/formal/OPEN_DECISIONS.md` in the order defined by the Build & Research Campaign Plan before beginning psychological implementation.
 
 Do not automatically resume the former Phase 3A → 3B → 3C plan.
 

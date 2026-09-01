@@ -24,11 +24,24 @@ Every persistent field has exactly one registered mutation authority. Other seam
 | immediate belief/expectation evidence | Learning Evidence application | unresolved specification |
 | episodic/imprint memory | Memory encoding/consolidation | unresolved specification |
 | associations | Consolidation | unresolved specification |
-| skills and habits | Consolidation | unresolved specification |
-| person models and relationships | Social learning/consolidation | unresolved specification |
+| values | Value learning/consolidation | unresolved specification |
+| skills | Procedural adaptation / skill-learning transition | unresolved specification |
+| habits | Habit learning/consolidation | unresolved specification |
+| person models | Person-model learning/application | unresolved specification |
+| relationships | Relationship learning/consolidation | unresolved specification |
+| regulatory adaptation, tolerance, sensitization, and accumulated load | Regulatory adaptation transition | unresolved specification |
 | self/identity/disposition | Identity/dispositional consolidation | unresolved specification |
 
 “Proposed” is not permission to implement. The seam ledger must replace each unresolved row with a versioned contract before code writes that state.
+
+## Evidence-route separation
+
+Character learning evidence and automatic adaptation input are different typed routes:
+
+- **Character learning evidence** contains only perceived or legitimately inferred information and may feed beliefs, expectations, memories, person models, relationships, values, habits, or identity through their registered authorities.
+- **Automatic adaptation input** may contain actual physiological exposure, recovery history, or practice that the character cannot explicitly know. It may feed only the registered regulatory or procedural adaptation authority.
+
+No record crosses between these routes implicitly. If one event legitimately affects both, the observation seam and the truth-side adaptation seam emit separate records with distinct provenance.
 
 ## Snapshot rule
 

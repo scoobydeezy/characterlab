@@ -10,6 +10,7 @@ CharacterLab is the deterministic research proving ground for Vivarium's charact
 4. [Research Program Brief](CharacterLab%20%E2%80%94%20Ideal%20Character%20Research%20Program%20Brief.md) — proof method and campaign rules
 5. [Formal Reference Model](docs/formal/README.md) — deterministic executable semantics
 6. [Active planning ledgers](docs/planning/README.md) — readiness, corpus, verdict evidence, and the reference-mechanism preservation gate
+7. [Build & Research Campaign Plan](CharacterLab%20%E2%80%94%20Reference%20Architecture%20Build%20%26%20Research%20Campaign%20Plan.md) — active sequence beginning with substrate Campaign 0
 
 ## Repository boundary
 
@@ -22,7 +23,7 @@ The historical implementation's full documentation is preserved at [reference/IM
 
 ## Current status
 
-The conceptual architecture has been reconciled around one canonical topology. The deterministic substrate and registries are now being formalized before any Build / Campaign Plan or new character implementation proceeds. The next task is to turn each canonical edge into a versioned seam contract, then build the thinnest complete traversable reference scaffold.
+The conceptual architecture has been reconciled around one canonical topology. Campaign 0 of the Build & Research Campaign Plan is active: close model/content identity, addressed randomness, analytical time, event ordering, trace, and save/load before psychological implementation. The first content seam after that is world/body truth → perception/interoception → `SemanticExperience`.
 
 ## Commands
 

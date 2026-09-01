@@ -19,6 +19,8 @@ Current foundation:
 - [State model](STATE_MODEL.md)
 - [Event ordering](EVENT_ORDERING.md)
 - [Trace and provenance](TRACE_AND_PROVENANCE.md)
+- [Authored content governance](CONTENT_GOVERNANCE.md)
+- [Formal open-decision register](OPEN_DECISIONS.md)
 - [Seam contract template](SEAM_CONTRACT_TEMPLATE.md)
 - [Vivarium formula intake ledger](FORMULA_INTAKE_LEDGER.md)
 
