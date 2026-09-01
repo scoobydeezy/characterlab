@@ -1,0 +1,25 @@
+# Formal Reference Model
+
+**Status:** pre-implementation authority
+
+**Purpose:** remove agent interpretation from every authoritative CharacterLab seam.
+
+The North Star defines what the character must preserve. The Architecture Map defines the canonical causal topology. This directory defines what that topology means exactly enough to execute, replay, compare, and falsify.
+
+Authority inside this layer:
+
+1. accepted, versioned seam specifications;
+2. shared substrate contracts referenced by those specifications;
+3. registries for identifiers, units, ordering, mutation authority, and trace records;
+4. unresolved-decision records, which block affected implementation rather than invite invention.
+
+Current foundation:
+
+- [Deterministic substrate](DETERMINISTIC_SUBSTRATE.md)
+- [State model](STATE_MODEL.md)
+- [Event ordering](EVENT_ORDERING.md)
+- [Trace and provenance](TRACE_AND_PROVENANCE.md)
+- [Seam contract template](SEAM_CONTRACT_TEMPLATE.md)
+- [Vivarium formula intake ledger](FORMULA_INTAKE_LEDGER.md)
+
+These documents establish the specification language and known obligations. They do not silently accept candidate psychological equations. A seam is implementation-ready only when its own versioned specification has no unresolved field capable of changing its result.

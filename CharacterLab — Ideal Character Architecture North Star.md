@@ -47,19 +47,25 @@ The target is a **deterministic causal model of a person**.
 A character should possess:
 
 - constitutional differences;
+- developmental and age-related state where behaviorally relevant;
 - a changing body;
 - regulatory dynamics;
 - perception and attention;
+- a capacity-limited active cognitive workspace;
+- cognitive control and inhibition;
 - imperfect knowledge;
 - learned expectations;
 - memories;
-- social beliefs;
+- social beliefs and observer-specific models of other minds;
 - appraisals;
 - affective states;
 - motivations;
-- commitments and goals;
+- commitments, goals, intentions and plans;
+- learned skills and procedural competence;
 - meaningful decisions;
 - genuine uncertainty;
+- action attempts distinct from execution;
+- outcome evaluation and causal learning;
 - autobiographical history;
 - plastic dispositions;
 - relationships;
@@ -71,7 +77,7 @@ The simulation determines conditions.
 
 The character model determines what those conditions mean to that person.
 
-The resulting character chooses according to their current constitution, body, knowledge, history, relationships, motivations, and identity.
+The resulting character chooses according to their current constitution, body, knowledge, history, relationships, motivations, goals, control state, competence and identity.
 
 The player may influence conditions and, where Vivarium permits, intervene at unresolved boundaries.
 
@@ -97,13 +103,19 @@ CharacterLab must attempt to demonstrate that:
 
 - perception can be selected deterministically;
 - attention and salience can be calculated deterministically;
+- active cognitive contents can be selected, maintained, updated and displaced deterministically;
+- cognitive control, inhibition, strategy switching and performance monitoring can be represented deterministically;
 - memory encoding and retrieval can be calculated deterministically;
 - similarity and recognition can be calculated deterministically;
 - beliefs can update deterministically;
 - uncertainty can be represented mathematically;
+- observer-specific beliefs about another character's disposition, affect, goals, intentions and knowledge can update deterministically;
 - appraisals can be derived deterministically;
 - regulatory dynamics can advance deterministically;
+- affective state can feed back into later attention, retrieval, appraisal and control through explicit deterministic transitions;
 - Needs and motivational pressures can be derived deterministically;
+- goals, intentions, prospective states and plans can be represented and maintained deterministically;
+- learned skill and procedural competence can change deterministically;
 - social inference can be updated from evidence deterministically;
 - Reasons can be compiled from causal inputs deterministically;
 - correlated evidence can be consolidated deterministically;
@@ -111,6 +123,11 @@ CharacterLab must attempt to demonstrate that:
 - decision confidence and unresolved conflict can be identified deterministically;
 - stochastic resolution, where required, can use deterministic seeded randomness;
 - an outcome's semantic Expression can be classified deterministically;
+- chosen intent can be separated deterministically from action planning, attempted execution and world outcome;
+- action success can depend deterministically on actual competence, embodied state, environment and scoped uncertainty rather than on capability belief alone;
+- expected and perceived outcomes can be compared deterministically;
+- prediction discrepancy, action-outcome contingency, controllability and causal attribution can update learning deterministically;
+- private state can be separated from communicative intent and externally observable expression deterministically;
 - autobiographical evidence can be accumulated deterministically;
 - semantic traits can be recognized deterministically;
 - memory can consolidate and fragment deterministically;
@@ -133,6 +150,14 @@ No LLM may be required to decide:
 
 > “What trait has this person earned?”
 
+No LLM may be required to decide:
+
+> “What does this character think another person believes, wants, or intends?”
+
+No LLM may be required to decide:
+
+> “Why did this character learn from the outcome they experienced?”
+
 Language models may eventually be useful outside the authoritative simulation for presentation, natural-language paraphrase, dialogue realization, content-authoring assistance, or other non-authoritative surfaces.
 
 But the underlying semantic truth must already exist before such a model sees it.
@@ -143,7 +168,7 @@ The simulation must be capable of running headlessly, reproducibly, explainably,
 
 CharacterLab does not begin from the fewest mechanisms anyone can imagine and add a new mechanism whenever the current model fails.
 
-That constructive-minimalist strategy is useful for isolated questions, but it is a poor governing method for a causally deep character. A locally sufficient primitive may conceal an upstream layer that later becomes necessary for memory, recognition, social inference, identity, regulation, or long-term adaptation. Repeated discovery of those layers forces downstream work to be reinterpreted.
+That constructive-minimalist strategy is useful for isolated questions, but it is a poor governing method for a causally deep character. A locally sufficient primitive may conceal an upstream layer that later becomes necessary for memory, recognition, social inference, identity, regulation, executive control, goal maintenance, action competence, or long-term adaptation. Repeated discovery of those layers forces downstream work to be reinterpreted.
 
 CharacterLab therefore begins from an intentionally overcomplete **reference architecture** containing the causal distinctions currently believed capable of explaining the ideal character. It then simplifies that architecture experimentally.
 
@@ -159,7 +184,7 @@ The governing target is:
 - candidate distinctions remain separate long enough to be tested;
 - and no candidate earns a place in Vivarium merely because it appeared in the reference model.
 
-CharacterLab should seek **maximum causal legibility before minimum object count**. Prematurely merging perception, memory, recognition, belief, appraisal, affect, regulation, motivation, reasons, decision, expression, and identity would make later failures impossible to localize.
+CharacterLab should seek **maximum causal legibility before minimum object count**. Prematurely merging perception, memory, recognition, belief, appraisal, affect, regulation, cognitive control, motivation, goals, skill, reasons, decision, action, outcome learning, expression, and identity would make later failures impossible to localize.
 
 The reference model is a **superset hypothesis**, not a semantic oracle. Required phenomena and architectural invariants judge the model; the model does not define success merely by reproducing its own outputs. If the intact reference path cannot produce a required phenomenon, preserve a truth boundary, or support the needed counterfactual, revise or substitute the responsible candidate before attempting to simplify it.
 
@@ -177,12 +202,14 @@ Compare the intact reference model and the reduced model on the same controlled 
 
 Use this reduction vocabulary consistently:
 
-- **RETAINED** — the distinction survives testing as independently necessary.
-- **DERIVED** — the phenomenon survives, but the state or mechanism can be computed from lower-level causes.
-- **MERGED** — two candidates are observationally and causally indistinguishable across the current corpus and become one.
-- **COMPRESSED** — the distinction is required while learning or interpreting history but can later use a cheaper representation.
-- **RETRACTED** — the candidate explains no required distinction and is removed.
-- **UNRESOLVED** — current experiments cannot distinguish the competing models.
+- **RETAINED** — a valid witness shows that removing or merging the distinction loses a required behavior, invariant, or causal counterfactual.
+- **DERIVED** — an explicit derivation reproduces the required quantity from lower-level state across a declared domain without separate authoritative state.
+- **MERGED** — purpose-built discrimination tests meet an explicit behavioral and causal equivalence criterion across an adequately covered declared domain.
+- **COMPRESSED** — the rich distinction is required before a defined transition, after which a cheaper representation preserves specified future behavior and provenance.
+- **RETRACTED** — adequately discriminating tests show that the candidate adds no required capacity across the declared domain.
+- **UNRESOLVED** — coverage, fidelity, numerical validity, or discriminating power is inadequate or conflicting.
+
+Difference needs a valid witness. Equivalence needs declared coverage. Failure to observe a difference is not itself evidence for derivation, merger, or retraction.
 
 These are research verdicts, not confidence theater. A verdict must identify the tested corpus and may be reopened when a new required phenomenon supplies a discriminating case.
 
@@ -253,6 +280,21 @@ FEAR
 
 It is not an authored command to flee.
 
+Likewise:
+
+```text
+expected success
++ attempted action
++ perceived failure
++ repeated low action-outcome contingency
+        ↓
+LOW PERCEIVED CONTROLLABILITY
+```
+
+`Low perceived controllability` does not directly command surrender.
+
+It becomes learned causal structure capable of changing future appraisal, persistence and strategy.
+
 The goal is not to eliminate semantics.
 
 The goal is to make semantics **earned, causal, inspectable, and reproducible**.
@@ -276,6 +318,8 @@ This applies to:
 - memories;
 - commitments;
 - Observer intervention;
+- action competence;
+- outcomes;
 - and the character's own internal processes.
 
 The canonical epistemic separation is:
@@ -362,6 +406,12 @@ Fear may contribute toward:
 
 The rest of the person determines what happens next.
 
+Affect may also change what becomes salient, what memories are accessible, how later situations are appraised, and how effectively the character exerts cognitive control.
+
+Those feedback effects require explicit transition boundaries.
+
+They do not make affect an action command.
+
 ---
 
 ## 5.5 Motivation is not action
@@ -374,7 +424,92 @@ No single motive should silently become a command unless the resulting decision 
 
 ---
 
-## 5.6 Intent is not execution
+## 5.6 Goal is not motive, plan or action
+
+A character may want a future state without currently acting toward it.
+
+The architecture must distinguish:
+
+```text
+MOTIVATIONAL PRESSURE
+"I want this."
+
+        ↓
+
+GOAL / PROSPECTIVE STATE
+"I want this future condition to become true."
+
+        ↓
+
+INTENTION
+"I currently mean to pursue it."
+
+        ↓
+
+PLAN / STRATEGY
+"This sequence may get me there."
+
+        ↓
+
+CURRENT ACTION
+"This is what I am trying now."
+```
+
+These may change independently.
+
+A person may care about a goal but procrastinate, forget, change strategy, abandon it, or be unable to act.
+
+---
+
+## 5.7 Believed capability is not actual competence
+
+A character's belief about what they can do is epistemic state.
+
+Their actual learned competence is action-relevant state.
+
+The architecture must permit:
+
+- skilled but insecure;
+- incompetent but overconfident;
+- rusty but formerly expert;
+- improving skill with stale self-belief;
+- temporarily impaired execution with unchanged long-term competence.
+
+Capability belief may shape Decision Reasons.
+
+Actual competence shapes execution.
+
+They must not silently share one variable.
+
+---
+
+## 5.8 Private state is not expressed communication
+
+What a character believes, feels, wants or intends internally is not automatically what other characters receive as evidence.
+
+The canonical communication boundary is:
+
+```text
+PRIVATE STATE
+        ↓
+COMMUNICATIVE INTENT
+        ↓
+ATTEMPTED EXPRESSION
+        ↓
+EXECUTED / OBSERVABLE SIGNAL
+        ↓
+OBSERVER PERCEPTION
+        ↓
+OBSERVER INTERPRETATION
+```
+
+A character may conceal, lie, exaggerate, perform, miscommunicate or accidentally reveal.
+
+No observer gains direct access to private state merely because the simulator knows it.
+
+---
+
+## 5.9 Intent is not execution
 
 The character's chosen intent and the world's executed outcome are separate facts.
 
@@ -382,9 +517,12 @@ A character may choose to leave and be physically prevented.
 
 They still chose to leave.
 
+A character may choose to perform an action and fail because they lack the skill, because their body is impaired, because circumstances change, or because the world prevents execution.
+
 This distinction is required for:
 
 - agency;
+- competence;
 - coercion;
 - Observer interference;
 - accountability;
@@ -394,160 +532,76 @@ This distinction is required for:
 
 ---
 
-## 5.7 History may change the future but never rewrite the past
+## 5.10 Authoritative outcome is not perceived outcome
 
-Resolved Decisions retain the causal meaning they had when resolved.
+What actually happened may differ from what the acting character or an observer believes happened.
 
-Later personality changes, beliefs, relationships, or world conditions must not recompute why an old choice occurred.
+Learning must proceed from legitimately perceived evidence.
 
-Historical reasons and qualifying semantic Expressions therefore require frozen provenance.
+The canonical learning separation is:
+
+```text
+EXPECTED OUTCOME
+        ↓
+ATTEMPT
+
+AUTHORITATIVE OUTCOME
+        ↓
+PERCEIVED OUTCOME
+        ↓
+OUTCOME EVALUATION
+        ↓
+BELIEF / EXPECTATION / CONTROLLABILITY UPDATE
+```
+
+A hidden cause must not silently update the character's causal model.
 
 ---
 
-## 5.8 One causal fact must not become modifier soup
+## 5.11 History may change the future but never rewrite the past
+
+Resolved Decisions retain the causal meaning they had when resolved.
+
+Later personality changes, beliefs, relationships, skills, or world conditions must not recompute why an old choice occurred.
+
+Historical reasons and qualifying semantic Expressions therefore require frozen provenance.
+
+Likewise, later learning may change what a character now believes about a past outcome without rewriting what they perceived or believed at the time.
+
+---
+
+## 5.12 One causal fact must not become modifier soup
 
 The same underlying fact must not be counted repeatedly merely because several systems can describe it.
 
 If regulatory stress contributes to fear, and fear contributes to a Reason, the regulator must not also independently add an equivalent Reason unless research establishes a genuinely distinct causal contribution.
 
+If one failed action updates both a specific capability belief and a general controllability belief, the update pathways must preserve their distinct evidence semantics rather than simply applying two generic failure penalties.
+
 CharacterLab must aggressively test for correlated evidence and double counting.
 
 ---
 
-# 6. Ideal character architecture
+# 6. Canonical architecture topology
 
-The following diagram is the target conceptual architecture.
+The complete current causal topology is owned by:
 
-It is not a claim that every box or edge has already been experimentally validated.
+> [**CharacterLab — Ideal Character Architecture Map**](CHARACTER_ARCHITECTURE.md#3-executive-ideal-architecture)
 
-```mermaid
-flowchart TB
-    World[World Truth and Events]
+That document is the sole canonical source for architecture boxes, edges, state ownership, and conceptual event ordering.
 
-    subgraph Character[CHARACTER]
-        direction TB
+This North Star governs what the topology must remain capable of expressing. In particular, any canonical map must preserve the invariant distinctions in §5 and the required phenomena in §§7–30. If the Architecture Map violates a North-Star invariant, the invariant wins and the map must be corrected.
 
-        subgraph Constitution[CONSTITUTIONAL BASELINE]
-            Bio[Biological Constitution<br/>candidate physiological parameters]
-            RegK[Regulatory Kinetics<br/>production, decay, sensitivity,<br/>thresholds, adaptation]
-            Psych0[Psychological Baseline<br/>only irreducible dimensions<br/>proven necessary by CharacterLab]
-        end
+Small diagrams elsewhere in this document are **illustrative invariant diagrams, not canonical topology**. They explain a required separation without independently defining the whole architecture.
 
-        subgraph Embodied[EMBODIED STATE]
-            Phys[Physiological State<br/>energy, hydration, sleep debt, etc.]
-            Reg[Regulatory State<br/>stress/reward/arousal-like dynamics]
-            Adapt[Regulatory Adaptation<br/>tolerance, sensitization,<br/>accumulated load]
-            Intero[Interoception<br/>character-accessible body evidence]
-        end
+The canonical topology must remain:
 
-        subgraph Plastic[PLASTIC PSYCHOLOGICAL STATE]
-            Disp[Learned Dispositional Adaptation]
-            Values[Values / durable preferences]
-            Self[Self-concept / consolidated identity]
-            Habits[Learned habits and adaptations]
-        end
-
-        subgraph Cognition[KNOWLEDGE AND MEMORY]
-            Percept[Perception / Attention]
-            SemExp[SemanticExperience]
-            Beliefs[Predictive and Social Beliefs]
-            Episodic[Episodic Imprints]
-            Assoc[Associations]
-            Expect[Expectations]
-            Social[Observer-specific Identity Beliefs]
-        end
-
-        Recognition[Recognition / Familiarity<br/>derived from current context<br/>and surviving memory]
-        Appraisal[Appraisal<br/>meaning, threat, control,<br/>social evaluation, incongruity, etc.]
-        Affect[Appraised Affect<br/>fear, amusement, embarrassment,<br/>relief, pride, shame, etc.]
-
-        Motives[Motivational Pressures<br/>physiological, psychological,<br/>social, goals, commitments]
-        Reasons[Semantic Reasons / Reason Nuclei]
-        Arbitration[Decision Arbitration<br/>option strength, confidence,<br/>significance, unresolved conflict]
-
-        Roll[Scoped Roll<br/>only where meaningful<br/>uncertainty remains]
-        Intent[Chosen Intent]
-        Expression[DecisionExpression<br/>frozen semantic meaning<br/>of the choice]
-    end
-
-    Action[Attempted Action]
-    Outcome[Executed Outcome / Consequences]
-
-    World --> Percept
-    Percept --> SemExp
-    SemExp --> Beliefs
-    SemExp --> Episodic
-    SemExp --> Assoc
-    SemExp --> Expect
-
-    World --> Phys
-    Bio --> Phys
-    RegK --> Reg
-    Phys --> Reg
-    Adapt --> Reg
-    Reg --> Intero
-    Phys --> Intero
-
-    Psych0 --> Appraisal
-    Disp --> Appraisal
-    Values --> Appraisal
-    Beliefs --> Appraisal
-    Social --> Appraisal
-    Intero --> Appraisal
-    Recognition --> Appraisal
-
-    Episodic --> Recognition
-    Assoc --> Recognition
-    Expect --> Recognition
-    SemExp --> Recognition
-
-    Appraisal --> Affect
-    Appraisal -. named regulatory impulse .-> Reg
-    Affect --> Motives
-    Intero --> Motives
-    Values --> Motives
-    Self --> Motives
-    Habits --> Motives
-    Beliefs --> Motives
-
-    Motives --> Reasons
-    Appraisal --> Reasons
-    Affect --> Reasons
-    Episodic --> Reasons
-    Assoc --> Reasons
-    Expect --> Reasons
-    Social --> Reasons
-    Self --> Reasons
-
-    Reasons --> Arbitration
-    Arbitration -->|settled| Intent
-    Arbitration -->|meaningfully unresolved| Roll
-    Roll --> Intent
-
-    Intent --> Expression
-    Intent --> Action
-    Action --> Outcome
-    Outcome --> World
-    Outcome --> Phys
-    Outcome --> Percept
-
-    Expression --> Episodic
-    Expression --> Self
-    Expression --> Disp
-
-    Episodic --> Assoc
-    Episodic --> Expect
-
-    SemExp -. observed behavior of others .-> Social
-```
-
-### Interpretation
-
-The architecture should be read as a causal network, not a per-frame execution pipeline.
-
-Feedback loops must be broken by explicit deterministic event ordering.
-
-No current-cycle value may recursively update itself without a named transition boundary.
+- causally traversable from world/body truth through character-relative evidence, cognition, choice, attempt, perception of outcome, learning, and consolidation;
+- explicit about where simulator truth becomes character-accessible evidence;
+- explicit about candidate option construction before option-relative reasoning;
+- explicit about pre-attempt snapshots and perceived-outcome evidence;
+- explicit about learning evidence and consolidation before persistent learned state changes;
+- and separable into deterministic event phases so feedback never depends on recursive or incidental evaluation order.
 
 ---
 
@@ -621,6 +675,7 @@ CharacterLab should specifically ask whether apparent primitives can instead eme
 - learned expectation;
 - beliefs;
 - affect;
+- cognitive control;
 - social history;
 - identity consolidation;
 - or interactions among these.
@@ -629,14 +684,45 @@ The rule is:
 
 > **Preserve required behavioral distinctions, not legacy variable names.**
 
+### Developmental / age state
+
+The ideal reference architecture must not assume that every constitutionally influenced parameter is effectively invariant across an entire life.
+
+Where required by the phenomenon set, CharacterLab should preserve a distinction between:
+
+```text
+PERSISTENT CONSTITUTIONAL PARAMETERS
+        +
+DEVELOPMENTAL / AGE STATE
+        +
+PLASTIC ACQUIRED STATE
+```
+
+Possible later phenomena include:
+
+- maturation;
+- aging;
+- changing sleep architecture;
+- reproductive transitions;
+- developmental plasticity;
+- changing learning rates;
+- changing regulatory baselines;
+- cognitive decline.
+
+CharacterLab does not need to simulate the whole human lifespan immediately.
+
+The requirement is simply that the architecture must not define adult starting parameters as metaphysically immutable in a way that makes later developmental change impossible without breaking the constitutional boundary.
+
 ---
 
-# 8. Personality is plastic even if constitution is not
+# 8. Personality is plastic even when constitution is persistent
 
 The model must distinguish:
 
 ```text
-IMMUTABLE CONSTITUTIONAL BASELINE
+PERSISTENT CONSTITUTIONAL PARAMETERS
+        +
+DEVELOPMENTAL / AGE STATE
         +
 PLASTIC PSYCHOLOGICAL ADAPTATION
         ↓
@@ -648,6 +734,8 @@ A low-Agency person may become more assertive through biography.
 A naturally threat-sensitive person may learn effective coping.
 
 A naturally sociable person may become socially avoidant.
+
+A person may also change because the biological or developmental substrate through which their constitution is expressed has changed.
 
 The model should preserve where the person began without requiring them to remain there forever.
 
@@ -741,6 +829,33 @@ CharacterLab must determine which motivational variables require authoritative s
 
 No Need should exist merely because a familiar game-design category expects one.
 
+### 10.1 Motivation and prospective goals remain distinct
+
+A motivational pressure may create or strengthen a goal without immediately producing action.
+
+For example:
+
+```text
+persistent autonomy pressure
+        ↓
+GOAL:
+"live independently"
+
+        ↓
+
+possible intentions:
+save money
+seek another job
+leave a relationship
+move habitats
+```
+
+The goal may persist while no immediate Decision concerning it is active.
+
+Conversely, a commitment or obligation may create a current intention even when intrinsic motivational pressure is weak.
+
+The architecture should therefore avoid representing all durable future-directed behavior as a currently active Reason.
+
 ---
 
 # 11. Memory architecture
@@ -757,6 +872,10 @@ The system must distinguish at least:
 Therefore:
 
 > **Event truth ≠ encoded memory ≠ current recollection.**
+
+Memory should also remain distinct from procedural competence.
+
+A character may become better at doing something without retaining an explicit episodic account of every practice event.
 
 ### 11.1 Episodic imprints
 
@@ -825,6 +944,22 @@ Repeated retrieval may preserve some fragments while others disappear.
 A frequently retold memory may therefore retain its narrative core while losing peripheral detail.
 
 CharacterLab should test whether deterministic retrieval and reinforcement can produce this behavior without storing the original full snapshot indefinitely.
+
+### 11.5 Affect may alter encoding and accessibility without rewriting truth
+
+The same event may produce different memory consequences under different affective states.
+
+Candidate effects include:
+
+- enhanced encoding of highly salient material;
+- reduced encoding of peripheral detail;
+- mood-congruent retrieval;
+- threat-biased accessibility;
+- repeated anger-driven retrieval of prior offenses.
+
+These are feedback hypotheses, not permission to let current mood rewrite historical content.
+
+CharacterLab should test whether affective modulation can be represented as deterministic changes to encoding and retrieval probability/activation while preserving frozen historical provenance.
 
 ---
 
@@ -912,7 +1047,7 @@ CharacterLab should reject a generic repetition penalty if these distinctions pr
 
 ---
 
-# 14. Semantic consolidation as a universal learning law
+# 14. Semantic consolidation as a cross-cutting learning principle
 
 The eventual model should attempt to obey:
 
@@ -933,6 +1068,10 @@ many observed expressions
         ↓
 belief about that person's disposition
 
+many observed mental-state cues
+        ↓
+belief about that person's goals / intentions
+
 many meaningful self-expressions
         ↓
 semantic identity
@@ -940,6 +1079,14 @@ semantic identity
 many repeated behaviors
         ↓
 habit
+
+many successful practice attempts
+        ↓
+procedural competence
+
+many action-outcome pairings
+        ↓
+contingency / controllability belief
 
 many repeated regulatory exposures
         ↓
@@ -961,6 +1108,8 @@ This is simultaneously:
 - a scaling strategy;
 - and an explanation for long-term character development.
 
+It is not a claim that memory, belief, skill, habit, relationship, identity, and physiological adaptation share one update equation or one writable state owner. The Architecture Map's consolidation boundary groups these transitions for causal legibility while each target family retains a separately testable formal contract and exactly one mutation authority.
+
 ### Retention rule
 
 > **Retain historical detail while its individuality remains causally or explanatorily important. Otherwise consolidate its future causal contribution into more compact learned state.**
@@ -971,22 +1120,25 @@ This is simultaneously:
 
 ---
 
-# 15. Social identity and the identity matrix
+# 15. Observer-relative person models and the identity matrix
 
 One of Vivarium's strongest retained concepts is the observer-relative identity model.
 
-The architecture survives even if its original axes do not.
+The identity matrix remains valuable, but it should be treated as one component of a broader **observer-specific Person Model**.
+
+The architecture survives even if its original identity axes do not.
 
 ```text
 TARGET'S EFFECTIVE DISPOSITION
++ TARGET'S CURRENT AFFECT / GOALS / INTENTIONS
         ↓
-TARGET'S EXPRESSION
+TARGET'S BEHAVIOR / EXPRESSION
         ↓
 OBSERVER PERCEIVES SOME OF IT
         ↓
 OBSERVER'S SOCIAL EVIDENCE
         ↓
-OBSERVER'S BELIEF ABOUT TARGET
+OBSERVER'S PERSON MODEL OF TARGET
         ↓
 OBSERVER-SPECIFIC APPRAISAL
         ↓
@@ -995,7 +1147,13 @@ OBSERVER'S FUTURE REASONS
 
 The observer may be wrong.
 
-The observer does not see hidden constitutional parameters.
+The observer does not see hidden constitutional parameters, private goals, true intentions, hidden knowledge, or private affect unless legitimate evidence reveals them.
+
+### 15.1 The identity matrix remains dispositional belief
+
+The identity portion of the Person Model answers:
+
+> **What sort of person do I think this target is?**
 
 A character may appear domineering because of:
 
@@ -1009,11 +1167,58 @@ A character may appear domineering because of:
 
 The observer infers the person from evidence.
 
+### 15.2 Current mental-state inference remains distinct
+
+A Person Model may also contain uncertain beliefs about:
+
+- current affect;
+- current goals or desires;
+- current intention;
+- what the target knows or believes;
+- what the target appears to be trying to cause.
+
+These are not identity traits.
+
+A character may correctly believe:
+
+> “Darius is usually dependable.”
+
+while incorrectly believing:
+
+> “Darius intends to betray me tonight.”
+
+Likewise, an observer may understand a target's current fear while misunderstanding the target's enduring disposition.
+
+The architecture must preserve this distinction.
+
+### 15.3 Theory of mind is bounded
+
+The ideal architecture does not require unlimited recursive belief structures.
+
+Do not assume:
+
+```text
+A thinks
+    B thinks
+        C thinks
+            D thinks ...
+```
+
+Sparse first-order mental-state beliefs should be the reference model.
+
+Bounded second-order beliefs may be added only where a required phenomenon proves them necessary, for example:
+
+```text
+Mina believes Glen thinks she abandoned him.
+```
+
+The same primitive-minimization discipline applies.
+
 ### Social state is directional
 
 A's model of B is not B's model of A.
 
-Relationship state must remain sparse and directional.
+Relationship and Person-Model state must remain sparse and directional.
 
 ### Relationship appraisal is multidimensional
 
@@ -1089,9 +1294,11 @@ Repeated resistance must occur in contexts where authority, autonomy, conformity
 
 Therefore trait recognition consumes **semantic DecisionExpression**, not merely outcome labels or primitive values.
 
+Self-identity may also incorporate beliefs about capability, goals and recurring roles, but those components must remain distinguishable from actual competence and from third-party identity beliefs.
+
 ---
 
-# 17. Decision architecture
+# 17. Decision, cognitive control, goals and action architecture
 
 A Decision is a meaningful choice among live alternatives.
 
@@ -1103,6 +1310,8 @@ The target flow is:
 
 ```text
 motivational and cognitive state
+        ↓
+active workspace + prospective context
         ↓
 Raw Cognitive Signals
         ↓
@@ -1131,9 +1340,319 @@ Therefore:
 
 > **Dice exist at the boundary of the character's current identity, not as a mandatory stage of every Decision.**
 
+The first executable reference architecture must preserve the earned Phase 2.9–2.97 **dice grammar**, not replace it with an opaque random choice:
+
+- independently meaningful Reason Nuclei compile into legible dice expressions;
+- a base die expresses an activated motive's current strength;
+- durable character history or identity may become a standing modifier on a matching reason;
+- current evidence or circumstance may become a situational modifier;
+- modifiers strengthen, weaken, or reshape an existing reason but cannot create semantic motivation from nothing;
+- correlated evidence is consolidated before compilation rather than becoming duplicate dice or modifiers;
+- exact pre-roll option distributions, contest, stake, authorship potential, resolution mode, random address, and rolled result remain traceable;
+- quiet and player-facing rolls are presentations of the same authoritative unresolved-choice state, not separate decision rules.
+
+This historical compiler is **retained reference substrate**: it must be ported into the fresh architecture as the initial arbitration implementation and control. Its particular thresholds, die bands, modifier quantization, and contest equations remain falsifiable, but the implementation may be reduced or replaced only by an explicit experiment and verdict—not by omission during the reset.
+
+The reinforcing identity loop is equally retained:
+
+```text
+unresolved meaningful Decision
+        ↓
+dice expression and resolved intent
+        ↓
+frozen DecisionExpression
+        ↓
+authorship-weighted identity evidence
+        ↓
+durable identity / disposition
+        ↓
+standing modifier on a matching future Reason Nucleus
+        ↓
+shifted future uncertainty boundary
+```
+
+The named trait remains a derived description of that history. It is never an independently authored bonus, and identity feedback must not double-count itself when the new Decision produces further identity evidence.
+
 The exact mathematical definition of confidence remains a CharacterLab research question.
 
 A simple top-two score difference must not be accepted without testing multi-option choices, correlated reasons, uncertainty, strong conflicting motives, censored evidence and significance.
+
+## 17.1 Active cognitive workspace
+
+Not everything the character knows or remembers is simultaneously active.
+
+The reference architecture should preserve a candidate capacity-limited workspace representing information that is currently maintained for ongoing cognition.
+
+Candidate contents include:
+
+- attended percepts;
+- currently relevant goals;
+- retrieved memories;
+- active plans;
+- salient appraisals;
+- social hypotheses;
+- recent instructions;
+- task rules;
+- unresolved intentions.
+
+The workspace should be event-driven rather than continuously simulated at neural fidelity.
+
+CharacterLab should test whether its phenomena require:
+
+- explicit capacity;
+- activation competition;
+- decay/displacement;
+- rehearsal/maintenance;
+- interference;
+- task-switch costs;
+- or whether some of these can be derived from simpler attention and retrieval dynamics.
+
+## 17.2 Cognitive control
+
+Cognitive control is a candidate causal distinction for:
+
+- maintaining a goal despite distraction;
+- inhibiting a habitual or immediately rewarding response;
+- deliberately shifting strategy;
+- suppressing an inappropriate action;
+- reappraising an emotional situation;
+- monitoring whether an action is working;
+- recovering from an error.
+
+Candidate behavior:
+
+```text
+dominant habit
++ immediate reward
+        ↓
+prepotent response
+
+active long-term goal
++ sufficient control
+        ↓
+response inhibited
+        ↓
+alternative action selected
+```
+
+The architecture must permit control effectiveness to change because of:
+
+- fatigue;
+- stress;
+- arousal;
+- intoxication;
+- developmental state;
+- learned self-regulation;
+- task complexity;
+- competing workspace load.
+
+No generic `Willpower` stat should be introduced unless an irreducible residual survives after these mechanisms are tested.
+
+## 17.3 Prospection and goal management
+
+A goal is a represented future condition whose truth matters to the character.
+
+Prospection may include:
+
+- anticipated future states;
+- active goals;
+- intentions;
+- plans / strategies;
+- prospective reminders;
+- estimated future consequences;
+- possible alternate futures.
+
+A goal can outlive any one Decision.
+
+A plan can fail while the goal survives.
+
+A character may switch strategy after feedback.
+
+The architecture should support patterns such as:
+
+```text
+GOAL:
+repair relationship with Glen
+
+PLAN A:
+apologize tonight
+
+        ↓ blocked / fails
+
+GOAL survives
+
+        ↓
+
+PLAN B:
+make amends through later action
+```
+
+CharacterLab should not begin with an unconstrained general-purpose symbolic planner.
+
+The reference implementation may use bounded authored action affordances and deterministic prospective composition.
+
+The seam matters even if its eventual implementation is very small.
+
+## 17.4 Skill and procedural competence
+
+Actual ability to execute an action is a learned state distinct from both episodic memory and self-belief.
+
+Candidate skill state may represent:
+
+- practiced competence;
+- task-specific procedural knowledge;
+- automaticity;
+- precision;
+- error rate;
+- execution speed;
+- transfer/generalization;
+- retention or rust.
+
+The architecture should support:
+
+```text
+ACTUAL COMPETENCE
+≠
+BELIEVED COMPETENCE
+≠
+EXPECTED OUTCOME
+```
+
+Practice may improve competence even when the character does not explicitly remember each practice episode.
+
+Repeated disuse may degrade accessible performance if experiments show the distinction is behaviorally useful.
+
+Habits and skills may interact but must not be assumed identical:
+
+> A habit is a learned tendency to select or initiate a response.
+
+> A skill is learned competence in carrying it out.
+
+## 17.5 Intent, action plan, attempt and execution
+
+The Decision determines chosen intent.
+
+Execution remains a separate causal problem.
+
+Candidate flow:
+
+```text
+CHOSEN INTENT
+        ↓
+ACTION / COMMUNICATION PLAN
+        ↓
+ATTEMPT
+        ↓
+actual skill
++ physiology
++ regulatory state
++ cognitive control
++ environmental affordances
++ external interference
++ scoped execution uncertainty
+        ↓
+EXECUTED OUTCOME
+```
+
+This allows a person to make the same choice twice and receive different outcomes because their body, skill or environment changed.
+
+It also preserves Vivarium's core autonomy distinction when the Observer blocks an attempt.
+
+## 17.6 Outcome evaluation and prediction discrepancy
+
+After an attempted action, the character should be able to compare what they expected against what they legitimately perceived.
+
+Candidate evaluation:
+
+```text
+EXPECTED RESULT
+        ↓
+
+PERCEIVED RESULT
+        ↓
+
+OUTCOME EVALUATION
+├─ better / worse than expected
+├─ surprise magnitude
+├─ action-outcome contingency
+├─ perceived controllability
+├─ perceived causal source
+└─ progress toward goal
+```
+
+This is a general learning seam, not a dopamine simulator.
+
+The same physical outcome can produce different learning depending on what was expected and what cause the character inferred.
+
+Examples:
+
+```text
+"I failed because I lack the skill."
+
+"I failed because the door was locked."
+
+"I failed because the Observer stopped me."
+
+"I failed and I have no idea why."
+
+"Nothing I do changes this."
+```
+
+These beliefs should have different future consequences.
+
+CharacterLab should explicitly test whether repeated low perceived action-outcome contingency can produce reduced persistence or learned helplessness-like behavior without an authored `Helpless` trait.
+
+Likewise, repeated successful control may increase self-efficacy, persistence or strategy confidence without requiring a global Confidence meter.
+
+## 17.7 Private state and communication
+
+Communication is action.
+
+The simulator may know:
+
+```text
+Mina is frightened.
+Mina believes Glen is angry.
+Mina intends to conceal both.
+```
+
+An observer should not receive those facts directly.
+
+A candidate communication flow is:
+
+```text
+private belief / affect / intention
+        ↓
+communicative goal
+        ↓
+selected semantic content / display
+        ↓
+attempted expression
+        ↓
+execution / skill / inhibition
+        ↓
+observable semantic signal
+        ↓
+observer perception
+        ↓
+observer interpretation
+```
+
+The authoritative simulation does not need to generate prose.
+
+An observable communication result may be represented with deterministic semantic content such as:
+
+- proposition asserted;
+- proposition denied;
+- topic referenced;
+- disclosure / concealment strength;
+- emotional display;
+- sincerity or deceptive intent;
+- confidence / uncertainty display;
+- social target;
+- public/private audience.
+
+Natural-language dialogue can later realize those semantics without owning simulation truth.
 
 ---
 
@@ -1158,6 +1677,12 @@ Candidate behavior:
 
 The exact thresholds and representation remain experimental.
 
+Cognitive-control difficulty is also distinct from Decision uncertainty.
+
+A person may know exactly what they want to do while still struggling to inhibit a competing habitual response.
+
+CharacterLab must not force that phenomenon back into Decision confidence merely because both can involve conflict.
+
 ---
 
 # 19. DecisionExpression
@@ -1174,6 +1699,7 @@ A candidate `DecisionExpression` includes sufficient frozen information to deter
 - cost;
 - relevant social/authority context;
 - relevant fear or affect;
+- active goals or commitments where relevant;
 - chosen intent;
 - intervention provenance;
 - and semantic qualifying features.
@@ -1189,6 +1715,22 @@ ChoseNoveltyOverFamiliarity
 ```
 
 These expressions become legitimate autobiographical evidence.
+
+A DecisionExpression records what the **choice** expressed.
+
+It does not claim that execution succeeded.
+
+For example:
+
+```text
+DecisionExpression:
+AttemptedToKeepCommitmentAtCost
+
+Outcome:
+Observer prevented departure
+```
+
+Both facts survive.
 
 ---
 
@@ -1232,6 +1774,10 @@ The desired result is:
 
 > **The dice appear at the boundary of identity, and the history of those dice moves the boundary.**
 
+CharacterLab should separately test whether repeated **execution** uncertainty changes competence without necessarily changing Decision confidence.
+
+A person may stop rolling to decide whether to attempt the thing while still becoming progressively better at actually doing it.
+
 ---
 
 # 21. Commitments, goals and accountability
@@ -1242,28 +1788,41 @@ A commitment is not an activity.
 
 It is durable intent or obligation.
 
+A goal is likewise not an activity.
+
+It is a represented desired future condition.
+
 The character may:
 
-- fulfill it;
+- fulfill a commitment;
 - miss it;
 - relinquish it;
 - renegotiate it;
-- or be prevented from fulfilling it.
+- be prevented from fulfilling it;
+- advance a goal;
+- change strategy toward a goal;
+- defer a goal;
+- abandon a goal;
+- or conclude that a goal is impossible.
 
-The social consequences must preserve the separation:
+Commitment accountability and goal learning must preserve the separation:
 
 ```text
+WHAT I INTENDED
+        ↓
+WHAT I ATTEMPTED
+        ↓
 WHAT HAPPENED
         ↓
 WHY IT ACTUALLY HAPPENED
         ↓
-WHAT AN OBSERVER PERCEIVED
+WHAT I / AN OBSERVER PERCEIVED
         ↓
-WHAT THAT OBSERVER ATTRIBUTED
+WHAT I / THEY ATTRIBUTED
         ↓
-WHAT IT MEANT TO THEM
+WHAT IT MEANT
         ↓
-WHAT THEY LEARNED
+WHAT WAS LEARNED
 ```
 
 Authoritative cause must not bypass observer knowledge.
@@ -1271,6 +1830,10 @@ Authoritative cause must not bypass observer knowledge.
 Routine repeated success should usually consolidate into evidence/background belief rather than generate an unbounded list of named memories.
 
 Salient violations may remain individuated.
+
+Repeated failure should not automatically imply abandonment.
+
+Whether a character persists, changes strategy, loses confidence, or gives up should depend on goal value, perceived controllability, causal attribution, cognitive control, alternatives, identity and history.
 
 ---
 
@@ -1283,15 +1846,22 @@ Where possible, it should perturb the causal substrate.
 For example, an intoxication-like state might alter:
 
 - regulatory dynamics;
+- cognitive-workspace capacity;
 - inhibition;
+- attentional control;
 - perception;
 - memory encoding;
+- memory retrieval;
+- appraisal weighting;
 - motor execution;
+- skilled performance;
 - threat weighting;
 - sleepiness;
 - reward response.
 
-Different characters should then behave differently under the same perturbation because their constitutions, histories, beliefs and current states differ.
+Different characters should then behave differently under the same perturbation because their constitutions, histories, beliefs, goals, skills and current states differ.
+
+A status effect may impair **execution** without changing **intent**, or impair **control** without changing the underlying goal.
 
 This is a CharacterLab proof target.
 
@@ -1302,6 +1872,7 @@ This is a CharacterLab proof target.
 Addiction is a particularly valuable architecture torture test because it may require:
 
 - reward;
+- prediction discrepancy;
 - habituation;
 - tolerance;
 - baseline adaptation;
@@ -1311,9 +1882,13 @@ Addiction is a particularly valuable architecture torture test because it may re
 - expectation;
 - relief learning;
 - habit;
+- cognitive control;
 - inhibition;
+- goal conflict;
+- prospective intention;
 - stress;
 - decision reasoning;
+- action competence;
 - and identity.
 
 A desirable emergent progression is:
@@ -1337,6 +1912,16 @@ and doing it promises relief."
 
 The motive changes over time.
 
+Recovery should also permit a person to:
+
+- still experience craving;
+- maintain a conflicting long-term goal;
+- inhibit a habitual response;
+- avoid learned cues;
+- relapse under control load;
+- reinterpret prior outcomes;
+- and gradually build a different identity.
+
 No `AddictionTendency` scalar should be introduced unless experiments prove an irreducible residual difference remains after the underlying mechanisms are modeled.
 
 ---
@@ -1351,9 +1936,11 @@ The research model should therefore prefer mechanisms compatible with approximat
 
 Continuous processes should advance analytically between meaningful event boundaries where possible.
 
+Active cognition should wake on meaningful triggers rather than simulate continuous inner speech or frame-by-frame thought.
+
 ### 24.2 Sparse social state
 
-Do not materialize full N×N relationship or belief matrices.
+Do not materialize full N×N relationship, identity-belief or mental-state-belief matrices.
 
 Create observer-target state when interaction, history, hearsay, shared context or relevance warrants it.
 
@@ -1385,11 +1972,27 @@ beliefs
 familiarity
 +
 identity
++
+skills / habits / learned control where required
 ```
 
 ### 24.5 Derived state should rebuild
 
 If a value can be deterministically recomputed from authoritative state at acceptable cost, do not duplicate it as independently mutable truth.
+
+### 24.6 Prospection and active cognition must remain bounded
+
+Do not allow every character to maintain an unbounded search tree of imagined futures.
+
+Prospective planning should use:
+
+- bounded horizons;
+- bounded candidate strategies;
+- event-driven reevaluation;
+- semantically relevant affordances;
+- compression of inactive goals.
+
+Likewise, observer-specific Person Models should stay sparse and uncertainty-bearing rather than recursively materializing full simulated minds inside minds.
 
 ---
 
@@ -1403,10 +2006,15 @@ A trace should be able to answer questions such as:
 - What did they fail to perceive?
 - What did they believe?
 - How certain were they?
+- What did they believe another person felt, wanted, intended or knew?
 - What memory was retrieved?
 - Why was it accessible?
+- What was active in the cognitive workspace?
+- What goal or plan was being maintained?
+- What competing response was inhibited or not inhibited?
 - What did the situation mean to them?
 - What affect arose?
+- How did that affect change later attention, retrieval, appraisal or control?
 - What physiological/regulatory state mattered?
 - What motives existed?
 - Which Reasons were independent?
@@ -1415,10 +2023,16 @@ A trace should be able to answer questions such as:
 - Why was the choice settled or unresolved?
 - What random address was used if a roll occurred?
 - What did the chosen intent semantically express?
+- What action or communication plan followed?
+- What skill or competence mattered to execution?
+- What did the character attempt?
 - What actually happened?
-- What did the character learn?
-- What did observers learn?
-- What memory or identity state changed?
+- What did the character perceive as the outcome?
+- What did they expect instead?
+- What causal source did they infer?
+- What did they learn about capability, contingency or controllability?
+- What did observers learn from the behavior or expressed signal?
+- What memory, habit, skill, belief, relationship or identity state changed?
 
 This trace is not necessarily player-facing.
 
@@ -1437,6 +2051,9 @@ A CharacterLab experiment fails the North Star if its success depends upon an un
 "this joke is funny"
 "this action demonstrates courage"
 "this person would probably be stressed"
+"this person probably meant to deceive them"
+"this failure proves they felt helpless"
+"this statement sounds sincere"
 ```
 
 Authored content may provide semantic facts about the world where appropriate.
@@ -1448,6 +2065,9 @@ an action violates Norm X
 an outcome causes Injury Y
 a statement references Entity Z
 an option breaches Commitment C
+an action requires Skill S
+a communication attempts to assert Proposition P
+an environmental barrier prevents Action A
 ```
 
 But character-relative interpretation must be computed from those facts plus character state.
@@ -1468,16 +2088,39 @@ CharacterLab may consume authored semantic primitives such as:
 - locations;
 - action categories;
 - causal outcome tags;
+- action affordances;
+- skill requirements;
 - social roles;
 - norms;
 - commitments;
 - observable properties;
+- communicative propositions / topics;
 - environmental conditions;
 - semantic features.
 
 The research obligation is that once these semantic world facts enter the model, **all character-relative transformations are deterministic**.
 
 An LLM must not be required to bridge one internal layer to another.
+
+A dialogue realization layer may later turn:
+
+```text
+AssertedProposition:
+"I was prevented from leaving."
+
+EmotionalDisplay:
+frustrated
+
+Disclosure:
+high
+
+SincerityIntent:
+truthful
+```
+
+into natural language.
+
+The semantics must already be authoritative before realization.
 
 ---
 
@@ -1497,10 +2140,24 @@ Each experiment should specify:
 8. **Semantic proof** — can the resulting meaning be compiled without manual interpretation?
 9. **Scale implications** — does the mechanism imply pathological storage, polling or dependency breadth?
 10. **Reduction operation** — what is removed, derived, merged, compressed, or substituted relative to the intact reference model?
-11. **Equivalence comparison** — which behavioral, causal, epistemic, semantic, historical, and scaling observations differ from the reference?
+11. **Equivalence comparison** — which behavioral, causal, epistemic, semantic, historical, developmental, action-competence, and scaling observations differ from the reference?
 12. **Verdict** — RETAINED, DERIVED, MERGED, COMPRESSED, RETRACTED, or UNRESOLVED, with the exact corpus on which the verdict rests.
 
 CharacterLab should prefer experiments that can falsify a proposed primitive.
+
+The new cognitive/action seams are subject to the same rule.
+
+CharacterLab must attempt to prove, for example, that:
+
+- explicit workspace capacity can be derived or omitted;
+- cognitive control can be merged into some lower-level process;
+- goal state can be reconstructed from current Reasons;
+- skill can be reduced to memory and current physiology;
+- prediction discrepancy can be replaced by simpler belief updating;
+- a broad Person Model can be reduced back to identity belief;
+- communication intent can be represented as ordinary action state.
+
+If a reduction preserves every required distinction and counterfactual, prefer the reduction.
 
 ---
 
@@ -1528,11 +2185,20 @@ CharacterLab should therefore actively attempt to eliminate candidates such as:
 - generic Trust;
 - generic Fearfulness;
 - generic Empathy;
-- generic Aggression.
+- generic Aggression;
+- Willpower;
+- Confidence;
+- generic Self-Efficacy;
+- generic Planning Ability;
+- generic Social Intelligence.
 
 Some may survive.
 
 All may appear in the overcomplete reference model. None survive into the distilled architecture by default.
+
+The newly added architecture boxes are not exempt.
+
+`Active Cognitive Workspace`, `Cognitive Control`, `Prospection`, `Skill / Procedural Competence`, `Outcome Evaluation`, and `Observer-specific Person Model` are **candidate causal distinctions** until CharacterLab proves whether each must remain independent.
 
 ---
 
@@ -1572,11 +2238,58 @@ Examples include:
 - person who remembers only that they “never really trusted” someone;
 - person who acts warmly while privately disliking someone;
 - person who laughs while embarrassed;
-- person who mistakes nervous laughter for cruelty.
+- person who mistakes nervous laughter for cruelty;
+- highly skilled person who believes they are incompetent;
+- incompetent person who is highly confident;
+- formerly skilled person who has become rusty;
+- person whose competence improves faster than their self-belief;
+- person who knows exactly what they should do but gives in when exhausted;
+- person who habitually begins an action and deliberately stops themself;
+- person who performs a practiced skill automatically but cannot explain how;
+- person who forms an intention for tomorrow and remembers it at the relevant moment;
+- person who values a long-term goal but repeatedly procrastinates;
+- person who changes strategy after one plan repeatedly fails;
+- person who repeatedly fails despite reasonable choices and eventually stops trying;
+- person who experiences the same failures but correctly infers an external barrier and persists;
+- person who repeatedly succeeds despite expecting failure and gradually revises self-belief;
+- angry person who disproportionately retrieves prior insults;
+- frightened person whose attention narrows around threat;
+- person who privately panics while outwardly appearing calm;
+- person who lies convincingly while afraid;
+- person who intends to tell the truth but communicates badly;
+- person who correctly understands someone's enduring personality while misunderstanding their current intention;
+- person who mistakes nervousness for guilt;
+- person whose habitual response persists after its original reward is no longer valuable;
+- person who strongly wants one thing but intentionally performs another because of a maintained long-term goal.
 
 Contradictory archetypes are particularly valuable because they expose collapsed axes.
 
 The architecture succeeds when similar outward behavior can emerge from different causes and similar causes can produce different behavior in different whole characters.
+
+The new cognitive/action torture cases are especially valuable because they distinguish:
+
+```text
+wanting
+from intending
+
+intending
+from controlling
+
+controlling
+from succeeding
+
+believing one can
+from actually being able
+
+choosing
+from executing
+
+private state
+from public expression
+
+failure
+from learned helplessness
+```
 
 ---
 
@@ -1607,37 +2320,58 @@ Do not port TypeScript object graphs merely because CharacterLab used them succe
 
 Port **proven causal contracts**.
 
+The same applies to the newly expanded reference architecture.
+
+Vivarium does not automatically receive permanent subsystems named `WorkingMemory`, `CognitiveControl`, `Prospection`, `Skill`, `PredictionError`, or `TheoryOfMind`.
+
+It receives whatever distinctions CharacterLab proves are required after subtractive testing.
+
 ---
 
 # 32. Definition of architectural success
 
 The character architecture is approaching success when CharacterLab can demonstrate, without an LLM in the authoritative loop, a character who:
 
-1. begins with a distinct constitution;
+1. begins with a distinct persistent constitution and can accommodate developmental change without rewriting constitutional history;
 2. experiences changing physiological and regulatory state;
 3. perceives only part of the world;
 4. forms uncertain beliefs from that evidence;
-5. remembers some experiences and forgets or abstracts others;
-6. recognizes familiar people, places and activities through surviving memory;
-7. experiences changing novelty and familiarity without arbitrary reset timers;
-8. learns expectations from outcomes;
-9. appraises the same event differently from another character;
-10. experiences derived affect such as fear, embarrassment or amusement;
-11. produces multiple competing Reasons for a meaningful choice;
-12. sometimes reaches an obvious choice without randomness;
-13. sometimes remains genuinely conflicted and rolls;
-14. produces a semantic DecisionExpression from that choice;
-15. changes autobiographically because of repeated Expressions;
-16. acquires a recognizable identity without an authored trait flag;
-17. changes where future uncertainty occurs because that identity changed;
-18. forms imperfect beliefs about another character's identity;
-19. changes a relationship because of what they believe happened;
-20. develops routines, boredom, comfort, habits or addiction through ordinary learning dynamics;
-21. retains defining memories while routine history consolidates;
-22. reconstructs old memories from fragmented imprints;
-23. continues behaving coherently after long analytical time advancement;
-24. survives save/load with identical continuation;
-25. and can explain every meaningful transition through a deterministic causal trace.
+5. maintains only a bounded/relevant subset of knowledge, goals and memories in active cognition;
+6. can maintain, inhibit or switch behavior differently under changing control load;
+7. remembers some experiences and forgets or abstracts others;
+8. recognizes familiar people, places and activities through surviving memory;
+9. experiences changing novelty and familiarity without arbitrary reset timers;
+10. learns expectations from outcomes;
+11. distinguishes expected outcome from perceived outcome and can update causal beliefs from their discrepancy;
+12. develops different persistence when repeated failure is attributed to low personal capability, external obstruction or low controllability;
+13. appraises the same event differently from another character;
+14. experiences derived affect such as fear, embarrassment or amusement;
+15. has affect that can alter later salience, retrieval, appraisal or control without directly commanding action;
+16. maintains goals and intentions across time without turning them into permanent current Reasons;
+17. can change strategy while preserving the underlying goal;
+18. produces multiple competing Reasons for a meaningful choice;
+19. sometimes reaches an obvious choice without randomness;
+20. sometimes remains genuinely conflicted and rolls;
+21. can know what it wants yet fail to inhibit a competing habitual or immediately rewarding response;
+22. produces a semantic DecisionExpression from a choice;
+23. preserves chosen intent when attempted execution fails or is externally prevented;
+24. distinguishes actual competence from belief about competence;
+25. can acquire procedural competence through practice without requiring explicit episodic recall of every practice event;
+26. changes autobiographically because of repeated Expressions;
+27. acquires a recognizable identity without an authored trait flag;
+28. changes where future uncertainty occurs because that identity changed;
+29. forms imperfect beliefs about another character's enduring identity;
+30. separately forms imperfect beliefs about another character's current affect, goals, intentions or knowledge;
+31. changes a relationship because of what they believe happened;
+32. can communicate or conceal private state without giving observers omniscient access to it;
+33. allows two observers to interpret the same expressed behavior differently;
+34. develops routines, boredom, comfort, habits or addiction through ordinary learning dynamics;
+35. can preserve a long-term recovery goal while cue-driven habit, withdrawal and control load still create relapse risk;
+36. retains defining memories while routine history consolidates;
+37. reconstructs old memories from fragmented imprints;
+38. continues behaving coherently after long analytical time advancement;
+39. survives save/load with identical continuation;
+40. and can explain every meaningful transition through a deterministic causal trace.
 
 The final proof is not that the character appears human in one scripted scenario.
 
@@ -1649,10 +2383,10 @@ It is that the same compact causal substrate continues producing coherent, diffe
 
 The intended model can be summarized as:
 
-> **A character is an embodied, partially informed, history-bearing autonomous system whose constitution shapes experience, whose experience changes prediction, whose predictions and body create meaning and motivation, whose motivations create reasons, whose unresolved reasons create genuine uncertainty, whose choices become autobiography, and whose autobiography gradually changes who they are.**
+> **A character is an embodied, partially informed, history-bearing autonomous system whose persistent constitution and development shape experience; whose attention, memory and active cognition determine what is available to think about; whose experience changes prediction and models of other people; whose predictions, body and history create appraisal, affect and motivation; whose motivations can become durable goals and immediate reasons; whose cognitive control mediates the struggle between maintained intentions and competing responses; whose unresolved reasons create genuine uncertainty; whose choices create intent but do not guarantee execution; whose skills, body and world determine what an attempt can actually accomplish; whose comparison of expected and perceived outcomes creates new learning; whose private state is only partially expressed to others; and whose choices, attempts, consequences and learned history gradually change who they are.**
 
 And the CharacterLab mandate is:
 
-> **Prove that every seam in that process can be represented deterministically, calculated with explicit mathematics, compiled into semantic meaning, traced causally, and eventually scaled—without requiring an LLM to decide what the character thinks, feels, wants, remembers, means, or chooses.**
+> **Prove that every seam in that process can be represented deterministically, calculated with explicit mathematics, compiled into semantic meaning, traced causally, experimentally simplified, and eventually scaled—without requiring an LLM to decide what the character thinks, feels, wants, remembers, plans, believes about another mind, means, attempts, learns, communicates, or chooses.**
 
 That is the architectural ground truth beneath all subsequent CharacterLab work.

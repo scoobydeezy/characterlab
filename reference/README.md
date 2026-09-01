@@ -10,5 +10,4 @@ Run the preserved test suite from the repository root:
 npm run test:reference
 ```
 
-The original phase briefs and research log remain at the repository root because they are research evidence and hypothesis sources, not implementation dependencies.
-
+The original phase briefs, research log, and implementation README are preserved in this directory because they are research evidence and hypothesis/control sources, not current architecture.
