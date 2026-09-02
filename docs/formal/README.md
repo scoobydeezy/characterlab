@@ -21,8 +21,12 @@ Current foundation:
 - [Event ordering](EVENT_ORDERING.md)
 - [Trace and provenance](TRACE_AND_PROVENANCE.md)
 - [Authored content governance](CONTENT_GOVERNANCE.md)
+- [Truth → observation → permitted evidence](OBSERVATION_AND_EVIDENCE.md)
+- [Event semantic binding and recognition boundary](EVENT_SEMANTIC_BINDING.md)
 - [Formal open-decision register](OPEN_DECISIONS.md)
 - [Campaign 0 conformance vectors](CONFORMANCE_VECTORS.md)
+- [Campaign 1 observation/evidence vectors](CAMPAIGN1_CONFORMANCE_VECTORS.md)
+- [Campaign 1 semantic-binding vectors](CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md)
 - [Seam contract template](SEAM_CONTRACT_TEMPLATE.md)
 - [Vivarium formula intake ledger](FORMULA_INTAKE_LEDGER.md)
 

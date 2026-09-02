@@ -16,7 +16,7 @@ Open decisions are not ordinary TODOs. If a row can affect an authoritative resu
 
 | Decision | Priority | Formal owner | Blocks | Target disposition |
 |---|---|---|---|---|
-| `MATH-006` event-to-measurement semantic compiler | `P0` | observation/interoception seam / Campaign 1 | earliest North-Star epistemic seam and every downstream learner | accepted truth→observation contract passing `PHEN-EPI-001` |
+| `SEM-001` event semantic binding and recognition boundary | `P0` | `semantic-binding/0.1-candidate` / Campaign 1 | general pre-recognition `SemanticExperience`, encoding, memory keys, association referents, person recognition, relationships, and semantic Reasons | accept binding occurrence identity, event/causal role separation, observer-scoped perceptual referents, binding-specific visibility, finite typed perceptual classification, safe provenance/linkability, and recognition attachment after all `CV-SEM-*`/`PHEN-SEM-001` controls pass |
 | `ORD-001` immediate belief timing | `P1` | ordering / belief seam | belief use within the same event | accepted belief-event phase map before belief campaign |
 | `ORD-002` simultaneous multi-character ordering | `P1` | ordering / interaction seam | multi-character fixtures and social observation | accepted interaction ordering before first multi-character fixture |
 | `ORD-005` appraisal-regulation feedback boundary | `P1` | ordering/regulation seam | regulatory campaigns and current-vs-later affect semantics | accepted phase mapping before regulation campaign |
@@ -27,6 +27,7 @@ Open decisions are not ordinary TODOs. If a row can affect an authoritative resu
 | `MATH-002` quadratic coefficient convention | `P2` | signal-field candidate seam | signal-field comparison only | choose polynomial/matrix convention in candidate seam and add equivalence vectors |
 | `MATH-003` quadratic variance distribution assumptions | `P2` | signal-field candidate seam | uncertainty-bearing signal fields | declare distribution/fourth moments or reject closed-form candidate |
 | `MATH-004` covariance validity under quantization | `P1` | belief representation campaign | fixed-point covariance/Kalman candidate | PSD-preserving representation/projection proof before candidate use |
+| `ONT-001` typed semantic ontology and facet inference | `P1` | content/ontology seam | generalized inheritance, facet implication, affordance closure, and shared non-cognitive world querying | accept typed facet/predicate schemas, inference and conflict rules, applicability, versioning, and a proof that character-relative appraisal cannot enter world truth; does not block finite `SEM-001` fixture facets |
 
 ## Resolution record
 
@@ -41,6 +42,16 @@ Closing a row requires:
 - migration/reopen conditions.
 
 The register is updated in the same change that accepts the governing contract. A row is never closed merely because code selected a default.
+
+## Closed Campaign 1 decisions — 2026-09-01
+
+### `MATH-006`
+
+- **Decision:** accept registered bounded state-change channels that compile exact permitted observation intervals from `Before`, `After`, known bounds, and polarity; missingness is a distinct sum type, and only visible provenance slots cross into thin `SemanticExperience`.
+- **Alternatives considered:** `OverflowLeak`, truth-side saturation classification, full provenance copy, missing-as-zero, and always-point measurement. Each is rejected by an exact structural divergence or closure violation.
+- **Domain/failure:** exact bounded scalar changes, deterministic registered missingness, known channel bounds, and point/lower/upper interval evidence. Invalid truth/channel/closure data aborts the whole instant; noisy sensors, uncertain bounds, and learning updates remain outside this contract.
+- **Proof:** `CV-OBS-001..006`, `CV-EPI-001..002`, the paired hidden-Overflow timeline through thin `SemanticExperience` and an immediate consumer, forbidden-field closure, named first divergence, and transactional rollback.
+- **Reopen:** measurement mode, interval vocabulary, channel knowledge, polarity, missingness, visibility/role projection, precision/unit, timing, safe-reference, or hidden-truth influence changes.
 
 ## Closed Campaign 0 decisions — 2026-09-01
 

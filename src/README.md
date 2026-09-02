@@ -20,4 +20,6 @@ No pre-refoundation character-model code is inherited here. Historical source is
 - `trace.ts` implements the committed trace envelope, separate failure-diagnostic encoding, and structural first-divergence reports with causal ancestry.
 - `transition.ts` binds registered seam contracts to the scheduler so reads, patches, allocated emissions, trace, and rollback share one transaction.
 
+`observation/` contains the accepted bounded-measurement Campaign 1 seam under immutable version identifier `observation/0.1-candidate`. `observation.ts` validates exact bounded-effect truth, compiles registered state-change channels into point/lower/upper interval evidence, distinguishes missingness from zero, and supplies a restricted identity-establishing provenance-token control. Its thin experience envelope is not a general event representation. `MATH-006` is closed; `SEM-001` blocks event-binding, perceptual-track/classification, recognition, and later evidence-aware encoding/learning implementation.
+
 Nothing in this directory is psychological implementation. The Campaign 0 substrate contracts and conformance manifest passed on 2026-09-01; psychological seam contracts remain separate future work.

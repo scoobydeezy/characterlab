@@ -167,27 +167,28 @@ describe('CONTENT-001 governed content and registry manifests', () => {
   });
 
   it('publishes the exact aggregate phenomenon-corpus manifest', async () => {
-    const names = ['ADAPT', 'BIO', 'COMMIT', 'DECISION', 'DET', 'EPI', 'LEARN', 'MEM', 'REASON'];
+    const names = ['ADAPT', 'BIO', 'COMMIT', 'DECISION', 'DET', 'EPI', 'LEARN', 'MEM', 'REASON', 'SEM'];
     const entries = names.map((name) => ({
       phenomenonId: typedIdentifier(23010n, text(`PHEN-${name}-001`)),
-      version: '1.0.0-draft',
+      version: name === 'EPI' || name === 'SEM' ? '1.1.0-draft' : '1.0.0-draft',
     }));
     const manifest = await compileCorpusManifest(entries);
     const reordered = await compileCorpusManifest([...entries].reverse());
     expect(manifest.canonicalBytes).toEqual(reordered.canonicalBytes);
     expect(manifest.digest).toEqual(reordered.digest);
     expect(hex(manifest.canonicalBytes)).toBe(
-      '09090aae01010201010be2b301050c5048454e2d42494f2d3030310201050b312e302e302d6472616674' +
+      '090a0aae01010201010be2b301050c5048454e2d42494f2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4445542d3030310201050b312e302e302d6472616674' +
-      '0aae01010201010be2b301050c5048454e2d4550492d3030310201050b312e302e302d6472616674' +
+      '0aae01010201010be2b301050c5048454e2d4550492d3030310201050b312e312e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4d454d2d3030310201050b312e302e302d6472616674' +
+      '0aae01010201010be2b301050c5048454e2d53454d2d3030310201050b312e312e302d6472616674' +
       '0aae01010201010be2b301050e5048454e2d41444150542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050e5048454e2d4c4541524e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d434f4d4d49542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d524541534f4e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b30105115048454e2d4445434953494f4e2d3030310201050b312e302e302d6472616674',
     );
-    expect(hex(manifest.digest)).toBe('0c4f7f69c0496f90f55224e312fb00279f109909f2ec44d9057d0552925d9aca');
+    expect(hex(manifest.digest)).toBe('e1cce742f8e6731fa5ee4dc50207b6f813d5dd19de9e25ba772d6d4f2519651e');
     await expect(compileCorpusManifest([entries[0], entries[0]])).rejects.toThrow(/duplicate PhenomenonId/);
     await expect(compileCorpusManifest([{ ...entries[0], version: '' }])).rejects.toThrow(/version must be nonempty/);
   });

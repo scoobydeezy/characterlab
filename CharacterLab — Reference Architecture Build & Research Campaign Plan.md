@@ -20,7 +20,7 @@ Campaign 3 — prove end-to-end traversability and retained corpus replay
 Campaign 4+ — controlled reduction campaigns chosen by invalidation risk
 ```
 
-Campaign 0 passed its completion gate on 2026-09-01. Campaign 1 is now the next eligible campaign; it remains unentered until its seam contract and `MATH-006` plan are explicitly opened.
+Campaign 0 passed its completion gate on 2026-09-01. Campaign 1 entered on 2026-09-01. Its bounded-measurement seam, immutable identifier `observation/0.1-candidate`, passed all declared vectors and closed `MATH-006` on 2026-09-01. A scope audit then opened `SEM-001`: visibility does not establish recognition, and the restricted token control is not a general event-binding representation. `SEM-001` also preserves typed perceptual classification as distinct from tracking, recognition, and appraisal without attempting to finish the full `ONT-001` world ontology. Campaign 1 remains active at this earlier semantic boundary before interval-aware encoding/learning.
 
 ## 2. Global entry rules
 
@@ -97,11 +97,13 @@ No psychological reduction verdict is produced by Campaign 0.
 
 ## 4. Campaign 1 — First North-Star epistemic seam
 
+**Entry state:** active (entered 2026-09-01). The bounded-measurement scope of [Truth → Observation → Permitted Evidence](docs/formal/OBSERVATION_AND_EVIDENCE.md) was accepted on 2026-09-01 after all declared `CV-OBS-*`/`CV-EPI-*` fixtures passed. [Event Semantic Binding and Recognition Boundary](docs/formal/EVENT_SEMANTIC_BINDING.md) is now the governing candidate for `SEM-001`; interval-aware encoding/learning is blocked until it passes.
+
 **Research question:** What deterministic transformation converts world/body truth into exactly the evidence this character may use?
 
-**Canonical path under study:** world outcome/body state → perception/interoception → permitted evidence → causal-role/evidence classification → `SemanticExperience`.
+**Canonical path under study:** world outcome/body state and typed world semantics → bounded measurement plus binding-specific role/classification observation → perceptual tracking → pre-recognition `SemanticExperience` → recognition hypotheses → later encoding/learning and appraisal.
 
-This is the earliest North-Star seam not yet proven under the refounded architecture.
+Exact bounded measurement is proven. General event truth → binding-specific perceptual evidence → pre-recognition `SemanticExperience` is not. `SEM-001` is therefore the earliest North-Star seam not yet proven under the refounded architecture.
 
 Required ports and controls:
 
@@ -110,10 +112,15 @@ Required ports and controls:
 - `EvidenceKind` and evidence-aware surprise;
 - residual attention and multiplicative salience as controls;
 - retired full-provenance/authoritative-`Applied` `SemanticExperience` shape as a negative epistemic control.
+- historical truth-side event-role provenance and derived causal roles, split so neither truth identity nor hidden causal classification crosses into pre-recognition experience;
+- the current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` projection as a restricted identity-establishing-channel control;
+- truth-identity-copy, referent-keyed binding, slot-wide visibility, linkable opaque handle, and recognition-rewrite negative controls.
+- a finite governed typed-facet vocabulary and independent classification/tracking/recognition interventions;
+- truth-facet-copy, freeform-tag, wrong-typed-facet, and classification-to-pressure negative controls.
 
-Required phenomena: `PHEN-EPI-001`, `PHEN-LEARN-001`, and replay portions of `PHEN-DET-001`.
+Required phenomena: `PHEN-EPI-001`, `PHEN-SEM-001`, `PHEN-LEARN-001`, and replay portions of `PHEN-DET-001`.
 
-Completion requires an accepted observation/interoception seam contract, zero hidden-truth reads, exact trace projection, and a verdict for each compared observation model. It does not require the rest of cognition to be high fidelity.
+Completion requires accepted bounded observation/interoception and event-semantic-binding contracts, zero hidden-truth or linkable-secret reads, exact trace projection, immutable pre-recognition experience, and a verdict for each compared observation model. It does not require the rest of cognition to be high fidelity.
 
 ## 5. Campaign 2 — Thin intact North-Star reference scaffold
 

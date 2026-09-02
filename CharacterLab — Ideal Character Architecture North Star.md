@@ -342,11 +342,27 @@ Incorrect belief is permitted.
 
 Different observers may infer different people from the same target.
 
+Visibility is not recognition. A simulator may know that a visible body is `person.glen` while the observer experiences only an unfamiliar perceptual referent, confidently misidentifies that referent, or recognizes it later. Pre-recognition experience must not silently copy truth identity. Recognition attaches an evidence-bearing hypothesis without rewriting what was originally perceived.
+
 ---
 
 ## 5.2 Knowledge is not appraisal
 
 Knowing that something happened does not determine what it means to the character.
+
+Typed semantic classification is also not appraisal. `Person`, `Metal`, `BluntObject`, `InteriorSpace`, or a registered affordance may describe truth-side or legitimately perceived structure. `Threatening`, `Likeable`, `Relaxing`, `Bad`, or psychologically `Valuable` are character-relative conclusions unless a narrower formal contract proves otherwise. Classification may expand applicability and inference, but it may not directly create psychological pressure.
+
+The legal path is:
+
+```text
+perceived semantic facts
+        ↓
+belief / context / memory / person model
+        ↓
+appraisal
+        ↓
+affect / motive / Reason
+```
 
 ```text
 Knowledge:

@@ -72,6 +72,25 @@ export interface FirstDivergence {
   readonly newCausalAncestry: readonly bigint[];
 }
 
+export interface CanonicalValueDivergence {
+  readonly structuralField: string;
+  readonly oldValue?: CanonicalValue;
+  readonly newValue?: CanonicalValue;
+}
+
+export function findCanonicalValueDivergence(
+  oldValue: CanonicalValue,
+  newValue: CanonicalValue,
+  rootName = 'Value',
+): CanonicalValueDivergence | undefined {
+  const difference = findCanonicalDifference(oldValue, newValue, rootName);
+  return difference && {
+    structuralField: difference.path,
+    oldValue: difference.oldValue && cloneCanonicalValue(difference.oldValue),
+    newValue: difference.newValue && cloneCanonicalValue(difference.newValue),
+  };
+}
+
 export function traceRecordValue(value: TraceRecord): CanonicalValue {
   return requiredRecord(traceSchemas.traceRecord, [
     text(value.traceSchemaVersion),

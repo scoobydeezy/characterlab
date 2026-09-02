@@ -409,6 +409,67 @@ flowchart TB
 
 ```
 
+### 3.2.1 Epistemic zoom: event bindings, perception, and recognition
+
+This is a semantic zoom into the existing `World → Perception → SemanticExperience → Recognition` edges in §3.2, not a second topology. The canonical boxes and ordering remain those in §3.2; exact record schemas and acceptance status belong to the formal seam contracts.
+
+```mermaid
+flowchart LR
+    subgraph Truth[WORLD / TRACE-SIDE TRUTH]
+        Referents[Registered Semantic Referents<br/>person.glen • location.library • object.lead_pipe]
+        SemanticFacts[Typed World Semantic Facts<br/>kind • material • form • affordance]
+        Event[WorldEventTruth]
+        Bindings[EventBindings<br/>binding identity + EventRole + truth referent]
+        TruthCausal[Truth-side Causal Classification]
+        Referents --> SemanticFacts
+        Referents --> Bindings
+        Event --> Bindings
+        Bindings --> TruthCausal
+    end
+
+    subgraph CharacterEvidence[CHARACTER-ACCESSIBLE, PRE-RECOGNITION]
+        Observe[Binding-specific Observation]
+        Track[Perceptual Track<br/>same perceived instance?]
+        Classify[Perceptual Classification Evidence<br/>what kind of thing does it appear to be?]
+        Perceived[PerceivedBindingEvidence<br/>perceptual referent + role evidence<br/>+ permitted observation references]
+        SemExp[SemanticExperience<br/>immutable pre-recognition evidence]
+        Observe --> Track
+        Observe --> Classify
+        Observe --> Perceived
+        Track --> Perceived
+        Perceived --> SemExp
+        Classify --> SemExp
+    end
+
+    subgraph Interpretation[CHARACTER-RELATIVE INTERPRETATION]
+        Recognition[Recognition Hypotheses<br/>perceptual referent → candidate identity]
+        Memory[Memory / Belief / Person Model]
+        SemExp --> Recognition --> Memory
+        Memory -. later evidence / correction .-> Recognition
+    end
+
+    Bindings -->|observable binding facts only| Observe
+    SemanticFacts -->|observable facet evidence only| Observe
+    Trace[Omniscient Causal Trace]
+    Bindings -. complete truth ancestry .-> Trace
+    Perceived -. projected-record ancestry .-> Trace
+    Classify -. classification ancestry .-> Trace
+    Recognition -. hypothesis ancestry .-> Trace
+    TruthCausal -. no hidden causal-role shortcut .-> Observe
+```
+
+The load-bearing distinctions are:
+
+- `EventRole` records semantic participation such as Actor, Companion, Target, Location, or Instrument. `CausalRole` is a separate analytical classification and may not erase event-role structure.
+- A visible entity is not necessarily recognized. Pre-recognition experience uses an observer-scoped perceptual referent rather than silently copying the simulator's truth identity.
+- Perceptual classification, perceptual tracking, and instance recognition are separate. “Person-like,” “the same perceived person,” and “Glen” require distinct evidence and records.
+- Recognition attaches a hypothesis to the perceptual referent. Correct recognition, misrecognition, and later correction do not rewrite the original experience.
+- Each binding occurrence has its own identity, so one referent may occupy several roles without deduplication.
+- Truth-binding provenance remains traversable in the omniscient trace, but truth identifiers or linkable secret handles do not thereby become character evidence.
+- World semantic facts use governed typed facets rather than freeform tags. Only perceptually supported facet evidence crosses into experience; registered truth classification is not itself observation.
+- Semantic classification may expand applicability or later inference, but it cannot directly create appraisal, affect, motive, or a Reason.
+- Human-readable descriptions are deterministic views over typed truth, contemporaneous character-relative, or current-reinterpretation records. Prose is not authoritative event meaning.
+
 ### 3.3 Core interpretation
 
 The architecture should be read as follows:

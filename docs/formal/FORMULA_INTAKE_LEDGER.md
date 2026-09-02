@@ -58,6 +58,8 @@ Vivarium's deterministic sampler retries rejection a finite number of times and 
 
 An exact update equation does not explain how world events become observations, likelihoods, reliability, censoring, or missing evidence. Event→perception→measurement compilation is a separate seam and must be proven independently.
 
+**Accepted disposition:** `observation/0.1-candidate` compiles a registered bounded state-change channel into exact point/lower-bound/upper-bound intervals. Classification uses permitted state change, known bounds, and registered polarity—not hidden `Overflow`. Missing evidence is a separate sum type. All `CV-OBS-*`/`CV-EPI-*`, forbidden-read, rollback, immediate-consumer, record-closure, and prohibited-control first-divergence proofs pass. `MATH-006` closed on 2026-09-01; the candidate-era version identifier remains immutable.
+
 ## Intake statuses
 
 Each formula entry eventually receives one status:

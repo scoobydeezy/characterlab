@@ -23,7 +23,7 @@ The historical implementation's full documentation is preserved at [reference/IM
 
 ## Current status
 
-The conceptual architecture has been reconciled around one canonical topology. Campaign 0 passed on 2026-09-01: identity/encoding, governed content and registries, addressed randomness, analytical time, atomic ordering/save-load, and mutation/structural proof are accepted substrate contracts with passing [Campaign 0 conformance vectors](docs/formal/CONFORMANCE_VECTORS.md). The next eligible seam is world/body truth → perception/interoception → `SemanticExperience`; Campaign 1 remains unentered until its contract and `MATH-006` plan are opened.
+The conceptual architecture has been reconciled around one canonical topology. Campaign 0 passed on 2026-09-01: identity/encoding, governed content and registries, addressed randomness, analytical time, atomic ordering/save-load, and mutation/structural proof are accepted substrate contracts with passing [Campaign 0 conformance vectors](docs/formal/CONFORMANCE_VECTORS.md). Campaign 1 is active. Exact bounded measurement is accepted and `MATH-006` is closed. `SEM-001` is the current P0 boundary: general event bindings and typed perceptual classification must become pre-recognition evidence without copying truth identity or unobserved world facets. Full ontology inheritance and affordance closure remain separately open under `ONT-001`.
 
 ## Commands
 

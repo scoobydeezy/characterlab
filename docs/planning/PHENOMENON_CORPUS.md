@@ -1,10 +1,10 @@
 # Retained Phenomenon Corpus
 
-**CorpusVersion:** `corpus/0.2.0-draft`
+**CorpusVersion:** `corpus/0.4.0-draft`
 
 **CorpusManifestSchema:** `CorpusManifestEntry` type 174, schema version 1
 
-**CorpusManifestDigest:** `0c4f7f69c0496f90f55224e312fb00279f109909f2ec44d9057d0552925d9aca`
+**CorpusManifestDigest:** `e1cce742f8e6731fa5ee4dc50207b6f813d5dd19de9e25ba772d6d4f2519651e`
 
 **Status:** initial populated corpus; fixtures require formal seam contracts before implementation
 
@@ -27,10 +27,11 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 | `PHEN-COMMIT-001` | `1.0.0-draft` | `MEC-020`, `EXP-013` | commitment pressure follows concrete lifecycle identity |
 | `PHEN-DECISION-001` | `1.0.0-draft` | `MEC-015`–`MEC-019`, `EXP-010` | settled versus unresolved authorship and frozen expression |
 | `PHEN-DET-001` | `1.0.0-draft` | `SUB-004`, `SUB-008`, `SUB-009` | exact replay and random-address independence |
-| `PHEN-EPI-001` | `1.0.0-draft` | `EXP-002`, `EXP-008`, `RET-006`, `RET-014` | hidden truth cannot alter character evidence |
+| `PHEN-EPI-001` | `1.1.0-draft` | `EXP-002`, `EXP-008`, `RET-006`, `RET-014` | hidden truth cannot alter character evidence |
 | `PHEN-LEARN-001` | `1.0.0-draft` | `MEC-001`, `MEC-002`, `EXP-002` | censored evidence changes belief only when informative |
 | `PHEN-MEM-001` | `1.0.0-draft` | `MEC-010`, `EXP-006` | recency, retrieval reinforcement, bounded access, and decay |
 | `PHEN-REASON-001` | `1.0.0-draft` | `MEC-012`–`MEC-016`, `EXP-009`, `EXP-014` | semantic reason independence and correlation control |
+| `PHEN-SEM-001` | `1.1.0-draft` | `MEC-004`, `RET-014`, North-Star perception/recognition boundary | event roles and typed classification survive observation without truth leakage |
 
 ---
 
@@ -88,7 +89,7 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 ## `PHEN-EPI-001` — Observational equivalence under hidden Overflow
 
-**Version:** `1.0.0-draft`
+**Version:** `1.1.0-draft`
 
 **Required setup domain:** Two timelines share model, character, prior belief, perceived concepts, attention, and a bounded positive channel at state `19/20`. Timeline A applies potential effect `1/10`; Timeline B applies `4/5`. Both authoritatively apply `1/20`, yielding different hidden Overflow.
 
@@ -98,7 +99,7 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 **Causal counterfactual obligation:** The omniscient trace differs in potential effect and Overflow. A model that reads either hidden field into cognition must produce a detectable forbidden difference.
 
-**Epistemic obligation:** Full `EffectProvenance`, potential effect, capacity, and Overflow remain truth/trace-side. Character evidence contains only the permitted projection and safe provenance references.
+**Epistemic obligation:** Full `EffectProvenance`, potential effect, capacity, and Overflow remain truth/trace-side. Character evidence contains only the permitted projection. The fixture's single source-record reference makes no general claim that stable opaque truth handles are safe across events; `PHEN-SEM-001` tests and forbids unintended linkage.
 
 **Historical/developmental horizon:** One observation plus every same-event learning and encoding consumer.
 
@@ -109,6 +110,32 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 **Applicable seams:** world outcome, interoception, perception, SemanticExperience, surprise, learning evidence, salience.
 
 **Reopen conditions:** a legitimate sensor exposes additional magnitude, a character-accessible hedonic signal is introduced, or permitted evidence distinguishes the timelines.
+
+---
+
+## `PHEN-SEM-001` — Observer-relative event bindings without recognition leakage
+
+**Version:** `1.1.0-draft`
+
+**Required setup domain:** One truth event binds separately identified occurrences for `Action → action.skip_rope`, `Actor → person.mina`, `Companion → person.glen`, `Location → location.library`, and `Instrument → object.lead_pipe`. Governed truth-side semantics classify the pipe as object/metal/blunt and the library as an interior space. Mina, Darius, and Glen observe the same event through different binding-specific affordances. Mina receives action, companion-like person, location-like place, and instrument evidence; Darius receives actor-like person, action, and location but neither Glen's binding nor the instrument; Glen receives actor, action, location, and instrument. Permitted classification evidence varies independently: person-like without identity, interior-space-like without location identity, and object-like/metal-like without object identity. Character records use perceptual referents, not the truth identities listed here. Include one unfamiliar observer, one correct recognition, one confident misrecognition, a later correction, a continuous perceptual track, and an interrupted track.
+
+**Interventions:** Swap only two event roles while retaining the same referents; bind one referent into several roles; change one observer's access to one binding; hold a perceptual track fixed while changing classification evidence; interrupt a track while holding classification fixed; change recognition while holding both fixed; hide one registered world semantic fact from the observer; substitute an unknown/freeform/wrong-typed facet; toggle whether a direct symbolic channel legitimately establishes identity; correct a prior misrecognition; replace observer-safe provenance with a stable opaque truth handle; derive a character causal role once from permitted evidence and once from hidden truth; attempt to emit psychological pressure directly from classification.
+
+**Observable obligation:** Event-role changes remain structurally visible even when the referent set is unchanged. Every binding occurrence survives independently. Each observer receives exactly the permitted binding and typed-classification set. Visible-but-unrecognized entities have stable perceptual referents and no truth referent in pre-recognition experience. Classification, track continuity, and recognition can vary independently. Correct and incorrect recognition attach hypotheses to equal perceptual evidence. Later correction leaves the original experience and contemporaneous hypothesis byte-identical. Event roles and causal roles remain separately inspectable. Missing classification is not false, and classification creates no psychological pressure without the intervening belief/context/appraisal path.
+
+**Causal counterfactual obligation:** Truth-identity copy, truth-facet copy, referent-keyed binding, slot-wide visibility, event-role/causal-role collapse, hidden causal-role derivation, linkable opaque truth handles, freeform tag bags, classification-to-pressure shortcuts, recognition rewrite, and authoritative prose each fail an exact structural comparison, closure rule, or downstream consequence.
+
+**Epistemic obligation:** Simulator `SemanticReferentId`, hidden bindings, unobserved truth-side semantic facts, and truth-side causal classification remain truth/trace-side unless a named observation establishes corresponding character evidence. Perceptual classification uses registered typed facets but does not imply instance identity, track continuity, appraisal, or truth. Omniscient trace can join truth and perceived records, but character cognition cannot traverse or compare a secret source handle. Recognition consumes permitted experience and character state; it never reads truth identity directly.
+
+**Historical/developmental horizon:** One multi-observer event, same-instant pre-recognition experience, one recognition event, one later correction, a save/load boundary, and one later historical rendering or memory consumer.
+
+**Exact comparison rule:** Canonical structural equality for unchanged perceptual evidence across recognition interventions; independent structural equality for held-fixed track/classification/recognition axes; exact set membership for each observer's perceived bindings and classifications; exact inequality under role swaps and multi-binding collapse controls; structural absence of truth referents, unobserved truth facets, and truth handles from character evidence; byte equality of frozen historical records after correction; zero psychological outputs from classification-only input; first divergence at the deliberately changed binding, observation permission, classification, track, hypothesis, or prohibited field.
+
+**Required trace fields:** truth event and binding IDs, truth event roles/referents, truth semantic facet assertions, observation affordance and actual reads, perceived binding/classification IDs, perceptual referent allocation provenance, event-role evidence, typed perceived facet/value, supporting permitted observation IDs, omitted-binding/classification reasons, recognition hypotheses/evidence bases, correction ancestry, causal-role derivation basis, receiving-seam audit, and renderer viewpoint/version.
+
+**Applicable seams:** governed content/referent registries, world events, perception/attention, bounded observation support, `SemanticExperience`, recognition, memory/belief interpretation, trace, rendering, ordering, allocation, and save/load.
+
+**Reopen conditions:** a required phenomenon needs uncertain role or classification distributions, full ontology inheritance/facet implication, cross-modal identity fusion, continuous tracking across interruptions, deception/disguise inference, character-accessible source-link equality, role-dependent identity resolution, or a different placement of recognition relative to `SemanticExperience`.
 
 ---
 

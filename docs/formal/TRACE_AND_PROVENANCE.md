@@ -62,6 +62,7 @@ Each random-draw record includes local `RandomAddress`, effective natural/couple
 7. Human explanations are generated from typed fields; free text is never the sole authoritative provenance.
 8. A declared read domain is not evidence that a value was read; actual reads come from capability projection instrumentation.
 9. Failure diagnostics may quote staged data for debugging but never appear as committed causal ancestors.
+10. Opaque is not synonymous with epistemically safe. Equality, reuse, ordering, and cardinality of an otherwise opaque truth handle can reveal hidden linkage. Character-accessible records may carry only observer-safe references whose complete observable behavior is permitted by the producing seam; unrestricted truth joins remain in omniscient trace.
 
 ## Comparison
 

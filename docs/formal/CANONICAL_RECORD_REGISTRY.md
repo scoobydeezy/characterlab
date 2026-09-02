@@ -96,3 +96,30 @@ The authored form of type 170 additionally permits presentation-only field ID 10
 ## Registration gate
 
 A new authoritative record type must be added here before implementation. Its entry must state a unique type ID, schema version, every permanent field ID, required/optional status, field semantic types, and the migration/evolution rule. Test-only record schemas may use IDs `10000` through `19999`; they are fixture-local and cannot enter authoritative artifacts.
+
+## Observation and permitted-evidence records
+
+| Type ID | Record | Schema version | Fields `(ID: meaning)` |
+|---:|---|---:|---|
+| 200 | `BoundedEffectTruth` | 1 | `1: Before`, `2: PotentialEffect`, `3: Applied`, `4: Overflow`, `5: After`, `6: Minimum`, `7: Maximum`, `8: EffectProvenance`, `9: TruthRecordId` |
+| 201 | `ObservationChannel` | 1 | `1: ObservationChannelId`, `2: ObserverId`, `3: SubjectId`, `4: ModalityId`, `5: UnitId`, `6: PolarityId`, `7: MeasurementModeId`, `8: Precision`, `9: VisibleProvenanceSlotIds`, `10: MissingnessRuleId`, `11: ExperimentalControlIdPresence`, `12: ExperimentalControlId` |
+| 202 | `MissingObservation` | 1 | `1: ObservationId`, `2: ObserverId`, `3: SubjectId`, `4: ObservationChannelId`, `5: OccurredAt`, `6: MissingnessRuleId` |
+| 203 | `PresentObservation` | 1 | `1: ObservationId`, `2: ObserverId`, `3: SubjectId`, `4: ObservationChannelId`, `5: OccurredAt`, `6: MeasurementInterval`, `7: EvidenceKindId`, `8: Precision`, `9: PerceivedConceptTokens`, `10: SafeSourceReferences`, `11: TransformationVersion` |
+| 204 | `MeasurementInterval` | 1 | `1: LowerPresence`, `2: Lower`, `3: UpperPresence`, `4: Upper` |
+| 205 | `PerceivedConceptToken` | 1 | `1: ConceptId`, `2: CausalRoleId`, `3: VisibleProvenanceSlotId` |
+| 207 | `EffectProvenanceTruth` | 1 | `1: Slots` |
+| 208 | `EffectProvenanceSlot` | 1 | `1: SlotId`, `2: ConceptIds` |
+| 209 | `ThinSemanticExperience` | 1 | `1: ExperienceId`, `2: ObserverId`, `3: OccurredAt`, `4: PresentObservations`, `5: TransformationVersion` |
+
+Required false sentinels occupy absent interval/control fields; presence booleans carry meaning. Permanent numeric registries for `observation/0.1-candidate` are:
+
+- evidence kind: `1 Point`, `2 LowerBound`, `3 UpperBound`;
+- polarity: `1 Increase`, `2 Decrease`, `3 Signed`;
+- measurement mode: `1 BoundedStateChange`, `2 ExactEffectControl`;
+- missingness rule: `1 AlwaysPresent`, `2 AlwaysMissing`;
+- causal role: `1 Cause`, `2 Actor`, `3 Target`, `4 Recipient`, `5 Instrument`, `6 AffectedEntity`, `7 Participant`, `8 Location`, `9 Context`, `10 Incidental`;
+- provenance slot priority: `1 SourceAction→Cause`, `2 Cause→Cause`, `3 Actor→Actor`, `4 Target→Target`, `5 Recipient→Recipient`, `6 Instrument→Instrument`, `7 AffectedEntity→AffectedEntity`, `8 Participants→Participant`, `9 Location→Location`, `10 ActiveContext→Context`, `11 IncidentalConcepts→Incidental`.
+
+Future additions append IDs; IDs and priority never reorder. Within the accepted bounded-measurement scope, evidence output contains only types 202–205 plus observer-safe evidence IDs. Types 200, 207, and 208 are truth/trace-side and forbidden in character-accessible projections. Type 205 is a restricted control: `ConceptId` may cross only when the registered channel itself establishes identity, and first-role-wins deduplication is not a general event-binding rule.
+
+`SEM-001` proposes `WorldEventTruth`, `EventBinding`, `PerceivedBindingEvidence`, `PerceptualClassificationEvidence`, pre-recognition `SemanticExperience`, and `RecognitionHypothesis` records plus separate event-role, causal-role, and finite typed semantic-facet registries. No permanent numeric IDs are allocated for those candidates until their shapes, perceptual-referent scope, facet value grammar, phase map, and provenance policy are accepted. `ONT-001` owns any later general ontology/inference records.

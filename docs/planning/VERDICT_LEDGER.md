@@ -85,3 +85,18 @@ No historical result is automatically retracted; none is automatically governing
 - **Verdict:** `DERIVED`
 - **Uncovered region:** each later content kind and psychological receiving seam must define its own domain validator and may not author interpretation directly
 - **Reopen conditions:** field authority, schema/version, reference/cycle policy, validator resolution, canonical registry, or commitment semantics change
+
+## `VER-C1-OBS-001` — Bounded truth-to-permitted-evidence epistemic boundary
+
+- **Date:** 2026-09-01
+- **Candidate/contracts:** accepted immutable identifier `observation/0.1-candidate`; accepted Campaign 0 substrate contracts
+- **Compared controls:** historical authoritative `Applied` point measurement and truth-side saturation classification; `OverflowLeak`, `FullProvenanceCopy`, `MissingAsZero`, and `AlwaysPoint` prohibited models
+- **Declared domain:** exact signed bounded scalar effects; registered deterministic state-change or named omniscient-control channels; known bounds; exact point/lower/upper intervals; registered polarity, precision, missingness, and restricted visible provenance slots. A token may carry a truth-side concept ID only when the channel itself establishes identity; general event observation is excluded.
+- **Evidence:** `CV-OBS-001..006`, `CV-EPI-001..002`; exact `PHEN-EPI-001` pair through capability-limited reads, accepted transactional scheduling/trace, thin `SemanticExperience`, and a same-instant immediate consumer; canonical round trips, forbidden-record closure, invalid-input rollback, and named first divergence for every prohibited control
+- **Preserved properties:** historical `EffectProvenance` remains complete truth/trace input; a restricted registered visible causal-role projection remains a control; exact state change remains observable; missing evidence remains explicit
+- **Changed representation:** clipped state change at a known boundary becomes a bound rather than a falsely exact efficacy value; classification never reads hidden `Overflow`; full provenance cannot enter character evidence; visible-slot tokens and the source-record reference are restricted to the declared control fixture and make no general event-semantic or cross-event-linkability claim
+- **Verdict:** `DERIVED`
+- **Uncovered region:** general `EventBinding`, one referent in multiple roles, binding-specific visibility, typed perceptual classification, classification/tracking/recognition independence, perceptual-referent scope, visibility without recognition, misrecognition/correction, causal-role epistemics, noisy/ambiguous sensing, attention, interval-aware surprise/learning, memory, and belief updates remain separate later contracts. `SEM-001` is the immediate P0 owner; full ontology inference remains under `ONT-001`.
+- **Reopen conditions:** measurement mode, interval vocabulary, polarity, channel-known bounds, missingness, visibility/role projection, precision/unit, timing, safe-reference policy, or any discovered hidden-truth influence
+
+**Scope clarification — 2026-09-01:** Opening `SEM-001` does not retract the bounded-measurement verdict or reopen `MATH-006`. It narrows this verdict's semantic-token claim to identity-establishing channels and prevents the thin measurement envelope from being mistaken for a proven general event representation.

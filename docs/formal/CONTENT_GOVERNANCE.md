@@ -43,7 +43,11 @@ Content may not directly author:
 - an LLM-produced authoritative classification;
 - a scenario-specific exception to formal ordering, quantization, randomness, or mutation rules.
 
-Content may author semantic argument structure—such as actor, target, instrument, affected entity, or commitment referent—when that structure is a fact about the action or world event. A formal perception/interpretation seam determines what a particular character can observe and infer from it.
+Content may author semantic argument structure—such as actor, target, companion, instrument, affected entity, or commitment referent—when that structure is a fact about the action or world event. Each event-role occurrence has its own binding identity; referent identity is not the binding key. A formal perception seam determines which bindings a character can discriminate, and a later recognition/interpretation seam determines which truth-side identities the character may hypothesize. Visibility alone never authorizes copying a truth referent into character evidence.
+
+World semantic classification uses governed typed facet definitions, not unrestricted tags. Each facet definition fixes a stable ID, exact value type/domain, applicability, version, and receiving-seam permissions. Content may describe objective or operational semantics such as kind, material, form, measurable physical properties, or registered affordances. It may not disguise appraisal as ontology by authoring universal `Scary`, `Likeable`, `Relaxing`, `Bad`, or psychologically `Valuable` facts. A facet may make an action or inference applicable; it cannot directly author psychological pressure.
+
+`SEM-001` may register a finite facet vocabulary needed to prove perceptual classification without truth leakage. `ONT-001` owns later inheritance, facet implication, affordance closure, and non-cognitive world consumers. Neither decision authorizes copying truth-side facets into character evidence without observation.
 
 ## Validation and status
 
