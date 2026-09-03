@@ -10,13 +10,21 @@ Events are ordered lexicographically by:
 
 `DueAt` is canonical `SimInstant`. `Phase` is a registered integer. `EventSequence` is a run-global monotonic scheduler tiebreaker assigned at authoritative scheduling time, never collection iteration order. Its allocator state is authoritative, persisted, and restored without minting replacement values.
 
-## Candidate phase registry
+## Accepted phase registry
+
+The registered phase manifest is `ordering-phases/2-candidate`. `SEM-001H` subdivides the two perception/recognition lanes without changing the accepted lexicographic scheduler semantics.
 
 | Phase | Boundary |
 |---:|---|
 | 0 | time/development and embodied materialization |
-| 10 | observation and interoception |
-| 20 | encoding, retrieval, recognition |
+| 10 | current-lane sensory observation/interoception and conditional experience reservation |
+| 11 | current continuant tracking and event-file segmentation |
+| 12 | current perceived bindings and feature evidence |
+| 13 | independent current continuant/event-pattern classification |
+| 14 | freeze/stage current pre-recognition `SemanticExperience` |
+| 15 | current experience-scoped companion causal-role evidence |
+| 20 | freeze current recognition cues and permitted retained-state projection |
+| 21 | current recognition evaluation/resolution |
 | 30 | belief and person-model evidence application |
 | 40 | workspace and control allocation |
 | 50 | appraisal and current affect from evidence valid at this boundary |
@@ -28,12 +36,19 @@ Events are ordered lexicographically by:
 | 90 | arbitration and addressed roll if unresolved |
 | 100 | intent, decision expression, frozen pre-attempt snapshot, plan |
 | 110 | attempt, execution, and world outcome |
-| 120 | observation and encoding of consequences |
-| 130 | outcome evaluation and learning-evidence production |
+| 120 | consequence-lane sensory observation and conditional experience reservation |
+| 121 | consequence continuant tracking and event-file segmentation |
+| 122 | consequence perceived bindings and feature evidence |
+| 123 | independent consequence continuant/event-pattern classification |
+| 124 | freeze/stage consequence pre-recognition `SemanticExperience` |
+| 125 | consequence experience-scoped companion causal-role evidence |
+| 126 | freeze consequence recognition cues and permitted retained-state projection |
+| 127 | consequence recognition evaluation/resolution |
+| 130 | character-relative outcome evaluation and learning-evidence production |
 | 140 | consolidation, adaptation, and persistent-state mutation |
-| 150 | trace commit and quiescence check |
+| 150 | **non-schedulable settlement sentinel:** quiescence, final trace/invariant validation, atomic commit |
 
-These values are a scaffold, not proof that each row should remain one phase. A seam specification may subdivide a phase only by updating the registry version and proving there is no cycle or epistemic leak.
+Unused gaps carry no simulated-duration or semantic magnitude. A seam specification may add or subdivide a phase only by updating the registry version and proving there is no cycle, epistemic leak, or construction-order dependence.
 
 ## Same-instant rules
 
@@ -44,6 +59,9 @@ These values are a scaffold, not proof that each row should remain one phase. A 
 5. Feedback that logically belongs to a later cycle is scheduled at a later `DueAt`, not smuggled backward through phases.
 6. The world outcome enters the authoritative trace at phase 110, but character learning receives only phase-120 observed/encoded consequences.
 7. Phase-52 regulatory changes may affect authoritative body/regulatory state immediately, but their newly derived interoceptive evidence is scheduled at a later `DueAt` or other explicitly defined later observation boundary. It cannot re-enter phase 50 of the current instant.
+8. An observation lane reads only truth/state available strictly before its entry cutoff. Truth first available at phase 10 cannot reopen the current lane; truth first available at phase 120 cannot reopen the consequence lane. Phase-110 outcome truth is eligible for phase-120 observation subject to the observation seam's own permissions.
+9. Phase ordering establishes temporal availability, never a `ReadDomain`. In particular, phase 21 preceding phase 30 does not settle `ORD-001`.
+10. Phase 150 is a registry sentinel, not a domain-event phase. Scheduling or restoring an ordinary event at 150 is invalid.
 
 ## Atomic simulation-instant transaction
 
@@ -75,6 +93,8 @@ If any transition, scheduler guard, patch precondition, authority check, invaria
 
 An instant is quiescent only when no scheduled event or reaction remains at that `DueAt` and every staged patch/event/trace validation has succeeded. External reads, commands, comparisons, and saves observe only quiescent committed state.
 
+No event executes at phase 150. After all schedulable work through phase 140 drains, the scheduler performs the existing final state/invariant/trace validation boundaries and commits atomically. The numeric sentinel makes the barrier explicit in the registry without turning settlement into a psychological or world transition.
+
 `MaxSettlementWorkPerSimulationInstant` is a versioned model parameter. Exceeding it is a typed failure that includes the complete available causal chain; remaining work is never deferred to another instant. Changing the limit changes `ParameterSetDigest`.
 
 ## Save/load boundary
@@ -84,6 +104,7 @@ Saves occur only at quiescent committed boundaries. Mid-transition saves are inv
 - `ModelIdentity` and artifact `SaveSchemaVersion`;
 - clock and complete authoritative state;
 - runtime ID, event ID, and `EventSequence` allocator states;
+- every accepted seam-owned allocator state, including the `SEM-001A` per-observer next-continuant-track and `SEM-001C` next-event-file sequence maps once implemented;
 - complete pending scheduler queue in canonical execution order;
 - every event's ID, `DueAt`, phase, sequence, type ID, canonical payload, dependencies/revisions, and causal parent IDs required by trace semantics;
 - analytical anchors and remainders;
@@ -91,6 +112,8 @@ Saves occur only at quiescent committed boundaries. Mid-transition saves are inv
 - explicit continuing run inputs such as a `ComparisonDrawMap`.
 
 Handlers never serialize. Event type IDs resolve through the model's stable registry. Loading preserves IDs and sequence values exactly; it does not call normal allocation paths. Save immediately before event `E`, load, and continue must be structurally trace-equivalent to uninterrupted continuation.
+
+The `SEM-001A` continuant-track and `SEM-001C` event-file allocators are not run-global tiebreakers: each observer owns independent monotonically increasing sequences. Interleaving another observer's detections or file creation must not renumber or otherwise perturb this observer's perceptual identity spaces. A failed instant restores every affected observer sequence exactly.
 
 ## Open obligations
 

@@ -344,6 +344,16 @@ Different observers may infer different people from the same target.
 
 Visibility is not recognition. A simulator may know that a visible body is `person.glen` while the observer experiences only an unfamiliar perceptual referent, confidently misidentifies that referent, or recognizes it later. Pre-recognition experience must not silently copy truth identity. Recognition attaches an evidence-bearing hypothesis without rewriting what was originally perceived.
 
+Character-accessible is not the same as universally admissible evidence. A record may inform a transition only when that transition's registered typed read domain admits the exact observer-safe record, producing epistemic seam, observer, temporal/window scope, modality, feature, carrier, and applicability. Character provenance is constructed from those explicit permitted references; it is not a filtered query into omniscient truth ancestry. Equality is itself information, so a truth-derived handle does not become safe merely because it is opaque, hashed, encrypted, renamed, or non-dereferenceable.
+
+Evidence availability and evidence quality are separate and proposition-relative. The architecture must not collapse visibility, perceptual certainty, classification certainty, recognition certainty, and appraisal into one binary state or shared scalar. Missing evidence is not negative evidence. Future uncertainty, precision, reliability, or strength belongs in the exact governed mathematics of the proposition that is uncertain. Distance, lighting, occlusion, sensory capability, and attention should normally alter feature-specific sensory evidence rather than directly add arbitrary bonuses to later cognition.
+
+The causal ladder remains observation evidence → perceptual interpretation → recognition → retained character state → appraisal. Later meaning may cite earlier evidence but may not rewrite or back-project itself into that evidence.
+
+Perceptual continuity is not truth identity or kind classification. A perceptual referent is one observer-relative continuant-file—capable of carrying a perceived person, discrete object, place, or spatial region—currently treated by perception as continuous. That tracking judgment may be objectively wrong. Different truth entities may be experienced as one continuous track; one truth entity may be split into several tracks. Later recognition may associate several immutable tracks with the same candidate identity, but truth knowledge and recognition may not silently merge, rewrite, or repair the original perceptual history. Track identifiers are observer-scoped opaque identities, not sources of psychological magnitude.
+
+Perceived occurrence continuity is likewise not truth event identity. A separate observer-relative event-file records which perceived role participations are currently treated as belonging to one occurrence. Perception may merge distinct truth events or split one truth event; one event-file may span several experience envelopes, and one experience may contain several event-files. Continuant-file, event-file, experience, and truth-event identities are not interchangeable, and their opaque ordinals carry no psychological magnitude.
+
 ---
 
 ## 5.2 Knowledge is not appraisal

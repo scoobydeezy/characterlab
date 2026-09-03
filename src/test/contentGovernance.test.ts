@@ -170,7 +170,7 @@ describe('CONTENT-001 governed content and registry manifests', () => {
     const names = ['ADAPT', 'BIO', 'COMMIT', 'DECISION', 'DET', 'EPI', 'LEARN', 'MEM', 'REASON', 'SEM'];
     const entries = names.map((name) => ({
       phenomenonId: typedIdentifier(23010n, text(`PHEN-${name}-001`)),
-      version: name === 'EPI' || name === 'SEM' ? '1.1.0-draft' : '1.0.0-draft',
+      version: name === 'EPI' ? '1.1.0-draft' : name === 'SEM' ? '1.12.0-draft' : '1.0.0-draft',
     }));
     const manifest = await compileCorpusManifest(entries);
     const reordered = await compileCorpusManifest([...entries].reverse());
@@ -181,14 +181,14 @@ describe('CONTENT-001 governed content and registry manifests', () => {
       '0aae01010201010be2b301050c5048454e2d4445542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4550492d3030310201050b312e312e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4d454d2d3030310201050b312e302e302d6472616674' +
-      '0aae01010201010be2b301050c5048454e2d53454d2d3030310201050b312e312e302d6472616674' +
+      '0aae01010201010be2b301050c5048454e2d53454d2d3030310201050c312e31322e302d6472616674' +
       '0aae01010201010be2b301050e5048454e2d41444150542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050e5048454e2d4c4541524e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d434f4d4d49542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d524541534f4e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b30105115048454e2d4445434953494f4e2d3030310201050b312e302e302d6472616674',
     );
-    expect(hex(manifest.digest)).toBe('e1cce742f8e6731fa5ee4dc50207b6f813d5dd19de9e25ba772d6d4f2519651e');
+    expect(hex(manifest.digest)).toBe('6e0a2b9337d1998242147dd8f4bdfe6bea09f18fea7dd4e139c559b6110bc2fe');
     await expect(compileCorpusManifest([entries[0], entries[0]])).rejects.toThrow(/duplicate PhenomenonId/);
     await expect(compileCorpusManifest([{ ...entries[0], version: '' }])).rejects.toThrow(/version must be nonempty/);
   });

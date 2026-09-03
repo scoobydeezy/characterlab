@@ -23,6 +23,8 @@ Current foundation:
 - [Authored content governance](CONTENT_GOVERNANCE.md)
 - [Truth → observation → permitted evidence](OBSERVATION_AND_EVIDENCE.md)
 - [Event semantic binding and recognition boundary](EVENT_SEMANTIC_BINDING.md)
+- [Event semantic canonical schema inventory](EVENT_SEMANTIC_SCHEMA_INVENTORY.md) — accepted `SEM-001I.1`; no numeric allocation yet
+- [Event semantic permanent numeric registry](EVENT_SEMANTIC_NUMERIC_REGISTRY.md) — accepted `SEM-001I.2` permanent allocation
 - [Formal open-decision register](OPEN_DECISIONS.md)
 - [Campaign 0 conformance vectors](CONFORMANCE_VECTORS.md)
 - [Campaign 1 observation/evidence vectors](CAMPAIGN1_CONFORMANCE_VECTORS.md)

@@ -13,8 +13,18 @@ import {
 import { INT64_MAX, simInstant, type SimInstant } from './time';
 
 export const ORDERING_CONTRACT_VERSION = 'ordering/0.2-candidate' as const;
-export const ORDERING_PHASE_REGISTRY_VERSION = 'ordering-phases/1-candidate' as const;
-export const ORDERING_PHASES = [0n, 10n, 20n, 30n, 40n, 50n, 51n, 52n, 60n, 70n, 80n, 90n, 100n, 110n, 120n, 130n, 140n, 150n] as const;
+export const ORDERING_PHASE_REGISTRY_VERSION = 'ordering-phases/2-candidate' as const;
+export const SETTLEMENT_BARRIER_PHASE = 150n as const;
+export const ORDERING_PHASES = [
+  0n,
+  10n, 11n, 12n, 13n, 14n, 15n,
+  20n, 21n,
+  30n, 40n, 50n, 51n, 52n, 60n, 70n, 80n, 90n, 100n, 110n,
+  120n, 121n, 122n, 123n, 124n, 125n, 126n, 127n,
+  130n, 140n,
+  SETTLEMENT_BARRIER_PHASE,
+] as const;
+export const SCHEDULABLE_ORDERING_PHASES = ORDERING_PHASES.filter((phase) => phase !== SETTLEMENT_BARRIER_PHASE);
 
 export const schedulerSchemas = {
   orderingParameters: schema(133n, 'OrderingParameters', ['MaxSettlementWorkPerSimulationInstant']),
@@ -467,6 +477,7 @@ function validateEmission(emission: EventEmission, earliest: SimInstant): void {
   simInstant(emission.dueAt);
   if (emission.dueAt < earliest) fail('CAUSAL_ORDER_VIOLATION', 'event cannot be scheduled before the current authoritative instant');
   if (typeof emission.phase !== 'bigint' || !ORDERING_PHASES.includes(emission.phase as typeof ORDERING_PHASES[number])) fail('INVALID_EVENT', 'event phase is not registered');
+  if (emission.phase === SETTLEMENT_BARRIER_PHASE) fail('INVALID_EVENT', 'the settlement barrier is not a schedulable domain phase');
   canonicalEncode(emission.eventTypeId);
   canonicalEncode(emission.payload);
   canonicalEncode(emission.dependencies);

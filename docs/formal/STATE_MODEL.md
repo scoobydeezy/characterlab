@@ -15,6 +15,16 @@
 | World truth | actual events, attempts, outcomes | Not character state; readable by the character only through observation seams |
 | Trace | authoritative execution/provenance record | Not character knowledge and never a hidden cognitive input |
 
+### Accepted Campaign 1 state obligation — observer-relative perceptual tracks
+
+Amended `SEM-001A` establishes that active perceptual continuant-files are authoritative observer-relative state owned solely by the perception seam. A `PerceptualReferentId` means only that this observer's perception currently treats a perceived person, discrete object, place, spatial region, or other continuant-file as continuous; it asserts neither stable truth identity nor kind. The authoritative state also includes a next-track sequence for each observer. Each sequence advances only on that observer's `NewTrack`, is monotonic, persists across save/load, and never reuses a value. Allocations by another observer cannot alter it.
+
+`PerceptualTrackTransition` is perception-owned provenance for deterministic `NewTrack` or `ContinuesPriorTrack` from observer-side detections and permitted supporting observations. It is not automatically character-accessible semantic evidence. False continuity and false discontinuity remain committed observer-relative history until a separately authorized perceptual mechanism changes future tracking; truth comparison and recognition cannot retroactively repair, merge, or rewrite tracks. Track ordinals are opaque identity and cannot contribute semantic or psychological magnitude.
+
+The record schemas and numeric IDs remain blocked by the parent `SEM-001`. When implemented, the active-track state, per-observer allocator map, transitions, and outputs participate in whole-instant staging, rollback, canonical save/load, and exact replay.
+
+`SEM-001C` establishes a parallel but distinct observer-relative event-file state. `PerceptualEventReferentId` means that this observer's perception currently groups permitted role participation as one continuous occurrence; it does not assert one truth event. Active event-files and each observer's next-event sequence are perception-owned, persisted, never reused, and transactionally restored. False event merges and splits remain committed perceptual history without truth repair. Event-file ordinals are opaque, and neither experience identity nor continuant-file identity may substitute for event-file identity.
+
 ## Mutation authority
 
 Every persistent field has exactly one registered mutation authority. Other seams emit typed evidence or requests; they do not write the field directly.
@@ -114,6 +124,10 @@ Character learning evidence and automatic adaptation input are different typed r
 - **Automatic adaptation input** may contain actual physiological exposure, recovery history, or practice that the character cannot explicitly know. It may feed only the registered regulatory or procedural adaptation authority.
 
 No record crosses between these routes implicitly. If one event legitimately affects both, the observation seam and the truth-side adaptation seam emit separate records with distinct provenance.
+
+Under accepted `SEM-001G`, character-accessible evidence is not a state category or a universal property on a record. A consuming transition may treat an observer-safe record as evidence only when its registered typed `ReadDomain` admits the record's exact reference kind, schema, and producing epistemic seam and all same-observer, time/window, modality, feature, carrier, and applicability checks pass. Character provenance is built from those explicit references; it cannot query the omniscient trace graph. Later interpretations may cite admitted evidence but cannot rewrite or become properties of the source record. Evidence quality remains proposition-local and may later use governed exact mathematics without creating one global visibility or confidence scalar.
+
+Accepted `SEM-001H` makes `ExperienceId` reservation transaction-local until successful instant settlement. No evidence means no reservation. Every surviving reservation corresponds to exactly one immutable envelope frozen at phase 14/124; causal-role and recognition records are separate companions/consumers and never reopen it. Current and consequence envelopes retain distinct identities even when they share continuant/event-file identities. Phase-110 authoritative outcome truth reaches character learning only through the phase-120..127 consequence lane and phase-130 perceived-outcome evaluation; separately governed truth-side adaptation remains a different state route.
 
 ## Snapshot rule
 

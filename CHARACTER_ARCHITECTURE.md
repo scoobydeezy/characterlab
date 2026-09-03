@@ -429,22 +429,27 @@ flowchart LR
 
     subgraph CharacterEvidence[CHARACTER-ACCESSIBLE, PRE-RECOGNITION]
         Observe[Binding-specific Observation]
-        Track[Perceptual Track<br/>same perceived instance?]
+        Track[Perceptual Continuant-File Track<br/>people • objects • places/regions<br/>continuity may be objectively wrong]
+        EventTrack[Perceptual Event-File Track<br/>observer-relative occurrence grouping<br/>may falsely merge or split]
         Classify[Perceptual Classification Evidence<br/>what kind of thing does it appear to be?]
-        Perceived[PerceivedBindingEvidence<br/>perceptual referent + role evidence<br/>+ permitted observation references]
-        SemExp[SemanticExperience<br/>immutable pre-recognition evidence]
+        Perceived[PerceivedBindingEvidence<br/>event-file + continuant-file + role evidence<br/>+ permitted observation references]
+        SemExp[SemanticExperience<br/>immutable pre-recognition envelope<br/>one or several event-files]
         Observe --> Track
+        Observe --> EventTrack
         Observe --> Classify
         Observe --> Perceived
         Track --> Perceived
+        EventTrack --> Perceived
         Perceived --> SemExp
         Classify --> SemExp
     end
 
     subgraph Interpretation[CHARACTER-RELATIVE INTERPRETATION]
         Recognition[Recognition Hypotheses<br/>perceptual referent → candidate identity]
+        CausalRole[Character-relative CausalRoleEvidence<br/>analytical role from admitted observer evidence]
         Memory[Memory / Belief / Person Model]
         SemExp --> Recognition --> Memory
+        SemExp --> CausalRole --> Memory
         Memory -. later evidence / correction .-> Recognition
     end
 
@@ -460,12 +465,20 @@ flowchart LR
 
 The load-bearing distinctions are:
 
-- `EventRole` records semantic participation such as Actor, Companion, Target, Location, or Instrument. `CausalRole` is a separate analytical classification and may not erase event-role structure.
-- A visible entity is not necessarily recognized. Pre-recognition experience uses an observer-scoped perceptual referent rather than silently copying the simulator's truth identity.
+- `EventRole` records governed semantic participation such as Actor, Companion, Target, Beneficiary, Location, or Instrument. Generic `Context` is not an initial role; new relations require exact governed role definitions. `CausalRole` is a separate analytical classification and may not erase event-role structure.
+- A visible entity is not necessarily recognized. Pre-recognition experience uses an observer-scoped perceptual referent rather than silently copying the simulator's truth identity. Each referent identifies one observer-relative continuant-file currently treated as continuous—a perceived person, discrete object, place, or spatial region—not an objectively continuous truth entity or a classification of its kind.
 - Perceptual classification, perceptual tracking, and instance recognition are separate. “Person-like,” “the same perceived person,” and “Glen” require distinct evidence and records.
-- Recognition attaches a hypothesis to the perceptual referent. Correct recognition, misrecognition, and later correction do not rewrite the original experience.
+- Tracking may produce false continuity across different truth entities or false discontinuity across one truth entity. Truth does not automatically repair either error. Allocation is monotonic and persisted independently per observer; its ordinal is opaque identity, never psychological magnitude.
+- Perceived occurrences have their own observer-relative event-file identities. An event-file groups the continuant-file role bindings treated as one occurrence, may falsely merge or split truth events, may span several experience envelopes, and is not interchangeable with truth event, continuant-file, or experience identity. Truth `Action` cannot be copied across or represented by pretending a continuant-file is the action.
+- Continuant appearance classification uses independent finite predicates and exact observer-side feature evidence. Missing classification is unresolved; explicit false requires negative feature evidence. Each model has one authoritative rule per facet, and classification enters only through pre-recognition experience assembly—it cannot directly assert identity or create psychology.
+- Recognition attaches a hypothesis to the perceptual referent. Correct recognition, misrecognition, and later correction do not rewrite the original experience or merge perceptual tracks; several tracks may separately point to the same recognition candidate.
 - Each binding occurrence has its own identity, so one referent may occupy several roles without deduplication.
+- Visibility of a binding does not automatically reveal its truth-side role. Permitted observation may preserve it, coarsen an involved-entity role to Participant, leave it unresolved, or omit it.
 - Truth-binding provenance remains traversable in the omniscient trace, but truth identifiers or linkable secret handles do not thereby become character evidence.
+- Character-accessible does not mean universally admissible evidence. A consuming transition may read a record as evidence only through an explicit typed `ReadDomain` admitting that exact observer-safe schema, producing epistemic seam, observer, time/window, modality, feature scope, and carrier. Semantic carrier/envelope IDs provide co-reference or scope; they are not themselves proof.
+- Character provenance and omniscient provenance are separate graphs. Character runtime may follow only explicit admitted observer-safe references and has no generic source, parent, trace-back, or common-ancestor query into truth ancestry. Equality is information: hashing, encrypting, renaming, or otherwise obscuring a truth handle does not make it safe.
+- `CausalRoleEvidence` is a character-relative analytical interpretation derived from admitted evidence. Zero or several roles may coexist, and none rewrites `EventRoleEvidence`. The legacy one-winning-role concept token remains a restricted comparison control.
+- Evidence availability and evidence quality are distinct and proposition-local. Observation is observer/channel/modality/feature-relative rather than one global visible/hidden bit; missing evidence is not negative evidence. Future intervals, precision, bounded uncertainty, reliability, feature strength, or recognition confidence require exact mathematics in their owning evidence schemas rather than one shared confidence scalar.
 - World semantic facts use governed typed facets rather than freeform tags. Only perceptually supported facet evidence crosses into experience; registered truth classification is not itself observation.
 - Semantic classification may expand applicability or later inference, but it cannot directly create appraisal, affect, motive, or a Reason.
 - Human-readable descriptions are deterministic views over typed truth, contemporaneous character-relative, or current-reinterpretation records. Prose is not authoritative event meaning.
@@ -513,6 +526,24 @@ Unknown is not neutral.
 An observed event is evidence from which belief may update.
 
 The same evidence can update two observers differently because of prior belief, uncertainty, source trust, attention, or interpretation.
+
+A record is admissible evidence for a transition only when it is character-accessible, provenance-safe, and explicitly included in that transition's registered typed `ReadDomain`. Character accessibility is therefore not a universal license to read or reinterpret the record. Later recognition, belief, relationship, or appraisal may cite its permitted sources but may not rewrite those sources or back-project later meaning into them.
+
+The architecture preserves the complete ladder:
+
+```text
+observation evidence
+        ↓
+perceptual feature / classification evidence
+        ↓
+recognition resolution
+        ↓
+retained character state
+        ↓
+appraisal
+```
+
+Physical conditions such as distance, lighting, occlusion, sensory capability, and attention normally change feature-specific evidence availability or quality. They do not directly manufacture a generic recognition bonus. A fully unavailable channel produces no applicable evidence, not weak negative evidence; partial access may support coarse features while withholding identity-discriminating ones.
 
 ### 4.3 Belief is not appraisal
 
@@ -1583,7 +1614,7 @@ The executive graph is not an execution order.
 
 Feedback loops must be broken into named phases.
 
-The following is an ideal reference ordering candidate, not a requirement that every event execute every phase.
+The following uses the accepted `SEM-001H` two-lane ordering scaffold. It does not require every event to execute every phase, and temporal precedence never grants a read capability by itself.
 
 ```mermaid
 sequenceDiagram
@@ -1605,13 +1636,14 @@ sequenceDiagram
     participant C as Consolidation/Adaptation
 
     Note over PR: Analytically advance relevant embodied state to event time
-    W->>PE: Observable world event / evidence
-    PR->>PE: Legitimate interoceptive evidence
-    PE->>MR: SemanticExperience encoding
-    MR->>MR: Retrieve bounded memory candidates and derive recognition
+    W->>PE: Phase 10 current-lane observable world evidence
+    PR->>PE: Phase 10 legitimate interoceptive evidence
+    Note over PE: Phases 11-14 track, bind, classify, then freeze SemanticExperience
+    PE->>MR: Phase 20 frozen recognition input
+    MR->>MR: Phase 21 evaluate recognition
     MR->>PM: Recollection / familiarity evidence
     PE->>PM: Current evidence
-    PM->>PM: Update eligible beliefs/person models
+    PM->>PM: Phase 30 eligible belief/person updates; ORD-001 governs same-instant recognition use
     PM->>AC: Relevant beliefs / inferred mental states
     GP->>AC: Active goals / prospective reminders
     AC->>AP: Maintained context + control state
@@ -1642,19 +1674,23 @@ sequenceDiagram
     I->>I: Freeze pre-attempt expectations/beliefs/goals and DecisionExpression
     I->>I: Build action/communication plan
     I->>X: Attempt
-    X->>W: Executed consequences
-    W->>PE: Observable consequences only
+    X->>W: Phase 110 executed authoritative consequences
+    W->>PE: Phase 120 consequence-lane observable evidence only
+    Note over PE,MR: Phases 121-127 track, bind, classify, freeze experience/input, then recognize
     Note over W,L: Authoritative outcome/cause enters omniscient trace, never character evaluation directly
-    PE->>L: Attempt-linked perceived outcome evidence
+    PE->>L: Phase 130 attempt-linked perceived outcome evidence
     I->>L: Frozen pre-attempt snapshot / expression
     L->>L: Evaluate discrepancy, contingency, controllability, cause
-    L->>C: Typed learning evidence with causal provenance
+    L->>C: Phase 140 typed learning evidence with causal provenance
     C->>MR: Memory / association / retention updates
     C->>PM: Queue consolidated evidence through the registered belief/person-model mutation authority
     C->>GP: Goal / strategy updates
     C->>AC: Learned control / strategy evidence where relevant
     C->>C: Skill / habit / value / relationship / identity / disposition updates through named authorities
+    Note over W,C: Settlement sentinel 150 is non-schedulable; quiescence and validation precede atomic commit
 ```
+
+Each perception lane has a strict truth-availability cutoff. The current lane can inspect only state/truth available before phase 10. The consequence lane can inspect the phase-110 outcome and other state available before phase 120. Later same-instant truth cannot reopen an earlier lane. `ExperienceId` is reserved only when the lane will emit character evidence, and every successful reservation must produce exactly one frozen envelope. Phase-15/125 causal-role evidence is a companion record rather than an envelope field. Phase-20/126 recognition inputs are immutable snapshots consumed at 21/127.
 
 ### 17.1 Event-driven rather than mandatory full-cycle cognition
 
