@@ -1,3 +1,4 @@
+import type { PerceptualReferentId } from './perceptualContinuantFiles';
 export const EVENT_BINDING_CONTRACT_VERSION = 'semantic-binding/0.1-candidate#SEM-001B' as const;
 
 export const EventRoleId = {
@@ -228,7 +229,8 @@ export type EventRoleEvidence =
   | { readonly kind: 'unresolved' };
 
 export interface PerceivedRoleProjection {
-  readonly perceptualReferentId: string;
+  /** Type-212 observer-relative continuant-file identity, never a symbolic handle. */
+  readonly perceptualReferentId: PerceptualReferentId;
   readonly eventRoleEvidence: EventRoleEvidence;
 }
 
@@ -244,10 +246,13 @@ const PARTICIPANT_COARSENABLE = new Set<EventRoleId>([
 
 export function projectEventRoleEvidence(
   binding: EventBinding,
-  perceptualReferentId: string,
+  perceptualReferentId: PerceptualReferentId,
   permittedObservation: PermittedRoleObservation,
 ): PerceivedRoleProjection | undefined {
-  if (!perceptualReferentId) fail('INVALID_REFERENT', 'perceptualReferentId must be nonempty');
+  if (!perceptualReferentId?.observerId || typeof perceptualReferentId.observerTrackSequence !== 'bigint'
+    || perceptualReferentId.observerTrackSequence < 0n) {
+    fail('INVALID_REFERENT', 'perceptualReferentId must be a well-formed observer-relative continuant-file identity');
+  }
   switch (permittedObservation.kind) {
     case 'omit': return undefined;
     case 'unresolved': return Object.freeze({ perceptualReferentId, eventRoleEvidence: Object.freeze({ kind: 'unresolved' }) });

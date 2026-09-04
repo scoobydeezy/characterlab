@@ -69,13 +69,13 @@ const binding = (perceivedBindingId: bigint, eventRoleId: EventRoleId): Perceive
   perceptualEventReferentId: eventFile,
   perceptualReferentId: track,
   eventRoleEvidence: { kind: 'exact', eventRoleId },
-  supportingObservationIds: [{ observerId, observationId: `observation/binding/${perceivedBindingId}` }],
+  supportingObservationIds: [{ observerId, observationId: 14900n }],
   occurredAt: 10n,
   transformationVersion: version,
 });
 
 const experience = (bindings: readonly PerceivedBindingEvidence[]): PreRecognitionSemanticExperience => ({
-  experienceId: 'experience/sem-001g',
+  experienceId: 7300n,
   observerId,
   occurredAt: 10n,
   perceptualEventReferentIds: [eventFile],
@@ -91,7 +91,7 @@ const bindingOccurrence = (value: PerceivedBindingEvidence): ObserverSafeEvidenc
   {
     recordSchemaVersion: 'perceived-binding/0.1-candidate',
     scope: {
-      experienceId: 'experience/sem-001g',
+      experienceId: 7300n,
       carrier: { kind: 'continuant-in-event', perceptualEventReferentId: eventFile, perceptualReferentId: track },
     },
   },
@@ -117,11 +117,11 @@ const causalModel = () => compileCausalRoleModel('model/causal-role-fixture', [I
 
 describe('SEM-001G character-accessible provenance and admissibility conformance', () => {
   it('CV-SEM-071 uses a closed evidence-reference union and keeps scopes/referents out of proof identity', () => {
-    const ref: CharacterEvidenceRef = { kind: 'observation', observationId: 'observation/1' };
+    const ref: CharacterEvidenceRef = { kind: 'observation', observationId: 14000n };
     expect(resolveAdmissibleEvidenceReference(ref, index(occurrence(ref)), domain(), { observerId, occurredAt: 10n })).toMatchObject({ ref });
     for (const forged of [
       { kind: 'perceptual-referent', perceptualReferentId: track },
-      { kind: 'experience', experienceId: 'experience/sem-001g' },
+      { kind: 'experience', experienceId: 7300n },
       { kind: 'generic-evidence', evidenceId: 'anything' },
     ]) {
       expect(() => resolveAdmissibleEvidenceReference(forged as never, [], domain(), { observerId, occurredAt: 10n }))
@@ -130,7 +130,7 @@ describe('SEM-001G character-accessible provenance and admissibility conformance
   });
 
   it('CV-SEM-072 admits an exact audited schema/seam and rejects truth handles even when opaque or hashed', () => {
-    const ref: CharacterEvidenceRef = { kind: 'observation', observationId: 'observation/1' };
+    const ref: CharacterEvidenceRef = { kind: 'observation', observationId: 14000n };
     const safe = occurrence(ref);
     expect(() => resolveAdmissibleEvidenceReference(ref, [safe], domain(), { observerId, occurredAt: 10n })).not.toThrow();
     expect(() => resolveAdmissibleEvidenceReference(ref, [safe], domain([], {
@@ -144,11 +144,11 @@ describe('SEM-001G character-accessible provenance and admissibility conformance
   });
 
   it('CV-SEM-073 makes evidence admissibility consumer-, observer-, window-, modality-, feature-, and carrier-relative', () => {
-    const ref: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 'feature/face/1' };
+    const ref: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 17002n };
     const visualFace = occurrence(ref, {
       recordSchemaVersion: 'continuant-feature/0.1-candidate',
       scope: {
-        experienceId: 'experience/sem-001g', windowId: 'window/1', modalityId: 'modality/visual',
+        experienceId: 7300n, windowId: 'window/1', modalityId: 'modality/visual',
         featureScopeId: 'feature-scope/face', carrier: { kind: 'continuant', perceptualReferentId: track },
       },
     });
@@ -168,8 +168,8 @@ describe('SEM-001G character-accessible provenance and admissibility conformance
   });
 
   it('CV-SEM-074 permits explicit perceptual co-reference but creates no hidden equality across false discontinuity', () => {
-    const firstRef: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 'feature/body/1' };
-    const laterRef: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 'feature/body/2' };
+    const firstRef: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 17000n };
+    const laterRef: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 17001n };
     const onTrack = (ref: CharacterEvidenceRef, carrierTrack: PerceptualReferentId) => occurrence(ref, {
       recordSchemaVersion: 'continuant-feature/0.1-candidate',
       scope: { carrier: { kind: 'continuant', perceptualReferentId: carrierTrack } },
@@ -184,12 +184,12 @@ describe('SEM-001G character-accessible provenance and admissibility conformance
   });
 
   it('CV-SEM-075 exposes explicitly shared observer evidence but never shared hidden ancestry', () => {
-    const shared: CharacterEvidenceRef = { kind: 'observation', observationId: 'observation/shared' };
+    const shared: CharacterEvidenceRef = { kind: 'observation', observationId: 14002n };
     const records = [occurrence(shared)];
     const first = resolveAdmissibleEvidenceReference(shared, records, domain(), { observerId, occurredAt: 10n });
     const second = resolveAdmissibleEvidenceReference(shared, records, domain(), { observerId, occurredAt: 20n });
     expect(characterEvidenceRefKey(first.ref)).toBe(characterEvidenceRefKey(second.ref));
-    const hiddenCommonSource = { ...occurrence({ kind: 'observation', observationId: 'observation/a' }), sourceEntityHash: 'same-secret' } as ObserverSafeEvidenceOccurrence;
+    const hiddenCommonSource = { ...occurrence({ kind: 'observation', observationId: 14001n }), sourceEntityHash: 'same-secret' } as ObserverSafeEvidenceOccurrence;
     expect(() => resolveAdmissibleEvidenceReference(hiddenCommonSource.ref, [hiddenCommonSource], domain(), { observerId, occurredAt: 10n }))
       .toThrowError(expect.objectContaining({ code: 'FORBIDDEN_TRUTH_LINKAGE' }));
   });
@@ -208,10 +208,10 @@ describe('SEM-001G character-accessible provenance and admissibility conformance
   it('CV-SEM-077 preserves missing versus explicit evidence and permits future exact quality schemas without generic confidence', () => {
     const read = domain(['continuant-feature']);
     expect(resolveAdmissibleEvidenceReferences([], [], read, { observerId, occurredAt: 10n })).toEqual([]);
-    const explicitFalse: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 'feature/face/explicit-false' };
+    const explicitFalse: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 17004n };
     expect(resolveAdmissibleEvidenceReferences([explicitFalse], [occurrence(explicitFalse)], read, { observerId, occurredAt: 10n })).toHaveLength(1);
 
-    const bounded: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 'feature/face/bounded-quality' };
+    const bounded: CharacterEvidenceRef = { kind: 'continuant-feature', featureObservationId: 17003n };
     const boundedRecord = occurrence(bounded, { recordSchemaVersion: 'continuant-feature/0.2-bounded-interval' });
     const boundedRead = domain([], { permittedEvidenceSchemas: [schema('continuant-feature', 'continuant-feature/0.2-bounded-interval', version)] });
     expect(resolveAdmissibleEvidenceReference(bounded, [boundedRecord], boundedRead, { observerId, occurredAt: 10n })).not.toHaveProperty('confidence');

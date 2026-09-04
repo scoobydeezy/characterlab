@@ -44,6 +44,62 @@ Every persistent field has exactly one registered mutation authority. Other seam
 
 “Proposed” is not permission to implement. The seam ledger must replace each unresolved row with a versioned contract before code writes that state.
 
+### `TRC-001`/`TRC-002` allocation addendum — `MutationAuthorityId` (`mutation-authority/0.1-candidate`)
+
+Campaign 0 accepted "exactly one mutation authority per writable leaf" as a general substrate
+invariant but allocated no identity namespace for it. Namespace `1025 MutationAuthorityId` is that
+missing allocation, appended after the semantic/model maximum `1024 UnionVariantDefinitionId`;
+`1025..1029` held no accepted allocation, so nothing is renumbered or reused. Candidate-era hole
+`1004` remains genuinely available and is not backfilled.
+
+A `MutationAuthorityId` is a governed semantic/model identity, not a run occurrence. It names an
+executable ownership role, is committed by registry/model identity, and is stable across every run
+of a model. Every state family — perception today; belief, memory, regulation, identity, habits,
+skills and relationships later — draws from this one global namespace. No seam defines its own
+authority identity family.
+
+An authority is named for the state family whose writes it governs, never for today's only
+producer. Initial-state construction is the origin of a starting state, not the enduring semantic
+owner of what that state means; where a bootstrap writer needs distinguishing, keep that
+distinction infrastructural.
+
+One authority may own several tightly related leaves. The invariant is exactly one authority per
+writable leaf, not a unique authority per leaf.
+
+Removal permission and admissible leaf values are properties of the registered writable leaf
+family, not of the authority, so one authority may legitimately own both a non-removable counter
+and a removable membership marker without contradiction.
+
+Record types 152–155 encode the committable definition. A leaf's admissible values are declared by
+a closed grammar tag — `1 UnsignedCounter`, `2 MembershipMarker`, `3 CanonicalRecord(RecordTypeId)`
+— rather than an anonymous predicate, so the executable validator is derived from committed
+registry data and cannot drift from it. Authority identity, each owned `StatePathPattern`, each
+leaf's removal permission, and each leaf's value grammar all contribute to the registry manifest
+digest; authorities and leaves encode as canonical sets, so declaration order does not. Changing
+ownership, removal permission, or value admissibility therefore changes `RegistryIdentity` and
+`ModelIdentity`, or fails registry construction. Executable proof is `CV-OWN-002` in
+`src/test/mutationAuthorityIdentity.test.ts`.
+
+#### First-divergence ownership across validation layers
+
+When several invariants would reject the same malformed model, the earliest deterministic
+structural validation boundary owns first divergence; later-layer invariants remain independently
+tested. Compiled writable-leaf construction therefore reports `INVALID_PATH` ("writable leaf
+declarations overlap") when two authority definitions imply the same leaf, rather than deferring to
+the constructed registry's `OWNERSHIP_OVERLAP`. Both invariants are proved separately — a compiled
+model cannot contain overlapping writable leaves, and a `StateAuthorityRegistry` cannot contain
+overlapping owners. Execution is never allowed to continue past an earlier structural error merely
+to obtain a later diagnostic label.
+
+A divergence must also name the construct it diverged on. A seam whose exact-key validation reports
+one construct's failure code for every record it validates satisfies "fails closed" but not "reports
+exact first divergence": the refusal is real and the diagnosis is wrong. The perceptual continuant-
+file and event-file seams therefore parameterise their forbidden-field code by the construct under
+validation, so a malformed perceived binding reports `INVALID_PERCEIVED_BINDING`, an experience
+reports `INVALID_EXPERIENCE`, and an end request reports its own end code. A truth-shaped field
+remains reported as `FORBIDDEN_TRUTH_FIELD` regardless of construct, because truth leakage is the
+more specific divergence.
+
 ## 0E — Transition, mutation-authority, and structural-proof substrate
 
 ### Canonical state paths

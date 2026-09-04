@@ -39,7 +39,7 @@ const initialModel = () => compileRecognitionModel(
 );
 
 const experience = (
-  experienceId = 'experience/recognition-1',
+  experienceId = 8601n,
   occurredAt = 10n,
   referentId = track,
 ): PreRecognitionSemanticExperience => {
@@ -48,7 +48,7 @@ const experience = (
     perceptualEventReferentId: eventFile,
     perceptualReferentId: referentId,
     eventRoleEvidence: { kind: 'exact', eventRoleId: EventRoleId.Participant },
-    supportingObservationIds: [{ observerId, observationId: `observation/${experienceId}` }],
+    supportingObservationIds: [{ observerId, observationId: 27900n }],
     occurredAt,
     transformationVersion: version,
   }], 40n).bindings;
@@ -56,7 +56,7 @@ const experience = (
     experienceId, observerId, occurredAt,
     perceptualEventReferentIds: [eventFile], perceivedBindings: bindings,
     perceptualClassifications: [], perceptualEventClassifications: [],
-    supportingObservationIds: [{ observerId, observationId: `observation/${experienceId}` }],
+    supportingObservationIds: [{ observerId, observationId: 27900n }],
     transformationVersion: version,
   });
 };
@@ -81,7 +81,7 @@ const cue = (
   ordinal: number,
   overrides: Partial<PermittedRecognitionCueEvidence> = {},
 ): PermittedRecognitionCueEvidence => ({
-  recognitionCueEvidenceId: `recognition-cue/${ordinal.toString().padStart(2, '0')}`,
+  recognitionCueEvidenceId: BigInt(ordinal),
   experienceId: exp.experienceId,
   observerId,
   perceptualReferentId: track,
@@ -107,7 +107,7 @@ const request = (
   perceptualReferentId: track,
   candidateCatalog: catalog(),
   identitySymbolMappings: [],
-  cueEvidence: [...cues].sort((a, b) => a.recognitionCueEvidenceId.localeCompare(b.recognitionCueEvidenceId)),
+  cueEvidence: [...cues].sort((a, b) => a.recognitionCueEvidenceId < b.recognitionCueEvidenceId ? -1 : a.recognitionCueEvidenceId > b.recognitionCueEvidenceId ? 1 : 0),
   priorResolutionHistory: history,
   recognitionVersion: version,
   ...overrides,
@@ -170,13 +170,14 @@ describe('SEM-001F append-only recognition-resolution conformance', () => {
     const claim = cue(exp, 'person.glen', 'SupportsCandidate', 1, {
       recognitionCueSource: {
         kind: 'identity-claim-mapping', perceivedIdentitySymbolId: 'perceived-symbol/GLEN',
-        observerSymbolCandidateMappingId: `symbol-mapping/perceived-symbol/GLEN/person.glen/${version}`,
+        observerSymbolCandidateMappingId: 4200n,
       },
     });
     expect(() => evaluateContinuantRecognition(initialModel(), request(exp, [claim]), 0n))
       .toThrowError(expect.objectContaining({ code: 'INVALID_SYMBOL_MAPPING' }));
     const mapping: ObserverIdentitySymbolMapping = {
-      observerId, perceivedIdentitySymbolId: 'perceived-symbol/GLEN',
+      observerSymbolCandidateMappingId: 4200n, observerId,
+      perceivedIdentitySymbolId: 'perceived-symbol/GLEN',
       candidateSemanticReferentId: 'person.glen', mappingVersion: version,
     };
     const mapped = evaluateContinuantRecognition(initialModel(), request(exp, [claim], [], {
@@ -190,41 +191,41 @@ describe('SEM-001F append-only recognition-resolution conformance', () => {
   });
 
   it('CV-SEM-065 appends replacement and withdrawal while no-cue and same-candidate evaluations preserve current resolution', () => {
-    const firstExp = experience('experience/first', 10n);
+    const firstExp = experience(8802n, 10n);
     const first = evaluateContinuantRecognition(initialModel(), request(firstExp, [cue(firstExp, 'person.glen', 'SupportsCandidate', 1)]), 0n);
     const firstSnapshot = structuredClone(first.resolutionRecord!);
 
-    const darkExp = experience('experience/dark', 20n);
+    const darkExp = experience(8801n, 20n);
     const dark = evaluateContinuantRecognition(initialModel(), request(darkExp, [], [first.resolutionRecord!]), 2n);
     expect(dark.evaluation.result).toEqual({ kind: 'no-update', reason: 'NoQualifyingCandidate' });
     expect(dark.resolutionRecord).toBeUndefined();
     expect(recognitionSemanticView(currentRecognitionResolution([first.resolutionRecord!], observerId, track))).toBe('asserted:person.glen');
 
-    const sameExp = experience('experience/same', 30n);
+    const sameExp = experience(8806n, 30n);
     const same = evaluateContinuantRecognition(initialModel(), request(sameExp, [cue(sameExp, 'person.glen', 'SupportsCandidate', 1)], [first.resolutionRecord!]), 3n);
     expect(same.evaluation.result).toEqual({ kind: 'no-update', reason: 'SameCandidateMaintained' });
     expect(same.resolutionRecord).toBeUndefined();
 
-    const withdrawExp = experience('experience/withdraw', 40n);
+    const withdrawExp = experience(8808n, 40n);
     const withdrawal = evaluateContinuantRecognition(initialModel(), request(withdrawExp, [cue(withdrawExp, 'person.glen', 'ContradictsCandidate', 1)], [first.resolutionRecord!]), 4n);
     expect(withdrawal.resolutionRecord?.resolution).toEqual({ kind: 'withdrawn' });
     expect(withdrawal.resolutionRecord?.revisesRecognitionResolutionId).toBe(first.resolutionRecord?.recognitionResolutionId);
     expect(first.resolutionRecord).toEqual(firstSnapshot);
 
-    const replacementExp = experience('experience/replacement', 50n);
+    const replacementExp = experience(8805n, 50n);
     const replacement = evaluateContinuantRecognition(initialModel(), request(replacementExp, [cue(replacementExp, 'person.darius', 'SupportsCandidate', 1)], [first.resolutionRecord!, withdrawal.resolutionRecord!]), 6n);
     expect(recognitionSemanticView(replacement.resolutionRecord)).toBe('asserted:person.darius');
     expect(replacement.resolutionRecord?.revisesRecognitionResolutionId).toBe(withdrawal.resolutionRecord?.recognitionResolutionId);
   });
 
   it('CV-SEM-066 preserves false continuity and false discontinuity under recognition changes', () => {
-    const glenExp = experience('experience/glen', 10n);
+    const glenExp = experience(8803n, 10n);
     const glen = evaluateContinuantRecognition(initialModel(), request(glenExp, [cue(glenExp, 'person.glen', 'SupportsCandidate', 1)]), 0n);
-    const dariusExp = experience('experience/darius', 20n);
+    const dariusExp = experience(8800n, 20n);
     const replaced = evaluateContinuantRecognition(initialModel(), request(dariusExp, [cue(dariusExp, 'person.darius', 'SupportsCandidate', 1)], [glen.resolutionRecord!]), 2n);
     expect(replaced.resolutionRecord?.perceptualReferentId).toEqual(glen.resolutionRecord?.perceptualReferentId);
 
-    const splitExp = experience('experience/split', 30n, otherTrack);
+    const splitExp = experience(8807n, 30n, otherTrack);
     const splitCue = cue(splitExp, 'person.glen', 'SupportsCandidate', 1, { perceptualReferentId: otherTrack });
     const split = evaluateContinuantRecognition(initialModel(), request(splitExp, [splitCue], [], { perceptualReferentId: otherTrack }), 4n);
     expect(recognitionSemanticView(split.resolutionRecord)).toBe(recognitionSemanticView(glen.resolutionRecord));
@@ -272,7 +273,7 @@ describe('SEM-001F append-only recognition-resolution conformance', () => {
     expect(recognitionSemanticView(low.resolutionRecord)).toEqual(recognitionSemanticView(shifted.resolutionRecord));
     expect(low.resolutionRecord?.recognitionResolutionId).not.toBe(shifted.resolutionRecord?.recognitionResolutionId);
 
-    const branched = { ...low.resolutionRecord!, recognitionResolutionId: 99n, recognitionEvaluationId: 98n, experienceId: 'experience/branch', occurredAt: 20n };
+    const branched = { ...low.resolutionRecord!, recognitionResolutionId: 99n, experienceId: 8600n, occurredAt: 20n };
     expect(() => validateResolutionHistory([low.resolutionRecord!, branched]))
       .toThrowError(expect.objectContaining({ code: 'INVALID_RESOLUTION_HISTORY' }));
 
@@ -298,7 +299,7 @@ describe('SEM-001F append-only recognition-resolution conformance', () => {
     }
     const exp = experience();
     const first = evaluateContinuantRecognition(initialModel(), request(exp, [cue(exp, 'person.glen', 'SupportsCandidate', 1)]), 0n);
-    const laterExp = experience('experience/repeat', 20n);
+    const laterExp = experience(8804n, 20n);
     const repeated = evaluateContinuantRecognition(initialModel(), request(laterExp, [cue(laterExp, 'person.glen', 'SupportsCandidate', 1)], [first.resolutionRecord!]), 2n);
     expect(repeated.resolutionRecord).toBeUndefined();
     expect(repeated.evaluation.result).toEqual({ kind: 'no-update', reason: 'SameCandidateMaintained' });

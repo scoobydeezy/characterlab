@@ -77,6 +77,8 @@ const narrowingValidators: readonly ReferentDomainValidator[] = [
   { validatorId: 'domain/striking-capable', accepts: (candidate) => candidate.domainTags.includes('striking-capable') },
 ];
 
+const minaTrack17 = { observerId: 'character/mina', observerTrackSequence: 17n };
+
 describe('SEM-001B event-binding occurrence and role conformance', () => {
   it('CV-SEM-023 preserves one referent in several roles as distinct occurrences', () => {
     const multiRoleSchema = schema('event-type/multi-role-control', [
@@ -198,10 +200,10 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
       .find((binding) => binding.eventRoleId === EventRoleId.Companion);
     if (!companion) throw new Error('fixture companion missing');
 
-    const preserved = projectEventRoleEvidence(companion, 'track/mina/17', { kind: 'preserve' });
-    const coarsened = projectEventRoleEvidence(companion, 'track/mina/17', { kind: 'coarsen-to-participant' });
-    const unresolved = projectEventRoleEvidence(companion, 'track/mina/17', { kind: 'unresolved' });
-    const omitted = projectEventRoleEvidence(companion, 'track/mina/17', { kind: 'omit' });
+    const preserved = projectEventRoleEvidence(companion, minaTrack17, { kind: 'preserve' });
+    const coarsened = projectEventRoleEvidence(companion, minaTrack17, { kind: 'coarsen-to-participant' });
+    const unresolved = projectEventRoleEvidence(companion, minaTrack17, { kind: 'unresolved' });
+    const omitted = projectEventRoleEvidence(companion, minaTrack17, { kind: 'omit' });
     expect(preserved?.eventRoleEvidence).toEqual({ kind: 'exact', eventRoleId: EventRoleId.Companion });
     expect(coarsened?.eventRoleEvidence).toEqual({ kind: 'exact', eventRoleId: EventRoleId.Participant });
     expect(unresolved?.eventRoleEvidence).toEqual({ kind: 'unresolved' });
@@ -209,7 +211,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
     for (const projection of [preserved, coarsened, unresolved]) {
       expect(projection).not.toHaveProperty('eventBindingId');
       expect(projection).not.toHaveProperty('semanticReferent');
-      expect(JSON.stringify(projection)).not.toContain('person.glen');
+      expect(stringifyWithBigInts(projection)).not.toContain('person.glen');
     }
   });
 
@@ -233,4 +235,9 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
 
 function compareText(left: string, right: string): number {
   return left < right ? -1 : left > right ? 1 : 0;
+}
+
+/** Occurrence ordinals are bigints, so leak checks need a bigint-aware serializer. */
+function stringifyWithBigInts(value: unknown): string {
+  return JSON.stringify(value, (_key, candidate: unknown) => typeof candidate === 'bigint' ? candidate.toString() : candidate);
 }

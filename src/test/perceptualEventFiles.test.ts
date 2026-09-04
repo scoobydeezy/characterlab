@@ -25,7 +25,7 @@ const mina = 'character/mina';
 const darius = 'character/darius';
 const version = 'perceptual-event-files/0.1-candidate';
 
-const observation = (observerId: string, observationId: string): SupportingObservationId => ({
+const observation = (observerId: string, observationId: bigint): SupportingObservationId => ({
   observerId,
   observationId,
 });
@@ -40,17 +40,24 @@ const eventFile = (observerEventSequence: bigint, observerId = mina): Perceptual
   observerEventSequence,
 });
 
+/** Stable ordinal per detection label: occurrence IDs are allocated, never symbolic. */
+const OCCURRENCE_ORDINALS = new Map<string, bigint>();
+const ordinalFor = (label: string): bigint => {
+  if (!OCCURRENCE_ORDINALS.has(label)) OCCURRENCE_ORDINALS.set(label, BigInt(OCCURRENCE_ORDINALS.size));
+  return OCCURRENCE_ORDINALS.get(label)!;
+};
+
 const transition = (
   continuityKind: 'NewEventFile' | 'ContinuesPriorEventFile',
-  detectionId: string,
+  detectionLabel: string,
   priorPerceptualEventReferentId?: PerceptualEventReferentId,
   observerId = mina,
 ): PerceptualEventTransitionRequest => ({
   observerId,
   priorPerceptualEventReferentId,
-  currentEventDetectionId: { observerId, detectionId },
+  currentEventDetectionId: { observerId, eventDetectionOccurrenceId: ordinalFor(detectionLabel) },
   continuityKind,
-  supportingObservationIds: [observation(observerId, `observation/${detectionId}`)],
+  supportingObservationIds: [observation(observerId, ordinalFor(`observation/${detectionLabel}`))],
   occurredAt: 10n,
   transformationVersion: version,
 });
@@ -66,13 +73,13 @@ const binding = (
   perceptualEventReferentId,
   perceptualReferentId,
   eventRoleEvidence,
-  supportingObservationIds: [observation(mina, 'observation/binding')],
+  supportingObservationIds: [observation(mina, ordinalFor('observation/binding'))],
   occurredAt: 10n,
   transformationVersion: version,
 });
 
 const experience = (
-  experienceId: string,
+  experienceId: bigint,
   eventIds: readonly PerceptualEventReferentId[],
   requests: readonly PerceivedBindingRequest[],
   nextRuntimeId = 0n,
@@ -86,7 +93,7 @@ const experience = (
     perceivedBindings: compiled.bindings,
     perceptualClassifications: [],
     perceptualEventClassifications: [],
-    supportingObservationIds: [observation(mina, 'observation/experience')],
+    supportingObservationIds: [observation(mina, ordinalFor('observation/experience'))],
     transformationVersion: version,
   });
 };
@@ -95,7 +102,7 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
   it('CV-SEM-031 preserves two simultaneous event groupings that an ungrouped role bag loses', () => {
     const first = eventFile(0n);
     const second = eventFile(1n);
-    const result = experience('experience/simultaneous', [first, second], [
+    const result = experience(8605n, [first, second], [
       binding(first, exact(EventRoleId.Actor), objectFile(0n)),
       binding(first, exact(EventRoleId.Target), objectFile(1n)),
       binding(first, exact(EventRoleId.Instrument), objectFile(2n)),
@@ -112,8 +119,8 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
 
   it('CV-SEM-032 permits one event-file to persist across distinct experiences', () => {
     const ongoing = eventFile(7n);
-    const early = experience('experience/early', [ongoing], [binding(ongoing, exact(EventRoleId.Actor), objectFile(0n))]);
-    const late = experience('experience/late', [ongoing], [binding(ongoing, exact(EventRoleId.Target), objectFile(1n))], 10n);
+    const early = experience(8600n, [ongoing], [binding(ongoing, exact(EventRoleId.Actor), objectFile(0n))]);
+    const late = experience(8602n, [ongoing], [binding(ongoing, exact(EventRoleId.Target), objectFile(1n))], 10n);
 
     expect(early.experienceId).not.toBe(late.experienceId);
     expect(early.perceptualEventReferentIds[0]).toEqual(late.perceptualEventReferentIds[0]);
@@ -136,7 +143,7 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
     const ended = endPerceptualEventFile(started.state, {
       observerId: mina,
       perceptualEventReferentId: started.transition.perceptualEventReferentId,
-      supportingObservationIds: [observation(mina, 'observation/loss')],
+      supportingObservationIds: [observation(mina, ordinalFor('observation/loss'))],
       occurredAt: 11n,
       transformationVersion: version,
     });
@@ -153,8 +160,8 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
       .toThrowError(expect.objectContaining({ code: 'FORBIDDEN_TRUTH_FIELD' }));
 
     const valid = applyPerceptualEventTransition(emptyPerceptualEventFileState(), transition('NewEventFile', 'visible-motion'));
-    expect(valid.transition.currentEventDetectionId).toEqual({ observerId: mina, detectionId: 'visible-motion' });
-    expect(valid.transition.supportingObservationIds).toEqual([observation(mina, 'observation/visible-motion')]);
+    expect(valid.transition.currentEventDetectionId).toEqual({ observerId: mina, eventDetectionOccurrenceId: ordinalFor('visible-motion') });
+    expect(valid.transition.supportingObservationIds).toEqual([observation(mina, ordinalFor('observation/visible-motion'))]);
     expect(stringifyWithBigInts(valid.transition)).not.toContain('truth/');
   });
 
@@ -163,7 +170,7 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
       binding(eventFile(0n), exact(EventRoleId.Action), objectFile(0n)),
     ], 0n)).toThrowError(expect.objectContaining({ code: 'ACTION_AS_CONTINUANT_FILE' }));
 
-    const grouped = experience('experience/unclassified-action', [eventFile(0n)], [
+    const grouped = experience(8606n, [eventFile(0n)], [
       binding(eventFile(0n), exact(EventRoleId.Actor), objectFile(0n)),
     ]);
     expect(stringifyWithBigInts(grouped)).not.toContain('action.skip-rope');
@@ -173,7 +180,7 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
     const first = eventFile(0n);
     const second = eventFile(1n);
     const shared = objectFile(4n);
-    const result = experience('experience/shared-participant', [first, second], [
+    const result = experience(8604n, [first, second], [
       binding(first, exact(EventRoleId.Actor), shared),
       binding(first, exact(EventRoleId.Target), shared),
       binding(second, exact(EventRoleId.Participant), shared),
@@ -202,11 +209,11 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
   });
 
   it('CV-SEM-039 gives event-file ordinals no semantic or psychological magnitude', () => {
-    const low = experience('experience/low-ordinals', [eventFile(0n), eventFile(1n)], [
+    const low = experience(8603n, [eventFile(0n), eventFile(1n)], [
       binding(eventFile(0n), exact(EventRoleId.Actor), objectFile(2n)),
       binding(eventFile(1n), exact(EventRoleId.Target), objectFile(3n)),
     ]);
-    const shifted = experience('experience/high-ordinals', [eventFile(700n), eventFile(900n)], [
+    const shifted = experience(8601n, [eventFile(700n), eventFile(900n)], [
       binding(eventFile(700n), exact(EventRoleId.Actor), objectFile(2n)),
       binding(eventFile(900n), exact(EventRoleId.Target), objectFile(3n)),
     ], 50n);

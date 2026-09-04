@@ -1,33 +1,35 @@
 # Campaign 1 Semantic-Binding Conformance Vectors
 
-**Status:** active candidate manifest, version `campaign1-semantic-binding-vectors/0.1-candidate`
+**Status:** closed manifest, version `campaign1-semantic-binding-vectors/0.1-candidate`. All one
+hundred vectors `PASS`; `SEM-001J` accepted and parent `SEM-001` closed on 2026-09-04. The manifest
+remains a mandatory regression suite: closure retires the obligations, not the tests.
 
-These vectors govern `semantic-binding/0.1-candidate`, `SEM-001`, and `PHEN-SEM-001`. Campaign 0 vectors and accepted bounded-observation vectors remain mandatory substrate controls. A row may execute when its named subdecision has enough exact symbolic structure to test it; passing a subset never accepts the parent contract and authorizes only the exact symbolic registry, phase, or provenance scope explicitly accepted by that subdecision. Permanent semantic record IDs remain blocked until the parent gate assigns them.
+These vectors govern `semantic-binding/0.1-candidate`, `SEM-001`, and `PHEN-SEM-001`. Campaign 0 vectors and accepted bounded-observation vectors remain mandatory substrate controls. A row may execute when its named subdecision has enough exact symbolic structure to test it; passing a subset never accepts the parent contract and authorizes only the exact symbolic registry, phase, or provenance scope explicitly accepted by that subdecision. Permanent semantic record IDs were blocked until a subdecision assigned them; accepted `SEM-001I.2` (2026-09-03) now supplies the permanent numeric allocation, and those values may never be renumbered or reused. The parent gate therefore audits that allocation rather than assigning it.
 
 | Vector | Required proof | Current evidence |
 |---|---|---|
-| `CV-SEM-001` | Two world events containing identical referents in different `EventRoleId` bindings produce structurally distinct truth bindings and permitted perceived bindings. | pending |
-| `CV-SEM-002` | One referent simultaneously occupying several event roles retains every binding occurrence; no referent-keyed deduplication occurs. | pending |
-| `CV-SEM-003` | Visibility is binding-specific. Mina, Darius, and Glen receive exactly their declared permitted binding sets from the same event. | pending |
+| `CV-SEM-001` | Two world events containing identical referents in different `EventRoleId` bindings produce structurally distinct truth bindings and permitted perceived bindings. | `PASS` — canonical and Actor/Companion-swapped events name the same referents, differ structurally on the truth side, and remain perceptually isomorphic to an observer who cannot see which referent moved |
+| `CV-SEM-002` | One referent simultaneously occupying several event roles retains every binding occurrence; no referent-keyed deduplication occurs. | `PASS` — truth-side multi-role retention plus both perceived-side directions: one continuant in two roles and two continuants in one repeatable role each keep distinct occurrences, so referent-keyed, role-keyed, and event-only collapse all fail |
+| `CV-SEM-003` | Visibility is binding-specific. Mina, Darius, and Glen receive exactly their declared permitted binding sets from the same event. | `PASS` — three mutually non-subsuming permitted sets from one truth event, the action carried as the event-file rather than a continuant binding, and each observer unperturbed by the others sharing one run-scoped allocator |
 | `CV-SEM-004` | A visible but unrecognized entity yields a `PerceptualReferentId` and no truth-side `SemanticReferentId`. | `PASS` — unfamiliar evaluation emits no resolution or truth identity |
 | `CV-SEM-005` | Correct recognition and categorical misrecognition attach different resolutions to equal perceptual evidence without changing that evidence. | `PASS` — observer-owned cue intervention over immutable experience |
 | `CV-SEM-006` | Later correction appends a replacement or withdrawal resolution; the original experience, evaluation, and contemporaneous resolution remain byte-identical. | `PASS` — append-only replacement/withdrawal chain |
-| `CV-SEM-007` | Truth binding IDs and truth referent IDs are structurally absent from character evidence. Stable opaque-handle equality cannot reveal that two hidden sources are equal. | pending |
-| `CV-SEM-008` | `EventRoleId` and `CausalRoleId` remain independently present and typed; deriving a causal role cannot erase or mutate event-role evidence. | pending |
-| `CV-SEM-009` | Character-relative causal-role evidence changes only when permitted observations change, never when only hidden truth-side causal structure changes. | pending |
-| `CV-SEM-010` | Every perceived binding has complete omniscient trace ancestry to one truth binding and observation operation, while the character projection cannot traverse that ancestry. | pending |
-| `CV-SEM-011` | Scalar measurement evidence is referenced as supporting evidence and is neither required for every binding nor treated as referent identity or role evidence. | pending |
-| `CV-SEM-012` | Deterministic omniscient, contemporaneous-character, and current-reinterpretation renderers consume typed records; changing presentation metadata changes no authoritative record. | pending |
-| `CV-SEM-013` | Perceptual-referent allocation is independently monotonic per observer, persists across save/load, never reuses an ordinal, and is invariant to other observers' allocations. | contract accepted by `SEM-001A`; implementation pending |
-| `CV-SEM-014` | Invalid registry IDs, multiplicity, hidden references, forged perceptual IDs, illegal causal derivation, or noncanonical order abort the complete instant with no committed state, allocation, trace, or output. | pending |
-| `CV-SEM-015` | Equal truth-side semantic facts with different permitted sensory evidence produce different perceptual classifications; hidden facts never copy through merely because they are registered. | pending |
+| `CV-SEM-007` | Truth binding IDs and truth referent IDs are structurally absent from character evidence. Stable opaque-handle equality cannot reveal that two hidden sources are equal. | `PASS` — the projection boundary returns exactly `{perceptualReferentId, eventRoleEvidence}` with a role drawn from the closed accepted vocabulary; two observers of one hidden referent share no continuant handle, and their coinciding ordinals carry no meaning |
+| `CV-SEM-008` | `EventRoleId` and `CausalRoleId` remain independently present and typed; deriving a causal role cannot erase or mutate event-role evidence. | `PASS` — derivation emits separate records and leaves the binding byte-identical; proven on the discriminating `Companion→Participant` and `Location→Location` mappings rather than only the identity-looking `Actor→Actor` pairing |
+| `CV-SEM-009` | Character-relative causal-role evidence changes only when permitted observations change, never when only hidden truth-side causal structure changes. | `PASS` — exchanging the truth Actor and Companion referents leaves the observer's causal evidence byte-identical, while coarsening his permitted role observation changes it from `Actor` to `Participant` |
+| `CV-SEM-010` | Every perceived binding has complete omniscient trace ancestry to one truth binding and observation operation, while the character projection cannot traverse that ancestry. | `PASS` — exactly one edge per perceived binding, naming the truth binding it actually descends from and explaining its role evidence; two observers of one hidden referent share no character-side handle while the trace side knows the referent is the same |
+| `CV-SEM-011` | Scalar measurement evidence is referenced as supporting evidence and is neither required for every binding nor treated as referent identity or role evidence. | `PASS` — a real `observation/0.1-candidate` bounded measurement is minted in the frozen `ObservationId` namespace 1115 and cited by a perceived binding; the join runs from the binding's own citation, the measurement's interval/precision/truth record reach no character record, and the canonical projection carries no measurement at all |
+| `CV-SEM-012` | Deterministic omniscient, contemporaneous-character, and current-reinterpretation renderers consume typed records; changing presentation metadata changes no authoritative record. | `PASS` — three viewpoints render from the same immutable experience, differing only in permitted read scope; record-derived lines are byte-identical across two presentations while the display surface responds to both, and every authoritative record is unchanged after rendering; only the omniscient viewpoint reaches truth binding or referent identity, with character-side referent identities held to closed catalog membership; the contemporaneous and current accounts differ exactly by one appended corrective resolution over an unmodified experience |
+| `CV-SEM-013` | Perceptual-referent allocation is independently monotonic per observer, persists across save/load, never reuses an ordinal, and is invariant to other observers' allocations. | `PASS` — executable observer-scoped allocator, structural restore, retirement-without-reuse, and interleaving controls |
+| `CV-SEM-014` | Invalid registry IDs, multiplicity, hidden references, forged perceptual IDs, illegal causal derivation, or noncanonical order abort the complete instant with no committed state, allocation, trace, or output. | `PASS` — a handler that allocates occurrence ordinals, compiles bindings, and contributes trace and outputs before failing settlement leaves state, allocators, committed trace, and outputs exactly as they were |
+| `CV-SEM-015` | Equal truth-side semantic facts with different permitted sensory evidence produce different perceptual classifications; hidden facts never copy through merely because they are registered. | `PASS` — two observers of one truth instrument classify it differently from their own permitted features, while exchanging the hidden truth referents leaves classification byte-identical |
 | `CV-SEM-016` | Perceptual classification, track continuity, and instance recognition are independently intervenable: each can change while the other two remain structurally fixed where the fixture permits. | `PASS` — accepted classification/track controls plus immutable-experience recognition intervention |
-| `CV-SEM-017` | Every perceptual classification uses a registered facet and exact declared value type; unknown facets, freeform tags, and wrong-typed values fail closure and roll back. Missing classification remains distinct from an explicit boolean-false assertion. | pending |
-| `CV-SEM-018` | Classification alone produces no appraisal, affect, motive, pressure, or Reason. The `ClassificationToPressure` shortcut fails read-domain or receiving-seam closure. | pending |
-| `CV-SEM-019` | False continuity: permitted sensory input deterministically continues one observer-relative track across two different truth entities; no truth comparison automatically corrects, ends, or replaces the track. | contract accepted by `SEM-001A`; implementation pending |
+| `CV-SEM-017` | Every perceptual classification uses a registered facet and exact declared value type; unknown facets, freeform tags, and wrong-typed values fail closure and roll back. Missing classification remains distinct from an explicit boolean-false assertion. | `PASS` — unknown facet, freeform feature tag, and non-boolean value each fail before emission; explicit negative evidence emits a present `false` record while absence emits none |
+| `CV-SEM-018` | Classification alone produces no appraisal, affect, motive, pressure, or Reason. The `ClassificationToPressure` shortcut fails read-domain or receiving-seam closure. | `PASS` — every psychological and world-truth emission target is refused, and emitted classification evidence carries exactly the accepted field set with no salience, valence, confidence, or weight field |
+| `CV-SEM-019` | False continuity: permitted sensory input deterministically continues one observer-relative track across two different truth entities; no truth comparison automatically corrects, ends, or replaces the track. | `PASS` — executable occlusion continue/split controls with no truth input or repair path |
 | `CV-SEM-020` | False discontinuity: one truth entity yields two separately allocated tracks after a declared perceptual break; later recognition may associate both tracks with the same semantic candidate without merging or rewriting either track. | `PASS` — separate track allocation plus independent equal recognition resolutions |
-| `CV-SEM-021` | `PerceptualTrackTransition` is produced solely from permitted observer-side detections and supporting observations, with exact binary `NewTrack`/`ContinuesPriorTrack`; its tracking rationale is not automatically character-accessible semantic evidence. | contract accepted by `SEM-001A`; implementation pending |
-| `CV-SEM-022` | Changing only another observer's track allocations or the opaque numeric ordinals of this observer's otherwise isomorphic tracks changes no classification, similarity, salience, appraisal, recognition score, or other psychological result. | contract accepted by `SEM-001A`; implementation pending |
+| `CV-SEM-021` | `PerceptualTrackTransition` is produced solely from permitted observer-side detections and supporting observations, with exact binary `NewTrack`/`ContinuesPriorTrack`; its tracking rationale is not automatically character-accessible semantic evidence. | `PASS` — forbidden-truth-field, non-binary-continuity, missing/cross-observer support, and forged/inactive prior controls |
+| `CV-SEM-022` | Changing only another observer's track allocations or the opaque numeric ordinals of this observer's otherwise isomorphic tracks changes no classification, similarity, salience, appraisal, recognition score, or other psychological result. | `PASS` — ordinal-shifted isomorphic run and foreign-observer interleaving compare equal under the ordinal-free continuity view |
 | `CV-SEM-023` | One truth referent bound into two roles yields two independently identified `EventBinding` occurrences; neither truth construction nor perception deduplicates them by referent. | `PASS` — executable occurrence-preservation control |
 | `CV-SEM-024` | Several truth referents bound into one repeatable role each retain a distinct binding occurrence; role-keyed storage or overwrite reports its first structural divergence. | `PASS` — executable repeatable-role control |
 | `CV-SEM-025` | Two event types apply different cardinalities and optional narrowing validators to the same global role. Effective validation is always broad-domain AND event-type narrowing, so an event type cannot widen the role domain. | `PASS` — strike/drink instrument controls |
@@ -109,15 +111,92 @@ These passing rows validate the reviewed permanent allocation. They do not autho
 | `CV-SEM-094` | Every finite candidate registry is duplicate-free; Campaign 0 causal values remain unchanged under their first typed namespace allocation (`CausalRoleId=1019`); nested authored/runtime referent origins with equal local payloads encode differently. | `PASS` — candidate vocabulary and referent-origin closure |
 | `CV-SEM-095` | Every union tag has exactly one canonical required/forbidden payload contract; all optional payload fields are accounted for; illegal layouts fail before emission; declaration reordering preserves the complete registry manifest while a matrix change changes its digest. | `PASS` — candidate union and manifest closure |
 
-### Planned `SEM-001I.3` codec, persistence, and state vectors
+### Accepted `SEM-001I.3` codec, persistence, and state vectors
 
 | Vector | Required proof | Status |
 |---|---|---|
-| `CV-SEM-096` | Canonical runtime codecs enforce the accepted type/field/tag registry, reject unknown versions and illegal union layouts before allocation/emission, and round-trip byte-identically. | pending |
-| `CV-SEM-097` | Semantic state roots, observer-scoped file counters, occurrence allocators, trace, and outputs save/load and replay byte-identically; failure rolls all of them back atomically. | pending |
-| `CV-SEM-098` | Extra detections for another observer may perturb raw global ordinals but change no tracking, classification, recognition, salience, similarity, or other semantics for this observer, for both continuant and event detection identities. | pending |
-| `CV-SEM-099` | Replacing active symbol-mapping occurrence A with B leaves A and historical cues immutable; only later admissible evaluations may cite B. `RecognitionKnowledgeState` permits at most one active mapping per `(ObserverId, PerceivedIdentitySymbolId)`. | pending |
-| `CV-SEM-100` | `RecognitionKnowledgeState` permits at most one active catalog entry per `(ObserverId, CandidateSemanticReferentId)` and rejects two individually canonical entries with different templates as ambiguous state. | pending |
+| `CV-SEM-096` | Canonical runtime codecs enforce the accepted type/field/tag registry, reject unknown versions and illegal union layouts before allocation/emission, and round-trip byte-identically. | `PASS` — named-field construction over the frozen allocation, unadmitted contract-version and unregistered schema-version rejection, pre-construction union-layout validation across all eight union types, byte-identical round trip, and order-independent state-root encoding |
+| `CV-SEM-097` | Semantic state roots, observer-scoped file counters, occurrence allocators, trace, and outputs save/load and replay byte-identically; failure rolls all of them back atomically. | `PASS` — types 241/242 encode and restore through the accepted allocation; a save/load boundary mid-history re-saves byte-identically to the uninterrupted run, and a staged failure restores state, both observer counters, allocators, committed trace, and outputs together |
+| `CV-SEM-098` | Extra detections for another observer may perturb raw global ordinals but change no tracking, classification, recognition, salience, similarity, or other semantics for this observer, for both continuant and event detection identities. | `PASS` — interleaved foreign detections move the shared run-scoped runtime allocator while this observer's continuant tracking, event-file grouping, ordinal-free continuity view, and both observer-scoped counters compare equal |
+| `CV-SEM-099` | Replacing active symbol-mapping occurrence A with B leaves A and historical cues immutable; only later admissible evaluations may cite B. `RecognitionKnowledgeState` permits at most one active mapping per `(ObserverId, PerceivedIdentitySymbolId)`. | `PASS` — allocated `ObserverSymbolCandidateMappingId` replaces the derived key; one-active-mapping guard, exact-occurrence claim admission, retired-occurrence rejection, and byte-stable historical cue encoding |
+| `CV-SEM-100` | `RecognitionKnowledgeState` permits at most one active catalog entry per `(ObserverId, CandidateSemanticReferentId)` and rejects two individually canonical entries with different templates as ambiguous state. | `PASS` — each entry admissible alone, the pair rejected as ambiguous rather than merged into one template set |
+
+**Mutation authority.** The numeric registry additionally requires exactly one registered mutation
+authority per writable leaf of state roots 241–244. `semanticStateAuthority.ts` registers all seven
+leaves: each of the four roots decomposes into `mapKey` families addressed by that collection's own
+accepted uniqueness key — the observer for both next-sequence counters, the type-212/213 identity
+record for both active-file sets, the accepted `(ObserverId, CandidateSemanticReferentId)` and
+`(ObserverId, PerceivedIdentitySymbolId)` tuples for recognition knowledge, and the declared
+occurrence identity for resolution records. No new addressing concept is introduced and no ordinal
+is used as a position. Removal permission follows the accepted lifecycle: observer counters and
+resolution history are never removable, while active-file membership and the two recognition
+collections are, because retirement and replacement are accepted. The perception seam owns both
+file states, the recognition-knowledge authority owns recognition knowledge, and the recognition seam owns
+the resolution log; the registry constructor itself proves non-overlap and full coverage.
+
+**Membership representation.** `mapKey → true` is the mutation-addressing projection of an accepted
+canonical set, not a conversion of the active-file collections into map-valued domain state.
+Canonical persistence still encodes both as `cenc/1` sets; the marker exists only to give the
+`StatePath` patch model an exact writable leaf value. The equivalence of the two views is
+executable: same members, same canonical identities, preserved across the persistence boundary and
+across retirement.
+
+Authority identities come from the accepted global `1025 MutationAuthorityId` namespace allocated by
+the `TRC-001`/`TRC-002` addendum, not from a semantic-binding-specific identity family. Each is
+named for the state family whose writes it governs — `authority/perception`,
+`authority/recognition-knowledge`, `authority/recognition-resolution` — so a later accepted
+learning/forgetting seam may write recognition knowledge through the same authority. One authority
+owning several tightly related leaves satisfies the invariant; what matters is exactly one owner
+per leaf. The semantic fixture's registry manifest commits the authority definition, so ownership,
+removal permission, and leaf value grammar are inside its `ModelIdentity`; substrate `CV-OWN-002`
+proves that discrimination generally.
+
+`CV-SEM-099` and `CV-SEM-100` also close two `SEM-001I.1` scaffolding dispositions in the running
+oracle: `ObserverIdentitySymbolMapping` now carries an allocated typed occurrence instead of an ID
+synthesized from symbol/candidate/version text, and `RecognitionResolutionRecord` no longer carries
+a `RecognitionEvaluationId` pointer, so persistent resolution state is self-sufficient and the
+evaluation exists exactly once in committed trace.
+
+`CV-SEM-096` proves the codec layer itself: `src/semanticBinding/semanticCodecs.ts` is the sole
+construction path from the frozen `SEM-001I.2` allocation to `cenc/1` bytes, and it refuses an
+unallocated field, an unadmitted seam-contract version, an unregistered record schema version, or
+an illegal union layout before any occurrence is allocated or emitted. Both perceptual file-state
+roots (types 241 and 242) already encode through it. Migrating the remaining `SEM-001B..H` module
+shapes off symbolic string occurrence IDs onto this layer is `CV-SEM-097`..`CV-SEM-100` work and is
+not claimed by this row.
+
+## Carried condition on `SEM-001J`
+
+`SEM-001I.3` acceptance does not permit the integrated gate to run the symbolic oracle and then
+serialize its result canonically. `SEM-001J` must migrate the remaining `SEM-001B..H` in-memory
+occurrence boundaries onto the accepted typed IDs and the codec/state machinery, and must exercise
+the path end to end:
+
+```text
+canonical truth occurrence IDs
+  → canonical observation/detection IDs
+  → canonical track/event identities
+  → canonical evidence occurrences
+  → canonical experience
+  → canonical recognition evaluation/resolution
+  → canonical state mutation
+  → save/load/replay
+```
+
+No authoritative result in `PHEN-SEM-001` may depend on a symbolic string occurrence ID.
+
+**Migration status (`SEM-001J` step one).** Every accepted occurrence family now carries an
+allocated ordinal at the in-memory boundary, not a symbolic string: `ExperienceId`,
+`ObservationId`, `DetectionOccurrenceId`, `EventDetectionOccurrenceId`, `FeatureObservationId`,
+`EventFeatureObservationId`, `RecognitionCueEvidenceId`, and the three supporting-ID collections.
+`admitObservationLane` returns the allocated `ExperienceId` itself rather than re-wrapping it as
+text, and `PerceivedRoleProjection` carries the type-212 continuant-file identity rather than a
+symbolic handle. Governed model identities — `EventTypeId`, `SemanticReferentId`,
+`RecognitionTemplateId`, rule and validator IDs — keep text payloads: they are not occurrence
+identities and principle 10 does not reach them. `src/test/semanticOccurrenceIdentity.test.ts`
+guards the boundary, including that supporting ordinals are ordered numerically rather than
+lexicographically over their decimal digits. Remaining for the gate: the integrated multi-observer
+`PHEN-SEM-001` fixture and its negative controls.
 
 ## Mandatory `PHEN-SEM-001` fixture
 
@@ -156,9 +235,67 @@ false discontinuity:  truth Glen → brief loss → Glen; observer track/17 ends
 
 In the second case, later recognition may attach `person.glen` to both tracks, but neither track is merged or rewritten. Track allocation is observer-scoped; interleaving another observer's `NewTrack` transitions cannot change this observer's assigned sequence.
 
+## `SEM-001J` integrated evidence
+
+The parent gate does not close by aggregate. Thirteen vectors were still pending when the gate
+opened; each names below the integrated `SEM-001J` evidence that closed it, so a reader can see
+which test discharged which parent obligation. Every other row was already closed by its own
+subdecision and remains so. At acceptance there are zero pending `CV-SEM` rows.
+
+| Vector | Integrated evidence that closed it |
+|---|---|
+| `CV-SEM-001` | `phenSem001Binding.test.ts` — canonical and role-swapped truth events are structurally distinct and perceptually isomorphic to an observer who cannot see which referent moved; the integrated run in `phenSem001Run.ts` carries both truth bindings and the resulting perceived bindings in one canonical chain |
+| `CV-SEM-002` | `phenSem001Binding.test.ts` multi-role and repeated-role controls, re-proved integrally: `semanticEvidenceCodecs` encodes each binding occurrence as its own type-224 record, so a referent-keyed collapse changes the committed bytes |
+| `CV-SEM-003` | `phenSem001Integration.test.ts` — three observers with non-subsuming permitted sets run in one scheduler over one shared runtime allocator, each unperturbed by the others |
+| `CV-SEM-007` | `phenSem001Binding.test.ts` — the observer's own continuant-file is the referent identity end to end; the integrated chain carries only type-212 identities in that position |
+| `CV-SEM-008` | `phenSem001Causal.test.ts` plus the integrated chain, where event-role evidence (type 223) and causal-role evidence (type 240) are separate canonical records that cannot overwrite one another |
+| `CV-SEM-009` | `phenSem001Causal.test.ts` — causal evidence responds to permitted observation and not to hidden truth; the integrated run derives it inside the same instant as the projection that feeds it |
+| `CV-SEM-010` | `phenSem001Causal.test.ts` — complete omniscient ancestry beside a projection that cannot traverse it; `sem001AcceptanceGate.test.ts` item 5 re-checks the separation over the whole fixture |
+| `CV-SEM-011` | `phenSem001Measurement.test.ts` — a real `observation/0.1-candidate` bounded measurement cited as supporting evidence through the frozen `ObservationId` namespace 1115 |
+| `CV-SEM-012` | `phenSem001Rendering.test.ts` — three viewpoint renderers over one immutable experience; `phenSem001Integration.test.ts` runs all three inside the scheduler and commits their record-derived output |
+| `CV-SEM-014` | `phenSem001Measurement.test.ts` whole-instant abort, with `phenSem001Integration.test.ts` proving the same transaction boundary under the complete fixture |
+| `CV-SEM-015` | `phenSem001Classification.test.ts` — equal truth with different permitted evidence classifies differently; equal evidence with different hidden truth is byte-identical |
+| `CV-SEM-017` | `phenSem001Classification.test.ts` and `semanticNegativeControls.test.ts` — registered facets and exact declared types, with missing distinct from explicit false |
+| `CV-SEM-018` | `phenSem001Classification.test.ts` and `sem001AcceptanceGate.test.ts` item 8 — classification emits only into experience assembly |
+
+## Registered is not admitted
+
+Campaign 0 registered ten causal-role values. `SEM-001`'s causal-role domain admits nine of them:
+`Context` (value 9) stays registered and unadmitted, and `Incidental` keeps value 10 rather than
+sliding into the gap. That is not an inconsistency to be tidied, and it is not a new mechanism. It
+records a distinction the architecture already relies on:
+
+> A registered semantic value is not thereby a value admitted by a given seam, read-domain, or
+> domain contract. Registration fixes a permanent number and meaning; admission is decided by the
+> exact receiving rule. A later implementation may not infer that "registered" means "legal
+> everywhere".
+
+The same distinction governs seam-contract versions, facet definitions, evidence reference classes,
+and role vocabularies. Where a registry is broader than what a seam admits, the seam's own contract
+is the authority, and the unadmitted value must remain registered at its permanent number so that
+admitting it later renumbers nothing.
+
 ## Required negative controls and first divergence
 
-Each control must either fail structural closure or report its first illegal field/consequence:
+Each control must either fail structural closure or report its first illegal field/consequence.
+
+`src/test/semanticNegativeControls.test.ts` is the ledger discharging this section: one test per
+named control, in the order below, each stating which of two forms it takes — **closure failure**,
+where the forbidden construction is expressible and the seam refuses it with an exact asserted
+failure code, or **structural absence**, where no admitted vocabulary, field, or carrier can express
+it and the proof runs against the registered vocabulary rather than a denylist of spellings. The
+ledger registers each control's name at collection time and asserts that the registered set is
+exactly the set named here, so a control added to this list without a test, or a test discharging a
+control this list does not name, fails.
+
+Two results of building it are recorded rather than smoothed over. First, `DuplicateOpaqueOccurrence`
+is owned by `assertUniqueTrackTransitions` over the transition history, not by the state transition,
+which is stateless with respect to detections; the ledger asserts it where the invariant lives.
+Second, the branch clause and the one-current-resolution clause of the recognition history rule both
+refuse a laundered rewrite and both report `INVALID_RESOLUTION_HISTORY`, so that control asserts the
+shape is refused without claiming which clause owns it.
+
+The named controls:
 
 - `TruthIdentityCopy`;
 - `ReferentKeyedBinding`;
@@ -194,7 +331,24 @@ Each control must either fail structural closure or report its first illegal fie
 
 ## Acceptance gate
 
-`SEM-001` closes only when:
+`src/test/sem001AcceptanceGate.test.ts` audits this gate item by item. It reads these formal
+documents directly, so a condition stated here and a condition proved in code cannot drift apart:
+the audit parses the numbered list below and fails if an item is named without an entry, or entered
+without being named. Each item is discharged as **executable here** (a property of the code, proved
+in the audit), **executable elsewhere** (proved by a named test file, which the audit records and
+confirms is in the suite), or **ledger condition** (a statement these documents must make, which the
+audit checks they do).
+
+Item 6 is discharged by `src/test/phenSem001Integration.test.ts`, which runs the complete
+three-observer fixture inside the deterministic scheduler — every occurrence identity drawn from the
+scheduler's own runtime allocator — through causal-role derivation, continuant recognition, and the
+three viewpoint renderers, across a save/load boundary that reproduces state roots, all three
+observers' file counters, allocators, committed trace, and outputs byte-identically. `CV-SEM-097`
+remains the codec-level persistence vector; it drives a single-observer handler and does not
+discharge this item on its own.
+
+`SEM-001` closed on 2026-09-04, having met all ten conditions. They remain the standing audit, and
+`sem001AcceptanceGate.test.ts` re-checks each on every run. `SEM-001` closes only when:
 
 1. every vector is `PASS`;
 2. permanent record/enum IDs, governed role definitions, and the finite typed semantic-facet definitions used by the fixture are registered;
@@ -202,7 +356,7 @@ Each control must either fail structural closure or report its first illegal fie
 4. the event, observation, experience, and recognition phases are registered;
 5. character evidence contains no unobserved truth identity, unobserved truth classification, or linkable secret handle;
 6. the complete multi-observer fixture passes through immediate consumers and save/load replay;
-7. all negative controls report exact first divergence or closure failure; and
+7. all negative controls report exact first divergence or closure failure — discharged by the ledger above, thirty-one for thirty-one; and
 8. classification cannot directly enter psychological-pressure seams;
 9. full ontology inheritance and affordance closure remain explicitly deferred to `ONT-001`; and
 10. the observation verdict and campaign ledgers record the accepted scope without broadening `MATH-006`.

@@ -88,6 +88,7 @@ Implementation progress (2026-09-01): `CV-ORD-001` through `CV-ORD-004` and `CV-
 | Vector | Required proof |
 |---|---|
 | `CV-OWN-001` | Model construction rejects overlapping ownership patterns and every uncovered writable state leaf. One authority may own a declared structured family without ambiguity. |
+| `CV-OWN-002` | `MutationAuthorityId` has exactly one accepted global semantic namespace (`1025`); equal payloads under other typed namespaces are unequal; every registered authority resolves through that namespace; unknown, wrong-namespace, and non-owning authorities fail; authority identity, owned path family, removal permission, and leaf value grammar all contribute to `RegistryIdentity`/`ModelIdentity`; and declaration order does not. |
 | `CV-READ-001` | Forbidden state is absent from `ContractReadProjection`; attempted illegal access cannot be expressed through the typed interface and forged paths fail validation. |
 | `CV-READ-002` | Allowed accessor use records exact concrete paths/values; unused allowed fields remain possible reads but not actual reads. Derived projection values retain source/transformation provenance. |
 | `CV-PATCH-001` | A legal patch writes only owned paths and produces the exact canonical structural diff. Patch construction order cannot alter encoded patch or result. |

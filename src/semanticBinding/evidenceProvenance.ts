@@ -9,13 +9,13 @@ import type {
 export const EVIDENCE_PROVENANCE_CONTRACT_VERSION = 'semantic-binding/0.1-candidate#SEM-001G' as const;
 
 export type CharacterEvidenceRef =
-  | { readonly kind: 'observation'; readonly observationId: string }
-  | { readonly kind: 'continuant-feature'; readonly featureObservationId: string }
-  | { readonly kind: 'event-feature'; readonly eventFeatureObservationId: string }
+  | { readonly kind: 'observation'; readonly observationId: bigint }
+  | { readonly kind: 'continuant-feature'; readonly featureObservationId: bigint }
+  | { readonly kind: 'event-feature'; readonly eventFeatureObservationId: bigint }
   | { readonly kind: 'perceived-binding'; readonly perceivedBindingId: bigint }
   | { readonly kind: 'continuant-classification'; readonly classificationEvidenceId: bigint }
   | { readonly kind: 'event-classification'; readonly eventClassificationEvidenceId: bigint }
-  | { readonly kind: 'recognition-cue'; readonly recognitionCueEvidenceId: string }
+  | { readonly kind: 'recognition-cue'; readonly recognitionCueEvidenceId: bigint }
   | { readonly kind: 'recognition-resolution'; readonly recognitionResolutionId: bigint }
   | { readonly kind: 'causal-role'; readonly causalRoleEvidenceId: bigint };
 
@@ -29,7 +29,7 @@ export type EvidenceCarrier =
     };
 
 export interface EvidenceApplicabilityScope {
-  readonly experienceId?: string;
+  readonly experienceId?: bigint;
   readonly windowId?: string;
   readonly modalityId?: string;
   readonly featureScopeId?: string;
@@ -69,7 +69,7 @@ export interface EvidenceReadDomain {
 export interface EvidenceConsumerContext {
   readonly observerId: string;
   readonly occurredAt: bigint;
-  readonly experienceId?: string;
+  readonly experienceId?: bigint;
   readonly windowId?: string;
   readonly requiredCarrier?: EvidenceCarrier;
 }
@@ -108,7 +108,7 @@ export interface CausalRoleModel {
 
 export interface CausalRoleEvidence {
   readonly causalRoleEvidenceId: bigint;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualEventReferentId: PerceptualEventReferentId;
   readonly perceptualReferentId: PerceptualReferentId;
@@ -242,7 +242,7 @@ export function deriveCausalRoleEvidence(
   ], 'causal-role request');
   requireNonempty(request.transformationVersion, 'transformationVersion');
   const { experience } = request;
-  requireNonempty(experience.experienceId, 'experienceId');
+  if (experience.experienceId < 0n) fail('INVALID_CAUSAL_ROLE_REQUEST', 'ExperienceId must be a nonnegative allocated occurrence');
   if (experience.observerId !== request.perceptualReferentId.observerId
     || experience.observerId !== request.perceptualEventReferentId.observerId) {
     fail('CROSS_OBSERVER_REFERENCE', 'causal-role carrier must belong to the experience observer');
@@ -377,7 +377,7 @@ function validateTemporalScope(record: ObserverSafeEvidenceOccurrence, domain: E
   if (domain.temporalScope === 'SameWindow') {
     if (!consumer.windowId || record.scope.windowId !== consumer.windowId) fail('INVALID_TEMPORAL_SCOPE', 'evidence is outside the consuming window');
   } else if (domain.temporalScope === 'SameExperience') {
-    if (!consumer.experienceId || record.scope.experienceId !== consumer.experienceId) fail('INVALID_TEMPORAL_SCOPE', 'evidence is outside the consuming experience');
+    if (consumer.experienceId === undefined || record.scope.experienceId !== consumer.experienceId) fail('INVALID_TEMPORAL_SCOPE', 'evidence is outside the consuming experience');
   }
 }
 
@@ -437,7 +437,10 @@ function exactObservedRole(evidence: EventRoleEvidence): EventRoleId | undefined
 }
 
 function validateOptionalScope(scope: EvidenceApplicabilityScope, observerId: string): void {
-  for (const [name, value] of [['experienceId', scope.experienceId], ['windowId', scope.windowId], ['modalityId', scope.modalityId], ['featureScopeId', scope.featureScopeId]] as const) {
+  if (scope.experienceId !== undefined && scope.experienceId < 0n) {
+    fail('INVALID_APPLICABILITY_SCOPE', 'experienceId must be a nonnegative allocated occurrence');
+  }
+  for (const [name, value] of [['windowId', scope.windowId], ['modalityId', scope.modalityId], ['featureScopeId', scope.featureScopeId]] as const) {
     if (value !== undefined) requireNonempty(value, name);
   }
   if (scope.carrier) validateCarrier(scope.carrier, observerId);

@@ -62,7 +62,7 @@ Field order below is semantic documentation only. Accepted `SEM-001I.2` assigns 
 |---|---|---|
 | `PerceptualContinuantFileState` | `NextTrackSequenceByObserver`, `ActivePerceptualReferentIds` | perception seam |
 | `PerceptualEventFileState` | `NextEventSequenceByObserver`, `ActivePerceptualEventReferentIds` | perception seam |
-| `RecognitionKnowledgeState` | duplicate-free canonical `CandidateCatalogEntries` and `IdentitySymbolMappings`, each explicitly scoped by observer | initial-state authority in v0.1; a future accepted learning/forgetting seam may mutate it; recognition is read-only |
+| `RecognitionKnowledgeState` | duplicate-free canonical `CandidateCatalogEntries` and `IdentitySymbolMappings`, each explicitly scoped by observer | owned by `RecognitionKnowledgeAuthority`, whose only producer in v0.1 is initial-state construction; a future accepted learning/forgetting seam becomes a second producer under the same authority; recognition is read-only |
 | `RecognitionResolutionState` | duplicate-free canonical set of append-only `RecognitionResolutionRecord` values | recognition seam |
 
 The two per-observer next-sequence maps are authoritative save/load state and require registered `StatePath` roots and fields. They are not folded into the run-global allocator. Ending a file removes it from the active set but never decrements or frees its observer sequence.

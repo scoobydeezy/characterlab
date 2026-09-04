@@ -23,9 +23,10 @@ import {
 } from '../semanticBinding/perceptualClassification';
 import type { PerceptualEventReferentId, PerceptualReferentId } from '../semanticBinding/perceptualEventFiles';
 
+const DEFAULT_SUPPORT = 20000n;
 const observerId = 'character/mina';
-const experienceId = 'experience/classification';
-const detectionId = { observerId, detectionId: 'detection/visual-1' };
+const experienceId = 7900n;
+const detectionId = { observerId, detectionOccurrenceId: 3101n };
 const continuant: PerceptualReferentId = { observerId, observerTrackSequence: 17n };
 const transformationVersion = 'perceptual-classification/0.1-candidate';
 
@@ -41,14 +42,14 @@ const feature = (
   booleanValue: boolean,
   ordinal: number,
 ): PermittedPerceptualFeatureObservation => ({
-  featureObservationId: `feature-observation/${ordinal.toString().padStart(2, '0')}`,
+  featureObservationId: BigInt(ordinal),
   observerId,
   currentDetectionId: detectionId,
   perceptualReferentId: continuant,
   perceptualFeatureId,
   booleanValue,
   observationChannelId: 'observation-channel/controlled-visual',
-  supportingObservationIds: [{ observerId, observationId: `observation/${ordinal.toString().padStart(2, '0')}` }],
+  supportingObservationIds: [{ observerId, observationId: DEFAULT_SUPPORT }],
   occurredAt: 20n,
   transformationVersion,
 });
@@ -61,7 +62,7 @@ const request = (
   observerId,
   perceptualReferentId: continuant,
   currentDetectionId: detectionId,
-  featureObservations: [...featureObservations].sort((left, right) => left.featureObservationId.localeCompare(right.featureObservationId)),
+  featureObservations: [...featureObservations].sort((left, right) => left.featureObservationId < right.featureObservationId ? -1 : left.featureObservationId > right.featureObservationId ? 1 : 0),
   occurredAt: 20n,
   transformationVersion,
   ...overrides,
@@ -160,8 +161,8 @@ describe('SEM-001D typed continuant-classification conformance', () => {
     expect(negative.classifications[0]).toMatchObject({
       perceptualFacetId: PerceptualFacetId.AppearsMetallic,
       typedPerceivedValue: false,
-      supportingFeatureObservationIds: ['feature-observation/01'],
-      supportingObservationIds: [{ observerId, observationId: 'observation/01' }],
+      supportingFeatureObservationIds: [1n],
+      supportingObservationIds: [{ observerId, observationId: DEFAULT_SUPPORT }],
     });
 
     const metallicRule = INITIAL_PERCEPTUAL_CLASSIFICATION_RULES.find(
@@ -201,8 +202,8 @@ describe('SEM-001D typed continuant-classification conformance', () => {
     expect(result.classifications[0]).toMatchObject({
       classificationEvidenceId: 10n,
       classificationRuleId: 'classification-rule/elongated-form',
-      supportingFeatureObservationIds: ['feature-observation/01'],
-      supportingObservationIds: [{ observerId, observationId: 'observation/01' }],
+      supportingFeatureObservationIds: [1n],
+      supportingObservationIds: [{ observerId, observationId: DEFAULT_SUPPORT }],
     });
     expect(result.classifications[0]).not.toHaveProperty('semanticReferentId');
     expect(result.classifications[0]).not.toHaveProperty('worldSemanticFacetId');

@@ -31,7 +31,8 @@ export interface PerceptualEventFacetDefinition {
 }
 
 export interface PermittedPerceptualEventFeatureObservation {
-  readonly eventFeatureObservationId: string;
+  /** Allocated typed `EventFeatureObservationId` occurrence (namespace 1102). */
+  readonly eventFeatureObservationId: bigint;
   readonly observerId: string;
   readonly currentEventDetectionId: CurrentEventDetectionId;
   readonly perceptualEventReferentId: PerceptualEventReferentId;
@@ -69,7 +70,7 @@ export interface PerceptualEventClassificationModel {
 }
 
 export interface EventClassificationRequest {
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualEventReferentId: PerceptualEventReferentId;
   readonly currentEventDetectionId: CurrentEventDetectionId;
@@ -80,13 +81,13 @@ export interface EventClassificationRequest {
 
 export interface PerceptualEventClassificationEvidence {
   readonly eventClassificationEvidenceId: bigint;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualEventReferentId: PerceptualEventReferentId;
   readonly perceptualEventFacetId: PerceptualEventFacetId;
   readonly typedPerceivedValue: boolean;
   readonly eventClassificationRuleId: string;
-  readonly supportingEventFeatureObservationIds: readonly string[];
+  readonly supportingEventFeatureObservationIds: readonly bigint[];
   readonly supportingPerceptualReferentIds: readonly PerceptualReferentId[];
   readonly supportingObservationIds: readonly SupportingObservationId[];
   readonly occurredAt: bigint;
@@ -217,14 +218,14 @@ export function classifyPerceptualEvent(
   if (nextRuntimeId < 0n) fail('INVALID_ALLOCATOR_STATE', 'nextRuntimeId must be nonnegative');
   compilePerceptualEventClassificationModel(model.modelIdentity, model.facetDefinitions, model.rules, model.derivations);
   exactKeys(request, ['experienceId', 'observerId', 'perceptualEventReferentId', 'currentEventDetectionId', 'featureObservations', 'occurredAt', 'transformationVersion'], 'event-classification request');
-  requireNonempty(request.experienceId, 'experienceId');
+  if (request.experienceId < 0n) fail('INVALID_ALLOCATOR_STATE', 'ExperienceId must be a nonnegative allocated occurrence');
   requireNonempty(request.observerId, 'observerId');
   requireNonempty(request.transformationVersion, 'transformationVersion');
   validateEventId(request.perceptualEventReferentId, request.observerId);
   validateDetection(request.currentEventDetectionId, request.observerId);
   const features = request.featureObservations.map((value) => validateFeature(value, request)).sort(compareFeatures);
-  requireCanonical(request.featureObservations, features, (value) => value.eventFeatureObservationId, 'event-feature observations');
-  const occurrenceIds = new Set<string>();
+  requireCanonical(request.featureObservations, features, (value) => String(value.eventFeatureObservationId), 'event-feature observations');
+  const occurrenceIds = new Set<bigint>();
   const featureIds = new Set<PerceptualEventFeatureId>();
   for (const feature of features) {
     if (occurrenceIds.has(feature.eventFeatureObservationId) || featureIds.has(feature.perceptualEventFeatureId)) fail('INVALID_FEATURE_OBSERVATION', 'event features must be unique by identity and predicate within a request');
@@ -250,7 +251,7 @@ export function classifyPerceptualEvent(
       perceptualEventFacetId: rule.outputPerceptualEventFacetId,
       typedPerceivedValue: result.booleanValue,
       eventClassificationRuleId: rule.eventClassificationRuleId,
-      supportingEventFeatureObservationIds: Object.freeze(inputs.map((value) => value.eventFeatureObservationId).sort(compareText)),
+      supportingEventFeatureObservationIds: Object.freeze(inputs.map((value) => value.eventFeatureObservationId).sort(compareOrdinal)),
       supportingPerceptualReferentIds: unionContinuants(inputs.flatMap((value) => value.supportingPerceptualReferentIds)),
       supportingObservationIds: unionObservations(inputs.flatMap((value) => value.supportingObservationIds)),
       occurredAt: request.occurredAt,
@@ -261,8 +262,8 @@ export function classifyPerceptualEvent(
   return Object.freeze({ classifications: Object.freeze(classifications), nextRuntimeId: nextRuntimeId + BigInt(classifications.length) });
 }
 
-export function validateExperienceEventClassifications(experienceId: string, classifications: readonly PerceptualEventClassificationEvidence[]): void {
-  requireNonempty(experienceId, 'experienceId');
+export function validateExperienceEventClassifications(experienceId: bigint, classifications: readonly PerceptualEventClassificationEvidence[]): void {
+  if (experienceId < 0n) fail('INVALID_ALLOCATOR_STATE', 'ExperienceId must be a nonnegative allocated occurrence');
   const ids = new Set<bigint>();
   const assertions = new Set<string>();
   for (const value of classifications) {
@@ -322,14 +323,16 @@ function validateRule(value: PerceptualEventClassificationRuleDefinition): Perce
 
 function validateFeature(value: PermittedPerceptualEventFeatureObservation, request: EventClassificationRequest): PermittedPerceptualEventFeatureObservation {
   exactKeys(value, ['eventFeatureObservationId', 'observerId', 'currentEventDetectionId', 'perceptualEventReferentId', 'perceptualEventFeatureId', 'booleanValue', 'observationChannelId', 'supportingPerceptualReferentIds', 'supportingObservationIds', 'occurredAt', 'transformationVersion'], 'event-feature observation');
-  requireNonempty(value.eventFeatureObservationId, 'eventFeatureObservationId');
+  if (typeof value.eventFeatureObservationId !== 'bigint' || value.eventFeatureObservationId < 0n) {
+    fail('INVALID_FEATURE_OBSERVATION', 'eventFeatureObservationId must be a nonnegative allocated occurrence');
+  }
   requireNonempty(value.observationChannelId, 'observationChannelId');
   requireNonempty(value.transformationVersion, 'transformationVersion');
   if (!isFeatureId(value.perceptualEventFeatureId)) fail('UNKNOWN_FEATURE', 'unknown event feature');
   if (typeof value.booleanValue !== 'boolean') fail('INVALID_FEATURE_OBSERVATION', 'event feature requires exact boolean');
   if (value.observerId !== request.observerId) fail('CROSS_OBSERVER_REFERENCE', 'event feature belongs to another observer');
   validateDetection(value.currentEventDetectionId, request.observerId);
-  if (value.currentEventDetectionId.detectionId !== request.currentEventDetectionId.detectionId) fail('INVALID_FEATURE_OBSERVATION', 'event feature belongs to another observation window');
+  if (value.currentEventDetectionId.eventDetectionOccurrenceId !== request.currentEventDetectionId.eventDetectionOccurrenceId) fail('INVALID_FEATURE_OBSERVATION', 'event feature belongs to another observation window');
   validateEventId(value.perceptualEventReferentId, request.observerId);
   if (eventKey(value.perceptualEventReferentId) !== eventKey(request.perceptualEventReferentId)) fail('INVALID_FEATURE_OBSERVATION', 'event feature belongs to another event-file');
   validateContinuants(value.supportingPerceptualReferentIds, request.observerId);
@@ -338,9 +341,11 @@ function validateFeature(value: PermittedPerceptualEventFeatureObservation, requ
 }
 
 function validateDetection(value: CurrentEventDetectionId, observerId: string): void {
-  exactKeys(value, ['observerId', 'detectionId'], 'current event detection');
+  exactKeys(value, ['observerId', 'eventDetectionOccurrenceId'], 'current event detection');
   if (value.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'event detection belongs to another observer');
-  requireNonempty(value.detectionId, 'detectionId');
+  if (typeof value.eventDetectionOccurrenceId !== 'bigint' || value.eventDetectionOccurrenceId < 0n) {
+    fail('INVALID_FEATURE_OBSERVATION', 'eventDetectionOccurrenceId must be a nonnegative allocated occurrence');
+  }
 }
 
 function validateEventId(value: PerceptualEventReferentId, observerId: string): void {
@@ -361,10 +366,13 @@ function validateContinuants(values: readonly PerceptualReferentId[], observerId
 
 function validateObservations(values: readonly SupportingObservationId[], observerId: string): void {
   if (values.length === 0) fail('INVALID_FEATURE_OBSERVATION', 'event feature requires supporting observations');
-  let prior = '';
+  let prior: bigint | undefined;
   for (const value of values) {
     if (value.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'supporting observation belongs to another observer');
-    if (!value.observationId || value.observationId <= prior) fail('INVALID_FEATURE_OBSERVATION', 'supporting observations must be unique and canonical');
+    if (typeof value.observationId !== 'bigint' || value.observationId < 0n
+      || (prior !== undefined && value.observationId <= prior)) {
+      fail('INVALID_FEATURE_OBSERVATION', 'supporting observations must be well-formed, unique, and canonical');
+    }
     prior = value.observationId;
   }
 }
@@ -383,7 +391,7 @@ function unionContinuants(values: readonly PerceptualReferentId[]): readonly Per
 
 function unionObservations(values: readonly SupportingObservationId[]): readonly SupportingObservationId[] {
   const byKey = new Map(values.map((value) => [`${value.observerId}\0${value.observationId}`, value]));
-  return Object.freeze([...byKey.values()].sort((a, b) => compareText(a.observationId, b.observationId)).map((value) => Object.freeze({ ...value })));
+  return Object.freeze([...byKey.values()].sort((a, b) => a.observationId < b.observationId ? -1 : a.observationId > b.observationId ? 1 : 0).map((value) => Object.freeze({ ...value })));
 }
 
 function exactKeys(value: object, allowed: readonly string[], description: string): void {
@@ -402,9 +410,14 @@ function freezeEventId(value: PerceptualEventReferentId): PerceptualEventReferen
 function eventKey(value: PerceptualEventReferentId): string { return `${value.observerId}:${value.observerEventSequence}`; }
 function compareFacets(a: PerceptualEventFacetDefinition, b: PerceptualEventFacetDefinition): number { return compareText(a.perceptualEventFacetId, b.perceptualEventFacetId); }
 function compareRules(a: PerceptualEventClassificationRuleDefinition, b: PerceptualEventClassificationRuleDefinition): number { return compareText(a.outputPerceptualEventFacetId, b.outputPerceptualEventFacetId) || compareText(a.eventClassificationRuleId, b.eventClassificationRuleId); }
-function compareFeatures(a: PermittedPerceptualEventFeatureObservation, b: PermittedPerceptualEventFeatureObservation): number { return compareText(a.eventFeatureObservationId, b.eventFeatureObservationId); }
+function compareFeatures(a: PermittedPerceptualEventFeatureObservation, b: PermittedPerceptualEventFeatureObservation): number { return compareOrdinal(a.eventFeatureObservationId, b.eventFeatureObservationId); }
 function compareText(a: string, b: string): number { return a < b ? -1 : a > b ? 1 : 0; }
 function isFacetId(value: unknown): value is PerceptualEventFacetId { return typeof value === 'string' && Object.values(PerceptualEventFacetId).includes(value as PerceptualEventFacetId); }
 function isFeatureId(value: unknown): value is PerceptualEventFeatureId { return typeof value === 'string' && Object.values(PerceptualEventFeatureId).includes(value as PerceptualEventFeatureId); }
 function requireNonempty(value: string, description: string): void { if (!value) fail('INVALID_MODEL', `${description} must be nonempty`); }
 function fail(code: PerceptualEventClassificationFailureCode, message: string): never { throw new PerceptualEventClassificationContractError(code, message); }
+
+/** Numeric ordering over opaque allocated ordinals; never lexicographic over their digits. */
+function compareOrdinal(left: bigint, right: bigint): number {
+  return left < right ? -1 : left > right ? 1 : 0;
+}

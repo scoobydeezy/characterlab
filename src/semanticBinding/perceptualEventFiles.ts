@@ -1,4 +1,5 @@
 import { EventRoleId, type EventRoleEvidence } from './eventBindings';
+import type { PerceptualReferentId, SupportingObservationId } from './perceptualContinuantFiles';
 import {
   validateExperienceClassifications,
   type PerceptualClassificationEvidence,
@@ -10,24 +11,20 @@ import {
 
 export const PERCEPTUAL_EVENT_FILE_CONTRACT_VERSION = 'semantic-binding/0.1-candidate#SEM-001C' as const;
 
-export interface PerceptualReferentId {
-  readonly observerId: string;
-  readonly observerTrackSequence: bigint;
-}
+// `PerceptualReferentId` and `SupportingObservationId` are accepted `SEM-001A` shapes owned by the
+// continuant-file seam. They are re-exported so existing `SEM-001C` consumers are unaffected.
+export type { PerceptualReferentId, SupportingObservationId } from './perceptualContinuantFiles';
 
 export interface PerceptualEventReferentId {
   readonly observerId: string;
   readonly observerEventSequence: bigint;
 }
 
+/** Type 215. */
 export interface CurrentEventDetectionId {
   readonly observerId: string;
-  readonly detectionId: string;
-}
-
-export interface SupportingObservationId {
-  readonly observerId: string;
-  readonly observationId: string;
+  /** Allocated typed `EventDetectionOccurrenceId` occurrence (namespace 1113). */
+  readonly eventDetectionOccurrenceId: bigint;
 }
 
 export type EventContinuityKind = 'NewEventFile' | 'ContinuesPriorEventFile';
@@ -91,7 +88,8 @@ export interface CompiledPerceivedBindings {
 }
 
 export interface PreRecognitionSemanticExperience {
-  readonly experienceId: string;
+  /** Allocated typed `ExperienceId` occurrence (namespace 1106). */
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly occurredAt: bigint;
   readonly perceptualEventReferentIds: readonly PerceptualEventReferentId[];
@@ -192,7 +190,7 @@ export function endPerceptualEventFile(
   validateState(state);
   validateExactKeys(request, [
     'observerId', 'perceptualEventReferentId', 'supportingObservationIds', 'occurredAt', 'transformationVersion',
-  ], 'event end');
+  ], 'event end', 'INVALID_EVENT_END');
   requireNonempty(request.observerId, 'observerId');
   requireNonempty(request.transformationVersion, 'transformationVersion');
   requireSameObserver(request.observerId, request.perceptualEventReferentId.observerId, 'event-file');
@@ -238,8 +236,8 @@ export function assemblePreRecognitionExperience(input: PreRecognitionSemanticEx
     'experienceId', 'observerId', 'occurredAt', 'perceptualEventReferentIds', 'perceivedBindings',
     'perceptualClassifications', 'perceptualEventClassifications',
     'supportingObservationIds', 'transformationVersion',
-  ], 'semantic experience');
-  requireNonempty(input.experienceId, 'experienceId');
+  ], 'semantic experience', 'INVALID_EXPERIENCE');
+  if (input.experienceId < 0n) fail('INVALID_EXPERIENCE', 'ExperienceId must be a nonnegative allocated occurrence');
   requireNonempty(input.observerId, 'observerId');
   requireNonempty(input.transformationVersion, 'transformationVersion');
   validateSupportingObservations(input.observerId, input.supportingObservationIds);
@@ -311,7 +309,7 @@ function validateBinding(request: PerceivedBindingRequest, index: number): Perce
   validateExactKeys(request, [
     'observerId', 'perceptualEventReferentId', 'perceptualReferentId', 'eventRoleEvidence',
     'supportingObservationIds', 'occurredAt', 'transformationVersion',
-  ], `perceived binding ${index}`);
+  ], `perceived binding ${index}`, 'INVALID_PERCEIVED_BINDING');
   requireNonempty(request.observerId, 'observerId');
   requireNonempty(request.transformationVersion, 'transformationVersion');
   requireSameObserver(request.observerId, request.perceptualEventReferentId.observerId, 'event-file');
@@ -354,20 +352,20 @@ function validateCommonObservationContext(
 ): void {
   requireNonempty(observerId, 'observerId');
   requireNonempty(transformationVersion, 'transformationVersion');
-  validateExactKeys(detectionId, ['observerId', 'detectionId'], 'current event detection');
+  validateExactKeys(detectionId, ['observerId', 'eventDetectionOccurrenceId'], 'current event detection');
   requireSameObserver(observerId, detectionId.observerId, 'current event detection');
-  requireNonempty(detectionId.detectionId, 'detectionId');
+  requireNonnegative(detectionId.eventDetectionOccurrenceId, 'eventDetectionOccurrenceId');
   validateSupportingObservations(observerId, supportingObservationIds);
 }
 
 function validateSupportingObservations(observerId: string, observations: readonly SupportingObservationId[]): void {
   if (observations.length === 0) fail('INVALID_SUPPORTING_OBSERVATION', 'at least one supporting observation is required');
-  let prior = '';
+  let prior: bigint | undefined;
   for (const observation of observations) {
-    validateExactKeys(observation, ['observerId', 'observationId'], 'supporting observation');
+    validateExactKeys(observation, ['observerId', 'observationId'], 'supporting observation', 'INVALID_SUPPORTING_OBSERVATION');
     requireSameObserver(observerId, observation.observerId, 'supporting observation');
-    requireNonempty(observation.observationId, 'observationId');
-    if (observation.observationId <= prior) {
+    requireNonnegative(observation.observationId, 'observationId');
+    if (prior !== undefined && observation.observationId <= prior) {
       fail('INVALID_SUPPORTING_OBSERVATION', 'supporting observations must be unique and strictly canonical');
     }
     prior = observation.observationId;
@@ -381,12 +379,23 @@ function validateEventId(eventId: PerceptualEventReferentId): void {
   }
 }
 
-function validateExactKeys(value: object, allowed: readonly string[], description: string): void {
+/**
+ * A forbidden field is reported against the construct being validated. `code` names that construct,
+ * so first divergence identifies the record that was malformed rather than defaulting every seam
+ * boundary to the event-transition code. A truth-shaped field is reported as truth leakage
+ * regardless of the construct, because that is the more specific divergence.
+ */
+function validateExactKeys(
+  value: object,
+  allowed: readonly string[],
+  description: string,
+  code: PerceptualEventFileFailureCode = 'INVALID_EVENT_TRANSITION',
+): void {
   const allowedSet = new Set(allowed);
   for (const key of Object.keys(value)) {
     if (!allowedSet.has(key)) {
       const truthLike = /truth|worldEvent|actionConcept|semanticReferent/i.test(key);
-      fail(truthLike ? 'FORBIDDEN_TRUTH_FIELD' : 'INVALID_EVENT_TRANSITION', `${description} contains forbidden field ${key}`);
+      fail(truthLike ? 'FORBIDDEN_TRUTH_FIELD' : code, `${description} contains forbidden field ${key}`);
     }
   }
 }
@@ -467,6 +476,13 @@ function requireSameObserver(expected: string, actual: string, description: stri
 
 function requireNonempty(value: string, description: string): void {
   if (!value) fail('INVALID_EVENT_TRANSITION', `${description} must be nonempty`);
+}
+
+/** Allocated occurrence ordinals are opaque but must be well-formed. */
+function requireNonnegative(value: bigint, description: string): void {
+  if (typeof value !== 'bigint' || value < 0n) {
+    fail('INVALID_EVENT_TRANSITION', `${description} must be a nonnegative allocated occurrence`);
+  }
 }
 
 function compareText(left: string, right: string): number {

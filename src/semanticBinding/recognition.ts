@@ -17,6 +17,8 @@ export interface RecognitionCandidateCatalogEntry {
 }
 
 export interface ObserverIdentitySymbolMapping {
+  /** Typed `ObserverSymbolCandidateMappingId` occurrence (namespace 1107), allocated not derived. */
+  readonly observerSymbolCandidateMappingId: bigint;
   readonly observerId: string;
   readonly perceivedIdentitySymbolId: string;
   readonly candidateSemanticReferentId: string;
@@ -28,7 +30,7 @@ export type RecognitionCueSource =
   | {
       readonly kind: 'identity-claim-mapping';
       readonly perceivedIdentitySymbolId: string;
-      readonly observerSymbolCandidateMappingId: string;
+      readonly observerSymbolCandidateMappingId: bigint;
     };
 
 export type RecognitionExperienceEvidenceRef =
@@ -39,8 +41,9 @@ export type RecognitionExperienceEvidenceRef =
 export type RecognitionCuePolarity = 'SupportsCandidate' | 'ContradictsCandidate';
 
 export interface PermittedRecognitionCueEvidence {
-  readonly recognitionCueEvidenceId: string;
-  readonly experienceId: string;
+  /** Allocated typed `RecognitionCueEvidenceId` occurrence (namespace 1108). */
+  readonly recognitionCueEvidenceId: bigint;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualReferentId: PerceptualReferentId;
   readonly candidateSemanticReferentId: string;
@@ -85,11 +88,11 @@ export interface RecognitionModel {
 
 export interface RecognitionEvaluation {
   readonly recognitionEvaluationId: bigint;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualReferentId: PerceptualReferentId;
   readonly recognitionRuleId: string;
-  readonly evaluatedRecognitionCueEvidenceIds: readonly string[];
+  readonly evaluatedRecognitionCueEvidenceIds: readonly bigint[];
   readonly priorRecognitionResolutionId?: bigint;
   readonly result: RecognitionRuleResult;
   readonly occurredAt: bigint;
@@ -102,13 +105,12 @@ export type RecognitionResolution =
 
 export interface RecognitionResolutionRecord {
   readonly recognitionResolutionId: bigint;
-  readonly recognitionEvaluationId: bigint;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualReferentId: PerceptualReferentId;
   readonly resolution: RecognitionResolution;
   readonly recognitionRuleId: string;
-  readonly evaluatedRecognitionCueEvidenceIds: readonly string[];
+  readonly evaluatedRecognitionCueEvidenceIds: readonly bigint[];
   readonly revisesRecognitionResolutionId?: bigint;
   readonly occurredAt: bigint;
   readonly recognitionVersion: string;
@@ -225,8 +227,8 @@ export function evaluateContinuantRecognition(
   const cues = request.cueEvidence.map((value) => validateCue(
     value, request.experience, request.perceptualReferentId, catalog, mappings,
   )).sort(compareCues);
-  requireCanonical(request.cueEvidence, cues, (value) => value.recognitionCueEvidenceId, 'recognition cues');
-  const cueIds = new Set<string>();
+  requireCanonical(request.cueEvidence, cues, (value) => String(value.recognitionCueEvidenceId), 'recognition cues');
+  const cueIds = new Set<bigint>();
   for (const cue of cues) {
     if (cueIds.has(cue.recognitionCueEvidenceId)) fail('INVALID_CUE', 'duplicate recognition cue identity');
     cueIds.add(cue.recognitionCueEvidenceId);
@@ -262,7 +264,6 @@ export function evaluateContinuantRecognition(
     : Object.freeze({ kind: 'withdrawn' });
   const resolutionRecord: RecognitionResolutionRecord = Object.freeze({
     recognitionResolutionId: nextRuntimeId + 1n,
-    recognitionEvaluationId: nextRuntimeId,
     experienceId: request.experience.experienceId,
     observerId,
     perceptualReferentId: freezeContinuantId(request.perceptualReferentId),
@@ -406,13 +407,16 @@ function validateMappings(
   requireCanonical(values, canonical, mappingKey, 'identity-symbol mappings');
   const result = new Map<string, ObserverIdentitySymbolMapping>();
   for (const value of values) {
-    exactKeys(value, ['observerId', 'perceivedIdentitySymbolId', 'candidateSemanticReferentId', 'mappingVersion'], 'identity-symbol mapping');
+    exactKeys(value, ['observerSymbolCandidateMappingId', 'observerId', 'perceivedIdentitySymbolId', 'candidateSemanticReferentId', 'mappingVersion'], 'identity-symbol mapping');
     if (value.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'identity-symbol mapping belongs to another observer');
+    if (value.observerSymbolCandidateMappingId < 0n) fail('INVALID_SYMBOL_MAPPING', 'symbol-mapping occurrence IDs must be nonnegative');
     requireNonempty(value.perceivedIdentitySymbolId, 'perceivedIdentitySymbolId');
     requireNonempty(value.mappingVersion, 'mappingVersion');
     if (!catalog.has(value.candidateSemanticReferentId)) fail('INVALID_SYMBOL_MAPPING', 'symbol mapping candidate is absent from observer catalog');
     const key = mappingKey(value);
-    if (result.has(key)) fail('INVALID_SYMBOL_MAPPING', 'duplicate identity-symbol mapping');
+    // At most one ACTIVE mapping per (ObserverId, PerceivedIdentitySymbolId). Replacement allocates
+    // a new occurrence and replaces this entry; it never remaps an existing occurrence in place.
+    if (result.has(key)) fail('INVALID_SYMBOL_MAPPING', 'observer holds more than one active mapping for one perceived identity symbol');
     result.set(key, Object.freeze({ ...value }));
   }
   return result;
@@ -426,7 +430,9 @@ function validateCue(
   mappings: ReadonlyMap<string, ObserverIdentitySymbolMapping>,
 ): PermittedRecognitionCueEvidence {
   exactKeys(value, ['recognitionCueEvidenceId', 'experienceId', 'observerId', 'perceptualReferentId', 'candidateSemanticReferentId', 'recognitionCueSource', 'cuePolarity', 'supportingExperienceEvidenceRefs', 'occurredAt', 'transformationVersion'], 'recognition cue');
-  requireNonempty(value.recognitionCueEvidenceId, 'recognitionCueEvidenceId');
+  if (typeof value.recognitionCueEvidenceId !== 'bigint' || value.recognitionCueEvidenceId < 0n) {
+    fail('INVALID_CUE', 'recognitionCueEvidenceId must be a nonnegative allocated occurrence');
+  }
   requireNonempty(value.transformationVersion, 'transformationVersion');
   if (value.experienceId !== experience.experienceId || value.observerId !== experience.observerId) fail('CROSS_OBSERVER_REFERENCE', 'recognition cue belongs to another observer or experience');
   validateContinuantId(value.perceptualReferentId, value.observerId);
@@ -454,8 +460,12 @@ function validateCueSource(
   }
   if (source.kind === 'identity-claim-mapping') {
     exactKeys(source, ['kind', 'perceivedIdentitySymbolId', 'observerSymbolCandidateMappingId'], 'identity-claim cue source');
-    const mapping = mappings.get(`${source.perceivedIdentitySymbolId}\0${candidateId}`);
-    if (!mapping || source.observerSymbolCandidateMappingId !== mappingId(mapping)) fail('INVALID_SYMBOL_MAPPING', 'identity claim lacks the exact observer-owned symbol mapping');
+    const mapping = mappings.get(source.perceivedIdentitySymbolId);
+    if (!mapping
+      || mapping.candidateSemanticReferentId !== candidateId
+      || source.observerSymbolCandidateMappingId !== mapping.observerSymbolCandidateMappingId) {
+      fail('INVALID_SYMBOL_MAPPING', 'identity claim lacks the exact observer-owned symbol mapping');
+    }
     return;
   }
   fail('INVALID_CUE', 'unknown recognition cue source');
@@ -519,14 +529,14 @@ function validateRuleResult(
 }
 
 function validateResolution(value: RecognitionResolutionRecord): void {
-  exactKeys(value, ['recognitionResolutionId', 'recognitionEvaluationId', 'experienceId', 'observerId', 'perceptualReferentId', 'resolution', 'recognitionRuleId', 'evaluatedRecognitionCueEvidenceIds', 'revisesRecognitionResolutionId', 'occurredAt', 'recognitionVersion'], 'recognition resolution');
-  if (value.recognitionResolutionId < 0n || value.recognitionEvaluationId < 0n) fail('INVALID_RESOLUTION_HISTORY', 'recognition occurrence IDs must be nonnegative');
-  requireNonempty(value.experienceId, 'experienceId');
+  exactKeys(value, ['recognitionResolutionId', 'experienceId', 'observerId', 'perceptualReferentId', 'resolution', 'recognitionRuleId', 'evaluatedRecognitionCueEvidenceIds', 'revisesRecognitionResolutionId', 'occurredAt', 'recognitionVersion'], 'recognition resolution');
+  if (value.recognitionResolutionId < 0n) fail('INVALID_RESOLUTION_HISTORY', 'recognition occurrence IDs must be nonnegative');
+  if (value.experienceId < 0n) fail('INVALID_RESOLUTION_HISTORY', 'ExperienceId must be a nonnegative allocated occurrence');
   requireNonempty(value.observerId, 'observerId');
   requireNonempty(value.recognitionRuleId, 'recognitionRuleId');
   requireNonempty(value.recognitionVersion, 'recognitionVersion');
   validateContinuantId(value.perceptualReferentId, value.observerId);
-  validateStrings(value.evaluatedRecognitionCueEvidenceIds, 'evaluated recognition cues', true);
+  validateOrdinals(value.evaluatedRecognitionCueEvidenceIds, 'evaluated recognition cues');
   if (value.resolution.kind === 'asserted-candidate') {
     exactKeys(value.resolution, ['kind', 'candidateSemanticReferentId'], 'asserted recognition resolution');
     requireNonempty(value.resolution.candidateSemanticReferentId, 'candidateSemanticReferentId');
@@ -571,11 +581,24 @@ function freezeResolution(value: RecognitionResolutionRecord): RecognitionResolu
 function freezeContinuantId(value: PerceptualReferentId): PerceptualReferentId { return Object.freeze({ ...value }); }
 function continuantKey(value: PerceptualReferentId): string { return `${value.observerId}:${value.observerTrackSequence}`; }
 function observationKey(value: SupportingObservationId): string { return `${value.observerId}:${value.observationId}`; }
-function mappingKey(value: ObserverIdentitySymbolMapping): string { return `${value.perceivedIdentitySymbolId}\0${value.candidateSemanticReferentId}`; }
-function mappingId(value: ObserverIdentitySymbolMapping): string { return `symbol-mapping/${value.perceivedIdentitySymbolId}/${value.candidateSemanticReferentId}/${value.mappingVersion}`; }
-function compareCues(a: PermittedRecognitionCueEvidence, b: PermittedRecognitionCueEvidence): number { return compareText(a.recognitionCueEvidenceId, b.recognitionCueEvidenceId); }
+function mappingKey(value: ObserverIdentitySymbolMapping): string { return value.perceivedIdentitySymbolId; }
+function compareCues(a: PermittedRecognitionCueEvidence, b: PermittedRecognitionCueEvidence): number { return compareOrdinal(a.recognitionCueEvidenceId, b.recognitionCueEvidenceId); }
+/** Duplicate-free, strictly ascending list of allocated occurrence ordinals. */
+function validateOrdinals(values: readonly bigint[], description: string): void {
+  let prior: bigint | undefined;
+  for (const value of values) {
+    if (typeof value !== 'bigint' || value < 0n) fail('INVALID_MODEL', `${description} must be nonnegative allocated occurrences`);
+    if (prior !== undefined && value <= prior) fail('INVALID_MODEL', `${description} must be unique and canonical`);
+    prior = value;
+  }
+}
 function compareResolutions(a: RecognitionResolutionRecord, b: RecognitionResolutionRecord): number { return a.recognitionResolutionId < b.recognitionResolutionId ? -1 : a.recognitionResolutionId > b.recognitionResolutionId ? 1 : 0; }
 function compareText(a: string, b: string): number { return a < b ? -1 : a > b ? 1 : 0; }
 function requireCanonical<T>(supplied: readonly T[], canonical: readonly T[], key: (value: T) => string, description: string): void { if (supplied.length !== canonical.length || supplied.some((value, index) => key(value) !== key(canonical[index]))) fail('INVALID_MODEL', `${description} must be canonical`); }
 function requireNonempty(value: string, description: string): void { if (!value) fail('INVALID_MODEL', `${description} must be nonempty`); }
 function fail(code: RecognitionFailureCode, message: string): never { throw new RecognitionContractError(code, message); }
+
+/** Numeric ordering over opaque allocated ordinals; never lexicographic over their digits. */
+function compareOrdinal(left: bigint, right: bigint): number {
+  return left < right ? -1 : left > right ? 1 : 0;
+}

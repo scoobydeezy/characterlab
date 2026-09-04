@@ -261,7 +261,7 @@ describe('SEM-001H two-lane semantic phase conformance', () => {
 
     const handler: EventHandler<PhaseState> = ({ state, allocateRuntimeId }) => {
       const reservation = admitObservationLane({ observerId, lane: 'Current', dueAt: 1n, emitsCharacterAccessibleEvidence: true }, allocateRuntimeId).reservation!;
-      expect(reservation.experienceId).toBe('experience/runtime/70');
+      expect(reservation.experienceId).toBe(8950n);
       validateSuccessfulExperienceSettlement([reservation], []);
       return { nextState: state, emittedEvents: [], traceContributions: [], outputs: [] };
     };

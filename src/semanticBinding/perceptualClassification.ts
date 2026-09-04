@@ -1,7 +1,8 @@
-import {
-  type PerceptualReferentId,
-  type SupportingObservationId,
-} from './perceptualEventFiles';
+import type {
+  CurrentDetectionId,
+  PerceptualReferentId,
+  SupportingObservationId,
+} from './perceptualContinuantFiles';
 
 export const PERCEPTUAL_CLASSIFICATION_CONTRACT_VERSION = 'semantic-binding/0.1-candidate#SEM-001D' as const;
 
@@ -27,10 +28,9 @@ export const PerceptualFeatureId = {
 
 export type PerceptualFeatureId = typeof PerceptualFeatureId[keyof typeof PerceptualFeatureId];
 
-export interface CurrentDetectionId {
-  readonly observerId: string;
-  readonly detectionId: string;
-}
+// `CurrentDetectionId` is an accepted `SEM-001A` observer-side detection occurrence owned by the
+// continuant-file seam; re-exported so existing `SEM-001D` consumers are unaffected.
+export type { CurrentDetectionId } from './perceptualContinuantFiles';
 
 export interface PerceptualFacetDefinition {
   readonly perceptualFacetId: PerceptualFacetId;
@@ -40,7 +40,8 @@ export interface PerceptualFacetDefinition {
 }
 
 export interface PermittedPerceptualFeatureObservation {
-  readonly featureObservationId: string;
+  /** Allocated typed `FeatureObservationId` occurrence (namespace 1101). */
+  readonly featureObservationId: bigint;
   readonly observerId: string;
   readonly currentDetectionId: CurrentDetectionId;
   readonly perceptualReferentId: PerceptualReferentId;
@@ -77,7 +78,7 @@ export interface PerceptualClassificationModel {
 }
 
 export interface ClassificationRequest {
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualReferentId: PerceptualReferentId;
   readonly currentDetectionId: CurrentDetectionId;
@@ -88,13 +89,13 @@ export interface ClassificationRequest {
 
 export interface PerceptualClassificationEvidence {
   readonly classificationEvidenceId: bigint;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly perceptualReferentId: PerceptualReferentId;
   readonly perceptualFacetId: PerceptualFacetId;
   readonly typedPerceivedValue: boolean;
   readonly classificationRuleId: string;
-  readonly supportingFeatureObservationIds: readonly string[];
+  readonly supportingFeatureObservationIds: readonly bigint[];
   readonly supportingObservationIds: readonly SupportingObservationId[];
   readonly occurredAt: bigint;
   readonly transformationVersion: string;
@@ -242,15 +243,15 @@ export function classifyContinuant(
     'experienceId', 'observerId', 'perceptualReferentId', 'currentDetectionId', 'featureObservations',
     'occurredAt', 'transformationVersion',
   ], 'classification request');
-  requireNonempty(request.experienceId, 'experienceId');
+  if (request.experienceId < 0n) fail('INVALID_ALLOCATOR_STATE', 'ExperienceId must be a nonnegative allocated occurrence');
   requireNonempty(request.observerId, 'observerId');
   requireNonempty(request.transformationVersion, 'transformationVersion');
   validateContinuantId(request.perceptualReferentId, request.observerId);
   validateDetection(request.currentDetectionId, request.observerId);
 
   const features = request.featureObservations.map((feature) => validateFeature(feature, request)).sort(compareFeatures);
-  requireCanonical(request.featureObservations, features, (candidate) => candidate.featureObservationId, 'feature observations');
-  const featureIds = new Set<string>();
+  requireCanonical(request.featureObservations, features, (candidate) => String(candidate.featureObservationId), 'feature observations');
+  const featureIds = new Set<bigint>();
   const featureKinds = new Set<PerceptualFeatureId>();
   for (const feature of features) {
     if (featureIds.has(feature.featureObservationId) || featureKinds.has(feature.perceptualFeatureId)) {
@@ -282,7 +283,7 @@ export function classifyContinuant(
       perceptualFacetId: rule.outputPerceptualFacetId,
       typedPerceivedValue: result.booleanValue,
       classificationRuleId: rule.classificationRuleId,
-      supportingFeatureObservationIds: Object.freeze(inputs.map((feature) => feature.featureObservationId).sort(compareText)),
+      supportingFeatureObservationIds: Object.freeze(inputs.map((feature) => feature.featureObservationId).sort(compareOrdinal)),
       supportingObservationIds,
       occurredAt: request.occurredAt,
       transformationVersion: request.transformationVersion,
@@ -296,10 +297,10 @@ export function classifyContinuant(
 }
 
 export function validateExperienceClassifications(
-  experienceId: string,
+  experienceId: bigint,
   classifications: readonly PerceptualClassificationEvidence[],
 ): void {
-  requireNonempty(experienceId, 'experienceId');
+  if (experienceId < 0n) fail('INVALID_ALLOCATOR_STATE', 'ExperienceId must be a nonnegative allocated occurrence');
   const occurrences = new Set<bigint>();
   const assertions = new Set<string>();
   for (const classification of classifications) {
@@ -368,14 +369,16 @@ function validateFeature(
     'featureObservationId', 'observerId', 'currentDetectionId', 'perceptualReferentId', 'perceptualFeatureId',
     'booleanValue', 'observationChannelId', 'supportingObservationIds', 'occurredAt', 'transformationVersion',
   ], 'feature observation');
-  requireNonempty(feature.featureObservationId, 'featureObservationId');
+  if (typeof feature.featureObservationId !== 'bigint' || feature.featureObservationId < 0n) {
+    fail('INVALID_FEATURE_OBSERVATION', 'featureObservationId must be a nonnegative allocated occurrence');
+  }
   requireNonempty(feature.observationChannelId, 'observationChannelId');
   requireNonempty(feature.transformationVersion, 'transformationVersion');
   if (!isFeatureId(feature.perceptualFeatureId)) fail('UNKNOWN_FEATURE', `unknown feature ${String(feature.perceptualFeatureId)}`);
   if (typeof feature.booleanValue !== 'boolean') fail('INVALID_FEATURE_OBSERVATION', 'feature value must be an exact boolean');
   if (feature.observerId !== request.observerId) fail('CROSS_OBSERVER_REFERENCE', 'feature belongs to another observer');
   validateDetection(feature.currentDetectionId, request.observerId);
-  if (feature.currentDetectionId.detectionId !== request.currentDetectionId.detectionId) {
+  if (feature.currentDetectionId.detectionOccurrenceId !== request.currentDetectionId.detectionOccurrenceId) {
     fail('INVALID_FEATURE_OBSERVATION', 'feature belongs to another detection context');
   }
   validateContinuantId(feature.perceptualReferentId, request.observerId);
@@ -387,9 +390,11 @@ function validateFeature(
 }
 
 function validateDetection(detection: CurrentDetectionId, observerId: string): void {
-  validateExactKeys(detection, ['observerId', 'detectionId'], 'current detection');
+  validateExactKeys(detection, ['observerId', 'detectionOccurrenceId'], 'current detection');
   if (detection.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'detection belongs to another observer');
-  requireNonempty(detection.detectionId, 'detectionId');
+  if (typeof detection.detectionOccurrenceId !== 'bigint' || detection.detectionOccurrenceId < 0n) {
+    fail('INVALID_FEATURE_OBSERVATION', 'detectionOccurrenceId must be a nonnegative allocated occurrence');
+  }
 }
 
 function validateContinuantId(referent: PerceptualReferentId, observerId: string): void {
@@ -414,12 +419,13 @@ function validateRuleResult(result: ClassificationRuleResult): void {
 
 function validateObservations(observerId: string, observations: readonly SupportingObservationId[]): void {
   if (observations.length === 0) fail('INVALID_FEATURE_OBSERVATION', 'feature observation requires permitted support');
-  let prior = '';
+  let prior: bigint | undefined;
   for (const observation of observations) {
     validateExactKeys(observation, ['observerId', 'observationId'], 'supporting observation');
     if (observation.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'supporting observation belongs to another observer');
-    if (!observation.observationId || observation.observationId <= prior) {
-      fail('INVALID_FEATURE_OBSERVATION', 'supporting observations must be nonempty, unique, and canonical');
+    if (typeof observation.observationId !== 'bigint' || observation.observationId < 0n
+      || (prior !== undefined && observation.observationId <= prior)) {
+      fail('INVALID_FEATURE_OBSERVATION', 'supporting observations must be well-formed, unique, and canonical');
     }
     prior = observation.observationId;
   }
@@ -429,7 +435,7 @@ function canonicalObservationUnion(observations: readonly SupportingObservationI
   const byKey = new Map<string, SupportingObservationId>();
   for (const observation of observations) byKey.set(`${observation.observerId}\u0000${observation.observationId}`, observation);
   return Object.freeze([...byKey.values()]
-    .sort((left, right) => compareText(left.observationId, right.observationId))
+    .sort((left, right) => left.observationId < right.observationId ? -1 : left.observationId > right.observationId ? 1 : 0)
     .map((observation) => Object.freeze({ ...observation })));
 }
 
@@ -494,7 +500,7 @@ function compareFeatures(
   left: PermittedPerceptualFeatureObservation,
   right: PermittedPerceptualFeatureObservation,
 ): number {
-  return compareText(left.featureObservationId, right.featureObservationId);
+  return compareOrdinal(left.featureObservationId, right.featureObservationId);
 }
 
 function continuantKey(referent: PerceptualReferentId): string {
@@ -519,4 +525,9 @@ function compareText(left: string, right: string): number {
 
 function fail(code: PerceptualClassificationFailureCode, message: string): never {
   throw new PerceptualClassificationContractError(code, message);
+}
+
+/** Numeric ordering over opaque allocated ordinals; never lexicographic over their digits. */
+function compareOrdinal(left: bigint, right: bigint): number {
+  return left < right ? -1 : left > right ? 1 : 0;
 }

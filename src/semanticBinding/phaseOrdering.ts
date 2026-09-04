@@ -49,7 +49,8 @@ export const OBSERVATION_LANES: Readonly<Record<ObservationLane, ObservationLane
 });
 
 export interface ExperienceReservation {
-  readonly experienceId: string;
+  /** Allocated typed `ExperienceId` occurrence (namespace 1106). */
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly lane: ObservationLane;
   readonly dueAt: bigint;
@@ -75,7 +76,7 @@ export interface StagedSemanticExperience {
 
 export interface FrozenRecognitionInput {
   readonly lane: ObservationLane;
-  readonly experienceId: string;
+  readonly experienceId: bigint;
   readonly observerId: string;
   readonly frozenAtPhase: bigint;
   readonly request: RecognitionRequest;
@@ -144,7 +145,7 @@ export function admitObservationLane(
   requireNonnegative(allocated, 'allocated ExperienceId');
   return Object.freeze({
     reservation: Object.freeze({
-      experienceId: `experience/runtime/${allocated}`,
+      experienceId: allocated,
       observerId: request.observerId,
       lane: request.lane,
       dueAt: request.dueAt,
@@ -171,13 +172,13 @@ export function validateSuccessfulExperienceSettlement(
   reservations: readonly ExperienceReservation[],
   stagedExperiences: readonly StagedSemanticExperience[],
 ): void {
-  const reserved = new Map<string, ExperienceReservation>();
+  const reserved = new Map<bigint, ExperienceReservation>();
   for (const reservation of reservations) {
     validateReservation(reservation);
     if (reserved.has(reservation.experienceId)) fail('DUPLICATE_EXPERIENCE_ENVELOPE', 'ExperienceId reservations must be unique across lanes');
     reserved.set(reservation.experienceId, reservation);
   }
-  const staged = new Map<string, StagedSemanticExperience>();
+  const staged = new Map<bigint, StagedSemanticExperience>();
   for (const envelope of stagedExperiences) {
     if (staged.has(envelope.experience.experienceId)) fail('DUPLICATE_EXPERIENCE_ENVELOPE', 'one ExperienceId cannot stage several envelopes');
     const reservation = reserved.get(envelope.experience.experienceId);
@@ -249,7 +250,7 @@ export function assertAutomaticAdaptationOutput(outputKind: 'adaptation-state' |
 
 function validateReservation(reservation: ExperienceReservation): void {
   exactKeys(reservation, ['experienceId', 'observerId', 'lane', 'dueAt', 'reservedAtPhase'], 'experience reservation');
-  requireNonempty(reservation.experienceId, 'experienceId');
+  requireNonnegative(reservation.experienceId, 'experienceId');
   requireNonempty(reservation.observerId, 'observerId');
   requireNonnegative(reservation.dueAt, 'dueAt');
   if (!Object.hasOwn(OBSERVATION_LANES, reservation.lane)

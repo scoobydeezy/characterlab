@@ -30,13 +30,14 @@ import {
   type PerceptualReferentId,
 } from '../semanticBinding/perceptualEventFiles';
 
+const SUPPORT_BASE = 21999n;
 const observerId = 'character/mina';
 const eventFile: PerceptualEventReferentId = { observerId, observerEventSequence: 8n };
 const continuants: readonly PerceptualReferentId[] = [
   { observerId, observerTrackSequence: 4n },
   { observerId, observerTrackSequence: 7n },
 ];
-const detection = { observerId, detectionId: 'event-detection/window-1' };
+const detection = { observerId, eventDetectionOccurrenceId: 3201n };
 const version = 'perceptual-event-classification/0.1-candidate';
 
 const initialModel = () => compilePerceptualEventClassificationModel(
@@ -52,7 +53,7 @@ const feature = (
   ordinal: number,
   overrides: Partial<PermittedPerceptualEventFeatureObservation> = {},
 ): PermittedPerceptualEventFeatureObservation => ({
-  eventFeatureObservationId: `event-feature/${ordinal.toString().padStart(2, '0')}`,
+  eventFeatureObservationId: BigInt(ordinal),
   observerId,
   currentEventDetectionId: detection,
   perceptualEventReferentId: eventFile,
@@ -60,7 +61,7 @@ const feature = (
   booleanValue,
   observationChannelId: 'observation-channel/controlled-event-pattern',
   supportingPerceptualReferentIds: continuants,
-  supportingObservationIds: [{ observerId, observationId: `observation/${ordinal.toString().padStart(2, '0')}` }],
+  supportingObservationIds: [{ observerId, observationId: SUPPORT_BASE + BigInt(ordinal) }],
   occurredAt: 30n,
   transformationVersion: version,
   ...overrides,
@@ -70,11 +71,11 @@ const request = (
   features: readonly PermittedPerceptualEventFeatureObservation[],
   overrides: Partial<EventClassificationRequest> = {},
 ): EventClassificationRequest => ({
-  experienceId: 'experience/event-pattern',
+  experienceId: 8101n,
   observerId,
   perceptualEventReferentId: eventFile,
   currentEventDetectionId: detection,
-  featureObservations: [...features].sort((a, b) => a.eventFeatureObservationId.localeCompare(b.eventFeatureObservationId)),
+  featureObservations: [...features].sort((a, b) => a.eventFeatureObservationId < b.eventFeatureObservationId ? -1 : a.eventFeatureObservationId > b.eventFeatureObservationId ? 1 : 0),
   occurredAt: 30n,
   transformationVersion: version,
   ...overrides,
@@ -91,7 +92,7 @@ const replaceRule = (
   replacement: PerceptualEventClassificationRuleDefinition,
 ) => INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES
   .map((rule) => rule.outputPerceptualEventFacetId === facetId ? replacement : rule)
-  .sort((a, b) => a.outputPerceptualEventFacetId.localeCompare(b.outputPerceptualEventFacetId)
+  .sort((a, b) => a.outputPerceptualEventFacetId < b.outputPerceptualEventFacetId ? -1 : a.outputPerceptualEventFacetId > b.outputPerceptualEventFacetId ? 1 : 0
     || a.eventClassificationRuleId.localeCompare(b.eventClassificationRuleId));
 
 describe('SEM-001E typed perceptual event-pattern classification conformance', () => {
@@ -146,13 +147,13 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
     expect(result.classifications[0]).toMatchObject({
       supportingPerceptualReferentIds: continuants,
       supportingObservationIds: [
-        { observerId, observationId: 'observation/01' },
-        { observerId, observationId: 'observation/02' },
-        { observerId, observationId: 'observation/03' },
+        { observerId, observationId: 22000n },
+        { observerId, observationId: 22001n },
+        { observerId, observationId: 22002n },
       ],
     });
     const staleNegative = feature(PerceptualEventFeatureId.ObservedCyclicFlexibleContinuantArc, false, 2, {
-      currentEventDetectionId: { observerId, detectionId: 'event-detection/other-window' },
+      currentEventDetectionId: { observerId, eventDetectionOccurrenceId: 3202n },
     });
     expect(() => classifyPerceptualEvent(initialModel(), request([staleNegative]), 0n))
       .toThrowError(expect.objectContaining({ code: 'INVALID_FEATURE_OBSERVATION' }));
@@ -162,16 +163,16 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
       perceptualEventReferentId: eventFile,
       perceptualReferentId: continuants[0],
       eventRoleEvidence: { kind: 'exact', eventRoleId },
-      supportingObservationIds: [{ observerId, observationId: 'observation/role' }],
+      supportingObservationIds: [{ observerId, observationId: 22005n }],
       occurredAt: 30n,
       transformationVersion: version,
     }], 100n).bindings;
     const withRoles = (bindings: ReturnType<typeof roleVariant>, classifications: readonly PerceptualEventClassificationEvidence[]) =>
       assemblePreRecognitionExperience({
-        experienceId: 'experience/event-pattern', observerId, occurredAt: 30n,
+        experienceId: 8101n, observerId, occurredAt: 30n,
         perceptualEventReferentIds: [eventFile], perceivedBindings: bindings,
         perceptualClassifications: [], perceptualEventClassifications: classifications,
-        supportingObservationIds: [{ observerId, observationId: 'observation/experience' }], transformationVersion: version,
+        supportingObservationIds: [{ observerId, observationId: 22004n }], transformationVersion: version,
       });
     const actorExperience = withRoles(roleVariant(EventRoleId.Actor), result.classifications);
     const targetExperience = withRoles(roleVariant(EventRoleId.Target), result.classifications);
@@ -188,8 +189,8 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
   });
 
   it('CV-SEM-055 preserves false-merge contradictions and false-split equivalence without repair', () => {
-    const early = classifyPerceptualEvent(initialModel(), request(ropeFeatures([true, true, true]), { experienceId: 'experience/early' }), 0n);
-    const late = classifyPerceptualEvent(initialModel(), request(ropeFeatures([true, false, true]), { experienceId: 'experience/late' }), 1n);
+    const early = classifyPerceptualEvent(initialModel(), request(ropeFeatures([true, true, true]), { experienceId: 8100n }), 0n);
+    const late = classifyPerceptualEvent(initialModel(), request(ropeFeatures([true, false, true]), { experienceId: 8102n }), 1n);
     expect(early.classifications[0].perceptualEventReferentId).toEqual(late.classifications[0].perceptualEventReferentId);
     expect(early.classifications[0].typedPerceivedValue).not.toBe(late.classifications[0].typedPerceivedValue);
     const splitFile = { observerId, observerEventSequence: 9n };
@@ -203,7 +204,7 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
     const first = classifyPerceptualEvent(initialModel(), request([
       feature(PerceptualEventFeatureId.ObservedRepeatedMotionPattern, true, 1),
     ]), 0n).classifications[0];
-    const later = { ...first, eventClassificationEvidenceId: 1n, experienceId: 'experience/later', typedPerceivedValue: false };
+    const later = { ...first, eventClassificationEvidenceId: 1n, experienceId: 8103n, typedPerceivedValue: false };
     expect(first).toMatchObject({ typedPerceivedValue: true });
     expect(later).toMatchObject({ typedPerceivedValue: false });
     const duplicate: PerceptualEventClassificationEvidence = { ...first, eventClassificationEvidenceId: 99n, typedPerceivedValue: false };
@@ -231,7 +232,7 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
       feature(PerceptualEventFeatureId.ObservedCoupledMotionAcrossContinuants, true, 1),
     ]), 0n).classifications[0];
     expect(result.eventClassificationRuleId).toBe('event-classification-rule/coupled-motion');
-    expect(result.supportingEventFeatureObservationIds).toEqual(['event-feature/01']);
+    expect(result.supportingEventFeatureObservationIds).toEqual([1n]);
     expect(result).not.toHaveProperty('semanticActionReferentId');
     const target = INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES[0];
     const prose = { ...target, derivationFunctionId: 'llm/prose-event-classifier' };
@@ -276,7 +277,7 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
       perceivedBindings: [],
       perceptualClassifications: [],
       perceptualEventClassifications: [result],
-      supportingObservationIds: [{ observerId, observationId: 'observation/experience' }],
+      supportingObservationIds: [{ observerId, observationId: 22004n }],
       transformationVersion: version,
     });
     expect(assembled.perceptualEventClassifications).toEqual([result]);
@@ -285,7 +286,7 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
       perceptualEventReferentId: eventFile,
       perceptualReferentId: continuants[0],
       eventRoleEvidence: { kind: 'exact', eventRoleId: EventRoleId.Action },
-      supportingObservationIds: [{ observerId, observationId: 'observation/action-binding' }],
+      supportingObservationIds: [{ observerId, observationId: 22003n }],
       occurredAt: 30n,
       transformationVersion: version,
     }], 100n)).toThrowError(expect.objectContaining({ code: 'ACTION_AS_CONTINUANT_FILE' }));
