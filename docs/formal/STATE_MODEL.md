@@ -35,11 +35,11 @@ Every persistent field has exactly one registered mutation authority. Other seam
 | episodic/imprint memory | Memory encoding/consolidation | unresolved specification |
 | associations | Consolidation | unresolved specification |
 | values | Value learning/consolidation | unresolved specification |
-| skills | Procedural adaptation / skill-learning transition | unresolved specification |
+| procedural skill (actual competence) | authority/procedural-skill | SHAPE ACCEPTED adaptation-input/0.31-candidate; allocation pending, implementation/proof gated |
 | habits | Habit learning/consolidation | unresolved specification |
 | person models | Person-model learning/application | unresolved specification |
 | relationships | Relationship learning/consolidation | unresolved specification |
-| regulatory adaptation, tolerance, sensitization, and accumulated load | Regulatory adaptation transition | unresolved specification |
+| regulatory adaptation, tolerance, sensitization, and accumulated load | authority/regulatory-adaptation | SHAPE ACCEPTED adaptation-input/0.31-candidate; allocation pending, implementation/proof gated |
 | self/identity/disposition | Identity/dispositional consolidation | unresolved specification |
 
 “Proposed” is not permission to implement. The seam ledger must replace each unresolved row with a versioned contract before code writes that state.
@@ -158,13 +158,20 @@ PatchOperation =
 
 `Set` with expected absence creates a keyed value. Patch operations sort by canonical encoded path. Duplicate paths, ancestor/descendant overlaps within one patch, noncanonical order, mutable aliases, or a precondition that does not structurally match staged state fail deterministically. Replacing an ordered aggregate is one explicit `Set`; implementations may not disguise multiple order-sensitive mutations as an unordered collection of operations.
 
-Before staging, the engine verifies:
+Before staging, the engine verifies, in this order (`WRT-001`):
 
+0. every patch path is structurally valid — checked explicitly, never as a side effect of sorting,
+   so first divergence does not depend on how many operations a patch happens to carry;
 1. seam and contract versions are registered;
 2. every actual read belongs to `ReadDomain`;
-3. every patch path is owned by `MutationAuthorityId`;
-4. expected old values match the current staged state structurally;
-5. new values satisfy type, domain, registry, and invariant constraints;
+3. every patch path belongs to a declared writable leaf family, resolved through one shared
+   primitive, so an undeclared path never reaches authority resolution and reports
+   `UNDECLARED_WRITABLE_PATH` rather than a `NON_OWNING_AUTHORITY` relationship no authority could
+   have held;
+4. every patch path is owned by `MutationAuthorityId`;
+5. operation-specific validation — removal permission, expected old values, and value grammar —
+   under the previously accepted `state/0.2-candidate` semantics and ordering, which `WRT-001` does
+   not change;
 6. emitted events use registered schemas and legal ordering; and
 7. no output contains an undeclared authoritative dependency.
 
@@ -196,3 +203,11 @@ State identity uses stable typed IDs and canonical registries. Copies used for c
 ## Candidate acceptance gate
 
 The ownership-overlap, uncovered-path, illegal read/write, stale precondition, patch-order, exact-diff, deep-copy, and whole-instant rollback vectors in [Campaign 0 Conformance Vectors](CONFORMANCE_VECTORS.md) pass. Acceptance covers only the enforcement machinery; each proposed psychological state-family authority in the table still requires its own seam contract.
+
+
+ADAPT shape-acceptance bookkeeping (2026-09-06): the two adaptation rows consume the
+[whole-contract shape acceptance](../planning/ADAPT_001_DRAFT_RESOLUTION.md) and
+[canonical packaging](../planning/ADAPT_001_PACKAGING_DRAFT.md). Permanent allocation is authorized
+and pending; these statuses do not claim physical registration, canonical implementation or proof.
+VAL-001 must close before canonical reliance on affected governed executables. Formal ADAPT-001
+remains open until its required phenomenon and adversarial/mutation gates pass.

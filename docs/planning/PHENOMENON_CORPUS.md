@@ -1,10 +1,10 @@
 # Retained Phenomenon Corpus
 
-**CorpusVersion:** `corpus/0.15.0-draft`
+**CorpusVersion:** `corpus/0.26.0-draft`
 
 **CorpusManifestSchema:** `CorpusManifestEntry` type 174, schema version 1
 
-**CorpusManifestDigest:** `6e0a2b9337d1998242147dd8f4bdfe6bea09f18fea7dd4e139c559b6110bc2fe`
+**CorpusManifestDigest:** `42dc63048912b666c8d7cd4b4c58273f698f1f1950b3a1714c1b12bc7eaa46fc`
 
 **Status:** initial populated corpus; fixtures require formal seam contracts before implementation
 
@@ -22,12 +22,12 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 | PhenomenonId | Version | Historical intake | Primary obligation |
 |---|---|---|---|
-| `PHEN-ADAPT-001` | `1.0.0-draft` | `P3-012`, North-Star embodied adaptation | hidden exposure may update adaptation but never cognition directly |
+| `PHEN-ADAPT-001` | `1.10.0-draft` | `P3-012`, North-Star embodied adaptation | hidden exposure may update adaptation but never cognition directly |
 | `PHEN-BIO-001` | `1.0.0-draft` | `MEC-017`, `MEC-018`, `EXP-011`, `EXP-012` | stochastic biography changes future decision boundaries |
 | `PHEN-COMMIT-001` | `1.0.0-draft` | `MEC-020`, `EXP-013` | commitment pressure follows concrete lifecycle identity |
 | `PHEN-DECISION-001` | `1.0.0-draft` | `MEC-015`–`MEC-019`, `EXP-010` | settled versus unresolved authorship and frozen expression |
 | `PHEN-DET-001` | `1.0.0-draft` | `SUB-004`, `SUB-008`, `SUB-009` | exact replay and random-address independence |
-| `PHEN-EPI-001` | `1.1.0-draft` | `EXP-002`, `EXP-008`, `RET-006`, `RET-014` | hidden truth cannot alter character evidence |
+| `PHEN-EPI-001` | `1.3.0-draft` | `EXP-002`, `EXP-008`, `RET-006`, `RET-014` | hidden truth cannot alter character evidence |
 | `PHEN-LEARN-001` | `1.0.0-draft` | `MEC-001`, `MEC-002`, `EXP-002` | censored evidence changes belief only when informative |
 | `PHEN-MEM-001` | `1.0.0-draft` | `MEC-010`, `EXP-006` | recency, retrieval reinforcement, bounded access, and decay |
 | `PHEN-REASON-001` | `1.0.0-draft` | `MEC-012`–`MEC-016`, `EXP-009`, `EXP-014` | semantic reason independence and correlation control |
@@ -37,25 +37,145 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 ## `PHEN-ADAPT-001` — Automatic adaptation without cognitive leakage
 
-**Version:** `1.0.0-draft`
+**Version:** `1.10.0-draft`
 
-**Required setup domain:** Two timelines share model, character state, permitted observations, authored inputs, and random addresses. Timeline A receives a hidden physiological exposure or valid practice event; Timeline B receives none. The immediate observation projection is deliberately identical. A later matched challenge can expose the changed regulatory or procedural state through its ordinary causal effects.
+**Required setup domain:** Two timelines share ModelIdentity, initial character/state bytes, RunSeed,
+ordered-input topology/timing, basis identities, all non-intervention input bytes and immediate
+permitted observations. The controlled intervention changes exactly one authored actual-fact count.
+OrderedInputSequenceDigest and therefore RunIdentity differ through that field, by design; neither
+model nor initial-state commitment changes. The accepted comparison specification and, where relevant,
+ComparisonDrawMap supply paired random-address coupling. A later matched challenge can expose changed
+regulatory/procedural state through ordinary causal effects.
+
+**Intervention identity control (new, frozen for review; not passed):** compare complete canonical
+input manifests and all RunIdentity components. Exactly the named count and its resulting ordered-input
+digest differ; hidden model/state/seed differences fail. Zero and nonzero source events both exist.
+For this fixture, rule applicability depends on basis kind/governed identity rather than that count;
+ApplicableRules and evaluation allocation topology match. The transition may use count to produce
+StateChange versus NoStateChange. Omitting the zero-count evaluation fails.
+
+**Both-affected ancestry control:** require one authoritative phase-110 intervention root whose
+independent branches produce AAI and the accepted SEM consequence→EVID chain. Two contemporaneous
+unrelated roots do not satisfy this obligation. No AAI ID or scheduler ancestry enters character
+evidence. The exact fixed-pulse consequence bridge is proposed in ADAPT_001_CONSEQUENCE_BRIDGE_DRAFT.md;
+its AD-D11..15 controls remain unpassed before ADAPT acceptance.
+
+**Matched allocation topology (required).** Both timelines schedule the same events and consume the same allocator positions; only the *semantic exposure facts* differ:
+
+```
+Timeline A:  matched exposure input → valid rule → StateChange
+Timeline B:  matched exposure input → valid rule → NoStateChange
+```
+
+Timeline B must not simply omit the exposure occurrence. An extra occurrence in A alone would shift every later allocated ordinal, and although those ordinals are semantically meaningless they remain part of canonical record identity — so a shifted `ExperienceId` or evidence ordinal would surface as a divergence *before* the adaptation is perceived, and the fixture would appear to fail its own first-divergence obligation for a reason that is not cognitive at all. The typed `NoStateChange` result exists partly to make this matched skeleton constructible.
+
+A fixture that deliberately uses a different allocation shape may not claim raw canonical identity equality; it must first have an explicitly accepted ordinal-free comparison projection for character semantics. Matched allocation is strongly preferred for this phenomenon.
 
 **Interventions:** Toggle only actual exposure/practice; independently toggle whether a later sensor or performance opportunity legitimately reveals its effects; replace the typed automatic-adaptation route with character-learning evidence as a negative control.
 
-**Observable obligation:** The qualifying exposure/practice changes only its registered regulatory or procedural adaptation target. Beliefs, expectations, episodic memory, person models, values, habits, identity, and current character learning evidence remain structurally equal while permitted observations are equal. A later matched challenge may diverge through the changed adaptation state and only then generate different character evidence.
+**Observable obligation:** The qualifying exposure/practice changes only its registered regulatory or procedural adaptation target. **Every registered character-learning-route state family, and every character-learning occurrence or output, remains structurally equal while permitted observations remain equal.** A later matched challenge may diverge through the changed adaptation state and only then generate different character evidence.
+
+The obligation is closure over the registered route rather than a prose list, so that adding a ninth character-learning state family cannot silently weaken this phenomenon.
+
+**The executable source of truth is the governed route definition committed to `ModelIdentity`, not this document.** It must cover both halves: which persistent state families belong to which route, *and* which occurrence/output families do — `OutcomeEvaluation` and `OutcomeLearningEvidence` among them. A state-family registry alone cannot prove the occurrence/output set exhaustive, which would leave that half open to exactly the omission that lost associations and relationships. The fixture derives both by query; the table below is an *audit* that documentation matches the governed definition, and a mismatch in either direction is a failure. Until Campaign 2A freezes that definition, this phenomenon cannot be executed — deriving route membership by parsing prose is the failure mode the closure form exists to prevent.
+
+| Character-learning-route state family | Source |
+|---|---|
+| Belief / expectation state | inventory row 1 |
+| Episodic / imprint memory | inventory row 2 |
+| Associations | inventory row 3 |
+| Values | inventory row 4 |
+| Habits | inventory row 6 |
+| Person models | inventory row 7 |
+| Relationships | inventory row 8 |
+| Self / identity / disposition | inventory row 10 |
+
+Associations and relationships were absent from this phenomenon's original enumeration; the closure form is what prevents that recurring. Character-learning occurrences and outputs — `OutcomeLearningEvidence` records and any `OutcomeEvaluation` they descend from — are equally in scope.
+
+**A derived closure may be empty; an empty closure cannot satisfy this phenomenon.** Deriving the set and finding it empty is a real assertion about the governed definition rather than a vacuous one, and is the honest state of a campaign that has registered no character-learning transitions yet. But this phenomenon's route obligation and its both-affected obligation name concrete members of that closure, so:
+
+> **No intentionally empty closure may satisfy a phenomenon that names concrete members of that closure.**
+
+The two halves therefore differ at verdict time. The character-learning **state** closure may contain families that are owned but not yet written — that is accepted early-slice behaviour. The character-learning **occurrence/output** closure must at least contain the outputs this phenomenon itself exercises, because the both-affected case requires them to exist and be emitted, not merely to be permitted. A thin character-learning occurrence contract is therefore a prerequisite of executing this phenomenon; belief consolidation is not, and character-learning evidence may exist without yet writing belief, value, habit, or any other state.
+
+**Result obligation:** The adaptation seam records dispatch unconditionally on admission and produces a typed, traceable evaluation result per applicable rule, so these outcomes stay distinguishable rather than collapsing into "nothing happened":
+
+```
+one admitted input → dispatch record → canonical set of applicable governed rules → one result per rule
+
+transition never ran                             → no dispatch record
+wrong route or wrong basis                       → typed admission failure, no dispatch record
+0 applicable rules                               → dispatch record, empty rule set, no evaluations
+applicable rule evaluated, no state change       → dispatch record + NoStateChange
+applicable rule evaluated, state changed         → dispatch record + StateChange
+```
+
+The dispatch record carries the input occurrence, the consuming transition, the admitted basis, the canonically ordered applicable rule set resolved *before* any state is read, and the instant and definition version. Without it, "the transition never ran" and "the transition ran and nothing in the committed model responded" are both the absence of a record, and absence cannot carry a distinction.
+
+"No applicable rule" and "an applicable rule produced `NoStateChange`" are **different** outcomes: the first says nothing in the committed model responds to this exposure, the second says a named rule looked and concluded no change. Collapsing them hides a missing rule behind a legitimate-looking no-op. `NoStateChange` is emitted per applicable rule and **must not be used for the zero-rule case** — there is no rule to name, so such a record either names one that did not apply or names none and becomes indistinguishable from a missing record. One rule owns exactly one leaf family, so an exposure affecting two leaves is two rules and two results, never one multi-leaf patch. `ADAPT-001` v0.1 constrains this fixture — not the grammar — to exactly one applicable rule per input, so the comparison has one unambiguous target path.
+
+A wrong-route or wrong-basis input does **not** produce `NoStateChange`; it fails admission at the consuming transition's typed boundary. The trace retains at minimum: the input occurrence, the rule identity, the semantic key evaluated, the prior state, the result, and the resulting patch if any. `NoStateChange` is what makes a matched non-changing exposure expressible, and the matched-allocation requirement above depends on it.
 
 **Causal counterfactual obligation:** A model that requires conscious observation before all adaptation fails the hidden-exposure case. A model that places hidden exposure on the character-learning bus produces a forbidden immediate cognitive divergence.
 
 **Epistemic obligation:** Actual exposure, practice truth, and adaptation mutation provenance remain truth/trace-side unless separately projected through a permitted observation seam. The adaptation itself may causally change later sensations or performance without granting retrospective knowledge of its hidden cause.
 
+**Route obligation:** Where one event legitimately affects both routes, the two records are emitted independently and neither descends from the other. The character-learning record descends from the accepted consequence chain — permitted consequence observation → consequence `SemanticExperience` → character-relative `OutcomeEvaluation` → `OutcomeLearningEvidence` — not from a raw observation record. Wrong-route input fails at the consuming transition's typed read-domain boundary, not at a mutation authority: authority answers who owns writes to a state family, and input admission belongs to the transition.
+
+**Temporal obligation:** The adaptation write occurs at accepted phase 140 (consolidation, adaptation, and persistent-state mutation), after both observation lanes and after phase-130 perceived-outcome evaluation. An adaptation mutation cannot retroactively reopen an earlier observation lane.
+
+The comparison is **within a single run, pre-write versus post-write**:
+
+```
+same run:
+    records frozen by phase 130, before the phase-140 adaptation
+    ==
+    those same records, after it
+```
+
+It is emphatically *not* a claim that Timeline A's phase-≤130 omniscient records equal Timeline B's: the hidden exposure truth is intentionally different between timelines, and the truth-side records differ accordingly. Cross-timeline equality is restricted to the declared character-epistemic projection and the route-closure table above.
+
+Where a fixture cannot satisfy the within-run obligation without taking a position on `ORD-005`, it is constructed across separate simulation instants and that construction is recorded rather than left implicit.
+
 **Historical/developmental horizon:** One hidden exposure or practice event, its adaptation transition, an observation-equivalent interval, and one later matched challenge.
 
-**Exact comparison rule:** Exact structural equality across all character-epistemic state before the later revealing observation; exact inequality in the targeted adaptation state after the qualifying event; zero mutation in every non-target authority; first cognitive divergence, if any, must descend from a later permitted observation.
+**Exact comparison rule:** Exact structural equality across all character-epistemic state before the later revealing observation; first cognitive divergence, if any, must descend from a later permitted observation. Mutation is checked at three levels, because an authority-level check cannot see spill inside a legitimate authority:
 
-**Required trace fields:** exposure/practice truth, adaptation-input type, target authority, pre/post adaptation state, character-learning evidence emitted, observation projection, mutation diff, and causal ancestry of the first later cognitive divergence.
+> **The exact set of committed mutation paths equals the exact expected target-path set**, where a path is `authority · state family · leaf family · semantic key`.
+
+The levels below are that rule's explanatory decomposition, not substitutes for it:
+
+```
+target path(s)                                      → permitted mutation
+every non-target authority                          → zero mutation
+every non-target leaf family within that authority  → zero mutation
+every other semantic key within that leaf family    → zero mutation
+```
+
+The third level is what a per-aspect authority split would otherwise have bought: `ADAPT-001` registers one `authority/regulatory-adaptation` over separately addressable leaf families, so an exposure that legitimately raises tolerance must leave sensitization and accumulated load structurally equal.
+
+The fourth is the one a leaf-family check still misses, and it has two shapes rather than one. `tolerance(Mina, alcohol, Y)` and `tolerance(Mina, caffeine, Y)` share an authority *and* a leaf family and differ only in the exposure; `tolerance(Mina, alcohol, sedation)` and `tolerance(Mina, alcohol, reward)` share the exposure too and differ only in the response variable. Both are wrong-key spills and only an exact-key comparison catches either; likewise `practice(cooking)` must not touch `procedural-skill(lockpicking)`. Tolerance and sensitization are stimulus→effect relations, so a key naming the stimulus alone cannot express "tolerant to alcohol's sedating effect while sensitized to its reward response" and would leave a downstream function to guess what one generic magnitude meant.
+
+**Every distinction this comparison must make has to be addressable in the path, not held inside a leaf's value.** Two semantic keys reached through one per-subject record are one `StatePath` carrying different contents, so the committed mutation-path set would be byte-identical in the correct and the spilling run and the fourth level would be unwritable rather than merely unwritten. This is an obligation on the state addressing any candidate must satisfy, not a preference among representations; `ADAPT-001` §2.14 supplies the keys that satisfy it. Construction still waits on permanent allocation.
+
+**Absence is baseline.** For every adaptation leaf this phenomenon compares, a missing state path *is* the canonical baseline: an explicit baseline-valued entry is noncanonical and fails validation, a leaf driven off baseline and back is removed rather than zeroed, and a leaf that was never written is byte-identical to one that returned. Structural equality therefore compares meaning, not materialization history — without this, every byte-identity comparison in this phenomenon would silently also be comparing which map keys happened to exist. Retaining a present-but-baseline entry solely to distinguish "never adapted" from "adapted and recovered" is refused: that is one bit of storage history standing in for phenomena — faster reacquisition, latent sensitization, skill savings — that each require their own retained state with their own semantics. A phenomenon showing that two characters with identical present values but different histories must behave differently reopens this, and is answered by adding that state, never by reading history out of key presence.
+
+**Same-instant collisions and the frozen pre-adaptation projection.** At most one applicable rule evaluation may target one exact adaptation `StatePath` per simulation instant, **regardless of whether that evaluation would ultimately produce `StateChange` or `NoStateChange`**. Stating the policy over outcome rather than targeting would make enforcement depend on this instant's values: a genuine race between two rules for one path would pass whenever one of them happened to be a no-op. Stated over targeting, the collision is decidable from the resolved rule set and the derived paths, before any state is read.
+
+All phase-140 evaluations in one instant read one **frozen pre-adaptation state projection** — the state as it stood before any adaptation patch of that instant — and stage their patches against it; no evaluation observes another's patch. This closes the complementary hole, where two evaluations target different paths but one reads a leaf the other writes.
+
+```
+admit → resolve rules (record dispatch) → derive target paths → reject duplicate paths
+      → freeze pre-adaptation projection → evaluate and stage → commit atomically
+```
+
+Together these **remove `EventSequence` from adaptation semantics entirely.** Ordering remains a scheduling fact fixing allocator positions and trace order, but no adaptation value may depend on it: "whichever phase-140 event runs first changes what the next one reads" is explicitly refused, and permuting the same-instant admitted inputs must leave committed adaptation state byte-identical. A governed aggregation rule — not an ordering convention — is the intended replacement when a phenomenon requires simultaneous accumulation.
+
+**Required trace fields:** exposure/practice truth, adaptation-input type and typed adaptation basis, the dispatch record with its resolved applicable rule set, the consuming transition and the leaf its rule selected, pre/post adaptation state, character-learning evidence emitted, observation projection, mutation diff, and causal ancestry of the first later cognitive divergence.
 
 **Applicable seams:** world/body truth, practice, automatic adaptation input, regulatory/procedural adaptation, interoception/performance observation, trace, mutation authority.
+
+**Preservation obligations:** `SUB-009` (`PORT`) supplies the paired counterfactual harness with coupled random addresses that makes exposure the only difference between the two timelines; `SUB-008` (`PORT`) supplies the first-divergence replay this fixture's causal-ancestry field requires. `MEC-003` (`CONTRACT`) applies *conditionally*: where an adaptation input derives from an accepted bounded effect, preserve the `Capacity`/`Applied`/`Overflow`/`EvidenceKind` decomposition and the hidden-Overflow boundary. A practice occurrence need not have a meaningful capacity, applied quantity, or overflow at all, and this phenomenon does not make all adaptation fit the bounded-effect grammar. `RET-006` and `RET-014` (`RETIRED` / prohibited) are the two canonical leak shapes this phenomenon exists to refuse. `EXP-002` and `EXP-008` (`CORPUS`) are its existing regression cases. `CTL-001` and `CTL-008` (`CONTROL`) are comparisons, not explanations. See `CAMPAIGN2_TOPOLOGY_INVENTORY.md` §6.1.
 
 **Reopen conditions:** adaptation becomes behaviorally dependent on awareness, expectation, attribution, or strategy; a qualifying exposure cannot be defined without perception; or one event legitimately updates both routes without separable records.
 
@@ -318,3 +438,8 @@ Required trace fields:
 Applicable seams:
 Reopen conditions:
 ```
+
+2026-09-06 corpus 0.26 / PHEN-ADAPT-001 1.10: corrects record-level CharacterLearningEvidence
+to accepted OutcomeLearningEvidence. This changes the explicit comparison schema claim and is
+versioned substantively; 1.9 carried stale generic naming. Manifest digest recomputed from the
+canonical versioned manifest, not a file hash. Fixed common-root bridge controls remain proposed.

@@ -1,0 +1,273 @@
+{
+  "version": "val-allocation/0.1-candidate",
+  "status": "PASS: PERMANENT AND FROZEN; FINAL MACHINE GATE PASSED",
+  "tableSha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39",
+  "markdownSha256": "6765a456a1223a99be9adabfe42ff15de86097d5eabc4e15b70203053866d5fd",
+  "baseAllocation": {
+    "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+    "version": "campaign2-allocation/0.2-candidate",
+    "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+  },
+  "priorRegistryEvidence": [
+    {
+      "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/formal/STATE_MODEL.md",
+      "sha256": "a9a8f65da1bc8064b269f4464eb33a2eeb95366afa87e4dcd45130821a5a1ff6"
+    }
+  ],
+  "allocationSnapshot": {
+    "version": "val-allocation/0.1-candidate",
+    "status": "PERMANENT AND FROZEN",
+    "date": "2026-09-06",
+    "authority": "docs/planning/VAL_001_DRAFT_RESOLUTION.md",
+    "baseAllocation": {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "version": "campaign2-allocation/0.2-candidate",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    "records": [
+      {
+        "typeId": 329,
+        "name": "GovernedContentKindDefinition",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "ContentSchema",
+            "type": "CanonicalRecordSchemaRef",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 330,
+        "name": "SemanticKindRoleValidatorDefinition",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "RequiredSemanticKind",
+            "type": "SemanticKindId",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "namespaces": [],
+    "members": [
+      {
+        "namespace": 1023,
+        "payload": "registry/semantic-kind"
+      },
+      {
+        "namespace": 1023,
+        "payload": "registry/domain-validator"
+      }
+    ],
+    "bindings": [
+      {
+        "stableIdNamespace": 1004,
+        "stableIdPayload": "semantic-kind/character",
+        "registryKind": "registry/semantic-kind",
+        "definitionVersion": "content-kind/0.1-candidate",
+        "definitionTypeId": 329,
+        "definitionSchemaVersion": 1
+      },
+      {
+        "stableIdNamespace": 1021,
+        "stableIdPayload": "validator/character-qualification",
+        "registryKind": "registry/domain-validator",
+        "definitionVersion": "governed-domain-validator/0.1-candidate",
+        "definitionTypeId": 330,
+        "definitionSchemaVersion": 1
+      }
+    ],
+    "unionVariants": [],
+    "finiteValues": [],
+    "unresolved": []
+  },
+  "authority": {
+    "path": "docs/planning/VAL_001_DRAFT_RESOLUTION.md",
+    "sha256": "6fc8fbb18222466863b75ed1b663de138a2243a234e2950a1509c2ca81823f5b"
+  },
+  "counts": {
+    "records": 2,
+    "fields": 2,
+    "members": 2,
+    "bindings": 2,
+    "newNamespaces": 0
+  },
+  "checks": [
+    {
+      "name": "accepted VAL shape authority",
+      "status": "PASS"
+    },
+    {
+      "name": "frozen base version",
+      "status": "PASS"
+    },
+    {
+      "name": "frozen base accepted status",
+      "status": "PASS"
+    },
+    {
+      "name": "complete frozen base bytes unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "exact additive record IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "append immediately after base record maximum",
+      "status": "PASS"
+    },
+    {
+      "name": "exact record names",
+      "status": "PASS"
+    },
+    {
+      "name": "record/field Markdown-JSON parity",
+      "status": "PASS"
+    },
+    {
+      "name": "exact schema/field shapes",
+      "status": "PASS"
+    },
+    {
+      "name": "exact members",
+      "status": "PASS"
+    },
+    {
+      "name": "member Markdown-JSON parity",
+      "status": "PASS"
+    },
+    {
+      "name": "entry binding Markdown-JSON parity",
+      "status": "PASS"
+    },
+    {
+      "name": "binding IDs/versions",
+      "status": "PASS"
+    },
+    {
+      "name": "no added namespaces",
+      "status": "PASS"
+    },
+    {
+      "name": "no added unionVariants",
+      "status": "PASS"
+    },
+    {
+      "name": "no added finiteValues",
+      "status": "PASS"
+    },
+    {
+      "name": "no added unresolved",
+      "status": "PASS"
+    },
+    {
+      "name": "record 329 absent prior registry tables",
+      "status": "PASS"
+    },
+    {
+      "name": "record GovernedContentKindDefinition accepted symbolic use",
+      "status": "PASS"
+    },
+    {
+      "name": "record 330 absent prior registry tables",
+      "status": "PASS"
+    },
+    {
+      "name": "record SemanticKindRoleValidatorDefinition accepted symbolic use",
+      "status": "PASS"
+    },
+    {
+      "name": "RegistryKindId/1023 inherited home",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/semantic-kind canonical NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/semantic-kind new relative to Campaign-2",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/semantic-kind absent prior permanent registry sources",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/semantic-kind accepted symbolic use",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/semantic-kind bound exactly once",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/domain-validator canonical NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/domain-validator new relative to Campaign-2",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/domain-validator absent prior permanent registry sources",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/domain-validator accepted symbolic use",
+      "status": "PASS"
+    },
+    {
+      "name": "member registry/domain-validator bound exactly once",
+      "status": "PASS"
+    },
+    {
+      "name": "existing StableId semantic-kind/character",
+      "status": "PASS"
+    },
+    {
+      "name": "definition 329 uniquely bound",
+      "status": "PASS"
+    },
+    {
+      "name": "existing StableId validator/character-qualification",
+      "status": "PASS"
+    },
+    {
+      "name": "definition 330 uniquely bound",
+      "status": "PASS"
+    },
+    {
+      "name": "exact table keys; no hidden allocation category",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown version parity",
+      "status": "PASS"
+    },
+    {
+      "name": "definition ownership clarification",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown status parity",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "VAL-A..W and implementation/build-release qualification are not passed by this audit.",
+    "Canonical activation remains unauthorized."
+  ]
+}

@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, list, text, typedIdentifier, unsigned, type CanonicalValue } from '../substrate/canonicalEncoding';
 import {
@@ -170,7 +171,9 @@ describe('CONTENT-001 governed content and registry manifests', () => {
     const names = ['ADAPT', 'BIO', 'COMMIT', 'DECISION', 'DET', 'EPI', 'LEARN', 'MEM', 'REASON', 'SEM'];
     const entries = names.map((name) => ({
       phenomenonId: typedIdentifier(23010n, text(`PHEN-${name}-001`)),
-      version: name === 'EPI' ? '1.1.0-draft' : name === 'SEM' ? '1.12.0-draft' : '1.0.0-draft',
+      version: name === 'ADAPT' ? '1.10.0-draft'
+        : name === 'EPI' ? '1.3.0-draft'
+          : name === 'SEM' ? '1.12.0-draft' : '1.0.0-draft',
     }));
     const manifest = await compileCorpusManifest(entries);
     const reordered = await compileCorpusManifest([...entries].reverse());
@@ -179,17 +182,47 @@ describe('CONTENT-001 governed content and registry manifests', () => {
     expect(hex(manifest.canonicalBytes)).toBe(
       '090a0aae01010201010be2b301050c5048454e2d42494f2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4445542d3030310201050b312e302e302d6472616674' +
-      '0aae01010201010be2b301050c5048454e2d4550492d3030310201050b312e312e302d6472616674' +
+      '0aae01010201010be2b301050c5048454e2d4550492d3030310201050b312e332e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d4d454d2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050c5048454e2d53454d2d3030310201050c312e31322e302d6472616674' +
-      '0aae01010201010be2b301050e5048454e2d41444150542d3030310201050b312e302e302d6472616674' +
+      '0aae01010201010be2b301050e5048454e2d41444150542d3030310201050c312e31302e302d6472616674' +
       '0aae01010201010be2b301050e5048454e2d4c4541524e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d434f4d4d49542d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b301050f5048454e2d524541534f4e2d3030310201050b312e302e302d6472616674' +
       '0aae01010201010be2b30105115048454e2d4445434953494f4e2d3030310201050b312e302e302d6472616674',
     );
-    expect(hex(manifest.digest)).toBe('6e0a2b9337d1998242147dd8f4bdfe6bea09f18fea7dd4e139c559b6110bc2fe');
+    expect(hex(manifest.digest)).toBe('42dc63048912b666c8d7cd4b4c58273f698f1f1950b3a1714c1b12bc7eaa46fc');
     await expect(compileCorpusManifest([entries[0], entries[0]])).rejects.toThrow(/duplicate PhenomenonId/);
     await expect(compileCorpusManifest([{ ...entries[0], version: '' }])).rejects.toThrow(/version must be nonempty/);
+  });
+});
+
+/**
+ * The corpus digest commits to the manifest table, and nothing commits the manifest table to the
+ * per-phenomenon `**Version:**` field further down the same document. That gap let `PHEN-EPI-001`
+ * drift: its manifest row and its section disagreed, so a verdict recording the aggregate version
+ * would have cited a version the phenomenon's own text contradicted, and the digest could not see it.
+ *
+ * This closes the gap mechanically. It audits document self-consistency only — the corpus is an
+ * audit target here, never a runtime semantic interpreter.
+ */
+describe('corpus manifest / phenomenon section agreement', () => {
+  it('has one section version per manifest row, and they agree', async () => {
+    const corpus = Object.values(import.meta.glob('../../docs/planning/PHENOMENON_CORPUS.md', {
+      query: '?raw', import: 'default', eager: true,
+    }) as Record<string, string>)[0];
+
+    const manifest = new Map([...corpus.matchAll(/^\| `(PHEN-[A-Z]+-\d+)` \| `([^`]+)` \|/gm)]
+      .map((match) => [match[1], match[2]] as const));
+    const sections = new Map([...corpus.matchAll(
+      /^## `(PHEN-[A-Z]+-\d+)`[^\n]*\n\n\*\*Version:\*\* `([^`]+)`/gm)]
+      .map((match) => [match[1], match[2]] as const));
+
+    expect(manifest.size).toBeGreaterThan(0);
+    expect([...sections.keys()].sort()).toEqual([...manifest.keys()].sort());
+
+    const disagreements = [...manifest].filter(([id, version]) => sections.get(id) !== version)
+      .map(([id, version]) => `${id}: manifest ${version} vs section ${sections.get(id)}`);
+    expect(disagreements).toEqual([]);
   });
 });

@@ -1,5 +1,9 @@
 # Canonical Record Type Registry
 
+**Accepted additive registry:** [VAL permanent allocation](VAL_PERMANENT_ALLOCATION.md),
+`val-allocation/0.1-candidate` (2026-09-06), appends schemas 329/1 and 330/1. Its exact fields,
+governed entry bindings and member assignments are permanent; earlier registry entries are unchanged.
+
 **Status:** accepted Campaign 0 registry, version identifier `cenc-records/0.1-candidate`; governed by accepted `substrate/0.2-candidate`
 
 **Purpose:** assign permanent numeric record and field IDs so an implementation cannot invent identity encodings locally.
@@ -143,3 +147,25 @@ Future additions append IDs; IDs and priority never reorder. Within the accepted
 `SEM-001H` accepts phase registry `ordering-phases/2-candidate`: current semantic-binding phases `10..15,20..21`, consequence phases `120..127`, character-relative outcome evaluation at `130`, and non-schedulable settlement sentinel `150`. It symbolically reserves an `ExperienceId` only for an admitted nonempty evidence lane and requires a bijection to one frozen envelope. This fixes phase values and lifecycle without allocating permanent event-type, record-type, field, or `ExperienceId` schemas; those remain blocked by the parent `SEM-001`.
 
 `SEM-001I.1` accepts the complete semantic schema inventory and fixes exact occurrence keys; explicit transition result identities; recognition catalogs/mappings as observer-owned character-state instances under model-governed schemas/rules; an explicitly stored typed `ObserverSymbolCandidateMappingId`; trace-only recognition evaluations; self-sufficient resolution state without `RecognitionEvaluationId`; distinct typed namespaces over the shared runtime allocator; detection-keyed transitions; event-file-keyed single retirement; and revision-link rather than timestamp/allocation history order. Accepted `SEM-001I.2` freezes those shapes into the reviewed append-only numeric table, including manifest-governed union layouts. `SEM-001I.3` must now prove canonical runtime codecs, state closure, persistence, replay, and rollback before the semantic records' runtime bytes are authoritative.
+
+
+## Campaign 2 permanent allocation accepted and frozen — 2026-09-06
+
+The revision-2 review's final mechanical conditions A/B passed: exact complete Markdown/JSON
+parity and the explicit observation/0.1-candidate SeamId declaration at
+OBSERVATION_AND_EVIDENCE.md:5 (accepted status at line 3).
+The [permanent registry addendum](CAMPAIGN2_PERMANENT_ALLOCATION.md) is now
+**campaign2-allocation/0.2-candidate, ACCEPTED AND FROZEN**. This disposition supersedes earlier
+allocation-pending statements; it does not revise accepted seam semantics. Records 260..328,
+namespaces 1004, 1026..1036 and 1116..1121 as listed, all 58 member payloads, 32 union variants
+and 10 finite field values are permanent. No renumbering, reuse or insertion by shifting; future
+additions append. All earlier proposed assignments are preserved. Namespace 1004's prior
+availability is historical; it is now assigned to CONTENT/shared SemanticKindId. SeamId/1036
+is shared, with contextual Campaign-2 enforcement and no global legacy trace migration.
+
+Allocation acceptance permits canonical construction of already shape-accepted surfaces subject
+to their remaining implementation gates. No construction was performed by this disposition.
+VAL-001 remains independent and must close before canonical reliance on affected governed
+executable closures, including the CONTENT character-kind validator. ADAPT-001 remains formally
+OPEN; PHEN-ADAPT-001, C2-F-ID-1/2 and all other unexecuted frozen gates remain NOT PASSED.
+Allocation is not implementation proof for EVID, REG, IDN or PRJ; previous WRT proof is preserved.

@@ -136,6 +136,8 @@ export type StateFailureCode =
   | 'UNKNOWN_AUTHORITY'
   | 'ILLEGAL_READ'
   | 'ILLEGAL_WRITE'
+  | 'UNDECLARED_WRITABLE_PATH'
+  | 'NON_OWNING_AUTHORITY'
   | 'STALE_PRECONDITION'
   | 'PATCH_OVERLAP'
   | 'INVALID_VALUE'
@@ -218,9 +220,21 @@ export class StateAuthorityRegistry {
     for (const entry of state.entries()) this.validateNewValue(entry.path, entry.value);
   }
 
-  validateNewValue(path: StatePath, value: CanonicalValue): void {
+  /**
+   * `WRT-001`: the single place that decides whether a path is writable at all.
+   *
+   * Writable-family membership is a property of the path, not a side effect of validating a
+   * proposed value — `Remove` has no proposed value, and three independent lookups could disagree
+   * about which divergence comes first. Every entry point resolves through here.
+   */
+  resolveWritableLeaf(path: StatePath): WritableLeafDeclaration {
     const declaration = this.#writable.find((leaf) => patternMatches(leaf.pattern, path));
-    if (!declaration) stateFail('ILLEGAL_WRITE', 'path is not a declared writable leaf');
+    if (!declaration) stateFail('UNDECLARED_WRITABLE_PATH', 'path is not a declared writable leaf');
+    return declaration;
+  }
+
+  validateNewValue(path: StatePath, value: CanonicalValue): void {
+    const declaration = this.resolveWritableLeaf(path);
     try {
       canonicalEncode(value);
       declaration.validateValue(value);
@@ -231,8 +245,7 @@ export class StateAuthorityRegistry {
   }
 
   validateRemoval(path: StatePath): void {
-    const declaration = this.#writable.find((leaf) => patternMatches(leaf.pattern, path));
-    if (!declaration) stateFail('ILLEGAL_WRITE', 'path is not a declared writable leaf');
+    const declaration = this.resolveWritableLeaf(path);
     if (!declaration.removalAllowed) stateFail('REMOVE_FORBIDDEN', 'owning schema forbids removing this leaf');
   }
 
@@ -240,7 +253,7 @@ export class StateAuthorityRegistry {
     const authority = this.#authorities.find((candidate) => equalCanonical(candidate.mutationAuthorityId, authorityId));
     if (!authority) stateFail('UNKNOWN_AUTHORITY', 'mutation authority is not registered');
     if (!authority.patterns.some((pattern) => patternMatches(pattern, path))) {
-      stateFail('ILLEGAL_WRITE', 'mutation authority does not own the proposed path');
+      stateFail('NON_OWNING_AUTHORITY', 'mutation authority does not own the proposed path');
     }
   }
 }
@@ -297,6 +310,12 @@ export class ContractReadProjection<Bindings extends Readonly<Record<string, Pro
 
 export function createStatePatch(operations: readonly PatchOperation[]): StatePatch {
   const cloned = operations.map(cloneOperation);
+  // `WRT-001` step 1: structural validity is checked explicitly, not as a side effect of sorting.
+  // The comparator below validates paths only when it is actually invoked, so a single-operation
+  // patch previously carried a malformed path straight through to writability/authority resolution
+  // — the same path reporting INVALID_PATH in a two-operation patch and something else in a
+  // one-operation patch. First divergence may not depend on how many operations happen to be present.
+  for (const operation of cloned) validatePath(operation.path);
   cloned.sort((left, right) => compareBytes(canonicalEncode(statePathValue(left.path)), canonicalEncode(statePathValue(right.path))));
   for (let left = 0; left < cloned.length; left += 1) {
     for (let right = left + 1; right < cloned.length; right += 1) {
@@ -318,6 +337,8 @@ export function applyStatePatch(
   const entries = new Map(state.entries().map((entry) => [statePathKey(entry.path), entry]));
   const diffs: StructuralMutationDiff[] = [];
   for (const operation of patch.operations) {
+    // WRT-001 ordering: an undeclared path never reaches authority resolution.
+    registry.resolveWritableLeaf(operation.path);
     registry.validateAuthority(mutationAuthorityId, operation.path);
     const key = statePathKey(operation.path);
     const old = entries.get(key);

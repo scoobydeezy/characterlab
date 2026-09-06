@@ -116,10 +116,11 @@ describe('TRC-001/002 addendum — global MutationAuthorityId allocation', () =>
       mutationAuthorityId('authority/never-registered'), path,
     ))).toBe('UNKNOWN_AUTHORITY');
 
-    // Registered authority that does not own this path.
+    // Registered authority that does not own this path. `WRT-001` reclassification: the meaning is
+    // unchanged and the code is now exact — this is a genuine ownership failure, not a writability one.
     expect(stateCode(() => compiled.registry.validateAuthority(
       mutationAuthorityId('authority/fixture-secondary'), path,
-    ))).toBe('ILLEGAL_WRITE');
+    ))).toBe('NON_OWNING_AUTHORITY');
   });
 
   it('CV-OWN-002 commits authority definitions into registry identity', async () => {
@@ -202,6 +203,10 @@ describe('TRC-001/002 addendum — global MutationAuthorityId allocation', () =>
       { path: leafPath(COUNTERS, text('observer/a')), value: unsigned(2n) },
       { path: leafPath(family(999n, 1n), text('x')), value: unsigned(1n) },
     ]);
-    expect(stateCode(() => compiled.registry.validateState(illegal))).toBe('ILLEGAL_WRITE');
+    // `WRT-001` reclassification, recorded deliberately rather than silently updated: family 999 is
+    // not a declared writable leaf at all, and the old `ILLEGAL_WRITE` here was the ambiguity the
+    // addendum removes — the same code previously stood for "no authority owns this" and "nobody may
+    // write this". This assertion encoded that ambiguity; it now names the actual first divergence.
+    expect(stateCode(() => compiled.registry.validateState(illegal))).toBe('UNDECLARED_WRITABLE_PATH');
   });
 });

@@ -264,9 +264,10 @@ describe('SEM-001I.3 semantic mutation authority', () => {
     expect(() => applyStatePatch(state, advanceCounter, SemanticMutationAuthority.Perception, registry))
       .not.toThrow();
 
-    // Recognition does not, and there is no most-specific-wins fallback.
+    // Recognition does not, and there is no most-specific-wins fallback. `WRT-001`: the path IS a
+    // declared writable leaf, so the divergence is ownership and the exact code says so.
     expect(stateCode(() => applyStatePatch(state, advanceCounter, SemanticMutationAuthority.RecognitionResolution, registry)))
-      .toBe('ILLEGAL_WRITE');
+      .toBe('NON_OWNING_AUTHORITY');
     expect(stateCode(() => applyStatePatch(
       state, advanceCounter, mutationAuthorityId('authority/unregistered'), registry,
     ))).toBe('UNKNOWN_AUTHORITY');
@@ -367,11 +368,11 @@ describe('SEM-001I.3 semantic mutation authority', () => {
     expect(() => registry.validateAuthority(SemanticMutationAuthority.RecognitionKnowledge, catalogPath))
       .not.toThrow();
     expect(stateCode(() => registry.validateAuthority(SemanticMutationAuthority.RecognitionResolution, catalogPath)))
-      .toBe('ILLEGAL_WRITE');
+      .toBe('NON_OWNING_AUTHORITY');
     expect(() => registry.validateAuthority(SemanticMutationAuthority.RecognitionResolution, resolutionPath))
       .not.toThrow();
     expect(stateCode(() => registry.validateAuthority(SemanticMutationAuthority.Perception, resolutionPath)))
-      .toBe('ILLEGAL_WRITE');
+      .toBe('NON_OWNING_AUTHORITY');
 
     // Resolution history is append-only.
     expect(stateCode(() => registry.validateRemoval(resolutionPath))).toBe('REMOVE_FORBIDDEN');
