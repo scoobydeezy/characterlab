@@ -1,0 +1,3871 @@
+{
+  "status": "COMPONENT PASS",
+  "corpusVersion": "finite-val-declaration/0.1",
+  "sourceFingerprint": {
+    "path": "src/campaign2/valDeclarations.ts",
+    "sha256": "89e6e65afb8b8b640add46fc6413610d5802f0cf22d665b206128158157cf7c0"
+  },
+  "harnessSha256": "8f0d2c44dc81caa7a1cf9be0c88a731fb783d5143d73edbe353fb2edb7da8b79",
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "casesChecked": 359,
+    "cases": [
+      {
+        "name": "declaration/empty/qualified/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/qualified/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/namespace-only/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/wrong-namespace/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/empty/unknown-validator/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/qualified/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/namespace-only/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/wrong-namespace/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/constraint/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/projection/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/kind/unknown-validator/occurrence/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/qualified/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/namespace-only/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/wrong-namespace/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/validator/unknown-validator/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/qualified/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/namespace-only/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/wrong-namespace/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/constraint/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/projection/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/root",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/list",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/set",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/map-key",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/map-value",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/record-field",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "declaration/both/unknown-validator/occurrence/typed-payload",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "shared-three-positions",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "duplicate-position",
+        "expected": "INVALID_CONFIGURATION",
+        "actual": "INVALID_CONFIGURATION",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/root",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/list",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/set",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/map-key",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/map-value",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/record-field",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/authored/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/root",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/set",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/map-key",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/map-value",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/record-field",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/runtime/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/root",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/set",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/map-key",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/map-value",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/record-field",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "record/observer/typed-payload",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      }
+    ]
+  },
+  "mutations": [
+    {
+      "name": "omit-role-position-265",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/root",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/list",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/set",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/record-field",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "({265:2n,266:4n,278:2n} as Record<number,bigint>)",
+      "to": "({266:4n,278:2n} as Record<number,bigint>)"
+    },
+    {
+      "name": "omit-role-position-266",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/root",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/list",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/set",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/record-field",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "({265:2n,266:4n,278:2n} as Record<number,bigint>)",
+      "to": "({265:2n,278:2n} as Record<number,bigint>)"
+    },
+    {
+      "name": "omit-role-position-278",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/root",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/list",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/set",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/record-field",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "({265:2n,266:4n,278:2n} as Record<number,bigint>)",
+      "to": "({265:2n,266:4n} as Record<number,bigint>)"
+    },
+    {
+      "name": "omit-declaration-map-keys",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/map-key",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "{visit(k);visit(x);}",
+      "to": "{visit(x);}"
+    },
+    {
+      "name": "omit-declaration-map-values",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/map-value",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "{visit(k);visit(x);}",
+      "to": "{visit(k);}"
+    },
+    {
+      "name": "traverse-identifier-declarations",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/wrong-namespace/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/unknown-validator/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/wrong-namespace/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/constraint/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/projection/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/unknown-validator/occurrence/typed-payload",
+          "expected": "ACCEPT",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "// Typed identifier payloads are not role-declaration containers.",
+      "to": "if(v.kind==='typedIdentifier')visit(v.payload);"
+    },
+    {
+      "name": "skip-duplicate-role-position",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "duplicate-position",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(constraints.has(pkey))invalid('duplicate canonical role position');",
+      "to": "void pkey;"
+    },
+    {
+      "name": "skip-validator-coverage",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "declaration/empty/qualified/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/empty/qualified/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/kind/qualified/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/constraint/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/projection/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/qualified/occurrence/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/constraint/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/projection/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/root",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/list",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/set",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/map-key",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/map-value",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/record-field",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/namespace-only/occurrence/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/wrong-namespace/constraint/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/wrong-namespace/projection/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/wrong-namespace/occurrence/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/unknown-validator/constraint/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/unknown-validator/projection/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "declaration/both/unknown-validator/occurrence/typed-payload",
+          "expected": "INVALID_CONFIGURATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(referenced.size!==(characterValidator?1:0)||(characterValidator&&!referenced.has(key(characterValidator))))invalid('referenced/declared validator mismatch');",
+      "to": "void referenced;"
+    },
+    {
+      "name": "omit-runtime-map-keys",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "record/runtime/map-key",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "record/observer/map-key",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "{recordRoles(k);recordRoles(v);}",
+      "to": "{recordRoles(v);}"
+    },
+    {
+      "name": "omit-runtime-map-values",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "record/runtime/map-value",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "record/observer/map-value",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "{recordRoles(k);recordRoles(v);}",
+      "to": "{recordRoles(k);}"
+    },
+    {
+      "name": "omit-runtime-list-set",
+      "status": "DETECTED",
+      "casesChecked": 359,
+      "differences": [
+        {
+          "name": "record/runtime/list",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "record/runtime/set",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "record/observer/list",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "record/observer/set",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "else if(value.kind==='list'||value.kind==='set')value.items.forEach(recordRoles);",
+      "to": "else if(value.kind==='list'||value.kind==='set')void value;"
+    }
+  ],
+  "limitations": [
+    "Expected labels are calculated from corpus construction, not a second general declaration compiler.",
+    "Three declared role positions and seven container contexts; finite valid-shape corpus plus operand/coverage errors.",
+    "Generic VAL component scope; no claim of complete factory/model construction, restore, PRJ execution or VAL closure."
+  ]
+}

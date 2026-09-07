@@ -1,0 +1,1651 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprint": {
+    "path": "src/campaign2/valDeclarations.ts",
+    "sha256": "89e6e65afb8b8b640add46fc6413610d5802f0cf22d665b206128158157cf7c0"
+  },
+  "harnessSha256": "aaff5fa6ccb7689c4db846d41ecabed06c9f5656bd3776b908c7a17758a2e1de",
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "roster/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "roster/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "candidateDomain/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "candidateDomain/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "recognition/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "recognition/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "body/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "body/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "state/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "state/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "activity/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "activity/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "clock/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "clock/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "rng/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "rng/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "presentation/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "presentation/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "trace/absent",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      },
+      {
+        "name": "trace/present",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "ambientReads": 0,
+        "agrees": true
+      }
+    ]
+  },
+  "mutations": [
+    {
+      "name": "roster",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.roster!==true) throw new ContentValidationError('mutant requires ambient roster');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "candidateDomain",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.candidateDomain!==true) throw new ContentValidationError('mutant requires ambient candidateDomain');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "recognition",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.recognition!==true) throw new ContentValidationError('mutant requires ambient recognition');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "body",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.body!==true) throw new ContentValidationError('mutant requires ambient body');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "state",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.state!==true) throw new ContentValidationError('mutant requires ambient state');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "activity",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.activity!==true) throw new ContentValidationError('mutant requires ambient activity');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "clock",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.clock!==true) throw new ContentValidationError('mutant requires ambient clock');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "rng",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.rng!==true) throw new ContentValidationError('mutant requires ambient rng');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "presentation",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.presentation!==true) throw new ContentValidationError('mutant requires ambient presentation');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "name": "trace",
+      "status": "DETECTED",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "function qualifyCharacter(value:CanonicalValue):void {",
+      "to": "function qualifyCharacter(value:CanonicalValue):void {\n if ((globalThis as any).__characterlabQualificationAmbient?.trace!==true) throw new ContentValidationError('mutant requires ambient trace');",
+      "cases": [
+        {
+          "name": "roster/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "roster/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "candidateDomain/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "recognition/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "body/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "state/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "activity/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "clock/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "rng/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/absent",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "presentation/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/absent",
+          "expected": "ACCEPT",
+          "actual": "ContentValidationError",
+          "ambientReads": 1,
+          "agrees": false
+        },
+        {
+          "name": "trace/present",
+          "expected": "ACCEPT",
+          "actual": "ACCEPT",
+          "ambientReads": 1,
+          "agrees": false
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Ten explicit test-only Boolean ambient stand-ins; no new roster, recognition, state or stochastic semantics.",
+    "Detects a direct added dependency on each stand-in and observes zero baseline reads. Not exhaustive proof against all host environment access or malicious interpreters.",
+    "Only qualification of one admitted character is varied under fixed canonical declarations; complete VAL-U and release review remain open."
+  ]
+}

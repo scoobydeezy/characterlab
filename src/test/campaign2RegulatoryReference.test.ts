@@ -31,6 +31,27 @@ function entry(o:Options={}){
 }
 const bytes=(...entries:CanonicalValue[])=>canonicalEncode(set(entries));
 describe('regulatory-reference/0.5-candidate closed compiler',()=>{
+  it('REG-M: malformed declarations fail at their exact closed construction check',async()=>{
+    const c=await context(),empty=entry({noCharacters:true}) as Extract<CanonicalValue,{kind:'record'}>;
+    const registration=empty.fields.get(4n) as typeof empty,reference=registration.fields.get(2n) as typeof empty;
+    const noCharactersOrParameters=record(empty.schema,new Map([...empty.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[2n,map([])]]))]]))]]));
+    const cases:[CanonicalValue[],string][]=[
+      [[entry({embedded:id(1030,'parameter/other')})],'parameter key/identity mismatch'],
+      [[entry({governing:id(1030,'parameter/missing')})],'unresolved local parameter'],
+      [[entry({extraParameter:true})],'unused REG parameter'],
+      [[entry({parameterMinimum:-1n})],'parameter/variable bounds differ'],
+      [[noCharactersOrParameters],'REG character set is not exact committed content image'],
+      [[entry(),entry({variable:id(1029,'variable/other')})],'REG parameter has multiple variable owners'],
+      [[entry({timeScale:2n})],'noncanonical REG rate'],
+      [[entry({instant:1n})],'REG authored anchor must start at zero with zero remainder'],
+      [[entry({rate:1n})],'analytical value exceeded its declared bounded representation'],
+      [[entry({parameter:id(1027,'parameter/control')})],'wrong regulatory identity family'],
+    ];
+    for(const [entries,message] of cases){
+      expect(()=>compileRegulatoryReferences(bytes(...entries),c),message).toThrow(message);
+      expect(()=>compileRegulatoryReferences(bytes(...entries),c),message).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    }
+  });
   it('FCT-L: generic REG/IDN retain complete authored identity across content families',async()=>{
     const stable=id(23000,'character/mina'),{content,entries}=fixtureContentInputs(stable);
     const generic=await compileValDeclarations(entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)]))).compileContent(content,entries);

@@ -1,0 +1,529 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationDomains.ts",
+      "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+    },
+    {
+      "path": "src/test/campaign2UntouchedState.test.ts",
+      "sha256": "724c3cc073a5b6037737d68ea7f4f11545dabe1582f80d3a3ce053a2b9cbbba9"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-zero-normal-form",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ dueAt: 1n, …(4) }\" instead of rejecting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "omit-tolerance-bound",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-load-bound",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-regulatory-domain-existence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-load-domain-existence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-procedure-existence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "skip-procedural-state-family",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-F7: untouched 'explicit-zero-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'explicit-zero-4' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: untouched 'tolerance-over-scale' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'load-over-capacity' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-0' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-1' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-2' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-3' rejects at creation and restore before runtime construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-F7: untouched 'unknown-domain-4' rejects at creation and restore before runtime construction",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ …(5) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-F7: a generic future writer reaches the same full-state invariant independently of E",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+    "Thirteen tests cover initial/restore full-map invalidity and one generic future-writer invariant; not every AD-F7 substitution.",
+    "No global factory, VAL, ADAPT or Campaign-2 verdict."
+  ]
+}

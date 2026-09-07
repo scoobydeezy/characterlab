@@ -487,3 +487,426 @@ tests and build PASS. See [qualification evidence](CAMPAIGN2_FCT6_QUALIFICATION.
 Component evidence only: FCT-6, global VAL/TRACE and PHEN-ADAPT remain open. Remaining work
 includes whole-declaration/recursive role controls, BaselineOnly and REG/persistence mutants,
 and the complete gate-to-witness matrix and release review.
+
+### 2026-09-06 — FCT-6 qualification pass 3
+
+FrozenBaseline independent comparison: 72 cases and six detected interpreter mutants.
+REG comparison: 252 cases and five detected mutants. Persistence exact metadata and
+saved-time admission: five checks and six detected mutants, including rejection before
+runtime construction. A rejection-only assay initially missed the saved-time mutant;
+the failed attempt and strengthened stage observation are preserved in the report.
+Source suite 59 files / 409 tests and build PASS. No production semantics, frozen model
+artifacts or allocations changed. See [qualification pass 3](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-3--frozenbaseline-reg-and-persistence-boundaries)
+and the [FCT/VAL/PERSIST evidence map](CAMPAIGN2_FACTORY_GATE_MATRIX.md).
+Global gates remain open; whole-declaration, forbidden-dependency and PRJ/OBS/SEM mutants
+and the inherited vector crosswalk remain qualification work.
+
+### 2026-09-07 — FCT-6 qualification pass 4
+
+359 construction-labelled declaration/record-role comparisons agree; eleven targeted
+traversal/coverage mutants detected. Five OBS/SEM factory substitutions detected under
+unchanged declarations, with exact-byte comparison and rollback checks. Six proof reports
+now contain 47 detected mutants. See [pass 4 evidence](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-4--declaration-traversal-and-obssem-substitutions).
+Build PASS; bounded-worker source regression 60 files / 410 tests PASS. The initial
+concurrent-build restore-test timeout and harness corrections are preserved in the report.
+No production semantics or frozen allocations/model artifacts changed in this pass.
+FCT/VAL/PERSIST global qualification remains open; PRJ execution, forbidden-dependency
+mutants and the inherited vector crosswalk remain explicitly pending.
+
+### 2026-09-07 — FCT-6 qualification pass 5
+
+Six inherited generic PRJ substitutions and ten explicit test-only ambient-dependency
+mutants detected. Twenty fixed-input qualifier cases perform zero ambient reads. Added
+PERSIST-B anchor-only identity change, exact empty metadata, old-save rejection and exact
+matching restore. Eight reports now contain 63 detected mutants. Source regression
+61 files / 412 tests and build PASS. See [pass 5](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-5--prj-execution-ambient-dependency-challenges-and-reg-ownership).
+No production semantics, frozen model artifacts or accepted gates changed. Remaining
+work is the inherited-vector crosswalk, whole-model declaration/restore coverage and
+remaining persistence qualification; no global FCT/VAL/PERSIST closure is claimed.
+
+### 2026-09-07 — FCT-6 qualification pass 6
+
+Nine negative whole-model variants reject at both prepare and restore before runtime
+construction; canonical enumeration permutations preserve identity and exact restore.
+Added exact AD-E8 single-Remove and restored absent-target state witness. First inherited
+crosswalk inventories 51 EVID/REG/ADAPT-E vectors with explicit partial evidence and gaps;
+its audit is bookkeeping only, with all runtime dispositions open. Source suite 62 files /
+415 tests and build PASS. See [pass 6](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-6--admissionrestore-parity-and-inherited-vector-audit).
+No production semantics or frozen artifacts changed; 63 detected mutants retained.
+Next: EVID-S, REG-M, exact AD-E5 and remaining inherited inventory.
+
+### 2026-09-07 — FCT-6 qualification pass 7
+
+Added exact both-stage EVID cardinality/schema negatives, REG first-check diagnostics,
+and AD-E5's two-rule frozen-gate identity-order permutation. Four EVID, nine REG and one
+staged-gate interpreter mutant detected; nine reports now contain 77 detected mutants.
+The reduced AD-E5 fixture's initial excess-ReadDomain rejection and runner listener cleanup
+are preserved in [pass 7](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-7--evidreg-construction-mutations-and-exact-frozen-gate-order).
+Source suite 63 files / 418 tests and build PASS. No production semantics or frozen
+artifacts changed. Remaining EVID/REG cases and inherited inventory are still open;
+no global FCT/VAL/ADAPT release verdict is implied.
+
+### 2026-09-07 — FCT-6 qualification pass 8
+
+Added EVID canonical nonempty/false carrier preservation, both-stage no-write precedence,
+and changed observer/time/occurrence admission rejection before allocation. Four new
+mutants detected; nine reports now total 81. Source suite 63 files / 421 tests and build
+PASS. The carrier fixture's producer-provenance limitation and initial assertion typo are
+recorded in [pass 8](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-8--evid-preservation-admission-and-no-write-precedence).
+No production semantics or frozen artifacts changed. Full EVID and global qualification
+remain open, including producer-derived carrier variants and remaining capability/fault cases.
+
+### 2026-09-07 — FCT-6 qualification pass 9
+
+Added four actual-factory EVID rollback fault points with full state/queue/allocator/
+output/trace/clock comparison, plus empty/current-lane and wrong-producer admission controls.
+Source suite 64 files / 426 tests and build PASS. Existing mutation reports refreshed;
+total remains 81. Scope limits and remaining producer-derived/restore witnesses are in
+[pass 9](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-9--evid-rollback-and-producer-boundary-controls).
+Production source and frozen artifacts unchanged; full inherited and global gates remain open.
+
+### 2026-09-07 — FCT-6 qualification pass 10
+
+Added actual-factory empty-input silence and zero-count positive controls, eight archived E/L
+create/restore rejection calls before runtime construction, and exact archive/ID continuation.
+Source suite 65 files / 428 tests and build PASS. The unsupported silent-observation branch and
+corrected archive-erasure hypothesis are recorded in
+[pass 10](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-10--evid-silence-and-archived-output-persistence).
+Frozen semantics/artifacts unchanged; inherited and global qualification remain open.
+
+### 2026-09-07 — FCT-6 qualification pass 11
+
+Added exact REG Scale=1 endpoint/time controls and retained-D=20 early-hook rollback plus
+saved-time restore rejection with exact failure carriers. Source suite 66 files / 430 tests
+and build PASS; strengthened carrier assertions pass the focused rerun. Scope is recorded in
+[pass 11](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-11--exact-reg-boundary-and-time-only-invalidity-witnesses).
+Frozen artifacts unchanged. Full inherited and global qualification remain open.
+
+### 2026-09-07 — FCT-6 qualification pass 12
+
+Added signed-rate query-order/remainder witnesses and paired D=0/10 same-provider histories
+with exact same-clock restore and authored-anchor preservation. Source suite 66 files /
+432 tests and build PASS. Scope and test-only TIME instrumentation are recorded in
+[pass 12](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-12--reg-query-order-and-paired-history-persistence).
+Frozen artifacts unchanged; inherited and global qualification remain open.
+
+### 2026-09-07 — FCT-6 qualification pass 13
+
+Five exact ADAPT batch/read-order controls and four mutants pass. Full suite: 67 files /
+437 tests; build PASS. Ten mutation reports total 85. Fixture correction and scope are in
+[pass 13](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-13--exact-adapt-batch-and-read-order-witnesses).
+No frozen artifacts or production source changed; qualification continues.
+
+### 2026-09-07 — FCT-6 qualification pass 14; FCT-C scope ruling requested
+
+AC-H committed-repair boundary control and two roster expressibility controls pass. Full
+suite: 68 files / 440 tests; build PASS. The valid generic IDN roster is expressly excluded
+by the bounded profile, so FCT-C's positive roster intervention needs an explicit qualification
+scope ruling. [Concrete review](CAMPAIGN2_QUALIFICATION_SCOPE_REVIEW.md) recommends generic
+component evidence plus bounded-profile exclusion controls, retaining the positive obligation.
+No scope ruling, gate PASS, activation or Campaign-2 completion is assumed.
+
+### 2026-09-07 — FCT-C qualified under accepted split scope
+
+FCT-C1/C2/C3 conjunction PASS. Generic A/B/absent roster invariance uses the shared production
+EVID implementation. A direct context.state bypass was found and fixed by isolating semantic
+operands; both stages reject twelve forbidden-handle substitutions. Bounded exclusion remains
+intact. [Evidence and failed-hypothesis record](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-15--accepted-fct-c-scope-and-evid-capability-isolation).
+69 files / 442 tests, build, frozen model verification and exact fresh-process continuation PASS.
+Other factory/inherited gates and Campaign-2 completion remain open.
+
+### 2026-09-07 — qualification pass 16; later-challenge semantic choice
+
+Untouched-state initial/restore and generic future-writer controls pass, with seven new detected
+invariant mutants. Full suite: 71 files / 456 tests; build PASS. FCT-C remains PASS under the
+accepted scope split. The fixed-pulse bridge cannot express a later adaptation-dependent
+observation; [a diagnostic regulatory-probe proposal](CAMPAIGN2_LATER_CHALLENGE_REVIEW.md)
+requests the first later-challenge semantic target. No new seam, allocation, profile or phenomenon
+verdict is accepted by that proposal. Other independent qualification work remains available.
+
+### 2026-09-07 — diagnostic probe target accepted; first shape draft
+
+User accepted the later diagnostic R0+D research target and authorized drafting only. The
+[revision 1 draft](CAMPAIGN2_REGULATORY_PROBE_DRAFT.md) separates truth production, observer
+permission, exact lattice measurement and the frozen fixed-pulse control; PROBE-A..L are
+unexecuted obligations. Inspection found that scalar observation differences cannot propagate as
+X/E/L byte differences through existing reference-only X and no-read EVID. A concrete scope or
+carriage-amendment ruling is required. No new shape acceptance, allocation, implementation,
+runtime PASS, frozen-artifact change or Campaign-2 closure is recorded.
+
+### 2026-09-07 — probe observation-only scope accepted; revision 2 proposed
+
+The user resolved the scope question: first observer-accessible divergence is permitted 203;
+matched-support X/E/L remain identical. SEM carriage is deferred under an explicit cognitive-
+consumer trigger. PROBE-H is revised and PROBE-M preserves this negative invariant. Neither
+ADAPT control 9's cognitive obligation nor PHEN-ADAPT is passed or weakened. The
+[revision 2 draft](CAMPAIGN2_REGULATORY_PROBE_DRAFT.md) proposes exact symbolic records, a dedicated
+absolute diagnostic channel, existing exact-path read capability, distinct truth occurrence family,
+fixed-budget hidden-work scheduling, trace mapping and new-profile commitments. These are review
+proposals only; no allocation, implementation or runtime result is inferred from scope acceptance.
+
+### 2026-09-07 — probe revision 3; final three shape corrections proposed
+
+Review accepted the exact read capability and absolute measurement semantics while withholding
+whole shape for n/q wording, exact EventTypeId inventory and padding-operation closure. The
+[revision 3 draft](CAMPAIGN2_REGULATORY_PROBE_DRAFT.md) corrects PROBE-A, specifies the eight new
+symbolic event members and one-child chain, and defines private void padding with five fixed ordinal
+advances, slot authority, no value inspection/publication and atomic rollback. PROBE-N/O cover its
+nonsemantic boundary and version-owned budget. Whole-shape acceptance, allocation, implementation,
+runtime vectors, ADAPT control 9 and PHEN-ADAPT remain open; frozen .2 and SEM/EVID are unchanged.
+
+### 2026-09-07 — whole probe shape accepted; numeric review prepared
+
+[regulatory-diagnostic-probe/0.1-candidate](../formal/REGULATORY_DIAGNOSTIC_PROBE.md) is whole-shape
+accepted with explicit InputOnly creation/cancellation/restore rules and PROBE-P. A separate
+[allocation packet](../formal/REGULATORY_PROBE_ALLOCATION_REVIEW.md) proposes 331..335, namespace
+1123 and twelve permanent members. All 224 allocation audit checks pass; prior frozen allocation
+artifacts are preserved. The packet is REVIEW CANDIDATE, not permanent. Implementation and new
+profile packaging await their gates; PROBE-A..P, ADAPT control 9 and PHEN-ADAPT are not passed.
+
+### 2026-09-07 — probe allocation frozen; profile packaging revision 1
+
+The review's sole freeze condition is satisfied by explicit type-259 entries for [335,1..3].
+The corrected allocation passes 240 checks and is frozen at regulatory-probe-allocation/0.1-candidate;
+prior artifacts remain byte-identical. No Support/216 typed role or padding identity was added.
+[Packaging revision 1](CAMPAIGN2_PROBE_PROFILE_PACKAGING_DRAFT.md) now specifies the proposed new
+RulesVersion/profile selection, committed union inventory, concrete diagnostic channel and six-slot
+delta, source authority, trace/restore closure and materialization gates. It awaits review; no new
+ModelIdentity, implementation, PROBE result or parent campaign PASS is claimed.
+
+### 2026-09-07 — probe packaging accepted; first model materialized
+
+Accepted zero-based registry layout and exact new whole-profile bindings are recorded. The
+[materialization review](CAMPAIGN2_PROBE_MODEL_MATERIALIZATION.md) contains seven concrete artifacts,
+exact structural delta, 30 preserved old-file hashes and successful 15-file fresh-process
+delete/rematerialize proof. New review-only compiler does not activate runtime. Build and 72 files /
+459 tests pass. Model digest 2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454
+awaits concrete freeze; probe runtime and parent verdicts remain gated.
+
+### 2026-09-07 — probe model frozen; InputOnly component and accessor gap
+
+User froze the seven model artifacts and digest 2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454,
+closing PROBE-MODEL-BYTE-A and authorizing runtime work. Materialization reproduces the same bytes;
+all 30 prior model files remain preserved. Whole probe input language now has explicit authored/probe
+branches, source authentication and original pending-source equality. Three component tests pass;
+full suite 73 files / 462 tests and build PASS. Initial new-fixture failures were invalid one-byte
+seeds, corrected to the accepted 32-byte grammar; no production relaxation.
+
+The [accessor review](CAMPAIGN2_PROBE_ACCESSOR_REVIEW.md) records a concrete implementation gap:
+ActualReadRecord/147 requires an accessor identity, but no probe member was frozen in 1028.
+The proposed single member and frozen-version disposition need a ruling. No direct read with an
+invented/reused ADAPT accessor, public probe activation, full PROBE-P or parent PASS is claimed.
+
+### 2026-09-07 — probe accessor accepted symbolically; successor review prepared
+
+The ruling accepts the exact diagnostic accessor in shared 1028 but requires preservation of
+frozen probe .1 and a successor trace/RulesVersion/ModelIdentity. The separate
+[member allocation review](../formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_REVIEW.md) passes 43 checks;
+no new namespace/record/role/registry is proposed. The
+[trace successor draft](CAMPAIGN2_PROBE_TRACE_SUCCESSOR_DRAFT.md) fixes the exact read identity,
+unchanged other trace rows/profile selections and PROBE-ACCESSOR-A..D. Member/binding review and
+successor materialization/freeze remain before authoritative read trace. No old model bytes changed.
+
+### 2026-09-07 — accessor frozen; probe .2 successor materialized
+
+The user froze the accessor and accepted exact probe trace/RulesVersion .2. The
+[successor packet](CAMPAIGN2_PROBE_SUCCESSOR_MATERIALIZATION.md) derives digest
+fda39ae4a8d82cbf531b41ce35c9af7ebb2ec5c7f233c4f7adbd7e6d7eba80e9. Only ModelIdentity RulesVersion
+changes; all manifests/component identities and 45 historical packet files are preserved.
+Fresh-process delete/rematerialize proof and build pass. PROBE-ACCESSOR-E is frozen, not passed.
+Successor concrete freeze remains the required next decision; authoritative read trace is gated.
+
+### 2026-09-07 — probe .2 model frozen; runtime qualification pass 1
+
+The user froze the successor seven-artifact packet and ModelIdentity, closing
+PROBE-ACCESSOR-MODEL-BYTE. Authoritative read trace now executes under .2 only; historical .1
+cannot activate it. [Runtime qualification](CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md) records
+PROBE-ACCESSOR-A..E PASS, real permitted diagnostic divergence, unchanged X/E/L and state,
+four-branch padding/sentinel checks, rollback/restore and seven detected production mutants.
+All 45 prior packet files remain preserved. Broad PROBE-A..P qualification is incomplete.
+
+The time-varying PROBE-F component witness passes with actual REG and probe execution; the
+frozen public model correctly rejects those changed declarations. Qualification scope needs
+disposition: generic positive + public exclusion control, or a separately committed temporal
+model and public-run witness. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain open.
+
+### 2026-09-07 — PROBE-F split accepted; transactional controls expanded
+
+User accepts F1 generic accepted REG + production probe consumer and F2 exact frozen public
+profile exclusion, with PROBE-F PASS iff both pass. Both witnesses pass, including exact scalar
+differences and the time-only negative interpretation. No temporal model commitment is needed;
+frozen probe .2 remains narrow and unchanged. [Qualification](CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md) records this disposition,
+32 passing event-slot rollback/recovery cases and fresh-process full-save continuation PASS.
+Whole PROBE-A..P, ADAPT-9b, parent control 9 and PHEN-ADAPT remain open.
+
+Pass-2 final verification: 80 test files / 523 tests, production build and reference boundary
+PASS. Probe arithmetic now receives detached R0/D operands; ten forbidden capability requests
+reject. Signed-domain and child-forgery witnesses pass, as do refreshed seven-mutant and six-
+substitution padding audits. Full probe qualification remains open; no broader gate is inferred.
+
+### 2026-09-07 — probe qualification pass 3; output-closure correction
+
+Allocation failure/recovery (18 cases), public InputOnly origin/restore controls and irrelevant-
+state invariance pass. An adversarial producer exposed missing output-count validation: extra
+learning could commit outside EVID. Exact per-slot output cardinality/type now rejects that
+substitution; archive validation also requires exact producer projections and ordered output
+closure. Raw observation/truth freeze substitutions reject. The failure and correction are
+retained in CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md. Frozen contracts/model bytes are unchanged;
+PROBE-F split and accessor PASS remain. Whole probe and parent campaign gates remain open.
+
+Pass-3 verification: 84 files / 549 tests, build, fresh-process continuation and frozen successor
+byte verification PASS; 45 prior artifacts preserved. No contract or allocation change.
+
+### 2026-09-07 — assembled probe qualification submitted for review
+
+Pass 4 adds the matched-allocation scalar witness, twelve detected read/carriage substitutions,
+four detected numeric substitutions and six rejected SEM source-audit mutations. No production
+semantics or frozen bytes change. CAMPAIGN2_PROBE_QUALIFICATION_REVIEW.md proposes the whole
+PROBE-A..P verdict with exact runtime/component/audit scopes; acceptance is not presumed.
+ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain open.
+
+### 2026-09-07 — regulatory diagnostic probe runtime QUALIFIED
+
+User accepts PROBE-A..P PASS under regulatory-diagnostic-probe/0.1-candidate and frozen probe
+rules .2; accessor A..E remain PASS. ADAPT-9a PASS: retained state changes later permitted
+observation (5 versus canonical 51/10), while matched X/E/L remain equal. F retains F1/F2
+generic temporal + public exclusion (no temporal public model). G explicitly retains G1
+public positive, G2 generic signed-domain production consumer and G3 public exclusion.
+PROBE-L PASS for this accepted seam; no broader learning semantics inferred. Preserve the
+real output-closure defect and corrected exact producer validation in the research history.
+ADAPT-9b, parent control 9, PHEN-ADAPT-001, ADAPT-001 formal campaign verdict and Campaign 2
+remain OPEN. Cognitive numeric/semantic carriage requires its own phenomenon target and seam.
+
+Next research target proposed in CAMPAIGN2_COGNITIVE_EVIDENCE_TARGET_REVIEW.md: observer-safe
+measurement evidence made available to a named cognitive consumer, with explicit first-content
+divergence and hidden-truth invariance. Target selection is pending; no record shapes, allocations,
+implementation, ADAPT-9b sufficiency or persistent learning updates are chosen.
+
+### 2026-09-07 — measurement-evidence carriage target accepted; revision 1 drafted
+
+User accepts the observer-safe measurement-evidence carriage target and authorizes inspection-
+first drafting only. Existing X/E/L, probe .1/.2 and PROBE-M remain unchanged; persistent updates,
+learning/appraisal/reward and ADAPT-9b are not selected or passed.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md inspects 203/204, metadata-only SEM-G reference
+resolution, EVID and closed transition/profile admission. It proposes a named observer-owned
+MeasurementEvidenceIntake, self-contained exact 203 plus admitted unit context, a transient output
+occurrence, explicit authenticated producer admission and a separately committed successor profile.
+Revision 1 proposed a new producer/route and schema/codec/profile support as blockers; the route
+proposal is withdrawn by the revision-2 disposition below. Proposed
+EVC-A..P are not passed; all new names remain symbolic. No numeric allocation or code change.
+
+### 2026-09-07 — measurement-evidence carriage revision 2 submitted
+
+User accepts the core epistemic design, exact embedded 203 plus UnitId, named transient intake,
+present-only domain, observer ownership and no writes; whole shape remains WITHHELD.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md revision 2 addresses all three review blockers:
+no new LearningRouteId or intake TransitionRoutes entry; shared successor ingress alone generates
+the real intake child, with separate profile-owned suppression padding; exact 203 field-1 role
+(namespace 1115, no validator) is reused and its absent occurrence rule is explicitly added to
+the proposed successor. The new output has its own matching symbolic field-1 rule and role.
+Proposed transition-admission/0.7-draft preserves .4 and the separate .6 extension. Conditional
+ingress/padding counts retain six ordinal advances and eight generated children. EVC-A..P are
+revised proposals, NOT PASSED. Whole-shape review is next; no allocation or implementation is
+authorized. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — measurement-evidence carriage revision 3 submitted
+
+User closes all revision-1 blockers and accepts the carriage representation, observer-owned
+consumer, no-route boundary, shared ingress, occurrence governance and scheduling topology.
+Whole shape remains WITHHELD solely for version ownership. Revision 3 withdraws the preceding
+transition-admission/0.7-draft proposal: the shared singleton stays transition-admission/0.4-candidate,
+cardinality one, with new occurrence entries as committed data under its unchanged map grammar.
+Carriage instead proposes transition-admission-extension/0.7-draft (intended accepted spelling
+transition-admission-extension/0.7-candidate), a separate NoStateWrites-only registration grammar.
+An explicit matrix preserves V04 EVID and V06 ADAPT rows and dispatch by committed DefinitionVersion;
+no latest-version selection or fallback decoding. EVC-O includes these preservation/rejection
+obligations. See CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md revision 3. Whole-shape review
+is next; EVC-A..P are not passed, allocation and implementation remain unauthorized. ADAPT-9b,
+parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — measurement-evidence carriage WHOLE SHAPE ACCEPTED; allocation proposed
+
+User accepts measurement-evidence-carriage/0.1-candidate and the separate NoStateWrites-only
+transition-admission-extension/0.7-candidate registration grammar. The V04 shared singleton and
+V04/V06 registrations remain unchanged in semantics; only successor occurrence-map data extends.
+The first V07 profile admits only AuthenticatedObserverMeasurementProducer; any other producer
+form requires separately committed registration semantics. EVC-A..P are FROZEN, NOT PASSED.
+Current authority: docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE.md; the revision draft is review history.
+
+Authorized separate allocation pass proposes records 336..341, dedicated occurrence namespace
+1124 and six NFC members in existing namespaces. No new producer union, write capability,
+LearningRouteId member, state root or observation identity. See
+docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_REVIEW.md and its machine table/audit.
+The allocation audit passes 195 consistency/preservation checks; values remain REVIEW CANDIDATE,
+not permanently assigned. Numeric acceptance is next; successor registry/profile packaging and
+materialization follow afterward. Implementation remains NOT YET AUTHORIZED. ADAPT-9b, parent
+control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage allocation ACCEPTED AND FROZEN; packaging revision 1
+
+User permanently accepts measurement-evidence-carriage-allocation/0.1-candidate: records 336..341,
+occurrence namespace 1124, six existing-family members and exact role/occurrence governance.
+Zero new union variants, learning routes or padding identities. Pre-promotion audit passed 195
+checks; lifecycle-aware frozen audit passes 197. Existing frozen authority and model packets
+remain byte-identical. EVC-A..P remain FROZEN, NOT PASSED.
+
+Successor registry/profile packaging is authorized. CAMPAIGN2_MEASUREMENT_EVIDENCE_PACKAGING_DRAFT.md
+revision 1 proposes rules/campaign2-measurement-evidence/0.1-candidate with four exact whole
+profiles, six-slot delta, sole V04 singleton plus unchanged V04/V06 and new V07 rows, fixed
+336/channel association, source/trace/restore closure and separate materialization obligations.
+EVC-PACK-A..H are proposed, NOT PASSED. Packaging acceptance is next; no model bytes have been
+materialized and runtime implementation remains unauthorized. ADAPT-9b, parent control 9,
+PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage packaging revision 2; ordered-input identity corrected
+
+User accepts registry/trace/persistence successors, six-slot delta, source authority and topology;
+whole packaging remains WITHHELD for the sole ordered-input identity correction. Revision 2
+withdraws the new measurement-evidence input profile and directly binds the accepted
+campaign2-probe-ordered-input/0.1-candidate under the new RulesVersion. EVC-PACK-C specifies
+that exact tuple and EVC-PACK-I adds canonical initial-source equivalence to frozen probe .2
+with only enclosing-model RunIdentity differences. The complete phase-120 trace envelope is
+successor-owned; padding uses the carriage seam/version without becoming V07 execution.
+See CAMPAIGN2_MEASUREMENT_EVIDENCE_PACKAGING_DRAFT.md revision 2. No semantic redesign or
+allocation. Materialization waits for packaging acceptance; implementation remains unauthorized.
+EVC-A..P remain FROZEN, NOT PASSED; EVC-PACK-A..I are proposed, NOT PASSED. ADAPT-9b and
+Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage packaging ACCEPTED; concrete model review ready
+
+User accepts whole packaging revision 2 and freezes EVC-PACK-A..I as NOT PASSED; concrete
+materialization is authorized, runtime remains blocked until ModelIdentity freeze. The isolated
+review materializer produces rules/campaign2-measurement-evidence/0.1-candidate with digest
+8dec83b33366ea13217db0005942f9e159ff2e36402c241231af5d5e1f04d22c.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_MATERIALIZATION.md and the separate packet record seven canonical
+artifacts/readable counterparts, exact 31-entry bundle/profile tuple, four model variants, slot-0
+nine additions/one singleton replacement, slot-5 eight additions, unchanged slots 1..4 and
+87 preserved prior files. Materialization reports 102 checks; fresh-process deletion/recreation
+and independent verification reproduce all 15 packet files.
+
+PACK findings are explicitly component-scoped: review-model structure/profile checks and bounded
+source equivalence pass, while authoritative V07 dispatch, carriage topology and restore remain
+unimplemented. No blanket PACK-A..I or EVC-A..P PASS. Concrete ModelIdentity review/freeze is
+next; no runtime activation. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage ModelIdentity FROZEN; runtime qualification proposed
+
+User accepts the positive seven-artifact packet and four control ModelIdentity representations
+at rules/campaign2-measurement-evidence/0.1-candidate, digest
+8dec83b33366ea13217db0005942f9e159ff2e36402c241231af5d5e1f04d22c.
+EVC-MODEL-BYTE PASS covers identity construction, registry delta, reproducibility and historical
+preservation only. Runtime implementation is authorized under this exact new RulesVersion.
+
+Implemented production model admission, V07 shared ingress, shared occurrence extraction,
+detached 203-to-337 intake, private padding, six/eight closure, successor trace and archive/restore.
+The restore dispatch omission found during the first focused pass was corrected and retained
+in review history. Full active regression: 86 files/563 tests PASS before five additional
+carriage controls; final focused suite: 18 tests PASS. Type-check/build/reference-boundary PASS.
+Fresh-process runtime continuation PASS; rematerialization reproduces 15 files, preserving 87
+prior files. Allocation audit 197 PASS. Historical probe semantics remain unchanged.
+
+CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md requests bounded PACK/EVC disposition,
+separating EVC-B's governed R0/D component witness from the public changed-anchor exclusion.
+Qualification acceptance is not presumed. Next decision: qualification/scope review, then a
+responding cognitive mechanism target. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2
+remain OPEN. No persistent cognitive update, new route or further allocation is selected.

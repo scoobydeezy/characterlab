@@ -1,0 +1,40 @@
+/** Frozen measurement-evidence .1 declarations; no stored packet is a construction input. */
+import allocation from '../../docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json';
+import {canonicalEncode as enc,canonicalDecode,RecordSchemaRegistry,record,list,set,text,unsigned,typedIdentifier,type CanonicalValue,type RecordSchema} from '../substrate/canonicalEncoding';
+import {contentRegistrySchemas} from '../substrate/contentManifest';
+import {probeSupportedSchemas} from './probeCodecs';
+import {probeModelReviewSource} from './probeModelReview';
+import {recordRole} from './firstModelCandidate';
+import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key} from './canonicalData';
+export const MEASUREMENT_RULES='rules/campaign2-measurement-evidence/0.1-candidate';
+export const MEASUREMENT_PROFILES={orderedInput:'campaign2-probe-ordered-input/0.1-candidate',trace:'campaign2-measurement-evidence-trace-binding/0.1-candidate',persistence:'campaign2-measurement-evidence-persistence/0.1-candidate'} as const;
+const versions={rulesVersion:MEASUREMENT_RULES,registrySchemaVersion:'campaign2-measurement-evidence-registry/0.1-candidate'};
+export const measurementSchemas:RecordSchema[]=allocation.records.map(r=>({typeId:BigInt(r.typeId),schemaVersion:1n,name:r.name,fields:r.fields.map(f=>({id:BigInt(f.id),name:f.name,required:f.required}))}));
+export const measurementSupportedSchemas=()=>[...probeSupportedSchemas(),...measurementSchemas];
+const all=measurementSupportedSchemas(),registry=new RecordSchemaRegistry();for(const s of all)registry.register(s);
+export const decodeMeasurement=(b:Uint8Array)=>canonicalDecode(b,registry);
+const decode=decodeMeasurement;
+const id=(n:number,s:string)=>typedIdentifier(n,text(s));
+export const measurementRecord=(n:number,values:CanonicalValue[])=>record(all.find(s=>s.typeId===BigInt(n))!,new Map(values.map((v,i)=>[BigInt(i+1),v])));
+const r=measurementRecord,schemas=measurementSchemas;
+const entry=(stable:CanonicalValue,kind:string,version:string,def:CanonicalValue)=>record(contentRegistrySchemas.semanticRegistryEntry,new Map<bigint,CanonicalValue>([[1n,stable],[2n,id(1023,kind)],[3n,text(version)],[4n,def]]));
+const isEntry=(v:CanonicalValue,stable:string)=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(id(stable==='MeasurementEvidenceIntakeTransition'?1009:1027,stable));
+export function measurementEvidenceModelSource(a=true,p=true){
+ const base=probeModelReviewSource(a,p),slots=items(decode(base.registry),'list'),old=items(slots[0],'set');
+ const channel=f(rec(f(rec(old.find(v=>isEntry(v,'definition/regulatory-diagnostic-probe'))!,171n),4n),331n),3n);
+ const intake=entry(id(1027,'definition/measurement-evidence-intake'),'registry/measurement-evidence-intake','measurement-evidence-carriage/0.1-candidate',r(336,[f(rec(channel,332n),2n),f(rec(channel,332n),1n),f(rec(channel,332n),5n)]));
+ const schema=(n:number)=>r(254,[unsigned(n),unsigned(1)]);
+ const producer=r(338,[id(1036,'seam/regulatory-diagnostic-probe'),text('regulatory-diagnostic-probe/0.1-candidate'),id(1001,'event/regulatory-diagnostic-probe-observation'),unsigned(120),schema(203)]);
+ const admission=r(339,[schema(203),producer,unsigned(1)]);
+ const definition=r(340,[admission,set([]),set([r(277,[schema(337),unsigned(1)])]),r(273,[unsigned(1)])]);
+ const ingress=r(276,[id(1001,'event/measurement-evidence-intake'),unsigned(1),unsigned(130),unsigned(1),unsigned(1)]);
+ const transition=entry(id(1009,'MeasurementEvidenceIntakeTransition'),'registry/transition-registration','transition-admission-extension/0.7-candidate',r(341,[id(1036,'seam/measurement-evidence-carriage'),text('measurement-evidence-carriage/0.1-candidate'),definition,ingress]));
+ const role=(ns:number)=>r(263,[unsigned(ns)]);
+ const oldSingleton=rec(old.find(v=>isEntry(v,'definition/transition-admission'))!,171n),singleton=rec(f(oldSingleton,4n),279n);
+ const additions=allocation.occurrenceIdentities.map(x=>[schema(x.recordTypeId),r(278,[unsigned(1),role(x.requiredNamespace)])] as const);
+ const changed=r(279,[f(singleton,1n),f(singleton,2n),{kind:'map',entries:[...(f(singleton,3n) as Extract<CanonicalValue,{kind:'map'}>).entries,...additions]}]);
+ const newSingleton=entry(f(oldSingleton,1n),'registry/transition-admission','transition-admission/0.4-candidate',changed);
+ const descriptors=schemas.map(s=>record(contentRegistrySchemas.recordSchemaDescriptor,new Map([[1n,unsigned(s.typeId)],[2n,unsigned(1)],[3n,text(s.name)],[4n,list(s.fields.map(x=>record(contentRegistrySchemas.recordFieldDescriptor,new Map([[1n,unsigned(x.id)],[2n,text(x.name)],[3n,true]]))))]])));
+ const roles=allocation.roles.map(x=>recordRole(x.recordTypeId,x.fieldId,role(x.requiredNamespace)));
+ return {...base,...versions,registry:enc(list([set([...old.filter(v=>v!==oldSingleton),newSingleton,...descriptors,intake,transition]),...slots.slice(1,5),set([...items(slots[5],'set'),...roles])]))};
+ }

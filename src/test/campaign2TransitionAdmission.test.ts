@@ -3,7 +3,8 @@ import {canonicalEncode,bytesToHex,list,set,map,unsigned,text,typedIdentifier,re
 import {contentRegistrySchemas} from '../substrate/contentManifest';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
-import {campaign2Record as r,campaign2SchemaByType} from '../campaign2/codecs';
+import {semanticRecordValue,semanticOccurrenceId,semanticTypedId,perceptualEventReferentIdValue} from '../semanticBinding/semanticCodecs';
+import {campaign2Record as r,campaign2SchemaByType,decodeCampaign2} from '../campaign2/codecs';
 import {compileFirstCampaign2Content} from '../campaign2/contentProfile';
 import {compileTransitionAdmissionV04} from '../campaign2/transitionAdmissionV04';
 import {compileOccurrenceIdentities} from '../campaign2/occurrenceIdentity';
@@ -44,6 +45,15 @@ async function context(omitExperienceRole=false){
 const experience=()=>preRecognitionSemanticExperienceValue({experienceId:1n,observerId:'observer/mina',occurredAt:10n,perceptualEventReferentIds:[],perceivedBindings:[],perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:[],transformationVersion:'semantic-binding/0.1-candidate#SEM-001H'});
 const evaluation=(ordinal=2)=>r('OutcomeEvaluation',{OutcomeEvaluationId:typedIdentifier(1116,unsigned(ordinal)),ConsequenceExperience:experience(),TransformationVersion:text('character-learning-evidence/0.5-candidate')});
 describe('V04 shared occurrence and output construction controls',()=>{
+  it('EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier',async()=>{
+    const model=compileTransitionAdmissionV04(enc(set([registration(),registration(true)])),enc(bundle()),await context());
+    for(const second of [false,true]){
+      const output=(ordinal:number)=>second?r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:typedIdentifier(1117,unsigned(ordinal)),Evaluation:evaluation(),TransformationVersion:text('character-learning-evidence/0.5-candidate')}):evaluation(ordinal);
+      expect(model.validateOutputs(second?learnKind:evalKind,[enc(output(100))])).toEqual([output(100)]);
+      for(const outputs of [[],[output(100),output(101)],[output(100),output(100)],[unsigned(0)]])
+        expect(()=>model.validateOutputs(second?learnKind:evalKind,outputs.map(enc))).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
+    }
+  });
   it('uses real scheduler child/occurrence allocation and rolls back externally injected consumer work',async()=>{
     const model=compileTransitionAdmissionV04(enc(set([registration(),registration(true)])),enc(bundle()),await context());
     for(const mode of ['valid','forged','duplicate-ingress']){
@@ -122,6 +132,25 @@ describe('V04 shared occurrence and output construction controls',()=>{
   const source=():ScheduledEvent=>({eventId:10n,eventSequence:10n,dueAt:simInstant(10n),phase:124n,eventTypeId:id(1001,'fixture/sem-freeze'),payload:unsigned(0),dependencies:set([]),causalParentEventIds:[]});
   const child=(emission:EventEmission,n:bigint,parent:bigint):ScheduledEvent=>({...emission,eventId:n,eventSequence:n,causalParentEventIds:[parent]});
   async function runtime(){const model=compileTransitionAdmissionV04(enc(set([registration(),registration(true)])),enc(bundle()),await context());return beginTransitionIngressV04(model,10n);}
+  it('EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail',async()=>{
+    // Trusted-adapter boundary controls; reservation derivation remains owned by SEM.
+    for(const current of [false,true]){
+      const rt=await runtime(),stage=rt.observeSemanticFreeze({...source(),phase:current?14n:124n},current?[enc(experience())]:[]);
+      expect(stage.emissions()).toEqual([]);stage.bindAllocatedChildren([]);
+      let allocations=0;
+      const injected={...source(),eventId:11n,eventSequence:11n,phase:130n,eventTypeId:id(1001,'event/outcome-evaluation'),payload:experience(),causalParentEventIds:[10n]};
+      expect(()=>{const cap=rt.admit(injected);rt.allocateEvidIdentity(cap,{allocateRuntimeId:()=>{allocations++;return 100n;}});}).toThrowError(expect.objectContaining({code:'INPUT_NOT_ADMITTED'}));
+      expect(allocations).toBe(0);rt.finish();
+    }
+    const rt=await runtime();
+    for(const phase of [13n,123n,130n,150n])expect(()=>rt.observeSemanticFreeze({...source(),phase},[enc(experience())])).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
+    expect(()=>rt.observeSemanticFreeze(source(),[enc(evaluation())])).toThrow();
+    // Rejected boundary calls leave no pending dispatch or execution.
+    rt.finish();
+    const wrongProducer=r('TransitionInputProducerV04',{VariantTag:unsigned(1),ProducingSeamId:id(1036,'seam/event-truth-to-pre-recognition-experience'),ProducingSeamVersion:text('semantic-binding/unsupported'),Lane:unsigned(2)});
+    const c=await context();
+    expect(()=>compileTransitionAdmissionV04(enc(set([registration(false,130,wrongProducer),registration(true)])),enc(bundle()),c)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+  });
   it('FCT-G/H/I/K: resemblance grants no admission or selector access',async()=>{
     const rt=await runtime(),staged=rt.observeSemanticFreeze(source(),[enc(experience())]),generated=child(staged.emissions()[0],11n,10n);
     let selectors=0,reads=0,allocations=0;
@@ -145,6 +174,49 @@ describe('V04 shared occurrence and output construction controls',()=>{
     const cap2=rt.admit(event2),l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
     const terminal=rt.completeEvid(cap2,[enc(l)]);expect(terminal.emissions()).toEqual([]);terminal.bindAllocatedChildren([]);rt.finish();
     expect(ordinal).toBe(102n);expect(()=>admittedInputFacts(cap2)).toThrowError(expect.objectContaining({code:'INPUT_NOT_ADMITTED'}));
+  });
+  it('EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies',async()=>{
+    const empty=experience() as Extract<CanonicalValue,{kind:'record'}>,eventFile=perceptualEventReferentIdValue({observerId:'observer/mina',observerEventSequence:3n});
+    // Canonical carrier fixture at the trusted freeze boundary, not a new SEM classification rule.
+    const classification=semanticRecordValue('PerceptualEventClassificationEvidence',{
+      EventClassificationEvidenceId:semanticOccurrenceId('EventClassificationEvidenceId',4n),ExperienceId:empty.fields.get(1n)!,ObserverId:id(1000,'observer/mina'),PerceptualEventReferentId:eventFile,
+      PerceptualEventFacetId:semanticTypedId('PerceptualEventFacetId',text('perceptual-event-facet/appears-rope-skipping-pattern-like')),TypedPerceivedValue:false,
+      EventClassificationRuleId:semanticTypedId('PerceptualEventClassificationRuleId',text('event-classification-rule/rope-skipping-pattern-conjunction')),
+      SupportingEventFeatureObservationIds:set([]),SupportingPerceptualReferentIds:set([]),SupportingObservationIds:set([]),OccurredAt:unsigned(10),TransformationVersion:text('semantic-binding/0.1-candidate#SEM-001H'),
+    });
+    const x=record(empty.schema,new Map([...empty.fields,[4n,set([eventFile])],[7n,set([classification])]]));
+    expect(decodeCampaign2(enc(x))).toEqual(x);expect(enc(x)).not.toEqual(enc(empty));
+    const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(x)]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
+    const cap=rt.admit(event);let ordinal=100n;const allocator={allocateRuntimeId:()=>ordinal++};
+    const e=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+    const next=rt.completeEvid(cap,[enc(e)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);const cap2=rt.admit(event2);
+    const l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+    const terminal=rt.completeEvid(cap2,[enc(l)]);terminal.bindAllocatedChildren([]);rt.finish();
+    const nested=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='record')throw Error('fixture record');return v.fields.get(2n)!;};
+    expect(enc(nested(decodeCampaign2(enc(e))))).toEqual(enc(x));expect(enc(nested(nested(decodeCampaign2(enc(l)))))).toEqual(enc(x));expect(ordinal).toBe(102n);
+  });
+  it('EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution',async()=>{
+    for(const second of [false,true]){
+      const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(experience())]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
+      let cap=rt.admit(event),ordinal=100n;const allocator={allocateRuntimeId:()=>ordinal++};
+      let output=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      if(second){const next=rt.completeEvid(cap,[enc(output)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);cap=rt.admit(event2);
+        output=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap,allocator),Evaluation:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});}
+      const before=ordinal;
+      expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[{} as never]})).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
+      expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[]},list([]),list([true]))).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
+      expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[]},list([]))).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
+      expect(()=>rt.completeEvid(cap,[enc(output)],{operations:[]},list([]),list([]))).not.toThrow();expect(ordinal).toBe(before);rt.abort();
+    }
+  });
+  it('EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity',async()=>{
+    for(const [field,value] of [[2n,id(1000,'observer/other')],[3n,unsigned(11)],[1n,typedIdentifier(1106,unsigned(99))]] as [bigint,CanonicalValue][]){
+      const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(experience())]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
+      const payload=event.payload as Extract<CanonicalValue,{kind:'record'}>;let allocations=0;
+      const consume=(e:ScheduledEvent)=>{const cap=rt.admit(e);rt.allocateEvidIdentity(cap,{allocateRuntimeId:()=>{allocations++;return 100n;}});};
+      expect(()=>consume({...event,payload:record(payload.schema,new Map([...payload.fields,[field,value]]))})).toThrowError(expect.objectContaining({code:'INPUT_NOT_ADMITTED'}));
+      expect(allocations).toBe(0);expect(()=>consume(event)).not.toThrow();expect(allocations).toBe(1);rt.abort();
+    }
   });
   it('FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation',async()=>{
     const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(experience())]),event=child(stage.emissions()[0],11n,10n);

@@ -1,0 +1,1288 @@
+{
+  "status": "CONCRETE BYTES ACCEPTED AND FROZEN",
+  "versions": {
+    "rulesVersion": "rules/campaign2-regulatory-probe/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "registrySchemaVersion": "campaign2-probe-registry/0.1-candidate",
+    "parameterSchemaVersion": "campaign2-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/exact-1",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "profiles": {
+    "orderedInput": "campaign2-probe-ordered-input/0.1-candidate",
+    "persistence": "campaign2-probe-persistence/0.1-candidate",
+    "trace": "campaign2-probe-trace-binding/0.1-candidate"
+  },
+  "semanticBundle": [
+    "substrate/0.2-candidate",
+    "cenc/1",
+    "content/0.2-candidate",
+    "content-kind/0.1-candidate",
+    "governed-domain-validator/0.1-candidate",
+    "governed-execution/0.1-candidate",
+    "ordering/0.2-candidate",
+    "ordering-phases/2-candidate",
+    "mutation-authority/0.1-candidate#TRC-001-002-addendum",
+    "state/0.3-candidate-addendum",
+    "projection/0.3-candidate-addendum",
+    "identity-binding/0.5-candidate",
+    "observation/0.1-candidate",
+    "authored-fact-observation/0.1-candidate",
+    "observation-unit-identity/0.1-candidate",
+    "referent-origin/0.1-candidate",
+    "content-definition-id/0.1-candidate",
+    "semantic-binding/0.1-candidate#SEM-001H",
+    "character-learning-evidence/0.5-candidate",
+    "transition-admission/0.4-candidate",
+    "transition-admission-extension/0.6-candidate",
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate",
+    "trace/0.2-candidate",
+    "campaign2-trace-binding/0.1-candidate",
+    "regulatory-diagnostic-probe/0.1-candidate",
+    "campaign2-probe-trace-binding/0.1-candidate"
+  ],
+  "modelDigest": "2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454",
+  "changedModelFields": [
+    "1",
+    "6"
+  ],
+  "registryDelta": [
+    {
+      "position": 0,
+      "byteIdentical": false,
+      "added": [
+        {
+          "record": "SemanticRegistryEntry/171/1",
+          "fields": {
+            "1:StableId": {
+              "namespace": "1024",
+              "payload": {
+                "list": [
+                  {
+                    "kind": "unsigned",
+                    "value": "335"
+                  },
+                  {
+                    "kind": "unsigned",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            "2:RegistryKind": {
+              "namespace": "1023",
+              "payload": {
+                "kind": "text",
+                "value": "registry/union-variant-definition"
+              }
+            },
+            "3:DefinitionVersion": {
+              "kind": "text",
+              "value": "union-variant/1"
+            },
+            "4:Definition": {
+              "record": "UnionVariantDefinition/259/1",
+              "fields": {
+                "1:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "335"
+                },
+                "2:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "3:RequiredPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "1"
+                    }
+                  ]
+                },
+                "4:ForbiddenPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "3"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "4"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "SemanticRegistryEntry/171/1",
+          "fields": {
+            "1:StableId": {
+              "namespace": "1024",
+              "payload": {
+                "list": [
+                  {
+                    "kind": "unsigned",
+                    "value": "335"
+                  },
+                  {
+                    "kind": "unsigned",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "2:RegistryKind": {
+              "namespace": "1023",
+              "payload": {
+                "kind": "text",
+                "value": "registry/union-variant-definition"
+              }
+            },
+            "3:DefinitionVersion": {
+              "kind": "text",
+              "value": "union-variant/1"
+            },
+            "4:Definition": {
+              "record": "UnionVariantDefinition/259/1",
+              "fields": {
+                "1:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "335"
+                },
+                "2:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "2"
+                },
+                "3:RequiredPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "3"
+                    }
+                  ]
+                },
+                "4:ForbiddenPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "4"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "SemanticRegistryEntry/171/1",
+          "fields": {
+            "1:StableId": {
+              "namespace": "1024",
+              "payload": {
+                "list": [
+                  {
+                    "kind": "unsigned",
+                    "value": "335"
+                  },
+                  {
+                    "kind": "unsigned",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            "2:RegistryKind": {
+              "namespace": "1023",
+              "payload": {
+                "kind": "text",
+                "value": "registry/union-variant-definition"
+              }
+            },
+            "3:DefinitionVersion": {
+              "kind": "text",
+              "value": "union-variant/1"
+            },
+            "4:Definition": {
+              "record": "UnionVariantDefinition/259/1",
+              "fields": {
+                "1:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "335"
+                },
+                "2:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "3"
+                },
+                "3:RequiredPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "4"
+                    }
+                  ]
+                },
+                "4:ForbiddenPayloadFieldIds": {
+                  "set": [
+                    {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    {
+                      "kind": "unsigned",
+                      "value": "3"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "SemanticRegistryEntry/171/1",
+          "fields": {
+            "1:StableId": {
+              "namespace": "1027",
+              "payload": {
+                "kind": "text",
+                "value": "definition/regulatory-diagnostic-probe"
+              }
+            },
+            "2:RegistryKind": {
+              "namespace": "1023",
+              "payload": {
+                "kind": "text",
+                "value": "registry/regulatory-diagnostic-probe"
+              }
+            },
+            "3:DefinitionVersion": {
+              "kind": "text",
+              "value": "regulatory-diagnostic-probe/0.1-candidate"
+            },
+            "4:Definition": {
+              "record": "RegulatoryProbeDefinition/331/1",
+              "fields": {
+                "1:CharacterId": {
+                  "namespace": "1002",
+                  "payload": {
+                    "namespace": "1037",
+                    "payload": {
+                      "namespace": "1038",
+                      "payload": {
+                        "kind": "text",
+                        "value": "character/bridge-subject"
+                      }
+                    }
+                  }
+                },
+                "2:RegulatoryVariableId": {
+                  "namespace": "1029",
+                  "payload": {
+                    "kind": "text",
+                    "value": "variable/fixture-regulation"
+                  }
+                },
+                "3:Channel": {
+                  "record": "DiagnosticProbeChannel/332/1",
+                  "fields": {
+                    "1:ObservationChannelId": {
+                      "namespace": "1005",
+                      "payload": {
+                        "kind": "text",
+                        "value": "channel/regulatory-diagnostic-probe"
+                      }
+                    },
+                    "2:ObserverId": {
+                      "namespace": "1000",
+                      "payload": {
+                        "kind": "text",
+                        "value": "observer/bridge-subject"
+                      }
+                    },
+                    "3:SubjectId": {
+                      "namespace": "1002",
+                      "payload": {
+                        "namespace": "1037",
+                        "payload": {
+                          "namespace": "1038",
+                          "payload": {
+                            "kind": "text",
+                            "value": "character/bridge-subject"
+                          }
+                        }
+                      }
+                    },
+                    "4:ModalityId": {
+                      "namespace": "1006",
+                      "payload": {
+                        "kind": "text",
+                        "value": "modality/diagnostic-regulatory-probe"
+                      }
+                    },
+                    "5:UnitId": {
+                      "namespace": "1039",
+                      "payload": {
+                        "kind": "text",
+                        "value": "unit/diagnostic-regulatory-level"
+                      }
+                    }
+                  }
+                },
+                "4:Available": true,
+                "5:ObserverPermitted": true
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRecordSchemaDescriptor/172/1",
+          "fields": {
+            "1:TypeId": {
+              "kind": "unsigned",
+              "value": "331"
+            },
+            "2:SchemaVersion": {
+              "kind": "unsigned",
+              "value": "1"
+            },
+            "3:Name": {
+              "kind": "text",
+              "value": "RegulatoryProbeDefinition"
+            },
+            "4:Fields": {
+              "list": [
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "CharacterId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "RegulatoryVariableId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "3"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "Channel"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "4"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "Available"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "5"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ObserverPermitted"
+                    },
+                    "3:Required": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "record": "CanonicalRecordSchemaDescriptor/172/1",
+          "fields": {
+            "1:TypeId": {
+              "kind": "unsigned",
+              "value": "332"
+            },
+            "2:SchemaVersion": {
+              "kind": "unsigned",
+              "value": "1"
+            },
+            "3:Name": {
+              "kind": "text",
+              "value": "DiagnosticProbeChannel"
+            },
+            "4:Fields": {
+              "list": [
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ObservationChannelId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ObserverId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "3"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "SubjectId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "4"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ModalityId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "5"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "UnitId"
+                    },
+                    "3:Required": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "record": "CanonicalRecordSchemaDescriptor/172/1",
+          "fields": {
+            "1:TypeId": {
+              "kind": "unsigned",
+              "value": "333"
+            },
+            "2:SchemaVersion": {
+              "kind": "unsigned",
+              "value": "1"
+            },
+            "3:Name": {
+              "kind": "text",
+              "value": "RegulatoryProbeOpportunity"
+            },
+            "4:Fields": {
+              "list": [
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ProbeDefinitionId"
+                    },
+                    "3:Required": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "record": "CanonicalRecordSchemaDescriptor/172/1",
+          "fields": {
+            "1:TypeId": {
+              "kind": "unsigned",
+              "value": "334"
+            },
+            "2:SchemaVersion": {
+              "kind": "unsigned",
+              "value": "1"
+            },
+            "3:Name": {
+              "kind": "text",
+              "value": "RegulatoryProbeTruth"
+            },
+            "4:Fields": {
+              "list": [
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "RegulatoryProbeTruthId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ProbeDefinitionId"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "3"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "OccurredAt"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "4"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "EffectiveValue"
+                    },
+                    "3:Required": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "record": "CanonicalRecordSchemaDescriptor/172/1",
+          "fields": {
+            "1:TypeId": {
+              "kind": "unsigned",
+              "value": "335"
+            },
+            "2:SchemaVersion": {
+              "kind": "unsigned",
+              "value": "1"
+            },
+            "3:Name": {
+              "kind": "text",
+              "value": "RegulatoryProbeCarrier"
+            },
+            "4:Fields": {
+              "list": [
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "1"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "VariantTag"
+                    },
+                    "3:Required": true
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "2"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "Truth"
+                    },
+                    "3:Required": false
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "3"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "ProbeDefinitionId"
+                    },
+                    "3:Required": false
+                  }
+                },
+                {
+                  "record": "CanonicalRecordFieldDescriptor/173/1",
+                  "fields": {
+                    "1:FieldId": {
+                      "kind": "unsigned",
+                      "value": "4"
+                    },
+                    "2:Name": {
+                      "kind": "text",
+                      "value": "Support"
+                    },
+                    "3:Required": false
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "position": 1,
+      "byteIdentical": true,
+      "added": []
+    },
+    {
+      "position": 2,
+      "byteIdentical": true,
+      "added": []
+    },
+    {
+      "position": 3,
+      "byteIdentical": true,
+      "added": []
+    },
+    {
+      "position": 4,
+      "byteIdentical": true,
+      "added": []
+    },
+    {
+      "position": 5,
+      "byteIdentical": false,
+      "added": [
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "331"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "1"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1002"
+                },
+                "2:DomainValidatorId": {
+                  "namespace": "1021",
+                  "payload": {
+                    "kind": "text",
+                    "value": "validator/character-qualification"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "331"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "2"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1029"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "332"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "1"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1005"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "332"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "2"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1000"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "332"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "3"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1002"
+                },
+                "2:DomainValidatorId": {
+                  "namespace": "1021",
+                  "payload": {
+                    "kind": "text",
+                    "value": "validator/character-qualification"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "332"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "4"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1006"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "332"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "5"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1039"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "333"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "1"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1027"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "334"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "1"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1123"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "334"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "2"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1027"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": "CanonicalRoleConstraint/265/1",
+          "fields": {
+            "1:Position": {
+              "record": "CanonicalRolePosition/264/1",
+              "fields": {
+                "1:VariantTag": {
+                  "kind": "unsigned",
+                  "value": "1"
+                },
+                "2:RecordTypeId": {
+                  "kind": "unsigned",
+                  "value": "335"
+                },
+                "4:FieldId": {
+                  "kind": "unsigned",
+                  "value": "3"
+                }
+              }
+            },
+            "2:Role": {
+              "record": "CanonicalIdentityRole/263/1",
+              "fields": {
+                "1:RequiredNamespace": {
+                  "kind": "unsigned",
+                  "value": "1027"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "name": "content",
+      "bytes": 124,
+      "sha256": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "oldSha256": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "byteIdentical": true
+    },
+    {
+      "name": "parameters",
+      "bytes": 11,
+      "sha256": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "oldSha256": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "byteIdentical": true
+    },
+    {
+      "name": "registry",
+      "bytes": 47798,
+      "sha256": "49fd880c6f86db328d3473c46ad5fb8f82e55e81d75d208972563df756c9117c",
+      "oldSha256": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "byteIdentical": false
+    },
+    {
+      "name": "content-identity",
+      "bytes": 65,
+      "sha256": "67e8beed1d99ed0f964190d361da166d755e5956d39085898037a4cbc79acef5",
+      "oldSha256": "67e8beed1d99ed0f964190d361da166d755e5956d39085898037a4cbc79acef5",
+      "byteIdentical": true
+    },
+    {
+      "name": "parameter-identity",
+      "bytes": 78,
+      "sha256": "4e2ec3bccb8f623be26257b857c5c10c737cdfc9d4f1ca0edee8e971f0571fb4",
+      "oldSha256": "4e2ec3bccb8f623be26257b857c5c10c737cdfc9d4f1ca0edee8e971f0571fb4",
+      "byteIdentical": true
+    },
+    {
+      "name": "registry-identity",
+      "bytes": 82,
+      "sha256": "376b464e82449484ebd096a840e77b187eb9471cc9eb71c67e14c0e87a26ed99",
+      "oldSha256": "855b10ed007315fd7887bfecf5022ab253e5f33e6d5f27fe24197e3be144d660",
+      "byteIdentical": false
+    },
+    {
+      "name": "model-identity",
+      "bytes": 345,
+      "sha256": "2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454",
+      "oldSha256": "57e0d7de1de0ffad564ebef4af5ce6b5a3b515069dc85df48f181f5629d1f39b",
+      "byteIdentical": false
+    }
+  ],
+  "preservedOldArtifacts": [
+    {
+      "path": "docs/planning/campaign2-first-model/REVIEW_MANIFEST.json",
+      "sha256": "e1d8eee646e5ed395cf79b99d07e636fe8e176599c0e0d8cc03fb0b9a462957b"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/content-identity.cenc.hex",
+      "sha256": "12409ac6e208d4481ea6d62d76e36c5ee19db40b8005c75657bff39c44c5c235"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/content-identity.json",
+      "sha256": "d1309bbebe3198407b659b435218b9147db890d74c6ccc52ed1a1ac29f8b7a2f"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/content.cenc.hex",
+      "sha256": "217c1cb703d608a82dbeecbe25f105502f6652e7a00bd9a88f55748ec7b27726"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/content.json",
+      "sha256": "226069b9448bef5d488bec63a6e6db21e59c990dd98c35385ba396a6d70f0fa7"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/model-identity.cenc.hex",
+      "sha256": "c91002a7a09f4045444c4a00e22076d4d273d3bc107fe16629bc4286acb89de3"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/model-identity.json",
+      "sha256": "9b8cac2bfe583e3d5176b16273446e7feb6d6e12ea6ec6b94c3b46d5c3d57ef4"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/parameter-identity.cenc.hex",
+      "sha256": "1dd6b94fc9aa6c4dab81ff1f19ca35033c5a835aa288d4403d91ff9b36d1551a"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/parameter-identity.json",
+      "sha256": "d0a6592aacbfdf9b99e3313ebb37930a866b05aee9d4408036f4fcc0ad2a844c"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/parameters.json",
+      "sha256": "bdfaf3a46f7c8f48c43cb017f541069b529c6e6624ca4e86e62a0338e192e8e9"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/registry-identity.cenc.hex",
+      "sha256": "7eeeb73b4373dc323609332749fa33f7f17a4c2d98786566fc0c53ea50a0f8a5"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/registry-identity.json",
+      "sha256": "b6b83ae00c07030e1c430af2243907779a27c5339a2cdb464471a6c1bb940755"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/registry.cenc.hex",
+      "sha256": "41894109b0bdf47fc1da230e0b710edeb97c6ebf9fadc71bfc7219ce5be73693"
+    },
+    {
+      "path": "docs/planning/campaign2-first-model/registry.json",
+      "sha256": "92d82ec5ad6c21dca982618a37572d46d94fd58c57ca2b7eeb8a96c1c443eb25"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/REVIEW_MANIFEST.json",
+      "sha256": "f84f84a2fa4e8b926567993bcea64fb34d67473fc855a963edbe2762b027115d"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/content-identity.cenc.hex",
+      "sha256": "12409ac6e208d4481ea6d62d76e36c5ee19db40b8005c75657bff39c44c5c235"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/content-identity.json",
+      "sha256": "d1309bbebe3198407b659b435218b9147db890d74c6ccc52ed1a1ac29f8b7a2f"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/content.cenc.hex",
+      "sha256": "217c1cb703d608a82dbeecbe25f105502f6652e7a00bd9a88f55748ec7b27726"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/content.json",
+      "sha256": "226069b9448bef5d488bec63a6e6db21e59c990dd98c35385ba396a6d70f0fa7"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/model-identity.cenc.hex",
+      "sha256": "756b42aac9ff1435a1250727498f271ebcb94cf157aa6b032c6cac6b600ab66e"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/model-identity.json",
+      "sha256": "323048f2875a9b6f7161dab566c7a6654f5539a38d90c266814ebd8136001af6"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/parameter-identity.cenc.hex",
+      "sha256": "1dd6b94fc9aa6c4dab81ff1f19ca35033c5a835aa288d4403d91ff9b36d1551a"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/parameter-identity.json",
+      "sha256": "d0a6592aacbfdf9b99e3313ebb37930a866b05aee9d4408036f4fcc0ad2a844c"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/parameters.json",
+      "sha256": "bdfaf3a46f7c8f48c43cb017f541069b529c6e6624ca4e86e62a0338e192e8e9"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/registry-identity.cenc.hex",
+      "sha256": "7eeeb73b4373dc323609332749fa33f7f17a4c2d98786566fc0c53ea50a0f8a5"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/registry-identity.json",
+      "sha256": "b6b83ae00c07030e1c430af2243907779a27c5339a2cdb464471a6c1bb940755"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/registry.cenc.hex",
+      "sha256": "41894109b0bdf47fc1da230e0b710edeb97c6ebf9fadc71bfc7219ce5be73693"
+    },
+    {
+      "path": "docs/planning/campaign2-trace-model/registry.json",
+      "sha256": "92d82ec5ad6c21dca982618a37572d46d94fd58c57ca2b7eeb8a96c1c443eb25"
+    }
+  ],
+  "limitations": [
+    "Probe runtime authorized; materialization is not runtime qualification.",
+    "Materialization checks are not PROBE-A..P or full packaging qualification."
+  ]
+}

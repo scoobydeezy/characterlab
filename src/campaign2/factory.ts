@@ -1,3 +1,6 @@
+import {compileMeasurementModel} from './measurementModel';
+import {MEASUREMENT_RULES,decodeMeasurement,measurementSupportedSchemas} from './measurementModelSource';
+import {validateMeasurementArchive} from './measurementArchive';
 /** Restricted FCT-5 implementation under the frozen bounded bundle and campaign2-persistence/0.1-candidate.
  * Qualification is separate; no caller-supplied runtime semantics enter this boundary.
  */
@@ -8,7 +11,10 @@ import {prepareCanonicalSave,SaveContractError,persistenceSchemas,type Persisten
 import {failureDiagnosticValue} from '../substrate/trace';
 import {compileBoundedModelDeclarations} from './modelPackaging';
 import {campaign2SupportedSchemas,decodeCampaign2} from './codecs';
-import {compileOrderedInputProfile,AUTHORED_FACT_EVENT} from './orderedInputs';
+import {compileOrderedInputProfile,AUTHORED_FACT_EVENT,PROBE_SOURCE_EVENT} from './orderedInputs';
+import {compileProbeModel} from './probeModel';
+import {PROBE_SUCCESSOR_RULES} from './probeSuccessorReview';
+import {decodeProbeReview,probeSupportedSchemas,validateProbeArchive} from './probeCodecs';
 import {compileAdaptationEvaluator} from './adaptationEvaluation';
 import {createAdaptationRuntime} from './adaptationRuntime';
 import {dataRecord as rec,dataField as f,dataKey as key,invalidModel} from './canonicalData';
@@ -16,7 +22,7 @@ import {dataRecord as rec,dataField as f,dataKey as key,invalidModel} from './ca
 export type Campaign2ModelSource=Parameters<typeof compileBoundedModelDeclarations>[0];
 declare const modelBrand:unique symbol;
 export interface Campaign2Model {readonly [modelBrand]:true;}
-type Model=Awaited<ReturnType<typeof compileBoundedModelDeclarations>>;
+type Model=Awaited<ReturnType<typeof compileMeasurementModel>>|Awaited<ReturnType<typeof compileBoundedModelDeclarations>>|Awaited<ReturnType<typeof compileProbeModel>>;
 const models=new WeakMap<object,Model>();
 const sourceFields=['rulesVersion','contentSchemaVersion','registrySchemaVersion','parameterSchemaVersion','numericProfileVersion','randomAlgorithmVersion','content','registry','parameters'];
 function ownData(value:unknown,fields:readonly string[]):Record<string,unknown>{
@@ -39,10 +45,10 @@ export async function prepareCampaign2Model(input:Campaign2ModelSource):Promise<
   const data=ownData(input,sourceFields);
   for(const field of sourceFields.slice(0,6))if(typeof data[field]!=='string')invalidModel('version must be explicit text');
   for(const field of sourceFields.slice(6))data[field]=copyBytes(data[field]);
-  const model=await compileBoundedModelDeclarations(data as Campaign2ModelSource);
+  const model=data.rulesVersion===MEASUREMENT_RULES?await compileMeasurementModel(data as Campaign2ModelSource):data.rulesVersion===PROBE_SUCCESSOR_RULES?await compileProbeModel(data as Campaign2ModelSource):await compileBoundedModelDeclarations(data as Campaign2ModelSource);
   // Closure derives from compiled declarations: only five integer maps, no read-only family;
   // fixed source/bridge/EVID/ADAPT dispatch has no anchor, draw or coupling operation.
-  if(model.profiles.persistence!=='campaign2-persistence/0.1-candidate')invalidModel('unsupported persistence profile');
+  if(model.profiles.persistence!==('measurement' in model?'campaign2-measurement-evidence-persistence/0.1-candidate':'probe' in model?'campaign2-probe-persistence/0.1-candidate':'campaign2-persistence/0.1-candidate'))invalidModel('unsupported persistence profile');
   const handle=Object.freeze({}) as Campaign2Model;models.set(handle,model);return handle;
 }
 export function campaign2ModelIdentity(handle:Campaign2Model):Uint8Array {return modelFacts(handle).modelIdentity.canonicalBytes.slice();}
@@ -68,25 +74,27 @@ export async function createCampaign2Run(handle:Campaign2Model,input:{initialSta
   const state=adapter.restore(decodeCampaign2(stateBytes));adapter.validate(state);m.domains.validateReferences(state,0n);
   const inputs=await compileOrderedInputProfile(m.profiles.orderedInput,m.compiled.content,m.domains).create(ordered,stateBytes,m.modelIdentity,seed);
   const evaluator=compileAdaptationEvaluator(m.adaptation,m.domains,m.compiled.stateModel);
-  return restrictedRun(createAdaptationRuntime(inputs,state,m.admission,evaluator,m.domains,m.compiled.stateModel,m.parameters.maxWork,m.bridge),m,inputs);
+  return restrictedRun(createAdaptationRuntime(inputs,state,m.admission,evaluator,m.domains,m.compiled.stateModel,m.parameters.maxWork,m.bridge,undefined,'probe' in m?m.probe:undefined,'measurement' in m?m.measurement:undefined),m,inputs);
 }
 export async function restoreCampaign2Run(source:Campaign2ModelSource,input:{orderedInputs:Uint8Array;save:Uint8Array}){
   const data=ownData(input,['orderedInputs','save']),ordered=copyBytes(data.orderedInputs),saveBytes=copyBytes(data.save);
   const handle=await prepareCampaign2Model(source),m=modelFacts(handle);
   let save:ReturnType<typeof rec>;
-  try{save=rec(decodeCampaign2(saveBytes),132n);}catch(error){
+  try{save=rec(('measurement' in m?decodeMeasurement:'probe' in m?decodeProbeReview:decodeCampaign2)(saveBytes),132n);}catch(error){
     throw new SaveContractError(`invalid canonical save: ${error instanceof Error?error.message:String(error)}`);
   }
   const runIdentity=await restoreRunIdentity(f(save,3n));
+  if('measurement' in m)try{validateMeasurementArchive(save,m);}catch(error){throw new SaveContractError(error instanceof Error?error.message:String(error));}
+  if('probe' in m)try{validateProbeArchive(save,m.probe.channel,m.probe.variableDefinition,m.probe.definitionId,m.probe);}catch(error){throw new SaveContractError(error instanceof Error?error.message:String(error));}
   // Saved queues at quiescence contain only original InputOnly work: every descendant settles at its source instant.
-  const prepared=await prepareCanonicalSave(saveBytes,{stateAdapter:persistentState(m),eventTypeKeys:new Set([key(AUTHORED_FACT_EVENT)]),
+  const prepared=await prepareCanonicalSave(saveBytes,{stateAdapter:persistentState(m),eventTypeKeys:new Set([key(AUTHORED_FACT_EVENT),...('probe' in m?[key(PROBE_SOURCE_EVENT)]:[])]),
     maxSettlementWorkPerSimulationInstant:m.parameters.maxWork,expectedModelIdentity:m.modelIdentity,expectedRunIdentity:runIdentity,
-    additionalSchemas:campaign2SupportedSchemas().filter(s=>![...Object.values(identitySchemas),...Object.values(persistenceSchemas)].some(base=>base.typeId===s.typeId))});
+    additionalSchemas:('measurement' in m?measurementSupportedSchemas():'probe' in m?probeSupportedSchemas():campaign2SupportedSchemas()).filter(s=>![...Object.values(identitySchemas),...Object.values(persistenceSchemas)].some(base=>base.typeId===s.typeId))});
   for(const value of [prepared.analyticalAnchors,prepared.randomRelevantAuthoritativeIds,prepared.continuingRunInputs])if(key(value)!==key(list([])))throw new SaveContractError('bounded persistence requires exact empty metadata');
   m.domains.validateReferences(prepared.state,prepared.clock);
   const profile=compileOrderedInputProfile(m.profiles.orderedInput,m.compiled.content,m.domains);
   await profile.validatePending(ordered,runIdentity.canonicalBytes,prepared.clock,prepared.queue);
   const inputs=await profile.restoreAuthority(ordered,runIdentity.canonicalBytes);
   const evaluator=compileAdaptationEvaluator(m.adaptation,m.domains,m.compiled.stateModel);
-  return restrictedRun(createAdaptationRuntime(inputs,prepared.state,m.admission,evaluator,m.domains,m.compiled.stateModel,m.parameters.maxWork,m.bridge,prepared),m,inputs);
+  return restrictedRun(createAdaptationRuntime(inputs,prepared.state,m.admission,evaluator,m.domains,m.compiled.stateModel,m.parameters.maxWork,m.bridge,prepared,'probe' in m?m.probe:undefined,'measurement' in m?m.measurement:undefined),m,inputs);
 }

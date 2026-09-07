@@ -620,3 +620,303 @@ Bootstrap inspection found C2-INPUT-ENC-001: no accepted canonical layout was fo
 unscheduled input-entry operands. This is a first-profile byte/restore-language choice, not an
 architectural or scalar expressibility failure. A concrete five-item canonical-list proposal
 is ready in CAMPAIGN2_ORDERED_INPUT_ENCODING_DECISION.md; no entry codec/allocation was made.
+
+### Accepted FCT-C qualification scope — 2026-09-07
+
+The user accepted FCT-C = C1 generic roster invariance AND C2 forbidden subject projection
+AND C3 bounded-profile exclusion. No roster-capable factory profile, allocation, or changed
+RulesVersion/ModelIdentity is required. The positive obligation remains mandatory at the
+generic accepted EVID/PRJ/IDN level; bounded rejection alone never substitutes for it.
+[Scope and executed evidence](../planning/CAMPAIGN2_QUALIFICATION_SCOPE_REVIEW.md).
+This scope ruling does not close VAL, ADAPT or Campaign 2.
+
+### Diagnostic regulatory probe research target — 2026-09-07
+
+Accepted as the first later-challenge target: diagnostic R0(C,V,T)+D(C,V), using only the exact
+displacement leaf and accepted immutable REG operations at T1 > T0. A separate governed probe
+opportunity and explicit availability/observer permission are required. The bounded .2 fixed-pulse
+model stays frozen. Drafting only is authorized; response laws, allocation and implementation are
+not authorized. [Current draft](../planning/CAMPAIGN2_REGULATORY_PROBE_DRAFT.md).
+
+RESOLVED scope decision: user accepted first observer-accessible divergence at permitted 203;
+X/E/L must remain byte-identical with matched observation/support IDs. No SEM/EVID carriage
+amendment is required or authorized. The future carriage trigger is a cognitive/learning consumer
+needing to distinguish permitted scalar values at identical support topology. EVID stays zero-read.
+ADAPT-9a/9b are proof labels only: this probe may later witness 9a, not the first cognitive
+divergence required by 9b. Parent ADAPT control 9, PHEN-ADAPT-001 and Campaign 2 remain open.
+Revision 2 proposes remaining probe shapes and PROBE-M; no shape acceptance or runtime PASS.
+
+Revision-2 review accepts the exact displacement-only capability and absolute diagnostic
+measurement semantics, and accepts definition/channel/truth and fixed-budget strategy in direction.
+Whole shape remains withheld. Revision 3 corrects truth n versus observation q, specifies all eight
+new symbolic EventTypeId members and the exact parent chain, closes private raw-ordinal padding
+with the normative five-advance budget, and adds PROBE-N/O. These corrections await whole-shape
+review; no allocation/implementation or ADAPT/PHEN gate closure follows.
+
+### Regulatory probe whole-shape acceptance and allocation review — 2026-09-07
+
+User accepts regulatory-diagnostic-probe/0.1-candidate in whole shape, including private padding,
+fixed event topology and trace mapping in shape. [Formal acceptance](REGULATORY_DIAGNOSTIC_PROBE.md)
+records the InputOnly source/restore clarification and PROBE-P. PROBE-A..P remain FROZEN, NOT PASSED.
+No semantic blockers are identified; implementation remains unauthorized.
+
+The authorized separate [allocation review](REGULATORY_PROBE_ALLOCATION_REVIEW.md) proposes records
+331..335, RegulatoryProbeTruthId namespace 1123, twelve existing-family members, local carrier tags
+and field/role assignments. Its 224-check mechanical audit passes, preserving prior allocation
+artifacts. Numeric acceptance is still pending: no proposed number/member is marked permanent.
+New profile/RulesVersion/ModelIdentity packaging follows that gate. ADAPT-9b, parent control 9,
+PHEN-ADAPT and Campaign 2 remain open.
+
+### Probe allocation freeze condition satisfied — 2026-09-07
+
+Numeric review accepted 331..335, namespace 1123, twelve permanent members and identity roles,
+conditional on governed type-259 carrier variants. The original table had layout rows only;
+the corrected table explicitly specifies exactly three registry entries with namespace-1024
+StableIds [335,1..3], registry/union-variant-definition, union-variant/1 and the exact field sets.
+All 240 allocation checks pass, including prior artifact preservation. Under the conditional
+ruling, regulatory-probe-allocation/0.1-candidate is PERMANENT AND FROZEN. No renumbering.
+
+The [new profile packaging draft](../planning/CAMPAIGN2_PROBE_PROFILE_PACKAGING_DRAFT.md)
+proposes exact RulesVersion/profile bindings and the six-slot model delta. Packaging acceptance,
+ModelIdentity materialization and implementation remain gated; PROBE-A..P are not passed.
+
+### Probe packaging accepted; model bytes submitted — 2026-09-07
+
+User accepted the exact probe RulesVersion and whole registry/input/trace/persistence bindings,
+clarifying canonical positions 0..5 and no old-profile fallback. Review compiler and materialization
+are authorized; authoritative runtime is not. [Materialization packet](../planning/CAMPAIGN2_PROBE_MODEL_MATERIALIZATION.md)
+derives ModelIdentity 2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454.
+Fresh-process delete/rematerialize proof, old-artifact preservation, 459 tests and build pass.
+Concrete-byte freeze is pending; PROBE-PACK component evidence does not pass runtime/parent gates.
+
+### Probe model frozen; accessor completion requested — 2026-09-07
+
+User accepted/froze the seven-artifact probe packet and ModelIdentity
+2cc10295fc9c8f8b0777fc0ac56c526bcc4f4d26ec865bcad3776d696d5bf454. Runtime implementation is
+authorized under probe rules only. PROBE-MODEL-BYTE-A PASS is materialization evidence, not runtime.
+InputOnly source component implementation has begun; no authoritative public probe activation yet.
+
+OPEN narrow naming gap: the accepted exact D ActualReadRecord requires a ProjectionAccessorId,
+but the frozen probe inventory names none. [Concrete proposal](../planning/CAMPAIGN2_PROBE_ACCESSOR_REVIEW.md)
+requests one symbolic member in existing 1028 and explicit disposition of the frozen model/version.
+No member, new model or altered trace semantics is assumed before that ruling.
+
+### Probe accessor symbol accepted; successor commitment required — 2026-09-07
+
+User accepts ProjectionAccessorId/1028("accessor/regulatory-diagnostic-displacement-prior")
+symbolically and authorizes append-only member allocation. Preservation of the frozen probe .1
+RulesVersion/ModelIdentity for the new read trace is explicitly rejected. Probe .1 stays historical;
+the narrow owner is a successor trace profile, with unchanged probe semantics/path and registry.
+
+[Member review](PROBE_ACCESSOR_MEMBER_ALLOCATION_REVIEW.md) passes 43 mechanical checks and
+remains REVIEW CANDIDATE. [Successor proposal](../planning/CAMPAIGN2_PROBE_TRACE_SUCCESSOR_DRAFT.md)
+specifies probe trace .2 and probe RulesVersion .2, unchanged other profile bindings and a projected
+RulesVersion-only ModelIdentity delta. No successor bytes or numeric freeze is presumed. D-read trace,
+probe wrappers and final runtime qualification await the member/binding/successor-model gates.
+
+### Probe accessor permanent; .2 binding accepted and materialized — 2026-09-07
+
+User froze probe-accessor-member-allocation/0.1-candidate and accepted probe trace/RulesVersion .2.
+All other profile bindings and underlying probe seam remain unchanged; PROBE-ACCESSOR-E forbids
+retroactive .1 read-trace activation. The member audit passes 43 checks.
+[Successor packet](../planning/CAMPAIGN2_PROBE_SUCCESSOR_MATERIALIZATION.md) derives
+fda39ae4a8d82cbf531b41ce35c9af7ebb2ec5c7f233c4f7adbd7e6d7eba80e9 with only ModelIdentity field 1
+changed and all six component artifacts identical. Fresh-process reproduction, 45 prior-file
+preservation and build pass. Concrete successor freeze remains pending before authoritative trace.
+
+### Probe .2 frozen; authoritative runtime and accessor controls — 2026-09-07
+
+The user's subsequent ACCEPT AND FREEZE ruling closes PROBE-ACCESSOR-MODEL-BYTE and freezes
+the successor packet/digest above. All manifests are unchanged from probe .1, which remains
+immutable historical evidence. Authoritative implementation under .2 is now authorized and
+implemented. [Runtime qualification](../planning/CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md)
+records executed PROBE-ACCESSOR-A..E PASS, permitted scalar divergence with equal X/E/L,
+suppression/allocator controls, rollback/restore evidence and seven detected implementation
+mutants. Build and regression checks pass; whole PROBE-A..P and Campaign 2 remain open.
+
+PROBE-F scope disposition is now requested: the frozen public specimen commits constant REG,
+so the valid time-varying production-component witness is rejected by that exact public model.
+Proposed split is generic REG + production probe positive evidence with frozen public exclusion;
+the alternative requires separately reviewed time-varying model commitment. No widening of
+the frozen compiler or complete PROBE-F PASS is authorized by these component results.
+
+### 2026-09-07 — PROBE-F split accepted; transactional controls expanded
+
+User accepts F1 generic accepted REG + production probe consumer and F2 exact frozen public
+profile exclusion, with PROBE-F PASS iff both pass. Both witnesses pass, including exact scalar
+differences and the time-only negative interpretation. No temporal model commitment is needed;
+frozen probe .2 remains narrow and unchanged. [Qualification](../planning/CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md) records this disposition,
+32 passing event-slot rollback/recovery cases and fresh-process full-save continuation PASS.
+Whole PROBE-A..P, ADAPT-9b, parent control 9 and PHEN-ADAPT remain open.
+
+Pass-2 final verification: 80 test files / 523 tests, production build and reference boundary
+PASS. Probe arithmetic now receives detached R0/D operands; ten forbidden capability requests
+reject. Signed-domain and child-forgery witnesses pass, as do refreshed seven-mutant and six-
+substitution padding audits. Full probe qualification remains open; no broader gate is inferred.
+
+### 2026-09-07 — probe qualification pass 3; output-closure correction
+
+Allocation failure/recovery (18 cases), public InputOnly origin/restore controls and irrelevant-
+state invariance pass. An adversarial producer exposed missing output-count validation: extra
+learning could commit outside EVID. Exact per-slot output cardinality/type now rejects that
+substitution; archive validation also requires exact producer projections and ordered output
+closure. Raw observation/truth freeze substitutions reject. The failure and correction are
+retained in CAMPAIGN2_PROBE_RUNTIME_QUALIFICATION.md. Frozen contracts/model bytes are unchanged;
+PROBE-F split and accessor PASS remain. Whole probe and parent campaign gates remain open.
+
+Pass-3 verification: 84 files / 549 tests, build, fresh-process continuation and frozen successor
+byte verification PASS; 45 prior artifacts preserved. No contract or allocation change.
+
+### 2026-09-07 — assembled probe qualification submitted for review
+
+Pass 4 adds the matched-allocation scalar witness, twelve detected read/carriage substitutions,
+four detected numeric substitutions and six rejected SEM source-audit mutations. No production
+semantics or frozen bytes change. CAMPAIGN2_PROBE_QUALIFICATION_REVIEW.md proposes the whole
+PROBE-A..P verdict with exact runtime/component/audit scopes; acceptance is not presumed.
+ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain open.
+
+### 2026-09-07 — regulatory diagnostic probe runtime QUALIFIED
+
+User accepts PROBE-A..P PASS under regulatory-diagnostic-probe/0.1-candidate and frozen probe
+rules .2; accessor A..E remain PASS. ADAPT-9a PASS: retained state changes later permitted
+observation (5 versus canonical 51/10), while matched X/E/L remain equal. F retains F1/F2
+generic temporal + public exclusion (no temporal public model). G explicitly retains G1
+public positive, G2 generic signed-domain production consumer and G3 public exclusion.
+PROBE-L PASS for this accepted seam; no broader learning semantics inferred. Preserve the
+real output-closure defect and corrected exact producer validation in the research history.
+ADAPT-9b, parent control 9, PHEN-ADAPT-001, ADAPT-001 formal campaign verdict and Campaign 2
+remain OPEN. Cognitive numeric/semantic carriage requires its own phenomenon target and seam.
+
+Next research target proposed in CAMPAIGN2_COGNITIVE_EVIDENCE_TARGET_REVIEW.md: observer-safe
+measurement evidence made available to a named cognitive consumer, with explicit first-content
+divergence and hidden-truth invariance. Target selection is pending; no record shapes, allocations,
+implementation, ADAPT-9b sufficiency or persistent learning updates are chosen.
+
+### 2026-09-07 — measurement-evidence carriage target accepted; revision 1 drafted
+
+User accepts the observer-safe measurement-evidence carriage target and authorizes inspection-
+first drafting only. Existing X/E/L, probe .1/.2 and PROBE-M remain unchanged; persistent updates,
+learning/appraisal/reward and ADAPT-9b are not selected or passed.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md inspects 203/204, metadata-only SEM-G reference
+resolution, EVID and closed transition/profile admission. It proposes a named observer-owned
+MeasurementEvidenceIntake, self-contained exact 203 plus admitted unit context, a transient output
+occurrence, explicit authenticated producer admission and a separately committed successor profile.
+Revision 1 proposed a new producer/route and schema/codec/profile support as blockers; the route
+proposal is withdrawn by the revision-2 disposition below. Proposed
+EVC-A..P are not passed; all new names remain symbolic. No numeric allocation or code change.
+
+### 2026-09-07 — measurement-evidence carriage revision 2 submitted
+
+User accepts the core epistemic design, exact embedded 203 plus UnitId, named transient intake,
+present-only domain, observer ownership and no writes; whole shape remains WITHHELD.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md revision 2 addresses all three review blockers:
+no new LearningRouteId or intake TransitionRoutes entry; shared successor ingress alone generates
+the real intake child, with separate profile-owned suppression padding; exact 203 field-1 role
+(namespace 1115, no validator) is reused and its absent occurrence rule is explicitly added to
+the proposed successor. The new output has its own matching symbolic field-1 rule and role.
+Proposed transition-admission/0.7-draft preserves .4 and the separate .6 extension. Conditional
+ingress/padding counts retain six ordinal advances and eight generated children. EVC-A..P are
+revised proposals, NOT PASSED. Whole-shape review is next; no allocation or implementation is
+authorized. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — measurement-evidence carriage revision 3 submitted
+
+User closes all revision-1 blockers and accepts the carriage representation, observer-owned
+consumer, no-route boundary, shared ingress, occurrence governance and scheduling topology.
+Whole shape remains WITHHELD solely for version ownership. Revision 3 withdraws the preceding
+transition-admission/0.7-draft proposal: the shared singleton stays transition-admission/0.4-candidate,
+cardinality one, with new occurrence entries as committed data under its unchanged map grammar.
+Carriage instead proposes transition-admission-extension/0.7-draft (intended accepted spelling
+transition-admission-extension/0.7-candidate), a separate NoStateWrites-only registration grammar.
+An explicit matrix preserves V04 EVID and V06 ADAPT rows and dispatch by committed DefinitionVersion;
+no latest-version selection or fallback decoding. EVC-O includes these preservation/rejection
+obligations. See CAMPAIGN2_MEASUREMENT_EVIDENCE_CARRIAGE_DRAFT.md revision 3. Whole-shape review
+is next; EVC-A..P are not passed, allocation and implementation remain unauthorized. ADAPT-9b,
+parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — measurement-evidence carriage WHOLE SHAPE ACCEPTED; allocation proposed
+
+User accepts measurement-evidence-carriage/0.1-candidate and the separate NoStateWrites-only
+transition-admission-extension/0.7-candidate registration grammar. The V04 shared singleton and
+V04/V06 registrations remain unchanged in semantics; only successor occurrence-map data extends.
+The first V07 profile admits only AuthenticatedObserverMeasurementProducer; any other producer
+form requires separately committed registration semantics. EVC-A..P are FROZEN, NOT PASSED.
+Current authority: docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE.md; the revision draft is review history.
+
+Authorized separate allocation pass proposes records 336..341, dedicated occurrence namespace
+1124 and six NFC members in existing namespaces. No new producer union, write capability,
+LearningRouteId member, state root or observation identity. See
+docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_REVIEW.md and its machine table/audit.
+The allocation audit passes 195 consistency/preservation checks; values remain REVIEW CANDIDATE,
+not permanently assigned. Numeric acceptance is next; successor registry/profile packaging and
+materialization follow afterward. Implementation remains NOT YET AUTHORIZED. ADAPT-9b, parent
+control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage allocation ACCEPTED AND FROZEN; packaging revision 1
+
+User permanently accepts measurement-evidence-carriage-allocation/0.1-candidate: records 336..341,
+occurrence namespace 1124, six existing-family members and exact role/occurrence governance.
+Zero new union variants, learning routes or padding identities. Pre-promotion audit passed 195
+checks; lifecycle-aware frozen audit passes 197. Existing frozen authority and model packets
+remain byte-identical. EVC-A..P remain FROZEN, NOT PASSED.
+
+Successor registry/profile packaging is authorized. CAMPAIGN2_MEASUREMENT_EVIDENCE_PACKAGING_DRAFT.md
+revision 1 proposes rules/campaign2-measurement-evidence/0.1-candidate with four exact whole
+profiles, six-slot delta, sole V04 singleton plus unchanged V04/V06 and new V07 rows, fixed
+336/channel association, source/trace/restore closure and separate materialization obligations.
+EVC-PACK-A..H are proposed, NOT PASSED. Packaging acceptance is next; no model bytes have been
+materialized and runtime implementation remains unauthorized. ADAPT-9b, parent control 9,
+PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage packaging revision 2; ordered-input identity corrected
+
+User accepts registry/trace/persistence successors, six-slot delta, source authority and topology;
+whole packaging remains WITHHELD for the sole ordered-input identity correction. Revision 2
+withdraws the new measurement-evidence input profile and directly binds the accepted
+campaign2-probe-ordered-input/0.1-candidate under the new RulesVersion. EVC-PACK-C specifies
+that exact tuple and EVC-PACK-I adds canonical initial-source equivalence to frozen probe .2
+with only enclosing-model RunIdentity differences. The complete phase-120 trace envelope is
+successor-owned; padding uses the carriage seam/version without becoming V07 execution.
+See CAMPAIGN2_MEASUREMENT_EVIDENCE_PACKAGING_DRAFT.md revision 2. No semantic redesign or
+allocation. Materialization waits for packaging acceptance; implementation remains unauthorized.
+EVC-A..P remain FROZEN, NOT PASSED; EVC-PACK-A..I are proposed, NOT PASSED. ADAPT-9b and
+Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage packaging ACCEPTED; concrete model review ready
+
+User accepts whole packaging revision 2 and freezes EVC-PACK-A..I as NOT PASSED; concrete
+materialization is authorized, runtime remains blocked until ModelIdentity freeze. The isolated
+review materializer produces rules/campaign2-measurement-evidence/0.1-candidate with digest
+8dec83b33366ea13217db0005942f9e159ff2e36402c241231af5d5e1f04d22c.
+CAMPAIGN2_MEASUREMENT_EVIDENCE_MATERIALIZATION.md and the separate packet record seven canonical
+artifacts/readable counterparts, exact 31-entry bundle/profile tuple, four model variants, slot-0
+nine additions/one singleton replacement, slot-5 eight additions, unchanged slots 1..4 and
+87 preserved prior files. Materialization reports 102 checks; fresh-process deletion/recreation
+and independent verification reproduce all 15 packet files.
+
+PACK findings are explicitly component-scoped: review-model structure/profile checks and bounded
+source equivalence pass, while authoritative V07 dispatch, carriage topology and restore remain
+unimplemented. No blanket PACK-A..I or EVC-A..P PASS. Concrete ModelIdentity review/freeze is
+next; no runtime activation. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+
+### 2026-09-07 — carriage ModelIdentity FROZEN; runtime qualification proposed
+
+User accepts the positive seven-artifact packet and four control ModelIdentity representations
+at rules/campaign2-measurement-evidence/0.1-candidate, digest
+8dec83b33366ea13217db0005942f9e159ff2e36402c241231af5d5e1f04d22c.
+EVC-MODEL-BYTE PASS covers identity construction, registry delta, reproducibility and historical
+preservation only. Runtime implementation is authorized under this exact new RulesVersion.
+
+Implemented production model admission, V07 shared ingress, shared occurrence extraction,
+detached 203-to-337 intake, private padding, six/eight closure, successor trace and archive/restore.
+The restore dispatch omission found during the first focused pass was corrected and retained
+in review history. Full active regression: 86 files/563 tests PASS before five additional
+carriage controls; final focused suite: 18 tests PASS. Type-check/build/reference-boundary PASS.
+Fresh-process runtime continuation PASS; rematerialization reproduces 15 files, preserving 87
+prior files. Allocation audit 197 PASS. Historical probe semantics remain unchanged.
+
+CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md requests bounded PACK/EVC disposition,
+separating EVC-B's governed R0/D component witness from the public changed-anchor exclusion.
+Qualification acceptance is not presumed. Next decision: qualification/scope review, then a
+responding cognitive mechanism target. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2
+remain OPEN. No persistent cognitive update, new route or further allocation is selected.

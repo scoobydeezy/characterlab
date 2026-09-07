@@ -1,0 +1,82 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/probeReadout.ts",
+      "sha256": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa"
+    },
+    {
+      "path": "src/test/campaign2ProbeNumericDomain.test.ts",
+      "sha256": "54a4e7cca594150d83d9e3cd26d7e0a1344a19a4f3d1b944e7453654acced211"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "clip-negative-level",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 0n } to deeply equal { kind: 'signed', value: -100n }"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "saturate-at-half-range",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 50n } to deeply equal { kind: 'signed', value: 99n }"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "threshold-instead-of-readout",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 0n } to deeply equal { kind: 'signed', value: -100n }"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "response-gain",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: -200n } to deeply equal { kind: 'signed', value: -100n }"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+    "Generic accepted signed REG domain with production probe consumer; frozen public profile excludes the broader declarations.",
+    "No global factory, VAL, ADAPT or Campaign-2 verdict."
+  ]
+}

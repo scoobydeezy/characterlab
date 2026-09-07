@@ -25,13 +25,13 @@ export function admittedInputFacts(token:AdmittedTransitionInput){
   const value=facts.get(token);
   if(!value||!value.active())throw new SchedulerContractError('INPUT_NOT_ADMITTED','missing or expired admitted-input capability');
   return {event:structuredClone(value.event),registration:value.registration.slice(),transitionKey:value.transitionKey,
-    payload:decodeCampaign2(canonicalEncode(value.event.payload)) as CanonicalValue};
+    payload:structuredClone(value.event.payload) as CanonicalValue};
 }
 
 type Model=ReturnType<typeof compileTransitionAdmissionV04>;
 function fail(code:'INPUT_NOT_ADMITTED'|'TRANSITION_OUTPUT_VIOLATION'|'TRANSITION_INGRESS_VIOLATION',message:string):never {throw new SchedulerContractError(code,message);}
 export function validateEvidRegistrations(model:Model){
-  const registrations=model.registrations().map(r=>({...r,value:(()=>{const v=decodeCampaign2(r.registration);if(typeof v==='boolean'||v.kind!=='record'||![272n,318n].includes(v.schema.typeId))throw new SchedulerContractError('INVALID_CONFIGURATION','unknown registration version');return v;})()}));
+  const registrations=model.registrations().map(r=>({...r,value:(()=>{const v=model.decode(r.registration);if(typeof v==='boolean'||v.kind!=='record'||![272n,318n,341n].includes(v.schema.typeId))throw new SchedulerContractError('INVALID_CONFIGURATION','unknown registration version');return v;})()}));
   const evalKey=key(typedIdentifier(1009,text('OutcomeEvaluationTransition'))),learnKey=key(typedIdentifier(1009,text('OutcomeLearningEvidenceTransition')));
   for(const r of registrations.filter(r=>[evalKey,learnKey].includes(r.transitionKey))){
     const d=rec(f(r.value,3n),271n),a=rec(f(d,1n),274n),p=rec(f(a,2n),275n),ingress=rec(f(r.value,4n),276n),isEval=r.transitionKey===evalKey;
@@ -47,26 +47,28 @@ export function validateEvidRegistrations(model:Model){
 export function beginTransitionIngressV04(model:Model,instant:bigint){
   simInstant(instant);let active=true;validateEvidRegistrations(model);
   const evalKey=key(typedIdentifier(1009,text('OutcomeEvaluationTransition'))),learnKey=key(typedIdentifier(1009,text('OutcomeLearningEvidenceTransition')));
-  const registrations=model.registrations().map(r=>({...r,value:(()=>{const v=decodeCampaign2(r.registration);if(typeof v==='boolean'||v.kind!=='record'||![272n,318n].includes(v.schema.typeId))throw new SchedulerContractError('INVALID_CONFIGURATION','unknown registration version');return v;})()}));
+  const registrations=model.registrations().map(r=>({...r,value:(()=>{const v=model.decode(r.registration);if(typeof v==='boolean'||v.kind!=='record'||![272n,318n,341n].includes(v.schema.typeId))throw new SchedulerContractError('INVALID_CONFIGURATION','unknown registration version');return v;})()}));
   const generated=new Map<bigint,{event:ScheduledEvent;transitionKey:string;registration:Uint8Array;consumed:boolean}>();
   const producers=new Set<bigint>(),pending=new Set<object>();
   const executions=new Map<AdmittedTransitionInput,{complete:boolean;identities:Map<string,CanonicalValue>}>();
   function live(){if(!active)fail('INPUT_NOT_ADMITTED','instant ingress authority is closed');}
-  function stage(source:ScheduledEvent,outputs:readonly CanonicalValue[],producerKey:string|undefined,authored=false){
+  function stage(source:ScheduledEvent,outputs:readonly CanonicalValue[],producerKey:string|undefined,authored=false,measurement=false){
     live();if(source.dueAt!==instant)fail('TRANSITION_OUTPUT_VIOLATION','source belongs to another instant');
     if(producers.has(source.eventId))fail('TRANSITION_OUTPUT_VIOLATION','producer execution observed twice');
     const identities=new Set<string>();
     const sources=outputs.map(value=>{
       const bytes=canonicalEncode(value),identity=key(model.occurrenceIdentity(bytes));
       if(identities.has(identity))fail('TRANSITION_OUTPUT_VIOLATION','repeated source occurrence');identities.add(identity);
-      return {value:decodeCampaign2(bytes),identity};
+      return {value:model.decode(bytes),identity};
     }).sort((a,b)=>a.identity<b.identity?-1:a.identity>b.identity?1:0);
     const plans:{emission:EventEmission;transitionKey:string;registration:Uint8Array}[]=[];
     for(const sourceOutput of sources)for(const r of registrations.slice().sort((a,b)=>a.transitionKey<b.transitionKey?-1:a.transitionKey>b.transitionKey?1:0)){
-      const v06=r.value.schema.typeId===318n,definition=rec(f(r.value,3n),v06?319n:271n),admission=rec(f(definition,1n),v06?320n:274n),producer=rec(f(admission,2n),v06?321n:275n),schema=rec(f(admission,1n),254n);
+      const v06=r.value.schema.typeId===318n,v07=r.value.schema.typeId===341n,definition=rec(f(r.value,3n),v07?340n:v06?319n:271n),admission=rec(f(definition,1n),v07?339n:v06?320n:274n),producer=rec(f(admission,2n),v07?338n:v06?321n:275n),schema=rec(f(admission,1n),254n);
       const output=sourceOutput.value;if(typeof output==='boolean'||output.kind!=='record')fail('TRANSITION_OUTPUT_VIOLATION','source must be record');
       if(output.schema.typeId!==u(f(schema,1n))||output.schema.schemaVersion!==u(f(schema,2n)))continue;
-      if(authored){
+      if(measurement){
+        if(!v07||source.phase!==u(f(producer,4n))||key(source.eventTypeId)!==key(f(producer,3n))||key(f(output,11n))!==key(f(producer,2n)))continue;
+      }else if(v07){continue;}else if(authored){
         if(!v06||u(f(producer,1n))!==3n||key(f(producer,6n))!==key(typedIdentifier(1027n,text('definition/authored-adaptation-facts'))))continue;
         const basis=f(rec(output,307n),2n);
         if(typeof basis==='boolean'||basis.kind!=='record'||basis.schema.typeId!==(u(f(rec(f(r.value,5n),317n),1n))===1n?305n:306n))continue;
@@ -76,7 +78,7 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
       const ingress=rec(f(r.value,4n),276n);
       plans.push({transitionKey:r.transitionKey,registration:r.registration,emission:{dueAt:source.dueAt,phase:u(f(ingress,3n)),eventTypeId:id(f(ingress,1n)),payload:output,dependencies:list([])}});
     }
-    if(authored&&plans.length!==1)fail('TRANSITION_INGRESS_VIOLATION','authored output requires exactly one matching basis consumer');
+    if((authored||measurement)&&plans.length!==1)fail('TRANSITION_INGRESS_VIOLATION','authored output requires exactly one matching basis consumer');
     producers.add(source.eventId);const ticket={};pending.add(ticket);
     return Object.freeze({
       emissions:()=>plans.map(p=>structuredClone(p.emission)),
@@ -114,6 +116,12 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
       const at=f(output,3n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==source.dueAt)fail('TRANSITION_OUTPUT_VIOLATION','AAI occurrence time differs');
       if(id(f(output,1n)).namespaceId!==1118n)fail('TRANSITION_OUTPUT_VIOLATION','wrong AAI occurrence identity');
       return stage(structuredClone(source),[output],undefined,true);
+    },
+    /** Trusted observer-side adapter only, after actual permitted production is validated. */
+    observeMeasurement(source:ScheduledEvent,actualOutput:Uint8Array){
+      live();const output=rec(model.decode(actualOutput),203n);
+      if(source.phase!==120n||key(source.eventTypeId)!==key(typedIdentifier(1001,text('event/regulatory-diagnostic-probe-observation'))))fail('TRANSITION_OUTPUT_VIOLATION','wrong measurement producer event');
+      return stage(structuredClone(source),[output],undefined,false,true);
     },
     admit(event:ScheduledEvent):AdmittedTransitionInput {
       live();const relation=generated.get(event.eventId);
@@ -155,6 +163,19 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
         if(key(f(output,2n))!==key(admitted.payload))fail('TRANSITION_OUTPUT_VIOLATION','EVID nested source differs from admitted input');
       }
       execution.complete=true;return stage(admitted.event,outputs,transition.transitionKey);
+    },
+    allocateMeasurementIdentity(token:AdmittedTransitionInput,allocator:{allocateRuntimeId():bigint}){
+      const a=admittedInputFacts(token),execution=executions.get(token);
+      if(!execution||execution.complete||execution.identities.size||a.transitionKey!==key(typedIdentifier(1009,text('MeasurementEvidenceIntakeTransition'))))fail('INPUT_NOT_ADMITTED','not a fresh carriage execution');
+      rec(model.decode(a.registration),341n);const identity=typedIdentifier(1124,unsigned(allocator.allocateRuntimeId()));execution.identities.set('337/1',identity);return identity;
+    },
+    completeMeasurement(token:AdmittedTransitionInput,outputBytes:Uint8Array){
+      const a=admittedInputFacts(token),execution=executions.get(token);
+      if(!execution||execution.complete||a.transitionKey!==key(typedIdentifier(1009,text('MeasurementEvidenceIntakeTransition'))))fail('INPUT_NOT_ADMITTED','not a live carriage execution');
+      const outputs=model.validateOutputs(typedIdentifier(1009,text('MeasurementEvidenceIntakeTransition')),[outputBytes]);
+      const output=rec(outputs[0],337n),allocated=execution.identities.get('337/1');
+      if(!allocated||key(f(output,1n))!==key(allocated)||key(f(output,2n))!==key(a.payload))fail('TRANSITION_OUTPUT_VIOLATION','carriage output allocation/source mismatch');
+      execution.complete=true;return stage(a.event,outputs,a.transitionKey);
     },
     completeAdaptation(result:object){
       const closed=adaptationExecutionFacts(result),admitted=admittedInputFacts(closed.token),execution=executions.get(closed.token);

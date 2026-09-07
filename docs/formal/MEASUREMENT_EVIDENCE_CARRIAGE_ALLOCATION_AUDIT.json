@@ -1,0 +1,794 @@
+{
+  "status": "PASS",
+  "scope": "allocation consistency only; no runtime or implementation verdict",
+  "checks": [
+    {
+      "name": "allocation lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "allocation version",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "accepted shape",
+      "status": "PASS"
+    },
+    {
+      "name": "six new record IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition fields",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition schema",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition all required",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition.ObserverId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition.ObservationChannelId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeDefinition.UnitId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence fields",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence schema",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence all required",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence.CognitiveMeasurementEvidenceId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence.Observation parity",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence.UnitId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "CognitiveMeasurementEvidence.TransformationVersion parity",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer fields",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer schema",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer all required",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer.ProducingSeamId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer.ProducingSeamVersion parity",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer.ProducerEventTypeId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer.ProducerPhase parity",
+      "status": "PASS"
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer.OutputRecordSchema parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07 fields",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07 schema",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07 field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07 all required",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07.InputRecordSchema parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07.Producer parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionInputAdmissionV07.RequiredSourceRelation parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07 fields",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07 schema",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07 field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07 all required",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07.InputAdmission parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07.ReadDomain parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07.OutputDefinitions parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionDefinitionV07.WriteCapability parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07 fields",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07 schema",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07 field IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07 all required",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07.ExecutingSeamId parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07.ExecutingSeamVersion parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07.TransitionDefinition parity",
+      "status": "PASS"
+    },
+    {
+      "name": "TransitionRegistrationV07.IngressDefinition parity",
+      "status": "PASS"
+    },
+    {
+      "name": "exact inherited layout 339",
+      "status": "PASS"
+    },
+    {
+      "name": "exact inherited layout 340",
+      "status": "PASS"
+    },
+    {
+      "name": "exact inherited layout 341",
+      "status": "PASS"
+    },
+    {
+      "name": "one new occurrence family",
+      "status": "PASS"
+    },
+    {
+      "name": "six members",
+      "status": "PASS"
+    },
+    {
+      "name": "exact members",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeTransition NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "MeasurementEvidenceIntakeTransition parity",
+      "status": "PASS"
+    },
+    {
+      "name": "event/measurement-evidence-intake NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/measurement-evidence-intake parity",
+      "status": "PASS"
+    },
+    {
+      "name": "event/measurement-evidence-padding NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/measurement-evidence-padding parity",
+      "status": "PASS"
+    },
+    {
+      "name": "seam/measurement-evidence-carriage NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "seam/measurement-evidence-carriage parity",
+      "status": "PASS"
+    },
+    {
+      "name": "definition/measurement-evidence-intake NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "definition/measurement-evidence-intake parity",
+      "status": "PASS"
+    },
+    {
+      "name": "registry/measurement-evidence-intake NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "registry/measurement-evidence-intake parity",
+      "status": "PASS"
+    },
+    {
+      "name": "no union allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "exact source relation",
+      "status": "PASS"
+    },
+    {
+      "name": "role coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 336/1",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 336/1",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 336/2",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 336/2",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 336/3",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 336/3",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 337/1",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 337/1",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 337/3",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 337/3",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 338/1",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 338/1",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 338/3",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 338/3",
+      "status": "PASS"
+    },
+    {
+      "name": "no validator 341/1",
+      "status": "PASS"
+    },
+    {
+      "name": "role parity 341/1",
+      "status": "PASS"
+    },
+    {
+      "name": "203 role reused",
+      "status": "PASS"
+    },
+    {
+      "name": "occurrence rules",
+      "status": "PASS"
+    },
+    {
+      "name": "shared singleton version",
+      "status": "PASS"
+    },
+    {
+      "name": "singleton count",
+      "status": "PASS"
+    },
+    {
+      "name": "V07 version",
+      "status": "PASS"
+    },
+    {
+      "name": "row definition/transition-admission",
+      "status": "PASS"
+    },
+    {
+      "name": "row definition/measurement-evidence-intake",
+      "status": "PASS"
+    },
+    {
+      "name": "row MeasurementEvidenceIntakeTransition",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/BOUNDED_NUMERIC_PROFILE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_BOUNDED_RULES_02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_TRACE_BINDING.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONFORMANCE_VECTORS.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_DEFINITION_ID.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_GOVERNANCE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/DETERMINISTIC_SUBSTRATE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/EVENT_ORDERING.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/EVENT_SEMANTIC_BINDING.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/EVENT_SEMANTIC_SCHEMA_INVENTORY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/FORMULA_INTAKE_LEDGER.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_AND_EVIDENCE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_IDENTITY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_REVIEW.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/README.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/REFERENT_ORIGIN.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/REGULATORY_DIAGNOSTIC_PROBE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/REGULATORY_PROBE_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/REGULATORY_PROBE_ALLOCATION_REVIEW.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/SEAM_CONTRACT_TEMPLATE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/STATE_MODEL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_AND_PROVENANCE.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/REVIEW_MANIFEST.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/content-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/content-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/content.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/content.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/model-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/model-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/parameter-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/parameter-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/parameters.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/parameters.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/registry-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/registry-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/registry.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-model/registry.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/REVIEW_MANIFEST.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/content-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/content-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/content.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/content.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/model-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/model-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/parameter-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/parameter-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/parameters.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/parameters.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/registry-identity.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/registry-identity.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/registry.cenc.hex",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/planning/campaign2-probe-successor-model/registry.json",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 336",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 337",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 338",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 339",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 340",
+      "status": "PASS"
+    },
+    {
+      "name": "unused record 341",
+      "status": "PASS"
+    },
+    {
+      "name": "unused namespace 1124",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member MeasurementEvidenceIntakeTransition",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member event/measurement-evidence-intake",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member event/measurement-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member seam/measurement-evidence-carriage",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member definition/measurement-evidence-intake",
+      "status": "PASS"
+    },
+    {
+      "name": "unused member registry/measurement-evidence-intake",
+      "status": "PASS"
+    },
+    {
+      "name": "append after latest allocated record",
+      "status": "PASS"
+    },
+    {
+      "name": "append after latest occurrence namespace",
+      "status": "PASS"
+    },
+    {
+      "name": "frozen vectors",
+      "status": "PASS"
+    },
+    {
+      "name": "sixteen vectors",
+      "status": "PASS"
+    }
+  ]
+}

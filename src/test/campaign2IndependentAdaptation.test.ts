@@ -3,7 +3,7 @@ import {canonicalEncode,list,set,record,signed,unsigned,type CanonicalValue} fro
 import {AuthoritativeState,restoreAuthoritativeState} from '../substrate/state';
 import {firstTraceModel} from '../campaign2/firstTraceModel';
 import {candidateId} from '../campaign2/firstModelCandidate';
-import {prepareCampaign2Model,createCampaign2Run,campaign2ModelIdentity} from '../campaign2/factory';
+import {prepareCampaign2Model,createCampaign2Run,restoreCampaign2Run,campaign2ModelIdentity} from '../campaign2/factory';
 import {decodeCampaign2,campaign2Record as r} from '../campaign2/codecs';
 import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
@@ -56,4 +56,21 @@ it('VAL-C: changing one committed rule step changes only its witnessed behavior 
  const one=await createCampaign2Run(a,args),two=await createCampaign2Run(b,args);await one.settleNextInstant();await two.settleNextInstant();
  const leaves=(run:typeof one)=>restoreAuthoritativeState(decodeCampaign2(run.snapshot().state)).entries().slice().sort((a,b)=>Number(a.path.fieldId-b.path.fieldId));
  const x=leaves(one),y=leaves(two);expect(f(rec(x[0].value,297n),1n)).toEqual(unsigned(2));expect(f(rec(y[0].value,297n),1n)).toEqual(unsigned(4));expect(x.slice(1)).toEqual(y.slice(1));
+});
+it('AD-E8: exact 6 + 3*(-2) emits one Remove and restores the same state as an absent target',async()=>{
+ const source=firstTraceModel(),slots=[...items(decodeCampaign2(source.registry),'list')];
+ slots[0]=set(items(slots[0],'set').map(v=>{
+  if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n||key(f(v,1n))!==key(candidateId(1035,'rule/fixture-tolerance')))return v;
+  const rule=rec(f(v,4n),311n);return record(v.schema,new Map([...v.fields,[4n,record(rule.schema,new Map([...rule.fields,[6n,signed(-2)]]))]]));
+ }));source.registry=enc(list(slots));
+ const orderedInputs=manifest(3),run=await createCampaign2Run(await prepareCampaign2Model(source),{initialState:initial(6),orderedInputs,runSeed:new Uint8Array(32)});
+ await run.settleNextInstant();
+ const trace=rec(items(decodeCampaign2(run.snapshot().trace),'list')[8],160n),ops=items(f(rec(f(trace,16n),144n),1n),'list');
+ const removals=ops.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===146n);
+ expect(removals).toHaveLength(1);expect(ops).toHaveLength(4);
+ const removal=rec(removals[0],146n);expect(f(removal,2n)).toEqual(r('ToleranceValue',{Magnitude:unsigned(6)}));
+ const path=rec(f(removal,1n),140n);expect(f(path,1n)).toEqual(unsigned(302));expect(f(path,2n)).toEqual(unsigned(1));
+ const neverPresentTarget=new AuthoritativeState(restoreAuthoritativeState(decodeCampaign2(initial(9))).entries().filter(e=>e.path.fieldId!==1n));
+ expect(run.snapshot().state).toEqual(enc(neverPresentTarget.canonicalValue()));
+ const restored=await restoreCampaign2Run(source,{save:run.save(),orderedInputs});expect(restored.snapshot().state).toEqual(enc(neverPresentTarget.canonicalValue()));expect(restored.save()).toEqual(run.save());
 });

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "PROBE-M source qualification of this closed first-profile SEM constructor; paired public runtime and admitted EVID controls remain separate evidence.",
+  "source": {
+    "path": "src/campaign2/probeExecution.ts",
+    "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+  },
+  "checks": [
+    "one fixed SEM assembly call",
+    "exact declared fields",
+    "empty classification/event/binding surfaces",
+    "support identity only, without scalar lookup",
+    "fixed provenance version"
+  ],
+  "mutants": [
+    {
+      "name": "classify scalar",
+      "status": "REJECTED"
+    },
+    {
+      "name": "classify event scalar",
+      "status": "REJECTED"
+    },
+    {
+      "name": "dereference scalar",
+      "status": "REJECTED"
+    },
+    {
+      "name": "hash scalar",
+      "status": "REJECTED"
+    },
+    {
+      "name": "embed scalar",
+      "status": "REJECTED"
+    },
+    {
+      "name": "encode scalar in version",
+      "status": "REJECTED"
+    }
+  ]
+}

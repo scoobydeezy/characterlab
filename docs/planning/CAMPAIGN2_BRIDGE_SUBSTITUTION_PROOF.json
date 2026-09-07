@@ -1,0 +1,278 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/consequenceBridge.ts",
+      "sha256": "6268fc0b1d2af2bf210c1d862b6d2278464a642bf89f7ae8db6b3470ddcf5abe"
+    },
+    {
+      "path": "src/campaign2/bridgeObservation.ts",
+      "sha256": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b"
+    }
+  ],
+  "rulesVersion": "rules/campaign2-bounded-bridge/0.2-candidate",
+  "declarationHashes": {
+    "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+    "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+    "parameters": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4"
+  },
+  "baseline": [
+    {
+      "count": 0,
+      "hashes": {
+        "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+        "outputs": "0f7c90b6c51e858526c876094ef3f29f85b6372bf268f9bf6d050fc737050320",
+        "trace": "4f2f4645e1e57a6ed9cc4677c1acee5dc5430c6037e5a987b79becb6e5d9cd7c"
+      }
+    },
+    {
+      "count": 2,
+      "hashes": {
+        "state": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+        "outputs": "92b83e15e9c08a7e6cced302b9021666a57bd12acc6e371a6874b1a7335f9062",
+        "trace": "225d1892154d7fd10ff59a4fcfe728ce282b2d707bd1d58296a60898233f6f18"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "name": "retain-truth-provenance",
+      "status": "DETECTED",
+      "source": "src/campaign2/bridgeObservation.ts",
+      "from": "fields.set(10n,list([]));",
+      "to": "/* retain raw truth provenance */",
+      "differences": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "state",
+            "outputs",
+            "trace"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        }
+      ]
+    },
+    {
+      "name": "omit-authoritative-observation",
+      "status": "DETECTED",
+      "source": "src/campaign2/consequenceBridge.ts",
+      "from": "outputs.push(observation); // Sole published observation, never its raw candidate.",
+      "to": "void observation;",
+      "differences": [
+        {
+          "count": 0,
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        },
+        {
+          "count": 2,
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "count": 0,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "67232684b63aac09915b86332d4cf8360b3ce232c3ca708f0d13ca3ca65cdb01",
+            "trace": "9ddc6b88628027a0c2b80ba6fddcf9d899c9dbdf47c546f47111e6d1bbcfb622"
+          }
+        },
+        {
+          "count": 2,
+          "hashes": {
+            "state": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+            "outputs": "a7e33651348aa2efe47650f7bd14e2ae2e1f9c6ffc51471e14e7ef0fd83827e0",
+            "trace": "f33b02aa5ec2fc836f7c7f60f0f3a44760419728830366c59d8afe52146b7ab9"
+          }
+        }
+      ]
+    },
+    {
+      "name": "omit-sem-support",
+      "status": "DETECTED",
+      "source": "src/campaign2/consequenceBridge.ts",
+      "from": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "to": "supportingObservationIds:[]",
+      "differences": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "state",
+            "outputs",
+            "trace"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        }
+      ]
+    },
+    {
+      "name": "duplicate-sem-support",
+      "status": "DETECTED",
+      "source": "src/campaign2/consequenceBridge.ts",
+      "from": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "to": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value},{observerId:observer,observationId:observation.payload.value}]",
+      "differences": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "state",
+            "outputs",
+            "trace"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        }
+      ]
+    },
+    {
+      "name": "shift-sem-time",
+      "status": "DETECTED",
+      "source": "src/campaign2/consequenceBridge.ts",
+      "from": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt",
+      "to": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt+1n",
+      "differences": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "outputs",
+            "trace"
+          ]
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "changed": [
+            "state",
+            "outputs",
+            "trace"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "count": 0,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        },
+        {
+          "count": 2,
+          "error": "TRANSITION_FAILURE",
+          "rollback": true,
+          "hashes": {
+            "state": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+            "outputs": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+            "trace": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+          }
+        }
+      ]
+    }
+  ],
+  "comparison": "Exact bytes compared in memory; hashes in report are diagnostics only.",
+  "limitations": [
+    "Differential interpreter substitution controls, not an independent OBS/SEM semantics implementation.",
+    "Two first-profile regulatory inputs with the same fixed safe pulse; no complete FCT-F or inherited SEM vector claim.",
+    "PRJ execution and roster variants are not admitted by this frozen first model and are separate controls."
+  ]
+}

@@ -87,6 +87,7 @@ function compileSharedAdmission(registrationBytes:Uint8Array,singletonBytes:Uint
     if(withAdaptation&&!r.v06&&r.phase===140n)invalidModel('ordinary phase-140 registration is forbidden');
   }
   return Object.freeze({
+    decode:decodeCampaign2,
     registrations():readonly {transitionKey:string;registration:Uint8Array}[] {
       return [...registrations].map(([transitionKey,r])=>({transitionKey,registration:r.bytes.slice()}));
     },

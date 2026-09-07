@@ -1,0 +1,971 @@
+{
+  "status": "PASS",
+  "allocationStatus": "PERMANENT AND FROZEN",
+  "scope": "allocation consistency only; no runtime verdict; PROBE-A..P NOT PASSED",
+  "checks": [
+    {
+      "name": "allocation lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "allocation version",
+      "status": "PASS"
+    },
+    {
+      "name": "accepted authority",
+      "status": "PASS"
+    },
+    {
+      "name": "whole shape accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "semantic version",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown version",
+      "status": "PASS"
+    },
+    {
+      "name": "five records",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition exact layout",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition.CharacterId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition.RegulatoryVariableId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition.Channel Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition.Available Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeDefinition.ObserverPermitted Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel exact layout",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel.ObservationChannelId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel.ObserverId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel.SubjectId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel.ModalityId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "DiagnosticProbeChannel.UnitId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeOpportunity exact layout",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeOpportunity Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeOpportunity.ProbeDefinitionId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth exact layout",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth.RegulatoryProbeTruthId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth.ProbeDefinitionId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth.OccurredAt Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeTruth.EffectiveValue Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier exact layout",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier.VariantTag Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier.Truth Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier.ProbeDefinitionId Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "RegulatoryProbeCarrier.Support Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "one distinct runtime family",
+      "status": "PASS"
+    },
+    {
+      "name": "family Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "complete exact member inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "definition/regulatory-diagnostic-probe NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "definition/regulatory-diagnostic-probe Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "registry/regulatory-diagnostic-probe NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "registry/regulatory-diagnostic-probe Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-observation NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-observation Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-tracking NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-tracking Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-binding NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-binding Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-classification NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-classification Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-freeze NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-freeze Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-evaluation-padding NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-evaluation-padding Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-evidence-padding NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "event/regulatory-diagnostic-probe-evidence-padding Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "seam/regulatory-diagnostic-probe NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "seam/regulatory-diagnostic-probe Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "unit/diagnostic-regulatory-level NFC",
+      "status": "PASS"
+    },
+    {
+      "name": "unit/diagnostic-regulatory-level Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "closed union",
+      "status": "PASS"
+    },
+    {
+      "name": "exactly three governed type-259 entries",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 1 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 1 descriptor parity",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 1 forbidden parity",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 2 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 2 descriptor parity",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 2 forbidden parity",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 3 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 3 descriptor parity",
+      "status": "PASS"
+    },
+    {
+      "name": "governed tag 3 forbidden parity",
+      "status": "PASS"
+    },
+    {
+      "name": "Suppressed Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "Observing Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "Supporting Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "exact identity role coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "role 331/1 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 331/2 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 332/1 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 332/2 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 332/3 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 332/4 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 332/5 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 333/1 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 334/1 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 334/2 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "role 335/3 Markdown",
+      "status": "PASS"
+    },
+    {
+      "name": "single truth occurrence",
+      "status": "PASS"
+    },
+    {
+      "name": "no state allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "no save allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CAMPAIGN2_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "CONTENT_ID_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "OBSERVATION_UNIT_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "ORIGIN_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json preservation coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free record 331",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free record 332",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free record 333",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free record 334",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free record 335",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json free namespace 1123",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json no prior carrier union identity",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member definition/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member registry/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-observation",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-tracking",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-binding",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-classification",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-freeze",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evaluation-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member event/regulatory-diagnostic-probe-evidence-padding",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member seam/regulatory-diagnostic-probe",
+      "status": "PASS"
+    },
+    {
+      "name": "VAL_ALLOCATION_TABLE.json new member unit/diagnostic-regulatory-level",
+      "status": "PASS"
+    },
+    {
+      "name": "complete prior artifact coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_BOUNDED_RULES_02.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CAMPAIGN2_TRACE_BINDING.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/CONTENT_ID_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/OBSERVATION_UNIT_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/ORIGIN_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/STATE_MODEL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_ALLOCATION_AUDIT.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved docs/formal/VAL_PERMANENT_ALLOCATION.md",
+      "status": "PASS"
+    },
+    {
+      "name": "CANONICAL_RECORD_REGISTRY.md no candidate collisions",
+      "status": "PASS"
+    },
+    {
+      "name": "EVENT_SEMANTIC_NUMERIC_REGISTRY.md no candidate collisions",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE_MODEL.md no candidate collisions",
+      "status": "PASS"
+    }
+  ],
+  "checkCount": 240,
+  "tableSha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5",
+  "markdownSha256": "404659ac23d806b8d1b96a2fedbdb447e2473f3c745cf72fc498d978b6c68cc3",
+  "authoritySha256": "e3c56e305c9cbcc4a0db57117f3feb4a759231479d5df7c045d9e1bb81c74f1a"
+}

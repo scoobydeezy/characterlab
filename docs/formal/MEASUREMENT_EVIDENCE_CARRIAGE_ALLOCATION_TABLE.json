@@ -1,0 +1,663 @@
+{
+  "version": "measurement-evidence-carriage-allocation/0.1-candidate",
+  "status": "PERMANENT AND FROZEN",
+  "authority": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE.md",
+  "semanticVersion": "measurement-evidence-carriage/0.1-candidate",
+  "registrationVersion": "transition-admission-extension/0.7-candidate",
+  "preservedSources": [
+    {
+      "path": "docs/formal/BOUNDED_NUMERIC_PROFILE.md",
+      "sha256": "df89a788e69f817d77fdab09cf24e77a1437400b3e8188ec9b475de89d40f52a"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md",
+      "sha256": "59bdd5fef46866d1b65c1f4bcf8c96031cfefd972b482423b27a75d81e0962f0"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_AUDIT.json",
+      "sha256": "d6623f6aee7a18ffc3d67f2a1f481090f9a0685def82b95c7856ba98fca885b4"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_BOUNDED_RULES_02.md",
+      "sha256": "fb9f8421c59f2fec37ad1ed923ef47aa28eebfe3d81836424fa48fd0de4f553e"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "sha256": "02d59271c7bbf0c4b12079a450dcc268ff49be4ac144c08f283b9331c747a060"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_TRACE_BINDING.md",
+      "sha256": "3407d5fd5f0bfe614b1e3f8a0359caa109a0f91553162c6f659f0eed6588ff0d"
+    },
+    {
+      "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+    },
+    {
+      "path": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c"
+    },
+    {
+      "path": "docs/formal/CONTENT_DEFINITION_ID.md",
+      "sha256": "41c328f71dc36775f4f4570740d3a312e13b486ae8d5061e7a34f2ccd4f8dbc9"
+    },
+    {
+      "path": "docs/formal/CONTENT_GOVERNANCE.md",
+      "sha256": "144bcdff92e66b260e03fc6064fff03ca23ae64f38dc2d808f85d6ca12be5cc8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_AUDIT.json",
+      "sha256": "21b2775c1f2059754214df0625ca102504293467d54cf881ee03ad5c4971e150"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_PERMANENT_ALLOCATION.md",
+      "sha256": "14b6379ea181b4a366cf01e1fe9fc962898ad172045d07b7ee28e80d9b2e7438"
+    },
+    {
+      "path": "docs/formal/DETERMINISTIC_SUBSTRATE.md",
+      "sha256": "a87d3c0fbbfbfbd1e58e8fadd838888839948a953f9ef936b4080d8b6ac4b52c"
+    },
+    {
+      "path": "docs/formal/EVENT_ORDERING.md",
+      "sha256": "ffe09bf487121d872107c6844cfed52752284edaf77474a65d0166162ee5a1c8"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_BINDING.md",
+      "sha256": "013ed30d236bb3f00af4f6c6afa29ae35e598271fbda791b2d08259c2d91b629"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_SCHEMA_INVENTORY.md",
+      "sha256": "6c4f287017d23bdc5a1cc79d95719d9aaa3ad373c05914955d30ad1e9d8b683c"
+    },
+    {
+      "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+      "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_AND_EVIDENCE.md",
+      "sha256": "76621450d9e65f844414f35795e2ed1036be945e096b195b9eb4dfe96f70feb9"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_AUDIT.json",
+      "sha256": "f2c39a53dd6afd6ea90c847628660078c4649d2a1d6151a196b080c1733148b9"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_IDENTITY.md",
+      "sha256": "fbc08d98906df1b6ef167b8d3f5e2d7154187b98cab8e645a3393fa354490cc7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_PERMANENT_ALLOCATION.md",
+      "sha256": "f33ace63ef3441d864d2c287af46e60b1340a1d4fa2920ec4546af86206beff0"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_AUDIT.json",
+      "sha256": "0d2f50834257478989224d6d7d4fd8da3d1d6bb5330c48422c0053b84b2db0e8"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/ORIGIN_PERMANENT_ALLOCATION.md",
+      "sha256": "72da288a8f49bf9d4df8519669c8b20afd465a749fbe2de415bf32239e3ba47b"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_AUDIT.json",
+      "sha256": "b7c3305112bf8aceb8abd4ce4885e08738da49d0c46a46b100fdaf9632183aba"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_REVIEW.md",
+      "sha256": "c1f53386dcf8a10d233d566023e8abef26bdf786635435a26f1bb813e35df7d3"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/README.md",
+      "sha256": "17ff5b38723106e1396ad8f45ea81dbecf118318d656c43ee92bef5828a18ce9"
+    },
+    {
+      "path": "docs/formal/REFERENT_ORIGIN.md",
+      "sha256": "d3f364b6faf2e61770720cbd3bb891d0628111111efb342f217cafb7856f521d"
+    },
+    {
+      "path": "docs/formal/REGULATORY_DIAGNOSTIC_PROBE.md",
+      "sha256": "e7eaabc433090d915e9d432657c759d0ca9ad6252e03f66b84cb3ac15e7c3376"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_AUDIT.json",
+      "sha256": "813c7421e96d607db7f8355aac9464516ce9aede47d7d6e90fddaeee1b3c03fd"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_REVIEW.md",
+      "sha256": "404659ac23d806b8d1b96a2fedbdb447e2473f3c745cf72fc498d978b6c68cc3"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/SEAM_CONTRACT_TEMPLATE.md",
+      "sha256": "4f4bee28f5701bd95cad46e799603230a1da549a00c66c8384cc3d4464fa7b29"
+    },
+    {
+      "path": "docs/formal/STATE_MODEL.md",
+      "sha256": "a9a8f65da1bc8064b269f4464eb33a2eeb95366afa87e4dcd45130821a5a1ff6"
+    },
+    {
+      "path": "docs/formal/TRACE_AND_PROVENANCE.md",
+      "sha256": "33c5e4b17d58367fa0402fb95fffff71aa19430d592c4815278f32f9d58a67d3"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION.md",
+      "sha256": "856b8a45c9596be49d598e1cbc28d1fd97adb065e0fd5f115fce3e6e32a331b4"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_AUDIT.json",
+      "sha256": "55b6e457390af8f821a4316cb42e9a51c0df9050dc71ec0a1788771a6f491b02"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_AUDIT.json",
+      "sha256": "bbdb48df9d3ac441cbf01d6d50a4cb438fcc90f4db89ed47d2bddbc08b7676d3"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/formal/VAL_PERMANENT_ALLOCATION.md",
+      "sha256": "6765a456a1223a99be9adabfe42ff15de86097d5eabc4e15b70203053866d5fd"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/REVIEW_MANIFEST.json",
+      "sha256": "717930a7b8616e2f3272cd3f8c0ea9056c69a44aa94cc0904ecb25a7f8abe090"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/content-identity.cenc.hex",
+      "sha256": "12409ac6e208d4481ea6d62d76e36c5ee19db40b8005c75657bff39c44c5c235"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/content-identity.json",
+      "sha256": "d1309bbebe3198407b659b435218b9147db890d74c6ccc52ed1a1ac29f8b7a2f"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/content.cenc.hex",
+      "sha256": "217c1cb703d608a82dbeecbe25f105502f6652e7a00bd9a88f55748ec7b27726"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/content.json",
+      "sha256": "226069b9448bef5d488bec63a6e6db21e59c990dd98c35385ba396a6d70f0fa7"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/model-identity.cenc.hex",
+      "sha256": "4f9cc2ca4ade95b1515f0eeddde36b22935b76daab8078a5ff0114e0a611be8b"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/model-identity.json",
+      "sha256": "4e794ba46603f177a01e3d2ff5a245fc37bd0b8a133cc9f2fc387be782c4d4a9"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/parameter-identity.cenc.hex",
+      "sha256": "1dd6b94fc9aa6c4dab81ff1f19ca35033c5a835aa288d4403d91ff9b36d1551a"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/parameter-identity.json",
+      "sha256": "d0a6592aacbfdf9b99e3313ebb37930a866b05aee9d4408036f4fcc0ad2a844c"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/parameters.json",
+      "sha256": "bdfaf3a46f7c8f48c43cb017f541069b529c6e6624ca4e86e62a0338e192e8e9"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/registry-identity.cenc.hex",
+      "sha256": "a7b6c42c206a1b4b7f0cf83f43e368852fc8215173d49cf285d26427a182fc82"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/registry-identity.json",
+      "sha256": "7e404e7adda3c6550bfef4a1122f894acf9cfe1d42b1d12676860319a508b021"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/registry.cenc.hex",
+      "sha256": "bbec7a005afb8dca62fd5a86cacdb5ba6f3f22714799c7d0128cbd03a06d6ab3"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-model/registry.json",
+      "sha256": "694b66ce5219f368796647bb192d23cc7d4a4145c7eb599b649a6582df1a07f1"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/REVIEW_MANIFEST.json",
+      "sha256": "472584d1612f32c623004a4a9e2d66dc7df4e0cde5d851d67137424e62d28838"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/content-identity.cenc.hex",
+      "sha256": "12409ac6e208d4481ea6d62d76e36c5ee19db40b8005c75657bff39c44c5c235"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/content-identity.json",
+      "sha256": "d1309bbebe3198407b659b435218b9147db890d74c6ccc52ed1a1ac29f8b7a2f"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/content.cenc.hex",
+      "sha256": "217c1cb703d608a82dbeecbe25f105502f6652e7a00bd9a88f55748ec7b27726"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/content.json",
+      "sha256": "226069b9448bef5d488bec63a6e6db21e59c990dd98c35385ba396a6d70f0fa7"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/model-identity.cenc.hex",
+      "sha256": "74418ef268a1d6e876f8be8b063302ee69a0c993847601341f257b24acbfe845"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/model-identity.json",
+      "sha256": "b7064c6df2c51ac0a378226b9405a0bc7e97174bfe9c69acc2af3bf7dd178f3d"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/parameter-identity.cenc.hex",
+      "sha256": "1dd6b94fc9aa6c4dab81ff1f19ca35033c5a835aa288d4403d91ff9b36d1551a"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/parameter-identity.json",
+      "sha256": "d0a6592aacbfdf9b99e3313ebb37930a866b05aee9d4408036f4fcc0ad2a844c"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/parameters.json",
+      "sha256": "bdfaf3a46f7c8f48c43cb017f541069b529c6e6624ca4e86e62a0338e192e8e9"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/registry-identity.cenc.hex",
+      "sha256": "a7b6c42c206a1b4b7f0cf83f43e368852fc8215173d49cf285d26427a182fc82"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/registry-identity.json",
+      "sha256": "7e404e7adda3c6550bfef4a1122f894acf9cfe1d42b1d12676860319a508b021"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/registry.cenc.hex",
+      "sha256": "bbec7a005afb8dca62fd5a86cacdb5ba6f3f22714799c7d0128cbd03a06d6ab3"
+    },
+    {
+      "path": "docs/planning/campaign2-probe-successor-model/registry.json",
+      "sha256": "694b66ce5219f368796647bb192d23cc7d4a4145c7eb599b649a6582df1a07f1"
+    }
+  ],
+  "records": [
+    {
+      "name": "MeasurementEvidenceIntakeDefinition",
+      "typeId": 336,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObserverId",
+          "type": "ObserverId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObservationChannelId",
+          "type": "ObservationChannelId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "UnitId",
+          "type": "ObservationUnitId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "CognitiveMeasurementEvidence",
+      "typeId": 337,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CognitiveMeasurementEvidenceId",
+          "type": "CognitiveMeasurementEvidenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "PresentObservation",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "UnitId",
+          "type": "ObservationUnitId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "AuthenticatedObserverMeasurementProducer",
+      "typeId": 338,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProducingSeamId",
+          "type": "SeamId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ProducingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ProducerEventTypeId",
+          "type": "EventTypeId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ProducerPhase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "OutputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "TransitionInputAdmissionV07",
+      "typeId": 339,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "CanonicalRecordSchemaRef"
+        },
+        {
+          "id": 2,
+          "name": "Producer",
+          "required": true,
+          "type": "AuthenticatedObserverMeasurementProducer"
+        },
+        {
+          "id": 3,
+          "name": "RequiredSourceRelation",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "name": "TransitionDefinitionV07",
+      "typeId": 340,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputAdmission",
+          "required": true,
+          "type": "TransitionInputAdmissionV07"
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 3,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<TransitionOutputDefinition>"
+        },
+        {
+          "id": 4,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "WriteCapabilityV04"
+        }
+      ]
+    },
+    {
+      "name": "TransitionRegistrationV07",
+      "typeId": 341,
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "TransitionDefinition",
+          "required": true,
+          "type": "TransitionDefinitionV07"
+        },
+        {
+          "id": 4,
+          "name": "IngressDefinition",
+          "required": true,
+          "type": "TransitionIngressDefinition"
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "namespace": 1124,
+      "name": "CognitiveMeasurementEvidenceId",
+      "scope": "run-scoped occurrence",
+      "payload": "unsigned-runtime-ordinal"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1009,
+      "payload": "MeasurementEvidenceIntakeTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-evidence-intake"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-evidence-padding"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/measurement-evidence-carriage"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/measurement-evidence-intake"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/measurement-evidence-intake"
+    }
+  ],
+  "unionVariants": [],
+  "finiteValues": [
+    {
+      "position": "TransitionInputAdmissionV07.RequiredSourceRelation",
+      "name": "ExactImmediateProducerOutput",
+      "value": 1
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 336,
+      "fieldId": 1,
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 336,
+      "fieldId": 2,
+      "requiredNamespace": 1005,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 336,
+      "fieldId": 3,
+      "requiredNamespace": 1039,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 337,
+      "fieldId": 1,
+      "requiredNamespace": 1124,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 337,
+      "fieldId": 3,
+      "requiredNamespace": 1039,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 338,
+      "fieldId": 1,
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 338,
+      "fieldId": 3,
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 341,
+      "fieldId": 1,
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    }
+  ],
+  "reusedRoles": [
+    {
+      "recordTypeId": 203,
+      "fieldId": 1,
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 203,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 337,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1124,
+      "domainValidatorId": null
+    }
+  ],
+  "reusedRecords": [
+    171,
+    203,
+    204,
+    254,
+    263,
+    264,
+    265,
+    273,
+    276,
+    277,
+    278,
+    279
+  ],
+  "registryRows": [
+    {
+      "registryKind": "registry/transition-admission",
+      "stableId": "definition/transition-admission",
+      "definitionVersion": "transition-admission/0.4-candidate",
+      "definitionSchema": "279/1",
+      "cardinality": 1,
+      "change": "occurrence-map data only"
+    },
+    {
+      "registryKind": "registry/measurement-evidence-intake",
+      "stableId": "definition/measurement-evidence-intake",
+      "definitionVersion": "measurement-evidence-carriage/0.1-candidate",
+      "definitionSchema": "336/1",
+      "cardinality": 1
+    },
+    {
+      "registryKind": "registry/transition-registration",
+      "stableId": "MeasurementEvidenceIntakeTransition",
+      "definitionVersion": "transition-admission-extension/0.7-candidate",
+      "definitionSchema": "341/1",
+      "cardinality": 1
+    }
+  ],
+  "excluded": [
+    "LearningRouteId member",
+    "state root",
+    "CharacterId family",
+    "observation identity family",
+    "evidence-store identity",
+    "new union variant",
+    "new DomainValidator",
+    "runtime implementation"
+  ]
+}

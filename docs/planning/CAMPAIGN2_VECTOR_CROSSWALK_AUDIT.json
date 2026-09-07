@@ -1,0 +1,313 @@
+{
+  "status": "INVENTORY AUDIT PASS",
+  "runtimeVerdict": "NONE",
+  "vectors": 51,
+  "coverageScope": "EVID-A..T, REG-A..R, AD-E1..13 only",
+  "sourceFingerprints": [
+    {
+      "path": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "sha256": "2d9de0cce35e8e4ed28e11453c13791e7e192cc24abf01f10dc31847f3c8f3a0"
+    },
+    {
+      "path": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "sha256": "43f628212d848c670e2e8dc89a8d26bd4a577ab362db029899a5501d024182ce"
+    },
+    {
+      "path": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "sha256": "9cae03eb1f51667b5e7bd365968168d8b1c6288d3d98c176225c93778fb3b2fa"
+    }
+  ],
+  "crosswalk": {
+    "path": "docs/planning/CAMPAIGN2_INHERITED_VECTOR_CROSSWALK.md",
+    "sha256": "31dbf24c6d3db9d2fa1a2b986333903ddfb1a67f70ce54cb1879afb998ae5296"
+  },
+  "evidenceFiles": [
+    "src/test/campaign2TransitionAdmission.test.ts",
+    "src/test/campaign2TraceBinding.test.ts",
+    "src/test/campaign2Factory.test.ts",
+    "src/test/campaign2ModelAdmissionParity.test.ts",
+    "src/test/campaign2Codecs.test.ts",
+    "src/test/campaign2RegulatoryReference.test.ts",
+    "src/test/campaign2PersistenceDerivations.test.ts",
+    "src/test/campaign2AdaptationDomains.test.ts",
+    "src/test/campaign2IndependentAdaptation.test.ts",
+    "src/test/campaign2MutationEvidence.test.ts",
+    "src/test/campaign2FrozenGateOrder.test.ts",
+    "src/test/campaign2EvidRollback.test.ts",
+    "src/test/campaign2EvidPersistence.test.ts",
+    "src/test/campaign2GenericRoster.test.ts",
+    "src/test/campaign2RosterScope.test.ts",
+    "src/test/campaign2BatchWitnesses.test.ts",
+    "src/test/campaign2RegExactWitnesses.test.ts",
+    "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+    "docs/planning/CAMPAIGN2_TRACE_CONTINUATION_PROOF.json",
+    "docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF.json",
+    "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF.json",
+    "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+    "docs/planning/CAMPAIGN2_EVID_REG_CONSTRUCTION_PROOF.json",
+    "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+    "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json"
+  ],
+  "rows": [
+    {
+      "id": "EVID-A",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-B",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-C",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-D",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-E",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-F",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-G",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-H",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-I",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-J",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-K",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-L",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-M",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-N",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-O",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-P",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-Q",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-R",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-S",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "EVID-T",
+      "source": "docs/planning/EVID_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-A",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-B",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-C",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-D",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-E",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-F",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-G",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-H",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-I",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-J",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-K",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-L",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-M",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-N",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-O",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-P",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-Q",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "REG-R",
+      "source": "docs/planning/REG_001_DRAFT_RESOLUTION.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E1",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E2",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E3",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E4",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E5",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E6",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E7",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E8",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E9",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E10",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E11",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E12",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    },
+    {
+      "id": "AD-E13",
+      "source": "docs/planning/ADAPT_001_RULE_INTERPRETER_DRAFT.md",
+      "disposition": "QUALIFICATION OPEN"
+    }
+  ],
+  "limitations": [
+    "Checks exact ID coverage and evidence-file existence only.",
+    "Does not execute or pass any vector.",
+    "ADAPT A-D, packaging and complete PRJ/IDN/OBS/SEM inventory remain outside this audit."
+  ]
+}

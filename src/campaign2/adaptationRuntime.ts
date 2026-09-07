@@ -1,13 +1,17 @@
+import {INTAKE_EVENT,CARRIAGE_PADDING,type compileMeasurementModel} from './measurementModel';
+import {executeMeasurementIntake} from './measurementExecution';
+import {scheduledEventValue} from '../substrate/persistence';
 /** Internal authored-fact composition with optional committed D bridge. Not FCT-4/5 qualification.
  * adaptation-input/0.31-candidate + adaptation-settlement/0.2-candidate.
  */
 import {canonicalEncode,text,list,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState} from '../substrate/state';
 import {DeterministicScheduler,SchedulerContractError,type EventHandler} from '../substrate/scheduler';
-import {compileOrderedInputProfile,beginAuthoredSourceInstant,AUTHORED_FACT_EVENT,compiledInputSchedule} from './orderedInputs';
+import {compileOrderedInputProfile,beginAuthoredSourceInstant,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,compiledInputSchedule} from './orderedInputs';
 import {beginTransitionIngressV04} from './transitionIngressV04';
 import {compileAdaptationEvaluator,adaptationExecutionDiffs} from './adaptationEvaluation';
-import {compileTraceBinding,TRACE_RULES} from './traceBinding';
+import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,TRACE_RULES} from './traceBinding';
+import type {compileProbeExecution} from './probeExecution';
 import type {compileTransitionAdmissionV06} from './transitionAdmissionV04';
 import type {compileAdaptationDomains} from './adaptationDomains';
 import type {compileCampaign2StateModel} from './stateModel';
@@ -15,6 +19,7 @@ import {dataKey as key} from './canonicalData';
 import {dataRecord as rec,dataField as f,dataIdentity as id} from './canonicalData';
 import {decodeCampaign2,campaign2Record as r} from './codecs';
 import {admittedInputFacts} from './admittedInput';
+import {evidOperands,executeEvid} from './evidExecution';
 import type {compileConsequenceBridge} from './consequenceBridge';
 import {createCanonicalSave,type prepareCanonicalSave} from '../substrate/persistence';
 import type {StructuralIdentity} from '../substrate/identity';
@@ -24,18 +29,41 @@ type Compilation=Awaited<ReturnType<ReturnType<typeof compileOrderedInputProfile
 export function createAdaptationRuntime(inputs:Compilation,initialState:AuthoritativeState,
   shared:ReturnType<typeof compileTransitionAdmissionV06>,evaluator:ReturnType<typeof compileAdaptationEvaluator>,
   domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>,maxWork:bigint,bridgeModel?:ReturnType<typeof compileConsequenceBridge>,
-  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>){
+  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement']){
   const modelIdentity=f(rec(inputs.runIdentity.value,104n),1n),rules=f(rec(modelIdentity,103n),1n);
-  const trace=typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
+  const trace=measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
   stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,continuation?.clock??0n);
   const initial=continuation?{events:continuation.queue,allocators:continuation.allocators}:compiledInputSchedule(inputs,canonicalEncode(initialState.canonicalValue()));
   let sources:ReturnType<typeof beginAuthoredSourceInstant>|undefined,ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
   let bridge:ReturnType<NonNullable<typeof bridgeModel>['begin']>|undefined;
+  let probe:ReturnType<NonNullable<typeof probeModel>['begin']>|undefined,probeSource:ReturnType<typeof beginProbeSourceInstant>|undefined;
+  let carriagePadding:import('../substrate/scheduler').ScheduledEvent|undefined,probeInstant=false,runtimeCount=0,childCount=0;
+  const counted=(allocator:{allocateRuntimeId():bigint})=>({allocateRuntimeId(){if(measurement&&probeInstant)runtimeCount++;return allocator.allocateRuntimeId();}});
   const clone=(state:AuthoritativeState)=>new AuthoritativeState(state.entries());
   const handlers=new Map<string,EventHandler<AuthoritativeState>>();
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
     if(handlers.has(eventKey))throw new SchedulerContractError('INVALID_CONFIGURATION','event has multiple fixed runtime adapters');handlers.set(eventKey,handler);
   };
+  for(const eventType of probeModel?.eventTypes()??[])registerHandler(key(eventType),context=>{
+   if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
+   if(key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)){probeSource.admit(context.event);probeInstant=true;}
+   const result=probe.execute(context.event,context.state,counted(context)),plan=result.freeze?ingress.observeSemanticFreeze(context.event,[canonicalEncode(result.freeze)]):undefined;
+   const emissions=result.plan.emissions();
+   const carriageSlot=!!measurement&&context.event.phase===120n;
+   let carriagePlan:ReturnType<NonNullable<typeof ingress>['observeMeasurement']>|undefined;
+   if(carriageSlot&&probeModel!.permitted){if(result.outputs.length!==1)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','missing diagnostic observation');measurement!.validateInput(result.outputs[0]);carriagePlan=ingress.observeMeasurement(context.event,canonicalEncode(result.outputs[0]));}
+   else if(carriageSlot&&result.outputs.length)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','suppressed producer emitted evidence');
+   const extra=carriagePlan?.emissions()??(carriageSlot?[{dueAt:context.event.dueAt,phase:130n,eventTypeId:CARRIAGE_PADDING,payload:list([]),dependencies:list([])}]:[]);
+   if(carriageSlot&&(emissions.length!==1||extra.length!==1))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage slot multiplicity');
+   return {nextState:context.state,outputs:result.outputs,emittedEvents:[...emissions,...extra,...(plan?.emissions()??[])],traceContributions:[],traceFactory:children=>{
+    result.plan.bindAllocatedChildren(children.slice(0,emissions.length));
+    if(measurement&&probeInstant)childCount+=children.length;
+    if(carriagePlan)carriagePlan.bindAllocatedChildren(children.slice(emissions.length,emissions.length+1));
+    else if(carriageSlot){if(carriagePadding)throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','duplicate padding');carriagePadding=structuredClone(children[emissions.length]);}
+    plan?.bindAllocatedChildren(children.slice(emissions.length+extra.length));
+    return trace?[trace.record(context.event,result.outputs,children,undefined,{readDomain:context.event.phase===110n?[probeModel!.pattern]:[],actualReadRecords:result.reads,patch:{operations:[]},diffs:[]})]:[];
+   }};
+  });
   registerHandler(key(AUTHORED_FACT_EVENT),context=>{
     if(!sources||!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','source outside live instant');
     const output=sources.execute(context.event,context),branch=bridge?.source(context.event,context),plan=ingress.observeAuthoredSource(context.event,canonicalEncode(output));
@@ -54,17 +82,32 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     }};
   });
   for(const registered of shared.registrations()){
-    const registration=decodeCampaign2(registered.registration);if(typeof registration==='boolean'||registration.kind!=='record'||registration.schema.typeId!==272n)continue;
+    const registration=shared.decode(registered.registration);if(typeof registration==='boolean'||registration.kind!=='record'||registration.schema.typeId!==272n)continue;
     if(!['OutcomeEvaluationTransition','OutcomeLearningEvidenceTransition'].some(name=>registered.transitionKey===key({kind:'typedIdentifier',namespaceId:1009n,payload:text(name)})))throw new SchedulerContractError('INVALID_CONFIGURATION','unsupported V04 runtime adapter');
     const definition=rec(f(registration,3n),271n),schema=rec(f(rec(f(definition,1n),274n),1n),254n),isEvaluation=key(f(schema,1n))===key({kind:'unsigned',value:227n});
     const eventType=id(f(rec(f(registration,4n),276n),1n));
     registerHandler(key(eventType),context=>{
       if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','EVID outside live instant');
-      const cap=ingress.admit(context.event),occurrence=ingress.allocateEvidIdentity(cap,context),payload=admittedInputFacts(cap).payload;
-      const output=isEvaluation?r('OutcomeEvaluation',{OutcomeEvaluationId:occurrence,ConsequenceExperience:payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')}):r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:occurrence,Evaluation:payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      const cap=ingress.admit(context.event),occurrence=ingress.allocateEvidIdentity(cap,counted(context)),payload=admittedInputFacts(cap).payload;
+      const output=executeEvid(evidOperands(isEvaluation,payload,occurrence));
       const plan=ingress.completeEvid(cap,[canonicalEncode(output)],{operations:[]},context.state.canonicalValue(),context.state.canonicalValue());
-      return {nextState:context.state,outputs:[output],emittedEvents:plan.emissions(),traceContributions:[],traceFactory:children=>{plan.bindAllocatedChildren(children);return trace?[trace.record(context.event,[output],children,registration)]:[];}};
+      return {nextState:context.state,outputs:[output],emittedEvents:plan.emissions(),traceContributions:[],traceFactory:children=>{plan.bindAllocatedChildren(children);if(measurement&&probeInstant)childCount+=children.length;return trace?[trace.record(context.event,[output],children,registration)]:[];}};
     });
+  }
+  if(measurement){
+   registerHandler(key(INTAKE_EVENT),context=>{
+    if(!ingress||!probeInstant)throw new SchedulerContractError('INPUT_NOT_ADMITTED','carriage outside probe instant');
+    const cap=ingress.admit(context.event),payload=admittedInputFacts(cap).payload;measurement.validateInput(payload);
+    const occurrence=ingress.allocateMeasurementIdentity(cap,counted(context));
+    const output=executeMeasurementIntake(payload,measurement.unit,occurrence);
+    const terminal=ingress.completeMeasurement(cap,canonicalEncode(output));
+    return {nextState:context.state,outputs:[output],emittedEvents:terminal.emissions(),traceContributions:[],traceFactory:children=>{terminal.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[output],children,shared.decode(measurement.registration))]:[];}};
+   });
+   registerHandler(key(CARRIAGE_PADDING),context=>{
+    if(!carriagePadding||key(scheduledEventValue(context.event))!==key(scheduledEventValue(carriagePadding)))throw new SchedulerContractError('INPUT_NOT_ADMITTED','unassociated carriage padding');
+    carriagePadding=undefined;counted(context).allocateRuntimeId();
+    return {nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[],traceFactory:children=>trace?[trace.record(context.event,[],children)]:[]};
+   });
   }
   const scheduler=new DeterministicScheduler({initialState,initialQueue:initial.events,initialAllocators:initial.allocators,
     initialClock:continuation?.clock,initialCommittedTrace:continuation?.committedTrace,initialOutputs:continuation?.outputs,
@@ -74,8 +117,10 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;
         sources=beginAuthoredSourceInstant(inputs,instant);ingress=beginTransitionIngressV04(shared,instant);
         bridge=bridgeModel?.begin(instant);
+        probe=probeModel?.begin(instant);probeSource=probeModel?beginProbeSourceInstant(inputs,instant):undefined;
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
@@ -100,9 +145,9 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
           },
         };
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();ingress!.finish();},
-      close(){sources?.close();ingress?.abort();bridge?.abort();sources=undefined;ingress=undefined;bridge=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','authored facts are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==6||childCount!==8||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage six/eight budget closure');},
+      close(){sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.

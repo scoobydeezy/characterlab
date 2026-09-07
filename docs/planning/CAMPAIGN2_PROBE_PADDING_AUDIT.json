@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "PROBE-N/O private void padding source qualification; executable branch budgets and later sentinel require separate runtime witnesses.",
+  "source": {
+    "path": "src/campaign2/probeExecution.ts",
+    "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+  },
+  "checks": [
+    "void, zero-argument, private capability",
+    "allocator result discarded as expression only",
+    "exact fixed slot budget",
+    "only two statement-only consumption sites"
+  ],
+  "mutants": [
+    {
+      "name": "capture ordinal",
+      "status": "REJECTED"
+    },
+    {
+      "name": "return ordinal",
+      "status": "REJECTED"
+    },
+    {
+      "name": "compare ordinal",
+      "status": "REJECTED"
+    },
+    {
+      "name": "expose ordinal",
+      "status": "REJECTED"
+    },
+    {
+      "name": "change fixed budget",
+      "status": "REJECTED"
+    },
+    {
+      "name": "calculate budget from allocator",
+      "status": "REJECTED"
+    }
+  ]
+}

@@ -7,13 +7,13 @@ import {dataRecord as rec,dataField as f,dataUnsigned as u,invalidModel} from '.
 import {identityRolesCompatible} from './identityRoles';
 import type {compileValDeclarations} from './valDeclarations';
 type Content=Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>;
-export function compileOccurrenceIdentities(mapBytes:Uint8Array,content:Content){
-  const value=decodeCampaign2(mapBytes);
+export function compileOccurrenceIdentities(mapBytes:Uint8Array,content:Content,codec={decode:decodeCampaign2,schema:campaign2SchemaByType}){
+  const value=codec.decode(mapBytes);
   if(typeof value==='boolean'||value.kind!=='map')return invalidModel('occurrence rules require canonical map');
   const rules=new Map<string,{fieldId:bigint;role:Uint8Array}>();
   for(const [schemaValue,ruleValue] of value.entries){
     const schemaRef=rec(schemaValue,254n),typeId=u(f(schemaRef,1n)),version=u(f(schemaRef,2n));
-    const schema=campaign2SchemaByType(typeId);
+    const schema=codec.schema(typeId);
     if(schema.schemaVersion!==version)invalidModel('unadmitted occurrence schema version');
     const rule=rec(ruleValue,278n),fieldId=u(f(rule,1n)),field=schema.fields.find(x=>x.id===fieldId);
     if(!field?.required)invalidModel('occurrence identity must be one required top-level field');
@@ -25,13 +25,13 @@ export function compileOccurrenceIdentities(mapBytes:Uint8Array,content:Content)
   return Object.freeze({
     has(typeId:bigint,version:bigint):boolean {return rules.has(`${typeId}/${version}`);},
     extract(bytes:Uint8Array):CanonicalValue {
-      const value=decodeCampaign2(bytes);
+      const value=codec.decode(bytes);
       if(typeof value==='boolean'||value.kind!=='record')return invalidModel('occurrence payload requires record');
       const rule=rules.get(`${value.schema.typeId}/${value.schema.schemaVersion}`);
       if(!rule)return invalidModel('missing occurrence identity rule');
       const identity=f(value,rule.fieldId);
       content.validateRole(canonicalEncode(identity),rule.role);
-      return decodeCampaign2(canonicalEncode(identity));
+      return codec.decode(canonicalEncode(identity));
     },
     schemaKeys():readonly string[] {return [...rules.keys()];},
   });

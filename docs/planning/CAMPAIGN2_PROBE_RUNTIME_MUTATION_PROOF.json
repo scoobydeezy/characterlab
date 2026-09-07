@@ -1,0 +1,588 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/probeExecution.ts",
+      "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+    },
+    {
+      "path": "src/campaign2/probeReadout.ts",
+      "sha256": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa"
+    },
+    {
+      "path": "src/test/campaign2ProbeRuntime.test.ts",
+      "sha256": "44f58c7a3abf5d21b50734aa75e2f38e7055e140bffc980331e95d513c16a314"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+        "state": "pass"
+      },
+      {
+        "name": "all committed permission branches preserve later sentinel identities and exact budget",
+        "state": "pass"
+      },
+      {
+        "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+        "state": "pass"
+      },
+      {
+        "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+        "state": "pass"
+      },
+      {
+        "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+        "state": "pass"
+      },
+      {
+        "name": "historical probe .1 cannot activate successor trace semantics",
+        "state": "pass"
+      },
+      {
+        "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+        "state": "pass"
+      },
+      {
+        "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+        "state": "pass"
+      },
+      {
+        "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+        "state": "pass"
+      },
+      {
+        "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "ignore-retained-displacement",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 50n } to deeply equal { kind: 'signed', value: 51n }"
+          ]
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "normalize-without-scale",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }"
+          ]
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "availability-always-true",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "pass"
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "fail",
+          "errors": [
+            "expected 1 to be +0 // Object.is equality"
+          ]
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "fail",
+          "errors": [
+            "expected 12 to be 8 // Object.is equality"
+          ]
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "fail",
+          "errors": [
+            "expected 1 to be +0 // Object.is equality"
+          ]
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "permission-ignored",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "pass"
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "fail",
+          "errors": [
+            "expected 5 to be 1 // Object.is equality"
+          ]
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "fail",
+          "errors": [
+            "expected 12 to be 8 // Object.is equality"
+          ]
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "skip-padding-advance",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "pass"
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'unsigned', value: 0n } to deeply equal { kind: 'unsigned', value: 5n }"
+          ]
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "wrong-truth-family",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "fail",
+          "errors": [
+            "invalid archived probe truth"
+          ]
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "borrow-adapt-accessor",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+          "state": "fail",
+          "errors": [
+            "invalid archived probe accessor"
+          ]
+        },
+        {
+          "name": "all committed permission branches preserve later sentinel identities and exact budget",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/false",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission false/true",
+          "state": "pass"
+        },
+        {
+          "name": "hidden D stays observer-inaccessible for availability/permission true/false",
+          "state": "pass"
+        },
+        {
+          "name": "historical probe .1 cannot activate successor trace semantics",
+          "state": "pass"
+        },
+        {
+          "name": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+          "state": "pass"
+        },
+        {
+          "name": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }"
+          ]
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+          "state": "pass"
+        },
+        {
+          "name": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+    "Fifteen probe factory controls; seven substitutions do not exhaust all frozen probe adversarial obligations.",
+    "No global factory, VAL, ADAPT or Campaign-2 verdict."
+  ]
+}

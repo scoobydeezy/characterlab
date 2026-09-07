@@ -1,0 +1,190 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/probeExecution.ts",
+      "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+    },
+    {
+      "path": "src/campaign2/probeReadout.ts",
+      "sha256": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa"
+    },
+    {
+      "path": "src/test/campaign2ProbeScalarIsolation.test.ts",
+      "sha256": "ba8efccdbd891c60619d657efc479e417f8f61fa68e5689d12647015ec931552"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "wrong-map-1",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrong-map-2",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrong-map-4",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "arbitrary-root",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unselected-map-root",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "other-character",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "referent origin requires a typed identifier"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "other-variable",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "projection binding requests a path outside its registered ReadDomain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "duplicate-logical-read",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "probe trace read count"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "embed-scalar-in-support",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hash-scalar-in-support",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "branch-support-on-scalar",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "embed-scalar-in-experience-version",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+          "state": "fail",
+          "errors": [
+            "contract version semantic-binding/0.1-candidate#SEM-001H50 is not an admitted seam contract"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+    "Focused matched-allocation scalar isolation; wrong-read and scalar-carriage substitutions are test-only.",
+    "No global factory, VAL, ADAPT or Campaign-2 verdict."
+  ]
+}

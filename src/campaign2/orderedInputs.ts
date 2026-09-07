@@ -8,12 +8,15 @@ import {scheduledEventValue,SaveContractError} from '../substrate/persistence';
 import {SchedulerContractError,type ScheduledEvent} from '../substrate/scheduler';
 import {simInstant} from '../substrate/time';
 import {decodeCampaign2,campaign2Record} from './codecs';
+import {decodeProbeReview} from './probeCodecs';
 import {dataRecord as rec,dataField as f,dataItems as items,dataIdentity as id,dataKey as key} from './canonicalData';
 import type {compileValDeclarations} from './valDeclarations';
 import type {compileAdaptationDomains} from './adaptationDomains';
 
 export const ORDERED_INPUT_PROFILE='campaign2-ordered-input/0.1-candidate' as const;
 export const AUTHORED_FACT_EVENT=typedIdentifier(1001n,text('event/authored-adaptation-fact'));
+export const PROBE_INPUT_PROFILE='campaign2-probe-ordered-input/0.1-candidate';
+export const PROBE_SOURCE_EVENT=typedIdentifier(1001n,text('event/regulatory-diagnostic-probe'));
 type Content=Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>;
 type Domains=Pick<ReturnType<typeof compileAdaptationDomains>,'hasProcedure'>;
 function invalid(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
@@ -35,6 +38,7 @@ export function beginAuthoredSourceInstant(compilation:OrderedInputCompilation,i
     execute(event:ScheduledEvent,allocator:{allocateRuntimeId():bigint}):CanonicalValue {
       if(!active||event.dueAt!==instant||consumed.has(event.eventId))invalid('expired or repeated authored source execution');
       const expected=original!.find(e=>e.eventId===event.eventId);
+      if(key(event.eventTypeId)!==key(AUTHORED_FACT_EVENT))invalid('not an authored adaptation source');
       if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(event)))invalid('event was not created by the admitted input compiler');
       // Every check precedes the sole shared semantic occurrence allocation.
       consumed.add(event.eventId);
@@ -47,21 +51,39 @@ export function beginAuthoredSourceInstant(compilation:OrderedInputCompilation,i
   });
 }
 
+/** Probe source authentication only; this capability cannot allocate or read state. */
+export function beginProbeSourceInstant(compilation:OrderedInputCompilation,instant:bigint){
+ const original=compilations.get(compilation)?.events;if(!original)invalid('missing input compiler authority');
+ let active=true;const used=new Set<bigint>();
+ return Object.freeze({admit(event:ScheduledEvent){
+  if(!active||event.dueAt!==instant||used.has(event.eventId)||key(event.eventTypeId)!==key(PROBE_SOURCE_EVENT))invalid('invalid probe source execution');
+  const expected=original!.find(e=>e.eventId===event.eventId);
+  if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(event)))invalid('probe source not in original compilation');
+  used.add(event.eventId);
+ },close(){active=false;used.clear();}});
+}
+
 /** Trusted construction component. Selection is an explicit version, not duck typing.
  * The eventual facade must supply the version from its fixed model bundle, not caller options.
  */
 export function compileOrderedInputProfile(profileVersion:string,content:Content,domains:Domains){
-  if(profileVersion!==ORDERED_INPUT_PROFILE)throw new SchedulerContractError('INVALID_CONFIGURATION','unadmitted ordered-input profile');
+  if(profileVersion!==ORDERED_INPUT_PROFILE&&profileVersion!==PROBE_INPUT_PROFILE)throw new SchedulerContractError('INVALID_CONFIGURATION','unadmitted ordered-input profile');
+  const probe=profileVersion===PROBE_INPUT_PROFILE,decodeValue=probe?decodeProbeReview:decodeCampaign2;
   function decode(inputBytes:Uint8Array){
-    const manifest=decodeCampaign2(inputBytes);
+    const manifest=decodeValue(inputBytes);
     const entries=items(manifest,'list').map(value=>{
       const entry=items(value,'list');if(entry.length!==5)invalid('ordered input requires exactly five positions');
       const [at,phase,eventType,payload,dependencies]=entry;
       if(typeof at==='boolean'||at.kind!=='signed'||typeof phase==='boolean'||phase.kind!=='unsigned')invalid('wrong DueAt/Phase scalar tag');
       const dueAt=simInstant(at.value);
-      if(key(id(eventType))!==key(AUTHORED_FACT_EVENT))invalid('event type is not admitted as an initial input');
+      const isProbe=probe&&key(id(eventType))===key(PROBE_SOURCE_EVENT);
+      if(!isProbe&&key(id(eventType))!==key(AUTHORED_FACT_EVENT))invalid('event type is not admitted as an initial input');
       if(dueAt<=0n||phase.value!==110n)invalid('authored fact requires positive DueAt and phase 110');
       if(key(dependencies)!==key(list([])))invalid('authored fact requires empty-list dependencies');
+      if(isProbe){
+        if(key(f(rec(payload,333n),1n))!==key(typedIdentifier(1027n,text('definition/regulatory-diagnostic-probe'))))invalid('unresolved probe definition');
+        return {dueAt,phase:phase.value,eventTypeId:id(eventType),payload,dependencies};
+      }
       const fact=f(rec(payload,304n),1n);
       if(typeof fact==='boolean'||fact.kind!=='record'||![305n,306n].includes(fact.schema.typeId))invalid('wrong authored fact basis');
       content.validateRecordRoles(canonicalEncode(payload));
@@ -71,6 +93,7 @@ export function compileOrderedInputProfile(profileVersion:string,content:Content
       else if(subject.namespaceId!==1034n||!domains.hasProcedure(subject))invalid('unknown procedure');
       return {dueAt,phase:phase.value,eventTypeId:id(eventType),payload,dependencies};
     });
+    if(probe)for(const e of entries.filter(e=>key(e.eventTypeId)===key(PROBE_SOURCE_EVENT)))if(entries.filter(x=>x.dueAt===e.dueAt).length!==1)invalid('probe instant must have exactly one source');
     return {manifest,entries};
   }
   // This function is deliberately private. No partial manifest returns a schedule or source authority.
@@ -107,7 +130,7 @@ export function compileOrderedInputProfile(profileVersion:string,content:Content
       const commitment=await commitManifest(manifest);
       if(key(f(run,3n))!==key(bytes(commitment.digest)))throw new SaveContractError('original ordered-input manifest differs from RunIdentity');
       const expected=schedule(entries).filter(e=>e.dueAt>boundary);
-      const pending=queue.filter(e=>key(e.eventTypeId)===key(AUTHORED_FACT_EVENT));
+      const pending=queue.filter(e=>key(e.eventTypeId)===key(AUTHORED_FACT_EVENT)||(probe&&key(e.eventTypeId)===key(PROBE_SOURCE_EVENT)));
       if(new Set(queue.map(e=>e.eventId)).size!==queue.length||new Set(queue.map(e=>e.eventSequence)).size!==queue.length)
         throw new SaveContractError('duplicate pending event identity/sequence');
       const eventKeys=(events:readonly ScheduledEvent[])=>events.map(e=>key(scheduledEventValue(e))).sort();

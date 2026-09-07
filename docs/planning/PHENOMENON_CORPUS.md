@@ -443,3 +443,13 @@ Reopen conditions:
 to accepted OutcomeLearningEvidence. This changes the explicit comparison schema claim and is
 versioned substantively; 1.9 carried stale generic naming. Manifest digest recomputed from the
 canonical versioned manifest, not a file hash. Fixed common-root bridge controls remain proposed.
+
+### 2026-09-07 qualification annotation — diagnostic sub-obligation only
+
+The user qualifies PROBE-A..P and ADAPT-9a under regulatory-diagnostic-probe/0.1-candidate /
+rules/campaign2-regulatory-probe/0.2-candidate. This records evidence against the existing corpus;
+it changes no corpus requirement or version. First permitted diagnostic observation differs at
+5 versus 51/10; matched X/E/L remain equal. F uses generic temporal + public exclusion scope
+(no temporal public model); G uses public positive + generic signed domain + public exclusion.
+ADAPT-9b, parent control 9 and PHEN-ADAPT-001 remain OPEN. The qualification record and retained
+output-closure failure history are in CAMPAIGN2_PROBE_QUALIFICATION_REVIEW.md.
