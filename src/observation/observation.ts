@@ -15,6 +15,8 @@ import { ExactRational } from '../substrate/exactMath';
 import type { SimInstant } from '../substrate/time';
 
 export const OBSERVATION_CONTRACT_VERSION = 'observation/0.1-candidate' as const;
+/** ADAPT D's explicit provenance-cut closure; not another measurement compiler. */
+export const AUTHORED_FACT_OBSERVATION_VERSION = 'authored-fact-observation/0.1-candidate' as const;
 
 export const observationSchemas = {
   boundedEffectTruth: schema(200n, 'BoundedEffectTruth', ['Before', 'PotentialEffect', 'Applied', 'Overflow', 'After', 'Minimum', 'Maximum', 'EffectProvenance', 'TruthRecordId']),
@@ -391,8 +393,15 @@ function validatePresentObservationRecord(root: CanonicalRecord): void {
   const references = requireList(field(root, 10n)).map(requireTypedIdentifier).map(canonicalKey);
   assertStrictKeys(references, 'safe source references');
   const version = field(root, 11n);
-  if (typeof version === 'boolean' || version.kind !== 'text' || version.value !== OBSERVATION_CONTRACT_VERSION) {
+  if (typeof version === 'boolean' || version.kind !== 'text'
+    || (version.value!==OBSERVATION_CONTRACT_VERSION&&version.value!==AUTHORED_FACT_OBSERVATION_VERSION)) {
     observationFail('INVALID_CHANNEL', 'unsupported observation transformation version');
+  }
+  if(version.value===AUTHORED_FACT_OBSERVATION_VERSION){
+    const one=ExactRational.of(1n);
+    if(!interval.lower?.equals(one)||!interval.upper?.equals(one)||kind!==EvidenceKindId.Point
+      ||!requireExact(field(root,8n)).equals(one)||tokenKeys.length||references.length)
+      observationFail('INVALID_CHANNEL','invalid authored-fact observation projection closure');
   }
 }
 

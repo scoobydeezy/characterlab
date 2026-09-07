@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, canonicalEncode, list, text, typedIdentifier } from '../substrate/canonicalEncoding';
 import { DeterministicScheduler, type EventHandler, type StateAdapter } from '../substrate/scheduler';
@@ -210,7 +211,7 @@ describe('SEM-001D typed continuant-classification conformance', () => {
 
     const truthLeaking = {
       ...feature(PerceptualFeatureId.ObservedElongatedForm, true, 1),
-      truthReferentId: 'person.glen',
+      truthReferentId: authoredReferentKey('person.glen'),
     } as PermittedPerceptualFeatureObservation;
     expect(() => classifyContinuant(initialModel(), request([truthLeaking]), 0n))
       .toThrowError(expect.objectContaining({ code: 'FORBIDDEN_TRUTH_FIELD' }));

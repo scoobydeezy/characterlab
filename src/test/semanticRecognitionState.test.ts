@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex } from '../substrate/canonicalEncoding';
 import { EventRoleId } from '../semanticBinding/eventBindings';
@@ -38,7 +39,7 @@ const experience = (experienceId = 9000n, occurredAt = 10n): PreRecognitionSeman
     perceptualEventReferentId: eventFile,
     perceptualReferentId: track,
     eventRoleEvidence: { kind: 'exact', eventRoleId: EventRoleId.Participant },
-    supportingObservationIds: [{ observerId, observationId: `observation/${experienceId}` }],
+    supportingObservationIds: [{ observerId, observationId: experienceId }],
     occurredAt,
     transformationVersion: version,
   }], 40n).bindings;
@@ -46,7 +47,7 @@ const experience = (experienceId = 9000n, occurredAt = 10n): PreRecognitionSeman
     experienceId, observerId, occurredAt,
     perceptualEventReferentIds: [eventFile], perceivedBindings: bindings,
     perceptualClassifications: [], perceptualEventClassifications: [],
-    supportingObservationIds: [{ observerId, observationId: `observation/${experienceId}` }],
+    supportingObservationIds: [{ observerId, observationId: experienceId }],
     transformationVersion: version,
   });
 };
@@ -60,8 +61,8 @@ const catalogEntry = (
 });
 
 const catalog = (): readonly RecognitionCandidateCatalogEntry[] => [
-  catalogEntry('person.darius', ['template/darius-face']),
-  catalogEntry('person.glen', ['template/glen-face']),
+  catalogEntry(authoredReferentKey('person.darius'), ['template/darius-face']),
+  catalogEntry(authoredReferentKey('person.glen'), ['template/glen-face']),
 ];
 
 const mapping = (
@@ -78,7 +79,7 @@ const identityClaimCue = (
   candidateSemanticReferentId: string,
   observerSymbolCandidateMappingId: bigint,
 ): PermittedRecognitionCueEvidence => ({
-  recognitionCueEvidenceId: 'recognition-cue/01',
+  recognitionCueEvidenceId: 1n,
   experienceId: exp.experienceId,
   observerId,
   perceptualReferentId: track,
@@ -104,7 +105,7 @@ const request = (
 ): RecognitionRequest => ({
   experience: exp,
   perceptualReferentId: track,
-  candidateCatalog,
+  candidateCatalog: [...candidateCatalog].sort((a,b)=>a.candidateSemanticReferentId.localeCompare(b.candidateSemanticReferentId)),
   identitySymbolMappings,
   cueEvidence: cues,
   priorResolutionHistory: [],
@@ -135,19 +136,19 @@ const recognitionFailure = (run: () => unknown): { code: string; message: string
 describe('SEM-001I.3 recognition-knowledge state identity', () => {
   it('CV-SEM-099 permits at most one active mapping per (ObserverId, PerceivedIdentitySymbolId)', () => {
     const exp = experience();
-    const claim = identityClaimCue(exp, 'person.glen', 4200n);
+    const claim = identityClaimCue(exp, authoredReferentKey('person.glen'), 4200n);
 
     // One active mapping for the symbol is admissible.
     expect(recognitionSemanticView(
-      evaluateContinuantRecognition(model(), request(exp, [claim], [mapping(4200n, 'person.glen')]), 0n)
+      evaluateContinuantRecognition(model(), request(exp, [claim], [mapping(4200n, authoredReferentKey('person.glen'))]), 0n)
         .resolutionRecord,
-    )).toBe('asserted:person.glen');
+    )).toBe(('asserted:'+authoredReferentKey('person.glen')));
 
     // Two active mappings for one perceived symbol are ambiguous knowledge state, even when each
     // occurrence is individually canonical and points at a catalogued candidate.
     const ambiguous = recognitionFailure(() => evaluateContinuantRecognition(model(), request(exp, [claim], [
-      mapping(4200n, 'person.glen'),
-      mapping(4201n, 'person.darius'),
+      mapping(4200n, authoredReferentKey('person.glen')),
+      mapping(4201n, authoredReferentKey('person.darius')),
     ]), 0n));
     expect(ambiguous.code).toBe('INVALID_SYMBOL_MAPPING');
     expect(ambiguous.message).toMatch(/more than one active mapping/);
@@ -155,8 +156,8 @@ describe('SEM-001I.3 recognition-knowledge state identity', () => {
 
   it('CV-SEM-099 replaces mapping A with B without remapping or mutating A', () => {
     const exp = experience();
-    const mappingA = mapping(4200n, 'person.glen');
-    const mappingB = mapping(4201n, 'person.darius');
+    const mappingA = mapping(4200n, authoredReferentKey('person.glen'));
+    const mappingB = mapping(4201n, authoredReferentKey('person.darius'));
     const beforeReplacement = encodeSemanticValue(semanticUnionValue('RecognitionCueSource', 2, {
       PerceivedIdentitySymbolId: semanticOccurrenceId('ExperienceId', 1n),
       ObserverSymbolCandidateMappingId: semanticOccurrenceId(
@@ -166,25 +167,25 @@ describe('SEM-001I.3 recognition-knowledge state identity', () => {
 
     // While A is active, a claim citing A resolves and a claim citing B does not.
     expect(recognitionSemanticView(
-      evaluateContinuantRecognition(model(), request(exp, [identityClaimCue(exp, 'person.glen', 4200n)], [mappingA]), 0n)
+      evaluateContinuantRecognition(model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.glen'), 4200n)], [mappingA]), 0n)
         .resolutionRecord,
-    )).toBe('asserted:person.glen');
+    )).toBe(('asserted:'+authoredReferentKey('person.glen')));
     expect(recognitionCode(() => evaluateContinuantRecognition(
-      model(), request(exp, [identityClaimCue(exp, 'person.glen', 4201n)], [mappingA]), 0n,
+      model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.glen'), 4201n)], [mappingA]), 0n,
     ))).toBe('INVALID_SYMBOL_MAPPING');
 
     // After replacement only B is active: a later evaluation may cite B, never the retired A.
     expect(recognitionSemanticView(
-      evaluateContinuantRecognition(model(), request(exp, [identityClaimCue(exp, 'person.darius', 4201n)], [mappingB]), 0n)
+      evaluateContinuantRecognition(model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.darius'), 4201n)], [mappingB]), 0n)
         .resolutionRecord,
-    )).toBe('asserted:person.darius');
+    )).toBe(('asserted:'+authoredReferentKey('person.darius')));
     expect(recognitionCode(() => evaluateContinuantRecognition(
-      model(), request(exp, [identityClaimCue(exp, 'person.darius', 4200n)], [mappingB]), 0n,
+      model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.darius'), 4200n)], [mappingB]), 0n,
     ))).toBe('INVALID_SYMBOL_MAPPING');
 
     // A's occurrence identity, and any historical cue citing it, are untouched by the replacement.
     expect(mappingA.observerSymbolCandidateMappingId).toBe(4200n);
-    expect(mappingA.candidateSemanticReferentId).toBe('person.glen');
+    expect(mappingA.candidateSemanticReferentId).toBe(authoredReferentKey('person.glen'));
     const afterReplacement = encodeSemanticValue(semanticUnionValue('RecognitionCueSource', 2, {
       PerceivedIdentitySymbolId: semanticOccurrenceId('ExperienceId', 1n),
       ObserverSymbolCandidateMappingId: semanticOccurrenceId(
@@ -198,13 +199,13 @@ describe('SEM-001I.3 recognition-knowledge state identity', () => {
     const exp = experience();
 
     // Two mappings differing only in version are different occurrences, not one recomputed string.
-    const first = mapping(4200n, 'person.glen');
+    const first = mapping(4200n, authoredReferentKey('person.glen'));
     const second: ObserverIdentitySymbolMapping = { ...first, observerSymbolCandidateMappingId: 4300n };
     expect(first.observerSymbolCandidateMappingId).not.toBe(second.observerSymbolCandidateMappingId);
 
     // A claim must cite the exact allocated occurrence; a near-miss ordinal is inadmissible.
     expect(recognitionCode(() => evaluateContinuantRecognition(
-      model(), request(exp, [identityClaimCue(exp, 'person.glen', 4199n)], [first]), 0n,
+      model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.glen'), 4199n)], [first]), 0n,
     ))).toBe('INVALID_SYMBOL_MAPPING');
 
     expect(() => assertCanonicalRoundTrip(semanticUnionValue('RecognitionCueSource', 2, {
@@ -215,20 +216,20 @@ describe('SEM-001I.3 recognition-knowledge state identity', () => {
 
   it('CV-SEM-100 permits at most one active catalog entry per (ObserverId, CandidateSemanticReferentId)', () => {
     const exp = experience();
-    const glenFace = catalogEntry('person.glen', ['template/glen-face']);
-    const glenGait = catalogEntry('person.glen', ['template/glen-gait']);
+    const glenFace = catalogEntry(authoredReferentKey('person.glen'), ['template/glen-face']);
+    const glenGait = catalogEntry(authoredReferentKey('person.glen'), ['template/glen-gait']);
 
     // Each entry is individually canonical.
     for (const entry of [glenFace, glenGait]) {
       expect(() => evaluateContinuantRecognition(
-        model(), request(exp, [], [], [catalogEntry('person.darius', ['template/darius-face']), entry]), 0n,
+        model(), request(exp, [], [], [catalogEntry(authoredReferentKey('person.darius'), ['template/darius-face']), entry]), 0n,
       )).not.toThrow();
     }
 
     // Together they are ambiguous knowledge state, not a merged template set.
     const ambiguous = recognitionFailure(() => evaluateContinuantRecognition(
       model(),
-      request(exp, [], [], [catalogEntry('person.darius', ['template/darius-face']), glenFace, glenGait]),
+      request(exp, [], [], [catalogEntry(authoredReferentKey('person.darius'), ['template/darius-face']), glenFace, glenGait]),
       0n,
     ));
     expect(ambiguous.code).toBe('INVALID_CATALOG');
@@ -238,7 +239,7 @@ describe('SEM-001I.3 recognition-knowledge state identity', () => {
   it('SEM-001I.1 keeps persistent resolution state self-sufficient', () => {
     const exp = experience();
     const result = evaluateContinuantRecognition(
-      model(), request(exp, [identityClaimCue(exp, 'person.glen', 4200n)], [mapping(4200n, 'person.glen')]), 0n,
+      model(), request(exp, [identityClaimCue(exp, authoredReferentKey('person.glen'), 4200n)], [mapping(4200n, authoredReferentKey('person.glen'))]), 0n,
     );
 
     // The evaluation exists once, in trace. The persisted resolution carries no pointer back to it.

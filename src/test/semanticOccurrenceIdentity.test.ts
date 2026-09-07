@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { EventRoleId, projectEventRoleEvidence, type EventBinding } from '../semanticBinding/eventBindings';
 import {
@@ -165,7 +166,7 @@ describe('SEM-001J occurrence identity boundary', () => {
     const binding: EventBinding = {
       eventBindingId: 200n,
       eventRoleId: EventRoleId.Companion,
-      semanticReferent: { semanticReferentId: 'person.glen', domainTags: ['person'] },
+      semanticReferent: { semanticReferentId: authoredReferentKey('person.glen'), domainTags: ['person'] },
     };
 
     const projected = projectEventRoleEvidence(binding, referent, { kind: 'preserve' });

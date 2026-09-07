@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, canonicalEncode, list, text, typedIdentifier, type CanonicalValue } from '../substrate/canonicalEncoding';
 import { DeterministicScheduler, type EventHandler, type StateAdapter } from '../substrate/scheduler';
@@ -25,13 +26,13 @@ const referent = (semanticReferentId: string, ...domainTags: string[]): Semantic
   domainTags: [...domainTags].sort(compareText),
 });
 
-const action = referent('action.skip-rope', 'action');
-const mina = referent('person.mina', 'entity');
-const glen = referent('person.glen', 'entity');
-const darius = referent('person.darius', 'entity');
-const library = referent('location.library', 'location');
-const pipe = referent('object.lead-pipe', 'entity', 'striking-capable', 'usable-entity');
-const cup = referent('object.cup', 'drink-container', 'entity', 'usable-entity');
+const action = referent(authoredReferentKey('action.skip-rope'), 'action');
+const mina = referent(authoredReferentKey('person.mina'), 'entity');
+const glen = referent(authoredReferentKey('person.glen'), 'entity');
+const darius = referent(authoredReferentKey('person.darius'), 'entity');
+const library = referent(authoredReferentKey('location.library'), 'location');
+const pipe = referent(authoredReferentKey('object.lead-pipe'), 'entity', 'striking-capable', 'usable-entity');
+const cup = referent(authoredReferentKey('object.cup'), 'drink-container', 'entity', 'usable-entity');
 
 const rule = (
   eventRoleId: EventRoleIdType,
@@ -99,7 +100,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
     const compiled = compileEventBindings(fixtureSchema, fixture([glen, darius]), 70n);
     const companions = compiled.bindings.filter((binding) => binding.eventRoleId === EventRoleId.Companion);
     expect(companions.map((binding) => binding.semanticReferent.semanticReferentId).sort(compareText))
-      .toEqual(['person.darius', 'person.glen']);
+      .toEqual([authoredReferentKey('person.darius'), authoredReferentKey('person.glen')].sort(compareText));
     expect(new Set(companions.map((binding) => binding.eventBindingId)).size).toBe(2);
   });
 
@@ -115,7 +116,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
     expect(() => compileEventBindings(drink, [request(EventRoleId.Instrument, pipe)], 0n, narrowingValidators))
       .toThrowError(expect.objectContaining({ code: 'REFERENT_DOMAIN_VIOLATION' }));
 
-    const notGloballyUsable = referent('object.decorative-hammer', 'entity', 'striking-capable');
+    const notGloballyUsable = referent(authoredReferentKey('object.decorative-hammer'), 'entity', 'striking-capable');
     expect(() => compileEventBindings(strike, [request(EventRoleId.Instrument, notGloballyUsable)], 0n, narrowingValidators))
       .toThrowError(expect.objectContaining({ code: 'REFERENT_DOMAIN_VIOLATION' }));
   });
@@ -127,7 +128,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
       () => compileEventBindings(fixtureSchema, [...fixture(), request(EventRoleId.Instrument, cup)], start),
       () => compileEventBindings(fixtureSchema, [...fixture(), request(EventRoleId.Beneficiary, glen)], start),
       () => compileEventBindings(fixtureSchema, fixture().map((candidate) => candidate.eventRoleId === EventRoleId.Instrument
-        ? request(EventRoleId.Instrument, referent('weather.rain', 'weather')) : candidate), start),
+        ? request(EventRoleId.Instrument, referent(authoredReferentKey('weather.rain'), 'weather')) : candidate), start),
       () => compileEventBindings({ ...fixtureSchema, roleCardinalityRules: [...fixtureSchema.roleCardinalityRules].reverse() }, fixture(), start),
       () => compileEventBindings(fixtureSchema, [
         ...fixture(),
@@ -211,7 +212,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
     for (const projection of [preserved, coarsened, unresolved]) {
       expect(projection).not.toHaveProperty('eventBindingId');
       expect(projection).not.toHaveProperty('semanticReferent');
-      expect(stringifyWithBigInts(projection)).not.toContain('person.glen');
+      expect(stringifyWithBigInts(projection)).not.toContain(authoredReferentKey('person.glen'));
     }
   });
 
@@ -224,7 +225,7 @@ describe('SEM-001B event-binding occurrence and role conformance', () => {
       qualified,
     ], 0n)).toThrowError(expect.objectContaining({ code: 'FORBIDDEN_BINDING_FIELD' }));
 
-    const fixedAction = schema('event-type/skip-rope-fixed', [rule(EventRoleId.Actor, 1, finiteMax(1))], 'action.skip-rope');
+    const fixedAction = schema('event-type/skip-rope-fixed', [rule(EventRoleId.Actor, 1, finiteMax(1))], authoredReferentKey('action.skip-rope'));
     expect(compileEventBindings(fixedAction, [request(EventRoleId.Actor, mina)], 0n).bindings).toHaveLength(1);
     expect(() => compileEventBindings(fixedAction, [
       request(EventRoleId.Actor, mina),

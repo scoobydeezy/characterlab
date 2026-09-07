@@ -108,6 +108,22 @@ export interface SchedulerConfiguration<State> {
   readonly initialCommittedTrace?: readonly CanonicalValue[];
   readonly initialOutputs?: readonly CanonicalValue[];
   readonly invariants?: readonly ((state: State) => void)[];
+  /** Trusted internal adapter for adaptation-settlement/0.2-candidate, never public factory data. */
+  readonly adaptationSettlement?: AdaptationSettlementAdapter<State>;
+}
+
+export interface AdaptationSettlementAdapter<State> {
+  readonly version:'adaptation-settlement/0.2-candidate';
+  beforeInstant(state:State,instant:SimInstant):void;
+  prepare(events:readonly ScheduledEvent[],state:State,instant:SimInstant):{
+    execute:EventHandler<State>;
+    finish():State;
+    /** Finalize transaction-local trace only after the batch's actual patch application. */
+    finalizeTrace?():readonly CanonicalValue[];
+  };
+  beforeCommit(state:State,instant:SimInstant):void;
+  close():void;
+  validateRuntimeEmission(event:EventEmission):void;
 }
 
 export interface FailureDiagnostic {
@@ -128,6 +144,16 @@ export type SchedulerFailureCode =
   | 'CASCADE_LIMIT_EXCEEDED'
   | 'UNKNOWN_EVENT_TYPE'
   | 'TRANSITION_FAILURE'
+  | 'INPUT_NOT_ADMITTED'
+  | 'INPUT_ONLY_EVENT_ORIGIN_VIOLATION'
+  | 'ADAPTATION_TARGET_COLLISION'
+  | 'ADAPTATION_STAGE_VIOLATION'
+  | 'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE'
+  | 'ADAPTATION_REFERENCE_OUT_OF_RANGE'
+  | 'ADAPTATION_MAGNITUDE_OUT_OF_RANGE'
+  | 'TRANSITION_WRITE_FORBIDDEN'
+  | 'TRANSITION_OUTPUT_VIOLATION'
+  | 'TRANSITION_INGRESS_VIOLATION'
   | 'STATE_VALIDATION_FAILURE'
   | 'EVENT_VALIDATION_FAILURE'
   | 'TRACE_VALIDATION_FAILURE'
@@ -175,6 +201,17 @@ interface MutableAllocatorState {
 
 const DEFAULT_ALLOCATORS: AllocatorState = { nextRuntimeId: 0n, nextEventId: 0n, nextEventSequence: 0n };
 
+/** Same continuation checks as construction, usable before any scheduler exists. */
+export function validateSchedulerContinuation(clock:SimInstant,allocators:AllocatorState,queue:readonly ScheduledEvent[]):void {
+  simInstant(clock);validateAllocatorState(allocators);
+  for(const event of queue)validateRestoredEvent(event,clock);
+  validateUniqueQueue(queue);
+  for(const event of queue){
+    if(event.eventId>=allocators.nextEventId)fail('INVALID_CONFIGURATION','event allocator would mint an existing or earlier event ID');
+    if(event.eventSequence>=allocators.nextEventSequence)fail('INVALID_CONFIGURATION','sequence allocator would mint an existing or earlier sequence');
+  }
+}
+
 export class DeterministicScheduler<State> {
   #state: State;
   #clock: SimInstant;
@@ -189,6 +226,7 @@ export class DeterministicScheduler<State> {
   readonly #handlers: ReadonlyMap<string, EventHandler<State>>;
   readonly #maxWork: bigint;
   readonly #invariants: readonly ((state: State) => void)[];
+  readonly #adaptation?:AdaptationSettlementAdapter<State>;
 
   constructor(configuration: SchedulerConfiguration<State>) {
     if (typeof configuration.maxSettlementWorkPerSimulationInstant !== 'bigint'
@@ -199,16 +237,15 @@ export class DeterministicScheduler<State> {
     this.#handlers = new Map(configuration.handlers);
     this.#maxWork = configuration.maxSettlementWorkPerSimulationInstant;
     this.#invariants = configuration.invariants ?? [];
+    this.#adaptation=configuration.adaptationSettlement;
+    if(this.#adaptation&&this.#adaptation.version!=='adaptation-settlement/0.2-candidate')fail('INVALID_CONFIGURATION','unknown adaptation settlement version');
     this.#adapter.validate(configuration.initialState);
     this.#state = this.#adapter.clone(configuration.initialState);
     this.#clock = configuration.initialClock ?? simInstant(0n);
     this.#allocators = mutableAllocators(configuration.initialAllocators ?? DEFAULT_ALLOCATORS);
     this.#queue = [...(configuration.initialQueue ?? [])];
-    validateAllocatorState(this.#allocators);
-    for (const event of this.#queue) validateRestoredEvent(event, this.#clock);
-    validateUniqueQueue(this.#queue);
+    validateSchedulerContinuation(this.#clock,this.#allocators,this.#queue);
     this.#queue.sort(compareEvents);
-    this.#validateAllocatorContinuation();
     this.#committedTrace = (configuration.initialCommittedTrace ?? []).map(cloneCanonicalValue);
     this.#outputs = (configuration.initialOutputs ?? []).map(cloneCanonicalValue);
   }
@@ -256,6 +293,7 @@ export class DeterministicScheduler<State> {
 
   schedule(event: EventEmission): ScheduledEvent {
     this.#requireActiveQuiescentMutation();
+    this.#adaptation?.validateRuntimeEmission(event);
     validateEmission(event, this.#clock);
     const scheduled = allocateEvent(event, [], this.#allocators);
     this.#queue.push(scheduled);
@@ -291,16 +329,24 @@ export class DeterministicScheduler<State> {
     let candidateTransitionData: CanonicalValue | undefined;
     this.#isSettling = true;
     try {
+      this.#adaptation?.beforeInstant(this.#adapter.clone(working.state),dueAt);
+      let batch:ReturnType<AdaptationSettlementAdapter<State>['prepare']>|undefined;
+      let batchRemaining=0;
       let work = 0n;
       while (working.queue.length > 0 && working.queue[0].dueAt === dueAt) {
         if (work >= this.#maxWork) {
           currentEvent = working.queue[0];
           fail('CASCADE_LIMIT_EXCEEDED', 'same-instant settlement exceeded its configured work ceiling');
         }
+        if(this.#adaptation&&working.queue[0].phase===140n&&!batch){
+          currentEvent=working.queue[0];
+          const events=working.queue.filter(e=>e.dueAt===dueAt&&e.phase===140n);
+          batch=this.#adaptation.prepare(events.map(cloneEvent),this.#adapter.clone(working.state),dueAt);batchRemaining=events.length;
+        }
         currentEvent = working.queue.shift()!;
         candidateTransitionData = undefined;
         work += 1n;
-        const handler = this.#handlers.get(canonicalIdKey(currentEvent.eventTypeId));
+        const handler = batch&&currentEvent.phase===140n?batch.execute:this.#handlers.get(canonicalIdKey(currentEvent.eventTypeId));
         if (!handler) fail('UNKNOWN_EVENT_TYPE', 'scheduled event type has no registered handler');
 
         let result: TransitionResult<State>;
@@ -333,7 +379,11 @@ export class DeterministicScheduler<State> {
         boundary(instrumentation, 'after-state-validation', currentEvent);
 
         boundary(instrumentation, 'before-event-validation', currentEvent);
-        for (const emission of result.emittedEvents) validateEmissionFromEvent(emission, currentEvent, working.allocators.nextEventId);
+        if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');
+        for (const emission of result.emittedEvents) {
+          this.#adaptation?.validateRuntimeEmission(emission);
+          validateEmissionFromEvent(emission, currentEvent, working.allocators.nextEventId);
+        }
         boundary(instrumentation, 'after-event-validation', currentEvent);
 
         const allocatedEmittedEvents = result.emittedEvents.map((emission) => {
@@ -350,6 +400,9 @@ export class DeterministicScheduler<State> {
           for (const contribution of traceContributions) canonicalEncode(contribution);
           for (const output of result.outputs) canonicalEncode(output);
         } catch (error) {
+          // Shared ingress binds the scheduler-allocated children at this boundary.
+          // Its accepted topology failure is not a trace serialization failure.
+          if (error instanceof SchedulerContractError && error.code === 'TRANSITION_INGRESS_VIOLATION') throw error;
           fail('TRACE_VALIDATION_FAILURE', errorMessage(error));
         }
         boundary(instrumentation, 'after-trace-validation', currentEvent);
@@ -360,12 +413,24 @@ export class DeterministicScheduler<State> {
         working.trace.push(...traceContributions.map(cloneCanonicalValue));
         working.outputs.push(...result.outputs.map(cloneCanonicalValue));
         working.executed.push(currentEvent);
+        if(batch&&currentEvent.phase===140n&&--batchRemaining===0){
+          working.state=this.#adapter.clone(batch.finish());
+          if(batch.finalizeTrace){
+            try{
+              const records=batch.finalizeTrace();
+              for(const record of records)canonicalEncode(record);
+              working.trace.push(...records.map(cloneCanonicalValue));
+            }catch(error){fail('TRACE_VALIDATION_FAILURE',errorMessage(error));}
+          }
+          if(working.queue.some(e=>e.dueAt===dueAt))fail('ADAPTATION_STAGE_VIOLATION','residual work after exclusive adaptation barrier');
+        }
       }
 
       boundary(instrumentation, 'before-invariant-validation');
       try { for (const invariant of this.#invariants) invariant(working.state); } catch (error) { fail('INVARIANT_FAILURE', errorMessage(error)); }
       boundary(instrumentation, 'after-invariant-validation');
       boundary(instrumentation, 'before-commit');
+      this.#adaptation?.beforeCommit(this.#adapter.clone(working.state),dueAt);
 
       this.#state = this.#adapter.clone(working.state);
       this.#queue = working.queue.map(cloneEvent);
@@ -398,6 +463,7 @@ export class DeterministicScheduler<State> {
       };
       throw contractError;
     } finally {
+      this.#adaptation?.close();
       this.#isSettling = false;
     }
   }
@@ -413,13 +479,6 @@ export class DeterministicScheduler<State> {
       outputs: this.#outputs.map(cloneCanonicalValue),
       status: this.#status,
     };
-  }
-
-  #validateAllocatorContinuation(): void {
-    for (const event of this.#queue) {
-      if (event.eventId >= this.#allocators.nextEventId) fail('INVALID_CONFIGURATION', 'event allocator would mint an existing or earlier event ID');
-      if (event.eventSequence >= this.#allocators.nextEventSequence) fail('INVALID_CONFIGURATION', 'sequence allocator would mint an existing or earlier sequence');
-    }
   }
 
   #requireQuiescentRead(): void {

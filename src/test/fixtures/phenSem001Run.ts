@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './referentOrigin';
 /**
  * The integrated `PHEN-SEM-001` run: the complete three-observer fixture driven through the
  * deterministic scheduler, its immediate consumers, and the canonical codecs.
@@ -137,9 +138,9 @@ export const handlerKey = (value: CanonicalValue) => bytesToHex(canonicalEncode(
 
 /** Each observer's own catalog. Seeded knowledge; never derived from the truth side. */
 export const CATALOGS: Readonly<Record<ObserverId, readonly CatalogCandidate[]>> = Object.freeze({
-  [MINA]: [{ candidateSemanticReferentId: 'person.glen', recognitionTemplateId: 'template/glen' }],
-  [DARIUS]: [{ candidateSemanticReferentId: 'person.mina', recognitionTemplateId: 'template/mina' }],
-  [GLEN]: [{ candidateSemanticReferentId: 'person.mina', recognitionTemplateId: 'template/mina' }],
+  [MINA]: [{ candidateSemanticReferentId: authoredReferentKey('person.glen'), recognitionTemplateId: 'template/glen' }],
+  [DARIUS]: [{ candidateSemanticReferentId: authoredReferentKey('person.mina'), recognitionTemplateId: 'template/mina' }],
+  [GLEN]: [{ candidateSemanticReferentId: authoredReferentKey('person.mina'), recognitionTemplateId: 'template/mina' }],
 });
 
 /** The track each observer recognises and derives a causal role for. */

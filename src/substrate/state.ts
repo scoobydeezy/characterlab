@@ -131,6 +131,8 @@ export class StateContractError extends Error {
 
 export type StateFailureCode =
   | 'INVALID_PATH'
+  | 'CANONICAL_ROLE_VIOLATION'
+  | 'REQUIRED_PROJECTION_VALUE_ABSENT'
   | 'OWNERSHIP_OVERLAP'
   | 'UNCOVERED_WRITABLE_PATH'
   | 'UNKNOWN_AUTHORITY'
@@ -499,7 +501,7 @@ function validatePattern(pattern: StatePathPattern): void {
   }
 }
 
-function patternCovers(container: StatePathPattern, contained: StatePathPattern): boolean {
+export function patternCovers(container: StatePathPattern, contained: StatePathPattern): boolean {
   if (container.rootStateTypeId !== contained.rootStateTypeId || container.fieldId !== contained.fieldId) return false;
   if (container.selectors.length > contained.selectors.length) return false;
   return container.selectors.every((candidate, index) => {
@@ -513,7 +515,7 @@ function patternCovers(container: StatePathPattern, contained: StatePathPattern)
   });
 }
 
-function patternsIntersect(left: StatePathPattern, right: StatePathPattern): boolean {
+export function patternsIntersect(left: StatePathPattern, right: StatePathPattern): boolean {
   if (left.rootStateTypeId !== right.rootStateTypeId || left.fieldId !== right.fieldId) return false;
   const shared = Math.min(left.selectors.length, right.selectors.length);
   for (let index = 0; index < shared; index += 1) {

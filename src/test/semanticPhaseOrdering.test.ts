@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import {
   OBSERVATION_LANES,
@@ -62,7 +63,7 @@ function binding(id: bigint): PerceivedBindingEvidence {
     perceptualEventReferentId: eventFile,
     perceptualReferentId: track,
     eventRoleEvidence: { kind: 'exact', eventRoleId: EventRoleId.Actor },
-    supportingObservationIds: [{ observerId, observationId: `observation/${id}` }],
+    supportingObservationIds: [{ observerId, observationId: id }],
     occurredAt: 100n,
     transformationVersion: version,
   };
@@ -77,7 +78,7 @@ function experience(reservation: ExperienceReservation, bindingId = 1n): PreReco
     perceivedBindings: [binding(bindingId)],
     perceptualClassifications: [],
     perceptualEventClassifications: [],
-    supportingObservationIds: [{ observerId, observationId: `observation/${bindingId}` }],
+    supportingObservationIds: [{ observerId, observationId: bindingId }],
     transformationVersion: version,
   };
 }
@@ -88,18 +89,18 @@ function stage(reservation: ExperienceReservation, bindingId = 1n): StagedSemant
 }
 
 const catalog: readonly RecognitionCandidateCatalogEntry[] = [
-  { observerId, candidateSemanticReferentId: 'person.darius', candidateDomain: 'Person', recognitionTemplateIds: ['template/darius'], catalogEntryVersion: version },
-  { observerId, candidateSemanticReferentId: 'person.glen', candidateDomain: 'Person', recognitionTemplateIds: ['template/glen'], catalogEntryVersion: version },
-];
+  { observerId, candidateSemanticReferentId: authoredReferentKey('person.darius'), candidateDomain: 'Person' as const, recognitionTemplateIds: ['template/darius'], catalogEntryVersion: version },
+  { observerId, candidateSemanticReferentId: authoredReferentKey('person.glen'), candidateDomain: 'Person' as const, recognitionTemplateIds: ['template/glen'], catalogEntryVersion: version },
+].sort((a,b)=>a.candidateSemanticReferentId.localeCompare(b.candidateSemanticReferentId));
 
-function cue(exp: PreRecognitionSemanticExperience, candidate: 'person.glen' | 'person.darius'): PermittedRecognitionCueEvidence {
+function cue(exp: PreRecognitionSemanticExperience, candidate: string): PermittedRecognitionCueEvidence {
   return {
-    recognitionCueEvidenceId: `cue/${candidate}/${exp.experienceId}`,
+    recognitionCueEvidenceId: exp.experienceId * 2n + (candidate === authoredReferentKey('person.glen') ? 1n : 0n),
     experienceId: exp.experienceId,
     observerId,
     perceptualReferentId: track,
     candidateSemanticReferentId: candidate,
-    recognitionCueSource: { kind: 'retained-template-match', recognitionTemplateId: candidate === 'person.glen' ? 'template/glen' : 'template/darius' },
+    recognitionCueSource: { kind: 'retained-template-match', recognitionTemplateId: candidate === authoredReferentKey('person.glen') ? 'template/glen' : 'template/darius' },
     cuePolarity: 'SupportsCandidate',
     supportingExperienceEvidenceRefs: [{ kind: 'perceived-binding', perceivedBindingId: exp.perceivedBindings[0].perceivedBindingId }],
     occurredAt: exp.occurredAt,
@@ -109,7 +110,7 @@ function cue(exp: PreRecognitionSemanticExperience, candidate: 'person.glen' | '
 
 function recognitionRequest(
   exp: PreRecognitionSemanticExperience,
-  candidate: 'person.glen' | 'person.darius',
+  candidate: string,
   history: readonly RecognitionResolutionRecord[] = [],
 ): RecognitionRequest {
   return {
@@ -217,21 +218,21 @@ describe('SEM-001H two-lane semantic phase conformance', () => {
 
   it('CV-SEM-087 freezes recognition inputs and permits consequence correction without rewriting phase-21 history', () => {
     const currentStage = stage(reserve('Current', 60n), 1n);
-    const mutableCurrentRequest = recognitionRequest(currentStage.experience, 'person.glen');
+    const mutableCurrentRequest = recognitionRequest(currentStage.experience, authoredReferentKey('person.glen'));
     const frozenCurrent = freezeRecognitionInput('Current', currentStage, mutableCurrentRequest, 20n);
     (mutableCurrentRequest.cueEvidence as PermittedRecognitionCueEvidence[]).splice(0, 1);
     expect(frozenCurrent.request.cueEvidence).toHaveLength(1);
     const first = evaluateContinuantRecognition(recognitionModel(), frozenCurrent.request, 100n);
-    expect(first.resolutionRecord?.resolution).toEqual({ kind: 'asserted-candidate', candidateSemanticReferentId: 'person.glen' });
+    expect(first.resolutionRecord?.resolution).toEqual({ kind: 'asserted-candidate', candidateSemanticReferentId: authoredReferentKey('person.glen') });
 
     const consequenceStage = stage(reserve('Consequence', 61n), 2n);
     const frozenConsequence = freezeRecognitionInput(
       'Consequence', consequenceStage,
-      recognitionRequest(consequenceStage.experience, 'person.darius', [first.resolutionRecord!]), 126n,
+      recognitionRequest(consequenceStage.experience, authoredReferentKey('person.darius'), [first.resolutionRecord!]), 126n,
     );
     const firstSnapshot = structuredClone(first.resolutionRecord!);
     const correction = evaluateContinuantRecognition(recognitionModel(), frozenConsequence.request, 102n);
-    expect(correction.resolutionRecord?.resolution).toEqual({ kind: 'asserted-candidate', candidateSemanticReferentId: 'person.darius' });
+    expect(correction.resolutionRecord?.resolution).toEqual({ kind: 'asserted-candidate', candidateSemanticReferentId: authoredReferentKey('person.darius') });
     expect(correction.resolutionRecord?.revisesRecognitionResolutionId).toBe(first.resolutionRecord?.recognitionResolutionId);
     expect(first.resolutionRecord).toEqual(firstSnapshot);
   });

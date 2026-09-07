@@ -1,0 +1,106 @@
+{
+  "status": "CONCRETE BYTES ACCEPTED AND FROZEN",
+  "versions": {
+    "rulesVersion": "rules/campaign2-bounded-bridge/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "registrySchemaVersion": "campaign2-registry/0.1-candidate",
+    "parameterSchemaVersion": "campaign2-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/exact-1",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "profiles": {
+    "orderedInput": "campaign2-ordered-input/0.1-candidate",
+    "persistence": "campaign2-persistence/0.1-candidate"
+  },
+  "semanticBundle": [
+    "substrate/0.2-candidate",
+    "cenc/1",
+    "content/0.2-candidate",
+    "content-kind/0.1-candidate",
+    "governed-domain-validator/0.1-candidate",
+    "governed-execution/0.1-candidate",
+    "ordering/0.2-candidate",
+    "ordering-phases/2-candidate",
+    "mutation-authority/0.1-candidate#TRC-001-002-addendum",
+    "state/0.3-candidate-addendum",
+    "projection/0.3-candidate-addendum",
+    "identity-binding/0.5-candidate",
+    "observation/0.1-candidate",
+    "authored-fact-observation/0.1-candidate",
+    "observation-unit-identity/0.1-candidate",
+    "referent-origin/0.1-candidate",
+    "content-definition-id/0.1-candidate",
+    "semantic-binding/0.1-candidate#SEM-001H",
+    "character-learning-evidence/0.5-candidate",
+    "transition-admission/0.4-candidate",
+    "transition-admission-extension/0.6-candidate",
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate"
+  ],
+  "parameterValue": "100",
+  "files": [
+    {
+      "name": "content",
+      "path": "content.cenc.hex",
+      "bytes": 124,
+      "sha256": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+    },
+    {
+      "name": "parameters",
+      "path": "parameters.cenc.hex",
+      "bytes": 11,
+      "sha256": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4"
+    },
+    {
+      "name": "registry",
+      "path": "registry.cenc.hex",
+      "bytes": 45760,
+      "sha256": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764"
+    },
+    {
+      "name": "content-identity",
+      "path": "content-identity.cenc.hex",
+      "bytes": 65,
+      "sha256": "67e8beed1d99ed0f964190d361da166d755e5956d39085898037a4cbc79acef5"
+    },
+    {
+      "name": "parameter-identity",
+      "path": "parameter-identity.cenc.hex",
+      "bytes": 78,
+      "sha256": "4e2ec3bccb8f623be26257b857c5c10c737cdfc9d4f1ca0edee8e971f0571fb4"
+    },
+    {
+      "name": "registry-identity",
+      "path": "registry-identity.cenc.hex",
+      "bytes": 76,
+      "sha256": "855b10ed007315fd7887bfecf5022ab253e5f33e6d5f27fe24197e3be144d660"
+    },
+    {
+      "name": "model-identity",
+      "path": "model-identity.cenc.hex",
+      "bytes": 337,
+      "sha256": "40bcb3c3feec3e3eaaa35161b8164cfdb56eb11f0bd452393f9ec08af489ffd0"
+    }
+  ],
+  "modelDigest": "40bcb3c3feec3e3eaaa35161b8164cfdb56eb11f0bd452393f9ec08af489ffd0",
+  "counts": {
+    "schemaDescriptors": 175,
+    "semanticEntries": 82,
+    "readOnlyFamilies": 0,
+    "keyGrammars": 5,
+    "roleConstraints": 58,
+    "rules": 5,
+    "transitions": 4
+  },
+  "versionAuthorities": {
+    "numeric": "docs/formal/BOUNDED_NUMERIC_PROFILE.md",
+    "random": "docs/formal/DETERMINISTIC_SUBSTRATE.md:173"
+  },
+  "limitations": [
+    "Seven concrete byte artifacts and specimen values are frozen; identities remain derived.",
+    "FCT-5 is unblocked to begin; no activation or new numeric allocation.",
+    "No run, initial state, input manifest, seed or execution result is frozen by this model packet.",
+    "Component compilation is not FCT-4/6, VAL or PHEN-ADAPT qualification."
+  ]
+}

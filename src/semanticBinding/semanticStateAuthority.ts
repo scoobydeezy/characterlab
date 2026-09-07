@@ -1,3 +1,4 @@
+import {semanticReferentValue} from '../substrate/referentOrigin';
 import {
   list, text, typedIdentifier, unsigned,
   type CanonicalValue, type TypedIdentifierValue,
@@ -161,7 +162,7 @@ export function candidateCatalogEntryPath(
 ): StatePath {
   return mapPath(SemanticStateFamily.CandidateCatalogEntries, list([
     observerIdValue(observerId),
-    typedIdentifier(SEMANTIC_TYPED_ID_NAMESPACES.SemanticReferentId, text(candidateSemanticReferentId)),
+    semanticReferentValue(candidateSemanticReferentId),
   ]));
 }
 

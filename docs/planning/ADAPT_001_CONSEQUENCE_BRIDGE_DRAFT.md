@@ -77,10 +77,14 @@ generates AAI consumer ingress; both runs use that same closed ordering.
 At phase 120 require genuine staged R→bridge generation, exact source input equality and
 assertTruthAvailableAtLaneEntry(Consequence,110). A seeded/lookalike observation event or unrelated
 same-T source cannot substitute. Call compilePermittedEvidence with the exact truth/channel, a new
-existing namespace-1115 ObservationId and T. The fixed inputs must produce PresentObservation with
-MeasurementInterval=[1,1], EvidenceKindId.Point, no perceived concept tokens and no safe source
-references. Record that complete actual permitted observation using accepted observation encoding.
-Reject an unexpected result rather than replacing it with a hand-authored observation.
+existing namespace-1115 ObservationId and T. The fixed inputs must produce the exact private raw PresentObservation candidate with
+MeasurementInterval=[1,1], EvidenceKindId.Point, precision 1, no perceived concept tokens and the
+single exact FixtureConsequenceTruthId reference, with exact observer/channel/subject/time and
+observation/0.1-candidate version. Apply authored-fact-observation/0.1-candidate: copy fields 1..9
+exactly, set SafeSourceReferences to list([]), and set TransformationVersion to that scoped version.
+Only this projected value is staged/published/cited as the sole authoritative observation for the
+one allocated ObservationId. The raw candidate remains private, non-staged and truth-side.
+Reject unexpected raw/projection results; never fabricate a substitute measurement.
 
 Then call admitObservationLane({observerId: channel.ObserverId, lane: Consequence, dueAt:T,
 emitsCharacterAccessibleEvidence:true}) using the accepted allocator for ExperienceId namespace
@@ -194,3 +198,5 @@ applicable inherited PRJ/WRT gates remain frozen; this verdict passes no impleme
 does not rescind previously recorded WRT substrate proof. PHEN-ADAPT-001 remains NOT PASSED.
 
 Earlier dated restrictions and open-status notes are history; this verdict governs the current gates.
+
+2026-09-06 C2-BRIDGE-OBS-001 amendment: the receiving recipe above now explicitly composes the unchanged observation compiler with the accepted bridge-owned projection. No equation, allocation, phase, source, route, or visible phenomenon changes. See CAMPAIGN2_BRIDGE_OBSERVATION_DECISION.md for sole-occurrence and no-remeasurement controls. Earlier direct-safe-output assumption is superseded by this amendment.

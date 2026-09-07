@@ -1,3 +1,4 @@
+import {semanticReferentValue} from '../substrate/referentOrigin';
 import type {
   PerceptualReferentId,
   PreRecognitionSemanticExperience,
@@ -10,6 +11,7 @@ export type RecognitionCandidateDomain = 'Person' | 'DiscreteObject' | 'PlaceOrR
 
 export interface RecognitionCandidateCatalogEntry {
   readonly observerId: string;
+  /** Canonical byte key of the proposed identity; its origin never establishes recognition truth. */
   readonly candidateSemanticReferentId: string;
   readonly candidateDomain: RecognitionCandidateDomain;
   readonly recognitionTemplateIds: readonly string[];
@@ -172,7 +174,7 @@ export function noRecognitionUpdate(reason: RecognitionNoUpdateReason): Recognit
 }
 
 export function assertUniqueRecognitionCandidate(candidateSemanticReferentId: string): RecognitionRuleResult {
-  requireNonempty(candidateSemanticReferentId, 'candidateSemanticReferentId');
+  semanticReferentValue(candidateSemanticReferentId);
   return Object.freeze({ kind: 'assert-unique-candidate', candidateSemanticReferentId });
 }
 
@@ -388,7 +390,7 @@ function validateCatalog(values: readonly RecognitionCandidateCatalogEntry[], ob
   for (const value of values) {
     exactKeys(value, ['observerId', 'candidateSemanticReferentId', 'candidateDomain', 'recognitionTemplateIds', 'catalogEntryVersion'], 'candidate catalog entry');
     if (value.observerId !== observerId) fail('CROSS_OBSERVER_REFERENCE', 'catalog entry belongs to another observer');
-    requireNonempty(value.candidateSemanticReferentId, 'candidateSemanticReferentId');
+    semanticReferentValue(value.candidateSemanticReferentId);
     requireNonempty(value.catalogEntryVersion, 'catalogEntryVersion');
     if (!['Person', 'DiscreteObject', 'PlaceOrRegion'].includes(value.candidateDomain)) fail('INVALID_CATALOG', 'unknown candidate domain');
     validateStrings(value.recognitionTemplateIds, 'recognition templates', true);
@@ -539,7 +541,7 @@ function validateResolution(value: RecognitionResolutionRecord): void {
   validateOrdinals(value.evaluatedRecognitionCueEvidenceIds, 'evaluated recognition cues');
   if (value.resolution.kind === 'asserted-candidate') {
     exactKeys(value.resolution, ['kind', 'candidateSemanticReferentId'], 'asserted recognition resolution');
-    requireNonempty(value.resolution.candidateSemanticReferentId, 'candidateSemanticReferentId');
+    semanticReferentValue(value.resolution.candidateSemanticReferentId);
   } else if (value.resolution.kind === 'withdrawn') {
     exactKeys(value.resolution, ['kind'], 'withdrawn recognition resolution');
   } else fail('INVALID_RESOLUTION_HISTORY', 'unknown recognition resolution');

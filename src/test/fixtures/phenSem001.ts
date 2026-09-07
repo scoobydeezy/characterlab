@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './referentOrigin';
 /**
  * `PHEN-SEM-001` — Observer-relative event bindings without recognition leakage.
  *
@@ -93,11 +94,11 @@ export type ObserverId = typeof OBSERVERS[number];
 // ---------------------------------------------------------------------------
 
 export const REFERENT = Object.freeze({
-  skipRope: { semanticReferentId: 'action.skip_rope', domainTags: ['action'] },
-  mina: { semanticReferentId: 'person.mina', domainTags: ['entity'] },
-  glen: { semanticReferentId: 'person.glen', domainTags: ['entity'] },
-  library: { semanticReferentId: 'location.library', domainTags: ['location'] },
-  leadPipe: { semanticReferentId: 'object.lead_pipe', domainTags: ['entity', 'usable-entity'] },
+  skipRope: { semanticReferentId: authoredReferentKey('action.skip_rope'), domainTags: ['action'] },
+  mina: { semanticReferentId: authoredReferentKey('person.mina'), domainTags: ['entity'] },
+  glen: { semanticReferentId: authoredReferentKey('person.glen'), domainTags: ['entity'] },
+  library: { semanticReferentId: authoredReferentKey('location.library'), domainTags: ['location'] },
+  leadPipe: { semanticReferentId: authoredReferentKey('object.lead_pipe'), domainTags: ['entity', 'usable-entity'] },
 }) satisfies Record<string, SemanticReferent>;
 
 export const SKIP_ROPE_SCHEMA: EventTypeBindingSchema = Object.freeze({

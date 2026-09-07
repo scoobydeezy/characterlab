@@ -289,3 +289,201 @@ RulesVersion ↔ accepted semantic bundle ↔ persistence profile binding remain
 FCT-6 and VAL-A..W, PERSIST-A..I, FCT-A..F plus inherited mutants remain NOT PASSED. Authoritative
 activation is NOT YET AUTHORIZED. Formal proof closure remains pending; shape acceptance does
 not close VAL or ADAPT. No new allocation, save-schema field or identity family is introduced.
+
+
+## FCT-1/2 incremental implementation; origin binding decision — 2026-09-06
+
+Implemented structural Campaign-2/VAL codecs and closed VAL declaration/CONTENT compilation.
+Full source suite: 40 files / 325 tests PASS; TypeScript and reference import boundary PASS.
+These are component results, not VAL/factory/phenomenon qualification. No authoritative activation.
+
+[C2-ORIGIN-001](CAMPAIGN2_ORIGIN_BINDING_DECISION.md) now records accepted alternative 2: exactly two nested origin
+families, structural authored resolution through the complete content StableId, and runtime
+ordinals allocated once by the existing shared run allocator. Test 20/21 promotion is rejected.
+IDN qualification is unchanged. The accepted SEM conformance correction preserves historical
+corpus evidence without asserting old/new canonical byte or identity equivalence.
+
+The symbolic contract is SHAPE ACCEPTED at referent-origin/0.1-candidate. The conditional
+numeric verdict plus the passed 43-check machine audit freezes origin-allocation/0.1-candidate:
+1037 AuthoredContentOriginId and 1122 RuntimeEntityOriginId. Existing permanent tables are
+unchanged. The origin semantic/allocation decision is closed; profile qualification remains separate.
+
+Origin construction, recursive SEM/Campaign-2 codec checks, and exact authored CharacterId
+qualification are implemented incrementally. SEM regression fixtures now explicitly construct
+nested authored identities; historical PHEN-SEM evidence is not relabeled or claimed byte-equivalent.
+Runtime interleaving and canonical save/load continuation have new regression evidence.
+FCT-3 has begun with recursive declared record-role validation and exact duplicate/position checks.
+Key-grammar coverage, state/projection integration, remaining model compilation, factory activation
+and integrated VAL/persistence gates remain pending. See CAMPAIGN2_ORIGIN_IMPLEMENTATION.md
+in docs/planning for the bounded proof map and remaining integration obligations.
+
+
+## First-model content StableId governance decision — 2026-09-06
+
+Origin allocation remains permanent and frozen. FCT-3 now also includes keyed-family coverage,
+read-only disjointness, state/path/restore/read/patch validation and IDN's exact immutable-family
+declaration checks. The source suite passed 42 files / 338 tests; one added IDN closure control
+then passed in the five-test state-model suite (current inventory 339).
+
+[C2-CONTENT-ID-001](CAMPAIGN2_CONTENT_STABLE_ID_DECISION.md) records the next first-model
+authoring choice: the permanent identity authority for GovernedContentDefinition.StableId.
+Only fixture homes 23000 and 20 were found for concrete content IDs; structural representability
+is already settled. A shared CONTENT-owned GovernedContentDefinitionId is proposed for the
+existing slot, without another copy, origin family or CharacterId namespace. No new numeric
+allocation or global StableId role restriction is made. Existing accepted seam semantics remain
+fixed; the decision concerns the first authoritative producer's identity home.
+
+
+## C2-CONTENT-ID-001 resolved — 2026-09-06
+
+Symbolic GovernedContentDefinitionId accepted under content-definition-id/0.1-candidate.
+Separate content-ID allocation audit passed all 37 checks; namespace 1038 is permanent and frozen.
+No previous allocation bytes changed, no fixture family was promoted, and no global role
+constraint was added to 170/1. First-profile construction requires this family; generic CONTENT
+remains polymorphic. Constructor, codec family grammar, profile compiler and six component tests
+are implemented. FCT-3 construction continues; authoritative activation remains gated.
+
+Continued FCT-3 component work: closed REG construction/reference validation and shared V04
+occurrence/output construction now have focused controls. Full source suite 45 files / 355
+tests and production build PASS. See CAMPAIGN2_CONTENT_ID_IMPLEMENTATION.md for exact proof
+limits and remaining runtime/activation gates. These are not integrated campaign verdicts.
+
+## Admitted-input implementation checkpoint — 2026-09-06
+
+Review retains frozen allocations and incremental acceptance, with no new symbolic decision.
+Internal V04 generated ingress, opaque admitted-input capability, required PRJ field projection,
+IDN roster-channel closure and execution-local EVID allocation checks now have component controls.
+The real scheduler control covers a bounded EVID chain and forged/duplicate ingress rollback.
+Generic REG/IDN family polymorphism is explicitly tested. Full source suite 45 files / 362 tests
+and build PASS; four allocation audits unchanged. See CAMPAIGN2_ADMITTED_INPUT_IMPLEMENTATION.md
+for FCT-G..L evidence and limits. Full SEM/factory lifecycle, remaining PRJ/IDN controls, V06/ADAPT
+construction, FCT-4+ and independent integrated qualification remain OPEN. No global gates inferred.
+
+## Composed PRJ and V06 construction checkpoint — 2026-09-06
+
+Admitted-input review accepted FCT-G..L as COMPONENT PASS only. Composed PRJ/IDN construction
+now exercises accessor uniqueness, disjoint storage, grammar coverage, both role-compatibility
+directions, recursive composite-key checks and alternate roster rejection in one admitted contract.
+ADAPT topology/domain/static-state validation and V06 rule/declaration refinements have component
+controls. Shared transition construction admits exact V04/V06 rows under the unchanged V04
+singleton; no second ADAPT runtime authentication mechanism is introduced. Runtime V06, D/E,
+exclusive phase-140 lifecycle and FCT-4+ remain pending.
+
+Bootstrap inspection found C2-INPUT-ENC-001: no accepted canonical layout was found for the five
+unscheduled input-entry operands. This is a first-profile byte/restore-language choice, not an
+architectural or scalar expressibility failure. A concrete five-item canonical-list proposal
+is ready in CAMPAIGN2_ORDERED_INPUT_ENCODING_DECISION.md; no entry codec/allocation was made.
+
+2026-09-06: C2-INPUT-ENC-001 ACCEPTED at campaign2-ordered-input/0.1-candidate. Exact five-position list, contextual profile selection, event-owned dependency grammar, preserved order/duplicates, compiler-owned IDs/parents; no allocation. Implementation authorized; factory qualification remains open.
+
+2026-09-06: C2-BRIDGE-OBS-001 records an actual D/OBS conflict: compilePermittedEvidence returns the pulse truth ID in SafeSourceReferences, whereas the accepted bridge requires exact empty references. A narrow explicit versioned projection is proposed, not implemented. Ordered-input acceptance and adaptation-only component work remain intact; both-affected bridge and integrated factory qualification remain blocked pending this decision.
+
+2026-09-06: C2-BRIDGE-OBS-001 ACCEPTED with sole-occurrence clarification. D receiving recipe amended to real measurement → private raw candidate → exact scoped projection → sole authoritative observation. No allocation; original OBS semantics preserved; implementation authorized.
+
+2026-09-06: amended D bridge component now composes real OBS measurement, sole projected type-203 occurrence, SEM consequence reservation/freeze and EVID. The paired hidden-count control preserves observation/X/E/L bytes while adaptation state differs; later failure rolls back both branches. C2-OBS-UNIT-001 identifies the remaining production UnitId home already noted by REG inspection. Symbolic ObservationUnitId proposal is ready; no numeric allocation or activation.
+
+2026-09-06: C2-OBS-UNIT-001 SYMBOLICALLY ACCEPTED at observation-unit-identity/0.1-candidate. Separate append-only allocation candidate proposes namespace 1039 and sole member unit/fixture-pulse, with zero records/registries/occurrences. Machine/Markdown/symbolic parity and prior frozen-byte preservation pass 77 checks. Numeric acceptance/freeze remains pending; no first-profile enforcement or OBS-UNIT implementation gate is inferred.
+
+
+2026-09-06 numeric verdict: observation-unit-allocation/0.1-candidate ACCEPTED AND FROZEN.
+ObservationUnitId/1039 and unit/fixture-pulse are permanent; no renumbering/reuse/shifting,
+open vocabulary, DomainValidator, unit mathematics or REG change. Audit: 77 checks PASS.
+First-profile namespace/member enforcement now has component evidence in
+[CAMPAIGN2_OBSERVATION_UNIT_IMPLEMENTATION.md](CAMPAIGN2_OBSERVATION_UNIT_IMPLEMENTATION.md).
+Earlier pending-allocation notes are historical. Allocation alone passed no runtime gate.
+
+
+2026-09-06 C2-MODEL-PACK-001: concrete first-profile commitment inspection found standalone
+ownership/phase/PRJ collections outside the existing 171/172 registry set compiler. Proposed
+six-position versioned registry composition and single OrderingParameters parameter layout are
+ready for review in CAMPAIGN2_MODEL_PACKAGING_DECISION.md. This blocks choosing authoritative
+combined manifest bytes/FCT-5 binding, not accepted A–F semantics or component work. No new IDs.
+
+
+2026-09-06 C2-MODEL-PACK-001 SHAPE ACCEPTED with cross-slot grammar and whole-model VAL
+clarifications. Six-slot registry, one-slot parameter and bounded RulesVersion bundle shape are
+accepted; no new allocation. Internal packaging compilers and candidate-byte materialization are
+implemented. Concrete values/bytes remain REVIEW CANDIDATE before FCT-5. Evidence and full packet:
+CAMPAIGN2_FIRST_MODEL_BYTE_REVIEW.md. Whole FCT-4/5/6, VAL and PHEN-ADAPT remain unqualified.
+
+
+2026-09-06 first-model byte freeze: the review accepted all specimen values and the RulesVersion
+bundle and authorized conditional freeze once numeric/random authority was anchored.
+numeric/exact-1 now has the accepted bounded formal definition in BOUNDED_NUMERIC_PROFILE.md.
+The exact RNG spelling was already fixed by accepted DETERMINISTIC_SUBSTRATE.md:173.
+RegulatoryReferenceParameterId/1030 prose corrected without changing bytes. MODEL-BYTE-A PASS:
+15 generated artifacts actually removed and recreated from source in a fresh process. All seven
+previous artifact hashes remain unchanged. Concrete bytes ACCEPTED AND FROZEN; FCT-5 UNBLOCKED
+TO BEGIN. Full runtime/restore, VAL, FCT-4/6 and PHEN-ADAPT qualification remain pending.
+
+2026-09-06 FCT-5 component: restricted model/create/restore facade implemented under the
+frozen bounded bundle. Original-input pending equality, saved state/REG and exact metadata
+checks precede runtime construction; no original initial state is needed for restore.
+393 source tests and build PASS; two fresh processes reproduce the full continued save
+byte-for-byte. See CAMPAIGN2_FACTORY_IMPLEMENTATION.md and its continuation proof.
+This does not qualify the incomplete canonical transition traces, FCT-6 independent
+comparison, whole VAL/PERSIST controls or PHEN-ADAPT. No accepted bytes or IDs changed.
+
+2026-09-06 trace continuation: actual ADAPT projection records and WRT-produced diffs are
+now retained for trace construction; completed diff evidence is available only after the
+whole batch succeeds. 396 source tests, build and unchanged fresh-process continuation PASS.
+C2-TRACE-001 records a narrow source/bridge trace-label binding decision in
+CAMPAIGN2_TRACE_BINDING_DECISION.md. Proposed EventTypeId RecordKind reuse and a symbolic
+dedicated source SeamId await review; no permanent member or canonical trace was added.
+This blocks those trace wrappers, not accepted execution semantics or frozen model bytes.
+
+2026-09-06 C2-TRACE-001 review/revision 2: RecordKind = exact EventTypeId and the dedicated
+source seam are accepted (source member symbolic); transactional ADAPT trace finalization
+is accepted. Whole mapping shape acceptance was withheld for phase-120 seam/version ownership.
+Revision 2 pairs proposed seam/authored-fact-observation with authored-fact-observation/0.1-candidate,
+preserves unchanged inner OBS and its sole projected occurrence, scopes one envelope to each
+scheduled authoritative event, and specifies all per-event ADAPT operations in existing StatePatch/144.
+TRACE-C2-J/K added; A..K NOT PASSED. Two symbolic SeamId/1036 members await whole shape acceptance
+then append-only member allocation review. No runtime, schema, allocation or model-byte changes.
+
+2026-09-06 C2-TRACE-001 revision 2 WHOLE MAPPING SHAPE ACCEPTED. Both symbolic SeamId/1036
+members frozen; RecordKind, handler projections and transactional ADAPT evidence accepted.
+TRACE-C2-A..L FROZEN, NOT PASSED. Two-member additive allocation packet prepared separately
+in formal/TRACE_SEAM_MEMBER_ALLOCATION.md; numeric/member acceptance remains pending.
+Acceptance adds a hard model-commitment gate: old RulesVersion 0.1 cannot acquire the trace
+mapping retrospectively. CAMPAIGN2_TRACE_COMMITMENT_UPDATE.md proposes trace profile 0.1 and
+bounded RulesVersion 0.2, preserving manifests and their identities but recomputing ModelIdentity.
+No old packet overwrite, save aliasing or wrapper implementation. Allocation audit preserves
+18 prior authority/allocation files and all 15 old model packet files byte-for-byte.
+
+2026-09-06 trace allocation ACCEPTED AND FROZEN: exact two SeamId/1036 additions, 110 checks
+PASS preserving all 33 prior sources. campaign2-trace-binding/0.1-candidate and bounded
+RulesVersion 0.2 meanings accepted/frozen; qualification vectors remain separate from semantics.
+Replacement packet in campaign2-trace-model is REVIEW CANDIDATE: six artifacts unchanged,
+only ModelIdentity RulesVersion operand differs, new digest 57e0d7de1de0ffad564ebef4af5ce6b5a3b515069dc85df48f181f5629d1f39b.
+All 15 new files removed/reproduced in a fresh process; old packet preserved byte-for-byte.
+CAMPAIGN2_TRACE_MODEL_BYTE_REVIEW.md owns next byte review. Wrappers remain blocked until
+replacement identity freeze; TRACE-C2-A..N, VAL/FCT-6/PHEN-ADAPT are not passed by this packet.
+
+2026-09-06 replacement seven-artifact packet/ModelIdentity ACCEPTED AND FROZEN; TRACE-C2-M
+COMPONENT / MATERIALIZATION PASS. Canonical type-160 wrappers implemented only for RulesVersion
+0.2; old 0.1 semantics and packet preserved. New factory controls, exact trace matrix, complete
+per-event ADAPT patches/WRT diffs, failure rollback and version-negative controls have component
+evidence. 401 source tests and build PASS. Two fresh processes reproduce the 39786-byte full save
+including 18 canonical traces. See CAMPAIGN2_TRACE_IMPLEMENTATION.md. No global trace/VAL/FCT-6/
+PHEN-ADAPT pass; independent finite qualification remains next.
+
+2026-09-06 FCT-6 pass 1: independent character-content oracle agrees on 572 cases (all
+531 graphs through three definitions plus boundaries), and seven in-memory interpreter
+mutants are detected under unchanged declarations. One undistinguished preliminary mutant
+is preserved explicitly. Independent bounded adaptation oracle agrees on 143 prior/count cases;
+a committed tolerance-step change witnesses VAL-C identity/behavior effects. 404 source tests
+and build PASS. See CAMPAIGN2_FCT6_QUALIFICATION.md for exact scope and missing controls.
+No production/model/identity change and no global FCT-6/VAL/TRACE/PHEN closure.
+<!-- Qualification continuation: accepted seam semantics remain unchanged. -->
+
+### 2026-09-06 — FCT-6 qualification pass 2
+
+Independent role/IDN finite comparison: 234 exact verdict agreements; seven isolated
+interpreter mutants detected with unchanged declarations and production source. Independent
+adaptation comparison expanded to +1 and -1 profiles (286 cases), including exact Remove
+operations, baseline omission and rejected-transaction rollback. Source suite 56 files / 406
+tests and build PASS. See [qualification evidence](CAMPAIGN2_FCT6_QUALIFICATION.md#pass-2--independent-roleidn-and-negative-step-execution).
+Component evidence only: FCT-6, global VAL/TRACE and PHEN-ADAPT remain open. Remaining work
+includes whole-declaration/recursive role controls, BaselineOnly and REG/persistence mutants,
+and the complete gate-to-witness matrix and release review.

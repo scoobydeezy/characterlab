@@ -1,3 +1,4 @@
+import {semanticReferentValue} from '../substrate/referentOrigin';
 import type { PerceptualReferentId } from './perceptualContinuantFiles';
 export const EVENT_BINDING_CONTRACT_VERSION = 'semantic-binding/0.1-candidate#SEM-001B' as const;
 
@@ -17,6 +18,7 @@ export const EventRoleId = {
 export type EventRoleId = typeof EventRoleId[keyof typeof EventRoleId];
 
 export interface SemanticReferent {
+  /** Complete cenc/1 typed-identity byte key, produced by semanticReferentKey; never a local name. */
   readonly semanticReferentId: string;
   readonly domainTags: readonly string[];
 }
@@ -323,7 +325,8 @@ function validateBindingRequest(request: EventBindingRequest, index: number): Ev
   validateExactKeys(request, ['eventRoleId', 'semanticReferent'], `binding request ${index}`);
   if (!isEventRoleId(request.eventRoleId)) fail('UNKNOWN_EVENT_ROLE', `unknown event role ${String(request.eventRoleId)}`);
   validateExactKeys(request.semanticReferent, ['semanticReferentId', 'domainTags'], `semantic referent ${index}`);
-  if (!request.semanticReferent.semanticReferentId) fail('INVALID_REFERENT', 'semantic referent ID must be nonempty');
+  if(!request.semanticReferent.semanticReferentId)fail('INVALID_REFERENT','semantic referent ID must be nonempty');
+  semanticReferentValue(request.semanticReferent.semanticReferentId);
   let prior = '';
   for (const tag of request.semanticReferent.domainTags) {
     if (!tag || tag <= prior) fail('INVALID_REFERENT', 'domain tags must be nonempty, unique, and strictly canonical');

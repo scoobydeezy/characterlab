@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 /**
  * `SEM-001` acceptance gate, item 6: *the complete multi-observer fixture passes through immediate
  * consumers and save/load replay.*
@@ -76,7 +77,8 @@ describe('SEM-001 gate item 6 — the complete fixture through consumers and per
       expect(outputText.some((line) => line.startsWith(`causal:${observerId}:`))).toBe(true);
       const resolved = outputText.find((line) => line.startsWith(`identity:${observerId}:`))!
         .slice(`identity:${observerId}:`.length);
-      expect(resolved.startsWith('person.')).toBe(true);
+      // Complete typed identity membership replaces the historical local-name prefix test.
+      expect([authoredReferentKey('person.glen'),authoredReferentKey('person.mina')]).toContain(resolved);
 
       for (const viewpoint of RENDERER_VIEWPOINTS) {
         const rendered = outputText.filter((line) =>

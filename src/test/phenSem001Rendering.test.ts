@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { EventRoleId } from '../semanticBinding/eventBindings';
 import { PerceptualFacetId } from '../semanticBinding/perceptualClassification';
@@ -29,10 +30,10 @@ import {
  * whose appearance in a character view would be a leak.
  */
 const MINA_CANDIDATE: CatalogCandidate = {
-  candidateSemanticReferentId: 'person.mina', recognitionTemplateId: 'template/mina',
+  candidateSemanticReferentId: authoredReferentKey('person.mina'), recognitionTemplateId: 'template/mina',
 };
 const DARIUS_CANDIDATE: CatalogCandidate = {
-  candidateSemanticReferentId: 'person.darius', recognitionTemplateId: 'template/darius',
+  candidateSemanticReferentId: authoredReferentKey('person.darius'), recognitionTemplateId: 'template/darius',
 };
 const GLEN_CATALOG: readonly CatalogCandidate[] = Object.freeze([MINA_CANDIDATE, DARIUS_CANDIDATE]);
 
@@ -159,7 +160,7 @@ describe('PHEN-SEM-001 viewpoint rendering', () => {
       `role:${EventRoleId.Location}|continuant#0`
       + `|facets:${PerceptualFacetId.AppearsInteriorSpaceLike}=true|identity:unrecognised`,
       `role:${EventRoleId.Participant}|continuant#1`
-      + `|facets:${PerceptualFacetId.AppearsPersonLike}=true|identity:person.darius`,
+      + `|facets:${PerceptualFacetId.AppearsPersonLike}=true|identity:${authoredReferentKey('person.darius')}`,
       'role:unresolved|continuant#2'
       + `|facets:${PerceptualFacetId.AppearsDiscreteObjectLike}=true,`
       + `${PerceptualFacetId.AppearsElongated}=true|identity:unrecognised`,
@@ -278,10 +279,10 @@ describe('PHEN-SEM-001 viewpoint rendering', () => {
     const current = renderView('current-reinterpretation', request, PLAIN_PRESENTATION);
 
     // What Glen took the actor to be at the time, and what he takes them to be now.
-    expect(identityTokens(contemporaneous.recordLines)).toContain('person.darius');
-    expect(identityTokens(contemporaneous.recordLines)).not.toContain('person.mina');
-    expect(identityTokens(current.recordLines)).toContain('person.mina');
-    expect(identityTokens(current.recordLines)).not.toContain('person.darius');
+    expect(identityTokens(contemporaneous.recordLines)).toContain(authoredReferentKey('person.darius'));
+    expect(identityTokens(contemporaneous.recordLines)).not.toContain(authoredReferentKey('person.mina'));
+    expect(identityTokens(current.recordLines)).toContain(authoredReferentKey('person.mina'));
+    expect(identityTokens(current.recordLines)).not.toContain(authoredReferentKey('person.darius'));
 
     // The correction is an appended revision of the contemporaneous resolution, not an edit of it.
     expect(scenario.correction.revisesRecognitionResolutionId)

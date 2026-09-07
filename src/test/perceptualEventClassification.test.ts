@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, canonicalEncode, list, text, typedIdentifier } from '../substrate/canonicalEncoding';
 import { DeterministicScheduler, type EventHandler, type StateAdapter } from '../substrate/scheduler';
@@ -116,7 +117,7 @@ describe('SEM-001E typed perceptual event-pattern classification conformance', (
     const differentFeaturesSameTruth = request([feature(PerceptualEventFeatureId.ObservedRepeatedMotionPattern, false, 1)]);
     expect(eventClassificationSemanticView(classifyPerceptualEvent(initialModel(), pattern, 0n).classifications))
       .not.toEqual(eventClassificationSemanticView(classifyPerceptualEvent(initialModel(), differentFeaturesSameTruth, 0n).classifications));
-    const truthCopy = { ...feature(PerceptualEventFeatureId.ObservedRepeatedMotionPattern, true, 1), semanticActionReferentId: 'action.skip_rope' } as PermittedPerceptualEventFeatureObservation;
+    const truthCopy = { ...feature(PerceptualEventFeatureId.ObservedRepeatedMotionPattern, true, 1), semanticActionReferentId: authoredReferentKey('action.skip_rope') } as PermittedPerceptualEventFeatureObservation;
     expect(() => classifyPerceptualEvent(initialModel(), request([truthCopy]), 0n))
       .toThrowError(expect.objectContaining({ code: 'FORBIDDEN_TRUTH_FIELD' }));
   });

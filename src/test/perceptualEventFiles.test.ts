@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, canonicalEncode, list, text, typedIdentifier } from '../substrate/canonicalEncoding';
 import { DeterministicScheduler, type EventHandler, type StateAdapter } from '../substrate/scheduler';
@@ -173,7 +174,7 @@ describe('SEM-001C observer-relative perceptual event-file conformance', () => {
     const grouped = experience(8606n, [eventFile(0n)], [
       binding(eventFile(0n), exact(EventRoleId.Actor), objectFile(0n)),
     ]);
-    expect(stringifyWithBigInts(grouped)).not.toContain('action.skip-rope');
+    expect(stringifyWithBigInts(grouped)).not.toContain(authoredReferentKey('action.skip-rope'));
   });
 
   it('CV-SEM-037 preserves concurrent participation and distinct same-object role occurrences', () => {

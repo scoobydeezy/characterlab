@@ -1,0 +1,190 @@
+{
+  "status": "CONCRETE BYTES ACCEPTED AND FROZEN",
+  "versions": {
+    "rulesVersion": "rules/campaign2-bounded-bridge/0.2-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "registrySchemaVersion": "campaign2-registry/0.1-candidate",
+    "parameterSchemaVersion": "campaign2-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/exact-1",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "profiles": {
+    "orderedInput": "campaign2-ordered-input/0.1-candidate",
+    "persistence": "campaign2-persistence/0.1-candidate",
+    "trace": "campaign2-trace-binding/0.1-candidate"
+  },
+  "semanticBundle": [
+    "substrate/0.2-candidate",
+    "cenc/1",
+    "content/0.2-candidate",
+    "content-kind/0.1-candidate",
+    "governed-domain-validator/0.1-candidate",
+    "governed-execution/0.1-candidate",
+    "ordering/0.2-candidate",
+    "ordering-phases/2-candidate",
+    "mutation-authority/0.1-candidate#TRC-001-002-addendum",
+    "state/0.3-candidate-addendum",
+    "projection/0.3-candidate-addendum",
+    "identity-binding/0.5-candidate",
+    "observation/0.1-candidate",
+    "authored-fact-observation/0.1-candidate",
+    "observation-unit-identity/0.1-candidate",
+    "referent-origin/0.1-candidate",
+    "content-definition-id/0.1-candidate",
+    "semantic-binding/0.1-candidate#SEM-001H",
+    "character-learning-evidence/0.5-candidate",
+    "transition-admission/0.4-candidate",
+    "transition-admission-extension/0.6-candidate",
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate",
+    "trace/0.2-candidate",
+    "campaign2-trace-binding/0.1-candidate"
+  ],
+  "oldRulesVersion": "rules/campaign2-bounded-bridge/0.1-candidate",
+  "oldModelDigest": "40bcb3c3feec3e3eaaa35161b8164cfdb56eb11f0bd452393f9ec08af489ffd0",
+  "modelDigest": "57e0d7de1de0ffad564ebef4af5ce6b5a3b515069dc85df48f181f5629d1f39b",
+  "structuralOperandDiff": [
+    {
+      "field": "1",
+      "name": "RulesVersion",
+      "oldValue": "rules/campaign2-bounded-bridge/0.1-candidate",
+      "newValue": "rules/campaign2-bounded-bridge/0.2-candidate"
+    }
+  ],
+  "files": [
+    {
+      "name": "content",
+      "path": "content.cenc.hex",
+      "bytes": 124,
+      "sha256": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "oldSha256": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "parameters",
+      "path": "parameters.cenc.hex",
+      "bytes": 11,
+      "sha256": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "oldSha256": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "registry",
+      "path": "registry.cenc.hex",
+      "bytes": 45760,
+      "sha256": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "oldSha256": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "content-identity",
+      "path": "content-identity.cenc.hex",
+      "bytes": 65,
+      "sha256": "67e8beed1d99ed0f964190d361da166d755e5956d39085898037a4cbc79acef5",
+      "oldSha256": "67e8beed1d99ed0f964190d361da166d755e5956d39085898037a4cbc79acef5",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "parameter-identity",
+      "path": "parameter-identity.cenc.hex",
+      "bytes": 78,
+      "sha256": "4e2ec3bccb8f623be26257b857c5c10c737cdfc9d4f1ca0edee8e971f0571fb4",
+      "oldSha256": "4e2ec3bccb8f623be26257b857c5c10c737cdfc9d4f1ca0edee8e971f0571fb4",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "registry-identity",
+      "path": "registry-identity.cenc.hex",
+      "bytes": 76,
+      "sha256": "855b10ed007315fd7887bfecf5022ab253e5f33e6d5f27fe24197e3be144d660",
+      "oldSha256": "855b10ed007315fd7887bfecf5022ab253e5f33e6d5f27fe24197e3be144d660",
+      "comparison": "byte-identical"
+    },
+    {
+      "name": "model-identity",
+      "path": "model-identity.cenc.hex",
+      "bytes": 337,
+      "sha256": "57e0d7de1de0ffad564ebef4af5ce6b5a3b515069dc85df48f181f5629d1f39b",
+      "oldSha256": "40bcb3c3feec3e3eaaa35161b8164cfdb56eb11f0bd452393f9ec08af489ffd0",
+      "comparison": "RulesVersion-only change"
+    }
+  ],
+  "preservedOldPacket": [
+    {
+      "name": "REVIEW_MANIFEST.json",
+      "sha256": "e1d8eee646e5ed395cf79b99d07e636fe8e176599c0e0d8cc03fb0b9a462957b"
+    },
+    {
+      "name": "content-identity.cenc.hex",
+      "sha256": "12409ac6e208d4481ea6d62d76e36c5ee19db40b8005c75657bff39c44c5c235"
+    },
+    {
+      "name": "content-identity.json",
+      "sha256": "d1309bbebe3198407b659b435218b9147db890d74c6ccc52ed1a1ac29f8b7a2f"
+    },
+    {
+      "name": "content.cenc.hex",
+      "sha256": "217c1cb703d608a82dbeecbe25f105502f6652e7a00bd9a88f55748ec7b27726"
+    },
+    {
+      "name": "content.json",
+      "sha256": "226069b9448bef5d488bec63a6e6db21e59c990dd98c35385ba396a6d70f0fa7"
+    },
+    {
+      "name": "model-identity.cenc.hex",
+      "sha256": "c91002a7a09f4045444c4a00e22076d4d273d3bc107fe16629bc4286acb89de3"
+    },
+    {
+      "name": "model-identity.json",
+      "sha256": "9b8cac2bfe583e3d5176b16273446e7feb6d6e12ea6ec6b94c3b46d5c3d57ef4"
+    },
+    {
+      "name": "parameter-identity.cenc.hex",
+      "sha256": "1dd6b94fc9aa6c4dab81ff1f19ca35033c5a835aa288d4403d91ff9b36d1551a"
+    },
+    {
+      "name": "parameter-identity.json",
+      "sha256": "d0a6592aacbfdf9b99e3313ebb37930a866b05aee9d4408036f4fcc0ad2a844c"
+    },
+    {
+      "name": "parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "name": "parameters.json",
+      "sha256": "bdfaf3a46f7c8f48c43cb017f541069b529c6e6624ca4e86e62a0338e192e8e9"
+    },
+    {
+      "name": "registry-identity.cenc.hex",
+      "sha256": "7eeeb73b4373dc323609332749fa33f7f17a4c2d98786566fc0c53ea50a0f8a5"
+    },
+    {
+      "name": "registry-identity.json",
+      "sha256": "b6b83ae00c07030e1c430af2243907779a27c5339a2cdb464471a6c1bb940755"
+    },
+    {
+      "name": "registry.cenc.hex",
+      "sha256": "41894109b0bdf47fc1da230e0b710edeb97c6ebf9fadc71bfc7219ce5be73693"
+    },
+    {
+      "name": "registry.json",
+      "sha256": "92d82ec5ad6c21dca982618a37572d46d94fd58c57ca2b7eeb8a96c1c443eb25"
+    }
+  ],
+  "counts": {
+    "schemaDescriptors": 175,
+    "semanticEntries": 82,
+    "readOnlyFamilies": 0,
+    "keyGrammars": 5,
+    "roleConstraints": 58,
+    "rules": 5,
+    "transitions": 4
+  },
+  "parameterValue": "100",
+  "limitations": [
+    "Replacement identity is frozen; implementation qualification remains separate.",
+    "Old model is immutable; no save migration alias.",
+    "TRACE-C2-M COMPONENT / MATERIALIZATION PASS; remaining trace controls require implementation evidence."
+  ]
+}

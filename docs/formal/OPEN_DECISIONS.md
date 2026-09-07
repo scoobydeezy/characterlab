@@ -19,6 +19,11 @@ blocking are unblocked to the exact scope that acceptance proves, and no further
 
 | Decision | Priority | Formal owner | Blocks | Target disposition |
 |---|---|---|---|---|
+| `C2-TRACE-001` first-profile trace binding | `CLOSED (shape/commitment)` | trace / Campaign-2 factory | qualification remains; wrapper implementation authorized | Both members, trace profile, RulesVersion 0.2 and replacement ModelIdentity frozen. TRACE-C2-M COMPONENT / MATERIALIZATION PASS. Canonical wrappers implemented for 0.2 only; see CAMPAIGN2_TRACE_IMPLEMENTATION.md for scoped evidence. No global trace/VAL/FCT/PHEN pass. |
+| `C2-MODEL-PACK-001` first-model manifest composition | `CLOSED` | campaign2-registry/0.1-candidate + campaign2-parameters/0.1-candidate | concrete model freeze satisfied; FCT-5 unblocked to begin | Both version authorities anchored; seven artifacts frozen unchanged after MODEL-BYTE-A PASS. See CAMPAIGN2_FIRST_MODEL_BYTE_REVIEW.md and formal BOUNDED_NUMERIC_PROFILE.md. |
+| `C2-OBS-UNIT-001` bridge unit identity | `CLOSED` | observation-unit-identity/0.1-candidate | allocation and component enforcement complete | Namespace 1039 and exact unit/fixture-pulse member permanently frozen at observation-unit-allocation/0.1-candidate; 77 allocation checks PASS. OBS-UNIT component evidence in CAMPAIGN2_OBSERVATION_UNIT_IMPLEMENTATION.md; no factory or phenomenon qualification inferred. |
+| `C2-BRIDGE-OBS-001` fixed bridge observation provenance | `CLOSED` | authored-fact-observation/0.1-candidate | accepted with sole-occurrence clarification; implementation authorized | private raw candidate; projected type 203 is sole authoritative observation; no allocation; see CAMPAIGN2_BRIDGE_OBSERVATION_DECISION.md |
+| `C2-INPUT-ENC-001` ordered-input entry bytes | `CLOSED` | campaign2-ordered-input/0.1-candidate | accepted five-item positional list; no allocation | implementation authorized; concrete RulesVersion/profile binding required before FCT-5; see CAMPAIGN2_ORDERED_INPUT_ENCODING_DECISION.md |
 | `ORD-001` immediate belief timing | `P1` | ordering / belief seam | belief use within the same event | accepted belief-event phase map before belief campaign |
 | `ORD-002` simultaneous multi-character ordering | `P1` | ordering / interaction seam | multi-character fixtures and social observation | accepted interaction ordering before first multi-character fixture |
 | `ORD-005` appraisal-regulation feedback boundary | `P1` | ordering/regulation seam | regulatory campaigns and current-vs-later affect semantics | accepted phase mapping before regulation campaign |
@@ -531,3 +536,87 @@ RulesVersion ↔ accepted semantic bundle ↔ persistence profile binding remain
 FCT-6 and VAL-A..W, PERSIST-A..I, FCT-A..F plus inherited mutants remain NOT PASSED. Authoritative
 activation is NOT YET AUTHORIZED. Formal proof closure remains pending; shape acceptance does
 not close VAL or ADAPT. No new allocation, save-schema field or identity family is introduced.
+
+
+## FCT-1/2 incremental implementation; origin binding decision — 2026-09-06
+
+Implemented structural Campaign-2/VAL codecs and closed VAL declaration/CONTENT compilation.
+Full source suite: 40 files / 325 tests PASS; TypeScript and reference import boundary PASS.
+These are component results, not VAL/factory/phenomenon qualification. No authoritative activation.
+
+[C2-ORIGIN-001](../planning/CAMPAIGN2_ORIGIN_BINDING_DECISION.md) now records accepted alternative 2: exactly two nested origin
+families, structural authored resolution through the complete content StableId, and runtime
+ordinals allocated once by the existing shared run allocator. Test 20/21 promotion is rejected.
+IDN qualification is unchanged. The accepted SEM conformance correction preserves historical
+corpus evidence without asserting old/new canonical byte or identity equivalence.
+
+The symbolic contract is SHAPE ACCEPTED at referent-origin/0.1-candidate. The conditional
+numeric verdict plus the passed 43-check machine audit freezes origin-allocation/0.1-candidate:
+1037 AuthoredContentOriginId and 1122 RuntimeEntityOriginId. Existing permanent tables are
+unchanged. The origin semantic/allocation decision is closed; profile qualification remains separate.
+
+Origin construction, recursive SEM/Campaign-2 codec checks, and exact authored CharacterId
+qualification are implemented incrementally. SEM regression fixtures now explicitly construct
+nested authored identities; historical PHEN-SEM evidence is not relabeled or claimed byte-equivalent.
+Runtime interleaving and canonical save/load continuation have new regression evidence.
+FCT-3 has begun with recursive declared record-role validation and exact duplicate/position checks.
+Key-grammar coverage, state/projection integration, remaining model compilation, factory activation
+and integrated VAL/persistence gates remain pending. See CAMPAIGN2_ORIGIN_IMPLEMENTATION.md
+in docs/planning for the bounded proof map and remaining integration obligations.
+
+
+## First-model content StableId governance decision — 2026-09-06
+
+Origin allocation remains permanent and frozen. FCT-3 now also includes keyed-family coverage,
+read-only disjointness, state/path/restore/read/patch validation and IDN's exact immutable-family
+declaration checks. The source suite passed 42 files / 338 tests; one added IDN closure control
+then passed in the five-test state-model suite (current inventory 339).
+
+[C2-CONTENT-ID-001](../planning/CAMPAIGN2_CONTENT_STABLE_ID_DECISION.md) records the next first-model
+authoring choice: the permanent identity authority for GovernedContentDefinition.StableId.
+Only fixture homes 23000 and 20 were found for concrete content IDs; structural representability
+is already settled. A shared CONTENT-owned GovernedContentDefinitionId is proposed for the
+existing slot, without another copy, origin family or CharacterId namespace. No new numeric
+allocation or global StableId role restriction is made. Existing accepted seam semantics remain
+fixed; the decision concerns the first authoritative producer's identity home.
+
+
+## C2-CONTENT-ID-001 resolved — 2026-09-06
+
+Symbolic GovernedContentDefinitionId accepted under content-definition-id/0.1-candidate.
+Separate content-ID allocation audit passed all 37 checks; namespace 1038 is permanent and frozen.
+No previous allocation bytes changed, no fixture family was promoted, and no global role
+constraint was added to 170/1. First-profile construction requires this family; generic CONTENT
+remains polymorphic. Constructor, codec family grammar, profile compiler and six component tests
+are implemented. FCT-3 construction continues; authoritative activation remains gated.
+
+Continued FCT-3 component work: closed REG construction/reference validation and shared V04
+occurrence/output construction now have focused controls. Full source suite 45 files / 355
+tests and production build PASS. See CAMPAIGN2_CONTENT_ID_IMPLEMENTATION.md for exact proof
+limits and remaining runtime/activation gates. These are not integrated campaign verdicts.
+
+## Admitted-input implementation checkpoint — 2026-09-06
+
+Review retains frozen allocations and incremental acceptance, with no new symbolic decision.
+Internal V04 generated ingress, opaque admitted-input capability, required PRJ field projection,
+IDN roster-channel closure and execution-local EVID allocation checks now have component controls.
+The real scheduler control covers a bounded EVID chain and forged/duplicate ingress rollback.
+Generic REG/IDN family polymorphism is explicitly tested. Full source suite 45 files / 362 tests
+and build PASS; four allocation audits unchanged. See CAMPAIGN2_ADMITTED_INPUT_IMPLEMENTATION.md
+for FCT-G..L evidence and limits. Full SEM/factory lifecycle, remaining PRJ/IDN controls, V06/ADAPT
+construction, FCT-4+ and independent integrated qualification remain OPEN. No global gates inferred.
+
+## Composed PRJ and V06 construction checkpoint — 2026-09-06
+
+Admitted-input review accepted FCT-G..L as COMPONENT PASS only. Composed PRJ/IDN construction
+now exercises accessor uniqueness, disjoint storage, grammar coverage, both role-compatibility
+directions, recursive composite-key checks and alternate roster rejection in one admitted contract.
+ADAPT topology/domain/static-state validation and V06 rule/declaration refinements have component
+controls. Shared transition construction admits exact V04/V06 rows under the unchanged V04
+singleton; no second ADAPT runtime authentication mechanism is introduced. Runtime V06, D/E,
+exclusive phase-140 lifecycle and FCT-4+ remain pending.
+
+Bootstrap inspection found C2-INPUT-ENC-001: no accepted canonical layout was found for the five
+unscheduled input-entry operands. This is a first-profile byte/restore-language choice, not an
+architectural or scalar expressibility failure. A concrete five-item canonical-list proposal
+is ready in CAMPAIGN2_ORDERED_INPUT_ENCODING_DECISION.md; no entry codec/allocation was made.

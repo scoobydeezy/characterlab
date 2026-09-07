@@ -1,0 +1,245 @@
+{
+  "version": "origin-allocation/0.1-candidate",
+  "status": "PASS: PERMANENT AND FROZEN; FINAL MACHINE GATE PASSED",
+  "tableSha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be",
+  "markdownSha256": "72da288a8f49bf9d4df8519669c8b20afd465a749fbe2de415bf32239e3ba47b",
+  "authority": {
+    "path": "docs/formal/REFERENT_ORIGIN.md",
+    "sha256": "d3f364b6faf2e61770720cbd3bb891d0628111111efb342f217cafb7856f521d"
+  },
+  "allocationSnapshot": {
+    "version": "origin-allocation/0.1-candidate",
+    "status": "PERMANENT AND FROZEN",
+    "date": "2026-09-06",
+    "authority": "docs/formal/REFERENT_ORIGIN.md",
+    "preservedSources": [
+      {
+        "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+        "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+      },
+      {
+        "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+        "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+      },
+      {
+        "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+        "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+      },
+      {
+        "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+        "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+      },
+      {
+        "path": "docs/formal/STATE_MODEL.md",
+        "sha256": "a9a8f65da1bc8064b269f4464eb33a2eeb95366afa87e4dcd45130821a5a1ff6"
+      }
+    ],
+    "outerNamespace": 1002,
+    "namespaces": [
+      {
+        "namespace": 1037,
+        "name": "AuthoredContentOriginId",
+        "scope": "model/content",
+        "payload": "canonical TypedIdentifierValue equal to content StableId"
+      },
+      {
+        "namespace": 1122,
+        "name": "RuntimeEntityOriginId",
+        "scope": "run",
+        "payload": "unsigned runtime ordinal from shared allocator"
+      }
+    ],
+    "records": [],
+    "members": [],
+    "bindings": [],
+    "unionVariants": [],
+    "finiteValues": [],
+    "occurrenceDefinitions": [],
+    "stateRoots": [],
+    "saveFields": []
+  },
+  "counts": {
+    "namespaces": 2,
+    "records": 0,
+    "members": 0,
+    "occurrenceDefinitions": 0
+  },
+  "checks": [
+    {
+      "name": "symbolic shape accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "exact contract version",
+      "status": "PASS"
+    },
+    {
+      "name": "conditionally accepted permanent status",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown status parity",
+      "status": "PASS"
+    },
+    {
+      "name": "exact allocation version",
+      "status": "PASS"
+    },
+    {
+      "name": "Markdown version parity",
+      "status": "PASS"
+    },
+    {
+      "name": "outer namespace unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "exact additive namespaces and payloads",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate namespace",
+      "status": "PASS"
+    },
+    {
+      "name": "accepted symbolic/numeric family and grammar bijection",
+      "status": "PASS"
+    },
+    {
+      "name": "complete namespace Markdown/JSON parity",
+      "status": "PASS"
+    },
+    {
+      "name": "no added records",
+      "status": "PASS"
+    },
+    {
+      "name": "no added members",
+      "status": "PASS"
+    },
+    {
+      "name": "no added bindings",
+      "status": "PASS"
+    },
+    {
+      "name": "no added unionVariants",
+      "status": "PASS"
+    },
+    {
+      "name": "no added finiteValues",
+      "status": "PASS"
+    },
+    {
+      "name": "no added occurrenceDefinitions",
+      "status": "PASS"
+    },
+    {
+      "name": "no added stateRoots",
+      "status": "PASS"
+    },
+    {
+      "name": "no added saveFields",
+      "status": "PASS"
+    },
+    {
+      "name": "exact table keys",
+      "status": "PASS"
+    },
+    {
+      "name": "complete preservation source inventory",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved complete bytes: docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "frozen prior status: docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved complete bytes: docs/formal/VAL_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "frozen prior status: docs/formal/VAL_ALLOCATION_TABLE.json",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved complete bytes: docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1037 in docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1122 in docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved complete bytes: docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1037 in docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1122 in docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "status": "PASS"
+    },
+    {
+      "name": "preserved complete bytes: docs/formal/STATE_MODEL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1037 in docs/formal/STATE_MODEL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "no earlier candidate mention: 1122 in docs/formal/STATE_MODEL.md",
+      "status": "PASS"
+    },
+    {
+      "name": "namespace 1037 has no prior collision",
+      "status": "PASS"
+    },
+    {
+      "name": "namespace 1037 is not fixture 20/21",
+      "status": "PASS"
+    },
+    {
+      "name": "symbolic family AuthoredContentOriginId in accepted contract",
+      "status": "PASS"
+    },
+    {
+      "name": "namespace 1122 has no prior collision",
+      "status": "PASS"
+    },
+    {
+      "name": "namespace 1122 is not fixture 20/21",
+      "status": "PASS"
+    },
+    {
+      "name": "symbolic family RuntimeEntityOriginId in accepted contract",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture 20/21 absent from permanent source tables",
+      "status": "PASS"
+    },
+    {
+      "name": "authored appends frozen shared/model allocation range",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime appends frozen run-scoped identity range",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "ORIGIN-A..I and affected SEM regressions are not passed by this audit.",
+    "Factory activation and integrated qualification remain pending."
+  ]
+}

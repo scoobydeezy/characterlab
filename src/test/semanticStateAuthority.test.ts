@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 import { describe, expect, it } from 'vitest';
 import { bytesToHex, canonicalEncode, list, text, unsigned, type CanonicalValue } from '../substrate/canonicalEncoding';
 import { commitManifest, createModelIdentity } from '../substrate/identity';
@@ -349,7 +350,7 @@ describe('SEM-001I.3 semantic mutation authority', () => {
   it('addresses recognition knowledge by its accepted uniqueness keys', () => {
     const registry = createSemanticStateAuthorityRegistry();
 
-    const catalogPath = candidateCatalogEntryPath(mina, 'person.glen');
+    const catalogPath = candidateCatalogEntryPath(mina, authoredReferentKey('person.glen'));
     const mappingPath = identitySymbolMappingPath(mina, 'perceived-symbol/GLEN');
     const resolutionPath = resolutionRecordPath(7n);
 
@@ -360,7 +361,7 @@ describe('SEM-001I.3 semantic mutation authority', () => {
     expect(resolutionPath.rootStateTypeId).toBe(244n);
 
     // The same candidate for a different observer is a different leaf.
-    const dariusCatalog = candidateCatalogEntryPath(darius, 'person.glen');
+    const dariusCatalog = candidateCatalogEntryPath(darius, authoredReferentKey('person.glen'));
     expect(pathKey(dariusCatalog)).not.toBe(pathKey(catalogPath));
 
     // Recognition knowledge has its own state-family authority; the resolution authority owns only

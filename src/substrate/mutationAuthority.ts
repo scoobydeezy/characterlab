@@ -95,7 +95,7 @@ export function isMutationAuthorityId(value: CanonicalValue): boolean {
     && value.namespaceId === MUTATION_AUTHORITY_NAMESPACE;
 }
 
-function leafValueGrammarValue(grammar: LeafValueGrammar): CanonicalValue {
+export function leafValueGrammarValue(grammar: LeafValueGrammar): CanonicalValue {
   const fields = new Map<bigint, CanonicalValue>();
   switch (grammar.kind) {
     case 'unsigned-counter':

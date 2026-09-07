@@ -1,3 +1,4 @@
+import {validateSemanticReferent,validateReferentOriginsInValue} from '../substrate/referentOrigin';
 import {
   canonicalDecode, canonicalEncode, list, map, record, set, text, typedIdentifier, unsigned,
   CanonicalEncodingError, RecordSchemaRegistry,
@@ -130,7 +131,9 @@ export function semanticTypedId(
   if (namespaceId === undefined) {
     fail('UNKNOWN_SEMANTIC_NAMESPACE', `no accepted typed-ID namespace named ${String(namespace)}`);
   }
-  return typedIdentifier(namespaceId, payload);
+  const value=typedIdentifier(namespaceId, payload);
+  if(namespaceId===1002n)validateSemanticReferent(value);
+  return value;
 }
 
 /**
@@ -392,12 +395,14 @@ export function restorePerceptualEventFileState(value: CanonicalValue): Perceptu
 // ---------------------------------------------------------------------------
 
 export function encodeSemanticValue(value: CanonicalValue): Uint8Array {
+  validateReferentOriginsInValue(value);
   return canonicalEncode(value);
 }
 
 /** Decodes only through the accepted schema registry; an unknown type or version fails closed. */
 export function decodeSemanticValue(input: Uint8Array): CanonicalValue {
-  return canonicalDecode(input, SEMANTIC_DECODE_REGISTRY);
+  const value=canonicalDecode(input, SEMANTIC_DECODE_REGISTRY);
+  validateReferentOriginsInValue(value);return value;
 }
 
 /**

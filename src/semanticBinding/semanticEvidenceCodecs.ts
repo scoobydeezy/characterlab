@@ -1,3 +1,4 @@
+import {semanticReferentValue} from '../substrate/referentOrigin';
 /**
  * `SEM-001J` — canonical construction for the authoritative evidence chain.
  *
@@ -53,7 +54,7 @@ export function eventBindingValue(binding: EventBinding): CanonicalValue {
   return semanticRecordValue('EventBinding', {
     EventBindingId: semanticOccurrenceId('EventBindingId', binding.eventBindingId),
     EventRoleId: semanticTypedId('EventRoleId', text(binding.eventRoleId)),
-    SemanticReferentId: semanticTypedId('SemanticReferentId', text(binding.semanticReferent.semanticReferentId)),
+    SemanticReferentId: semanticReferentValue(binding.semanticReferent.semanticReferentId),
   });
 }
 
@@ -243,7 +244,7 @@ export function recognitionResolutionValue(
       : RecognitionResolutionTag.Withdrawn,
     {
       CandidateSemanticReferentId: candidate === undefined
-        ? undefined : semanticTypedId('SemanticReferentId', text(candidate)),
+        ? undefined : semanticReferentValue(candidate),
     },
   );
 }

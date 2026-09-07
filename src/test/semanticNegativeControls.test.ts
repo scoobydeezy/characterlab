@@ -1,3 +1,4 @@
+import {authoredReferentKey} from './fixtures/referentOrigin';
 /**
  * `SEM-001` acceptance gate, item 7: *all negative controls report exact first divergence or
  * closure failure.*
@@ -103,7 +104,7 @@ const control = (name: string, body: () => void): void => {
 
 /** A second usable entity, so an Instrument cardinality control is not deflected by domain. */
 const SECOND_INSTRUMENT = Object.freeze({
-  semanticReferentId: 'object.cup',
+  semanticReferentId: authoredReferentKey('object.cup'),
   domainTags: Object.freeze(['entity', 'usable-entity']),
 });
 
@@ -640,8 +641,8 @@ describe('SEM-001 negative controls — recognition', () => {
     });
     const actorTrack = projection.tracksByLabel.get('glen/actor')!;
     const catalog = [
-      { candidateSemanticReferentId: 'person.mina', recognitionTemplateId: 'template/mina' },
-      { candidateSemanticReferentId: 'person.darius', recognitionTemplateId: 'template/darius' },
+      { candidateSemanticReferentId: authoredReferentKey('person.mina'), recognitionTemplateId: 'template/mina' },
+      { candidateSemanticReferentId: authoredReferentKey('person.darius'), recognitionTemplateId: 'template/darius' },
     ];
     const first = recognizeObserverContinuant({
       projection, perceptualReferentId: actorTrack, catalog,
@@ -671,7 +672,7 @@ describe('SEM-001 negative controls — recognition', () => {
       recognitionResolutionId: first.recognitionResolutionId + 1n,
       revisesRecognitionResolutionId: first.recognitionResolutionId,
       occurredAt: first.occurredAt - 1n,
-      resolution: { kind: 'asserted-candidate' as const, candidateSemanticReferentId: 'person.mina' },
+      resolution: { kind: 'asserted-candidate' as const, candidateSemanticReferentId: authoredReferentKey('person.mina') },
     };
     expect(codeOf(historyWith([first, backdatedRewrite]))).toBe('INVALID_RESOLUTION_HISTORY');
 
@@ -710,7 +711,7 @@ describe('SEM-001 negative controls — recognition', () => {
       observerId: GLEN, truth: truthBindings(), allocator, experienceId: 1n,
     });
     const actorTrack = projection.tracksByLabel.get('glen/actor')!;
-    const catalog = [{ candidateSemanticReferentId: 'person.mina', recognitionTemplateId: 'template/mina' }];
+    const catalog = [{ candidateSemanticReferentId: authoredReferentKey('person.mina'), recognitionTemplateId: 'template/mina' }];
     const supporting = projection.perceivedBindings.find((binding) =>
       binding.perceptualReferentId.observerTrackSequence === actorTrack.observerTrackSequence)!;
 
@@ -747,7 +748,7 @@ describe('SEM-001 negative controls — recognition', () => {
     // And a catalog candidate still requires a template that catalog entry actually owns, so a cue
     // cannot borrow identity from something the observer never retained.
     expect(codeOf(() => evaluateContinuantRecognition(
-      recognitionModel(), request('person.mina', 'template/derived-from-appears-person-like'), 9000n,
+      recognitionModel(), request(authoredReferentKey('person.mina'), 'template/derived-from-appears-person-like'), 9000n,
     ))).toBe('INVALID_CUE');
   });
 });

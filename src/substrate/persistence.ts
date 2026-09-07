@@ -13,7 +13,7 @@ import {
 } from './canonicalEncoding';
 import { identitySchemas, restoreModelIdentity, restoreRunIdentity, type StructuralIdentity } from './identity';
 import {
-  DeterministicScheduler,
+  DeterministicScheduler, validateSchedulerContinuation,
   type AllocatorState,
   type EventHandler,
   type ScheduledEvent,
@@ -107,7 +107,9 @@ export function createCanonicalSave<State>(context: SaveContext<State>): Uint8Ar
   return canonicalEncode(value);
 }
 
-export async function loadCanonicalSave<State>(bytes: Uint8Array, context: LoadContext<State>): Promise<LoadedSave<State>> {
+export type SavePreparationContext<State>=Omit<LoadContext<State>,'handlers'> & {readonly eventTypeKeys:ReadonlySet<string>};
+export async function prepareCanonicalSave<State>(inputBytes: Uint8Array, context: SavePreparationContext<State>) {
+  const bytes=inputBytes.slice();
   const registry = new RecordSchemaRegistry([
     ...Object.values(identitySchemas),
     ...Object.values(persistenceSchemas),
@@ -135,31 +137,25 @@ export async function loadCanonicalSave<State>(bytes: Uint8Array, context: LoadC
   const allocators = parseAllocators(field(save, 6n));
   const queue = requireList(field(save, 7n)).map(parseScheduledEvent);
   for (const event of queue) {
-    if (!context.handlers.has(canonicalKey(event.eventTypeId))) saveFail('pending event type does not resolve through the receiving handler registry');
+    if (!context.eventTypeKeys.has(canonicalKey(event.eventTypeId))) saveFail('pending event type does not resolve through the receiving handler registry');
   }
   const committedTrace = requireList(field(save, 11n));
   const outputs = requireList(field(save, 12n));
-  const scheduler = new DeterministicScheduler({
-    initialState: state,
-    stateAdapter: context.stateAdapter,
-    handlers: context.handlers,
-    maxSettlementWorkPerSimulationInstant: context.maxSettlementWorkPerSimulationInstant,
-    initialClock: clock,
-    initialAllocators: allocators,
-    initialQueue: queue,
-    initialCommittedTrace: committedTrace,
-    initialOutputs: outputs,
-    invariants: context.invariants,
-  });
-  return {
-    scheduler,
-    modelIdentity,
-    runIdentity,
-    analyticalAnchors: field(save, 8n),
-    randomRelevantAuthoritativeIds: field(save, 9n),
-    continuingRunInputs: field(save, 10n),
-    canonicalBytes: bytes.slice(),
-  };
+  validateSchedulerContinuation(clock,allocators,queue);
+  return {state,clock,allocators,queue,committedTrace,outputs,modelIdentity,runIdentity,
+    analyticalAnchors:field(save,8n),randomRelevantAuthoritativeIds:field(save,9n),
+    continuingRunInputs:field(save,10n),canonicalBytes:bytes};
+}
+
+export async function loadCanonicalSave<State>(bytes:Uint8Array,context:LoadContext<State>):Promise<LoadedSave<State>> {
+  const prepared=await prepareCanonicalSave(bytes,{...context,eventTypeKeys:new Set(context.handlers.keys())});
+  const scheduler=new DeterministicScheduler({initialState:prepared.state,stateAdapter:context.stateAdapter,
+    handlers:context.handlers,maxSettlementWorkPerSimulationInstant:context.maxSettlementWorkPerSimulationInstant,
+    initialClock:prepared.clock,initialAllocators:prepared.allocators,initialQueue:prepared.queue,
+    initialCommittedTrace:prepared.committedTrace,initialOutputs:prepared.outputs,invariants:context.invariants});
+  return {scheduler,modelIdentity:prepared.modelIdentity,runIdentity:prepared.runIdentity,
+    analyticalAnchors:prepared.analyticalAnchors,randomRelevantAuthoritativeIds:prepared.randomRelevantAuthoritativeIds,
+    continuingRunInputs:prepared.continuingRunInputs,canonicalBytes:prepared.canonicalBytes};
 }
 
 export function scheduledEventValue(event: ScheduledEvent): CanonicalValue {
