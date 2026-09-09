@@ -1,12 +1,18 @@
 # Retained Phenomenon Corpus
 
-**CorpusVersion:** `corpus/0.26.0-draft`
+**CorpusVersion:** `corpus/0.27.0`
 
 **CorpusManifestSchema:** `CorpusManifestEntry` type 174, schema version 1
 
-**CorpusManifestDigest:** `42dc63048912b666c8d7cd4b4c58273f698f1f1950b3a1714c1b12bc7eaa46fc`
+**CorpusManifestDigest:** `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`
 
 **Status:** initial populated corpus; fixtures require formal seam contracts before implementation
+
+**Current commitment:** corpus/0.27.0 is ACCEPTED AND FROZEN, with PHEN-ADAPT-001/1.11.0
+PASS in bounded frozen-model scope. The reviewed draft and corpus0.26 remain historical
+commitments, not aliases. See [accepted promotion](PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json)
+and [the governing amendment](../formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md).
+Acceptance of this manifest does not imply every member phenomenon has passed.
 
 The corpus is the common exam for the intact architecture and every reduction. Scenarios are fixtures; phenomena are obligations. One phenomenon may require several fixtures, and one fixture may exercise several phenomena.
 
@@ -22,7 +28,7 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 | PhenomenonId | Version | Historical intake | Primary obligation |
 |---|---|---|---|
-| `PHEN-ADAPT-001` | `1.10.0-draft` | `P3-012`, North-Star embodied adaptation | hidden exposure may update adaptation but never cognition directly |
+| `PHEN-ADAPT-001` | `1.11.0` | `P3-012`, North-Star embodied adaptation | hidden exposure may update adaptation but never cognition directly |
 | `PHEN-BIO-001` | `1.0.0-draft` | `MEC-017`, `MEC-018`, `EXP-011`, `EXP-012` | stochastic biography changes future decision boundaries |
 | `PHEN-COMMIT-001` | `1.0.0-draft` | `MEC-020`, `EXP-013` | commitment pressure follows concrete lifecycle identity |
 | `PHEN-DECISION-001` | `1.0.0-draft` | `MEC-015`–`MEC-019`, `EXP-010` | settled versus unresolved authorship and frozen expression |
@@ -37,7 +43,12 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 
 ## `PHEN-ADAPT-001` — Automatic adaptation without cognitive leakage
 
-**Version:** `1.10.0-draft`
+**Version:** `1.11.0`
+
+**Fixture amendment status:** ACCEPTED; PHEN-ADAPT PASS in bounded frozen-model scope under
+[PHEN_ADAPT_FIXTURE_AMENDMENT.md](../formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md).
+The historical one-rule clause and prior corpus commitments remain preserved. The accepted
+fixture addendum does not change executable ADAPT grammar, runtime or model semantics.
 
 **Required setup domain:** Two timelines share ModelIdentity, initial character/state bytes, RunSeed,
 ordered-input topology/timing, basis identities, all non-intervention input bytes and immediate
@@ -73,7 +84,7 @@ A fixture that deliberately uses a different allocation shape may not claim raw 
 
 **Interventions:** Toggle only actual exposure/practice; independently toggle whether a later sensor or performance opportunity legitimately reveals its effects; replace the typed automatic-adaptation route with character-learning evidence as a negative control.
 
-**Observable obligation:** The qualifying exposure/practice changes only its registered regulatory or procedural adaptation target. **Every registered character-learning-route state family, and every character-learning occurrence or output, remains structurally equal while permitted observations remain equal.** A later matched challenge may diverge through the changed adaptation state and only then generate different character evidence.
+**Observable obligation:** The qualifying exposure/practice changes exactly its independently specified state-changing subset of the rule-derived regulatory or procedural target-path set. **Every registered character-learning-route state family, and every character-learning occurrence or output, remains structurally equal while permitted observations remain equal.** A later matched challenge may diverge through the changed adaptation state and only then generate different character evidence.
 
 The obligation is closure over the registered route rather than a prose list, so that adding a ninth character-learning state family cannot silently weaken this phenomenon.
 
@@ -112,7 +123,7 @@ applicable rule evaluated, state changed         → dispatch record + StateChan
 
 The dispatch record carries the input occurrence, the consuming transition, the admitted basis, the canonically ordered applicable rule set resolved *before* any state is read, and the instant and definition version. Without it, "the transition never ran" and "the transition ran and nothing in the committed model responded" are both the absence of a record, and absence cannot carry a distinction.
 
-"No applicable rule" and "an applicable rule produced `NoStateChange`" are **different** outcomes: the first says nothing in the committed model responds to this exposure, the second says a named rule looked and concluded no change. Collapsing them hides a missing rule behind a legitimate-looking no-op. `NoStateChange` is emitted per applicable rule and **must not be used for the zero-rule case** — there is no rule to name, so such a record either names one that did not apply or names none and becomes indistinguishable from a missing record. One rule owns exactly one leaf family, so an exposure affecting two leaves is two rules and two results, never one multi-leaf patch. `ADAPT-001` v0.1 constrains this fixture — not the grammar — to exactly one applicable rule per input, so the comparison has one unambiguous target path.
+"No applicable rule" and "an applicable rule produced `NoStateChange`" are **different** outcomes: the first says nothing in the committed model responds to this exposure, the second says a named rule looked and concluded no change. Collapsing them hides a missing rule behind a legitimate-looking no-op. `NoStateChange` is emitted per applicable rule and **must not be used for the zero-rule case** — there is no rule to name, so such a record either names one that did not apply or names none and becomes indistinguishable from a missing record. One rule owns exactly one leaf family, so an exposure affecting two leaves is two rules and two results, never one multi-leaf patch. The bounded fixture resolves the same nonempty ApplicableRules set in both timelines. Let ExpectedTargetPaths be the exact StatePaths derived from those rules; independently specify ExpectedChangedPaths as the state-changing subset expected in each timeline. Actual committed adaptation mutation paths must equal exactly ExpectedChangedPaths, with every other path unchanged. ActualContactCount may alter results but not rule applicability. The frozen exposure fixture evaluates tolerance, sensitization, displacement D and load: count0 yields four NoStateChange results and an empty changed set; count1 yields four StateChange results at exactly those four governed paths. This replaces the historical one-rule fixture restriction through the explicit amendment linked above, while preserving one rule → one path.
 
 A wrong-route or wrong-basis input does **not** produce `NoStateChange`; it fails admission at the consuming transition's typed boundary. The trace retains at minimum: the input occurrence, the rule identity, the semantic key evaluated, the prior state, the result, and the resulting patch if any. `NoStateChange` is what makes a matched non-changing exposure expressible, and the matched-allocation requirement above depends on it.
 
@@ -141,18 +152,18 @@ Where a fixture cannot satisfy the within-run obligation without taking a positi
 
 **Exact comparison rule:** Exact structural equality across all character-epistemic state before the later revealing observation; first cognitive divergence, if any, must descend from a later permitted observation. Mutation is checked at three levels, because an authority-level check cannot see spill inside a legitimate authority:
 
-> **The exact set of committed mutation paths equals the exact expected target-path set**, where a path is `authority · state family · leaf family · semantic key`.
+> **The exact set of committed mutation paths equals the independently specified expected state-changing subset of the rule-derived target-path set**, where a path is `authority · state family · leaf family · semantic key`.
 
 The levels below are that rule's explanatory decomposition, not substitutes for it:
 
 ```
-target path(s)                                      → permitted mutation
+expected state-changing target-path subset          → exact committed mutation
 every non-target authority                          → zero mutation
 every non-target leaf family within that authority  → zero mutation
 every other semantic key within that leaf family    → zero mutation
 ```
 
-The third level is what a per-aspect authority split would otherwise have bought: `ADAPT-001` registers one `authority/regulatory-adaptation` over separately addressable leaf families, so an exposure that legitimately raises tolerance must leave sensitization and accumulated load structurally equal.
+The third level retains its generic obligation: a rule that targets tolerance alone cannot spill into sensitization or load. In the frozen four-rule exposure fixture, however, all four regulatory leaf families are independently targeted. Control3 is therefore mechanically satisfied but non-discriminating at leaf-family granularity here. Isolation is established by exact-path-set equality3a, wrong exposure/response-variable keys7g/7g′, sole-owner/exact-path WRT and the collision controls, not by claiming a strong witness from the empty non-target leaf-family complement.
 
 The fourth is the one a leaf-family check still misses, and it has two shapes rather than one. `tolerance(Mina, alcohol, Y)` and `tolerance(Mina, caffeine, Y)` share an authority *and* a leaf family and differ only in the exposure; `tolerance(Mina, alcohol, sedation)` and `tolerance(Mina, alcohol, reward)` share the exposure too and differ only in the response variable. Both are wrong-key spills and only an exact-key comparison catches either; likewise `practice(cooking)` must not touch `procedural-skill(lockpicking)`. Tolerance and sensitization are stimulus→effect relations, so a key naming the stimulus alone cannot express "tolerant to alcohol's sedating effect while sensitized to its reward response" and would leave a downstream function to guess what one generic magnitude meant.
 
@@ -170,6 +181,16 @@ admit → resolve rules (record dispatch) → derive target paths → reject dup
 ```
 
 Together these **remove `EventSequence` from adaptation semantics entirely.** Ordering remains a scheduling fact fixing allocator positions and trace order, but no adaptation value may depend on it: "whichever phase-140 event runs first changes what the next one reads" is explicitly refused, and permuting the same-instant admitted inputs must leave committed adaptation state byte-identical. A governed aggregation rule — not an ordering convention — is the intended replacement when a phenomenon requires simultaneous accumulation.
+
+**Distinguished response-mediating path (control9):** For this fixture P* is
+302/3/mapKey(RegulatoryAdaptationKey(CharacterId, RegulatoryVariableId)), the displacement D path.
+The earlier intervention creates its D=0/1 difference. The later diagnostic challenge reads
+exactly P* as its sole authoritative state read, and that read must match the earlier retained
+result. It cannot read tolerance, sensitization or load as alternative inputs. The resulting
+permitted5 versus51/10 measurement mediates the first cognitive divergence. Keep actual scheduler
+parent edges separate from the adaptation-write/probe-read and episode-write/recall-read state
+dependencies. This restriction is on the diagnostic challenge; later recall still reads IDN and
+the addressed episode.
 
 **Required trace fields:** exposure/practice truth, adaptation-input type and typed adaptation basis, the dispatch record with its resolved applicable rule set, the consuming transition and the leaf its rule selected, pre/post adaptation state, character-learning evidence emitted, observation projection, mutation diff, and causal ancestry of the first later cognitive divergence.
 
@@ -453,3 +474,114 @@ it changes no corpus requirement or version. First permitted diagnostic observat
 (no temporal public model); G uses public positive + generic signed domain + public exclusion.
 ADAPT-9b, parent control 9 and PHEN-ADAPT-001 remain OPEN. The qualification record and retained
 output-closure failure history are in CAMPAIGN2_PROBE_QUALIFICATION_REVIEW.md.
+
+## Carriage qualification annotation — 2026-09-07
+
+User accepts measurement-evidence-carriage/0.1-candidate under the frozen first measurement
+model: EVC-A..P and EVC-PACK-A..I PASS; EVC-MODEL-BYTE remains PASS. Exact bounded scopes,
+including EVC-B's component/public-exclusion split, are recorded in
+[the qualification review](CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md).
+This changes no phenomenon version or obligation. Transient 337 content divergence is
+qualified; no responding persistent cognition is proved. ADAPT-9b, parent control 9,
+PHEN-ADAPT-001 and Campaign 2 remain OPEN. A proposed memory/recall target awaits selection.
+
+## Episodic measurement target annotation — 2026-09-07
+
+The accepted first responding-cognition target is single-episode measurement retention plus
+later governed exact recall. Candidate ADAPT-9b first persistent cognitive divergence is
+formation; later recall separately proves usability. Both must qualify. The target's
+[MEMR-A..P obligations](CAMPAIGN2_MEASUREMENT_MEMORY_DRAFT.md) are frozen as target proof burden,
+NOT PASSED; executable scope awaits compatible seam shape closure. No phenomenon version,
+PHEN-MEM lifecycle requirement or parent gate is changed or passed by this selection.
+
+
+## Measurement-memory concrete freeze and runtime evidence — 2026-09-08
+
+The user accepted and froze the corrected reference canonical packet and all16 control
+commitments. Reference diagnostic digest:
+3396fa9887e6bed02f3d0cb72344e11a6e0fb23859d330cc45f779f931d01df9.
+Complete canonical bytes are authoritative; FREEZE.json records the acceptance without
+rewriting historical review artifacts. C2-MEM-PACK-002 is concretely CLOSED. The blocked
+58a491... family was NEVER ADMITTED/FROZEN and is not a migration or compatibility source.
+This supersedes the preceding pending-freeze/runtime-blocked checkpoint.
+
+Authorized production implementation now reproduces all16 exact models and executes M1,
+IDN formation, delayed cue, exact episode recall, ablations/padding and mandatory original-S0
+prefix restore. See CAMPAIGN2_MEASUREMENT_MEMORY_RUNTIME_REVIEW.md and the production byte
+and fresh-process restore proof reports for evidence and explicit public/component scopes.
+Whole MEM-PACK-A..G and MEMR-A..P qualification is submitted for review, not locally promoted.
+ADAPT-9b, parent control9, PHEN-ADAPT and Campaign2 remain OPEN pending that research verdict.
+No numeric allocation or frozen model/profile/semantic authority changed.
+
+
+## Accepted memory qualification and joined ADAPT parent pair — 2026-09-08
+
+The user QUALIFIES measurement-episodic-memory/0.1-candidate in the accepted bounded scope.
+MEM-PACK-A..G and MEMR-A..P are PASS. Preserve MEM-PACK-E substrate-composition scope,
+MEMR-B component/public split, MEMR-G historical-change/immutability split, and prefix integrity
+without antirollback claims. PHEN-MEM-001 remains OPEN / NOT CLAIMED.
+See CAMPAIGN2_MEASUREMENT_MEMORY_QUALIFICATION.md for the accepted research disposition.
+
+The user withheld ADAPT-9b until a same-S0 joined actual-fact intervention witness executed.
+That conditional gate is now satisfied: identical model/S0/seed, only earlier count0/1 differs;
+four matched rule evaluations create only governed adaptation differences, later actual probe
+reads D=0/1 and emits5/51-over-10, exact carriage forms episodes and later identical cues recover
+352. Full event/allocator topology matches, and both pending-recall restores match final saves.
+ADAPT-9b and parent control9 are PASS under the user's stated condition;52 named pair checks
+plus structural assertions pass. No different-adaptation-S0 substitute is used.
+
+PHEN-ADAPT-001 remains OPEN pending the requested consolidation review against inherited gates;
+no blanket ADAPT/factory/VAL qualification is inferred. Campaign2 remains OPEN / ACTIVE.
+See CAMPAIGN2_PHEN_ADAPT_CONSOLIDATION_REVIEW.md and CAMPAIGN2_ADAPT_PARENT_PAIR_PROOF.json.
+No production code, frozen model, allocation or seam semantics changed in this integration pass.
+
+
+## Parent-pair acceptance and fixture-alignment review — 2026-09-08
+
+The user explicitly ACCEPTS the joined same-S0 causal witness: ADAPT-9a, ADAPT-9b and parent
+control9 are PASS. The PHEN-ADAPT evidence corpus is sufficient except for specification alignment.
+PHEN-ADAPT-001 remains WITHHELD: historical accepted ADAPT fixture prose says one applicable
+rule/input, while the unchanged frozen model and accepted proof execute four single-path rules.
+
+PHEN_ADAPT_FIXTURE_AMENDMENT.md records the requested correct-forward amendment for explicit
+acceptance. It specifies the same nonempty ApplicableRules set, exact rule-derived target paths,
+independently expected state-changing subsets, and distinguished D response-mediating path.
+Control3 is mechanically satisfied but non-discriminating at leaf-family granularity in this
+four-leaf fixture;3a,7g/7g-prime and WRT/collision protections retain the isolation burden.
+The historical ADAPT acceptance source and frozen artifacts remain unchanged.
+
+The corpus draft advances PHEN-ADAPT1.10 to1.11 and aggregate0.26 to0.27; the separate manifest
+audit preserves both canonical commitments and proves exactly one member changed. This is a
+proposal awaiting amendment acceptance, not a silent PHEN PASS. No new model, runtime, allocation
+or behavioral witness is required or introduced. Blanket ADAPT/factory/VAL qualification is not
+inferred; PHEN-MEM-001 and Campaign2 remain OPEN.
+
+
+## Accepted fixture amendment and PHEN-ADAPT PASS — 2026-09-08
+
+The user ACCEPTS PHEN_ADAPT_FIXTURE_AMENDMENT rev1 and PASSES PHEN-ADAPT-001 in the bounded
+frozen-model scope. ADAPT-9a/9b and parent control9 remain PASS. The four matched single-path
+rules, independently specified changed-path sets, distinguished D path, control3 limited scope,
+exact-path/key/WRT protections and accepted component scopes remain binding. Historical1.10/
+corpus0.26 and the original ADAPT acceptance source are preserved. No blanket ADAPT/factory/VAL
+qualification, PHEN-MEM PASS or Campaign2 completion is inferred.
+
+One serialization conflict requires reconciliation: the accepted review digest181ce571... commits
+PHEN-ADAPT1.11.0-draft; the explicitly requested1.11.0 promotion compiles to3cb09115.... Both exact
+manifests are retained in PHEN_ADAPT_CORPUS_PROMOTION_REVIEW.json. See
+PHEN_ADAPT_ACCEPTANCE_AND_CORPUS_VERSION_REVIEW.md. The research PASS is recorded now; only the
+current canonical version/digest pair awaits the user's choice. No runtime/model/allocation changes.
+
+
+## Approved canonical promotion — 2026-09-08
+
+The user approves and freezes PHEN-ADAPT-001/1.11.0 with corpus/0.27.0 and current canonical
+digest3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276.
+The version/digest reconciliation is CLOSED. PHEN-ADAPT remains PASS in bounded frozen-model scope.
+The reviewed1.11.0-draft commitment181ce571... is preserved: superseded reviewed draft, not current,
+not invalid, not an alias. Historical corpus0.26/42dc6304... is unchanged. The original review/audit
+JSON files retain their exact bytes; PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json records the accepted
+promotion separately. The canonical member promotion changes no fixture semantics, model, runtime
+or allocation and requires no additional behavioral proof. Blanket ADAPT/factory/VAL qualification
+is not inferred. PHEN-MEM-001 and Campaign2 remain OPEN. Current verification command:
+node scripts/audit-phen-adapt-corpus-promotion.mjs.

@@ -3,6 +3,9 @@ import {canonicalEncode,bytesToHex,list,set,map,unsigned,text,typedIdentifier,re
 import {contentRegistrySchemas} from '../substrate/contentManifest';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
+import {applyPerceptualTrackTransition,emptyPerceptualContinuantFileState} from '../semanticBinding/perceptualContinuantFiles';
+import {applyPerceptualEventTransition,emptyPerceptualEventFileState,assemblePreRecognitionExperience,compilePerceivedBindings} from '../semanticBinding/perceptualEventFiles';
+import {classifyPerceptualEvent,compilePerceptualEventClassificationModel,INITIAL_PERCEPTUAL_EVENT_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES,INITIAL_EVENT_CLASSIFICATION_DERIVATIONS,PerceptualEventFeatureId} from '../semanticBinding/perceptualEventClassification';
 import {semanticRecordValue,semanticOccurrenceId,semanticTypedId,perceptualEventReferentIdValue} from '../semanticBinding/semanticCodecs';
 import {campaign2Record as r,campaign2SchemaByType,decodeCampaign2} from '../campaign2/codecs';
 import {compileFirstCampaign2Content} from '../campaign2/contentProfile';
@@ -18,6 +21,10 @@ import {AuthoritativeState,statePathPatternValue,type StatePathPattern} from '..
 import {mutationAuthorityRegistryValue,leafValueGrammarValue} from '../substrate/mutationAuthority';
 import {compileRequiredProjections} from '../campaign2/requiredProjection';
 import {compileCampaign2StateModel} from '../campaign2/stateModel';
+import {compileBoundedModelDeclarations} from '../campaign2/modelPackaging';
+import {firstTraceModel} from '../campaign2/firstTraceModel';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import type {StatePatch,StatePath} from '../substrate/state';
 import {fixtureContentInputs,fixtureRoleConstraints,recordConstraint,namespaceRole,fixtureCharacterRole} from './fixtures/campaign2Model';
 const id=(ns:number,s:string)=>typedIdentifier(ns,text(s)),enc=canonicalEncode;
 const evalKind=id(1009,'OutcomeEvaluationTransition'),learnKind=id(1009,'OutcomeLearningEvidenceTransition'),route=id(1026,'route/character-learning');
@@ -195,7 +202,51 @@ describe('V04 shared occurrence and output construction controls',()=>{
     const nested=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='record')throw Error('fixture record');return v.fields.get(2n)!;};
     expect(enc(nested(decodeCampaign2(enc(e))))).toEqual(enc(x));expect(enc(nested(nested(decodeCampaign2(enc(l)))))).toEqual(enc(x));expect(ordinal).toBe(102n);
   });
+  it('EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L',async()=>{
+    const observerId='observer/mina',occurredAt=10n,transformationVersion='semantic-binding/0.1-candidate#SEM-001H';
+    const supportingObservationIds=[{observerId,observationId:20n}],common={observerId,occurredAt,transformationVersion,supportingObservationIds};
+    // As in CV-SEM-019, the observer continues a track across an occlusion. A
+    // trace-side change of truth entity is deliberately not an argument to SEM.
+    const firstTrack=applyPerceptualTrackTransition(emptyPerceptualContinuantFileState(),{...common,currentDetectionId:{observerId,detectionOccurrenceId:21n},continuityKind:'NewTrack'});
+    const continued=applyPerceptualTrackTransition(firstTrack.state,{...common,currentDetectionId:{observerId,detectionOccurrenceId:22n},continuityKind:'ContinuesPriorTrack',priorPerceptualReferentId:firstTrack.transition.perceptualReferentId});
+    expect(continued.transition.perceptualReferentId).toEqual(firstTrack.transition.perceptualReferentId);
+    const classifier=compilePerceptualEventClassificationModel('model/event-pattern-reference',INITIAL_PERCEPTUAL_EVENT_FACET_DEFINITIONS,INITIAL_PERCEPTUAL_EVENT_CLASSIFICATION_RULES,INITIAL_EVENT_CLASSIFICATION_DERIVATIONS);
+    for(const split of [false,true])for(const missing of [false,true]){
+      const first=applyPerceptualEventTransition(emptyPerceptualEventFileState(),{...common,currentEventDetectionId:{observerId,eventDetectionOccurrenceId:23n},continuityKind:'NewEventFile'});
+      // CV-SEM-033/034 permit observer segmentation independent of truth grouping.
+      const currentEventDetectionId={observerId,eventDetectionOccurrenceId:24n};
+      const later=applyPerceptualEventTransition(first.state,{...common,currentEventDetectionId,continuityKind:split?'NewEventFile':'ContinuesPriorEventFile',...(split?{}:{priorPerceptualEventReferentId:first.transition.perceptualEventReferentId})});
+      const perceptualEventReferentId=later.transition.perceptualEventReferentId,perceptualReferentId=continued.transition.perceptualReferentId;
+      expect(perceptualEventReferentId.observerEventSequence).toBe(split?1n:0n);
+      const features=[PerceptualEventFeatureId.ObservedRepeatedVerticalBodyMotion,PerceptualEventFeatureId.ObservedCyclicFlexibleContinuantArc,PerceptualEventFeatureId.ObservedBodyContinuantPassageCoordination]
+        .slice(0,missing?2:3).map((perceptualEventFeatureId,i)=>({...common,eventFeatureObservationId:BigInt(30+i),currentEventDetectionId,perceptualEventReferentId,perceptualEventFeatureId,booleanValue:missing||i!==1,observationChannelId:'observation-channel/controlled-event-pattern',supportingPerceptualReferentIds:[perceptualReferentId]}));
+      const classified=classifyPerceptualEvent(classifier,{observerId,occurredAt,transformationVersion,experienceId:1n,perceptualEventReferentId,currentEventDetectionId,featureObservations:features},40n);
+      expect(classified.classifications.map(x=>x.typedPerceivedValue)).toEqual(missing?[]:[false]);
+      const bindings=compilePerceivedBindings([{...common,perceptualEventReferentId,perceptualReferentId,eventRoleEvidence:{kind:'unresolved'}}],50n).bindings;
+      expect(bindings[0].eventRoleEvidence).toEqual({kind:'unresolved'});
+      const produced=assemblePreRecognitionExperience({...common,experienceId:1n,perceptualEventReferentIds:split?[first.transition.perceptualEventReferentId,perceptualEventReferentId]:[perceptualEventReferentId],perceivedBindings:bindings,perceptualClassifications:[],perceptualEventClassifications:classified.classifications});
+      const x=preRecognitionSemanticExperienceValue(produced),rt=await runtime();
+      // Trusted consequence-freeze adapter boundary: this proves C1 producibility
+      // plus EVID carriage, not the full H truth-to-sensory reservation pipeline.
+      const stage=rt.observeSemanticFreeze(source(),[enc(x)]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
+      const cap=rt.admit(event);let ordinal=100n;const allocator={allocateRuntimeId:()=>ordinal++};
+      const e=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      const next=rt.completeEvid(cap,[enc(e)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);const cap2=rt.admit(event2);
+      const l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      const terminal=rt.completeEvid(cap2,[enc(l)]);terminal.bindAllocatedChildren([]);rt.finish();
+      const nested=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='record')throw Error('record expected');return v.fields.get(2n)!;};
+      expect(enc(nested(decodeCampaign2(enc(e))))).toEqual(enc(x));expect(enc(nested(nested(decodeCampaign2(enc(l)))))).toEqual(enc(x));expect(ordinal).toBe(102n);
+    }
+  });
   it('EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution',async()=>{
+    const globalModel=await compileBoundedModelDeclarations(firstTraceModel());
+    const C=semanticReferentFromAuthoredContent(governedContentDefinitionId('character/bridge-subject'));
+    const path:StatePath={rootStateTypeId:302n,fieldId:1n,selectors:[{kind:'mapKey',key:r('ToleranceKey',{CharacterId:C,ExposureReferentId:C,RegulatoryVariableId:id(1029,'variable/fixture-regulation')})}]};
+    const value=r('ToleranceValue',{Magnitude:unsigned(1)}),state=new AuthoritativeState([{path,value}]);
+    const noOp:StatePatch={operations:[{kind:'set',path,expected:{presence:true,value},newValue:value}]};
+    globalModel.compiled.stateModel.validateState(state);globalModel.domains.validateStatic(state);
+    const applied=globalModel.compiled.stateModel.applyPatch(state,noOp,id(1025,'authority/regulatory-adaptation'));
+    expect(applied.state.canonicalValue()).toEqual(state.canonicalValue());expect(applied.diffs).toHaveLength(1);
     for(const second of [false,true]){
       const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(experience())]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
       let cap=rt.admit(event),ordinal=100n;const allocator={allocateRuntimeId:()=>ordinal++};
@@ -203,6 +254,8 @@ describe('V04 shared occurrence and output construction controls',()=>{
       if(second){const next=rt.completeEvid(cap,[enc(output)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);cap=rt.admit(event2);
         output=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap,allocator),Evaluation:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});}
       const before=ordinal;
+      expect(()=>rt.completeEvid(cap,[enc(output)],noOp,state.canonicalValue(),applied.state.canonicalValue())).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
+      expect(state.canonicalValue()).toEqual(applied.state.canonicalValue());expect(ordinal).toBe(before);
       expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[{} as never]})).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
       expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[]},list([]),list([true]))).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));
       expect(()=>rt.completeEvid(cap,[enc(unsigned(0))],{operations:[]},list([]))).toThrowError(expect.objectContaining({code:'TRANSITION_WRITE_FORBIDDEN'}));

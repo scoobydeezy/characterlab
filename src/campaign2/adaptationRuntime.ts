@@ -1,3 +1,5 @@
+import {createMemoryExecution,type MemoryPendingFact} from './memoryExecution';
+import type {compileMemoryModel} from './memoryModel';
 import {INTAKE_EVENT,CARRIAGE_PADDING,type compileMeasurementModel} from './measurementModel';
 import {executeMeasurementIntake} from './measurementExecution';
 import {scheduledEventValue} from '../substrate/persistence';
@@ -10,7 +12,7 @@ import {DeterministicScheduler,SchedulerContractError,type EventHandler} from '.
 import {compileOrderedInputProfile,beginAuthoredSourceInstant,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,compiledInputSchedule} from './orderedInputs';
 import {beginTransitionIngressV04} from './transitionIngressV04';
 import {compileAdaptationEvaluator,adaptationExecutionDiffs} from './adaptationEvaluation';
-import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,TRACE_RULES} from './traceBinding';
+import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,compileMemoryBaseTraceBinding,TRACE_RULES} from './traceBinding';
 import type {compileProbeExecution} from './probeExecution';
 import type {compileTransitionAdmissionV06} from './transitionAdmissionV04';
 import type {compileAdaptationDomains} from './adaptationDomains';
@@ -29,9 +31,10 @@ type Compilation=Awaited<ReturnType<ReturnType<typeof compileOrderedInputProfile
 export function createAdaptationRuntime(inputs:Compilation,initialState:AuthoritativeState,
   shared:ReturnType<typeof compileTransitionAdmissionV06>,evaluator:ReturnType<typeof compileAdaptationEvaluator>,
   domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>,maxWork:bigint,bridgeModel?:ReturnType<typeof compileConsequenceBridge>,
-  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement']){
+  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement'],memory?:Awaited<ReturnType<typeof compileMemoryModel>>,memoryPending:readonly MemoryPendingFact[]=[]){
   const modelIdentity=f(rec(inputs.runIdentity.value,104n),1n),rules=f(rec(modelIdentity,103n),1n);
-  const trace=measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
+  const memoryRuntime=memory&&measurement?createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,memoryPending):undefined;
+  const trace=memory&&probeModel?compileMemoryBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
   stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,continuation?.clock??0n);
   const initial=continuation?{events:continuation.queue,allocators:continuation.allocators}:compiledInputSchedule(inputs,canonicalEncode(initialState.canonicalValue()));
   let sources:ReturnType<typeof beginAuthoredSourceInstant>|undefined,ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
@@ -101,14 +104,20 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     const occurrence=ingress.allocateMeasurementIdentity(cap,counted(context));
     const output=executeMeasurementIntake(payload,measurement.unit,occurrence);
     const terminal=ingress.completeMeasurement(cap,canonicalEncode(output));
-    return {nextState:context.state,outputs:[output],emittedEvents:terminal.emissions(),traceContributions:[],traceFactory:children=>{terminal.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[output],children,shared.decode(measurement.registration))]:[];}};
+    const memoryPlan=memoryRuntime?.observeIntake(context.event,output);
+    return {nextState:context.state,outputs:[output],emittedEvents:memoryPlan?.emissions()??terminal.emissions(),traceContributions:[],traceFactory:children=>{terminal.bindAllocatedChildren(memoryPlan?[]:children);memoryPlan?.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[output],children,shared.decode(measurement.registration))]:[];}};
    });
    registerHandler(key(CARRIAGE_PADDING),context=>{
     if(!carriagePadding||key(scheduledEventValue(context.event))!==key(scheduledEventValue(carriagePadding)))throw new SchedulerContractError('INPUT_NOT_ADMITTED','unassociated carriage padding');
     carriagePadding=undefined;counted(context).allocateRuntimeId();
-    return {nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[],traceFactory:children=>trace?[trace.record(context.event,[],children)]:[]};
+    const memoryPlan=memoryRuntime?.observeIntake(context.event);
+    return {nextState:context.state,outputs:[],emittedEvents:memoryPlan?.emissions()??[],traceContributions:[],traceFactory:children=>{memoryPlan?.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[],children)]:[];}};
    });
   }
+  for(const eventType of memoryRuntime?.eventTypes()??[])registerHandler(key(eventType),context=>{
+    const result=memoryRuntime!.execute(context.event,context.state,counted(context));
+    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:result.plan.emissions(),traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children);if(probeInstant)childCount+=children.length;return [result.trace(children)];}};
+  });
   const scheduler=new DeterministicScheduler({initialState,initialQueue:initial.events,initialAllocators:initial.allocators,
     initialClock:continuation?.clock,initialCommittedTrace:continuation?.committedTrace,initialOutputs:continuation?.outputs,
     maxSettlementWorkPerSimulationInstant:maxWork,
@@ -117,13 +126,18 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime?.begin(instant);
         sources=beginAuthoredSourceInstant(inputs,instant);ingress=beginTransitionIngressV04(shared,instant);
         bridge=bridgeModel?.begin(instant);
         probe=probeModel?.begin(instant);probeSource=probeModel?beginProbeSourceInstant(inputs,instant):undefined;
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        if(memoryRuntime&&events.some(e=>memoryRuntime.isEvent(e))){
+          if(events.length!==1||!memoryRuntime.isEvent(events[0]))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','mixed memory/ADAPT stage');
+          let result:ReturnType<typeof memoryRuntime.execute>|undefined;
+          return {execute(context){result=memoryRuntime.execute(context.event,state,counted(context));result.plan.bindAllocatedChildren([]);return {nextState:state,outputs:result.outputs,emittedEvents:[],traceContributions:[]};},finish(){if(!result)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing memory execution');return result.nextState;},finalizeTrace(){return result?[result.trace([])]:[];}};
+        }
         for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');
         const tokens=events.map(event=>ingress!.admit(event)),batch=evaluator.prepare(tokens,instant).begin(state);let index=0;
         let completed:ReturnType<typeof batch.finish>|undefined;
@@ -145,13 +159,13 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
           },
         };
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==6||childCount!==8||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage six/eight budget closure');},
-      close(){sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==(memory?7:6)||childCount!==(memory?11:8)||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');memoryRuntime?.commit();},
+      close(){memoryRuntime?.close();sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
       validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.
-  return Object.freeze({settleNextInstant:()=>scheduler.settleNextInstant(),snapshot:()=>scheduler.exportQuiescentSnapshot(),
+  return Object.freeze({memoryPendingFacts:()=>memoryRuntime?.pendingFacts()??[],settleNextInstant:()=>scheduler.settleNextInstant(),snapshot:()=>scheduler.exportQuiescentSnapshot(),
     save(modelIdentity:StructuralIdentity<'ModelIdentity'>,runIdentity:StructuralIdentity<'RunIdentity'>){
       return createCanonicalSave({scheduler,modelIdentity,runIdentity,continuingRunInputs:list([]),stateAdapter:{clone,
         canonicalValue:state=>state.canonicalValue(),validate:state=>{stateModel.validateState(state);domains.validateStatic(state);},

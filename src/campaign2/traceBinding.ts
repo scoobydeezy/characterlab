@@ -34,9 +34,10 @@ export function compileProbeTraceBinding(modelIdentity:CanonicalValue,runIdentit
  return compileBinding(modelIdentity,runIdentity,probe);
 }
 export function compileMeasurementTraceBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,probe:ReturnType<typeof compileProbeExecution>){return compileBinding(modelIdentity,runIdentity,probe,true);}
-function compileBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,probe?:ReturnType<typeof compileProbeExecution>,measurement=false){
+export function compileMemoryBaseTraceBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,probe:ReturnType<typeof compileProbeExecution>){return compileBinding(modelIdentity,runIdentity,probe,true,true);}
+function compileBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,probe?:ReturnType<typeof compileProbeExecution>,measurement=false,memory=false){
  const model=rec(modelIdentity,103n),run=rec(runIdentity,104n);
- if(!supportsTraceProfile(TRACE_PROFILE)||txt(f(model,1n))!==(measurement?'rules/campaign2-measurement-evidence/0.1-candidate':probe?'rules/campaign2-regulatory-probe/0.2-candidate':TRACE_RULES)||key(f(run,1n))!==key(model))throw new SchedulerContractError('INVALID_CONFIGURATION','canonical trace requires exact 0.2 model/run binding');
+ if(!supportsTraceProfile(TRACE_PROFILE)||txt(f(model,1n))!==(memory?'rules/campaign2-measurement-memory/0.1-candidate':measurement?'rules/campaign2-measurement-evidence/0.1-candidate':probe?'rules/campaign2-regulatory-probe/0.2-candidate':TRACE_RULES)||key(f(run,1n))!==key(model))throw new SchedulerContractError('INVALID_CONFIGURATION','canonical trace requires exact 0.2 model/run binding');
  return Object.freeze({record(event:ScheduledEvent,outputs:readonly CanonicalValue[],children:readonly ScheduledEvent[],registration?:CanonicalValue,evidence?:AdaptationTraceEvidence):CanonicalValue{
   const name=txt(event.eventTypeId.payload),probeIndex=probe?.eventTypes().findIndex(e=>key(e)===key(event.eventTypeId))??-1;
   const carriage=measurement&&['event/measurement-evidence-intake','event/measurement-evidence-padding'].includes(name),padding=name==='event/measurement-evidence-padding';
@@ -45,7 +46,7 @@ function compileBinding(modelIdentity:CanonicalValue,runIdentity:CanonicalValue,
   let subjects:TypedIdentifierValue[]=[],sources:TypedIdentifierValue[]=[],output:CanonicalValue=outputs.length?outputs[0]:list([]);
   const payload=event.payload;
   if(carriage){
-   if(children.length||outputs.length!==(padding?0:1)||padding&&key(payload)!==key(list([])))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','carriage output/child closure');
+   if(children.length!==(memory?2:0)||outputs.length!==(padding?0:1)||padding&&key(payload)!==key(list([])))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','carriage output/child closure');
    if(!padding){const input=rec(payload,203n),out=rec(outputs[0],337n);if(key(f(out,2n))!==key(input))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','carriage trace source');subjects=[id(f(input,2n))];sources=[id(f(input,1n))];}
   }else if(probeIndex>=0){
    if(measurement&&probeIndex===1){if(children.length!==2||txt(children[0].eventTypeId.payload)!=='event/regulatory-diagnostic-probe-tracking'||txt(children[1].eventTypeId.payload)!==(probe!.permitted?'event/measurement-evidence-intake':'event/measurement-evidence-padding'))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','carriage phase-120 closure');}

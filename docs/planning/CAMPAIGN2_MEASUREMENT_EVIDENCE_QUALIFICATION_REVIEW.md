@@ -1,6 +1,6 @@
 # Measurement-evidence carriage — runtime qualification review
 
-2026-09-07. **IMPLEMENTED; QUALIFICATION DISPOSITION REQUESTED.**
+2026-09-07. **RUNTIME QUALIFIED — USER VERDICT ACCEPTED.**
 Accepted runtime: `measurement-evidence-carriage/0.1-candidate`, registration extension
 `transition-admission-extension/0.7-candidate`, solely under frozen
 `rules/campaign2-measurement-evidence/0.1-candidate`.
@@ -51,9 +51,15 @@ after later authored adaptation. [Materialization proof](CAMPAIGN2_MEASUREMENT_E
 recreates all 15 frozen packet files in fresh processes and preserves 87 prior files. The permanent
 allocation audit remains PASS with 197 checks. These proof scopes are distinct.
 
-## Proposed EVC disposition and exact scope
+## Accepted EVC disposition and exact scope
 
-The table proposes qualification on the accepted bounded slice; acceptance is not presumed.
+User accepts EVC-A..P and EVC-PACK-A..I PASS; EVC-MODEL-BYTE remains PASS.
+EVC-B is PASS iff B1 (actual generic REG/probe/validation/shared V07/intake witness)
+and B2 (altered anchor excluded by the frozen public model) both pass. This is not
+a frozen public model run with different R0 declarations. EVC-E covers only the accepted
+diagnostic-present domain. PACK-B covers only the frozen first production model, not an
+arbitrary V07 language. PACK-I rests on exact implementation/profile reuse and bounded
+witnesses, not enumeration of every possible manifest.
 
 | Vector | Executed evidence / preservation basis |
 |---|---|
@@ -105,12 +111,12 @@ focused probe run passed; the complete suite then passed with two workers and un
 settings. The initial sandboxed Vite invocation encountered the known esbuild config-access limit;
 normal-access execution succeeded. These environment failures are not counted as semantic passes.
 
-## Decision requested
+## Qualification disposition and next decision
 
-Review the bounded runtime qualification and the explicit **EVC-B component/public-exclusion
-scope**. No semantic redesign, numeric allocation or model-byte change is proposed. The next
-research target after qualification must select a responding cognitive mechanism; this carriage
-implementation deliberately does not select one or claim ADAPT-9b.
+The bounded runtime qualification and explicit **EVC-B component/public-exclusion scope**
+are accepted. No semantic redesign, numeric allocation or model-byte change accompanies this
+verdict. The [next target proposal](CAMPAIGN2_RESPONDING_COGNITION_TARGET_REVIEW.md) requests
+selection of a responding cognitive mechanism; carriage does not select one or claim ADAPT-9b.
 
 ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN. Belief, memory, appraisal,
 reward, persistent evidence stores, generic measurement formats, CharacterId-owned intake and

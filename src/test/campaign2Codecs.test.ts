@@ -31,6 +31,24 @@ function fields(name:string,tag?:number):Record<string,CanonicalValue> {
 function value(name:string):CanonicalValue{return campaign2Record(name,fields(name));}
 
 describe('FCT-1 frozen allocation codecs (structural, not domain admission)',()=>{
+  it('rejects raw missing required fields, unknown fields and schema-version drift across all 71 allocated records',()=>{
+    let omissions=0;
+    for(const d of definitions){
+      const valid=value(d.name);if(typeof valid==='boolean'||valid.kind!=='record')throw Error('record witness');
+      const schema=valid.schema;
+      for(const field of schema.fields.filter(f=>f.required)){
+        const fields=new Map(valid.fields);fields.delete(field.id);
+        // Encode with a permissive local descriptor so rejection belongs to the
+        // production decoder's frozen schema, not the convenience builder.
+        const permissive={...schema,fields:schema.fields.map(f=>f.id===field.id?{...f,required:false}:f)};
+        expect(()=>decodeCampaign2(canonicalEncode(record(permissive,fields))),`${d.name} missing ${field.name}`).toThrow();omissions++;
+      }
+      const extra={...schema,fields:[...schema.fields,{id:999n,name:'Unadmitted',required:true}]};
+      expect(()=>decodeCampaign2(canonicalEncode(record(extra,new Map([...valid.fields,[999n,unsigned(1)]])))),`${d.name} unknown field`).toThrow();
+      expect(()=>decodeCampaign2(canonicalEncode(record({...schema,schemaVersion:schema.schemaVersion+1n},valid.fields))),`${d.name} version`).toThrow();
+    }
+    expect(definitions).toHaveLength(71);expect(omissions).toBeGreaterThan(71);
+  });
   it('rejects object/proxy byte impostors without executing getters, slice or iteration hooks',()=>{
     let calls=0;
     const impostor={get slice(){calls++;return ()=>canonicalEncode(unsigned(1));}};

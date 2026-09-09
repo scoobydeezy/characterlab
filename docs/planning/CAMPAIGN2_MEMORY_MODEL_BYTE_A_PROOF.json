@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "scope": "production frozen-byte model preparation; complete successor VAL/state declaration closure; no behavior/runtime qualification",
+  "referenceDigest": "3396fa9887e6bed02f3d0cb72344e11a6e0fb23859d330cc45f779f931d01df9",
+  "models": [
+    {
+      "a": false,
+      "p": false,
+      "F": false,
+      "R": false,
+      "digest": "71deb7771bc8822ac25dd9dc9fd9bf4b3070b9a43d2e1ccae07008a18cfa8ddb",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": false,
+      "F": false,
+      "R": true,
+      "digest": "b5e644a076eddca1094350115c5b7ac5ab4d2150f79111edd8b1085c22bf1480",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": false,
+      "F": true,
+      "R": false,
+      "digest": "86fc3f596e2e89835b67b189406da4e9cc86627fe793e121f043ab8be09d87b4",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": false,
+      "F": true,
+      "R": true,
+      "digest": "96dfd4ca0ae3318b6c3b7d719f5543ca59273776aa23f3e1fce46637f6cb6ed6",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": true,
+      "F": false,
+      "R": false,
+      "digest": "17bdd9e980e78d2c9e3630bcadb3c0b7388bf63897c503dbbfd1be4c46a39c5e",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": true,
+      "F": false,
+      "R": true,
+      "digest": "b8d373ba58f9b58ab5bb1dcf98941ffe2abb5fbea31d450d0be76204200258d4",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": true,
+      "F": true,
+      "R": false,
+      "digest": "65bb194160109373f2e69674547f57f887224f2717c8e66896ee110a1f1c0e91",
+      "status": "PASS"
+    },
+    {
+      "a": false,
+      "p": true,
+      "F": true,
+      "R": true,
+      "digest": "fc921291ed7735f0f11f4177c40dfb5cc4a1c384112ae407bb37f2799f25f0ee",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": false,
+      "F": false,
+      "R": false,
+      "digest": "5aa3a5604bccb473fc42de4646810f588102a25836625203586fb511696a3820",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": false,
+      "F": false,
+      "R": true,
+      "digest": "2ebe967a337cd34258429cc392a4e67eb3289820dc6d33dbef638fba76f18dca",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": false,
+      "F": true,
+      "R": false,
+      "digest": "06acad5d787c86efffb8331055f6392de999a536957f477bfccc7b06e2422813",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": false,
+      "F": true,
+      "R": true,
+      "digest": "1cfcf60b5c551a0b23e99f39cf553f67a63c936884737acf408768a55f9a3fe1",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": true,
+      "F": false,
+      "R": false,
+      "digest": "c54b277b5a074e42b929ada38e74ab597f3f4bea5e1a67ad5951b1aa18ef8b4f",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": true,
+      "F": false,
+      "R": true,
+      "digest": "f0140e9150ccfb45f9d0fe75d9ec1632d46ce2115c99e23dbb3cb9e11a78e55a",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": true,
+      "F": true,
+      "R": false,
+      "digest": "55b3e105d30090fd5033b9a2cc4a67a4f2d49cd0aca9fcabb82f4227b13a0008",
+      "status": "PASS"
+    },
+    {
+      "a": true,
+      "p": true,
+      "F": true,
+      "R": true,
+      "digest": "3396fa9887e6bed02f3d0cb72344e11a6e0fb23859d330cc45f779f931d01df9",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "name": "static binding injection",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong profile",
+      "status": "PASS"
+    },
+    {
+      "name": "bare registration",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong wrapper",
+      "status": "PASS"
+    },
+    {
+      "name": "anonymous list",
+      "status": "PASS"
+    },
+    {
+      "name": "missing requirement",
+      "status": "PASS"
+    },
+    {
+      "name": "missing IDN role",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong IDN namespace",
+      "status": "PASS"
+    },
+    {
+      "name": "accessor input",
+      "status": "PASS"
+    }
+  ],
+  "fullStateFamilies": {
+    "writable": 6,
+    "readOnly": 1
+  },
+  "staticBindings": "caller injection rejected",
+  "limitations": [
+    "create/run/restore memory behavior not exercised",
+    "MEMR-A..P remain NOT PASSED",
+    "MEM-PACK-A..G not wholesale promoted"
+  ]
+}

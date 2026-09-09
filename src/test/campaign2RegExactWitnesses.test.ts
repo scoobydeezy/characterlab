@@ -14,6 +14,7 @@ import {AUTHORED_FACT_EVENT} from '../campaign2/orderedInputs';
 import * as runtimeModule from '../campaign2/adaptationRuntime';
 import * as ingressModule from '../campaign2/transitionIngressV04';
 import * as timeModule from '../substrate/time';
+import * as regModule from '../campaign2/regulatoryReference';
 
 const variable=id(1029,'variable/fixture-regulation'),character=semanticReferentFromAuthoredContent(governedContentDefinitionId('character/bridge-subject'));
 function replace(v:CanonicalValue,n:bigint,value:CanonicalValue){if(typeof v==='boolean'||v.kind!=='record')throw Error('fixture');return record(v.schema,new Map([...v.fields,[n,value]]));}
@@ -30,6 +31,35 @@ function modelSource(dynamic:boolean,rate=1n,repair=false){
  return {...source,registry:enc(list(slots))};
 }
 const state=(d:bigint)=>new AuthoritativeState(d===0n?[]:[{path:{rootStateTypeId:302n,fieldId:3n,selectors:[{kind:'mapKey',key:r('RegulatoryAdaptationKey',{CharacterId:character,RegulatoryVariableId:variable})}]},value:r('RegulatoryAdaptationValue',{Magnitude:signed(d)})}]);
+
+it('REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write',async()=>{
+ const source=modelSource(true),registry=source.registry.slice(),compile=regModule.compileRegulatoryReferences;
+ const providers:ReturnType<typeof compile>[]=[];
+ const capture=vi.spyOn(regModule,'compileRegulatoryReferences').mockImplementation((...args)=>{const p=compile(...args);providers.push(p);return p;});
+ try{
+  const model=await prepareCampaign2Model(source);expect(providers).toHaveLength(1);const provider=providers[0];
+  const fact=r('AuthoredActualAdaptationFact',{Fact:r('RegulatoryExposureFact',{CharacterId:character,ExposureReferentId:character,ActualContactCount:unsigned(1)})});
+  const orderedInputs=enc(list([list([signed(2),unsigned(110),AUTHORED_FACT_EVENT,fact,list([])])]));
+  const run=await createCampaign2Run(model,{initialState:enc(state(0n).canonicalValue()),orderedInputs,runSeed:new Uint8Array(32)});
+  const anchors=vi.spyOn(timeModule,'materializeLinear');
+  try{
+   const query=()=>{
+    const saved=run.save(),snapshot=run.snapshot();
+    for(let i=0;i<3;i++){
+     expect(provider.referenceOperatingPoint(character,variable,2n)).toEqual({kind:'ReferenceValue',value:signed(80)});
+     const anchor=anchors.mock.calls.at(-1)![0];expect(anchor).toMatchObject({valueAtAnchor:80n,anchorInstant:0n,exactBoundedRemainder:0n});
+     expect((anchors.mock.results.at(-1)!.value as ReturnType<typeof timeModule.materializeLinear>).exactBoundedRemainder).toBe(2n);
+    }
+    // Canonical save includes the queue and all allocator cursors; queries are
+    // observational even when T is the impending settlement instant.
+    expect(run.save()).toEqual(saved);expect(run.snapshot()).toEqual(snapshot);expect(source.registry).toEqual(registry);
+   };
+   query();await run.settleNextInstant();expect(run.snapshot().clock).toBe(2n);
+   const d=restoreAuthoritativeState(decodeCampaign2(run.snapshot().state)).entries().find(e=>e.path.rootStateTypeId===302n&&e.path.fieldId===3n);
+   expect(d?.value).toEqual(r('RegulatoryAdaptationValue',{Magnitude:signed(1)}));query();
+  }finally{anchors.mockRestore();}
+ }finally{capture.mockRestore();}
+});
 
 it('REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors',async()=>{
  for(const rate of [-1n,1n]){

@@ -11,7 +11,7 @@ records whole-shape acceptance of revision 3 and freezes EVC-A..P as NOT PASSED.
 [successor packaging](CAMPAIGN2_MEASUREMENT_EVIDENCE_PACKAGING_DRAFT.md) is accepted; the
 [concrete model packet](CAMPAIGN2_MEASUREMENT_EVIDENCE_MATERIALIZATION.md) is frozen.
 Authorized runtime implementation is complete for this slice; the
-[qualification review](CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md) requests disposition. The target proposal below remains review history.
+[qualification review](CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md) records accepted EVC-A..P and EVC-PACK-A..I PASS, with EVC-B's component/public-exclusion split. ADAPT-9b remains OPEN. The [responding-cognition target](CAMPAIGN2_RESPONDING_COGNITION_TARGET_REVIEW.md) is proposed for selection. The target proposal below remains review history; its shape-time NOT PASSED status above is superseded only by the scoped runtime qualification.
 
 The qualified diagnostic probe closes ADAPT-9a. The next choice is which observer-safe content,
 if any, should become available to a named cognitive consumer. This proposal requests a target

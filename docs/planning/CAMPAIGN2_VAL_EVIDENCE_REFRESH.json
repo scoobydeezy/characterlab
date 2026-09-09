@@ -1,0 +1,51 @@
+{
+  "status": "FINITE ASSAYS REFRESHED",
+  "results": [
+    {
+      "assay": "scripts/prove-campaign2-independent-content.mjs",
+      "assaySha256": "9223c67c3185cb112d1b84921da7936e9e8b82daf3caaedfe068783f9c294bc3",
+      "historical": "docs/planning/CAMPAIGN2_INDEPENDENT_CONTENT_PROOF.json",
+      "historicalSha256": "aba84145288e0e9ea893f2b0a822e8f871e9459758a9e614ae5c62aa6e861ea5",
+      "current": "docs/planning/CAMPAIGN2_INDEPENDENT_CONTENT_VAL_REFRESH.json",
+      "status": "COMPONENT PASS",
+      "mutants": 7
+    },
+    {
+      "assay": "scripts/prove-campaign2-independent-roles.mjs",
+      "assaySha256": "1c40a73b3a71edb993a3c0c1bdeae8c8a0a9ad369edd2ab76608f4c47c83cb6d",
+      "historical": "docs/planning/CAMPAIGN2_INDEPENDENT_ROLE_PROOF.json",
+      "historicalSha256": "1a79913bef00ea001ce27ec1603329d01bf33dca6ac862b0fe77a42bcf2b95db",
+      "current": "docs/planning/CAMPAIGN2_INDEPENDENT_ROLE_VAL_REFRESH.json",
+      "status": "COMPONENT PASS",
+      "mutants": 7
+    },
+    {
+      "assay": "scripts/prove-campaign2-declaration-coverage.mjs",
+      "assaySha256": "d615a1b85c137f54cfd2987f58fa0e639f61eff665437f0c5baba762e8efbc2e",
+      "historical": "docs/planning/CAMPAIGN2_DECLARATION_COVERAGE_PROOF.json",
+      "historicalSha256": "f97e3269df641bcf5af6d61c18c346d2bff7d2e8da5c48a7d4da1dccb5114b99",
+      "current": "docs/planning/CAMPAIGN2_DECLARATION_COVERAGE_VAL_REFRESH.json",
+      "status": "COMPONENT PASS",
+      "mutants": 11
+    },
+    {
+      "assay": "scripts/prove-campaign2-forbidden-dependencies.mjs",
+      "assaySha256": "1b6c3e54bdb54341d74092aaa51ef0bcf9cb531dc8e86655c1db1acb2036ad62",
+      "historical": "docs/planning/CAMPAIGN2_FORBIDDEN_DEPENDENCY_PROOF.json",
+      "historicalSha256": "ec435407edc5873ad47b5a9b3a63d84931a5e961b2c5ed0383dd90b26c495361",
+      "current": "docs/planning/CAMPAIGN2_FORBIDDEN_DEPENDENCY_VAL_REFRESH.json",
+      "status": "COMPONENT PASS",
+      "mutants": 10
+    },
+    {
+      "assay": "scripts/prove-campaign2-reg-persistence.mjs",
+      "assaySha256": "7834767c0f4283cf8e89edbaf185d65a2356429f662fb7004f8a70f90013870b",
+      "historical": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF.json",
+      "historicalSha256": "bfcf8c1ed5f258001b8917da503bc140a4752fb3f8468e0e5d177ebc8a3dfd31",
+      "current": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_VAL_REFRESH.json",
+      "status": "COMPONENT PASS",
+      "mutants": 11
+    }
+  ],
+  "scope": "Same historical assay semantics against current production sources; separate reports. No new gate verdict or independent compiler claim."
+}

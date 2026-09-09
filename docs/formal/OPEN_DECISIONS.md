@@ -30,7 +30,7 @@ blocking are unblocked to the exact scope that acceptance proves, and no further
 | `TRC-003` privacy-safe trace projections | `P1` | trace/epistemic seam | researcher/UI views without cognitive leakage | accepted projection schema passing forbidden-read audit |
 | `TRC-004` causal-overlap provenance | `P1` | trace/reason consolidation | port of aggregate evidence coverage | accepted evidence-basis contract passing collective-redundancy fixture |
 | `DEC-001` authorship/identity qualification | `P1` | decision-expression and identity seam / Campaign 2 | retained dice-to-identity feedback and roll-boundary migration | accepted qualification contract covering contest, significance, cost, coercion, intervention, resolution mode, roll occurrence, and `AuthorshipPotential`, passing `PHEN-DECISION-001` and `PHEN-BIO-001` |
-| `ADAPT-001` automatic adaptation input | `P1` | state/adaptation seam / Campaign 2 | whole-contract shape accepted 2026-09-06 at adaptation-input/0.31-candidate; allocation unblocked, implementation/proof pending; row remains OPEN | accepted typed adaptation-input and mutation-authority contract passing `PHEN-ADAPT-001` |
+| `ADAPT-001` automatic adaptation input | `P1` | state/adaptation seam / Campaign 2 | whole-contract shape accepted at adaptation-input/0.31-candidate; implementation and bounded PHEN-ADAPT PASS recorded; blanket contract/factory qualification not inferred; row remains OPEN | remaining whole-contract qualification accounting; bounded PHEN-ADAPT prerequisite passed 2026-09-08 |
 | `VAL-001` committable governed executables | `P1` | substrate validation / cross-campaign | shape accepted 2026-09-06 at governed-execution/0.1-candidate; formal closure/qualification pending; canonical implementation activation for any new governed executable, including the `CONTENT-001` character-kind validator | accepted rule for which executable functions may affect model construction, canonical validity, or transition-visible semantics, and how their executable meaning is committed to `ModelIdentity`: same governed declaration and same `ModelIdentity` → same executable semantics, and changed executable semantics → changed `ModelIdentity`. No anonymous callback may decide canonical admissibility, domain qualification, semantic projection, rule applicability, or state-transition meaning unless its complete behaviour derives from committed governed data. Prerequisite of canonical reliance on a `CONTENT-001` character-kind validator in built fixtures; does not block `IDN-001` shape acceptance, `EVID-001` or `REG-001` drafting, or Campaign 2 **F** allocation |
 | `C2-PERSIST-001` exact Campaign-2 save metadata | `P1` | persistence / factory activation | SHAPE ACCEPTED at campaign2-persistence/0.1-candidate; concrete profile binding and implementation qualification pending before authoritative activation | accepted profile with exact source/traversal/grammar for save fields 8/9/10, identity-bearing profile binding and persistence qualification; no VAL or other accepted seam reopening |
 | `MATH-002` quadratic coefficient convention | `P2` | signal-field candidate seam | signal-field comparison only | choose polynomial/matrix convention in candidate seam and add equivalence vectors |
@@ -920,3 +920,478 @@ separating EVC-B's governed R0/D component witness from the public changed-ancho
 Qualification acceptance is not presumed. Next decision: qualification/scope review, then a
 responding cognitive mechanism target. ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2
 remain OPEN. No persistent cognitive update, new route or further allocation is selected.
+
+## Measurement-evidence carriage — accepted runtime qualification, 2026-09-07
+
+User verdict qualifies measurement-evidence-carriage/0.1-candidate under frozen
+rules/campaign2-measurement-evidence/0.1-candidate: EVC-A..P PASS, EVC-PACK-A..I PASS,
+EVC-MODEL-BYTE remains PASS. No model bytes, allocation or runtime semantics change.
+
+EVC-B = PASS iff B1 and B2: actual generic REG provider + diagnostic producer + production
+observation validation + shared V07 ingress + actual intake gives equal 203/337 for
+anchor50,D1 versus anchor51,D0; separately, the frozen public model rejects the altered
+anchor. This is not a public frozen-model run with different R0 declarations.
+EVC-E covers only the accepted diagnostic-present domain. PACK-B covers only the frozen
+first production model, not arbitrary V07. PACK-I rests on exact profile/compiler reuse
+plus bounded witnesses, not exhaustive enumeration of the infinite manifest domain.
+
+The qualified result is transient observer-owned cognitive measurement evidence with
+provenance-safe content. Persistent cognition is unchanged. The restore configuration
+omission and its explicit correction remain in the qualification review; no frozen bytes
+changed to correct it. This is runtime qualification, not a psychological reduction verdict.
+
+Evidence: CAMPAIGN2_MEASUREMENT_EVIDENCE_QUALIFICATION_REVIEW.md and its linked runtime,
+continuation and materialization proof artifacts. Earlier pending-review entries are history.
+ADAPT-9b, parent ADAPT control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+CAMPAIGN2_RESPONDING_COGNITION_TARGET_REVIEW.md proposes episodic measurement retention
+and later recall for target selection only; no responding mechanism is accepted yet.
+
+## Measurement episodic retention and later recall — target accepted, 2026-09-07
+
+User selects episodic measurement retention plus later governed exact recall as the first
+responding-cognition target and authorizes inspection-first formalization. Persistent memory
+formation is the candidate first cognitive divergence; later recall is a separate required
+usability witness. The historical claim is "I observed M on that occasion," never current
+REG state or hidden D/R0. Character-learning boundary and admitted PRJ/IDN ownership are required;
+337 cannot write memory directly and observed SubjectId cannot become memory owner.
+Existing 227 -> OutcomeEvaluation/269 -> OutcomeLearningEvidence/270 remains frozen.
+
+MEMR-A..P are target obligations, NOT PASSED. Single episode, exact content-free later cue,
+formation and recall-access ablations, observer isolation, hidden-cause equality and historical
+preservation are required. General retrieval/decay/top-K, salience/reinforcement, belief,
+expectation, appraisal/reward/value remain deferred. ADAPT-9b, parent control9, PHEN-ADAPT
+and Campaign2 remain OPEN.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_DRAFT.md revision1 records actual substrate inspection:
+nested observer projection, distinct measurement learning evidence, memory writer/topology,
+exact recall admission and successor profile closure require compatible new contracts.
+Its proposed resolutions are not shape acceptance, allocation or implementation authority.
+The earlier target-selection request is answered; review now concerns these new seam designs.
+
+## Measurement memory revision1 review — accepted inspection, revision2 drafting, 2026-09-07
+
+User accepts the target interpretation and substrate inspection. M1/M2/M3/M5 gaps are confirmed;
+M4 is split into M4a later recall-opportunity authority and M4b character-owned memory addressing.
+MEMR-A..P are FROZEN, NOT PASSED. Whole seam shape is not accepted; allocation and implementation
+are not authorized. ADAPT-9b and all parent gates remain OPEN.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_DRAFT.md revision2 proposes exact symbolic measurement-learning
+evidence semantics, compares nested PRJ selection with a copied top-level selector/equality
+invariant, and recommends a separately versioned closed required-record-field path. The copy
+alternative remains viable. Neither projection strategy is accepted yet.
+WRT's existing expected-absent set precondition can reject duplicate formation without semantic
+memory reads. Recall is proposed as a live337-generated future cue independent of formation,
+with a committed positive delay relation and a separately governed preauthorized composite
+character-memory read. These are design proposals, not closed admission/persistence contracts.
+Pending generated recall across save/restore is an explicit new closure obligation.
+Drafting order remains M1, M2, M3, M4a, M4b, M5. No canonical vector is added.
+
+## Measurement memory revision2 review — M1 V04 correction, 2026-09-07
+
+User accepts M1 measurement-learning semantics, M4a/M4b decomposition and the cue's independence
+from formation; nested field-path M2 and the tentative (CharacterId,337Id) key are accepted in
+direction. A new M1 registration grammar is rejected as unnecessary. Accepted carriage semantics
+already resolve RegisteredTransitionProducer across committed V04/V06/V07 producer registrations.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_DRAFT.md revision3 corrects M1 to TransitionRegistrationV04:
+RegisteredTransitionProducer names MeasurementEvidenceIntakeTransition, exact337 input,
+ExactImmediateProducerOutput, ReadDomain={}, exactly one measurement-learning evidence output,
+NoStateWrites, phase130/SameAsProducer, route/character-learning. New successor registry/model
+data is required; registration semantics do not change. The earlier proposed extension is
+retained as a corrected design error.
+
+Revision3 also specifies the proposed five-field EventDependentProjectedFieldPathRequirement
+and admission-before-extraction sequence. Only the IDN roster lookup is an ActualReadRecord.
+M2 whole contract remains for review; M3/M4a/M4b/M5 remain open. RecallDelay and future-cue
+persistence are unresolved. MEMR-A..P remain FROZEN/NOT PASSED, with no new canonical vectors.
+Whole seam shape, allocation and implementation are not authorized. ADAPT-9b and Campaign2 OPEN.
+
+## Measurement memory M1/M2 shape acceptance; M3 draft, 2026-09-07
+
+User accepts revision3 M1 evidence and V04 RegisteredTransitionProducer registration, and
+bounded projection-input-field-path M2 including the exact first formation path. Requirement
+identity/uniqueness and terminal canonical-role inventory are explicit closure obligations.
+Frozen model role203/2 is present with namespace1000 and absent validator; reuse unchanged.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_M3_DRAFT.md proposes one episodic map-entry family, key
+(CharacterId,337Id), value embedding exact M1, sole authority, bounded character-learning
+writer registration, zero semantic outputs/children, expected-absent WRT insertion and exact
+candidate/diff validation. This M3 design is NOT ACCEPTED. It explicitly identifies key/value/
+roster consistency and historical formation validation beyond ordinary structural role checks.
+M4b must close the same key before freeze. M5 must inspect actual phase130 EventSequence order.
+M4a/M4b/M5, whole seam, allocation and implementation remain gated. MEMR-A..P NOT PASSED;
+ADAPT-9b and Campaign2 OPEN.
+
+## Measurement memory M3 revision1 review — partial acceptance, revision2 correction, 2026-09-07
+
+User accepts the physical episodic family/value, sole authority, character-learning route,
+insert-only WRT semantics, deterministic patch/exact diff and trace direction. The candidate
+(CharacterId,337Id) key remains conditional on M4b. Whole M3 acceptance is withheld for two blockers:
+duplicate insert-capability semantics and independent state/restore-validator IDN access.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_M3_DRAFT.md revision2 replaces the duplicate with accepted StateWrites,
+preserving the distinct memory writer registration and exact insertion behavior. Structural
+validation now checks local schemas/roles and key EvidenceId equality only; live admitted M2
+establishes ownership. No validation-only roster resolver is allowed. M5 owns historical formation
+and restore legitimacy, without widening IDN. Prior proposals are retained as corrected history.
+
+M4a/M4b/M5 remain open, including successor phase140 stage policy. Whole seam and allocation remain
+gated; MEMR-A..P FROZEN/NOT PASSED, ADAPT-9b and Campaign2 OPEN.
+
+## M3 accepted; M4b exact-address draft — 2026-09-07
+
+User SHAPE ACCEPTS measurement-memory M3 revision2. Episode key acceptance is conditional
+only on M4b preauthorizing the exact (CharacterId,CognitiveMeasurementEvidenceId) record key.
+Accepted components include sparse family/value, sole authority, StateWrites, insert-only WRT,
+exact patch/diff, local validation and trace shape. Alternate IDN validation is prohibited.
+M5 owns history/restore integrity and phase140 composition; canonical trace source encoding
+requires inspection, not a presumed direct M1 ID assignment.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_M4B_DRAFT.md revision1 proposes a fixed composite read requirement:
+live cue admission, ordinary IDN re-resolution, exact M3 key construction, full path authorization,
+then one optional episode read. It specifies role/accessor closure, trace semantics, absence and
+same-character/multiple-observer cue-source protection. This is a draft, not M4b acceptance.
+M4a cue/delay authority, recall output composition and M5 remain open. No numeric allocation or
+implementation. MEMR-A..P FROZEN/NOT PASSED; ADAPT-9b and Campaign2 OPEN.
+
+## M4b accepted; M3 key condition closed; M4a draft — 2026-09-07
+
+User SHAPE ACCEPTS measurement-episode-read/0.1-candidate, its bounded read requirement,
+fixed IDN-to-key composition, one optional leaf read and symbolic accessor/measurement-episode-read.
+M3 MeasurementEpisodeKey is now unconditionally SHAPE ACCEPTED, identical for write and read.
+No global lookup, post-read owner check or alternate roster resolver. Episode read trace is direct:
+DerivedSources=[], TransformationId absent; M5 validates its path against recorded C and cue E.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_M4A_DRAFT.md revision1 proposes content-free cue generation from
+actual live337, positive checked SimDuration, future phase20 and scheduler-event identity reuse.
+It separates this new delayed/projected relation from frozen SameAsProducer ingress and records
+the pending-generated-event restore authority gap. The possible independent replay validation
+construction is explicitly unselected, with original-initial-state availability still to inspect.
+M4a and composed recall/M5 remain OPEN. Allocation deferred pending composed inventory.
+MEMR-A..P FROZEN/NOT PASSED; ADAPT-9b and Campaign2 OPEN.
+
+## M4a shape acceptance; M5 composition inspection — 2026-09-07
+
+User accepts measurement-recall-opportunity/0.1-candidate: exact two-identity cue, scheduler-only
+invocation identity, actual live337 source, independent cue generation, positive checked duration,
+phase20, exact parent/dependencies/multiplicity. No CueId or EvidenceId-as-cue occurrence rule.
+Composed recall registration/output and generated pending-event restore authority remain open.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_M5_DRAFT.md revision1 inspects current factory, stage, sequence and
+trace surfaces. It proposes recall output/admission and stage composition, compares persisted
+certificates, external signatures and independent admitted prefix validation. Replay is recommended
+for review, NOT SELECTED/ACCEPTED; original S0 restore input, exact checkpoint boundary, operational
+cost and private association rehydration require closure. M4a acceptance authorized no replay choice.
+Complete padding/ablation topology and composed inventory remain open. No allocation/implementation.
+MEMR-A..P FROZEN/NOT PASSED; ADAPT-9b and Campaign2 OPEN.
+
+## M5 revision1 review and revision2 composition — 2026-09-07
+
+User accepts event-authenticated recall and conditional output semantics, recollection direction,
+and prefix validation as leading restore direction; whole M5 withheld. Revision2 corrects:
+real recollection allocation OR private void result-slot advance; exclusive ADAPT OR one memory/
+control phase140 batch, with explicitly proposed suppressed private padding; recall trace source
+exactly historical337 identity, not an invented cue identity.
+
+M5 revision2 defines original-S0 restore identity checks, N committed-event replay with whole-instant
+quiescent stopping and exact N=0 initial boundary, whole-save byte equality, and detached validated
+pending associations used to mint fresh private admission. It derives a proposed per-probe table:
+11 generated events; 11 executions T1 including source and one T2; runtime advances7+1. Sixteen
+committed a/p/F/R configurations and explicit private suppressed branches are proposed for review.
+These counts/designs are NOT runtime passes or shape acceptance. New padding/control vocabulary,
+canonical registration inventory and concrete delay remain gated. MEMR-A..P NOT PASSED;
+ADAPT-9b and Campaign2 OPEN. No allocation or implementation.
+
+## M5 revision2 behavioral acceptance; revision3 symbolic inventory — 2026-09-07
+
+User accepts all four revision1 blocker corrections and M5 restore architecture, S0 facade,
+trace-count/quiescent stop, whole-save byte equality and association rehydration. Topology and
+sixteen configurations accepted in shape. Whole M5 remains withheld for symbolic closure.
+RecallDelay value is model-packaging data, not a symbolic allocation blocker.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_SYMBOLIC_CLOSURE.md proposes14 new record shapes, exact registry
+homes/profile tuple/version ownership, same TransitionKind/event across model-specific ablations,
+new private event vocabulary and type160 matrix. No duplicate control registration schema,
+capability, CueId, MemoryEpisodeId, stage-policy record or save field is proposed. Generation
+uses the accepted opportunity definition plus fixed successor profile, without a duplicate row.
+ValidatedPendingGeneratedAssociation has private RecallCue/PrivateFuturePadding kinds.
+This symbolic closure is FOR REVIEW, not whole-shape acceptance or allocation authorization.
+MEMR-A..P FROZEN/NOT PASSED; ADAPT-9b and Campaign2 OPEN.
+
+## Memory symbolic closure revision3 review; revision4 corrections — 2026-09-08
+
+User accepts M5 behavior, control identity strategy, RulesVersion stage ownership, persistence
+profile ownership and trace matrix except private SeamVersion labeling. Whole shape withheld
+for three ownership/version-home corrections plus exact IDN slot additions.
+
+CAMPAIGN2_MEASUREMENT_MEMORY_SYMBOLIC_CLOSURE.md revision4 removes both proposed projection
+definition rows and their new registry kind from the inventory. PRJ requirements remain canonical
+TransitionSeamContract-owned sets; any concrete serialization gap is a packaging gate, not permission
+to invent a global projection registry. State-family singleton retains adaptation-input/0.31-candidate
+DefinitionVersion; only episodic storage data changes. Private padding trace uses the memory seam
+version, never RulesVersion text. Slot3 adds exact268/1 read-only family; slot4 adds exact IDN
+identity-key and episode record-key grammars. Actual roster remains S0/RunIdentity data.
+
+Four new SemanticRegistryEntry rows remain (three transitions, one opportunity), fourteen proposed
+record shapes unchanged. Whole acceptance/combined allocation not yet authorized. MEMR-A..P
+FROZEN/NOT PASSED; ADAPT-9b and Campaign2 OPEN.
+
+## Whole measurement-memory seam shape acceptance — 2026-09-08
+
+M1–M5 and M5 revision 4 symbolic closure are WHOLE SHAPE ACCEPTED at
+`measurement-episodic-memory/0.1-candidate`; see
+[formal disposition](MEASUREMENT_EPISODIC_MEMORY.md).
+Fourteen schemas and minimal members are accepted in shape. Combined numeric allocation
+review is authorized next; separate numeric freeze precedes packaging/materialization.
+Runtime implementation is NOT AUTHORIZED. MEMR-A..P remain FROZEN/NOT PASSED;
+ADAPT-9b, parent control 9, PHEN-ADAPT and Campaign 2 remain OPEN.
+This supersedes earlier pending whole-shape dispositions, not runtime gates.
+
+## Memory allocation frozen; packaging revision 1 — 2026-09-08
+
+measurement-memory-allocation/0.1-candidate is ACCEPTED AND PERMANENT: records342–355,
+occurrence namespaces1125–1126,15 members and14 field roles. No union allocation.
+Successor packaging is authorized; runtime remains gated. See
+[packaging revision 1](../planning/CAMPAIGN2_MEASUREMENT_MEMORY_PACKAGING.md).
+C2-MEM-PACK-001 records the concrete transition-owned projection serialization gap and
+proposes a successor-profile registration envelope for review, with RecallDelay=1 tick.
+No model packet/digest or runtime pass is claimed. MEMR-A..P FROZEN/NOT PASSED;
+ADAPT-9b, parent control9, PHEN-ADAPT and Campaign2 OPEN.
+
+## Memory packaging revision 1 review; wrapper shape draft — 2026-09-08
+
+RecallDelay=signed SimDuration(1),16 configurations, ordered-input reuse and trace/persistence
+bindings are accepted; six-slot direction is accepted. C2-MEM-PACK-001 anonymous list envelope
+is REJECTED. Packaging revision2 replaces it with three proposed exact canonical
+TransitionSeamContract wrappers and separate typed collections; see
+[wrapper shape draft](../planning/CAMPAIGN2_MEMORY_TRANSITION_WRAPPER_DRAFT.md).
+Frozen342–355 remain unchanged. Wrapper shape acceptance must precede separate append-only
+numeric review. No new numbers are allocated. Whole packaging, materialization and runtime
+remain gated. MEM-PACK-A..G and MEMR-A..P FROZEN/NOT PASSED; ADAPT-9b, parent control9,
+PHEN-ADAPT and Campaign2 OPEN. This supersedes the earlier ordered-pair proposal.
+
+## Wrapper and whole packaging shape accepted — 2026-09-08
+
+C2-MEM-PACK-001 CLOSED. Three typed TransitionSeamContract wrappers and packaging revision2
+are SHAPE ACCEPTED. StaticBindings is profile-fixed exactly empty; any external injection
+rejects under MEM-PACK-F. Separate three-record append-only allocation review is authorized
+next. Existing342–355 remain frozen and unchanged. Materialization follows wrapper numeric
+freeze; runtime remains blocked. MEM-PACK-A..G and MEMR-A..P FROZEN/NOT PASSED;
+ADAPT-9b, parent control9, PHEN-ADAPT and Campaign2 OPEN.
+
+## Wrapper allocation frozen; concrete memory materialization — 2026-09-08
+
+memory-wrapper-allocation/0.1-candidate is ACCEPTED AND PERMANENT:356–358 and nine local
+fields, with zero new identity/member/role/occurrence/union surfaces. The historical342–355
+allocation remains unchanged. Model materialization is authorized; runtime remains gated by
+concrete model freeze. See CAMPAIGN2_MEASUREMENT_MEMORY_MATERIALIZATION_REVIEW.md for
+review evidence; no concrete ModelIdentity acceptance is inferred. MEM-PACK-A..G and
+MEMR-A..P remain NOT PASSED; ADAPT-9b, parent control9, PHEN-ADAPT and Campaign2 OPEN.
+
+## C2-MEM-PACK-002 — materialization substrate blocker, 2026-09-08
+
+Independent slot5 inspection found inherited268/1 StateMapKey role absent. The accepted
+14-role delta leaves materialized IDN inadmissible under stateModel.ts. Review specimens
+are labeled BLOCKED/NOT ADMITTED, not candidates for concrete freeze. Proposed repair:
+add one existing265/264/263 declaration for StateMapKey268/1, namespace1000, no validator;
+slot5 delta becomes15 (14 memory +1 IDN), zero wrapper roles. No allocation change.
+See CAMPAIGN2_MEASUREMENT_MEMORY_MATERIALIZATION_REVIEW.md. Repair NOT APPLIED;
+user review required to amend accepted exact slot5 delta. Runtime and qualification remain gated.
+
+## C2-MEM-PACK-002 accepted and applied — 2026-09-08
+
+Successor slot5 is amended to15 declarations:14 frozen memory RecordField roles and1
+IDN StateMapKey268/1 role (namespace1000, no validator). No allocation/schema/version changes.
+The previously blocked16 specimens are retained only in campaign2-measurement-memory-blocked-review;
+none was ever admitted or frozen. All16 commitments are being recomputed from declarations.
+Concrete ModelIdentity freeze remains the next gate; runtime and MEM-PACK/MEMR qualification
+remain blocked. This supersedes earlier exact14-only packaging accounting without editing
+fingerprinted historical authority documents or allocation artifacts.
+
+## Corrected16-model review packet — 2026-09-08
+
+C2-MEM-PACK-002 rematerialization yields reference digest
+3396fa9887e6bed02f3d0cb72344e11a6e0fb23859d330cc45f779f931d01df9.
+All16 commitments changed and remain distinct.589 review/component checks pass, including
+actual VAL/stateModel IDN-fragment closure and five adversarial cases.150 preservation
+fingerprints include retained inadmissible specimens, which are never historical frozen models.
+See CAMPAIGN2_MEASUREMENT_MEMORY_REMATERIALIZATION_REVIEW.md. Concrete model freeze is
+pending; runtime and whole MEM-PACK/MEMR qualification remain gated.
+
+
+## Measurement-memory concrete freeze and runtime evidence — 2026-09-08
+
+The user accepted and froze the corrected reference canonical packet and all16 control
+commitments. Reference diagnostic digest:
+3396fa9887e6bed02f3d0cb72344e11a6e0fb23859d330cc45f779f931d01df9.
+Complete canonical bytes are authoritative; FREEZE.json records the acceptance without
+rewriting historical review artifacts. C2-MEM-PACK-002 is concretely CLOSED. The blocked
+58a491... family was NEVER ADMITTED/FROZEN and is not a migration or compatibility source.
+This supersedes the preceding pending-freeze/runtime-blocked checkpoint.
+
+Authorized production implementation now reproduces all16 exact models and executes M1,
+IDN formation, delayed cue, exact episode recall, ablations/padding and mandatory original-S0
+prefix restore. See CAMPAIGN2_MEASUREMENT_MEMORY_RUNTIME_REVIEW.md and the production byte
+and fresh-process restore proof reports for evidence and explicit public/component scopes.
+Whole MEM-PACK-A..G and MEMR-A..P qualification is submitted for review, not locally promoted.
+ADAPT-9b, parent control9, PHEN-ADAPT and Campaign2 remain OPEN pending that research verdict.
+No numeric allocation or frozen model/profile/semantic authority changed.
+
+
+## Accepted memory qualification and joined ADAPT parent pair — 2026-09-08
+
+The user QUALIFIES measurement-episodic-memory/0.1-candidate in the accepted bounded scope.
+MEM-PACK-A..G and MEMR-A..P are PASS. Preserve MEM-PACK-E substrate-composition scope,
+MEMR-B component/public split, MEMR-G historical-change/immutability split, and prefix integrity
+without antirollback claims. PHEN-MEM-001 remains OPEN / NOT CLAIMED.
+See CAMPAIGN2_MEASUREMENT_MEMORY_QUALIFICATION.md for the accepted research disposition.
+
+The user withheld ADAPT-9b until a same-S0 joined actual-fact intervention witness executed.
+That conditional gate is now satisfied: identical model/S0/seed, only earlier count0/1 differs;
+four matched rule evaluations create only governed adaptation differences, later actual probe
+reads D=0/1 and emits5/51-over-10, exact carriage forms episodes and later identical cues recover
+352. Full event/allocator topology matches, and both pending-recall restores match final saves.
+ADAPT-9b and parent control9 are PASS under the user's stated condition;52 named pair checks
+plus structural assertions pass. No different-adaptation-S0 substitute is used.
+
+PHEN-ADAPT-001 remains OPEN pending the requested consolidation review against inherited gates;
+no blanket ADAPT/factory/VAL qualification is inferred. Campaign2 remains OPEN / ACTIVE.
+See CAMPAIGN2_PHEN_ADAPT_CONSOLIDATION_REVIEW.md and CAMPAIGN2_ADAPT_PARENT_PAIR_PROOF.json.
+No production code, frozen model, allocation or seam semantics changed in this integration pass.
+
+
+## Parent-pair acceptance and fixture-alignment review — 2026-09-08
+
+The user explicitly ACCEPTS the joined same-S0 causal witness: ADAPT-9a, ADAPT-9b and parent
+control9 are PASS. The PHEN-ADAPT evidence corpus is sufficient except for specification alignment.
+PHEN-ADAPT-001 remains WITHHELD: historical accepted ADAPT fixture prose says one applicable
+rule/input, while the unchanged frozen model and accepted proof execute four single-path rules.
+
+PHEN_ADAPT_FIXTURE_AMENDMENT.md records the requested correct-forward amendment for explicit
+acceptance. It specifies the same nonempty ApplicableRules set, exact rule-derived target paths,
+independently expected state-changing subsets, and distinguished D response-mediating path.
+Control3 is mechanically satisfied but non-discriminating at leaf-family granularity in this
+four-leaf fixture;3a,7g/7g-prime and WRT/collision protections retain the isolation burden.
+The historical ADAPT acceptance source and frozen artifacts remain unchanged.
+
+The corpus draft advances PHEN-ADAPT1.10 to1.11 and aggregate0.26 to0.27; the separate manifest
+audit preserves both canonical commitments and proves exactly one member changed. This is a
+proposal awaiting amendment acceptance, not a silent PHEN PASS. No new model, runtime, allocation
+or behavioral witness is required or introduced. Blanket ADAPT/factory/VAL qualification is not
+inferred; PHEN-MEM-001 and Campaign2 remain OPEN.
+
+
+## Accepted fixture amendment and PHEN-ADAPT PASS — 2026-09-08
+
+The user ACCEPTS PHEN_ADAPT_FIXTURE_AMENDMENT rev1 and PASSES PHEN-ADAPT-001 in the bounded
+frozen-model scope. ADAPT-9a/9b and parent control9 remain PASS. The four matched single-path
+rules, independently specified changed-path sets, distinguished D path, control3 limited scope,
+exact-path/key/WRT protections and accepted component scopes remain binding. Historical1.10/
+corpus0.26 and the original ADAPT acceptance source are preserved. No blanket ADAPT/factory/VAL
+qualification, PHEN-MEM PASS or Campaign2 completion is inferred.
+
+One serialization conflict requires reconciliation: the accepted review digest181ce571... commits
+PHEN-ADAPT1.11.0-draft; the explicitly requested1.11.0 promotion compiles to3cb09115.... Both exact
+manifests are retained in PHEN_ADAPT_CORPUS_PROMOTION_REVIEW.json. See
+PHEN_ADAPT_ACCEPTANCE_AND_CORPUS_VERSION_REVIEW.md. The research PASS is recorded now; only the
+current canonical version/digest pair awaits the user's choice. No runtime/model/allocation changes.
+
+
+## Approved canonical promotion — 2026-09-08
+
+The user approves and freezes PHEN-ADAPT-001/1.11.0 with corpus/0.27.0 and current canonical
+digest3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276.
+The version/digest reconciliation is CLOSED. PHEN-ADAPT remains PASS in bounded frozen-model scope.
+The reviewed1.11.0-draft commitment181ce571... is preserved: superseded reviewed draft, not current,
+not invalid, not an alias. Historical corpus0.26/42dc6304... is unchanged. The original review/audit
+JSON files retain their exact bytes; PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json records the accepted
+promotion separately. The canonical member promotion changes no fixture semantics, model, runtime
+or allocation and requires no additional behavioral proof. Blanket ADAPT/factory/VAL qualification
+is not inferred. PHEN-MEM-001 and Campaign2 remain OPEN. Current verification command:
+node scripts/audit-phen-adapt-corpus-promotion.mjs.
+
+## 2026-09-08 — accepted PERSIST-I scope ruling
+
+PERSIST-I is FROZEN / RETAINED / DEFERRED / NOT PASSED. Its original positive
+obligation is preserved. Current bounded no-RNG qualification may continue;
+whole PERSIST-A..I, VAL and factory qualification are not inferred. The trigger
+is the first separately accepted AND production-supported RNG-consuming seam;
+execute PERSIST-I before claiming complete persistence qualification of that build.
+An RNG-admitting model requires its own separately accepted persistence extension.
+See docs/planning/CAMPAIGN2_PERSIST_I_SCOPE_ADDENDUM.md for the accepted ruling
+and CAMPAIGN2_BUILD_METADATA_PROOF.json for the bounded build-inventory control:
+baseline exact-byte invariance and both save/restore substitutions detected.
+This evidence is not the future positive witness. No fabricated consumer,
+primitive-as-consumer substitution, runtime/model/allocation change or blanket
+activation is authorized. PHEN-ADAPT PASS is unchanged; Campaign 2 remains OPEN.
+
+## 2026-09-08 — bounded no-RNG persistence qualification accepted
+
+campaign2-persistence/0.1-candidate: BOUNDED NO-RNG PROFILE QUALIFIED.
+PERSIST-A..H PASS for the original bounded first profile. PERSIST-I remains
+RETAINED / DEFERRED / NOT PASSED; its separately accepted + production-supported
+RNG-consuming-seam trigger is unchanged. Whole PERSIST-A..I are NOT ALL PASS.
+The accepted argument and exact evidence limits are recorded in
+CAMPAIGN2_BOUNDED_PERSISTENCE_QUALIFICATION_REVIEW.md under docs/planning.
+The 700 descriptor negatives establish omission/version sensitivity only;
+no whole FCT-1/B or VAL verdict follows. Historical matrices retain their original
+checkpoint status. Whole factory/FCT and VAL remain OPEN. Memory prefix-replay
+persistence is separately governed; RNG-capable persistence is not admitted.
+No runtime/model/allocation changes. PHEN-ADAPT PASS unchanged; Campaign 2 OPEN.
+
+## 2026-09-08 — VAL reconciliation accepted
+
+CAMPAIGN2_VAL_CLOSURE_RECONCILIATION and new evidence ACCEPTED.
+VAL-E PASS in generic canonical-content permutation scope; VAL-M PASS;
+VAL-W PASS in current character-only CONTENT scope. Whole VAL/FCT remain OPEN.
+VAL-T second-kind positive remains CONDITIONAL / DEFERRED / NOT PASSED and is
+not a current-profile blocker; do not invent a second kind for qualification.
+The definitive next evidence map is CAMPAIGN2_VAL_A_W_QUALIFICATION_CROSSWALK.md
+in docs/planning, with separate admitted-branch/mutant and declaration-position
+matrices. Proposed statuses there are not accepted verdicts.
+PERSIST-A..H PASS bounded no-RNG; PERSIST-I DEFERRED / NOT PASSED.
+PHEN-ADAPT PASS unchanged; production semantics unchanged; Campaign 2 OPEN.
+
+## 2026-09-08 — VAL A–W crosswalk verdict
+
+CAMPAIGN2_VAL_A_W_QUALIFICATION_CROSSWALK ACCEPTED.
+VAL-A B C D E F G H I J K L M N O P Q R S T U W PASS in the exact scopes
+recorded by that review: finite accepted language/dependencies, current character
+domain, inherited PRJ component, listed owned interpreters, original bounded
+restore facade, finite CONTENT specialization, and current VAL-T obligations.
+T-positive-second-kind remains FUTURE CONDITIONAL / DEFERRED / NOT PASSED;
+not a current blocker. Whole VAL remains OPEN only on VAL-V; FCT stays separate.
+The proposed future-profile deferral for VAL-V is REJECTED: the accepted memory
+recall wrapper already supplies real266.OutputRole in both R=true and R=false.
+Use that public profile for prepare/restore traversal; no invented carrier or
+new scope exception. The first-profile-only audit omitted this existing successor
+and must not be interpreted as absence of a production carrier across the build.
+
+## 2026-09-08 — VAL-V accepted; whole VAL withheld on stage order
+
+VAL-V PASS. All current VAL-A..W vectors PASS in their previously accepted scopes.
+Whole current VAL remains WITHHELD pending one validation-order correction:
+CONTENT stages 2/3 must precede DomainValidator/role closure (stage 4), with the
+exact frozen memory specimen gate afterward and before ModelIdentity/runtime.
+The real public memory266 witness and retained exact-matcher guard are ACCEPTED;
+the initial matcher-first assay remains insufficient historical evidence.
+Add the requested cyclic/missing-reference CONTENT + malformed266 dual-defect
+prepare/restore precedence control. No scope exception or model/allocation change.
+T-positive-second-kind remains FUTURE CONDITIONAL / DEFERRED / not a current blocker.
+Whole FCT/factory remains OPEN and separate. See CAMPAIGN2_VAL_V_MEMORY_ROLE_REVIEW.md.
+
+## 2026-09-08 — whole current VAL qualified
+
+CAMPAIGN2_VAL_V_MEMORY_ROLE_REVIEW rev2 ACCEPTED. VAL-A..W PASS in recorded
+bounded scopes. Whole current VAL QUALIFIED over the accepted Campaign-2
+implementation language and finite qualification scopes; not universal compiler
+or host equivalence. D finite interpreter mutations; E generic CONTENT permutations;
+G/U named dependency alternatives; L/W current character domain; N inherited PRJ;
+O listed interpreters; P original bounded restore; Q finite CONTENT specialization.
+CONTENT-before-role sequencing and dual-defect precedence control ACCEPTED.
+Exact frozen-memory narrowing remains mandatory; no admitted model/identity or
+allocation bytes change. The insufficient matcher-first assay remains historical.
+T-positive-second-kind is FUTURE CONDITIONAL / DEFERRED / NOT PASSED, not a current
+blocker. PERSIST-A..H PASS bounded no-RNG; PERSIST-I DEFERRED / NOT PASSED.
+Whole FCT/factory release remains OPEN / SEPARATE, next reconciliation target.
+PHEN-ADAPT PASS unchanged; Campaign 2 OPEN.

@@ -1,5 +1,7 @@
 import {describe,it,expect} from 'vitest';
-import {canonicalEncode,signed,unsigned,text,set,map,record,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {canonicalEncode,signed,unsigned,text,list,set,map,record,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {decodeCampaign2} from '../campaign2/codecs';
+import {dataItems,dataRecord,dataField} from '../campaign2/canonicalData';
 import {INT64_MAX,timeSchemas} from '../substrate/time';
 import {contentRegistrySchemas} from '../substrate/contentManifest';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
@@ -31,6 +33,35 @@ function entry(o:Options={}){
 }
 const bytes=(...entries:CanonicalValue[])=>canonicalEncode(set(entries));
 describe('regulatory-reference/0.5-candidate closed compiler',()=>{
+  it('REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject',async()=>{
+    const registration=dataRecord(dataField(dataRecord(entry(),171n),4n),283n),reference=dataRecord(dataField(registration,2n),282n);
+    const parameters=dataField(reference,2n) as Extract<CanonicalValue,{kind:'map'}>,parameterCopy=parameters.entries[0][1];
+    const original=fixtureContentInputs(contentId),definition=dataRecord(dataItems(decodeCampaign2(original.content),'set')[0],170n);
+    const copiedContent=canonicalEncode(set([record(definition.schema,new Map([...definition.fields,[10n,list([parameterCopy])]]))]));
+    const inertContext=await compileFirstCampaign2Content(copiedContent,original.entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)])),original.entries);
+    const baseline=compileRegulatoryReferences(bytes(entry()),await context()),withCopy=compileRegulatoryReferences(bytes(entry()),inertContext);
+    for(const at of [0n,1n,INT64_MAX])expect(withCopy.referenceOperatingPoint(character,variable,at)).toEqual(baseline.referenceOperatingPoint(character,variable,at));
+    const otherFamily=id(1027,'parameter/control');
+    for(const options of [{parameter:otherFamily,embedded:parameter},{embedded:otherFamily},{governing:otherFamily},{parameter:otherFamily}]){
+      expect(()=>compileRegulatoryReferences(bytes(entry(options)),inertContext)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    }
+    // The copy is a canonical model datum; only the selected REG map owns parameters.
+    expect(dataField(dataRecord(dataItems(decodeCampaign2(inertContext.canonicalBytes),'set')[0],170n),10n)).toEqual(list([parameterCopy]));
+  });
+  it('REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes',async()=>{
+    const secondId=governedContentDefinitionId('character/second-control'),second=semanticReferentFromAuthoredContent(secondId);
+    const a=fixtureContentInputs(contentId),b=fixtureContentInputs(secondId);
+    const content=canonicalEncode(set([...dataItems(decodeCampaign2(a.content),'set'),...dataItems(decodeCampaign2(b.content),'set')]));
+    const c=await compileFirstCampaign2Content(content,a.entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)])),a.entries);
+    const e=dataRecord(entry(),171n),registration=dataRecord(dataField(e,4n),283n),reference=dataRecord(dataField(registration,2n),282n);
+    const references=dataField(reference,1n) as Extract<CanonicalValue,{kind:'map'}>,anchor=references.entries[0][1];
+    const shared=record(e.schema,new Map([...e.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[1n,map([...references.entries,[r('RegulatoryCharacterReferenceKey',{CharacterId:second}),anchor]])]]))]]))]]));
+    const reg=compileRegulatoryReferences(bytes(shared),c);
+    for(const who of [character,second])expect(reg.referenceOperatingPoint(who,variable,INT64_MAX)).toEqual({kind:'ReferenceValue',value:signed(80)});
+    // Separate single-character controls isolate ownership from total-character coverage.
+    const single=await context();
+    for(const maximum of [100n,101n])expect(()=>compileRegulatoryReferences(bytes(entry(),entry({variable:id(1029,'variable/other'),maximum})),single)).toThrow('REG parameter has multiple variable owners');
+  });
   it('REG-M: malformed declarations fail at their exact closed construction check',async()=>{
     const c=await context(),empty=entry({noCharacters:true}) as Extract<CanonicalValue,{kind:'record'}>;
     const registration=empty.fields.get(4n) as typeof empty,reference=registration.fields.get(2n) as typeof empty;

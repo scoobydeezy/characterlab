@@ -26,9 +26,9 @@ export function decodeStatePattern(value:CanonicalValue):StatePathPattern {
   });
   const result={rootStateTypeId:root,fieldId,selectors};statePathPatternValue(result);return result;
 }
-function valueGrammar(value:CanonicalValue):LeafValueGrammar {
+function valueGrammar(value:CanonicalValue,schema=campaign2SchemaByType):LeafValueGrammar {
   const r=rec(value,152n),tag=u(field(r,1n));
-  if(tag===3n){const typeId=u(field(r,2n));campaign2SchemaByType(typeId);return {kind:'canonical-record',recordTypeId:typeId};}
+  if(tag===3n){const typeId=u(field(r,2n));schema(typeId);return {kind:'canonical-record',recordTypeId:typeId};}
   if(r.fields.has(2n))invalidModel('unexpected value grammar record operand');
   if(tag===1n)return {kind:'unsigned-counter'};
   if(tag===2n)return {kind:'membership-marker'};
@@ -39,8 +39,9 @@ const patternKey=(p:StatePathPattern)=>key(statePathPatternValue(p));
 
 export function compileCampaign2StateModel(
   ownershipBytes:Uint8Array,readOnlyBytes:Uint8Array,keyGrammarBytes:Uint8Array,content:ContentContext,
+  codec={decode:decodeCampaign2,schema:campaign2SchemaByType},
 ){
-  const ownership=rec(decodeCampaign2(ownershipBytes),155n);
+  const ownership=rec(codec.decode(ownershipBytes),155n);
   if(txt(field(ownership,1n))!==MUTATION_AUTHORITY_CONTRACT_VERSION)invalidModel('unsupported ownership version');
   const definitions:MutationAuthorityDefinition[]=items(field(ownership,2n),'set').map(value=>{
     const r=rec(value,154n),authority=id(field(r,1n));
@@ -48,22 +49,22 @@ export function compileCampaign2StateModel(
     return {authorityName:txt(authority.payload),ownedLeaves:items(field(r,2n),'set').map(value=>{
       const leaf=rec(value,153n),removal=field(leaf,3n);
       if(typeof removal!=='boolean')invalidModel('removal permission must be boolean');
-      return {pattern:decodeStatePattern(field(leaf,1n)),valueGrammar:valueGrammar(field(leaf,2n)),removalAllowed:removal as boolean};
+      return {pattern:decodeStatePattern(field(leaf,1n)),valueGrammar:valueGrammar(field(leaf,2n),codec.schema),removalAllowed:removal as boolean};
     })};
   });
   const owned=compileMutationAuthorityRegistry(definitions);
   const families:Family[]=definitions.flatMap(d=>d.ownedLeaves.map(l=>({pattern:l.pattern,grammar:l.valueGrammar,readonly:false,owner:d.authorityName,removalAllowed:l.removalAllowed})));
-  for(const value of items(decodeCampaign2(readOnlyBytes),'set')){
-    const r=rec(value,262n),family={pattern:decodeStatePattern(field(r,1n)),grammar:valueGrammar(field(r,2n)),readonly:true};
+  for(const value of items(codec.decode(readOnlyBytes),'set')){
+    const r=rec(value,262n),family={pattern:decodeStatePattern(field(r,1n)),grammar:valueGrammar(field(r,2n),codec.schema),readonly:true};
     if(families.some(f=>patternsIntersect(f.pattern,family.pattern)))invalidModel('read-only family overlaps another family');
     families.push(family);
   }
   const grammars=new Map<string,{tag:bigint;typeId?:bigint}>();
-  for(const value of items(decodeCampaign2(keyGrammarBytes),'set')){
+  for(const value of items(codec.decode(keyGrammarBytes),'set')){
     const r=rec(value,261n),pattern=decodeStatePattern(field(r,1n)),g=rec(field(r,2n),260n),pkey=patternKey(pattern);
     if(grammars.has(pkey))invalidModel('duplicate key grammar pattern');
     const tag=u(field(g,1n)),typeId=tag===2n?u(field(g,2n)):undefined;
-    if(typeId!==undefined)campaign2SchemaByType(typeId);
+    if(typeId!==undefined)codec.schema(typeId);
     grammars.set(pkey,{tag,typeId});
   }
   const keyed=families.filter(f=>hasMapKey(f.pattern));
@@ -81,7 +82,7 @@ export function compileCampaign2StateModel(
       invalidModel('IDN binding family requires its exact immutable identity-key/record-value shape');
     const mapRole=content.mapKeyRole(268n,1n),characterRole=content.recordRole(267n,1n);
     if(!mapRole||!characterRole)invalidModel('IDN requires both canonical roles');
-    const observer=rec(decodeCampaign2(mapRole!),263n),character=rec(decodeCampaign2(characterRole!),263n);
+    const observer=rec(codec.decode(mapRole!),263n),character=rec(codec.decode(characterRole!),263n);
     if(u(field(observer,1n))!==1000n||observer.fields.has(2n)||u(field(character,1n))!==1002n||!character.fields.has(2n))invalidModel('IDN role declaration mismatch');
     const validator=id(field(character,2n));
     if(validator.namespaceId!==1021n||txt(validator.payload)!=='validator/character-qualification')invalidModel('IDN character validator mismatch');
@@ -129,8 +130,8 @@ export function compileCampaign2StateModel(
     declaredFamilies(){return structuredClone(families);},
     validatePath,
     validateState,
-    restorePath(bytes:Uint8Array):StatePath {const path=restoreStatePath(decodeCampaign2(bytes));validatePath(path);return path;},
-    restoreState(bytes:Uint8Array):AuthoritativeState {const state=restoreAuthoritativeState(decodeCampaign2(bytes));validateState(state);return state;},
+    restorePath(bytes:Uint8Array):StatePath {const path=restoreStatePath(codec.decode(bytes));validatePath(path);return path;},
+    restoreState(bytes:Uint8Array):AuthoritativeState {const state=restoreAuthoritativeState(codec.decode(bytes));validateState(state);return state;},
     read(state:AuthoritativeState,path:StatePath){
       validatePath(path);const result=state.read(path);
       if(result.presence){const family=families.find(f=>patternMatches(f.pattern,path));if(family)validateValue(family,result.value!);}
@@ -138,7 +139,7 @@ export function compileCampaign2StateModel(
     },
     applyPatch(state:AuthoritativeState,patch:StatePatch,authorityId:TypedIdentifierValue){return applyStatePatch(state,patch,authorityId,authority);},
     family(patternBytes:Uint8Array){
-      const p=decodeStatePattern(decodeCampaign2(patternBytes)),f=families.find(f=>patternKey(f.pattern)===patternKey(p));
+      const p=decodeStatePattern(codec.decode(patternBytes)),f=families.find(f=>patternKey(f.pattern)===patternKey(p));
       return f?structuredClone(f):undefined;
     },
   });

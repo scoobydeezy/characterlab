@@ -1,0 +1,4212 @@
+{
+  "status": "COMPONENT PASS",
+  "control": "FCT-6 / VAL-Q independent character-content specialization",
+  "corpusVersion": "finite-character-content/0.1",
+  "modelContext": "rules/campaign2-bounded-bridge/0.2-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/valDeclarations.ts",
+      "sha256": "b147b5fe2cc389d07bfbaa1885a8f4e2624525ad33e0638983304998113d45fc"
+    },
+    {
+      "path": "src/substrate/contentManifest.ts",
+      "sha256": "078a8e031e985439c970e9ca7d95904753a79eff3c471bba0f746d59cd0467bb"
+    }
+  ],
+  "oracleSha256": "c430280fd4e92e7f5071a146e6375bc52e6dd87d7e89b3f5075fefa080956a86",
+  "scope": "All 531 directed graphs through 3 distinct content definitions, plus explicit schema/kind/reference/data boundary cases. Shared cenc transport; independent semantic checks and transitive-closure cycle algorithm.",
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "graph/0/0",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+        "actualSha256": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+      },
+      {
+        "name": "graph/1/0",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "62fddb92ccf358e68d5a09435fe1b5a7e80d7e5e34b9a548c6d1165cc7aff38b",
+        "actualSha256": "62fddb92ccf358e68d5a09435fe1b5a7e80d7e5e34b9a548c6d1165cc7aff38b"
+      },
+      {
+        "name": "graph/1/1",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/0",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "dde3689c44515102ef5a67139d6dee338bfb04d3307def0eb5e3d976175fbdee",
+        "actualSha256": "dde3689c44515102ef5a67139d6dee338bfb04d3307def0eb5e3d976175fbdee"
+      },
+      {
+        "name": "graph/2/1",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/2",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "435580ca428b35902a52235138ba75864fae03e0acbba21a57d500e006a04296",
+        "actualSha256": "435580ca428b35902a52235138ba75864fae03e0acbba21a57d500e006a04296"
+      },
+      {
+        "name": "graph/2/3",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/4",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "2042798c3fc594a262e620a72d9724293c4c29726bcda00d2cdab17f328a0b32",
+        "actualSha256": "2042798c3fc594a262e620a72d9724293c4c29726bcda00d2cdab17f328a0b32"
+      },
+      {
+        "name": "graph/2/5",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/6",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/7",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/8",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/9",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/10",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/11",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/12",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/13",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/14",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/2/15",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/0",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "15216f8687710070420a183e6be706cb437ab0a0c324ed53f45a44b728bab4e0",
+        "actualSha256": "15216f8687710070420a183e6be706cb437ab0a0c324ed53f45a44b728bab4e0"
+      },
+      {
+        "name": "graph/3/1",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/2",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "0b53ba82b5670ec742c1a79fcfcbb85c85a440b9d1c98cc6266c983471b613a7",
+        "actualSha256": "0b53ba82b5670ec742c1a79fcfcbb85c85a440b9d1c98cc6266c983471b613a7"
+      },
+      {
+        "name": "graph/3/3",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/4",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "10cc7cfae6f99dcab797b7556c5cfe243e4f91fb0964d216ae40021aaaca37c0",
+        "actualSha256": "10cc7cfae6f99dcab797b7556c5cfe243e4f91fb0964d216ae40021aaaca37c0"
+      },
+      {
+        "name": "graph/3/5",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/6",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "22f031bc008740cb51731a99fbe89b71bf50009fcd7623236b7a186dbb7181e8",
+        "actualSha256": "22f031bc008740cb51731a99fbe89b71bf50009fcd7623236b7a186dbb7181e8"
+      },
+      {
+        "name": "graph/3/7",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/8",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "939eba5ee9c41ca9499e5540f61a3e9be401e9534379f2fb387f4557db750a34",
+        "actualSha256": "939eba5ee9c41ca9499e5540f61a3e9be401e9534379f2fb387f4557db750a34"
+      },
+      {
+        "name": "graph/3/9",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/10",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/11",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/12",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "0007ac46687eaa3b3ce877bf79cee0ee3dff70a6d1cb70603f7c6cda15341cb3",
+        "actualSha256": "0007ac46687eaa3b3ce877bf79cee0ee3dff70a6d1cb70603f7c6cda15341cb3"
+      },
+      {
+        "name": "graph/3/13",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/14",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/15",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/16",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/17",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/18",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/19",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/20",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/21",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/22",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/23",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/24",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/25",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/26",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/27",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/28",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/29",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/30",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/31",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/32",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "82a6e8ae62f05922ed69f86460f4da57154aa18470e5f174a0f38ac9f8f94bab",
+        "actualSha256": "82a6e8ae62f05922ed69f86460f4da57154aa18470e5f174a0f38ac9f8f94bab"
+      },
+      {
+        "name": "graph/3/33",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/34",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "298e6050c23b53a356d45e656d21e3fbff521c7e63ad2f43c5d8fa3475b140a7",
+        "actualSha256": "298e6050c23b53a356d45e656d21e3fbff521c7e63ad2f43c5d8fa3475b140a7"
+      },
+      {
+        "name": "graph/3/35",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/36",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "7e64240f81873a84cd3bca0b91edfe9432576d52e47ddcbd8b3ea16d6df36a7b",
+        "actualSha256": "7e64240f81873a84cd3bca0b91edfe9432576d52e47ddcbd8b3ea16d6df36a7b"
+      },
+      {
+        "name": "graph/3/37",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/38",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "5797385cc7de4fadb6fb0066822e2d8e36b4385f3f1cc0033cdd49eb9c6873ea",
+        "actualSha256": "5797385cc7de4fadb6fb0066822e2d8e36b4385f3f1cc0033cdd49eb9c6873ea"
+      },
+      {
+        "name": "graph/3/39",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/40",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "e9d6cfdf6322183bd2fa83ebb5bd80ac58ca5699a228a068b29e99ece6392dcb",
+        "actualSha256": "e9d6cfdf6322183bd2fa83ebb5bd80ac58ca5699a228a068b29e99ece6392dcb"
+      },
+      {
+        "name": "graph/3/41",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/42",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/43",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/44",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "92b30f5406e88c39b1c5efeb71d4078de816070fe62b5507ac1efc2f324d466c",
+        "actualSha256": "92b30f5406e88c39b1c5efeb71d4078de816070fe62b5507ac1efc2f324d466c"
+      },
+      {
+        "name": "graph/3/45",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/46",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/47",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/48",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/49",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/50",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/51",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/52",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/53",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/54",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/55",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/56",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/57",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/58",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/59",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/60",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/61",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/62",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/63",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/64",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "4b1bcb7b0517f493c484e01e3df12ce0295782696826ee0eb52b89b8b3f5169d",
+        "actualSha256": "4b1bcb7b0517f493c484e01e3df12ce0295782696826ee0eb52b89b8b3f5169d"
+      },
+      {
+        "name": "graph/3/65",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/66",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "4bd58957debf74efe10f597c3c2fe574cb82491d0f6d13ed8e60bcb2fa497faf",
+        "actualSha256": "4bd58957debf74efe10f597c3c2fe574cb82491d0f6d13ed8e60bcb2fa497faf"
+      },
+      {
+        "name": "graph/3/67",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/68",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/69",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/70",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/71",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/72",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "1891e1c64accf3f99379c757f85206839aaecf59c9cfa40077cbd312ff5b0cf8",
+        "actualSha256": "1891e1c64accf3f99379c757f85206839aaecf59c9cfa40077cbd312ff5b0cf8"
+      },
+      {
+        "name": "graph/3/73",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/74",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/75",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/76",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/77",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/78",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/79",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/80",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/81",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/82",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/83",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/84",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/85",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/86",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/87",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/88",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/89",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/90",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/91",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/92",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/93",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/94",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/95",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/96",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "d8f2705272cbd085ea5867e8e82608ad29dea42ed39bdc05abc7bd40ab2d0a3e",
+        "actualSha256": "d8f2705272cbd085ea5867e8e82608ad29dea42ed39bdc05abc7bd40ab2d0a3e"
+      },
+      {
+        "name": "graph/3/97",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/98",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/99",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/100",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/101",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/102",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/103",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/104",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "b0ebb6ba4a09614770b902d14b892138a051f67aefd3f5db71cb0201eac9cb44",
+        "actualSha256": "b0ebb6ba4a09614770b902d14b892138a051f67aefd3f5db71cb0201eac9cb44"
+      },
+      {
+        "name": "graph/3/105",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/106",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/107",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/108",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/109",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/110",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/111",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/112",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/113",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/114",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/115",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/116",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/117",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/118",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/119",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/120",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/121",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/122",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/123",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/124",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/125",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/126",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/127",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/128",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "65fe79a811daaa9eec2d08a12c8762aaa6991d741c2078d612c4906f322a21ef",
+        "actualSha256": "65fe79a811daaa9eec2d08a12c8762aaa6991d741c2078d612c4906f322a21ef"
+      },
+      {
+        "name": "graph/3/129",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/130",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "525fd4e8ad9005cca4b026170c5aab8e82346a309ab79993d2f853f6bf9efe42",
+        "actualSha256": "525fd4e8ad9005cca4b026170c5aab8e82346a309ab79993d2f853f6bf9efe42"
+      },
+      {
+        "name": "graph/3/131",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/132",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "3994b7546d09b1df58819d9a48949370e580f05a17a59cc40c82f43fa6ddb0c7",
+        "actualSha256": "3994b7546d09b1df58819d9a48949370e580f05a17a59cc40c82f43fa6ddb0c7"
+      },
+      {
+        "name": "graph/3/133",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/134",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "08589fca25a4c9d8e530500bc9f9eb113740c6b98d54a1622dce6d1c3e0bc90a",
+        "actualSha256": "08589fca25a4c9d8e530500bc9f9eb113740c6b98d54a1622dce6d1c3e0bc90a"
+      },
+      {
+        "name": "graph/3/135",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/136",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "01ff759a67b0fb23698db0ec8c650634e7fee02394c0603a0d0525d71e7f6140",
+        "actualSha256": "01ff759a67b0fb23698db0ec8c650634e7fee02394c0603a0d0525d71e7f6140"
+      },
+      {
+        "name": "graph/3/137",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/138",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/139",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/140",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/141",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/142",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/143",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/144",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/145",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/146",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/147",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/148",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/149",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/150",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/151",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/152",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/153",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/154",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/155",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/156",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/157",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/158",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/159",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/160",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/161",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/162",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/163",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/164",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/165",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/166",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/167",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/168",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/169",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/170",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/171",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/172",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/173",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/174",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/175",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/176",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/177",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/178",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/179",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/180",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/181",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/182",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/183",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/184",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/185",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/186",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/187",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/188",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/189",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/190",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/191",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/192",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "d035ea7a140d1d0c7c1bc503e4e1488c165f24268dc1376925ab375e789a42ea",
+        "actualSha256": "d035ea7a140d1d0c7c1bc503e4e1488c165f24268dc1376925ab375e789a42ea"
+      },
+      {
+        "name": "graph/3/193",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/194",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "ea06c99b418f601a5127c33f9adcb118a5dca52a74dc8a17d563574c39bb660c",
+        "actualSha256": "ea06c99b418f601a5127c33f9adcb118a5dca52a74dc8a17d563574c39bb660c"
+      },
+      {
+        "name": "graph/3/195",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/196",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/197",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/198",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/199",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/200",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "d69623511db8dfe4ed58a914774dd61c7979c7c8cde4a7be07df2da4ae85f6cf",
+        "actualSha256": "d69623511db8dfe4ed58a914774dd61c7979c7c8cde4a7be07df2da4ae85f6cf"
+      },
+      {
+        "name": "graph/3/201",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/202",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/203",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/204",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/205",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/206",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/207",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/208",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/209",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/210",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/211",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/212",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/213",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/214",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/215",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/216",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/217",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/218",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/219",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/220",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/221",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/222",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/223",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/224",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/225",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/226",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/227",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/228",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/229",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/230",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/231",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/232",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/233",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/234",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/235",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/236",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/237",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/238",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/239",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/240",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/241",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/242",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/243",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/244",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/245",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/246",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/247",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/248",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/249",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/250",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/251",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/252",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/253",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/254",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/255",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/256",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/257",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/258",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/259",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/260",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/261",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/262",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/263",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/264",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/265",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/266",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/267",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/268",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/269",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/270",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/271",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/272",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/273",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/274",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/275",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/276",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/277",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/278",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/279",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/280",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/281",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/282",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/283",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/284",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/285",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/286",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/287",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/288",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/289",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/290",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/291",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/292",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/293",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/294",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/295",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/296",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/297",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/298",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/299",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/300",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/301",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/302",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/303",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/304",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/305",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/306",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/307",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/308",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/309",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/310",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/311",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/312",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/313",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/314",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/315",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/316",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/317",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/318",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/319",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/320",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/321",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/322",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/323",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/324",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/325",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/326",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/327",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/328",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/329",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/330",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/331",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/332",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/333",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/334",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/335",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/336",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/337",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/338",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/339",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/340",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/341",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/342",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/343",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/344",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/345",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/346",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/347",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/348",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/349",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/350",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/351",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/352",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/353",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/354",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/355",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/356",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/357",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/358",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/359",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/360",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/361",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/362",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/363",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/364",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/365",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/366",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/367",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/368",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/369",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/370",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/371",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/372",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/373",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/374",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/375",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/376",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/377",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/378",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/379",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/380",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/381",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/382",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/383",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/384",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/385",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/386",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/387",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/388",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/389",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/390",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/391",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/392",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/393",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/394",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/395",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/396",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/397",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/398",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/399",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/400",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/401",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/402",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/403",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/404",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/405",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/406",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/407",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/408",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/409",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/410",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/411",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/412",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/413",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/414",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/415",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/416",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/417",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/418",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/419",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/420",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/421",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/422",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/423",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/424",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/425",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/426",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/427",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/428",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/429",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/430",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/431",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/432",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/433",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/434",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/435",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/436",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/437",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/438",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/439",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/440",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/441",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/442",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/443",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/444",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/445",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/446",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/447",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/448",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/449",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/450",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/451",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/452",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/453",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/454",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/455",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/456",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/457",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/458",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/459",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/460",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/461",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/462",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/463",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/464",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/465",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/466",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/467",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/468",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/469",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/470",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/471",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/472",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/473",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/474",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/475",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/476",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/477",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/478",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/479",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/480",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/481",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/482",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/483",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/484",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/485",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/486",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/487",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/488",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/489",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/490",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/491",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/492",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/493",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/494",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/495",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/496",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/497",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/498",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/499",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/500",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/501",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/502",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/503",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/504",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/505",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/506",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/507",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/508",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/509",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/510",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "graph/3/511",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "missing-field/1",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/2",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/3",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/4",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/5",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/6",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/7",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/8",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/9",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/10",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/11",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/12",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/13",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/14",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/15",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "missing-field/16",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "CanonicalEncodingError"
+      },
+      {
+        "name": "duplicate-stable-id",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "unknown-kind",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "wrong-kind-namespace",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "unknown-content-reference",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "duplicate-content-reference",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "unknown-registry-reference",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "duplicate-registry-reference",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "ContentValidationError"
+      },
+      {
+        "name": "known-registry-reference",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "8690a8cad1d56b283210285c7dc7155a94deb2b27a88ea035d3cde8ae25499ae",
+        "actualSha256": "8690a8cad1d56b283210285c7dc7155a94deb2b27a88ea035d3cde8ae25499ae"
+      },
+      {
+        "name": "unordered-content-references",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "22f031bc008740cb51731a99fbe89b71bf50009fcd7623236b7a186dbb7181e8",
+        "actualSha256": "22f031bc008740cb51731a99fbe89b71bf50009fcd7623236b7a186dbb7181e8"
+      },
+      {
+        "name": "wrong-reference-container",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "SchedulerContractError"
+      },
+      {
+        "name": "wrong-reference-atom",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "SchedulerContractError"
+      },
+      {
+        "name": "wrong-stable-id-shape",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "SchedulerContractError"
+      },
+      {
+        "name": "wrong-top-level",
+        "expected": "reject",
+        "actual": "reject",
+        "exactAgreement": true,
+        "errorClass": "SchedulerContractError"
+      },
+      {
+        "name": "opaque-authoritative-data/3",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "cfa5a106cafe7d683c477d79133f9f000a148d7fadbec13947f92e39f21a8800",
+        "actualSha256": "cfa5a106cafe7d683c477d79133f9f000a148d7fadbec13947f92e39f21a8800"
+      },
+      {
+        "name": "opaque-authoritative-data/4",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "9aa1b3748275fa1734e406d15802eab8b75f98bce9133ce674fd8bf6439c6bfa",
+        "actualSha256": "9aa1b3748275fa1734e406d15802eab8b75f98bce9133ce674fd8bf6439c6bfa"
+      },
+      {
+        "name": "opaque-authoritative-data/5",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "c4cc9270b68f192c3df1f9b3b5b726c5b5c80cdac8c4e1aa19a65109cd584466",
+        "actualSha256": "c4cc9270b68f192c3df1f9b3b5b726c5b5c80cdac8c4e1aa19a65109cd584466"
+      },
+      {
+        "name": "opaque-authoritative-data/6",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "399fa7a911e11088b8333437ad8436cefa70e5783d8be473918c1198cf8032f9",
+        "actualSha256": "399fa7a911e11088b8333437ad8436cefa70e5783d8be473918c1198cf8032f9"
+      },
+      {
+        "name": "opaque-authoritative-data/7",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "548649a74bb95005d9ab0dc4c7d730f16776b41454d5d922c7616cf04b625cbf",
+        "actualSha256": "548649a74bb95005d9ab0dc4c7d730f16776b41454d5d922c7616cf04b625cbf"
+      },
+      {
+        "name": "opaque-authoritative-data/8",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "7ccb41c57839a651be538a04a8746516594b1a6f54a60de3f8d12bbce35dedb1",
+        "actualSha256": "7ccb41c57839a651be538a04a8746516594b1a6f54a60de3f8d12bbce35dedb1"
+      },
+      {
+        "name": "opaque-authoritative-data/9",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "f118d4a9ec56151732386b649de92a357b7b4694e33f5ed9d302dc1165f59b45",
+        "actualSha256": "f118d4a9ec56151732386b649de92a357b7b4694e33f5ed9d302dc1165f59b45"
+      },
+      {
+        "name": "opaque-authoritative-data/10",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "b081ca0768a6fc7a26a9f6613ccbc95e51e0cd7a0f11c48ba3ddd28360b644e5",
+        "actualSha256": "b081ca0768a6fc7a26a9f6613ccbc95e51e0cd7a0f11c48ba3ddd28360b644e5"
+      },
+      {
+        "name": "opaque-authoritative-data/13",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "5f04bb25fb5f2a2e76a456ffca6aceecde7c45df2bd4d677313c430e8bcaf978",
+        "actualSha256": "5f04bb25fb5f2a2e76a456ffca6aceecde7c45df2bd4d677313c430e8bcaf978"
+      },
+      {
+        "name": "opaque-authoritative-data/14",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "54e7bdd057ae8c0ce705468e7c2c07e0908fb4428417c0c9107cdc8e0f70140a",
+        "actualSha256": "54e7bdd057ae8c0ce705468e7c2c07e0908fb4428417c0c9107cdc8e0f70140a"
+      },
+      {
+        "name": "opaque-authoritative-data/15",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "9bdd28299de409f84e503d27390ec8bb7c3a7873413bdf7b384fbac6a72fe8f3",
+        "actualSha256": "9bdd28299de409f84e503d27390ec8bb7c3a7873413bdf7b384fbac6a72fe8f3"
+      },
+      {
+        "name": "opaque-authoritative-data/16",
+        "expected": "accept",
+        "actual": "accept",
+        "exactAgreement": true,
+        "expectedSha256": "93b275541bd02ef666258d681779dbaeb7daf578b18ef85470b08ce72968f450",
+        "actualSha256": "93b275541bd02ef666258d681779dbaeb7daf578b18ef85470b08ce72968f450"
+      }
+    ],
+    "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef"
+  },
+  "mutations": [
+    {
+      "name": "skip-cycle-check",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "graph/1/1",
+          "expected": "reject",
+          "actual": "accept",
+          "exactAgreement": false,
+          "actualSha256": "35bbeecb528a9fb4ca0009f41f561837e9d861e5bde91b63a2b97203d5fb23ac"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/substrate/contentManifest.ts",
+      "from": "rejectContentCycles(byId);",
+      "to": "void byId;"
+    },
+    {
+      "name": "skip-registry-reference-existence",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "unknown-registry-reference",
+          "expected": "reject",
+          "actual": "accept",
+          "exactAgreement": false,
+          "actualSha256": "1a0b8e14b8956b85c947114c2ab442ecb0be94ec5f48eb5dcd78c66f29384a59"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/substrate/contentManifest.ts",
+      "from": "if (!registryKeys.has(canonicalKey(reference)))",
+      "to": "if (false)"
+    },
+    {
+      "name": "admit-dangling-content-reference",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "unknown-content-reference",
+          "expected": "reject",
+          "actual": "accept",
+          "exactAgreement": false,
+          "actualSha256": "2abb21ec386596c579342f521fdae082087cdb1c1a60466dbd20a8c534f125e2"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/substrate/contentManifest.ts",
+      "from": "if (!byId.has(canonicalKey(reference)))",
+      "to": "if (false)",
+      "extraFrom": "for (const reference of byId.get(key)!.referencedContentIds) visit(canonicalKey(reference));",
+      "extraTo": "for (const reference of byId.get(key)!.referencedContentIds) if (byId.has(canonicalKey(reference))) visit(canonicalKey(reference));"
+    },
+    {
+      "name": "require-uncommitted-body-predicate",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "graph/1/0",
+          "expected": "accept",
+          "actual": "reject",
+          "exactAgreement": false,
+          "expectedSha256": "62fddb92ccf358e68d5a09435fe1b5a7e80d7e5e34b9a548c6d1165cc7aff38b",
+          "errorClass": "ContentValidationError"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "validate:()=>{}",
+      "to": "validate:()=>{throw new ContentValidationError('mutant requires body');}"
+    },
+    {
+      "name": "substitute-authoritative-field",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "opaque-authoritative-data/6",
+          "expected": "accept",
+          "actual": "accept",
+          "exactAgreement": false,
+          "expectedSha256": "399fa7a911e11088b8333437ad8436cefa70e5783d8be473918c1198cf8032f9",
+          "actualSha256": "62fddb92ccf358e68d5a09435fe1b5a7e80d7e5e34b9a548c6d1165cc7aff38b"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "worldEffects:field(r,6n)",
+      "to": "worldEffects:field(r,5n)"
+    },
+    {
+      "name": "skip-reference-uniqueness",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "duplicate-registry-reference",
+          "expected": "reject",
+          "actual": "accept",
+          "exactAgreement": false,
+          "actualSha256": "75d6ff1923835d988717bbcce29bdaa787e6b5098c41a3f49f3243174f5449bb"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/substrate/contentManifest.ts",
+      "from": "if (canonicalKey(sorted[index - 1]) === canonicalKey(sorted[index]))",
+      "to": "if (false)"
+    },
+    {
+      "name": "skip-reference-order-normalization",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "unordered-content-references",
+          "expected": "accept",
+          "actual": "accept",
+          "exactAgreement": false,
+          "expectedSha256": "22f031bc008740cb51731a99fbe89b71bf50009fcd7623236b7a186dbb7181e8",
+          "actualSha256": "683b0db7ac9df800865d53bc7ad91b9706f0f8670a2539dc0a2d219a4a75aea9"
+        }
+      ],
+      "registrySha256": "4ad1c689a4736a8214ff336d7eaf0847609682b4a6ec0aa8c73508cc1f74afef",
+      "source": "src/substrate/contentManifest.ts",
+      "from": "list(canonicalUnique(input.referencedContentIds, 'referenced content ID'))",
+      "to": "list(input.referencedContentIds)"
+    }
+  ],
+  "supersededMutationAttempts": [
+    {
+      "name": "skip-content-reference-existence",
+      "result": "not distinguished by accept/reject comparison",
+      "reason": "Removing only the explicit existence check still rejects during DFS traversal of the missing node. Replaced with a two-site dangling-reference acceptance mutant; no claim that the first mutation was killed."
+    }
+  ],
+  "limitations": [
+    "No independent codec proof.",
+    "Acceptance/rejection and exact accepted canonical bytes compared; rejection-carrier precedence is not independently qualified here.",
+    "Fixed valid VAL declarations; full declaration/role traversal and IDN qualification are separate controls.",
+    "Not full FCT-6, VAL-A..W, ADAPT or PHEN-ADAPT closure."
+  ]
+}

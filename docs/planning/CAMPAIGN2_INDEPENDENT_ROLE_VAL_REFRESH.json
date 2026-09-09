@@ -1,0 +1,2714 @@
+{
+  "status": "COMPONENT PASS",
+  "control": "FCT-6 independent role / IDN qualification",
+  "corpusVersion": "finite-character-role/0.1",
+  "sourceFingerprint": {
+    "path": "src/campaign2/valDeclarations.ts",
+    "sha256": "b147b5fe2cc389d07bfbaa1885a8f4e2624525ad33e0638983304998113d45fc"
+  },
+  "oracleSha256": "8644f9a79c6b808b2c982bb6baa459224d8f23f2b27805abb42ab9399d549d00",
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "casesChecked": 234,
+    "differences": [],
+    "cases": [
+      {
+        "name": "empty/qualify/1002/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/authored-known",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/authored-missing",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/authored-foreign-stable",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/authored-empty-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/runtime-zero",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/runtime-one",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/runtime-large",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/authored-known",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/authored-missing",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/authored-foreign-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/runtime-zero",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/runtime-one",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/runtime-large",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/1000/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/1000/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/1000/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/authored-known",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/authored-missing",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/authored-foreign-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/runtime-zero",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/runtime-one",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/runtime-large",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/20/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/20/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/20/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/root-boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/root-boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/root-boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/root-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/root-text",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/root-text",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualify/root-list",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "empty/qualified-role/root-list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "empty/namespace-role/root-list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/authored-known",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/authored-known",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/authored-known",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/authored-missing",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/authored-foreign-stable",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/authored-empty-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/runtime-zero",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/runtime-one",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/runtime-large",
+        "expected": "ACCEPT",
+        "actual": "ACCEPT",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1002/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/authored-known",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/authored-missing",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/authored-foreign-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/runtime-zero",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/runtime-one",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/runtime-large",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/1000/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/1000/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/1000/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/authored-known",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/authored-known",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/authored-missing",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/authored-missing",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/authored-foreign-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/authored-foreign-stable",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/authored-empty-stable",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/authored-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/runtime-zero",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/runtime-zero",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/runtime-one",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/runtime-one",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/runtime-large",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/runtime-large",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/runtime-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/unknown-origin",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/unknown-origin",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/text-only",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/text-only",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/20/boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/20/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/20/boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/root-boolean",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/root-boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/root-boolean",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/root-text",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/root-text",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/root-text",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualify/root-list",
+        "expected": "CanonicalEncodingError",
+        "actual": "CanonicalEncodingError",
+        "agrees": true
+      },
+      {
+        "name": "populated/qualified-role/root-list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      },
+      {
+        "name": "populated/namespace-role/root-list",
+        "expected": "CANONICAL_ROLE_VIOLATION",
+        "actual": "CANONICAL_ROLE_VIOLATION",
+        "agrees": true
+      }
+    ],
+    "declarationHashes": {
+      "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+    }
+  },
+  "mutations": [
+    {
+      "name": "skip-committed-resolution",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/qualify/1002/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-empty-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-empty-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(origin.namespaceId!==1037n||contentKinds.get(key(origin.payload))!==key(characterKind!))",
+      "to": "if(origin.namespaceId!==1037n)"
+    },
+    {
+      "name": "compare-stable-payload-only",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "populated/qualify/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(origin.namespaceId!==1037n||contentKinds.get(key(origin.payload))!==key(characterKind!))",
+      "to": "if(origin.namespaceId!==1037n||!inputs.some(d=>key(d.stableId.payload)===key(asId(origin.payload).payload)))"
+    },
+    {
+      "name": "qualify-namespace-only-role",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/namespace-role/1002/authored-known",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1002/authored-missing",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1002/authored-foreign-stable",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1002/runtime-zero",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1002/runtime-one",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1002/runtime-large",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1002/authored-missing",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1002/authored-foreign-stable",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1002/runtime-zero",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1002/runtime-one",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1002/runtime-large",
+          "expected": "ACCEPT",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(role.fields.has(2n))qualifyCharacter(value);",
+      "to": "qualifyCharacter(value);"
+    },
+    {
+      "name": "skip-required-namespace",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/qualified-role/1000/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1000/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/1000/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/20/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "empty/namespace-role/20/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1000/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/1000/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/unknown-origin",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/text-only",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/20/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "CanonicalEncodingError",
+          "agrees": false
+        },
+        {
+          "name": "populated/namespace-role/20/boolean",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "value.namespaceId!==asUnsigned(field(role,1n))",
+      "to": "false"
+    },
+    {
+      "name": "skip-referent-shell",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/qualify/1002/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/authored-known",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/authored-missing",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/authored-foreign-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/authored-empty-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/runtime-zero",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/runtime-one",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/runtime-large",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1000/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/authored-known",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/authored-missing",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/authored-foreign-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/authored-empty-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/runtime-zero",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/runtime-one",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/runtime-large",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/20/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/root-boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/root-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/root-list",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/authored-known",
+          "expected": "CanonicalEncodingError",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/authored-missing",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/authored-foreign-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/authored-empty-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/runtime-zero",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/runtime-one",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/runtime-large",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1000/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/authored-known",
+          "expected": "CanonicalEncodingError",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/authored-missing",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/authored-foreign-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/authored-empty-stable",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/authored-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/runtime-zero",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/runtime-one",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/runtime-large",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/runtime-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/unknown-origin",
+          "expected": "CanonicalEncodingError",
+          "actual": "CANONICAL_ROLE_VIOLATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/text-only",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/20/boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "INVALID_CONFIGURATION",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/root-boolean",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/root-text",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/root-list",
+          "expected": "CanonicalEncodingError",
+          "actual": "TypeError",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "validateSemanticReferent(value); // Structural failure precedes the narrower role.",
+      "to": "// Mutant omits structural shell validation."
+    },
+    {
+      "name": "admit-runtime-as-character",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/qualify/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ACCEPT",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "if(origin.namespaceId!==1037n||contentKinds.get(key(origin.payload))!==key(characterKind!))",
+      "to": "if(origin.namespaceId===1037n&&contentKinds.get(key(origin.payload))!==key(characterKind!))"
+    },
+    {
+      "name": "replace-qualification-error-carrier",
+      "status": "DETECTED",
+      "casesChecked": 234,
+      "differences": [
+        {
+          "name": "empty/qualify/1002/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-known",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/authored-empty-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualify/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "empty/qualified-role/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/authored-missing",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/authored-foreign-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/authored-empty-stable",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-zero",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-one",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualify/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        },
+        {
+          "name": "populated/qualified-role/1002/runtime-large",
+          "expected": "CANONICAL_ROLE_VIOLATION",
+          "actual": "ContentValidationError",
+          "agrees": false
+        }
+      ],
+      "declarationHashes": {
+        "registry": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+        "content": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+      },
+      "source": "src/campaign2/valDeclarations.ts",
+      "from": "throw new StateContractError('CANONICAL_ROLE_VIOLATION','referent is not an authored character in committed content');",
+      "to": "throw new ContentValidationError('referent is not an authored character in committed content');"
+    }
+  ],
+  "limitations": [
+    "Finite atom/list namespace corpus, not a general independent codec.",
+    "Direct qualification and decoded role admission intentionally have distinct structural-error precedence.",
+    "No whole-declaration or recursive record/map-key traversal qualification claim.",
+    "No global FCT-6, VAL, TRACE or PHEN-ADAPT closure."
+  ]
+}

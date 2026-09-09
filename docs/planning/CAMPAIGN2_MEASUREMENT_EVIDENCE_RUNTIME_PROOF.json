@@ -1,5 +1,5 @@
 {
-  "status": "EXECUTED EVIDENCE; QUALIFICATION ACCEPTANCE PENDING",
+  "status": "RUNTIME QUALIFIED; USER VERDICT ACCEPTED",
   "rulesVersion": "rules/campaign2-measurement-evidence/0.1-candidate",
   "modelDigest": "8dec83b33366ea13217db0005942f9e159ff2e36402c241231af5d5e1f04d22c",
   "regression": {
@@ -25,5 +25,17 @@
     "parent control 9",
     "PHEN-ADAPT",
     "Campaign 2"
-  ]
+  ],
+  "qualification": {
+    "date": "2026-09-07",
+    "contract": "measurement-evidence-carriage/0.1-candidate",
+    "evc": "EVC-A..P PASS",
+    "packaging": "EVC-PACK-A..I PASS",
+    "modelByte": "EVC-MODEL-BYTE PASS preserved",
+    "evcB": "PASS iff B1 actual generic REG/probe/production validation/shared V07/intake equality witness AND B2 frozen public changed-anchor exclusion. No public R0 variation claimed.",
+    "evcE": "Accepted diagnostic-present domain only",
+    "packB": "Frozen first production model only; no arbitrary V07 language",
+    "packI": "Exact implementation/profile reuse plus bounded witnesses; no exhaustive manifest enumeration",
+    "persistentCognitiveUpdate": "NONE"
+  }
 }

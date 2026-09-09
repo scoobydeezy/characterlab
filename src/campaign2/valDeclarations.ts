@@ -33,7 +33,10 @@ function collection(v:CanonicalValue,kind:'list'|'set'):readonly CanonicalValue[
  * owning factory's closed registry matrix. No callback or origin namespace option is accepted.
  * Coverage is computed from actual declared role positions, not an external list of validator IDs.
  */
-export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Uint8Array) {
+export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Uint8Array,
+  codec={decode:decodeCampaign2,schema:campaign2SchemaByType}) {
+  // Internal version-specific schema context, never supplied by a public factory caller.
+  const declarationValue=(bytes:Uint8Array):CanonicalValue=>{try{return codec.decode(bytes);}catch(error){return invalid(error instanceof Error?error.message:String(error));}};
   const entries=collection(declarationValue(entryBytes),'set');
   const declarations=declarationValue(declarationBytes);
   let characterKind:Id|undefined,characterValidator:Id|undefined;
@@ -73,7 +76,7 @@ export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Ui
         if(constraints.has(pkey))invalid('duplicate canonical role position');
         const tag=asUnsigned(field(p,1n));
         const typeId=asUnsigned(field(p,tag===1n?2n:3n)),fieldId=asUnsigned(field(p,4n));
-        let schema;try{schema=campaign2SchemaByType(typeId);}catch{invalid('unknown role position record type');}
+        let schema;try{schema=codec.schema(typeId);}catch{invalid('unknown role position record type');}
         if(!schema!.fields.some(f=>f.id===fieldId))invalid('unknown role position field');
         constraints.set(pkey,{position:p,role:asRecord(field(v,2n),263n)});
       }
@@ -99,7 +102,7 @@ export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Ui
       }
       for(const e of entries){const expected=asRecord(e,171n),found=registered.get(key(field(expected,1n)));
         if(found===undefined||key(found)!==key(e))invalid('VAL declarations differ from complete registry');}
-      const values=collection(decodeCampaign2(contentBytes),'set');
+      const values=collection(codec.decode(contentBytes),'set');
       const inputs:GovernedContentInput[]=values.map(v=>{
         const r=asRecord(v,170n);const kind=asId(field(r,2n));
         if(!characterKind||key(kind)!==key(characterKind))throw new ContentValidationError('unsupported content semantic kind');
@@ -147,7 +150,7 @@ export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Ui
         /** FCT-3 component only: recursive record positions. StateMapKey checks must follow
          * the owning family's StateKeyGrammar check in the state/projection compiler.
          */
-        validateRecordRoles(bytes:Uint8Array):void {recordRoles(decodeCampaign2(bytes));},
+        validateRecordRoles(bytes:Uint8Array):void {recordRoles(codec.decode(bytes));},
         recordRole(typeId:bigint,fieldId:bigint):Uint8Array|undefined {
           const found=[...constraints.values()].find(c=>asUnsigned(field(c.position,1n))===1n&&asUnsigned(field(c.position,2n))===typeId&&asUnsigned(field(c.position,4n))===fieldId);
           return found===undefined?undefined:canonicalEncode(found.role);
@@ -162,7 +165,7 @@ export function compileValDeclarations(entryBytes:Uint8Array,declarationBytes:Ui
             exactId(field(r,2n),1021n,'validator/character-qualification');
             if(asUnsigned(field(r,1n))!==1002n||!characterValidator)invalid('unadmitted role validator');
           }
-          checkRole(decodeCampaign2(valueBytes),r);
+          checkRole(codec.decode(valueBytes),r);
         },
       });
     },

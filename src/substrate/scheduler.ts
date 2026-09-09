@@ -137,6 +137,7 @@ export interface FailureDiagnostic {
 }
 
 export type SchedulerFailureCode =
+  | 'INSTANT_OVERFLOW'
   | 'RUN_NOT_ACTIVE'
   | 'INVALID_CONFIGURATION'
   | 'INVALID_EVENT'
