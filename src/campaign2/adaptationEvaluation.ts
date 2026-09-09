@@ -2,7 +2,7 @@
  * Batch preparation admits every capability and detects all targets before projection reads.
  */
 import {canonicalEncode,record,set,signed,unsigned,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
-import {AuthoritativeState,ContractReadProjection,actualReadRecordValue,statePathValue,statePatchValue,type StatePath,type StatePatch,type PatchOperation,type ProjectionBinding,type ActualReadRecord,type StructuralMutationDiff} from '../substrate/state';
+import {AuthoritativeState,ContractReadProjection,actualReadRecordValue,statePathValue,statePatchValue,createStatePatch,mutationDiffValue,type StatePath,type StatePatch,type PatchOperation,type ProjectionBinding,type ActualReadRecord,type StructuralMutationDiff} from '../substrate/state';
 import {SchedulerContractError} from '../substrate/scheduler';
 import {decodeCampaign2,campaign2Record as r,campaign2SchemaByType} from './codecs';
 import {admittedInputFacts,type AdmittedTransitionInput} from './admittedInput';
@@ -63,8 +63,9 @@ export function compileAdaptationEvaluator(transitions:ReturnType<typeof compile
           if(evaluated)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','batch evaluated twice');evaluated=true;
           const snapshot=new AuthoritativeState(frozen.entries());domains.validateStatic(snapshot);domains.validateReferences(snapshot,instant);
           let candidate=new AuthoritativeState(snapshot.entries());
-          let cursor=0,closed=false;
+          let cursor=0,closed=false,active=false;
           const results:ReturnType<typeof executeNext>[]=[];
+          const expectations=new Map<object,{paths:StatePath[];roots:bigint[];outputs:Uint8Array[];diffs:string[];reads:string[]}>();
           function executeNext(token:AdmittedTransitionInput,allocator:{allocateRuntimeId():bigint}){
             const execution=executions[cursor];
             if(closed||!execution||execution.token!==token)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','batch event order or multiplicity differs');
@@ -82,7 +83,11 @@ export function compileAdaptationEvaluator(transitions:ReturnType<typeof compile
               const prior=projection.read('target'),p=magnitude(prior);domains.validateMagnitude(path,p,instant);
               const gate=gatePath?projection.read('gate'):undefined,g=gatePath?magnitude(gate):undefined;
               if(gatePath)domains.validateMagnitude(gatePath,g!,instant);
-              reads.push(...projection.actualReadRecords());
+              const segment=projection.actualReadRecords();
+              const expectedRead=(name:string,path:StatePath,value:CanonicalValue|undefined)=>actualReadRecordValue({accessorId:accessor(name),path,presence:value!==undefined,value,derivedSources:[]});
+              const expectedSegment=[expectedRead('target',path,prior),...(gatePath?[expectedRead('gate',gatePath,gate)]:[])].map(key);
+              if(JSON.stringify(segment.map(v=>key(actualReadRecordValue(v))))!==JSON.stringify(expectedSegment))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','ADAPT rule read instrumentation differs from target/gate segment');
+              reads.push(...segment);
               const step=f(rule,6n) as {value:bigint},q=countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g);
               domains.validateMagnitude(path,q,instant);
               let patch:StatePatch={operations:[]};
@@ -100,15 +105,35 @@ export function compileAdaptationEvaluator(transitions:ReturnType<typeof compile
                 Result:r('AdaptationResult',patch.operations.length?{VariantTag:unsigned(2),Patch:statePatchValue(patch)}:{VariantTag:unsigned(1)}),TransformationVersion:text(VERSION)});
             });
             const patch={operations};
-            return {token:execution.token,event:execution.admitted.event,outputs:[dispatch,...evaluations],actualReads:reads.map(actualReadRecordValue),actualReadRecords:reads,readDomain,patch,authority};
+            const result={token:execution.token,event:execution.admitted.event,outputs:[dispatch,...evaluations],actualReads:reads.map(actualReadRecordValue),actualReadRecords:reads,readDomain,patch,authority};
+            const writable=items(f(rec(f(definition,4n),322n),3n),'set');
+            // Construction already resolves these exact two materialized families.
+            const roots=writable.map(v=>key(v)===key(typedIdentifier(1031n,text('regulatory-adaptation')))?302n:303n);
+            const expectedDiffs=createStatePatch(patch.operations).operations.map(op=>key(mutationDiffValue(op.kind==='set'
+              ?{path:op.path,oldPresence:op.expected.presence,oldValue:op.expected.presence?op.expected.value:undefined,newPresence:true,newValue:op.newValue,mutationAuthorityId:authority}
+              :{path:op.path,oldPresence:true,oldValue:op.expectedOldValue,newPresence:false,mutationAuthorityId:authority})));
+            expectations.set(result,{paths:structuredClone(execution.rules.map(v=>v.path)),roots,outputs:result.outputs.map(canonicalEncode),diffs:expectedDiffs,reads:reads.map(v=>key(actualReadRecordValue(v)))});
+            return result;
           }
           return Object.freeze({
-            execute(token:AdmittedTransitionInput,allocator:{allocateRuntimeId():bigint}){const result=executeNext(token,allocator);results.push(result);return result;},
+            execute(token:AdmittedTransitionInput,allocator:{allocateRuntimeId():bigint}){
+              if(active)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','nested ADAPT execution');
+              active=true;
+              try{const result=executeNext(token,allocator);results.push(result);return result;}
+              finally{active=false;}
+            },
             finish(){
-          if(closed||cursor!==executions.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','unfinished or repeated batch barrier');closed=true;
+          if(active||closed||cursor!==executions.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','unfinished or repeated batch barrier');closed=true;
           // Barrier: every read/evaluation completed against the unchanged common snapshot.
           const diffs=new Map<object,readonly StructuralMutationDiff[]>();
-          for(const result of results){const applied=stateModel.applyPatch(candidate,result.patch,result.authority);candidate=applied.state;diffs.set(result,applied.diffs);}
+          for(const result of results){
+            const expected=expectations.get(result)!;
+            const applied=stateModel.applyPatch(candidate,result.patch,result.authority,{writableRoots:expected.roots,targetPaths:expected.paths});
+            if(JSON.stringify(applied.diffs.map(d=>key(mutationDiffValue(d))))!==JSON.stringify(expected.diffs))throw new SchedulerContractError('ADAPTATION_MUTATION_DIFF_VIOLATION','actual diffs differ from staged effective changes');
+            if(result.outputs.length!==expected.outputs.length||result.outputs.some((v,i)=>key(v)!==key(decodeCampaign2(expected.outputs[i]))))throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','outputs differ from staged evaluations');
+            if(JSON.stringify(result.actualReadRecords.map(v=>key(actualReadRecordValue(v))))!==JSON.stringify(expected.reads)||JSON.stringify(result.actualReads.map(key))!==JSON.stringify(expected.reads))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','ADAPT read evidence differs from staged rule segments');
+            candidate=applied.state;diffs.set(result,applied.diffs);
+          }
           try{domains.validateStatic(candidate);}catch(error){throw new SchedulerContractError('STATE_VALIDATION_FAILURE',error instanceof Error?error.message:String(error));}
           domains.validateReferences(candidate,instant);
           for(const result of results)completedExecutions.set(result,{token:result.token,outputs:result.outputs.map(v=>decodeCampaign2(canonicalEncode(v))),diffs:structuredClone(diffs.get(result)!)});

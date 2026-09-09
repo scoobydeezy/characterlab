@@ -1,0 +1,335 @@
+{
+  "status": "FCT-C refreshed split-scope evidence / AD-E11",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+    },
+    {
+      "path": "src/campaign2/evidExecution.ts",
+      "sha256": "285aac632f246c604f3e07d835c047423f24e552538353909032e472d2601f49"
+    },
+    {
+      "path": "src/campaign2/transitionIngressV04.ts",
+      "sha256": "cfb297935516f618d1b68ee9e6b58f45dcbe5cb6017ec387e48adfd7f00ad778"
+    },
+    {
+      "path": "src/campaign2/requiredProjection.ts",
+      "sha256": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/test/campaign2GenericRoster.test.ts",
+      "sha256": "32f749c7cd45565c65913b9beee9b709c855f8edd304f4b0e123209a1fd307ba"
+    },
+    {
+      "path": "src/test/campaign2RosterScope.test.ts",
+      "sha256": "7282d80e7c8ad4e95e575685ed662ee4a7a6c43069d2c13cd4b4fc13917c59d7"
+    },
+    {
+      "path": "src/test/fixtures/campaign2RosterModel.ts",
+      "sha256": "f037e11f2f27bd601ce19d81ef61e22951b28e4ebff5b2ee947c476174d1ea6d"
+    }
+  ],
+  "genericBaseline": {
+    "test": "src/test/campaign2GenericRoster.test.ts",
+    "mode": "BASELINE",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+        "state": "pass"
+      },
+      {
+        "name": "FCT-C2: exact accepted IDN subject requirement is rejected by the EVID empty ReadDomain",
+        "state": "pass"
+      }
+    ]
+  },
+  "projectionRejections": [
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "state",
+      "attempt": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "event",
+      "attempt": "void (input as any).event;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "trace",
+      "attempt": "void (input as any).trace;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "parent",
+      "attempt": "void (input as any).parent;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "content",
+      "attempt": "void (input as any).content;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "registry",
+      "attempt": "void (input as any).registry;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "identityOrdinal",
+      "attempt": "void (input as any).identityOrdinal;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "traceAncestry",
+      "attempt": "void (input as any).traceAncestry;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "evaluation",
+      "field": "perceivedSuccess",
+      "attempt": "void (input as any).perceivedSuccess;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "state",
+      "attempt": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "event",
+      "attempt": "void (input as any).event;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "trace",
+      "attempt": "void (input as any).trace;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "parent",
+      "attempt": "void (input as any).parent;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "content",
+      "attempt": "void (input as any).content;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "registry",
+      "attempt": "void (input as any).registry;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "identityOrdinal",
+      "attempt": "void (input as any).identityOrdinal;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "traceAncestry",
+      "attempt": "void (input as any).traceAncestry;"
+    },
+    {
+      "test": "src/test/campaign2GenericRoster.test.ts",
+      "mode": "EXACT REJECTION WITNESS",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+          "state": "pass"
+        }
+      ],
+      "stage": "learning",
+      "field": "perceivedSuccess",
+      "attempt": "void (input as any).perceivedSuccess;"
+    }
+  ],
+  "boundedBaseline": {
+    "test": "src/test/campaign2RosterScope.test.ts",
+    "mode": "BASELINE",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "FCT-C scope: valid generic IDN roster declarations cannot enter the bounded no-read-only profile",
+        "state": "pass"
+      },
+      {
+        "name": "FCT-C scope: roster initial state and restored state reject before bounded runtime construction",
+        "state": "pass"
+      }
+    ]
+  },
+  "priorFailure": {
+    "status": "PRESERVED SUPERSEDED CAPABILITY FAILURE",
+    "source": "src/campaign2/adaptationRuntime.ts",
+    "description": "Original inline semantic code could read context.state directly; guarded PRJ alone rejected but direct access completed successfully. Fixed by separating production semantic execution from the host context."
+  },
+  "expected": "Inner ILLEGAL_READ; outer TRANSITION_FAILURE; zero roster reads and whole-instant rollback for A/B/absent rosters, independently in both stages.",
+  "limitations": [
+    "Generic harness is not an admitted bounded factory profile.",
+    "Handler read evidence is observed directly; no generic canonical trace profile is invented.",
+    "Eighteen explicit expected-rejection substitutions, not merely arbitrary test failures.",
+    "Host admission/allocation/state validation remains outside the isolated semantic executor.",
+    "Occurrence payload remains a carried identity: named hidden-operand exclusion is not proof against arbitrary trusted host inspecting every nested byte.",
+    "No global factory/VAL/ADAPT/Campaign-2 verdict."
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "status": "INITIAL CANONICAL DECLARATION CONSTRUCTION; WHOLE MODEL REVIEW PENDING",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/cognitive-model-declarations.mjs",
+      "sha256": "5bb30d238c53398d7c72171a34a7275c6ef989f84417b4ad446a5527d64b806b"
+    },
+    {
+      "path": "scripts/materialize-cognitive-declaration-review.mjs",
+      "sha256": "aa0068501d2ad38e007206ef007ec70049f469e3f26d2e802bb0fb26b4b971ee"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_SHAPE_MANIFEST.json",
+      "sha256": "cf6c2dad3afb64909cc5829f02316a21c34fb86909f3f5869fbc0d127f303a87"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_PLAN_LEAF_ALLOCATION_TABLE.json",
+      "sha256": "581490f019b60073c44876b7bd946e36a039fa18a8702918ff71806432795e65"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    },
+    {
+      "path": "src/campaign2/taskCodecs.ts",
+      "sha256": "0d0d3c6db9bd662792b9630380ffb5bb289b76a7d088a1a1eeea0ed8987866e2"
+    }
+  ],
+  "profiles": {
+    "orderedInput": "campaign2-task-cognitive-ordered-input/0.1-candidate",
+    "trace": "campaign2-task-cognitive-trace-binding/0.1-candidate",
+    "persistence": "campaign2-task-cognitive-persistence/0.1-candidate"
+  },
+  "semanticBundle": [
+    "substrate/0.2-candidate",
+    "cenc/1",
+    "content/0.2-candidate",
+    "content-kind/0.1-candidate",
+    "governed-domain-validator/0.1-candidate",
+    "governed-execution/0.1-candidate",
+    "ordering/0.2-candidate",
+    "ordering-phases/2-candidate",
+    "mutation-authority/0.1-candidate#TRC-001-002-addendum",
+    "state/0.3-candidate-addendum",
+    "projection/0.3-candidate-addendum",
+    "identity-binding/0.5-candidate",
+    "observation/0.1-candidate",
+    "authored-fact-observation/0.1-candidate",
+    "observation-unit-identity/0.1-candidate",
+    "referent-origin/0.1-candidate",
+    "content-definition-id/0.1-candidate",
+    "semantic-binding/0.1-candidate#SEM-001H",
+    "character-learning-evidence/0.5-candidate",
+    "transition-admission/0.4-candidate",
+    "transition-admission-extension/0.6-candidate",
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate",
+    "trace/0.2-candidate",
+    "campaign2-trace-binding/0.1-candidate",
+    "regulatory-diagnostic-probe/0.1-candidate",
+    "campaign2-probe-trace-binding/0.2-candidate",
+    "transition-admission-extension/0.7-candidate",
+    "measurement-evidence-carriage/0.1-candidate",
+    "campaign2-measurement-evidence-trace-binding/0.1-candidate",
+    "measurement-episodic-memory/0.1-candidate",
+    "measurement-memory-formation-registration/0.1-candidate",
+    "measurement-recall-registration/0.1-candidate",
+    "measurement-formation-write-ablation/0.1-candidate",
+    "measurement-recall-read-ablation/0.1-candidate",
+    "projection-input-field-path/0.1-candidate",
+    "measurement-episode-read/0.1-candidate",
+    "measurement-recall-opportunity/0.1-candidate",
+    "campaign2-measurement-memory-trace-binding/0.1-candidate",
+    "campaign2-measurement-memory-persistence/0.1-candidate",
+    "measurement-prediction/0.2-candidate",
+    "measurement-prediction-application-registration/0.1-candidate",
+    "measurement-prediction-read-registration/0.2-candidate",
+    "measurement-prediction-target-projection/0.1-candidate",
+    "measurement-prediction-opportunity/0.1-candidate",
+    "measurement-prediction-application-ablation/0.1-candidate",
+    "measurement-prediction-read-ablation/0.1-candidate",
+    "campaign2-measurement-prediction-trace-binding/0.1-candidate",
+    "campaign2-measurement-prediction-persistence/0.1-candidate",
+    "task-commitment/0.2-candidate",
+    "task-content-kind/0.1-candidate",
+    "task-domain-validator/0.1-candidate",
+    "task-measurement-registration/0.1-candidate",
+    "task-deadline-registration/0.1-candidate",
+    "task-target-projection/0.1-candidate",
+    "prospective-transition-routes/0.1-candidate",
+    "prospective-family-topology/0.1-candidate",
+    "campaign2-task-commitment-trace-binding/0.1-candidate",
+    "campaign2-task-commitment-persistence/0.1-candidate",
+    "task-workspace/0.1-candidate",
+    "task-appraisal-affect/0.1-candidate",
+    "task-plan-context/0.1-candidate",
+    "task-motive-context/0.1-candidate",
+    "task-option-construction/0.1-candidate",
+    "task-reason-source/0.1-candidate",
+    "reason-evidence-coverage/0.1-candidate",
+    "reason-dice/0.1-candidate",
+    "task-arbitration/0.1-candidate",
+    "task-decision-expression/0.1-candidate",
+    "task-identity-evidence/0.1-candidate",
+    "bounded-protocol-execution/0.1-candidate",
+    "protocol-consequence-observation/0.1-candidate",
+    "task-cognitive-path/0.1-candidate",
+    "task-cognitive-plan-leaf/0.1-candidate",
+    "campaign2-task-cognitive-ordered-input/0.1-candidate",
+    "campaign2-task-cognitive-trace-binding/0.1-candidate",
+    "campaign2-task-cognitive-persistence/0.1-candidate"
+  ],
+  "controlModels": [
+    {
+      "recipe": "baseline",
+      "modelDigest": "abe15a4f6bb6ec13a3ccc825dc5e9d755c4444998fa178dbb8683969a1a2a498",
+      "registryDigest": "751e51e2c6858a1ce0865d54989628c2c228588f361ec041393b5fd63cdc6f72",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "workspace-zero",
+      "modelDigest": "bc557999d93b027ab80b01d443a26738190e8f92fb6d38c81c9cca5aa64894d4",
+      "registryDigest": "8d20d8f9a2bf3837a357bb525c64fba00fefd71734c4852cb1ea58ae9baf04c8",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "workspace-one",
+      "modelDigest": "a2f8b80067ffc0274baa983d164efd6563ab2f8ee31af82cf71fb17a89fa5290",
+      "registryDigest": "2dcae124e05dc393d6b31e5556cfe0f2bdaf4a8581781c404bfb2647de8e707d",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "workspace-two",
+      "modelDigest": "e29a5443d7cd83d778677c25b82683bea90e4a4343afe2f6141ddbe775ec711e",
+      "registryDigest": "e41700611823a42072e5e2e1308c18461b66ad2fc4892a6b33bea0c2b10c514b",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "task-access-off",
+      "modelDigest": "bd28253c1dac0a3340a7bdca9eb8e2c88c8dfc49ed19c15dabfc7ae92496cf24",
+      "registryDigest": "ccf6c5df3ae7cde63334770d8bb33edf81b4114e035b0bbfc812a01341e3c248",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "forecast-access-off",
+      "modelDigest": "ee062795e782a033a6b73607813e768d15921d5a5a0b31ea482b168891befe4b",
+      "registryDigest": "0223ba17eda412adf3a1ca48fa00aa21399ceede0bd0272c64f15b583550fac0",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "concern-off",
+      "modelDigest": "c82eefd34b2ebc7a101b89d606d770ad54f1ae571342f51793f6b747fbd67660",
+      "registryDigest": "1912414ff32acb689327b019d158737b462339d2488dcd168e21b5191f4cb1c6",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "base-off",
+      "modelDigest": "cb52d3f8dfc9a8477be8bd01f370f92c509bf1367e956250a7613d7eaa4bbdf8",
+      "registryDigest": "d8e4c2f0c4ac16ef74c4a8cb6df8a03f949e9fdfa77d143070d7929e400aaeca",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "plan-access-off",
+      "modelDigest": "435f7d7baa74fd3ed51102386d6e157e7d1af1812b7702892364f0e38b9798ca",
+      "registryDigest": "92b00048d8b4194c06e52330311707734336996256d5ed37afd3ba26bcc37dad",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "standing-access-off",
+      "modelDigest": "c0ade5928b7b5f19a7ad84386e74490518b0a3056e96301da92c078c52443e9b",
+      "registryDigest": "fb4f456e75f993d23d3639b23688bf2a0e3db423ea58ad2b222f1fd750a4c1c3",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "execution-blocked",
+      "modelDigest": "7a8a3209fc2f89041d133479e4d9c03d20ffc3d078168684d6f9d25dbc403721",
+      "registryDigest": "95ff9489f003dda796119edbb65e2e3a3fca7bbd810eeda1a45d76ccaac1bced",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "protocol-observer-off",
+      "modelDigest": "08c5c07d2a89f79c5f21a3ffbc4b4a491892f22688ca64ae081691c906d4b4a4",
+      "registryDigest": "fec482f16850a1ac72899ca75d851b221f13659c8ed00b8e76e405e1d92878e3",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "equal-criteria",
+      "modelDigest": "7be372d3c977b29427afba1a5c2b438db64a496f1a47f55f0e626f977d6be423",
+      "registryDigest": "395ba8e652b914d0ea0a59b702fbe8820f693d10d8349ef177bb6886fc616de3",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "deadline-overlap",
+      "modelDigest": "f5bfa4569f1148b60ce61caca37f5f2456d84db931a921ba620193846c51fe58",
+      "registryDigest": "ab895294fc070cbc201378f89fad3a927ea9f480fed7c3b79bd4fc2dcd2d4626",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "history-boundary",
+      "modelDigest": "3ceca75c405c92e3ac470084751ab130b1771220f516eac6e5227002b2503a27",
+      "registryDigest": "c426987b915d6231f71cb091eca3094b0a833d59abc4d48eb10b4f55f1495f52",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "standing-integer",
+      "modelDigest": "0e19a580f497d22b8a145f75e95aad192385fdffa189e1a59ad9a99ad3221b3d",
+      "registryDigest": "1a9247747a47abf67a21f6ca0a55236514c90e4f3aca8411e4f66f821a265747",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "context-integer",
+      "modelDigest": "d9b6ff120f2ed607ce7fd919b5e997ba28ce2c92c5c65cfde11681d612efa4cd",
+      "registryDigest": "427fb82862c5edcdb002e2414adcd6a528cc11fa57a2bca527114a245143ca51",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "die-six",
+      "modelDigest": "3330182c46512b379f656d0c0dd3cf78b50fc88a2f2c36d62e7b75fe1dfc6905",
+      "registryDigest": "73354111ac17a5b3ff271091a3dc75722df236e160d9efaf7b0a085a6a39c11c",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "die-eight",
+      "modelDigest": "4faaf7773231ca349260c9ccc039b1168cf711049573dc9acfcf500dbe8b23d3",
+      "registryDigest": "f73f59dc6194bb88de62913829b6ad68f937faf9886d36e45d66fe9ec67272bb",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "die-ten",
+      "modelDigest": "a0a705f4f5f11825a60825780490234c73cb712c5fea24bf6cc3d8a105450e5c",
+      "registryDigest": "900506afe745dcaad31b98265679284bef62fbf55868a8b15b61376629d848ec",
+      "rows": 148,
+      "descriptors": 297
+    },
+    {
+      "recipe": "die-twelve",
+      "modelDigest": "e705fbcde1b99f1755b4f25d27b5ad9400a9f0df17e458c773f9ea42842b419c",
+      "registryDigest": "45373fd0d2d39c09f5c535053d9a9dddb492fbd60148250a9f627ad77915e921",
+      "rows": 148,
+      "descriptors": 297
+    }
+  ],
+  "baselineModelDigest": "abe15a4f6bb6ec13a3ccc825dc5e9d755c4444998fa178dbb8683969a1a2a498",
+  "checks": [
+    "21 distinct canonical commitments",
+    "six-slot construction and complete codec round trip",
+    "unique registry StableIds and type/version descriptors",
+    "373/schema2 only in new descriptor manifest",
+    "14 added output identity rules and17 payload-only union rows",
+    "declared maxWork27",
+    "source preservation"
+  ],
+  "limits": [
+    "Full receiving registry/source/role/contextual grammar validation is not executed by this initial construction.",
+    "No ownership/mutation, generated-source, random or persistence runtime qualification.",
+    "Do not activate or freeze this model from these structural counts alone."
+  ]
+}

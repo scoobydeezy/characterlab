@@ -1,0 +1,91 @@
+{
+  "status": "EXECUTED RESEARCH CONTROL EXPLORATION; NO SEAM QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/explore-measurement-prediction-controls.mjs",
+      "sha256": "6fbe497e7948ad5ab1ad878f7403658dfef5a35523a5e5e7c0679b99759fd494"
+    },
+    {
+      "path": "src/substrate/exactMath.ts",
+      "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+    },
+    {
+      "path": "reference/src/model/estimate.ts",
+      "sha256": "fcf6dda928020d8dce29b879f9d19219976a04f6cd178bfe6421a3efebddd2b8"
+    },
+    {
+      "path": "reference/src/kernel/rational.ts",
+      "sha256": "c56ada046ef92829ab322e8377eac01f494a6d64a5912634e6bde49322a25205"
+    },
+    {
+      "path": "reference/src/kernel/lattice.ts",
+      "sha256": "fd3ec3571cb5136c4fde0b83ab68bc88a1b8234a11da10ebbc0d49cf9cfa54e2"
+    }
+  ],
+  "cases": [
+    {
+      "name": "unobserved is absent",
+      "inputs": [],
+      "expected": "Absent",
+      "actual": "Absent",
+      "lastReading": "Absent",
+      "constantGainHalf": "Absent",
+      "historicalQuantized": "Absent"
+    },
+    {
+      "name": "learned zero exists",
+      "inputs": [
+        "0/1"
+      ],
+      "expected": "0/1",
+      "actual": "0/1",
+      "lastReading": "0/1",
+      "constantGainHalf": "0/1",
+      "historicalQuantized": "0/1"
+    },
+    {
+      "name": "history influences forecast",
+      "inputs": [
+        "0/1",
+        "10/1",
+        "10/1"
+      ],
+      "expected": "20/3",
+      "actual": "20/3",
+      "lastReading": "10/1",
+      "constantGainHalf": "15/2",
+      "historicalQuantized": "6666667/1000000"
+    },
+    {
+      "name": "diagnostic permitted change",
+      "inputs": [
+        "5/1",
+        "51/10"
+      ],
+      "expected": "101/20",
+      "actual": "101/20",
+      "lastReading": "51/10",
+      "constantGainHalf": "101/20",
+      "historicalQuantized": "101/20"
+    }
+  ],
+  "finiteAlgebraCases": 1296,
+  "quantizationWitness": {
+    "inputs": [
+      "-1/3",
+      "-1/3",
+      "0/1",
+      "0/1"
+    ],
+    "exactMean": "-1/6",
+    "historicalForward": "-83333/500000",
+    "historicalReverse": "-166667/1000000"
+  },
+  "limitations": [
+    "No canonical prediction schema or implementation exists.",
+    "No public admission, subject projection, state mutation, scheduling, trace or restore is exercised.",
+    "Negative points are algebra controls outside the first diagnostic profile.",
+    "Historical source is loaded read-only as an explicitly named control, never imported by active src.",
+    "No claim of calibrated uncertainty, independence, psychological sufficiency or retention."
+  ]
+}

@@ -6,6 +6,7 @@ import {createServer} from 'vite';
 const root=new URL('../',import.meta.url),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const bridge='src/campaign2/consequenceBridge.ts',obs='src/campaign2/bridgeObservation.ts';
 const mutants=[
+ {name:'derive-safe-pulse-from-hidden-count',file:bridge,from:'before:q(0n),potentialEffect:q(1n),applied:q(1n),overflow:q(0n),after:q(1n)',to:"before:q(0n),potentialEffect:q((f(rec(f(rec(source.payload,304n),1n),305n),3n) as Extract<CanonicalValue,{kind:'unsigned'}>).value),applied:q((f(rec(f(rec(source.payload,304n),1n),305n),3n) as Extract<CanonicalValue,{kind:'unsigned'}>).value),overflow:q(0n),after:q((f(rec(f(rec(source.payload,304n),1n),305n),3n) as Extract<CanonicalValue,{kind:'unsigned'}>).value)"},
  {name:'retain-truth-provenance',file:obs,from:'fields.set(10n,list([]));',to:'/* retain raw truth provenance */'},
  {name:'omit-authoritative-observation',file:bridge,from:'outputs.push(observation); // Sole published observation, never its raw candidate.',to:'void observation;'},
  {name:'omit-sem-support',file:bridge,from:'supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]',to:'supportingObservationIds:[]'},
@@ -15,7 +16,7 @@ const mutants=[
 const sources=[bridge,obs].map(path=>({path,sha256:hash(fs.readFileSync(new URL(path,root)))}));
 async function execute(mutant){
  let transformed=0;
- const server=await createServer({server:{middlewareMode:true},appType:'custom',optimizeDeps:{noDiscovery:true,include:[]},plugins:mutant?[{
+ const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom',optimizeDeps:{noDiscovery:true,include:[]},plugins:mutant?[{
   name:'bridge-interpreter-substitution',enforce:'pre',transform(code,id){if(!id.replaceAll('\\','/').endsWith('/'+mutant.file))return;assert.equal(code.split(mutant.from).length-1,1);transformed++;return code.replace(mutant.from,mutant.to);},
  }]:[]});
  try{
@@ -53,7 +54,7 @@ for(const m of mutants){
  mutations.push({name:m.name,status:'DETECTED',source:m.file,from:m.from,to:m.to,differences,cases:result.cases.map(summarize)});console.log(m.name+': DETECTED');
 }
 for(const s of sources)assert.equal(hash(fs.readFileSync(new URL(s.path,root))),s.sha256);
-fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,rulesVersion:baseline.rulesVersion,declarationHashes:baseline.declarationHashes,
+fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV3.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,rulesVersion:baseline.rulesVersion,declarationHashes:baseline.declarationHashes,
  baseline:baseline.cases.map(summarize),mutations,comparison:'Exact bytes compared in memory; hashes in report are diagnostics only.',
  limitations:['Differential interpreter substitution controls, not an independent OBS/SEM semantics implementation.',
  'Two first-profile regulatory inputs with the same fixed safe pulse; no complete FCT-F or inherited SEM vector claim.',

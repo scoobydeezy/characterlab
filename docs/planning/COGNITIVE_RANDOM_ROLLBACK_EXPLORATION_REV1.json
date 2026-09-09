@@ -1,0 +1,37 @@
+{
+  "status": "EXECUTED SUBSTRATE COMPOSITION EXPLORATION; NOT PERSIST-I OR COGNITIVE RUNTIME QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "src/substrate/random.ts",
+      "sha256": "a01aeae52c0c43f1533e35dcd01c23acb1c44b02059c909960966cdb0de24596"
+    },
+    {
+      "path": "src/substrate/canonicalEncoding.ts",
+      "sha256": "24ac760e1aee56886d58fd3b7f7599d48c9a530748e8973b2064f17fbee05707"
+    },
+    {
+      "path": "src/substrate/crypto.ts",
+      "sha256": "a1ab34b3f5a76e000ff2770dce03902001a5677fb2b609bd8049df4632515016"
+    },
+    {
+      "path": "scripts/explore-cognitive-random-rollback.mjs",
+      "sha256": "d1a77529a17c405876c0689846065c17ecd78b29a92ad301dff6cfdeacdd130e"
+    }
+  ],
+  "checks": {
+    "existingOracleRejectsRepeatedAddress": true,
+    "discardAndRecreateReproducesFullDrawRecord": true,
+    "failedLocalAdapterPublishesNoCommittedAddress": true,
+    "retryMatchesOriginalDraw": true,
+    "successfulCommitPublishesAddress": true,
+    "laterInstantRejectsCommittedReuse": true,
+    "distinctPurposeRemainsAdmissible": true
+  },
+  "limitations": [
+    "The tiny local adapter is research instrumentation, not an accepted runtime implementation.",
+    "A later scheduler failure is simulated by discarding the adapter; the actual complete-instant scheduler integration remains untested.",
+    "Full-prefix restore and the successor random-relevant-authoritative-ID projection remain unresolved.",
+    "Research test namespaces are historical-style controls and cannot be promoted to production vocabulary.",
+    "Comparison uses complete returned draw records, not only mapped results."
+  ]
+}

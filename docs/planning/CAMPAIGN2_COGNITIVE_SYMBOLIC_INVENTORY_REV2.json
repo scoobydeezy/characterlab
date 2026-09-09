@@ -1,0 +1,1147 @@
+{
+  "status": "PARTIAL SYMBOLIC INVENTORY; NOT SHAPE ACCEPTED OR ALLOCATED",
+  "records": [
+    {
+      "name": "DeliberationOpportunity",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "optional": false
+        },
+        {
+          "name": "AgendaDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskWorkspaceDefinition",
+      "fields": [
+        {
+          "name": "PredictionDefinitionId",
+          "optional": false
+        },
+        {
+          "name": "Capacity",
+          "optional": false
+        },
+        {
+          "name": "TaskAccessEnabled",
+          "optional": false
+        },
+        {
+          "name": "ForecastAccessEnabled",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "WorkspaceTaskItem",
+      "fields": [
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "TaskSpecRef",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "WorkspaceForecast",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "PredictionValue",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskWorkspace",
+      "fields": [
+        {
+          "name": "WorkspaceOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "CharacterId",
+          "optional": false
+        },
+        {
+          "name": "AgendaDefinitionId",
+          "optional": false
+        },
+        {
+          "name": "Tasks",
+          "optional": false
+        },
+        {
+          "name": "Forecast",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskAssessment",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "Distance",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskAppraisalItem",
+      "fields": [
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "Assessment",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskAppraisal",
+      "fields": [
+        {
+          "name": "AppraisalOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "Workspace",
+          "optional": false
+        },
+        {
+          "name": "Assessments",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskConcernDefinition",
+      "fields": [
+        {
+          "name": "Gain",
+          "optional": false
+        },
+        {
+          "name": "Enabled",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskConcernResponse",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "Intensity",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskConcernItem",
+      "fields": [
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "Response",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskConcern",
+      "fields": [
+        {
+          "name": "ConcernOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "Appraisal",
+          "optional": false
+        },
+        {
+          "name": "Responses",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "PlanInstructionDefinition",
+      "fields": [
+        {
+          "name": "ProtocolActionDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "AdoptedTaskInstruction",
+      "fields": [
+        {
+          "name": "PlanInstructionDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ProtocolActionDefinition",
+      "fields": [
+        {
+          "name": "RequestedContactCount",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskMotiveDefinition",
+      "fields": [
+        {
+          "name": "BasePressure",
+          "optional": false
+        },
+        {
+          "name": "Enabled",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskMotiveItem",
+      "fields": [
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "RawPressure",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskMotiveContext",
+      "fields": [
+        {
+          "name": "MotiveContextOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "Concern",
+          "optional": false
+        },
+        {
+          "name": "Motives",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ProceduralCandidateKey",
+      "fields": [
+        {
+          "name": "CharacterId",
+          "optional": false
+        },
+        {
+          "name": "ProtocolActionDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ProceduralCandidateOrigin",
+      "fields": [
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "PlanInstructionDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ProceduralCandidate",
+      "fields": [
+        {
+          "name": "Key",
+          "optional": false
+        },
+        {
+          "name": "Origins",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskCandidateOptions",
+      "fields": [
+        {
+          "name": "CandidateOptionsOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "MotiveContext",
+          "optional": false
+        },
+        {
+          "name": "Candidates",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ReasonEvidenceAtom",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "ObservationReference",
+          "optional": true
+        },
+        {
+          "name": "QualificationOccurrenceId",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ReasonEvidenceBasis",
+      "fields": [
+        {
+          "name": "Weights",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskRawSignalKey",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "optional": false
+        },
+        {
+          "name": "TaskCommitmentKey",
+          "optional": false
+        },
+        {
+          "name": "SourceRole",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskRawSignal",
+      "fields": [
+        {
+          "name": "Key",
+          "optional": false
+        },
+        {
+          "name": "SignedStrength",
+          "optional": false
+        },
+        {
+          "name": "EvidenceBasis",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskRawSignalContext",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "CandidateOptions",
+          "optional": false
+        },
+        {
+          "name": "Signals",
+          "optional": false
+        },
+        {
+          "name": "NonIdentitySemanticPressure",
+          "optional": false
+        },
+        {
+          "name": "StandingIdentityRead",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ReasonNucleusKey",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "optional": false
+        },
+        {
+          "name": "MotiveChannel",
+          "optional": false
+        },
+        {
+          "name": "TaskReferent",
+          "optional": false
+        },
+        {
+          "name": "Direction",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "CoverageContribution",
+      "fields": [
+        {
+          "name": "SourceKey",
+          "optional": false
+        },
+        {
+          "name": "Magnitude",
+          "optional": false
+        },
+        {
+          "name": "Basis",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "CoverageResult",
+      "fields": [
+        {
+          "name": "SourceKey",
+          "optional": false
+        },
+        {
+          "name": "RawMagnitude",
+          "optional": false
+        },
+        {
+          "name": "OverlapWithPrior",
+          "optional": false
+        },
+        {
+          "name": "IndependentFraction",
+          "optional": false
+        },
+        {
+          "name": "EffectiveMagnitude",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ReasonRoleSummary",
+      "fields": [
+        {
+          "name": "BaseNet",
+          "optional": false
+        },
+        {
+          "name": "StandingNet",
+          "optional": false
+        },
+        {
+          "name": "SituationalNet",
+          "optional": false
+        },
+        {
+          "name": "CoverageResults",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "CompiledReasonNucleus",
+      "fields": [
+        {
+          "name": "Key",
+          "optional": false
+        },
+        {
+          "name": "RoleSummary",
+          "optional": false
+        },
+        {
+          "name": "Relevance",
+          "optional": false
+        },
+        {
+          "name": "BaseDie",
+          "optional": false
+        },
+        {
+          "name": "StandingModifier",
+          "optional": false
+        },
+        {
+          "name": "SituationalModifier",
+          "optional": false
+        },
+        {
+          "name": "Distribution",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskReasonContext",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "RawSignalContext",
+          "optional": false
+        },
+        {
+          "name": "ActiveNuclei",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "DecisionResolution",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "OccurredAt",
+          "optional": false
+        },
+        {
+          "name": "ReasonContext",
+          "optional": false
+        },
+        {
+          "name": "Result",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "CognitiveRandomCandidateAttempt",
+      "fields": [
+        {
+          "name": "InternalCandidateIndex",
+          "optional": false
+        },
+        {
+          "name": "Candidate",
+          "optional": false
+        },
+        {
+          "name": "Rejected",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "CognitiveRandomDraw",
+      "fields": [
+        {
+          "name": "LocalAddress",
+          "optional": false
+        },
+        {
+          "name": "EffectiveKey",
+          "optional": false
+        },
+        {
+          "name": "Result",
+          "optional": false
+        },
+        {
+          "name": "Span",
+          "optional": false
+        },
+        {
+          "name": "Limit",
+          "optional": false
+        },
+        {
+          "name": "Fallback",
+          "optional": false
+        },
+        {
+          "name": "Attempts",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskIdentityKey",
+      "fields": [
+        {
+          "name": "CharacterId",
+          "optional": false
+        },
+        {
+          "name": "IdentityChannelId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskIdentityContribution",
+      "fields": [
+        {
+          "name": "QualificationOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "DecisionResolutionOccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "OccurredAt",
+          "optional": false
+        },
+        {
+          "name": "SignedContribution",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskIdentityEvidence",
+      "fields": [
+        {
+          "name": "Contributions",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskIdentityState",
+      "fields": [
+        {
+          "name": "Evidence",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskWorkspaceTaskRequirement",
+      "fields": [
+        {
+          "name": "SubjectAccessor",
+          "optional": false
+        },
+        {
+          "name": "TaskSpecIds",
+          "optional": false
+        },
+        {
+          "name": "TargetStatePathTemplate",
+          "optional": false
+        },
+        {
+          "name": "OutputAccessor",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskWorkspaceSourceRegistration",
+      "fields": [
+        {
+          "name": "ExecutingSeamId",
+          "optional": false
+        },
+        {
+          "name": "ExecutingSeamVersion",
+          "optional": false
+        },
+        {
+          "name": "InputRecordSchema",
+          "optional": false
+        },
+        {
+          "name": "ConsumerEventTypeId",
+          "optional": false
+        },
+        {
+          "name": "AgendaDefinitionId",
+          "optional": false
+        },
+        {
+          "name": "ReadDomain",
+          "optional": false
+        },
+        {
+          "name": "OutputDefinitions",
+          "optional": false
+        },
+        {
+          "name": "WriteCapability",
+          "optional": false
+        },
+        {
+          "name": "SubjectRequirements",
+          "optional": false
+        },
+        {
+          "name": "TaskRequirements",
+          "optional": false
+        },
+        {
+          "name": "PredictionRequirements",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "TaskConcernRegistration",
+      "fields": [
+        {
+          "name": "BaseRegistration",
+          "optional": false
+        },
+        {
+          "name": "ConcernDefinitionId",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "DecisionResult",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "ChosenData",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ChosenDecisionData",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "optional": false
+        },
+        {
+          "name": "Probabilities",
+          "optional": false
+        },
+        {
+          "name": "Margin",
+          "optional": false
+        },
+        {
+          "name": "Contest",
+          "optional": false
+        },
+        {
+          "name": "ConflictMass",
+          "optional": false
+        },
+        {
+          "name": "Stake",
+          "optional": false
+        },
+        {
+          "name": "AuthorshipPotential",
+          "optional": false
+        },
+        {
+          "name": "ResolutionMode",
+          "optional": false
+        },
+        {
+          "name": "ReasonDraws",
+          "optional": false
+        },
+        {
+          "name": "TieBreak",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "OptionProbability",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "optional": false
+        },
+        {
+          "name": "Probability",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ReasonDraw",
+      "fields": [
+        {
+          "name": "NucleusKey",
+          "optional": false
+        },
+        {
+          "name": "BaseDie",
+          "optional": false
+        },
+        {
+          "name": "StandingModifier",
+          "optional": false
+        },
+        {
+          "name": "SituationalModifier",
+          "optional": false
+        },
+        {
+          "name": "Draw",
+          "optional": false
+        },
+        {
+          "name": "Face",
+          "optional": false
+        },
+        {
+          "name": "SignedContribution",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "DecisionTieBreak",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "Leaders",
+          "optional": true
+        },
+        {
+          "name": "Draw",
+          "optional": true
+        },
+        {
+          "name": "SelectedKey",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ExactScoreDistribution",
+      "fields": [
+        {
+          "name": "Masses",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ChosenIntent",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "DecisionResolution",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "DecisionExpression",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "ChosenIntent",
+          "optional": false
+        },
+        {
+          "name": "ChannelExpressions",
+          "optional": false
+        },
+        {
+          "name": "QualificationContext",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ChannelExpression",
+      "fields": [
+        {
+          "name": "IdentityChannelId",
+          "optional": false
+        },
+        {
+          "name": "Alignment",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "FixtureQualificationContext",
+      "fields": [
+        {
+          "name": "ScopeVersion",
+          "optional": false
+        },
+        {
+          "name": "CostRepresentation",
+          "optional": false
+        },
+        {
+          "name": "FearRepresentation",
+          "optional": false
+        },
+        {
+          "name": "ChoiceInterventionRepresentation",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "DecisionQualification",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "DecisionExpression",
+          "optional": false
+        },
+        {
+          "name": "Result",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "QualificationResult",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "optional": false
+        },
+        {
+          "name": "Weight",
+          "optional": true
+        },
+        {
+          "name": "SignedContribution",
+          "optional": true
+        },
+        {
+          "name": "RejectionReason",
+          "optional": true
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ActionPlan",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "ChosenIntent",
+          "optional": false
+        },
+        {
+          "name": "RequestedContactCount",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ActionAttempt",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "ActionPlan",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ExecutionOutcome",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "optional": false
+        },
+        {
+          "name": "ActionAttempt",
+          "optional": false
+        },
+        {
+          "name": "CompletedContactCount",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    },
+    {
+      "name": "ExecutionDefinition",
+      "fields": [
+        {
+          "name": "Permitted",
+          "optional": false
+        }
+      ],
+      "numericAllocation": null
+    }
+  ],
+  "requiredIdentitySymbols": [
+    "WorkspaceOccurrenceId",
+    "AppraisalOccurrenceId",
+    "ConcernOccurrenceId",
+    "MotiveContextOccurrenceId",
+    "CandidateOptionsOccurrenceId",
+    "RawSignalContextOccurrenceId",
+    "ReasonContextOccurrenceId",
+    "DecisionResolutionOccurrenceId",
+    "ChosenIntentOccurrenceId",
+    "DecisionExpressionOccurrenceId",
+    "QualificationOccurrenceId",
+    "ActionPlanOccurrenceId",
+    "ActionAttemptOccurrenceId",
+    "ExecutionOutcomeOccurrenceId",
+    "IdentityChannelId",
+    "RandomPurposeId",
+    "RandomSubjectRoleId",
+    "RandomComparisonRoleId"
+  ],
+  "existingIdentityReuse": [
+    "CharacterId is the accepted qualified SemanticReferentId",
+    "DefinitionId1027 for action/plan/calibration declarations",
+    "TaskCommitmentKey371 and task SemanticReferentId reused",
+    "Observation reference237/1115 reused as evidence",
+    "AutomaticAdaptationInput307/1118 reused",
+    "Output identity rules279/278 remain sole occurrence authority"
+  ],
+  "unresolved": [
+    "DecisionResult closed union and Chosen payload record",
+    "ChosenIntent exact frozen-source fields",
+    "DecisionExpression exact field order and context grammar",
+    "DecisionQualification verdict/eligible payload and rejection tags",
+    "ActionPlan/ActionAttempt/ExecutionOutcome exact nested source fields",
+    "Option probabilities, reason draws, tie-break and exact distribution field grammars",
+    "StandingIdentityRead absent/present projection shape",
+    "All additional definition/read/target/conditional ingress registrations",
+    "Identity140 registration, write authority and prepared-stage profile",
+    "TaskCommitmentState373 successor schema, preserving retired/old schema behavior",
+    "Production identity namespaces/members and exact scalar versus collection roles",
+    "Full output occurrence map, trace and persistence profile"
+  ],
+  "checks": {
+    "uniqueRecordNames": true,
+    "uniqueFieldNames": true,
+    "noPermanentNumericAllocation": true
+  },
+  "counts": {
+    "records": 59,
+    "fields": 184,
+    "identitySymbolsRequiringInventoryReview": 18
+  }
+}

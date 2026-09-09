@@ -1,0 +1,143 @@
+{
+  "status": "EXECUTED HISTORICAL COMPONENT EXPLORATION; NOT CAMPAIGN2 QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "reference/src/model/diceCompiler.ts",
+      "sha256": "9029aef84a3915ae82b0195f527f4e6419cfbb8e84b7e1f36c0806d746ff94c0"
+    },
+    {
+      "path": "reference/src/model/reasonNucleus.ts",
+      "sha256": "5d1d5d33f8aa7470556800488cf8e5e803026b067728c5039e058bff9f4c8ddf"
+    },
+    {
+      "path": "reference/src/kernel/evidenceOverlap.ts",
+      "sha256": "3e2be4b25c5c4ea57821fde9377755a6fc3c7bc704dd6b4015c8e6b8154516db"
+    },
+    {
+      "path": "reference/src/kernel/discreteDistribution.ts",
+      "sha256": "478dbe82f17beddf6d7648b4f113ea29c721840d1381b3bc5fc66a921a4ed1ca"
+    },
+    {
+      "path": "reference/src/kernel/rational.ts",
+      "sha256": "c56ada046ef92829ab322e8377eac01f494a6d64a5912634e6bde49322a25205"
+    }
+  ],
+  "parameters": {
+    "rawBase": "1/10",
+    "consolidatedBase": "1/11",
+    "rawSituationA": "3/10",
+    "rawSituationB": "0/1",
+    "rawStandingBefore": "0/1",
+    "insufficientRawStanding": "1/4",
+    "rawStandingAfter": "1/3",
+    "activationThreshold": "3/10",
+    "modifierUnit": "1/1"
+  },
+  "beforeStanding": [
+    {
+      "option": "A",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "46/143",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    },
+    {
+      "option": "B",
+      "nuclei": []
+    }
+  ],
+  "insufficientStanding": [
+    {
+      "option": "A",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "373/715",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    },
+    {
+      "option": "B",
+      "nuclei": []
+    }
+  ],
+  "afterStanding": [
+    {
+      "option": "A",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "327/572",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    },
+    {
+      "option": "B",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "15/44",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    }
+  ],
+  "retired": [
+    {
+      "option": "A",
+      "nuclei": []
+    },
+    {
+      "option": "B",
+      "nuclei": []
+    }
+  ],
+  "symmetric": [
+    {
+      "option": "A",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "327/572",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    },
+    {
+      "option": "B",
+      "nuclei": [
+        {
+          "base": "1/11",
+          "activation": "327/572",
+          "baseDie": 4,
+          "standingModifier": 0,
+          "situationalModifier": 0
+        }
+      ]
+    }
+  ],
+  "initialRejectedAssumption": "The first attempted1/4 raw standing witness did not activate B. Actual historical role consolidation applies boundedResponse before relevance;1/11+1/5 is below3/10. Corrected1/3 raw standing gives1/11+1/4 above3/10.",
+  "conclusion": "Equal standing contributions can activate only the previously inactive nucleus when situation differs. Consolidated base motives remain unchanged; modifiers cannot resurrect a missing base.",
+  "limitations": [
+    "Signals are explicit research component inputs, not generated Campaign2 psychological intermediates.",
+    "No identity evidence accumulation, qualification, efficacy, option generation, RNG or full arbitration is exercised.",
+    "Parameters exhibit a mathematical possibility; they are not selected production calibration.",
+    "RecentExperience is the historical compiler slot; a new concern source requires its own semantic modifier/provenance contract.",
+    "No claim that equal shifts change an already-symmetric contest."
+  ]
+}

@@ -28,6 +28,6 @@ async function run(mutant){
 const baseline=await run(),results=[];
 for(const mutant of mutants)results.push(await run(mutant));
 assert.deepEqual([source,test].map(fingerprint),before);
-fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_APPLICABILITY_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',contract:'adaptation-input/0.31-candidate',sourceFingerprints:before,baseline,mutants:results,
+fs.writeFileSync(new URL(process.argv[2]??'docs/planning/CAMPAIGN2_APPLICABILITY_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',contract:'adaptation-input/0.31-candidate',sourceFingerprints:before,baseline,mutants:results,
  limitations:['Isolated two-rule declaration specimen; frozen production artifacts unchanged.','Wrong-referent exposure uses an existing runtime-origin identity family, not a second character or CONTENT kind.','Three fixed-declaration in-memory substitutions; no exhaustive applicability or whole FCT verdict.']},null,2)+'\n');
 process.exitCode=0;

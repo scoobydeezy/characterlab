@@ -1,0 +1,210 @@
+{
+  "status": "DRAFT REFERENCE AND UNION COVERAGE ONLY",
+  "source": "docs/planning/CAMPAIGN2_COGNITIVE_FIELD_GRAMMAR_REV1.json",
+  "sha256": "3ced94d03b1f5846b57580e129a3accded5a0193d6cb9f2e63118e17e12a10f5",
+  "identifierAliases": {
+    "CharacterId": "1002/character qualifier",
+    "TaskReferentId": "1002/task qualifier",
+    "ObserverId": "1000",
+    "DefinitionId": "1027/exact receiving kind and member",
+    "ProjectionAccessorId": "1028",
+    "SeamId": "1036",
+    "EventTypeId": "1001",
+    "TransitionKindId": "1009",
+    "WorkspaceOccurrenceId": "symbolic; separate allocation required",
+    "AppraisalOccurrenceId": "symbolic; separate allocation required",
+    "ConcernOccurrenceId": "symbolic; separate allocation required",
+    "MotiveContextOccurrenceId": "symbolic; separate allocation required",
+    "CandidateOptionsOccurrenceId": "symbolic; separate allocation required",
+    "RawSignalContextOccurrenceId": "symbolic; separate allocation required",
+    "ReasonContextOccurrenceId": "symbolic; separate allocation required",
+    "DecisionResolutionOccurrenceId": "symbolic; separate allocation required",
+    "ChosenIntentOccurrenceId": "symbolic; separate allocation required",
+    "DecisionExpressionOccurrenceId": "symbolic; separate allocation required",
+    "QualificationOccurrenceId": "symbolic; separate allocation required",
+    "ActionPlanOccurrenceId": "symbolic; separate allocation required",
+    "ActionAttemptOccurrenceId": "symbolic; separate allocation required",
+    "ExecutionOutcomeOccurrenceId": "symbolic; separate allocation required",
+    "MotiveChannelId": "symbolic; separate allocation required",
+    "IdentityChannelId": "symbolic; separate allocation required",
+    "RandomPurposeId": "symbolic; separate allocation required",
+    "RandomSubjectRoleId": "symbolic; separate allocation required"
+  },
+  "existingRecordReferences": [
+    "110",
+    "112",
+    "149",
+    "201",
+    "237",
+    "254",
+    "266",
+    "271",
+    "272",
+    "273",
+    "274",
+    "276",
+    "277",
+    "322",
+    "361",
+    "363",
+    "371",
+    "372"
+  ],
+  "records": 77,
+  "fields": 247,
+  "closedUnionBranches": [
+    {
+      "record": "WorkspaceForecast",
+      "variant": "Unavailable",
+      "required": [],
+      "forbidden": [
+        "PredictionValue"
+      ]
+    },
+    {
+      "record": "WorkspaceForecast",
+      "variant": "Known",
+      "required": [
+        "PredictionValue"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "TaskAssessment",
+      "variant": "UnknownForecast",
+      "required": [],
+      "forbidden": [
+        "Distance"
+      ]
+    },
+    {
+      "record": "TaskAssessment",
+      "variant": "Below",
+      "required": [
+        "Distance"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "TaskAssessment",
+      "variant": "Within",
+      "required": [],
+      "forbidden": [
+        "Distance"
+      ]
+    },
+    {
+      "record": "TaskAssessment",
+      "variant": "Above",
+      "required": [
+        "Distance"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "TaskConcernResponse",
+      "variant": "Unavailable",
+      "required": [],
+      "forbidden": [
+        "Intensity"
+      ]
+    },
+    {
+      "record": "TaskConcernResponse",
+      "variant": "Known",
+      "required": [
+        "Intensity"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "ReasonEvidenceAtom",
+      "variant": "Observation",
+      "required": [
+        "ObservationReference"
+      ],
+      "forbidden": [
+        "QualificationOccurrenceId"
+      ]
+    },
+    {
+      "record": "ReasonEvidenceAtom",
+      "variant": "QualifiedExpression",
+      "required": [
+        "QualificationOccurrenceId"
+      ],
+      "forbidden": [
+        "ObservationReference"
+      ]
+    },
+    {
+      "record": "DecisionResult",
+      "variant": "NoOptions",
+      "required": [],
+      "forbidden": [
+        "ChosenData"
+      ]
+    },
+    {
+      "record": "DecisionResult",
+      "variant": "NoActiveReasons",
+      "required": [],
+      "forbidden": [
+        "ChosenData"
+      ]
+    },
+    {
+      "record": "DecisionResult",
+      "variant": "Chosen",
+      "required": [
+        "ChosenData"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "DecisionTieBreak",
+      "variant": "None",
+      "required": [],
+      "forbidden": [
+        "Leaders",
+        "Draw",
+        "SelectedKey"
+      ]
+    },
+    {
+      "record": "DecisionTieBreak",
+      "variant": "Present",
+      "required": [
+        "Leaders",
+        "Draw",
+        "SelectedKey"
+      ],
+      "forbidden": []
+    },
+    {
+      "record": "QualificationResult",
+      "variant": "Eligible",
+      "required": [
+        "Weight",
+        "SignedContribution"
+      ],
+      "forbidden": [
+        "RejectionReason"
+      ]
+    },
+    {
+      "record": "QualificationResult",
+      "variant": "Rejected",
+      "required": [
+        "RejectionReason"
+      ],
+      "forbidden": [
+        "Weight",
+        "SignedContribution"
+      ]
+    }
+  ],
+  "rejectionControls": 6,
+  "numericAllocation": null,
+  "limits": "Alias namespaces require authority parity review; grammar reference resolution does not prove refinements, source authenticity, codecs, runtime controls or model closure."
+}

@@ -1,0 +1,52 @@
+{
+  "status": "NUMERIC ACCEPTANCE AND FREEZE PASS",
+  "reviewedArtifacts": [
+    {
+      "path": "docs/planning/TASK_COGNITIVE_ALLOCATION_DRAFT.json",
+      "sha256": "88a2324ddc7bfd086966785a8eadcce76c2308728bade142d9fbb549322bc32d"
+    },
+    {
+      "path": "docs/planning/TASK_COGNITIVE_ALLOCATION_DRAFT.md",
+      "sha256": "eb012e2ff7e1890fdd99c3fdb9b06ccbc37eff2d578a615ac4a6b5427cc9de28"
+    },
+    {
+      "path": "docs/planning/TASK_COGNITIVE_ALLOCATION_AUDIT.json",
+      "sha256": "43fce47315c43d82145c6db1079dcf5c4832e7ffbea9c1de98d2423e0f9d1ceb"
+    }
+  ],
+  "counts": {
+    "newRecords": 76,
+    "newFields": 244,
+    "existingRootSuccessors": 1,
+    "appendedExistingFields": 1,
+    "newDiscriminatorNamespaces": 4,
+    "newOccurrenceNamespaces": 14,
+    "fixedMembers": 103,
+    "scalarRoles": 52,
+    "unionBranches": 17
+  },
+  "preservedSources": 18,
+  "checks": [
+    "displayed record/namespace/member tables independently parsed",
+    "one-to-one symbolic field grammar coverage",
+    "prior record/namespace/member collision exclusion",
+    "actual old registry max376 and373/schema1 unchanged",
+    "both373 schema versions coexist in generic registry",
+    "103 exact canonical member payload round trips, no fixture promotion",
+    "17 existing259 payload-only rows exclude discriminator field1",
+    "all prior frozen fingerprints preserved"
+  ],
+  "frozenArtifacts": [
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_PERMANENT_ALLOCATION.md",
+      "sha256": "4edec13ab810dbf6559524d6be794ffb47c6a6373d7b46535135522320a41fa8"
+    }
+  ],
+  "runtime": "NOT PASSED",
+  "modelFreeze": "PENDING",
+  "campaign2": "OPEN"
+}

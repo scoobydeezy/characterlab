@@ -1,0 +1,87 @@
+{
+  "status": "CORRECTION EVIDENCE SUBMITTED",
+  "sourceFingerprints": [
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/test/projectionBindingIsolation.test.ts",
+      "sha256": "24f19296f226cfdbeb3c98dd3b3e56ba325a6f69473d8ec9f217ff3a30758b8f"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+        "state": "pass"
+      },
+      {
+        "name": "PRJ binding isolation: derived paths and function selection are captured at construction",
+        "state": "pass"
+      },
+      {
+        "name": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "retain-caller-binding-alias",
+      "status": "DETECTED",
+      "from": "this.#bindings = Object.fromEntries(Object.entries(bindings).map(([name,binding])=>[name,\n      binding.kind==='direct'\n        ? {kind:'direct',accessorId:cloneCanonicalValue(binding.accessorId),path:cloneStatePath(binding.path)}\n        : {kind:'derived',accessorId:cloneCanonicalValue(binding.accessorId),projectionPath:cloneStatePath(binding.projectionPath),sourcePaths:binding.sourcePaths.map(cloneStatePath),transformationId:cloneCanonicalValue(binding.transformationId),derive:binding.derive},\n    ])) as Bindings;",
+      "to": "this.#bindings = bindings;",
+      "tests": [
+        {
+          "name": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 7n } to deeply equal { kind: 'signed', value: 4n }"
+          ]
+        },
+        {
+          "name": "PRJ binding isolation: derived paths and function selection are captured at construction",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 999n } to deeply equal { kind: 'signed', value: 4n }"
+          ]
+        },
+        {
+          "name": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "retain-nested-direct-path-alias",
+      "status": "DETECTED",
+      "from": "path:cloneStatePath(binding.path)",
+      "to": "path:binding.path",
+      "tests": [
+        {
+          "name": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'signed', value: 7n } to deeply equal { kind: 'signed', value: 4n }"
+          ]
+        },
+        {
+          "name": "PRJ binding isolation: derived paths and function selection are captured at construction",
+          "state": "pass"
+        },
+        {
+          "name": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Generic construction alias isolation; not a public Campaign2 executor-binding API.",
+    "No purity guarantee for trusted derive closures, no universal hostile-code confinement.",
+    "Whole AD-E7/B/FCT remain open."
+  ]
+}

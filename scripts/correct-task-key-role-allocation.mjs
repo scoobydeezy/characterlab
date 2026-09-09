@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(p,'utf8'),fp=path=>({path,sha256:crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+const original='docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json',correction='docs/formal/TASK_COMMITMENT_KEY_ROLE_CORRECTION.md';
+const output='docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json',audit='docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_AUDIT.json';
+for(const p of [output,audit])assert(!fs.existsSync(p),'Preserve prior correction');
+const old=JSON.parse(read(original)),oldHash=fp(original),upstream='docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md';
+assert(read(upstream).includes('do not substitute StateMapKey for fields inside a record key'));
+for(const f of old.sourceFingerprints)assert.deepEqual(fp(f.path),f);
+assert.deepEqual(old.mapKeyRoles.map(r=>[r.rootStateTypeId,r.keyFieldId]),[[373,1],[373,2]]);
+assert.deepEqual(old.roles.filter(r=>r.recordTypeId===371).map(r=>[r.fieldId,r.requiredNamespace,r.domainValidatorId]),[[1,1002,'validator/character-qualification'],[2,1002,'validator/task-qualification']]);
+const current={...old,version:'task-commitment-allocation/0.2-candidate',semanticVersion:'task-commitment/0.2-candidate',authority:correction,mapKeyRoles:[],supersedesRoleClosure:old.version,correction:'Remove two invalid StateMapKey declarations; use unchanged371 RecordField roles after exact key grammar.',sourceFingerprints:[...old.sourceFingerprints,...[original,correction,upstream].map(fp)]};
+assert.deepEqual(current.records,old.records);assert.deepEqual(current.members,old.members);assert.deepEqual(current.roles,old.roles);assert.deepEqual(current.unionVariants,old.unionVariants);
+assert.equal(current.records.find(r=>r.typeId===373).fields.length,1);assert.equal(current.namespaces.length,0);
+fs.writeFileSync(output,JSON.stringify(current,null,2)+'\n');assert.deepEqual(fp(original),oldHash);
+fs.writeFileSync(audit,JSON.stringify({status:'CORRECTED ROLE CLOSURE ACCEPTED AND FROZEN',semanticVersion:current.semanticVersion,allocationVersion:current.version,unchanged:{records:7,fields:34,members:14,recordFieldRoles:10,statusVariants:3},newStateMapKeyRoles:0,historicalError:'The0.1 audit verified parity but misinterpreted StateMapKey.FieldId. Its role-ownership PASS for373/1 and373/2 is superseded.',checks:['actual upstream RecordField requirement inspected','exact371 key-field roles retained','373/schema1 remains one-field record','no record/member/field/union changes','all earlier fingerprinted artifacts preserved'],sourceFingerprints:current.sourceFingerprints,frozenArtifact:fp(output),runtime:'TC-A..L NOT PASSED; direct state-role controls still required'},null,2)+'\n');
+console.log('PASS corrected key-role allocation: unchanged7records/34fields/14members; zero new StateMapKey roles.');

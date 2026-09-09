@@ -20,7 +20,7 @@ const mutants=[
 const sources=[...new Set(mutants.map(m=>m.file))].map(path=>({path,sha256:hash(fs.readFileSync(new URL(path,root)))}));
 async function run(suite,mutant){
  let transformed=0;
- const server=await createServer({server:{middlewareMode:true},appType:'custom',optimizeDeps:{noDiscovery:true,include:[]},plugins:[{
+ const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom',optimizeDeps:{noDiscovery:true,include:[]},plugins:[{
   name:'reg-persistence-interpreter-mutant',enforce:'pre',transform(code,id){
    const normalized=id.replaceAll('\\','/');let changed=false;
    if(suite==='persistence'&&normalized.endsWith('/'+runtime)){
@@ -43,9 +43,10 @@ async function run(suite,mutant){
 const baselines=[];for(const suite of ['reg','persistence']){baselines.push(await run(suite));console.log(suite+': baseline PASS');}
 const mutations=[];for(const m of mutants){mutations.push({...await run(m.suite,m),source:m.file,from:m.from,to:m.to});console.log(m.name+': DETECTED');}
 for(const s of sources)assert.equal(hash(fs.readFileSync(new URL(s.path,root))),s.sha256);
-fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,baselines,mutations,
+fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV4.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,baselines,mutations,
  supersededMutationAttempts:[{name:'restore-validates-time-zero',result:'NOT DISTINGUISHED by rejection-only assay',reason:'Runtime construction repeated the saved-time check, so restore still rejected. Added observational entry counter to require rejection before runtime construction; the same single-site mutant is now distinguished.'}],
  limitations:['REG scalar oracle is independent of production TIME arithmetic; canonical transport and VAL content setup are shared.',
  'Persistence tests compare exact empty metadata and round-trip bytes; they are not a second persistence implementation.',
  'Retained-time witness edits a canonical checkpoint clock, without claiming that its history was executed.',
  'No complete FCT-D, FCT-6, PERSIST, VAL or PHEN-ADAPT closure.']},null,2)+'\n');
+

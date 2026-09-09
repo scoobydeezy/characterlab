@@ -16,7 +16,7 @@ const mutants=[
 ];
 async function execute(mutant){
  let transformed=0;
- const ctx=await startVitest('test',[test],{run:true,watch:false,maxWorkers:1,minWorkers:1,reporters:[],testNamePattern:'required projection accepts only admitted input'},
+ const ctx=await startVitest('test',[test],{config:false,include:['src/test/**/*.test.ts'],run:true,watch:false,maxWorkers:1,minWorkers:1,reporters:[],testNamePattern:'required projection accepts only admitted input'},
   {plugins:mutant?[{name:'isolated-prj-substitution',enforce:'pre',transform(code,id){if(!id.replaceAll('\\','/').endsWith('/'+file))return;assert.equal(code.split(mutant.from).length-1,1);transformed++;return code.replace(mutant.from,mutant.to);}}]:[]});
  assert(ctx,'Vitest context');
  try{
@@ -32,7 +32,7 @@ async function execute(mutant){
 const baseline=await execute(),mutations=[];console.log('Inherited PRJ execution control PASS');
 for(const m of mutants){mutations.push({...await execute(m),source:file,from:m.from,to:m.to});console.log(m.name+': DETECTED');}
 for(const s of sources)assert.equal(hash(fs.readFileSync(new URL(s.path,root))),s.sha256);
-fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,baseline,mutations,
+fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF_REV4.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:sources,baseline,mutations,
  limitations:['Runs an existing generic PRJ fixture registration, not the zero-read EVID specialization or frozen first-model activation.',
  'Inherited assertion-based mutation qualification, not an independent general PRJ interpreter.',
  'No whole PRJ/IDN, FCT-6 or VAL-N release verdict.']},null,2)+'\n');

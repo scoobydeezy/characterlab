@@ -1,8 +1,9 @@
-import {describe,it,expect} from 'vitest';
+import {describe,it,expect,vi} from 'vitest';
 import {canonicalEncode,signed,unsigned,text,list,set,map,record,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {decodeCampaign2} from '../campaign2/codecs';
 import {dataItems,dataRecord,dataField} from '../campaign2/canonicalData';
 import {INT64_MAX,timeSchemas} from '../substrate/time';
+import * as timeModule from '../substrate/time';
 import {contentRegistrySchemas} from '../substrate/contentManifest';
 import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
 import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
@@ -67,6 +68,7 @@ describe('regulatory-reference/0.5-candidate closed compiler',()=>{
     const registration=empty.fields.get(4n) as typeof empty,reference=registration.fields.get(2n) as typeof empty;
     const noCharactersOrParameters=record(empty.schema,new Map([...empty.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[2n,map([])]]))]]))]]));
     const cases:[CanonicalValue[],string][]=[
+      [[entry({character:id(1000,'observer/not-a-character'),governing:id(1030,'parameter/missing')})],'identity does not satisfy required namespace'],
       [[entry({embedded:id(1030,'parameter/other')})],'parameter key/identity mismatch'],
       [[entry({governing:id(1030,'parameter/missing')})],'unresolved local parameter'],
       [[entry({extraParameter:true})],'unused REG parameter'],
@@ -108,6 +110,20 @@ describe('regulatory-reference/0.5-candidate closed compiler',()=>{
   });
   it('rejects invalid domains, references, parameter ownership and non-total endpoints',async()=>{
     const c=await context();
+    const raw=dataRecord(entry(),171n),registration=dataRecord(dataField(raw,4n),283n),definition=dataRecord(dataField(registration,1n),280n);
+    const withUnit=record({...definition.schema,fields:[...definition.schema.fields,{id:999n,name:'Unit',required:true}]},new Map([...definition.fields,[999n,text('meters')]]));
+    const malformed=record(raw.schema,new Map([...raw.fields,[4n,record(registration.schema,new Map([...registration.fields,[1n,withUnit]]))]]));
+    const arithmetic=vi.spyOn(timeModule,'materializeLinear');
+    try{
+      // Permissive local descriptor emits the extra field; production decode owns
+      // rejection. The unit is never compared and no endpoint arithmetic occurs.
+      expect(()=>compileRegulatoryReferences(bytes(malformed),c)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+      expect(arithmetic).not.toHaveBeenCalled();
+      const reference=dataRecord(dataField(registration,2n),282n),references=dataField(reference,1n) as Extract<CanonicalValue,{kind:'map'}>;
+      const duplicate=record(raw.schema,new Map([...raw.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[1n,map([...references.entries,...references.entries])]]))]]))]]));
+      expect(()=>bytes(duplicate)).toThrow(); // cenc forbids duplicate character keys before REG intake.
+      expect(arithmetic).not.toHaveBeenCalled();
+    }finally{arithmetic.mockRestore();}
     const invalid:Options[]=[{scale:0n},{minimum:101n},{embedded:id(1030,'parameter/other')},{governing:id(1030,'parameter/missing')},
       {extraParameter:true},{parameterMinimum:-1n},{noCharacters:true},{parameter:id(1027,'parameter/control')},
       {timeScale:2n},{rate:2n,timeScale:4n},{instant:1n},{remainder:1n},{rate:1n},{rate:-1n},{version:'wrong'}];
@@ -121,6 +137,12 @@ describe('regulatory-reference/0.5-candidate closed compiler',()=>{
     const {content,entries}=fixtureContentInputs(contentId);
     const noRole=await compileFirstCampaign2Content(content,entries,canonicalEncode(set(fixtureRoleConstraints)),entries);
     expect(()=>compileRegulatoryReferences(bytes(entry()),noRole)).toThrow(/missing REG CharacterId role/);
+    // Real compiled CONTENT otherwise unchanged. The REG component must validate
+    // its incoming role declaration even when all current values would qualify.
+    const wrongRole={...c,recordRole:(type:bigint,field:bigint)=>type===281n&&field===1n
+      ?canonicalEncode(r('CanonicalIdentityRole',{RequiredNamespace:unsigned(1000),DomainValidatorId:id(1021,'validator/character-qualification')}))
+      :c.recordRole(type,field)};
+    expect(()=>compileRegulatoryReferences(bytes(entry()),wrongRole)).toThrow(/wrong REG CharacterId role/);
   });
   it('preserves variable → character → D → T failure precedence',async()=>{
     const reg=compileRegulatoryReferences(bytes(entry()),await context());

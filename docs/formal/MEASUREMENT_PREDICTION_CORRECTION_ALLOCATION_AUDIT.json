@@ -1,0 +1,64 @@
+{
+  "status": "CORRECTIVE ALLOCATION ACCEPTED AND FROZEN; AGENT SELF-REVIEW",
+  "acceptedArtifacts": [
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION.md",
+      "sha256": "fbe19a4458da102f141de40df316bbf6e92038e82198d00e03bceff63e820245"
+    }
+  ],
+  "reviewedDraftArtifact": {
+    "path": "docs/planning/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION_DRAFT.json",
+    "sha256": "0a4ecdb6bcea78628715f819bf9f71fa823988baa2e10567ea97512d382ea3f5"
+  },
+  "sourceFingerprints": [
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md",
+      "sha256": "190e165ff705594ec9e39ab38a641c5d27c7c0bb7e640000742ebf415749cc25"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    }
+  ],
+  "preservedPriorArtifacts": [
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION.md",
+      "sha256": "cda6be575268a141b6b91c95fb3f4480c6c076f15b8748169067cd008a186cf6"
+    },
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_ALLOCATION_DRAFT.json",
+      "sha256": "9c8c30e5e9a6bd72e020547f057b5a6fbe70e606b758d09311f0174eb0077bb9"
+    },
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_ALLOCATION_DRAFT.md",
+      "sha256": "9b5f9dab24cb2e7b1b27ac62755dbafef0505988aaaecc7a9aa0622479cf0e0e"
+    }
+  ],
+  "checks": [
+    "275 is producer,278 is occurrence rule; mistaken275 substitution rejected",
+    "other reused schema semantic names checked",
+    "type/field IDs and names preserved",
+    "retired field remains declared with forced absence",
+    "containing registration schema reference updated explicitly",
+    "sole shared occurrence rule, no parallel registration rule",
+    "old accepted/draft artifacts and166 frozen fingerprints preserved"
+  ],
+  "newNumericIds": 0,
+  "runtimeQualification": "NONE"
+}

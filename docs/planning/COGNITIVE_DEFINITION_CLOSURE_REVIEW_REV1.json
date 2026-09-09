@@ -1,0 +1,31 @@
+{
+  "status": "RECEIVING DECLARATION CHECKS PASS; MODEL FREEZE PENDING",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/cognitive-model-declarations.mjs",
+      "sha256": "5bb30d238c53398d7c72171a34a7275c6ef989f84417b4ad446a5527d64b806b"
+    },
+    {
+      "path": "scripts/review-cognitive-definition-closure.mjs",
+      "sha256": "07d29377dfa2f4ccea02515c71a11001237270ad847c3c181690132bb948f6dd"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/planning/campaign2-cognitive-declaration-review/REVIEW_MANIFEST.json",
+      "sha256": "8e9bf57bcbbff8fbe0067ffdf6f18cebd309dfa45cac584621961271552681df"
+    }
+  ],
+  "models": 21,
+  "definitionRowsPerModel": 13,
+  "checkedFields": 2047,
+  "checkedReferences": 233,
+  "rejectedMutations": [
+    "instruction refers to wrong definition kind",
+    "observation projection names wrong producer",
+    "definition stored under wrong registry kind"
+  ],
+  "scope": "New definition/registration primitive and reference grammar plus exact controller/read targets. Not live source authentication, new psychological record runtime validation or behavioral qualification."
+}

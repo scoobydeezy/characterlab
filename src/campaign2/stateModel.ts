@@ -7,6 +7,7 @@ import {AuthoritativeState,StateAuthorityRegistry,StateContractError,applyStateP
 import {compileMutationAuthorityRegistry,leafValueValidator,MUTATION_AUTHORITY_CONTRACT_VERSION,
   type LeafValueGrammar,type MutationAuthorityDefinition} from '../substrate/mutationAuthority';
 import {decodeCampaign2,campaign2SchemaByType} from './codecs';
+import {SchedulerContractError} from '../substrate/scheduler';
 import type {compileValDeclarations} from './valDeclarations';
 import {dataRecord as rec,dataField as field,dataUnsigned as u,dataText as txt,dataIdentity as id,dataItems as items,dataKey as key,invalidModel} from './canonicalData';
 
@@ -115,9 +116,10 @@ export function compileCampaign2StateModel(
   class PrjAuthorityRegistry extends StateAuthorityRegistry {
     override resolveWritableLeaf(path:StatePath){validatePath(path);return super.resolveWritableLeaf(path);}
   }
-  const authority=new PrjAuthorityRegistry(owned.writableLeaves.map(leaf=>({...leaf,validateValue:(value:CanonicalValue)=>{
+  const writable=owned.writableLeaves.map(leaf=>({...leaf,validateValue:(value:CanonicalValue)=>{
     const family=families.find(f=>patternKey(f.pattern)===patternKey(leaf.pattern))!;validateValue(family,value);
-  }})),owned.authorities);
+  }}));
+  const authority=new PrjAuthorityRegistry(writable,owned.authorities);
   function validateState(state:AuthoritativeState):void {
     for(const entry of state.entries()){
       validatePath(entry.path);
@@ -137,7 +139,20 @@ export function compileCampaign2StateModel(
       if(result.presence){const family=families.find(f=>patternMatches(f.pattern,path));if(family)validateValue(family,result.value!);}
       return result;
     },
-    applyPatch(state:AuthoritativeState,patch:StatePatch,authorityId:TypedIdentifierValue){return applyStatePatch(state,patch,authorityId,authority);},
+    applyPatch(state:AuthoritativeState,patch:StatePatch,authorityId:TypedIdentifierValue,scope?:{readonly writableRoots:readonly bigint[];readonly targetPaths:readonly StatePath[]}){
+      if(!scope)return applyStatePatch(state,patch,authorityId,authority);
+      // ADAPT B inserts data-derived checks after the existing PRJ/WRT prefix,
+      // before expected-old/removal/value validation. No executor callback.
+      const roots=[...scope.writableRoots],targets=new Set(scope.targetPaths.map(p=>key(statePathValue(p))));
+      class ScopedAuthority extends PrjAuthorityRegistry {
+        override validateAuthority(owner:TypedIdentifierValue,path:StatePath){
+          super.validateAuthority(owner,path);
+          if(!roots.includes(path.rootStateTypeId))throw new SchedulerContractError('TRANSITION_WRITE_SCOPE_VIOLATION','write is outside transition families');
+          if(!targets.has(key(statePathValue(path))))throw new SchedulerContractError('ADAPTATION_TARGET_PATH_VIOLATION','write differs from resolved rule target');
+        }
+      }
+      return applyStatePatch(state,patch,authorityId,new ScopedAuthority(writable,owned.authorities));
+    },
     family(patternBytes:Uint8Array){
       const p=decodeStatePattern(codec.decode(patternBytes)),f=families.find(f=>patternKey(f.pattern)===patternKey(p));
       return f?structuredClone(f):undefined;

@@ -1,0 +1,193 @@
+{
+  "status": "EXECUTED RESEARCH POSSIBILITY; NOT COGNITIVE OR IDENTITY QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/predictionFactory.ts",
+      "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+    },
+    {
+      "path": "src/campaign2/predictionExecution.ts",
+      "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+    },
+    {
+      "path": "src/campaign2/predictionModelReview.ts",
+      "sha256": "f3e491084c91c9cf2cb985f7d394936862492ed325b16b4a49e872211b6eaedf"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+    },
+    {
+      "path": "reference/src/model/diceCompiler.ts",
+      "sha256": "9029aef84a3915ae82b0195f527f4e6419cfbb8e84b7e1f36c0806d746ff94c0"
+    },
+    {
+      "path": "reference/src/model/identity.ts",
+      "sha256": "e395a4f8b191481be9dc838f9bfdf55a996af1b8c4d27f571722606b56796d68"
+    },
+    {
+      "path": "reference/src/kernel/evidenceOverlap.ts",
+      "sha256": "3e2be4b25c5c4ea57821fde9377755a6fc3c7bc704dd6b4015c8e6b8154516db"
+    },
+    {
+      "path": "scripts/explore-generated-task-calibration.mjs",
+      "sha256": "d59e39ad7d1273095c3fa2f9e2478fc706a6ab5436cfab053381edc0d748120f"
+    }
+  ],
+  "initialRejectedAssumption": "Thirty authored exposures exceed the frozen tolerance/load bounds. The actual runtime correctly rejected that history; this revision uses ten, at the exact existing bound, without widening the profile.",
+  "actualHistory": {
+    "profile": "qualified prediction profile",
+    "initialDisplacement": -50,
+    "authoredExposureEvents": 10,
+    "observations": [
+      "0/1",
+      "1/1"
+    ],
+    "retainedMeans": [
+      "0/1",
+      "1/2"
+    ]
+  },
+  "proposedCalibration": {
+    "base": "1/10",
+    "gain": "1/1",
+    "thetaReason": "9/25",
+    "standingControl": "1/3"
+  },
+  "cases": [
+    {
+      "forecast": "0/1",
+      "concern": [
+        "2/5",
+        "1/2"
+      ],
+      "beforeStanding": [
+        {
+          "option": "A",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "29/77",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        },
+        {
+          "option": "B",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "14/33",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        }
+      ],
+      "afterStanding": [
+        {
+          "option": "A",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "193/308",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        },
+        {
+          "option": "B",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "89/132",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        }
+      ],
+      "proposedNonIdentitySemanticAlignment": [
+        "-1/25",
+        "1/25"
+      ],
+      "equalMeaningAlignment": [
+        "0/1",
+        "0/1"
+      ]
+    },
+    {
+      "forecast": "1/2",
+      "concern": [
+        "7/20",
+        "9/20"
+      ],
+      "beforeStanding": [
+        {
+          "option": "A",
+          "nuclei": []
+        },
+        {
+          "option": "B",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "128/319",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        }
+      ],
+      "afterStanding": [
+        {
+          "option": "A",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "713/1188",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        },
+        {
+          "option": "B",
+          "nuclei": [
+            {
+              "base": "1/11",
+              "relevance": "831/1276",
+              "die": 4,
+              "standingModifier": 0,
+              "contextModifier": 0
+            }
+          ]
+        }
+      ],
+      "proposedNonIdentitySemanticAlignment": [
+        "-40/939",
+        "40/939"
+      ],
+      "equalMeaningAlignment": [
+        "0/1",
+        "0/1"
+      ]
+    }
+  ],
+  "limitations": [
+    "The prediction history is actual runtime evidence; intervening exposures are original authored controls, not generated decisions or actions.",
+    "Concern, raw signals and semantic-pressure mapping are explicitly proposed research operands, not an implemented cognitive source.",
+    "Synthetic reference-only basis tags are test inputs and cannot be admitted to the future canonical TRC-004 source.",
+    "Standing strength is an intervention, not earned identity; DEC-001 and actual qualification/feedback remain unresolved.",
+    "The frozen task profile expires before this history ends. A new exact longer-window profile is required for an intact live-task witness.",
+    "Equal semantic meanings give zero alignment; choice between two identically meaningful commitments cannot earn fidelity by relabeling the winner."
+  ]
+}

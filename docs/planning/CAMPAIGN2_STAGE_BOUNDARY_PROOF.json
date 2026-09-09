@@ -1,0 +1,104 @@
+{
+  "status": "EXECUTED BOUNDED EVIDENCE",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "174d863004e41a06d08fd7f44c7d33ee48d83834f62bb98ee1ff37620313eb66"
+    },
+    {
+      "path": "src/test/campaign2StageBoundary.test.ts",
+      "sha256": "58121adab6ab01aa0d5a6d47f1257962a873a73f391406e4503bde9e87516ad0"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AC-I phase140 stage boundary: ordinary-event",
+        "state": "pass"
+      },
+      {
+        "name": "AC-I phase140 stage boundary: forged-consumer",
+        "state": "pass"
+      },
+      {
+        "name": "AC-I phase140 stage boundary: late-child",
+        "state": "pass"
+      },
+      {
+        "name": "AC-I phase140 stage boundary: valid",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-ordinary-phase140-exclusion",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationRuntime.ts",
+      "from": "for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');",
+      "to": "void events;",
+      "required": "ordinary-event",
+      "tests": [
+        {
+          "name": "AC-I phase140 stage boundary: ordinary-event",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AC-I phase140 stage boundary: forged-consumer",
+          "state": "pass"
+        },
+        {
+          "name": "AC-I phase140 stage boundary: late-child",
+          "state": "pass"
+        },
+        {
+          "name": "AC-I phase140 stage boundary: valid",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "permit-late-phase140-child",
+      "status": "DETECTED",
+      "source": "src/substrate/scheduler.ts",
+      "from": "if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');",
+      "to": "void batch;",
+      "required": "late-child",
+      "tests": [
+        {
+          "name": "AC-I phase140 stage boundary: ordinary-event",
+          "state": "pass"
+        },
+        {
+          "name": "AC-I phase140 stage boundary: forged-consumer",
+          "state": "pass"
+        },
+        {
+          "name": "AC-I phase140 stage boundary: late-child",
+          "state": "fail",
+          "errors": [
+            "expected 1 to be +0 // Object.is equality"
+          ]
+        },
+        {
+          "name": "AC-I phase140 stage boundary: valid",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Internal fault injection into real public-factory runtime; not public scheduling authority.",
+    "Ordinary event exclusion and forbidden late-child stage are distinguished from later ingress failure.",
+    "Positive witness checks one batch and exactly one execution per original event."
+  ]
+}

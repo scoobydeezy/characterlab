@@ -1,0 +1,171 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+    },
+    {
+      "path": "src/test/campaign2BatchWitnesses.test.ts",
+      "sha256": "9e067345670059aabc7ab3ef1ba9f9ce0bf51f1fc7b361bffd58e80484e3aa58"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-batch-collision-check",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "filter-zero-count-rule",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1"
+          ]
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+          "state": "fail",
+          "errors": [
+            "expected [] to have a length of 2 but got +0"
+          ]
+        },
+        {
+          "name": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "reverse-target-gate-read-evidence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+          "state": "fail",
+          "errors": [
+            "ADAPT rule read instrumentation differs from target/gate segment"
+          ]
+        },
+        {
+          "name": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-gate-read-evidence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+          "state": "fail",
+          "errors": [
+            "ADAPT rule read instrumentation differs from target/gate segment"
+          ]
+        },
+        {
+          "name": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+    "Five tests cover AD-E1, AD-E6 and selected AD-E7 witnesses, not all ADAPT controls.",
+    "No global factory, VAL, ADAPT or Campaign-2 verdict."
+  ]
+}

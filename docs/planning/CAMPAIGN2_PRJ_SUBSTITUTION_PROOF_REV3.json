@@ -1,0 +1,126 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/requiredProjection.ts",
+      "sha256": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64"
+    },
+    {
+      "path": "src/test/campaign2TransitionAdmission.test.ts",
+      "sha256": "9b110231dfbe53208adab722bda64a838521bf4849de1f686cc9b4c04cf04af9"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutations": [
+    {
+      "name": "select-occurrence-instead-of-observer",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "const selector=f(payload,q.sourceId)",
+      "to": "const selector=f(payload,1n)"
+    },
+    {
+      "name": "expose-roster-wrapper",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "const value=f(sourceValue,q.projectedId);",
+      "to": "const value=sourceValue;"
+    },
+    {
+      "name": "lose-source-wrapper-evidence",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'record', …(2) }"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "derivedSources:[source]",
+      "to": "derivedSources:[{...source,value}]"
+    },
+    {
+      "name": "skip-required-presence-carrier",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "if(!source.presence)throw new StateContractError('REQUIRED_PROJECTION_VALUE_ABSENT','required projection source is absent');",
+      "to": "void source.presence;"
+    },
+    {
+      "name": "skip-roster-static-read-ban",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "if(patternMatches(roster,path))invalidModel('IDN forbids static/legacy derived roster access');",
+      "to": "void path;"
+    },
+    {
+      "name": "skip-required-roster-projection",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/requiredProjection.ts",
+      "from": "if(rosterCount!==(rosterReadable?1:0))invalidModel('IDN roster ReadDomain requires exactly one subject projection');",
+      "to": "void rosterCount;"
+    }
+  ],
+  "limitations": [
+    "Runs an existing generic PRJ fixture registration, not the zero-read EVID specialization or frozen first-model activation.",
+    "Inherited assertion-based mutation qualification, not an independent general PRJ interpreter.",
+    "No whole PRJ/IDN, FCT-6 or VAL-N release verdict."
+  ]
+}

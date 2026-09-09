@@ -1,0 +1,991 @@
+{
+  "status": "SYMBOLIC STRUCTURAL AUDIT; NOT WHOLE SHAPE OR RUNTIME PASS",
+  "sourceFingerprints": [
+    {
+      "path": "docs/planning/CAMPAIGN2_COGNITIVE_FIELD_GRAMMAR_REV2.json",
+      "sha256": "50bb09d127d58292a4b953894ada34237ccdfcfe064963244eaf404bdab3f367"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_COGNITIVE_SYMBOLIC_INVENTORY_REV5.json",
+      "sha256": "b7e674739e4a24974e5e658527408b006eb05c5a514b914bbeb8ffad67a48957"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    }
+  ],
+  "aliases": {
+    "CharacterId": {
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    "TaskReferentId": {
+      "namespace": 1002,
+      "validator": "validator/task-qualification"
+    },
+    "ObserverId": {
+      "namespace": 1000
+    },
+    "DefinitionId": {
+      "namespace": 1027
+    },
+    "ProjectionAccessorId": {
+      "namespace": 1028
+    },
+    "SeamId": {
+      "namespace": 1036
+    },
+    "EventTypeId": {
+      "namespace": 1001
+    },
+    "TransitionKindId": {
+      "namespace": 1009
+    },
+    "WorkspaceOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "AppraisalOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ConcernOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "MotiveContextOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "CandidateOptionsOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "RawSignalContextOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ReasonContextOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "DecisionResolutionOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ChosenIntentOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "DecisionExpressionOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "QualificationOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ActionPlanOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ActionAttemptOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "ExecutionOutcomeOccurrenceId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "MotiveChannelId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "IdentityChannelId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "RandomPurposeId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    },
+    "RandomSubjectRoleId": {
+      "namespace": null,
+      "allocation": "PENDING"
+    }
+  },
+  "inheritedSchemaReferences": [
+    {
+      "typeId": 110,
+      "schemaVersion": 1,
+      "name": "RandomAddress"
+    },
+    {
+      "typeId": 112,
+      "schemaVersion": 1,
+      "name": "NaturalRandomKey"
+    },
+    {
+      "typeId": 149,
+      "schemaVersion": 1,
+      "name": "StatePathPattern"
+    },
+    {
+      "typeId": 201,
+      "schemaVersion": 1,
+      "name": "ObservationChannel"
+    },
+    {
+      "typeId": 237,
+      "schemaVersion": 1,
+      "name": "CharacterEvidenceRef"
+    },
+    {
+      "typeId": 254,
+      "schemaVersion": 1,
+      "name": "CanonicalRecordSchemaRef"
+    },
+    {
+      "typeId": 266,
+      "schemaVersion": 1,
+      "name": "EventDependentProjectedFieldRequirement"
+    },
+    {
+      "typeId": 272,
+      "schemaVersion": 1,
+      "name": "TransitionRegistrationV04"
+    },
+    {
+      "typeId": 273,
+      "schemaVersion": 1,
+      "name": "WriteCapabilityV04"
+    },
+    {
+      "typeId": 274,
+      "schemaVersion": 1,
+      "name": "TransitionInputAdmissionV04"
+    },
+    {
+      "typeId": 276,
+      "schemaVersion": 1,
+      "name": "TransitionIngressDefinition"
+    },
+    {
+      "typeId": 277,
+      "schemaVersion": 1,
+      "name": "TransitionOutputDefinition"
+    },
+    {
+      "typeId": 322,
+      "schemaVersion": 1,
+      "name": "WriteCapabilityV06"
+    },
+    {
+      "typeId": 361,
+      "schemaVersion": 1,
+      "name": "MeasurementPrediction"
+    },
+    {
+      "typeId": 363,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionTargetRequirement"
+    },
+    {
+      "typeId": 371,
+      "schemaVersion": 1,
+      "name": "TaskCommitmentKey"
+    }
+  ],
+  "scalarRoles": [
+    {
+      "record": "DeliberationOpportunity",
+      "field": "ObserverId",
+      "position": "RecordField",
+      "identityFamily": "ObserverId",
+      "namespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "record": "DeliberationOpportunity",
+      "field": "AgendaDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceDefinition",
+      "field": "PredictionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "WorkspaceTaskItem",
+      "field": "TaskSpecRef",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspace",
+      "field": "WorkspaceOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "WorkspaceOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspace",
+      "field": "CharacterId",
+      "position": "RecordField",
+      "identityFamily": "CharacterId",
+      "namespace": 1002,
+      "validator": "validator/character-qualification",
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "record": "TaskWorkspace",
+      "field": "AgendaDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskAppraisal",
+      "field": "AppraisalOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "AppraisalOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskConcern",
+      "field": "ConcernOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ConcernOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "PlanInstructionDefinition",
+      "field": "ProtocolActionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "AdoptedTaskInstruction",
+      "field": "PlanInstructionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskMotiveContext",
+      "field": "MotiveContextOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "MotiveContextOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ProceduralCandidateKey",
+      "field": "CharacterId",
+      "position": "RecordField",
+      "identityFamily": "CharacterId",
+      "namespace": 1002,
+      "validator": "validator/character-qualification",
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "record": "ProceduralCandidateKey",
+      "field": "ProtocolActionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "ProceduralCandidateOrigin",
+      "field": "PlanInstructionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskCandidateOptions",
+      "field": "CandidateOptionsOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "CandidateOptionsOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ReasonEvidenceAtom",
+      "field": "QualificationOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "QualificationOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskRawSignalContext",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "RawSignalContextOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ReasonNucleusKey",
+      "field": "MotiveChannel",
+      "position": "RecordField",
+      "identityFamily": "MotiveChannelId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ReasonNucleusKey",
+      "field": "TaskReferent",
+      "position": "RecordField",
+      "identityFamily": "TaskReferentId",
+      "namespace": 1002,
+      "validator": "validator/task-qualification",
+      "domainValidatorId": "validator/task-qualification"
+    },
+    {
+      "record": "TaskReasonContext",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ReasonContextOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "DecisionResolution",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "DecisionResolutionOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityKey",
+      "field": "CharacterId",
+      "position": "RecordField",
+      "identityFamily": "CharacterId",
+      "namespace": 1002,
+      "validator": "validator/character-qualification",
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "record": "TaskIdentityKey",
+      "field": "IdentityChannelId",
+      "position": "RecordField",
+      "identityFamily": "IdentityChannelId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityContribution",
+      "field": "QualificationOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "QualificationOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityContribution",
+      "field": "DecisionResolutionOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "DecisionResolutionOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceTaskRequirement",
+      "field": "SubjectAccessor",
+      "position": "RecordField",
+      "identityFamily": "ProjectionAccessorId",
+      "namespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceTaskRequirement",
+      "field": "OutputAccessor",
+      "position": "RecordField",
+      "identityFamily": "ProjectionAccessorId",
+      "namespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "ExecutingSeamId",
+      "position": "RecordField",
+      "identityFamily": "SeamId",
+      "namespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "ConsumerEventTypeId",
+      "position": "RecordField",
+      "identityFamily": "EventTypeId",
+      "namespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "AgendaDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskConcernRegistration",
+      "field": "ConcernDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "ChosenIntent",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ChosenIntentOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "DecisionExpression",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "DecisionExpressionOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ChannelExpression",
+      "field": "IdentityChannelId",
+      "position": "RecordField",
+      "identityFamily": "IdentityChannelId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "DecisionQualification",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "QualificationOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ActionPlan",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ActionPlanOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ActionAttempt",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ActionAttemptOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "ExecutionOutcome",
+      "field": "OccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "ExecutionOutcomeOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskMotiveRegistration",
+      "field": "MotiveDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskCandidateRegistration",
+      "field": "CandidateDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskRawSignalRegistration",
+      "field": "ReasonSourceDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskReasonCompilationRegistration",
+      "field": "ReasonDiceDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskArbitrationRegistration",
+      "field": "ArbitrationDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "ProtocolExecutionRegistration",
+      "field": "ExecutionDefinitionId",
+      "position": "RecordField",
+      "identityFamily": "DefinitionId",
+      "namespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskPlanBindingRequirement",
+      "field": "OutputAccessor",
+      "position": "RecordField",
+      "identityFamily": "ProjectionAccessorId",
+      "namespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityReadRequirement",
+      "field": "IdentityChannelId",
+      "position": "RecordField",
+      "identityFamily": "IdentityChannelId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityReadRequirement",
+      "field": "OutputAccessor",
+      "position": "RecordField",
+      "identityFamily": "ProjectionAccessorId",
+      "namespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "record": "ChosenIntentIngressDefinition",
+      "field": "ConsumerEventTypeId",
+      "position": "RecordField",
+      "identityFamily": "EventTypeId",
+      "namespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "record": "TaskIdentityApplicationRegistration",
+      "field": "ExecutingSeamId",
+      "position": "RecordField",
+      "identityFamily": "SeamId",
+      "namespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "record": "ProtocolObservationBridgeDefinition",
+      "field": "ProducingTransitionKind",
+      "position": "RecordField",
+      "identityFamily": "TransitionKindId",
+      "namespace": 1009,
+      "domainValidatorId": null
+    },
+    {
+      "record": "IdentityQuantizationOperation",
+      "field": "SourceQualificationOccurrenceId",
+      "position": "RecordField",
+      "identityFamily": "QualificationOccurrenceId",
+      "namespace": null,
+      "allocation": "PENDING",
+      "domainValidatorId": null
+    }
+  ],
+  "collectionPositions": [
+    {
+      "record": "TaskWorkspace",
+      "field": "Tasks",
+      "grammar": "list(WorkspaceTaskItem)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskAppraisal",
+      "field": "Assessments",
+      "grammar": "list(TaskAppraisalItem)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskConcern",
+      "field": "Responses",
+      "grammar": "list(TaskConcernItem)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskMotiveContext",
+      "field": "Motives",
+      "grammar": "list(TaskMotiveItem)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ProceduralCandidate",
+      "field": "Origins",
+      "grammar": "set(ProceduralCandidateOrigin)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskCandidateOptions",
+      "field": "Candidates",
+      "grammar": "list(ProceduralCandidate)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ReasonEvidenceBasis",
+      "field": "Weights",
+      "grammar": "map(ReasonEvidenceAtom,q)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskRawSignalContext",
+      "field": "Signals",
+      "grammar": "set(TaskRawSignal)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskRawSignalContext",
+      "field": "NonIdentitySemanticPressure",
+      "grammar": "map(ProceduralCandidateKey,q)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ReasonRoleSummary",
+      "field": "CoverageResults",
+      "grammar": "list(CoverageResult)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskReasonContext",
+      "field": "ActiveNuclei",
+      "grammar": "list(CompiledReasonNucleus)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "CognitiveRandomDraw",
+      "field": "Attempts",
+      "grammar": "list(CognitiveRandomCandidateAttempt)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskIdentityEvidence",
+      "field": "Contributions",
+      "grammar": "list(TaskIdentityContribution)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskIdentityState",
+      "field": "Evidence",
+      "grammar": "map(TaskIdentityKey,TaskIdentityEvidence)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceTaskRequirement",
+      "field": "TaskSpecIds",
+      "grammar": "set(DefinitionId)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "ReadDomain",
+      "grammar": "set(149)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "OutputDefinitions",
+      "grammar": "set(277)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "SubjectRequirements",
+      "grammar": "set(266)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "TaskRequirements",
+      "grammar": "set(TaskWorkspaceTaskRequirement)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskWorkspaceSourceRegistration",
+      "field": "PredictionRequirements",
+      "grammar": "set(363)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ChosenDecisionData",
+      "field": "Probabilities",
+      "grammar": "list(OptionProbability)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ChosenDecisionData",
+      "field": "ReasonDraws",
+      "grammar": "list(ReasonDraw)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "DecisionTieBreak",
+      "field": "Leaders",
+      "grammar": "list(ProceduralCandidateKey)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ExactScoreDistribution",
+      "field": "Masses",
+      "grammar": "map(i,q)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "DecisionExpression",
+      "field": "ChannelExpressions",
+      "grammar": "list(ChannelExpression)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskPlanBindingRequirement",
+      "field": "SubjectFieldPath",
+      "grammar": "list(u)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskPlanBindingRequirement",
+      "field": "TaskListFieldPath",
+      "grammar": "list(u)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskIdentityReadRequirement",
+      "field": "SubjectFieldPath",
+      "grammar": "list(u)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskIdentityApplicationRegistration",
+      "field": "ReadDomain",
+      "grammar": "set(149)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "TaskIdentityApplicationRegistration",
+      "field": "OutputDefinitions",
+      "grammar": "set(277)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ProtocolObservationBridgeDefinition",
+      "field": "StageEventTypes",
+      "grammar": "map(u,EventTypeId)",
+      "owner": "exact receiving profile; not scalar265"
+    },
+    {
+      "record": "ProtocolObservationBridgeDefinition",
+      "field": "PublishedOutputSchemas",
+      "grammar": "set(254)",
+      "owner": "exact receiving profile; not scalar265"
+    }
+  ],
+  "outputs": [
+    {
+      "family": "WorkspaceOccurrenceId",
+      "output": "TaskWorkspace",
+      "identityField": "WorkspaceOccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "AppraisalOccurrenceId",
+      "output": "TaskAppraisal",
+      "identityField": "AppraisalOccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "ConcernOccurrenceId",
+      "output": "TaskConcern",
+      "identityField": "ConcernOccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "MotiveContextOccurrenceId",
+      "output": "TaskMotiveContext",
+      "identityField": "MotiveContextOccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "CandidateOptionsOccurrenceId",
+      "output": "TaskCandidateOptions",
+      "identityField": "CandidateOptionsOccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "RawSignalContextOccurrenceId",
+      "output": "TaskRawSignalContext",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "ReasonContextOccurrenceId",
+      "output": "TaskReasonContext",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "DecisionResolutionOccurrenceId",
+      "output": "DecisionResolution",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": [
+        "TaskIdentityContribution.DecisionResolutionOccurrenceId"
+      ]
+    },
+    {
+      "family": "ChosenIntentOccurrenceId",
+      "output": "ChosenIntent",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "DecisionExpressionOccurrenceId",
+      "output": "DecisionExpression",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "QualificationOccurrenceId",
+      "output": "DecisionQualification",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": [
+        "ReasonEvidenceAtom.QualificationOccurrenceId",
+        "TaskIdentityContribution.QualificationOccurrenceId",
+        "IdentityQuantizationOperation.SourceQualificationOccurrenceId"
+      ]
+    },
+    {
+      "family": "ActionPlanOccurrenceId",
+      "output": "ActionPlan",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "ActionAttemptOccurrenceId",
+      "output": "ActionAttempt",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    },
+    {
+      "family": "ExecutionOutcomeOccurrenceId",
+      "output": "ExecutionOutcome",
+      "identityField": "OccurrenceId",
+      "allocationOwner": "279/278",
+      "multiplicity": "ExactlyOne",
+      "referencePositions": []
+    }
+  ],
+  "existingRootSuccessor": {
+    "typeId": 373,
+    "predecessorSchemaVersion": 1,
+    "successorSchemaVersion": null,
+    "name": "TaskCommitmentState",
+    "fields": [
+      {
+        "name": "Commitments",
+        "existingFieldId": 1,
+        "grammar": "map(371,372)",
+        "required": true
+      },
+      {
+        "name": "AdoptedInstructions",
+        "fieldId": null,
+        "grammar": "map(371,AdoptedTaskInstruction)",
+        "required": true
+      }
+    ],
+    "authority": "CAMPAIGN2_COGNITIVE_STATE_AND_OCCURRENCE_CLOSURE_DRAFT.md"
+  },
+  "checks": {
+    "resolvedAll244Fields": true,
+    "qualifiedRecordFieldRoles": true,
+    "noScalarCollectionRoles": true,
+    "oneOutputOwnerPerFamily": true,
+    "inherited373Unchanged": true,
+    "wrongTypeRejections": 4
+  },
+  "limits": "Exact definition membership, source authenticity, collection refinements and codec/persistence behavior still require implementation tests. New numbers remain unallocated."
+}

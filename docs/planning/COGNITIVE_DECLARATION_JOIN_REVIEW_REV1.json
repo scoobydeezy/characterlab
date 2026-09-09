@@ -1,0 +1,147 @@
+{
+  "status": "DECLARATION JOIN REVIEW PASS; WHOLE MODEL STILL PENDING",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/cognitive-model-declarations.mjs",
+      "sha256": "5bb30d238c53398d7c72171a34a7275c6ef989f84417b4ad446a5527d64b806b"
+    },
+    {
+      "path": "scripts/review-cognitive-declaration-joins.mjs",
+      "sha256": "2f82b736da1ba9a3d4461956214b6f76664ca4d41adc0f648c76ccc6c8fb076d"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "src/campaign2/taskDeclarations.ts",
+      "sha256": "8791a1001efdf417522bc46177c4fb77a2ef56801e20d9d3517ac813ea21d8af"
+    },
+    {
+      "path": "docs/planning/campaign2-cognitive-declaration-review/REVIEW_MANIFEST.json",
+      "sha256": "8e9bf57bcbbff8fbe0067ffdf6f18cebd309dfa45cac584621961271552681df"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "baseline",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "workspace-zero",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "workspace-one",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "workspace-two",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "task-access-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "forecast-access-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "concern-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "base-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "plan-access-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "standing-access-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "execution-blocked",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "protocol-observer-off",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "equal-criteria",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "deadline-overlap",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "history-boundary",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "standing-integer",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "context-integer",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "die-six",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "die-eight",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "die-ten",
+      "stages": 16,
+      "stateFamilies": 11
+    },
+    {
+      "recipe": "die-twelve",
+      "stages": 16,
+      "stateFamilies": 11
+    }
+  ],
+  "negativeControls": [
+    "actual ownership compiler rejects plan read-only/write overlap",
+    "actual ownership compiler rejects missing plan key grammar"
+  ],
+  "scope": [
+    "all16 new source/output/phase registration joins checked",
+    "one scoped200/9 role replacement, all other inherited role rows preserved",
+    "actual owner/read-only/key grammar construction across21 recipes",
+    "predecessor content context used only for inherited IDN construction checks; new runtime value qualification is not claimed"
+  ],
+  "remaining": [
+    "Complete exact receiving registry/definition and contextual member validation",
+    "Controlled model/profile freeze",
+    "Generated runtime and persistence qualification"
+  ]
+}

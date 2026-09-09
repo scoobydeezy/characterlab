@@ -1,0 +1,155 @@
+{
+  "status": "EXACT RECIPE DIFFERENCE REVIEW PASS",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/cognitive-model-declarations.mjs",
+      "sha256": "5bb30d238c53398d7c72171a34a7275c6ef989f84417b4ad446a5527d64b806b"
+    },
+    {
+      "path": "scripts/review-cognitive-recipe-differences.mjs",
+      "sha256": "30fb597f26ca3e6401e6f02d65499e81bf047c25736b9b0d69600f8f808a8055"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_SHAPE_MANIFEST.json",
+      "sha256": "cf6c2dad3afb64909cc5829f02316a21c34fb86909f3f5869fbc0d127f303a87"
+    }
+  ],
+  "models": 21,
+  "results": [
+    {
+      "recipe": "baseline",
+      "changedRegistryRows": []
+    },
+    {
+      "recipe": "workspace-zero",
+      "changedRegistryRows": [
+        "definition/task-workspace"
+      ]
+    },
+    {
+      "recipe": "workspace-one",
+      "changedRegistryRows": [
+        "definition/task-workspace"
+      ]
+    },
+    {
+      "recipe": "workspace-two",
+      "changedRegistryRows": [
+        "definition/task-workspace"
+      ]
+    },
+    {
+      "recipe": "task-access-off",
+      "changedRegistryRows": [
+        "definition/task-workspace"
+      ]
+    },
+    {
+      "recipe": "forecast-access-off",
+      "changedRegistryRows": [
+        "definition/task-workspace"
+      ]
+    },
+    {
+      "recipe": "concern-off",
+      "changedRegistryRows": [
+        "definition/task-concern"
+      ]
+    },
+    {
+      "recipe": "base-off",
+      "changedRegistryRows": [
+        "definition/task-motive"
+      ]
+    },
+    {
+      "recipe": "plan-access-off",
+      "changedRegistryRows": [
+        "definition/task-candidates"
+      ]
+    },
+    {
+      "recipe": "standing-access-off",
+      "changedRegistryRows": [
+        "definition/task-reason-source"
+      ]
+    },
+    {
+      "recipe": "execution-blocked",
+      "changedRegistryRows": [
+        "definition/protocol-execution"
+      ]
+    },
+    {
+      "recipe": "protocol-observer-off",
+      "changedRegistryRows": [
+        "definition/protocol-observation"
+      ]
+    },
+    {
+      "recipe": "equal-criteria",
+      "changedRegistryRows": [
+        "definition/task-b"
+      ]
+    },
+    {
+      "recipe": "deadline-overlap",
+      "changedRegistryRows": [
+        "definition/task-a",
+        "definition/task-b"
+      ]
+    },
+    {
+      "recipe": "history-boundary",
+      "changedRegistryRows": [
+        "definition/protocol-execution",
+        "definition/task-a",
+        "definition/task-b"
+      ]
+    },
+    {
+      "recipe": "standing-integer",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    },
+    {
+      "recipe": "context-integer",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    },
+    {
+      "recipe": "die-six",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    },
+    {
+      "recipe": "die-eight",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    },
+    {
+      "recipe": "die-ten",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    },
+    {
+      "recipe": "die-twelve",
+      "changedRegistryRows": [
+        "definition/task-reason-dice"
+      ]
+    }
+  ],
+  "checks": [
+    "exact row-difference sets",
+    "content/parameters and slots1..5 byte-identical across recipes",
+    "all access/permission booleans and workspace capacities literal",
+    "all task windows/criteria and action/instruction pairs literal",
+    "shared base/gain/K retained"
+  ],
+  "runtime": "NOT PASSED"
+}

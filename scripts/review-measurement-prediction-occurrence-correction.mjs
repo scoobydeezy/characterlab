@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url),read=p=>fs.readFileSync(new URL(p,root),'utf8');
+const fp=p=>({path:p,sha256:crypto.createHash('sha256').update(fs.readFileSync(new URL(p,root))).digest('hex')});
+const basePath='docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json',base=JSON.parse(read(basePath));
+const c2=JSON.parse(read('docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json')),memory=JSON.parse(read('docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json'));
+const names=new Map([...c2.records,...memory.records].map(r=>[r.typeId,r.name]));
+const expectName=(n,name)=>assert.equal(names.get(n),name,'Semantic schema-reference mismatch');
+expectName(275,'TransitionInputProducerV04');expectName(278,'OccurrenceIdentityRule');
+assert.throws(()=>expectName(275,'OccurrenceIdentityRule'),/Semantic schema-reference mismatch/);
+for(const [n,name] of [[266,'EventDependentProjectedFieldRequirement'],[273,'WriteCapabilityV04'],[274,'TransitionInputAdmissionV04'],[276,'TransitionIngressDefinition'],[277,'TransitionOutputDefinition'],[279,'TransitionAdmissionRegistry'],[322,'WriteCapabilityV06'],[343,'EventDependentProjectedFieldPathRequirement']])expectName(n,name);
+const output=structuredClone(base.records.find(r=>r.typeId===367)),registration=structuredClone(base.records.find(r=>r.typeId===368));
+assert.equal(output.fields[1].name,'OutputOccurrenceRule');assert.equal(output.fields[1].type,'275/1');
+output.schemaVersion=2;output.fields[1]={...output.fields[1],required:false,retired:true,presence:'must-be-absent'};
+registration.schemaVersion=2;assert.equal(registration.fields[6].type,'set<367/1>');registration.fields[6].type='set<367/2>';
+for(const r of [output,registration]){const old=base.records.find(x=>x.typeId===r.typeId);assert.equal(old.name,r.name);assert.deepEqual(old.fields.map(f=>[f.id,f.name]),r.fields.map(f=>[f.id,f.name]));}
+const oldAudit=JSON.parse(read('docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_AUDIT.json'));
+for(const f of [...oldAudit.acceptedArtifacts,...oldAudit.reviewedDraftArtifacts,...oldAudit.sourceFingerprints,...oldAudit.preservationFingerprints])assert.deepEqual(fp(f.path),f);
+const files=['docs/planning/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION_DRAFT.json','docs/planning/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION_AUDIT.json'];
+for(const p of files)assert(!fs.existsSync(new URL(p,root)),'Preserve prior correction artifacts');
+const corrected={version:'measurement-prediction-correction-allocation/0.1-draft',status:'PROPOSED SCHEMA REVISIONS; NO NEW NUMERIC IDENTITIES',authority:'docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md',semanticVersion:'measurement-prediction/0.2-candidate',records:[output,registration],namespaces:[],members:[],roles:[],occurrenceIdentities:[],unionVariants:[],finiteValues:[],sourceFingerprints:[fp(basePath),fp('docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md'),fp('docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json'),fp('docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json')],sharedOccurrenceRule:{recordTypeId:366,schemaVersion:1,identityFieldId:1,requiredNamespace:1127,domainValidatorId:null,ruleRecordTypeId:278,registryRecordTypeId:279,registryFieldId:3},excludedSchemas:[{typeId:367,schemaVersion:1},{typeId:368,schemaVersion:1}]};
+fs.writeFileSync(new URL(files[0],root),JSON.stringify(corrected,null,2)+'\n');
+const audit={status:'SCHEMA REVISION AUDIT PASS; SEMANTIC REFERENCE ERROR DETECTED',reviewedArtifact:fp(files[0]),sourceFingerprints:corrected.sourceFingerprints,preservedPriorArtifacts:[...oldAudit.acceptedArtifacts,...oldAudit.reviewedDraftArtifacts],priorPreservationCount:oldAudit.preservationCount,checks:['275 is producer,278 is occurrence rule; mistaken275 substitution rejected','other reused schema semantic names checked','type/field IDs and names preserved','retired field remains declared with forced absence','containing registration schema reference updated explicitly','sole shared occurrence rule, no parallel registration rule','old accepted/draft artifacts and166 frozen fingerprints preserved'],runtimeQualification:'NONE'};
+fs.writeFileSync(new URL(files[1],root),JSON.stringify(audit,null,2)+'\n');
+console.log(JSON.stringify({status:audit.status,schemas:['367/2','368/2'],newNumericIds:0,priorArtifactsPreserved:true},null,2));

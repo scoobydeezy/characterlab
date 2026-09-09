@@ -1,0 +1,2243 @@
+{
+  "status": "EXECUTED OLD-PROFILE COUNTS; DERIVED NEW-PROFILE ACCOUNTING",
+  "sourceFingerprints": [
+    {
+      "path": "scripts/review-prediction-stage-accounting.mjs",
+      "sha256": "98850a58abb3e0bdb11523504854e2f494a52ae6e757f251566c40da01ea810a"
+    },
+    {
+      "path": "src/campaign2/memoryFactory.ts",
+      "sha256": "a79ad99e1a456c1bc38c74e9731434a4cb49fa5a4f9063cd5177e09e56174be6"
+    },
+    {
+      "path": "src/campaign2/memoryExecution.ts",
+      "sha256": "603f21cc9712a9856bf737e3da788600cba2deb5985f4ac8c31fddadf6036297"
+    },
+    {
+      "path": "src/campaign2/memoryModelSource.ts",
+      "sha256": "e166886f43b1bf70248bb9eb496f83c786b34e29d4770cc84bd7fcc4ee324869"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_PACKAGING.md",
+      "sha256": "3ab3a6e22f1a89b95653b2fc9dc3654828c22c5af934277ddc35d108496cd0cd"
+    }
+  ],
+  "controls": [
+    {
+      "available": false,
+      "permitted": false,
+      "formation": false,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": false,
+      "formation": false,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": false,
+      "formation": true,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": false,
+      "formation": true,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": true,
+      "formation": false,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": true,
+      "formation": false,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": true,
+      "formation": true,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": false,
+      "permitted": true,
+      "formation": true,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": false,
+      "formation": false,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": false,
+      "formation": false,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": false,
+      "formation": true,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": false,
+      "formation": true,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evaluation-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/regulatory-diagnostic-probe-evidence-padding"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation-padding"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-future-padding"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": true,
+      "formation": false,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": true,
+      "formation": false,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": true,
+      "formation": true,
+      "memoryRead": false,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    },
+    {
+      "available": true,
+      "permitted": true,
+      "formation": true,
+      "memoryRead": true,
+      "executedMemoryCounts": {
+        "4": 11,
+        "5": 12,
+        "6": 1
+      },
+      "events": [
+        {
+          "at": "4",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "4",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "4",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "4",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "4",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "4",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "4",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "5",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        },
+        {
+          "at": "5",
+          "phase": "110",
+          "kind": "event/regulatory-diagnostic-probe"
+        },
+        {
+          "at": "5",
+          "phase": "120",
+          "kind": "event/regulatory-diagnostic-probe-observation"
+        },
+        {
+          "at": "5",
+          "phase": "121",
+          "kind": "event/regulatory-diagnostic-probe-tracking"
+        },
+        {
+          "at": "5",
+          "phase": "122",
+          "kind": "event/regulatory-diagnostic-probe-binding"
+        },
+        {
+          "at": "5",
+          "phase": "123",
+          "kind": "event/regulatory-diagnostic-probe-classification"
+        },
+        {
+          "at": "5",
+          "phase": "124",
+          "kind": "event/regulatory-diagnostic-probe-freeze"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-evidence-intake"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-evaluation"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/measurement-episode-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "130",
+          "kind": "event/outcome-learning-evidence"
+        },
+        {
+          "at": "5",
+          "phase": "140",
+          "kind": "event/measurement-episode-formation"
+        },
+        {
+          "at": "6",
+          "phase": "20",
+          "kind": "event/measurement-exact-recall"
+        }
+      ],
+      "derivedPredictionCounts": {
+        "4": 12,
+        "5": 14,
+        "6": 2
+      }
+    }
+  ],
+  "workCeiling": 100,
+  "maximumDerivedProbeInstantWork": 14,
+  "limitations": [
+    "The prediction scheduler/dispatcher has not been implemented or executed.",
+    "New counts follow the accepted two-slot delta; runtime qualification must reproduce them.",
+    "Counts cover two consecutive probe sources and all sixteen inherited controls.",
+    "General authored-input overload remains governed by the existing work-ceiling failure, not this successful-probe bound."
+  ]
+}

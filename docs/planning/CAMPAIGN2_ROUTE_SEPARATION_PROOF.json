@@ -1,0 +1,109 @@
+{
+  "status": "EXECUTED BOUNDED EVIDENCE",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+    },
+    {
+      "path": "src/campaign2/transitionIngressV04.ts",
+      "sha256": "cfb297935516f618d1b68ee9e6b58f45dcbe5cb6017ec387e48adfd7f00ad778"
+    },
+    {
+      "path": "src/test/campaign2RouteSeparation.test.ts",
+      "sha256": "3fe221a596390fd8798974a0bf258dbbd68058b969b2797f1ae0d56a9c791ad1"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E11 rejects opposite-route input at event/regulatory-adaptation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E11 rejects opposite-route input at event/procedural-adaptation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E11 rejects opposite-route input at event/outcome-evaluation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E11 rejects opposite-route input at event/outcome-learning-evidence",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E11 extra zero-count history changes occurrence ancestry without changing later adaptation",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "event-ordinal-as-magnitude",
+      "status": "DETECTED",
+      "operand": "execution.admitted.event.eventId",
+      "tests": [
+        {
+          "name": "AD-E11 rejects opposite-route input at event/regulatory-adaptation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/procedural-adaptation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/outcome-evaluation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/outcome-learning-evidence",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 extra zero-count history changes occurrence ancestry without changing later adaptation",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ] to deeply equal Uint8Array[ 9, 0 ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "causal-parent-as-magnitude",
+      "status": "DETECTED",
+      "operand": "execution.admitted.event.causalParentEventIds[0]",
+      "tests": [
+        {
+          "name": "AD-E11 rejects opposite-route input at event/regulatory-adaptation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/procedural-adaptation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/outcome-evaluation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 rejects opposite-route input at event/outcome-learning-evidence",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E11 extra zero-count history changes occurrence ancestry without changing later adaptation",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ] to deeply equal Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ]"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Five explicit public tests and two hidden-dependency mutants, not universal host-code noninterference.",
+    "EVID opaque occurrence is carried output identity; exact payload/identity closure is separately enforced."
+  ]
+}

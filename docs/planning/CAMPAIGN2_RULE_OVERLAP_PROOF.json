@@ -1,0 +1,460 @@
+{
+  "status": "COMPONENT PASS",
+  "contract": "adaptation-input/0.31-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationTransitions.ts",
+      "sha256": "2ed1d04c09a7893bfd29762448ec2b8ac3b542ef09209397e40218c3ae821a97"
+    },
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "3e903ae684cd6738e0acab2c18a2251b6966fea9bb74cc1bc7153294258d84e8"
+    },
+    {
+      "path": "src/test/campaign2RuleOverlap.test.ts",
+      "sha256": "30ec9a75dea904d3eb6cd3107e1f83348f937a8cb21fa2f34ff904e3b7bfd21e"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E13 rejects guaranteed overlap for tolerance with same variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for tolerance with step variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for tolerance with gate variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for sensitization with same variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for sensitization with step variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for sensitization with gate variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with same variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with step variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with gate variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for accumulated-load with same variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for accumulated-load with step variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for accumulated-load with gate variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for procedural-competence with same variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for procedural-competence with step variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 rejects guaranteed overlap for procedural-competence with gate variation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 permits disjoint exposure matches for tolerance at construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 permits disjoint exposure matches for sensitization at construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 permits disjoint exposure matches for regulatory-displacement at construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 permits disjoint exposure matches for accumulated-load at construction",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 permits the five distinct target recipes under the original exposure/practice matches",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E13 disjoint exposures can still collide at the exact same runtime displacement key",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "defer-guaranteed-collision-to-runtime",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationTransitions.ts",
+      "from": "if(key(selected[i].match)===key(selected[j].match)&&key(selected[i].target)===key(selected[j].target))",
+      "to": "if(false)",
+      "required": "AD-E13 rejects guaranteed overlap",
+      "tests": [
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with same variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with step variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with gate variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with same variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with step variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with gate variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with same variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with step variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with gate variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with same variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with step variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with gate variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with same variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with step variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with gate variation",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"{ compiled: { …(5) }, …(10) }\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for tolerance at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for sensitization at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for regulatory-displacement at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for accumulated-load at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits the five distinct target recipes under the original exposure/practice matches",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 disjoint exposures can still collide at the exact same runtime displacement key",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "reject-disjoint-matches",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationTransitions.ts",
+      "from": "if(key(selected[i].match)===key(selected[j].match)&&key(selected[i].target)===key(selected[j].target))",
+      "to": "if(key(selected[i].target)===key(selected[j].target))",
+      "required": "AD-E13 permits disjoint exposure",
+      "tests": [
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for tolerance at construction",
+          "state": "fail",
+          "errors": [
+            "guaranteed overlapping rule target collision"
+          ]
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for sensitization at construction",
+          "state": "fail",
+          "errors": [
+            "guaranteed overlapping rule target collision"
+          ]
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for regulatory-displacement at construction",
+          "state": "fail",
+          "errors": [
+            "guaranteed overlapping rule target collision"
+          ]
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for accumulated-load at construction",
+          "state": "fail",
+          "errors": [
+            "guaranteed overlapping rule target collision"
+          ]
+        },
+        {
+          "name": "AD-E13 permits the five distinct target recipes under the original exposure/practice matches",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 disjoint exposures can still collide at the exact same runtime displacement key",
+          "state": "fail",
+          "errors": [
+            "guaranteed overlapping rule target collision"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "omit-runtime-target-collision",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "if(targets.has(pathKey))throw new SchedulerContractError('ADAPTATION_TARGET_COLLISION','duplicate target across complete phase-140 batch');",
+      "to": "",
+      "required": "AD-E13 disjoint exposures can still collide",
+      "tests": [
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for tolerance with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for sensitization with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for regulatory-displacement with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for accumulated-load with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with same variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with step variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 rejects guaranteed overlap for procedural-competence with gate variation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for tolerance at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for sensitization at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for regulatory-displacement at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits disjoint exposure matches for accumulated-load at construction",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 permits the five distinct target recipes under the original exposure/practice matches",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E13 disjoint exposures can still collide at the exact same runtime displacement key",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Five key forms, same/Step/Gate variants, four disjoint exposure positives, original distinct recipes and one runtime displacement collision.",
+    "No arbitrary matcher language or whole B/FCT qualification.",
+    "Runtime case checks no projection reads and public snapshot rollback with Failed status; full queue/allocator rollback remains separately evidenced."
+  ]
+}

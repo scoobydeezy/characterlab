@@ -24,9 +24,10 @@ declare const compilationBrand:unique symbol;
 export interface OrderedInputCompilation {readonly [compilationBrand]:true;}
 const compilations=new WeakMap<object,{events:readonly ScheduledEvent[];initialState?:CanonicalValue}>();
 export function compiledInputSchedule(compilation:OrderedInputCompilation,initialStateBytes:Uint8Array){
-  const facts=compilations.get(compilation);if(!facts||facts.initialState===undefined||key(facts.initialState)!==key(decodeCampaign2(initialStateBytes)))invalid('initial state differs from admitted run commitment');
+  const facts=compilations.get(compilation);if(!facts||facts.initialState===undefined||!sameBytes(canonicalEncode(facts.initialState),initialStateBytes))invalid('initial state differs from admitted run commitment');
   return {events:structuredClone(facts.events),allocators:{nextRuntimeId:0n,nextEventId:BigInt(facts.events.length),nextEventSequence:BigInt(facts.events.length)}};
 }
+const sameBytes=(a:Uint8Array,b:Uint8Array)=>a.length===b.length&&a.every((v,i)=>v===b[i]);
 
 /** Fixed source adapter capability; kept inside the runtime, never the data-only facade.
  * Its evidence is the compiler's original schedule, not a caller's event-type or payload claim.
@@ -66,7 +67,7 @@ export function beginProbeSourceInstant(compilation:OrderedInputCompilation,inst
 /** Trusted construction component. Selection is an explicit version, not duck typing.
  * The eventual facade must supply the version from its fixed model bundle, not caller options.
  */
-export function compileOrderedInputProfile(profileVersion:string,content:Content,domains:Domains){
+export function compileOrderedInputProfile(profileVersion:string,content:Content,domains:Domains,decodeInitialState:(bytes:Uint8Array)=>CanonicalValue=decodeCampaign2){
   if(profileVersion!==ORDERED_INPUT_PROFILE&&profileVersion!==PROBE_INPUT_PROFILE)throw new SchedulerContractError('INVALID_CONFIGURATION','unadmitted ordered-input profile');
   const probe=profileVersion===PROBE_INPUT_PROFILE,decodeValue=probe?decodeProbeReview:decodeCampaign2;
   function decode(inputBytes:Uint8Array){
@@ -111,7 +112,7 @@ export function compileOrderedInputProfile(profileVersion:string,content:Content
       compilations.set(result,{events:structuredClone(events)});return result as typeof result & OrderedInputCompilation;
     },
     async create(inputBytes:Uint8Array,initialStateBytes:Uint8Array,modelIdentity:StructuralIdentity<'ModelIdentity'>,runSeed:Uint8Array){
-      const {manifest,entries}=decode(inputBytes),initial=decodeCampaign2(initialStateBytes);
+      const {manifest,entries}=decode(inputBytes),initial=decodeInitialState(initialStateBytes);
       // Snapshot all inputs before asynchronous hashing; returned copies never own internal state.
       const model=structuredClone(modelIdentity),seed=new Uint8Array(runSeed);
       const ordered=await commitManifest(manifest),state=await commitManifest(initial);
@@ -119,7 +120,7 @@ export function compileOrderedInputProfile(profileVersion:string,content:Content
       const events=schedule(entries);
       const result={runIdentity,manifestBytes:ordered.canonicalBytes.slice(),initialEvents:events,
         initialAllocators:{nextRuntimeId:0n,nextEventId:BigInt(events.length),nextEventSequence:BigInt(events.length)}};
-      compilations.set(result,{events:structuredClone(events),initialState:decodeCampaign2(canonicalEncode(initial))});
+      compilations.set(result,{events:structuredClone(events),initialState:structuredClone(initial)});
       return result as typeof result & OrderedInputCompilation;
     },
     /** Additional D restore check; the caller must also perform existing save/model/state validation. */

@@ -1,0 +1,64 @@
+{
+  "record": "ModelIdentity",
+  "typeId": "103",
+  "schemaVersion": "1",
+  "fields": {
+    "1:RulesVersion": {
+      "kind": "text",
+      "value": "rules/campaign2-measurement-prediction/0.1-candidate"
+    },
+    "2:ContentIdentity": {
+      "record": "ContentIdentity",
+      "typeId": "100",
+      "schemaVersion": "1",
+      "fields": {
+        "1:ContentSchemaVersion": {
+          "kind": "text",
+          "value": "content/0.2-candidate"
+        },
+        "2:ContentManifestDigest": {
+          "kind": "bytes",
+          "hex": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd"
+        }
+      }
+    },
+    "3:ParameterIdentity": {
+      "record": "ParameterIdentity",
+      "typeId": "101",
+      "schemaVersion": "1",
+      "fields": {
+        "1:ParameterSchemaVersion": {
+          "kind": "text",
+          "value": "campaign2-parameters/0.1-candidate"
+        },
+        "2:ParameterSetDigest": {
+          "kind": "bytes",
+          "hex": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4"
+        }
+      }
+    },
+    "4:NumericProfileVersion": {
+      "kind": "text",
+      "value": "numeric/measurement-prediction-exact/0.1-candidate"
+    },
+    "5:RandomAlgorithmVersion": {
+      "kind": "text",
+      "value": "rng/sha256-addressed-128-v1-candidate"
+    },
+    "6:RegistryIdentity": {
+      "record": "RegistryIdentity",
+      "typeId": "102",
+      "schemaVersion": "1",
+      "fields": {
+        "1:RegistrySchemaVersion": {
+          "kind": "text",
+          "value": "campaign2-measurement-prediction-registry/0.1-candidate"
+        },
+        "2:RegistryManifestDigest": {
+          "kind": "bytes",
+          "hex": "d25ee487b7bde7e35e9716706936eee79d4e6be770f2bcd4f376b17dadf956cf"
+        }
+      }
+    }
+  }
+}

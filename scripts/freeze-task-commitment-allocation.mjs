@@ -1,0 +1,35 @@
+// Separate permanence review. Read the proposal independently; preserve its bytes.
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(p,'utf8'),fp=path=>({path,sha256:crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+const draft='docs/planning/TASK_COMMITMENT_ALLOCATION_DRAFT.json',md='docs/planning/TASK_COMMITMENT_ALLOCATION_DRAFT.md',audit='docs/planning/TASK_COMMITMENT_ALLOCATION_AUDIT.json';
+const table='docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json',permanent='docs/formal/TASK_COMMITMENT_PERMANENT_ALLOCATION.md',receipt='docs/formal/TASK_COMMITMENT_ALLOCATION_FREEZE_AUDIT.json';
+for(const p of [table,permanent,receipt])assert(!fs.existsSync(p),'Preserve prior '+p);
+const value=JSON.parse(read(draft)),report=JSON.parse(read(audit)),text=read(md);
+assert.equal(report.status,'MECHANICAL ALLOCATION REVIEW PASS; NOT PERMANENT');
+for(const f of report.artifacts)assert.deepEqual(fp(f.path),f);
+for(const f of value.sourceFingerprints)assert.deepEqual(fp(f.path),f);
+assert.deepEqual(JSON.parse(text.split('```json\n')[1].split('\n```')[0]),value);
+const humanRecords=[...text.matchAll(/^## (\d+)\/(\d+) (\w+)\r?\n\r?\n\| Field \| Name \| Required \| Type \|\r?\n\|---\|---\|---\|---\|\r?\n((?:\|.*\r?\n)+)/gm)].map(m=>({typeId:Number(m[1]),schemaVersion:Number(m[2]),name:m[3],fields:m[4].trim().split('\n').map(line=>{const [,id,name,required,type]=line.split('|').map(s=>s.trim());return {id:Number(id),name,required:required==='true',type};})}));
+assert.deepEqual(humanRecords,value.records,'human-facing field tables independently parsed');
+const humanMembers=text.split('## Existing-family additions')[1].split('## Complete machine allocation')[0].split('\n').filter(l=>/^\| \d+ \|/.test(l)).map(l=>{const [,ns,payload]=l.split('|').map(s=>s.trim());return {namespace:Number(ns),payload};});
+assert.deepEqual(humanMembers,value.members);
+assert.deepEqual(value.records.map(r=>r.typeId),[370,371,372,373,374,375,376]);
+assert(value.records.every(r=>r.schemaVersion===1));
+assert.deepEqual(value.records.map(r=>r.fields.length),[6,2,3,1,4,9,9]);
+assert.deepEqual(value.records.flatMap(r=>r.fields.filter(f=>!f.required).map(f=>[r.typeId,f.id])),[[372,2],[372,3]]);
+const old=fs.readdirSync('docs/formal').filter(p=>p.endsWith('ALLOCATION_TABLE.json')).map(p=>JSON.parse(read('docs/formal/'+p)));
+for(const r of value.records)assert(!old.some(t=>(t.records??[]).some(x=>x.typeId===r.typeId)));
+for(const m of value.members)assert(!old.some(t=>(t.members??[]).some(x=>x.namespace===m.namespace&&x.payload===m.payload)));
+assert.equal(value.namespaces.length,0);assert.equal(value.occurrenceIdentities.length,0);
+assert.equal(value.members.length,14);assert.equal(value.roles.length,10);assert.equal(value.mapKeyRoles.length,2);
+assert.deepEqual(value.unionVariants.map(v=>[v.tag,v.name,v.requiredFields,v.forbiddenFields]),[[1,'Open',[1],[2,3]],[2,'PerceivedSatisfied',[1,2,3],[]],[3,'DeadlineMissed',[1],[2,3]]]);
+for(const role of value.roles){const r=value.records.find(r=>r.typeId===role.recordTypeId);assert(r.fields.some(f=>f.id===role.fieldId));assert(!r.fields.find(f=>f.id===role.fieldId).type.startsWith('set'));}
+assert.deepEqual(value.mapKeyRoles.map(r=>[r.rootStateTypeId,r.keyFieldId,r.domainValidatorId]),[[373,1,'validator/character-qualification'],[373,2,'validator/task-qualification']]);
+const accepted={...value,version:'task-commitment-allocation/0.1-candidate',status:'PERMANENT AND FROZEN',acceptance:'agent self-review under explicit autonomous-work authorization',reviewedDraftArtifacts:[draft,md,audit].map(fp)};
+fs.writeFileSync(table,JSON.stringify(accepted,null,2)+'\n');
+fs.writeFileSync(permanent,['# Task commitment permanent allocation','', '**task-commitment-allocation/0.1-candidate — PERMANENT AND FROZEN.**','', 'Agent independent numeric review accepts records370..376/schema1,34fields,14exact','members in existing namespaces and the three status tags. No new namespace or','occurrence identity is allocated. Numbers and exact member payloads may not be','renumbered or reused; future additions append. Numeric adjacency carries no meaning.','', 'The complete normative allocation is [the machine table](TASK_COMMITMENT_ALLOCATION_TABLE.json).','The reviewed human field/member tables remain in','[the preserved proposal](../planning/TASK_COMMITMENT_ALLOCATION_DRAFT.md).','[The separate freeze audit](TASK_COMMITMENT_ALLOCATION_FREEZE_AUDIT.json) independently','parsed their displayed field/member rows and verified full machine parity.','', 'This is an additive canonical registry entry; earlier frozen tables and registry','bytes remain unchanged. It supersedes allocation-pending status for the exact','task-commitment/0.1-candidate inventory without changing that reviewed contract.','', 'TC-A..L remain FROZEN, NOT PASSED. No executable model/profile activation, new','workspace/appraisal/motive/plan code or Campaign2 completion is authorized by this','allocation alone. Exact task successor packaging and runtime qualification follow.',''].join('\n'));
+const result={status:'NUMERIC ACCEPTANCE AND FREEZE PASS',acceptance:accepted.acceptance,records:7,fields:34,members:14,newNamespaces:0,priorSourcesPreserved:value.sourceFingerprints.length,checks:['independent displayed Markdown record/field/member parse equals complete machine proposal','exact next unused record sequence370..376','field requiredness and status payload closure','scalar versus collection role ownership','task and character map-key qualifiers separate','no prior record/member collision','no speculative namespace/occurrence/plan field','all prior source fingerprints preserved'],reviewedDraftArtifacts:accepted.reviewedDraftArtifacts,frozenArtifacts:[table,permanent].map(fp),runtimeControls:'TC-A..L FROZEN NOT PASSED'};
+fs.writeFileSync(receipt,JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({status:result.status,records:7,fields:34,members:14,preserved:result.priorSourcesPreserved}));

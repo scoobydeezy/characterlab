@@ -51,6 +51,20 @@ async function context(omitExperienceRole=false){
 }
 const experience=()=>preRecognitionSemanticExperienceValue({experienceId:1n,observerId:'observer/mina',occurredAt:10n,perceptualEventReferentIds:[],perceivedBindings:[],perceptualClassifications:[],perceptualEventClassifications:[],supportingObservationIds:[],transformationVersion:'semantic-binding/0.1-candidate#SEM-001H'});
 const evaluation=(ordinal=2)=>r('OutcomeEvaluation',{OutcomeEvaluationId:typedIdentifier(1116,unsigned(ordinal)),ConsequenceExperience:experience(),TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+// Raw wire challenges: one opaque handle at every record position actually
+// inhabited by this carrier, including records inside typed identities/sets.
+function opaqueHandleInjections(v:CanonicalValue):CanonicalValue[]{
+  if(typeof v==='boolean')return [];
+  if(v.kind==='record')return [record({...v.schema,fields:[...v.schema.fields,{id:999n,name:'OpaqueTruthHandle',required:true}]},new Map([...v.fields,[999n,text('sha256:opaque-unread-truth')]])),
+    ...[...v.fields].flatMap(([n,x])=>opaqueHandleInjections(x).map(y=>record(v.schema,new Map([...v.fields,[n,y]]))))];
+  if(v.kind==='list'||v.kind==='set')return v.items.flatMap((x,i)=>opaqueHandleInjections(x).map(y=>({...v,items:v.items.map((z,j)=>i===j?y:z)})));
+  if(v.kind==='typedIdentifier')return opaqueHandleInjections(v.payload).map(payload=>({...v,payload}));
+  if(v.kind==='map')return v.entries.flatMap(([k,x],i)=>[
+    ...opaqueHandleInjections(k).map(y=>({...v,entries:v.entries.map((pair,j)=>i===j?[y,x] as const:pair)})),
+    ...opaqueHandleInjections(x).map(y=>({...v,entries:v.entries.map((pair,j)=>i===j?[k,y] as const:pair)})),
+  ]);
+  return [];
+}
 describe('V04 shared occurrence and output construction controls',()=>{
   it('EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier',async()=>{
     const model=compileTransitionAdmissionV04(enc(set([registration(),registration(true)])),enc(bundle()),await context());
@@ -126,6 +140,8 @@ describe('V04 shared occurrence and output construction controls',()=>{
     const staticBinding={kind:'direct' as const,accessorId:id(1028,'accessor/adaptation-target-prior'),path:tolerancePath};
     expect(()=>compileRequiredProjections(enc(declared),enc(set([requirement])),[staticBinding],stateModel,c)).not.toThrow();
     expect(()=>compileRequiredProjections(enc(declared),enc(set([requirement])),[{...staticBinding,accessorId:accessor}],stateModel,c)).toThrow(/duplicate/);
+    expect(()=>compileRequiredProjections(enc(declared),enc(set([requirement])),[staticBinding,staticBinding],stateModel,c)).toThrow(/duplicate static projection accessor/);
+    expect(()=>compileRequiredProjections(enc(declared),enc(set([requirement,replace(requirement,3n,unsigned(2))])),[],stateModel,c)).toThrow(/duplicate projection accessor/);
     expect(()=>compileRequiredProjections(enc(declared),enc(set([replace(requirement,1n,unsigned(1))])),[],stateModel,c)).toThrow(/incompatible projection roles/);
     expect(()=>compileRequiredProjections(enc(declared),enc(set([replace(requirement,4n,namespaceRole(1000))])),[],stateModel,c)).toThrow(/incompatible projection roles/);
     const badPath={...tolerancePath,selectors:[{kind:'mapKey' as const,key:r('RegulatoryAdaptationKey',{CharacterId:characterValue,RegulatoryVariableId:id(1029,'variable/control')})}]};
@@ -150,6 +166,10 @@ describe('V04 shared occurrence and output construction controls',()=>{
       expect(allocations).toBe(0);rt.finish();
     }
     const rt=await runtime();
+    const original=experience() as Extract<CanonicalValue,{kind:'record'}>;
+    for(const repeated of [original,record(original.schema,new Map([...original.fields,[2n,id(1000,'observer/other')]]))]){
+      expect(()=>rt.observeSemanticFreeze(source(),[enc(original),enc(repeated)])).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
+    }
     for(const phase of [13n,123n,130n,150n])expect(()=>rt.observeSemanticFreeze({...source(),phase},[enc(experience())])).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
     expect(()=>rt.observeSemanticFreeze(source(),[enc(evaluation())])).toThrow();
     // Rejected boundary calls leave no pending dispatch or execution.
@@ -177,10 +197,34 @@ describe('V04 shared occurrence and output construction controls',()=>{
     staged.bindAllocatedChildren([event]);const cap=rt.admit(event);let ordinal=100n;
     const allocator={allocateRuntimeId:()=>ordinal++};
     const e=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+    for(const injected of opaqueHandleInjections(e)){
+      const wire=enc(injected);expect(()=>decodeCampaign2(wire)).toThrow();
+      expect(()=>rt.completeEvid(cap,[wire])).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
+    }
     const next=rt.completeEvid(cap,[enc(e)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);
     const cap2=rt.admit(event2),l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
     const terminal=rt.completeEvid(cap2,[enc(l)]);expect(terminal.emissions()).toEqual([]);terminal.bindAllocatedChildren([]);rt.finish();
     expect(ordinal).toBe(102n);expect(()=>admittedInputFacts(cap2)).toThrowError(expect.objectContaining({code:'INPUT_NOT_ADMITTED'}));
+  });
+  it('EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain',async()=>{
+    const results:CanonicalValue[]=[];
+    for(const observer of ['observer/mina','observer/other'])for(const start of [100n,300n]){
+      const x=experience() as Extract<CanonicalValue,{kind:'record'}>,safe=record(x.schema,new Map([...x.fields,[2n,id(1000,observer)]]));
+      const rt=await runtime(),stage=rt.observeSemanticFreeze(source(),[enc(safe)]),event=child(stage.emissions()[0],11n,10n);stage.bindAllocatedChildren([event]);
+      const cap=rt.admit(event);let ordinal=start;const allocator={allocateRuntimeId:()=>ordinal++};
+      const e=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      const next=rt.completeEvid(cap,[enc(e)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);const cap2=rt.admit(event2);
+      const l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+      const terminal=rt.completeEvid(cap2,[enc(l)]);terminal.bindAllocatedChildren([]);rt.finish();expect(ordinal).toBe(start+2n);
+      const E=e as Extract<CanonicalValue,{kind:'record'}>,L=l as typeof E;
+      expect(E.fields.get(2n)).toEqual(safe);expect(L.fields.get(2n)).toEqual(e);
+      expect(E.fields.get(1n)).toEqual(typedIdentifier(1116,unsigned(start)));expect(L.fields.get(1n)).toEqual(typedIdentifier(1117,unsigned(start+1n)));
+      const normalizedE=record(E.schema,new Map([...E.fields,[1n,typedIdentifier(1116,unsigned(100))]]));
+      results.push(record(L.schema,new Map([...L.fields,[1n,typedIdentifier(1117,unsigned(101))],[2n,normalizedE]])));
+    }
+    expect(results[0]).toEqual(results[1]);expect(results[2]).toEqual(results[3]);expect(results[0]).not.toEqual(results[2]);
+    // No subject lookup occurs at this generic boundary. A shared roster target
+    // cannot be a deduplication key; roster permission is tested separately.
   });
   it('EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies',async()=>{
     const empty=experience() as Extract<CanonicalValue,{kind:'record'}>,eventFile=perceptualEventReferentIdValue({observerId:'observer/mina',observerEventSequence:3n});
@@ -198,6 +242,12 @@ describe('V04 shared occurrence and output construction controls',()=>{
     const e=r('OutcomeEvaluation',{OutcomeEvaluationId:rt.allocateEvidIdentity(cap,allocator),ConsequenceExperience:admittedInputFacts(cap).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
     const next=rt.completeEvid(cap,[enc(e)]),event2=child(next.emissions()[0],12n,11n);next.bindAllocatedChildren([event2]);const cap2=rt.admit(event2);
     const l=r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:rt.allocateEvidIdentity(cap2,allocator),Evaluation:admittedInputFacts(cap2).payload,TransformationVersion:text('character-learning-evidence/0.5-candidate')});
+    expect(()=>r('OutcomeEvaluation',{OutcomeEvaluationId:typedIdentifier(1116,unsigned(100)),ConsequenceExperience:x,TransformationVersion:text('character-learning-evidence/0.5-candidate'),ObserverId:id(1000,'observer/mina')})).toThrow();
+    expect(()=>r('OutcomeLearningEvidence',{OutcomeLearningEvidenceId:typedIdentifier(1117,unsigned(101)),Evaluation:e,TransformationVersion:text('character-learning-evidence/0.5-candidate'),ObserverId:id(1000,'observer/mina')})).toThrow();
+    for(const injected of opaqueHandleInjections(l)){
+      const wire=enc(injected);expect(()=>decodeCampaign2(wire)).toThrow();
+      expect(()=>rt.completeEvid(cap2,[wire])).toThrowError(expect.objectContaining({code:'TRANSITION_OUTPUT_VIOLATION'}));
+    }
     const terminal=rt.completeEvid(cap2,[enc(l)]);terminal.bindAllocatedChildren([]);rt.finish();
     const nested=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='record')throw Error('fixture record');return v.fields.get(2n)!;};
     expect(enc(nested(decodeCampaign2(enc(e))))).toEqual(enc(x));expect(enc(nested(nested(decodeCampaign2(enc(l)))))).toEqual(enc(x));expect(ordinal).toBe(102n);

@@ -1,0 +1,315 @@
+{
+  "status": "BOUNDED CURRENT-SOURCE SUBSTITUTIONS EXECUTED",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/taskExecution.ts",
+      "sha256": "867e93144647c304551189fc4a48282e17dff1f043e3194df0c179fcd3cd37b2"
+    },
+    {
+      "path": "src/test/campaign2TaskRuntime.test.ts",
+      "sha256": "319b37fe04940ea14dcf2d66ddf374fd6663faafef737109b0da226c2099a94e"
+    },
+    {
+      "path": "src/test/campaign2TaskBoundary.test.ts",
+      "sha256": "bf22bc2abbdaea49e1222271b388d9bb58c30916b8e1db4cfb288532dcc638be"
+    },
+    {
+      "path": "src/campaign2/taskFactory.ts",
+      "sha256": "d953fa5f7c52aa2188e65e160966543549f295481c75f1afb3220213b12d2716"
+    },
+    {
+      "path": "src/campaign2/taskBootstrap.ts",
+      "sha256": "d59351b34afb4453a19b8765c1bb60c18265042c7ae091a652fd423b58c04562"
+    },
+    {
+      "path": "src/campaign2/taskModel.ts",
+      "sha256": "fd5e874b0e14b50c812cc19e19bad3b8b3f1ca4779b95630d5ea4e1b2ea19189"
+    },
+    {
+      "path": "src/campaign2/taskDeclarations.ts",
+      "sha256": "8791a1001efdf417522bc46177c4fb77a2ef56801e20d9d3517ac813ea21d8af"
+    },
+    {
+      "path": "src/campaign2/orderedInputs.ts",
+      "sha256": "9b87038e4c765cae8c2ee232d2730436fec2757e7dd991dc5192d69ec13a9f7d"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+    },
+    {
+      "path": "src/campaign2/memoryExecution.ts",
+      "sha256": "4a6dd6e717b9d7b564e242109f890dab0639b1b0c9beec2b4cbb9f73b7d646c4"
+    },
+    {
+      "path": "src/campaign2/predictionExecution.ts",
+      "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+    },
+    {
+      "path": "src/campaign2/traceBinding.ts",
+      "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "58ac5e7607b73829d3d7908f005e67b18d9a4da1b2a88cc3da5addbae99b6a67"
+    },
+    {
+      "path": "scripts/prove-task-lifecycle.mjs",
+      "sha256": "35552e6969075a750ba1ab95b003d5d910b6669d202aa070a1ac361632e4ca9c"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "private clocks terminate adopted tasks: overlapping",
+        "state": "pass"
+      },
+      {
+        "name": "private clocks terminate adopted tasks: coincident",
+        "state": "pass"
+      },
+      {
+        "name": "private clocks terminate adopted tasks: recurrence",
+        "state": "pass"
+      },
+      {
+        "name": "one safe measurement satisfies two overlapping adopted tasks; later clocks preserve terminals",
+        "state": "pass"
+      },
+      {
+        "name": "unadopted tasks remain absent while both private clocks still execute",
+        "state": "pass"
+      },
+      {
+        "name": "deadline excludes measurement for old instance and admits recurrent next instance",
+        "state": "pass"
+      },
+      {
+        "name": "suppressed M1 runs empty S padding; clocks still expire both commitments",
+        "state": "pass"
+      },
+      {
+        "name": "task exact inclusive interval D=-10",
+        "state": "pass"
+      },
+      {
+        "name": "task exact inclusive interval D=-11",
+        "state": "pass"
+      },
+      {
+        "name": "task exact inclusive interval D=10",
+        "state": "pass"
+      },
+      {
+        "name": "task exact inclusive interval D=11",
+        "state": "pass"
+      },
+      {
+        "name": "task forged association fails before any projection or prior access",
+        "state": "pass"
+      },
+      {
+        "name": "all three subject projections precede every phase-140 prior; task outputs stay empty",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: missing-S",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: duplicate-S",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: mismatched-parent",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: premature-finish",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: skip",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: duplicate-execution",
+        "state": "pass"
+      },
+      {
+        "name": "task whole-instant rollback: trace-failure",
+        "state": "pass"
+      },
+      {
+        "name": "actual M1 source rejects delayed observation, foreign observer, wrong version and raw input before reads",
+        "state": "pass"
+      },
+      {
+        "name": "bootstrap commits actual S0, allocates all clocks after original IDs, and detaches exposed schedules",
+        "state": "pass"
+      },
+      {
+        "name": "actual task target collision component rejects before prior lookup",
+        "state": "pass"
+      },
+      {
+        "name": "whole-prefix restore rejects changed deadline, terminal support, initial adoption and partial history",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "immortal-open-clock",
+      "status": "DETECTED",
+      "from": "if(name(event)===names[2])value=r(372,[unsigned(3)]);",
+      "to": "if(name(event)===names[2])value=undefined;",
+      "test": "src/test/campaign2TaskRuntime.test.ts",
+      "pattern": "private clocks terminate",
+      "tests": [
+        {
+          "name": "private clocks terminate adopted tasks: overlapping",
+          "state": "fail",
+          "errors": [
+            "expired open task at quiescence"
+          ]
+        },
+        {
+          "name": "private clocks terminate adopted tasks: coincident",
+          "state": "fail",
+          "errors": [
+            "expired open task at quiescence"
+          ]
+        },
+        {
+          "name": "private clocks terminate adopted tasks: recurrence",
+          "state": "fail",
+          "errors": [
+            "expired open task at quiescence"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "exclude-exact-lower-endpoint",
+      "status": "DETECTED",
+      "from": "compare(p.x!,t.minimum)>=0n",
+      "to": "compare(p.x!,t.minimum)>0n",
+      "test": "src/test/campaign2TaskRuntime.test.ts",
+      "pattern": "exact inclusive interval",
+      "tests": [
+        {
+          "name": "task exact inclusive interval D=-10",
+          "state": "fail",
+          "errors": [
+            "expected [ …(2) ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "task exact inclusive interval D=-11",
+          "state": "pass"
+        },
+        {
+          "name": "task exact inclusive interval D=10",
+          "state": "pass"
+        },
+        {
+          "name": "task exact inclusive interval D=11",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "overwrite-terminal-with-clock",
+      "status": "DETECTED",
+      "from": "||u(f(rec(prior.value!,372n),1n))!==1n",
+      "to": "",
+      "test": "src/test/campaign2TaskRuntime.test.ts",
+      "pattern": "one safe measurement satisfies",
+      "tests": [
+        {
+          "name": "one safe measurement satisfies two overlapping adopted tasks; later clocks preserve terminals",
+          "state": "fail",
+          "errors": [
+            "expected [ …(2) ] to deeply equal [ …(2) ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "permit-delayed-observation",
+      "status": "DETECTED",
+      "from": "typeof at==='boolean'||at.kind!=='signed'||at.value!==instant",
+      "to": "false",
+      "test": "src/test/campaign2TaskBoundary.test.ts",
+      "pattern": "actual M1 source rejects",
+      "tests": [
+        {
+          "name": "actual M1 source rejects delayed observation, foreign observer, wrong version and raw input before reads",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to throw an error"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "skip-task-collision",
+      "status": "DETECTED",
+      "from": "if(targets.has(k))",
+      "to": "if(false)",
+      "test": "src/test/campaign2TaskBoundary.test.ts",
+      "pattern": "actual task target collision",
+      "tests": [
+        {
+          "name": "actual task target collision component rejects before prior lookup",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "skip-preflight-seal",
+      "status": "DETECTED",
+      "from": "||!sealed||!p",
+      "to": "||!p",
+      "test": "src/test/campaign2TaskBoundary.test.ts",
+      "pattern": "actual task target collision",
+      "tests": [
+        {
+          "name": "actual task target collision component rejects before prior lookup",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unbound-task-source",
+      "status": "DETECTED",
+      "from": "!pending.has(ek(event))",
+      "to": "false",
+      "test": "src/test/campaign2TaskRuntime.test.ts",
+      "pattern": "task forged association",
+      "tests": [
+        {
+          "name": "task forged association fails before any projection or prior access",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to throw an error"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Public controls and synthetic duplicate-clock component control are identified by test name.",
+    "This does not qualify the later workspace, pressure generation, identity or arbitration path.",
+    "Whole TC qualification and historical comparison remain separate."
+  ]
+}

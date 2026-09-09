@@ -1,0 +1,166 @@
+{
+  "status": "EXECUTED BOUNDED EVIDENCE; NOT WHOLE QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/predictionExecution.ts",
+      "sha256": "e3e1a49a555ab14d7867fa4dc5e425a577c49a2e8eb298c8cbe424a33c80ff8f"
+    },
+    {
+      "path": "src/campaign2/predictionModel.ts",
+      "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+    },
+    {
+      "path": "src/campaign2/predictionFactory.ts",
+      "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "59b67856ea06a9705a22b20fb203bbbf4718e289ea265ed4e18531e002865ae0"
+    },
+    {
+      "path": "src/campaign2/traceBinding.ts",
+      "sha256": "ddb62d63438817c518d8822d619d174d2403c821e75dae7f04b06ef588518ebb"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "a00d27d2f830c84b9e80ec3a0e18e5cad6ce63421d705dc1f66652614f21de17"
+    },
+    {
+      "path": "src/test/campaign2Prediction.test.ts",
+      "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+    },
+    {
+      "path": "src/test/campaign2PredictionComponent.test.ts",
+      "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+    },
+    {
+      "path": "scripts/prove-measurement-prediction.mjs",
+      "sha256": "9c5933b56887235b3be6f03e9e123f0fcba2dcecfafb422d1b51249cce748480"
+    }
+  ],
+  "baseline": {
+    "name": "component-baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "PRED-C/F: held-safe-input hidden D cannot change operands; owner comes from IDN, absent roster blocks prior access",
+        "state": "pass"
+      },
+      {
+        "name": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+        "state": "pass"
+      },
+      {
+        "name": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+        "state": "pass"
+      },
+      {
+        "name": "PRED-G: source-domain alternatives fail before any prediction state access",
+        "state": "pass"
+      },
+      {
+        "name": "PRED-I/J: collision precedes second prior read; exact owned patch and illegal foreign path",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "count-repeated-observation-as-fresh",
+      "status": "DETECTED",
+      "from": "basis.some(v=>key(v)===key(ref))",
+      "to": "false",
+      "test": "src/test/campaign2PredictionComponent.test.ts",
+      "pattern": "PRED-D/H/K",
+      "tests": [
+        {
+          "name": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-mean-by-last-reading",
+      "status": "DETECTED",
+      "from": "rational(count*m.numerator*x.denominator+x.numerator*m.denominator,(count+1n)*m.denominator*x.denominator)",
+      "to": "x",
+      "test": "src/test/campaign2PredictionComponent.test.ts",
+      "pattern": "PRED-D/H/K|PRED-P",
+      "tests": [
+        {
+          "name": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }"
+          ]
+        },
+        {
+          "name": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+          "state": "fail",
+          "errors": [
+            "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "allow-sixty-fifth-support",
+      "status": "DETECTED",
+      "from": "count>=u(f(model.definition,4n))",
+      "to": "count>u(f(model.definition,4n))",
+      "test": "src/test/campaign2PredictionComponent.test.ts",
+      "pattern": "PRED-D/H/K",
+      "tests": [
+        {
+          "name": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "same-instant-read-back-edge",
+      "status": "DETECTED",
+      "from": "simDuration(1n)",
+      "to": "simDuration(0n)",
+      "test": "src/test/campaign2Prediction.test.ts",
+      "pattern": "public prediction, independent memory",
+      "tests": [
+        {
+          "name": "public prediction, independent memory, exact actual reads and prefix continuation",
+          "state": "fail",
+          "errors": [
+            "same-instant work cannot emit into an earlier phase"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "application-extra-output",
+      "status": "DETECTED",
+      "from": "patch={operations:[{kind:",
+      "to": "outputs.push(list([]));patch={operations:[{kind:",
+      "test": "src/test/campaign2Prediction.test.ts",
+      "pattern": "public prediction, independent memory",
+      "tests": [
+        {
+          "name": "public prediction, independent memory, exact actual reads and prefix continuation",
+          "state": "fail",
+          "errors": [
+            "prediction application emitted semantic output"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Generic/component interventions and public profile controls are named separately.",
+    "Only the listed source substitutions are claimed detected.",
+    "No immediate phase30 producer, calibrated uncertainty, reward or full Campaign2 topology is qualified."
+  ]
+}

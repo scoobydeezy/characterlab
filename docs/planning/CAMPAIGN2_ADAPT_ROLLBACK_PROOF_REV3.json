@@ -1,0 +1,238 @@
+{
+  "status": "EXECUTED BOUNDED EVIDENCE",
+  "sourceFingerprints": [
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "58ac5e7607b73829d3d7908f005e67b18d9a4da1b2a88cc3da5addbae99b6a67"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+    },
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+    },
+    {
+      "path": "src/test/campaign2AdaptRollbackStages.test.ts",
+      "sha256": "832bde2059e523d1f060cf7724f7df36dd020ddc13f806349284d66a56220a0c"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E12 after-reads restores the complete public instant",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E12 later-out-of-range restores the complete public instant",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E12 after-staged-outputs restores the complete public instant",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E12 after-patch-union restores the complete public instant",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E12 final-trace restores the complete public instant",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E12 work-limit restores the complete public instant",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "publish-failed-working-state",
+      "status": "DETECTED",
+      "injection": "this.#state=this.#adapter.clone(working.state);",
+      "tests": [
+        {
+          "name": "AD-E12 after-reads restores the complete public instant",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E12 later-out-of-range restores the complete public instant",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E12 after-staged-outputs restores the complete public instant",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E12 after-patch-union restores the complete public instant",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E12 final-trace restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ] to deeply equal Uint8Array[ 9, 0 ]"
+          ]
+        },
+        {
+          "name": "AD-E12 work-limit restores the complete public instant",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "publish-failed-working-queue",
+      "status": "DETECTED",
+      "injection": "this.#queue=working.queue.map(cloneEvent);",
+      "tests": [
+        {
+          "name": "AD-E12 after-reads restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "AD-E12 later-out-of-range restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "AD-E12 after-staged-outputs restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "AD-E12 after-patch-union restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "AD-E12 final-trace restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]"
+          ]
+        },
+        {
+          "name": "AD-E12 work-limit restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ …(2) ] to deeply equal [ …(2) ]"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "burn-failed-working-allocators",
+      "status": "DETECTED",
+      "injection": "this.#allocators={...working.allocators};",
+      "tests": [
+        {
+          "name": "AD-E12 after-reads restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 7n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        },
+        {
+          "name": "AD-E12 later-out-of-range restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 9n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        },
+        {
+          "name": "AD-E12 after-staged-outputs restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        },
+        {
+          "name": "AD-E12 after-patch-union restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        },
+        {
+          "name": "AD-E12 final-trace restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        },
+        {
+          "name": "AD-E12 work-limit restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected { nextRuntimeId: 6n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "publish-failed-working-trace-and-outputs",
+      "status": "DETECTED",
+      "injection": "this.#committedTrace.push(...working.trace);this.#outputs.push(...working.outputs);",
+      "tests": [
+        {
+          "name": "AD-E12 after-reads restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []"
+          ]
+        },
+        {
+          "name": "AD-E12 later-out-of-range restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []"
+          ]
+        },
+        {
+          "name": "AD-E12 after-staged-outputs restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []"
+          ]
+        },
+        {
+          "name": "AD-E12 after-patch-union restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []"
+          ]
+        },
+        {
+          "name": "AD-E12 final-trace restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []"
+          ]
+        },
+        {
+          "name": "AD-E12 work-limit restores the complete public instant",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Six explicit failure stages and four publication-leak substitutions; not all possible host failures.",
+    "No semantic contract widening or whole B/FCT qualification."
+  ]
+}

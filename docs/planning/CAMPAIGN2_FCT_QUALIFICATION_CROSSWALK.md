@@ -153,3 +153,114 @@ the authored anchor remains80 at0 with zero authored remainder, and each TIME re
 has exact remainder2. Registry bytes remain unchanged. Existing late-failure rollback
 controls remain separate; this addition fills the same-T write/query observation.
 Six exact REG tests PASS. No production implementation or frozen model artifact changed.
+
+## Subsequent ADAPT B implementation finding
+
+The next AD-E4 audit found a missing runtime check, not merely missing evidence.
+The [write-boundary review](CAMPAIGN2_ADAPT_WRITE_BOUNDARY_REVIEW.md) records the
+failing regression, implemented prefix correction, passing controls and outstanding
+qualification scope. It supersedes any implication that the preceding test-only
+passes had already established complete B enforcement. Whole FCT remains OPEN.
+Source-sensitive historical mutation reports are retained and require explicit refresh
+before being treated as evidence for this corrected implementation.
+
+2026-09-09: the write-boundary correction and submitted bounded target/diff evidence
+are ACCEPTED. Whole B/FCT remain OPEN. Additional Remove/equal-value and staged-rule
+association controls pass; the new23-test /4-substitution report retains explicit
+component scope. See [the reachability decision packet](CAMPAIGN2_ADAPT_B_REACHABILITY_REVIEW.md)
+for the mismatch between a proposed shared-authority witness and the frozen separate
+authorities, and the recommended generic-positive / bounded-exclusion scope ruling.
+
+The split-scope ruling is now APPROVED, including the conditional future-profile
+triggers. It does not qualify whole B or FCT. The next
+[AD-E4/E8 consolidation](CAMPAIGN2_AD_E4_E8_CONSOLIDATION_REVIEW.md) maps the accepted
+controls and adds a finite pre-snapshot rule-association oracle/mutation, explicit-zero
+Set rejection and the same-model absent/zero-count control. Vector passes are proposed
+for review, not recorded as accepted here.
+
+Subsequent ruling: AD-E4 and AD-E8 are now ACCEPTED/PASS in the specified bounded
+and split scopes. Remaining B/FCT work is unaffected. The next
+[AD-E13 proposal](CAMPAIGN2_AD_E13_CONSOLIDATION_REVIEW.md) supplies21 construction/
+runtime tests and three detected current-source substitutions; its vector PASS is
+proposed for review, not yet accepted.
+
+2026-09-09 subsequent ruling: AD-E13 is now ACCEPTED/PASS in its submitted finite
+matrix. The mixed-Gate clarification closed the sole withheld clause. AD-E4/E8
+remain PASS; whole B/FCT remain OPEN. The next
+[AD-E3 commitment review](CAMPAIGN2_AD_E3_CONSOLIDATION_REVIEW.md) records public
+Step/Gate/Match/membership comparisons, generic isolated V/L and gate-source
+comparisons with public profile exclusions, and callback/name-table, unknown-tag
+and orphan rejection evidence. Its15-test targeted suite PASS is evidence submitted
+for review; AD-E3 remains OPEN pending disposition.
+
+2026-09-09 subsequent ruling: AD-E3 PASS in its finite public and accepted split
+scopes. Conditional future richer-profile public prepare/restore witnesses are not
+current blockers; a dedicated commitment mutation assay is not required. The next
+[AD-E9 boundary packet](CAMPAIGN2_AD_E9_CONSOLIDATION_REVIEW.md) supplies13 public
+boundary tests and three detected clamping/ceiling substitutions. Its evidence is
+submitted for review; AD-E9 and whole B/FCT remain OPEN. AD-E3/4/8/13 PASS.
+
+2026-09-09 subsequent ruling: AD-E9 PASS in the finite magnitude/domain matrix,
+including second-leaf confinement composed with accepted AD-E4/E8. The next
+[AD-E10 reference packet](CAMPAIGN2_AD_E10_CONSOLIDATION_REVIEW.md) records eight
+passing REG/AD-E10 tests and two detected current-source substitutions: omission of
+pre-instant reference validation and collapse of the unknown-variable error mapping.
+AD-E10 remains OPEN pending review; component mapping and earlier public exclusion
+are distinguished. AD-E3/4/8/9/13 PASS; AD-E7/10/11/12 and whole B/FCT OPEN.
+
+2026-09-09 subsequent ruling: AD-E10 PASS in its finite public and component split
+scopes; AD-E12 full rollback is not inferred. The next AD-E7 audit found and corrected
+missing staged-read evidence enforcement. See the
+[read-evidence correction review](CAMPAIGN2_AD_E7_READ_EVIDENCE_CORRECTION_REVIEW.md).
+Seven new controls and two detected check-removal mutants support a narrow correction
+review, not whole AD-E7 acceptance. Evaluator-sensitive historical mutation reports
+require explicit refresh for the corrected tree before whole B/FCT. AD-E3/4/8/9/10/13
+PASS; AD-E7/11/12 and whole B/FCT OPEN.
+
+2026-09-09: AD-E7 read-evidence correction is narrowly ACCEPTED, whole vector OPEN.
+The next [binding-isolation review](CAMPAIGN2_AD_E7_BINDING_ISOLATION_REVIEW.md)
+maps the remaining controls and corrects caller-binding aliases in the owning
+ContractReadProjection constructor. Generic isolation and declaration evidence is
+kept distinct from public Campaign2 capabilities. Whole AD-E7/B/FCT is not promoted.
+
+2026-09-09: binding isolation narrowly ACCEPTED; arbitrary derive-closure purity
+is not qualified. The [AD-E7 consolidation](CAMPAIGN2_AD_E7_CONSOLIDATION_REVIEW.md)
+adds actual projection-object sharing and named public binding-hook negatives,
+and corrects a reproduced active-evaluation reentrancy gap. Eighty targeted tests
+PASS; revised10-test assay detects four guard removals. Narrow lifecycle correction
+and finite/split-scope AD-E7 acceptance are proposed; whole vector remains OPEN
+pending review, as do whole B/FCT and AD-E11/12.
+
+## Autonomous review continuation, 2026-09-09
+
+The user authorized independent adversarial self-review. Subsequent dispositions
+are recorded in CAMPAIGN2_AUTONOMOUS_ADVERSARIAL_REVIEW.md, without attributing them
+to the planning agent. AD-E7/11/12 and then AD-E1/2/5/6 pass their recorded finite
+controls. Together with externally accepted E3/4/8/9/10/13, every AD-E vector now has
+an explicit disposition. This alone does not qualify ADAPT A–D/F or whole FCT.
+
+REG's selected-key/query gap was corrected before arithmetic. Current REG is
+qualified in the bounded no-body and named generic component scopes described in
+CAMPAIGN2_INHERITED_CURRENT_REVIEW.md. Future body-state intervention stays explicit;
+the two-variable component does not widen the public first profile.
+
+Fresh-source regression after the correction:101 files/712 tests PASS. Additive
+EVID/REG tests subsequently pass targeted suites; that earlier count excludes them.
+Report refreshes preserve previous bytes: WRITE_BOUNDARY REV6, BATCH REV2,
+APPLICABILITY REV3, INDEPENDENT_GATE REV2, RULE_OVERLAP REV2, MAGNITUDE_BOUNDARY REV2,
+REFERENCE_SETTLEMENT REV2, REG_PERSISTENCE_MUTATION REV2, STATE_INVARIANT REV2,
+PRJ_SUBSTITUTION REV3, BRIDGE_SUBSTITUTION REV2, EVID_REG_CONSTRUCTION REV4.
+New ROUTE_SEPARATION, ADAPT_ROLLBACK and REG_KEY_PRESERVATION reports accompany the
+READ_EVIDENCE REV2 and FCT_C REV2 assays. Full names use the CAMPAIGN2_ prefix and
+_PROOF.json suffix except the existing independently named mutation reports.
+
+Whole factory closure still needs explicit A–D/F inherited accounting and final
+EVID/bridge composition. No old inventory's remaining-work wording becomes a PASS
+by implication, and no aggregate mutant count substitutes for that accounting.
+
+Final forward receipt: CAMPAIGN2_BOUNDED_FACTORY_QUALIFICATION.md now qualifies
+FCT-1..6/A..F and current EVID/REG/ADAPT in the stated bounded and generic/public
+scopes. Source currency is verified by CAMPAIGN2_CURRENT_EVIDENCE_INVENTORY.json;
+102 files/721 tests, TypeScript, build, reference boundary and166 preservation
+fingerprints PASS. The earlier OPEN/proposed entries above retain their historical
+meaning. Full Campaign2 topology and PERSIST-I remain outside this qualification.

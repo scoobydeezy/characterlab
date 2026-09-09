@@ -1,0 +1,160 @@
+{
+  "status": "ACCEPTED AND FROZEN — TASK LIFECYCLE PROFILE",
+  "acceptance": "agent self-review under autonomous-work authorization",
+  "semanticVersion": "task-commitment/0.2-candidate",
+  "modelDigest": "74aa96b751fb92dfaf693e6249ecc0abfe35df3493dd13919ddb254e4ee3d45e",
+  "profiles": {
+    "orderedInput": "campaign2-probe-ordered-input/0.1-candidate",
+    "trace": "campaign2-task-commitment-trace-binding/0.1-candidate",
+    "persistence": "campaign2-task-commitment-persistence/0.1-candidate"
+  },
+  "semanticBundle": [
+    "substrate/0.2-candidate",
+    "cenc/1",
+    "content/0.2-candidate",
+    "content-kind/0.1-candidate",
+    "governed-domain-validator/0.1-candidate",
+    "governed-execution/0.1-candidate",
+    "ordering/0.2-candidate",
+    "ordering-phases/2-candidate",
+    "mutation-authority/0.1-candidate#TRC-001-002-addendum",
+    "state/0.3-candidate-addendum",
+    "projection/0.3-candidate-addendum",
+    "identity-binding/0.5-candidate",
+    "observation/0.1-candidate",
+    "authored-fact-observation/0.1-candidate",
+    "observation-unit-identity/0.1-candidate",
+    "referent-origin/0.1-candidate",
+    "content-definition-id/0.1-candidate",
+    "semantic-binding/0.1-candidate#SEM-001H",
+    "character-learning-evidence/0.5-candidate",
+    "transition-admission/0.4-candidate",
+    "transition-admission-extension/0.6-candidate",
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate",
+    "trace/0.2-candidate",
+    "campaign2-trace-binding/0.1-candidate",
+    "regulatory-diagnostic-probe/0.1-candidate",
+    "campaign2-probe-trace-binding/0.2-candidate",
+    "transition-admission-extension/0.7-candidate",
+    "measurement-evidence-carriage/0.1-candidate",
+    "campaign2-measurement-evidence-trace-binding/0.1-candidate",
+    "measurement-episodic-memory/0.1-candidate",
+    "measurement-memory-formation-registration/0.1-candidate",
+    "measurement-recall-registration/0.1-candidate",
+    "measurement-formation-write-ablation/0.1-candidate",
+    "measurement-recall-read-ablation/0.1-candidate",
+    "projection-input-field-path/0.1-candidate",
+    "measurement-episode-read/0.1-candidate",
+    "measurement-recall-opportunity/0.1-candidate",
+    "campaign2-measurement-memory-trace-binding/0.1-candidate",
+    "campaign2-measurement-memory-persistence/0.1-candidate",
+    "measurement-prediction/0.2-candidate",
+    "measurement-prediction-application-registration/0.1-candidate",
+    "measurement-prediction-read-registration/0.2-candidate",
+    "measurement-prediction-target-projection/0.1-candidate",
+    "measurement-prediction-opportunity/0.1-candidate",
+    "measurement-prediction-application-ablation/0.1-candidate",
+    "measurement-prediction-read-ablation/0.1-candidate",
+    "campaign2-measurement-prediction-trace-binding/0.1-candidate",
+    "campaign2-measurement-prediction-persistence/0.1-candidate",
+    "task-commitment/0.2-candidate",
+    "task-content-kind/0.1-candidate",
+    "task-domain-validator/0.1-candidate",
+    "task-measurement-registration/0.1-candidate",
+    "task-deadline-registration/0.1-candidate",
+    "task-target-projection/0.1-candidate",
+    "prospective-transition-routes/0.1-candidate",
+    "prospective-family-topology/0.1-candidate",
+    "campaign2-task-commitment-trace-binding/0.1-candidate",
+    "campaign2-task-commitment-persistence/0.1-candidate"
+  ],
+  "authorityFingerprints": [
+    {
+      "path": "docs/planning/CAMPAIGN2_TASK_PACKAGING_ACCEPTANCE.md",
+      "sha256": "91fb81635945e098219b5473bed4649e6f04e63157b74a50a396f38839a9d2e0"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_NUMERIC_PROFILE.md",
+      "sha256": "108329151ff353b6ad459a8439bee6135d84bbc5a4ff9ffaf26274b4c86b7bb7"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_KEY_ROLE_CORRECTION.md",
+      "sha256": "05213cf12532b4701622f2b5049d1f4b7a28018f99cb55144436e72e3f416121"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/taskCodecs.ts",
+      "sha256": "0d0d3c6db9bd662792b9630380ffb5bb289b76a7d088a1a1eeea0ed8987866e2"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    }
+  ],
+  "constructionEvidenceFingerprints": [
+    {
+      "path": "scripts/materialize-task-commitment-review.mjs",
+      "sha256": "8883040323dd2740f194bfb95b6759d271bed0ec02e443dbbdcba36045453c2d"
+    },
+    {
+      "path": "src/campaign2/taskDeclarations.ts",
+      "sha256": "8791a1001efdf417522bc46177c4fb77a2ef56801e20d9d3517ac813ea21d8af"
+    },
+    {
+      "path": "src/test/campaign2TaskDeclarations.test.ts",
+      "sha256": "0add68718c11622f487a423291a9777e9b82cf2ad4695081e92021804bc81c2e"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_TASK_LIFECYCLE_PACKAGING.md",
+      "sha256": "14589f54169680b2eb28eb922236781f6dab847690ad3c4f5bb15cb81ed596ae"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_TASK_PACKAGING_REVIEW_2.md",
+      "sha256": "ba180c020e8d87b21482d3a8104bf471ef984bac844d90af5558aa665834c10d"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_KEY_ROLE_CORRECTION.md",
+      "sha256": "05213cf12532b4701622f2b5049d1f4b7a28018f99cb55144436e72e3f416121"
+    }
+  ],
+  "files": [
+    {
+      "name": "CONTROLS.json",
+      "sha256": "659eae7c5e52d4ee26e1669c1feebec0fcf60d09ed259ae8014a6e0a7fcbeb1c"
+    },
+    {
+      "name": "REVIEW_MANIFEST.json",
+      "sha256": "f67f5f05fb08084760f21518cae71613622b56b1b92be3062e760a6c56d7aaef"
+    },
+    {
+      "name": "content.cenc.hex",
+      "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+    },
+    {
+      "name": "model-identity.cenc.hex",
+      "sha256": "80d52c44c6e2823bcf721c4eb073a1a7e30fa0db80e78b8aa1b676648d36fb2c"
+    },
+    {
+      "name": "parameters.cenc.hex",
+      "sha256": "aa673dd7e009075f5490294ec534bc1cc50cf91382c9e7ec85921ea989a2888c"
+    },
+    {
+      "name": "registry.cenc.hex",
+      "sha256": "77db1aa3be9caa1dc596b45111a506cc42097a56e9954d70c7939d0abfc8892e"
+    }
+  ],
+  "runtime": "IMPLEMENTATION AUTHORIZED; TC-A..L FROZEN NOT PASSED",
+  "scope": "Lifecycle only; no workspace/appraisal/motive/option activation",
+  "preservation": "Frozen declaration builders and canonical artifacts remain unchanged. Construction evidence fingerprints record the reviewed implementation; later implementation corrections require new current evidence without rewriting this history."
+}

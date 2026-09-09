@@ -1,0 +1,140 @@
+{
+  "version": "measurement-prediction-correction-allocation/0.1-draft",
+  "status": "PROPOSED SCHEMA REVISIONS; NO NEW NUMERIC IDENTITIES",
+  "authority": "docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md",
+  "semanticVersion": "measurement-prediction/0.2-candidate",
+  "records": [
+    {
+      "typeId": 367,
+      "schemaVersion": 2,
+      "name": "MeasurementPredictionReadOutputDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OutputRecordSchema",
+          "required": true,
+          "type": "254/1"
+        },
+        {
+          "id": 2,
+          "name": "OutputOccurrenceRule",
+          "required": false,
+          "type": "275/1",
+          "retired": true,
+          "presence": "must-be-absent"
+        }
+      ]
+    },
+    {
+      "typeId": 368,
+      "schemaVersion": 2,
+      "name": "MeasurementPredictionReadRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 4,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "254/1"
+        },
+        {
+          "id": 5,
+          "name": "OpportunityDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 6,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 7,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<367/2>"
+        },
+        {
+          "id": 8,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "273/1"
+        },
+        {
+          "id": 9,
+          "name": "SubjectRequirements",
+          "required": true,
+          "type": "set<266/1>"
+        },
+        {
+          "id": 10,
+          "name": "TargetRequirements",
+          "required": true,
+          "type": "set<363/1>"
+        }
+      ]
+    }
+  ],
+  "namespaces": [],
+  "members": [],
+  "roles": [],
+  "occurrenceIdentities": [],
+  "unionVariants": [],
+  "finiteValues": [],
+  "sourceFingerprints": [
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md",
+      "sha256": "190e165ff705594ec9e39ab38a641c5d27c7c0bb7e640000742ebf415749cc25"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    }
+  ],
+  "sharedOccurrenceRule": {
+    "recordTypeId": 366,
+    "schemaVersion": 1,
+    "identityFieldId": 1,
+    "requiredNamespace": 1127,
+    "domainValidatorId": null,
+    "ruleRecordTypeId": 278,
+    "registryRecordTypeId": 279,
+    "registryFieldId": 3
+  },
+  "excludedSchemas": [
+    {
+      "typeId": 367,
+      "schemaVersion": 1
+    },
+    {
+      "typeId": 368,
+      "schemaVersion": 1
+    }
+  ]
+}

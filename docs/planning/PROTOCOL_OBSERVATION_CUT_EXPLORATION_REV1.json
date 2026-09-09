@@ -1,0 +1,50 @@
+{
+  "status": "EXECUTED OBSERVER COMPONENT INSPECTION; NOT NEW PROJECTION QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "src/observation/observation.ts",
+      "sha256": "37542c15dc8f55f9aa2708594cf9107b938dbb9c0e2e3ccc53a0e7a7825d748d"
+    },
+    {
+      "path": "src/campaign2/bridgeObservation.ts",
+      "sha256": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b"
+    },
+    {
+      "path": "scripts/explore-protocol-observation-cut.mjs",
+      "sha256": "6ffa4823a7a612f024389051720a06bae8839d7313c0cabf44917b21c464307e"
+    }
+  ],
+  "cases": [
+    {
+      "completedCount": 0,
+      "lower": 0,
+      "upper": 0,
+      "evidenceKind": "Point",
+      "privateTruthReferencePresent": true,
+      "oldFixedPulseBridgeAdmitted": false
+    },
+    {
+      "completedCount": 1,
+      "lower": 1,
+      "upper": 1,
+      "evidenceKind": "Point",
+      "privateTruthReferencePresent": true,
+      "oldFixedPulseBridgeAdmitted": true
+    },
+    {
+      "completedCount": 2,
+      "lower": 2,
+      "upper": null,
+      "evidenceKind": "LowerBound",
+      "privateTruthReferencePresent": true,
+      "oldFixedPulseBridgeAdmitted": false
+    }
+  ],
+  "blockedRequestedPotentialRejected": true,
+  "limitations": [
+    "The new version/projection and actual ExecutionOutcome source do not exist in canonical runtime yet.",
+    "Research observer/source IDs are test namespaces; no production namespace is allocated.",
+    "The existing fixed-pulse bridge remains unchanged and rejects0/2 as required.",
+    "Raw source references demonstrate why a separate safe projection is required; raw results must never be published to the character route."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "status": "HISTORICAL COMPONENT RESEARCH ONLY",
+  "sourceFingerprints": [
+    {
+      "path": "reference/src/model/diceCompiler.ts",
+      "sha256": "9029aef84a3915ae82b0195f527f4e6419cfbb8e84b7e1f36c0806d746ff94c0"
+    },
+    {
+      "path": "reference/src/model/decision.ts",
+      "sha256": "3f3ba47f915e8484599bd4e57d6cf4056559cbbbfad224b27a619cc828ea96d9"
+    },
+    {
+      "path": "reference/src/model/identity.ts",
+      "sha256": "e395a4f8b191481be9dc838f9bfdf55a996af1b8c4d27f571722606b56796d68"
+    },
+    {
+      "path": "reference/src/kernel/evidenceOverlap.ts",
+      "sha256": "3e2be4b25c5c4ea57821fde9377755a6fc3c7bc704dd6b4015c8e6b8154516db"
+    },
+    {
+      "path": "scripts/explore-cognitive-dice-recipes.mjs",
+      "sha256": "df1a29d1e96f9f3bd4bd3a86f00ee5d5d1de97432520e55a4bfc19cee2f3226f"
+    }
+  ],
+  "cases": [
+    {
+      "name": "baseline",
+      "faces": 4,
+      "modifiers": [
+        0,
+        0
+      ],
+      "contest": "1/1",
+      "authorshipPotential": "5/7",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "context-integer",
+      "faces": 4,
+      "modifiers": [
+        2,
+        3
+      ],
+      "contest": "9/16",
+      "authorshipPotential": "81/176",
+      "mode": "QuietRoll"
+    },
+    {
+      "name": "die-six",
+      "faces": 6,
+      "modifiers": [
+        0,
+        0
+      ],
+      "contest": "1/1",
+      "authorshipPotential": "7/9",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "die-eight",
+      "faces": 8,
+      "modifiers": [
+        0,
+        0
+      ],
+      "contest": "1/1",
+      "authorshipPotential": "9/11",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "die-ten",
+      "faces": 10,
+      "modifiers": [
+        0,
+        0
+      ],
+      "contest": "1/1",
+      "authorshipPotential": "11/13",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "die-twelve",
+      "faces": 12,
+      "modifiers": [
+        0,
+        0
+      ],
+      "contest": "1/1",
+      "authorshipPotential": "13/15",
+      "mode": "PlayerFacingRoll"
+    }
+  ],
+  "limits": [
+    "Proposed task concern operands, not generated canonical workspace/appraisal records.",
+    "Historical selection uses its own RNG; no new substrate draw or persistence claim.",
+    "The actual first-profile compiler and every public recipe still require implementation and tests."
+  ]
+}

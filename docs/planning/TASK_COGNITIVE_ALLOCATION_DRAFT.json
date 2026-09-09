@@ -1,0 +1,3679 @@
+{
+  "version": "task-cognitive-allocation/0.1-draft",
+  "status": "NUMERIC PROPOSAL; NOT PERMANENT",
+  "authority": "docs/formal/TASK_COGNITIVE_PATH.md",
+  "semanticVersion": "task-cognitive-path/0.1-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json",
+      "sha256": "161047465549a2fb3b665c08a019a0915311114159e51251bba707066f721f17"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_SHAPE_MANIFEST.json",
+      "sha256": "cf6c2dad3afb64909cc5829f02316a21c34fb86909f3f5869fbc0d127f303a87"
+    },
+    {
+      "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    }
+  ],
+  "records": [
+    {
+      "typeId": 377,
+      "schemaVersion": 1,
+      "name": "DeliberationOpportunity",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObserverId",
+          "required": true,
+          "type": "id(ObserverId)"
+        },
+        {
+          "id": 2,
+          "name": "AgendaDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 378,
+      "schemaVersion": 1,
+      "name": "TaskWorkspaceDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "TaskAccessEnabled",
+          "required": true,
+          "type": "bool"
+        },
+        {
+          "id": 4,
+          "name": "ForecastAccessEnabled",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 379,
+      "schemaVersion": 1,
+      "name": "WorkspaceTaskItem",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 2,
+          "name": "TaskSpecRef",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 380,
+      "schemaVersion": 1,
+      "name": "WorkspaceForecast",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(WorkspaceForecast)"
+        },
+        {
+          "id": 2,
+          "name": "PredictionValue",
+          "required": false,
+          "type": "r(361)"
+        }
+      ]
+    },
+    {
+      "typeId": 381,
+      "schemaVersion": 1,
+      "name": "TaskWorkspace",
+      "fields": [
+        {
+          "id": 1,
+          "name": "WorkspaceOccurrenceId",
+          "required": true,
+          "type": "id(WorkspaceOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "CharacterId",
+          "required": true,
+          "type": "id(CharacterId)"
+        },
+        {
+          "id": 3,
+          "name": "AgendaDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "required": true,
+          "type": "list(WorkspaceTaskItem)"
+        },
+        {
+          "id": 5,
+          "name": "Forecast",
+          "required": true,
+          "type": "r(WorkspaceForecast)"
+        }
+      ]
+    },
+    {
+      "typeId": 382,
+      "schemaVersion": 1,
+      "name": "TaskAssessment",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(TaskAssessment)"
+        },
+        {
+          "id": 2,
+          "name": "Distance",
+          "required": false,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 383,
+      "schemaVersion": 1,
+      "name": "TaskAppraisalItem",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 2,
+          "name": "Assessment",
+          "required": true,
+          "type": "r(TaskAssessment)"
+        }
+      ]
+    },
+    {
+      "typeId": 384,
+      "schemaVersion": 1,
+      "name": "TaskAppraisal",
+      "fields": [
+        {
+          "id": 1,
+          "name": "AppraisalOccurrenceId",
+          "required": true,
+          "type": "id(AppraisalOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "Workspace",
+          "required": true,
+          "type": "r(TaskWorkspace)"
+        },
+        {
+          "id": 3,
+          "name": "Assessments",
+          "required": true,
+          "type": "list(TaskAppraisalItem)"
+        }
+      ]
+    },
+    {
+      "typeId": 385,
+      "schemaVersion": 1,
+      "name": "TaskConcernDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Gain",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "Enabled",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 386,
+      "schemaVersion": 1,
+      "name": "TaskConcernResponse",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(TaskConcernResponse)"
+        },
+        {
+          "id": 2,
+          "name": "Intensity",
+          "required": false,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 387,
+      "schemaVersion": 1,
+      "name": "TaskConcernItem",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 2,
+          "name": "Response",
+          "required": true,
+          "type": "r(TaskConcernResponse)"
+        }
+      ]
+    },
+    {
+      "typeId": 388,
+      "schemaVersion": 1,
+      "name": "TaskConcern",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ConcernOccurrenceId",
+          "required": true,
+          "type": "id(ConcernOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "required": true,
+          "type": "r(TaskAppraisal)"
+        },
+        {
+          "id": 3,
+          "name": "Responses",
+          "required": true,
+          "type": "list(TaskConcernItem)"
+        }
+      ]
+    },
+    {
+      "typeId": 389,
+      "schemaVersion": 1,
+      "name": "PlanInstructionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProtocolActionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 390,
+      "schemaVersion": 1,
+      "name": "AdoptedTaskInstruction",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PlanInstructionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 391,
+      "schemaVersion": 1,
+      "name": "ProtocolActionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "RequestedContactCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "typeId": 392,
+      "schemaVersion": 1,
+      "name": "TaskMotiveDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BasePressure",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "Enabled",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 393,
+      "schemaVersion": 1,
+      "name": "TaskMotiveItem",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 2,
+          "name": "RawPressure",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 394,
+      "schemaVersion": 1,
+      "name": "TaskMotiveContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "MotiveContextOccurrenceId",
+          "required": true,
+          "type": "id(MotiveContextOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "Concern",
+          "required": true,
+          "type": "r(TaskConcern)"
+        },
+        {
+          "id": 3,
+          "name": "Motives",
+          "required": true,
+          "type": "list(TaskMotiveItem)"
+        }
+      ]
+    },
+    {
+      "typeId": 395,
+      "schemaVersion": 1,
+      "name": "ProceduralCandidateKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "id(CharacterId)"
+        },
+        {
+          "id": 2,
+          "name": "ProtocolActionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 396,
+      "schemaVersion": 1,
+      "name": "ProceduralCandidateOrigin",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 2,
+          "name": "PlanInstructionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 397,
+      "schemaVersion": 1,
+      "name": "ProceduralCandidate",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "r(ProceduralCandidateKey)"
+        },
+        {
+          "id": 2,
+          "name": "Origins",
+          "required": true,
+          "type": "set(ProceduralCandidateOrigin)"
+        }
+      ]
+    },
+    {
+      "typeId": 398,
+      "schemaVersion": 1,
+      "name": "TaskCandidateOptions",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateOptionsOccurrenceId",
+          "required": true,
+          "type": "id(CandidateOptionsOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "MotiveContext",
+          "required": true,
+          "type": "r(TaskMotiveContext)"
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "required": true,
+          "type": "list(ProceduralCandidate)"
+        }
+      ]
+    },
+    {
+      "typeId": 399,
+      "schemaVersion": 1,
+      "name": "ReasonEvidenceAtom",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(ReasonEvidenceAtom)"
+        },
+        {
+          "id": 2,
+          "name": "ObservationReference",
+          "required": false,
+          "type": "r(237)"
+        },
+        {
+          "id": 3,
+          "name": "QualificationOccurrenceId",
+          "required": false,
+          "type": "id(QualificationOccurrenceId)"
+        }
+      ]
+    },
+    {
+      "typeId": 400,
+      "schemaVersion": 1,
+      "name": "ReasonEvidenceBasis",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Weights",
+          "required": true,
+          "type": "map(ReasonEvidenceAtom,q)"
+        }
+      ]
+    },
+    {
+      "typeId": 401,
+      "schemaVersion": 1,
+      "name": "TaskRawSignalKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "required": true,
+          "type": "r(ProceduralCandidateKey)"
+        },
+        {
+          "id": 2,
+          "name": "TaskCommitmentKey",
+          "required": true,
+          "type": "r(371)"
+        },
+        {
+          "id": 3,
+          "name": "SourceRole",
+          "required": true,
+          "type": "enum(SourceRole)"
+        }
+      ]
+    },
+    {
+      "typeId": 402,
+      "schemaVersion": 1,
+      "name": "TaskRawSignal",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "r(TaskRawSignalKey)"
+        },
+        {
+          "id": 2,
+          "name": "SignedStrength",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "EvidenceBasis",
+          "required": true,
+          "type": "r(ReasonEvidenceBasis)"
+        }
+      ]
+    },
+    {
+      "typeId": 403,
+      "schemaVersion": 1,
+      "name": "TaskRawSignalContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(RawSignalContextOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "CandidateOptions",
+          "required": true,
+          "type": "r(TaskCandidateOptions)"
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "required": true,
+          "type": "set(TaskRawSignal)"
+        },
+        {
+          "id": 4,
+          "name": "NonIdentitySemanticPressure",
+          "required": true,
+          "type": "map(ProceduralCandidateKey,q)"
+        }
+      ]
+    },
+    {
+      "typeId": 404,
+      "schemaVersion": 1,
+      "name": "ReasonNucleusKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "required": true,
+          "type": "r(ProceduralCandidateKey)"
+        },
+        {
+          "id": 2,
+          "name": "MotiveChannel",
+          "required": true,
+          "type": "id(MotiveChannelId)"
+        },
+        {
+          "id": 3,
+          "name": "TaskReferent",
+          "required": true,
+          "type": "id(TaskReferentId)"
+        },
+        {
+          "id": 4,
+          "name": "Direction",
+          "required": true,
+          "type": "enum(Direction)"
+        }
+      ]
+    },
+    {
+      "typeId": 405,
+      "schemaVersion": 1,
+      "name": "CoverageResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SourceKey",
+          "required": true,
+          "type": "r(TaskRawSignalKey)"
+        },
+        {
+          "id": 2,
+          "name": "RawMagnitude",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "OverlapWithPrior",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "IndependentFraction",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 5,
+          "name": "EffectiveMagnitude",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 406,
+      "schemaVersion": 1,
+      "name": "ReasonRoleSummary",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseNet",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "StandingNet",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "SituationalNet",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "CoverageResults",
+          "required": true,
+          "type": "list(CoverageResult)"
+        }
+      ]
+    },
+    {
+      "typeId": 407,
+      "schemaVersion": 1,
+      "name": "CompiledReasonNucleus",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "r(ReasonNucleusKey)"
+        },
+        {
+          "id": 2,
+          "name": "RoleSummary",
+          "required": true,
+          "type": "r(ReasonRoleSummary)"
+        },
+        {
+          "id": 3,
+          "name": "Relevance",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "BaseDie",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "StandingModifier",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 6,
+          "name": "SituationalModifier",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 7,
+          "name": "Distribution",
+          "required": true,
+          "type": "r(ExactScoreDistribution)"
+        }
+      ]
+    },
+    {
+      "typeId": 408,
+      "schemaVersion": 1,
+      "name": "TaskReasonContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(ReasonContextOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "RawSignalContext",
+          "required": true,
+          "type": "r(TaskRawSignalContext)"
+        },
+        {
+          "id": 3,
+          "name": "ActiveNuclei",
+          "required": true,
+          "type": "list(CompiledReasonNucleus)"
+        }
+      ]
+    },
+    {
+      "typeId": 409,
+      "schemaVersion": 1,
+      "name": "DecisionResolution",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(DecisionResolutionOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "OccurredAt",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 3,
+          "name": "ReasonContext",
+          "required": true,
+          "type": "r(TaskReasonContext)"
+        },
+        {
+          "id": 4,
+          "name": "Result",
+          "required": true,
+          "type": "r(DecisionResult)"
+        }
+      ]
+    },
+    {
+      "typeId": 410,
+      "schemaVersion": 1,
+      "name": "CognitiveRandomCandidateAttempt",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InternalCandidateIndex",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "Rejected",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 411,
+      "schemaVersion": 1,
+      "name": "CognitiveRandomDraw",
+      "fields": [
+        {
+          "id": 1,
+          "name": "LocalAddress",
+          "required": true,
+          "type": "r(110)"
+        },
+        {
+          "id": 2,
+          "name": "EffectiveKey",
+          "required": true,
+          "type": "r(112)"
+        },
+        {
+          "id": 3,
+          "name": "Result",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 4,
+          "name": "Span",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "Limit",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 6,
+          "name": "Fallback",
+          "required": true,
+          "type": "bool"
+        },
+        {
+          "id": 7,
+          "name": "Attempts",
+          "required": true,
+          "type": "list(CognitiveRandomCandidateAttempt)"
+        }
+      ]
+    },
+    {
+      "typeId": 412,
+      "schemaVersion": 1,
+      "name": "TaskIdentityKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "id(CharacterId)"
+        },
+        {
+          "id": 2,
+          "name": "IdentityChannelId",
+          "required": true,
+          "type": "id(IdentityChannelId)"
+        }
+      ]
+    },
+    {
+      "typeId": 413,
+      "schemaVersion": 1,
+      "name": "TaskIdentityContribution",
+      "fields": [
+        {
+          "id": 1,
+          "name": "QualificationOccurrenceId",
+          "required": true,
+          "type": "id(QualificationOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "DecisionResolutionOccurrenceId",
+          "required": true,
+          "type": "id(DecisionResolutionOccurrenceId)"
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 4,
+          "name": "SignedContribution",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 414,
+      "schemaVersion": 1,
+      "name": "TaskIdentityEvidence",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Contributions",
+          "required": true,
+          "type": "list(TaskIdentityContribution)"
+        }
+      ]
+    },
+    {
+      "typeId": 415,
+      "schemaVersion": 1,
+      "name": "TaskIdentityState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Evidence",
+          "required": true,
+          "type": "map(TaskIdentityKey,TaskIdentityEvidence)"
+        }
+      ]
+    },
+    {
+      "typeId": 416,
+      "schemaVersion": 1,
+      "name": "TaskWorkspaceTaskRequirement",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SubjectAccessor",
+          "required": true,
+          "type": "id(ProjectionAccessorId)"
+        },
+        {
+          "id": 2,
+          "name": "TaskSpecIds",
+          "required": true,
+          "type": "set(DefinitionId)"
+        },
+        {
+          "id": 3,
+          "name": "TargetStatePathTemplate",
+          "required": true,
+          "type": "r(149)"
+        },
+        {
+          "id": 4,
+          "name": "OutputAccessor",
+          "required": true,
+          "type": "id(ProjectionAccessorId)"
+        }
+      ]
+    },
+    {
+      "typeId": 417,
+      "schemaVersion": 1,
+      "name": "TaskWorkspaceSourceRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "id(SeamId)"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "r(254)"
+        },
+        {
+          "id": 4,
+          "name": "ConsumerEventTypeId",
+          "required": true,
+          "type": "id(EventTypeId)"
+        },
+        {
+          "id": 5,
+          "name": "AgendaDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 6,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set(149)"
+        },
+        {
+          "id": 7,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set(277)"
+        },
+        {
+          "id": 8,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "r(273)"
+        },
+        {
+          "id": 9,
+          "name": "SubjectRequirements",
+          "required": true,
+          "type": "set(266)"
+        },
+        {
+          "id": 10,
+          "name": "TaskRequirements",
+          "required": true,
+          "type": "set(TaskWorkspaceTaskRequirement)"
+        },
+        {
+          "id": 11,
+          "name": "PredictionRequirements",
+          "required": true,
+          "type": "set(363)"
+        }
+      ]
+    },
+    {
+      "typeId": 418,
+      "schemaVersion": 1,
+      "name": "TaskConcernRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "ConcernDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 419,
+      "schemaVersion": 1,
+      "name": "DecisionResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(DecisionResult)"
+        },
+        {
+          "id": 2,
+          "name": "ChosenData",
+          "required": false,
+          "type": "r(ChosenDecisionData)"
+        }
+      ]
+    },
+    {
+      "typeId": 420,
+      "schemaVersion": 1,
+      "name": "ChosenDecisionData",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "required": true,
+          "type": "r(ProceduralCandidateKey)"
+        },
+        {
+          "id": 2,
+          "name": "Probabilities",
+          "required": true,
+          "type": "list(OptionProbability)"
+        },
+        {
+          "id": 3,
+          "name": "Margin",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "Contest",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 5,
+          "name": "ConflictMass",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 6,
+          "name": "Stake",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 7,
+          "name": "AuthorshipPotential",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 8,
+          "name": "ResolutionMode",
+          "required": true,
+          "type": "enum(ResolutionMode)"
+        },
+        {
+          "id": 9,
+          "name": "ReasonDraws",
+          "required": true,
+          "type": "list(ReasonDraw)"
+        },
+        {
+          "id": 10,
+          "name": "TieBreak",
+          "required": true,
+          "type": "r(DecisionTieBreak)"
+        }
+      ]
+    },
+    {
+      "typeId": 421,
+      "schemaVersion": 1,
+      "name": "OptionProbability",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "required": true,
+          "type": "r(ProceduralCandidateKey)"
+        },
+        {
+          "id": 2,
+          "name": "Probability",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 422,
+      "schemaVersion": 1,
+      "name": "ReasonDraw",
+      "fields": [
+        {
+          "id": 1,
+          "name": "NucleusKey",
+          "required": true,
+          "type": "r(ReasonNucleusKey)"
+        },
+        {
+          "id": 2,
+          "name": "BaseDie",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "StandingModifier",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 4,
+          "name": "SituationalModifier",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 5,
+          "name": "Draw",
+          "required": true,
+          "type": "r(CognitiveRandomDraw)"
+        },
+        {
+          "id": 6,
+          "name": "Face",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 7,
+          "name": "SignedContribution",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "typeId": 423,
+      "schemaVersion": 1,
+      "name": "DecisionTieBreak",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(DecisionTieBreak)"
+        },
+        {
+          "id": 2,
+          "name": "Leaders",
+          "required": false,
+          "type": "list(ProceduralCandidateKey)"
+        },
+        {
+          "id": 3,
+          "name": "Draw",
+          "required": false,
+          "type": "r(CognitiveRandomDraw)"
+        },
+        {
+          "id": 4,
+          "name": "SelectedKey",
+          "required": false,
+          "type": "r(ProceduralCandidateKey)"
+        }
+      ]
+    },
+    {
+      "typeId": 424,
+      "schemaVersion": 1,
+      "name": "ExactScoreDistribution",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Masses",
+          "required": true,
+          "type": "map(i,q)"
+        }
+      ]
+    },
+    {
+      "typeId": 425,
+      "schemaVersion": 1,
+      "name": "ChosenIntent",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(ChosenIntentOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "DecisionResolution",
+          "required": true,
+          "type": "r(DecisionResolution)"
+        }
+      ]
+    },
+    {
+      "typeId": 426,
+      "schemaVersion": 1,
+      "name": "DecisionExpression",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(DecisionExpressionOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "ChosenIntent",
+          "required": true,
+          "type": "r(ChosenIntent)"
+        },
+        {
+          "id": 3,
+          "name": "ChannelExpressions",
+          "required": true,
+          "type": "list(ChannelExpression)"
+        },
+        {
+          "id": 4,
+          "name": "QualificationContext",
+          "required": true,
+          "type": "r(FixtureQualificationContext)"
+        }
+      ]
+    },
+    {
+      "typeId": 427,
+      "schemaVersion": 1,
+      "name": "ChannelExpression",
+      "fields": [
+        {
+          "id": 1,
+          "name": "IdentityChannelId",
+          "required": true,
+          "type": "id(IdentityChannelId)"
+        },
+        {
+          "id": 2,
+          "name": "Alignment",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 428,
+      "schemaVersion": 1,
+      "name": "FixtureQualificationContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ScopeVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 2,
+          "name": "CostRepresentation",
+          "required": true,
+          "type": "enum(CostRepresentation)"
+        },
+        {
+          "id": 3,
+          "name": "FearRepresentation",
+          "required": true,
+          "type": "enum(FearRepresentation)"
+        },
+        {
+          "id": 4,
+          "name": "ChoiceInterventionRepresentation",
+          "required": true,
+          "type": "enum(ChoiceInterventionRepresentation)"
+        }
+      ]
+    },
+    {
+      "typeId": 429,
+      "schemaVersion": 1,
+      "name": "DecisionQualification",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(QualificationOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "DecisionExpression",
+          "required": true,
+          "type": "r(DecisionExpression)"
+        },
+        {
+          "id": 3,
+          "name": "Result",
+          "required": true,
+          "type": "r(QualificationResult)"
+        }
+      ]
+    },
+    {
+      "typeId": 430,
+      "schemaVersion": 1,
+      "name": "QualificationResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "required": true,
+          "type": "enum(QualificationResult)"
+        },
+        {
+          "id": 2,
+          "name": "Weight",
+          "required": false,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "SignedContribution",
+          "required": false,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "RejectionReason",
+          "required": false,
+          "type": "enum(RejectionReason)"
+        }
+      ]
+    },
+    {
+      "typeId": 431,
+      "schemaVersion": 1,
+      "name": "ActionPlan",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(ActionPlanOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "ChosenIntent",
+          "required": true,
+          "type": "r(ChosenIntent)"
+        },
+        {
+          "id": 3,
+          "name": "RequestedContactCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "typeId": 432,
+      "schemaVersion": 1,
+      "name": "ActionAttempt",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(ActionAttemptOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "ActionPlan",
+          "required": true,
+          "type": "r(ActionPlan)"
+        }
+      ]
+    },
+    {
+      "typeId": 433,
+      "schemaVersion": 1,
+      "name": "ExecutionOutcome",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "required": true,
+          "type": "id(ExecutionOutcomeOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "ActionAttempt",
+          "required": true,
+          "type": "r(ActionAttempt)"
+        },
+        {
+          "id": 3,
+          "name": "CompletedContactCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "typeId": 434,
+      "schemaVersion": 1,
+      "name": "ExecutionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Permitted",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 435,
+      "schemaVersion": 1,
+      "name": "TaskCandidateDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PlanAccessEnabled",
+          "required": true,
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "typeId": 436,
+      "schemaVersion": 1,
+      "name": "TaskReasonSourceDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "StandingAccessEnabled",
+          "required": true,
+          "type": "bool"
+        },
+        {
+          "id": 2,
+          "name": "IdentityK",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 437,
+      "schemaVersion": 1,
+      "name": "ReasonDiceDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseDieThresholds",
+          "required": true,
+          "type": "r(BaseDieThresholds)"
+        },
+        {
+          "id": 2,
+          "name": "ActivationThreshold",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "StandingModifier",
+          "required": true,
+          "type": "r(ModifierDefinition)"
+        },
+        {
+          "id": 4,
+          "name": "SituationalModifier",
+          "required": true,
+          "type": "r(ModifierDefinition)"
+        }
+      ]
+    },
+    {
+      "typeId": 438,
+      "schemaVersion": 1,
+      "name": "BaseDieThresholds",
+      "fields": [
+        {
+          "id": 1,
+          "name": "D4",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "D6",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 3,
+          "name": "D8",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "D10",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 5,
+          "name": "D12",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 439,
+      "schemaVersion": 1,
+      "name": "ModifierDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Unit",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "MaximumMagnitude",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "typeId": 440,
+      "schemaVersion": 1,
+      "name": "TaskArbitrationDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ThetaRoll",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 2,
+          "name": "ThetaPlayer",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    },
+    {
+      "typeId": 441,
+      "schemaVersion": 1,
+      "name": "TaskMotiveRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "MotiveDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 442,
+      "schemaVersion": 1,
+      "name": "TaskCandidateRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "CandidateDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 3,
+          "name": "PlanRequirement",
+          "required": true,
+          "type": "r(TaskPlanBindingRequirement)"
+        }
+      ]
+    },
+    {
+      "typeId": 443,
+      "schemaVersion": 1,
+      "name": "TaskRawSignalRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "ReasonSourceDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 3,
+          "name": "IdentityRequirement",
+          "required": true,
+          "type": "r(TaskIdentityReadRequirement)"
+        }
+      ]
+    },
+    {
+      "typeId": 444,
+      "schemaVersion": 1,
+      "name": "TaskReasonCompilationRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "ReasonDiceDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 445,
+      "schemaVersion": 1,
+      "name": "TaskArbitrationRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "ArbitrationDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        },
+        {
+          "id": 3,
+          "name": "ChosenIntentIngress",
+          "required": true,
+          "type": "r(ChosenIntentIngressDefinition)"
+        }
+      ]
+    },
+    {
+      "typeId": 446,
+      "schemaVersion": 1,
+      "name": "ProtocolExecutionRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "BaseRegistration",
+          "required": true,
+          "type": "r(272)"
+        },
+        {
+          "id": 2,
+          "name": "ExecutionDefinitionId",
+          "required": true,
+          "type": "id(DefinitionId)"
+        }
+      ]
+    },
+    {
+      "typeId": 447,
+      "schemaVersion": 1,
+      "name": "TaskPlanBindingRequirement",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SubjectFieldPath",
+          "required": true,
+          "type": "list(u)"
+        },
+        {
+          "id": 2,
+          "name": "TaskListFieldPath",
+          "required": true,
+          "type": "list(u)"
+        },
+        {
+          "id": 3,
+          "name": "TargetStatePathTemplate",
+          "required": true,
+          "type": "r(149)"
+        },
+        {
+          "id": 4,
+          "name": "OutputAccessor",
+          "required": true,
+          "type": "id(ProjectionAccessorId)"
+        }
+      ]
+    },
+    {
+      "typeId": 448,
+      "schemaVersion": 1,
+      "name": "TaskIdentityReadRequirement",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SubjectFieldPath",
+          "required": true,
+          "type": "list(u)"
+        },
+        {
+          "id": 2,
+          "name": "IdentityChannelId",
+          "required": true,
+          "type": "id(IdentityChannelId)"
+        },
+        {
+          "id": 3,
+          "name": "TargetStatePathTemplate",
+          "required": true,
+          "type": "r(149)"
+        },
+        {
+          "id": 4,
+          "name": "OutputAccessor",
+          "required": true,
+          "type": "id(ProjectionAccessorId)"
+        }
+      ]
+    },
+    {
+      "typeId": 449,
+      "schemaVersion": 1,
+      "name": "ChosenIntentIngressDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ConsumerEventTypeId",
+          "required": true,
+          "type": "id(EventTypeId)"
+        },
+        {
+          "id": 2,
+          "name": "ConsumerPhase",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 3,
+          "name": "PayloadSchema",
+          "required": true,
+          "type": "r(254)"
+        },
+        {
+          "id": 4,
+          "name": "BranchRule",
+          "required": true,
+          "type": "enum(ChosenIngressRule)"
+        }
+      ]
+    },
+    {
+      "typeId": 450,
+      "schemaVersion": 1,
+      "name": "TaskIdentityApplicationRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "id(SeamId)"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "InputAdmission",
+          "required": true,
+          "type": "r(274)"
+        },
+        {
+          "id": 4,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set(149)"
+        },
+        {
+          "id": 5,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set(277)"
+        },
+        {
+          "id": 6,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "r(322)"
+        },
+        {
+          "id": 7,
+          "name": "Ingress",
+          "required": true,
+          "type": "r(276)"
+        },
+        {
+          "id": 8,
+          "name": "IdentityRequirement",
+          "required": true,
+          "type": "r(TaskIdentityReadRequirement)"
+        }
+      ]
+    },
+    {
+      "typeId": 451,
+      "schemaVersion": 1,
+      "name": "ProtocolObservationBridgeDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProducingTransitionKind",
+          "required": true,
+          "type": "id(TransitionKindId)"
+        },
+        {
+          "id": 2,
+          "name": "ProducerOutputSchema",
+          "required": true,
+          "type": "r(254)"
+        },
+        {
+          "id": 3,
+          "name": "Channel",
+          "required": true,
+          "type": "r(201)"
+        },
+        {
+          "id": 4,
+          "name": "Permitted",
+          "required": true,
+          "type": "bool"
+        },
+        {
+          "id": 5,
+          "name": "StageEventTypes",
+          "required": true,
+          "type": "map(u,EventTypeId)"
+        },
+        {
+          "id": 6,
+          "name": "ObservationInputSchema",
+          "required": true,
+          "type": "r(254)"
+        },
+        {
+          "id": 7,
+          "name": "PublishedOutputSchemas",
+          "required": true,
+          "type": "set(254)"
+        }
+      ]
+    },
+    {
+      "typeId": 452,
+      "schemaVersion": 1,
+      "name": "IdentityQuantizationOperation",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SourceQualificationOccurrenceId",
+          "required": true,
+          "type": "id(QualificationOccurrenceId)"
+        },
+        {
+          "id": 2,
+          "name": "CounterKind",
+          "required": true,
+          "type": "enum(CounterKind)"
+        },
+        {
+          "id": 3,
+          "name": "Input",
+          "required": true,
+          "type": "q"
+        },
+        {
+          "id": 4,
+          "name": "Scale",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 5,
+          "name": "RoundedInteger",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 6,
+          "name": "Output",
+          "required": true,
+          "type": "q"
+        }
+      ]
+    }
+  ],
+  "schemaSuccessors": [
+    {
+      "typeId": 373,
+      "schemaVersion": 2,
+      "name": "TaskCommitmentState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Commitments",
+          "required": true,
+          "type": "map(371,372)"
+        },
+        {
+          "id": 2,
+          "name": "AdoptedInstructions",
+          "required": true,
+          "type": "map(371,AdoptedTaskInstruction)"
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "name": "MotiveChannelId",
+      "namespace": 1040,
+      "payload": "nonempty canonical UTF-8 NFC text"
+    },
+    {
+      "name": "IdentityChannelId",
+      "namespace": 1041,
+      "payload": "nonempty canonical UTF-8 NFC text"
+    },
+    {
+      "name": "RandomPurposeId",
+      "namespace": 1042,
+      "payload": "nonempty canonical UTF-8 NFC text"
+    },
+    {
+      "name": "RandomSubjectRoleId",
+      "namespace": 1043,
+      "payload": "nonempty canonical UTF-8 NFC text"
+    },
+    {
+      "name": "WorkspaceOccurrenceId",
+      "namespace": 1128,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "AppraisalOccurrenceId",
+      "namespace": 1129,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ConcernOccurrenceId",
+      "namespace": 1130,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "MotiveContextOccurrenceId",
+      "namespace": 1131,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "CandidateOptionsOccurrenceId",
+      "namespace": 1132,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "RawSignalContextOccurrenceId",
+      "namespace": 1133,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ReasonContextOccurrenceId",
+      "namespace": 1134,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "DecisionResolutionOccurrenceId",
+      "namespace": 1135,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ChosenIntentOccurrenceId",
+      "namespace": 1136,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "DecisionExpressionOccurrenceId",
+      "namespace": 1137,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "QualificationOccurrenceId",
+      "namespace": 1138,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ActionPlanOccurrenceId",
+      "namespace": 1139,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ActionAttemptOccurrenceId",
+      "namespace": 1140,
+      "payload": "unsigned-runtime-ordinal"
+    },
+    {
+      "name": "ExecutionOutcomeOccurrenceId",
+      "namespace": 1141,
+      "payload": "unsigned-runtime-ordinal"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1040,
+      "payload": "Commitment"
+    },
+    {
+      "namespace": 1041,
+      "payload": "CommitmentFidelity"
+    },
+    {
+      "namespace": 1042,
+      "payload": "purpose/task-reason-face"
+    },
+    {
+      "namespace": 1042,
+      "payload": "purpose/task-decision-tie"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/actor"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/action"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/task"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskWorkspaceTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/deliberation-opportunity"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskAppraisalTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-appraisal"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskConcernTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-concern"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskMotiveTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-motive"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskCandidateTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-candidates"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskRawSignalTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-raw-signals"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskReasonCompilationTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-reasons"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskArbitrationTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-arbitration"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskIntentTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-intent"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskExpressionTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-expression"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskPlanTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-plan"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskAttemptTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-attempt"
+    },
+    {
+      "namespace": 1009,
+      "payload": "ProtocolExecutionTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-execution"
+    },
+    {
+      "namespace": 1009,
+      "payload": "ProtocolActualFactBridgeTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-actual-fact"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskQualificationTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-qualification"
+    },
+    {
+      "namespace": 1009,
+      "payload": "TaskIdentityApplicationTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/task-identity-application"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-workspace"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-workspace"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-concern"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-concern"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-motive"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-motive"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-candidates"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-candidates"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-reason-source"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-reason-source"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-reason-dice"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-reason-dice"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-arbitration"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-arbitration"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/protocol-execution"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/protocol-execution"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/protocol-observation"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/protocol-observation"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-instruction-one"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/task-instruction"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/task-instruction-two"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/protocol-contact-one"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/protocol-action"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/protocol-contact-two"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-observation"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-tracking"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-bindings"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-classification"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/protocol-experience"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/workspace-task-status"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/task-plan-binding"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/task-identity-history"
+    },
+    {
+      "namespace": 1025,
+      "payload": "authority/task-identity-evidence"
+    },
+    {
+      "namespace": 1032,
+      "payload": "leaf/identity-evidence"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-workspace"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-appraisal-affect"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-plan-context"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-motive-context"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-option-construction"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-reason-source"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/reason-evidence-coverage"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/reason-dice"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-arbitration"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-decision-expression"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/task-identity-evidence"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/bounded-protocol-execution"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/protocol-consequence-observation"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        380,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        380,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        382,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        382,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        382,
+        3
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        382,
+        4
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        386,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        386,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        399,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        399,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        419,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        419,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        419,
+        3
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        423,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        423,
+        2
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        430,
+        1
+      ]
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        430,
+        2
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 377,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 377,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 378,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 379,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 381,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1128,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 381,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 381,
+      "fieldId": 3,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 384,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1129,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 388,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1130,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 389,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 390,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 394,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1131,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 395,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 395,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 396,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 398,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1132,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 399,
+      "fieldId": 3,
+      "position": "RecordField",
+      "requiredNamespace": 1138,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 403,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1133,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 404,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1040,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 404,
+      "fieldId": 3,
+      "position": "RecordField",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/task-qualification"
+    },
+    {
+      "recordTypeId": 408,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1134,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 409,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1135,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 412,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 412,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1041,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 413,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1138,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 413,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1135,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 416,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 416,
+      "fieldId": 4,
+      "position": "RecordField",
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 417,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 417,
+      "fieldId": 4,
+      "position": "RecordField",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 417,
+      "fieldId": 5,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 418,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 425,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1136,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 426,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1137,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 427,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1041,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 429,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1138,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 431,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1139,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 432,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1140,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 433,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1141,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 441,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 442,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 443,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 444,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 445,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 446,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 447,
+      "fieldId": 4,
+      "position": "RecordField",
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 448,
+      "fieldId": 2,
+      "position": "RecordField",
+      "requiredNamespace": 1041,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 448,
+      "fieldId": 4,
+      "position": "RecordField",
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 449,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 450,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 451,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1009,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 452,
+      "fieldId": 1,
+      "position": "RecordField",
+      "requiredNamespace": 1138,
+      "domainValidatorId": null
+    }
+  ],
+  "finiteValues": [
+    {
+      "name": "WorkspaceForecast",
+      "values": [
+        {
+          "name": "Unavailable",
+          "value": 1
+        },
+        {
+          "name": "Known",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "TaskAssessment",
+      "values": [
+        {
+          "name": "UnknownForecast",
+          "value": 1
+        },
+        {
+          "name": "Below",
+          "value": 2
+        },
+        {
+          "name": "Within",
+          "value": 3
+        },
+        {
+          "name": "Above",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "name": "TaskConcernResponse",
+      "values": [
+        {
+          "name": "Unavailable",
+          "value": 1
+        },
+        {
+          "name": "Known",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "ReasonEvidenceAtom",
+      "values": [
+        {
+          "name": "Observation",
+          "value": 1
+        },
+        {
+          "name": "QualifiedExpression",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "SourceRole",
+      "values": [
+        {
+          "name": "MotiveGenerating",
+          "value": 1
+        },
+        {
+          "name": "SituationalEvidence",
+          "value": 2
+        },
+        {
+          "name": "StandingDisposition",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "Direction",
+      "values": [
+        {
+          "name": "Approach",
+          "value": 1
+        },
+        {
+          "name": "Avoid",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "DecisionResult",
+      "values": [
+        {
+          "name": "NoOptions",
+          "value": 1
+        },
+        {
+          "name": "NoActiveReasons",
+          "value": 2
+        },
+        {
+          "name": "Chosen",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "ResolutionMode",
+      "values": [
+        {
+          "name": "Auto",
+          "value": 1
+        },
+        {
+          "name": "QuietRoll",
+          "value": 2
+        },
+        {
+          "name": "PlayerFacingRoll",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "DecisionTieBreak",
+      "values": [
+        {
+          "name": "None",
+          "value": 1
+        },
+        {
+          "name": "Present",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "CostRepresentation",
+      "values": [
+        {
+          "name": "NotRepresented",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "FearRepresentation",
+      "values": [
+        {
+          "name": "NotRepresented",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "ChoiceInterventionRepresentation",
+      "values": [
+        {
+          "name": "ExcludedByInputProfile",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "QualificationResult",
+      "values": [
+        {
+          "name": "Eligible",
+          "value": 1
+        },
+        {
+          "name": "Rejected",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "RejectionReason",
+      "values": [
+        {
+          "name": "ZeroAuthorship",
+          "value": 1
+        },
+        {
+          "name": "NoExpressedChannel",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "ChosenIngressRule",
+      "values": [
+        {
+          "name": "ChosenOnly",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "CounterKind",
+      "values": [
+        {
+          "name": "Support",
+          "value": 1
+        },
+        {
+          "name": "Opposition",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "unionVariants": [
+    {
+      "recordTypeId": 380,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Unavailable",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 380,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Known",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 382,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "UnknownForecast",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 382,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Below",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 382,
+      "schemaVersion": 1,
+      "tag": 3,
+      "name": "Within",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 382,
+      "schemaVersion": 1,
+      "tag": 4,
+      "name": "Above",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 386,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Unavailable",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 386,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Known",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 399,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Observation",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": [
+        3
+      ]
+    },
+    {
+      "recordTypeId": 399,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "QualifiedExpression",
+      "requiredFields": [
+        1,
+        3
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 419,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "NoOptions",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 419,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "NoActiveReasons",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 419,
+      "schemaVersion": 1,
+      "tag": 3,
+      "name": "Chosen",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 423,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "None",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "recordTypeId": 423,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Present",
+      "requiredFields": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 430,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Eligible",
+      "requiredFields": [
+        1,
+        2,
+        3
+      ],
+      "forbiddenFields": [
+        4
+      ]
+    },
+    {
+      "recordTypeId": 430,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Rejected",
+      "requiredFields": [
+        1,
+        4
+      ],
+      "forbiddenFields": [
+        2,
+        3
+      ]
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 381,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1128,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 384,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1129,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 388,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1130,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 394,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1131,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 398,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1132,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 403,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1133,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 408,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1134,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 409,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1135,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 425,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1136,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 426,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1137,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 429,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1138,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 431,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1139,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 432,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1140,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 433,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1141,
+      "domainValidatorId": null
+    }
+  ],
+  "existingRecordReferences": [
+    {
+      "typeId": 110,
+      "schemaVersion": 1,
+      "name": "RandomAddress"
+    },
+    {
+      "typeId": 112,
+      "schemaVersion": 1,
+      "name": "NaturalRandomKey"
+    },
+    {
+      "typeId": 149,
+      "schemaVersion": 1,
+      "name": "StatePathPattern"
+    },
+    {
+      "typeId": 201,
+      "schemaVersion": 1,
+      "name": "ObservationChannel"
+    },
+    {
+      "typeId": 237,
+      "schemaVersion": 1,
+      "name": "CharacterEvidenceRef"
+    },
+    {
+      "typeId": 254,
+      "schemaVersion": 1,
+      "name": "CanonicalRecordSchemaRef"
+    },
+    {
+      "typeId": 266,
+      "schemaVersion": 1,
+      "name": "EventDependentProjectedFieldRequirement"
+    },
+    {
+      "typeId": 272,
+      "schemaVersion": 1,
+      "name": "TransitionRegistrationV04"
+    },
+    {
+      "typeId": 273,
+      "schemaVersion": 1,
+      "name": "WriteCapabilityV04"
+    },
+    {
+      "typeId": 274,
+      "schemaVersion": 1,
+      "name": "TransitionInputAdmissionV04"
+    },
+    {
+      "typeId": 276,
+      "schemaVersion": 1,
+      "name": "TransitionIngressDefinition"
+    },
+    {
+      "typeId": 277,
+      "schemaVersion": 1,
+      "name": "TransitionOutputDefinition"
+    },
+    {
+      "typeId": 322,
+      "schemaVersion": 1,
+      "name": "WriteCapabilityV06"
+    },
+    {
+      "typeId": 361,
+      "schemaVersion": 1,
+      "name": "MeasurementPrediction"
+    },
+    {
+      "typeId": 363,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionTargetRequirement"
+    },
+    {
+      "typeId": 371,
+      "schemaVersion": 1,
+      "name": "TaskCommitmentKey"
+    }
+  ],
+  "identifierAliases": {
+    "CharacterId": 1002,
+    "TaskReferentId": 1002,
+    "ObserverId": 1000,
+    "DefinitionId": 1027,
+    "ProjectionAccessorId": 1028,
+    "SeamId": 1036,
+    "EventTypeId": 1001,
+    "TransitionKindId": 1009,
+    "WorkspaceOccurrenceId": 1128,
+    "AppraisalOccurrenceId": 1129,
+    "ConcernOccurrenceId": 1130,
+    "MotiveContextOccurrenceId": 1131,
+    "CandidateOptionsOccurrenceId": 1132,
+    "RawSignalContextOccurrenceId": 1133,
+    "ReasonContextOccurrenceId": 1134,
+    "DecisionResolutionOccurrenceId": 1135,
+    "ChosenIntentOccurrenceId": 1136,
+    "DecisionExpressionOccurrenceId": 1137,
+    "QualificationOccurrenceId": 1138,
+    "ActionPlanOccurrenceId": 1139,
+    "ActionAttemptOccurrenceId": 1140,
+    "ExecutionOutcomeOccurrenceId": 1141,
+    "MotiveChannelId": 1040,
+    "IdentityChannelId": 1041,
+    "RandomPurposeId": 1042,
+    "RandomSubjectRoleId": 1043
+  },
+  "executingVersions": [
+    "task-workspace/0.1-candidate",
+    "task-appraisal-affect/0.1-candidate",
+    "task-plan-context/0.1-candidate",
+    "task-motive-context/0.1-candidate",
+    "task-option-construction/0.1-candidate",
+    "task-reason-source/0.1-candidate",
+    "reason-evidence-coverage/0.1-candidate",
+    "reason-dice/0.1-candidate",
+    "task-arbitration/0.1-candidate",
+    "task-decision-expression/0.1-candidate",
+    "task-identity-evidence/0.1-candidate",
+    "bounded-protocol-execution/0.1-candidate",
+    "protocol-consequence-observation/0.1-candidate"
+  ],
+  "notes": [
+    "DefinitionId is the RegistryDefinitionId1027 shorthand, not a new family.",
+    "Type373/schema1 and all prior fields remain unchanged.",
+    "Type373/schema2 field2 is the only appended existing-root field.",
+    "Union definition StableId1024 payload is canonical list<unsigned>[RecordTypeId,VariantTag].",
+    "No comparison key/role family, standalone coverage operand or second occurrence allocator.",
+    "Numeric adjacency carries no meaning. Model materialization and runtime gates remain open."
+  ]
+}

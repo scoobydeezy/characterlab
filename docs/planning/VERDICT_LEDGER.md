@@ -396,3 +396,367 @@ T-positive-second-kind is FUTURE CONDITIONAL / DEFERRED / NOT PASSED, not a curr
 blocker. PERSIST-A..H PASS bounded no-RNG; PERSIST-I DEFERRED / NOT PASSED.
 Whole FCT/factory release remains OPEN / SEPARATE, next reconciliation target.
 PHEN-ADAPT PASS unchanged; Campaign 2 OPEN.
+
+## 2026-09-09 - ADAPT write-boundary correction accepted in bounded scope
+
+CAMPAIGN2_ADAPT_WRITE_BOUNDARY_REVIEW ACCEPTED. Internal capability-derived scope,
+B-prefix ordering, exact resolved-target and actual-diff guards, staged publication,
+and the already-governed failure codes are accepted. Target/diff guards and
+NoStateChange effective-write exclusion PASS in submitted bounded evidence.
+The redundant patch-byte guard removal and retained survived assay are accepted.
+Whole ADAPT-B, AD-E4, AD-E8 and whole FCT remain OPEN. VAL remains QUALIFIED;
+bounded PERSIST-A..H and deferred PERSIST-I are unchanged; PHEN-ADAPT PASS unchanged.
+No model/allocation/frozen packet changes. Remaining scope/reachability and new
+operation controls are in CAMPAIGN2_ADAPT_B_REACHABILITY_REVIEW.md; those later
+controls are proposed evidence, not covered retroactively by this acceptance.
+
+## 2026-09-09 - ADAPT B split-scope ruling approved
+
+CAMPAIGN2_ADAPT_B_REACHABILITY_REVIEW APPROVED. Family-root interpreter component
+PASS plus frozen two-authority profile exclusion PASS; alternate qualified subject
+generic component PASS plus frozen one-character profile exclusion PASS. These are
+not admitted richer factory executions. Qualification-only topology widening is
+prohibited and no new production profile is required now.
+Future family-root public witness becomes mandatory only when a separately accepted
+profile permits an authority to own multiple writable families while a transition
+permits a strict subset. Future alternate-subject public witness becomes mandatory
+only when a separately accepted profile supports 2+ qualified characters and a valid
+non-target subject. Both are CONDITIONAL / DEFERRED, not current B blockers.
+Remove precedence, equal-value Set controls, bounded staged rule/path association
+and rev3's four substitutions are ACCEPTED at their recorded scopes. Arbitrary
+pre-snapshot resolver equivalence is not established by the staged-swap control.
+Whole B, AD-E4, AD-E8 and FCT remain OPEN pending consolidation. VAL QUALIFIED,
+bounded PERSIST-A..H PASS, deferred PERSIST-I and PHEN-ADAPT PASS are unchanged.
+
+## 2026-09-09 - AD-E4 and AD-E8 accepted
+
+CAMPAIGN2_AD_E4_E8_CONSOLIDATION_REVIEW ACCEPTED. AD-E4 PASS in bounded and accepted
+split scopes; AD-E8 PASS in the finite operation/persistence matrix. Rev5's 25-test
+baseline and five detected substitutions are accepted, including the independently
+authored pre-snapshot RuleId/path oracle. Universal resolver equivalence is not claimed.
+Future public family-scope and alternate-subject witnesses remain conditional only
+on separately accepted profiles making their branches reachable; not current blockers.
+Whole B, AD-E3/7/9/10/11/12/13, remaining composition and whole FCT remain OPEN.
+VAL QUALIFIED, bounded PERSIST-A..H PASS, deferred PERSIST-I and PHEN-ADAPT PASS
+are unchanged. No production/model/allocation change accompanies this acceptance.
+Evidence precision: the same-model zero-count exposure test emits one dispatch plus
+four regulatory evaluations (five outputs), all four evaluations NoStateChange.
+The review's prose saying five evaluated rules does not change that execution record.
+
+## 2026-09-09 - AD-E13 mixed-Gate clarification
+
+AD-E13 consolidation accepted in direction; vector acceptance withheld solely on
+literal Gate difference. Other submitted construction/runtime clauses and three
+mutants accepted in their stated scopes. Inspection confirms the existing five gate
+rows retain original Always and change only the duplicate to FrozenBaseline, with
+identical Step, Match and target recipe. All five baseline rows PASS and all existing
+proof source/test fingerprints still match. Packet wording clarified; no runtime,
+test or proof artifact changed. AD-E13 awaits final disposition on this clarification;
+whole B/FCT remain OPEN. See CAMPAIGN2_AD_E13_CONSOLIDATION_REVIEW.md.
+
+## 2026-09-09 - AD-E13 accepted
+
+CAMPAIGN2_AD_E13_CONSOLIDATION_REVIEW ACCEPTED. AD-E13 PASS in the submitted finite
+construction/runtime matrix, including explicit Always-vs-FrozenBaseline Gate
+invariance, differing Step, both Match kinds, all five keys, legal disjoint matches,
+distinct recipes and contingent runtime collision. Three policy mutants DETECTED.
+Mixed-Gate clarification accepted by unchanged proof fingerprints; no rerun required.
+AD-E4/E8 remain PASS. Whole B, AD-E3/7/9/10/11/12 and FCT remain OPEN.
+VAL QUALIFIED, bounded PERSIST-A..H PASS, deferred PERSIST-I and PHEN-ADAPT PASS
+remain unchanged. No model/runtime/allocation changes accompany this acceptance.
+
+## 2026-09-09 - AD-E3 accepted
+
+CAMPAIGN2_AD_E3_CONSOLIDATION_REVIEW ACCEPTED. AD-E3 PASS in the submitted finite
+and accepted split scopes: public Step, Gate variant, Match and membership/closure
+commitments; generic V/L and isolated gate-source commitments with bounded public
+profile exclusions; callback/name-table, unknown-tag/forbidden-field and orphan
+rejection. Generic structural identities are not publicly admitted richer models.
+Future public prepare/restore V/L/alternate-source witnesses are CONDITIONAL on a
+separately accepted production profile supporting those domains, NOT current blockers.
+No dedicated AD-E3 mutation assay is required. No profile widening is authorized.
+AD-E3/4/8/13 PASS; whole B, AD-E7/9/10/11/12 and FCT OPEN. VAL QUALIFIED,
+bounded PERSIST-A..H PASS, deferred PERSIST-I and PHEN-ADAPT PASS unchanged.
+Campaign2 OPEN. No production/model/allocation/frozen artifact changes.
+
+## 2026-09-09 - AD-E9 accepted
+
+CAMPAIGN2_AD_E9_CONSOLIDATION_REVIEW ACCEPTED. AD-E9 PASS in the submitted finite
+magnitude/domain matrix: unsigned underflow, tolerance/load endpoints and overflow,
+zero normalization, absent zero-count no-op and unbounded sensitization/load/competence.
+Three clamp/ceiling mutants DETECTED. Second-leaf confinement PASS by complete-state
+assertions composed with accepted AD-E4/E8 evidence; no duplicate mutant required.
+This is not universal arbitrary-bigint verification. AD-E10 reference semantics and
+AD-E12 full rollback remain separate and OPEN. AD-E3/4/8/9/13 PASS; whole B,
+AD-E7/10/11/12 and FCT OPEN. VAL QUALIFIED, bounded no-RNG PERSIST-A..H PASS,
+deferred PERSIST-I and PHEN-ADAPT PASS unchanged. Campaign2 OPEN.
+
+## 2026-09-09 - AD-E10 accepted
+
+CAMPAIGN2_AD_E10_CONSOLIDATION_REVIEW ACCEPTED. AD-E10 PASS in finite public
+endpoint/pre-repair/authored-reference and real component-mapping scopes. Unknown
+variable translation is qualified with separate earlier public state/domain exclusion.
+R0 remains authored model reference; D remains retained adaptation state; R0+D is
+validated, never stored as a new REG anchor or learned baseline. Functional repair
+before the time boundary does not rescue invalid retained state at the boundary.
+Both distinctive mutants DETECTED; no additional AD-E10 mutant required.
+AD-E3/4/8/9/10/13 PASS; AD-E7/11/12 and whole B/FCT OPEN. AD-E12 full rollback is
+not inferred. VAL QUALIFIED, bounded no-RNG PERSIST-A..H PASS, deferred PERSIST-I,
+PHEN-ADAPT PASS unchanged. Campaign2 OPEN.
+
+## 2026-09-09 - AD-E7 read-evidence correction submitted
+
+Inspection found missing enforcement for staged read evidence. Four initial negative
+controls accepted omitted/reversed/shared/encoded-read substitutions unexpectedly.
+The evaluator now validates each target/optional-gate instrumentation segment and
+compares staged structured/encoded reads before completed-evidence publication.
+Seven new controls PASS; both check-removal mutants DETECTED. See
+CAMPAIGN2_AD_E7_READ_EVIDENCE_CORRECTION_REVIEW.md for bounded evidence and remaining
+matrix. Correction acceptance is requested; AD-E7 is not qualified. Whole B/FCT OPEN.
+Prior evaluator-sensitive reports remain historical pending explicit refresh.
+
+## 2026-09-09 - AD-E7 read-evidence correction accepted
+
+CAMPAIGN2_AD_E7_READ_EVIDENCE_CORRECTION_REVIEW ACCEPTED: per-rule instrumentation
+and pre-publication structured/encoded snapshot guards, existing TRACE_VALIDATION_FAILURE,
+and unchanged earlier WRT/diff/output precedence. Seven bounded controls PASS; two
+mutants DETECTED; fresh instances are supporting evidence, not whole qualification.
+Recorded reviewed tree: 97 files/694 tests PASS; targeted45/4 PASS; TypeScript PASS;
+166 preservation fingerprints PASS. PRJ owns read values; ADAPT does not reread state
+or create a second value oracle. Internal injections are not public capabilities.
+Whole AD-E7/B/FCT remain OPEN. Remaining declaration, rebinding, actual sharing,
+executor-binding, interleaving, cross-character/undeclared/enumeration controls need
+explicit mapping. Evaluator-sensitive history requires refresh before new whole gates.
+
+## 2026-09-09 - AD-E7 binding-isolation correction submitted
+
+Crosswalk found a generic ContractReadProjection constructor alias: validated caller
+bindings could later redirect direct or derived reads. Two initial isolation tests
+failed. The constructor now validates and retains a private binding/path/accessor
+snapshot, capturing the selected derive function without claiming closure purity.
+Three isolation/interface tests PASS; both alias mutants DETECTED. Static/static and
+dynamic/dynamic duplicate-accessor assertions supplement existing static/dynamic proof.
+See CAMPAIGN2_AD_E7_BINDING_ISOLATION_REVIEW.md. Narrow substrate correction review
+requested; whole AD-E7/B/FCT OPEN. Public Campaign2 exposes no new binding capability.
+
+## 2026-09-09 - AD-E7 binding-isolation correction accepted
+
+CAMPAIGN2_AD_E7_BINDING_ISOLATION_REVIEW ACCEPTED. Snapshot-before-validation and
+retention of the same private binding graph closes direct/member/nested-path alias
+rebinding in submitted scope. Exact-domain cross-character redirection and bounded
+interface exposure are closed at generic component scope; declared wildcard domains
+remain valid. Detached source mutation is not a rebind API. Selected derive function
+capture does NOT qualify external captured-state purity or anonymous authoritative
+PRJ semantics. Existing version identifiers retained; no new semantic option/allocation.
+Static/static, dynamic/dynamic and static/dynamic accessor uniqueness are supporting
+PASS evidence. Recorded tree:98 files/697 tests PASS, TypeScript PASS,166 fingerprints
+PASS, three binding tests PASS and two alias mutants DETECTED. Whole AD-E7/B/FCT OPEN.
+
+## 2026-09-09 - AD-E7 lifetime consolidation submitted
+
+Actual same-object projection sharing rejects through existing instrumentation;
+public binding/read/enumeration hooks reject without invocation. A targeted A-target/
+B-execute/A-gate attempt exposed missing active-evaluation exclusion. The batch now
+rejects nested execution and finish while active with ADAPTATION_STAGE_VIOLATION.
+Eighty targeted tests/eight files PASS; TypeScript PASS. Read-evidence REV2 baseline10
+PASS and four guard-removal mutants DETECTED; original report preserved. See
+CAMPAIGN2_AD_E7_CONSOLIDATION_REVIEW.md for complete finite public/component crosswalk.
+Lifecycle correction and whole-vector acceptance proposed; AD-E7/B/FCT remain OPEN
+pending review. AD-E11/12 remain separate; historical source-sensitive assays are
+not silently refreshed. No schema/profile/allocation changes.
+
+## 2026-09-09 - Autonomous review authority and AD-E7 self-reviewed PASS
+
+User authorized independent adversarial self-review through Campaign2 completion.
+See CAMPAIGN2_AUTONOMOUS_ADVERSARIAL_REVIEW.md. AD-E7 PASS in finite public/component
+scopes; lifecycle correction ACCEPTED by agent self-review, not an external verdict.
+No accepted limitations are widened. Whole B/FCT and Campaign2 remain OPEN; full
+campaign gate includes retained dice/identity and the entire thin causal path.
+
+## 2026-09-09 - AD-E11 and AD-E12 self-reviewed PASS
+
+Agent adversarial self-review under explicit user authorization records AD-E11 PASS
+in finite route/dependency and generic/public scopes, and AD-E12 PASS in the frozen
+finite failure-stage matrix. See CAMPAIGN2_AUTONOMOUS_ADVERSARIAL_REVIEW.md for exact
+claims, original/procedural source correction, identity-carriage limitation, named
+capability rejection, six rollback stages, restored continuation and detected mutants.
+No external review is implied. Whole B/FCT and Campaign2 remain OPEN; explicit
+AD-E1/2/5/6 composition and current-source refresh are still in progress.
+
+
+## 2026-09-09 - Further autonomous ADAPT/REG review
+
+Under the user's explicit independent-work authorization, agent self-review records
+AD-E1/2/5/6 PASS for the exact count/applicability/frozen-gate/collision controls.
+All AD-E1..13 now have explicit external or self-reviewed finite dispositions.
+REG selected-key/query isolation was corrected and adversarially checked before
+arithmetic. Current REG is QUALIFIED in the bounded no-body and named generic
+component scopes of CAMPAIGN2_INHERITED_CURRENT_REVIEW.md. REG-C's future body-state
+intervention remains conditional; no body model or public multi-variable profile
+is adopted. Whole ADAPT/FCT and Campaign2 remain OPEN for their broader obligations.
+
+
+## 2026-09-09 - Bounded factory and inherited composition qualified
+
+Agent adversarial self-review under explicit user authorization accepts
+CAMPAIGN2_BOUNDED_FACTORY_QUALIFICATION.md. FCT-1..6 and FCT-A..F are QUALIFIED
+for the original bounded no-RNG profiles and recorded generic/public splits.
+Current EVID/REG/ADAPT composition is QUALIFIED in the mapped finite scopes;
+no future body/belief/value/DecisionExpression or RNG profile is admitted by this
+receipt. Prior external VAL, PERSIST-A..H, PHEN-ADAPT and successor-profile verdicts
+remain unchanged. PERSIST-I stays DEFERRED / NOT PASSED.
+
+Final fresh-source regression:102 files/721 tests PASS; TypeScript, application
+build, reference boundary and166 preservation fingerprints PASS. The current
+evidence inventory verifies18 report fingerprints and records71 production files.
+This is a reviewed implementation receipt, not a new canonical identity or model.
+Campaign2 remains OPEN for the full thin topology and retained dice/identity port.
+See CAMPAIGN2_REMAINING_TOPOLOGY_WORKPLAN.md; ORD-001 is the next specification
+frontier, with no belief implementation authorized until its own contracts exist.
+
+## 2026-09-09 — prediction frontier, autonomous shape/allocation review
+
+Agent self-review accepts the bounded consequence measurement-prediction target,
+with current corrected semantics measurement-prediction/0.2-candidate. Authority:
+docs/formal/MEASUREMENT_PREDICTION_OCCURRENCE_CORRECTION.md, composing the prior
+target/draft/symbolic closure in its stated scope. This is not an external verdict.
+
+Initial permanent allocation assigns359..369 and readout occurrence namespace1127.
+The subsequent self-review caught275 incorrectly named as an occurrence rule:
+275 is a producer requirement,278 is the shared identity rule. Correct-forward
+allocation freezes367/schema2 (field2 retired and forced absent) and368/schema2,
+preserving all earlier bytes, numbers and fields as history. The shared279/3 map
+is the sole readout occurrence-rule authority. No prediction runtime/model used
+the earlier schemas; they are excluded from future profile admission.
+
+See MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json and
+MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json under docs/formal.
+Complete Rules/Registry/Numeric/Trace/Persistence packaging still gates canonical
+implementation. PRED-A..P are FROZEN / NOT PASSED. Exact-mean algebra exploration
+is not runtime proof. Reference controls passed43 files/328 tests via the direct
+Vitest equivalent after npm config loading hit a parent-directory access error.
+
+The first prediction consumes existing authentic342 at140 and is read in a later
+instant. It requires no new current-lane producer and does not close ORD-001.
+Unknown absence differs from learned zero; no confidence, REG access, value or
+action-causal meaning is inferred. Later readout has no LearningRouteId.
+Campaign2 and its full motives/reasons/dice/identity/intent/attempt path remain OPEN.
+
+## 2026-09-09 — measurement prediction first-profile qualification
+
+Agent self-review accepts the bounded implementation of measurement-prediction/0.2-candidate
+under rules/campaign2-measurement-prediction/0.1-candidate, model digest
+f272823f9c3aca5894e7366d646cdfcad050b4062db084219860403324008278.
+See docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_QUALIFICATION.md for the PRED-A..P
+public/component crosswalk and exclusions. This supersedes the prior implementation
+NOT PASSED disposition only in those scopes. It is not an external review verdict.
+The frozen model/allocation bytes remain unchanged; the current source inventory is
+CAMPAIGN2_CURRENT_EVIDENCE_INVENTORY_REV2.json. Existing ADAPT/EVID/REG/VAL and bounded
+persistence qualifications are preserved and their five affected proof packets refreshed.
+ORD-001 and PERSIST-I remain open/deferred; Campaign2 and the remaining full causal
+path remain OPEN. No current belief timing, appraisal, reward, value or action-efficacy
+meaning is inferred from the predictor.
+
+## 2026-09-09 — task lifecycle symbolic shape and allocation
+
+Internal agent SHAPE ACCEPT: task-commitment/0.1-candidate. Separate numeric ACCEPT
+AND FREEZE: task-commitment-allocation/0.1-candidate, records370..376/1 and14new
+members in existing families. See CAMPAIGN2_TASK_LIFECYCLE_SHAPE_REVIEW.md and
+../formal/TASK_COMMITMENT_ALLOCATION_FREEZE_AUDIT.json. The separate audit checked
+34fields, scalar/collection/map-key role ownership, closed status variants, complete
+displayed Markdown/machine parity and190 unchanged source fingerprints.
+
+TC-A..L are FROZEN NOT PASSED. No task model/runtime activation or new cognitive
+consumer is qualified. CAMPAIGN2_TASK_LIFECYCLE_PACKAGING.md is the next construction
+gate. Existing prediction and earlier qualifications remain unchanged; Campaign2 OPEN.
+
+## 2026-09-09 — corrected task key-role closure and construction evidence
+
+The0.1 task audit's role-ownership PASS for StateMapKey373/1 and373/2 is withdrawn.
+Actual upstream authority requires RecordField roles for composite key371. The
+correct-forward0.2 contract/allocation retains all numeric record/field/member/union
+assignments and removes the two invalid declarations. See
+../formal/TASK_COMMITMENT_KEY_ROLE_CORRECTION.md and the separate correction audit.
+No old artifact is overwritten and no upstream PRJ/VAL/WRT meaning changes.
+
+Seventeen construction tests PASS, including real state key checks and the two
+invalid-position negatives.192 corrected source combinations materialize successfully
+in campaign2-task-commitment-review-rev2/. These are not TC runtime PASS or task model
+activation. All task runtime and full Campaign2 gates remain open.
+
+## 2026-09-09 — task lifecycle runtime qualified in the frozen profile
+
+Internal agent adversarial review under autonomous-work authorization: see
+CAMPAIGN2_TASK_LIFECYCLE_QUALIFICATION.md in docs/planning. The effective seam is
+task-commitment/0.2-candidate; frozen model digest
+74aa96b751fb92dfaf693e6249ecc0abfe35df3493dd13919ddb254e4ee3d45e.
+TC-A..L pass in the packet's explicit lifecycle/public/component comparison scopes.
+This supersedes the preceding task runtime NOT PASSED entries, without changing any
+frozen semantic, numeric or model artifact. No external review is implied.
+
+Evidence: 109 active files/974 tests baseline; 24 focused post-correction tests;
+9 preservation tests; 7 detected task substitutions; 43 reference files/328 tests.
+The 64 runtime control combinations are included in the baseline. Construction and
+frozen model checks remain17 and68 respectively. TASK_LIFECYCLE_RUNTIME_AUDIT_REV2
+preserves212 fingerprints. The18 inherited proof packets and five prediction
+substitutions are current after new receipt revisions; prior receipts remain history.
+
+The historical live-list comparison is external research instrumentation. Canonical
+workspace, appraisal, concern, motive/plan/option generation and the retained
+reason/dice/identity pipeline are still unfinished and may not be replaced by task
+status or trace. ORD-001 OPEN; PERSIST-I DEFERRED; Campaign2 OPEN. Continue the exact
+cognitive source/operand closure independently; no user decision is currently needed.
+
+### Cognitive continuation — internal drafts, no allocation or PASS
+
+Current index: CAMPAIGN2_COGNITIVE_SOURCE_SELF_REVIEW_2,
+CAMPAIGN2_COGNITIVE_REGISTRATION_JOIN_DRAFT,
+CAMPAIGN2_COGNITIVE_OUTPUT_SHAPES_DRAFT and
+CAMPAIGN2_COGNITIVE_TRAVERSABILITY_REVIEW in docs/planning. Symbolic inventoryrev2
+currently lists59 record proposals/184 ordered fields; role, registration and packaging
+closure remain unfinished. This count is not a numeric allocation or completeness gate.
+
+The Phase2.97 direct-strength commitment standing source is the required initial port;
+older alignment-scaled feedback remains a named comparison. Historical researchrev2
+finds32/32 sampled hypothetical later mode changes from initially empty identity.
+The seven-check RNG rollback exploration is substrate composition evidence only.
+Neither result qualifies generated cognition, DEC-001, TRC-004, PERSIST-I or Campaign2.
+All prior task/prediction/ADAPT/VAL/model/allocation verdicts remain unchanged.
+
+### Cognitive whole shape and separate numeric closure — internal acceptance
+
+Under the user's explicit autonomous-work instruction, task-cognitive-path/0.1-candidate
+is internally shape accepted through docs/formal/TASK_COGNITIVE_PATH.md and its exact
+TASK_COGNITIVE_SHAPE_MANIFEST.json. CAMPAIGN2_COGNITIVE_WHOLE_SHAPE_REVIEW records the
+adversarial findings and bounded historical/public/component scopes. No external
+planning-agent approval is claimed.
+
+Separate task-cognitive-allocation/0.1-candidate is PERMANENT AND FROZEN: records377..452,
+244 new fields,373/schema2's appended instruction field2, discriminator namespaces1040..1043,
+occurrence namespaces1128..1141,103 exact members,52 scalar roles and17 union branches.
+TASK_COGNITIVE_ALLOCATION_FREEZE_AUDIT preserves18 prior authority/allocation sources.
+The old373/schema1 and all earlier numeric commitments remain unchanged.
+
+Current symbolic inventoryrev5 and field grammarrev2 supersede the earlier59/184 and
+77/247 draft counts. CoverageContribution was removed as an unneeded canonical wrapper.
+TRC-004 has bounded formal shape through reason-evidence-coverage/0.1-candidate; its
+runtime/component qualification remains OPEN. General DEC-001 and ORD-001 remain OPEN
+with the bounded exclusions documented. ContextModulating is retained as a future
+source/role obligation, not silently merged or retired.
+
+Model materialization/freeze and the generated cognitive implementation are next.
+All new runtime vectors remain FROZEN, NOT PASSED. PERSIST-I remains unpassed;
+Campaign2 remains OPEN. Existing qualified predecessor results are unchanged.
+
+## Cognitive model and implementation pause receipt — 2026-09-09
+
+The cognitive model/profile is now frozen under task-cognitive-model-profile/0.1-candidate;
+see campaign2-task-cognitive-model/FREEZE.json. The separate correct-forward
+plan-leaf allocation permanently adds leaf/task-instruction in namespace 1032.
+Structural codecs and pure cognitive mathematics are implemented: 23 focused tests
+PASS; actual historical differential controls PASS (270 dice cases, 11 identity
+histories); final TypeScript compilation PASS. These are bounded component results,
+not public runtime qualification. Shared-source fingerprint receipts require refresh
+where affected; historical receipts remain preserved. Campaign 2 and PERSIST-I remain
+OPEN. Work is paused for the user's power cycle. See
+CAMPAIGN2_AUTONOMOUS_PAUSE_CHECKPOINT.md for exact artifacts, limits and resume sequence.

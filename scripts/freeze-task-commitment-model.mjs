@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const source='docs/planning/campaign2-task-commitment-review-rev2/',target='docs/planning/campaign2-task-commitment-model/';
+assert(!fs.existsSync(target),'Preserve existing frozen model');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),fp=path=>({path,sha256:hash(fs.readFileSync(path))});
+const review=JSON.parse(fs.readFileSync(source+'REVIEW_MANIFEST.json'));
+assert.equal(review.status,'CANONICAL DECLARATION REVIEW PASS; MODEL NOT FROZEN OR ACTIVE');
+assert.equal(review.semanticVersion,'task-commitment/0.2-candidate');
+for(const f of [...review.sourceFingerprints,...review.preservedSources])assert.deepEqual(fp(f.path),f);
+assert.equal(hash(Buffer.from(fs.readFileSync(source+'model-identity.cenc.hex','utf8').trim(),'hex')),review.normalModelDigest);
+const controls=JSON.parse(fs.readFileSync(source+'CONTROLS.json'));assert.equal(controls.length,192);assert.equal(new Set(controls.map(x=>x.modelDigest)).size,192);
+const authority=['docs/planning/CAMPAIGN2_TASK_PACKAGING_ACCEPTANCE.md','docs/formal/TASK_COMMITMENT_NUMERIC_PROFILE.md','docs/formal/TASK_COMMITMENT_KEY_ROLE_CORRECTION.md','docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json'];
+const builder=['src/campaign2/taskCodecs.ts','src/campaign2/taskModelReview.ts'];
+const files=fs.readdirSync(source).sort();fs.mkdirSync(target);for(const file of files)fs.copyFileSync(source+file,target+file);
+const frozen={status:'ACCEPTED AND FROZEN — TASK LIFECYCLE PROFILE',acceptance:'agent self-review under autonomous-work authorization',semanticVersion:review.semanticVersion,modelDigest:review.normalModelDigest,profiles:review.profiles,semanticBundle:review.semanticBundle,authorityFingerprints:authority.map(fp),sourceFingerprints:builder.map(fp),constructionEvidenceFingerprints:review.sourceFingerprints.filter(f=>!builder.includes(f.path)),files:files.map(name=>({name,sha256:hash(fs.readFileSync(target+name))})),runtime:'IMPLEMENTATION AUTHORIZED; TC-A..L FROZEN NOT PASSED',scope:'Lifecycle only; no workspace/appraisal/motive/option activation',preservation:'Frozen declaration builders and canonical artifacts remain unchanged. Construction evidence fingerprints record the reviewed implementation; later implementation corrections require new current evidence without rewriting this history.'};
+fs.writeFileSync(target+'FREEZE.json',JSON.stringify(frozen,null,2)+'\n');
+console.log(JSON.stringify({status:frozen.status,modelDigest:frozen.modelDigest,files:files.length,controls:192}));

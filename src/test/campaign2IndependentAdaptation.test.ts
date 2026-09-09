@@ -63,7 +63,7 @@ it('AD-E8: exact 6 + 3*(-2) emits one Remove and restores the same state as an a
   if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n||key(f(v,1n))!==key(candidateId(1035,'rule/fixture-tolerance')))return v;
   const rule=rec(f(v,4n),311n);return record(v.schema,new Map([...v.fields,[4n,record(rule.schema,new Map([...rule.fields,[6n,signed(-2)]]))]]));
  }));source.registry=enc(list(slots));
- const orderedInputs=manifest(3),run=await createCampaign2Run(await prepareCampaign2Model(source),{initialState:initial(6),orderedInputs,runSeed:new Uint8Array(32)});
+ const model=await prepareCampaign2Model(source),orderedInputs=manifest(3),run=await createCampaign2Run(model,{initialState:initial(6),orderedInputs,runSeed:new Uint8Array(32)});
  await run.settleNextInstant();
  const trace=rec(items(decodeCampaign2(run.snapshot().trace),'list')[8],160n),ops=items(f(rec(f(trace,16n),144n),1n),'list');
  const removals=ops.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===146n);
@@ -73,4 +73,9 @@ it('AD-E8: exact 6 + 3*(-2) emits one Remove and restores the same state as an a
  const neverPresentTarget=new AuthoritativeState(restoreAuthoritativeState(decodeCampaign2(initial(9))).entries().filter(e=>e.path.fieldId!==1n));
  expect(run.snapshot().state).toEqual(enc(neverPresentTarget.canonicalValue()));
  const restored=await restoreCampaign2Run(source,{save:run.save(),orderedInputs});expect(restored.snapshot().state).toEqual(enc(neverPresentTarget.canonicalValue()));expect(restored.save()).toEqual(run.save());
+ const absent=await createCampaign2Run(model,{initialState:initial(0),orderedInputs:manifest(0),runSeed:new Uint8Array(32)});await absent.settleNextInstant();
+ expect(absent.snapshot().state).toEqual(initial(0));
+ const zeroTrace=rec(items(decodeCampaign2(absent.snapshot().trace),'list')[8],160n);expect(items(f(rec(f(zeroTrace,16n),144n),1n),'list')).toEqual([]);
+ const zeroOutputs=items(f(zeroTrace,13n),'list');expect(zeroOutputs).toHaveLength(5);
+ for(const output of zeroOutputs.slice(1))expect(f(rec(output,325n),6n)).toEqual(r('AdaptationResult',{VariantTag:unsigned(1)}));
 });

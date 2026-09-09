@@ -22,6 +22,14 @@ const leafSpecs=[
 function entries(value:CanonicalValue){if(typeof value==='boolean'||value.kind!=='map')return invalidModel('expected canonical map');return value.entries;}
 function family(value:CanonicalValue,ns:bigint){const v=id(value);if(v.namespaceId!==ns)invalidModel('wrong adaptation identity family');return v;}
 const bad=(message:string):never=>{throw new StateContractError('INVALID_VALUE',message);};
+/** REG-E integration guard. The selected ADAPT key remains authoritative; scalar
+ * operands carry no second identity/domain/provenance. Internal component only. */
+export function validateKeyedRegulatoryReference(reg:ReturnType<typeof compileRegulatoryReferences>,selectedKey:CanonicalValue,character:CanonicalValue,variable:CanonicalValue,at:bigint,displacement:CanonicalValue){
+  const selected=rec(selectedKey,294n);
+  if(key(character)!==key(f(selected,1n))||key(variable)!==key(f(selected,2n)))
+    throw new StateContractError('INVALID_PATH','REG query differs from selected ADAPT key');
+  return reg.validateAdaptedReference(character,variable,at,displacement);
+}
 export function compileAdaptationDomains(declarationBytes:Uint8Array,stateModel:ReturnType<typeof compileCampaign2StateModel>,reg:ReturnType<typeof compileRegulatoryReferences>,content:Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>){
   const definitions=new Map<string,CanonicalValue>(),loads=new Map<string,{scale:bigint;maximum?:bigint}>(),procedures=new Map<string,bigint>(),scales=new Map<string,bigint>();
   let topology:CanonicalValue|undefined;
@@ -82,7 +90,7 @@ export function compileAdaptationDomains(declarationBytes:Uint8Array,stateModel:
       if(!spec||path.selectors.length!==1||path.selectors[0].kind!=='mapKey')bad('unknown magnitude path');
       const selector=path.selectors[0] as Extract<typeof path.selectors[number],{kind:'mapKey'}>,k=rec(selector.key,spec!.key);
       if(spec!.domain===2n){
-        const result=reg.validateAdaptedReference(f(k,1n),f(k,2n),at,signed(magnitude));
+        const result=validateKeyedRegulatoryReference(reg,k,f(k,1n),f(k,2n),at,signed(magnitude));
         if(result.kind==='Failure')throw new SchedulerContractError(result.code==='REG_UNKNOWN_VARIABLE'?'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE':'ADAPTATION_REFERENCE_OUT_OF_RANGE',result.code);
       }else{
         const maximum=spec!.value===297n?scales.get(spec!.name):spec!.domain===3n?loads.get(key(f(k,2n)))?.maximum:undefined;
@@ -94,7 +102,7 @@ export function compileAdaptationDomains(declarationBytes:Uint8Array,stateModel:
         stateModel.validatePath(entry.path);
         const selector=entry.path.selectors[0];if(selector.kind!=='mapKey')bad('invalid displacement key');
         const k=rec((selector as Extract<typeof selector,{kind:'mapKey'}>).key,294n);
-        const result=reg.validateAdaptedReference(f(k,1n),f(k,2n),at,f(rec(entry.value,299n),1n));
+        const result=validateKeyedRegulatoryReference(reg,k,f(k,1n),f(k,2n),at,f(rec(entry.value,299n),1n));
         if(result.kind==='Failure')throw new SchedulerContractError(result.code==='REG_UNKNOWN_VARIABLE'?'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE':'ADAPTATION_REFERENCE_OUT_OF_RANGE',result.code);
       }
     },

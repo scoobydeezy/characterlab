@@ -43,7 +43,7 @@ const mutants=[
 ];
 async function run(mutant){
  let transformed=0;const prior=new Set(process.listeners('unhandledRejection'));
- const ctx=await startVitest('test',[test],{run:true,watch:false,maxWorkers:1,minWorkers:1,reporters:[{onFinished(){}}]},
+ const ctx=await startVitest('test',[test],{config:false,include:['src/test/**/*.test.ts'],run:true,watch:false,maxWorkers:1,minWorkers:1,reporters:[{onFinished(){}}]},
   {plugins:mutant?[{name:'batch-mutant',enforce:'pre',transform(code,id){if(!id.replaceAll('\\','/').endsWith('/'+file))return;assert.equal(code.split(mutant.from).length-1,1);transformed++;return code.replace(mutant.from,mutant.to);}}]:[]});
  assert(ctx);
  try{
@@ -55,6 +55,6 @@ async function run(mutant){
  }finally{await ctx.close();for(const listener of process.listeners('unhandledRejection'))if(!prior.has(listener))process.removeListener('unhandledRejection',listener);}
 }
 const baseline=await run(),results=[];for(const mutant of mutants)results.push(await run(mutant));
-fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:[file,test].map(path=>({path,sha256:hash(path)})),baseline,mutants:results,
+fs.writeFileSync(new URL('docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF_REV2.json',root),JSON.stringify({status:'COMPONENT PASS',sourceFingerprints:[file,test].map(path=>({path,sha256:hash(path)})),baseline,mutants:results,
  limitations:['Test-only in-memory interpreter substitutions; frozen declarations unchanged.','Thirteen tests cover initial/restore full-map invalidity and one generic future-writer invariant; not every AD-F7 substitution.','No global factory, VAL, ADAPT or Campaign-2 verdict.']},null,2)+'\n');
 process.exitCode=0;

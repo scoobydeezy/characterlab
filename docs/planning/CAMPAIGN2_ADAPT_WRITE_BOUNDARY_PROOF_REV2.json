@@ -1,0 +1,270 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "3e903ae684cd6738e0acab2c18a2251b6966fea9bb74cc1bc7153294258d84e8"
+    },
+    {
+      "path": "src/test/campaign2MutationEvidence.test.ts",
+      "sha256": "6484a700b337fc3cbba86514a46f3a21056633947063e8863f5ce51f88cda2e6"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "ADAPT mutation evidence comes from the successful common-snapshot WRT barrier and is isolated",
+        "state": "pass"
+      },
+      {
+        "name": "a later WRT failure publishes no completed mutation evidence for an earlier staged application",
+        "state": "pass"
+      },
+      {
+        "name": "zero-count dispatches retain real prior reads with no patches or invented mutation diffs",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=false)",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=true)",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B preserves the accepted prefix before the exact target check: shape",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B preserves the accepted prefix before the exact target check: role",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B preserves the accepted prefix before the exact target check: authority",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B preserves the accepted prefix before the exact target check: leaf",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B rejects WRT diff substitution before publishing completed execution evidence",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4 exact key operand: execution 0 leaf 1 field 3 namespace 1029",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4 exact key operand: execution 0 leaf 2 field 3 namespace 1029",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4 exact key operand: execution 0 leaf 3 field 2 namespace 1029",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4 exact key operand: execution 0 leaf 4 field 2 namespace 1033",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E4 exact key operand: execution 1 leaf 1 field 2 namespace 1034",
+        "state": "pass"
+      },
+      {
+        "name": "ADAPT B does not turn a resolved no-change target into permission for an extra Set",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "skip-exact-target",
+      "status": "DETECTED",
+      "source": "src/campaign2/stateModel.ts",
+      "from": "if(!targets.has(key(statePathValue(path))))",
+      "to": "if(false)",
+      "tests": [
+        {
+          "name": "ADAPT mutation evidence comes from the successful common-snapshot WRT barrier and is isolated",
+          "state": "pass"
+        },
+        {
+          "name": "a later WRT failure publishes no completed mutation evidence for an earlier staged application",
+          "state": "pass"
+        },
+        {
+          "name": "zero-count dispatches retain real prior reads with no patches or invented mutation diffs",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=false)",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=true)",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: shape",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: role",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: authority",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: leaf",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "ADAPT B rejects WRT diff substitution before publishing completed execution evidence",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 1 field 3 namespace 1029",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 2 field 3 namespace 1029",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 3 field 2 namespace 1029",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 4 field 2 namespace 1033",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 1 leaf 1 field 2 namespace 1034",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "ADAPT B does not turn a resolved no-change target into permission for an extra Set",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "skip-actual-diff",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "if(JSON.stringify(applied.diffs.map(d=>key(mutationDiffValue(d))))!==JSON.stringify(expected.diffs))",
+      "to": "if(false)",
+      "tests": [
+        {
+          "name": "ADAPT mutation evidence comes from the successful common-snapshot WRT barrier and is isolated",
+          "state": "pass"
+        },
+        {
+          "name": "a later WRT failure publishes no completed mutation evidence for an earlier staged application",
+          "state": "pass"
+        },
+        {
+          "name": "zero-count dispatches retain real prior reads with no patches or invented mutation diffs",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=false)",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4: a role-valid wrong exposure rejects before Set preconditions (stale=true)",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: shape",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: role",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: authority",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B preserves the accepted prefix before the exact target check: leaf",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B rejects WRT diff substitution before publishing completed execution evidence",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 1 field 3 namespace 1029",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 2 field 3 namespace 1029",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 3 field 2 namespace 1029",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 0 leaf 4 field 2 namespace 1033",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E4 exact key operand: execution 1 leaf 1 field 2 namespace 1034",
+          "state": "pass"
+        },
+        {
+          "name": "ADAPT B does not turn a resolved no-change target into permission for an extra Set",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Fixed in-memory substitutions only.",
+    "Family-scope reachability, Remove cases and cross-rule reassignment remain separate controls.",
+    "Revision1 retained: redundant staged-patch guard survived and was removed; actual-diff guard carries that obligation."
+  ]
+}

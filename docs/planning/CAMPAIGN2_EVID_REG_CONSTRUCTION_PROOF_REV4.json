@@ -1,0 +1,1331 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+    },
+    {
+      "path": "src/campaign2/transitionIngressV04.ts",
+      "sha256": "cfb297935516f618d1b68ee9e6b58f45dcbe5cb6017ec387e48adfd7f00ad778"
+    },
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+    },
+    {
+      "path": "src/campaign2/transitionAdmissionV04.ts",
+      "sha256": "c2695fb3e914b736e863cfc52d31a63d616b01b761aa62ae6c107d69092e11a9"
+    },
+    {
+      "path": "src/campaign2/occurrenceIdentity.ts",
+      "sha256": "fbd7b6390a6da94c785efdee77a468628481c54b184f3c9df0e4bb93e0641b7b"
+    },
+    {
+      "path": "src/test/campaign2TransitionAdmission.test.ts",
+      "sha256": "9b110231dfbe53208adab722bda64a838521bf4849de1f686cc9b4c04cf04af9"
+    },
+    {
+      "path": "src/test/campaign2RegulatoryReference.test.ts",
+      "sha256": "2f0315ef88b77cba164fa155e99ff4aefa1f20da05e6d9ab1e73158f284b4b92"
+    },
+    {
+      "path": "src/test/campaign2FrozenGateOrder.test.ts",
+      "sha256": "964ed7fcc07001df351b0f41ca82cd013722f68eade54f4c0f03c37f3cd72633"
+    }
+  ],
+  "baselines": [
+    {
+      "group": "evid",
+      "name": "baseline",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "pass"
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "group": "reg",
+      "name": "baseline",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "group": "regfull",
+      "name": "baseline",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject",
+          "state": "pass"
+        },
+        {
+          "name": "REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes",
+          "state": "pass"
+        },
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-L: generic REG/IDN retain complete authored identity across content families",
+          "state": "pass"
+        },
+        {
+          "name": "uses immutable authored R0 and exact signed displacement bounds without state",
+          "state": "pass"
+        },
+        {
+          "name": "retains negative-rate floor and separates variable Scale from TIME Scale",
+          "state": "pass"
+        },
+        {
+          "name": "rejects invalid domains, references, parameter ownership and non-total endpoints",
+          "state": "pass"
+        },
+        {
+          "name": "requires exact character coverage and declared Character role",
+          "state": "pass"
+        },
+        {
+          "name": "preserves variable → character → D → T failure precedence",
+          "state": "pass"
+        },
+        {
+          "name": "time-only invalidity rejects unchanged D without clamping the reference",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "group": "gate",
+      "name": "baseline",
+      "status": "PASS",
+      "tests": [
+        {
+          "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "mutations": [
+    {
+      "group": "regfull",
+      "name": "omit-reg-identity-family",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes",
+          "state": "pass"
+        },
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "wrong regulatory identity family: expected [Function] to throw an error"
+          ]
+        },
+        {
+          "name": "FCT-L: generic REG/IDN retain complete authored identity across content families",
+          "state": "pass"
+        },
+        {
+          "name": "uses immutable authored R0 and exact signed displacement bounds without state",
+          "state": "pass"
+        },
+        {
+          "name": "retains negative-rate floor and separates variable Scale from TIME Scale",
+          "state": "pass"
+        },
+        {
+          "name": "rejects invalid domains, references, parameter ownership and non-total endpoints",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "requires exact character coverage and declared Character role",
+          "state": "pass"
+        },
+        {
+          "name": "preserves variable → character → D → T failure precedence",
+          "state": "pass"
+        },
+        {
+          "name": "time-only invalidity rejects unchanged D without clamping the reference",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(value.namespaceId!==ns)return invalidModel('wrong regulatory identity family');",
+      "to": ""
+    },
+    {
+      "group": "regfull",
+      "name": "omit-reg-domain-check",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject",
+          "state": "pass"
+        },
+        {
+          "name": "REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes",
+          "state": "pass"
+        },
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-L: generic REG/IDN retain complete authored identity across content families",
+          "state": "pass"
+        },
+        {
+          "name": "uses immutable authored R0 and exact signed displacement bounds without state",
+          "state": "pass"
+        },
+        {
+          "name": "retains negative-rate floor and separates variable Scale from TIME Scale",
+          "state": "pass"
+        },
+        {
+          "name": "rejects invalid domains, references, parameter ownership and non-total endpoints",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "requires exact character coverage and declared Character role",
+          "state": "pass"
+        },
+        {
+          "name": "preserves variable → character → D → T failure precedence",
+          "state": "pass"
+        },
+        {
+          "name": "time-only invalidity rejects unchanged D without clamping the reference",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(u(f(v.definition,1n))===0n||v.minimum>v.maximum)invalidModel('invalid regulatory interval/scale');",
+      "to": "void v;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-reg-character-role-before-local-resolution",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace: expected [Function] to throw error including 'identity does not satisfy required na…' but got 'unresolved local parameter'"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "content.validateRecordRoles(canonicalEncode(k));",
+      "to": ""
+    },
+    {
+      "group": "regfull",
+      "name": "omit-reg-character-role-definition",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject",
+          "state": "pass"
+        },
+        {
+          "name": "REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes",
+          "state": "pass"
+        },
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-L: generic REG/IDN retain complete authored identity across content families",
+          "state": "pass"
+        },
+        {
+          "name": "uses immutable authored R0 and exact signed displacement bounds without state",
+          "state": "pass"
+        },
+        {
+          "name": "retains negative-rate floor and separates variable Scale from TIME Scale",
+          "state": "pass"
+        },
+        {
+          "name": "rejects invalid domains, references, parameter ownership and non-total endpoints",
+          "state": "pass"
+        },
+        {
+          "name": "requires exact character coverage and declared Character role",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to throw an error"
+          ]
+        },
+        {
+          "name": "preserves variable → character → D → T failure precedence",
+          "state": "pass"
+        },
+        {
+          "name": "time-only invalidity rejects unchanged D without clamping the reference",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(u(f(role,1n))!==1002n||key(f(role,2n))!==key({kind:'typedIdentifier',namespaceId:1021n,payload:{kind:'text',value:'validator/character-qualification'}}))invalidModel('wrong REG CharacterId role');",
+      "to": "void role;"
+    },
+    {
+      "group": "regfull",
+      "name": "mistake-inert-content-copy-for-reg-owner",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject",
+          "state": "fail",
+          "errors": [
+            "inert copy incorrectly treated as another owner"
+          ]
+        },
+        {
+          "name": "REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes",
+          "state": "pass"
+        },
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-L: generic REG/IDN retain complete authored identity across content families",
+          "state": "pass"
+        },
+        {
+          "name": "uses immutable authored R0 and exact signed displacement bounds without state",
+          "state": "pass"
+        },
+        {
+          "name": "retains negative-rate floor and separates variable Scale from TIME Scale",
+          "state": "pass"
+        },
+        {
+          "name": "rejects invalid domains, references, parameter ownership and non-total endpoints",
+          "state": "pass"
+        },
+        {
+          "name": "requires exact character coverage and declared Character role",
+          "state": "pass"
+        },
+        {
+          "name": "preserves variable → character → D → T failure precedence",
+          "state": "pass"
+        },
+        {
+          "name": "time-only invalidity rejects unchanged D without clamping the reference",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "const owners=new Set<string>();",
+      "to": "const owners=new Set<string>(); if(dataItems(decodeCampaign2(content.canonicalBytes),'set').some(v=>{const x=rec(v,170n).fields.get(10n);return x&&typeof x!=='boolean'&&x.kind==='list'&&x.items.some(p=>typeof p!=='boolean'&&p.kind==='record'&&p.schema.typeId===120n);}))invalidModel('inert copy incorrectly treated as another owner');"
+    },
+    {
+      "group": "evid",
+      "name": "omit-payload-admission-equality",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "pass"
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "||key(event.payload)!==key(expected.payload)",
+      "to": ""
+    },
+    {
+      "group": "evid",
+      "name": "allow-patch-before-output-validation",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "if(patch.operations.length!==0||",
+      "to": "if(false||"
+    },
+    {
+      "group": "evid",
+      "name": "allow-state-replacement-before-output-validation",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "if(patch.operations.length!==0||(originalState===undefined)!==(returnedState===undefined)\n        ||(originalState!==undefined&&returnedState!==undefined&&key(originalState)!==key(returnedState)))",
+      "to": "if(patch.operations.length!==0)"
+    },
+    {
+      "group": "evid",
+      "name": "erase-nonempty-event-classifications",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "fail",
+          "errors": [
+            "expected Uint8Array[ 10, 227, 1, 1, 9, 1, …(128) ] to deeply equal Uint8Array[ 10, 227, 1, 1, 9, 1, …(390) ]"
+          ]
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "pass"
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "payload:structuredClone(value.event.payload) as CanonicalValue",
+      "to": "payload:(()=>{const p=decodeCampaign2(canonicalEncode(value.event.payload));if(typeof p!=='boolean'&&p.kind==='record'&&p.schema.typeId===227n)return {...p,fields:new Map([...p.fields,[7n,{kind:'set',items:[]}]])};return p;})() as CanonicalValue"
+    },
+    {
+      "group": "gate",
+      "name": "gate-reads-earlier-staged-write",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+          "state": "fail",
+          "errors": [
+            "expected [ { path: { …(3) }, value: { …(3) } } ] to have a length of 2 but got 1"
+          ]
+        },
+        {
+          "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g)",
+      "to": "countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,gatePath?(()=>{const op=operations.find(o=>key(statePathValue(o.path))===key(statePathValue(gatePath)));return op?.kind==='set'?magnitude(op.newValue):g;})():g)"
+    },
+    {
+      "group": "evid",
+      "name": "omit-output-cardinality",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "pass"
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionAdmissionV04.ts",
+      "from": "if(schemas.length!==r.outputs.length)throw Error('missing required domain output');",
+      "to": "void schemas;"
+    },
+    {
+      "group": "evid",
+      "name": "extract-wrong-occurrence-field",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "fail",
+          "errors": [
+            "identity does not satisfy required namespace"
+          ]
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/occurrenceIdentity.ts",
+      "from": "const identity=f(value,rule.fieldId);",
+      "to": "const identity=f(value,2n);"
+    },
+    {
+      "group": "evid",
+      "name": "generate-zero-ingress-children",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "fail",
+          "errors": [
+            "missing or duplicate generated children"
+          ]
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "fail",
+          "errors": [
+            "wrong generated-child topology"
+          ]
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "emissions:()=>plans.map(p=>structuredClone(p.emission))",
+      "to": "emissions:()=>[]"
+    },
+    {
+      "group": "evid",
+      "name": "generate-two-ingress-children",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "EVID-A/S: both stages reject zero, two distinct, two identical and wrong-schema outputs with the exact carrier",
+          "state": "pass"
+        },
+        {
+          "name": "uses real scheduler child/occurrence allocation and rolls back externally injected consumer work",
+          "state": "fail",
+          "errors": [
+            "missing or duplicate generated children"
+          ]
+        },
+        {
+          "name": "FCT-G/K and IDN-8d: required projection accepts only admitted input and exposes only the field",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/M/O: empty and current-lane freezes grant no EVID ingress; archived E and wrong producer versions fail",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-G/H/I/K: resemblance grants no admission or selector access",
+          "state": "pass"
+        },
+        {
+          "name": "authenticates both EVID stages, fresh IDs, terminal output and quiescent capability expiry",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-E/R: distinct observers stay distinct; shifted output allocations preserve the exact predecessor chain",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: canonical nonempty event-classification and explicit false survive both admitted nested copies",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-L: Campaign-1 producers preserve fallible files, unresolved roles and missing versus false facets through E/L",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-J/S: no-write rejection precedes bad output validation at both stages and does not consume the execution",
+          "state": "pass"
+        },
+        {
+          "name": "EVID-B/C/H: altered observer, time or occurrence bytes cannot reuse generated admission or allocate output identity",
+          "state": "pass"
+        },
+        {
+          "name": "FCT-J: unused-looking or reused valid IDs cannot replace the execution allocation",
+          "state": "pass"
+        },
+        {
+          "name": "detects missing/duplicate child topology even when no consumer enters",
+          "state": "pass"
+        },
+        {
+          "name": "derives inhabited route closure and exact terminal output cardinality",
+          "state": "pass"
+        },
+        {
+          "name": "rejects missing/incompatible identity roles and wrong identity fields",
+          "state": "pass"
+        },
+        {
+          "name": "rejects unresolved producers, backward/unschedulable ingress, shared event IDs and unknown routes",
+          "state": "pass"
+        },
+        {
+          "name": "uses exact PRJ role compatibility, with no validator implication",
+          "state": "pass"
+        }
+      ],
+      "source": "src/campaign2/transitionIngressV04.ts",
+      "from": "emissions:()=>plans.map(p=>structuredClone(p.emission))",
+      "to": "emissions:()=>plans.flatMap(p=>[structuredClone(p.emission),structuredClone(p.emission)])"
+    },
+    {
+      "group": "reg",
+      "name": "omit-key-identity",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "parameter key/identity mismatch: expected [Function] to throw error including 'parameter key/identity mismatch' but got 'analytical anchor parameter identity …'"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(k!==key(p.parameterIdentity))invalidModel('parameter key/identity mismatch');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-local-resolution",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "unresolved local parameter: expected [Function] to throw error including 'unresolved local parameter' but got 'analytical anchor parameter identity …'"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(!v.parameters.has(key(governing)))invalidModel('unresolved local parameter');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-parameter-closure",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "unused REG parameter: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(used.size!==v.parameters.size)invalidModel('unused REG parameter');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-bound-agreement",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "parameter/variable bounds differ: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(p.valueMinimum!==v.minimum||p.valueMaximum!==v.maximum)invalidModel('parameter/variable bounds differ');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-character-totality",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "REG character set is not exact committed content image: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(JSON.stringify([...v.anchors.keys()].sort())!==JSON.stringify(characters))invalidModel('REG character set is not exact committed content image');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-parameter-ownership",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "REG parameter has multiple variable owners: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(owners.has(k))invalidModel('REG parameter has multiple variable owners');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-rate-normal-form",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "noncanonical REG rate: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if((p.rate===0n&&p.scale!==1n)||(p.rate!==0n&&gcd(p.rate,p.scale)!==1n))invalidModel('noncanonical REG rate');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-anchor-normal-form",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "REG authored anchor must start at zero with zero remainder: expected [Function] to throw error including 'REG authored anchor must start at zer…' but got 'analytical advancement duration must …'"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "if(a.anchorInstant!==0n||a.exactBoundedRemainder!==0n)invalidModel('REG authored anchor must start at zero with zero remainder');",
+      "to": "void 0;"
+    },
+    {
+      "group": "reg",
+      "name": "omit-endpoint-totality",
+      "status": "DETECTED",
+      "tests": [
+        {
+          "name": "REG-M: malformed declarations fail at their exact closed construction check",
+          "state": "fail",
+          "errors": [
+            "analytical value exceeded its declared bounded representation: expected [Function] to throw an error"
+          ]
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "materializeLinear(a,simInstant(INT64_MAX),v.registry!);",
+      "to": "void 0;"
+    }
+  ],
+  "limitations": [
+    "Inherited assertion-based controls, not independent general EVID/REG interpreters.",
+    "REG diagnostic messages locate the implementation check; only INVALID_CONFIGURATION is claimed as the public carrier. No new normative message wording.",
+    "REG family/domain/role and inert-content ownership substitutes are included; arbitrary body callbacks are not admitted by the public factory.",
+    "Exact AD-E5 order witness distinguishes a staged-write gate from the accepted frozen snapshot.",
+    "No complete EVID-S, REG-M, FCT-6 or release verdict."
+  ]
+}

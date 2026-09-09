@@ -1,0 +1,166 @@
+{
+  "status": "EVIDENCE SUBMITTED",
+  "contracts": [
+    "adaptation-input/0.31-candidate",
+    "adaptation-settlement/0.2-candidate",
+    "regulatory-reference/0.5-candidate"
+  ],
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+    },
+    {
+      "path": "src/campaign2/adaptationDomains.ts",
+      "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+    },
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+    },
+    {
+      "path": "src/test/campaign2RegExactWitnesses.test.ts",
+      "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+        "state": "pass"
+      },
+      {
+        "name": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+        "state": "pass"
+      },
+      {
+        "name": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+        "state": "pass"
+      },
+      {
+        "name": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+        "state": "pass"
+      },
+      {
+        "name": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+        "state": "pass"
+      },
+      {
+        "name": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+        "state": "pass"
+      },
+      {
+        "name": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-pre-instant-reference-validation",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationRuntime.ts",
+      "from": "beforeInstant(state,instant){\n        domains.validateStatic(state);domains.validateReferences(state,instant);",
+      "to": "beforeInstant(state,instant){\n        domains.validateStatic(state);",
+      "occurrences": 1,
+      "required": "AC-H: a committed repairing rule",
+      "tests": [
+        {
+          "name": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+          "state": "pass"
+        },
+        {
+          "name": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+          "state": "pass"
+        },
+        {
+          "name": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+          "state": "pass"
+        },
+        {
+          "name": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+          "state": "pass"
+        },
+        {
+          "name": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+          "state": "pass"
+        },
+        {
+          "name": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+          "state": "fail",
+          "errors": [
+            "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n"
+          ]
+        },
+        {
+          "name": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+          "state": "fail",
+          "errors": [
+            "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "collapse-unknown-variable-to-out-of-range",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationDomains.ts",
+      "from": "result.code==='REG_UNKNOWN_VARIABLE'?'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE':'ADAPTATION_REFERENCE_OUT_OF_RANGE'",
+      "to": "'ADAPTATION_REFERENCE_OUT_OF_RANGE'",
+      "occurrences": 2,
+      "required": "AD-E10: real domain component",
+      "tests": [
+        {
+          "name": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+          "state": "fail",
+          "errors": [
+            "expected error to match asymmetric matcher"
+          ]
+        },
+        {
+          "name": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+          "state": "pass"
+        },
+        {
+          "name": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+          "state": "pass"
+        },
+        {
+          "name": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+          "state": "pass"
+        },
+        {
+          "name": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+          "state": "pass"
+        },
+        {
+          "name": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+          "state": "pass"
+        },
+        {
+          "name": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite AD-E10 and existing REG/AC-H witnesses; no whole B/FCT acceptance.",
+    "Unknown-variable translation is actual domain-component evidence with separate public earlier exclusion.",
+    "No production profile widening or exhaustive fault matrix."
+  ]
+}

@@ -50,12 +50,14 @@ export function createMemoryExecution(model:Model,validate337:(v:CanonicalValue)
   const read:ActualReadRecord={accessorId:accessor,path:p,presence:true,value:C,derivedSources:[value],transformationId:accessor};
   return {C:ident(C),read};
  }
+ const preflight=new Map<string,{state:AuthoritativeState;projected:ReturnType<typeof subject>}>();
  return Object.freeze({
+  preflightFormation(event:ScheduledEvent,state:AuthoritativeState){if(!active||event.phase!==140n||!pending.has(eventKey(event))||preflight.has(eventKey(event)))fail('memory formation preflight');if(name(event)===eventNames[4]){if(key(event.payload)!==key(list([])))fail('memory formation padding');return;}if(name(event)!==eventNames[1])fail('memory preflight event');const evidence=rec(event.payload,342n),source=rec(f(evidence,2n),337n);validate337(source);if(txt(f(evidence,3n))!==MEMORY_VERSION)fail('M1 version');const projected=subject(evidence,true,state);if(model.formationEnabled)model.stateModel.validatePath({rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:r(344,[projected.C,f(source,1n)])}]});preflight.set(eventKey(event),{state,projected});},
   eventTypes:()=>eventNames.map(n=>id(1001,n)),isEvent,
   begin(instant:bigint){currentInstant=instant;if(active)fail('memory instant already active');checkpoint=new Map([...pending].map(([k,e])=>[k,structuredClone(e)]));active=true;},
   pendingFacts():readonly MemoryPendingFact[]{if(active)fail('pending memory facts require quiescence');return [...pending.values()].map(event=>{const n=name(event);if(n!==eventNames[2]&&n!==eventNames[5])fail('nonfuture pending memory event');const producerEventId=event.causalParentEventIds[0];return n===eventNames[2]?{kind:'RecallCue' as const,event:structuredClone(event),producerEventId,sourceEvidenceId:ident(cloneMemory(f(rec(event.payload,351n),2n))),opportunityDefinitionId:id(1027,'definition/measurement-recall-opportunity')}:{kind:'PrivateFuturePadding' as const,event:structuredClone(event),producerEventId};});},
   commit(){if([...pending.values()].some(e=>e.dueAt<=currentInstant))fail('unconsumed memory event');checkpoint=new Map([...pending].map(([k,e])=>[k,structuredClone(e)]));},
-  close(){pending=checkpoint;active=false;},
+  close(){pending=checkpoint;active=false;preflight.clear();},
   observeIntake(event:ScheduledEvent,output?:CanonicalValue){
    if(!active||event.phase!==130n||name(event)!==(output?'event/measurement-evidence-intake':'event/measurement-evidence-padding'))fail('memory intake producer');
    let later;try{later=checkedAddDuration(event.dueAt,simDuration(1n));}catch(error){throw new SchedulerContractError('INSTANT_OVERFLOW',error instanceof Error?error.message:String(error));} // Always checked, including suppression.
@@ -71,7 +73,7 @@ export function createMemoryExecution(model:Model,validate337:(v:CanonicalValue)
    else if(n===eventNames[3]){allocator.allocateRuntimeId();children=plan([emit(event,eventNames[4],140n,list([]))],event);}
    else if(n===eventNames[1]){
     const evidence=rec(event.payload,342n),source=rec(f(evidence,2n),337n);validate337(source);if(txt(f(evidence,3n))!==MEMORY_VERSION)fail('M1 version');
-    const projected=subject(evidence,true,state);reads.push(projected.read);subjects.push(projected.C);sources.push(ident(f(evidence,1n)));domain=formDomain;
+    const prepared=preflight.get(eventKey(event));if(prepared&&prepared.state!==state)fail('memory preflight B0 mismatch');const projected=prepared?.projected??subject(evidence,true,state);preflight.delete(eventKey(event));reads.push(projected.read);subjects.push(projected.C);sources.push(ident(f(evidence,1n)));domain=formDomain;
     if(model.formationEnabled){const k=r(344,[projected.C,f(source,1n)]),path:StatePath={rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:k}]};patch={operations:[{kind:'set',path,expected:{presence:false},newValue:r(345,[evidence])}]};const applied=model.stateModel.applyPatch(state,patch,id(1025,'authority/measurement-episode-formation'));nextState=applied.state;diffs=applied.diffs;}else version=MEMORY_FORMATION_ABLATION;
    }else if(n===eventNames[2]){
     const cue=rec(event.payload,351n),projected=subject(cue,false,state);reads.push(projected.read);subjects.push(projected.C);sources.push(ident(f(cue,2n)));domain=recallDomain;

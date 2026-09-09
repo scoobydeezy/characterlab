@@ -1,0 +1,2334 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+    },
+    {
+      "path": "src/substrate/time.ts",
+      "sha256": "f6f72f54c559ec61e05b0f76108bc8828629db73933188281cfa2f1281627ecb"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+    },
+    {
+      "path": "src/campaign2/factory.ts",
+      "sha256": "28c2aff5250f508bf170133ee1c33ad5dcabc9a2fa6214e2885eb8ff87694948"
+    }
+  ],
+  "baselines": [
+    {
+      "suite": "reg",
+      "name": "baseline",
+      "status": "PASS",
+      "casesChecked": 252,
+      "cases": [
+        {
+          "name": "rate=-1/anchor=0/time=0/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/reference",
+          "expected": "-1",
+          "actual": "-1",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/reference",
+          "expected": "-1",
+          "actual": "-1",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/reference",
+          "expected": "-1",
+          "actual": "-1",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/reference",
+          "expected": "-2",
+          "actual": "-2",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/reference",
+          "expected": "-4",
+          "actual": "-4",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/reference",
+          "expected": "-3074457345618258603",
+          "actual": "-3074457345618258603",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/reference",
+          "expected": "6",
+          "actual": "6",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/reference",
+          "expected": "6",
+          "actual": "6",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/reference",
+          "expected": "6",
+          "actual": "6",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/reference",
+          "expected": "5",
+          "actual": "5",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/reference",
+          "expected": "3",
+          "actual": "3",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/reference",
+          "expected": "-3074457345618258596",
+          "actual": "-3074457345618258596",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/reference",
+          "expected": "0",
+          "actual": "0",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/reference",
+          "expected": "1",
+          "actual": "1",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/reference",
+          "expected": "1",
+          "actual": "1",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/reference",
+          "expected": "3",
+          "actual": "3",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/reference",
+          "expected": "3074457345618258602",
+          "actual": "3074457345618258602",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/reference",
+          "expected": "7",
+          "actual": "7",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/reference",
+          "expected": "8",
+          "actual": "8",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/reference",
+          "expected": "8",
+          "actual": "8",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/reference",
+          "expected": "10",
+          "actual": "10",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/reference",
+          "expected": "3074457345618258609",
+          "actual": "3074457345618258609",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=-1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=0",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=1",
+          "expected": "Valid",
+          "actual": "Valid",
+          "agrees": true
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": true
+        }
+      ]
+    },
+    {
+      "suite": "persistence",
+      "name": "baseline",
+      "status": "PASS",
+      "casesChecked": 5,
+      "cases": [
+        {
+          "name": "save-metadata/8",
+          "agrees": true
+        },
+        {
+          "name": "save-metadata/9",
+          "agrees": true
+        },
+        {
+          "name": "save-metadata/10",
+          "agrees": true
+        },
+        {
+          "name": "restore-valid-exact",
+          "agrees": true
+        },
+        {
+          "name": "retained-time-rejects-unchanged-displacement",
+          "agrees": true,
+          "constructionsBefore": 3,
+          "constructionsAfter": 3
+        }
+      ]
+    }
+  ],
+  "mutations": [
+    {
+      "suite": "reg",
+      "name": "reference-at-zero",
+      "status": "DETECTED",
+      "casesChecked": 252,
+      "differences": [
+        {
+          "name": "rate=-1/anchor=0/time=1/reference",
+          "expected": "-1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/reference",
+          "expected": "-1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/reference",
+          "expected": "-1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/reference",
+          "expected": "-2",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/reference",
+          "expected": "-4",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/reference",
+          "expected": "-3074457345618258603",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/reference",
+          "expected": "6",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/reference",
+          "expected": "6",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/reference",
+          "expected": "6",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/reference",
+          "expected": "5",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/reference",
+          "expected": "3",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/reference",
+          "expected": "-3074457345618258596",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/reference",
+          "expected": "1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/reference",
+          "expected": "1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/reference",
+          "expected": "3",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/reference",
+          "expected": "3074457345618258602",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/reference",
+          "expected": "8",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/reference",
+          "expected": "8",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/reference",
+          "expected": "10",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/reference",
+          "expected": "3074457345618258609",
+          "actual": "7",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "signed(materializeLinear(resolved.anchor,simInstant(at),resolved.v.registry!).value)",
+      "to": "signed(materializeLinear(resolved.anchor,simInstant(0n),resolved.v.registry!).value)"
+    },
+    {
+      "suite": "reg",
+      "name": "adapted-bound-at-zero",
+      "status": "DETECTED",
+      "casesChecked": 252,
+      "differences": [
+        {
+          "name": "rate=-1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "r0=materializeLinear(resolved.anchor,simInstant(at),resolved.v.registry!).value",
+      "to": "r0=materializeLinear(resolved.anchor,simInstant(0n),resolved.v.registry!).value"
+    },
+    {
+      "suite": "reg",
+      "name": "ignore-displacement",
+      "status": "DETECTED",
+      "casesChecked": 252,
+      "differences": [
+        {
+          "name": "rate=-1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=0/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=1/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=2/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=3/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=4/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=10/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=7/time=9223372036854775807/D=9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "total=r0+d",
+      "to": "total=r0"
+    },
+    {
+      "suite": "reg",
+      "name": "exclude-valid-endpoints",
+      "status": "DETECTED",
+      "casesChecked": 252,
+      "differences": [
+        {
+          "name": "rate=-1/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=1/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=2/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=3/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=4/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=10/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=0/anchor=0/time=9223372036854775807/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=0/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=1/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        },
+        {
+          "name": "rate=1/anchor=0/time=2/D=9223372036854775807",
+          "expected": "Valid",
+          "actual": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/regulatoryReference.ts",
+      "from": "total<resolved.v.minimum||total>resolved.v.maximum",
+      "to": "total<=resolved.v.minimum||total>=resolved.v.maximum"
+    },
+    {
+      "suite": "reg",
+      "name": "truncate-negative-time-rate",
+      "status": "DETECTED",
+      "casesChecked": 252,
+      "differences": [
+        {
+          "name": "rate=-1/anchor=0/time=1/reference",
+          "expected": "-1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=1/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/reference",
+          "expected": "-1",
+          "actual": "0",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=2/D=-9223372036854775807",
+          "expected": "REG_ADAPTED_REFERENCE_OUT_OF_RANGE",
+          "actual": "Valid",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=4/reference",
+          "expected": "-2",
+          "actual": "-1",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=10/reference",
+          "expected": "-4",
+          "actual": "-3",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=0/time=9223372036854775807/reference",
+          "expected": "-3074457345618258603",
+          "actual": "-3074457345618258602",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=1/reference",
+          "expected": "6",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=2/reference",
+          "expected": "6",
+          "actual": "7",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=4/reference",
+          "expected": "5",
+          "actual": "6",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=10/reference",
+          "expected": "3",
+          "actual": "4",
+          "agrees": false
+        },
+        {
+          "name": "rate=-1/anchor=7/time=9223372036854775807/reference",
+          "expected": "-3074457345618258596",
+          "actual": "-3074457345618258595",
+          "agrees": false
+        }
+      ],
+      "source": "src/substrate/time.ts",
+      "from": "const delta = floorDiv(total, parameters.scale);",
+      "to": "const delta = total / parameters.scale;"
+    },
+    {
+      "suite": "persistence",
+      "name": "save-invented-anchors",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "save-metadata/8",
+          "agrees": false
+        },
+        {
+          "name": "restore-valid-exact",
+          "agrees": false,
+          "error": "saved analytical-anchor projection does not match authoritative state"
+        }
+      ],
+      "source": "src/campaign2/adaptationRuntime.ts",
+      "from": "analyticalAnchors:()=>list([])",
+      "to": "analyticalAnchors:()=>list([true])"
+    },
+    {
+      "suite": "persistence",
+      "name": "save-invented-rng-ids",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "save-metadata/9",
+          "agrees": false
+        },
+        {
+          "name": "restore-valid-exact",
+          "agrees": false,
+          "error": "saved random-relevant-ID projection does not match authoritative state"
+        }
+      ],
+      "source": "src/campaign2/adaptationRuntime.ts",
+      "from": "randomRelevantAuthoritativeIds:()=>list([])",
+      "to": "randomRelevantAuthoritativeIds:()=>list([true])"
+    },
+    {
+      "suite": "persistence",
+      "name": "save-invented-continuing-input",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "save-metadata/10",
+          "agrees": false
+        },
+        {
+          "name": "restore-valid-exact",
+          "agrees": false,
+          "error": "bounded persistence requires exact empty metadata"
+        }
+      ],
+      "source": "src/campaign2/adaptationRuntime.ts",
+      "from": "continuingRunInputs:list([])",
+      "to": "continuingRunInputs:list([true])"
+    },
+    {
+      "suite": "persistence",
+      "name": "restore-invented-anchor-derivation",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "restore-valid-exact",
+          "agrees": false,
+          "error": "saved analytical-anchor projection does not match authoritative state"
+        }
+      ],
+      "source": "src/campaign2/factory.ts",
+      "from": "analyticalAnchors:()=>list([])",
+      "to": "analyticalAnchors:()=>list([true])"
+    },
+    {
+      "suite": "persistence",
+      "name": "restore-invented-rng-derivation",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "restore-valid-exact",
+          "agrees": false,
+          "error": "saved random-relevant-ID projection does not match authoritative state"
+        }
+      ],
+      "source": "src/campaign2/factory.ts",
+      "from": "randomRelevantAuthoritativeIds:()=>list([])",
+      "to": "randomRelevantAuthoritativeIds:()=>list([true])"
+    },
+    {
+      "suite": "persistence",
+      "name": "restore-validates-time-zero",
+      "status": "DETECTED",
+      "casesChecked": 5,
+      "differences": [
+        {
+          "name": "retained-time-rejects-unchanged-displacement",
+          "agrees": false,
+          "constructionsBefore": 3,
+          "constructionsAfter": 4
+        }
+      ],
+      "source": "src/campaign2/factory.ts",
+      "from": "m.domains.validateReferences(prepared.state,prepared.clock);",
+      "to": "m.domains.validateReferences(prepared.state,0n);"
+    }
+  ],
+  "supersededMutationAttempts": [
+    {
+      "name": "restore-validates-time-zero",
+      "result": "NOT DISTINGUISHED by rejection-only assay",
+      "reason": "Runtime construction repeated the saved-time check, so restore still rejected. Added observational entry counter to require rejection before runtime construction; the same single-site mutant is now distinguished."
+    }
+  ],
+  "limitations": [
+    "REG scalar oracle is independent of production TIME arithmetic; canonical transport and VAL content setup are shared.",
+    "Persistence tests compare exact empty metadata and round-trip bytes; they are not a second persistence implementation.",
+    "Retained-time witness edits a canonical checkpoint clock, without claiming that its history was executed.",
+    "No complete FCT-D, FCT-6, PERSIST, VAL or PHEN-ADAPT closure."
+  ]
+}

@@ -267,8 +267,14 @@ export class ContractReadProjection<Bindings extends Readonly<Record<string, Pro
 
   constructor(state: AuthoritativeState, readDomain: readonly StatePathPattern[], bindings: Bindings) {
     this.#state = state;
-    this.#bindings = bindings;
-    for (const binding of Object.values(bindings)) {
+    // Validate and retain the same private binding snapshot. Caller-owned path,
+    // accessor and source arrays must not redirect a read after ReadDomain checks.
+    this.#bindings = Object.fromEntries(Object.entries(bindings).map(([name,binding])=>[name,
+      binding.kind==='direct'
+        ? {kind:'direct',accessorId:cloneCanonicalValue(binding.accessorId),path:cloneStatePath(binding.path)}
+        : {kind:'derived',accessorId:cloneCanonicalValue(binding.accessorId),projectionPath:cloneStatePath(binding.projectionPath),sourcePaths:binding.sourcePaths.map(cloneStatePath),transformationId:cloneCanonicalValue(binding.transformationId),derive:binding.derive},
+    ])) as Bindings;
+    for (const binding of Object.values(this.#bindings)) {
       const paths = binding.kind === 'direct' ? [binding.path] : [binding.projectionPath, ...binding.sourcePaths];
       for (const path of paths) {
         if (!readDomain.some((pattern) => patternMatches(pattern, path))) {

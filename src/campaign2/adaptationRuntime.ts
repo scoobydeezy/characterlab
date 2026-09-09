@@ -1,5 +1,12 @@
 import {createMemoryExecution,type MemoryPendingFact} from './memoryExecution';
+import {createTaskExecution,type TaskPendingFact} from './taskExecution';
+import {taskInitialSchedule,TASK_DEADLINE_EVENT} from './taskBootstrap';
+import type {compileTaskModel} from './taskModel';
+import {compileTaskBaseTraceBinding} from './traceBinding';
+import type {ScheduledEvent,EventHandlerContext} from '../substrate/scheduler';
 import type {compileMemoryModel} from './memoryModel';
+import {createPredictionExecution,type PredictionPendingFact} from './predictionExecution';
+import type {compilePredictionModel} from './predictionModel';
 import {INTAKE_EVENT,CARRIAGE_PADDING,type compileMeasurementModel} from './measurementModel';
 import {executeMeasurementIntake} from './measurementExecution';
 import {scheduledEventValue} from '../substrate/persistence';
@@ -12,7 +19,7 @@ import {DeterministicScheduler,SchedulerContractError,type EventHandler} from '.
 import {compileOrderedInputProfile,beginAuthoredSourceInstant,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,compiledInputSchedule} from './orderedInputs';
 import {beginTransitionIngressV04} from './transitionIngressV04';
 import {compileAdaptationEvaluator,adaptationExecutionDiffs} from './adaptationEvaluation';
-import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,compileMemoryBaseTraceBinding,TRACE_RULES} from './traceBinding';
+import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,compileMemoryBaseTraceBinding,compilePredictionBaseTraceBinding,TRACE_RULES} from './traceBinding';
 import type {compileProbeExecution} from './probeExecution';
 import type {compileTransitionAdmissionV06} from './transitionAdmissionV04';
 import type {compileAdaptationDomains} from './adaptationDomains';
@@ -31,12 +38,17 @@ type Compilation=Awaited<ReturnType<ReturnType<typeof compileOrderedInputProfile
 export function createAdaptationRuntime(inputs:Compilation,initialState:AuthoritativeState,
   shared:ReturnType<typeof compileTransitionAdmissionV06>,evaluator:ReturnType<typeof compileAdaptationEvaluator>,
   domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>,maxWork:bigint,bridgeModel?:ReturnType<typeof compileConsequenceBridge>,
-  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement'],memory?:Awaited<ReturnType<typeof compileMemoryModel>>,memoryPending:readonly MemoryPendingFact[]=[]){
+  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement'],memory?:Awaited<ReturnType<typeof compileMemoryModel>>,memoryPending:readonly MemoryPendingFact[]=[],prediction?:Awaited<ReturnType<typeof compilePredictionModel>>,predictionPending:readonly PredictionPendingFact[]=[],task?:Awaited<ReturnType<typeof compileTaskModel>>,taskPending:readonly TaskPendingFact[]=[]){
   const modelIdentity=f(rec(inputs.runIdentity.value,104n),1n),rules=f(rec(modelIdentity,103n),1n);
   const memoryRuntime=memory&&measurement?createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,memoryPending):undefined;
-  const trace=memory&&probeModel?compileMemoryBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
+  if(prediction&&(!memoryRuntime||!probeModel))throw new SchedulerContractError('INVALID_CONFIGURATION','prediction requires its compiled memory/probe dependencies');
+  const predictionRuntime=prediction?createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,predictionPending):undefined;
+  const trace=task&&probeModel?compileTaskBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):prediction&&probeModel?compilePredictionBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):memory&&probeModel?compileMemoryBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
   stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,continuation?.clock??0n);
-  const initial=continuation?{events:continuation.queue,allocators:continuation.allocators}:compiledInputSchedule(inputs,canonicalEncode(initialState.canonicalValue()));
+  const taskInitial=task&&!continuation?taskInitialSchedule(task,inputs,canonicalEncode(initialState.canonicalValue())):undefined;
+  const initial=continuation?{events:continuation.queue,allocators:continuation.allocators}:taskInitial??compiledInputSchedule(inputs,canonicalEncode(initialState.canonicalValue()));
+  if(task&&(!predictionRuntime||!memoryRuntime||!probeModel))throw new SchedulerContractError('INVALID_CONFIGURATION','task requires prediction/memory/probe');
+  const taskRuntime=task?createTaskExecution(task,modelIdentity,inputs.runIdentity.value,continuation?taskPending:taskInitial!.deadlines.map(event=>({event}))):undefined;
   let sources:ReturnType<typeof beginAuthoredSourceInstant>|undefined,ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
   let bridge:ReturnType<NonNullable<typeof bridgeModel>['begin']>|undefined;
   let probe:ReturnType<NonNullable<typeof probeModel>['begin']>|undefined,probeSource:ReturnType<typeof beginProbeSourceInstant>|undefined;
@@ -116,8 +128,15 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
   }
   for(const eventType of memoryRuntime?.eventTypes()??[])registerHandler(key(eventType),context=>{
     const result=memoryRuntime!.execute(context.event,context.state,counted(context));
-    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:result.plan.emissions(),traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children);if(probeInstant)childCount+=children.length;return [result.trace(children)];}};
+    const isM1=['event/measurement-episode-evidence','event/measurement-episode-evidence-padding'].some(n=>key(context.event.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text(n)}));
+    const extra=isM1?predictionRuntime?.observeM1(context.event,result.outputs[0]):undefined,old=result.plan.emissions(),extraEvents=extra?.emissions()??[],prospective=isM1?taskRuntime?.observeM1(context.event,result.outputs[0]):undefined;
+    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[...old,...extraEvents,...(prospective?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children.slice(0,old.length));extra?.bindAllocatedChildren(children.slice(old.length,old.length+extraEvents.length));prospective?.bindAllocatedChildren(children.slice(old.length+extraEvents.length));if(probeInstant)childCount+=children.length;return [result.trace(children)];}};
   });
+  for(const eventType of predictionRuntime?.eventTypes()??[])registerHandler(key(eventType),context=>{
+    const result=predictionRuntime!.execute(context.event,context.state,counted(context));
+    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[],traceContributions:[],traceFactory:()=>[result.trace()]};
+  });
+  for(const eventType of taskRuntime?.eventTypes()??[])registerHandler(key(eventType),()=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION','task requires prepared stage');});
   const scheduler=new DeterministicScheduler({initialState,initialQueue:initial.events,initialAllocators:initial.allocators,
     initialClock:continuation?.clock,initialCommittedTrace:continuation?.committedTrace,initialOutputs:continuation?.outputs,
     maxSettlementWorkPerSimulationInstant:maxWork,
@@ -126,23 +145,42 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime?.begin(instant);predictionRuntime?.begin(instant);taskRuntime?.begin(instant);
         sources=beginAuthoredSourceInstant(inputs,instant);ingress=beginTransitionIngressV04(shared,instant);
         bridge=bridgeModel?.begin(instant);
         probe=probeModel?.begin(instant);probeSource=probeModel?beginProbeSourceInstant(inputs,instant):undefined;
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        function inherited(events:readonly ScheduledEvent[]){
+        if(predictionRuntime&&memoryRuntime&&events.some(e=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e))){
+          predictionRuntime.validatePair(events);
+          let index=0,finished=false,executing=false,memoryResult:ReturnType<typeof memoryRuntime.execute>|undefined,predictionResult:ReturnType<typeof predictionRuntime.execute>|undefined;
+          const traces:(()=>CanonicalValue)[]=[];
+          return {execute(context:EventHandlerContext<AuthoritativeState>){
+            if(finished||executing||index>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[index])))throw new SchedulerContractError('PREDICTION_STAGE_VIOLATION','prediction pair execution lifecycle');
+            executing=true;try{
+              if(memoryRuntime.isEvent(context.event)){memoryResult=memoryRuntime.execute(context.event,state,counted(context));memoryResult.plan.bindAllocatedChildren([]);if(memoryResult.outputs.length)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','formation pair member emitted semantic output');traces.push(()=>memoryResult!.trace([]));}
+              else{predictionResult=predictionRuntime.execute(context.event,state,counted(context));if(predictionResult.outputs.length)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','prediction application emitted semantic output');traces.push(()=>predictionResult!.trace());}
+              index++;return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};
+            }finally{executing=false;}
+          },finish(){
+            if(finished||executing||index!==events.length||!memoryResult||!predictionResult)throw new SchedulerContractError('PREDICTION_STAGE_VIOLATION','incomplete prediction pair');finished=true;
+            // Both evaluated against B0. Applying the separately authorized belief
+            // patch to the memory candidate cannot overwrite the episode patch.
+            return predictionResult.patch.operations.length?stateModel.applyPatch(memoryResult.nextState,predictionResult.patch,{kind:'typedIdentifier',namespaceId:1025n,payload:text('authority/belief-expectation')},{writableRoots:[362n],targetPaths:predictionResult.patch.operations.map(o=>o.path)}).state:memoryResult.nextState;
+          },finalizeTrace(){if(!finished)throw new SchedulerContractError('PREDICTION_STAGE_VIOLATION','prediction trace before completion');return traces.map(make=>make());}};
+        }
         if(memoryRuntime&&events.some(e=>memoryRuntime.isEvent(e))){
           if(events.length!==1||!memoryRuntime.isEvent(events[0]))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','mixed memory/ADAPT stage');
           let result:ReturnType<typeof memoryRuntime.execute>|undefined;
-          return {execute(context){result=memoryRuntime.execute(context.event,state,counted(context));result.plan.bindAllocatedChildren([]);return {nextState:state,outputs:result.outputs,emittedEvents:[],traceContributions:[]};},finish(){if(!result)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing memory execution');return result.nextState;},finalizeTrace(){return result?[result.trace([])]:[];}};
+          return {execute(context:EventHandlerContext<AuthoritativeState>){result=memoryRuntime.execute(context.event,state,counted(context));result.plan.bindAllocatedChildren([]);return {nextState:state,outputs:result.outputs,emittedEvents:[],traceContributions:[]};},finish(){if(!result)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing memory execution');return result.nextState;},finalizeTrace(){return result?[result.trace([])]:[];}};
         }
         for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');
         const tokens=events.map(event=>ingress!.admit(event)),batch=evaluator.prepare(tokens,instant).begin(state);let index=0;
         let completed:ReturnType<typeof batch.finish>|undefined;
         return {
-          execute(context){
+          execute(context:EventHandlerContext<AuthoritativeState>){
             const result=batch.execute(tokens[index++],context);
             return {nextState:context.state,outputs:result.outputs,emittedEvents:[],traceContributions:trace?[]:result.actualReads};
           },
@@ -158,14 +196,29 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
             return completed.executions.map(e=>trace.record(e.event,e.outputs,[],decodeCampaign2(shared.registrationForEvent(e.event.eventTypeId)!),{readDomain:e.readDomain,actualReadRecords:e.actualReadRecords,patch:e.patch,diffs:adaptationExecutionDiffs(e)}));
           },
         };
+        }
+        if(!taskRuntime)return inherited(events);
+        const prospective=events.filter(e=>taskRuntime.isEvent(e)),baseEvents=events.filter(e=>!taskRuntime.isEvent(e)),slots=prospective.filter(e=>key(e.eventTypeId)!==key(TASK_DEADLINE_EVENT)),clocks=prospective.filter(e=>key(e.eventTypeId)===key(TASK_DEADLINE_EVENT));
+        const hasPair=baseEvents.some(e=>memoryRuntime!.isEvent(e)||predictionRuntime!.isEvent(e));
+        const bad=(message:string):never=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION',message);};
+        if(clocks.length>2||slots.length!==(hasPair?1:0))bad('task stage slot multiplicity');
+        if(hasPair){predictionRuntime!.validatePair(baseEvents);const p=baseEvents.find(e=>predictionRuntime!.isEvent(e))!,s=slots[0];if(s.causalParentEventIds.length!==1||s.causalParentEventIds[0]!==p.causalParentEventIds[0]||key(s.payload)!==key(p.payload)||(key(s.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text('event/task-measurement-settlement-padding')}))!==(key(p.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text('event/measurement-prediction-application-padding')})))bad('task S does not match P');}
+        // Source/subject/target admission precedes every group's prior evaluation.
+        for(const event of events){if(taskRuntime.isEvent(event))taskRuntime.preflight(event,state);else if(memoryRuntime!.isEvent(event))memoryRuntime!.preflightFormation(event,state);else if(predictionRuntime!.isEvent(event))predictionRuntime!.preflightApplication(event,state);}
+        const baseStage=baseEvents.length?inherited(baseEvents):undefined;
+        taskRuntime.sealPreflight();
+        let cursor=0,finished=false,executing=false;const results:ReturnType<typeof taskRuntime.execute>[]=[],traceOrder:{task?:ReturnType<typeof taskRuntime.execute>}[]=[];
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||executing||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor])))bad('task stage execution lifecycle');executing=true;try{cursor++;if(taskRuntime.isEvent(context.event)){const result=taskRuntime.execute(context.event,state);results.push(result);traceOrder.push({task:result});return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}traceOrder.push({});return baseStage!.execute(context);}finally{executing=false;}},
+          finish(){if(finished||executing||cursor!==events.length)bad('incomplete task stage');finished=true;let candidate=baseStage?.finish()??state;for(const result of results)candidate=stateModel.applyPatch(candidate,result.patch,{kind:'typedIdentifier',namespaceId:1025n,payload:text('authority/prospective-commitments')},{writableRoots:[373n],targetPaths:result.patch.operations.map(o=>o.path)}).state;return candidate;},
+          finalizeTrace(){if(!finished)bad('task trace before finish');const baseTrace=baseStage?.finalizeTrace()??[];let i=0;const values=traceOrder.map(x=>x.task?x.task.trace():baseTrace[i++]);if(i!==baseTrace.length||values.some(x=>x===undefined))bad('task trace accounting');return values;}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==(memory?7:6)||childCount!==(memory?11:8)||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');memoryRuntime?.commit();},
-      close(){memoryRuntime?.close();sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==(memory?7:6)||childCount!==(task?14:prediction?13:memory?11:8)||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime?.prepareCommit(state);predictionRuntime?.prepareCommit();memoryRuntime?.commit();predictionRuntime?.commit();taskRuntime?.commit();},
+      close(){memoryRuntime?.close();predictionRuntime?.close();taskRuntime?.close();sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||task&&key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.
-  return Object.freeze({memoryPendingFacts:()=>memoryRuntime?.pendingFacts()??[],settleNextInstant:()=>scheduler.settleNextInstant(),snapshot:()=>scheduler.exportQuiescentSnapshot(),
+  return Object.freeze({taskPendingFacts:()=>taskRuntime?.pendingFacts()??[],memoryPendingFacts:()=>memoryRuntime?.pendingFacts()??[],predictionPendingFacts:()=>predictionRuntime?.pendingFacts()??[],settleNextInstant:()=>scheduler.settleNextInstant(),snapshot:()=>scheduler.exportQuiescentSnapshot(),
     save(modelIdentity:StructuralIdentity<'ModelIdentity'>,runIdentity:StructuralIdentity<'RunIdentity'>){
       return createCanonicalSave({scheduler,modelIdentity,runIdentity,continuingRunInputs:list([]),stateAdapter:{clone,
         canonicalValue:state=>state.canonicalValue(),validate:state=>{stateModel.validateState(state);domains.validateStatic(state);},

@@ -1,0 +1,651 @@
+{
+  "version": "measurement-prediction-allocation/0.1-draft",
+  "status": "PROPOSED ALLOCATION; NOT PERMANENT",
+  "authority": "docs/formal/MEASUREMENT_PREDICTION.md",
+  "semanticVersion": "measurement-prediction/0.1-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION.md",
+      "sha256": "879a18e3eb1add1c9a9a0a4435f696d1935c3841c1d4b9e871e6868ce8bedcdf"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_RESEARCH_TARGET.md",
+      "sha256": "a65600f951004c610f71186f28c43744f161e13be2177b92389d6281ff8f99bb"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_DRAFT.md",
+      "sha256": "43165576e0a45e192d5c207c7a6e94c36d4e00c79d6cbb2ae9221419097c00cb"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_SYMBOLIC_CLOSURE.md",
+      "sha256": "84d156b2652fc224c361f8f7f2b9ea5cf1dc2122efbf23dbd73a6c8ce450464c"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MEASUREMENT_PREDICTION_SHAPE_REVIEW.md",
+      "sha256": "bc3e9d12a7d156b46ab914c96b972c97c9951ed8be48748bfb8a44f30de94ccc"
+    }
+  ],
+  "records": [
+    {
+      "typeId": 359,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SourceChannelId",
+          "required": true,
+          "type": "ObservationChannelId"
+        },
+        {
+          "id": 2,
+          "name": "ObservedSubjectId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 3,
+          "name": "UnitId",
+          "required": true,
+          "type": "ObservationUnitId"
+        },
+        {
+          "id": 4,
+          "name": "MaxEvidenceCount",
+          "required": true,
+          "type": "unsigned"
+        }
+      ]
+    },
+    {
+      "typeId": 360,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "required": true,
+          "type": "CharacterId"
+        },
+        {
+          "id": 2,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        }
+      ]
+    },
+    {
+      "typeId": 361,
+      "schemaVersion": 1,
+      "name": "MeasurementPrediction",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExpectedReading",
+          "required": true,
+          "type": "rational"
+        },
+        {
+          "id": 2,
+          "name": "EvidenceBasis",
+          "required": true,
+          "type": "set<237/1>"
+        }
+      ]
+    },
+    {
+      "typeId": 362,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Predictions",
+          "required": true,
+          "type": "map<360/1,361/1>"
+        }
+      ]
+    },
+    {
+      "typeId": 363,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionTargetRequirement",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SubjectAccessor",
+          "required": true,
+          "type": "ProjectionAccessorId"
+        },
+        {
+          "id": 2,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 3,
+          "name": "TargetStatePathTemplate",
+          "required": true,
+          "type": "StatePathPattern"
+        },
+        {
+          "id": 4,
+          "name": "OutputAccessor",
+          "required": true,
+          "type": "ProjectionAccessorId"
+        }
+      ]
+    },
+    {
+      "typeId": 364,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionApplicationRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 4,
+          "name": "InputAdmission",
+          "required": true,
+          "type": "274/1"
+        },
+        {
+          "id": 5,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 6,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<277/1>"
+        },
+        {
+          "id": 7,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "322/1"
+        },
+        {
+          "id": 8,
+          "name": "IngressDefinition",
+          "required": true,
+          "type": "276/1"
+        },
+        {
+          "id": 9,
+          "name": "SubjectRequirements",
+          "required": true,
+          "type": "set<343/1>"
+        },
+        {
+          "id": 10,
+          "name": "TargetRequirements",
+          "required": true,
+          "type": "set<363/1>"
+        }
+      ]
+    },
+    {
+      "typeId": 365,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionReadCue",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObserverId",
+          "required": true,
+          "type": "ObserverId"
+        },
+        {
+          "id": 2,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        }
+      ]
+    },
+    {
+      "typeId": 366,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionReadout",
+      "fields": [
+        {
+          "id": 1,
+          "name": "MeasurementPredictionReadoutId",
+          "required": true,
+          "type": "MeasurementPredictionReadoutId"
+        },
+        {
+          "id": 2,
+          "name": "Key",
+          "required": true,
+          "type": "360/1"
+        },
+        {
+          "id": 3,
+          "name": "Prediction",
+          "required": true,
+          "type": "361/1"
+        }
+      ]
+    },
+    {
+      "typeId": 367,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionReadOutputDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OutputRecordSchema",
+          "required": true,
+          "type": "254/1"
+        },
+        {
+          "id": 2,
+          "name": "OutputOccurrenceRule",
+          "required": true,
+          "type": "275/1"
+        }
+      ]
+    },
+    {
+      "typeId": 368,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionReadRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ExecutingSeamId",
+          "required": true,
+          "type": "SeamId"
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamVersion",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "id": 3,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 4,
+          "name": "InputRecordSchema",
+          "required": true,
+          "type": "254/1"
+        },
+        {
+          "id": 5,
+          "name": "OpportunityDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 6,
+          "name": "ReadDomain",
+          "required": true,
+          "type": "set<StatePathPattern>"
+        },
+        {
+          "id": 7,
+          "name": "OutputDefinitions",
+          "required": true,
+          "type": "set<367/1>"
+        },
+        {
+          "id": 8,
+          "name": "WriteCapability",
+          "required": true,
+          "type": "273/1"
+        },
+        {
+          "id": 9,
+          "name": "SubjectRequirements",
+          "required": true,
+          "type": "set<266/1>"
+        },
+        {
+          "id": 10,
+          "name": "TargetRequirements",
+          "required": true,
+          "type": "set<363/1>"
+        }
+      ]
+    },
+    {
+      "typeId": 369,
+      "schemaVersion": 1,
+      "name": "MeasurementPredictionOpportunityDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProducingTransitionKind",
+          "required": true,
+          "type": "TransitionKindId"
+        },
+        {
+          "id": 2,
+          "name": "ApplicationEventTypeId",
+          "required": true,
+          "type": "EventTypeId"
+        },
+        {
+          "id": 3,
+          "name": "ReadEventTypeId",
+          "required": true,
+          "type": "EventTypeId"
+        },
+        {
+          "id": 4,
+          "name": "PredictionDefinitionId",
+          "required": true,
+          "type": "RegistryDefinitionId"
+        },
+        {
+          "id": 5,
+          "name": "ReadDelay",
+          "required": true,
+          "type": "signed SimDuration"
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "namespace": 1127,
+      "name": "MeasurementPredictionReadoutId",
+      "scope": "run-scoped occurrence",
+      "payload": "unsigned-runtime-ordinal"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1036,
+      "payload": "seam/measurement-prediction"
+    },
+    {
+      "namespace": 1009,
+      "payload": "MeasurementPredictionApplicationTransition"
+    },
+    {
+      "namespace": 1009,
+      "payload": "MeasurementPredictionReadTransition"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-prediction-application"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-prediction-read"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-prediction-application-padding"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/measurement-prediction-read-padding"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/measurement-prediction"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/measurement-prediction-opportunity"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/measurement-prediction"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/measurement-prediction-opportunity"
+    },
+    {
+      "namespace": 1025,
+      "payload": "authority/belief-expectation"
+    },
+    {
+      "namespace": 1032,
+      "payload": "leaf/measurement-prediction"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/measurement-prediction-prior"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/measurement-prediction-read"
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 359,
+      "fieldId": 1,
+      "requiredNamespace": 1005,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 359,
+      "fieldId": 2,
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 359,
+      "fieldId": 3,
+      "requiredNamespace": 1039,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 360,
+      "fieldId": 1,
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 360,
+      "fieldId": 2,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 363,
+      "fieldId": 1,
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 363,
+      "fieldId": 2,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 363,
+      "fieldId": 4,
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 364,
+      "fieldId": 1,
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 364,
+      "fieldId": 3,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 365,
+      "fieldId": 1,
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 365,
+      "fieldId": 2,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 366,
+      "fieldId": 1,
+      "requiredNamespace": 1127,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 368,
+      "fieldId": 1,
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 368,
+      "fieldId": 3,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 368,
+      "fieldId": 5,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 369,
+      "fieldId": 1,
+      "requiredNamespace": 1009,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 369,
+      "fieldId": 2,
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 369,
+      "fieldId": 3,
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 369,
+      "fieldId": 4,
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    }
+  ],
+  "reusedRoles": [
+    {
+      "recordTypeId": 203,
+      "fieldId": 2,
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 2,
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 366,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1127,
+      "domainValidatorId": null
+    }
+  ],
+  "unionVariants": [],
+  "finiteValues": [],
+  "newFailureCodes": [
+    "PREDICTION_OBSERVATION_ALREADY_APPLIED",
+    "PREDICTION_EVIDENCE_LIMIT_EXCEEDED",
+    "PREDICTION_TARGET_COLLISION",
+    "PREDICTION_STAGE_VIOLATION"
+  ],
+  "excluded": [
+    "new application/cue/observation occurrence identity",
+    "new learning route or evidence union variant",
+    "new state-family identity",
+    "existing model/corpus/allocation changes",
+    "runtime implementation or PRED qualification"
+  ]
+}

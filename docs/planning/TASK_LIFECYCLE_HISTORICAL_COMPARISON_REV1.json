@@ -1,0 +1,91 @@
+{
+  "status": "BOUNDED LIFECYCLE / ACTUAL HISTORICAL LIVE-LIST COMPARISON PASS",
+  "sourceFingerprints": [
+    {
+      "path": "reference/src/model/commitment.ts",
+      "sha256": "6fd99d3141db5bc656cebe4cfcf178f86620cd9190f463c4b9176adda01c384f"
+    },
+    {
+      "path": "reference/src/test/phase2_97CommitmentLifecycle.test.ts",
+      "sha256": "0078f45ce13dc46f875f8ed5d4810e91a12f90bd40bb74b55d1f5143ebe1c012"
+    },
+    {
+      "path": "src/campaign2/taskExecution.ts",
+      "sha256": "867e93144647c304551189fc4a48282e17dff1f043e3194df0c179fcd3cd37b2"
+    },
+    {
+      "path": "src/campaign2/taskFactory.ts",
+      "sha256": "d953fa5f7c52aa2188e65e160966543549f295481c75f1afb3220213b12d2716"
+    },
+    {
+      "path": "src/campaign2/taskModel.ts",
+      "sha256": "fd5e874b0e14b50c812cc19e19bad3b8b3f1ca4779b95630d5ea4e1b2ea19189"
+    },
+    {
+      "path": "src/campaign2/taskModelReview.ts",
+      "sha256": "7c451327dc192e79c762fc550b7684891f7ba92cb1ed093c262a1a0c92905bf4"
+    },
+    {
+      "path": "scripts/compare-task-live-list.mjs",
+      "sha256": "45b04162d6ab4b5d2346c5eab7aa0e9fd9c25bdeed1f1337ac79939b9df4e854"
+    }
+  ],
+  "history": [
+    {
+      "instant": "0",
+      "liveInstances": [],
+      "referenceSignals": []
+    },
+    {
+      "instant": "2",
+      "liveInstances": [
+        0
+      ],
+      "referenceSignals": [
+        {
+          "referent": "task-0",
+          "role": "MotiveGenerating",
+          "strength": "1/10"
+        }
+      ]
+    },
+    {
+      "instant": "3",
+      "liveInstances": [
+        0
+      ],
+      "referenceSignals": [
+        {
+          "referent": "task-0",
+          "role": "MotiveGenerating",
+          "strength": "1/10"
+        }
+      ]
+    },
+    {
+      "instant": "4",
+      "liveInstances": [
+        1
+      ],
+      "referenceSignals": [
+        {
+          "referent": "task-1",
+          "role": "MotiveGenerating",
+          "strength": "1/10"
+        }
+      ]
+    },
+    {
+      "instant": "7",
+      "liveInstances": [],
+      "referenceSignals": []
+    }
+  ],
+  "sameHolderDistinctInstances": true,
+  "limitations": [
+    "Eligibility here is external test analysis of public quiescent state, not a canonical workspace or motive producer.",
+    "The reference function receives an explicitly selected live list; it does not implement the new automatic lifecycle.",
+    "Reference full identity-rich lifecycle controls execute separately in the preserved test suite.",
+    "No new Campaign2 motive, reason nucleus, identity, dice, action choice or social fulfillment is qualified."
+  ]
+}

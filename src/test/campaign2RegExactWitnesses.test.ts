@@ -32,6 +32,36 @@ function modelSource(dynamic:boolean,rate=1n,repair=false){
 }
 const state=(d:bigint)=>new AuthoritativeState(d===0n?[]:[{path:{rootStateTypeId:302n,fieldId:3n,selectors:[{kind:'mapKey',key:r('RegulatoryAdaptationKey',{CharacterId:character,RegulatoryVariableId:variable})}]},value:r('RegulatoryAdaptationValue',{Magnitude:signed(d)})}]);
 
+it('AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond',async()=>{
+ for(const [step,validPrior,invalidPrior,expected] of [[1n,19n,20n,20n],[-1n,-79n,-80n,-80n]]){
+  const source=modelSource(false,1n,step<0n),registry=source.registry.slice(),model=await prepareCampaign2Model(source),{reg}=await compileBoundedModelDeclarations(source);
+  const fact=r('AuthoredActualAdaptationFact',{Fact:r('RegulatoryExposureFact',{CharacterId:character,ExposureReferentId:character,ActualContactCount:unsigned(1)})});
+  const args=(p:bigint)=>({initialState:enc(state(p).canonicalValue()),orderedInputs:enc(list([list([signed(2),unsigned(110),AUTHORED_FACT_EVENT,fact,list([])])])),runSeed:new Uint8Array(32)});
+  const good=await createCampaign2Run(model,args(validPrior));await good.settleNextInstant();
+  const entries=restoreAuthoritativeState(decodeCampaign2(good.snapshot().state)).entries();
+  expect(entries.find(e=>e.path.fieldId===3n)?.value).toEqual(r('RegulatoryAdaptationValue',{Magnitude:signed(expected)}));
+  expect(entries).toHaveLength(4); // Four ordinary regulatory targets; no reference/anchor state.
+  expect(reg.referenceOperatingPoint(character,variable,2n)).toEqual({kind:'ReferenceValue',value:signed(80)});
+  expect(reg.validateAdaptedReference(character,variable,2n,signed(expected))).toEqual({kind:'Valid'});
+  const bad=await createCampaign2Run(model,args(invalidPrior)),before=bad.snapshot();
+  await expect(bad.settleNextInstant()).rejects.toThrowError(expect.objectContaining({code:'ADAPTATION_REFERENCE_OUT_OF_RANGE'}));
+  for(const field of ['state','outputs','trace','clock'] as const)expect(bad.snapshot()[field]).toEqual(before[field]);
+  expect(source.registry).toEqual(registry);
+ }
+});
+
+it('AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier',async()=>{
+ const source=modelSource(false),{domains}=await compileBoundedModelDeclarations(source),known=state(1n).entries()[0].path;
+ for(const d of [-80n,20n])expect(()=>domains.validateMagnitude(known,d,2n)).not.toThrow();
+ for(const d of [-81n,21n])expect(()=>domains.validateMagnitude(known,d,2n)).toThrowError(expect.objectContaining({code:'ADAPTATION_REFERENCE_OUT_OF_RANGE'}));
+ const unknown={...known,selectors:[{kind:'mapKey' as const,key:r('RegulatoryAdaptationKey',{CharacterId:character,RegulatoryVariableId:id(1029,'variable/unknown-control')})}]};
+ expect(()=>domains.validateMagnitude(unknown,1n,2n)).toThrowError(expect.objectContaining({code:'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE'}));
+ const unknownState=new AuthoritativeState([{path:unknown,value:r('RegulatoryAdaptationValue',{Magnitude:signed(1)})}]);
+ expect(()=>domains.validateReferences(unknownState,2n)).toThrowError(expect.objectContaining({code:'ADAPTATION_REFERENCE_UNKNOWN_VARIABLE'}));
+ const model=await prepareCampaign2Model(source);
+ await expect(createCampaign2Run(model,{initialState:enc(unknownState.canonicalValue()),orderedInputs:enc(list([])),runSeed:new Uint8Array(32)})).rejects.toThrow(/unknown regulatory variable/);
+});
+
 it('REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write',async()=>{
  const source=modelSource(true),registry=source.registry.slice(),compile=regModule.compileRegulatoryReferences;
  const providers:ReturnType<typeof compile>[]=[];

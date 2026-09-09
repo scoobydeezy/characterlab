@@ -1,0 +1,287 @@
+{
+  "status": "CORRECTION EVIDENCE SUBMITTED",
+  "contract": "adaptation-input/0.31-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+    },
+    {
+      "path": "src/test/campaign2ReadEvidence.test.ts",
+      "sha256": "3ee13cda525201cdad085bb2b226219fedf6f7f8361553ecdeb9f98f21011194"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E7 staged read evidence rejects omit substitution",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 staged read evidence rejects reverse substitution",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 staged read evidence rejects share substitution",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 staged read evidence rejects encoded substitution",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 actual projection-object sharing is rejected during the second rule",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 rejects active target-next-evaluation-gate interleaving before nested reads",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 public model rejects executor binding, read and enumeration hooks without invoking them",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 distinct rule projections publish five isolated read segments",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 rejects omit instrumentation before staging",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E7 rejects accessor instrumentation before staging",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-active-execution-guard",
+      "status": "DETECTED",
+      "from": "if(active)",
+      "required": "AD-E7 rejects active",
+      "tests": [
+        {
+          "name": "AD-E7 staged read evidence rejects omit substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects reverse substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects share substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects encoded substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 actual projection-object sharing is rejected during the second rule",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects active target-next-evaluation-gate interleaving before nested reads",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 public model rejects executor binding, read and enumeration hooks without invoking them",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 distinct rule projections publish five isolated read segments",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects omit instrumentation before staging",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects accessor instrumentation before staging",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "allow-finish-during-active-evaluation",
+      "status": "DETECTED",
+      "from": "if(active||closed||cursor!==executions.length)",
+      "to": "if(closed||cursor!==executions.length)",
+      "required": "AD-E7 rejects active",
+      "tests": [
+        {
+          "name": "AD-E7 staged read evidence rejects omit substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects reverse substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects share substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects encoded substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 actual projection-object sharing is rejected during the second rule",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects active target-next-evaluation-gate interleaving before nested reads",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 public model rejects executor binding, read and enumeration hooks without invoking them",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 distinct rule projections publish five isolated read segments",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects omit instrumentation before staging",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects accessor instrumentation before staging",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "omit-per-rule-instrumentation-check",
+      "status": "DETECTED",
+      "from": "if(JSON.stringify(segment.map(v=>key(actualReadRecordValue(v))))!==JSON.stringify(expectedSegment))",
+      "required": "AD-E7 rejects",
+      "tests": [
+        {
+          "name": "AD-E7 staged read evidence rejects omit substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects reverse substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects share substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects encoded substitution",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 actual projection-object sharing is rejected during the second rule",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 rejects active target-next-evaluation-gate interleaving before nested reads",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 public model rejects executor binding, read and enumeration hooks without invoking them",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 distinct rule projections publish five isolated read segments",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects omit instrumentation before staging",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 rejects accessor instrumentation before staging",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "omit-staged-read-comparison",
+      "status": "DETECTED",
+      "from": "if(JSON.stringify(result.actualReadRecords.map(v=>key(actualReadRecordValue(v))))!==JSON.stringify(expected.reads)||JSON.stringify(result.actualReads.map(key))!==JSON.stringify(expected.reads))",
+      "required": "AD-E7 staged read evidence",
+      "tests": [
+        {
+          "name": "AD-E7 staged read evidence rejects omit substitution",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects reverse substitution",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects share substitution",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 staged read evidence rejects encoded substitution",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        },
+        {
+          "name": "AD-E7 actual projection-object sharing is rejected during the second rule",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects active target-next-evaluation-gate interleaving before nested reads",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 public model rejects executor binding, read and enumeration hooks without invoking them",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 distinct rule projections publish five isolated read segments",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects omit instrumentation before staging",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E7 rejects accessor instrumentation before staging",
+          "state": "pass"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Internal admitted batch boundary, not a public executor injection API.",
+    "Partial AD-E7 evidence only; no whole-vector or B/FCT acceptance.",
+    "Historical evaluator-sensitive reports require explicit refresh before whole B/FCT."
+  ]
+}
