@@ -1,5 +1,10 @@
 # CharacterLab
 
+Current research status: [CURRENT.md](docs/planning/CURRENT.md). Campaign 2's bounded
+scaffold is qualified; [Campaign 3 readiness](docs/planning/CAMPAIGN3_ENTRY_READINESS.md)
+distinguishes preserved results from missing whole-phenomenon setups.
+
+
 CharacterLab is the deterministic research proving ground for Vivarium's character architecture. It begins with an intentionally complete causal model, proves each seam, and simplifies only when controlled evidence supports equivalence.
 
 ## Read first

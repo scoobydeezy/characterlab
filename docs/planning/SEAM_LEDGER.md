@@ -1,6 +1,40 @@
 # Seam Ledger
 
-**Status:** initial refoundation index
+**Status:** current bounded implementation index, reconciled 2026-09-10.
+
+Start with [CURRENT.md](CURRENT.md), [Campaign 3 readiness](CAMPAIGN3_ENTRY_READINESS.md),
+and the [semantic number glossary](CURRENT_RECORD_GLOSSARY.md). “Qualified” below
+always means the named bounded contract/profile, never the whole ideal capability.
+
+| Seam family | Current authority / evidence | Current bounded state | Remaining gate |
+|---|---|---|---|
+| Deterministic time, random, state, trace | substrate/0.2-candidate and Campaign0 verdicts | Implemented/qualified | New domains/coupling profiles require explicit proof |
+| Constitution/development/physiology | Architecture §§6–7; EMB-001 | No physiological dynamics or embodied Need source | Versioned body/interoception/motive contracts; proposed physiology corpus |
+| Regulatory reference and displacement | regulatory-reference/0.5-candidate; adaptation-input/0.31-candidate; bounded factory qualification | Implemented/qualified authored reference arithmetic and retained adaptation | Not general physiological dynamics or motivational efficacy |
+| Observation/SEM/recognition | semantic-binding/0.1-candidate; SEM-001J | Qualified Campaign1 finite epistemic path | Broad ontology/social recognition extensions |
+| Perceptual attention and encoding salience | ATTN-001; MEC-005 CONTROL+CONTRACT; MEC-007 CONTROL; RET-001 remains retired | Unimplemented; explicitly tracked. Perception/Attention remains in canonical topology | Attention capacity, residual-pool and alternative salience contracts/experiments |
+| Consequence SEM → OutcomeEvaluation → CharacterLearningEvidence | character-learning-evidence/0.5-candidate and transition-admission/0.4-candidate | Qualified generated, observer-safe, no-state evidence path | New evidence types/consumers need their own permission/proof |
+| Measurement carriage, retention and recall | measurement-evidence-carriage/0.1-candidate; measurement-episodic-memory/0.1-candidate | Qualified bounded episodic path | General top-K/accessibility/decay/reinforcement not implemented; PHEN-MEM not implied |
+| Measurement belief/prediction | measurement-prediction/0.1-candidate and accepted successor packaging | Qualified bounded forecast | PHEN-LEARN exact precision-update semantics remain outside this profile; ORD-001 isolated |
+| Workspace → appraisal → transient concern | task-workspace/0.1-candidate; task-appraisal-affect/0.1-candidate | Qualified capacity0..3 and bounded discrepancy/concern | General competing control, multi-factor affect and later feedback not qualified |
+| Task motives/instructions → options | task-motive-context/0.1-candidate; task-plan-context/0.1-candidate; task-option-construction/0.1-candidate | Qualified two adopted tasks/actions, immutable instructions | Second motive family, general planning and social ownership remain open |
+| Raw reasons → nuclei → arbitration | task-reason-source/0.1-candidate; reason-dice/0.1-candidate; task-arbitration/0.1-candidate | Qualified retained exact grammar, bounded public source | General motives/Avoid/multi-source public corpus not inferred from component controls |
+| Evidence overlap | reason-evidence-coverage/0.1-candidate | Qualified aggregate-coverage component | Independent heterogeneous source-family witness remains missing |
+| Expression → qualification → identity → reasons | task-decision-expression/0.1-candidate; task-identity-evidence/0.1-candidate | Qualified bounded loop; separate pre-entry public ablation receipt | Whole PHEN-BIO biography and general DEC-001 remain open |
+| Intent → plan → attempt → execution | bounded-protocol-execution/0.1-candidate | Qualified fixed protocol; blocked outcome is distinct from frozen expression | General skill, interference observers, efficacy/planning semantics |
+| Protocol consequence observation | protocol-consequence-observation/0.1-candidate | Qualified points0/1 and censored2; truth excluded | General sensory/attention model |
+| Learning consolidation and automatic adaptation | Cognitive common-stage profile and qualified ADAPT composition | Separate sole owners, prepared B0 stage; qualified writes only | Unimplemented state families are not automatically writable |
+| Affect/control/regulatory feedback | Architecture §3.2; ORD-005; ATTN-001 | No general feedback implementation | Named impulse/order, affect distinctions and attention/control contracts |
+| Social/person-model/communication | Architecture; ORD-002, TRC-003 | Not implemented | No public PHEN-COMMIT social-witness proof |
+| Trace/persistence/inspection | cognitive trace and persistence qualification | Exact trace and complete-prefix RNG restore qualified | External maps and privacy-safe researcher UI remain gated |
+
+## Historical snapshots — not current implementation status
+
+The original table and dated acceptance log below are preserved as history. Their
+“none”, “blocked”, “not authorized” and earlier Campaign-active statements must not
+be used as today's implementation disposition. Current status is the table above
+and the linked qualification records; accepted mathematics/allocations remain in
+formal contracts, not in this index.
 
 | Seam family | Formal contract | Current state | Implementation gate |
 |---|---|---|---|

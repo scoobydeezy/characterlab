@@ -792,3 +792,45 @@ Final consolidated validation: COGNITIVE_FINAL_SUITE_RECEIPT_REV1.json records
 with source/test fingerprints unchanged during both runs. TypeScript, reference
 boundary and final whitespace checks PASS. This supersedes earlier test counts;
 Campaign2 completion and its bounded research exclusions remain as recorded above.
+
+## VER-C3-PRE-IDENTITY-001 — Earned identity versus history without feedback
+
+- Date:2026-09-10; internal empirical review under the user's pre-entry-review request.
+- Candidate/contracts: MEC-018 raw earned standing participation in reason activation;
+  task-reason-source/0.1-candidate, reason-dice/0.1-candidate,
+  task-identity-evidence/0.1-candidate, frozen cognitive model profile.
+- Compared models: exact baseline and standing-access-off ModelIdentity values in
+  CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json. Both were already in the21-member
+  frozen cohort. Registry normalization proves only RawSignalDefinition StandingEnabled
+  differs; content and numeric parameters are byte-equal. No code mutation or new ID.
+- Declared domain: one holder, two adopted tasks, fixed probe1/cognition2/3/4/probe5/
+  cognition6 sequence, empty learned S0, D=-50, four seeds with final byte0..3.
+- Corpus/coverage: corpus/0.27.0 and PHEN-BIO-001/1.0.0-draft feedback-ablation subcase,
+  not whole phenomenon qualification. Governing digest remains unchanged.
+- Comparison: first three complete decisions and all state/history through time5
+  equal. At time6 compare exact option probabilities, mode and chosen action.
+  The previously retained three contributions remain byte-identical after the probe.
+- Randomness: every shared natural address has an identical complete draw record
+  (six per pair). After the mode changes, draw sets legitimately differ; no claim
+  of coupling unshared addresses or the whole PHEN-BIO third-seed design.
+- Observed difference: enabled feedback gives probabilities(1/2,1/2), PlayerFacingRoll;
+  history-without-feedback gives(0,1), Auto, in all four pairs. Chosen action differs
+  for three seeds. Early history is preserved; later newly formed history may differ.
+- Mathematical finding: baseline integer standing modifier stays0. The effect travels
+  through standing's contribution to reason relevance/activation, rescuing a weak
+  nonzero base. This falsifies the suspected “zero integer modifier means no effect”.
+- Semantic finding: retaining history without allowing it into future reasons is
+  not behaviorally equivalent in this matched domain. No authored identity, hidden
+  state change, independent identity die or zero-base resurrection was introduced.
+- Verdict: RETAINED as a bounded reference distinction against this actual ablation.
+  General MEC-018 necessity and whole PHEN-BIO remain UNRESOLVED, not automatically PASS.
+- Known uncovered regions: third-seed probes, external coupling maps, more motive
+  families, long-run contradiction/coercion/cost, broad human plausibility and scaling.
+  standing-integer pure compiler comparisons are separate component evidence only.
+- Reopen conditions: an alternative reproduces the same matched-state distribution
+  effects without this distinction; calibration/activation law changes; added sources
+  expose duplicated evidence; broader biography controls fail.
+- Artifacts: CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json,
+  CAMPAIGN3_IDENTITY_ABLATION_SUMMARY.json and CAMPAIGN3_PRE_ENTRY_REVIEW_DISPOSITION.md.
+  Revision1 was exploratory full-run comparison; revision2 adds the owning matched
+  prefix checks. Final-history inequality is an effect, not loss of pre-probe history.

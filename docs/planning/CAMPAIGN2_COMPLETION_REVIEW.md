@@ -1,5 +1,12 @@
 # Campaign 2 completion review
 
+Pre-entry clarification, 2026-09-10: see CAMPAIGN3_PRE_ENTRY_REVIEW_DISPOSITION.md
+and CAMPAIGN3_ENTRY_READINESS.md. This bounded completion remains valid; it is not
+whole ideal-loop or whole phenomenon coverage. Source substitutions below are
+conformance/mutation evidence, not alone a psychological necessity verdict. A later
+genuine public identity-feedback comparison has its own scoped VER-C3-PRE-IDENTITY-001
+verdict. No frozen model, allocation or corpus commitment changed.
+
 **Campaign 2 COMPLETE for the thin bounded North-Star reference scaffold**, 2026-09-09.
 This is an internal adversarial qualification under the user's explicit instruction
 to work independently through completion. It is not external review, a reduction

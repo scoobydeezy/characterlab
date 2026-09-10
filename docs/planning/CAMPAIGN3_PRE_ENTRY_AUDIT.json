@@ -1,0 +1,45 @@
+{
+  "status": "PRE-ENTRY PACKET CONSISTENT; NO NEW WHOLE PHENOMENON PASS",
+  "intakeEntries": 8,
+  "requiredFieldsPerEntry": 12,
+  "localLinksChecked": 15,
+  "preservedFingerprintChecks": 446,
+  "productionSource": "All prior full-suite source fingerprints unchanged; tests not rerun in this pass.",
+  "ablation": "Four public matched pairs plus separately labeled generated-source component contrasts; exact prefix/history/shared-draw assertions PASS.",
+  "documents": [
+    {
+      "path": "docs/planning/CURRENT.md",
+      "sha256": "3f476c5c2843ff252426c838940761b0c20067b8f0b417e6bb600ed479610e2c"
+    },
+    {
+      "path": "docs/planning/CURRENT_RECORD_GLOSSARY.md",
+      "sha256": "005715acfd51a58018ea168da39fb2350c986ea0b2fd3a7e5546868773b80843"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ENTRY_READINESS.md",
+      "sha256": "aa55de822a7939eee13caa32de6632fc767866e60993726c23c8302116e7cc7d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_PRE_ENTRY_REVIEW_DISPOSITION.md",
+      "sha256": "f9fe986b1b4cdcb427ab9bd17e98cd2ebbb57ad712c62bcd2820e5efc1f80525"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_CORPUS_INTAKE_DRAFT.md",
+      "sha256": "6698631988a13e4b12d5cb94e8d6067841d27795c21d5548809fc0857862f2b6"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json",
+      "sha256": "052e9e7e960869806005204f9102fb74bbd53a7b49c9ecb406dc6a3b094a2a52"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_IDENTITY_ABLATION_SUMMARY.json",
+      "sha256": "f5be082f0831bea13e2d7f7aa67d5067f71b63848695216167e6da32f14acf69"
+    }
+  ],
+  "script": {
+    "path": "scripts/audit-campaign3-pre-entry.mjs",
+    "sha256": "c67c807168f320f5cc35cab5786a7ac960b4b079368394fdcef5fd7afbc1be75"
+  }
+}

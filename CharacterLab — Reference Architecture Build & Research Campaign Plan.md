@@ -129,7 +129,7 @@ Current disposition (2026-09-09): **COMPLETE in the bounded reference-scaffold s
 the genuine generated path, historical controls and current adversarial evidence.
 The cognitive model/allocations and PHEN-ADAPT/corpus commitments are unchanged.
 Earlier Campaign 1/2 active-status prose in this plan records historical checkpoints.
-Campaign 3 is next; its wider phenomenon replay and psychological sufficiency are
+Campaign 3 discovery is active; its wider phenomenon replay and psychological sufficiency are
 not implied by this completion. General DEC-001, ORD-001 and other isolated future
 obligations remain open.
 
@@ -157,6 +157,46 @@ Historical `PORT` entries are initial reference implementations and controls, ne
 - no `P0` decision relevant to the slice remains open.
 
 ## 6. Campaign 3 — Traversability and retained-corpus replay
+
+### Pre-entry reconciliation (2026-09-10)
+
+Read `docs/planning/CAMPAIGN3_ENTRY_READINESS.md` before claiming a runnable whole
+phenomenon. Campaign2 completed the bounded thin path; it did not implement every
+ideal feedback edge. Campaign3 begins with coverage/admission inventory and admitted
+comparisons, preserving the mandatory set below and SEM as a regression companion.
+Missing public setups remain BLOCKED, not executed FAIL and not vacuous PASS.
+
+The fifteen Research Brief families all remain in the coverage denominator. Review
+the eleven new corpus intake proposals before intentionally committing a successor
+manifest; corpus0.27.0 and PHEN-BIO-001 (biography) keep their exact identities.
+Gap ranking must include normative importance and invalidation risk for unimplemented
+families. Missing fixtures mean unknown discrimination, not zero importance.
+
+Campaign3 is active for discovery: required phenomenon → public expressibility →
+minimum missing contract → public fixture → serious controls → bounded verdict.
+Missing coverage blocks the verdicts it could plausibly invalidate, not the entire
+program. Record that relevance analysis for each reduction; do not demand every
+possible feedback loop before any bounded comparison. General Campaign4 ranking
+awaits reasonable representation across the fifteen families.
+
+The first new frontier is embodied/interoceptive motivation paired with MULTISOURCE;
+see `docs/planning/CAMPAIGN3_BODY_RESEARCH_FRONTIER.md`. Investigate attention's
+permission, selection, encoding and retrieval boundaries alongside it, without making
+general attention a BODY prerequisite unless the actual fixture requires it. Preserve
+Need-ownership alternatives and leave cross-family consolidation open. UI debt is
+visible but does not block entry. No new implementation follows from this direction
+without accepted seam/model gates.
+
+Pilot competing-model experiments may run before Campaign4 when their setup is
+already admitted. VER-C3-PRE-IDENTITY-001 is one such bounded public ablation, not
+whole biography qualification. Source-mutation detection alone is not a psychological
+reduction verdict. Reserved old numeric IDs do not require a retired/ablated mechanism
+to execute; use distinct model commitments and preserve historical replay.
+
+Whole Campaign3 PASS remains unavailable until its full declared obligations are
+executed or explicitly amended through the authority hierarchy. A new motive source,
+body/affect loop, retrieval law or observer view still requires its own accepted seam
+and model gates. Do not shrink the mandatory set to disguise missing expressibility.
 
 Run the intact scaffold against the populated corpus. Initial mandatory set:
 

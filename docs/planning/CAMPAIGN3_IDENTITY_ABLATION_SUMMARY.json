@@ -1,0 +1,150 @@
+{
+  "status": "BOUNDED PUBLIC IDENTITY FEEDBACK ABLATION DISCRIMINATES",
+  "source": {
+    "path": "docs/planning/CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json",
+    "sha256": "052e9e7e960869806005204f9102fb74bbd53a7b49c9ecb406dc6a3b094a2a52"
+  },
+  "script": {
+    "path": "scripts/summarize-campaign3-identity-ablation.mjs",
+    "sha256": "1aba90ef21a73bf429a952a558ea5298540d12761dbfc83cfc2a2340df560a73"
+  },
+  "results": [
+    {
+      "seed": 0,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 1,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 2,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 3,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    }
+  ],
+  "interpretation": "Standing changes reason activation while integer modifier remains zero. Existing history is not deleted; future updates may diverge. Whole PHEN-BIO remains open."
+}

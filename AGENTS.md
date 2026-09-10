@@ -18,6 +18,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+Campaign 3 discovery is active (2026-09-10): start at `docs/planning/CURRENT.md` and
+`CAMPAIGN3_ENTRY_READINESS.md` in that directory. The seam ledger's front table is
+current; its older table/log is explicitly historical. Missing phenomena are BLOCKED
+or PARTIAL, not passed by Campaign2 completion. ATTN-001 and EMB-001 own newly explicit
+debts. PHEN-BIO-001 means biography and keeps its immutable ID. New corpus proposals
+are not yet members of the frozen corpus. Broad source/feedback extensions still
+require accepted contracts; do not implement them from the external review alone.
+The first new contract investigation is `CAMPAIGN3_BODY_RESEARCH_FRONTIER.md` in
+that directory. Missing coverage blocks affected verdicts, not all bounded research.
+
 Current checkpoint (2026-09-09): Campaign 2 is complete in the bounded thin-scaffold
 scope of `docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md`. The cognitive pipeline and
 complete-prefix RNG persistence are qualified under their exact frozen versions.

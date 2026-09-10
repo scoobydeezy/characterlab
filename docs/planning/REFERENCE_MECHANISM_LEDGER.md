@@ -248,3 +248,34 @@ converted into a general RETAINED or reduction verdict.
 
 The known weighted-Jaccard subset residual and historical calibration limitations
 remain visible. No North-Star mechanism was eliminated by this port qualification.
+
+## Campaign 3 pre-entry obligations — 2026-09-10
+
+ATTN-001 now explicitly owns unimplemented perceptual attention/encoding salience.
+MEC-005 remains CONTROL+CONTRACT, MEC-007 and CTL-004 remain CONTROL, and RET-001
+remains retired; no new reduction verdict alters those dispositions. The residual
+pool and independent/shared-budget alternatives must be compared through permitted
+observer evidence. EXP-007/015 are preserved in the proposed ATTENTION intake,
+which is not counted as a frozen corpus member before an intentional successor.
+
+EMB-001 owns body-kinetics/interoception/embodied-motive expressibility. CTL-001 remains
+a control; REG is implemented authored-reference mathematics, not an unimplemented
+physiology model. The proposed BODY and MULTISOURCE entries preserve that difference.
+
+The new VER-C3-PRE-IDENTITY-001 executes a public baseline/history-without-feedback
+comparison and retains earned standing's activation effect in its four-seed matched
+probe domain. General biography remains unqualified. Historical numeric reservation
+is not a mandate to keep a mechanism active; future ablations use distinct model
+commitments and may omit a retired mechanism while its old decoder remains replayable.
+
+SUB-013 and TRC-003 remain explicit inspection/UI obligations. No observer-view
+semantics or omitted feedback loop is retired by the current thin-path qualification.
+
+Planning response, 2026-09-10: BODY + MULTISOURCE is the first new contract frontier;
+CTL-001 remains a stored-meter control against the architecture's preferred
+interoceptively mediated embodied pressure. Do not select a cross-family consolidation
+law from provenance overlap alone. ATTN-001 separates permission, active selection,
+encoding strength and later access; residual-pool and multiplicative salience are
+comparison mechanisms. HABIT, RELATIONSHIP and LONGITUDINAL intake preserves P3-012
+and EXP-011/012/013 without declaring their mechanisms ported or qualified. UI debt
+does not block Campaign3 entry. See CAMPAIGN3_BODY_RESEARCH_FRONTIER.md.
