@@ -1,0 +1,526 @@
+{
+  "disposition": "BOUNDED WHOLE SYMBOLIC SHAPE ACCEPTED; NOT ALLOCATED OR RUNTIME QUALIFIED",
+  "reviewer": "Primary agent self-review requested by user; no external review claimed",
+  "verdict": {
+    "path": "docs/formal/EMBODIED_RESERVE_SHAPE_ACCEPTANCE.md",
+    "sha256": "308dd070b44fc629e1e1853c53638fbd5c29c0d5d71deced55a9d12e4a129601"
+  },
+  "manifest": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.json",
+    "sha256": "229dbeb52a9f60a4ef9fc6220b87e7ef7a5ade206c0dfb258b807100dc5a862e"
+  },
+  "authorities": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "08b5c6b65417ed1acbba57a81a11f9c35634fbfbac12c6819d1b5d2b0744f473"
+    },
+    {
+      "path": "CharacterLab — Ideal Character Architecture North Star.md",
+      "sha256": "3257ea52993c75e424e73b1fa9f7a808f37b9dcf6ff5a3a4105376b6b7e9ee89"
+    },
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "2d3bc470f2c3158d13ff73ba08f011ddc00b507753a157a11791ffbc7f885f93"
+    },
+    {
+      "path": "CharacterLab — Ideal Character Research Program Brief.md",
+      "sha256": "90ab1756022132f6fed1d457eadd4636c0931d6f508b8f4b56af0eafdf518265"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "050435eca7053f06eb925f63894a9dcdb0c700965856c57f48f0b8167de0ed88"
+    }
+  ],
+  "records": 32,
+  "fields": 128,
+  "proofVectors": [
+    {
+      "id": "EMB-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-A kinetics | q_a=80 at0; r=1 versus2. At10 amounts70 versus60 despite equal initial q. Constant-current-level control fails. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-B partition | r=1/3, q_a=80. Query at1 then2 then3 versus3 directly gives79 with unchanged anchor. Rounded-per-query and discarded-remainder controls fail. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-C depletion | q_a=2,r=1: q(3)=0; add5 at3, then q(4)=4. Hidden consumption-debt carryover fails. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-D bounded refill | Before95, e5 versus9 produces After100 in both, Overflow0 versus4. Matching level-channel evidence cannot disclose overflow. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-E bin alias | q41 versus49, w20 gives[40,60] and p0. Direct-q pressure gives different positive values and must be rejected. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-F resolution | q45: w20 gives[40,60],p0; w10 gives[40,50],p1/6. Equal truth can produce different pressure through the channel alone. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-G",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-G ties | w20: q0→[0,20], q20→[20,40], q100→[80,100]. Invalid width0 and nonintegral C/w reject. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-H",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-H missing | Denied/unavailable channel yields Unavailable, never Known(0) or pressure1. No unauthorized body read or evidence emission. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-I",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-I identity | Wrong observer/body mapping rejects; opaque ID spelling and another observer's allocations cannot change p. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-J",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-J timing | Pre110 and post110 reserve differ; frozen current-lane pressure stays unchanged. Later admitted observation can affect next-instant pressure only. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-K",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-K ownership | Pressure/observation produce no character-learning patch; negative e and forged writes reject with complete state/output/allocator rollback. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-L",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-L restore | Prefix restore before/after depletion and replenishment reproduces body, evidence and subsequent pressure; changed parameter/model commitments reject. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EMB-M",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-M receiving | Genuine task and body origins share an action without fake TaskReferent, duplicate option or erased independent ground. BLOCKED pending receiving contract. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    },
+    {
+      "id": "EMB-N",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-N action knowledge | Removing/changing adopted action knowledge changes candidate access/association without changing physical pressure. Hidden world efficacy cannot rescue missing knowledge. BLOCKED pending bridge. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    },
+    {
+      "id": "EMB-O",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-O overlap | Shared observer-safe support versus independent grounds exercise distinct receiving alternatives. No world-ID overlap join; cross-family law remains open. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    },
+    {
+      "id": "EOBS-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-A | Nondegenerate finite interval rejects through old203/204; succeeds only through the new committed schema/producer. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-B | Level versus effect meanings cannot be exchanged despite equal endpoint bytes. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-C | Caller-authored payload, observation ID, version string or copied trace cannot mint producer/SEM binding. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-D | Correct observation paired with another same-observer frozen experience rejects; support identity alone cannot substitute altered payload bytes. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-E | Wrong observer or unmapped subject rejects before handler; no static or nested alternate roster access. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-F | Pressure sees exact detached sample and H, no payload resolver, body handle, registry object or truth ancestry. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-G",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-G | New observation reference is rejected by old evidence consumers; no global ReadDomain widening. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-H",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-H | Missing result has no SEM evidence/support and gives Unavailable; Known(0) remains distinct. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-I",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-I | Permission/availability-false branches read no body and reveal no distinct reason. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-J",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-J | Matched interval/support yields equal pressure despite hidden q, rate, overflow and inaccessible facts. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-K",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-K | Duplicate registration/delivery, reused occurrence, stale event or altered admitted payload rejects atomically. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-L",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-L | Present/unavailable profile branches use equal relevant allocation budgets without fake227 or leaked padding. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-M",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-M | Projection reads are traced accurately; sampling/pressure writes no persistent learning state. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-N",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-N | Same-instant post110 changes cannot reach the earlier sample; restore preserves exact historical payloads. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EOBS-O",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "exactLine": "| EOBS-O | A support-only SEM is admitted honestly or remains blocked; no invented tracking/classification to satisfy shape. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-A | Extra/missing/duplicate branch registration or wrong schema/version fails construction. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-B | Forged original source, cancellation, replay scheduling or changed channel fails source admission before selector/body reads. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-C | Genuine sample plus unrelated genuine SEM fails the same-opportunity join. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-D | Correct support identity plus altered sample bytes fails exact production binding. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-E | Absent sample cannot create evidence-index entry,227, belief update or Known(0). |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-F | Availability-false and permission-false generate identical unavailable sample/result bytes at matched allocation, with no body read. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-G",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-G | Present failure never falls back to Unavailable or padding. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-H",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-H | All event/runtime/sequence budgets match; skip-padding mutant changes the next allocated identity and is detected. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-I",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-I | Wrong child parent/type/phase/time/payload/sequence or duplicated child fails before capability publication. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-J",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-J | Token reuse, cross-instant use, mid-instant save and forged saved internal child reject. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-K",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-K | Fail after sample, SEM, child binding, projection, pressure or final validation; all committed state, queue, trace and allocators roll back. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-L",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-L | Restore before/after a completed opportunity preserves later output bytes; missing/extra/changed original pending source rejects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-M",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-M | Changed H/channel/model cannot reinterpret saved output; history does not authenticate new production. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EING-N",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "exactLine": "| EING-N | Wrong-observer interleaving and speculative read-then-redact mutants fail exact subject/read boundaries. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-A | New source registration cannot enter old projection dispatch; successor accepts only exact declared layouts. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-B | Source token forgery or registration substitution rejects before selector/roster reads. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-C | Alternate roster binding, nested selector or caller-provided CharacterId rejects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-D | Swap to another valid character's equal-valued anchor; owner/path equality must reject the substitution. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-E | Permission false causes zero body reads, with the actual IDN read retained in trace. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-F | Missing/malformed body is failure on present branch, not missing observation or clamped initial state. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-G",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-G | Mutating binding inputs after compilation cannot redirect the read. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-H",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-H | Unit/capacity/parameter mismatch and orphan/duplicate body binding reject. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-I",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-I | OutputChoice neither/both, wrong occurrence family or sample identity reuse rejects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-J",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-J | Pressure registration cannot read anchor, source definition, world effects or unregistered channel parameters. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-K",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-K | Direct-read trace reports exact anchor and no fictitious q state/derived row. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREG-L",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "exactLine": "| EREG-L | Restore with changed body parameter binding/model rejects; pure query never rewrites anchor bytes. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-A | q95,C100: e5/e9 yields identical After100 and Overflow0/4; later permitted level evidence matches. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-B | Zero delivery cannot raise reserve; invalid negative delivery rejects before patch. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-C | Two same-body inputs read staged predecessors; reused earlier expected anchor fails stale-precondition validation. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-D | Wrong valid character path, non-owner, undeclared root and missing anchor reject at their owning boundaries. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-E | Pressure, intent or copied source event cannot mint replenishment; only original physical input succeeds. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-F | Sample at T precedes refill at T; next-time sample may change, frozen current sample/pressure cannot. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-G",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-G | Extra result occurrence allocation or emitted child violates the zero-runtime/zero-child replenishment budget. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-H",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-H | Result trace exposes complete decomposition but no character evidence reference; hidden overflow never enters pressure. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-I",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-I | Later same-instant failure restores earlier body patches and all sampling/allocation effects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-J",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-J | Restore preserves exact remaining sample and replenishment inputs; missing either family rejects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-K",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-K | Direct read reports anchor; changed parameters/model cannot reinterpret historical results. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EREP-L",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "exactLine": "| EREP-L | Equal outcomes under split inputs do not authorize aliasing event IDs or rewriting history. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-A | Present sampling with missing/wrong/extra bin operation rejects at trace validation. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-B | Denied/unavailable sampling produces no bin operation and makes no speculative q read. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-C | q=C uses last bin; q at another exact boundary uses its upper bin; wrong-index mutant is detected. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-D | Exporting InputLevel or the operation reference in sample/SEM/pressure fails epistemic/output closure. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-E | Supplying wrong C, extra roster read or an invented truth source for trace fields rejects. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "ECOMP-F",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "exactLine": "| ECOMP-F | Same observer-safe sample can coexist with different trace InputLevel; character equality must remain intact. |",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EROLE-A",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "exactLine": "* EROLE-A: wrong namespace in either definition-ID set rejects before execution.",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EROLE-B",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "exactLine": "* EROLE-B: valid namespace but missing/wrong-kind/wrong-version target rejects.",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EROLE-C",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "exactLine": "* EROLE-C: unqualified character map key rejects after key grammar; valid different-body",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EROLE-D",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "exactLine": "* EROLE-D: pressure registration's valid TransitionKind stable ID remains admissible;",
+      "disposition": "FROZEN; NOT PASSED"
+    },
+    {
+      "id": "EROLE-E",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "exactLine": "* EROLE-E: removing the collection-member check is caught independently of record-field",
+      "disposition": "FROZEN; NOT PASSED"
+    }
+  ],
+  "implementationObligations": 76,
+  "deferredReceivingObligations": 3,
+  "packetHashesChecked": 15,
+  "inspectedSourceHashesChecked": 2,
+  "preservedChecks": 446,
+  "script": {
+    "path": "scripts/review-campaign3-embodied-shape.mjs",
+    "sha256": "66907c4f510394cf33ce802140fd379632ff47f7cec62a9211c5be04cc49cab8"
+  },
+  "limitations": [
+    "File and vector integrity only; acceptance reasoning is in the verdict.",
+    "No new runtime, codec, persistence or adversarial vector executed.",
+    "No permanent number, ModelIdentity or corpus commitment allocated."
+  ]
+}

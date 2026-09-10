@@ -1,0 +1,49 @@
+{
+  "status": "MECHANICAL NUMERIC REVIEW PASS; NOT YET PERMANENT",
+  "reviewedArtifacts": [
+    {
+      "path": "docs/planning/EMBODIED_RESERVE_ALLOCATION_DRAFT.json",
+      "sha256": "eee32513e885d6aca2c9ac8ea0b1e7ac95231a80288de8bb593ae49eb8cbc4d6"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RESERVE_ALLOCATION_DRAFT.md",
+      "sha256": "7684e2afccb082bc1aa31aac58f3e9555f1c8c9039617ab310b978a7162d7b5a"
+    }
+  ],
+  "shape": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_SHAPE_REVIEW_REV1.json",
+    "sha256": "c55329e10eedd017fca50b259402071f012502e7b4ca69dc8c73e1547c6ca6ba"
+  },
+  "counts": {
+    "records": 32,
+    "fields": 128,
+    "namespaces": 1,
+    "members": 43,
+    "unionVariants": 4,
+    "finiteValues": 2,
+    "recordRoles": 40,
+    "mapKeyRoles": 1,
+    "collectionChecks": 2,
+    "occurrenceDefinitions": 3
+  },
+  "canonicalDeclarationRoundTrips": 79,
+  "existingRuntimeSchemaPairs": 298,
+  "preservedChecks": 446,
+  "checks": [
+    "Independent Markdown record/field/member/union/finite table parsing matches JSON.",
+    "Exact accepted field grammar, required/forbidden matrices and identity roles match.",
+    "One-to-one vocabulary plus witness and union member coverage; no orphan additions.",
+    "Prior formal tables and current runtime schemas exclude proposed allocations.",
+    "Actual canonical member,259 union and172/173 descriptor round trips pass.",
+    "Alias uses exact two schemas; occurrence definitions reuse1115 and add1142 only.",
+    "All frozen fingerprints remain unchanged."
+  ],
+  "limitations": [
+    "Declaration round trips do not execute new EMB record-domain codecs.",
+    "No behavior, model activation or runtime vector qualified."
+  ],
+  "script": {
+    "path": "scripts/review-embodied-reserve-allocation.mjs",
+    "sha256": "4599f3fe43a8d48f873887b1800362749d3d3eb7195fd388a76d209dca156846"
+  }
+}

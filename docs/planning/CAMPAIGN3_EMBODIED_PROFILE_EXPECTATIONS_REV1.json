@@ -1,0 +1,1777 @@
+{
+  "status": "SYM-3 EXPECTED ARITHMETIC CHECKED; PUBLIC PROFILE NOT EXECUTED",
+  "inputs": [
+    [
+      "sample",
+      10
+    ],
+    [
+      "sample",
+      40
+    ],
+    [
+      "delivery",
+      40,
+      30
+    ],
+    [
+      "sample",
+      41
+    ],
+    [
+      "sample",
+      75
+    ],
+    [
+      "delivery",
+      75,
+      5
+    ],
+    [
+      "delivery",
+      75,
+      60
+    ],
+    [
+      "sample",
+      76
+    ],
+    [
+      "sample",
+      180
+    ]
+  ],
+  "cases": {
+    "baseline": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "70/1",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 0,
+          "experienceOrdinal": 1,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "40/1",
+          "interval": [
+            "40/1",
+            "50/1"
+          ],
+          "pressure": "1/6",
+          "observationOrdinal": 3,
+          "experienceOrdinal": 4,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "40/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "70/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "69/1",
+          "interval": [
+            "60/1",
+            "70/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 6,
+          "experienceOrdinal": 7,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "35/1",
+          "interval": [
+            "30/1",
+            "40/1"
+          ],
+          "pressure": "1/3",
+          "observationOrdinal": 9,
+          "experienceOrdinal": 10,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "35/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "40/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "40/1",
+          "potential": "60/1",
+          "applied": "60/1",
+          "overflow": "0/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": [
+            "90/1",
+            "100/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 12,
+          "experienceOrdinal": 13,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": [
+            "0/1",
+            "10/1"
+          ],
+          "pressure": "5/6",
+          "observationOrdinal": 15,
+          "experienceOrdinal": 16,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 6
+      }
+    },
+    "hiddenInitial": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "79/1",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 0,
+          "experienceOrdinal": 1,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "49/1",
+          "interval": [
+            "40/1",
+            "50/1"
+          ],
+          "pressure": "1/6",
+          "observationOrdinal": 3,
+          "experienceOrdinal": 4,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "49/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "79/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "78/1",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 6,
+          "experienceOrdinal": 7,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "44/1",
+          "interval": [
+            "40/1",
+            "50/1"
+          ],
+          "pressure": "1/6",
+          "observationOrdinal": 9,
+          "experienceOrdinal": 10,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "44/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "49/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "49/1",
+          "potential": "60/1",
+          "applied": "51/1",
+          "overflow": "9/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": [
+            "90/1",
+            "100/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 12,
+          "experienceOrdinal": 13,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": [
+            "0/1",
+            "10/1"
+          ],
+          "pressure": "5/6",
+          "observationOrdinal": 15,
+          "experienceOrdinal": 16,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "89/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "79/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "79/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 6
+      }
+    },
+    "slower": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "75/1",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 0,
+          "experienceOrdinal": 1,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "60/1",
+          "interval": [
+            "60/1",
+            "70/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 3,
+          "experienceOrdinal": 4,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "60/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "90/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "179/2",
+          "interval": [
+            "80/1",
+            "90/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 6,
+          "experienceOrdinal": 7,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "145/2",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 9,
+          "experienceOrdinal": 10,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "145/2",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "155/2"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "155/2",
+          "potential": "60/1",
+          "applied": "45/2",
+          "overflow": "75/2",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "199/2",
+          "interval": [
+            "90/1",
+            "100/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 12,
+          "experienceOrdinal": 13,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "95/2",
+          "interval": [
+            "40/1",
+            "50/1"
+          ],
+          "pressure": "1/6",
+          "observationOrdinal": 15,
+          "experienceOrdinal": 16,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "90/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "90/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 6
+      }
+    },
+    "coarser": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "70/1",
+          "interval": [
+            "60/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 0,
+          "experienceOrdinal": 1,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "40/1",
+          "interval": [
+            "40/1",
+            "60/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 3,
+          "experienceOrdinal": 4,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "40/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "70/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "69/1",
+          "interval": [
+            "60/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 6,
+          "experienceOrdinal": 7,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "35/1",
+          "interval": [
+            "20/1",
+            "40/1"
+          ],
+          "pressure": "1/3",
+          "observationOrdinal": 9,
+          "experienceOrdinal": 10,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "35/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "40/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "40/1",
+          "potential": "60/1",
+          "applied": "60/1",
+          "overflow": "0/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": [
+            "80/1",
+            "100/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 12,
+          "experienceOrdinal": 13,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": [
+            "0/1",
+            "20/1"
+          ],
+          "pressure": "2/3",
+          "observationOrdinal": 15,
+          "experienceOrdinal": 16,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 6
+      }
+    },
+    "denied": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "70/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 0,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 1,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "40/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 3,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 4,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "40/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "70/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "69/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 6,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 7,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "35/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 9,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 10,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "35/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "40/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "40/1",
+          "potential": "60/1",
+          "applied": "60/1",
+          "overflow": "0/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 12,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 13,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 15,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 16,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 0
+      }
+    },
+    "unavailable": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "70/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 0,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 1,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "40/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 3,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 4,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "40/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "70/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "69/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 6,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 7,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "35/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 9,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 10,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "35/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "40/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "40/1",
+          "potential": "60/1",
+          "applied": "60/1",
+          "overflow": "0/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 12,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 13,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": null,
+          "pressure": "Unavailable",
+          "observationOrdinal": 15,
+          "experienceOrdinal": null,
+          "privatePaddingOrdinal": 16,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 0
+      }
+    },
+    "overflow": {
+      "records": [
+        {
+          "input": 0,
+          "kind": "sample",
+          "time": 10,
+          "reserve": "70/1",
+          "interval": [
+            "70/1",
+            "80/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 0,
+          "experienceOrdinal": 1,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 2,
+          "children": [
+            9,
+            13
+          ]
+        },
+        {
+          "input": 1,
+          "kind": "sample",
+          "time": 40,
+          "reserve": "40/1",
+          "interval": [
+            "40/1",
+            "50/1"
+          ],
+          "pressure": "1/6",
+          "observationOrdinal": 3,
+          "experienceOrdinal": 4,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 5,
+          "children": [
+            14,
+            18
+          ]
+        },
+        {
+          "input": 2,
+          "kind": "delivery",
+          "time": 40,
+          "before": "40/1",
+          "potential": "30/1",
+          "applied": "30/1",
+          "overflow": "0/1",
+          "after": "70/1"
+        },
+        {
+          "input": 3,
+          "kind": "sample",
+          "time": 41,
+          "reserve": "69/1",
+          "interval": [
+            "60/1",
+            "70/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 6,
+          "experienceOrdinal": 7,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 8,
+          "children": [
+            19,
+            23
+          ]
+        },
+        {
+          "input": 4,
+          "kind": "sample",
+          "time": 75,
+          "reserve": "35/1",
+          "interval": [
+            "30/1",
+            "40/1"
+          ],
+          "pressure": "1/3",
+          "observationOrdinal": 9,
+          "experienceOrdinal": 10,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 11,
+          "children": [
+            24,
+            28
+          ]
+        },
+        {
+          "input": 5,
+          "kind": "delivery",
+          "time": 75,
+          "before": "35/1",
+          "potential": "5/1",
+          "applied": "5/1",
+          "overflow": "0/1",
+          "after": "40/1"
+        },
+        {
+          "input": 6,
+          "kind": "delivery",
+          "time": 75,
+          "before": "40/1",
+          "potential": "64/1",
+          "applied": "60/1",
+          "overflow": "4/1",
+          "after": "100/1"
+        },
+        {
+          "input": 7,
+          "kind": "sample",
+          "time": 76,
+          "reserve": "99/1",
+          "interval": [
+            "90/1",
+            "100/1"
+          ],
+          "pressure": "0/1",
+          "observationOrdinal": 12,
+          "experienceOrdinal": 13,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 14,
+          "children": [
+            29,
+            33
+          ]
+        },
+        {
+          "input": 8,
+          "kind": "sample",
+          "time": 180,
+          "reserve": "0/1",
+          "interval": [
+            "0/1",
+            "10/1"
+          ],
+          "pressure": "5/6",
+          "observationOrdinal": 15,
+          "experienceOrdinal": 16,
+          "privatePaddingOrdinal": null,
+          "pressureOrdinal": 17,
+          "children": [
+            34,
+            38
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "time": 10,
+          "anchor": [
+            "80/1",
+            0
+          ],
+          "nextRuntime": 3,
+          "nextEvent": 14,
+          "nextSequence": 14,
+          "pendingInputIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 40,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 6,
+          "nextEvent": 19,
+          "nextSequence": 19,
+          "pendingInputIds": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 41,
+          "anchor": [
+            "70/1",
+            40
+          ],
+          "nextRuntime": 9,
+          "nextEvent": 24,
+          "nextSequence": 24,
+          "pendingInputIds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "time": 75,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 12,
+          "nextEvent": 29,
+          "nextSequence": 29,
+          "pendingInputIds": [
+            7,
+            8
+          ]
+        },
+        {
+          "time": 76,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 15,
+          "nextEvent": 34,
+          "nextSequence": 34,
+          "pendingInputIds": [
+            8
+          ]
+        },
+        {
+          "time": 180,
+          "anchor": [
+            "100/1",
+            75
+          ],
+          "nextRuntime": 18,
+          "nextEvent": 39,
+          "nextSequence": 39,
+          "pendingInputIds": []
+        }
+      ],
+      "totals": {
+        "samples": 6,
+        "deliveries": 3,
+        "events": 39,
+        "generatedChildren": 30,
+        "runtimeAdvances": 18,
+        "semOutputs": 6
+      }
+    }
+  },
+  "preservedChecks": 446,
+  "limitation": "This script implements finite expectation arithmetic only. No production scheduler, PRJ, SEM, ingress, patch, trace or restore operation was executed.",
+  "document": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_PROFILE_WITNESS_DRAFT.md",
+    "sha256": "d0dbb63b12ab61ce90a2d0969602508dece64eadc022da0b050dbe53fd1c154d"
+  },
+  "script": {
+    "path": "scripts/check-campaign3-embodied-profile-expectations.mjs",
+    "sha256": "aeaf93fbd95e560d86ada850e58e3995600fb8a58e50eb19494444066347efcd"
+  }
+}

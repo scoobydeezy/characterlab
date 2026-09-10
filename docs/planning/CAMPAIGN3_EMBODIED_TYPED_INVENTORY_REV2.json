@@ -1,0 +1,924 @@
+{
+  "status": "CORRECTED TYPE PROPOSAL; WHOLE SHAPE WITHHELD",
+  "records": [
+    {
+      "name": "ReserveParameters",
+      "fields": [
+        {
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "ConsumptionRate",
+          "type": "rational",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveAnchor",
+      "fields": [
+        {
+          "name": "AmountAtAnchor",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "AnchorInstant",
+          "type": "SimInstant",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveState",
+      "fields": [
+        {
+          "name": "Anchors",
+          "type": "map<id:CharacterId;ReserveAnchor>",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveBodyBinding",
+      "fields": [
+        {
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "name": "ReserveParameterDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveBodyRegistryDefinition",
+      "fields": [
+        {
+          "name": "Bindings",
+          "type": "set<ReserveBodyBinding>",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelChannelDefinition",
+      "fields": [
+        {
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "name": "ModalityId",
+          "type": "id:ModalityId",
+          "required": true
+        },
+        {
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "BinWidth",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Available",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "Permitted",
+          "type": "boolean",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelSamplingOpportunity",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "name": "ChannelDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PressureDefinition",
+      "fields": [
+        {
+          "name": "ChannelDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "Threshold",
+          "type": "rational",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "EmbodiedLevelObservation",
+      "fields": [
+        {
+          "name": "ObservationId",
+          "type": "id:ObservationId",
+          "required": true
+        },
+        {
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "name": "OccurredAt",
+          "type": "SimInstant",
+          "required": true
+        },
+        {
+          "name": "FiniteLevelInterval",
+          "type": "FiniteLevelInterval",
+          "required": true
+        },
+        {
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "FiniteLevelInterval",
+      "fields": [
+        {
+          "name": "Lower",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Upper",
+          "type": "rational",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "UnavailableLevelSample",
+      "fields": [
+        {
+          "name": "ObservationId",
+          "type": "id:ObservationId",
+          "required": true
+        },
+        {
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "name": "OccurredAt",
+          "type": "SimInstant",
+          "required": true
+        },
+        {
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "EmbodiedPressureOutput",
+      "fields": [
+        {
+          "name": "PressureOccurrenceId",
+          "type": "id:PressureOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "name": "Sample",
+          "type": "EmbodiedSample",
+          "required": true
+        },
+        {
+          "name": "PressureResult",
+          "type": "PressureResult",
+          "required": true
+        },
+        {
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelSourceRegistration",
+      "fields": [
+        {
+          "name": "ProducingSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "name": "ProducingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "SourceDefinition",
+          "type": "LevelSourceDefinition",
+          "required": true
+        },
+        {
+          "name": "SourceOrigin",
+          "type": "LevelInputOnlyOrigin",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelSourceDefinition",
+      "fields": [
+        {
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "name": "ChannelDefinitions",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        },
+        {
+          "name": "BodyBindingDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "OutputChoice",
+          "type": "LevelSampleOutputChoice",
+          "required": true
+        },
+        {
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelInputOnlyOrigin",
+      "fields": [
+        {
+          "name": "EventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "Phase",
+          "type": "unsigned",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelSampleOutputChoice",
+      "fields": [
+        {
+          "name": "PresentOutputSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "UnavailableOutputSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PresentPressureRegistration",
+      "fields": [
+        {
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "Definition",
+          "type": "PresentPressureTransitionDefinition",
+          "required": true
+        },
+        {
+          "name": "Ingress",
+          "type": "LevelPressureIngressDefinition",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "UnavailablePressureRegistration",
+      "fields": [
+        {
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "Definition",
+          "type": "UnavailablePressureTransitionDefinition",
+          "required": true
+        },
+        {
+          "name": "Ingress",
+          "type": "LevelPressureIngressDefinition",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PresentPressureTransitionDefinition",
+      "fields": [
+        {
+          "name": "InputAdmission",
+          "type": "PresentLevelInputAdmission",
+          "required": true
+        },
+        {
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "UnavailablePressureTransitionDefinition",
+      "fields": [
+        {
+          "name": "InputAdmission",
+          "type": "UnavailableLevelInputAdmission",
+          "required": true
+        },
+        {
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PresentLevelInputAdmission",
+      "fields": [
+        {
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "PresentWithFrozenSupport",
+          "type": "PresentWithFrozenSupport",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "UnavailableLevelInputAdmission",
+      "fields": [
+        {
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "UnavailableOpportunityResult",
+          "type": "UnavailableOpportunityResult",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PresentWithFrozenSupport",
+      "fields": [
+        {
+          "name": "SamplingProducerDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "SamplingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "SampleEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "SamplePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "SampleSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "SEMSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "Lane",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "FreezeEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "FreezePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "FrozenSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "SupportRule",
+          "type": "unsigned",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "UnavailableOpportunityResult",
+      "fields": [
+        {
+          "name": "SamplingProducerDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "SamplingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "SampleEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "SamplePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "SampleSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "SettlementEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "SettlementPhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "ResultRule",
+          "type": "unsigned",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveReplenishmentDefinition",
+      "fields": [
+        {
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "name": "ReserveParameterDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "name": "DeliveredAmount",
+          "type": "rational",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveReplenishmentInput",
+      "fields": [
+        {
+          "name": "ReplenishmentDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveReplenishmentResult",
+      "fields": [
+        {
+          "name": "Before",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "PotentialEffect",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Applied",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Overflow",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "After",
+          "type": "rational",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "ReserveReplenishmentRegistration",
+      "fields": [
+        {
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "InputOrigin",
+          "type": "LevelInputOnlyOrigin",
+          "required": true
+        },
+        {
+          "name": "DefinitionIds",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        },
+        {
+          "name": "BodyBindingDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "WritableFamilies",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "MutationAuthorityId",
+          "type": "id:MutationAuthorityId",
+          "required": true
+        },
+        {
+          "name": "OutputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "PressureResult",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "Value",
+          "type": "rational",
+          "required": false
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelChainCarrier",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "Sample",
+          "type": "EmbodiedSample",
+          "required": true
+        },
+        {
+          "name": "ReservedExperienceId",
+          "type": "id:ExperienceId",
+          "required": false
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelPressureIngressDefinition",
+      "fields": [
+        {
+          "name": "ConsumerEventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "ConsumerPhase",
+          "type": "unsigned",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    },
+    {
+      "name": "LevelBinQuantization",
+      "fields": [
+        {
+          "name": "InputLevel",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "BinWidth",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "BinIndex",
+          "type": "unsigned",
+          "required": true
+        }
+      ],
+      "allocation": "NONE"
+    }
+  ],
+  "typeAliases": {
+    "EmbodiedSample": [
+      "EmbodiedLevelObservation",
+      "UnavailableLevelSample"
+    ]
+  },
+  "externalSchemaReferences": {
+    "CanonicalRecordSchemaRef": "254/1",
+    "StatePathPattern": "149/1",
+    "EventDependentProjectedFieldRequirement": "266/1",
+    "TransitionOutputDefinition": "277/1",
+    "WriteCapabilityV04": "273/1"
+  },
+  "identityRoles": {
+    "ObserverId": "1000",
+    "CharacterId": "1002 + character qualification",
+    "ObservationId": "1115",
+    "ExperienceId": "1106",
+    "PressureOccurrenceId": "UNALLOCATED",
+    "ObservationChannelId": "1005",
+    "DefinitionId": "1027",
+    "SeamId": "1036",
+    "EventTypeId": "1001",
+    "MutationAuthorityId": "1025",
+    "ObservationUnitId": "1039",
+    "ModalityId": "1006"
+  },
+  "unionMatrices": [
+    {
+      "record": "PressureResult",
+      "variants": [
+        {
+          "tag": "Known",
+          "required": [
+            "VariantTag",
+            "Value"
+          ],
+          "forbidden": []
+        },
+        {
+          "tag": "Unavailable",
+          "required": [
+            "VariantTag"
+          ],
+          "forbidden": [
+            "Value"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "LevelChainCarrier",
+      "variants": [
+        {
+          "tag": "Present",
+          "required": [
+            "VariantTag",
+            "Sample",
+            "ReservedExperienceId"
+          ],
+          "forbidden": [],
+          "sampleSchema": "EmbodiedLevelObservation"
+        },
+        {
+          "tag": "Unavailable",
+          "required": [
+            "VariantTag",
+            "Sample"
+          ],
+          "forbidden": [
+            "ReservedExperienceId"
+          ],
+          "sampleSchema": "UnavailableLevelSample"
+        }
+      ]
+    }
+  ],
+  "numericTags": "UNALLOCATED; symbolic tags are mapped only at separate numeric gate",
+  "correction": "LevelBinQuantization is trace-only; no occurrence or character admission.",
+  "previous": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_TYPED_INVENTORY_REV1.json",
+    "sha256": "a75a6016b391be5a37476d536063f90bdb0c219926aea59105b6ac629a8ad00e"
+  },
+  "authority": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+    "sha256": "65a9227ed16826ce2d85c83b6dbf64611bc61816666e5c3f866e81240ce86e33"
+  }
+}

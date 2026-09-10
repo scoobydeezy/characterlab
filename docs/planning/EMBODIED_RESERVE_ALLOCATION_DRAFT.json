@@ -1,0 +1,1866 @@
+{
+  "version": "embodied-reserve-allocation/0.1-draft",
+  "status": "NUMERIC PROPOSAL; NOT PERMANENT",
+  "shape": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_SHAPE_REVIEW_REV1.json",
+    "sha256": "c55329e10eedd017fca50b259402071f012502e7b4ca69dc8c73e1547c6ca6ba"
+  },
+  "sourceFingerprints": [
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_PLAN_LEAF_ALLOCATION_TABLE.json",
+      "sha256": "581490f019b60073c44876b7bd946e36a039fa18a8702918ff71806432795e65"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json",
+      "sha256": "161047465549a2fb3b665c08a019a0915311114159e51251bba707066f721f17"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    },
+    {
+      "path": "docs/formal/CANONICAL_RECORD_REGISTRY.md",
+      "sha256": "6f95e9f59ce3a66e4acd6de9cdc1b1a77e4893ca537a6286577d54717ea82474"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_PROFILE_WITNESS_DRAFT.md",
+      "sha256": "d0dbb63b12ab61ce90a2d0969602508dece64eadc022da0b050dbe53fd1c154d"
+    }
+  ],
+  "records": [
+    {
+      "typeId": 453,
+      "schemaVersion": 1,
+      "name": "ReserveParameters",
+      "fields": [
+        {
+          "id": 1,
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ConsumptionRate",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 454,
+      "schemaVersion": 1,
+      "name": "ReserveAnchor",
+      "fields": [
+        {
+          "id": 1,
+          "name": "AmountAtAnchor",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "AnchorInstant",
+          "type": "SimInstant",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 455,
+      "schemaVersion": 1,
+      "name": "ReserveState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Anchors",
+          "type": "map<id:CharacterId;ReserveAnchor>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 456,
+      "schemaVersion": 1,
+      "name": "ReserveBodyBinding",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReserveParameterDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 457,
+      "schemaVersion": 1,
+      "name": "ReserveBodyRegistryDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Bindings",
+          "type": "set<ReserveBodyBinding>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 458,
+      "schemaVersion": 1,
+      "name": "LevelChannelDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ModalityId",
+          "type": "id:ModalityId",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BinWidth",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Available",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Permitted",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 459,
+      "schemaVersion": 1,
+      "name": "LevelSamplingOpportunity",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ChannelDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 460,
+      "schemaVersion": 1,
+      "name": "PressureDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ChannelDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Threshold",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 461,
+      "schemaVersion": 1,
+      "name": "EmbodiedLevelObservation",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationId",
+          "type": "id:ObservationId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OccurredAt",
+          "type": "SimInstant",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "FiniteLevelInterval",
+          "type": "FiniteLevelInterval",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 462,
+      "schemaVersion": 1,
+      "name": "FiniteLevelInterval",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Lower",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Upper",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 463,
+      "schemaVersion": 1,
+      "name": "UnavailableLevelSample",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationId",
+          "type": "id:ObservationId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "id:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ObservationChannelId",
+          "type": "id:ObservationChannelId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OccurredAt",
+          "type": "SimInstant",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 464,
+      "schemaVersion": 1,
+      "name": "EmbodiedPressureOutput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PressureOccurrenceId",
+          "type": "id:PressureOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Sample",
+          "type": "EmbodiedSample",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "PressureResult",
+          "type": "PressureResult",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 465,
+      "schemaVersion": 1,
+      "name": "LevelSourceRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProducingSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ProducingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SourceDefinition",
+          "type": "LevelSourceDefinition",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SourceOrigin",
+          "type": "LevelInputOnlyOrigin",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 466,
+      "schemaVersion": 1,
+      "name": "LevelSourceDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ChannelDefinitions",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "BodyBindingDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "OutputChoice",
+          "type": "LevelSampleOutputChoice",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 467,
+      "schemaVersion": 1,
+      "name": "LevelInputOnlyOrigin",
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 468,
+      "schemaVersion": 1,
+      "name": "LevelSampleOutputChoice",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PresentOutputSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "UnavailableOutputSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 469,
+      "schemaVersion": 1,
+      "name": "PresentPressureRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Definition",
+          "type": "PresentPressureTransitionDefinition",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Ingress",
+          "type": "LevelPressureIngressDefinition",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 470,
+      "schemaVersion": 1,
+      "name": "UnavailablePressureRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Definition",
+          "type": "UnavailablePressureTransitionDefinition",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Ingress",
+          "type": "LevelPressureIngressDefinition",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 471,
+      "schemaVersion": 1,
+      "name": "PresentPressureTransitionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputAdmission",
+          "type": "PresentLevelInputAdmission",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 472,
+      "schemaVersion": 1,
+      "name": "UnavailablePressureTransitionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputAdmission",
+          "type": "UnavailableLevelInputAdmission",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 473,
+      "schemaVersion": 1,
+      "name": "PresentLevelInputAdmission",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PresentWithFrozenSupport",
+          "type": "PresentWithFrozenSupport",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 474,
+      "schemaVersion": 1,
+      "name": "UnavailableLevelInputAdmission",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "UnavailableOpportunityResult",
+          "type": "UnavailableOpportunityResult",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 475,
+      "schemaVersion": 1,
+      "name": "PresentWithFrozenSupport",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SamplingProducerDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SamplingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SampleEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SamplePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "SampleSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "SEMSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Lane",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "FreezeEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "FreezePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "FrozenSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "SupportRule",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 476,
+      "schemaVersion": 1,
+      "name": "UnavailableOpportunityResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SamplingProducerDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SamplingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SampleEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SamplePhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "SampleSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "SettlementEventType",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "SettlementPhase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ResultRule",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 477,
+      "schemaVersion": 1,
+      "name": "ReserveReplenishmentDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReserveParameterDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "UnitId",
+          "type": "id:ObservationUnitId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "DeliveredAmount",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 478,
+      "schemaVersion": 1,
+      "name": "ReserveReplenishmentInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ReplenishmentDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 479,
+      "schemaVersion": 1,
+      "name": "ReserveReplenishmentResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Before",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PotentialEffect",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Overflow",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "After",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 480,
+      "schemaVersion": 1,
+      "name": "ReserveReplenishmentRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OwningSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "InputOrigin",
+          "type": "LevelInputOnlyOrigin",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "DefinitionIds",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BodyBindingDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "WritableFamilies",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "MutationAuthorityId",
+          "type": "id:MutationAuthorityId",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "OutputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 481,
+      "schemaVersion": 1,
+      "name": "PressureResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Value",
+          "type": "rational",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 482,
+      "schemaVersion": 1,
+      "name": "LevelChainCarrier",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sample",
+          "type": "EmbodiedSample",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ReservedExperienceId",
+          "type": "id:ExperienceId",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 483,
+      "schemaVersion": 1,
+      "name": "LevelPressureIngressDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ConsumerEventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ConsumerPhase",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 484,
+      "schemaVersion": 1,
+      "name": "LevelBinQuantization",
+      "fields": [
+        {
+          "id": 1,
+          "name": "InputLevel",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "BinWidth",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "BinIndex",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "namespace": 1142,
+      "name": "PressureOccurrenceId",
+      "scope": "run-scoped occurrence",
+      "payload": "unsigned-runtime-ordinal",
+      "allocator": "existing shared run runtime allocator; no new allocator"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1036,
+      "payload": "seam/embodied-reserve",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/embodied-level-observation",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/embodied-pressure",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/embodied-replenishment",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-level-sample",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-level-tracking-slot",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-level-binding-slot",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-level-classification-slot",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-level-settlement",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-pressure-present",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-pressure-unavailable",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/embodied-reserve-replenishment",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1009,
+      "payload": "EmbodiedPresentPressureTransition",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1009,
+      "payload": "EmbodiedUnavailablePressureTransition",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/embodied-reserve-anchor",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1025,
+      "payload": "authority/embodied-reserve",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1006,
+      "payload": "modality/embodied-fuel-level",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1039,
+      "payload": "unit/embodied-fuel-stock",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-reserve-parameters",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-reserve-bodies",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-level-channel",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-pressure-definition",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-level-source-registration",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-pressure-present-registration",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-pressure-unavailable-registration",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-replenishment-definition",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1023,
+      "payload": "registry/embodied-replenishment-registration",
+      "origin": "accepted vocabulary"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-reserve-parameters",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-reserve-bodies",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-level-channel",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-pressure",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-level-source",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-replenishment",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-delivery-30",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-delivery-5",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/embodied-delivery-60",
+      "origin": "accepted witness definition"
+    },
+    {
+      "namespace": 1000,
+      "payload": "observer/embodied-subject",
+      "origin": "accepted witness instance"
+    },
+    {
+      "namespace": 1005,
+      "payload": "channel/embodied-fuel-level",
+      "origin": "accepted witness instance"
+    },
+    {
+      "namespace": 1038,
+      "payload": "character/embodied-subject",
+      "origin": "accepted witness instance"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        481,
+        1
+      ],
+      "origin": "existing canonical unsigned-pair UnionVariantId grammar"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        481,
+        2
+      ],
+      "origin": "existing canonical unsigned-pair UnionVariantId grammar"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        482,
+        1
+      ],
+      "origin": "existing canonical unsigned-pair UnionVariantId grammar"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        482,
+        2
+      ],
+      "origin": "existing canonical unsigned-pair UnionVariantId grammar"
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 453,
+      "fieldId": 1,
+      "family": "ObservationUnitId",
+      "requiredNamespace": 1039,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 456,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": {
+        "namespace": 1021,
+        "payload": "validator/character-qualification"
+      },
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 456,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 458,
+      "fieldId": 1,
+      "family": "ObservationChannelId",
+      "requiredNamespace": 1005,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 458,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 458,
+      "fieldId": 3,
+      "family": "ObservationUnitId",
+      "requiredNamespace": 1039,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 458,
+      "fieldId": 4,
+      "family": "ModalityId",
+      "requiredNamespace": 1006,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 459,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 459,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 460,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 461,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 461,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 461,
+      "fieldId": 3,
+      "family": "ObservationChannelId",
+      "requiredNamespace": 1005,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 463,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 463,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 463,
+      "fieldId": 3,
+      "family": "ObservationChannelId",
+      "requiredNamespace": 1005,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 464,
+      "fieldId": 1,
+      "family": "PressureOccurrenceId",
+      "requiredNamespace": 1142,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 464,
+      "fieldId": 2,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": {
+        "namespace": 1021,
+        "payload": "validator/character-qualification"
+      },
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 465,
+      "fieldId": 1,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 466,
+      "fieldId": 5,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 467,
+      "fieldId": 1,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 469,
+      "fieldId": 1,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 470,
+      "fieldId": 1,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 471,
+      "fieldId": 6,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 472,
+      "fieldId": 6,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 475,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 475,
+      "fieldId": 3,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 475,
+      "fieldId": 8,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 476,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 476,
+      "fieldId": 3,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 476,
+      "fieldId": 6,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 477,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": {
+        "namespace": 1021,
+        "payload": "validator/character-qualification"
+      },
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 477,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 477,
+      "fieldId": 3,
+      "family": "ObservationUnitId",
+      "requiredNamespace": 1039,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 478,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 480,
+      "fieldId": 1,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 480,
+      "fieldId": 6,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 480,
+      "fieldId": 9,
+      "family": "MutationAuthorityId",
+      "requiredNamespace": 1025,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 482,
+      "fieldId": 3,
+      "family": "ExperienceId",
+      "requiredNamespace": 1106,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    },
+    {
+      "recordTypeId": 483,
+      "fieldId": 1,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "position": "RecordField"
+    }
+  ],
+  "mapKeyRoles": [
+    {
+      "recordTypeId": 455,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": {
+        "namespace": 1021,
+        "payload": "validator/character-qualification"
+      },
+      "position": "StateMapKey",
+      "precedence": "StateKeyGrammar then role then exact body coverage"
+    }
+  ],
+  "collectionIdentityChecks": [
+    {
+      "recordTypeId": 466,
+      "fieldId": 4,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "SetMember",
+      "owner": "fixed profile compiler; namespace plus target kind/version closure"
+    },
+    {
+      "recordTypeId": 480,
+      "fieldId": 5,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "position": "SetMember",
+      "owner": "fixed profile compiler; namespace plus target kind/version closure"
+    }
+  ],
+  "unionVariants": [
+    {
+      "recordTypeId": 481,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Known",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": []
+    },
+    {
+      "recordTypeId": 481,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Unavailable",
+      "requiredFields": [
+        1
+      ],
+      "forbiddenFields": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 482,
+      "schemaVersion": 1,
+      "tag": 1,
+      "name": "Present",
+      "requiredFields": [
+        1,
+        2,
+        3
+      ],
+      "forbiddenFields": [],
+      "sampleSchema": {
+        "typeId": 461,
+        "schemaVersion": 1
+      }
+    },
+    {
+      "recordTypeId": 482,
+      "schemaVersion": 1,
+      "tag": 2,
+      "name": "Unavailable",
+      "requiredFields": [
+        1,
+        2
+      ],
+      "forbiddenFields": [
+        3
+      ],
+      "sampleSchema": {
+        "typeId": 463,
+        "schemaVersion": 1
+      }
+    }
+  ],
+  "unionDefinitions": [
+    {
+      "recordTypeId": 481,
+      "tag": 1,
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": []
+    },
+    {
+      "recordTypeId": 481,
+      "tag": 2,
+      "requiredPayloadFieldIds": [],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 482,
+      "tag": 1,
+      "requiredPayloadFieldIds": [
+        2,
+        3
+      ],
+      "forbiddenPayloadFieldIds": []
+    },
+    {
+      "recordTypeId": 482,
+      "tag": 2,
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": [
+        3
+      ]
+    }
+  ],
+  "finiteValues": [
+    {
+      "recordTypeId": 475,
+      "fieldId": 11,
+      "name": "ExactSingletonSameOpportunity",
+      "value": 1
+    },
+    {
+      "recordTypeId": 476,
+      "fieldId": 8,
+      "name": "NoPresentEvidenceNoReservation",
+      "value": 1
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 461,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 463,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 464,
+      "schemaVersion": 1,
+      "identityFieldId": 1,
+      "requiredNamespace": 1142,
+      "domainValidatorId": null
+    }
+  ],
+  "typeAliases": {
+    "EmbodiedSample": [
+      {
+        "typeId": 461,
+        "schemaVersion": 1
+      },
+      {
+        "typeId": 463,
+        "schemaVersion": 1
+      }
+    ]
+  },
+  "existingRecordReferences": {
+    "CanonicalRecordSchemaRef": "254/1",
+    "StatePathPattern": "149/1",
+    "EventDependentProjectedFieldRequirement": "266/1",
+    "TransitionOutputDefinition": "277/1",
+    "WriteCapabilityV04": "273/1"
+  },
+  "state": {
+    "rootRecordTypeId": 455,
+    "fieldId": 1,
+    "keyRole": "qualified CharacterId/1002",
+    "valueSchema": {
+      "typeId": 454,
+      "schemaVersion": 1
+    },
+    "authority": {
+      "namespace": 1025,
+      "payload": "authority/embodied-reserve"
+    },
+    "newLogicalFamilyOrLeafMembers": []
+  },
+  "newFailureCodes": [
+    "EMBODIED_TARGET_PATH_VIOLATION",
+    "EMBODIED_TIME_ORDER_VIOLATION"
+  ],
+  "notes": [
+    "All new schema versions are1; fields preserve accepted order starting at1.",
+    "Union259 payload requirements exclude discriminator field1; variant schemas require it.",
+    "EmbodiedSample remains a closed schema alias, not a third tagged union or extra record.",
+    "Occurrence extraction does not independently allocate IDs or prove freshness.",
+    "Existing Current lane, phases, NoStateWrites and output multiplicity are reused without allocation.",
+    "No logical-family/leaf identity member was shape accepted; none is invented here.",
+    "Full content170, role declarations, model packaging and save bindings remain later gates.",
+    "Fuel member does not widen the old fixture-pulse singleton or define a conversion."
+  ]
+}

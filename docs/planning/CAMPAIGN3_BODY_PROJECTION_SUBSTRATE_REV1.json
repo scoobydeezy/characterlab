@@ -1,0 +1,41 @@
+{
+  "status": "EXISTING PROJECTION ISOLATION CONTROLS PASS",
+  "tests": [
+    {
+      "name": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+      "state": "pass"
+    },
+    {
+      "name": "PRJ binding isolation: derived paths and function selection are captured at construction",
+      "state": "pass"
+    },
+    {
+      "name": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+      "state": "pass"
+    }
+  ],
+  "scope": "Existing direct/derived binding capture, exact-domain exclusion and inaccessible internals. Does not test proposed subject-selected body dispatch, source admission, permission branches or any EREG public vector.",
+  "preservedChecks": 446,
+  "sourceFingerprints": [
+    {
+      "path": "src/test/projectionBindingIsolation.test.ts",
+      "sha256": "24f19296f226cfdbeb3c98dd3b3e56ba325a6f69473d8ec9f217ff3a30758b8f"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/campaign2/requiredProjection.ts",
+      "sha256": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64"
+    },
+    {
+      "path": "scripts/review-campaign3-body-projection-substrate.mjs",
+      "sha256": "a4b0ba3e1e1f61e2f4ea8b70f86de51cb6fa7d1134e88f779880589770e1d34d"
+    }
+  ],
+  "draft": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+    "sha256": "7ab77c6271ad50a94da46d30f9200ba044576fc5b18cf917571e5e785b176eda"
+  }
+}

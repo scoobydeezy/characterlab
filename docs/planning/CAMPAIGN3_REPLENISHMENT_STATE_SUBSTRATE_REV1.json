@@ -1,0 +1,53 @@
+{
+  "status": "EXISTING STATE OWNERSHIP AND PATCH CONTROLS PASS",
+  "tests": [
+    {
+      "name": "CV-OWN-001 rejects ownership overlap and uncovered writable families",
+      "state": "pass"
+    },
+    {
+      "name": "CV-READ-001 rejects bindings and forged accessors outside the declared interface",
+      "state": "pass"
+    },
+    {
+      "name": "CV-READ-002 records only actual reads and preserves derived-source provenance",
+      "state": "pass"
+    },
+    {
+      "name": "CV-PATCH-001 canonicalizes construction order and emits exact structural diffs",
+      "state": "pass"
+    },
+    {
+      "name": "CV-PATCH-002 rejects authority, precondition, overlap, domain, and mutable-alias failures",
+      "state": "pass"
+    },
+    {
+      "name": "CV-PATCH-003 isolates deep counterfactual copies and encodings",
+      "state": "pass"
+    }
+  ],
+  "scope": "Existing state ownership, read, patch, stale-precondition, alias and diff controls. Does not execute proposed replenishment admission, same-instant composition or any EREP public vector.",
+  "preservedChecks": 446,
+  "sourceFingerprints": [
+    {
+      "path": "src/test/state.test.ts",
+      "sha256": "a8f58e0dd0578dc851ae64881fd378a3d92e570da1a00ca83823d1c9cf66c6b2"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/campaign2/requiredProjection.ts",
+      "sha256": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64"
+    },
+    {
+      "path": "scripts/review-campaign3-replenishment-state-substrate.mjs",
+      "sha256": "8dcf7f5ca6649722233b1537ce87e03147bd4be3225c73c13bc64803eae700b3"
+    }
+  ],
+  "draft": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+    "sha256": "3a1678b59a82be3d9ebbf54a006dee57fcb9cda8ed386bf21d16dedbe8585c1e"
+  }
+}

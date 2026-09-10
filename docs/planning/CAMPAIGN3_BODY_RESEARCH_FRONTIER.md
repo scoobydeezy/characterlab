@@ -5,6 +5,10 @@ or executable fixture**. Incorporates the planning response to the pre-entry rev
 Campaign 3 is active for gap discovery and admitted comparisons. Campaign 2's bounded
 completion, accepted contracts, model bytes and corpus0.27.0 remain unchanged.
 
+First concrete proposal: [EMB-001 revision1](CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md).
+Its body/sensor/pressure mathematics are proposed, with observation admission and
+source/action receiving still open; no whole seam acceptance is claimed.
+
 ## Authority and research rule
 
 The North Star, Architecture §7.2–7.3 and Research Brief govern this frontier.
@@ -107,6 +111,12 @@ owns all four answers. Any affect/familiarity influence must name the receiving
 operation and temporal edge rather than silently modifying history.
 
 ## Next contract work and deliberately deferred decisions
+
+2026-09-10 checkpoint: [bounded whole symbolic shape accepted](../formal/EMBODIED_RESERVE_SHAPE_ACCEPTANCE.md)
+for reserve/current observation/option-free pressure/external replenishment. This
+supersedes the drafting sequence below for that subprofile only. Next prepare separate
+allocation review, then complete model packaging and runtime qualification. The parent
+EMB-001, non-task receiving/action knowledge and BODY+MULTISOURCE remain open.
 
 EMB-001's first draft must freeze: physical interpretation and dimension; constitutional
 parameters versus dynamic state; exact integration/quantization and elapsed-time law;

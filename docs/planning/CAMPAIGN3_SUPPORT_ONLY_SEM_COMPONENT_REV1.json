@@ -1,0 +1,33 @@
+{
+  "status": "EXISTING SEM SUPPORT-ONLY COMPONENT EXPRESSIBLE",
+  "checks": [
+    "current support-only assembly/freeze/settlement succeeds",
+    "one reservation allocation; no fabricated binding",
+    "empty support rejects",
+    "cross-observer support rejects",
+    "wrong freeze phase rejects",
+    "mismatched reservation identity rejects",
+    "orphan reservation rejects",
+    "duplicate envelope rejects",
+    "no present evidence requests no reservation"
+  ],
+  "scope": "Direct existing component invocation only. Does not admit a new observation schema, unavailable-marker semantics, public producer, PRJ registration or EMB runtime vector.",
+  "sourceFingerprints": [
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/campaign2/probeExecution.ts",
+      "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+    },
+    {
+      "path": "scripts/review-campaign3-support-only-sem.mjs",
+      "sha256": "1dbbb8136182ef3d99940738dc8fd71918824a534cbe92096d87369e82ed88ea"
+    }
+  ]
+}

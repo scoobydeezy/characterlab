@@ -1,0 +1,612 @@
+{
+  "status": "BOUNDED SYMBOLIC PACKET READY FOR SHAPE REVIEW; NO ALLOCATION OR RUNTIME PASS",
+  "records": 32,
+  "fields": 128,
+  "identityPositions": [
+    {
+      "record": "ReserveParameters",
+      "field": "UnitId",
+      "family": "ObservationUnitId",
+      "role": "1039",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveState",
+      "field": "Anchors",
+      "family": "CharacterId",
+      "role": "1002 + character qualification",
+      "owner": "state key grammar then map-key role"
+    },
+    {
+      "record": "ReserveBodyBinding",
+      "field": "CharacterId",
+      "family": "CharacterId",
+      "role": "1002 + character qualification",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveBodyBinding",
+      "field": "ReserveParameterDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelChannelDefinition",
+      "field": "ObservationChannelId",
+      "family": "ObservationChannelId",
+      "role": "1005",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelChannelDefinition",
+      "field": "ObserverId",
+      "family": "ObserverId",
+      "role": "1000",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelChannelDefinition",
+      "field": "UnitId",
+      "family": "ObservationUnitId",
+      "role": "1039",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelChannelDefinition",
+      "field": "ModalityId",
+      "family": "ModalityId",
+      "role": "1006",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelSamplingOpportunity",
+      "field": "ObserverId",
+      "family": "ObserverId",
+      "role": "1000",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelSamplingOpportunity",
+      "field": "ChannelDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PressureDefinition",
+      "field": "ChannelDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "EmbodiedLevelObservation",
+      "field": "ObservationId",
+      "family": "ObservationId",
+      "role": "1115",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "EmbodiedLevelObservation",
+      "field": "ObserverId",
+      "family": "ObserverId",
+      "role": "1000",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "EmbodiedLevelObservation",
+      "field": "ObservationChannelId",
+      "family": "ObservationChannelId",
+      "role": "1005",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableLevelSample",
+      "field": "ObservationId",
+      "family": "ObservationId",
+      "role": "1115",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableLevelSample",
+      "field": "ObserverId",
+      "family": "ObserverId",
+      "role": "1000",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableLevelSample",
+      "field": "ObservationChannelId",
+      "family": "ObservationChannelId",
+      "role": "1005",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "EmbodiedPressureOutput",
+      "field": "PressureOccurrenceId",
+      "family": "PressureOccurrenceId",
+      "role": "UNALLOCATED",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "EmbodiedPressureOutput",
+      "field": "CharacterId",
+      "family": "CharacterId",
+      "role": "1002 + character qualification",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelSourceRegistration",
+      "field": "ProducingSeamId",
+      "family": "SeamId",
+      "role": "1036",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "ChannelDefinitions",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "closed profile collection-member check"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "BodyBindingDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelInputOnlyOrigin",
+      "field": "EventTypeId",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PresentPressureRegistration",
+      "field": "OwningSeamId",
+      "family": "SeamId",
+      "role": "1036",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailablePressureRegistration",
+      "field": "OwningSeamId",
+      "family": "SeamId",
+      "role": "1036",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "PressureDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "PressureDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PresentWithFrozenSupport",
+      "field": "SamplingProducerDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PresentWithFrozenSupport",
+      "field": "SampleEventType",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "PresentWithFrozenSupport",
+      "field": "FreezeEventType",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableOpportunityResult",
+      "field": "SamplingProducerDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableOpportunityResult",
+      "field": "SampleEventType",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "UnavailableOpportunityResult",
+      "field": "SettlementEventType",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentDefinition",
+      "field": "CharacterId",
+      "family": "CharacterId",
+      "role": "1002 + character qualification",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentDefinition",
+      "field": "ReserveParameterDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentDefinition",
+      "field": "UnitId",
+      "family": "ObservationUnitId",
+      "role": "1039",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentInput",
+      "field": "ReplenishmentDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "OwningSeamId",
+      "family": "SeamId",
+      "role": "1036",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "DefinitionIds",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "closed profile collection-member check"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "BodyBindingDefinitionId",
+      "family": "DefinitionId",
+      "role": "1027",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "MutationAuthorityId",
+      "family": "MutationAuthorityId",
+      "role": "1025",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelChainCarrier",
+      "field": "ReservedExperienceId",
+      "family": "ExperienceId",
+      "role": "1106",
+      "owner": "recursive record-field role"
+    },
+    {
+      "record": "LevelPressureIngressDefinition",
+      "field": "ConsumerEventTypeId",
+      "family": "EventTypeId",
+      "role": "1001",
+      "owner": "recursive record-field role"
+    }
+  ],
+  "dependencies": [
+    {
+      "record": "ReserveState",
+      "field": "Anchors",
+      "target": "ReserveAnchor"
+    },
+    {
+      "record": "ReserveBodyRegistryDefinition",
+      "field": "Bindings",
+      "target": "ReserveBodyBinding"
+    },
+    {
+      "record": "EmbodiedLevelObservation",
+      "field": "FiniteLevelInterval",
+      "target": "FiniteLevelInterval"
+    },
+    {
+      "record": "EmbodiedPressureOutput",
+      "field": "Sample",
+      "target": "EmbodiedSample"
+    },
+    {
+      "record": "EmbodiedPressureOutput",
+      "field": "PressureResult",
+      "target": "PressureResult"
+    },
+    {
+      "record": "LevelSourceRegistration",
+      "field": "SourceDefinition",
+      "target": "LevelSourceDefinition"
+    },
+    {
+      "record": "LevelSourceRegistration",
+      "field": "SourceOrigin",
+      "target": "LevelInputOnlyOrigin"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "InputRecordSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "ReadDomain",
+      "target": "StatePathPattern"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "RequiredProjections",
+      "target": "EventDependentProjectedFieldRequirement"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "OutputChoice",
+      "target": "LevelSampleOutputChoice"
+    },
+    {
+      "record": "LevelSourceDefinition",
+      "field": "WriteCapability",
+      "target": "WriteCapabilityV04"
+    },
+    {
+      "record": "LevelSampleOutputChoice",
+      "field": "PresentOutputSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "LevelSampleOutputChoice",
+      "field": "UnavailableOutputSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "PresentPressureRegistration",
+      "field": "Definition",
+      "target": "PresentPressureTransitionDefinition"
+    },
+    {
+      "record": "PresentPressureRegistration",
+      "field": "Ingress",
+      "target": "LevelPressureIngressDefinition"
+    },
+    {
+      "record": "UnavailablePressureRegistration",
+      "field": "Definition",
+      "target": "UnavailablePressureTransitionDefinition"
+    },
+    {
+      "record": "UnavailablePressureRegistration",
+      "field": "Ingress",
+      "target": "LevelPressureIngressDefinition"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "InputAdmission",
+      "target": "PresentLevelInputAdmission"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "ReadDomain",
+      "target": "StatePathPattern"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "OutputDefinitions",
+      "target": "TransitionOutputDefinition"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "WriteCapability",
+      "target": "WriteCapabilityV04"
+    },
+    {
+      "record": "PresentPressureTransitionDefinition",
+      "field": "RequiredProjections",
+      "target": "EventDependentProjectedFieldRequirement"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "InputAdmission",
+      "target": "UnavailableLevelInputAdmission"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "ReadDomain",
+      "target": "StatePathPattern"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "OutputDefinitions",
+      "target": "TransitionOutputDefinition"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "WriteCapability",
+      "target": "WriteCapabilityV04"
+    },
+    {
+      "record": "UnavailablePressureTransitionDefinition",
+      "field": "RequiredProjections",
+      "target": "EventDependentProjectedFieldRequirement"
+    },
+    {
+      "record": "PresentLevelInputAdmission",
+      "field": "InputRecordSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "PresentLevelInputAdmission",
+      "field": "PresentWithFrozenSupport",
+      "target": "PresentWithFrozenSupport"
+    },
+    {
+      "record": "UnavailableLevelInputAdmission",
+      "field": "InputRecordSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "UnavailableLevelInputAdmission",
+      "field": "UnavailableOpportunityResult",
+      "target": "UnavailableOpportunityResult"
+    },
+    {
+      "record": "PresentWithFrozenSupport",
+      "field": "SampleSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "PresentWithFrozenSupport",
+      "field": "FrozenSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "UnavailableOpportunityResult",
+      "field": "SampleSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "InputRecordSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "InputOrigin",
+      "target": "LevelInputOnlyOrigin"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "ReadDomain",
+      "target": "StatePathPattern"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "WritableFamilies",
+      "target": "StatePathPattern"
+    },
+    {
+      "record": "ReserveReplenishmentRegistration",
+      "field": "OutputRecordSchema",
+      "target": "CanonicalRecordSchemaRef"
+    },
+    {
+      "record": "LevelChainCarrier",
+      "field": "Sample",
+      "target": "EmbodiedSample"
+    },
+    {
+      "alias": "EmbodiedSample",
+      "target": "EmbodiedLevelObservation"
+    },
+    {
+      "alias": "EmbodiedSample",
+      "target": "UnavailableLevelSample"
+    }
+  ],
+  "externalSchemaReferences": {
+    "CanonicalRecordSchemaRef": "254/1",
+    "StatePathPattern": "149/1",
+    "EventDependentProjectedFieldRequirement": "266/1",
+    "TransitionOutputDefinition": "277/1",
+    "WriteCapabilityV04": "273/1"
+  },
+  "packet": [
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "sha256": "69a587badee6feec9e9bd137688812136c950b86d70728d24ecd57ad96298277"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "sha256": "0a99493974b9a1f0fa11e3188ba5d78ff48e16c88a03da9104fd6dcf5f60296d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "sha256": "01629cd451bbe71fd859896421279d95b52042ad83efc30401d9120764af6900"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "sha256": "7ab77c6271ad50a94da46d30f9200ba044576fc5b18cf917571e5e785b176eda"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "sha256": "3a1678b59a82be3d9ebbf54a006dee57fcb9cda8ed386bf21d16dedbe8585c1e"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_SYMBOLIC_CONSOLIDATION.md",
+      "sha256": "5709b3421f543ef18c04c43f66567ae7cbff528710d45b196515198c031ddde1"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_FIELD_TYPE_REVIEW.md",
+      "sha256": "d4ce90881fe61ea5a9ff1887afd35bdb36d9ac6ef77358c5d59946f6a7904abe"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_VOCABULARY_DISPATCH_DRAFT.md",
+      "sha256": "133b74a05309249202ee88bf8c4acb8eb54414535a69092c50583d5f70109cdf"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_PROFILE_WITNESS_DRAFT.md",
+      "sha256": "d0dbb63b12ab61ce90a2d0969602508dece64eadc022da0b050dbe53fd1c154d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "sha256": "65a9227ed16826ce2d85c83b6dbf64611bc61816666e5c3f866e81240ce86e33"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "sha256": "73b254b0af4881fc3427214cc79a3507a25c71dc9bf9315716c86054acba1550"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_TYPED_INVENTORY_REV2.json",
+      "sha256": "6841c1a1855137474780fd9b92dbb6dbbfbc3abb520bfa157fe4e683a79e65d6"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_VOCABULARY_REV1.json",
+      "sha256": "44bd85a6f2a1fe3f82ceb09a7485548ba872e4c258481fe64f1069e5c0b4f824"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_PROFILE_EXPECTATIONS_REV1.json",
+      "sha256": "d22ac61a1a141dfa46335619eb1210d8dee0bee9a5f06be94cdf082164987028"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.json",
+      "sha256": "0c191fc10086de3213453da80426d24b28f0e8e0f758071c9e47fbe8585140cf"
+    }
+  ],
+  "inspectedRoleSources": [
+    {
+      "path": "src/campaign2/valDeclarations.ts",
+      "sha256": "b147b5fe2cc389d07bfbaa1885a8f4e2624525ad33e0638983304998113d45fc"
+    },
+    {
+      "path": "src/campaign2/identityRoles.ts",
+      "sha256": "228697d9f5c1fd7c16ee2797d48067ff853c6ecd99809ff5dc1a789f73cfa8a3"
+    }
+  ],
+  "preservedChecks": 446,
+  "limitations": [
+    "References are symbolic, not numeric codec descriptors.",
+    "Identity ownership is inventoried, not executed.",
+    "Registry target closure remains a required compiler check, not proven by this inventory."
+  ],
+  "script": {
+    "path": "scripts/audit-campaign3-embodied-review-manifest.mjs",
+    "sha256": "a8cc66bd9d74f0de9d7b36fd3c17af6ed2518a8c259f8633523eba934edc0ea2"
+  }
+}

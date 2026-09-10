@@ -9,7 +9,7 @@ always means the named bounded contract/profile, never the whole ideal capabilit
 | Seam family | Current authority / evidence | Current bounded state | Remaining gate |
 |---|---|---|---|
 | Deterministic time, random, state, trace | substrate/0.2-candidate and Campaign0 verdicts | Implemented/qualified | New domains/coupling profiles require explicit proof |
-| Constitution/development/physiology | Architecture §§6–7; EMB-001 | No physiological dynamics or embodied Need source | Versioned body/interoception/motive contracts; proposed physiology corpus |
+| Constitution/development/physiology | Architecture §§6–7; EMB-001; [bounded shape](../formal/EMBODIED_RESERVE_SHAPE_ACCEPTANCE.md), [permanent allocation](../formal/EMBODIED_RESERVE_PERMANENT_ALLOCATION.md) | Bounded reserve/current level/option-free pressure/external-delivery shape accepted and allocated; unimplemented | Model/content/role packaging, then 76 frozen implementation obligations; general EMB and BODY+MULTISOURCE remain open |
 | Regulatory reference and displacement | regulatory-reference/0.5-candidate; adaptation-input/0.31-candidate; bounded factory qualification | Implemented/qualified authored reference arithmetic and retained adaptation | Not general physiological dynamics or motivational efficacy |
 | Observation/SEM/recognition | semantic-binding/0.1-candidate; SEM-001J | Qualified Campaign1 finite epistemic path | Broad ontology/social recognition extensions |
 | Perceptual attention and encoding salience | ATTN-001; MEC-005 CONTROL+CONTRACT; MEC-007 CONTROL; RET-001 remains retired | Unimplemented; explicitly tracked. Perception/Attention remains in canonical topology | Attention capacity, residual-pool and alternative salience contracts/experiments |

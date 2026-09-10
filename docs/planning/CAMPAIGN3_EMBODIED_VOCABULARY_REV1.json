@@ -1,0 +1,287 @@
+{
+  "status": "SYM-2 VOCABULARY/DISPATCH PROPOSAL; NO NUMERIC OR SHAPE ACCEPTANCE",
+  "members": [
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-reserve",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-level-observation",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-pressure",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-replenishment",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-level-sample",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-level-tracking-slot",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-level-binding-slot",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-level-classification-slot",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-level-settlement",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-pressure-present",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-pressure-unavailable",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-reserve-replenishment",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedPresentPressureTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedUnavailablePressureTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "existingNamespace": 1028,
+      "payload": "accessor/embodied-reserve-anchor",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "MutationAuthorityId",
+      "existingNamespace": 1025,
+      "payload": "authority/embodied-reserve",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "ModalityId",
+      "existingNamespace": 1006,
+      "payload": "modality/embodied-fuel-level",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "ObservationUnitId",
+      "existingNamespace": 1039,
+      "payload": "unit/embodied-fuel-stock",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-reserve-parameters",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-reserve-bodies",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-level-channel",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-pressure-definition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-level-source-registration",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-pressure-present-registration",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-pressure-unavailable-registration",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-replenishment-definition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-replenishment-registration",
+      "status": "PROPOSED; NOT ALLOCATED"
+    }
+  ],
+  "events": [
+    {
+      "payload": "event/embodied-level-sample",
+      "phase": 10
+    },
+    {
+      "payload": "event/embodied-level-tracking-slot",
+      "phase": 11
+    },
+    {
+      "payload": "event/embodied-level-binding-slot",
+      "phase": 12
+    },
+    {
+      "payload": "event/embodied-level-classification-slot",
+      "phase": 13
+    },
+    {
+      "payload": "event/embodied-level-settlement",
+      "phase": 14
+    },
+    {
+      "payload": "event/embodied-pressure-present",
+      "phase": 60
+    },
+    {
+      "payload": "event/embodied-pressure-unavailable",
+      "phase": 60
+    },
+    {
+      "payload": "event/embodied-reserve-replenishment",
+      "phase": 110
+    }
+  ],
+  "dispatch": [
+    {
+      "kind": "registry/embodied-reserve-parameters",
+      "targetVersion": "embodied-reserve/0.1-candidate",
+      "schema": "ReserveParameters",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-reserve-bodies",
+      "targetVersion": "embodied-reserve/0.1-candidate",
+      "schema": "ReserveBodyRegistryDefinition",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-level-channel",
+      "targetVersion": "embodied-level-observation/0.1-candidate",
+      "schema": "LevelChannelDefinition",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-pressure-definition",
+      "targetVersion": "embodied-pressure/0.1-candidate",
+      "schema": "PressureDefinition",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-level-source-registration",
+      "targetVersion": "embodied-source-admission/0.1-candidate",
+      "schema": "LevelSourceRegistration",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-pressure-present-registration",
+      "targetVersion": "embodied-pressure-admission/0.1-candidate",
+      "schema": "PresentPressureRegistration",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-pressure-unavailable-registration",
+      "targetVersion": "embodied-pressure-admission/0.1-candidate",
+      "schema": "UnavailablePressureRegistration",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-replenishment-definition",
+      "targetVersion": "embodied-replenishment/0.1-candidate",
+      "schema": "ReserveReplenishmentDefinition",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "registry/embodied-replenishment-registration",
+      "targetVersion": "embodied-replenishment/0.1-candidate",
+      "schema": "ReserveReplenishmentRegistration",
+      "status": "PROPOSED"
+    }
+  ],
+  "newFailureSymbols": [
+    "EMBODIED_TARGET_PATH_VIOLATION",
+    "EMBODIED_TIME_ORDER_VIOLATION"
+  ],
+  "remaining": [
+    "SYM-3 closed instance IDs and specimen data",
+    "SYM-3 exact restore-code mapping",
+    "whole composed shape review",
+    "separate allocation and profile packaging"
+  ],
+  "checks": {
+    "members": 27,
+    "dispatchRows": 9,
+    "formalJsonScanned": 35,
+    "exactStringCollisions": 0,
+    "preservedChecks": 446
+  },
+  "limitation": "Exact string scan does not replace semantic review, permanent member allocation or runtime controls.",
+  "document": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_VOCABULARY_DISPATCH_DRAFT.md",
+    "sha256": "133b74a05309249202ee88bf8c4acb8eb54414535a69092c50583d5f70109cdf"
+  },
+  "typedInventory": {
+    "path": "docs/planning/CAMPAIGN3_EMBODIED_TYPED_INVENTORY_REV1.json",
+    "sha256": "a75a6016b391be5a37476d536063f90bdb0c219926aea59105b6ac629a8ad00e"
+  },
+  "script": {
+    "path": "scripts/audit-campaign3-embodied-vocabulary.mjs",
+    "sha256": "3cf9262f170d503efcd993bb2af4e3500e74082240c9636523bcca4ac3e8cdc3"
+  }
+}
