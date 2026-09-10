@@ -1,0 +1,1655 @@
+{
+  "version": "embodied-receiving-allocation/0.1-draft",
+  "status": "NUMERIC PROPOSAL; NOT PERMANENT",
+  "authority": "docs/formal/EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md",
+  "sourceManifest": {
+    "path": "docs/formal/EMBODIED_RECEIVING_SHAPE_MANIFEST.json",
+    "sha256": "c1cd1d39dfa4a228f858317a418b93129842943a798ec798fd42590cc97ef2d1"
+  },
+  "records": [
+    {
+      "typeId": 485,
+      "schemaVersion": 1,
+      "name": "EmbodiedResponseInstructionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ProtocolActionDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 486,
+      "schemaVersion": 1,
+      "name": "EmbodiedResponseContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "AdoptedInstructions",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 487,
+      "schemaVersion": 1,
+      "name": "EmbodiedResponseInstructionState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Contexts",
+          "type": "map<id:CharacterId,EmbodiedResponseContext>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 488,
+      "schemaVersion": 1,
+      "name": "BodyCandidateOrigin",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "InstructionDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 489,
+      "schemaVersion": 1,
+      "name": "BodyResponseOptions",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:CandidateOptionsOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Pressure",
+          "type": "EmbodiedPressureOutput",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Origins",
+          "type": "list<BodyCandidateOrigin>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 490,
+      "schemaVersion": 1,
+      "name": "MixedCandidateOption",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "TaskOrigins",
+          "type": "set<ProceduralCandidateOrigin>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "BodyOrigins",
+          "type": "set<id:DefinitionId>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 491,
+      "schemaVersion": 1,
+      "name": "MixedCandidateJoinInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "TaskOptions",
+          "type": "TaskCandidateOptions",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "BodyOptions",
+          "type": "BodyResponseOptions",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 492,
+      "schemaVersion": 1,
+      "name": "MixedCandidateContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:CandidateOptionsOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sources",
+          "type": "MixedCandidateJoinInput",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": "list<MixedCandidateOption>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 493,
+      "schemaVersion": 1,
+      "name": "EmbodiedGround",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PressureDefinitionId",
+          "type": "id:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 494,
+      "schemaVersion": 1,
+      "name": "MixedMotivationGround",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Task",
+          "type": "TaskCommitmentKey",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "Body",
+          "type": "EmbodiedGround",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 495,
+      "schemaVersion": 1,
+      "name": "MixedSignalKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SourceRole",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "BodyInstructionDefinitionId",
+          "type": "id:DefinitionId",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 496,
+      "schemaVersion": 1,
+      "name": "MixedRawSignal",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "type": "MixedSignalKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Strength",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Basis",
+          "type": "ReasonEvidenceBasis",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 497,
+      "schemaVersion": 1,
+      "name": "GroundMeaning",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Meaning",
+          "type": "map<ProceduralCandidateKey,rational>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 498,
+      "schemaVersion": 1,
+      "name": "MixedRawJoinInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "MixedCandidates",
+          "type": "MixedCandidateContext",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "TaskRaw",
+          "type": "TaskRawSignalContext",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 499,
+      "schemaVersion": 1,
+      "name": "MixedRawContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:RawSignalContextOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sources",
+          "type": "MixedRawJoinInput",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": "set<MixedRawSignal>",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "NonStandingMeanings",
+          "type": "list<GroundMeaning>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 500,
+      "schemaVersion": 1,
+      "name": "MixedCoverageResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SourceKey",
+          "type": "MixedSignalKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "RawMagnitude",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Overlap",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Independence",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "EffectiveMagnitude",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 501,
+      "schemaVersion": 1,
+      "name": "MixedRoleSummary",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Base",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Standing",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Situational",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Coverage",
+          "type": "list<MixedCoverageResult>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 502,
+      "schemaVersion": 1,
+      "name": "MixedReasonKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "MotiveChannelId",
+          "type": "id:MotiveChannelId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Direction",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 503,
+      "schemaVersion": 1,
+      "name": "MixedReasonNucleus",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "type": "MixedReasonKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Roles",
+          "type": "MixedRoleSummary",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Relevance",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "BaseDie",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "StandingModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "SituationalModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Distribution",
+          "type": "ExactScoreDistribution",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 504,
+      "schemaVersion": 1,
+      "name": "MixedReasonContext",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:ReasonContextOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "RawContext",
+          "type": "MixedRawContext",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": "list<MixedReasonNucleus>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 505,
+      "schemaVersion": 1,
+      "name": "MixedReasonDraw",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "type": "MixedReasonKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "BaseDie",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "StandingModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SituationalModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Draw",
+          "type": "CognitiveRandomDraw",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Face",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "SignedContribution",
+          "type": "signed",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 506,
+      "schemaVersion": 1,
+      "name": "MixedChosenData",
+      "fields": [
+        {
+          "id": 1,
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Probabilities",
+          "type": "list<OptionProbability>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Margin",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Contest",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ConflictMass",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Stake",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "AuthorshipPotential",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ResolutionMode",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ReasonDraws",
+          "type": "list<MixedReasonDraw>",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "TieBreak",
+          "type": "DecisionTieBreak",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 507,
+      "schemaVersion": 1,
+      "name": "MixedDecisionResult",
+      "fields": [
+        {
+          "id": 1,
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ChosenData",
+          "type": "MixedChosenData",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 508,
+      "schemaVersion": 1,
+      "name": "MixedDecisionResolution",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:DecisionResolutionOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "OccurredAt",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ReasonContext",
+          "type": "MixedReasonContext",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Result",
+          "type": "MixedDecisionResult",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 509,
+      "schemaVersion": 1,
+      "name": "MixedChosenIntent",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:ChosenIntentOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Resolution",
+          "type": "MixedDecisionResolution",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 510,
+      "schemaVersion": 1,
+      "name": "GroundExpression",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Alignment",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 511,
+      "schemaVersion": 1,
+      "name": "MixedDecisionExpression",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:DecisionExpressionOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "MixedChosenIntent",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "GroundExpressions",
+          "type": "list<GroundExpression>",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ScopeVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 512,
+      "schemaVersion": 1,
+      "name": "MixedActionPlan",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:ActionPlanOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "MixedChosenIntent",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "RequestedContactCount",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 513,
+      "schemaVersion": 1,
+      "name": "MixedActionAttempt",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:ActionAttemptOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "MixedActionPlan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 514,
+      "schemaVersion": 1,
+      "name": "MixedExecutionOutcome",
+      "fields": [
+        {
+          "id": 1,
+          "name": "OccurrenceId",
+          "type": "id:ExecutionOutcomeOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "MixedActionAttempt",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "CompletedContactCount",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 515,
+      "schemaVersion": 1,
+      "name": "EmbodiedReceivingStageRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Stage",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ExecutingSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ExecutingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "EventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Phase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "SourceEvents",
+          "type": "set<id:EventTypeId>",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "members": [
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-workspace"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingWorkspaceTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-appraisal"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingAppraisalTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-concern"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingConcernTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-task-motive"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingTaskMotiveTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-body-options"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingBodyOptionsTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-task-candidates"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingTaskCandidatesTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-mixed-candidates"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingMixedCandidatesTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-task-raw"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingTaskRawTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-mixed-raw"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingMixedRawTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-mixed-reasons"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingMixedReasonsTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-resolution"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingResolutionTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-intent"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingIntentTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-expression"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingExpressionTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-plan"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingPlanTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-attempt"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingAttemptTransition"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/embodied-receiving-execution"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "EmbodiedReceivingExecutionTransition"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-task-source"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-response-instruction"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-task-options"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-task-reasons"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-task-arbitration"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-choice-expression"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/embodied-protocol-attempt"
+    },
+    {
+      "family": "RegistryKindId",
+      "namespace": 1023,
+      "payload": "registry/embodied-response-instruction"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/embodied-response-a"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/embodied-response-a-copy"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/embodied-response-b"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "namespace": 1028,
+      "payload": "accessor/embodied-response-context"
+    },
+    {
+      "family": "MotiveChannelId",
+      "namespace": 1040,
+      "payload": "EmbodiedFuelDeficit"
+    },
+    {
+      "family": "RandomPurposeId",
+      "namespace": 1042,
+      "payload": "purpose/embodied-task-reason-face"
+    },
+    {
+      "family": "RandomPurposeId",
+      "namespace": 1042,
+      "payload": "purpose/embodied-body-reason-face"
+    },
+    {
+      "family": "RandomPurposeId",
+      "namespace": 1042,
+      "payload": "purpose/embodied-decision-tie"
+    },
+    {
+      "family": "RandomSubjectRoleId",
+      "namespace": 1043,
+      "payload": "subject/pressure-definition"
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 485,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 485,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 488,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 489,
+      "fieldId": 1,
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 492,
+      "fieldId": 1,
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 493,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification"
+    },
+    {
+      "recordTypeId": 493,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 495,
+      "fieldId": 4,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 499,
+      "fieldId": 1,
+      "family": "RawSignalContextOccurrenceId",
+      "requiredNamespace": 1133,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 502,
+      "fieldId": 3,
+      "family": "MotiveChannelId",
+      "requiredNamespace": 1040,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 504,
+      "fieldId": 1,
+      "family": "ReasonContextOccurrenceId",
+      "requiredNamespace": 1134,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 508,
+      "fieldId": 1,
+      "family": "DecisionResolutionOccurrenceId",
+      "requiredNamespace": 1135,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 509,
+      "fieldId": 1,
+      "family": "ChosenIntentOccurrenceId",
+      "requiredNamespace": 1136,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 511,
+      "fieldId": 1,
+      "family": "DecisionExpressionOccurrenceId",
+      "requiredNamespace": 1137,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 512,
+      "fieldId": 1,
+      "family": "ActionPlanOccurrenceId",
+      "requiredNamespace": 1139,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 513,
+      "fieldId": 1,
+      "family": "ActionAttemptOccurrenceId",
+      "requiredNamespace": 1140,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 514,
+      "fieldId": 1,
+      "family": "ExecutionOutcomeOccurrenceId",
+      "requiredNamespace": 1141,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 515,
+      "fieldId": 2,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 515,
+      "fieldId": 4,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    }
+  ],
+  "mapKeyRoles": [
+    {
+      "recordTypeId": 487,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification",
+      "position": "StateMapKey"
+    }
+  ],
+  "collectionIdentityChecks": [
+    {
+      "recordTypeId": 486,
+      "fieldId": 1,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "containerGrammar": "set<id:DefinitionId>"
+    },
+    {
+      "recordTypeId": 487,
+      "fieldId": 1,
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": "validator/character-qualification",
+      "containerGrammar": "map<id:CharacterId,EmbodiedResponseContext>"
+    },
+    {
+      "recordTypeId": 490,
+      "fieldId": 3,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null,
+      "containerGrammar": "set<id:DefinitionId>"
+    },
+    {
+      "recordTypeId": 515,
+      "fieldId": 11,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null,
+      "containerGrammar": "set<id:EventTypeId>"
+    }
+  ],
+  "unionDefinitions": [
+    {
+      "recordTypeId": 494,
+      "tag": 1,
+      "name": "Task",
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": [
+        3
+      ]
+    },
+    {
+      "recordTypeId": 494,
+      "tag": 2,
+      "name": "Body",
+      "requiredPayloadFieldIds": [
+        3
+      ],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 507,
+      "tag": 1,
+      "name": "NoOptions",
+      "requiredPayloadFieldIds": [],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 507,
+      "tag": 2,
+      "name": "NoActiveReasons",
+      "requiredPayloadFieldIds": [],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 507,
+      "tag": 3,
+      "name": "Chosen",
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": []
+    }
+  ],
+  "finiteDomains": [
+    {
+      "recordTypeId": 495,
+      "fieldId": 3,
+      "values": [
+        {
+          "name": "MotiveGenerating",
+          "value": 1
+        },
+        {
+          "name": "SituationalEvidence",
+          "value": 2
+        },
+        {
+          "name": "StandingDisposition",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "recordTypeId": 502,
+      "fieldId": 4,
+      "values": [
+        {
+          "name": "Approach",
+          "value": 1
+        },
+        {
+          "name": "Avoid",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "recordTypeId": 506,
+      "fieldId": 8,
+      "values": [
+        {
+          "name": "Auto",
+          "value": 1
+        },
+        {
+          "name": "QuietRoll",
+          "value": 2
+        },
+        {
+          "name": "PlayerFacingRoll",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "recordTypeId": 515,
+      "fieldId": 1,
+      "values": [
+        {
+          "name": "workspace",
+          "value": 1
+        },
+        {
+          "name": "appraisal",
+          "value": 2
+        },
+        {
+          "name": "concern",
+          "value": 3
+        },
+        {
+          "name": "task-motive",
+          "value": 4
+        },
+        {
+          "name": "body-options",
+          "value": 5
+        },
+        {
+          "name": "task-candidates",
+          "value": 6
+        },
+        {
+          "name": "mixed-candidates",
+          "value": 7
+        },
+        {
+          "name": "task-raw",
+          "value": 8
+        },
+        {
+          "name": "mixed-raw",
+          "value": 9
+        },
+        {
+          "name": "mixed-reasons",
+          "value": 10
+        },
+        {
+          "name": "resolution",
+          "value": 11
+        },
+        {
+          "name": "intent",
+          "value": 12
+        },
+        {
+          "name": "expression",
+          "value": 13
+        },
+        {
+          "name": "plan",
+          "value": 14
+        },
+        {
+          "name": "attempt",
+          "value": 15
+        },
+        {
+          "name": "execution",
+          "value": 16
+        }
+      ]
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 489,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132
+    },
+    {
+      "recordTypeId": 492,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132
+    },
+    {
+      "recordTypeId": 499,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "RawSignalContextOccurrenceId",
+      "requiredNamespace": 1133
+    },
+    {
+      "recordTypeId": 504,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ReasonContextOccurrenceId",
+      "requiredNamespace": 1134
+    },
+    {
+      "recordTypeId": 508,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "DecisionResolutionOccurrenceId",
+      "requiredNamespace": 1135
+    },
+    {
+      "recordTypeId": 509,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ChosenIntentOccurrenceId",
+      "requiredNamespace": 1136
+    },
+    {
+      "recordTypeId": 511,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "DecisionExpressionOccurrenceId",
+      "requiredNamespace": 1137
+    },
+    {
+      "recordTypeId": 512,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ActionPlanOccurrenceId",
+      "requiredNamespace": 1139
+    },
+    {
+      "recordTypeId": 513,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ActionAttemptOccurrenceId",
+      "requiredNamespace": 1140
+    },
+    {
+      "recordTypeId": 514,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ExecutionOutcomeOccurrenceId",
+      "requiredNamespace": 1141
+    }
+  ],
+  "existingRecordReferences": {
+    "ProceduralCandidateKey": "395/1",
+    "ProceduralCandidateOrigin": "396/1",
+    "TaskCommitmentKey": "371/1",
+    "TaskCandidateOptions": "398/1",
+    "TaskRawSignalContext": "403/1",
+    "EmbodiedPressureOutput": "464/1",
+    "ReasonEvidenceBasis": "400/1",
+    "ExactScoreDistribution": "424/1",
+    "CognitiveRandomDraw": "411/1",
+    "OptionProbability": "421/1",
+    "DecisionTieBreak": "423/1",
+    "CanonicalRecordSchemaRef": "254/1",
+    "StatePathPattern": "149/1",
+    "WriteCapabilityV04": "273/1",
+    "EventDependentProjectedFieldRequirement": "266/1",
+    "TransitionOutputDefinition": "277/1"
+  },
+  "identifierAliases": {
+    "DefinitionId": 1027,
+    "CharacterId": 1002,
+    "CandidateOptionsOccurrenceId": 1132,
+    "RawSignalContextOccurrenceId": 1133,
+    "ReasonContextOccurrenceId": 1134,
+    "DecisionResolutionOccurrenceId": 1135,
+    "ChosenIntentOccurrenceId": 1136,
+    "DecisionExpressionOccurrenceId": 1137,
+    "ActionPlanOccurrenceId": 1139,
+    "ActionAttemptOccurrenceId": 1140,
+    "ExecutionOutcomeOccurrenceId": 1141,
+    "MotiveChannelId": 1040,
+    "SeamId": 1036,
+    "EventTypeId": 1001
+  },
+  "newNamespaces": [],
+  "counts": {
+    "records": 31,
+    "fields": 110,
+    "members": 49,
+    "unionVariants": 5,
+    "finiteDomains": 4,
+    "roles": 19,
+    "mapKeyRoles": 1,
+    "collectionIdentityChecks": 4,
+    "outputIdentities": 10
+  },
+  "preservation": [
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md",
+      "sha256": "8188d3b0f0e9d00029dd65df73ce3eb550a464422552e7f07352599e80667390"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_INSPECTION.md",
+      "sha256": "3bb8b8cc3f003e5efd14d98511c34ab67ea53fdf703b570ed95ee1aa932fe16d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_DRAFT.md",
+      "sha256": "03d16076c77bc776723f9ffdb96bfa66f4130b8e186664c66c1fa46699444b51"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_CLOSURE_DRAFT.md",
+      "sha256": "04d3218bd652ac4c5067c72e63e6f7b3f67b00fa94c2b2999bb2ea0e71b70519"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_MODEL_DRAFT.md",
+      "sha256": "d7e8cbcfbcd43c9651a7230e0404f4eb3c413d14ce075757acdb94175e03ec75"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_SELF_REVIEW_1.md",
+      "sha256": "7d262bb9feedcac0dfd5825702b2a38eccf5aa437fcd1402324aa907c1c0fcd0"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_SELF_REVIEW_2.md",
+      "sha256": "10d3906ca3f1fae3758bb6b932f8ee74902643b29e5a0195a78e77e228a6e847"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_SYMBOLIC_INVENTORY_REV3.json",
+      "sha256": "c7476f167d6dc88f3fe6767da1984cd5dea11faa99c53cb5a6d802b6e9a02feb"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_VOCABULARY_REV2.json",
+      "sha256": "04a8702a2944e0260bbcbcb4cf8e68a21e60cb2ec2751076bfa8c1437e621a88"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_INHERITANCE_REVIEW_REV1.json",
+      "sha256": "81ba7b1f864053c46f7ff52b3f2fb3224dd1ec58256fbb34a2b4c8279e4b968d"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_ARITHMETIC_REV1.json",
+      "sha256": "d093fe947e6427adc8f010778408a91d77d2cc9b5e4d298c3aaa42e3d009dcb8"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_SCHEDULING_REV1.json",
+      "sha256": "f5a61f097b1d60f6ed939dd988d43f3e5f70245eec92bb78bcc53fc057aef857"
+    }
+  ]
+}

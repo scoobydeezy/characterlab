@@ -1,0 +1,34 @@
+// Isolated current-source substitutions. Never edits production source files.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const output='docs/planning/EMBODIED_RECEIVING_MUTANTS_REV2.json';assert(!fs.existsSync(output));
+const cohort='docs/planning/campaign3-embodied-receiving-model-rev1',runs='docs/planning/embodied-receiving-execution-rev2',freeze=JSON.parse(fs.readFileSync(cohort+'/FREEZE.json'));
+const read=p=>new Uint8Array(Buffer.from(fs.readFileSync(p,'utf8').trim(),'hex')),fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')}),hex=b=>Buffer.from(b).toString('hex');
+const mutations=[
+ ['wrong-trace-subject','receivingRuntime.ts','subjectIds:stage===1?[O,C]:[C]','subjectIds:[O]','baseline'],
+ ['omitted-trace-sources','receivingRuntime.ts','sourceRecordIds:sourceRecords.map(id)','sourceRecordIds:[]','baseline'],
+ ['omitted-trace-output','receivingRuntime.ts','outputProjection:list([output]),randomDrawRecords','outputProjection:list([]),randomDrawRecords','baseline'],
+ ['omitted-trace-random','receivingRuntime.ts','outputProjection:list([output]),randomDrawRecords,quantizationOperations','outputProjection:list([output]),randomDrawRecords:[],quantizationOperations','baseline'],
+ ['omitted-trace-reads','receivingRuntime.ts','sourceRecordIds:sourceRecords.map(id),registeredReadDomain:domain,actualReadRecords:reads','sourceRecordIds:sourceRecords.map(id),registeredReadDomain:domain,actualReadRecords:[]','baseline'],
+ ['duplicate-coverage-removed','receivingTransforms.ts',"const overlap=law==='no-coverage'||union.equals(ZERO)?ZERO:intersection.divide(union)",'const overlap=ZERO','duplicate'],
+ ['independent-grounds-collapsed','receivingTransforms.ts','k=key(list([f(s,1n),f(s,2n)]))','k=key(f(s,1n))','same-option'],
+ ['registry-membership-becomes-adoption','receivingRuntime.ts',"items(f(rec(context,486n),1n),'set').map(instructionId=>","[ID(1027,'definition/embodied-response-a')].map(instructionId=>",'drop-body'],
+ ['inactive-context-read','receivingTransforms.ts','const adopted=active?[...readAdopted()]:[];','const adopted=[...readAdopted()];','known-zero'],
+ ['missing-receiving-child-binding','receivingRuntime.ts','receiving!.bindChildren(event,children);const trace=','const trace=','baseline'],
+ ['extra-receiving-allocation','receivingRuntime.ts','const outputSchema=rec(','context.allocateRuntimeId();const outputSchema=rec(','baseline'],
+ ['receiving-body-write','receivingRuntime.ts','return {nextState:state,outputs:[output],',"return {nextState:model.state.applyPatch(state,{operations:[{kind:'set',path:bodyPath,expected:{presence:true,value:state.read(bodyPath).value!},newValue:r(454,[atom(exact(f(params,2n))),signed(instant)])}]},OWNER).state,outputs:[output],",'baseline'],
+ ['execution-permission-bypassed','receivingRuntime.ts',"f(rec(definition('protocol-execution'),434n),1n)===true?f(plan,3n):unsigned(0)",'f(plan,3n)','execution-blocked','execution-blocked'],
+ ['lower-bound-pressure','receivingRuntime.ts','deficitPressure(exact(f(rec(f(sample,5n),462n),2n)),threshold)','deficitPressure(exact(f(rec(f(sample,5n),462n),1n)),threshold)','baseline'],
+ ['missing-SEM-settlement','receivingRuntime.ts','ingress.settled(event,experience);','/* missing settlement */','baseline'],
+ ['instruction-used-as-ground','receivingTransforms.ts','r(493,[f(pressure,2n),pressureDefinition])',"r(493,[f(pressure,2n),id(1027,'definition/embodied-response-a')])",'duplicate'],
+ ['wrong-body-RNG-purpose','receivingArbitration.ts',"'purpose/embodied-body-reason-face'","'purpose/embodied-task-reason-face'",'baseline'],
+ ['deadline-retirement-omitted','receivingRuntime.ts',"operations:prior.presence&&(f(rec(prior.value!,372n),1n) as {value:bigint}).value===1n?","operations:false&&(f(rec(prior.value!,372n),1n) as {value:bigint}).value===1n?",'deadline'],
+ ['cognitive-body-read','receivingRuntime.ts','const domain=items(f(registered,7n)',"bodyRead(state,C,bodyDomain);const domain=items(f(registered,7n)",'baseline'],
+];
+async function execute(specimen,modelName='baseline',mutation){let replaced=0;const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom',plugins:mutation?[{name:'receiving-mutant',enforce:'pre',transform(code,id){if(id.replaceAll('\\','/').endsWith('/src/campaign3/'+mutation[1])){assert.equal(code.split(mutation[2]).length-1,1,mutation[0]+' exact replacement');replaced++;return code.replace(mutation[2],mutation[3]);}}}]:[]});
+ try{const api=await server.ssrLoadModule('/src/campaign3/receivingFactory.ts'),source={...freeze.versions,...Object.fromEntries(['content','registry','parameters'].map(n=>[n,read(cohort+'/'+modelName+'/'+n+'.cenc.hex')]))},model=await api.prepareReceivingModel(source),run=await api.createReceivingRun(model,{initialState:read(runs+'/'+specimen+'/initial.cenc.hex'),orderedInputs:read(runs+'/'+specimen+'/inputs.cenc.hex'),runSeed:new Uint8Array(32)});try{while(await run.settleNextInstant()){}return {outputs:hex(run.snapshot().outputs),replaced};}catch(error){return {failure:error.code??error.name,message:error.message,replaced};}}finally{await server.close();}
+}
+const controls=new Map(),results=[];
+for(const mutation of mutations){const specimen=mutation[4],model=mutation[5]??'baseline',k=specimen+'/'+model;if(!controls.has(k)){const original=await execute(specimen,model);assert(original.outputs);assert.equal(original.outputs,hex(read(runs+'/'+specimen+'/outputs.cenc.hex')),'new guards preserve recorded public bytes');controls.set(k,original.outputs);}const result=await execute(specimen,model,mutation);assert.equal(result.replaced,1);assert(result.failure||result.outputs!==controls.get(k),'survived '+mutation[0]);results.push({name:mutation[0],source:mutation[1],removed:mutation[2],inserted:mutation[3],specimen,model,detectedBy:result.failure?'production rejection':'public canonical output difference',failure:result.failure,message:result.message});console.log(mutation[0]+': '+(result.failure??'output difference'));}
+fs.writeFileSync(output,JSON.stringify({status:'NINETEEN CURRENT-SOURCE ALTERNATIVES DETECTED',results,unchangedPublicControlExecutions:controls.size,sources:['src/campaign3/receivingRuntime.ts','src/campaign3/receivingTransforms.ts','src/campaign3/receivingArbitration.ts','src/campaign3/receivingAdmission.ts','src/campaign3/receivingTrace.ts','scripts/review-embodied-receiving-mutants-rev2.mjs'].map(fp),cohort:fp(cohort+'/FREEZE.json'),historicalExecutionPacket:fp(runs+'/REVIEW.json'),limits:['Fault sensitivity is not a general reduction verdict.','Public output-difference mutants need the named reference-law expectations to identify the retained winner.','Generic multi-atom aggregate control is separately tested.']},null,2)+'\n');
+
+

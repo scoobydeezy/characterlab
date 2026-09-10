@@ -1,0 +1,21 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const output='docs/formal/EMBODIED_RECEIVING_SHAPE_MANIFEST.json';assert(!fs.existsSync(output));
+const read=p=>JSON.parse(fs.readFileSync(p));
+const inventory=read('docs/planning/EMBODIED_RECEIVING_SYMBOLIC_INVENTORY_REV3.json'),vocabulary=read('docs/planning/EMBODIED_RECEIVING_VOCABULARY_REV2.json');
+assert.deepEqual(inventory.counts,{records:31,fields:110,outputs:10});assert.equal(vocabulary.members.length,49);assert.equal(vocabulary.stages.length,16);
+assert(inventory.records.every(r=>r.typeId===undefined&&r.fields.every(f=>f.id===undefined)),'no new numeric IDs');
+assert.equal(new Set(vocabulary.stages.map(s=>s.stage)).size,16);
+const outputs=new Set(vocabulary.stages.map(s=>s.output));for(const o of inventory.occurrenceOutputs)assert(outputs.has(o.output),'orphan semantic output');
+for(const role of vocabulary.scalarRoles){const field=inventory.records.find(r=>r.name===role.record)?.fields.find(f=>f.name===role.field);assert(field);assert.equal(field.type,'id:'+role.family);assert.equal(role.requiredNamespace,inventory.existingIdentityFamilies[role.family]);}
+assert.equal(vocabulary.stateMapKeyRole.requiredNamespace,1002);assert.equal(vocabulary.stateMapKeyRole.domainValidator,'validator/character-qualification');
+for(const m of vocabulary.members){assert.equal(m.payload.normalize('NFC'),m.payload);assert(m.payload.length);assert(m.existingNamespace<1100);}
+const inheritance=read('docs/planning/EMBODIED_RECEIVING_INHERITANCE_REVIEW_REV1.json');assert.equal(inheritance.inherited.length,16);
+assert.equal(inheritance.dormantPrediction.unit,'unit/diagnostic-regulatory-level');
+const arithmetic=read('docs/planning/EMBODIED_RECEIVING_ARITHMETIC_REV1.json');assert.equal(arithmetic.contrasts[0].probabilities[0],'221/256');assert.equal(arithmetic.contrasts[3].probabilities[0],'1/2');assert.equal(arithmetic.contrasts[4].probabilities[0],'2/3');
+const scheduling=read('docs/planning/EMBODIED_RECEIVING_SCHEDULING_REV1.json');assert.equal(scheduling.results[4].events.length,26);assert.equal(scheduling.results[5].failure,'CASCADE_LIMIT_EXCEEDED');
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+for(const receipt of [arithmetic,scheduling])for(const source of receipt.sources)assert.deepEqual(fp(source.path),source,'research source changed');
+for(const source of inheritance.preservation)assert.deepEqual(fp(source.path),source,'inherited source changed');
+const paths=['docs/formal/EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_INSPECTION.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_DRAFT.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_CLOSURE_DRAFT.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_MODEL_DRAFT.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_SELF_REVIEW_1.md','docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_SELF_REVIEW_2.md','docs/planning/EMBODIED_RECEIVING_SYMBOLIC_INVENTORY_REV3.json','docs/planning/EMBODIED_RECEIVING_VOCABULARY_REV2.json','docs/planning/EMBODIED_RECEIVING_INHERITANCE_REVIEW_REV1.json','docs/planning/EMBODIED_RECEIVING_ARITHMETIC_REV1.json','docs/planning/EMBODIED_RECEIVING_SCHEDULING_REV1.json'];
+fs.writeFileSync(output,JSON.stringify({status:'BOUNDED WHOLE SYMBOLIC SHAPE ACCEPTED BY PRIMARY-AGENT REVIEW',acceptance:'docs/formal/EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md',files:paths.map(fp),inventoryCounts:inventory.counts,vocabularyCounts:vocabulary.counts,modelRecipes:13,frozenRuntimeVectors:['EMB-M','EMB-N','EMB-O',...'ABCDEFGHIJKLMNOPQR'.split('').map(c=>'ER-'+c)],runtimeStatus:'NOT PASSED',nextGates:['Separate permanent allocation review','Thirteen exact canonical models and declaration/source review','Canonical implementation and public/component qualification','Bounded EMB closure and preservation review'],limits:['Research arithmetic and abstract scheduler evidence are not semantic execution.','No new namespace or field number assigned by this acceptance.','General Need ownership and mixed learning remain outside the bounded claim.']},null,2)+'\n');
+console.log(JSON.stringify({acceptedFiles:paths.length,records:31,fields:110,members:49,models:13,runtime:'NOT PASSED'}));

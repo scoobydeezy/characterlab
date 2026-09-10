@@ -1,0 +1,554 @@
+{
+  "status": "ACCEPTED AND FROZEN FINITE MODEL COHORT; RUNTIME QUALIFICATION NOT IMPLIED",
+  "reviewer": "primary-agent adversarial review under explicit autonomous authorization; not external review",
+  "versions": {
+    "rulesVersion": "rules/campaign3-embodied-receiving/0.1-candidate",
+    "registrySchemaVersion": "campaign3-embodied-receiving-registry/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "parameterSchemaVersion": "campaign3-embodied-receiving-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/embodied-receiving-exact/0.1-candidate",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "models": [
+    {
+      "name": "baseline",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042084b7ccf394001c365fc4b4732ff276b65041aed342b095680edcc60391bf3fa2",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/baseline/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/baseline/registry.cenc.hex",
+          "sha256": "38dc228d82273e23d42e37eb7f6ff44762e927afc30f264229e4ebfb6439e1c8"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/baseline/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/baseline/model-identity.cenc.hex",
+          "sha256": "11a6f5968059cec46345978c2151a580b4978ff748033b8ce8e5788f2a490d0f"
+        }
+      ]
+    },
+    {
+      "name": "slower",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420e602e802fc14f8f794867582d4ad8556eab53ed46ed1786bf6fc25df2a5ca6cb",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/slower/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/slower/registry.cenc.hex",
+          "sha256": "8b4a0678e11a14f8f299de71720444eccb257d10e14fe65931ecfc98cf88a136"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/slower/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/slower/model-identity.cenc.hex",
+          "sha256": "3a7b1c0e8131ea026765ac7ed488e6f1891ca8c6d7a91b141e130603db8d1f8a"
+        }
+      ]
+    },
+    {
+      "name": "coarser",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420b520c70643b3dc1ae75d447fa174176dd7ddc255eeeb68270c1e101cc3a57a5c",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/coarser/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/coarser/registry.cenc.hex",
+          "sha256": "b50bd235f64c480e3dace64c7924deff0b54ae9866d13416a3f336ce137d5098"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/coarser/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/coarser/model-identity.cenc.hex",
+          "sha256": "da8512b0bab769dd82604372e8444531b75ff9e937a59d1a06cea0f2b0826b0a"
+        }
+      ]
+    },
+    {
+      "name": "denied",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420bda718fdb5c495efb85e9ec4021c501d1959575a31b28049dfe75af9612852d7",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/denied/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/denied/registry.cenc.hex",
+          "sha256": "164a3393fb84cdfa0b33a7a726899f4e111c1ef7c416c7f47b9081a3209dbc61"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/denied/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/denied/model-identity.cenc.hex",
+          "sha256": "272fdaae2e9486dd21d68a52831b802ac7b13be2f8aa99798ff066cac6d01284"
+        }
+      ]
+    },
+    {
+      "name": "unavailable",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420698ad822c2ce7827ff314cadd60dd4bef8176cabcb632e64bb8fefce4c46fb8f",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/unavailable/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/unavailable/registry.cenc.hex",
+          "sha256": "4664f0c8ae24eca852fba4e17a52c183480a00321e92a5ef485f296c1a816b75"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/unavailable/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/unavailable/model-identity.cenc.hex",
+          "sha256": "3c3be0492133f63ec3274c30f60b543e410e34907778614f48a584c7e9112f24"
+        }
+      ]
+    },
+    {
+      "name": "task-base-off",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e646964617465020104206008efd81538f1bf8eaf335cce58ae9ef40b1cc514c42ef9cd32f26c6bb0e9ba",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-base-off/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-base-off/registry.cenc.hex",
+          "sha256": "bf09b58fcb500e2cf58c5b44ef6e66c707a039e88f23c5ceeca8894fcf23c7cc"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-base-off/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-base-off/model-identity.cenc.hex",
+          "sha256": "ef923f3800ab8daf2f8246cf099f94fb7c622f362d40595d74278b447f3ce114"
+        }
+      ]
+    },
+    {
+      "name": "task-plan-off",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042076556f87f9b5fd19b21b9d2ecf573e5d32ae2d57f6c13674c4f2ada92de5b3e1",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-plan-off/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-plan-off/registry.cenc.hex",
+          "sha256": "ff7c60d0b7c2172813de2ed7e0687d2d49a8411ab607363ebc70caf61d4c9d6d"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-plan-off/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/task-plan-off/model-identity.cenc.hex",
+          "sha256": "d60c54d3f022a8647e5baf53f478f4a7bd3377e716a9644303c38ffc4a26cd00"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420bdca0bd5594e702a413ae18487ef6242d30fd83e28dba759f9d03de32fd471f9",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/execution-blocked/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/execution-blocked/registry.cenc.hex",
+          "sha256": "91b120c155b158412ee6ee7676a933dff72bbf99ae2027a52292d5e6d7eafc14"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/execution-blocked/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/execution-blocked/model-identity.cenc.hex",
+          "sha256": "6ac6784db029d0e499adaf20d85e89e97c4dfdd470ae82ceb81f0be4241e5ea7"
+        }
+      ]
+    },
+    {
+      "name": "quiet",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420d26a7f3e816d844323480a2458b3fc6d3c55e6c9f04b16c272e63f893332348f",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/quiet/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/quiet/registry.cenc.hex",
+          "sha256": "13fb155299f4f0af54f00322f56f3bfa0005d375d034889a4c699d32f74808ac"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/quiet/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/quiet/model-identity.cenc.hex",
+          "sha256": "1c7b8e87bfe9148c9fdac06e70f1f910719d1ca11e4c1e0912ab15c740ca78e4"
+        }
+      ]
+    },
+    {
+      "name": "auto",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420cfe75de532611c2dcd2add7d91e19ef406f2ccf711ab0f2e8185c22961d561ae",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/auto/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/auto/registry.cenc.hex",
+          "sha256": "cbc61a0b8dc073000235da2b0b08969b53a40a6451eae8d434b8f29e070ee6fd"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/auto/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/auto/model-identity.cenc.hex",
+          "sha256": "db7eb11ae7bba9b17499d287f8f76b0d01076f3db3134f34bca2c1c9cb6ebacc"
+        }
+      ]
+    },
+    {
+      "name": "weak-task",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042017704b720027f9a4d866c19e55a173f0a34651f8e481d745a8e6b70c91c41713",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/weak-task/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/weak-task/registry.cenc.hex",
+          "sha256": "3c767b3fab7ed3bb364871d07cce75904e6be7fd1567f8d8193abd8e5c3b6f0b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/weak-task/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/weak-task/model-identity.cenc.hex",
+          "sha256": "1e5c2e1c7dfcb80507eb38f9f55aa3d33083e4ebb37175c517a618552b9d04bc"
+        }
+      ]
+    },
+    {
+      "name": "work25",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e64696461746502010420f860e9c658117868f6780fd357d704090d89e1992c42865e86f8299e256604930401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042084b7ccf394001c365fc4b4732ff276b65041aed342b095680edcc60391bf3fa2",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/work25/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/work25/registry.cenc.hex",
+          "sha256": "38dc228d82273e23d42e37eb7f6ff44762e927afc30f264229e4ebfb6439e1c8"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/work25/parameters.cenc.hex",
+          "sha256": "74e42ff71b681efd5c2bf8818a9ef1b6d86d2b8edcc6af3089c747807f8604a5"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/work25/model-identity.cenc.hex",
+          "sha256": "ac2422740eae700e0af2ffd7e46cf01218686314da92c19236bdf510094b006b"
+        }
+      ]
+    },
+    {
+      "name": "no-coverage-control",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042026cb9956835761655147bc1bbd6fb335ad4b5e88ecaf552a2cbd8ab8b236c1c4",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/no-coverage-control/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/no-coverage-control/registry.cenc.hex",
+          "sha256": "6f6360ea675dd13e2b010d671d759aa6038ad54c69554a24d3aa7e3da07c1a3b"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/no-coverage-control/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/campaign3-embodied-receiving-model-rev1/no-coverage-control/model-identity.cenc.hex",
+          "sha256": "e965a7869acf439f9d90d0d986071f34ca1110577cbead6a1d5bc98c2d5f3dd9"
+        }
+      ]
+    }
+  ],
+  "checked": 180,
+  "checks": [
+    "inherited body definition definition/embodied-pressure",
+    "inherited body definition definition/embodied-delivery-5",
+    "inherited body definition definition/embodied-delivery-30",
+    "inherited body definition definition/embodied-delivery-60",
+    "inherited body definition definition/embodied-level-source",
+    "inherited body definition definition/embodied-level-channel",
+    "inherited body definition definition/embodied-replenishment",
+    "inherited body definition definition/embodied-reserve-bodies",
+    "inherited body definition definition/embodied-reserve-parameters",
+    "inherited body definition semantic-kind/character",
+    "inherited body definition EmbodiedPresentPressureTransition",
+    "inherited body definition EmbodiedUnavailablePressureTransition",
+    "inherited body definition validator/character-qualification",
+    "inherited task definition definition/measurement-prediction",
+    "inherited task definition definition/task-instruction-one",
+    "inherited task definition definition/task-instruction-two",
+    "inherited task definition definition/protocol-contact-one",
+    "inherited task definition definition/protocol-contact-two",
+    "inherited task definition TaskDeadlineSettlementTransition",
+    "inherited task definition semantic-kind/task-commitment",
+    "inherited task definition validator/task-qualification",
+    "real task with accepted0..100 window only",
+    "baseline definition task-workspace",
+    "baseline definition task-concern",
+    "baseline definition task-motive",
+    "baseline definition task-candidates",
+    "baseline definition task-reason-source",
+    "baseline definition task-arbitration",
+    "baseline definition protocol-execution",
+    "baseline definition embodied-response-a",
+    "baseline definition embodied-response-a-copy",
+    "baseline definition embodied-response-b",
+    "dice exact cutoffs and modifiers",
+    "whole workspace seam/source/read closure",
+    "whole appraisal seam/source/read closure",
+    "whole concern seam/source/read closure",
+    "whole task-motive seam/source/read closure",
+    "whole body-options seam/source/read closure",
+    "whole task-candidates seam/source/read closure",
+    "whole mixed-candidates seam/source/read closure",
+    "whole task-raw seam/source/read closure",
+    "whole mixed-raw seam/source/read closure",
+    "whole mixed-reasons seam/source/read closure",
+    "whole resolution seam/source/read closure",
+    "whole intent seam/source/read closure",
+    "whole expression seam/source/read closure",
+    "whole plan seam/source/read closure",
+    "whole attempt seam/source/read closure",
+    "whole execution seam/source/read closure",
+    "exact13 finite recipes",
+    "baseline exact registry recipe differences",
+    "baseline unchanged slot1",
+    "baseline unchanged slot2",
+    "baseline unchanged slot3",
+    "baseline unchanged slot4",
+    "baseline unchanged slot5",
+    "baseline inherited descriptors/unions unchanged",
+    "baseline unchanged content bytes",
+    "baseline exact work limit",
+    "baseline recomputed structural model identity",
+    "slower exact registry recipe differences",
+    "slower unchanged slot1",
+    "slower unchanged slot2",
+    "slower unchanged slot3",
+    "slower unchanged slot4",
+    "slower unchanged slot5",
+    "slower inherited descriptors/unions unchanged",
+    "slower unchanged content bytes",
+    "slower exact work limit",
+    "slower recomputed structural model identity",
+    "coarser exact registry recipe differences",
+    "coarser unchanged slot1",
+    "coarser unchanged slot2",
+    "coarser unchanged slot3",
+    "coarser unchanged slot4",
+    "coarser unchanged slot5",
+    "coarser inherited descriptors/unions unchanged",
+    "coarser unchanged content bytes",
+    "coarser exact work limit",
+    "coarser recomputed structural model identity",
+    "denied exact registry recipe differences",
+    "denied unchanged slot1",
+    "denied unchanged slot2",
+    "denied unchanged slot3",
+    "denied unchanged slot4",
+    "denied unchanged slot5",
+    "denied inherited descriptors/unions unchanged",
+    "denied unchanged content bytes",
+    "denied exact work limit",
+    "denied recomputed structural model identity",
+    "unavailable exact registry recipe differences",
+    "unavailable unchanged slot1",
+    "unavailable unchanged slot2",
+    "unavailable unchanged slot3",
+    "unavailable unchanged slot4",
+    "unavailable unchanged slot5",
+    "unavailable inherited descriptors/unions unchanged",
+    "unavailable unchanged content bytes",
+    "unavailable exact work limit",
+    "unavailable recomputed structural model identity",
+    "task-base-off exact registry recipe differences",
+    "task-base-off unchanged slot1",
+    "task-base-off unchanged slot2",
+    "task-base-off unchanged slot3",
+    "task-base-off unchanged slot4",
+    "task-base-off unchanged slot5",
+    "task-base-off inherited descriptors/unions unchanged",
+    "task-base-off unchanged content bytes",
+    "task-base-off exact work limit",
+    "task-base-off recomputed structural model identity",
+    "task-plan-off exact registry recipe differences",
+    "task-plan-off unchanged slot1",
+    "task-plan-off unchanged slot2",
+    "task-plan-off unchanged slot3",
+    "task-plan-off unchanged slot4",
+    "task-plan-off unchanged slot5",
+    "task-plan-off inherited descriptors/unions unchanged",
+    "task-plan-off unchanged content bytes",
+    "task-plan-off exact work limit",
+    "task-plan-off recomputed structural model identity",
+    "execution-blocked exact registry recipe differences",
+    "execution-blocked unchanged slot1",
+    "execution-blocked unchanged slot2",
+    "execution-blocked unchanged slot3",
+    "execution-blocked unchanged slot4",
+    "execution-blocked unchanged slot5",
+    "execution-blocked inherited descriptors/unions unchanged",
+    "execution-blocked unchanged content bytes",
+    "execution-blocked exact work limit",
+    "execution-blocked recomputed structural model identity",
+    "quiet exact registry recipe differences",
+    "quiet unchanged slot1",
+    "quiet unchanged slot2",
+    "quiet unchanged slot3",
+    "quiet unchanged slot4",
+    "quiet unchanged slot5",
+    "quiet inherited descriptors/unions unchanged",
+    "quiet unchanged content bytes",
+    "quiet exact work limit",
+    "quiet recomputed structural model identity",
+    "auto exact registry recipe differences",
+    "auto unchanged slot1",
+    "auto unchanged slot2",
+    "auto unchanged slot3",
+    "auto unchanged slot4",
+    "auto unchanged slot5",
+    "auto inherited descriptors/unions unchanged",
+    "auto unchanged content bytes",
+    "auto exact work limit",
+    "auto recomputed structural model identity",
+    "weak-task exact registry recipe differences",
+    "weak-task unchanged slot1",
+    "weak-task unchanged slot2",
+    "weak-task unchanged slot3",
+    "weak-task unchanged slot4",
+    "weak-task unchanged slot5",
+    "weak-task inherited descriptors/unions unchanged",
+    "weak-task unchanged content bytes",
+    "weak-task exact work limit",
+    "weak-task recomputed structural model identity",
+    "work25 exact registry recipe differences",
+    "work25 unchanged slot1",
+    "work25 unchanged slot2",
+    "work25 unchanged slot3",
+    "work25 unchanged slot4",
+    "work25 unchanged slot5",
+    "work25 inherited descriptors/unions unchanged",
+    "work25 unchanged content bytes",
+    "work25 exact work limit",
+    "work25 recomputed structural model identity",
+    "no-coverage-control exact registry recipe differences",
+    "no-coverage-control unchanged slot1",
+    "no-coverage-control unchanged slot2",
+    "no-coverage-control unchanged slot3",
+    "no-coverage-control unchanged slot4",
+    "no-coverage-control unchanged slot5",
+    "no-coverage-control inherited descriptors/unions unchanged",
+    "no-coverage-control unchanged content bytes",
+    "no-coverage-control exact work limit",
+    "no-coverage-control recomputed structural model identity"
+  ],
+  "componentChecks": 585,
+  "sources": [
+    {
+      "path": "docs/planning/embodied-receiving-model-review-rev1/REVIEW.json",
+      "sha256": "8b589dc5409f6f9297580de5ae85860599c74f8bf183e702210eea15479fcbd2"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RECEIVING_DECLARATION_REVIEW_REV1.json",
+      "sha256": "475288c2c2e86e3d4ad1ea5a23b633b94017e3d4c4a2235bb63291dec668b0a5"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_SHAPE_MANIFEST.json",
+      "sha256": "c1cd1d39dfa4a228f858317a418b93129842943a798ec798fd42590cc97ef2d1"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json",
+      "sha256": "c77ea031a5753e43e826dd4f5c79ce571d7d01fec49d6827a1772a7cc511b9bb"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_DEADLINE_ROUTE_CLARIFICATION.md",
+      "sha256": "15a7395fae5a846d5f5d6c658503fecc26b23e4f29012a9eba6ecf747fb5cd02"
+    },
+    {
+      "path": "scripts/review-freeze-embodied-receiving-models.mjs",
+      "sha256": "0e2e533223dbcb6826992e8110aa70fced8ef8c698e554eeb01bdcfeebca52d6"
+    }
+  ],
+  "limits": [
+    "Only these13 exact commitments are eligible for activation.",
+    "EMB-M..O and ER-A..R remain FROZEN NOT PASSED.",
+    "No changed behavior is inferred for preserved earlier profiles."
+  ]
+}

@@ -1,0 +1,853 @@
+{
+  "status": "SYMBOLIC DRAFT; NO NEW NUMERIC ALLOCATION",
+  "source": "docs/planning/CAMPAIGN3_EMBODIED_RECEIVING_DRAFT.md",
+  "records": [
+    {
+      "name": "EmbodiedResponseInstructionDefinition",
+      "fields": [
+        {
+          "name": "PressureDefinitionId",
+          "type": "id:RegistryDefinitionId",
+          "required": true
+        },
+        {
+          "name": "ProtocolActionDefinitionId",
+          "type": "id:RegistryDefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EmbodiedResponseContext",
+      "fields": [
+        {
+          "name": "AdoptedInstructions",
+          "type": "set<id:RegistryDefinitionId>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EmbodiedResponseInstructionState",
+      "fields": [
+        {
+          "name": "Contexts",
+          "type": "map<id:CharacterId,EmbodiedResponseContext>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BodyCandidateOrigin",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "name": "InstructionDefinitionId",
+          "type": "id:RegistryDefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BodyResponseOptions",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:CandidateOptionsOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Pressure",
+          "type": "EmbodiedPressureOutput",
+          "required": true
+        },
+        {
+          "name": "Origins",
+          "type": "list<BodyCandidateOrigin>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedCandidateOption",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "name": "TaskOrigins",
+          "type": "set<ProceduralCandidateOrigin>",
+          "required": true
+        },
+        {
+          "name": "BodyOrigins",
+          "type": "set<id:RegistryDefinitionId>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedCandidateJoinInput",
+      "fields": [
+        {
+          "name": "TaskOptions",
+          "type": "TaskCandidateOptions",
+          "required": true
+        },
+        {
+          "name": "BodyOptions",
+          "type": "BodyResponseOptions",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedCandidateContext",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:CandidateOptionsOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Sources",
+          "type": "MixedCandidateJoinInput",
+          "required": true
+        },
+        {
+          "name": "Options",
+          "type": "list<MixedCandidateOption>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EmbodiedGround",
+      "fields": [
+        {
+          "name": "CharacterId",
+          "type": "id:CharacterId",
+          "required": true
+        },
+        {
+          "name": "PressureDefinitionId",
+          "type": "id:RegistryDefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedMotivationGround",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "Task",
+          "type": "TaskCommitmentKey",
+          "required": false
+        },
+        {
+          "name": "Body",
+          "type": "EmbodiedGround",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "MixedSignalKey",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "name": "SourceRole",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "BodyInstructionDefinitionId",
+          "type": "id:RegistryDefinitionId",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "MixedRawSignal",
+      "fields": [
+        {
+          "name": "Key",
+          "type": "MixedSignalKey",
+          "required": true
+        },
+        {
+          "name": "Strength",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Basis",
+          "type": "ReasonEvidenceBasis",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "GroundMeaning",
+      "fields": [
+        {
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "name": "Meaning",
+          "type": "map<ProceduralCandidateKey,rational>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedRawJoinInput",
+      "fields": [
+        {
+          "name": "MixedCandidates",
+          "type": "MixedCandidateContext",
+          "required": true
+        },
+        {
+          "name": "TaskRaw",
+          "type": "TaskRawSignalContext",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedRawContext",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:RawSignalContextOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Sources",
+          "type": "MixedRawJoinInput",
+          "required": true
+        },
+        {
+          "name": "Signals",
+          "type": "set<MixedRawSignal>",
+          "required": true
+        },
+        {
+          "name": "NonStandingMeanings",
+          "type": "list<GroundMeaning>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedCoverageResult",
+      "fields": [
+        {
+          "name": "SourceKey",
+          "type": "MixedSignalKey",
+          "required": true
+        },
+        {
+          "name": "RawMagnitude",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Overlap",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Independence",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "EffectiveMagnitude",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedRoleSummary",
+      "fields": [
+        {
+          "name": "Base",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Standing",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Situational",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Coverage",
+          "type": "list<MixedCoverageResult>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedReasonKey",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "name": "MotiveChannelId",
+          "type": "id:MotiveChannelId",
+          "required": true
+        },
+        {
+          "name": "Direction",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedReasonNucleus",
+      "fields": [
+        {
+          "name": "Key",
+          "type": "MixedReasonKey",
+          "required": true
+        },
+        {
+          "name": "Roles",
+          "type": "MixedRoleSummary",
+          "required": true
+        },
+        {
+          "name": "Relevance",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "BaseDie",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "StandingModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "name": "SituationalModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "name": "Distribution",
+          "type": "ExactScoreDistribution",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedReasonContext",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:ReasonContextOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "RawContext",
+          "type": "MixedRawContext",
+          "required": true
+        },
+        {
+          "name": "Nuclei",
+          "type": "list<MixedReasonNucleus>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedReasonDraw",
+      "fields": [
+        {
+          "name": "Key",
+          "type": "MixedReasonKey",
+          "required": true
+        },
+        {
+          "name": "BaseDie",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "StandingModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "name": "SituationalModifier",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "name": "Draw",
+          "type": "CognitiveRandomDraw",
+          "required": true
+        },
+        {
+          "name": "Face",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "SignedContribution",
+          "type": "signed",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedChosenData",
+      "fields": [
+        {
+          "name": "CandidateKey",
+          "type": "ProceduralCandidateKey",
+          "required": true
+        },
+        {
+          "name": "Probabilities",
+          "type": "list<OptionProbability>",
+          "required": true
+        },
+        {
+          "name": "Margin",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Contest",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "ConflictMass",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "Stake",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "AuthorshipPotential",
+          "type": "rational",
+          "required": true
+        },
+        {
+          "name": "ResolutionMode",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "ReasonDraws",
+          "type": "list<MixedReasonDraw>",
+          "required": true
+        },
+        {
+          "name": "TieBreak",
+          "type": "DecisionTieBreak",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedDecisionResult",
+      "fields": [
+        {
+          "name": "VariantTag",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "ChosenData",
+          "type": "MixedChosenData",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "MixedDecisionResolution",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:DecisionResolutionOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "OccurredAt",
+          "type": "signed",
+          "required": true
+        },
+        {
+          "name": "ReasonContext",
+          "type": "MixedReasonContext",
+          "required": true
+        },
+        {
+          "name": "Result",
+          "type": "MixedDecisionResult",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedChosenIntent",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:ChosenIntentOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Resolution",
+          "type": "MixedDecisionResolution",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "GroundExpression",
+      "fields": [
+        {
+          "name": "Ground",
+          "type": "MixedMotivationGround",
+          "required": true
+        },
+        {
+          "name": "Alignment",
+          "type": "rational",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedDecisionExpression",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:DecisionExpressionOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Intent",
+          "type": "MixedChosenIntent",
+          "required": true
+        },
+        {
+          "name": "GroundExpressions",
+          "type": "list<GroundExpression>",
+          "required": true
+        },
+        {
+          "name": "ScopeVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedActionPlan",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:ActionPlanOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Intent",
+          "type": "MixedChosenIntent",
+          "required": true
+        },
+        {
+          "name": "RequestedContactCount",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedActionAttempt",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:ActionAttemptOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Plan",
+          "type": "MixedActionPlan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MixedExecutionOutcome",
+      "fields": [
+        {
+          "name": "OccurrenceId",
+          "type": "id:ExecutionOutcomeOccurrenceId",
+          "required": true
+        },
+        {
+          "name": "Attempt",
+          "type": "MixedActionAttempt",
+          "required": true
+        },
+        {
+          "name": "CompletedContactCount",
+          "type": "unsigned",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EmbodiedReceivingStageRegistration",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "ExecutingSeamId",
+          "type": "id:SeamId",
+          "required": true
+        },
+        {
+          "name": "ExecutingSeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "EventTypeId",
+          "type": "id:EventTypeId",
+          "required": true
+        },
+        {
+          "name": "Phase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "name": "InputRecordSchema",
+          "type": "CanonicalRecordSchemaRef",
+          "required": true
+        },
+        {
+          "name": "ReadDomain",
+          "type": "set<StatePathPattern>",
+          "required": true
+        },
+        {
+          "name": "WriteCapability",
+          "type": "WriteCapabilityV04",
+          "required": true
+        },
+        {
+          "name": "RequiredProjections",
+          "type": "set<EventDependentProjectedFieldRequirement>",
+          "required": true
+        },
+        {
+          "name": "OutputDefinitions",
+          "type": "set<TransitionOutputDefinition>",
+          "required": true
+        },
+        {
+          "name": "SourceEvents",
+          "type": "set<id:EventTypeId>",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "existingRecords": {
+    "ProceduralCandidateKey": "395/1",
+    "ProceduralCandidateOrigin": "396/1",
+    "TaskCommitmentKey": "371/1",
+    "TaskCandidateOptions": "398/1",
+    "TaskRawSignalContext": "403/1",
+    "EmbodiedPressureOutput": "464/1",
+    "ReasonEvidenceBasis": "400/1",
+    "ExactScoreDistribution": "424/1",
+    "CognitiveRandomDraw": "411/1",
+    "OptionProbability": "421/1",
+    "DecisionTieBreak": "423/1",
+    "CanonicalRecordSchemaRef": "254/1",
+    "StatePathPattern": "160/1",
+    "WriteCapabilityV04": "273/1",
+    "EventDependentProjectedFieldRequirement": "266/1",
+    "TransitionOutputDefinition": "277/1"
+  },
+  "existingIdentityFamilies": {
+    "RegistryDefinitionId": 1027,
+    "CharacterId": 1002,
+    "CandidateOptionsOccurrenceId": 1132,
+    "RawSignalContextOccurrenceId": 1133,
+    "ReasonContextOccurrenceId": 1134,
+    "DecisionResolutionOccurrenceId": 1135,
+    "ChosenIntentOccurrenceId": 1136,
+    "DecisionExpressionOccurrenceId": 1137,
+    "ActionPlanOccurrenceId": 1139,
+    "ActionAttemptOccurrenceId": 1140,
+    "ExecutionOutcomeOccurrenceId": 1141,
+    "MotiveChannelId": 1040,
+    "SeamId": 1036,
+    "EventTypeId": 1001
+  },
+  "unions": [
+    {
+      "record": "MixedMotivationGround",
+      "tagField": "VariantTag",
+      "variants": [
+        {
+          "name": "Task",
+          "required": [
+            "Task"
+          ],
+          "forbidden": [
+            "Body"
+          ]
+        },
+        {
+          "name": "Body",
+          "required": [
+            "Body"
+          ],
+          "forbidden": [
+            "Task"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "MixedDecisionResult",
+      "tagField": "VariantTag",
+      "variants": [
+        {
+          "name": "NoOptions",
+          "required": [],
+          "forbidden": [
+            "ChosenData"
+          ]
+        },
+        {
+          "name": "NoActiveReasons",
+          "required": [],
+          "forbidden": [
+            "ChosenData"
+          ]
+        },
+        {
+          "name": "Chosen",
+          "required": [
+            "ChosenData"
+          ],
+          "forbidden": []
+        }
+      ]
+    }
+  ],
+  "occurrenceOutputs": [
+    {
+      "output": "BodyResponseOptions",
+      "family": "CandidateOptionsOccurrenceId"
+    },
+    {
+      "output": "MixedCandidateContext",
+      "family": "CandidateOptionsOccurrenceId"
+    },
+    {
+      "output": "MixedRawContext",
+      "family": "RawSignalContextOccurrenceId"
+    },
+    {
+      "output": "MixedReasonContext",
+      "family": "ReasonContextOccurrenceId"
+    },
+    {
+      "output": "MixedDecisionResolution",
+      "family": "DecisionResolutionOccurrenceId"
+    },
+    {
+      "output": "MixedChosenIntent",
+      "family": "ChosenIntentOccurrenceId"
+    },
+    {
+      "output": "MixedDecisionExpression",
+      "family": "DecisionExpressionOccurrenceId"
+    },
+    {
+      "output": "MixedActionPlan",
+      "family": "ActionPlanOccurrenceId"
+    },
+    {
+      "output": "MixedActionAttempt",
+      "family": "ActionAttemptOccurrenceId"
+    },
+    {
+      "output": "MixedExecutionOutcome",
+      "family": "ExecutionOutcomeOccurrenceId"
+    }
+  ],
+  "counts": {
+    "records": 31,
+    "fields": 110,
+    "outputs": 10
+  },
+  "open": [
+    "Exact registration stage table and field refinements",
+    "Independent confirmation of every inherited schema name/number",
+    "Occurrence-family scope ruling",
+    "Fixed-member and scalar-role/collection-role coverage",
+    "Finite model/trace/persistence closure",
+    "Whole shape review before allocation"
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "status": "NINETEEN CURRENT-SOURCE ALTERNATIVES DETECTED",
+  "results": [
+    {
+      "name": "wrong-trace-subject",
+      "source": "receivingRuntime.ts",
+      "removed": "subjectIds:stage===1?[O,C]:[C]",
+      "inserted": "subjectIds:[O]",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "receiving trace field 8"
+    },
+    {
+      "name": "omitted-trace-sources",
+      "source": "receivingRuntime.ts",
+      "removed": "sourceRecordIds:sourceRecords.map(id)",
+      "inserted": "sourceRecordIds:[]",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "receiving trace field 9"
+    },
+    {
+      "name": "omitted-trace-output",
+      "source": "receivingRuntime.ts",
+      "removed": "outputProjection:list([output]),randomDrawRecords",
+      "inserted": "outputProjection:list([]),randomDrawRecords",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "receiving trace field 13"
+    },
+    {
+      "name": "omitted-trace-random",
+      "source": "receivingRuntime.ts",
+      "removed": "outputProjection:list([output]),randomDrawRecords,quantizationOperations",
+      "inserted": "outputProjection:list([output]),randomDrawRecords:[],quantizationOperations",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "receiving trace field 14"
+    },
+    {
+      "name": "omitted-trace-reads",
+      "source": "receivingRuntime.ts",
+      "removed": "sourceRecordIds:sourceRecords.map(id),registeredReadDomain:domain,actualReadRecords:reads",
+      "inserted": "sourceRecordIds:sourceRecords.map(id),registeredReadDomain:domain,actualReadRecords:[]",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "receiving trace field 11"
+    },
+    {
+      "name": "duplicate-coverage-removed",
+      "source": "receivingTransforms.ts",
+      "removed": "const overlap=law==='no-coverage'||union.equals(ZERO)?ZERO:intersection.divide(union)",
+      "inserted": "const overlap=ZERO",
+      "specimen": "duplicate",
+      "model": "baseline",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "independent-grounds-collapsed",
+      "source": "receivingTransforms.ts",
+      "removed": "k=key(list([f(s,1n),f(s,2n)]))",
+      "inserted": "k=key(f(s,1n))",
+      "specimen": "same-option",
+      "model": "baseline",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "registry-membership-becomes-adoption",
+      "source": "receivingRuntime.ts",
+      "removed": "items(f(rec(context,486n),1n),'set').map(instructionId=>",
+      "inserted": "[ID(1027,'definition/embodied-response-a')].map(instructionId=>",
+      "specimen": "drop-body",
+      "model": "baseline",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "inactive-context-read",
+      "source": "receivingTransforms.ts",
+      "removed": "const adopted=active?[...readAdopted()]:[];",
+      "inserted": "const adopted=[...readAdopted()];",
+      "specimen": "known-zero",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "INVALID_CONFIGURATION",
+      "message": "receiving grammar: inactive pressure cannot generate body origins"
+    },
+    {
+      "name": "missing-receiving-child-binding",
+      "source": "receivingRuntime.ts",
+      "removed": "receiving!.bindChildren(event,children);const trace=",
+      "inserted": "const trace=",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_INGRESS_VIOLATION",
+      "message": "unbound/repeated receiving event"
+    },
+    {
+      "name": "extra-receiving-allocation",
+      "source": "receivingRuntime.ts",
+      "removed": "const outputSchema=rec(",
+      "inserted": "context.allocateRuntimeId();const outputSchema=rec(",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_OUTPUT_VIOLATION",
+      "message": "one receiving output reservation required"
+    },
+    {
+      "name": "receiving-body-write",
+      "source": "receivingRuntime.ts",
+      "removed": "return {nextState:state,outputs:[output],",
+      "inserted": "return {nextState:model.state.applyPatch(state,{operations:[{kind:'set',path:bodyPath,expected:{presence:true,value:state.read(bodyPath).value!},newValue:r(454,[atom(exact(f(params,2n))),signed(instant)])}]},OWNER).state,outputs:[output],",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_WRITE_SCOPE_VIOLATION",
+      "message": "receiving stages have NoStateWrites"
+    },
+    {
+      "name": "execution-permission-bypassed",
+      "source": "receivingRuntime.ts",
+      "removed": "f(rec(definition('protocol-execution'),434n),1n)===true?f(plan,3n):unsigned(0)",
+      "inserted": "f(plan,3n)",
+      "specimen": "execution-blocked",
+      "model": "execution-blocked",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "lower-bound-pressure",
+      "source": "receivingRuntime.ts",
+      "removed": "deficitPressure(exact(f(rec(f(sample,5n),462n),2n)),threshold)",
+      "inserted": "deficitPressure(exact(f(rec(f(sample,5n),462n),1n)),threshold)",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "pressure sample/identity/result closure"
+    },
+    {
+      "name": "missing-SEM-settlement",
+      "source": "receivingRuntime.ts",
+      "removed": "ingress.settled(event,experience);",
+      "inserted": "/* missing settlement */",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_INGRESS_VIOLATION",
+      "message": "wrong allocated child topology/payload"
+    },
+    {
+      "name": "instruction-used-as-ground",
+      "source": "receivingTransforms.ts",
+      "removed": "r(493,[f(pressure,2n),pressureDefinition])",
+      "inserted": "r(493,[f(pressure,2n),id(1027,'definition/embodied-response-a')])",
+      "specimen": "duplicate",
+      "model": "baseline",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "wrong-body-RNG-purpose",
+      "source": "receivingArbitration.ts",
+      "removed": "'purpose/embodied-body-reason-face'",
+      "inserted": "'purpose/embodied-task-reason-face'",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "public canonical output difference"
+    },
+    {
+      "name": "deadline-retirement-omitted",
+      "source": "receivingRuntime.ts",
+      "removed": "operations:prior.presence&&(f(rec(prior.value!,372n),1n) as {value:bigint}).value===1n?",
+      "inserted": "operations:false&&(f(rec(prior.value!,372n),1n) as {value:bigint}).value===1n?",
+      "specimen": "deadline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "INVARIANT_FAILURE",
+      "message": "deadline left expired Open task"
+    },
+    {
+      "name": "cognitive-body-read",
+      "source": "receivingRuntime.ts",
+      "removed": "const domain=items(f(registered,7n)",
+      "inserted": "bodyRead(state,C,bodyDomain);const domain=items(f(registered,7n)",
+      "specimen": "baseline",
+      "model": "baseline",
+      "detectedBy": "production rejection",
+      "failure": "ILLEGAL_READ",
+      "message": "body capability is unavailable at this stage/branch"
+    }
+  ],
+  "unchangedPublicControlExecutions": 7,
+  "sources": [
+    {
+      "path": "src/campaign3/receivingRuntime.ts",
+      "sha256": "8a45870accff002d96629d4c54099e20cdd7cc27780bb085f6e28dd8c3b0a798"
+    },
+    {
+      "path": "src/campaign3/receivingTransforms.ts",
+      "sha256": "6f8f39035eb299f2d2133a3ea5a29dcb7c37a48e1d602306f6fa2da1c17103ae"
+    },
+    {
+      "path": "src/campaign3/receivingArbitration.ts",
+      "sha256": "24d632ad3e7067d2e91cf226efc5fcb010f7e7ac8dc4c52f1afcc06d274344c6"
+    },
+    {
+      "path": "src/campaign3/receivingAdmission.ts",
+      "sha256": "a1f8706ddb0343cac5698e5783d16bed733e65bc58cb52549d9085c07f9f1a0e"
+    },
+    {
+      "path": "src/campaign3/receivingTrace.ts",
+      "sha256": "a71201ea469a6ae92474498a15ab91cfc0d67b4163966ab823bdaf7ec86aaef2"
+    },
+    {
+      "path": "scripts/review-embodied-receiving-mutants-rev2.mjs",
+      "sha256": "df80e50bca80865b8bfb18bee3bb498435399cfaea3863b08d2589eb758128e8"
+    }
+  ],
+  "cohort": {
+    "path": "docs/planning/campaign3-embodied-receiving-model-rev1/FREEZE.json",
+    "sha256": "291ba57595b476327418e8ed50a50993daf073a5ddcebbe209681e019a2e6012"
+  },
+  "historicalExecutionPacket": {
+    "path": "docs/planning/embodied-receiving-execution-rev2/REVIEW.json",
+    "sha256": "4c54eb8300ba218e8e70ae42a23e063fd284b7609576bc9b81c3eb1ccfb533ad"
+  },
+  "limits": [
+    "Fault sensitivity is not a general reduction verdict.",
+    "Public output-difference mutants need the named reference-law expectations to identify the retained winner.",
+    "Generic multi-atom aggregate control is separately tested."
+  ]
+}

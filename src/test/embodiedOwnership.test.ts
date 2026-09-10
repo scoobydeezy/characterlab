@@ -1,0 +1,36 @@
+import {describe,it,expect} from 'vitest';
+import freeze from '../../docs/planning/campaign3-embodied-model-rev2/FREEZE.json';
+import {embodiedFixtureBytes as bytes} from './embodiedFixtures';
+import {compileEmbodiedModel} from '../campaign3/embodiedModel';
+import {decodeEmbodied as decode,embodiedRecord as r,embodiedSchema as schema} from '../campaign3/embodiedCodecs';
+import {verifyEmbodiedBodyTarget} from '../campaign3/embodiedBodyTarget';
+import {compileValDeclarations} from '../campaign2/valDeclarations';
+import {compileCampaign2StateModel} from '../campaign2/stateModel';
+import {dataRecord as rec,dataField as f,dataItems as items,dataText as str,dataIdentity as id} from '../campaign2/canonicalData';
+import {canonicalEncode as enc,set,list,text,typedIdentifier,record,rational,signed} from '../substrate/canonicalEncoding';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import {AuthoritativeState} from '../substrate/state';
+import {proposeEmbodiedReplenishment} from '../campaign3/embodiedReplenishment';
+import {ExactRational as Q} from '../substrate/exactMath';
+const ID=(ns:number,s:string)=>typedIdentifier(ns,text(s));
+describe('EMB two-qualified-body component / one-body public exclusion',()=>{
+ it('rejects the other valid equal-valued anchor by exact target equality',async()=>{
+  const source={...freeze.versions,content:bytes('baseline/content.cenc.hex'),registry:bytes('baseline/registry.cenc.hex'),parameters:bytes('baseline/parameters.cenc.hex')},model=await compileEmbodiedModel(source),slots=items(decode(source.registry),'list');
+  const entries=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n)),val=set(entries.filter(e=>['registry/semantic-kind','registry/domain-validator'].includes(str(id(f(e,2n)).payload))));
+  const first=items(decode(source.content),'set')[0],a=rec(first,170n),otherId=ID(1038,'character/embodied-second-control'),other=record(a.schema,new Map([...a.fields].map(([k,v])=>[k,k===1n?otherId:v]))),contentBytes=enc(set([first,other]));
+  const content=await compileValDeclarations(enc(val),enc(slots[5]),{decode,schema}).compileContent(contentBytes,enc(val));
+  const C=id(decode(model.characterBytes())),D=semanticReferentFromAuthoredContent(otherId);content.qualifyCharacter(C);content.qualifyCharacter(D);
+  const component=compileCampaign2StateModel(enc(slots[2]),enc(slots[3]),enc(slots[4]),content,{decode,schema}),path=(key:typeof C)=>({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey' as const,key}]}),anchor=r(454,[rational(80,1),signed(0)]),state=new AuthoritativeState([{path:path(C),value:anchor},{path:path(D),value:anchor}]);
+  component.validateState(state);expect(component.read(state,path(C)).value).toEqual(component.read(state,path(D)).value);
+  expect(()=>verifyEmbodiedBodyTarget(path(C),C)).not.toThrow();expect(()=>verifyEmbodiedBodyTarget(path(D),C)).toThrow(/exact projected/);
+  await expect(compileEmbodiedModel({...source,content:contentBytes})).rejects.toThrow(/exact character content/);
+  const owner=ID(1025,'authority/embodied-reserve'),patch={operations:[{kind:'set' as const,path:path(C),expected:{presence:true as const,value:anchor},newValue:r(454,[rational(81,1),signed(1)])}]};
+  const applied=component.applyPatch(state,patch,owner);expect(()=>component.applyPatch(applied.state,patch,owner)).toThrow(/precondition/);
+  const zero=proposeEmbodiedReplenishment(anchor,Q.of(75n),Q.of(100n),Q.of(0n),5n,path(C));
+  const zeroApplied=component.applyPatch(state,zero.patch,owner);expect(zeroApplied.state.read(path(C)).value).toEqual(r(454,[rational(75,1),signed(5)]));expect(zeroApplied.state.read(path(D)).value).toEqual(anchor);
+  expect(()=>component.applyPatch(state,patch,ID(1025,'authority/not-owner'))).toThrow();
+  expect(()=>component.applyPatch(state,{operations:[{kind:'remove',path:path(C),expectedOldValue:anchor}]},owner)).toThrow();
+  expect(()=>component.validatePath({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:ID(1000,'not-character')}]})).toThrow();
+  expect(()=>component.validatePath({rootStateTypeId:455n,fieldId:1n,selectors:[{kind:'mapKey',key:list([])}]})).toThrow();
+ });
+});

@@ -1,0 +1,445 @@
+{
+  "status": "COMPLETE DECLARATION AND RUN COMMITMENT REVIEW; NOT FROZEN",
+  "versions": {
+    "rulesVersion": "rules/campaign3-embodied-reserve/0.1-candidate",
+    "registrySchemaVersion": "campaign3-embodied-registry/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "parameterSchemaVersion": "campaign3-embodied-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/embodied-reserve-exact/0.1-candidate",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "models": [
+    {
+      "name": "baseline",
+      "modelDigest": "f6dbd018de8689db6c9b5ac1ea50249c7bb005db0fc266307a61985cb27afd4b",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "slower",
+      "modelDigest": "a36b43b5ac0def8857c2548fec3646b22394731a7742443f624c4c7f0524977f",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "coarser",
+      "modelDigest": "02380c27d4ed5dbb4be4ef7529cb6f274d050ecc638fb409a57bc7be08efb5d7",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "denied",
+      "modelDigest": "a17180f240666e985fbc8bb8c23b394d19b397d86b7cc7cc010fd21d236f5389",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "unavailable",
+      "modelDigest": "d6c1504eb78167fe23079603c87e58d9fbdf13451b708beef3c2423fe04389ac",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "overflow",
+      "modelDigest": "8a0325a9fd26b5848c183f416c21d2ab9905d98d001b7845b0a7d68a109b5a20",
+      "work": "8",
+      "kind": "semantic comparison"
+    },
+    {
+      "name": "work7",
+      "modelDigest": "afe09083ab8832aa46efbac4c79db3df39e03ed75670cd151b47fe22ef7dd08c",
+      "work": "7",
+      "kind": "negative work-limit control"
+    }
+  ],
+  "runs": [
+    {
+      "name": "baseline",
+      "model": "baseline",
+      "modelDigest": "f6dbd018de8689db6c9b5ac1ea50249c7bb005db0fc266307a61985cb27afd4b",
+      "runDigest": "f9c1027eafda3855e820d45a8164dd7fc9830126c8d9ee5ebba73c5216a403d8",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "hidden89",
+      "model": "baseline",
+      "modelDigest": "f6dbd018de8689db6c9b5ac1ea50249c7bb005db0fc266307a61985cb27afd4b",
+      "runDigest": "cb45f7716ab8a6ccf96db8068f80e944218987d71a1a86332db569dde97397ae",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "slower",
+      "model": "slower",
+      "modelDigest": "a36b43b5ac0def8857c2548fec3646b22394731a7742443f624c4c7f0524977f",
+      "runDigest": "57abf72bb43dd32cbb3e4cff68fc0c745db4df8c0e819d6f88e77b4046c6ae16",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "coarser",
+      "model": "coarser",
+      "modelDigest": "02380c27d4ed5dbb4be4ef7529cb6f274d050ecc638fb409a57bc7be08efb5d7",
+      "runDigest": "368aaef62cca17cf5af9005c6b526314e1c7b8487d663de572e3bfa3684d293d",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "denied",
+      "model": "denied",
+      "modelDigest": "a17180f240666e985fbc8bb8c23b394d19b397d86b7cc7cc010fd21d236f5389",
+      "runDigest": "b03caaac68988713f9ff14bffc82a4e93b483ee9b34625784ede2fbe5c9fd3d9",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "unavailable",
+      "model": "unavailable",
+      "modelDigest": "d6c1504eb78167fe23079603c87e58d9fbdf13451b708beef3c2423fe04389ac",
+      "runDigest": "f41bd06fcce4613a0ccf8dc0812f1208b50e875f64016d5b39e181964353b6dd",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "overflow",
+      "model": "overflow",
+      "modelDigest": "8a0325a9fd26b5848c183f416c21d2ab9905d98d001b7845b0a7d68a109b5a20",
+      "runDigest": "c28b83a9247444c20570a17cf0f9d008bafbdce45b69c2cfe5c9a3313ab67b6c",
+      "initialClock": "0",
+      "initialAllocatorsBeforeInputs": [
+        "0",
+        "0",
+        "0"
+      ],
+      "afterInputs": [
+        "0",
+        "9",
+        "9"
+      ],
+      "runSeedHex": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "checks": [
+    "Seven complete model images compile with distinct commitments",
+    "Foreign numeric profile rejects",
+    "Extra source property rejects",
+    "Missing registry slot rejects",
+    "Wrong phase registry rejects",
+    "Missing owner rejects",
+    "Missing immutable roster rejects",
+    "Missing key grammar rejects",
+    "Missing canonical role rejects",
+    "Extra character content rejects",
+    "Wrong channel fuel member rejects",
+    "Mismatched channel capacity rejects",
+    "Orphan pressure target rejects",
+    "Threshold greater than capacity rejects",
+    "Source channel-definition schema cannot replace opportunity459",
+    "Wrong-kind well-typed channel-set reference rejects",
+    "Missing source branch output rejects",
+    "Pressure cannot change its admitted source registration",
+    "Writer cannot use source definition as delivery member",
+    "Extra learning route rejects",
+    "Missing output occurrence rejects",
+    "Old cognitive model factory excludes EMB bundle",
+    "Caller byte mutation after compile entry cannot change snapshot",
+    "Seven run commitments; hidden89 shares model but changes RunIdentity"
+  ],
+  "adversarialChecks": 24,
+  "artifacts": [
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/baseline/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/baseline/registry.cenc.hex",
+      "sha256": "fb063c9835212e8fd69d03fddfeac80a76143689c65389d4161e753dbc882dcf"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/baseline/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/baseline/model-identity.cenc.hex",
+      "sha256": "5bc89d51c2bb60ba8045aea8eb663d80eb85b2bcf96a7116218786e8b3b9fc8d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/slower/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/slower/registry.cenc.hex",
+      "sha256": "2848ec5515edbd9e564c87dd18efde67eb69ff429761551cc8cbc3fc5f23da40"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/slower/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/slower/model-identity.cenc.hex",
+      "sha256": "fa9ed8457a3b189303a4da8b9b48301a08d610873c735bb376443afb51bcf499"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/coarser/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/coarser/registry.cenc.hex",
+      "sha256": "1874704b9862eb3e185ffa219cfb2bb6699b331c477522cbef3be0690e6b1f45"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/coarser/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/coarser/model-identity.cenc.hex",
+      "sha256": "0a7ae85563257a43e40a2bc0d548c0731c06ff87f1e735f064fe717a983632ff"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/denied/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/denied/registry.cenc.hex",
+      "sha256": "57f9962998437893b3668b25286446eaa3a67bd8063b16fee55c1406b4c8ba36"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/denied/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/denied/model-identity.cenc.hex",
+      "sha256": "371566a84851040b9ca9029d04981e122907cfaebfe9a8cf8c54939c93fa3bf8"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/unavailable/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/unavailable/registry.cenc.hex",
+      "sha256": "979816029f069bc0573ccd459841cc5daa92efd6439f9de98b2894228786f747"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/unavailable/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/unavailable/model-identity.cenc.hex",
+      "sha256": "3450aaa7bf1e56a88bed143f58d1cddcefd80f8b14b8f007c9d5496626e3df56"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/overflow/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/overflow/registry.cenc.hex",
+      "sha256": "26a86b2ef0f35ddb59e9d5f123945eb3f3ed6f85cd66a5b538b7a02619db0345"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/overflow/parameters.cenc.hex",
+      "sha256": "cd501947d1a22a162c98916a1bd07f83a18b90577a656b77763bf179aba485e7"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/overflow/model-identity.cenc.hex",
+      "sha256": "84ff7aa5235acc15f2eedb11fab27d7530a1842627948a67a6d3d229db81673f"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/work7/content.cenc.hex",
+      "sha256": "492bc5f9f495222c1d4d7f3f8ed1e06ff865f196538799721a4cb209ed799bf0"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/work7/registry.cenc.hex",
+      "sha256": "fb063c9835212e8fd69d03fddfeac80a76143689c65389d4161e753dbc882dcf"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/work7/parameters.cenc.hex",
+      "sha256": "4d806d63a29996901d6ae4a7a281769bbc824dc10745b540e015bc4402cfa912"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/work7/model-identity.cenc.hex",
+      "sha256": "278fc48107acddf3f1254cc4ea0dc90194204b52269a85cd345f235bed66f8c9"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/baseline/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/baseline/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/baseline/run-identity.cenc.hex",
+      "sha256": "8172eeedd3911bc132fcabd52ea68d349c1f3faa57180d9050c14214cb9aa822"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/hidden89/initial-state.cenc.hex",
+      "sha256": "09a2d92cd02462cc59ac0e0d25b08854e54022527e901e2878ef3d6272e23941"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/hidden89/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/hidden89/run-identity.cenc.hex",
+      "sha256": "aedd381b54d6af897862a2cbda8991bcf5dbafa500d8f69ce22e1b6753889f9a"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/slower/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/slower/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/slower/run-identity.cenc.hex",
+      "sha256": "1268e7ab5557915fcb88e28ea3230ef9e4f685c5c871590180a2f12ddf57b849"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/coarser/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/coarser/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/coarser/run-identity.cenc.hex",
+      "sha256": "f13d83368f07781029d99872b9fca3ced1de7a6278556b963494ba2ffb23fec4"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/denied/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/denied/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/denied/run-identity.cenc.hex",
+      "sha256": "8a06d7cf486733facf30554754d32d75b9a5c5d4603d3b9ace5adba49bc22ace"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/unavailable/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/unavailable/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/unavailable/run-identity.cenc.hex",
+      "sha256": "d458aa525ffdfb38238375ac18e1d7a9236b5662e6ed0ee9818bbc0510caac9e"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/overflow/initial-state.cenc.hex",
+      "sha256": "d89b3c7d018b6041092d9b87aa5484355bf3623a149e92ff02bd6ba94892228d"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/overflow/ordered-inputs.cenc.hex",
+      "sha256": "daad5fd683cde1c4aacecc1603b9513fd04f5078ff25d4b3db7f71eb5f485158"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-review/runs/overflow/run-identity.cenc.hex",
+      "sha256": "50ea1077feb13686bcc9cff3104db09bf5de9bd1470179a65fe85a303ef43a5e"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/embodiedCodecs.ts",
+      "sha256": "29a519c6569150546bd841a020a0e12443aa8099aa2b3ad5cd92e23b3f5762a0"
+    },
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "5f20c093414933ca149e1200e8328caaae2ed4c309c03e9d833fa6b0f9e16f8b"
+    },
+    {
+      "path": "scripts/embodied-declaration-tools.mjs",
+      "sha256": "cac0fcc1d715083e5bc5d907d712c0524a642128ebaab817e4dd50dd93d3833d"
+    },
+    {
+      "path": "scripts/materialize-embodied-model-review.mjs",
+      "sha256": "083dee8d294d8fbb93210e477b3dbf01995bebae5e2d28c4939008e9a1997cf1"
+    },
+    {
+      "path": "docs/formal/EMBODIED_MODEL_PACKAGING_ACCEPTANCE.md",
+      "sha256": "e7b23d14200b4724f4afac16cc775872a2c8a354bcb38d655e5d3c87483f5c7f"
+    },
+    {
+      "path": "docs/formal/EMBODIED_PACKAGING_INPUT_REFERENCE_CORRECTION.md",
+      "sha256": "75b73d4a1ca8564b348109643677ea588f59910ba73b1a7ed8994c9b4dbd0406"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+    }
+  ],
+  "preservedChecks": 446,
+  "limits": [
+    "New model declaration compiler executed; no runtime activation.",
+    "State specimens checked structurally; exact public initial-state admission remains a runtime gate.",
+    "Ordered input bytes are constructed, not yet passed through the new live-source compiler.",
+    "No whole EPACK work/identity/runtime control inferred from these checks."
+  ]
+}

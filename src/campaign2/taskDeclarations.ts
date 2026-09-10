@@ -7,6 +7,7 @@ import {validateSemanticReferent} from '../substrate/referentOrigin';
 import {StateContractError} from '../substrate/state';
 import {decodeTask,taskSupportedSchemas} from './taskCodecs';
 import {decodeCognitive,cognitiveSupportedSchemas} from './cognitiveCodecs';
+import {decodeReceiving,receivingSupportedSchemas} from '../campaign3/receivingCodecs';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataText as txt,dataUnsigned as u,dataKey as key,invalidModel,type RecordValue} from './canonicalData';
 
 const identity=(ns:number,payload:string)=>typedIdentifier(ns,text(payload));
@@ -22,8 +23,18 @@ export async function compileTaskDeclarations(contentBytes:Uint8Array,registryBy
 
 /** Internal receiving-profile composition. Public factories never accept a codec or predicate. */
 export async function compileTaskContentDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'){
- const decode=profile==='cognitive'?decodeCognitive:decodeTask;
- const schemas=profile==='cognitive'?cognitiveSupportedSchemas():taskSupportedSchemas();
+ return compileTaskContentContext(contentBytes,registryBytes,profile);
+}
+
+/** embodied-task-source/0.1-candidate: the same task/content/VAL semantics in an
+ * explicitly closed receiving schema context. No caller-supplied codec or predicate. */
+export async function compileReceivingTaskContentDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array){
+ return compileTaskContentContext(contentBytes,registryBytes,'embodied-receiving');
+}
+
+async function compileTaskContentContext(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'|'embodied-receiving'){
+ const decode=profile==='embodied-receiving'?decodeReceiving:profile==='cognitive'?decodeCognitive:decodeTask;
+ const schemas=profile==='embodied-receiving'?receivingSupportedSchemas():profile==='cognitive'?cognitiveSupportedSchemas():taskSupportedSchemas();
  const contentValues=items(decode(contentBytes),'set'),registryValue=decode(registryBytes),slots=items(registryValue,'list');
  if(slots.length!==6)invalidModel('task declarations require six registry slots');
  const allRows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));

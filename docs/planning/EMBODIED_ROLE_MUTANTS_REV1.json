@@ -1,0 +1,42 @@
+{
+  "status": "EROLE-E INDEPENDENT COMPONENT FAULT CONTROLS DETECTED",
+  "results": [
+    {
+      "mode": "intact",
+      "collectionAccepted": false,
+      "keyAccepted": false,
+      "recursiveFieldVAL": "REJECTS unqualified CharacterId"
+    },
+    {
+      "mode": "collection",
+      "collectionAccepted": true,
+      "keyAccepted": false,
+      "recursiveFieldVAL": "REJECTS unqualified CharacterId"
+    },
+    {
+      "mode": "map-key",
+      "collectionAccepted": false,
+      "keyAccepted": true,
+      "recursiveFieldVAL": "REJECTS unqualified CharacterId"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "07ed740a3a9c9b4de439af7f062b5270721b8f563c5d99cf9dd973b82da6928d"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "scripts/review-embodied-role-mutants.mjs",
+      "sha256": "c1dcb9a7306b48d5dfe48cc7be4b56dd75dd29ae87b639768f64dd5abaca5767"
+    }
+  ],
+  "limits": [
+    "Uses the actual model declaration and state-key components.",
+    "No mutated candidate enters the public frozen-cohort activation facade.",
+    "No fixture model or frozen artifact changed."
+  ]
+}

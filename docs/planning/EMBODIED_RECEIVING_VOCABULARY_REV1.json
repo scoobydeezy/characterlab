@@ -1,0 +1,753 @@
+{
+  "status": "SYMBOLIC VOCABULARY AND ROLE PROPOSAL; NO PERMANENT ALLOCATION",
+  "stages": [
+    {
+      "stage": "workspace",
+      "phase": 40,
+      "input": "377/1",
+      "output": "381/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-workspace",
+      "transition": "EmbodiedReceivingWorkspaceTransition"
+    },
+    {
+      "stage": "appraisal",
+      "phase": 50,
+      "input": "381/1",
+      "output": "384/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-appraisal",
+      "transition": "EmbodiedReceivingAppraisalTransition"
+    },
+    {
+      "stage": "concern",
+      "phase": 50,
+      "input": "384/1",
+      "output": "388/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-concern",
+      "transition": "EmbodiedReceivingConcernTransition"
+    },
+    {
+      "stage": "task-motive",
+      "phase": 60,
+      "input": "388/1",
+      "output": "394/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-task-motive",
+      "transition": "EmbodiedReceivingTaskMotiveTransition"
+    },
+    {
+      "stage": "body-options",
+      "phase": 70,
+      "input": "464/1",
+      "output": "BodyResponseOptions",
+      "seam": "embodied-response-instruction",
+      "event": "event/embodied-receiving-body-options",
+      "transition": "EmbodiedReceivingBodyOptionsTransition"
+    },
+    {
+      "stage": "task-candidates",
+      "phase": 70,
+      "input": "394/1",
+      "output": "398/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-task-candidates",
+      "transition": "EmbodiedReceivingTaskCandidatesTransition"
+    },
+    {
+      "stage": "mixed-candidates",
+      "phase": 70,
+      "input": "MixedCandidateJoinInput",
+      "output": "MixedCandidateContext",
+      "seam": "embodied-task-options",
+      "event": "event/embodied-receiving-mixed-candidates",
+      "transition": "EmbodiedReceivingMixedCandidatesTransition"
+    },
+    {
+      "stage": "task-raw",
+      "phase": 80,
+      "input": "398/1",
+      "output": "403/1",
+      "seam": "embodied-task-source",
+      "event": "event/embodied-receiving-task-raw",
+      "transition": "EmbodiedReceivingTaskRawTransition"
+    },
+    {
+      "stage": "mixed-raw",
+      "phase": 80,
+      "input": "MixedRawJoinInput",
+      "output": "MixedRawContext",
+      "seam": "embodied-task-reasons",
+      "event": "event/embodied-receiving-mixed-raw",
+      "transition": "EmbodiedReceivingMixedRawTransition"
+    },
+    {
+      "stage": "mixed-reasons",
+      "phase": 80,
+      "input": "MixedRawContext",
+      "output": "MixedReasonContext",
+      "seam": "embodied-task-reasons",
+      "event": "event/embodied-receiving-mixed-reasons",
+      "transition": "EmbodiedReceivingMixedReasonsTransition"
+    },
+    {
+      "stage": "resolution",
+      "phase": 80,
+      "input": "MixedReasonContext",
+      "output": "MixedDecisionResolution",
+      "seam": "embodied-task-arbitration",
+      "event": "event/embodied-receiving-resolution",
+      "transition": "EmbodiedReceivingResolutionTransition"
+    },
+    {
+      "stage": "intent",
+      "phase": 90,
+      "input": "MixedDecisionResolution",
+      "output": "MixedChosenIntent",
+      "seam": "embodied-choice-expression",
+      "event": "event/embodied-receiving-intent",
+      "transition": "EmbodiedReceivingIntentTransition"
+    },
+    {
+      "stage": "expression",
+      "phase": 90,
+      "input": "MixedChosenIntent",
+      "output": "MixedDecisionExpression",
+      "seam": "embodied-choice-expression",
+      "event": "event/embodied-receiving-expression",
+      "transition": "EmbodiedReceivingExpressionTransition"
+    },
+    {
+      "stage": "plan",
+      "phase": 100,
+      "input": "MixedChosenIntent",
+      "output": "MixedActionPlan",
+      "seam": "embodied-protocol-attempt",
+      "event": "event/embodied-receiving-plan",
+      "transition": "EmbodiedReceivingPlanTransition"
+    },
+    {
+      "stage": "attempt",
+      "phase": 110,
+      "input": "MixedActionPlan",
+      "output": "MixedActionAttempt",
+      "seam": "embodied-protocol-attempt",
+      "event": "event/embodied-receiving-attempt",
+      "transition": "EmbodiedReceivingAttemptTransition"
+    },
+    {
+      "stage": "execution",
+      "phase": 110,
+      "input": "MixedActionAttempt",
+      "output": "MixedExecutionOutcome",
+      "seam": "embodied-protocol-attempt",
+      "event": "event/embodied-receiving-execution",
+      "transition": "EmbodiedReceivingExecutionTransition"
+    }
+  ],
+  "members": [
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-workspace",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingWorkspaceTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-appraisal",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingAppraisalTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-concern",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingConcernTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-task-motive",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingTaskMotiveTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-body-options",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingBodyOptionsTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-task-candidates",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingTaskCandidatesTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-mixed-candidates",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingMixedCandidatesTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-task-raw",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingTaskRawTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-mixed-raw",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingMixedRawTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-mixed-reasons",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingMixedReasonsTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-resolution",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingResolutionTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-intent",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingIntentTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-expression",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingExpressionTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-plan",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingPlanTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-attempt",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingAttemptTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "EventTypeId",
+      "existingNamespace": 1001,
+      "payload": "event/embodied-receiving-execution",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "TransitionKindId",
+      "existingNamespace": 1009,
+      "payload": "EmbodiedReceivingExecutionTransition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-task-source",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-response-instruction",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-task-options",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-task-reasons",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-task-arbitration",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-choice-expression",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "SeamId",
+      "existingNamespace": 1036,
+      "payload": "seam/embodied-protocol-attempt",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RegistryKindId",
+      "existingNamespace": 1023,
+      "payload": "registry/embodied-response-instruction",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "DefinitionId",
+      "existingNamespace": 1027,
+      "payload": "definition/embodied-response-a",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "DefinitionId",
+      "existingNamespace": 1027,
+      "payload": "definition/embodied-response-a-copy",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "DefinitionId",
+      "existingNamespace": 1027,
+      "payload": "definition/embodied-response-b",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "existingNamespace": 1028,
+      "payload": "accessor/embodied-response-context",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "MotiveChannelId",
+      "existingNamespace": 1040,
+      "payload": "EmbodiedFuelDeficit",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "CharacterStateFamilyId",
+      "existingNamespace": 1031,
+      "payload": "adopted-response-instructions",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "StateLeafId",
+      "existingNamespace": 1032,
+      "payload": "leaf/embodied-response-instructions",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RandomPurposeId",
+      "existingNamespace": 1042,
+      "payload": "purpose/embodied-task-reason-face",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RandomPurposeId",
+      "existingNamespace": 1042,
+      "payload": "purpose/embodied-body-reason-face",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RandomPurposeId",
+      "existingNamespace": 1042,
+      "payload": "purpose/embodied-decision-tie",
+      "status": "PROPOSED; NOT ALLOCATED"
+    },
+    {
+      "family": "RandomSubjectRoleId",
+      "existingNamespace": 1043,
+      "payload": "subject/pressure-definition",
+      "status": "PROPOSED; NOT ALLOCATED"
+    }
+  ],
+  "scalarRoles": [
+    {
+      "record": "EmbodiedResponseInstructionDefinition",
+      "field": "PressureDefinitionId",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null
+    },
+    {
+      "record": "EmbodiedResponseInstructionDefinition",
+      "field": "ProtocolActionDefinitionId",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null
+    },
+    {
+      "record": "BodyCandidateOrigin",
+      "field": "InstructionDefinitionId",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null
+    },
+    {
+      "record": "BodyResponseOptions",
+      "field": "OccurrenceId",
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedCandidateContext",
+      "field": "OccurrenceId",
+      "family": "CandidateOptionsOccurrenceId",
+      "requiredNamespace": 1132,
+      "domainValidator": null
+    },
+    {
+      "record": "EmbodiedGround",
+      "field": "CharacterId",
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "record": "EmbodiedGround",
+      "field": "PressureDefinitionId",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedSignalKey",
+      "field": "BodyInstructionDefinitionId",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedRawContext",
+      "field": "OccurrenceId",
+      "family": "RawSignalContextOccurrenceId",
+      "requiredNamespace": 1133,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedReasonKey",
+      "field": "MotiveChannelId",
+      "family": "MotiveChannelId",
+      "requiredNamespace": 1040,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedReasonContext",
+      "field": "OccurrenceId",
+      "family": "ReasonContextOccurrenceId",
+      "requiredNamespace": 1134,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedDecisionResolution",
+      "field": "OccurrenceId",
+      "family": "DecisionResolutionOccurrenceId",
+      "requiredNamespace": 1135,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedChosenIntent",
+      "field": "OccurrenceId",
+      "family": "ChosenIntentOccurrenceId",
+      "requiredNamespace": 1136,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedDecisionExpression",
+      "field": "OccurrenceId",
+      "family": "DecisionExpressionOccurrenceId",
+      "requiredNamespace": 1137,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedActionPlan",
+      "field": "OccurrenceId",
+      "family": "ActionPlanOccurrenceId",
+      "requiredNamespace": 1139,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedActionAttempt",
+      "field": "OccurrenceId",
+      "family": "ActionAttemptOccurrenceId",
+      "requiredNamespace": 1140,
+      "domainValidator": null
+    },
+    {
+      "record": "MixedExecutionOutcome",
+      "field": "OccurrenceId",
+      "family": "ExecutionOutcomeOccurrenceId",
+      "requiredNamespace": 1141,
+      "domainValidator": null
+    },
+    {
+      "record": "EmbodiedReceivingStageRegistration",
+      "field": "ExecutingSeamId",
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidator": null
+    },
+    {
+      "record": "EmbodiedReceivingStageRegistration",
+      "field": "EventTypeId",
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidator": null
+    }
+  ],
+  "collectionIdentityChecks": [
+    {
+      "record": "EmbodiedResponseContext",
+      "field": "AdoptedInstructions",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null,
+      "containerGrammar": "set<id:DefinitionId>",
+      "admission": "element/key role plus separately exact semantic membership and source coverage"
+    },
+    {
+      "record": "EmbodiedResponseInstructionState",
+      "field": "Contexts",
+      "family": "CharacterId",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification",
+      "containerGrammar": "map<id:CharacterId,EmbodiedResponseContext>",
+      "admission": "element/key role plus separately exact semantic membership and source coverage"
+    },
+    {
+      "record": "MixedCandidateOption",
+      "field": "BodyOrigins",
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidator": null,
+      "containerGrammar": "set<id:DefinitionId>",
+      "admission": "element/key role plus separately exact semantic membership and source coverage"
+    },
+    {
+      "record": "EmbodiedReceivingStageRegistration",
+      "field": "SourceEvents",
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidator": null,
+      "containerGrammar": "set<id:EventTypeId>",
+      "admission": "element/key role plus separately exact semantic membership and source coverage"
+    }
+  ],
+  "stateMapKeyRole": {
+    "record": "EmbodiedResponseInstructionState",
+    "field": "Contexts",
+    "family": "CharacterId",
+    "requiredNamespace": 1002,
+    "domainValidator": "validator/character-qualification",
+    "admission": "independent StateMapKey role; not inferred from recursive field VAL"
+  },
+  "finiteDomains": [
+    {
+      "record": "MixedMotivationGround",
+      "field": "VariantTag",
+      "values": [
+        "Task",
+        "Body"
+      ]
+    },
+    {
+      "record": "MixedSignalKey",
+      "field": "SourceRole",
+      "values": [
+        "MotiveGenerating",
+        "SituationalEvidence",
+        "StandingDisposition"
+      ],
+      "inheritedNumbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "record": "MixedReasonKey",
+      "field": "Direction",
+      "values": [
+        "Approach",
+        "Avoid"
+      ],
+      "inheritedNumbers": [
+        1,
+        2
+      ],
+      "publicScope": "Approach only; no new public Avoid claim"
+    },
+    {
+      "record": "MixedDecisionResult",
+      "field": "VariantTag",
+      "values": [
+        "NoOptions",
+        "NoActiveReasons",
+        "Chosen"
+      ]
+    },
+    {
+      "record": "MixedChosenData",
+      "field": "ResolutionMode",
+      "values": [
+        "Auto",
+        "QuietRoll",
+        "PlayerFacingRoll"
+      ],
+      "inheritedNumbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "record": "EmbodiedReceivingStageRegistration",
+      "field": "Stage",
+      "values": [
+        "workspace",
+        "appraisal",
+        "concern",
+        "task-motive",
+        "body-options",
+        "task-candidates",
+        "mixed-candidates",
+        "task-raw",
+        "mixed-raw",
+        "mixed-reasons",
+        "resolution",
+        "intent",
+        "expression",
+        "plan",
+        "attempt",
+        "execution"
+      ]
+    }
+  ],
+  "counts": {
+    "stages": 16,
+    "members": 51,
+    "scalarRoles": 19,
+    "collectionIdentityChecks": 4,
+    "stateMapKeyRoles": 1,
+    "finiteDomains": 6
+  },
+  "existingTablesChecked": [
+    "CAMPAIGN2_ALLOCATION_TABLE.json",
+    "CONTENT_ID_ALLOCATION_TABLE.json",
+    "EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+    "MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+    "MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+    "MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+    "MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+    "MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+    "OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+    "ORIGIN_ALLOCATION_TABLE.json",
+    "PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+    "REGULATORY_PROBE_ALLOCATION_TABLE.json",
+    "TASK_COGNITIVE_ALLOCATION_TABLE.json",
+    "TASK_COGNITIVE_PLAN_LEAF_ALLOCATION_TABLE.json",
+    "TASK_COMMITMENT_ALLOCATION_TABLE.json",
+    "TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+    "TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+    "VAL_ALLOCATION_TABLE.json"
+  ],
+  "limits": [
+    "Namespace numbers identify already allocated families; new record, field and discriminator numbers remain unallocated.",
+    "Primitive role coverage does not prove reference resolution, source authenticity or model activation.",
+    "Canonical record-valued collections additionally require recursive inherited/new field roles and exact collection coverage."
+  ]
+}

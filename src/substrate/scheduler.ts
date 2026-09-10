@@ -11,6 +11,7 @@ import {
   type TypedIdentifierValue,
 } from './canonicalEncoding';
 import { INT64_MAX, simInstant, type SimInstant } from './time';
+import type {StateFailureCode} from './state';
 
 export const ORDERING_CONTRACT_VERSION = 'ordering/0.2-candidate' as const;
 export const ORDERING_PHASE_REGISTRY_VERSION = 'ordering-phases/2-candidate' as const;
@@ -137,6 +138,9 @@ export interface FailureDiagnostic {
 }
 
 export type SchedulerFailureCode =
+  | StateFailureCode
+  | 'EMBODIED_TIME_ORDER_VIOLATION'
+  | 'EMBODIED_TARGET_PATH_VIOLATION'
   | 'INSTANT_OVERFLOW'
   | 'RUN_NOT_ACTIVE'
   | 'INVALID_CONFIGURATION'

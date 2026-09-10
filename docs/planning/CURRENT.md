@@ -3,7 +3,35 @@
 Updated 2026-09-10. This index routes readers to authorities; it does not override
 the North Star, Architecture Map, Research Brief, accepted contracts or frozen bytes.
 
-Latest EMB checkpoint: [whole symbolic shape acceptance](../formal/EMBODIED_RESERVE_SHAPE_ACCEPTANCE.md)
+**Current checkpoint:** [bounded EMB experiment complete and qualified](CAMPAIGN3_EMBODIED_QUALIFICATION.md), 2026-09-10.
+EMB-A..O and ER-A..R pass in their explicit public/component scope. The reserve,
+interoception and pressure kernel now feeds actual adopted body instructions and a
+shared task/body choice. Independent grounds and duplicate descriptions are tested
+separately; no general cross-family law or biology verdict is inferred.
+
+[Exact qualification receipt](CAMPAIGN3_EMBODIED_QUALIFICATION.json): 28 public runs,
+86 restored prefixes across 13 frozen models, 20 receiving fault substitutions plus
+one generic coverage substitute, and 304 trace corruptions. Current coverage reconciles
+1,137 active tests and 328 historical tests. Final review corrected handler-owned body
+access and concurrent-settlement scope protection before qualification.
+
+The [accepted shape](../formal/EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md),
+[permanent allocation](../formal/EMBODIED_RECEIVING_PERMANENT_ALLOCATION.md) and
+[frozen model cohort](campaign3-embodied-receiving-model-rev1/FREEZE.json) remain exact.
+General physiology/final Need ownership, mixed learning and broad BODY/MULTISOURCE
+corpus qualification remain future work. Campaign 3 remains open. Earlier body-only
+qualification and draft dispositions below are historical scoped checkpoints.
+
+**Historical body implementation checkpoint:** [execution and adversarial review](CAMPAIGN3_EMBODIED_IMPLEMENTATION_REVIEW_REV1.md).
+The bounded reserve → current observation → support-only SEM → pressure chain and
+external replenishment now execute. The corrected exact model cohort is
+`campaign3-embodied-model-rev2/FREEZE.json`; the earlier cohort is preserved but
+superseded because its pressure PRJ selected ObservationId instead of ObserverId.
+Seven public specimens matched the frozen expectations. Its then-pending qualification
+is superseded by the bounded body qualification and whole bounded EMB verdict above.
+Entries below preserve historical checkpoints, not current unimplemented status.
+
+Historical symbolic checkpoint: [whole symbolic shape acceptance](../formal/EMBODIED_RESERVE_SHAPE_ACCEPTANCE.md)
 accepts the bounded reserve/current observation/option-free pressure/external-delivery
 subprofile against the exact 15-file review manifest (32 records/128 fields).
 There are 76 frozen implementation obligations, none newly passed, and three deferred
@@ -23,7 +51,11 @@ now defines six registry slots,45 role positions, exact input encoding, work lim
 and a dedicated exact numeric profile. Inspection distinguishes297 inherited declared
 schema pairs from298 decoder-supported pairs; the proposed manifest has329 descriptors.
 Hidden-initial-reserve comparison shares baseline ModelIdentity, yielding six proposed
-models and seven runs. Packaging review and canonical model images remain pending.
+models and seven runs. [Packaging shape is now accepted](../formal/EMBODIED_MODEL_PACKAGING_ACCEPTANCE.md)
+after14 inherited VAL/state/occurrence component checks. EPACK-A..H remain NOT PASSED.
+Next construct and validate the complete declaration images, including one separate
+work7 negative-control model, then review exact model/run commitments before freeze.
+No canonical model image or runtime activation has occurred.
 
 Campaign 3 is active for coverage discovery and admitted bounded comparisons. Its
 first new contract investigation is [BODY + motive receiving](CAMPAIGN3_BODY_RESEARCH_FRONTIER.md),

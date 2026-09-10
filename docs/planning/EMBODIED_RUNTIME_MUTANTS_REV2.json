@@ -1,0 +1,159 @@
+{
+  "status": "TWELVE CURRENT-SOURCE ALTERNATIVES DETECTED",
+  "results": [
+    {
+      "name": "extra-delivery-allocation",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "ingress.admitDelivery(event);",
+      "inserted": "allocate();ingress.admitDelivery(event);",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "EMB runtime allocation budget"
+    },
+    {
+      "name": "pressure-body-read",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "const admitted=ingress.admitPressure(event),",
+      "inserted": "bodyRead(state,C,bodyDomain);const admitted=ingress.admitPressure(event),",
+      "detectedBy": "production rejection",
+      "failure": "ILLEGAL_READ",
+      "message": "body capability is unavailable at this stage/branch"
+    },
+    {
+      "name": "reuse-sample-occurrence",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "const observation=typedIdentifier(1115,unsigned(allocate()));",
+      "inserted": "const observation=typedIdentifier(1115,unsigned((allocate(),0n)));",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "source branch/occurrence/payload closure"
+    },
+    {
+      "name": "stored-current-level",
+      "model": "baseline",
+      "source": "embodiedMath.ts",
+      "removed": "const remaining=amount.subtract(rate.multiply(Q.of(time-anchor)))",
+      "inserted": "const remaining=amount",
+      "detectedBy": "canonical output comparison"
+    },
+    {
+      "name": "direct-lower-pressure",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "deficitPressure(exact(f(rec(f(sample,5n),462n),2n)),threshold)",
+      "inserted": "deficitPressure(exact(f(rec(f(sample,5n),462n),1n)),threshold)",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "pressure sample/identity/result closure"
+    },
+    {
+      "name": "skip-absence-padding",
+      "model": "denied",
+      "source": "embodiedRuntime.ts",
+      "removed": ");allocate();carrier=",
+      "inserted": ");carrier=",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "EMB runtime allocation budget"
+    },
+    {
+      "name": "omit-quantization",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "quantization=[r(484,[atom(body.level),atom(capacity),atom(width),unsigned(bin.index)])]",
+      "inserted": "quantization=[]",
+      "detectedBy": "production rejection",
+      "failure": "TRACE_VALIDATION_FAILURE",
+      "message": "missing/extra/wrong bin operation"
+    },
+    {
+      "name": "read-then-redact",
+      "model": "denied",
+      "source": "embodiedRuntime.ts",
+      "removed": "}else{sample=r(463,",
+      "inserted": "}else{bodyRead(state,subject,bodyDomain);sample=r(463,",
+      "detectedBy": "production rejection",
+      "failure": "ILLEGAL_READ",
+      "message": "body capability is unavailable at this stage/branch"
+    },
+    {
+      "name": "omit-live-child-binding",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "if(children.length)ingress!.bindChild(event,children[0]);",
+      "inserted": "/* missing binding */",
+      "detectedBy": "production rejection",
+      "failure": "INPUT_NOT_ADMITTED",
+      "message": "event not the exact live admitted original/child"
+    },
+    {
+      "name": "omit-SEM-settlement",
+      "model": "baseline",
+      "source": "embodiedRuntime.ts",
+      "removed": "ingress.settled(event,experience);",
+      "inserted": "/* missing settlement */",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_INGRESS_VIOLATION",
+      "message": "wrong allocated child topology/payload"
+    },
+    {
+      "name": "retain-consumption-debt",
+      "model": "baseline",
+      "source": "embodiedMath.ts",
+      "removed": "return remaining.compare(zero)<0?zero:remaining",
+      "inserted": "return remaining",
+      "detectedBy": "production rejection",
+      "failure": "TRANSITION_OUTPUT_VIOLATION",
+      "message": "invalid bin operands"
+    },
+    {
+      "name": "drop-overflow",
+      "model": "overflow",
+      "source": "embodiedMath.ts",
+      "removed": "overflow:delivered.subtract(applied)",
+      "inserted": "overflow:zero",
+      "detectedBy": "canonical output comparison"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "6abff94009865ce4aae69c98cb7dc3605b1b46b9eb816b85fec6519ad59519b0"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign3/embodiedTrace.ts",
+      "sha256": "e869365407934b2775fd6d74ba115ae1bfbb37fa11eb5e8e90b2078429d0780b"
+    },
+    {
+      "path": "src/campaign3/embodiedAdmission.ts",
+      "sha256": "0ec314083a07fdd9a3c284b9975ec2f040deb074a710f66c642097af97331907"
+    },
+    {
+      "path": "src/campaign3/embodiedBodyTarget.ts",
+      "sha256": "b39e11fe1a58be59198c30c4f076f6278a18620e01781773a542748001f8db40"
+    },
+    {
+      "path": "src/campaign3/embodiedReplenishment.ts",
+      "sha256": "f76a9432a5866d831c9e1764894389c8b5caed9f900811dce08790a20c84d746"
+    },
+    {
+      "path": "scripts/review-embodied-runtime-mutants-rev2.mjs",
+      "sha256": "a0c0580caf29fa8408eabbd294278956f2fd51c21b36d517c9f8c48947b593b9"
+    }
+  ],
+  "cohort": {
+    "path": "docs/planning/campaign3-embodied-model-rev2/FREEZE.json",
+    "sha256": "985dbf1d020c4c529b9079a8f52363a98f7c753c64ac0b40cb4ac6fbb8aec8ad"
+  },
+  "limits": [
+    "Fault sensitivity, not a reduction verdict.",
+    "No receiving/action-knowledge or whole BODY claim."
+  ]
+}

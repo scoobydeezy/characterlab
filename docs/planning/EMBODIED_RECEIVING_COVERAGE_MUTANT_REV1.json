@@ -1,0 +1,34 @@
+{
+  "status": "PAIRWISE-ONLY ALTERNATIVE DETECTED BY ACTUAL NUMERICAL COMPONENT",
+  "reference": {
+    "replacements": 0,
+    "net": "5/9",
+    "lastOverlap": "1/1"
+  },
+  "alternative": {
+    "replacements": 1,
+    "net": "11/19",
+    "lastOverlap": "1/2"
+  },
+  "removed": "for(const [k,w] of weights)if(w.compare(aggregate.get(k)??ZERO)>0)aggregate.set(k,w);",
+  "inserted": "aggregate.clear();for(const [k,w] of weights)aggregate.set(k,w);",
+  "scope": "Three structurally valid source descriptions with bases {a},{b},{a,b}; no claim of public third-instruction or extra-evidence admission. Public unknown instruction exclusion is tested independently.",
+  "sources": [
+    {
+      "path": "src/campaign3/receivingTransforms.ts",
+      "sha256": "6f8f39035eb299f2d2133a3ea5a29dcb7c37a48e1d602306f6fa2da1c17103ae"
+    },
+    {
+      "path": "src/test/receivingTransforms.test.ts",
+      "sha256": "33c16ef39d78109411ce6e9dd99b3fb662c1eedb553aed9569bf5eb6bd9b13e3"
+    },
+    {
+      "path": "src/test/receivingFactory.test.ts",
+      "sha256": "a4ab807e91b2ad27b6b4edd6bb26a37a46407507707e34b00d96445b83999c92"
+    },
+    {
+      "path": "scripts/review-embodied-receiving-coverage-mutant.mjs",
+      "sha256": "51ddcd549db9be611edb5f4d05bfa25e12fac81b1c535d72d07c4bfb49120715"
+    }
+  ]
+}

@@ -2,7 +2,11 @@
 import {canonicalEncode,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateContractError,patternCovers,patternMatches,patternsIntersect,type StatePath,type ActualReadRecord,type ProjectionBinding} from '../substrate/state';
 import {SchedulerContractError} from '../substrate/scheduler';
-import {campaign2SchemaByType,decodeCampaign2} from './codecs';
+import {campaign2SchemaByType as baseSchema,decodeCampaign2 as baseDecode} from './codecs';
+import {decodeEmbodied,embodiedSchema} from '../campaign3/embodiedCodecs';
+import {embodiedAdmittedInputFacts,type EmbodiedAdmittedInput} from '../campaign3/embodiedAdmission';
+import {decodeReceiving,receivingSchema} from '../campaign3/receivingCodecs';
+import {receivingAdmittedInputFacts,type ReceivingAdmittedInput} from '../campaign3/receivingAdmission';
 import {admittedInputFacts,type AdmittedTransitionInput} from './admittedInput';
 import {decodeStatePattern,type compileCampaign2StateModel} from './stateModel';
 import {identityRolesCompatible} from './identityRoles';
@@ -13,11 +17,29 @@ type StateModel=ReturnType<typeof compileCampaign2StateModel>;
 const roster={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'wildcard' as const,selectorKind:'mapKey' as const}]};
 export function compileRequiredProjections(registrationBytes:Uint8Array,requirementBytes:Uint8Array,
   staticBindings:readonly ProjectionBinding[],stateModel:StateModel,content:Content){
+  return compileProjection('base',registrationBytes,requirementBytes,staticBindings,stateModel,content);
+}
+/** EMB's separately admitted layouts use the same PRJ/IDN role/path/read semantics. */
+export function compileEmbodiedRequiredProjections(registrationBytes:Uint8Array,requirementBytes:Uint8Array,
+  staticBindings:readonly ProjectionBinding[],stateModel:StateModel,content:Content){
+  return compileProjection('embodied',registrationBytes,requirementBytes,staticBindings,stateModel,content);
+}
+/** Receiving workspace retains the same PRJ/IDN algorithm under its actual515 layout. */
+export function compileReceivingRequiredProjections(registrationBytes:Uint8Array,requirementBytes:Uint8Array,
+  staticBindings:readonly ProjectionBinding[],stateModel:StateModel,content:Content){
+  return compileProjection('receiving',registrationBytes,requirementBytes,staticBindings,stateModel,content);
+}
+function compileProjection(mode:'base'|'embodied'|'receiving',registrationBytes:Uint8Array,requirementBytes:Uint8Array,
+  staticBindings:readonly ProjectionBinding[],stateModel:StateModel,content:Content){
+  const embodied=mode==='embodied',receiving=mode==='receiving';
+  const decodeCampaign2=receiving?decodeReceiving:embodied?decodeEmbodied:baseDecode,campaign2SchemaByType=receiving?receivingSchema:embodied?embodiedSchema:baseSchema;
   const registration=decodeCampaign2(registrationBytes);
-  if(typeof registration==='boolean'||registration.kind!=='record'||![272n,318n].includes(registration.schema.typeId))invalidModel('projection requires admitted transition registration');
+  if(typeof registration==='boolean'||registration.kind!=='record'||!(receiving?[515n]:embodied?[465n,469n,470n]:[272n,318n]).includes(registration.schema.typeId))invalidModel('projection requires admitted transition registration');
   const r=registration as Extract<CanonicalValue,{kind:'record'}>,version=r.schema.typeId===272n?271n:319n;
-  const definition=rec(f(r,3n),version),admission=rec(f(definition,1n),version===271n?274n:320n),schema=rec(f(admission,1n),254n);
-  const inputSchema=campaign2SchemaByType(u(f(schema,1n))),readDomain=items(f(definition,2n),'set').map(decodeStatePattern);
+  if(receiving&&(u(f(r,1n))!==1n||key(f(r,9n))!==key(decodeCampaign2(requirementBytes))))invalidModel('receiving PRJ requires exact workspace requirements');
+  const definition=receiving?r:rec(f(r,3n),embodied?(r.schema.typeId===465n?466n:r.schema.typeId===469n?471n:472n):version);
+  const schema=receiving?rec(f(r,6n),254n):r.schema.typeId===465n?rec(f(definition,1n),254n):rec(f(rec(f(definition,1n),embodied?(r.schema.typeId===469n?473n:474n):version===271n?274n:320n),1n),254n);
+  const inputSchema=campaign2SchemaByType(u(f(schema,1n))),readDomain=items(f(definition,receiving?7n:2n),'set').map(decodeStatePattern);
   const accessors=new Set<string>();
   for(const binding of staticBindings){
     if(binding.accessorId.namespaceId!==1028n||accessors.has(key(binding.accessorId)))invalidModel('invalid/duplicate static projection accessor');
@@ -55,8 +77,8 @@ export function compileRequiredProjections(registrationBytes:Uint8Array,requirem
   if(rosterCount!==(rosterReadable?1:0))invalidModel('IDN roster ReadDomain requires exactly one subject projection');
   const registrationKey=key(registration);
   return Object.freeze({
-    construct(admitted:AdmittedTransitionInput,state:AuthoritativeState){
-      const input=admittedInputFacts(admitted); // Strictly first: no payload selection or state operation before admission.
+    construct(admitted:AdmittedTransitionInput|EmbodiedAdmittedInput|ReceivingAdmittedInput,state:AuthoritativeState){
+      const input=receiving?receivingAdmittedInputFacts(admitted as ReceivingAdmittedInput):embodied?embodiedAdmittedInputFacts(admitted as EmbodiedAdmittedInput):admittedInputFacts(admitted as AdmittedTransitionInput); // Strictly first, before selector/state operations.
       if(key(decodeCampaign2(input.registration))!==registrationKey)throw new SchedulerContractError('INPUT_NOT_ADMITTED','admitted input belongs to another projection contract');
       const payload=rec(input.payload,inputSchema.typeId),values=new Map<string,CanonicalValue>(),reads:ActualReadRecord[]=[];
       for(const q of requirements){

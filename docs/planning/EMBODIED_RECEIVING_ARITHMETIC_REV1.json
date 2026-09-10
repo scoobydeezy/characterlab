@@ -1,0 +1,160 @@
+{
+  "status": "FINITE RECEIVING CALIBRATION DISTINGUISHES THE PROPOSED ALTERNATIVES; NOT RUNTIME PROOF",
+  "calibration": {
+    "taskPressure": "1/4",
+    "bodyPressure": "1/3",
+    "cutoffs": [
+      "1/20",
+      "1/10",
+      "1/5",
+      "3/10",
+      "2/5"
+    ],
+    "activationThreshold": "0/1",
+    "thetaRoll": "1/10",
+    "thetaPlayer": "1/10"
+  },
+  "contrasts": [
+    {
+      "name": "independent task+body on A versus body on B",
+      "dice": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "221/256",
+        "35/256"
+      ],
+      "margin": "93/128",
+      "contest": "35/128",
+      "stake": "9/11",
+      "authorship": "315/1408",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "drop task independent ground",
+      "dice": [
+        [
+          "8"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "margin": "0/1",
+      "contest": "1/1",
+      "stake": "9/11",
+      "authorship": "9/11",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "drop body shared ground",
+      "dice": [
+        [
+          "8"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "margin": "0/1",
+      "contest": "1/1",
+      "stake": "9/11",
+      "authorship": "9/11",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "duplicate descriptions consolidated on A versus task on B",
+      "dice": [
+        [
+          "8"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "margin": "0/1",
+      "contest": "1/1",
+      "stake": "9/11",
+      "authorship": "9/11",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "no-overlap alternative incorrectly sums descriptions",
+      "dice": [
+        [
+          "12"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "2/3",
+        "1/3"
+      ],
+      "margin": "1/3",
+      "contest": "2/3",
+      "stake": "9/11",
+      "authorship": "6/11",
+      "mode": "PlayerFacingRoll"
+    },
+    {
+      "name": "one-die-per-description alternative",
+      "dice": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "probabilities": [
+        "221/256",
+        "35/256"
+      ],
+      "margin": "93/128",
+      "contest": "35/128",
+      "stake": "9/11",
+      "authorship": "315/1408",
+      "mode": "PlayerFacingRoll"
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/explore-embodied-receiving.mjs",
+      "sha256": "bb7562746bb0143436af52a2b0ce716f31aa839e9532c4323553fb93efbc69b7"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/substrate/exactMath.ts",
+      "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+    }
+  ],
+  "limits": [
+    "Uses the actual shared exact arbitration kernel with mathematical option labels, not canonical mixed records.",
+    "Body/task source authenticity, overlap admission, public runtime and RNG are not exercised.",
+    "No allocation, model commitment, reduction verdict or EMB-M..O pass."
+  ]
+}

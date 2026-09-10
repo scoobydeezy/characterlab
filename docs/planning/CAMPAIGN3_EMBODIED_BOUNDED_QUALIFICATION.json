@@ -1,0 +1,1202 @@
+{
+  "status": "BOUNDED EMB SUBPROFILE COMPLETE AND QUALIFIED",
+  "reviewer": "Primary-agent self-review under user authorization; no external verdict claimed",
+  "rows": [
+    {
+      "id": "EMB-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact rate1/rate2 arithmetic; public baseline/slower trajectories; stored-level substitution detected.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-A kinetics | q_a=80 at0; r=1 versus2. At10 amounts70 versus60 despite equal initial q. Constant-current-level control fails. |"
+    },
+    {
+      "id": "EMB-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact thirds component plus public extra-query/direct-query state equality; queries never reanchor.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-B partition | r=1/3, q_a=80. Query at1 then2 then3 versus3 directly gives79 with unchanged anchor. Rounded-per-query and discarded-remainder controls fail. |"
+    },
+    {
+      "id": "EMB-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public q2 depletion, delivery5 and next q4; exact component and debt substitution.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-C depletion | q_a=2,r=1: q(3)=0; add5 at3, then q(4)=4. Hidden consumption-debt carryover fails. |"
+    },
+    {
+      "id": "EMB-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact e5/e9 component; public baseline/overflow share saturated state and character outputs.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-D bounded refill | Before95, e5 versus9 produces After100 in both, Overflow0 versus4. Matching level-channel evidence cannot disclose overflow. |"
+    },
+    {
+      "id": "EMB-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public q41/q49 with width20 yields byte-equal character outputs; hidden trace differs.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-E bin alias | q41 versus49, w20 gives[40,60] and p0. Direct-q pressure gives different positive values and must be rejected. |"
+    },
+    {
+      "id": "EMB-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public resolution-only model contrast changes evidence/pressure with byte-equal body state.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-F resolution | q45: w20 gives[40,60],p0; w10 gives[40,50],p1/6. Equal truth can produce different pressure through the channel alone. |"
+    },
+    {
+      "id": "EMB-G",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual exact bin and codec components cover0/interior/capacity ties and invalid widths; bounded cohort lacks a public capacity sample.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-G ties | w20: q0→[0,20], q20→[20,40], q100→[80,100]. Invalid width0 and nonintegral C/w reject. |"
+    },
+    {
+      "id": "EMB-H",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public denied/unavailable produce absence, no SEM and only source roster reads.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-H missing | Denied/unavailable channel yields Unavailable, never Known(0) or pressure1. No unauthorized body read or evidence emission. |"
+    },
+    {
+      "id": "EMB-I",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Live PRJ and wrong-subject exclusion; two qualified bodies in actual component; pure pressure has no identity operand.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-I identity | Wrong observer/body mapping rejects; opaque ID spelling and another observer's allocations cannot change p. |"
+    },
+    {
+      "id": "EMB-J",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public phase10/14/60 before110 and later sample; frozen earlier evidence unchanged.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-J timing | Pre110 and post110 reserve differ; frozen current-lane pressure stays unchanged. Later admitted observation can affect next-instant pressure only. |"
+    },
+    {
+      "id": "EMB-K",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Empty non-writer patches, actual WRT controls and45 whole-instant rollback boundaries.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-K ownership | Pressure/observation produce no character-learning patch; negative e and forged writes reject with complete state/output/allocator rollback. |"
+    },
+    {
+      "id": "EMB-L",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Every whole-instant public prefix restores to exact final bytes; changed model/S0 rejects.",
+      "tests": [
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedRuntime.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "obligation": "| EMB-L restore | Prefix restore before/after depletion and replenishment reproduces body, evidence and subsequent pressure; changed parameter/model commitments reject. |"
+    },
+    {
+      "id": "EOBS-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual old203/204 serializer rejects finite two-endpoint interval; new462 succeeds.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-A | Nondegenerate finite interval rejects through old203/204; succeeds only through the new committed schema/producer. |"
+    },
+    {
+      "id": "EOBS-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Old valid effect evidence cannot enter exact opportunity source admission; no numeric relabeling.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-B | Level versus effect meanings cannot be exchanged despite equal endpoint bytes. |"
+    },
+    {
+      "id": "EOBS-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Data-only facade and original authentication exclude raw payloads, caller IDs and copied traces.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-C | Caller-authored payload, observation ID, version string or copied trace cannot mint producer/SEM binding. |"
+    },
+    {
+      "id": "EOBS-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Real SEM substitution/support/payload binding controls reject under live opportunity.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-D | Correct observation paired with another same-observer frozen experience rejects; support identity alone cannot substitute altered payload bytes. |"
+    },
+    {
+      "id": "EOBS-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Top-level PRJ plus fixed observer exclusion, exact role/path grammar and no alternate roster accessor.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-E | Wrong observer or unmapped subject rejects before handler; no static or nested alternate roster access. |"
+    },
+    {
+      "id": "EOBS-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Pressure arithmetic receives only upper bound and H; body-read substitution rejects at capability guard.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-F | Pressure sees exact detached sample and H, no payload resolver, body handle, registry object or truth ancestry. |"
+    },
+    {
+      "id": "EOBS-G",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual old evidence consumer rejects new schema/seam; old model factory and decoder exclude EMB.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-G | New observation reference is rejected by old evidence consumers; no global ReadDomain widening. |"
+    },
+    {
+      "id": "EOBS-H",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Absence lacks SEM/support; Unavailable is distinct from Known zero in actual codecs and outputs.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-H | Missing result has no SEM evidence/support and gives Unavailable; Known(0) remains distinct. |"
+    },
+    {
+      "id": "EOBS-I",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Both unavailable causes produce byte-equal output; source body capability and quantization are absent.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-I | Permission/availability-false branches read no body and reveal no distinct reason. |"
+    },
+    {
+      "id": "EOBS-J",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public hidden-initial, rate and overflow comparisons preserve pressure when admitted sample matches.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-J | Matched interval/support yields equal pressure despite hidden q, rate, overflow and inaccessible facts. |"
+    },
+    {
+      "id": "EOBS-K",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Source reuse/changed sequence, child replay, occurrence reuse substitution and atomic rollback.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-K | Duplicate registration/delivery, reused occurrence, stale event or altered admitted payload rejects atomically. |"
+    },
+    {
+      "id": "EOBS-L",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public branch-neutral budgets; private padding omission substitution fails without fake227.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-L | Present/unavailable profile branches use equal relevant allocation budgets without fake227 or leaked padding. |"
+    },
+    {
+      "id": "EOBS-M",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual IDN/direct reads, empty non-writer patches and preserved authoritative families.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-M | Projection reads are traced accurately; sampling/pressure writes no persistent learning state. |"
+    },
+    {
+      "id": "EOBS-N",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Current-lane timing and complete-prefix restore preserve historical sample bytes.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-N | Same-instant post110 changes cannot reach the earlier sample; restore preserves exact historical payloads. |"
+    },
+    {
+      "id": "EOBS-O",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Real SEM reservation, assembly and freeze of empty semantic sets plus singleton216 support.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedTrace.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_OBSERVATION_ADMISSION_DRAFT.md",
+      "obligation": "| EOBS-O | A support-only SEM is admitted honestly or remains blocked; no invented tracking/classification to satisfy shape. |"
+    },
+    {
+      "id": "EING-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact declaration graph rejects branch/layout changes; real PRJ compiled before activation.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-A | Extra/missing/duplicate branch registration or wrong schema/version fails construction. |"
+    },
+    {
+      "id": "EING-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Only original459/478 admission; forged sequence, raw sample and extra public capability reject.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-B | Forged original source, cancellation, replay scheduling or changed channel fails source admission before selector/body reads. |"
+    },
+    {
+      "id": "EING-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Genuine same-observer SEM substitution and premature settlement reject.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-C | Genuine sample plus unrelated genuine SEM fails the same-opportunity join. |"
+    },
+    {
+      "id": "EING-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Matching support identity cannot authorize altered sample bytes at allocated-child binding.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-D | Correct support identity plus altered sample bytes fails exact production binding. |"
+    },
+    {
+      "id": "EING-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public absence produces no227; output closure forbids additional learning outputs or Known zero.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-E | Absent sample cannot create evidence-index entry,227, belief update or Known(0). |"
+    },
+    {
+      "id": "EING-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Denied/unavailable comparison gives identical outputs and zero source body reads.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-F | Availability-false and permission-false generate identical unavailable sample/result bytes at matched allocation, with no body read. |"
+    },
+    {
+      "id": "EING-G",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Present branch failure aborts; injected boundary failures and malformed state never become absence.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-G | Present failure never falls back to Unavailable or padding. |"
+    },
+    {
+      "id": "EING-H",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "All39-event/18-runtime budgets; skipped-padding and extra-delivery-allocation substitutions detected.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-H | All event/runtime/sequence budgets match; skip-padding mutant changes the next allocated identity and is detected. |"
+    },
+    {
+      "id": "EING-I",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Each changed allocated child coordinate rejects before publication; canonical parent also checked.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-I | Wrong child parent/type/phase/time/payload/sequence or duplicated child fails before capability publication. |"
+    },
+    {
+      "id": "EING-J",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Reuse/expired token, pre-ingress settlement, mid-instant save and archived generated child reject.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-J | Token reuse, cross-instant use, mid-instant save and forged saved internal child reject. |"
+    },
+    {
+      "id": "EING-K",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "45 scheduler boundaries cover source, SEM, binding, pressure, final checks and staged writer rollback.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-K | Fail after sample, SEM, child binding, projection, pressure or final validation; all committed state, queue, trace and allocators roll back. |"
+    },
+    {
+      "id": "EING-L",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "All prefix saves continue exactly; missing/extra/changed original source rows reject.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-L | Restore before/after a completed opportunity preserves later output bytes; missing/extra/changed original pending source rejects. |"
+    },
+    {
+      "id": "EING-M",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Different admitted model/S0 cannot reinterpret saved output; complete live prefix is replayed.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-M | Changed H/channel/model cannot reinterpret saved output; history does not authenticate new production. |"
+    },
+    {
+      "id": "EING-N",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Singleton observer exclusion plus shared PRJ isolation; read-then-redact substitution fails. No public multi-observer claim.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_INGRESS_SCHEDULING_DRAFT.md",
+      "obligation": "| EING-N | Wrong-observer interleaving and speculative read-then-redact mutants fail exact subject/read boundaries. |"
+    },
+    {
+      "id": "EREG-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Old PRJ rejects new layout; actual EMB source/present/absent layouts compile through shared PRJ.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-A | New source registration cannot enter old projection dispatch; successor accepts only exact declared layouts. |"
+    },
+    {
+      "id": "EREG-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Unbranded/expired source and registration mismatch fail before projection.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-B | Source token forgery or registration substitution rejects before selector/roster reads. |"
+    },
+    {
+      "id": "EREG-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact266 requirement, key grammar, content singleton and absent caller CharacterId.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-C | Alternate roster binding, nested selector or caller-provided CharacterId rejects. |"
+    },
+    {
+      "id": "EREG-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual two-qualified-body component has equal anchors; wrong bound target rejects; public second body excluded.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-D | Swap to another valid character's equal-valued anchor; owner/path equality must reject the substitution. |"
+    },
+    {
+      "id": "EREG-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Permission false retains only the actual IDN trace read.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-E | Permission false causes zero body reads, with the actual IDN read retained in trace. |"
+    },
+    {
+      "id": "EREG-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Malformed/missing initial body fails; no fallback, repair or initial clamp.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-F | Missing/malformed body is failure on present branch, not missing observation or clamped initial state. |"
+    },
+    {
+      "id": "EREG-G",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Caller model/run byte snapshots and shared direct-binding isolation preserve selected target.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-G | Mutating binding inputs after compilation cannot redirect the read. |"
+    },
+    {
+      "id": "EREG-H",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact unit/capacity/parameter/body/reference graph checks in actual declaration compiler.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-H | Unit/capacity/parameter mismatch and orphan/duplicate body binding reject. |"
+    },
+    {
+      "id": "EREG-I",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Closed choice/union/occurrence rules and trace occurrence/allocation checks reject malformed/reused output.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-I | OutputChoice neither/both, wrong occurrence family or sample identity reuse rejects. |"
+    },
+    {
+      "id": "EREG-J",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Pressure has only IDN ReadDomain; pure operator has no registry/body capability; body-read mutant fails.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-J | Pressure registration cannot read anchor, source definition, world effects or unregistered channel parameters. |"
+    },
+    {
+      "id": "EREG-K",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Direct trace reads report exact454 anchor without invented derived q; trace verifier checks actual facts.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-K | Direct-read trace reports exact anchor and no fictitious q state/derived row. |"
+    },
+    {
+      "id": "EREG-L",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Model/parameter mismatch restore rejection and public query-state byte equality.",
+      "tests": [
+        "src/test/embodiedAdmission.test.ts",
+        "src/test/embodiedBinding.test.ts",
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/embodiedTrace.test.ts",
+        "src/test/projectionBindingIsolation.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "obligation": "| EREG-L | Restore with changed body parameter binding/model rejects; pure query never rewrites anchor bytes. |"
+    },
+    {
+      "id": "EREP-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact e5/e9 component and public overflow64 comparison: same saturation, hidden overflow difference.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-A | q95,C100: e5/e9 yields identical After100 and Overflow0/4; later permitted level evidence matches. |"
+    },
+    {
+      "id": "EREP-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual writer proposal plus WRT apply reanchors zero delivery; negative amount rejected. Zero is component-only in this cohort.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-B | Zero delivery cannot raise reserve; invalid negative delivery rejects before patch. |"
+    },
+    {
+      "id": "EREP-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public tied deliveries consume staged predecessors; stale expected prior fails actual WRT component.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-C | Two same-body inputs read staged predecessors; reused earlier expected anchor fails stale-precondition validation. |"
+    },
+    {
+      "id": "EREP-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Two-body target component, wrong authority/removal/key controls and inherited WRT owning-stage controls.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-D | Wrong valid character path, non-owner, undeclared root and missing anchor reject at their owning boundaries. |"
+    },
+    {
+      "id": "EREP-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Only original478 can enter writer; private child graph and public input grammar exclude pressure/intent forgery.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-E | Pressure, intent or copied source event cannot mint replenishment; only original physical input succeeds. |"
+    },
+    {
+      "id": "EREP-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public source/SEM/pressure ordering precedes tied deliveries; later observation may change.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-F | Sample at T precedes refill at T; next-time sample may change, frozen current sample/pressure cannot. |"
+    },
+    {
+      "id": "EREP-G",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Zero writer child/runtime budget checked; extra writer ordinal substitution fails.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-G | Extra result occurrence allocation or emitted child violates the zero-runtime/zero-child replenishment budget. |"
+    },
+    {
+      "id": "EREP-H",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Complete trace-only decomposition; public overflow contrast leaves character outputs unchanged.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-H | Result trace exposes complete decomposition but no character evidence reference; hidden overflow never enters pressure. |"
+    },
+    {
+      "id": "EREP-I",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "45-boundary rollback and work7 failure undo earlier same-instant body patches.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-I | Later same-instant failure restores earlier body patches and all sampling/allocation effects. |"
+    },
+    {
+      "id": "EREP-J",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Pending sample and delivery closure checked against scratch prefix; removing either rejects.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-J | Restore preserves exact remaining sample and replenishment inputs; missing either family rejects. |"
+    },
+    {
+      "id": "EREP-K",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Exact direct anchor trace plus incompatible model/parameter restore rejection.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-K | Direct read reports anchor; changed parameters/model cannot reinterpret historical results. |"
+    },
+    {
+      "id": "EREP-L",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Ordered distinct tied events retain separate IDs/history; no outcome-based identity aliasing.",
+      "tests": [
+        "src/test/embodiedOwnership.test.ts",
+        "src/test/embodiedContrasts.test.ts",
+        "src/test/embodiedRuntime.test.ts",
+        "src/test/embodiedFactory.test.ts",
+        "src/test/wrt001WriteValidationOrder.test.ts",
+        "src/test/mutationAuthorityIdentity.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "obligation": "| EREP-L | Equal outcomes under split inputs do not authorize aliasing event IDs or rewriting history. |"
+    },
+    {
+      "id": "ECOMP-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual verifier rejects missing/additional/coherently wrong bin operation; omission mutant fails.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-A | Present sampling with missing/wrong/extra bin operation rejects at trace validation. |"
+    },
+    {
+      "id": "ECOMP-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Denied/unavailable has no operation or source body capability; read-then-redact mutant fails.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-B | Denied/unavailable sampling produces no bin operation and makes no speculative q read. |"
+    },
+    {
+      "id": "ECOMP-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Real bin/codec components protect interior and capacity endpoint rules.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-C | q=C uses last bin; q at another exact boundary uses its upper bin; wrong-index mutant is detected. |"
+    },
+    {
+      "id": "ECOMP-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Closed source/SEM/pressure records reject hidden-field or wrong-output additions; all trace fields checked.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-D | Exporting InputLevel or the operation reference in sample/SEM/pressure fails epistemic/output closure. |"
+    },
+    {
+      "id": "ECOMP-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Wrong C/hidden q operation, extra/invented read and metadata drift reject against execution facts.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-E | Supplying wrong C, extra roster read or an invented truth source for trace fields rejects. |"
+    },
+    {
+      "id": "ECOMP-F",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Public hidden-initial and exact41/49 alias: equal character outputs with different trace InputLevel.",
+      "tests": [
+        "src/test/embodiedTrace.test.ts",
+        "src/test/embodiedCodecs.test.ts",
+        "src/test/embodiedContrasts.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_COMPOSED_REVIEW_REV1.md",
+      "obligation": "| ECOMP-F | Same observer-safe sample can coexist with different trace InputLevel; character equality must remain intact. |"
+    },
+    {
+      "id": "EROLE-A",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Wrong namespaces in both definition-ID collections reject at actual compiler/codec boundary.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "obligation": "* EROLE-A: wrong namespace in either definition-ID set rejects before execution."
+    },
+    {
+      "id": "EROLE-B",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Missing/wrong-kind/wrong-version targets reject in declaration tests and materialization review.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "obligation": "* EROLE-B: valid namespace but missing/wrong-kind/wrong-version target rejects."
+    },
+    {
+      "id": "EROLE-C",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual VAL-qualified two-body component plus unqualified/nonidentity key rejection and public exclusion.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "obligation": "* EROLE-C: unqualified character map key rejects after key grammar; valid different-body"
+    },
+    {
+      "id": "EROLE-D",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Actual TransitionKind stable member compiles; DefinitionId alias rejects.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "obligation": "* EROLE-D: pressure registration's valid TransitionKind stable ID remains admissible;"
+    },
+    {
+      "id": "EROLE-E",
+      "status": "PASS IN BOUNDED PUBLIC/COMPONENT COMPOSITION",
+      "witness": "Two independent source substitutions remove collection qualification or map-key qualification; recursive field VAL remains active.",
+      "tests": [
+        "src/test/embodiedDeclarations.test.ts",
+        "src/test/embodiedOwnership.test.ts"
+      ],
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_REVIEW_MANIFEST_REV1.md",
+      "obligation": "* EROLE-E: removing the collection-member check is caught independently of record-field"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "EMB-M",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-M receiving | Genuine task and body origins share an action without fake TaskReferent, duplicate option or erased independent ground. BLOCKED pending receiving contract. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    },
+    {
+      "id": "EMB-N",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-N action knowledge | Removing/changing adopted action knowledge changes candidate access/association without changing physical pressure. Hidden world efficacy cannot rescue missing knowledge. BLOCKED pending bridge. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    },
+    {
+      "id": "EMB-O",
+      "source": "docs/planning/CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md",
+      "exactLine": "| EMB-O overlap | Shared observer-safe support versus independent grounds exercise distinct receiving alternatives. No world-ID overlap join; cross-family law remains open. |",
+      "disposition": "DEFERRED RECEIVING DEPENDENCY"
+    }
+  ],
+  "packaging": "EPACK-A..I PASS in stated bounded composition",
+  "evidence": [
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_SHAPE_REVIEW_REV1.json",
+      "sha256": "c55329e10eedd017fca50b259402071f012502e7b4ca69dc8c73e1547c6ca6ba"
+    },
+    {
+      "path": "docs/planning/campaign3-embodied-model-rev2/FREEZE.json",
+      "sha256": "985dbf1d020c4c529b9079a8f52363a98f7c753c64ac0b40cb4ac6fbb8aec8ad"
+    },
+    {
+      "path": "docs/planning/embodied-execution-rev3/REVIEW.json",
+      "sha256": "3932e0019387888c4ccaa19dcf5cbd026458695d9d5f515e754676b24c5801a0"
+    },
+    {
+      "path": "docs/planning/EMBODIED_TARGETED_TESTS_REV2.json",
+      "sha256": "8d987d8015d0d384d1c4292c80159917e5c2b41fef0e54c8d508687bcc6f88b9"
+    },
+    {
+      "path": "docs/planning/EMBODIED_REGRESSION_RECONCILIATION_REV2.json",
+      "sha256": "bda6a7d698e3284b4f4b2e350b99658e89311eb3c00d1f848f4d8a6ec4002e6c"
+    },
+    {
+      "path": "docs/planning/EMBODIED_RUNTIME_MUTANTS_REV3.json",
+      "sha256": "1c8071eebfb26f52bb915a494f5bc06183507250bd1f54547879643744cc6e0c"
+    },
+    {
+      "path": "docs/planning/EMBODIED_ROLE_MUTANTS_REV1.json",
+      "sha256": "f58a22f72bb867976b78d171af9138984c1224761769751296078503c093118e"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EMBODIED_BOUNDED_QUALIFICATION.md",
+      "sha256": "6369f561a598f8a816bd26cba680af8c7599c263d92cb9ef5e76c75d61d40ee7"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/embodiedAdmission.ts",
+      "sha256": "26fd76d6a98967eb7dd2756d0cc7d613ab162d40a7f1ccab8700f0f8a88269d0"
+    },
+    {
+      "path": "src/campaign3/embodiedBodyTarget.ts",
+      "sha256": "b39e11fe1a58be59198c30c4f076f6278a18620e01781773a542748001f8db40"
+    },
+    {
+      "path": "src/campaign3/embodiedCodecs.ts",
+      "sha256": "29a519c6569150546bd841a020a0e12443aa8099aa2b3ad5cd92e23b3f5762a0"
+    },
+    {
+      "path": "src/campaign3/embodiedFactory.ts",
+      "sha256": "94ebccdb6385bce2530a27938573ddc96be419c5050ba85eef9bf8e0a4c2cd55"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "07ed740a3a9c9b4de439af7f062b5270721b8f563c5d99cf9dd973b82da6928d"
+    },
+    {
+      "path": "src/campaign3/embodiedReplenishment.ts",
+      "sha256": "f76a9432a5866d831c9e1764894389c8b5caed9f900811dce08790a20c84d746"
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+    },
+    {
+      "path": "src/campaign3/embodiedTrace.ts",
+      "sha256": "df8619bf31762fe1e141411cc17146cae3d89d034baa85b28d2d8186def33b95"
+    },
+    {
+      "path": "src/campaign3/raw.d.ts",
+      "sha256": "efb7ab760a99ee4bbe1b3a6e557e62714ce34b2f05a45be2b98c5586f8dfab8f"
+    }
+  ],
+  "script": {
+    "path": "scripts/qualify-embodied-bounded-profile.mjs",
+    "sha256": "ba1d4251a1780ea28c05073fc60bf73076e82cbfc6c06d673471d7a74e46bb7d"
+  },
+  "limits": [
+    "Parent EMB-001 remains open",
+    "EMB-M..O deferred",
+    "No BODY/MULTISOURCE, final Need ownership or corpus promotion"
+  ]
+}
