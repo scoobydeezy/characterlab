@@ -17,6 +17,8 @@ import type { SimInstant } from '../substrate/time';
 export const OBSERVATION_CONTRACT_VERSION = 'observation/0.1-candidate' as const;
 /** ADAPT D's explicit provenance-cut closure; not another measurement compiler. */
 export const AUTHORED_FACT_OBSERVATION_VERSION = 'authored-fact-observation/0.1-candidate' as const;
+/** Separately frozen protocol projection; generic measurement mathematics is unchanged. */
+export const PROTOCOL_OBSERVATION_VERSION = 'protocol-consequence-observation/0.1-candidate' as const;
 
 export const observationSchemas = {
   boundedEffectTruth: schema(200n, 'BoundedEffectTruth', ['Before', 'PotentialEffect', 'Applied', 'Overflow', 'After', 'Minimum', 'Maximum', 'EffectProvenance', 'TruthRecordId']),
@@ -394,7 +396,7 @@ function validatePresentObservationRecord(root: CanonicalRecord): void {
   assertStrictKeys(references, 'safe source references');
   const version = field(root, 11n);
   if (typeof version === 'boolean' || version.kind !== 'text'
-    || (version.value!==OBSERVATION_CONTRACT_VERSION&&version.value!==AUTHORED_FACT_OBSERVATION_VERSION)) {
+    || (version.value!==OBSERVATION_CONTRACT_VERSION&&version.value!==AUTHORED_FACT_OBSERVATION_VERSION&&version.value!==PROTOCOL_OBSERVATION_VERSION)) {
     observationFail('INVALID_CHANNEL', 'unsupported observation transformation version');
   }
   if(version.value===AUTHORED_FACT_OBSERVATION_VERSION){
@@ -402,6 +404,13 @@ function validatePresentObservationRecord(root: CanonicalRecord): void {
     if(!interval.lower?.equals(one)||!interval.upper?.equals(one)||kind!==EvidenceKindId.Point
       ||!requireExact(field(root,8n)).equals(one)||tokenKeys.length||references.length)
       observationFail('INVALID_CHANNEL','invalid authored-fact observation projection closure');
+  }
+  if(version.value===PROTOCOL_OBSERVATION_VERSION){
+    const zero=ExactRational.of(0n),one=ExactRational.of(1n),two=ExactRational.of(2n);
+    const point=kind===EvidenceKindId.Point&&(interval.lower?.equals(zero)||interval.lower?.equals(one))&&interval.upper?.equals(interval.lower!);
+    const saturated=interval.lower?.equals(two)&&interval.upper===undefined&&kind===EvidenceKindId.LowerBound;
+    if((!point&&!saturated)||!requireExact(field(root,8n)).equals(one)||tokenKeys.length||references.length)
+      observationFail('INVALID_CHANNEL','invalid protocol observation projection closure');
   }
 }
 

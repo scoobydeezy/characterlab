@@ -1,8 +1,8 @@
 import {createMemoryExecution,type MemoryPendingFact} from './memoryExecution';
-import {createTaskExecution,type TaskPendingFact} from './taskExecution';
+import {createTaskExecution,type TaskPendingFact,type TaskExecutionModel} from './taskExecution';
 import {taskInitialSchedule,TASK_DEADLINE_EVENT} from './taskBootstrap';
-import type {compileTaskModel} from './taskModel';
-import {compileTaskBaseTraceBinding} from './traceBinding';
+import {compileTaskBaseTraceBinding,compileCognitiveBaseTraceBinding} from './traceBinding';
+import type {createCognitiveExecution} from './cognitiveExecution';
 import type {ScheduledEvent,EventHandlerContext} from '../substrate/scheduler';
 import type {compileMemoryModel} from './memoryModel';
 import {createPredictionExecution,type PredictionPendingFact} from './predictionExecution';
@@ -16,7 +16,7 @@ import {scheduledEventValue} from '../substrate/persistence';
 import {canonicalEncode,text,list,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState} from '../substrate/state';
 import {DeterministicScheduler,SchedulerContractError,type EventHandler} from '../substrate/scheduler';
-import {compileOrderedInputProfile,beginAuthoredSourceInstant,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,compiledInputSchedule} from './orderedInputs';
+import {compileOrderedInputProfile,beginAuthoredSourceInstant,beginProbeSourceInstant,PROBE_SOURCE_EVENT,AUTHORED_FACT_EVENT,DELIBERATION_EVENT,compiledInputSchedule} from './orderedInputs';
 import {beginTransitionIngressV04} from './transitionIngressV04';
 import {compileAdaptationEvaluator,adaptationExecutionDiffs} from './adaptationEvaluation';
 import {compileTraceBinding,compileProbeTraceBinding,compileMeasurementTraceBinding,compileMemoryBaseTraceBinding,compilePredictionBaseTraceBinding,TRACE_RULES} from './traceBinding';
@@ -38,12 +38,12 @@ type Compilation=Awaited<ReturnType<ReturnType<typeof compileOrderedInputProfile
 export function createAdaptationRuntime(inputs:Compilation,initialState:AuthoritativeState,
   shared:ReturnType<typeof compileTransitionAdmissionV06>,evaluator:ReturnType<typeof compileAdaptationEvaluator>,
   domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>,maxWork:bigint,bridgeModel?:ReturnType<typeof compileConsequenceBridge>,
-  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement'],memory?:Awaited<ReturnType<typeof compileMemoryModel>>,memoryPending:readonly MemoryPendingFact[]=[],prediction?:Awaited<ReturnType<typeof compilePredictionModel>>,predictionPending:readonly PredictionPendingFact[]=[],task?:Awaited<ReturnType<typeof compileTaskModel>>,taskPending:readonly TaskPendingFact[]=[]){
+  continuation?:Awaited<ReturnType<typeof prepareCanonicalSave<AuthoritativeState>>>,probeModel?:ReturnType<typeof compileProbeExecution>,measurement?:Awaited<ReturnType<typeof compileMeasurementModel>>['measurement'],memory?:Awaited<ReturnType<typeof compileMemoryModel>>,memoryPending:readonly MemoryPendingFact[]=[],prediction?:Awaited<ReturnType<typeof compilePredictionModel>>,predictionPending:readonly PredictionPendingFact[]=[],task?:TaskExecutionModel,taskPending:readonly TaskPendingFact[]=[],cognitive?:ReturnType<typeof createCognitiveExecution>){
   const modelIdentity=f(rec(inputs.runIdentity.value,104n),1n),rules=f(rec(modelIdentity,103n),1n);
   const memoryRuntime=memory&&measurement?createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,memoryPending):undefined;
   if(prediction&&(!memoryRuntime||!probeModel))throw new SchedulerContractError('INVALID_CONFIGURATION','prediction requires its compiled memory/probe dependencies');
   const predictionRuntime=prediction?createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,predictionPending):undefined;
-  const trace=task&&probeModel?compileTaskBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):prediction&&probeModel?compilePredictionBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):memory&&probeModel?compileMemoryBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
+  const trace=cognitive&&probeModel?compileCognitiveBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):task&&probeModel?compileTaskBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):prediction&&probeModel?compilePredictionBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):memory&&probeModel?compileMemoryBaseTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):measurement&&probeModel?compileMeasurementTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):probeModel?compileProbeTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel):typeof rules!=='boolean'&&rules.kind==='text'&&rules.value===TRACE_RULES?compileTraceBinding(modelIdentity,inputs.runIdentity.value):undefined;
   stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,continuation?.clock??0n);
   const taskInitial=task&&!continuation?taskInitialSchedule(task,inputs,canonicalEncode(initialState.canonicalValue())):undefined;
   const initial=continuation?{events:continuation.queue,allocators:continuation.allocators}:taskInitial??compiledInputSchedule(inputs,canonicalEncode(initialState.canonicalValue()));
@@ -137,6 +137,18 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[],traceContributions:[],traceFactory:()=>[result.trace()]};
   });
   for(const eventType of taskRuntime?.eventTypes()??[])registerHandler(key(eventType),()=>{throw new SchedulerContractError('TASK_STAGE_VIOLATION','task requires prepared stage');});
+  for(const eventType of cognitive?.eventTypes()??[])registerHandler(key(eventType),async context=>{
+   if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','cognitive outside live ingress');
+   const result=await cognitive!.execute(context.event,context.state,context),own=result.emissions();
+   const extra=typeof result.output!=='boolean'&&result.output.kind==='record'&&result.output.schema.typeId===307n?ingress.observeProtocolSource(context.event,canonicalEncode(result.output)):undefined;
+   return {nextState:context.state,outputs:[result.output],emittedEvents:[...own,...(extra?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length));return [result.trace(children)];}};
+  });
+  for(const eventType of cognitive?.protocolEventTypes()??[])registerHandler(key(eventType),context=>{
+   if(!ingress)throw new SchedulerContractError('INPUT_NOT_ADMITTED','protocol outside live ingress');
+   const result=cognitive!.executeProtocol(context.event,context),own=result.plan.emissions(),extra=result.freeze?ingress.observeSemanticFreeze(context.event,[canonicalEncode(result.freeze)]):undefined;
+   return {nextState:context.state,outputs:result.outputs,emittedEvents:[...own,...(extra?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children.slice(0,own.length));extra?.bindAllocatedChildren(children.slice(own.length));return [result.trace(children)];}};
+  });
+  if(cognitive)registerHandler(key(cognitive.identityEventType()),()=>{throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION','identity requires common prepared stage');});
   const scheduler=new DeterministicScheduler({initialState,initialQueue:initial.events,initialAllocators:initial.allocators,
     initialClock:continuation?.clock,initialCommittedTrace:continuation?.committedTrace,initialOutputs:continuation?.outputs,
     maxSettlementWorkPerSimulationInstant:maxWork,
@@ -145,13 +157,15 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime?.begin(instant);predictionRuntime?.begin(instant);taskRuntime?.begin(instant);
+        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime?.begin(instant);predictionRuntime?.begin(instant);taskRuntime?.begin(instant);cognitive?.begin(instant);
         sources=beginAuthoredSourceInstant(inputs,instant);ingress=beginTransitionIngressV04(shared,instant);
         bridge=bridgeModel?.begin(instant);
         probe=probeModel?.begin(instant);probeSource=probeModel?beginProbeSourceInstant(inputs,instant):undefined;
       },
       prepare(events,state,instant){
         if(!ingress)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','missing live ingress');
+        cognitive?.validateParticipants(events);
+        function prepareGroup(events:readonly ScheduledEvent[]){
         function inherited(events:readonly ScheduledEvent[]){
         if(predictionRuntime&&memoryRuntime&&events.some(e=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e))){
           predictionRuntime.validatePair(events);
@@ -211,10 +225,25 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||executing||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor])))bad('task stage execution lifecycle');executing=true;try{cursor++;if(taskRuntime.isEvent(context.event)){const result=taskRuntime.execute(context.event,state);results.push(result);traceOrder.push({task:result});return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}traceOrder.push({});return baseStage!.execute(context);}finally{executing=false;}},
           finish(){if(finished||executing||cursor!==events.length)bad('incomplete task stage');finished=true;let candidate=baseStage?.finish()??state;for(const result of results)candidate=stateModel.applyPatch(candidate,result.patch,{kind:'typedIdentifier',namespaceId:1025n,payload:text('authority/prospective-commitments')},{writableRoots:[373n],targetPaths:result.patch.operations.map(o=>o.path)}).state;return candidate;},
           finalizeTrace(){if(!finished)bad('task trace before finish');const baseTrace=baseStage?.finalizeTrace()??[];let i=0;const values=traceOrder.map(x=>x.task?x.task.trace():baseTrace[i++]);if(i!==baseTrace.length||values.some(x=>x===undefined))bad('task trace accounting');return values;}};
+        }
+        const identityEvents=cognitive?events.filter(e=>key(e.eventTypeId)===key(cognitive.identityEventType())):[];
+        if(!identityEvents.length)return prepareGroup(events);
+        const bad=(message:string):never=>{throw new SchedulerContractError('COGNITIVE_STAGE_VIOLATION',message);};
+        const identityEvent=identityEvents[0],rest=events.filter(e=>e!==identityEvent),automatic=rest.filter(e=>!!shared.registrationForEvent(e.eventTypeId));
+        if(identityEvents.length!==1||automatic.length!==1||rest.some(e=>e!==automatic[0]&&key(e.eventTypeId)!==key(TASK_DEADLINE_EVENT)))bad('chosen stage requires A + I with optional deadlines only');
+        // Source and target admission for I precedes prepareGroup, which admits
+        // every inherited target before it opens the ADAPT B0 read capability.
+        const paths=cognitive!.preflightIdentity(identityEvent,state);if(paths.some(p=>p.rootStateTypeId!==415n))bad('identity target overlaps inherited owners');
+        const inherited=prepareGroup(rest);cognitive!.sealIdentityPreflight();
+        let cursor=0,finished=false,result:ReturnType<NonNullable<typeof cognitive>['identityCandidate']>|undefined,identityTrace:CanonicalValue|undefined;
+        return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor++])))bad('cognitive common-stage execution order');
+         if(key(context.event.eventTypeId)===key(cognitive!.identityEventType())){result=cognitive!.identityCandidate(context.event,state);return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}return inherited.execute(context);},
+         finish(){if(finished||cursor!==events.length||!result)bad('incomplete cognitive common stage');finished=true;const inheritedState=inherited.finish(),applied=stateModel.applyPatch(inheritedState,result!.patch,result!.authority,{writableRoots:[415n],targetPaths:paths});identityTrace=result!.trace(applied.diffs);return applied.state;},
+         finalizeTrace(){if(!finished||!identityTrace)bad('cognitive trace before WRT completion');const rows=inherited.finalizeTrace();let i=0;return events.map(e=>e===identityEvent?identityTrace!:rows[i++]);}};
       },
-      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==(memory?7:6)||childCount!==(task?14:prediction?13:memory?11:8)||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime?.prepareCommit(state);predictionRuntime?.prepareCommit();memoryRuntime?.commit();predictionRuntime?.commit();taskRuntime?.commit();},
-      close(){memoryRuntime?.close();predictionRuntime?.close();taskRuntime?.close();sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
-      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||task&&key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
+      beforeCommit(state,instant){domains.validateStatic(state);domains.validateReferences(state,instant);bridge?.finish();probe?.finish();ingress!.finish();if(measurement&&probeInstant&&(runtimeCount!==(memory?7:6)||childCount!==(task?14:prediction?13:memory?11:8)||carriagePadding))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage/memory budget closure');taskRuntime?.prepareCommit(state);predictionRuntime?.prepareCommit();cognitive?.prepareCommit();memoryRuntime?.commit();predictionRuntime?.commit();taskRuntime?.commit();cognitive?.commit();},
+      close(){memoryRuntime?.close();predictionRuntime?.close();taskRuntime?.close();cognitive?.close();sources?.close();ingress?.abort();bridge?.abort();probe?.abort();probeSource?.close();sources=undefined;ingress=undefined;bridge=undefined;probe=undefined;probeSource=undefined;},
+      validateRuntimeEmission(event){if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT)||cognitive&&key(event.eventTypeId)===key(DELIBERATION_EVENT)||task&&key(event.eventTypeId)===key(TASK_DEADLINE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');},
     },
   });
   // Only quiescent observations/settlement are exposed. No injection, allocator or handler API.
@@ -222,7 +251,7 @@ export function createAdaptationRuntime(inputs:Compilation,initialState:Authorit
     save(modelIdentity:StructuralIdentity<'ModelIdentity'>,runIdentity:StructuralIdentity<'RunIdentity'>){
       return createCanonicalSave({scheduler,modelIdentity,runIdentity,continuingRunInputs:list([]),stateAdapter:{clone,
         canonicalValue:state=>state.canonicalValue(),validate:state=>{stateModel.validateState(state);domains.validateStatic(state);},
-        restore:()=>{throw new Error('save adapter cannot restore');},analyticalAnchors:()=>list([]),randomRelevantAuthoritativeIds:()=>list([])}});
+        restore:()=>{throw new Error('save adapter cannot restore');},analyticalAnchors:()=>list([]),randomRelevantAuthoritativeIds:state=>cognitive?cognitive.randomRelevantAuthoritativeIds(state):list([])}});
     },
     diagnostic:()=>scheduler.failureDiagnostic});
 }

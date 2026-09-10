@@ -1,0 +1,6654 @@
+{
+  "status": "COMPONENT PASS",
+  "corpusVersion": "finite-frozen-baseline/0.1",
+  "sourceFingerprint": {
+    "path": "src/campaign2/adaptationEvaluation.ts",
+    "sha256": "88276413f66a22e2f5f2754594aec57146d49ffee8398fbc12da9146f76d85fd"
+  },
+  "harnessSha256": "422398f5bdd43e2a7184fc4c5df92510bbcb1c4fd4dbf0dbcc54e8a2c9b2409c",
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "casesChecked": 72,
+    "cases": [
+      {
+        "name": "step=1/prior=0/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=0/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=0/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=0/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            3,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            3,
+            2,
+            2,
+            2
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=1/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=0/count=2",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            11,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=9/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=0/count=1",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            11,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=0/count=2",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            12,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=1/prior=10/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=0/count=1",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            -1,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=0/count=2",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            -2,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=0/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 1
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=0/count=2",
+        "expected": {
+          "accept": false,
+          "magnitudes": [
+            -1,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": false,
+        "observed": {
+          "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+          "rollback": true
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=1/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            1,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            1,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            8,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            8,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=0/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            7,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            7,
+            2,
+            2,
+            2
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=9/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=0/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=0/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            9,
+            1,
+            1,
+            1
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            9,
+            1,
+            1,
+            1
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=0/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            8,
+            2,
+            2,
+            2
+          ],
+          "ops": 4
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            8,
+            2,
+            2,
+            2
+          ],
+          "ops": 4,
+          "diffs": 4,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=1/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            1,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            1,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=1/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            2,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            2,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=1/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            3,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            3,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=8/count=0",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            8,
+            0,
+            0
+          ],
+          "ops": 0
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            8,
+            0,
+            0
+          ],
+          "ops": 0,
+          "diffs": 0,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=8/count=1",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            9,
+            1,
+            1
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            9,
+            1,
+            1
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      },
+      {
+        "name": "step=-1/prior=10/gate=8/count=2",
+        "expected": {
+          "accept": true,
+          "magnitudes": [
+            10,
+            10,
+            2,
+            2
+          ],
+          "ops": 3
+        },
+        "accepted": true,
+        "observed": {
+          "magnitudes": [
+            10,
+            10,
+            2,
+            2
+          ],
+          "ops": 3,
+          "diffs": 3,
+          "reads": 5,
+          "removeCount": 0
+        },
+        "agrees": true
+      }
+    ]
+  },
+  "mutations": [
+    {
+      "name": "ignore-frozen-gate",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              3,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 1
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 1
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              7,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              7,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "gatePrior===undefined||gatePrior===0n",
+      "to": "true"
+    },
+    {
+      "name": "invert-frozen-gate",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=1/prior=0/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              3,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              3,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              3,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              11,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=0/count=1",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              11,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              12,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=0/count=1",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -1,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -2,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -1,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 1
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 1
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              7,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              7,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              7,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              1,
+              1,
+              1
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              2,
+              2
+            ],
+            "ops": 3,
+            "diffs": 3,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              8,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "gatePrior===undefined||gatePrior===0n",
+      "to": "gatePrior===undefined||gatePrior!==0n"
+    },
+    {
+      "name": "use-target-as-gate",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=1/prior=0/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              3,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              7,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": false,
+          "observed": {
+            "error": "TRACE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "gatePath?projection.read('gate'):undefined",
+      "to": "gatePath?projection.read('target'):undefined"
+    },
+    {
+      "name": "discard-step-sign",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=-1/prior=0/gate=0/count=1",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -1,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -2,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=2",
+          "expected": {
+            "accept": false,
+            "magnitudes": [
+              -1,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              3,
+              2,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              1,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              7,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              8,
+              2,
+              2,
+              2
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "ADAPTATION_MAGNITUDE_OUT_OF_RANGE",
+            "rollback": true
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "count*step",
+      "to": "count*(step<0n?-step:step)"
+    },
+    {
+      "name": "emit-set-for-baseline",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=-1/prior=1/gate=0/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "ops": 4
+          },
+          "accepted": false,
+          "observed": {
+            "error": "STATE_VALIDATION_FAILURE",
+            "rollback": true
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "if(q===0n){if(prior===undefined)",
+      "to": "if(false){if(prior===undefined)"
+    },
+    {
+      "name": "emit-unchanged-set",
+      "status": "DETECTED",
+      "casesChecked": 72,
+      "differences": [
+        {
+          "name": "step=1/prior=0/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=0/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=0/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              0,
+              8,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=1/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              1,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=9/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              9,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=0/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "ops": 1,
+            "diffs": 1,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              1,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              2,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=1/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              3,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=0",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 0
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              8,
+              0,
+              0
+            ],
+            "ops": 2,
+            "diffs": 2,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=1",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              9,
+              1,
+              1
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        },
+        {
+          "name": "step=-1/prior=10/gate=8/count=2",
+          "expected": {
+            "accept": true,
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 3
+          },
+          "accepted": true,
+          "observed": {
+            "magnitudes": [
+              10,
+              10,
+              2,
+              2
+            ],
+            "ops": 4,
+            "diffs": 4,
+            "reads": 5,
+            "removeCount": 0
+          },
+          "agrees": false
+        }
+      ],
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "if(q!==p){",
+      "to": "if(q!==0n||q!==p){"
+    }
+  ],
+  "limitations": [
+    "Uses isolated committed FrozenBaseline / signed-Step variants of the frozen first model, without editing its artifacts.",
+    "Independent scalar expected results; canonical transport and production factory setup are shared.",
+    "No full REG, persistence, FCT-6 or PHEN-ADAPT closure."
+  ]
+}

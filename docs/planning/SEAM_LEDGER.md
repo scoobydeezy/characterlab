@@ -1776,3 +1776,45 @@ not public runtime qualification. Shared-source fingerprint receipts require ref
 where affected; historical receipts remain preserved. Campaign 2 and PERSIST-I remain
 OPEN. Work is paused for the user's power cycle. See
 CAMPAIGN2_AUTONOMOUS_PAUSE_CHECKPOINT.md for exact artifacts, limits and resume sequence.
+
+## Autonomous cognitive implementation resumed — 2026-09-09
+
+The power-cycle pause is over. The frozen cognitive cohort now has an actual public
+factory and generated scheduler path with observer-safe SEM/EVID, protocol ADAPT,
+prepared identity writes and complete-prefix RNG restore. The finite21-recipe runtime
+receipt and bounded tests are indexed in CAMPAIGN2_COGNITIVE_IMPLEMENTATION_PROGRESS.
+These supersede the prior statement that no public cognitive runtime exists, without
+promoting all frozen vectors. PERSIST-I and Campaign2 remain OPEN pending the complete
+adversarial crosswalk, current-source receipts and final preservation/research review.
+
+## Campaign 2 completion — 2026-09-09
+
+Campaign 2 is COMPLETE in the bounded thin-scaffold scope of
+[CAMPAIGN2_COMPLETION_REVIEW.md](CAMPAIGN2_COMPLETION_REVIEW.md).
+This internal adversarial verdict is made under the user's explicit autonomous-work
+authorization. It supersedes the earlier OPEN/power-cycle/implementation-pending
+checkpoint dispositions, without rewriting any frozen shape, allocation or model file.
+
+`task-cognitive-path/0.1-candidate` is QUALIFIED. TW/TP/RI/IH/TRC4/CS controls pass
+within the documented public/component/exclusion split; see
+[CAMPAIGN2_COGNITIVE_QUALIFICATION.md](CAMPAIGN2_COGNITIVE_QUALIFICATION.md).
+PERSIST-I now PASS only for `campaign2-task-cognitive-persistence/0.1-candidate`,
+complete-prefix reconstruction with actual RNG and no external coupling maps; see
+[CAMPAIGN2_COGNITIVE_PERSISTENCE_QUALIFICATION.md](CAMPAIGN2_COGNITIVE_PERSISTENCE_QUALIFICATION.md).
+Earlier no-RNG qualifications, whole current VAL and bounded ADAPT remain unchanged.
+
+The exact 21-model cohort executes;17 source substitutions are detected; historical
+math and18 predecessor assays pass. Public64/65 and27/26 boundaries execute. Current
+receipt/source and frozen-artifact consistency:24 receipts,446 fingerprints PASS.
+No external planning-agent approval or general psychological/reduction verdict is claimed.
+
+PHEN-ADAPT-001/1.11.0 and corpus/0.27.0 remain unchanged at digest
+`3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`.
+General DEC-001, ORD-001/002/005, future ContextModulating and the remaining expanded
+phenomenon/research obligations stay open. Campaign 3 is next; it has not passed.
+
+Final consolidated validation: COGNITIVE_FINAL_SUITE_RECEIPT_REV1.json records
+118 active files /1,063 tests PASS and43 preserved-reference files /328 tests PASS,
+with source/test fingerprints unchanged during both runs. TypeScript, reference
+boundary and final whitespace checks PASS. This supersedes earlier test counts;
+Campaign2 completion and its bounded research exclusions remain as recorded above.

@@ -52,7 +52,7 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
   const producers=new Set<bigint>(),pending=new Set<object>();
   const executions=new Map<AdmittedTransitionInput,{complete:boolean;identities:Map<string,CanonicalValue>}>();
   function live(){if(!active)fail('INPUT_NOT_ADMITTED','instant ingress authority is closed');}
-  function stage(source:ScheduledEvent,outputs:readonly CanonicalValue[],producerKey:string|undefined,authored=false,measurement=false){
+  function stage(source:ScheduledEvent,outputs:readonly CanonicalValue[],producerKey:string|undefined,authored=false,measurement=false,protocol=false){
     live();if(source.dueAt!==instant)fail('TRANSITION_OUTPUT_VIOLATION','source belongs to another instant');
     if(producers.has(source.eventId))fail('TRANSITION_OUTPUT_VIOLATION','producer execution observed twice');
     const identities=new Set<string>();
@@ -78,7 +78,7 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
       const ingress=rec(f(r.value,4n),276n);
       plans.push({transitionKey:r.transitionKey,registration:r.registration,emission:{dueAt:source.dueAt,phase:u(f(ingress,3n)),eventTypeId:id(f(ingress,1n)),payload:output,dependencies:list([])}});
     }
-    if((authored||measurement)&&plans.length!==1)fail('TRANSITION_INGRESS_VIOLATION','authored output requires exactly one matching basis consumer');
+    if((authored||measurement||protocol)&&plans.length!==1)fail('TRANSITION_INGRESS_VIOLATION','source output requires exactly one matching basis consumer');
     producers.add(source.eventId);const ticket={};pending.add(ticket);
     return Object.freeze({
       emissions:()=>plans.map(p=>structuredClone(p.emission)),
@@ -116,6 +116,15 @@ export function beginTransitionIngressV04(model:Model,instant:bigint){
       const at=f(output,3n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==source.dueAt)fail('TRANSITION_OUTPUT_VIOLATION','AAI occurrence time differs');
       if(id(f(output,1n)).namespaceId!==1118n)fail('TRANSITION_OUTPUT_VIOLATION','wrong AAI occurrence identity');
       return stage(structuredClone(source),[output],undefined,true);
+    },
+    /** Fixed protocol bridge only. No generic registered-producer injection surface. */
+    observeProtocolSource(source:ScheduledEvent,actualOutput:Uint8Array){
+      live();if(source.phase!==110n||key(source.eventTypeId)!==key(typedIdentifier(1001,text('event/protocol-actual-fact'))))fail('TRANSITION_OUTPUT_VIOLATION','wrong protocol actual-fact event');
+      const output=rec(model.decode(actualOutput),307n),outcome=rec(source.payload,433n),attempt=rec(f(outcome,2n),432n),plan=rec(f(attempt,2n),431n),intent=rec(f(plan,2n),425n),resolution=rec(f(intent,2n),409n),result=rec(f(resolution,4n),419n);
+      if(u(f(result,1n))!==3n)fail('TRANSITION_OUTPUT_VIOLATION','protocol source without chosen resolution');
+      const candidate=rec(f(rec(f(result,2n),420n),1n),395n),C=f(candidate,1n),basis=rec(f(output,2n),305n),at=f(output,3n);
+      if(key(f(basis,1n))!==key(C)||key(f(basis,2n))!==key(C)||key(f(basis,3n))!==key(f(outcome,3n))||key(f(output,4n))!==key(text('bounded-protocol-execution/0.1-candidate'))||typeof at==='boolean'||at.kind!=='signed'||at.value!==source.dueAt||id(f(output,1n)).namespaceId!==1118n)fail('TRANSITION_OUTPUT_VIOLATION','protocol actual-fact projection mismatch');
+      return stage(structuredClone(source),[output],key(typedIdentifier(1009,text('ProtocolActualFactBridgeTransition'))),false,false,true);
     },
     /** Trusted observer-side adapter only, after actual permitted production is validated. */
     observeMeasurement(source:ScheduledEvent,actualOutput:Uint8Array){

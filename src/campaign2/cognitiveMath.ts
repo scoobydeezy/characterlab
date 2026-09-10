@@ -86,15 +86,21 @@ export function analyzeOptions(options:readonly AnalyticalOption[],thetaRoll:Q,t
 
 export function choiceAlignment(chosen:CanonicalValue,semantic:ReadonlyMap<string,Q>):Q {const own=semantic.get(key(chosen));if(!own)bad('chosen candidate missing from meaning map');return bounded(own!.subtract(sum([...semantic].filter(([k])=>k!==key(chosen)).map(([,v])=>v))));}
 
-export function foldIdentityHistory(contributions:readonly CanonicalValue[],k:Q){
- if(k.compare(ZERO)<=0)bad('positive identity K');
+/** Structural history checks do not derive counters or create semantic fold rows. */
+export function validateIdentityHistory(contributions:readonly CanonicalValue[]){
  if(contributions.length>64)throw new SchedulerContractError('IDENTITY_EVIDENCE_LIMIT_EXCEEDED','identity history exceeds64');
- let support=ZERO,opposition=ZERO,previous=0n;const qualifications=new Set<string>(),decisions=new Set<string>(),operations:CanonicalValue[]=[];
+ let previous=0n;const qualifications=new Set<string>(),decisions=new Set<string>();
  for(const value of contributions){const row=rec(value,413n),qualification=f(row,1n),decision=f(row,2n),instant=f(row,3n),e=readQ(f(row,4n));
   if(qualifications.has(key(qualification))||decisions.has(key(decision)))throw new SchedulerContractError('IDENTITY_EVIDENCE_ALREADY_APPLIED','repeated identity source');
   if(typeof instant==='boolean'||instant.kind!=='signed'||instant.value<=previous)throw new SchedulerContractError('IDENTITY_EVIDENCE_ORDER_VIOLATION','identity history time order');
   if(e.equals(ZERO)||absolute(e).compare(ONE)>0)bad('nonzero bounded identity contribution');
   qualifications.add(key(qualification));decisions.add(key(decision));previous=(instant as {value:bigint}).value;
+ }
+}
+export function foldIdentityHistory(contributions:readonly CanonicalValue[],k:Q){
+ if(k.compare(ZERO)<=0)bad('positive identity K');validateIdentityHistory(contributions);
+ let support=ZERO,opposition=ZERO;const operations:CanonicalValue[]=[];
+ for(const value of contributions){const row=rec(value,413n),qualification=f(row,1n),e=readQ(f(row,4n));
   const quantize=(prior:Q,increment:Q,kind:bigint)=>{const input=prior.add(increment),integer=roundEven(input.numerator*1000000n,input.denominator),output=Q.of(integer,1000000n);operations.push(r(452,[qualification,u(kind),qValue(input),u(1000000),u(integer),qValue(output)]));return output;};
   support=quantize(support,max(ZERO,e),1n);opposition=quantize(opposition,max(ZERO,ZERO.subtract(e)),2n);
  }

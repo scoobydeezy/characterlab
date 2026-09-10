@@ -1,0 +1,64 @@
+{
+  "status": "EXECUTED BOUNDED EVIDENCE",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationDomains.ts",
+      "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+    },
+    {
+      "path": "src/campaign2/regulatoryReference.ts",
+      "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+    },
+    {
+      "path": "src/test/campaign2RegKeyPreservation.test.ts",
+      "sha256": "defca56e63d4c349ee897f798517375cd1ae48d0baaa0b5d01448614bf1a4d12"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "REG-E real ADAPT component preserves variable key even with identical scales and bounds; public profile excludes two variables",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "omit-variable-key-guard",
+      "status": "DETECTED",
+      "from": "key(variable)!==key(f(selected,2n))",
+      "to": "false",
+      "tests": [
+        {
+          "name": "REG-E real ADAPT component preserves variable key even with identical scales and bounds; public profile excludes two variables",
+          "state": "fail",
+          "errors": [
+            "expected function to throw an error, but it didn't"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "select-V1-query-V2",
+      "status": "DETECTED",
+      "from": "validateKeyedRegulatoryReference(reg,k,f(k,1n),f(k,2n),at,signed(magnitude))",
+      "to": "validateKeyedRegulatoryReference(reg,k,f(k,1n),atom(1029n,'variable/key-preservation'),at,signed(magnitude))",
+      "tests": [
+        {
+          "name": "REG-E real ADAPT component preserves variable key even with identical scales and bounds; public profile excludes two variables",
+          "state": "fail",
+          "errors": [
+            "expected [Function] to not throw an error but 'StateContractError: REG query differs…' was thrown"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Real generic two-variable component, public first-profile two-variable exclusion.",
+    "D=0 wrong-key rejection occurs before real REG arithmetic; both variables independently admit that scalar.",
+    "This guards a selected-key/query mismatch, not arbitrary malicious replacement of both trusted operands."
+  ]
+}

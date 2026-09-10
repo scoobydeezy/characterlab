@@ -1,0 +1,42 @@
+{
+  "status": "ACTUAL COMPONENT DIFFERENTIAL PASS; NOT FULL COGNITIVE QUALIFICATION",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveCodecs.ts",
+      "sha256": "7ba605d092d65aef4d1f143de5e89540ad2ee3af6f4314304810d2e9ac1a6fb8"
+    },
+    {
+      "path": "reference/src/model/diceCompiler.ts",
+      "sha256": "9029aef84a3915ae82b0195f527f4e6419cfbb8e84b7e1f36c0806d746ff94c0"
+    },
+    {
+      "path": "reference/src/model/identity.ts",
+      "sha256": "e395a4f8b191481be9dc838f9bfdf55a996af1b8c4d27f571722606b56796d68"
+    },
+    {
+      "path": "reference/src/kernel/evidenceOverlap.ts",
+      "sha256": "3e2be4b25c5c4ea57821fde9377755a6fc3c7bc704dd6b4015c8e6b8154516db"
+    },
+    {
+      "path": "scripts/compare-cognitive-math-reference-rev2.mjs",
+      "sha256": "7aba7bf66eabe605d404dbc28ad57c731d990d86875e97612ab5e7bc9560bdca"
+    }
+  ],
+  "diceCases": 270,
+  "activeCases": 140,
+  "identityHistories": 11,
+  "scope": [
+    "actual historical dice compiler against current codec-backed nucleus computation",
+    "negative/zero/positive bases, opposing modifiers, activation and floor",
+    "exact score mass and whole-expression sign",
+    "actual historical ordered identity quantization/strength across ties and opposing histories"
+  ],
+  "limits": [
+    "Raw controls are external mathematical operands, not public task-source occurrences.",
+    "No generated choice, qualified expression, RNG integration or persistence executes here."
+  ]
+}

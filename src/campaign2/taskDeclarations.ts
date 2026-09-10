@@ -6,6 +6,7 @@ import {compileGovernedContentManifest,type GovernedContentInput} from '../subst
 import {validateSemanticReferent} from '../substrate/referentOrigin';
 import {StateContractError} from '../substrate/state';
 import {decodeTask,taskSupportedSchemas} from './taskCodecs';
+import {decodeCognitive,cognitiveSupportedSchemas} from './cognitiveCodecs';
 import {dataRecord as rec,dataField as f,dataIdentity as id,dataItems as items,dataText as txt,dataUnsigned as u,dataKey as key,invalidModel,type RecordValue} from './canonicalData';
 
 const identity=(ns:number,payload:string)=>typedIdentifier(ns,text(payload));
@@ -16,7 +17,14 @@ const exact=(a:CanonicalValue,b:CanonicalValue,message:string)=>{if(!same(a,b))i
 const namespace=(value:CanonicalValue,ns:bigint)=>{if(id(value).namespaceId!==ns)invalidModel('task declaration identity namespace');};
 
 export async function compileTaskDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array){
- const contentValues=items(decodeTask(contentBytes),'set'),registryValue=decodeTask(registryBytes),slots=items(registryValue,'list');
+ return compileTaskContentDeclarations(contentBytes,registryBytes,'task');
+}
+
+/** Internal receiving-profile composition. Public factories never accept a codec or predicate. */
+export async function compileTaskContentDeclarations(contentBytes:Uint8Array,registryBytes:Uint8Array,profile:'task'|'cognitive'){
+ const decode=profile==='cognitive'?decodeCognitive:decodeTask;
+ const schemas=profile==='cognitive'?cognitiveSupportedSchemas():taskSupportedSchemas();
+ const contentValues=items(decode(contentBytes),'set'),registryValue=decode(registryBytes),slots=items(registryValue,'list');
  if(slots.length!==6)invalidModel('task declarations require six registry slots');
  const allRows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const rows=new Map<string,RecordValue>();for(const row of allRows){const k=key(f(row,1n));if(rows.has(k))invalidModel('duplicate registry StableId');rows.set(k,row);}
@@ -61,7 +69,7 @@ export async function compileTaskDeclarations(contentBytes:Uint8Array,registryBy
  const inputs:GovernedContentInput[]=contents.map(r=>({stableId:id(f(r,1n)),semanticKind:id(f(r,2n)),declaredInputs:f(r,3n),declaredOutputs:f(r,4n),preconditions:f(r,5n),worldEffects:f(r,6n),unitsDomainsBounds:f(r,7n),epistemicVisibility:f(r,8n),observationAffordances:f(r,9n),lifecycle:f(r,10n),referencedRegistryIds:items(f(r,11n),'list').map(id),referencedContentIds:items(f(r,12n),'list').map(id),validationInvariants:f(r,13n),sourceProvenance:f(r,14n),changeHistory:f(r,15n),formalSeamMappings:f(r,16n)}));
  // Fixed receiving checks above precede generic CONTENT reference/cycle commitment.
  const commitment=await compileGovernedContentManifest(inputs,allRows.map(r=>id(f(r,1n))),[{semanticKindId:characterKind,validate:()=>{}},{semanticKindId:taskKind,validate:()=>{}}]);
- const schemas=taskSupportedSchemas(),constraints=new Map<string,{position:RecordValue;role:RecordValue}>(),referenced=new Set<string>();
+ const constraints=new Map<string,{position:RecordValue;role:RecordValue}>(),referenced=new Set<string>();
  function validateRoleDeclaration(value:CanonicalValue){const role=rec(value,263n),validator=role.fields.get(2n);u(f(role,1n));if(validator!==undefined){
   if(u(f(role,1n))!==1002n||(!same(validator,characterValidator)&&!same(validator,taskValidator)))invalidModel('unsupported task-profile role predicate');referenced.add(key(validator));}return role;}
  function visit(value:CanonicalValue):void {if(typeof value==='boolean')return;
@@ -97,7 +105,7 @@ export async function compileTaskDeclarations(contentBytes:Uint8Array,registryBy
  }else if(value.kind==='list'||value.kind==='set')value.items.forEach(recordRoles);else if(value.kind==='map')for(const [k,v] of value.entries){recordRoles(k);recordRoles(v);}}
  const lookup=(tag:bigint,type:bigint,field:bigint)=>{const c=[...constraints.values()].find(c=>u(f(c.position,1n))===tag&&u(f(c.position,tag===1n?2n:3n))===type&&u(f(c.position,4n))===field);return c===undefined?undefined:enc(c.role);};
  return Object.freeze({...commitment,qualifyCharacter:(value:CanonicalValue)=>qualify(value,characterKind),qualifyTask:(value:CanonicalValue)=>qualify(value,taskKind),characterContentBytes:()=>enc(set(characters)),
-  validateRecordRoles:(bytes:Uint8Array)=>recordRoles(decodeTask(bytes)),recordRole:(type:bigint,field:bigint)=>lookup(1n,type,field),mapKeyRole:(root:bigint,field:bigint)=>lookup(2n,root,field),
-  validateRole(valueBytes:Uint8Array,roleBytes:Uint8Array){const role=validateRoleDeclaration(decodeTask(roleBytes));checkRole(decodeTask(valueBytes),role);},
+  validateRecordRoles:(bytes:Uint8Array)=>recordRoles(decode(bytes)),recordRole:(type:bigint,field:bigint)=>lookup(1n,type,field),mapKeyRole:(root:bigint,field:bigint)=>lookup(2n,root,field),
+  validateRole(valueBytes:Uint8Array,roleBytes:Uint8Array){const role=validateRoleDeclaration(decode(roleBytes));checkRole(decode(valueBytes),role);},
  });
 }

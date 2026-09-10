@@ -2,6 +2,10 @@
 
 **Status:** active blocking register
 
+Current Campaign 2 reconciliation (2026-09-09): the thin bounded scaffold is COMPLETE;
+see `../planning/CAMPAIGN2_COMPLETION_REVIEW.md`. Current scoped dispositions below
+supersede earlier checkpoint descriptions, not their accepted semantic contracts.
+
 Open decisions are not ordinary TODOs. If a row can affect an authoritative result, every dependent seam remains blocked until the target contract accepts a resolution and its proof tests.
 
 ## Priority meanings
@@ -28,11 +32,11 @@ blocking are unblocked to the exact scope that acceptance proves, and no further
 | `ORD-002` simultaneous multi-character ordering | `P1` | ordering / interaction seam | multi-character fixtures and social observation | accepted interaction ordering before first multi-character fixture |
 | `ORD-005` appraisal-regulation feedback boundary | `P1` | ordering/regulation seam | regulatory campaigns and current-vs-later affect semantics | accepted phase mapping before regulation campaign |
 | `TRC-003` privacy-safe trace projections | `P1` | trace/epistemic seam | researcher/UI views without cognitive leakage | accepted projection schema passing forbidden-read audit |
-| `TRC-004` causal-overlap provenance | `P1` | trace/reason consolidation | port of aggregate evidence coverage | accepted evidence-basis contract passing collective-redundancy fixture |
-| `DEC-001` authorship/identity qualification | `P1` | decision-expression and identity seam / Campaign 2 | retained dice-to-identity feedback and roll-boundary migration | accepted qualification contract covering contest, significance, cost, coercion, intervention, resolution mode, roll occurrence, and `AuthorshipPotential`, passing `PHEN-DECISION-001` and `PHEN-BIO-001` |
-| `ADAPT-001` automatic adaptation input | `CLOSED in qualified bounded profiles` | state/adaptation seam / Campaign 2 | adaptation-input/0.31-candidate implemented and qualified; PHEN-ADAPT PASS preserved | Agent self-review under user authorization closes current finite composition via CAMPAIGN2_BOUNDED_FACTORY_QUALIFICATION.md (2026-09-09). Future profile/kinetics/state widening needs its own contracts and proof; full Campaign 2 remains OPEN. |
-| `VAL-001` committable governed executables | `P1` | substrate validation / cross-campaign | shape accepted 2026-09-06 at governed-execution/0.1-candidate; formal closure/qualification pending; canonical implementation activation for any new governed executable, including the `CONTENT-001` character-kind validator | accepted rule for which executable functions may affect model construction, canonical validity, or transition-visible semantics, and how their executable meaning is committed to `ModelIdentity`: same governed declaration and same `ModelIdentity` → same executable semantics, and changed executable semantics → changed `ModelIdentity`. No anonymous callback may decide canonical admissibility, domain qualification, semantic projection, rule applicability, or state-transition meaning unless its complete behaviour derives from committed governed data. Prerequisite of canonical reliance on a `CONTENT-001` character-kind validator in built fixtures; does not block `IDN-001` shape acceptance, `EVID-001` or `REG-001` drafting, or Campaign 2 **F** allocation |
-| `C2-PERSIST-001` exact Campaign-2 save metadata | `P1` | persistence / factory activation | SHAPE ACCEPTED at campaign2-persistence/0.1-candidate; concrete profile binding and implementation qualification pending before authoritative activation | accepted profile with exact source/traversal/grammar for save fields 8/9/10, identity-bearing profile binding and persistence qualification; no VAL or other accepted seam reopening |
+| `TRC-004` causal-overlap provenance | `CLOSED in bounded component scope` | reason-evidence-coverage/0.1-candidate | no longer blocks the bounded task scaffold | Aggregate union-max weighted overlap, collective redundancy, subset residual and canonical ordering qualified; public multi-source reachability is not inferred. See CAMPAIGN2_COGNITIVE_QUALIFICATION. |
+| `DEC-001` authorship/identity qualification | `P1` | decision-expression and identity seam / Campaign 2 | general cost/coercion/intervention and broader biography; bounded task qualifier separately qualified | General qualification still requires PHEN-DECISION-001 and PHEN-BIO-001; the accepted free-choice task scope does not close this broader decision |
+| `ADAPT-001` automatic adaptation input | `CLOSED in qualified bounded profiles` | state/adaptation seam / Campaign 2 | adaptation-input/0.31-candidate implemented and qualified; PHEN-ADAPT PASS preserved | Agent self-review under user authorization closes current finite composition via CAMPAIGN2_BOUNDED_FACTORY_QUALIFICATION.md (2026-09-09). Future profile/kinetics/state widening needs its own contracts and proof; Campaign 2 bounded scaffold is now complete; broader profiles remain gated. |
+| `VAL-001` committable governed executables | `CLOSED in qualified bounded profiles` | governed-execution/0.1-candidate | current named governed compilers and cognitive successor qualified | Whole current VAL acceptance and fresh preservation are retained. Same committed model selects the same fixed executable meaning; no public anonymous callback admission. Broader executable/profile changes require new qualification. |
+| `C2-PERSIST-001` exact Campaign-2 save metadata | `CLOSED in qualified bounded profiles` | persistence / factory activation | current no-RNG and cognitive complete-prefix profiles qualified | PERSIST-A..H retain accepted no-RNG scope; PERSIST-I PASS under campaign2-task-cognitive-persistence/0.1-candidate with actual draws and no external coupling maps. No mid-instant/imported learned S0 admission. |
 | `MATH-002` quadratic coefficient convention | `P2` | signal-field candidate seam | signal-field comparison only | choose polynomial/matrix convention in candidate seam and add equivalence vectors |
 | `MATH-003` quadratic variance distribution assumptions | `P2` | signal-field candidate seam | uncertainty-bearing signal fields | declare distribution/fourth moments or reject closed-form candidate |
 | `MATH-004` covariance validity under quantization | `P1` | belief representation campaign | fixed-point covariance/Kalman candidate | PSD-preserving representation/projection proof before candidate use |
@@ -1750,3 +1754,24 @@ source/role obligation, not silently merged or retired.
 Model materialization/freeze and the generated cognitive implementation are next.
 All new runtime vectors remain FROZEN, NOT PASSED. PERSIST-I remains unpassed;
 Campaign2 remains OPEN. Existing qualified predecessor results are unchanged.
+
+## Current bounded Campaign 2 qualification — 2026-09-09
+
+Campaign2 is COMPLETE: see ../planning/CAMPAIGN2_COMPLETION_REVIEW.md and its cognitive
+and persistence qualification receipts. These later dispositions supersede historical
+OPEN/NOT PASSED checkpoint prose above, without editing any frozen contract/manifest.
+
+VAL-001 is CLOSED in its already qualified bounded profiles; the original P1 shape-stage disposition
+is its historical shape-stage description. The cognitive successor preserves the fixed
+committed compiler/public data boundary and qualified predecessors. This is not generic
+callback admission. ADAPT remains qualified in its exact bounded profiles.
+
+General DEC-001 remains P1 for cost, fear, coercion, intervention and the wider
+PHEN-DECISION/PHEN-BIO proof; it no longer blocks the accepted free-choice task
+qualifier. ORD-001 remains P1: later140-to-next40 reading does not decide same-event
+belief timing. ORD-002/005 and the other unexercised extensions remain open in their
+owners. None is a relevant unresolved P0 for the completed slice.
+
+Reopen a bounded closure when its source domain, state authority, evidence basis,
+mathematics, randomness/coupling or input/profile semantics change. Do not infer
+broader decision closure or a new corpus member from this implementation qualification.

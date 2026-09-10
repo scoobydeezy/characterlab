@@ -124,6 +124,15 @@ Completion requires accepted bounded observation/interoception and event-semanti
 
 ## 5. Campaign 2 — Thin intact North-Star reference scaffold
 
+Current disposition (2026-09-09): **COMPLETE in the bounded reference-scaffold scope**.
+`docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md` checks the five conditions below against
+the genuine generated path, historical controls and current adversarial evidence.
+The cognitive model/allocations and PHEN-ADAPT/corpus commitments are unchanged.
+Earlier Campaign 1/2 active-status prose in this plan records historical checkpoints.
+Campaign 3 is next; its wider phenomenon replay and psychological sufficiency are
+not implied by this completion. General DEC-001, ORD-001 and other isolated future
+obligations remain open.
+
 ### 2A — Specify the entire thin topology
 
 Before implementation, create a versioned seam contract for every canonical edge needed by one traversable event. Thin or identity-like transformations are allowed; unexplained transformations are not. Register sole mutation authority for every persistent target, including Values and regulatory adaptation.

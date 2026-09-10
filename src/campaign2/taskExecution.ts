@@ -11,7 +11,8 @@ import {TASK_VERSION} from './taskModelReview';
 import {MEMORY_VERSION} from './memoryModelSource';
 import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataText as txt,dataUnsigned as u,dataIdentity as id} from './canonicalData';
 import type {compileTaskModel} from './taskModel';
-type Model=Awaited<ReturnType<typeof compileTaskModel>>;
+export type TaskExecutionModel=Pick<Awaited<ReturnType<typeof compileTaskModel>>,'base'|'content'|'deadline'|'measurement'|'predictionComponent'|'stateModel'|'tasks'>;
+type Model=TaskExecutionModel;
 export interface TaskPendingFact {readonly event:ScheduledEvent;}
 const atom=(n:number,s:string)=>typedIdentifier(n,text(s));
 const names=['event/task-measurement-settlement','event/task-measurement-settlement-padding','event/task-deadline'];

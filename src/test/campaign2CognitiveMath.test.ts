@@ -24,6 +24,11 @@ describe('cognitive pure components; no source or runtime qualification',()=>{
   const out=consolidateCoverage([{sourceKey:source('a'),magnitude:q(3),basis:basis([1,2,3])},{sourceKey:source('b'),magnitude:ONE,basis:basis([1,2])}]);expect(show(out.total)).toBe('10/3');
   expect(show(readQ(f(rec(out.results[1],405n),3n)))).toBe('2/3');
  });
+ it('component scope: unequal atom weights use weighted intersection over union',()=>{
+  const weighted=(weights:number[])=>r(400,[map(weights.map((weight,i)=>[named(399,{VariantTag:u(1),ObservationReference:r(237,[u(1),id(1115,u(i+1))])}),qValue(q(weight))]))]);
+  const out=consolidateCoverage([{sourceKey:source('a'),magnitude:q(2),basis:weighted([2,1])},{sourceKey:source('b'),magnitude:ONE,basis:weighted([1,3])}]);
+  expect(show(readQ(f(rec(out.results[1],405n),3n)))).toBe('2/5');expect(show(out.total)).toBe('13/5');
+ });
  it('orders contributions canonically and rejects duplicate empty-basis causes',()=>{
   const operands=[{sourceKey:source('a'),magnitude:ONE,basis:basis([1])},{sourceKey:source('b'),magnitude:ONE,basis:basis([1])}];
   expect(consolidateCoverage(operands).results.map(key)).toEqual(consolidateCoverage([...operands].reverse()).results.map(key));

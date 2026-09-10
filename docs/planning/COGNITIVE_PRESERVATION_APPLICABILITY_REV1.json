@@ -1,0 +1,98 @@
+{
+  "status": "COMPONENT PASS",
+  "contract": "adaptation-input/0.31-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "88276413f66a22e2f5f2754594aec57146d49ffee8398fbc12da9146f76d85fd"
+    },
+    {
+      "path": "src/test/campaign2FrozenGateOrder.test.ts",
+      "sha256": "964ed7fcc07001df351b0f41ca82cd013722f68eade54f4c0f03c37f3cd72633"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "ignore-referent-match",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "if(key(f(match,u(f(match,1n))===1n?2n:3n))!==key(f(basis,2n)))return undefined;",
+      "to": "",
+      "tests": [
+        {
+          "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+          "state": "fail",
+          "errors": [
+            "expected [ …(2) ] to have a length of +0 but got 2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "omit-empty-dispatch",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "outputs:[dispatch,...evaluations]",
+      "to": "outputs:[...(execution.rules.length?[dispatch]:[]),...evaluations]",
+      "tests": [
+        {
+          "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+          "state": "fail",
+          "errors": [
+            "expected [] to have a length of 1 but got +0"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "state-dependent-applicability",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "const evaluations=execution.rules.map(({ruleId,rule,path,gatePath})=>{",
+      "to": "const evaluations=execution.rules.filter(({gatePath})=>!gatePath||snapshot.read(gatePath)===undefined).map(({ruleId,rule,path,gatePath})=>{",
+      "tests": [
+        {
+          "name": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+          "state": "fail",
+          "errors": [
+            "expected [ { path: { …(3) }, value: { …(3) } } ] to have a length of 2 but got 1"
+          ]
+        },
+        {
+          "name": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+          "state": "fail",
+          "errors": [
+            "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Isolated two-rule declaration specimen; frozen production artifacts unchanged.",
+    "Wrong-referent exposure uses an existing runtime-origin identity family, not a second character or CONTENT kind.",
+    "Three fixed-declaration in-memory substitutions; no exhaustive applicability or whole FCT verdict."
+  ]
+}

@@ -203,3 +203,48 @@ Before a campaign or implementation touches a seam, it must:
 7. update this ledger and the verdict ledger with the result.
 
 This is the mechanism-level counterpart to the repository's `reference/` boundary: history cannot contaminate the new architecture automatically, and it cannot vanish automatically either.
+
+## Campaign 2 bounded port qualification — 2026-09-09
+
+The current result is recorded in CAMPAIGN2_COGNITIVE_QUALIFICATION.md and
+CAMPAIGN2_COMPLETION_REVIEW.md, under task-cognitive-path/0.1-candidate. This update
+completes the porting gate for that bounded task profile; PORT is not automatically
+converted into a general RETAINED or reduction verdict.
+
+- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,
+  addressed draws, finite distributions, aggregate coverage, structural trace/prefix
+  replay and bounded transform execute. Actual historical differential controls pass
+  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference
+  suite43/328 passes. No reference import enters active source.
+- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe
+  commitments and historical receipts remain preserved. No fixture namespace promotion.
+- SUB-009: natural-address deterministic replay and rollback are qualified; externally
+  supplied comparison maps remain excluded from this profile. Existing substrate
+  coupling stays a separately tested PORT/control; equal seeds alone do not pair
+  differing addresses.
+- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause
+  consolidation, all five die bands, three modes and zero-base/active-floor controls
+  execute. Component Avoid and richer coverage are explicitly not public source claims.
+- MEC-013: three historical source roles execute. ContextModulating remains a future
+  separately traceable PORT obligation; it is neither admitted nor silently retired.
+- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered
+  evidence, immutable historical expressions and intent/attempt/outcome separation
+  execute. Positive/opposing/quantized histories are component controls; public
+  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad
+  biography, coercion/cost and seed-space sufficiency remain corpus obligations.
+- MEC-020: immutable adopted task instructions and active-only lifecycle pressure
+  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.
+- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and
+  interval semantics are preserved. Protocol2 remains censored; execution identity
+  stays outside character evidence. Eighteen predecessor assays were refreshed.
+- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior
+  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled
+  compiler control; no new old-vs-new reduction verdict is claimed.
+- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact
+  source substitutions detect local-I scaling, extra tickets, standing in meaning,
+  lost aggregate history and protocol truth leakage. The collective redundancy
+  fixture detects the retired pairwise-max alternative without claiming that the
+  last-basis substitution is literally that algorithm.
+
+The known weighted-Jaccard subset residual and historical calibration limitations
+remain visible. No North-Star mechanism was eliminated by this port qualification.

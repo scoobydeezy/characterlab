@@ -1,0 +1,91 @@
+{
+  "status": "COMPONENT PASS",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "sha256": "f3bee081d6465027d67e68f864c00dd5b7902eda699da53df7b9a6a2216ddbac"
+    },
+    {
+      "path": "src/campaign2/factory.ts",
+      "sha256": "28c2aff5250f508bf170133ee1c33ad5dcabc9a2fa6214e2885eb8ff87694948"
+    },
+    {
+      "path": "src/test/fixtures/campaign2PopulatedMetadata.ts",
+      "sha256": "c71203f487083da261d9806e68b7d564d3df92a8baf15b52f755d837eb379500"
+    }
+  ],
+  "results": [
+    {
+      "target": "baseline",
+      "status": "PASS",
+      "cases": [
+        {
+          "name": "populated-state/metadata-8",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/metadata-9",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/metadata-10",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/exact-restore",
+          "agrees": true
+        }
+      ]
+    },
+    {
+      "target": "src/campaign2/adaptationRuntime.ts",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "populated-state/metadata-8",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/metadata-9",
+          "agrees": false
+        },
+        {
+          "name": "populated-state/metadata-10",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/exact-restore",
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "target": "src/campaign2/factory.ts",
+      "status": "DETECTED",
+      "cases": [
+        {
+          "name": "populated-state/metadata-8",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/metadata-9",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/metadata-10",
+          "agrees": true
+        },
+        {
+          "name": "populated-state/exact-restore",
+          "agrees": false
+        }
+      ]
+    }
+  ],
+  "scope": [
+    "PERSIST-D all-state-ID scan: populated admitted displacement state, exact empty metadata and restore.",
+    "Save and restore derivations independently substituted.",
+    "Not PERSIST-I: no accepted stochastic consumer is added or claimed.",
+    "No whole PERSIST, VAL, factory or Campaign-2 verdict."
+  ]
+}

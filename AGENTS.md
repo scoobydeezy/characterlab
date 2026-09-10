@@ -18,6 +18,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+Current checkpoint (2026-09-09): Campaign 2 is complete in the bounded thin-scaffold
+scope of `docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md`. The cognitive pipeline and
+complete-prefix RNG persistence are qualified under their exact frozen versions.
+Campaign 3's expanded corpus is next, not already passed. The Campaign 1 narrative
+below is historical; current seam/decision dispositions are in the formal register
+and the latest planning receipts. Preserve their public/component limits and all
+unresolved broader decisions. Do not restart old Campaign 1 or Phase 3 plans.
+
 CharacterLab is undergoing a ground-zero architectural refoundation.
 
 The active implementation belongs in `src/`. It begins only after the relevant deterministic substrate and seam contracts exist. The first implementation target is the North-Star Reference Scaffold: a thin, deterministic, end-to-end causal topology whose candidate distinctions can be ablated, substituted, merged, derived, compressed, or retracted.

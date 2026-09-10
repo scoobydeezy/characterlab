@@ -1,0 +1,300 @@
+{
+  "status": "EVIDENCE SUBMITTED",
+  "contract": "adaptation-input/0.31-candidate",
+  "sourceFingerprints": [
+    {
+      "path": "src/campaign2/adaptationEvaluation.ts",
+      "sha256": "88276413f66a22e2f5f2754594aec57146d49ffee8398fbc12da9146f76d85fd"
+    },
+    {
+      "path": "src/campaign2/adaptationDomains.ts",
+      "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+    },
+    {
+      "path": "src/test/campaign2MagnitudeBoundary.test.ts",
+      "sha256": "764980d6414b8dc3d6e2096fd6f0c085c8b61a9c9e6a2424471243a2c7499086"
+    }
+  ],
+  "baseline": {
+    "name": "baseline",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+        "state": "pass"
+      },
+      {
+        "name": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+        "state": "pass"
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "clamp-negative-q-to-zero",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "q=countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g);",
+      "to": "raw=countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g),q=raw<0n?0n:raw;",
+      "required": "AD-E9 unsigned leaf",
+      "tests": [
+        {
+          "name": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "clamp-bounded-q-to-maximum",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationEvaluation.ts",
+      "from": "q=countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g);",
+      "to": "raw=countStepWithBaselineGate(u(f(execution.basis,3n)),step.value,p,g),q=path.rootStateTypeId===302n&&(path.fieldId===1n||path.fieldId===4n)&&raw>10n?10n:raw;",
+      "required": "AD-E9 bounded leaf",
+      "tests": [
+        {
+          "name": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+          "state": "fail",
+          "errors": [
+            "promise resolved \"true\" instead of rejecting"
+          ]
+        },
+        {
+          "name": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+          "state": "fail",
+          "errors": [
+            "expected [ { path: { …(3) }, value: { …(3) } } ] to deeply equal [ { path: { …(3) }, value: { …(3) } } ]"
+          ]
+        },
+        {
+          "name": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+          "state": "pass"
+        }
+      ]
+    },
+    {
+      "name": "invent-ceiling-for-unbounded-leaves",
+      "status": "DETECTED",
+      "source": "src/campaign2/adaptationDomains.ts",
+      "from": "if(magnitude<0n||(maximum!==undefined&&magnitude>maximum))",
+      "to": "if(magnitude<0n||magnitude>(maximum??10n))",
+      "required": "AD-E9 unbounded leaf",
+      "tests": [
+        {
+          "name": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+          "state": "pass"
+        },
+        {
+          "name": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+          "state": "fail",
+          "errors": [
+            "magnitude lies outside its declared lattice domain"
+          ]
+        },
+        {
+          "name": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+          "state": "fail",
+          "errors": [
+            "magnitude lies outside its declared lattice domain"
+          ]
+        },
+        {
+          "name": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+          "state": "fail",
+          "errors": [
+            "magnitude lies outside its declared lattice domain"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite public-model matrix; no universal arbitrary-integer proof.",
+    "No whole B/FCT or AD-E9 acceptance assigned by this assay.",
+    "Public snapshot rollback here; complete queue/allocator fault matrix belongs to AD-E12.",
+    "Second-leaf confinement also relies on separately accepted AD-E4/E8 exact target/diff enforcement."
+  ]
+}

@@ -4,7 +4,7 @@
 import {canonicalEncode,record,set,signed,unsigned,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,ContractReadProjection,actualReadRecordValue,statePathValue,statePatchValue,createStatePatch,mutationDiffValue,type StatePath,type StatePatch,type PatchOperation,type ProjectionBinding,type ActualReadRecord,type StructuralMutationDiff} from '../substrate/state';
 import {SchedulerContractError} from '../substrate/scheduler';
-import {decodeCampaign2,campaign2Record as r,campaign2SchemaByType} from './codecs';
+import {decodeCampaign2,campaign2Record,campaign2SchemaByType} from './codecs';
 import {admittedInputFacts,type AdmittedTransitionInput} from './admittedInput';
 import {dataRecord as rec,dataField as f,dataUnsigned as u,dataItems as items,dataIdentity as id,dataKey as key} from './canonicalData';
 import {decodeStatePattern,type compileCampaign2StateModel} from './stateModel';
@@ -17,7 +17,7 @@ const completedExecutions=new WeakMap<object,{token:AdmittedTransitionInput;outp
 /** Internal fixed-adapter result, authenticated by execution rather than output-shaped data. */
 export function adaptationExecutionFacts(result:object){
   const facts=completedExecutions.get(result);if(!facts)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','missing closed ADAPT execution result');
-  admittedInputFacts(facts.token);return {token:facts.token,outputs:facts.outputs.map(v=>decodeCampaign2(canonicalEncode(v)))};
+  admittedInputFacts(facts.token);return {token:facts.token,outputs:structuredClone(facts.outputs)};
 }
 /** Trace-side evidence from the actual WRT application, available only after the batch succeeds. */
 export function adaptationExecutionDiffs(result:object):readonly StructuralMutationDiff[]{
@@ -28,7 +28,10 @@ export function adaptationExecutionDiffs(result:object):readonly StructuralMutat
 export function countStepWithBaselineGate(count:bigint,step:bigint,prior:bigint,gatePrior?:bigint):bigint {
   return prior+(gatePrior===undefined||gatePrior===0n?count*step:0n);
 }
-export function compileAdaptationEvaluator(transitions:ReturnType<typeof compileAdaptationTransitions>,domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>){
+export function compileAdaptationEvaluator(transitions:ReturnType<typeof compileAdaptationTransitions>,domains:ReturnType<typeof compileAdaptationDomains>,stateModel:ReturnType<typeof compileCampaign2StateModel>,codec={decode:decodeCampaign2,record:campaign2Record}){
+  // Selected only by the trusted model compiler. Arithmetic and batch authority
+  // remain common; the successor's nested307 has its own frozen version string.
+  const r=codec.record;
   const registrations=items(decodeCampaign2(transitions.registrationBytes()),'set').map(v=>f(rec(v,171n),4n)).map(key);
   function target(leaf:CanonicalValue,derivation:CanonicalValue,basis:ReturnType<typeof rec>):StatePath {
     const spec=domains.leaf(leaf);if(!spec)throw new SchedulerContractError('INVALID_CONFIGURATION','unknown target leaf');
@@ -130,13 +133,13 @@ export function compileAdaptationEvaluator(transitions:ReturnType<typeof compile
             const expected=expectations.get(result)!;
             const applied=stateModel.applyPatch(candidate,result.patch,result.authority,{writableRoots:expected.roots,targetPaths:expected.paths});
             if(JSON.stringify(applied.diffs.map(d=>key(mutationDiffValue(d))))!==JSON.stringify(expected.diffs))throw new SchedulerContractError('ADAPTATION_MUTATION_DIFF_VIOLATION','actual diffs differ from staged effective changes');
-            if(result.outputs.length!==expected.outputs.length||result.outputs.some((v,i)=>key(v)!==key(decodeCampaign2(expected.outputs[i]))))throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','outputs differ from staged evaluations');
+            if(result.outputs.length!==expected.outputs.length||result.outputs.some((v,i)=>key(v)!==key(codec.decode(expected.outputs[i]))))throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','outputs differ from staged evaluations');
             if(JSON.stringify(result.actualReadRecords.map(v=>key(actualReadRecordValue(v))))!==JSON.stringify(expected.reads)||JSON.stringify(result.actualReads.map(key))!==JSON.stringify(expected.reads))throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','ADAPT read evidence differs from staged rule segments');
             candidate=applied.state;diffs.set(result,applied.diffs);
           }
           try{domains.validateStatic(candidate);}catch(error){throw new SchedulerContractError('STATE_VALIDATION_FAILURE',error instanceof Error?error.message:String(error));}
           domains.validateReferences(candidate,instant);
-          for(const result of results)completedExecutions.set(result,{token:result.token,outputs:result.outputs.map(v=>decodeCampaign2(canonicalEncode(v))),diffs:structuredClone(diffs.get(result)!)});
+          for(const result of results)completedExecutions.set(result,{token:result.token,outputs:result.outputs.map(v=>codec.decode(canonicalEncode(v))),diffs:structuredClone(diffs.get(result)!)});
           return {state:candidate,executions:results};
             },
           });
