@@ -6,7 +6,10 @@ choosing implementations. They do not modify corpus0.27.0, its manifest, IDs or 
 Acceptance and exact executable fixtures require a separate corpus-version change.
 The proposed names below are local intake labels, not allocated PhenomenonIds.
 
-Every entry is currently BLOCKED for public execution by its named missing seams.
+2026-09-11 coverage reconciliation: [BODY and MULTISOURCE now have PARTIAL bounded
+coverage](CAMPAIGN3_POST_EMB_COVERAGE.md) from qualified EMB. Their remaining public
+comparisons are still blocked. ATTENTION and other unimplemented proposals remain
+blocked by their named seams. The requirements below are unchanged.
 That is an expressibility result, not a failed behavior or permission to supply a
 psychological intermediate. Freeze exact parameters, time and observer channels with
 the eventual fixture; do not infer formulas or admit unspecified numeric defaults.

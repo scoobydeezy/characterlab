@@ -1,6 +1,6 @@
 # Campaign 3 readiness and coverage
 
-Date: 2026-09-10. Readiness audit, **not new phenomenon qualification**.
+Date: 2026-09-11 reconciliation of the 2026-09-10 readiness audit; **not new phenomenon qualification**.
 Governing corpus remains0.27.0, digest
 `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`.
 The Campaign2 thin-path completion survives; an intact implementation of every ideal
@@ -10,7 +10,10 @@ Planning-response reconciliation: Campaign3 is active for coverage discovery and
 admitted comparisons. Missing coverage blocks the conclusions it could plausibly
 invalidate, not the whole program. Assess that relevance explicitly before a reduction;
 general ranking awaits broader representation. The intake now has eleven proposals,
-including HABIT, RELATIONSHIP and LONGITUDINAL, still unaccepted and unexecuted.
+including HABIT, RELATIONSHIP and LONGITUDINAL, still unaccepted as corpus members.
+[Post-EMB coverage](CAMPAIGN3_POST_EMB_COVERAGE.md) records executed BODY/MULTISOURCE
+subsets as PARTIAL intake coverage; it supersedes blanket execution-blocked claims
+only for those named obligations. ATTENTION remains blocked pending its new draft.
 Goals/prospection and addiction clauses remain partial/missing, not silently covered.
 See [BODY research frontier](CAMPAIGN3_BODY_RESEARCH_FRONTIER.md) for the first minimum
 seam investigation and four separate attention questions. No current table disposition

@@ -1,0 +1,67 @@
+{
+  "status": "SYMBOLIC SOURCE AND COMPONENT COMPOSITION CHECKPOINT; PUBLIC SHAPE OPEN",
+  "cases": 64,
+  "hiddenRoleEqualityChecks": 96,
+  "componentTests": 12,
+  "mutants": 6,
+  "activeTestsComposed": 1149,
+  "activeFiles": 134,
+  "scope": "Previous full1148 run plus current12-test rerun replacing11 component tests; not a fresh full run.",
+  "preservedEMBFingerprints": 453,
+  "correctForwardSourceChanges": [
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "39463d54086ced57b6e2c780353884a643aad0a88530403e2933e4497727b727",
+      "currentSha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "src/test/attentionSelection.test.ts",
+      "sha256": "e7df78e1c837674848a68ba9e1a3136a53190f45e16d5cd355913136ee85ef0a",
+      "currentSha256": "81f7830f7057e5afc217491ef3cba19f674ad64ddbb4cdc1426a9310ff69d08b"
+    },
+    {
+      "path": "src/test/attentionFixtures.ts",
+      "sha256": "3804e0343fe0082b6fdbf0a0b5cf8d7abb34edf7fe7dec123d3ce7acd966518c",
+      "currentSha256": "df55fe21fc0edea4406f845ce981beffd40e0eadab6ee222d5ed9fc29309ef21"
+    }
+  ],
+  "publicAttentionStatus": "NOT IMPLEMENTED OR QUALIFIED; AT2-A..N NOT PASSED",
+  "evidence": [
+    {
+      "path": "docs/planning/ATTENTION_SOURCE_COMPOSITION_REV1.json",
+      "sha256": "ab36d12eaa8173342a5cffcc071e451fef987de07dd1c29af43e521f5674813a"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_MUTANTS_REV2.json",
+      "sha256": "341aff97102cb39b14d927362f7db611143795331e4335dfbaeedfeb6ed5e202"
+    },
+    {
+      "path": "docs/planning/ATTENTION_REFERENCE_ORDER_MUTANT_REV1.json",
+      "sha256": "49c5bbfd72700c7389abd68c2d345e83857897438bea5f06fec1d86063c3e858"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTENTION_SOURCE_CLOSURE_REV1.md",
+      "sha256": "aacf387a5516675c4455635aba89e5bb02ed5b3a681db6518b16073c8fd82b38"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_ORDER_CORRECTION.md",
+      "sha256": "174d7dbb5d113c13d7cad1e06d4b658488261a194caa92a3f24e04e835ac3bdb"
+    },
+    {
+      "path": "docs/planning/ATTENTION_ACTIVE_REGRESSION_REV1.json",
+      "sha256": "d12e49ce06f17244a6d6255d8a428fd70005b9a074ba0234be180b2135a62913"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_TESTS_REV3.json",
+      "sha256": "da2c25382b2b528e35983487d35d00ff4ab4f7a37fca75a249a79a719c915c6a"
+    },
+    {
+      "path": "scripts/review-attention-source-checkpoint.mjs",
+      "sha256": "19ebb8ca4d1dc9fbd0a110a077f82413a4da0dd0fbb4743cb8ae63eef5e12e6b"
+    }
+  ],
+  "source": {
+    "path": "src/campaign3/attentionSelection.ts",
+    "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+  }
+}

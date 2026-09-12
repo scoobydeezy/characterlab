@@ -1,0 +1,534 @@
+{
+  "version": "attention-public-integration/0.1-draft",
+  "status": "BEHAVIORAL INVENTORY REVIEWED; CANONICAL DECLARATION GAP OPEN",
+  "records": {
+    "AttentionSceneDefinition": [
+      {
+        "name": "PortReferents",
+        "type": "list3<existing:SemanticReferentId>"
+      },
+      {
+        "name": "PortRoles",
+        "type": "list3<existing:EventRoleId>"
+      },
+      {
+        "name": "Version",
+        "type": "text"
+      }
+    ],
+    "AttentionSceneOriginal": [
+      {
+        "name": "DueAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "SceneDefinitionId",
+        "type": "existing:DefinitionId"
+      }
+    ],
+    "AttentionRoleChannelDefinition": [
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "PortModes",
+        "type": "list3<mode>"
+      },
+      {
+        "name": "Version",
+        "type": "text"
+      }
+    ],
+    "AttentionSelectionPolicy": [
+      {
+        "name": "Algorithm",
+        "type": "algorithm"
+      },
+      {
+        "name": "Capacity",
+        "type": "capacity"
+      },
+      {
+        "name": "Version",
+        "type": "text"
+      }
+    ],
+    "ObservedRoleDetection": [
+      {
+        "name": "DetectionId",
+        "type": "existing:214"
+      },
+      {
+        "name": "RoleEvidence",
+        "type": "existing:223"
+      }
+    ],
+    "AttentionRoleObservation": [
+      {
+        "name": "ObservationId",
+        "type": "existing:ObservationId"
+      },
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "OccurredAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "EventDetectionId",
+        "type": "existing:215"
+      },
+      {
+        "name": "Detections",
+        "type": "list1..3<ObservedRoleDetection>"
+      },
+      {
+        "name": "TransformationVersion",
+        "type": "text"
+      }
+    ],
+    "AttentionNoDetectionObservation": [
+      {
+        "name": "ObservationId",
+        "type": "existing:ObservationId"
+      },
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "OccurredAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "TransformationVersion",
+        "type": "text"
+      }
+    ],
+    "AttentionTrackingInput": [
+      {
+        "name": "Observation",
+        "type": "AttentionRoleObservation"
+      }
+    ],
+    "AttentionBindingInput": [
+      {
+        "name": "Observation",
+        "type": "AttentionRoleObservation"
+      },
+      {
+        "name": "EventTransition",
+        "type": "existing:219"
+      },
+      {
+        "name": "TrackTransitions",
+        "type": "list1..3<existing:217>"
+      }
+    ],
+    "AttentionClassificationInput": [
+      {
+        "name": "Observation",
+        "type": "AttentionRoleObservation"
+      },
+      {
+        "name": "EventTransition",
+        "type": "existing:219"
+      },
+      {
+        "name": "Bindings",
+        "type": "list1..3<existing:224>"
+      }
+    ],
+    "AttentionFreezeInput": [
+      {
+        "name": "Observation",
+        "type": "AttentionRoleObservation"
+      },
+      {
+        "name": "EventTransition",
+        "type": "existing:219"
+      },
+      {
+        "name": "Bindings",
+        "type": "list1..3<existing:224>"
+      }
+    ],
+    "AttentionRoleBatchInput": [
+      {
+        "name": "Experience",
+        "type": "existing:227"
+      }
+    ],
+    "AttentionPositiveSelectionInput": [
+      {
+        "name": "Experience",
+        "type": "existing:227"
+      },
+      {
+        "name": "Claims",
+        "type": "list0..3<existing:240>"
+      }
+    ],
+    "AttentionEmptySelectionInput": [
+      {
+        "name": "Observation",
+        "type": "AttentionNoDetectionObservation"
+      }
+    ],
+    "AttentionUnitKey": [
+      {
+        "name": "EventFile",
+        "type": "existing:213"
+      },
+      {
+        "name": "ContinuantFile",
+        "type": "existing:212"
+      }
+    ],
+    "AttentionAuditRow": [
+      {
+        "name": "Unit",
+        "type": "AttentionUnitKey"
+      },
+      {
+        "name": "Roles",
+        "type": "set<existing:CausalRoleId>"
+      },
+      {
+        "name": "Exclusion",
+        "type": "exclusion"
+      },
+      {
+        "name": "Priority",
+        "type": "optional<existing:Rational>"
+      },
+      {
+        "name": "Selected",
+        "type": "boolean"
+      },
+      {
+        "name": "EvidenceRefs",
+        "type": "set<existing:237>"
+      }
+    ],
+    "AttentionExperienceSource": [
+      {
+        "name": "ExperienceId",
+        "type": "existing:ExperienceId"
+      }
+    ],
+    "AttentionEmptySource": [
+      {
+        "name": "ObservationId",
+        "type": "existing:ObservationId"
+      }
+    ],
+    "AttentionSelectionAudit": [
+      {
+        "name": "SelectionId",
+        "type": "new:SelectionOccurrenceId"
+      },
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "OccurredAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "Source",
+        "type": "selectionSource"
+      },
+      {
+        "name": "Policy",
+        "type": "AttentionSelectionPolicy"
+      },
+      {
+        "name": "Rows",
+        "type": "list0..3<AttentionAuditRow>"
+      },
+      {
+        "name": "TransformationVersion",
+        "type": "text"
+      }
+    ],
+    "SelectedAttentionUnit": [
+      {
+        "name": "Unit",
+        "type": "AttentionUnitKey"
+      },
+      {
+        "name": "Bindings",
+        "type": "list1..1<existing:224>"
+      },
+      {
+        "name": "Claims",
+        "type": "list1..1<existing:240>"
+      }
+    ],
+    "SelectedEvidenceView": [
+      {
+        "name": "SelectionId",
+        "type": "new:SelectionOccurrenceId"
+      },
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "OccurredAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "Units",
+        "type": "list0..3<SelectedAttentionUnit>"
+      }
+    ],
+    "AttentionBindingRead": [
+      {
+        "name": "Binding",
+        "type": "existing:224"
+      }
+    ],
+    "AttentionRoleRead": [
+      {
+        "name": "Claim",
+        "type": "existing:240"
+      }
+    ],
+    "AttentionProcessingReceipt": [
+      {
+        "name": "ProcessingId",
+        "type": "new:ProcessingOccurrenceId"
+      },
+      {
+        "name": "SelectionId",
+        "type": "new:SelectionOccurrenceId"
+      },
+      {
+        "name": "ObserverId",
+        "type": "existing:ObserverId"
+      },
+      {
+        "name": "OccurredAt",
+        "type": "existing:SimInstant"
+      },
+      {
+        "name": "ReadValues",
+        "type": "list0..6<readValue>"
+      },
+      {
+        "name": "TransformationVersion",
+        "type": "text"
+      }
+    ]
+  },
+  "enums": {
+    "mode": [
+      "Denied",
+      "VisibleExact",
+      "VisibleUnresolved"
+    ],
+    "algorithm": [
+      "RolePriority",
+      "EqualPriority",
+      "Unlimited"
+    ],
+    "capacity": [
+      0,
+      1,
+      2
+    ],
+    "exclusion": [
+      "Eligible",
+      "MissingRole",
+      "MultipleRoles",
+      "UnsupportedRole"
+    ]
+  },
+  "unions": {
+    "selectionSource": [
+      "AttentionExperienceSource",
+      "AttentionEmptySource"
+    ],
+    "readValue": [
+      "AttentionBindingRead",
+      "AttentionRoleRead"
+    ]
+  },
+  "stages": [
+    {
+      "name": "World",
+      "phase": 0,
+      "input": "AttentionSceneOriginal",
+      "outputs": [
+        "existing:210"
+      ],
+      "children": [
+        "Observe"
+      ],
+      "counts": [
+        4,
+        1
+      ],
+      "writes": []
+    },
+    {
+      "name": "Observe",
+      "phase": 10,
+      "input": "existing:210",
+      "outputs": [
+        "AttentionRoleObservation|AttentionNoDetectionObservation"
+      ],
+      "children": [
+        "Track|EmptySelect"
+      ],
+      "counts": [
+        "n+3 if n>0 else 1",
+        1
+      ],
+      "writes": []
+    },
+    {
+      "name": "Track",
+      "phase": 11,
+      "input": "AttentionTrackingInput",
+      "outputs": [
+        "existing:219",
+        "n*existing:217"
+      ],
+      "children": [
+        "Bind"
+      ],
+      "counts": [
+        0,
+        "1+n"
+      ],
+      "writes": [
+        "241/1",
+        "241/2",
+        "242/1",
+        "242/2"
+      ]
+    },
+    {
+      "name": "Bind",
+      "phase": 12,
+      "input": "AttentionBindingInput",
+      "outputs": [
+        "n*existing:224"
+      ],
+      "children": [
+        "Classify"
+      ],
+      "counts": [
+        "n",
+        "n"
+      ],
+      "writes": []
+    },
+    {
+      "name": "Classify",
+      "phase": 13,
+      "input": "AttentionClassificationInput",
+      "outputs": [],
+      "children": [
+        "Freeze"
+      ],
+      "counts": [
+        0,
+        0
+      ],
+      "writes": []
+    },
+    {
+      "name": "Freeze",
+      "phase": 14,
+      "input": "AttentionFreezeInput",
+      "outputs": [
+        "existing:227"
+      ],
+      "children": [
+        "Role"
+      ],
+      "counts": [
+        0,
+        1
+      ],
+      "writes": []
+    },
+    {
+      "name": "Role",
+      "phase": 15,
+      "input": "AttentionRoleBatchInput",
+      "outputs": [
+        "q*existing:240"
+      ],
+      "children": [
+        "PositiveSelect"
+      ],
+      "counts": [
+        "q",
+        "q"
+      ],
+      "writes": []
+    },
+    {
+      "name": "PositiveSelect",
+      "phase": 40,
+      "input": "AttentionPositiveSelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit"
+      ],
+      "children": [
+        "Consume"
+      ],
+      "counts": [
+        1,
+        1
+      ],
+      "writes": []
+    },
+    {
+      "name": "EmptySelect",
+      "phase": 40,
+      "input": "AttentionEmptySelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit"
+      ],
+      "children": [
+        "Consume"
+      ],
+      "counts": [
+        1,
+        1
+      ],
+      "writes": []
+    },
+    {
+      "name": "Consume",
+      "phase": 40,
+      "input": "SelectedEvidenceView",
+      "outputs": [
+        "AttentionProcessingReceipt"
+      ],
+      "children": [],
+      "counts": [
+        1,
+        1
+      ],
+      "writes": []
+    }
+  ],
+  "newOccurrenceFamilies": [
+    "SelectionOccurrenceId",
+    "ProcessingOccurrenceId"
+  ],
+  "allocation": "NONE",
+  "stageRegistrationStatus": "Not yet a canonical record: producer, output, nested-allocation and accessor declaration shapes remain required",
+  "publicVectors": "AT2-A..N NOT PASSED"
+}

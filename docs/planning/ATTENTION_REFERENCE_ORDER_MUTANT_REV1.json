@@ -1,0 +1,20 @@
+{
+  "status": "CANONICAL REFERENCE ORDER REMOVAL DETECTED",
+  "firstBindingId": "9",
+  "removed": "occurrences.sort((a, b) => characterEvidenceRefKey(a.ref).localeCompare(characterEvidenceRefKey(b.ref)));",
+  "failure": "INVALID_EVIDENCE_REFERENCE",
+  "sources": [
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "src/test/attentionFixtures.ts",
+      "sha256": "df55fe21fc0edea4406f845ce981beffd40e0eadab6ee222d5ed9fc29309ef21"
+    },
+    {
+      "path": "scripts/review-attention-reference-order-mutant.mjs",
+      "sha256": "ace9774281893354727b1aa1688103ffef74031bff105d0c63dbeea190f2d5f2"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PUBLIC DESIGN AUDIT PASS; WHOLE SHAPE WITHHELD ON DECLARATION CLOSURE",
+  "checks": [
+    "unique nonempty field names",
+    "all symbolic field references resolve",
+    "closed union targets resolve",
+    "exactly two result occurrence families; no view/unit identity",
+    "observer-only carriers do not introduce character identity",
+    "phase graph is acyclic with only later-sequence equal-phase children",
+    "only tracking has state writes",
+    "consumer is terminal and receives only selected view",
+    "positive and empty occurrence/output bounds from stage sums",
+    "source composition evidence is bounded component evidence"
+  ],
+  "recordCount": 24,
+  "fieldCount": 69,
+  "stageCount": 10,
+  "positiveEvents": 9,
+  "emptyEvents": 4,
+  "fingerprints": [
+    {
+      "path": "docs/planning/ATTENTION_PUBLIC_INVENTORY_REV1.json",
+      "sha256": "f041073618ad2cee544fbc9ebaf4a00a5f036da212b4be9a31a8a030504ff151"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTENTION_PUBLIC_INTEGRATION_REV1.md",
+      "sha256": "7551d352e4db4632649e35f4c3b555e3aa863245c9c0ebb0e99cfb02636442f6"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTENTION_SOURCE_CLOSURE_REV1.md",
+      "sha256": "aacf387a5516675c4455635aba89e5bb02ed5b3a681db6518b16073c8fd82b38"
+    },
+    {
+      "path": "src/campaign2/transitionAdmissionV04.ts",
+      "sha256": "c2695fb3e914b736e863cfc52d31a63d616b01b761aa62ae6c107d69092e11a9"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "src/semanticBinding/semanticStateAuthority.ts",
+      "sha256": "7f56e249dd363f526c6e88ff2da33f4c8d566067ef8be39c8e2f5cd2e19736c0"
+    },
+    {
+      "path": "src/campaign3/receivingTrace.ts",
+      "sha256": "a71201ea469a6ae92474498a15ab91cfc0d67b4163966ab823bdaf7ec86aaef2"
+    },
+    {
+      "path": "src/campaign3/receivingFactory.ts",
+      "sha256": "31bb3dad33ca3cf3360a02f13f690fff83ab185810ad19c96cd7f1feb073b726"
+    },
+    {
+      "path": "scripts/review-attention-public-inventory.mjs",
+      "sha256": "a95ae7becf5fe497521925c0ce9f091c70cfcf603e19a99969fa4ea383673571"
+    }
+  ],
+  "limitations": [
+    "Symbolic audit is not a canonical schema/declaration compiler.",
+    "No executed scheduler, trace, rollback or restore qualification.",
+    "No new runtime code or permanent numeric allocation.",
+    "Subject narrowing needs explicit inclusion in eventual whole-shape acceptance."
+  ]
+}

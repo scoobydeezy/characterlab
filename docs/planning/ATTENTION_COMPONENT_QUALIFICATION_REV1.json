@@ -1,0 +1,126 @@
+{
+  "status": "ATTENTION SELECTION AND SELECTED-ONLY ACCESS COMPONENT QUALIFIED",
+  "version": "attention-selection-component/0.1-candidate",
+  "reviewer": "Primary-agent self-review under user authorization; no external verdict",
+  "rows": [
+    {
+      "id": "AC-A",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-A: exact roles, capacities and empty component pool"
+    },
+    {
+      "id": "AC-B",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-B: observed role swap and honest alternative components"
+    },
+    {
+      "id": "AC-C",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-C: missing, unsupported and multiple roles do not receive fallback priorities"
+    },
+    {
+      "id": "AC-D",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-D: actual derivation rejects missing, forged, foreign and duplicated claims"
+    },
+    {
+      "id": "AC-E",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-E: rejects invalid capacity and more than three units"
+    },
+    {
+      "id": "AC-F",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-F: order invariance, canonical ties and strict-priority renaming"
+    },
+    {
+      "id": "AC-G",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-G: exact selected bytes succeed while unselected and observation lookup fail"
+    },
+    {
+      "id": "AC-H",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-H: forged, reused, closed and failed capabilities cannot read"
+    },
+    {
+      "id": "AC-I",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-I: source, audit and result mutations cannot change private authority"
+    },
+    {
+      "id": "AC-J",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-J: duplicate requests and duplicate semantic binding cannot enlarge selection"
+    },
+    {
+      "id": "AC-K",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "attention-selection-component/0.1-candidate AC-K: source history remains unchanged across selection and consumption"
+    },
+    {
+      "id": "AC-L",
+      "status": "PASS COMPONENT SCOPE",
+      "test": "Five current-source substitutions and earlier qualification fingerprint preservation"
+    }
+  ],
+  "componentTests": 11,
+  "currentSourceSubstitutions": 5,
+  "activeTests": 1148,
+  "activeFiles": 134,
+  "preservedEMBFingerprints": 453,
+  "evidence": [
+    {
+      "path": "docs/planning/ATTENTION_ACTIVE_REGRESSION_REV1.json",
+      "sha256": "d12e49ce06f17244a6d6255d8a428fd70005b9a074ba0234be180b2135a62913"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_MUTANTS_REV1.json",
+      "sha256": "607b428cdcc0bd09e357ee9797bb8e730bb215f9ad9f05c5748845863dd11369"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_TESTS_REV1.json",
+      "sha256": "50e31ec7ca3c4ef3e01862c8c8a1e34bb9efc6ee133d73a15a8be08e4f0eb696"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_TESTS_REV2.json",
+      "sha256": "87be543d99d29c334f5553132251ee5a5d71885bc83c1dc3aef1efa4c86b52ec"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTENTION_COMPONENT_CHECKPOINT.md",
+      "sha256": "5d9fba079b199955aec785aaf34ddf139d122e61a8f1d3af89a178b427067b53"
+    },
+    {
+      "path": "docs/formal/ATTENTION_SELECTION_COMPONENT.md",
+      "sha256": "99cb10e4dc3add0fa4b5056f7a4f72829570d846c99844d4d68ce41b5eb4c451"
+    },
+    {
+      "path": "docs/formal/ATTENTION_COMPONENT_SHAPE_ACCEPTANCE.json",
+      "sha256": "f7a86939afe537086ac877734122d49bc22811bfd97fe49d18f5e1f4e72e2667"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "39463d54086ced57b6e2c780353884a643aad0a88530403e2933e4497727b727"
+    },
+    {
+      "path": "src/test/attentionSelection.test.ts",
+      "sha256": "e7df78e1c837674848a68ba9e1a3136a53190f45e16d5cd355913136ee85ef0a"
+    },
+    {
+      "path": "src/test/attentionFixtures.ts",
+      "sha256": "3804e0343fe0082b6fdbf0a0b5cf8d7abb34edf7fe7dec123d3ce7acd966518c"
+    },
+    {
+      "path": "scripts/qualify-attention-component.mjs",
+      "sha256": "14c27774ea344c2ae7bbd52f778c34d9b05e121824ba9b7e6e6855c7f1c030e5"
+    }
+  ],
+  "publicAttentionStatus": "OPEN / NOT IMPLEMENTED OR QUALIFIED",
+  "permanentAllocation": "NONE: component creates no new persisted/public record or identity",
+  "limits": [
+    "AT2-A..N remain NOT PASSED.",
+    "Producer observation/input grammar, public schemas and admission, allocation/model freeze, trace, rollback and replay remain later gates.",
+    "No encoding/retrieval/residual-salience or corpus verdict.",
+    "Historical328 reference tests are retained prior evidence, not rerun for this isolated addition."
+  ]
+}

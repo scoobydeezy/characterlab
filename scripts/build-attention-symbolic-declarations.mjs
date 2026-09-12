@@ -1,0 +1,55 @@
+// Symbolic closure only: no permanent schema, namespace, field or tag allocation.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const out='docs/planning/ATTENTION_SYMBOLIC_DECLARATIONS_REV1.json';assert(!fs.existsSync(out));
+const old=JSON.parse(fs.readFileSync('docs/planning/ATTENTION_PUBLIC_INVENTORY_REV1.json'));
+const records=structuredClone(old.records);
+// Canonical unions need explicit tag/payload schemas; old abstract union names were not layouts.
+for(const name of ['AttentionExperienceSource','AttentionEmptySource','AttentionBindingRead','AttentionRoleRead'])delete records[name];
+const F=(...pairs)=>pairs.map(([name,type])=>({name,type}));
+records.AttentionSelectionSource=F(['Tag','sourceTag'],['ExperienceId','optional<existing:ExperienceId>'],['ObservationId','optional<existing:ObservationId>']);
+records.AttentionReadValue=F(['Tag','readTag'],['Binding','optional<existing:224>'],['Claim','optional<existing:240>']);
+records.AttentionSelectionAudit.find(f=>f.name==='Source').type='AttentionSelectionSource';
+records.AttentionProcessingReceipt.find(f=>f.name==='ReadValues').type='list0..6<AttentionReadValue>';
+records.AttentionIngressDefinition=F(['Tag','ingressTag'],['ParentStages','set<stage>']);
+records.AttentionOutputDefinition=F(['Schema','existing:254'],['Count','countRule'],['Identity','outputIdentity']);
+records.AttentionReadAccess=F(['AccessorId','existing:ProjectionAccessorId'],['PathPattern','existing:149']);
+records.AttentionStageRegistration=F(['Stage','stage'],['SeamId','existing:SeamId'],['SeamVersion','text'],['EventTypeId','existing:EventTypeId'],['Phase','unsigned'],['InputSchema','existing:254'],['Ingress','AttentionIngressDefinition'],['Outputs','list0..2<AttentionOutputDefinition>'],['Allocations','set<allocationRule>'],['Reads','set<AttentionReadAccess>'],['WritableStateFamilies','set<existing:149>']);
+const enums={...old.enums,sourceTag:['Experience','Empty'],readTag:['Binding','Role'],ingressTag:['Original','CompletedParent'],stage:old.stages.map(s=>s.name),countRule:['One','VisibleCount','ClaimCount'],outputIdentity:['RuntimeTopLevel','ContinuantTransition','EventTransition'],allocationRule:['None','WorldBatch','PositiveObservation','EmptyObservation','Bindings','Claims','Selection','Processing']};
+const unions=[{record:'AttentionSelectionSource',tagField:'Tag',variants:[{tag:'Experience',required:['ExperienceId'],forbidden:['ObservationId']},{tag:'Empty',required:['ObservationId'],forbidden:['ExperienceId']}]},{record:'AttentionReadValue',tagField:'Tag',variants:[{tag:'Binding',required:['Binding'],forbidden:['Claim']},{tag:'Role',required:['Claim'],forbidden:['Binding']}]}];
+const outputs={World:[['210','One','RuntimeTopLevel']],Observe:[['AttentionRoleObservation','One','RuntimeTopLevel'],['AttentionNoDetectionObservation','One','RuntimeTopLevel']],Track:[['219','One','EventTransition'],['217','VisibleCount','ContinuantTransition']],Bind:[['224','VisibleCount','RuntimeTopLevel']],Classify:[],Freeze:[['227','One','RuntimeTopLevel']],Role:[['240','ClaimCount','RuntimeTopLevel']],PositiveSelect:[['AttentionSelectionAudit','One','RuntimeTopLevel']],EmptySelect:[['AttentionSelectionAudit','One','RuntimeTopLevel']],Consume:[['AttentionProcessingReceipt','One','RuntimeTopLevel']]};
+const patterns={World:['WorldBatch'],Observe:['PositiveObservation','EmptyObservation'],Track:['None'],Bind:['Bindings'],Classify:['None'],Freeze:['None'],Role:['Claims'],PositiveSelect:['Selection'],EmptySelect:['Selection'],Consume:['Processing']};
+const slug=name=>name.replace(/([a-z])([A-Z])/g,'$1-$2').toLowerCase();
+const stages=old.stages.map(s=>({...s,transitionKind:'transition/attention-'+slug(s.name),eventType:'event/attention-'+slug(s.name),seam:'seam/attention-'+slug(s.name),seamVersion:'attention-public-integration/0.1-candidate',parents:old.stages.filter(p=>p.children.some(c=>c.split('|').includes(s.name))).map(p=>p.name),outputDefinitions:outputs[s.name].map(([schema,count,identity])=>({schema,count,identity})),allocationRules:patterns[s.name]}));
+const accessors=[['continuant-counter',241,1,'ObserverId'],['continuant-active',241,2,'212'],['event-counter',242,1,'ObserverId'],['event-active',242,2,'213']].map(([suffix,root,field,key])=>({member:'accessor/attention-'+suffix,root,field,key,selector:'mapKey(*)',value:field===1?'unsigned-counter':'membership-marker',owner:'authority/perception',removalAllowed:field===2}));
+const identityFamilies={ObserverId:1000,EventTypeId:1001,SemanticReferentId:1002,EventRoleId:1003,TransitionKindId:1009,CausalRoleId:1019,CausalRoleDerivationRuleId:1020,DomainValidatorId:1021,RegistryKindId:1023,MutationAuthorityId:1025,DefinitionId:1027,ProjectionAccessorId:1028,SeamId:1036,GovernedContentDefinitionId:1038,SemanticKindId:1004};
+const occurrences=['EventBindingId','FeatureObservationId','EventFeatureObservationId','PerceivedBindingId','ClassificationEvidenceId','EventClassificationEvidenceId','ExperienceId','ObserverSymbolCandidateMappingId','RecognitionCueEvidenceId','RecognitionEvaluationId','RecognitionResolutionId','CausalRoleEvidenceId','DetectionOccurrenceId','EventDetectionOccurrenceId','WorldEventId','ObservationId'];occurrences.forEach((n,i)=>identityFamilies[n]=1100+i);
+identityFamilies.DerivationFunctionId=1022;
+const roles=[],collectionChecks=[];
+for(const [record,fields] of Object.entries(records))for(const f of fields){const type=f.type.replace(/^optional</,'').replace(/>$/,'');if(type.startsWith('new:'))roles.push({record,field:f.name,family:type.slice(4),namespace:'PENDING',validator:null});else if(type.startsWith('existing:')&&identityFamilies[type.slice(9)])roles.push({record,field:f.name,family:type.slice(9),namespace:identityFamilies[type.slice(9)],validator:null});else if(/^(list[^<]*|set)<existing:[A-Za-z]+>$/.test(f.type)){const family=f.type.match(/existing:([^>]+)/)[1];assert(identityFamilies[family],family);collectionChecks.push({record,field:f.name,family,namespace:identityFamilies[family],owner:'exact attention compiler; not scalar VAL position'});}}
+const members=[];const add=(family,payload)=>members.push({family,namespace:identityFamilies[family],payload});
+for(const s of stages){add('TransitionKindId',s.transitionKind);add('EventTypeId',s.eventType);add('SeamId',s.seam);}
+for(const a of accessors)add('ProjectionAccessorId',a.member);
+add('ObserverId','observer/attention-subject');add('EventTypeId','event/attention-participation-scene');add('SemanticKindId','semantic-kind/attention-scene-object');
+add('RegistryKindId','registry/attention-definition');
+const scenes=[['base',['Actor','Target','Participant']],['swap',['Participant','Actor','Target']],['tie',['Actor','Actor','Participant']],['instrument-a',['Instrument','Target','Participant']],['instrument-b',['Actor','Instrument','Participant']],['instrument-c',['Actor','Target','Instrument']],['beneficiary-a',['Beneficiary','Target','Participant']]].map(([name,roles])=>({name,definition:'definition/attention-scene-'+name,roles,ports:['a','b','c']}));
+for(const s of scenes)add('DefinitionId',s.definition);
+for(const port of ['a','b','c'])add('GovernedContentDefinitionId','content/attention-port-'+port);
+for(const name of ['channel','policy','event-schema','causal-role-model'])add('DefinitionId','definition/attention-'+name);
+const channels=[];for(const a of enums.mode)for(const b of enums.mode)for(const c of enums.mode)channels.push([a,b,c]);
+const models=channels.map((modes,i)=>({name:'role-k1-channel-'+i,modes,algorithm:'RolePriority',capacity:1,work:9}));
+for(const [name,algorithm,capacity,work] of [['role-k0','RolePriority',0,9],['role-k2','RolePriority',2,9],['equal-k1','EqualPriority',1,9],['unlimited','Unlimited',0,9],['work8','RolePriority',1,8]])models.push({name,modes:['VisibleExact','VisibleExact','VisibleExact'],algorithm,capacity,work});
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+const inheritedPath='docs/planning/campaign2-task-cognitive-model/registry.cenc.hex';const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom'});let inherited;
+try{const {decodeCognitive,cognitiveSupportedSchemas}=await server.ssrLoadModule('/src/campaign2/cognitiveCodecs.ts'),{SEMANTIC_RECORD_SCHEMAS}=await server.ssrLoadModule('/src/semanticBinding/semanticSchemaRegistry.ts');
+ const registry=decodeCognitive(Uint8Array.from(Buffer.from(fs.readFileSync(inheritedPath,'utf8').trim(),'hex'))),rows=registry.items[0].items;
+ const descriptors=rows.filter(r=>r.schema.typeId===172n),unionRows=rows.filter(r=>r.schema.typeId===171n&&r.fields.get(2n).payload.value==='registry/union-variant-definition');
+ inherited={source:fp(inheritedPath),descriptors:descriptors.map(r=>({type:Number(r.fields.get(1n).value),version:Number(r.fields.get(2n).value)})),unionStableIds:unionRows.map(r=>r.fields.get(1n).payload.items.map(i=>Number(i.value))),decoderSupported:cognitiveSupportedSchemas().length,executableEntriesInherited:0};
+ // Existing SEM scalar roles are read from accepted schema names, with all variants retained.
+ const schemas=SEMANTIC_RECORD_SCHEMAS??[];
+ const active=new Set([210,211,212,213,214,215,216,217,219,223,224,227,237,240,246,247,248,255,256,257,258]);
+ for(const s of schemas.filter(s=>active.has(Number(s.typeId))))for(const f of s.fields){const family=({BroadReferentDomainValidatorId:'DomainValidatorId',ReferentDomainNarrowingValidatorId:'DomainValidatorId'})[f.name]??f.name;if(identityFamilies[family])roles.push({record:Number(s.typeId),field:f.name,existingFieldId:Number(f.id),family,namespace:identityFamilies[family],validator:null});}
+ assert(schemas.length,'SEM registry export inventory required');
+}finally{await server.close();}
+const occurrenceRules=[['210','WorldEventId'],['211','EventBindingId'],['214','DetectionOccurrenceId'],['215','EventDetectionOccurrenceId'],['224','PerceivedBindingId'],['227','ExperienceId'],['240','CausalRoleEvidenceId'],['AttentionRoleObservation','ObservationId'],['AttentionNoDetectionObservation','ObservationId'],['AttentionSelectionAudit','SelectionId'],['AttentionProcessingReceipt','ProcessingId']].map(([record,field])=>({record,field}));
+const result={version:'attention-public-declarations/0.1-draft',status:'SYMBOLIC ONLY; NO NUMERIC ALLOCATION',records,enums,unions,stages,accessors,identityFamilies,newOccurrenceFamilies:['SelectionOccurrenceId','ProcessingOccurrenceId'],roles,collectionChecks,members,scenes,models,inherited,occurrenceRules,counts:{records:Object.keys(records).length,fields:Object.values(records).reduce((a,b)=>a+b.length,0),stages:stages.length,roles:roles.length,collectionChecks:collectionChecks.length,members:members.length,models:models.length},script:fp('scripts/build-attention-symbolic-declarations.mjs')};
+assert.equal(new Set(members.map(m=>m.namespace+'/'+m.payload)).size,members.length);fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n');console.log(result.counts);

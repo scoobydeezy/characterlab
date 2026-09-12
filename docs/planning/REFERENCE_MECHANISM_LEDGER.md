@@ -279,3 +279,9 @@ encoding strength and later access; residual-pool and multiplicative salience ar
 comparison mechanisms. HABIT, RELATIONSHIP and LONGITUDINAL intake preserves P3-012
 and EXP-011/012/013 without declaring their mechanisms ported or qualified. UI debt
 does not block Campaign3 entry. See CAMPAIGN3_BODY_RESEARCH_FRONTIER.md.
+
+2026-09-11 ATTN intake: [inspection and explicit mechanism dispositions](CAMPAIGN3_ATTENTION_INSPECTION.md)
+preserve MEC-005 residual allocation, MEC-007/CTL-004 salience and MEC-008/009/010
+learning/access controls. Proposed hard capacity is a new selection candidate, not a
+claim that the historical continuous allocation already implemented top-K. RET-001/002
+remain retired; no copied truth-provenance/category-name shortcut.

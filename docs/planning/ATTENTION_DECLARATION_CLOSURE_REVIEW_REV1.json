@@ -1,0 +1,64 @@
+{
+  "status": "DECLARATION SHAPE REVIEW PASS; NOT PUBLIC RUNTIME QUALIFICATION",
+  "checks": [
+    "closed symbolic types, union layouts, scalar/collection roles, source graph and finite models",
+    "all existing occurrence fields resolve to required scalar fields with roles",
+    "generic governed content accepts three finite non-character object definitions",
+    "existing VAL character-only content boundary remains closed"
+  ],
+  "detectedSymbolicFaults": [
+    "duplicate event kind",
+    "consumer truth input",
+    "selector writes",
+    "consumer bypasses selection",
+    "mixed source union",
+    "observer role misnamespace",
+    "validator smuggling",
+    "fake wrapper occurrence",
+    "detection identity wrong field",
+    "unadmitted source role",
+    "work limit widened",
+    "historical descriptor promoted"
+  ],
+  "counts": {
+    "records": 26,
+    "fields": 89,
+    "stages": 10,
+    "roles": 62,
+    "collectionChecks": 3,
+    "members": 52,
+    "models": 32
+  },
+  "contentProbe": "Generic content positive; existing character-only compiler rejection. Proposed member text is a research specimen, not an allocated/frozen model.",
+  "preservedEMBFingerprints": 453,
+  "fingerprints": [
+    {
+      "path": "docs/planning/ATTENTION_SYMBOLIC_DECLARATIONS_REV1.json",
+      "sha256": "0752b53d5bba31a0e78aa50f928821695031ba44cec276cfe65f9fecc4633447"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTENTION_DECLARATION_CLOSURE_REV1.md",
+      "sha256": "590f752176f412fd3e76f694821d3ff8d09ad53b3c8cf5db31d2b5a48a694463"
+    },
+    {
+      "path": "src/substrate/contentManifest.ts",
+      "sha256": "078a8e031e985439c970e9ca7d95904753a79eff3c471bba0f746d59cd0467bb"
+    },
+    {
+      "path": "src/campaign2/valDeclarations.ts",
+      "sha256": "b147b5fe2cc389d07bfbaa1885a8f4e2624525ad33e0638983304998113d45fc"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "src/campaign2/occurrenceIdentity.ts",
+      "sha256": "fbd7b6390a6da94c785efdee77a468628481c54b184f3c9df0e4bb93e0641b7b"
+    },
+    {
+      "path": "scripts/review-attention-declaration-closure.mjs",
+      "sha256": "9d8ef14933eb97f3b7adb731c82b0c2a73c02a36b2246c38177831d9281fc907"
+    }
+  ]
+}

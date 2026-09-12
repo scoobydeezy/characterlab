@@ -5,6 +5,12 @@ or executable fixture**. Incorporates the planning response to the pre-entry rev
 Campaign 3 is active for gap discovery and admitted comparisons. Campaign 2's bounded
 completion, accepted contracts, model bytes and corpus0.27.0 remain unchanged.
 
+**2026-09-11 current disposition:** [bounded EMB completed](CAMPAIGN3_EMBODIED_QUALIFICATION.md).
+[Coverage reconciliation](CAMPAIGN3_POST_EMB_COVERAGE.md) maps its evidence to the
+broader BODY/MULTISOURCE intake without promoting either. Next is
+[ATTN-001 selection investigation](CAMPAIGN3_ATTENTION_DRAFT.md). The original
+scoping and then-open gates below are historical, superseded within bounded EMB.
+
 First concrete proposal: [EMB-001 revision1](CAMPAIGN3_EMBODIED_MOTIVATION_DRAFT.md).
 Its body/sensor/pressure mathematics are proposed, with observation admission and
 source/action receiving still open; no whole seam acceptance is claimed.

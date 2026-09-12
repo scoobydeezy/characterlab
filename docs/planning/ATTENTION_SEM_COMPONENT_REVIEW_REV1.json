@@ -1,0 +1,54 @@
+{
+  "status": "SEM COMPONENT EXPRESSIBILITY CHECKED; NOT PUBLIC ATTENTION PRODUCTION OR QUALIFICATION",
+  "checks": [
+    "actual component derives event-role/actor",
+    "foreign observer rejected 0",
+    "actual component derives event-role/target",
+    "foreign observer rejected 1",
+    "actual component derives event-role/participant",
+    "foreign observer rejected 2",
+    "accepted initial mappings contain neither Cause nor Incidental",
+    "actual experience assembler retains three units"
+  ],
+  "claims": [
+    {
+      "role": "causal-role/actor",
+      "source": "perceived-binding:10"
+    },
+    {
+      "role": "causal-role/target",
+      "source": "perceived-binding:12"
+    },
+    {
+      "role": "causal-role/participant",
+      "source": "perceived-binding:11"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/semanticBinding/evidenceProvenance.ts",
+      "sha256": "dce698ec019e2ec24ca04d371c3821206285e28a4f1c4ae5156bdca84a8170b2"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/semanticBinding/eventBindings.ts",
+      "sha256": "71dacd5b681f0ae8fcfb04b5f3fcff51edaa923e8cbfad7d308a223ae085bbcb"
+    },
+    {
+      "path": "docs/formal/EVENT_ORDERING.md",
+      "sha256": "ffe09bf487121d872107c6844cfed52752284edaf77474a65d0166162ee5a1c8"
+    },
+    {
+      "path": "scripts/review-attention-sem-components.mjs",
+      "sha256": "5706fe0a7fc09434021133f6937cecd9620c9f79746ab3b61b331a6c24536e48"
+    }
+  ],
+  "limits": [
+    "Inputs here are explicit component fixtures, not an admitted public source.",
+    "Small bigint counters are local component fixture values, not new permanent allocations.",
+    "Selection and attention transition code are not implemented."
+  ]
+}

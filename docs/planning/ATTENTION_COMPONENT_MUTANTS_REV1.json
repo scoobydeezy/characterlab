@@ -1,0 +1,113 @@
+{
+  "status": "FIVE CURRENT-SOURCE COMPONENT ALTERNATIVES DETECTED",
+  "control": {
+    "rank": [
+      "causal-role/actor"
+    ],
+    "capacity": 1,
+    "access": true,
+    "reuse": false,
+    "multiple": "MultipleRoles",
+    "replacements": 0
+  },
+  "results": [
+    {
+      "name": "reversed-role-order",
+      "removed": "b.priority!.compare(a.priority!)",
+      "inserted": "a.priority!.compare(b.priority!)",
+      "observed": {
+        "rank": [
+          "causal-role/participant"
+        ],
+        "capacity": 1,
+        "access": false,
+        "reuse": false,
+        "multiple": "MultipleRoles",
+        "replacements": 1
+      },
+      "detected": true
+    },
+    {
+      "name": "capacity-removed",
+      "removed": "eligible.slice(0, law === 'unlimited' ? eligible.length : capacity)",
+      "inserted": "eligible",
+      "observed": {
+        "rank": [
+          "causal-role/actor",
+          "causal-role/target",
+          "causal-role/participant"
+        ],
+        "capacity": 3,
+        "access": false,
+        "reuse": false,
+        "multiple": "MultipleRoles",
+        "replacements": 1
+      },
+      "detected": true
+    },
+    {
+      "name": "multiple-role-collapse",
+      "removed": "roles.length > 1 ? 'MultipleRoles' : ",
+      "inserted": "",
+      "observed": {
+        "rank": [
+          "causal-role/actor"
+        ],
+        "capacity": 1,
+        "access": true,
+        "reuse": false,
+        "replacements": 1
+      },
+      "detected": true
+    },
+    {
+      "name": "full-pool-consumer-index",
+      "removed": "for (const { unit } of selected)",
+      "inserted": "for (const { unit } of rows)",
+      "observed": {
+        "rank": [
+          "causal-role/actor"
+        ],
+        "capacity": 1,
+        "access": false,
+        "reuse": false,
+        "multiple": "MultipleRoles",
+        "replacements": 1
+      },
+      "detected": true
+    },
+    {
+      "name": "capability-reuse",
+      "removed": "views.delete(view);\n    const seen",
+      "inserted": "/* missing revoke */\n    const seen",
+      "observed": {
+        "rank": [
+          "causal-role/actor"
+        ],
+        "capacity": 1,
+        "access": true,
+        "reuse": true,
+        "multiple": "MultipleRoles",
+        "replacements": 1
+      },
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "39463d54086ced57b6e2c780353884a643aad0a88530403e2933e4497727b727"
+    },
+    {
+      "path": "src/test/attentionFixtures.ts",
+      "sha256": "3804e0343fe0082b6fdbf0a0b5cf8d7abb34edf7fe7dec123d3ce7acd966518c"
+    },
+    {
+      "path": "scripts/review-attention-component-mutants.mjs",
+      "sha256": "19b27896c4bfe25acc93115dd1105957cb57d9f826fa7ae4616d7f5b3a32e9f7"
+    }
+  ],
+  "limits": [
+    "Component fault sensitivity only; no public source or runtime qualification."
+  ]
+}

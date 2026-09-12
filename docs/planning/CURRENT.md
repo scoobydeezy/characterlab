@@ -1,7 +1,93 @@
 # Current research entry point
 
-Updated 2026-09-10. This index routes readers to authorities; it does not override
+Updated 2026-09-11. This index routes readers to authorities; it does not override
 the North Star, Architecture Map, Research Brief, accepted contracts or frozen bytes.
+
+**Latest checkpoint:** [public ATTN exact model cohort accepted and frozen](CAMPAIGN3_ATTENTION_MODEL_CHECKPOINT.md).
+The32 models and224 specimen run commitments passed independent image review:
+65 checks, seven rejected corruptions and all453 prior EMB fingerprints unchanged.
+Each model has323 schema descriptors and105 registry entries. The
+[exact freeze](campaign3-attention-model-rev1/FREEZE.json) preserves the reviewed bytes;
+the incomplete seed-length attempt remains historical and ineligible.
+
+**Next gate:** implement the closed declaration/content compiler and data-only public
+factory against this cohort, then execute AT2-A..N, trace/rollback/restore and
+preservation controls. No public runtime or production compiler was qualified here.
+No user decision is needed for this implementation work.
+
+**Prior checkpoint:** [public ATTN allocation accepted and frozen](../formal/ATTENTION_PERMANENT_ALLOCATION.md).
+Records516..541/1, SelectionOccurrenceId1143 and ProcessingOccurrenceId1144 now have
+permanent assignments. The table also freezes52 text members, four union members,
+64 scalar/map-key roles and11 occurrence mappings. Separate numeric review passed
+277 parity checks,11 negative controls and135 canonical declaration round trips;
+all453 prior EMB fingerprints and prior allocation tables remain unchanged.
+
+**Historical next gate (model commitments frozen above):** construct and review the32 exact model commitments, then implement
+the public factory and qualify AT2-A..N. No runtime codec or model was activated by
+allocation; no general ATTN or corpus verdict changed.
+
+**Prior checkpoint:** [bounded public ATTN whole symbolic shape accepted](../formal/ATTENTION_PUBLIC_SHAPE_ACCEPTANCE.md).
+The [exact accepted packet](../formal/ATTENTION_PUBLIC_SHAPE_MANIFEST.json) closes the
+registration, content, role/member and six-slot model recipe gates:26 records/89 fields,
+ten stages, two proposed occurrence families and32 proposed models. Primary-agent
+adversarial review detected12 symbolic faults; actual content probes preserve the
+character-only VAL boundary. All453 earlier EMB fingerprints remain unchanged.
+
+**Historical next gate (allocation completed above):** separate permanent allocation and parity review, then exact model
+commitments and public runtime implementation. No new numeric allocation or runtime
+qualification occurred. AT2-A..N remain FROZEN, NOT PASSED. General ATTN and corpus
+intake remain open; no user decision is required for the next mechanical gate.
+
+**Prior checkpoint:** [ATTN public integration inventory](CAMPAIGN3_ATTENTION_PUBLIC_INTEGRATION_REV1.md).
+The reviewed symbolic inventory contains24 records/69 fields and10 stages. It closes
+the observer-only diagnostic subject, selected read receipt, graph bounds and proposed
+whole-prefix trace/restore behavior. [Ten design checks pass](ATTENTION_PUBLIC_INVENTORY_REVIEW_REV1.json).
+These checks are not public runtime qualification. No new runtime or allocation changed.
+
+**Historical next gate (closed in the accepted packet above):** dedicated canonical attention registration/producer/output declarations,
+exhaustive roles/members and six-slot model packaging. Existing V04 admission is not
+expressive enough unchanged for these identity-free transports and tracking writes.
+Whole-shape acceptance remains withheld until this declaration inventory closes;
+no user decision is required to continue that work. AT2-A..N remain NOT PASSED.
+
+**Prior source checkpoint:** [three-port ATTN source design and composition](CAMPAIGN3_ATTENTION_SOURCE_CLOSURE_REV1.md).
+64 visibility/resolution cases and96 hidden-role equalities compose actual SEM tracking,
+binding, reservation/staging and role derivation with selection. Proposed source bounds
+are7 events,13 outputs and16 runtime slots; event counts are not scheduler proof.
+
+The composition exposed and [corrected canonical reference ordering](ATTENTION_COMPONENT_ORDER_CORRECTION.md)
+in the qualified component at decimal occurrence boundaries. Current component evidence:
+12 tests, six current-source faults and1,149 active tests in full-plus-targeted coverage;
+453 earlier EMB fingerprints unchanged. [Forward receipt](ATTENTION_SOURCE_CHECKPOINT_REVIEW_REV1.json).
+The11-test qualification below is historical; its source hashes are retained, not rewritten.
+
+**Historical next whole-public-shape gate (advanced by the checkpoint above):**
+complete selection/audit/view/receipt schemas, registration/PRJ/state roles,
+trace/admission and restore inventory against this source.
+No public ATTN shape acceptance, allocation or factory implementation yet. AT2-A..N
+remain NOT PASSED. Residual salience, encoding, retrieval and corpus gates remain open.
+
+**Historical component checkpoint:** [attention selection/access component qualified](CAMPAIGN3_ATTENTION_COMPONENT_CHECKPOINT.md)
+under [attention-selection-component/0.1-candidate](../formal/ATTENTION_SELECTION_COMPONENT.md).
+AC-A..L pass at component scope: 11 tests, five current-source substitutions and
+453 unchanged EMB fingerprints. The full active run passes 1148 tests in
+134 files. [Exact qualification receipt](ATTENTION_COMPONENT_QUALIFICATION_REV1.json).
+
+The implementation validates actual SEM derivation, uses Actor/Target/Participant
+priorities and gives its consumer only selected binding/claim bytes. It allocates no
+identity, adds no public/persisted record and has no state writes. The residual-pool
+experiment remains deferred; unsupported Cause/Incidental are not invented.
+
+**Next public gate:** [ATTN closure revision2](CAMPAIGN3_ATTENTION_CLOSURE_REV2.md)
+requires the exact observer-event producer projection/input grammar, symbolic public
+carriers/registration/roles/output/work inventory, separate allocation and model freeze,
+then phase40 runtime admission, trace, rollback and replay. AT2-A..N remain NOT PASSED.
+No public attention factory, whole ATTN, encoding/access or corpus qualification is
+implied. Earlier drafts and test failure receipts remain historical.
+
+[Post-EMB coverage reconciliation](CAMPAIGN3_POST_EMB_COVERAGE.md) records BODY and
+MULTISOURCE as PARTIAL broader intake coverage, with their missing comparisons still
+blocked. No corpus membership or digest changes.
 
 **Current checkpoint:** [bounded EMB experiment complete and qualified](CAMPAIGN3_EMBODIED_QUALIFICATION.md), 2026-09-10.
 EMB-A..O and ER-A..R pass in their explicit public/component scope. The reserve,

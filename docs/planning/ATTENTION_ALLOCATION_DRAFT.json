@@ -1,0 +1,2050 @@
+{
+  "version": "attention-allocation/0.1-draft",
+  "status": "NUMERIC PROPOSAL; NOT PERMANENT",
+  "sourceManifest": {
+    "path": "docs/formal/ATTENTION_PUBLIC_SHAPE_MANIFEST.json",
+    "sha256": "38e694eeef858de2d1bb76ade35277f65bd88ba3b81a21cf135b1ac1d1623ef1"
+  },
+  "symbolicInput": {
+    "path": "docs/planning/ATTENTION_SYMBOLIC_DECLARATIONS_REV1.json",
+    "sha256": "0752b53d5bba31a0e78aa50f928821695031ba44cec276cfe65f9fecc4633447"
+  },
+  "records": [
+    {
+      "typeId": 516,
+      "schemaVersion": 1,
+      "name": "AttentionSceneDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "PortReferents",
+          "type": "list3<existing:SemanticReferentId>",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PortRoles",
+          "type": "list3<existing:EventRoleId>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 517,
+      "schemaVersion": 1,
+      "name": "AttentionSceneOriginal",
+      "fields": [
+        {
+          "id": 1,
+          "name": "DueAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SceneDefinitionId",
+          "type": "existing:DefinitionId",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 518,
+      "schemaVersion": 1,
+      "name": "AttentionRoleChannelDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PortModes",
+          "type": "list3<mode>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 519,
+      "schemaVersion": 1,
+      "name": "AttentionSelectionPolicy",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Algorithm",
+          "type": "algorithm",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "type": "capacity",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 520,
+      "schemaVersion": 1,
+      "name": "ObservedRoleDetection",
+      "fields": [
+        {
+          "id": 1,
+          "name": "DetectionId",
+          "type": "existing:214",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "RoleEvidence",
+          "type": "existing:223",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 521,
+      "schemaVersion": 1,
+      "name": "AttentionRoleObservation",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationId",
+          "type": "existing:ObservationId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "EventDetectionId",
+          "type": "existing:215",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Detections",
+          "type": "list1..3<ObservedRoleDetection>",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 522,
+      "schemaVersion": 1,
+      "name": "AttentionNoDetectionObservation",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ObservationId",
+          "type": "existing:ObservationId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 523,
+      "schemaVersion": 1,
+      "name": "AttentionTrackingInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "AttentionRoleObservation",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 524,
+      "schemaVersion": 1,
+      "name": "AttentionBindingInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "AttentionRoleObservation",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "EventTransition",
+          "type": "existing:219",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "TrackTransitions",
+          "type": "list1..3<existing:217>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 525,
+      "schemaVersion": 1,
+      "name": "AttentionClassificationInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "AttentionRoleObservation",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "EventTransition",
+          "type": "existing:219",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Bindings",
+          "type": "list1..3<existing:224>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 526,
+      "schemaVersion": 1,
+      "name": "AttentionFreezeInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "AttentionRoleObservation",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "EventTransition",
+          "type": "existing:219",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Bindings",
+          "type": "list1..3<existing:224>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 527,
+      "schemaVersion": 1,
+      "name": "AttentionRoleBatchInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Experience",
+          "type": "existing:227",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 528,
+      "schemaVersion": 1,
+      "name": "AttentionPositiveSelectionInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Experience",
+          "type": "existing:227",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Claims",
+          "type": "list0..3<existing:240>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 529,
+      "schemaVersion": 1,
+      "name": "AttentionEmptySelectionInput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "AttentionNoDetectionObservation",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 530,
+      "schemaVersion": 1,
+      "name": "AttentionUnitKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventFile",
+          "type": "existing:213",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ContinuantFile",
+          "type": "existing:212",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 531,
+      "schemaVersion": 1,
+      "name": "AttentionAuditRow",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Unit",
+          "type": "AttentionUnitKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Roles",
+          "type": "set<existing:CausalRoleId>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Exclusion",
+          "type": "exclusion",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Priority",
+          "type": "existing:Rational",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Selected",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "EvidenceRefs",
+          "type": "set<existing:237>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 532,
+      "schemaVersion": 1,
+      "name": "AttentionSelectionAudit",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SelectionId",
+          "type": "new:SelectionOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Source",
+          "type": "AttentionSelectionSource",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Policy",
+          "type": "AttentionSelectionPolicy",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Rows",
+          "type": "list0..3<AttentionAuditRow>",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 533,
+      "schemaVersion": 1,
+      "name": "SelectedAttentionUnit",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Unit",
+          "type": "AttentionUnitKey",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Bindings",
+          "type": "list1..1<existing:224>",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Claims",
+          "type": "list1..1<existing:240>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 534,
+      "schemaVersion": 1,
+      "name": "SelectedEvidenceView",
+      "fields": [
+        {
+          "id": 1,
+          "name": "SelectionId",
+          "type": "new:SelectionOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OccurredAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Units",
+          "type": "list0..3<SelectedAttentionUnit>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 535,
+      "schemaVersion": 1,
+      "name": "AttentionProcessingReceipt",
+      "fields": [
+        {
+          "id": 1,
+          "name": "ProcessingId",
+          "type": "new:ProcessingOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SelectionId",
+          "type": "new:SelectionOccurrenceId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "ObserverId",
+          "type": "existing:ObserverId",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OccurredAt",
+          "type": "existing:SimInstant",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ReadValues",
+          "type": "list0..6<AttentionReadValue>",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "TransformationVersion",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 536,
+      "schemaVersion": 1,
+      "name": "AttentionSelectionSource",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Tag",
+          "type": "sourceTag",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ExperienceId",
+          "type": "existing:ExperienceId",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "ObservationId",
+          "type": "existing:ObservationId",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 537,
+      "schemaVersion": 1,
+      "name": "AttentionReadValue",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Tag",
+          "type": "readTag",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Binding",
+          "type": "existing:224",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "Claim",
+          "type": "existing:240",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 538,
+      "schemaVersion": 1,
+      "name": "AttentionIngressDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Tag",
+          "type": "ingressTag",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ParentStages",
+          "type": "set<stage>",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 539,
+      "schemaVersion": 1,
+      "name": "AttentionOutputDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Schema",
+          "type": "existing:254",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Count",
+          "type": "countRule",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Identity",
+          "type": "outputIdentity",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 540,
+      "schemaVersion": 1,
+      "name": "AttentionReadAccess",
+      "fields": [
+        {
+          "id": 1,
+          "name": "AccessorId",
+          "type": "existing:ProjectionAccessorId",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PathPattern",
+          "type": "existing:149",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 541,
+      "schemaVersion": 1,
+      "name": "AttentionStageRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Stage",
+          "type": "stage",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "SeamId",
+          "type": "existing:SeamId",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SeamVersion",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "EventTypeId",
+          "type": "existing:EventTypeId",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Phase",
+          "type": "unsigned",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "InputSchema",
+          "type": "existing:254",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Ingress",
+          "type": "AttentionIngressDefinition",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Outputs",
+          "type": "list0..2<AttentionOutputDefinition>",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Allocations",
+          "type": "set<allocationRule>",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Reads",
+          "type": "set<AttentionReadAccess>",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "WritableStateFamilies",
+          "type": "set<existing:149>",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "newNamespaces": [
+    {
+      "family": "SelectionOccurrenceId",
+      "namespace": 1143,
+      "payload": "unsigned shared runtime ordinal"
+    },
+    {
+      "family": "ProcessingOccurrenceId",
+      "namespace": 1144,
+      "payload": "unsigned shared runtime ordinal"
+    }
+  ],
+  "identifierAliases": {
+    "ObserverId": 1000,
+    "EventTypeId": 1001,
+    "SemanticReferentId": 1002,
+    "EventRoleId": 1003,
+    "TransitionKindId": 1009,
+    "CausalRoleId": 1019,
+    "CausalRoleDerivationRuleId": 1020,
+    "DomainValidatorId": 1021,
+    "RegistryKindId": 1023,
+    "MutationAuthorityId": 1025,
+    "DefinitionId": 1027,
+    "ProjectionAccessorId": 1028,
+    "SeamId": 1036,
+    "GovernedContentDefinitionId": 1038,
+    "SemanticKindId": 1004,
+    "EventBindingId": 1100,
+    "FeatureObservationId": 1101,
+    "EventFeatureObservationId": 1102,
+    "PerceivedBindingId": 1103,
+    "ClassificationEvidenceId": 1104,
+    "EventClassificationEvidenceId": 1105,
+    "ExperienceId": 1106,
+    "ObserverSymbolCandidateMappingId": 1107,
+    "RecognitionCueEvidenceId": 1108,
+    "RecognitionEvaluationId": 1109,
+    "RecognitionResolutionId": 1110,
+    "CausalRoleEvidenceId": 1111,
+    "DetectionOccurrenceId": 1112,
+    "EventDetectionOccurrenceId": 1113,
+    "WorldEventId": 1114,
+    "ObservationId": 1115,
+    "DerivationFunctionId": 1022,
+    "SelectionOccurrenceId": 1143,
+    "ProcessingOccurrenceId": 1144
+  },
+  "members": [
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-world"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-world"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-world"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-observe"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-observe"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-observe"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-track"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-track"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-track"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-bind"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-bind"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-bind"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-classify"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-classify"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-classify"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-freeze"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-freeze"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-freeze"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-role"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-role"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-role"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-positive-select"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-positive-select"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-positive-select"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-empty-select"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-empty-select"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-empty-select"
+    },
+    {
+      "family": "TransitionKindId",
+      "namespace": 1009,
+      "payload": "transition/attention-consume"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-consume"
+    },
+    {
+      "family": "SeamId",
+      "namespace": 1036,
+      "payload": "seam/attention-consume"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "namespace": 1028,
+      "payload": "accessor/attention-continuant-counter"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "namespace": 1028,
+      "payload": "accessor/attention-continuant-active"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "namespace": 1028,
+      "payload": "accessor/attention-event-counter"
+    },
+    {
+      "family": "ProjectionAccessorId",
+      "namespace": 1028,
+      "payload": "accessor/attention-event-active"
+    },
+    {
+      "family": "ObserverId",
+      "namespace": 1000,
+      "payload": "observer/attention-subject"
+    },
+    {
+      "family": "EventTypeId",
+      "namespace": 1001,
+      "payload": "event/attention-participation-scene"
+    },
+    {
+      "family": "SemanticKindId",
+      "namespace": 1004,
+      "payload": "semantic-kind/attention-scene-object"
+    },
+    {
+      "family": "RegistryKindId",
+      "namespace": 1023,
+      "payload": "registry/attention-definition"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-base"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-swap"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-tie"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-instrument-a"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-instrument-b"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-instrument-c"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-scene-beneficiary-a"
+    },
+    {
+      "family": "GovernedContentDefinitionId",
+      "namespace": 1038,
+      "payload": "content/attention-port-a"
+    },
+    {
+      "family": "GovernedContentDefinitionId",
+      "namespace": 1038,
+      "payload": "content/attention-port-b"
+    },
+    {
+      "family": "GovernedContentDefinitionId",
+      "namespace": 1038,
+      "payload": "content/attention-port-c"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-channel"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-policy"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-event-schema"
+    },
+    {
+      "family": "DefinitionId",
+      "namespace": 1027,
+      "payload": "definition/attention-causal-role-model"
+    }
+  ],
+  "roles": [
+    {
+      "recordTypeId": 517,
+      "fieldId": 2,
+      "family": "DefinitionId",
+      "requiredNamespace": 1027,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 518,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 521,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 521,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 522,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 522,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 532,
+      "fieldId": 1,
+      "family": "SelectionOccurrenceId",
+      "requiredNamespace": 1143,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 532,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 534,
+      "fieldId": 1,
+      "family": "SelectionOccurrenceId",
+      "requiredNamespace": 1143,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 534,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 535,
+      "fieldId": 1,
+      "family": "ProcessingOccurrenceId",
+      "requiredNamespace": 1144,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 535,
+      "fieldId": 2,
+      "family": "SelectionOccurrenceId",
+      "requiredNamespace": 1143,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 535,
+      "fieldId": 3,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 536,
+      "fieldId": 2,
+      "family": "ExperienceId",
+      "requiredNamespace": 1106,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 536,
+      "fieldId": 3,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 540,
+      "fieldId": 1,
+      "family": "ProjectionAccessorId",
+      "requiredNamespace": 1028,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 541,
+      "fieldId": 2,
+      "family": "SeamId",
+      "requiredNamespace": 1036,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 541,
+      "fieldId": 4,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 210,
+      "fieldId": 1,
+      "family": "WorldEventId",
+      "requiredNamespace": 1114,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 210,
+      "fieldId": 2,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 211,
+      "fieldId": 1,
+      "family": "EventBindingId",
+      "requiredNamespace": 1100,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 211,
+      "fieldId": 2,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 211,
+      "fieldId": 3,
+      "family": "SemanticReferentId",
+      "requiredNamespace": 1002,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 212,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 213,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 214,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 214,
+      "fieldId": 2,
+      "family": "DetectionOccurrenceId",
+      "requiredNamespace": 1112,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 215,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 215,
+      "fieldId": 2,
+      "family": "EventDetectionOccurrenceId",
+      "requiredNamespace": 1113,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 216,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 216,
+      "fieldId": 2,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 217,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 219,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 223,
+      "fieldId": 2,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 224,
+      "fieldId": 1,
+      "family": "PerceivedBindingId",
+      "requiredNamespace": 1103,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 224,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 227,
+      "fieldId": 1,
+      "family": "ExperienceId",
+      "requiredNamespace": 1106,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 227,
+      "fieldId": 2,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 2,
+      "family": "ObservationId",
+      "requiredNamespace": 1115,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 3,
+      "family": "FeatureObservationId",
+      "requiredNamespace": 1101,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 4,
+      "family": "EventFeatureObservationId",
+      "requiredNamespace": 1102,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 5,
+      "family": "PerceivedBindingId",
+      "requiredNamespace": 1103,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 6,
+      "family": "ClassificationEvidenceId",
+      "requiredNamespace": 1104,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 7,
+      "family": "EventClassificationEvidenceId",
+      "requiredNamespace": 1105,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 8,
+      "family": "RecognitionCueEvidenceId",
+      "requiredNamespace": 1108,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 9,
+      "family": "RecognitionResolutionId",
+      "requiredNamespace": 1110,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 237,
+      "fieldId": 10,
+      "family": "CausalRoleEvidenceId",
+      "requiredNamespace": 1111,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 240,
+      "fieldId": 1,
+      "family": "CausalRoleEvidenceId",
+      "requiredNamespace": 1111,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 240,
+      "fieldId": 2,
+      "family": "ExperienceId",
+      "requiredNamespace": 1106,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 240,
+      "fieldId": 3,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 240,
+      "fieldId": 6,
+      "family": "CausalRoleId",
+      "requiredNamespace": 1019,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 240,
+      "fieldId": 7,
+      "family": "CausalRoleDerivationRuleId",
+      "requiredNamespace": 1020,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 246,
+      "fieldId": 1,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 246,
+      "fieldId": 4,
+      "family": "DomainValidatorId",
+      "requiredNamespace": 1021,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 247,
+      "fieldId": 1,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 247,
+      "fieldId": 2,
+      "family": "DomainValidatorId",
+      "requiredNamespace": 1021,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 248,
+      "fieldId": 1,
+      "family": "EventTypeId",
+      "requiredNamespace": 1001,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 256,
+      "fieldId": 1,
+      "family": "TransitionKindId",
+      "requiredNamespace": 1009,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 257,
+      "fieldId": 1,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 257,
+      "fieldId": 2,
+      "family": "CausalRoleId",
+      "requiredNamespace": 1019,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 258,
+      "fieldId": 1,
+      "family": "CausalRoleDerivationRuleId",
+      "requiredNamespace": 1020,
+      "domainValidatorId": null
+    },
+    {
+      "recordTypeId": 258,
+      "fieldId": 5,
+      "family": "DerivationFunctionId",
+      "requiredNamespace": 1022,
+      "domainValidatorId": null
+    }
+  ],
+  "mapKeyRoles": [
+    {
+      "recordTypeId": 241,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "StateMapKey"
+    },
+    {
+      "recordTypeId": 242,
+      "fieldId": 1,
+      "family": "ObserverId",
+      "requiredNamespace": 1000,
+      "domainValidatorId": null,
+      "position": "StateMapKey"
+    }
+  ],
+  "collectionIdentityChecks": [
+    {
+      "recordTypeId": 516,
+      "fieldId": 1,
+      "family": "SemanticReferentId",
+      "requiredNamespace": 1002,
+      "owner": "exact attention compiler; not scalar VAL position"
+    },
+    {
+      "recordTypeId": 516,
+      "fieldId": 2,
+      "family": "EventRoleId",
+      "requiredNamespace": 1003,
+      "owner": "exact attention compiler; not scalar VAL position"
+    },
+    {
+      "recordTypeId": 531,
+      "fieldId": 2,
+      "family": "CausalRoleId",
+      "requiredNamespace": 1019,
+      "owner": "exact attention compiler; not scalar VAL position"
+    }
+  ],
+  "finiteEnums": {
+    "mode": [
+      {
+        "name": "Denied",
+        "value": 1
+      },
+      {
+        "name": "VisibleExact",
+        "value": 2
+      },
+      {
+        "name": "VisibleUnresolved",
+        "value": 3
+      }
+    ],
+    "algorithm": [
+      {
+        "name": "RolePriority",
+        "value": 1
+      },
+      {
+        "name": "EqualPriority",
+        "value": 2
+      },
+      {
+        "name": "Unlimited",
+        "value": 3
+      }
+    ],
+    "capacity": [
+      {
+        "name": "0",
+        "value": 0
+      },
+      {
+        "name": "1",
+        "value": 1
+      },
+      {
+        "name": "2",
+        "value": 2
+      }
+    ],
+    "exclusion": [
+      {
+        "name": "Eligible",
+        "value": 1
+      },
+      {
+        "name": "MissingRole",
+        "value": 2
+      },
+      {
+        "name": "MultipleRoles",
+        "value": 3
+      },
+      {
+        "name": "UnsupportedRole",
+        "value": 4
+      }
+    ],
+    "sourceTag": [
+      {
+        "name": "Experience",
+        "value": 1
+      },
+      {
+        "name": "Empty",
+        "value": 2
+      }
+    ],
+    "readTag": [
+      {
+        "name": "Binding",
+        "value": 1
+      },
+      {
+        "name": "Role",
+        "value": 2
+      }
+    ],
+    "ingressTag": [
+      {
+        "name": "Original",
+        "value": 1
+      },
+      {
+        "name": "CompletedParent",
+        "value": 2
+      }
+    ],
+    "stage": [
+      {
+        "name": "World",
+        "value": 1
+      },
+      {
+        "name": "Observe",
+        "value": 2
+      },
+      {
+        "name": "Track",
+        "value": 3
+      },
+      {
+        "name": "Bind",
+        "value": 4
+      },
+      {
+        "name": "Classify",
+        "value": 5
+      },
+      {
+        "name": "Freeze",
+        "value": 6
+      },
+      {
+        "name": "Role",
+        "value": 7
+      },
+      {
+        "name": "PositiveSelect",
+        "value": 8
+      },
+      {
+        "name": "EmptySelect",
+        "value": 9
+      },
+      {
+        "name": "Consume",
+        "value": 10
+      }
+    ],
+    "countRule": [
+      {
+        "name": "One",
+        "value": 1
+      },
+      {
+        "name": "VisibleCount",
+        "value": 2
+      },
+      {
+        "name": "ClaimCount",
+        "value": 3
+      }
+    ],
+    "outputIdentity": [
+      {
+        "name": "RuntimeTopLevel",
+        "value": 1
+      },
+      {
+        "name": "ContinuantTransition",
+        "value": 2
+      },
+      {
+        "name": "EventTransition",
+        "value": 3
+      }
+    ],
+    "allocationRule": [
+      {
+        "name": "None",
+        "value": 1
+      },
+      {
+        "name": "WorldBatch",
+        "value": 2
+      },
+      {
+        "name": "PositiveObservation",
+        "value": 3
+      },
+      {
+        "name": "EmptyObservation",
+        "value": 4
+      },
+      {
+        "name": "Bindings",
+        "value": 5
+      },
+      {
+        "name": "Claims",
+        "value": 6
+      },
+      {
+        "name": "Selection",
+        "value": 7
+      },
+      {
+        "name": "Processing",
+        "value": 8
+      }
+    ]
+  },
+  "finiteFields": [
+    {
+      "recordTypeId": 518,
+      "fieldId": 2,
+      "container": "list",
+      "enum": "mode"
+    },
+    {
+      "recordTypeId": 519,
+      "fieldId": 1,
+      "container": "scalar",
+      "enum": "algorithm"
+    },
+    {
+      "recordTypeId": 519,
+      "fieldId": 2,
+      "container": "scalar",
+      "enum": "capacity"
+    },
+    {
+      "recordTypeId": 531,
+      "fieldId": 3,
+      "container": "scalar",
+      "enum": "exclusion"
+    },
+    {
+      "recordTypeId": 536,
+      "fieldId": 1,
+      "container": "scalar",
+      "enum": "sourceTag"
+    },
+    {
+      "recordTypeId": 537,
+      "fieldId": 1,
+      "container": "scalar",
+      "enum": "readTag"
+    },
+    {
+      "recordTypeId": 538,
+      "fieldId": 1,
+      "container": "scalar",
+      "enum": "ingressTag"
+    },
+    {
+      "recordTypeId": 538,
+      "fieldId": 2,
+      "container": "set",
+      "enum": "stage"
+    },
+    {
+      "recordTypeId": 539,
+      "fieldId": 2,
+      "container": "scalar",
+      "enum": "countRule"
+    },
+    {
+      "recordTypeId": 539,
+      "fieldId": 3,
+      "container": "scalar",
+      "enum": "outputIdentity"
+    },
+    {
+      "recordTypeId": 541,
+      "fieldId": 1,
+      "container": "scalar",
+      "enum": "stage"
+    },
+    {
+      "recordTypeId": 541,
+      "fieldId": 9,
+      "container": "set",
+      "enum": "allocationRule"
+    }
+  ],
+  "unionDefinitions": [
+    {
+      "recordTypeId": 536,
+      "tag": 1,
+      "name": "Experience",
+      "tagFieldId": 1,
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": [
+        3
+      ]
+    },
+    {
+      "recordTypeId": 536,
+      "tag": 2,
+      "name": "Empty",
+      "tagFieldId": 1,
+      "requiredPayloadFieldIds": [
+        3
+      ],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    },
+    {
+      "recordTypeId": 537,
+      "tag": 1,
+      "name": "Binding",
+      "tagFieldId": 1,
+      "requiredPayloadFieldIds": [
+        2
+      ],
+      "forbiddenPayloadFieldIds": [
+        3
+      ]
+    },
+    {
+      "recordTypeId": 537,
+      "tag": 2,
+      "name": "Role",
+      "tagFieldId": 1,
+      "requiredPayloadFieldIds": [
+        3
+      ],
+      "forbiddenPayloadFieldIds": [
+        2
+      ]
+    }
+  ],
+  "unionMembers": [
+    {
+      "namespace": 1024,
+      "payload": [
+        536,
+        1
+      ],
+      "encoding": "list<unsigned,unsigned>"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        536,
+        2
+      ],
+      "encoding": "list<unsigned,unsigned>"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        537,
+        1
+      ],
+      "encoding": "list<unsigned,unsigned>"
+    },
+    {
+      "namespace": 1024,
+      "payload": [
+        537,
+        2
+      ],
+      "encoding": "list<unsigned,unsigned>"
+    }
+  ],
+  "occurrenceIdentities": [
+    {
+      "recordTypeId": 210,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "WorldEventId",
+      "requiredNamespace": 1114
+    },
+    {
+      "recordTypeId": 211,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "EventBindingId",
+      "requiredNamespace": 1100
+    },
+    {
+      "recordTypeId": 214,
+      "schemaVersion": 1,
+      "fieldId": 2,
+      "family": "DetectionOccurrenceId",
+      "requiredNamespace": 1112
+    },
+    {
+      "recordTypeId": 215,
+      "schemaVersion": 1,
+      "fieldId": 2,
+      "family": "EventDetectionOccurrenceId",
+      "requiredNamespace": 1113
+    },
+    {
+      "recordTypeId": 224,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "PerceivedBindingId",
+      "requiredNamespace": 1103
+    },
+    {
+      "recordTypeId": 227,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ExperienceId",
+      "requiredNamespace": 1106
+    },
+    {
+      "recordTypeId": 240,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "CausalRoleEvidenceId",
+      "requiredNamespace": 1111
+    },
+    {
+      "recordTypeId": 521,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115
+    },
+    {
+      "recordTypeId": 522,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ObservationId",
+      "requiredNamespace": 1115
+    },
+    {
+      "recordTypeId": 532,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "SelectionOccurrenceId",
+      "requiredNamespace": 1143
+    },
+    {
+      "recordTypeId": 535,
+      "schemaVersion": 1,
+      "fieldId": 1,
+      "family": "ProcessingOccurrenceId",
+      "requiredNamespace": 1144
+    }
+  ],
+  "priorAllocations": [
+    {
+      "path": "docs/formal/CAMPAIGN2_ALLOCATION_TABLE.json",
+      "sha256": "c7503135f1aa0daa8a260e0c159211bc89c8483c9a3ab72fd1019983708e37d8"
+    },
+    {
+      "path": "docs/formal/CONTENT_ID_ALLOCATION_TABLE.json",
+      "sha256": "f4e504a63c55437915597f22caf1df4c3d49c7e1655bf7406242b4916aa9b194"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json",
+      "sha256": "c77ea031a5753e43e826dd4f5c79ce571d7d01fec49d6827a1772a7cc511b9bb"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_EVIDENCE_CARRIAGE_ALLOCATION_TABLE.json",
+      "sha256": "9b2582aa44e6b4e7f576fd738155e4dc69d6458fedaa7746937099470faa139e"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json",
+      "sha256": "4a476c4f6a279f60af4597c3008e0e830d19b7bcbb4373838e028307ed9cc278"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_ALLOCATION_TABLE.json",
+      "sha256": "648d573adeb6fc621e001e8ca5397ea0189defb172e1d760729dbe00576f2e21"
+    },
+    {
+      "path": "docs/formal/MEASUREMENT_PREDICTION_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "c7f82429afcce5fe2ceb3e1730a2db5df44493ea3438efb6fbfbb50a7ade6443"
+    },
+    {
+      "path": "docs/formal/MEMORY_WRAPPER_ALLOCATION_TABLE.json",
+      "sha256": "cd6bb62b6b2b1bbb5759c1a397d88c14c553ba207dc1fa224e5e6d8c8c970cd7"
+    },
+    {
+      "path": "docs/formal/OBSERVATION_UNIT_ALLOCATION_TABLE.json",
+      "sha256": "e5f1aac58d479c32ff988d55fd55b5c4137e8b2d11b1e0faa111c8b859ddcf78"
+    },
+    {
+      "path": "docs/formal/ORIGIN_ALLOCATION_TABLE.json",
+      "sha256": "b8ee30bd920774e77969f92cff9ceba9e2668ba4ba9e7184f7aa366e6513f7be"
+    },
+    {
+      "path": "docs/formal/PROBE_ACCESSOR_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "48b43cd484f6bb2ecc689abc51fc88ed605cc4164774a4a8016b21403f904f5b"
+    },
+    {
+      "path": "docs/formal/REGULATORY_PROBE_ALLOCATION_TABLE.json",
+      "sha256": "746d7a25adf3729f08d66419cca44916c6a08a8e28b5ad619f839a0f63da9af5"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_PLAN_LEAF_ALLOCATION_TABLE.json",
+      "sha256": "581490f019b60073c44876b7bd946e36a039fa18a8702918ff71806432795e65"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_ALLOCATION_TABLE.json",
+      "sha256": "161047465549a2fb3b665c08a019a0915311114159e51251bba707066f721f17"
+    },
+    {
+      "path": "docs/formal/TASK_COMMITMENT_CORRECTION_ALLOCATION_TABLE.json",
+      "sha256": "8d1d42da9d9fc2bb45d79a4da9268cb4934a05db58a7564d4484cd8fcf81cc07"
+    },
+    {
+      "path": "docs/formal/TRACE_SEAM_MEMBER_ALLOCATION_TABLE.json",
+      "sha256": "1910b2fbbcf9098236aa57849dfa9ae724074045556a7c362e4cd65501c213f6"
+    },
+    {
+      "path": "docs/formal/VAL_ALLOCATION_TABLE.json",
+      "sha256": "8bef1ed8a2f05de224330ffa5aff0557064f7acef3edfbaa2e6738153c3bfd39"
+    }
+  ],
+  "availability": {
+    "previousRuntimeMaxRecord": 515,
+    "scannedPriorTables": 19,
+    "proposedRecordRange": [
+      516,
+      541
+    ],
+    "proposedNamespaces": [
+      1143,
+      1144
+    ]
+  },
+  "counts": {
+    "records": 26,
+    "fields": 89,
+    "textMembers": 52,
+    "unionMembers": 4,
+    "roles": 62,
+    "mapKeyRoles": 2,
+    "collectionChecks": 3,
+    "occurrenceIdentities": 11
+  }
+}
