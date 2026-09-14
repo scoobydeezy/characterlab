@@ -69,6 +69,15 @@ receipt's exact source fingerprint remains historical, not a current-file hash c
 
 ## Resume here
 
+> **SUPERSEDED AS ENTRY POINT 2026-09-14.** Start at
+> [`GENERAL_ATTENTION_RESUME_BRIEF.md`](GENERAL_ATTENTION_RESUME_BRIEF.md). Substantial
+> repository change occurred on 2026-09-14 while GA was paused — corpus 0.28.0, five new
+> verdicts, two owner rulings on the concern feedback edge, a replaced `CURRENT.md` and a
+> new checkpoint discipline. The frozen-artifact list and technical steps 2–5 below remain
+> correct and are unchanged; the brief carries what is new plus the work-ceiling input,
+> and records that registration/compiler steps 2–3 are owned end-to-end by the primary
+> implementation agent from 2026-09-19 and must not be split across agents.
+>
 > **REDIRECTED 2026-09-14.** Before step 1 below, execute work-order items 1-5 in
 > [`CAMPAIGN3_WORK_ORDER_2026_09_14.md`](CAMPAIGN3_WORK_ORDER_2026_09_14.md): run the
 > salience-law arithmetic comparison and record its verdict, publish corpus `0.28.0`,

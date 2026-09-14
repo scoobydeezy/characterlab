@@ -2077,3 +2077,158 @@ Final consolidated validation: COGNITIVE_FINAL_SUITE_RECEIPT_REV1.json records
 with source/test fingerprints unchanged during both runs. TypeScript, reference
 boundary and final whitespace checks PASS. This supersedes earlier test counts;
 Campaign2 completion and its bounded research exclusions remain as recorded above.
+
+## Corpus 0.28.0 promoted — 2026-09-14
+
+Eleven reviewed Campaign 3 intake proposals are now corpus members. `corpus/0.28.0`
+digest `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+The ten `corpus/0.27.0` members are preserved byte-for-byte in identity, version and
+obligation; `corpus/0.27.0` at digest
+`3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276` remains a distinct
+historical commitment and every verdict resting on it keeps that version and digest.
+
+New members: `PHEN-ATTN-001`, `PHEN-BODY-001`, `PHEN-BELIEF-001`, `PHEN-AFFECT-001`,
+`PHEN-WORK-001`, `PHEN-SKILL-001`, `PHEN-SOCIAL-001`, `PHEN-MULTI-001`,
+`PHEN-HABIT-001`, `PHEN-REL-001`, `PHEN-LONG-001`, each at `1.0.0-draft`.
+
+**Membership asserts that an obligation exists; it does not assert that it passes.**
+Ten of the eleven enter BLOCKED or PARTIAL. No seam is unblocked, no implementation
+authorized and no mechanism accepted by this promotion. Thirteen of the Brief's fifteen
+required families now have at least one named member, up from six.
+
+Requirement text is carried verbatim from `CAMPAIGN3_CORPUS_INTAKE_DRAFT.md`; the
+promotion script asserts that reversing the version token restores each source body
+exactly. The digest was computed by `compileCorpusManifest` through the project's own
+`cenc/1` encoder after first reproducing the accepted 0.27.0 digest from its ten
+members. Receipt: `CORPUS_0_28_0_PROMOTION_REV1.json`; script:
+`scripts/promote-corpus-0-28-0.mjs`.
+
+`PHEN-ATTN-001` takes the first ordinal. `ATTN-001` is a seam/decision identifier in a
+different typed namespace and no `PHEN-ATTN-*` reservation exists; ordinals are never
+skipped for resemblance to another namespace. See `CHECKPOINT_TEMPLATE.md` rule 4.
+
+## `OD-C3-001` ratified with scope amendment — 2026-09-14
+
+Owner ruling on the cross-instant concern → attention feedback edge
+(`prior-concern-feedback-component/0.1-candidate`, `src/campaign3/priorConcernFeedback.ts`).
+Escalated under `CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md` criterion 3. Full record:
+`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`.
+
+**Ratified.** A lawful prior-instant transient character concern may feed back into later
+attention/encoding allocation. The precedent is a **transient character-state → attention
+feedback seam**. It does **not** qualify `TaskConcern` as the project's general Affect
+representation, and `PHEN-AFFECT-001` still owes the factorized threat/appraisal work.
+A later affect model may compile into this seam, replace its source, or show that a scalar
+`q` is insufficient; none of those requires superseding this ruling.
+
+**Candidate only.** `residual × (1−q)` and `ω_A = 1+q` are the first named
+Concern-Modulated Allocation Candidate, **not** architectural law. Not frozen: that
+residual suppression is linear-multiplicative in `q`; that focal amplification is linear-
+additive in `q`; that `q = 1` zeroes the incidental pool; that `q = 1` doubles focal
+weight. A **shape-different** Candidate B is owed — thresholded/gated or saturating, not a
+recalibrated `1+q/2` — with the same `q ∈ [0,1]`, source, cross-instant join, eligibility
+and `K`, identical behaviour at the declared neutral point, materially different
+predictions inside `(0,1]`, and no new psychological state. Selecting it is a LOCAL
+DISPOSITION and does not return for a ruling unless it introduces a new semantic mechanism.
+
+**Scope.** The first candidate modifies continuous encoding allocation only; role
+eligibility and capacity `K` are unchanged. Concern-dependent eligibility or capacity
+narrowing is a separate future comparator and may not be smuggled into this one.
+
+**Branches.** `EnabledKnown`, `BaselineWithoutAvailableFeedback` and `DisabledFeedback`
+remain three distinct states — mechanism with an admitted value; mechanism with no lawful
+prior feedback available; mechanism absent from the model. Do not collapse the latter two
+into `q = 0`.
+
+**Blocker, narrowed.** GA **may** qualify the *existence* of the concern → allocation
+feedback seam once its public source, join and path are proven. Only a broader GA model
+verdict that **relies on the specific modulation law** requires Candidate B first;
+unrelated GA results are not held up by the numerical law. Qualifying this candidate does
+not give `PHEN-ATTN-001` a whole PASS — its encoding-footprint clause and later retrieval
+probe remain BLOCKED on their own seams, per `VER-C3-ATTN-001`. General Attention remains
+OPEN.
+
+## `OD-C3-001` obligation 1 discharged — 2026-09-14
+
+Candidate B selected locally and compared: `f(q) = q/(1+q)` — the architecture's own
+accepted bounded response (EAM-1) — substituted for `q` in both terms, giving
+`residualPool = residual/(1+q)` and `ω_A = 1 + f(q)`. No new mathematics, no free
+parameter, no new psychological state; same `q`, source, cross-instant join, eligibility
+and `K`. Shape, not calibration.
+
+Result (`VER-C3-CONCERN-001`): the modulation **shape is load-bearing**. Both laws are
+identical at the declared neutral point `q = 0` and diverge throughout `(0,1]`. The exact
+retrieval crossover is `ω_A* = 5/3`; Candidate A attains it at `q = 2/3` as an exact score
+tie resolved by canonical key order, and reverses the ranking from the next sampled `q`.
+Candidate B tops out at `ω_A = 3/2` and cannot reach the crossover at any `q`. A versus B
+is **UNRESOLVED** — neither is the law.
+
+GA blocker status: satisfied for seam-existence work. General Attention may qualify the
+**existence** of the concern → allocation feedback seam on a proven public source, join
+and path. Any broader GA verdict that relies on the specific modulation law must cite
+`VER-C3-CONCERN-001` and remains unsettled. `PHEN-ATTN-001` receives no PASS.
+`src/campaign3/priorConcernFeedback.ts` is unmodified.
+
+## `OD-C3-002` design ruling and `VER-C3-CONCERN-002` — 2026-09-14
+
+Owner design ruling after `VER-C3-CONCERN-001`: neither Candidate A nor B is the
+modulation law; both are retained as comparators. The eventual law must satisfy seven
+qualitative constraints, and — the architectural content — **encoding suppression and
+retrieval amplification are separate effects that need not share one transfer function**.
+
+Candidate C developed locally: `E(q) = 1 − f(q)`, `R(q) = f(3q)` with `f(x) = x/(1+x)`,
+the accepted EAM-1 response. B is exactly C at gain 1; A is the linear limit. No new
+mathematics, state or mechanism, so no re-escalation was required.
+
+Result: A fails C3 (`E(1) = 0` annihilates peripheral encoding); B fails C6 (`ω_A` tops
+out at `3/2`, below the `5/3` crossover, so it can never reorder retrieval); **C satisfies
+all seven**. A and C reorder retrieval at the same `q = 3/4`, but A retains `1/4` of the
+peripheral pool there against C's `4/7`. Across gains `{1,2,3,4,6}` the encoding arm is
+bit-identical while the reordering threshold moves from never to `q = 1/2`, making the
+gain an interpretable and independent quantity.
+
+Disposition: `MERGED` is **refuted** for the two arms — they may not be assumed to share
+one curve. C is **UNRESOLVED as a law** but is the only candidate satisfying the accepted
+constraints. No modulation law is accepted. `PHEN-ATTN-001` receives no PASS;
+`src/campaign3/priorConcernFeedback.ts` is unmodified. General Attention remains OPEN and
+may still qualify seam **existence** on a proven public source, join and path.
+
+## Concern retrieval ceiling — scope bound on `VER-C3-CONCERN-002`, 2026-09-14
+
+Robustness probe of constraint C6 (`CONCERN_RETRIEVAL_CEILING_REV1.json`). No verdict is
+reopened; `VER-C3-CONCERN-002` carries a dated scope annotation.
+
+The candidate family `R(q) = f(g·q)` has a **hard ceiling of `ω_A = 2`** because `f` is
+bounded by 1. A attains it exactly at `q = 1` and only by paying `E(1) = 0`; every C
+approaches it but cannot reach it at any gain — gain 100 gives `201/101`. Crossovers at or
+above 2 are therefore **unreachable by every member**, and gain is not the lever.
+
+C6 is fixture-relative: every law reorders a crossover-`6/5` fixture; no law reorders
+`2/1` or harder. The original `5/3` fixture lies inside the discriminating band, so the
+Candidate C result stands there and only there. C6 should be restated as "passes the
+crossover **of a declared corpus fixture**" before it is used as an acceptance criterion.
+
+**Future obligation, unblocked today:** should a required phenomenon need reordering
+against a crossover at or above 2, the bound on `R` — not the gain — must be revisited.
+`OD-C3-002` C7 requires `R` bounded but does not fix the bound; an `R ≤ 2` family
+(`ω_A ≤ 3`) is a legitimate future comparator. `PHEN-ATTN-001` receives no PASS.
+
+## `OD-C3-002` C6 amended to be fixture-relative — 2026-09-14
+
+Owner amendment following the retrieval-ceiling probe. C6 no longer asserts a generic
+recency crossover. Amended form: concern feedback must be capable of behaviourally
+meaningful retrieval reordering in **at least one explicitly declared corpus fixture where
+such reordering is psychologically required**, crossing **that fixture's** threshold within
+its admitted concern domain; it is **not** required to overcome arbitrary recency
+advantages. Each family's maximum achievable retrieval bias is part of its behavioural
+contract and must remain visible.
+
+Recorded characterisation: family bound `ω_A ≤ 2` (`R = f(g·q) ≤ 1` for every gain);
+A `2` attained at `q=1`, B `3/2`, C g3 `7/4`, C g10 `21/11`, C g100 `201/101`. A uniquely
+attains the ceiling and only while driving incidental encoding to zero, so the
+`VER-C3-CONCERN-002` decoupling is **partial** — an interior region, not an escape.
+
+**Reopen condition, not a work item:** a required phenomenon needing fixture crossover
+`≥ 2` makes the response bound itself a comparator. Until then `ω_A ≤ 2` is a property of
+the family and not a defect. No higher-bound family is to be implemented, no candidate is
+reopened, no verdict is added, and General Attention closure is not blocked.

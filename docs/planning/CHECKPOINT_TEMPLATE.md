@@ -3,7 +3,7 @@
 Adopted 2026-09-14 by the owner-directed correction pass. Use this for every Campaign 3
 checkpoint from here.
 
-## The three rules
+## The four rules
 
 1. **`CURRENT.md` is replaced, never appended.** It is a state index. Chronology goes to
    `CAMPAIGN3_LOG.md`. If `CURRENT.md` contains two blocks claiming to be current, it has
@@ -24,6 +24,16 @@ checkpoint from here.
    example is the GA identity-role crosswalk: seventeen revisions, ~34 near-duplicate
    build/review scripts, with REV16 and REV17 identical in size five minutes apart and
    REV17 reporting no change.
+
+4. **Never skip an ordinal to avoid resemblance to an identifier in another typed
+   namespace.** An ordinal gap requires an actual reservation or history reason. Typed
+   namespaces are independent: `ATTN-001` (seam/decision) and `PHEN-ATTN-001`
+   (phenomenon) may coexist, and assigning `PHEN-ATTN-002` "for clarity" would encode a
+   fake historical fact — that some `PHEN-ATTN-001` exists or once existed. Check the
+   authoritative allocation inventory; if it shows no reservation, take the ordinal.
+   This rule was adopted 2026-09-14 after exactly that error was caught in the
+   `corpus/0.28.0` draft manifest. It saves later archaeology over gaps that never had
+   a cause.
 
 ## Template
 

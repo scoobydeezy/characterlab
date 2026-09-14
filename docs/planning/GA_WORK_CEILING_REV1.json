@@ -1,0 +1,244 @@
+{
+  "status": "DERIVED - GA-local work bound; whole-model ceiling still requires the inherited addend",
+  "resumeStep": "GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13 step 4",
+  "topologyVersion": "ga-composed-logical-topology/0.2-draft",
+  "topologyDeclaresCeiling": null,
+  "method": {
+    "graph": {
+      "stages": 67,
+      "nextEdges": 48,
+      "conditionalEdges": 18,
+      "totalEdges": 66,
+      "acyclic": true,
+      "trueRoots": 12
+    },
+    "joinSemantics": "Stages whose gate says \"exactly one join\" are invoked once however many parents complete.",
+    "replacementSemantics": "Stages whose gate says \"Replace X iff ...\" are mutually exclusive with X; both lanes are evaluated.",
+    "conditionalEdgesAreDisjoint": "The 18 conditional edges share no pair with the 48 next edges, so a graph built from next alone misclassifies every gated child as an externally scheduled root and reports 26 roots instead of 12."
+  },
+  "gaLocalBound": {
+    "baselineLane": {
+      "events": 80,
+      "outputs": 58,
+      "byPhase": {
+        "0": 3,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 6,
+        "40": 12,
+        "50": 3,
+        "110": 1,
+        "120": 1,
+        "121": 1,
+        "122": 1,
+        "123": 1,
+        "124": 1,
+        "125": 1,
+        "130": 25,
+        "140": 19
+      },
+      "outputsByPhase": {
+        "0": 1,
+        "10": 1,
+        "11": 3,
+        "12": 1,
+        "13": 0,
+        "14": 1,
+        "15": 6,
+        "40": 13,
+        "50": 3,
+        "110": 1,
+        "120": 1,
+        "121": 3,
+        "122": 1,
+        "123": 0,
+        "124": 1,
+        "125": 1,
+        "130": 21,
+        "140": 0
+      },
+      "peakPhase": {
+        "phase": 130,
+        "events": 25
+      },
+      "repeated": [
+        {
+          "stage": "ordinary-memory-formation",
+          "invocations": 4
+        },
+        {
+          "stage": "event-presentation-dispatch",
+          "invocations": 4
+        },
+        {
+          "stage": "event-presentation-owner",
+          "invocations": 4
+        },
+        {
+          "stage": "current-recollection",
+          "invocations": 2
+        },
+        {
+          "stage": "consequence-recollection",
+          "invocations": 2
+        },
+        {
+          "stage": "visual-acquisition-evidence",
+          "invocations": 2
+        },
+        {
+          "stage": "body-acquisition-evidence",
+          "invocations": 2
+        },
+        {
+          "stage": "event-association-formation",
+          "invocations": 2
+        },
+        {
+          "stage": "event-presentation-formation",
+          "invocations": 2
+        }
+      ],
+      "inactive": [
+        "prior-concern-event-rank",
+        "prior-concern-visual-encoding"
+      ]
+    },
+    "priorConcernReplacementLane": {
+      "events": 80,
+      "outputs": 58,
+      "byPhase": {
+        "0": 3,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 6,
+        "40": 12,
+        "50": 3,
+        "110": 1,
+        "120": 1,
+        "121": 1,
+        "122": 1,
+        "123": 1,
+        "124": 1,
+        "125": 1,
+        "130": 25,
+        "140": 19
+      },
+      "outputsByPhase": {
+        "0": 1,
+        "10": 1,
+        "11": 3,
+        "12": 1,
+        "13": 0,
+        "14": 1,
+        "15": 6,
+        "40": 13,
+        "50": 3,
+        "110": 1,
+        "120": 1,
+        "121": 3,
+        "122": 1,
+        "123": 0,
+        "124": 1,
+        "125": 1,
+        "130": 21,
+        "140": 0
+      },
+      "peakPhase": {
+        "phase": 130,
+        "events": 25
+      },
+      "repeated": [
+        {
+          "stage": "ordinary-memory-formation",
+          "invocations": 4
+        },
+        {
+          "stage": "event-presentation-dispatch",
+          "invocations": 4
+        },
+        {
+          "stage": "event-presentation-owner",
+          "invocations": 4
+        },
+        {
+          "stage": "current-recollection",
+          "invocations": 2
+        },
+        {
+          "stage": "consequence-recollection",
+          "invocations": 2
+        },
+        {
+          "stage": "visual-acquisition-evidence",
+          "invocations": 2
+        },
+        {
+          "stage": "body-acquisition-evidence",
+          "invocations": 2
+        },
+        {
+          "stage": "event-association-formation",
+          "invocations": 2
+        },
+        {
+          "stage": "event-presentation-formation",
+          "invocations": 2
+        }
+      ],
+      "inactive": [
+        "current-visual-encoding",
+        "current-event-rank"
+      ]
+    }
+  },
+  "joinConvergence": [
+    {
+      "join": "retained-attribution",
+      "parentCompletions": 3,
+      "invocations": 1
+    },
+    {
+      "join": "significance-join",
+      "parentCompletions": 3,
+      "invocations": 1
+    }
+  ],
+  "findings": [
+    "The checkpoint warning is confirmed with a number: the GA-local maximum is 80 stage invocations in one instant against 67 templates, a gap of 13 driven by repeated rank and owner invocations exactly as predicted.",
+    "Nine stages are invoked more than once; ordinary-memory-formation, event-presentation-owner and event-presentation-dispatch each reach four invocations.",
+    "Phase 130 is the busiest at 25 invocations, with phase 140 next; any per-phase budget must be sized on those two rather than on an average.",
+    "Both declared joins converge genuinely: retained-attribution takes 3 parent completions to 1 invocation; significance-join takes 3 parent completions to 1 invocation. Summing per parent would overcount by 4.",
+    "The prior-concern replacement lane is work-neutral: identical event and output totals, differing only in which stages are inactive. The concern feedback path therefore does not enlarge the work budget, which is useful to have established before registration binds it.",
+    "Building the graph from next alone yields 26 apparent roots; merging the disjoint conditional edges gives 12. An analysis that misses that distinction both misplaces the roots and undercounts the fan-out."
+  ],
+  "remainingAddendForWholeModelCeiling": [
+    "Inherited Campaign 2 cognitive stages, which have their own committed work accounting.",
+    "Inherited measurement-prediction stages.",
+    "Inherited EMB receiving stages.",
+    "Any repeated invocation of an inherited stage caused by GA fan-out, counted at GA multiplicity rather than at the inherited manifest multiplicity.",
+    "Runtime slot accounting, a separate budget from events and outputs that cannot be derived from this graph."
+  ],
+  "limits": [
+    "GA-LOCAL ONLY. A lower bound on the whole-model ceiling, not the ceiling. Do not freeze a ModelIdentity or a work budget against this number alone.",
+    "Derived from the composed logical topology, not from an executed run. Registration may add or merge stages, which changes it.",
+    "Events and outputs only. Runtime slots require the runtime.",
+    "Allocates nothing, promotes nothing, qualifies nothing. General Attention remains OPEN."
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV2.json",
+      "sha256": "8de392024fea8f836276556cb168590f7aedc519d13273596af3a543def74371"
+    },
+    {
+      "path": "scripts/derive-ga-work-ceiling.mjs",
+      "sha256": "a4047955eb94ea1db81e1624be2c509805452d4a6655d912aeb6b61bb59ddf05"
+    }
+  ]
+}

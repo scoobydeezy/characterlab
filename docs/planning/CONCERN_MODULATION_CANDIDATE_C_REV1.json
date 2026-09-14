@@ -1,0 +1,383 @@
+{
+  "status": "EXECUTED — decoupled Candidate C developed and compared against A and B",
+  "obligation": "OD-C3-002 (owner design ruling 2026-09-14): develop the next serious candidate locally under the stated qualitative constraints and compare it against A/B",
+  "verdictEntry": "VER-C3-CONCERN-002",
+  "architecturalFinding": "Encoding suppression and retrieval amplification are separate consequences of the same concern state and need not share one transfer function. A and B both conflated them by construction; C separates them. B is exactly C at gain 1, and A is the linear limit, so the three form one family rather than three unrelated proposals.",
+  "candidates": {
+    "candidate-a-linear": "E(q) = 1 − q; R(q) = q. Fails C3: E(1) = 0 annihilates peripheral encoding.",
+    "candidate-b-saturating": "E(q) = 1 − f(q); R(q) = f(q), one shared curve. Fails C6: ω_A tops out at 3/2, below the demonstrated crossover 5/3, so it can never reorder retrieval.",
+    "candidate-c-decoupled": "E(q) = 1 − f(q); R(q) = f(3·q). Separate transfer functions. Satisfies all seven constraints."
+  },
+  "declaredDomain": {
+    "boundedResponse": "f(x) = x/(1+x), the accepted EAM-1 response; no new mathematics",
+    "retrievalGain": "3",
+    "residual": "1/5",
+    "q": [
+      "0/1",
+      "1/4",
+      "1/2",
+      "2/3",
+      "3/4",
+      "1/1"
+    ],
+    "demonstratedCrossover": "5/3",
+    "crossoverProvenance": "ω_A* = 5/3 established by VER-C3-CONCERN-001 on this same fixture; it is a property of the fixture, not a general threshold",
+    "consumers": "identical to VER-C3-CONCERN-001 — allocateSpatialContext for the encoding arm, rankAccessibleEpisodes for the retrieval arm"
+  },
+  "results": {
+    "candidate-a-linear": [
+      {
+        "q": "0/1",
+        "E": "1/1",
+        "R": "0/1",
+        "omegaA": "1/1",
+        "residualPool": "1/5",
+        "peripheralAllocation": [
+          "1/10",
+          "1/10"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/4",
+        "E": "3/4",
+        "R": "1/4",
+        "omegaA": "5/4",
+        "residualPool": "3/20",
+        "peripheralAllocation": [
+          "3/40",
+          "3/40"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/2",
+        "E": "1/2",
+        "R": "1/2",
+        "omegaA": "3/2",
+        "residualPool": "1/10",
+        "peripheralAllocation": [
+          "1/20",
+          "1/20"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "2/3",
+        "E": "1/3",
+        "R": "2/3",
+        "omegaA": "5/3",
+        "residualPool": "1/15",
+        "peripheralAllocation": [
+          "1/30",
+          "1/30"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": true
+      },
+      {
+        "q": "3/4",
+        "E": "1/4",
+        "R": "3/4",
+        "omegaA": "7/4",
+        "residualPool": "1/20",
+        "peripheralAllocation": [
+          "1/40",
+          "1/40"
+        ],
+        "retrievalTop": "y-associated",
+        "omegaAReachesCrossover": true
+      },
+      {
+        "q": "1/1",
+        "E": "0/1",
+        "R": "1/1",
+        "omegaA": "2/1",
+        "residualPool": "0/1",
+        "peripheralAllocation": [
+          "0/1",
+          "0/1"
+        ],
+        "retrievalTop": "y-associated",
+        "omegaAReachesCrossover": true
+      }
+    ],
+    "candidate-b-saturating": [
+      {
+        "q": "0/1",
+        "E": "1/1",
+        "R": "0/1",
+        "omegaA": "1/1",
+        "residualPool": "1/5",
+        "peripheralAllocation": [
+          "1/10",
+          "1/10"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/4",
+        "E": "4/5",
+        "R": "1/5",
+        "omegaA": "6/5",
+        "residualPool": "4/25",
+        "peripheralAllocation": [
+          "2/25",
+          "2/25"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/2",
+        "E": "2/3",
+        "R": "1/3",
+        "omegaA": "4/3",
+        "residualPool": "2/15",
+        "peripheralAllocation": [
+          "1/15",
+          "1/15"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "2/3",
+        "E": "3/5",
+        "R": "2/5",
+        "omegaA": "7/5",
+        "residualPool": "3/25",
+        "peripheralAllocation": [
+          "3/50",
+          "3/50"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "3/4",
+        "E": "4/7",
+        "R": "3/7",
+        "omegaA": "10/7",
+        "residualPool": "4/35",
+        "peripheralAllocation": [
+          "2/35",
+          "2/35"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/1",
+        "E": "1/2",
+        "R": "1/2",
+        "omegaA": "3/2",
+        "residualPool": "1/10",
+        "peripheralAllocation": [
+          "1/20",
+          "1/20"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      }
+    ],
+    "candidate-c-decoupled": [
+      {
+        "q": "0/1",
+        "E": "1/1",
+        "R": "0/1",
+        "omegaA": "1/1",
+        "residualPool": "1/5",
+        "peripheralAllocation": [
+          "1/10",
+          "1/10"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/4",
+        "E": "4/5",
+        "R": "3/7",
+        "omegaA": "10/7",
+        "residualPool": "4/25",
+        "peripheralAllocation": [
+          "2/25",
+          "2/25"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "1/2",
+        "E": "2/3",
+        "R": "3/5",
+        "omegaA": "8/5",
+        "residualPool": "2/15",
+        "peripheralAllocation": [
+          "1/15",
+          "1/15"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": false
+      },
+      {
+        "q": "2/3",
+        "E": "3/5",
+        "R": "2/3",
+        "omegaA": "5/3",
+        "residualPool": "3/25",
+        "peripheralAllocation": [
+          "3/50",
+          "3/50"
+        ],
+        "retrievalTop": "x-recent",
+        "omegaAReachesCrossover": true
+      },
+      {
+        "q": "3/4",
+        "E": "4/7",
+        "R": "9/13",
+        "omegaA": "22/13",
+        "residualPool": "4/35",
+        "peripheralAllocation": [
+          "2/35",
+          "2/35"
+        ],
+        "retrievalTop": "y-associated",
+        "omegaAReachesCrossover": true
+      },
+      {
+        "q": "1/1",
+        "E": "1/2",
+        "R": "3/4",
+        "omegaA": "7/4",
+        "residualPool": "1/10",
+        "peripheralAllocation": [
+          "1/20",
+          "1/20"
+        ],
+        "retrievalTop": "y-associated",
+        "omegaAReachesCrossover": true
+      }
+    ]
+  },
+  "constraintSatisfaction": {
+    "candidate-a-linear": {
+      "C1 E(0)=1 baseline at neutral": true,
+      "C2 E monotonically decreasing": true,
+      "C3 E(1)>0 concern does not annihilate": false,
+      "C4 R(0)=0 baseline at neutral": true,
+      "C5 R monotonically increasing": true,
+      "C6 omega_A can pass the crossover by q=1": true,
+      "C7 both arms bounded (R<=1, E in [0,1])": true,
+      "satisfiesAll": false
+    },
+    "candidate-b-saturating": {
+      "C1 E(0)=1 baseline at neutral": true,
+      "C2 E monotonically decreasing": true,
+      "C3 E(1)>0 concern does not annihilate": true,
+      "C4 R(0)=0 baseline at neutral": true,
+      "C5 R monotonically increasing": true,
+      "C6 omega_A can pass the crossover by q=1": false,
+      "C7 both arms bounded (R<=1, E in [0,1])": true,
+      "satisfiesAll": false
+    },
+    "candidate-c-decoupled": {
+      "C1 E(0)=1 baseline at neutral": true,
+      "C2 E monotonically decreasing": true,
+      "C3 E(1)>0 concern does not annihilate": true,
+      "C4 R(0)=0 baseline at neutral": true,
+      "C5 R monotonically increasing": true,
+      "C6 omega_A can pass the crossover by q=1": true,
+      "C7 both arms bounded (R<=1, E in [0,1])": true,
+      "satisfiesAll": true
+    }
+  },
+  "peripheralRetainedAtReordering": {
+    "candidate-a-linear": {
+      "q": "3/4",
+      "omegaA": "7/4",
+      "peripheralPoolRetained": "1/4",
+      "residualPool": "1/20"
+    },
+    "candidate-b-saturating": null,
+    "candidate-c-decoupled": {
+      "q": "3/4",
+      "omegaA": "22/13",
+      "peripheralPoolRetained": "4/7",
+      "residualPool": "4/35"
+    }
+  },
+  "retrievalGainSensitivity": [
+    {
+      "gain": "1",
+      "omegaAAtQ1": "3/2",
+      "firstReorderingAtQ": null,
+      "EAtQ1": "1/2",
+      "equivalentTo": "candidate-b-saturating"
+    },
+    {
+      "gain": "2",
+      "omegaAAtQ1": "5/3",
+      "firstReorderingAtQ": null,
+      "EAtQ1": "1/2",
+      "equivalentTo": null
+    },
+    {
+      "gain": "3",
+      "omegaAAtQ1": "7/4",
+      "firstReorderingAtQ": "3/4",
+      "EAtQ1": "1/2",
+      "equivalentTo": null
+    },
+    {
+      "gain": "4",
+      "omegaAAtQ1": "9/5",
+      "firstReorderingAtQ": "2/3",
+      "EAtQ1": "1/2",
+      "equivalentTo": null
+    },
+    {
+      "gain": "6",
+      "omegaAAtQ1": "13/7",
+      "firstReorderingAtQ": "1/2",
+      "EAtQ1": "1/2",
+      "equivalentTo": null
+    }
+  ],
+  "findings": [
+    "Candidate A fails the owner constraint that generic maximum concern must not force the incidental pool to exact zero. Candidate B fails the constraint that strong concern must be capable of reordering retrieval against recency. Each fails a different constraint, which is why neither is the law.",
+    "Candidate C satisfies all seven constraints, and does so by decoupling rather than by finding a better compromise curve. It takes B's encoding arm unchanged and gives the retrieval arm an independent gain.",
+    "The decisive comparative: A and C reorder retrieval at the SAME q = 3/4, but A has only 1/4 of the peripheral pool left at that point while C retains 4/7 — roughly 2.3× as much. The behaviour the North Star wants is obtainable without A's extreme encoding claim.",
+    "The retrieval gain moves the reordering threshold while leaving the encoding arm bit-identical across every gain tested: gain 1 (= Candidate B) never reorders, gain 3 reorders at q = 3/4, gain 6 at q = 1/2, and E(1) = 1/2 throughout. That is the decoupling doing exactly the work it was introduced for, and it makes the gain an interpretable quantity — the concern level at which concern-congruent recall can overtake recency.",
+    "The constraints are therefore jointly satisfiable, which was not obvious in advance: it was possible that requiring both non-annihilating encoding and crossover-capable retrieval would need a new mechanism. It does not."
+  ],
+  "limits": [
+    "Pure arithmetic at component scope. No identity, canonical record, allocation, record type, public ingress, state writer or corpus promotion. src/campaign3/priorConcernFeedback.ts is unmodified.",
+    "C satisfies the owner's qualitative constraints; it is NOT thereby the accepted law. The gain 3 is a first declared constant, not a calibration result, and neither arm's curve family is earned.",
+    "Which curve family is psychologically correct still needs an accepted downstream observable, BLOCKED on the encoding-strength and retrieval-probe seams.",
+    "The crossover 5/3 is a property of this two-episode fixture. A richer retrieval fixture moves it and could change which gains satisfy C6.",
+    "A and B are preserved as comparators per the ruling, not retired.",
+    "TaskConcern remains un-qualified as the general Affect representation; a later affect model may modulate these two arms differently, which is an argument for keeping them separate rather than for freezing this family.",
+    "PHEN-ATTN-001 receives no PASS from this comparison."
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/spatialContextAllocation.ts",
+      "sha256": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7"
+    },
+    {
+      "path": "scripts/compare-concern-modulation-candidate-c.mjs",
+      "sha256": "ed8fbeecabc441404a2ee476d81d50515ff761b8a672fe64b90c5f8f65b4bbe7"
+    }
+  ]
+}

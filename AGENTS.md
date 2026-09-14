@@ -11,9 +11,12 @@ Behavioral differences, finite fixture scope and deterministic representation ch
 alone are not owner blockers. Escalate only under that policy's architectural criteria.
 
 Items that **do** meet those criteria are tracked in
-`docs/planning/CAMPAIGN3_PENDING_OWNER_DECISIONS.md`. One is open: ratification of the
-concern -> attention feedback edge, which is criterion 3's first named example
-(affect -> retrieval). Do not close General Attention while it is open.
+`docs/planning/CAMPAIGN3_PENDING_OWNER_DECISIONS.md`. **Zero are open.** `OD-C3-001`
+(concern -> attention feedback) was RATIFIED WITH SCOPE AMENDMENT on 2026-09-14: the
+ratified precedent is a *transient character-state -> attention* seam, `TaskConcern` is
+NOT the general Affect representation, `residual x (1-q)` / `omegaA = 1+q` is Candidate A
+only, and a shape-different Candidate B is owed before any GA verdict that relies on the
+modulation law. Selecting Candidate B is a local disposition.
 
 ## Architectural authority
 

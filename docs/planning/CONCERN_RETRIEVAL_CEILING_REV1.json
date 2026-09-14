@@ -1,0 +1,365 @@
+{
+  "status": "EXECUTED — robustness probe of constraint C6 across fixture difficulty",
+  "motivation": "VER-C3-CONCERN-002 evaluated C6 against a single fixture whose crossover was 5/3. This tests whether that constraint is a property of the law or of the fixture.",
+  "relatesTo": [
+    "VER-C3-CONCERN-001",
+    "VER-C3-CONCERN-002",
+    "OD-C3-002"
+  ],
+  "declaredDomain": {
+    "baseGap": "1/4 (x-recent at now−1 → base 1/2; y-associated at now−3 → base 1/4)",
+    "pullX": "1/10",
+    "crossoverTargets": [
+      "6/5",
+      "3/2",
+      "5/3",
+      "2/1",
+      "5/2",
+      "3/1"
+    ],
+    "q": [
+      "0/1",
+      "1/4",
+      "1/2",
+      "2/3",
+      "3/4",
+      "1/1"
+    ],
+    "lambda": "1",
+    "exponent": 1,
+    "omegaB": "1",
+    "now": "10",
+    "crossoverFormula": "omega* = (base_x − base_y) / (pull_y − pull_x)"
+  },
+  "structuralCeiling": {
+    "omegaAAtQ1": {
+      "A-linear": "2/1",
+      "B (= C g=1)": "3/2",
+      "C g=3": "7/4",
+      "C g=10": "21/11",
+      "C g=100": "201/101"
+    },
+    "statement": "R(q) = f(g·q) is bounded above by 1 for every gain, so omega_A = 1 + R is bounded above by 2 across the entire candidate family. A attains 2 exactly at q=1; every C attains it only in the limit of infinite gain. No member can exceed it."
+  },
+  "fixtureSweep": [
+    {
+      "crossover": "6/5",
+      "pullY": "37/120",
+      "reordersAtQ": {
+        "A-linear": "1/4",
+        "B (= C g=1)": "1/2",
+        "C g=3": "1/4",
+        "C g=10": "1/4",
+        "C g=100": "1/4"
+      }
+    },
+    {
+      "crossover": "3/2",
+      "pullY": "4/15",
+      "reordersAtQ": {
+        "A-linear": "2/3",
+        "B (= C g=1)": null,
+        "C g=3": "1/2",
+        "C g=10": "1/4",
+        "C g=100": "1/4"
+      }
+    },
+    {
+      "crossover": "5/3",
+      "pullY": "1/4",
+      "reordersAtQ": {
+        "A-linear": "3/4",
+        "B (= C g=1)": null,
+        "C g=3": "3/4",
+        "C g=10": "1/4",
+        "C g=100": "1/4"
+      }
+    },
+    {
+      "crossover": "2/1",
+      "pullY": "9/40",
+      "reordersAtQ": {
+        "A-linear": null,
+        "B (= C g=1)": null,
+        "C g=3": null,
+        "C g=10": null,
+        "C g=100": null
+      }
+    },
+    {
+      "crossover": "5/2",
+      "pullY": "1/5",
+      "reordersAtQ": {
+        "A-linear": null,
+        "B (= C g=1)": null,
+        "C g=3": null,
+        "C g=10": null,
+        "C g=100": null
+      }
+    },
+    {
+      "crossover": "3/1",
+      "pullY": "11/60",
+      "reordersAtQ": {
+        "A-linear": null,
+        "B (= C g=1)": null,
+        "C g=3": null,
+        "C g=10": null,
+        "C g=100": null
+      }
+    }
+  ],
+  "wideSelection": {
+    "k": 2,
+    "byLaw": {
+      "A-linear": [
+        {
+          "q": "0/1",
+          "selected": [
+            "c-old",
+            "d-oldest"
+          ]
+        },
+        {
+          "q": "1/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/2",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "2/3",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "3/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/1",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        }
+      ],
+      "B (= C g=1)": [
+        {
+          "q": "0/1",
+          "selected": [
+            "c-old",
+            "d-oldest"
+          ]
+        },
+        {
+          "q": "1/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/2",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "2/3",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "3/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/1",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        }
+      ],
+      "C g=3": [
+        {
+          "q": "0/1",
+          "selected": [
+            "c-old",
+            "d-oldest"
+          ]
+        },
+        {
+          "q": "1/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/2",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "2/3",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "3/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/1",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        }
+      ],
+      "C g=10": [
+        {
+          "q": "0/1",
+          "selected": [
+            "c-old",
+            "d-oldest"
+          ]
+        },
+        {
+          "q": "1/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/2",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "2/3",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "3/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/1",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        }
+      ],
+      "C g=100": [
+        {
+          "q": "0/1",
+          "selected": [
+            "c-old",
+            "d-oldest"
+          ]
+        },
+        {
+          "q": "1/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/2",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "2/3",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "3/4",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        },
+        {
+          "q": "1/1",
+          "selected": [
+            "d-oldest",
+            "c-old"
+          ]
+        }
+      ]
+    }
+  },
+  "findings": [
+    "C6 is fixture-relative, as suspected. Every law reorders an easy fixture (crossover 6/5); no law reorders a hard one (crossover 2/1 or above). The constraint is only discriminating in the band between.",
+    "The family has a hard structural ceiling of omega_A = 2, because R = f(g·q) is bounded by 1 for every gain. Raising the gain to 10 or 100 does not rescue a crossover at or above 2 — the limit is the bounded response itself, not the calibration.",
+    "Candidate A is the unique member that ATTAINS the ceiling, and it does so precisely by paying E(1) = 0. Within this family, maximum retrieval amplification and non-annihilating encoding are in direct tension at the boundary; the decoupling buys a strictly interior region, not an escape from the trade.",
+    "The original 5/3 fixture sits inside the discriminating band, so VER-C3-CONCERN-002 is not vacuous: B genuinely cannot reorder it and A and C genuinely can. The conclusion stands for fixtures in that band and only there.",
+    "The effect is not an artifact of top-1 selection: over four episodes at K=2 the selected SET changes with q, so concern reorders membership and not merely the winner."
+  ],
+  "consequences": [
+    "C6 must be restated as fixture-relative before it can serve as an acceptance criterion. \"omega_A can pass THE crossover\" is not well-formed; \"omega_A can pass the crossover of a declared corpus fixture\" is.",
+    "If a required phenomenon ever needs reordering against a recency advantage whose crossover is at or above 2, no member of this family can supply it, and the bounded-response choice for R — not the gain — is what must be revisited.",
+    "That is a question about the bound on R, which OD-C3-002 constraint C7 requires to be bounded but does not fix the value of. A family with R bounded by 2 (omega_A <= 3) is a different family and a legitimate future comparator."
+  ],
+  "limits": [
+    "Pure arithmetic at component scope. No identity, canonical record, allocation, record type, public ingress, state writer or corpus promotion. No source modified.",
+    "One base-gap value and one pull-x value; the crossover was varied only through pull-y. Varying lambda, the decay exponent or presentation counts would move the bases and is untested.",
+    "This probe changes no verdict. It bounds the scope of VER-C3-CONCERN-002 rather than contradicting it.",
+    "PHEN-ATTN-001 receives no PASS."
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "scripts/probe-concern-retrieval-ceiling.mjs",
+      "sha256": "6ed0103afe558d8ef7a30b341e47014c527694626b5cb61ae43039b33fcb1e5c"
+    }
+  ]
+}

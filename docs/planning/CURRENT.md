@@ -7,9 +7,10 @@ not a narrative. Chronology belongs in [`CAMPAIGN3_LOG.md`](CAMPAIGN3_LOG.md); v
 belong in [`VERDICT_LEDGER.md`](VERDICT_LEDGER.md). If this file exceeds roughly one
 screen, or contains more than one block claiming to be "current", it has failed.
 
-**Governing next increment:** [`CAMPAIGN3_WORK_ORDER_2026_09_14.md`](CAMPAIGN3_WORK_ORDER_2026_09_14.md).
+**Governing next increment:** [`CAMPAIGN3_WORK_ORDER_2026_09_14.md`](CAMPAIGN3_WORK_ORDER_2026_09_14.md) — **items 1–5 complete**; item 6 (resume GA) is **HANDED OFF and PAUSED**.
+**GA entry point:** [`GENERAL_ATTENTION_RESUME_BRIEF.md`](GENERAL_ATTENTION_RESUME_BRIEF.md) — read it before the pause checkpoint. Registration/compiler steps 2–3 are owned end-to-end by the primary implementation agent, resuming on or after **2026-09-19**. Do not split that pass.
 **Checkpoint format:** [`CHECKPOINT_TEMPLATE.md`](CHECKPOINT_TEMPLATE.md).
-**Owner decisions awaiting a ruling:** [`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`](CAMPAIGN3_PENDING_OWNER_DECISIONS.md) — **1 open.**
+**Owner decisions awaiting a ruling:** [`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`](CAMPAIGN3_PENDING_OWNER_DECISIONS.md) — **0 open.** `OD-C3-001` ratified with scope amendment 2026-09-14; obligations discharged. `OD-C3-002` design ruling 2026-09-14 discharged by `VER-C3-CONCERN-002`.
 
 This index routes to authorities. It does not override the North Star, Architecture
 Map, Research Brief, accepted contracts, or any frozen bytes.
@@ -23,10 +24,10 @@ specification outrunning research.
 
 | Counter | Value | Note |
 |---|---|---|
-| Highest permanently allocated record type | **706** | 452 at Campaign 2 completion (2026-09-09) |
-| Record types allocated since last verdict or corpus member | **254** | **Over the 50 threshold — stop specifying, run an experiment** |
-| Corpus members (`corpus/0.27.0`) | **10** | successor `0.28.0` prepared, not published |
-| Verdict-ledger entries | **7** | 6 substrate, 1 psychological |
+| Highest permanently allocated record type | **706** | 452 at Campaign 2 completion (2026-09-09); unchanged since |
+| Record types allocated since last verdict or corpus member | **0** | reset by `VER-C3-SALIENCE-001`, 2026-09-14 |
+| Corpus members (`corpus/0.28.0`) | **21** | promoted 2026-09-14; 10 preserved, 11 added BLOCKED/PARTIAL |
+| Verdict-ledger entries | **12** | 6 substrate, 6 psychological |
 | Active tests (last full run) | ~1,679 | last full active regression |
 
 **Threshold rule:** when "record types allocated since last verdict or corpus member"
@@ -46,9 +47,9 @@ another allocation. This is a stop condition, not a suggestion.
 | Adaptation input | `adaptation-input/0.31-candidate` | **QUALIFIED**, bounded | broader profile contracts | no |
 | Task cognitive path | `task-cognitive-path/0.1-candidate` | **QUALIFIED**, bounded | — | no |
 | Measurement memory / prediction | `measurement-episodic-memory/0.1`, `measurement-prediction/0.2` | **QUALIFIED**, bounded | general retrieval/decay/top-K | no |
-| Embodied reserve (EMB-001) | `embodied-reserve/0.1-candidate` | **QUALIFIED**, bounded | **verdict entry owed** | no |
-| Attention selection (ATTN-001) | `attention-public-integration/0.1-candidate` | **QUALIFIED**, bounded public | **verdict entry owed** | no |
-| General Attention (GA) | — | **OPEN — PAUSED, and now REORDERED** | salience-law comparison (see work order) | no |
+| Embodied reserve (EMB-001) | `embodied-reserve/0.1-candidate` | **QUALIFIED**, bounded | `VER-C3-EMB-001` recorded; ownership comparison UNRESOLVED | no |
+| Attention selection (ATTN-001) | `attention-public-integration/0.1-candidate` | **QUALIFIED**, bounded public | `VER-C3-ATTN-001` recorded; `PHEN-ATTN-001` NOT passed | no |
+| General Attention (GA) | — | **OPEN — PAUSED, HANDED OFF** | registration/compiler steps 2–3, primary agent, from 2026-09-19; see resume brief | no |
 | Belief / ORD-001 | none | BLOCKED | first thin belief contract | no |
 | Affect (factorized) | none | BLOCKED | `AFFECT` intake fixture | no |
 | Workspace / control | none | BLOCKED | `WORKSPACE` intake fixture | no |
@@ -83,6 +84,8 @@ another allocation. This is a stop condition, not a suggestion.
 
 ---
 
-Frozen `corpus/0.27.0` digest `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`
-remains unchanged. No accepted contract, allocation, model byte, or historical receipt
+Corpus is `corpus/0.28.0` at digest
+`1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+`corpus/0.27.0` remains a distinct historical commitment and every verdict resting on it
+keeps that version. No accepted contract, allocation, model byte, or historical receipt
 was modified by the 2026-09-14 correction pass.

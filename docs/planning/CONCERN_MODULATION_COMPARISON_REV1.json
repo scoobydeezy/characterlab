@@ -1,0 +1,273 @@
+{
+  "status": "EXECUTED — Candidate A versus Candidate B modulation shapes, component scope",
+  "obligation": "OD-C3-001 obligation 1 (ruling 2026-09-14): a shape-different comparator",
+  "selectedLocally": "Candidate B chosen under CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md; it changes modulation shape only and introduces no new psychological state or causal mechanism, so it does not return for a ruling.",
+  "candidates": {
+    "candidate-a-linear": "residualPool = residual × (1 − q); ω_A = 1 + q. Accepted first named candidate; implemented in src/campaign3/priorConcernFeedback.ts. Unchanged by this comparison.",
+    "candidate-b-saturating": "f(q) = q/(1+q) is the architecture's own accepted bounded response (EAM-1). residualPool = residual × (1 − f(q)) = residual/(1+q); ω_A = 1 + f(q). No new mathematics, no free parameter, no new state."
+  },
+  "shapeDifferenceArgument": "B is A with q replaced by the project's existing bounded response, so the difference is functional form and not calibration: A is linear in q and reaches its endpoints exactly, B saturates and never does. A recalibrated 1+q/2 would have been rejected as a calibration change.",
+  "declaredDomain": {
+    "residual": "1/5",
+    "q": [
+      "0/1",
+      "1/4",
+      "1/2",
+      "2/3",
+      "3/4",
+      "1/1"
+    ],
+    "neutralPoint": "0/1",
+    "allocationConsumer": "allocateSpatialContext with focalWeight 1, one focal and two peripheral detections in an 8×8 cell grid",
+    "retrievalConsumer": "rankAccessibleEpisodes, lambda 1, exponent 1, omegaB 1, K 1, now 10; x-recent base 1/2 pull 1/10; y-associated base 1/4 pull 1/4"
+  },
+  "results": {
+    "candidate-a-linear": [
+      {
+        "q": "0/1",
+        "residualPool": "1/5",
+        "omegaA": "1/1",
+        "peripheralAllocation": [
+          "1/10",
+          "1/10"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "3/5",
+            "y-associated": "1/2"
+          }
+        }
+      },
+      {
+        "q": "1/4",
+        "residualPool": "3/20",
+        "omegaA": "5/4",
+        "peripheralAllocation": [
+          "3/40",
+          "3/40"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "5/8",
+            "y-associated": "9/16"
+          }
+        }
+      },
+      {
+        "q": "1/2",
+        "residualPool": "1/10",
+        "omegaA": "3/2",
+        "peripheralAllocation": [
+          "1/20",
+          "1/20"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "13/20",
+            "y-associated": "5/8"
+          }
+        }
+      },
+      {
+        "q": "2/3",
+        "residualPool": "1/15",
+        "omegaA": "5/3",
+        "peripheralAllocation": [
+          "1/30",
+          "1/30"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "2/3",
+            "y-associated": "2/3"
+          }
+        }
+      },
+      {
+        "q": "3/4",
+        "residualPool": "1/20",
+        "omegaA": "7/4",
+        "peripheralAllocation": [
+          "1/40",
+          "1/40"
+        ],
+        "retrieval": {
+          "top": "y-associated",
+          "scores": {
+            "x-recent": "27/40",
+            "y-associated": "11/16"
+          }
+        }
+      },
+      {
+        "q": "1/1",
+        "residualPool": "0/1",
+        "omegaA": "2/1",
+        "peripheralAllocation": [
+          "0/1",
+          "0/1"
+        ],
+        "retrieval": {
+          "top": "y-associated",
+          "scores": {
+            "x-recent": "7/10",
+            "y-associated": "3/4"
+          }
+        }
+      }
+    ],
+    "candidate-b-saturating": [
+      {
+        "q": "0/1",
+        "residualPool": "1/5",
+        "omegaA": "1/1",
+        "peripheralAllocation": [
+          "1/10",
+          "1/10"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "3/5",
+            "y-associated": "1/2"
+          }
+        }
+      },
+      {
+        "q": "1/4",
+        "residualPool": "4/25",
+        "omegaA": "6/5",
+        "peripheralAllocation": [
+          "2/25",
+          "2/25"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "31/50",
+            "y-associated": "11/20"
+          }
+        }
+      },
+      {
+        "q": "1/2",
+        "residualPool": "2/15",
+        "omegaA": "4/3",
+        "peripheralAllocation": [
+          "1/15",
+          "1/15"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "19/30",
+            "y-associated": "7/12"
+          }
+        }
+      },
+      {
+        "q": "2/3",
+        "residualPool": "3/25",
+        "omegaA": "7/5",
+        "peripheralAllocation": [
+          "3/50",
+          "3/50"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "16/25",
+            "y-associated": "3/5"
+          }
+        }
+      },
+      {
+        "q": "3/4",
+        "residualPool": "4/35",
+        "omegaA": "10/7",
+        "peripheralAllocation": [
+          "2/35",
+          "2/35"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "9/14",
+            "y-associated": "17/28"
+          }
+        }
+      },
+      {
+        "q": "1/1",
+        "residualPool": "1/10",
+        "omegaA": "3/2",
+        "peripheralAllocation": [
+          "1/20",
+          "1/20"
+        ],
+        "retrieval": {
+          "top": "x-recent",
+          "scores": {
+            "x-recent": "13/20",
+            "y-associated": "5/8"
+          }
+        }
+      }
+    ]
+  },
+  "analysis": {
+    "identicalAtNeutralPoint": true,
+    "divergentInsideInterval": true,
+    "retrievalCrossover": {
+      "exactOmegaAStar": "5/3",
+      "candidate-a-linear": {
+        "reachesCrossover": true,
+        "crossoverAtQ": "2/3",
+        "tieAtCrossover": true,
+        "tieResolvedBy": "canonical key order, preserving the recency winner",
+        "firstSampledFlipAtQ": "3/4"
+      },
+      "candidate-b-saturating": {
+        "reachesCrossover": false,
+        "maximumOmegaA": "3/2",
+        "firstSampledFlipAtQ": null
+      }
+    },
+    "endpointBehaviour": {
+      "candidate-a-linear": "q=1 extinguishes the peripheral pool entirely (0/1) and doubles associative pull weight (2/1)",
+      "candidate-b-saturating": "q=1 halves the peripheral pool (1/10 of a 1/5 residual) and reaches ω_A 3/2; neither endpoint is attained"
+    }
+  },
+  "findings": [
+    "The two shapes are identical at the declared neutral point q=0 and diverge throughout (0,1], as the ruling requires of a comparator.",
+    "The divergence is behaviourally visible, not merely numeric: Candidate A reverses the retrieval ranking inside (0,1], promoting an older associated episode over a more recent unassociated one, while Candidate B never reverses it at any q. Same input, same source, same eligibility and K.",
+    "The exact crossover is omega_A* = 5/3. Candidate A attains it precisely at q = 2/3, where the two episode scores are exactly equal and the canonical key tie-break preserves the recency winner; the flip is therefore observed from the next sampled q. Candidate B tops out at omega_A = 3/2 and cannot reach the crossover at any q. That B fails to reach it is a property of the shape, not of the sampling.",
+    "The candidates encode different psychological claims at the extreme. A says maximal concern abolishes peripheral encoding and doubles associative pull. B says peripheral attention is suppressed but never extinguished and associative pull saturates. Neither is currently earned.",
+    "The retrieval consumer is where the modulation law bites hardest: ω_A is the associative-pull weight in RetrievalScore = ω_B·Base + ω_A·pull, so the shape of the concern coupling directly determines whether mood-congruent retrieval can overtake recency."
+  ],
+  "limits": [
+    "Pure arithmetic at component scope. No identity, canonical record, allocation, record type, public ingress, state writer or corpus promotion. src/campaign3/priorConcernFeedback.ts is unmodified.",
+    "This establishes that the modulation SHAPE is load-bearing and that Candidate A is not the only admissible law. It does NOT establish which shape is psychologically correct — that needs an accepted downstream observable, which remains BLOCKED on the encoding-strength and retrieval-probe seams.",
+    "One residual value, one detection geometry, one two-episode retrieval fixture. The flip point 2/3 is specific to this fixture and is not a general threshold.",
+    "Candidate B is a comparator, not a proposal to replace Candidate A. Promoting either to a registered component with an allocation is separate work.",
+    "PHEN-ATTN-001 receives no PASS from this comparison; per VER-C3-ATTN-001 its encoding-footprint clause and later retrieval probe remain BLOCKED."
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/spatialContextAllocation.ts",
+      "sha256": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7"
+    },
+    {
+      "path": "scripts/compare-concern-modulation-laws.mjs",
+      "sha256": "8932f3155f6217726a1b07d8edd5e9b79dd65ad01e9d951c2e27c645af299c36"
+    }
+  ]
+}

@@ -1,7 +1,18 @@
 # Campaign 3 additional phenomenon intake
 
-Status: **eleven complete-format research proposals, not accepted corpus members**,
-2026-09-10. These preserve requirements from the Brief and mechanism ledger before
+Status: **PROMOTED 2026-09-14 — all eleven are now corpus members** in `corpus/0.28.0`,
+digest `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+Their requirement text was carried verbatim into `PHENOMENON_CORPUS.md`; this document is
+retained as the historical intake record and is no longer the governing text for these
+obligations. Membership asserts that an obligation exists, not that it passes: ten of the
+eleven entered BLOCKED or PARTIAL. Receipt: `CORPUS_0_28_0_PROMOTION_REV1.json`.
+Intake labels map to PhenomenonIds as ATTENTION->PHEN-ATTN-001, BODY->PHEN-BODY-001,
+BELIEF->PHEN-BELIEF-001, AFFECT->PHEN-AFFECT-001, WORKSPACE->PHEN-WORK-001,
+SKILL->PHEN-SKILL-001, SOCIAL->PHEN-SOCIAL-001, MULTISOURCE->PHEN-MULTI-001,
+HABIT->PHEN-HABIT-001, RELATIONSHIP->PHEN-REL-001, LONGITUDINAL->PHEN-LONG-001.
+
+Original status, preserved: **eleven complete-format research proposals, not accepted
+corpus members**, 2026-09-10. These preserve requirements from the Brief and mechanism ledger before
 choosing implementations. They do not modify corpus0.27.0, its manifest, IDs or digest.
 Acceptance and exact executable fixtures require a separate corpus-version change.
 The proposed names below are local intake labels, not allocated PhenomenonIds.

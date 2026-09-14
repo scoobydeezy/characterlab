@@ -1,0 +1,828 @@
+{
+  "status": "EXECUTED — four-law arithmetic comparison at component scope",
+  "contract": "encoding-access-math/0.1-candidate (EAM-2), unchanged and not reopened",
+  "obligation": "GENERAL_ATTENTION_CLOSURE_PLAN.md closure obligation #2",
+  "workOrder": "CAMPAIGN3_WORK_ORDER_2026_09_14.md item 1",
+  "verdictEntry": "VER-C3-SALIENCE-001",
+  "provenanceNote": "Re-run from the repository root to regenerate this receipt with the complete source fingerprint set; the sources list fingerprints only files present at run time.",
+  "laws": [
+    "independent",
+    "historical-shared",
+    "historical-hybrid",
+    "retired-flat"
+  ],
+  "declaredDomain": {
+    "focalEvidence": "base 3/10, attention 1, need 1/2, alphaN 1, surprise 0; raw = 9/20 at Cause",
+    "roles": {
+      "Cause": "1/1",
+      "Target": "9/10",
+      "Incidental": "1/5"
+    },
+    "residualPool": "1/5",
+    "budget": "1/5",
+    "threshold": "1/5",
+    "eta": "1/1",
+    "footprints": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "quantizationScales": [
+      "100",
+      "10000",
+      "1000000"
+    ],
+    "massScale": "1000000",
+    "attentionRegimes": {
+      "conserved": "MEC-005 residual pool split across n incidental units; total incidental attention fixed",
+      "unconserved": "each incidental unit holds the full pool value; total incidental attention grows with n"
+    }
+  },
+  "level1_allocation": {
+    "conserved": {
+      "independent": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 1,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 2,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 4,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 8,
+            "zFocal": "9/29"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      },
+      "historical-shared": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 1,
+            "zFocal": "75/77"
+          },
+          {
+            "n": 2,
+            "zFocal": "75/77"
+          },
+          {
+            "n": 4,
+            "zFocal": "75/77"
+          },
+          {
+            "n": 8,
+            "zFocal": "75/77"
+          }
+        ],
+        "focalInvariantUnderFootprint": false
+      },
+      "historical-hybrid": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 1,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 2,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 4,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 8,
+            "zFocal": "9/29"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      },
+      "retired-flat": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 1,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 2,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 4,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 8,
+            "zFocal": "1/1"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      }
+    },
+    "unconserved": {
+      "independent": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 1,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 2,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 4,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 8,
+            "zFocal": "9/29"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      },
+      "historical-shared": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 1,
+            "zFocal": "75/77"
+          },
+          {
+            "n": 2,
+            "zFocal": "75/79"
+          },
+          {
+            "n": 4,
+            "zFocal": "75/83"
+          },
+          {
+            "n": 8,
+            "zFocal": "75/91"
+          }
+        ],
+        "focalInvariantUnderFootprint": false
+      },
+      "historical-hybrid": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 1,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 2,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 4,
+            "zFocal": "9/29"
+          },
+          {
+            "n": 8,
+            "zFocal": "9/29"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      },
+      "retired-flat": {
+        "series": [
+          {
+            "n": 0,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 1,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 2,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 4,
+            "zFocal": "1/1"
+          },
+          {
+            "n": 8,
+            "zFocal": "1/1"
+          }
+        ],
+        "focalInvariantUnderFootprint": true
+      }
+    }
+  },
+  "level1b_roleResponse": {
+    "independent": {
+      "series": [
+        {
+          "role": "Cause",
+          "roleFactor": "1/1",
+          "zFocal": "9/29"
+        },
+        {
+          "role": "Target",
+          "roleFactor": "9/10",
+          "zFocal": "81/281"
+        },
+        {
+          "role": "Incidental",
+          "roleFactor": "1/5",
+          "zFocal": "9/109"
+        }
+      ],
+      "roleSensitive": true,
+      "distinctOutcomes": 3
+    },
+    "historical-shared": {
+      "series": [
+        {
+          "role": "Cause",
+          "roleFactor": "1/1",
+          "zFocal": "75/77"
+        },
+        {
+          "role": "Target",
+          "roleFactor": "9/10",
+          "zFocal": "135/139"
+        },
+        {
+          "role": "Incidental",
+          "roleFactor": "1/5",
+          "zFocal": "9/20"
+        }
+      ],
+      "roleSensitive": true,
+      "distinctOutcomes": 3
+    },
+    "historical-hybrid": {
+      "series": [
+        {
+          "role": "Cause",
+          "roleFactor": "1/1",
+          "zFocal": "9/29"
+        },
+        {
+          "role": "Target",
+          "roleFactor": "9/10",
+          "zFocal": "81/281"
+        },
+        {
+          "role": "Incidental",
+          "roleFactor": "1/5",
+          "zFocal": "9/20"
+        }
+      ],
+      "roleSensitive": true,
+      "distinctOutcomes": 3
+    },
+    "retired-flat": {
+      "series": [
+        {
+          "role": "Cause",
+          "roleFactor": "1/1",
+          "zFocal": "1/1"
+        },
+        {
+          "role": "Target",
+          "roleFactor": "9/10",
+          "zFocal": "1/1"
+        },
+        {
+          "role": "Incidental",
+          "roleFactor": "1/5",
+          "zFocal": "1/1"
+        }
+      ],
+      "roleSensitive": false,
+      "distinctOutcomes": 1
+    }
+  },
+  "level2_associationEdge": {
+    "100": {
+      "independent": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "0/1"
+          },
+          {
+            "n": 2,
+            "focalEdge": "0/1"
+          },
+          {
+            "n": 4,
+            "focalEdge": "0/1"
+          },
+          {
+            "n": 8,
+            "focalEdge": "0/1"
+          }
+        ],
+        "allZero": true,
+        "invariant": true
+      },
+      "historical-shared": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "3/100"
+          },
+          {
+            "n": 2,
+            "focalEdge": "1/100"
+          },
+          {
+            "n": 4,
+            "focalEdge": "1/100"
+          },
+          {
+            "n": 8,
+            "focalEdge": "0/1"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "historical-hybrid": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "31/100"
+          },
+          {
+            "n": 2,
+            "focalEdge": "4/25"
+          },
+          {
+            "n": 4,
+            "focalEdge": "2/25"
+          },
+          {
+            "n": 8,
+            "focalEdge": "1/25"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "retired-flat": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "1/1"
+          },
+          {
+            "n": 2,
+            "focalEdge": "1/2"
+          },
+          {
+            "n": 4,
+            "focalEdge": "1/4"
+          },
+          {
+            "n": 8,
+            "focalEdge": "13/100"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      }
+    },
+    "10000": {
+      "independent": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "37/10000"
+          },
+          {
+            "n": 2,
+            "focalEdge": "19/10000"
+          },
+          {
+            "n": 4,
+            "focalEdge": "9/10000"
+          },
+          {
+            "n": 8,
+            "focalEdge": "1/2000"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "historical-shared": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "253/10000"
+          },
+          {
+            "n": 2,
+            "focalEdge": "63/5000"
+          },
+          {
+            "n": 4,
+            "focalEdge": "63/10000"
+          },
+          {
+            "n": 8,
+            "focalEdge": "2/625"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "historical-hybrid": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "3103/10000"
+          },
+          {
+            "n": 2,
+            "focalEdge": "97/625"
+          },
+          {
+            "n": 4,
+            "focalEdge": "97/1250"
+          },
+          {
+            "n": 8,
+            "focalEdge": "97/2500"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "retired-flat": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "1/1"
+          },
+          {
+            "n": 2,
+            "focalEdge": "1/2"
+          },
+          {
+            "n": 4,
+            "focalEdge": "1/4"
+          },
+          {
+            "n": 8,
+            "focalEdge": "1/8"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      }
+    },
+    "1000000": {
+      "independent": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "23/6250"
+          },
+          {
+            "n": 2,
+            "focalEdge": "1851/1000000"
+          },
+          {
+            "n": 4,
+            "focalEdge": "29/31250"
+          },
+          {
+            "n": 8,
+            "focalEdge": "93/200000"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "historical-shared": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "25299/1000000"
+          },
+          {
+            "n": 2,
+            "focalEdge": "253/20000"
+          },
+          {
+            "n": 4,
+            "focalEdge": "253/40000"
+          },
+          {
+            "n": 8,
+            "focalEdge": "1581/500000"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "historical-hybrid": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "62069/200000"
+          },
+          {
+            "n": 2,
+            "focalEdge": "38793/250000"
+          },
+          {
+            "n": 4,
+            "focalEdge": "38793/500000"
+          },
+          {
+            "n": 8,
+            "focalEdge": "38793/1000000"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      },
+      "retired-flat": {
+        "series": [
+          {
+            "n": 1,
+            "focalEdge": "1/1"
+          },
+          {
+            "n": 2,
+            "focalEdge": "1/2"
+          },
+          {
+            "n": 4,
+            "focalEdge": "1/4"
+          },
+          {
+            "n": 8,
+            "focalEdge": "1/8"
+          }
+        ],
+        "allZero": false,
+        "invariant": false
+      }
+    }
+  },
+  "level3_totalMassAndSaturation": {
+    "independent": {
+      "series": [
+        {
+          "n": 1,
+          "zIrrelevant": "3/253",
+          "focalEdge": "23/6250",
+          "rowMass": "3680",
+          "rowMassOfScale": "23/6250",
+          "overflowed": false
+        },
+        {
+          "n": 2,
+          "zIrrelevant": "3/503",
+          "focalEdge": "1851/1000000",
+          "rowMass": "3702",
+          "rowMassOfScale": "1851/500000",
+          "overflowed": false
+        },
+        {
+          "n": 4,
+          "zIrrelevant": "3/1003",
+          "focalEdge": "29/31250",
+          "rowMass": "3712",
+          "rowMassOfScale": "58/15625",
+          "overflowed": false
+        },
+        {
+          "n": 8,
+          "zIrrelevant": "3/2003",
+          "focalEdge": "93/200000",
+          "rowMass": "3720",
+          "rowMassOfScale": "93/25000",
+          "overflowed": false
+        }
+      ],
+      "saturatesBudget": false,
+      "overflowsFromFootprint": null,
+      "peakMassOfScale": "93/25000",
+      "spreadOverPeak": "1/93",
+      "massConservedAcrossFootprint": true
+    },
+    "historical-shared": {
+      "series": [
+        {
+          "n": 1,
+          "zIrrelevant": "2/77",
+          "focalEdge": "25299/1000000",
+          "rowMass": "25299",
+          "rowMassOfScale": "25299/1000000",
+          "overflowed": false
+        },
+        {
+          "n": 2,
+          "zIrrelevant": "1/77",
+          "focalEdge": "253/20000",
+          "rowMass": "25300",
+          "rowMassOfScale": "253/10000",
+          "overflowed": false
+        },
+        {
+          "n": 4,
+          "zIrrelevant": "1/154",
+          "focalEdge": "253/40000",
+          "rowMass": "25300",
+          "rowMassOfScale": "253/10000",
+          "overflowed": false
+        },
+        {
+          "n": 8,
+          "zIrrelevant": "1/308",
+          "focalEdge": "1581/500000",
+          "rowMass": "25296",
+          "rowMassOfScale": "1581/62500",
+          "overflowed": false
+        }
+      ],
+      "saturatesBudget": false,
+      "overflowsFromFootprint": null,
+      "peakMassOfScale": "253/10000",
+      "spreadOverPeak": "1/6325",
+      "massConservedAcrossFootprint": true
+    },
+    "historical-hybrid": {
+      "series": [
+        {
+          "n": 1,
+          "zIrrelevant": "1/1",
+          "focalEdge": "62069/200000",
+          "rowMass": "310345",
+          "rowMassOfScale": "62069/200000",
+          "overflowed": false
+        },
+        {
+          "n": 2,
+          "zIrrelevant": "1/2",
+          "focalEdge": "38793/250000",
+          "rowMass": "310344",
+          "rowMassOfScale": "38793/125000",
+          "overflowed": false
+        },
+        {
+          "n": 4,
+          "zIrrelevant": "1/4",
+          "focalEdge": "38793/500000",
+          "rowMass": "310344",
+          "rowMassOfScale": "38793/125000",
+          "overflowed": false
+        },
+        {
+          "n": 8,
+          "zIrrelevant": "1/8",
+          "focalEdge": "38793/1000000",
+          "rowMass": "310344",
+          "rowMassOfScale": "38793/125000",
+          "overflowed": false
+        }
+      ],
+      "saturatesBudget": false,
+      "overflowsFromFootprint": null,
+      "peakMassOfScale": "62069/200000",
+      "spreadOverPeak": "1/310345",
+      "massConservedAcrossFootprint": true
+    },
+    "retired-flat": {
+      "series": [
+        {
+          "n": 1,
+          "zIrrelevant": "1/1",
+          "focalEdge": "1/1",
+          "rowMass": "1000000",
+          "rowMassOfScale": "1/1",
+          "overflowed": false
+        },
+        {
+          "n": 2,
+          "zIrrelevant": "1/1",
+          "focalEdge": "1/2",
+          "rowMass": "1000000",
+          "rowMassOfScale": "1/1",
+          "overflowed": true
+        },
+        {
+          "n": 4,
+          "zIrrelevant": "1/1",
+          "focalEdge": "1/4",
+          "rowMass": "1000000",
+          "rowMassOfScale": "1/1",
+          "overflowed": true
+        },
+        {
+          "n": 8,
+          "zIrrelevant": "1/1",
+          "focalEdge": "1/8",
+          "rowMass": "1000000",
+          "rowMassOfScale": "1/1",
+          "overflowed": true
+        }
+      ],
+      "saturatesBudget": true,
+      "overflowsFromFootprint": 2,
+      "peakMassOfScale": "1/1",
+      "spreadOverPeak": "0/1",
+      "massConservedAcrossFootprint": false
+    }
+  },
+  "pairwiseDistinguishability": [
+    {
+      "a": "independent",
+      "b": "historical-shared",
+      "distinguishable": true
+    },
+    {
+      "a": "independent",
+      "b": "historical-hybrid",
+      "distinguishable": true
+    },
+    {
+      "a": "independent",
+      "b": "retired-flat",
+      "distinguishable": true
+    },
+    {
+      "a": "historical-shared",
+      "b": "historical-hybrid",
+      "distinguishable": true
+    },
+    {
+      "a": "historical-shared",
+      "b": "retired-flat",
+      "distinguishable": true
+    },
+    {
+      "a": "historical-hybrid",
+      "b": "retired-flat",
+      "distinguishable": true
+    }
+  ],
+  "findings": [
+    "Allocation-level footprint invariance (independent, hybrid) does NOT confer learning-level footprint invariance. At resolving quantization no law has a footprint-invariant focal edge.",
+    "The ~1/n per-edge dependence is common to all four laws and is therefore not the RET-001 defect. For the three derived laws it follows from a conserved attentional resource divided among n partners, which is the intended behaviour.",
+    "The RET-001 defect is budget saturation: flat tagging consumes 100% of the associative row budget at every footprint and overflows from n=2, so total learned mass carries no information about the focal evidence. The three derived laws hold total mass essentially constant and evidence-proportional.",
+    "MEC-005 residual-pool conservation is load-bearing for MEC-007 shared allocation: shared z_focal degrades monotonically with footprint only in the unconserved regime.",
+    "A quantization-floor artifact is visible and is reported rather than suppressed: at D=100 the independent focal edge is zero at every footprint, which reads as invariance and is not."
+  ],
+  "limits": [
+    "Pure arithmetic. No identity, canonical record, allocation, record type, public ingress, state writer, source admission or corpus promotion.",
+    "Establishes which laws are behaviourally distinguishable, and isolates the retired control. Does NOT establish which of the three derived laws is psychologically correct — that needs the encoding -> later-retrieval probe, BLOCKED on its own seam.",
+    "MEC-005 stays CONTROL+CONTRACT; MEC-007/CTL-004 stay CONTROL; MEC-008 stays CONTROL with its sole-writer and largest-remainder invariants; RET-001 stays retired, executable only as this named negative comparison.",
+    "One focal evidence vector, one incidental profile, one prior graph (empty), eta=1, no decay. Richer priors, several focal units and nonzero decay are untested.",
+    "A hard top-K selector still does not establish a continuous salience law; the bounded public ATTN profile is unchanged."
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "scripts/compare-salience-laws.mjs",
+      "sha256": "81a4f7791f2e60068a5ca618f3eae427d1e3e05e5b0db9fb8fab7be0beba19a5"
+    }
+  ]
+}

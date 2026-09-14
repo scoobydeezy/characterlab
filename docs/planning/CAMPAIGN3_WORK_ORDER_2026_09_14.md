@@ -115,15 +115,32 @@ It carries the two program counters and the revision cap. Specifically:
   manifests should be generated and diffed, not reviewed as a document. The GA identity-role
   crosswalk is the worked example: seventeen revisions, ~34 near-duplicate scripts.
 
-### 5. Obtain the one pending owner ruling
+### 5. Obtain the one pending owner ruling — **COMPLETE 2026-09-14**
 
-[`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`](CAMPAIGN3_PENDING_OWNER_DECISIONS.md) — the
-concern→attention feedback edge. One item. Do not close GA without it.
+`OD-C3-001` is **RATIFIED WITH SCOPE AMENDMENT**; see
+[`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`](CAMPAIGN3_PENDING_OWNER_DECISIONS.md). Zero open
+owner decisions. The ruling created one new obligation and narrowed the GA blocker:
+
+- **Candidate B owed.** `residual × (1−q)` / `ω_A = 1+q` is Candidate A only, not
+  architectural law. A **shape-different** comparator — thresholded/gated or saturating,
+  not a recalibrated `1+q/2` — must be compared before GA treats the modulation law as
+  settled. Selecting it is a local disposition; it does not return for a ruling unless it
+  introduces a new semantic mechanism.
+- **Precedent is narrow.** The seam ratified is *transient character-state → later
+  attention allocation*. `TaskConcern` is **not** qualified as the project's general
+  Affect representation, and `PHEN-AFFECT-001` still owes the factorized threat work.
+- **GA blocker, narrowed.** GA **may** qualify the *existence* of the feedback seam once
+  the public source, join and path are proven. Only a broader GA verdict that **relies on
+  the specific modulation law** requires Candidate B first. Unrelated GA results are not
+  held up by the numerical law.
 
 ### 6. Then resume GA
 
 Registration closure, model packaging, allocation and public qualification resume after
 items 1–5, following the pause checkpoint's technical steps 2–5, which remain correct.
+Carry the `OD-C3-001` obligations with it: Candidate B before any verdict that leans on
+the modulation law, and the three feedback branches kept distinct rather than collapsed
+into `q = 0`.
 
 ---
 

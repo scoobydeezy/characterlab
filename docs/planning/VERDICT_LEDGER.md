@@ -837,75 +837,230 @@ Campaign2 completion and its bounded research exclusions remain as recorded abov
 
 ---
 
-## Outstanding verdict obligations — recorded 2026-09-14
+## `VER-C3-CONCERN-001` — Concern → attention modulation shape is load-bearing
 
-Appended by the owner-directed correction pass. **This section records debts. It asserts
-no verdict and changes nothing above it.** Every entry above remains exactly as written.
+- **Date:** 2026-09-14. Discharges obligation 1 of `OD-C3-001` (RATIFIED WITH SCOPE
+  AMENDMENT, same date): a shape-different comparator must exist before General Attention
+  treats the concern modulation law as settled.
+- **Candidate/contracts:** `prior-concern-feedback-component/0.1-candidate` (Candidate A,
+  `src/campaign3/priorConcernFeedback.ts`) **unmodified**; `encoding-access-math/0.1-candidate`
+  and `spatial-context-allocation/0.1-candidate` consumed unchanged. No identity, canonical
+  record, allocation, record type, public ingress or state writer was created.
+- **Compared models:**
+  - **Candidate A (linear, accepted first named candidate):**
+    `residualPool = residual × (1 − q)`, `ω_A = 1 + q`.
+  - **Candidate B (saturating), selected locally** under the escalation policy:
+    `f(q) = q/(1+q)` — the architecture's own accepted bounded response from EAM-1 —
+    giving `residualPool = residual × (1 − f(q)) = residual/(1+q)` and `ω_A = 1 + f(q)`.
+    B is A with `q` replaced by that existing response: no new mathematics, no free
+    parameter, no new psychological state, same `q ∈ [0,1]`, same source and cross-instant
+    join, same eligibility and `K`. The difference is functional form, not calibration —
+    a recalibrated `1 + q/2` would not have satisfied the ruling.
+- **Declared domain:** residual pool `1/5`; `q ∈ {0, 1/4, 1/2, 2/3, 3/4, 1}`; neutral point
+  declared at `q = 0`. Both consumers of the feedback are measured:
+  `residualPool` → peripheral allocation via `allocateSpatialContext` (focal weight 1, one
+  focal and two peripheral detections); `ω_A` → the associative-pull weight in
+  `rankAccessibleEpisodes` (`RetrievalScore = ω_B·Base + ω_A·pull`, `ω_B` 1, `λ` 1,
+  exponent 1, `K` 1, now 10) over `x-recent` (base `1/2`, pull `1/10`) and
+  `y-associated` (base `1/4`, pull `1/4`).
+- **Corpus/coverage:** `corpus/0.28.0`, digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`. Bears on
+  `PHEN-ATTN-001`; promotes nothing and passes nothing.
 
-As of 2026-09-14 this ledger holds **seven** entries: six Campaign 0/1 substrate verdicts
-and one psychological verdict (`VER-C3-PRE-IDENTITY-001`). In the four days to
-2026-09-14, Campaign 3 allocated 254 further permanent record types and produced no new
-entry here. The three obligations below are owed and are items 1 and 3 of
-`CAMPAIGN3_WORK_ORDER_2026_09_14.md`.
+### Observed differences
 
-A **bounded qualification receipt is not a verdict.** A qualification records that an
-implementation conforms to its accepted contract. A verdict records which distinction
-survived a comparison against a named alternative, on a declared corpus, with reopen
-conditions. Brief §9 stages C, D and E are what produce the second thing, and Campaign 3
-has not reached them on any seam.
+| `q` | A pool | A `ω_A` | A top | B pool | B `ω_A` | B top |
+|---|---|---|---|---|---|---|
+| 0 | 1/5 | 1 | x-recent | 1/5 | 1 | x-recent |
+| 1/4 | 3/20 | 5/4 | x-recent | 4/25 | 6/5 | x-recent |
+| 1/2 | 1/10 | 3/2 | x-recent | 2/15 | 4/3 | x-recent |
+| 2/3 | 1/15 | **5/3** | x-recent *(exact tie)* | 3/25 | 7/5 | x-recent |
+| 3/4 | 1/20 | 7/4 | **y-associated** | 4/35 | 10/7 | x-recent |
+| 1 | **0/1** | **2/1** | **y-associated** | 1/10 | 3/2 | x-recent |
 
-### `VER-C3-EMB-001` — owed
+- **Mathematical findings.** The shapes are identical at the declared neutral point and
+  diverge throughout `(0,1]`, satisfying the comparator constraints. The exact retrieval
+  crossover is `ω_A* = 5/3`. Candidate A attains it precisely at `q = 2/3`, where the two
+  episode scores are **exactly equal** and the canonical key tie-break preserves the
+  recency winner — so the observed flip is at the next sampled `q`. Candidate B tops out
+  at `ω_A = 3/2` and **cannot reach the crossover at any `q`**; that is a property of the
+  shape, not of the sampling. At the endpoint A extinguishes the peripheral pool (`0/1`)
+  and doubles associative pull; B halves the pool (`1/10`) and neither endpoint is
+  attained.
+- **Semantic findings.** The two candidates encode different psychological claims, and the
+  difference is **behaviourally visible rather than numeric**: under A, sufficient concern
+  reverses the retrieval ranking so an older associated episode outranks a more recent
+  unassociated one; under B it never does, at any `q`, from the same input, source,
+  eligibility and `K`. Stated plainly, A claims maximal concern abolishes peripheral
+  encoding and doubles associative pull; B claims peripheral attention is suppressed but
+  never extinguished and associative pull saturates. **Neither claim is currently earned.**
+  The retrieval consumer is where the law bites hardest, because `ω_A` is precisely the
+  weight deciding whether associatively-linked material can overtake recency.
+- **Verdict:** the **modulation shape is RETAINED as a load-bearing distinction** — it is
+  not a calibration detail, and two admissible shapes produce different selected episodes
+  on the same fixture. Candidate A versus Candidate B is **UNRESOLVED**: nothing here
+  discriminates which shape is correct, and neither may be treated as the law. The
+  `OD-C3-001` obligation-1 comparator now exists, so General Attention may proceed on the
+  narrowed blocker — it may qualify the **existence** of the concern → allocation feedback
+  seam on a proven public source, join and path, while any broader verdict that **relies on
+  the specific modulation law** must cite this comparison and remains unsettled.
+- **Known uncovered regions:** which shape is psychologically correct — that needs an
+  accepted downstream observable, BLOCKED on the encoding-strength and retrieval-probe
+  seams. One residual value, one detection geometry, one two-episode retrieval fixture; the
+  flip location is specific to this fixture and is not a general threshold. Thresholded and
+  gated shapes remain uncompared. Candidate B is a comparator, not a proposal to replace
+  Candidate A; promoting either to a registered component with an allocation is separate
+  work.
+- **Preserved dispositions:** `MEC-005` remains `CONTROL+CONTRACT`; `MEC-007`/`CTL-004`
+  remain `CONTROL`; `MEC-010` remains `CONTROL+CORPUS`. The three feedback branches
+  `EnabledKnown`, `BaselineWithoutAvailableFeedback` and `DisabledFeedback` remain
+  distinct and are not collapsed into `q = 0`, per `OD-C3-001` obligation 2.
+  `TaskConcern` is **not** qualified as the general Affect representation; the ratified
+  precedent remains a transient character-state → attention seam.
+  `PHEN-ATTN-001` receives no PASS from this comparison.
+- **Reopen conditions:** a downstream observable discriminates the shapes; a thresholded or
+  gated candidate is compared; the residual-pool mechanism or `RetrievalScore` weighting
+  changes; a factorized affect source replaces scalar `q`; or a richer retrieval fixture
+  moves the crossover such that B can reach it.
+- **Artifacts:** `docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json`,
+  `scripts/compare-concern-modulation-laws.mjs`. Five assertion groups guard the claims;
+  one was corrected during execution after it asserted a flip at `q = 2/3` that is in fact
+  an exact tie resolved by canonical key order, and the boundary is now recorded rather
+  than smoothed.
 
-- **Seam:** `embodied-reserve/0.1-candidate`, bounded qualification recorded
-  2026-09-11 (`CAMPAIGN3_EMBODIED_QUALIFICATION.md`).
-- **Executed evidence exists:** EMB-A/B (equal level, different kinetics → different
-  trajectories), EMB-E/F/H (hidden aliases, observer resolution), EMB-C/D/J/L
-  (delayed exposure and motive), plus the MULTISOURCE ER-A/E/F second-family results.
-- **Missing for a verdict:** the declared competing models. `CTL-001` stored meters and
-  the authored-reference model are preserved as controls but no matched three-model
-  public comparison has been run (`CAMPAIGN3_POST_EMB_COVERAGE.md` records this).
-- **Admissible outcome:** `UNRESOLVED` is correct and expected if the three-model
-  comparison has not run. Record it, and name the missing comparison — that is what makes
-  the coverage debt legible to Campaign 4 ranking.
+---
 
-### `VER-C3-ATTN-001` — owed
+## `VER-C3-CONCERN-002` — Decoupled encoding and retrieval modulation satisfies the design constraints
 
-- **Seam:** `attention-public-integration/0.1-candidate` with
-  `attention-selection-component/0.1-candidate`, bounded public qualification recorded
-  2026-09-11 (`CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md`).
-- **Executed evidence exists:** AT2-A..N across 32 models / 224 specimen runs, 434
-  whole-prefix restores, 58 boundary rollback witnesses, 11 runtime fault controls.
-- **Competing models are already declared** in `CAMPAIGN3_ATTENTION_DRAFT.md`:
-  equal-priority finite selection, unlimited selection, and the historical residual
-  allocation component. Whether they were executed as a comparison — rather than as
-  profile controls — determines whether this is `RETAINED` or `UNRESOLVED`.
-- **Scope guard:** the qualification's own statement stands — *"a hard top-K selector
-  does not establish a continuous salience law."* Any verdict here is about bounded
-  capacity-limited selection, not about salience.
+- **Date:** 2026-09-14. Discharges `OD-C3-002` (owner design ruling, same date): develop
+  the next serious candidate locally under the stated qualitative constraints and compare
+  it against A and B.
+- **Candidate/contracts:** `encoding-access-math/0.1-candidate` and
+  `spatial-context-allocation/0.1-candidate` consumed unchanged.
+  `prior-concern-feedback-component/0.1-candidate` (Candidate A) **unmodified**. No
+  identity, canonical record, allocation, record type, public ingress or state writer.
+- **Compared models**, all with `f(x) = x/(1+x)`, the architecture's own accepted EAM-1
+  bounded response, and `residualPool = residual × E(q)`, `ω_A = 1 + R(q)`:
+  - **A (linear):** `E = 1 − q`, `R = q`
+  - **B (saturating, shared curve):** `E = 1 − f(q)`, `R = f(q)`
+  - **C (decoupled), developed locally:** `E = 1 − f(q)`, `R = f(3q)`
+  C takes B's encoding arm unchanged and gives the retrieval arm an independent gain.
+  **B is exactly C at gain 1; A is the linear limit.** The three are one family, not
+  three unrelated proposals. C introduces no new mathematics, no new psychological state
+  and no new causal mechanism, so it did not require re-escalation.
+- **Declared domain:** residual `1/5`; `q ∈ {0, 1/4, 1/2, 2/3, 3/4, 1}`; gain sweep
+  `{1, 2, 3, 4, 6}`; consumers identical to `VER-C3-CONCERN-001` —
+  `allocateSpatialContext` for the encoding arm, `rankAccessibleEpisodes` for the
+  retrieval arm, crossover `ω_A* = 5/3` as established there.
+- **Corpus/coverage:** `corpus/0.28.0`, digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`. Bears on
+  `PHEN-ATTN-001`; promotes nothing and passes nothing.
 
-### `VER-C3-SALIENCE-001` — owed, and it is the next experiment
+### Constraint satisfaction
 
-- **Obligation:** `GENERAL_ATTENTION_CLOSURE_PLAN.md` closure obligation #2, not yet run.
-- **Compared models:** independent `x/(1+x)`; shared `x/max(B, Σx)` (note that plan's own
-  correction — it is *not* `B·x/max(B, Σx)`); hybrid (important entries exempt, remaining
-  budget as denominator floor for low entries); and retired `RET-001` flat tagging as the
-  named negative comparison.
-- **Cost:** pure exact-rational arithmetic. No identities, canonical records, public
-  ingress, state ownership, allocation or new record types.
-- **Discriminating evidence already in the corpus obligations:** `EXP-007` (role,
-  attention gating, Need relevance, evidence-aware surprise) and `EXP-015` (semantic
-  footprint capping achievable association strength — the documented Habit case, an edge
-  capped at exactly `1/2` flat versus ≈`0.0014` derived).
-- **Dispositions that must survive whatever the result:** `MEC-005` `CONTROL+CONTRACT`;
-  `MEC-007`/`CTL-004` `CONTROL`; `MEC-008`/`MEC-009` `CONTROL` with their stated
-  invariants; `MEC-010` `CONTROL+CORPUS`; `RET-001` retired, executable only as a named
-  negative comparison. A passing arithmetic kernel authorizes no corpus promotion and
-  closes no expressibility gap.
+| | A | B | C |
+|---|---|---|---|
+| C1 `E(0)=1` | ✓ | ✓ | ✓ |
+| C2 `E` decreasing | ✓ | ✓ | ✓ |
+| **C3 `E(1)>0`** | **✗** `E(1)=0` | ✓ `1/2` | ✓ `1/2` |
+| C4 `R(0)=0` | ✓ | ✓ | ✓ |
+| C5 `R` increasing | ✓ | ✓ | ✓ |
+| **C6 `ω_A` reaches `5/3`** | ✓ `2/1` | **✗** max `3/2` | ✓ `7/4` |
+| C7 both bounded | ✓ | ✓ | ✓ |
+| **satisfies all** | **no** | **no** | **yes** |
 
-### Standing rule
+- **Mathematical findings.** A and B each fail a *different* constraint, which is why
+  neither is the law and why the failure is structural rather than a matter of tuning.
+  The constraints turn out to be **jointly satisfiable without a new mechanism** — not
+  obvious in advance, since requiring both non-annihilating encoding and
+  crossover-capable retrieval could have demanded new state. Decoupling suffices.
+  Across the gain sweep `{1,2,3,4,6}` the encoding arm is **bit-identical**
+  (`E(1) = 1/2` throughout) while the reordering threshold moves: gain 1 (= Candidate B)
+  never reorders, gain 2 never reorders, gain 3 reorders at `q = 3/4`, gain 4 at `q = 2/3`,
+  gain 6 at `q = 1/2`. The gain is therefore an interpretable quantity — the concern level
+  at which concern-congruent recall can overtake recency — and it is independent of how
+  hard concern narrows encoding.
+- **Semantic findings.** The decisive comparative: **A and C reorder retrieval at the same
+  `q = 3/4`, but A has only `1/4` of the peripheral pool left at that point while C retains
+  `4/7`** — roughly 2.3× as much. The behaviour the North Star asks for, an older
+  associated memory coming to mind ahead of a newer unrelated one under sufficient
+  concern, is obtainable **without** A's claim that maximal concern abolishes incidental
+  encoding. The two effects were conflated by construction in both earlier candidates; once
+  separated, the desired behaviour and the unwanted extreme come apart cleanly.
+- **Verdict:** **`MERGED` is REFUTED for the two arms** — encoding suppression and
+  retrieval amplification must not be assumed to share one transfer function, on the
+  strength of a valid witness: the same reordering behaviour is reachable at materially
+  different encoding cost depending only on whether the arms are coupled. Candidate C is
+  **UNRESOLVED as a law** but is the only one of the three that satisfies the accepted
+  design constraints; A and B remain **retained comparators**, each with a named failing
+  constraint. No candidate is accepted as the modulation law.
+- **Known uncovered regions:** which curve family is psychologically correct still needs
+  an accepted downstream observable, BLOCKED on the encoding-strength and retrieval-probe
+  seams. Gain 3 is a first declared constant, not a calibration result. The crossover
+  `5/3` is a property of this two-episode fixture; a richer fixture moves it and could
+  change which gains satisfy C6. Thresholded and gated shapes remain uncompared. Nothing
+  here tests interaction with the encoding-strength law compared in
+  `VER-C3-SALIENCE-001`.
+- **Preserved dispositions:** A and B retained as comparators per `OD-C3-002`, not
+  retired. `MEC-005` `CONTROL+CONTRACT`; `MEC-007`/`CTL-004` `CONTROL`; `MEC-010`
+  `CONTROL+CORPUS`. The three feedback branches remain distinct and are not collapsed
+  into `q = 0`. `TaskConcern` remains un-qualified as the general Affect representation —
+  and a later affect model that modulates the two arms differently is an argument for
+  keeping them separate, not for freezing this family. `PHEN-ATTN-001` receives no PASS.
+- **Reopen conditions:** a downstream observable discriminates the curve families; a
+  thresholded or gated candidate is compared; a factorized affect source replaces scalar
+  `q`; the `RetrievalScore` weighting or residual-pool mechanism changes; or a richer
+  retrieval fixture relocates the crossover.
+- **Artifacts:** `docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json`,
+  `scripts/compare-concern-modulation-candidate-c.mjs`. Nine assertions guard the claims,
+  including that A fails exactly C3, B fails exactly C6, C satisfies all seven, the two
+  reordering points coincide at `q = 3/4`, and the encoding arm is invariant across the
+  entire gain sweep.
 
-Every seam from here names its Brief §9 Stage C competitor **before** allocation, not
-after, and terminates in an entry in this ledger — `UNRESOLVED` where the comparison has
-not run. `VER-C3-PRE-IDENTITY-001` is the format to follow: it populates every field,
-declares its uncovered regions, and reports a result that falsified its own starting
-hypothesis. That is what a verdict looks like.
+### `VER-C3-CONCERN-002` — scope annotation, 2026-09-14
+
+Added the same day by a robustness probe of its own constraint C6
+(`CONCERN_RETRIEVAL_CEILING_REV1.json`, `scripts/probe-concern-retrieval-ceiling.mjs`).
+The verdict above is **unchanged and not reopened**; this bounds its scope.
+
+C6 was evaluated against a single fixture whose retrieval crossover was `5/3`. Sweeping
+fixture difficulty shows that crossover is a property of the **fixture**, not of the law:
+
+| crossover `ω*` | A | B (= C g1) | C g3 | C g10 | C g100 |
+|---|---|---|---|---|---|
+| 6/5 | q=1/4 | q=1/2 | q=1/4 | q=1/4 | q=1/4 |
+| 3/2 | q=2/3 | never | q=1/2 | q=1/4 | q=1/4 |
+| **5/3** | **q=3/4** | **never** | **q=3/4** | q=1/4 | q=1/4 |
+| 2/1 | never | never | never | never | never |
+| 5/2 | never | never | never | never | never |
+| 3/1 | never | never | never | never | never |
+
+Three consequences.
+
+**The family has a hard structural ceiling of `ω_A = 2.`** `R(q) = f(g·q)` is bounded above
+by 1 for every gain, so `ω_A = 1 + R ≤ 2` across all candidates. Measured ceilings at
+`q = 1`: A `2/1`, B `3/2`, C g3 `7/4`, C g10 `21/11`, C g100 `201/101`. **Raising the gain
+to 100 does not rescue a crossover at or above 2** — the limit is the bounded response
+itself, not the calibration.
+
+**Candidate A is the unique member that attains the ceiling, and pays `E(1) = 0` to do it.**
+Within this family maximum retrieval amplification and non-annihilating encoding are in
+direct tension *at the boundary*. The decoupling in `VER-C3-CONCERN-002` buys a strictly
+interior region; it does not escape the trade.
+
+**C6 as written is not well-formed.** "`ω_A` can pass the demonstrated crossover" presumes
+one crossover. The usable form is "`ω_A` can pass the crossover **of a declared corpus
+fixture**". The original `5/3` fixture sits inside the discriminating band, so
+`VER-C3-CONCERN-002` is not vacuous — B genuinely cannot reorder it and A and C genuinely
+can — but the result holds **for fixtures in that band and only there**.
+
+**Named future obligation.** If a required phenomenon ever needs reordering against a
+recency advantage whose crossover is at or above 2, no member of this family can supply
+it, and the bound on `R` — which `OD-C3-002` C7 requires to be bounded but does not fix —
+is what must be revisited. A family with `R ≤ 2` (`ω_A ≤ 3`) is a different family and a
+legitimate future comparator. Nothing is blocked today; this is recorded so it surfaces
+when a phenomenon demands it rather than being rediscovered then.
+
+Also confirmed: the effect is **not an artifact of top-1 selection.** Over four episodes at
+`K = 2` the selected *set* changes with `q`, so concern reorders membership rather than
+only the winner.

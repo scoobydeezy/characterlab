@@ -34,6 +34,17 @@ separate numeric allocation, exact model packaging, execution and preservation g
 5. Bind real later affect feedback to attention/accessibility. The current transient
    TaskConcern is not persistent affect and cannot be silently read at another instant.
    Freeze the minimum later-feedback carriage/state seam and its authentic producer.
+   **Ruled 2026-09-14 (`OD-C3-001`, RATIFIED WITH SCOPE AMENDMENT):** the cross-instant
+   feedback edge is ratified as a *transient character-state → attention* seam;
+   `TaskConcern` is **not** qualified as the general Affect representation.
+   `residual × (1−q)` / `ω_A = 1+q` is **Candidate A only**. A **shape-different**
+   Candidate B — thresholded/gated or saturating, not a recalibrated `1+q/2` — is owed,
+   selectable locally, same `q`/source/join/eligibility/`K`, identical at the declared
+   neutral point, materially different inside `(0,1]`, no new psychological state.
+   Keep `EnabledKnown` / `BaselineWithoutAvailableFeedback` / `DisabledFeedback` distinct;
+   do not collapse the latter two into `q = 0`. **Blocker is narrow:** GA may qualify the
+   *existence* of the seam on a proven public source/join/path; only a broader verdict
+   that relies on the modulation law needs Candidate B first.
 6. Qualify whole-prefix replay, each-stage rollback, exact read/write/identity closure,
    live-source negative controls and computational alternatives under frozen models.
 7. Freeze an exact ATTENTION corpus fixture, comparison/coupling rules, ExperimentIdentity,
