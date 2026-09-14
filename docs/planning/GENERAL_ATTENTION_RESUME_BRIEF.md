@@ -63,7 +63,8 @@ counters at every checkpoint.
 - **Corpus is now `corpus/0.28.0`**, 21 members, digest
   `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
   The ten `0.27.0` members are preserved byte-for-byte; eleven Campaign 3 intake proposals
-  were promoted, ten of them **BLOCKED or PARTIAL**. Brief-family coverage went 6 → 13 of 15.
+  were promoted, all eleven **BLOCKED or PARTIAL** (3 PARTIAL, 8 BLOCKED; count corrected
+  forward on 2026-09-14 in `CAMPAIGN3_LOG.md`). Brief-family coverage went 6 → 13 of 15.
   Membership asserts an obligation **exists**, not that it passes.
   **`corpus/0.27.0` remains a distinct historical commitment and every verdict resting on
   it keeps that version.** Any new verdict must declare coverage against `0.28.0`.
@@ -192,6 +193,33 @@ Steps 2–5 from the pause checkpoint, unchanged in content:
    before closing GA. Corpus promotion now targets `0.28.0`.
 
 ---
+
+### First implementation checkpoint: registration/compiler closure
+
+Preparation added 2026-09-14; this makes steps 2–3 above reviewable, without adding a
+contract or starting implementation. Keep both steps with their single owner.
+
+- **Start:** inspect the current worktree and frozen manifests, then locate the actual
+  compiler admission boundary and its existing tests. Preserve other agents’ changes.
+  Reuse the accepted inventories; generate and diff any derived binding crosswalk.
+- **Deliver:** all 67 templates bound through 706 with the exact component, schema,
+  read/projection, write, accessor and output definitions required by steps 2–3.
+  Report any unresolved binding explicitly; codec or helper coverage cannot fill it.
+- **Prove admission:** exercise the actual compiler with valid bindings and the frozen
+  wrong-subject, absent-cue, wrong-root and tampered-derived-result controls. Keep
+  runtime rollback evidence separately identified if execution awaits cohort models.
+- **Validate:** run focused tests for the changed admission path during development;
+  at checkpoint run `npm test` and `npm run build`. Preserve frozen commitments and
+  report public versus component evidence separately. Test sensitivity does not replace
+  the named Stage C model comparisons.
+- **Exit:** registration/compiler bindings are evidenced, remaining execution controls
+  are named, and step 4 has the inherited-work and slot-accounting inputs it still needs.
+  Do not infer a whole-model ceiling, freeze ModelIdentity against 80, or declare GA PASS.
+
+Record the result in the existing log and replace CURRENT using the checkpoint template
+(counters currently **706 / 0**). Follow the existing escalation policy: routine bindings
+are local work; a genuine ontology, epistemic-authority or unsupported causal-mechanism
+fork needs a decision. This checklist creates no additional approval gate.
 
 ## 6. What is settled and must not be reopened
 

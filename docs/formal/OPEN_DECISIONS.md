@@ -1,5 +1,11 @@
 # Formal Open-Decision Register
 
+**Current routing, 2026-09-14:** [state index](../planning/CURRENT.md) and [owner decisions](../planning/CAMPAIGN3_PENDING_OWNER_DECISIONS.md). Both concern rulings are resolved; zero owner decisions are open. GA remains OPEN and its implementation pass is paused. Accepted register dispositions remain in force.
+
+## Historical checkpoint summaries through 2026-09-13
+
+The earlier checkpoint summaries below are historical.
+
 2026-09-13: [Pause checkpoint](../planning/GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md).
 Write-scope correction ACCEPTED and allocated705/706; old704 unchanged. Fixed boundary
 checks pass; exact model admission and GA OPEN. User requested pause, not escalation.

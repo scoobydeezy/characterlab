@@ -72,8 +72,10 @@ checkpoint from here.
 
 Brief §9 has five stages: **A** make the seam exist, **B** make the intact path work,
 **C** create a competing model, **D** replay the same corpus, **E** assign a verdict.
-Campaign 3 has been running Stage A almost exclusively, and both bounded qualifications
-so far (EMB, ATTN) stopped before a verdict. Naming the competitor before allocation —
+At the correction pass's outset, Campaign 3 had been running Stage A almost exclusively,
+and the EMB and ATTN bounded qualifications lacked verdict entries. Those entries are
+now recorded as `VER-C3-EMB-001` and `VER-C3-ATTN-001`; the discipline still applies.
+Naming the competitor before allocation —
 rather than deferring it to a closure plan — is what keeps a seam falsifiable while it is
 still cheap to change.
 
@@ -85,7 +87,7 @@ re-litigated; it just needs to stay visible on the template.
 ## Why "North Star transfer" is on the template
 
 `src/campaign3/` now contains a substantial visual-search apparatus. Its destination is
-correctly aimed at `PHEN-ATTN-002` / `PHEN-MEM-001` / `EXP-006` / `EXP-015`, but a
+correctly aimed at `PHEN-ATTN-001` / `PHEN-MEM-001` / `EXP-006` / `EXP-015`, but a
 fixture that cannot state which §30 archetype it stands in for is at risk of becoming its
 own world. One paragraph per checkpoint keeps that honest and is cheap. If the paragraph
 is hard to write, shrink the fixture rather than closing it.

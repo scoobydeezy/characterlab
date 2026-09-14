@@ -1,5 +1,11 @@
 # Seam Ledger
 
+**Current routing, 2026-09-14:** [state index](CURRENT.md), [GA resume brief](GENERAL_ATTENTION_RESUME_BRIEF.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.28.0 has21 members; GA implementation remains paused; zero owner rulings open.
+
+## Historical checkpoint summaries through 2026-09-13
+
+The summaries below are historical, not instructions to resume.
+
 2026-09-13: [User-requested pause](GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md).
 705/706 close the registration write-scope representation gap;23 focused tests pass.
 General Attention/public model closure remains OPEN. No architectural decision pending.
@@ -230,6 +236,10 @@ tests/seven faults and SEM opportunity reuse. [Three-local-reserve source scope 
 [Source component](LOCAL_RESERVE_SOURCE_COMPONENT_CHECKPOINT.md) passes eight tests/six
 faults; public symbolic admission/state/memory closure remains pending. No pressure
 aggregation, canonical physiology or public source diversity is inferred from labels.
+
+## Bounded seam table
+
+Qualification scope below is preserved. Current corpus membership and comparison verdicts are governed by CURRENT and VERDICT_LEDGER; membership does not imply PASS.
 
 | Seam family | Current authority / evidence | Current bounded state | Remaining gate |
 |---|---|---|---|

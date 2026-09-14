@@ -1,5 +1,23 @@
 # Campaign 3 readiness and coverage
 
+**Current routing — 2026-09-14:** use [CURRENT.md](CURRENT.md) and
+[GENERAL_ATTENTION_RESUME_BRIEF.md](GENERAL_ATTENTION_RESUME_BRIEF.md) for active work.
+Corpus **0.28.0** now contains 21 members at digest
+`1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+All eleven intake obligations were promoted: three PARTIAL and eight BLOCKED at
+promotion. Named Brief-family representation increased from 6 to 13 of 15; this is
+membership coverage, not completed behavioral coverage. Current scoped verdicts are in
+[VERDICT_LEDGER.md](VERDICT_LEDGER.md). GA remains OPEN and its implementation paused;
+no owner decision is pending.
+
+## Historical entry audit — September 11
+
+The remainder preserves the audit at its stated date. Its “current,” “proposed,”
+“unaccepted,” and “outside the frozen manifest” descriptions refer to that snapshot,
+not today's membership or implementation status. Later promotion and bounded verdicts
+supersede those status descriptions only in their explicitly recorded scope; they do
+not turn the missing whole-phenomenon obligations below into PASS claims.
+
 Date: 2026-09-11 reconciliation of the 2026-09-10 readiness audit; **not new phenomenon qualification**.
 Governing corpus remains0.27.0, digest
 `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`.

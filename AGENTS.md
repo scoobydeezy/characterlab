@@ -15,8 +15,9 @@ Items that **do** meet those criteria are tracked in
 (concern -> attention feedback) was RATIFIED WITH SCOPE AMENDMENT on 2026-09-14: the
 ratified precedent is a *transient character-state -> attention* seam, `TaskConcern` is
 NOT the general Affect representation, `residual x (1-q)` / `omegaA = 1+q` is Candidate A
-only, and a shape-different Candidate B is owed before any GA verdict that relies on the
-modulation law. Selecting Candidate B is a local disposition.
+only. The comparison obligation is discharged by `VER-C3-CONCERN-001/002`;
+encoding suppression and retrieval amplification remain distinct, and A/B/C are
+retained candidates, not settled laws. No owner ruling is pending.
 
 ## Architectural authority
 
@@ -39,8 +40,10 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 reorders GA work only; it reopens no contract, allocation, model byte or digest.
 Sequence: (1) run the salience-law comparison as pure arithmetic and record a verdict;
 (2) publish corpus `0.28.0` from the prepared successor manifest; (3) write the owed
-EMB and ATTN verdict entries; (4) adopt `CHECKPOINT_TEMPLATE.md`; (5) obtain the one
-pending owner ruling; (6) only then resume GA registration and model closure.
+EMB and ATTN verdict entries; (4) adopt `CHECKPOINT_TEMPLATE.md`; (5) resolve the concern-feedback owner ruling; (6) resume GA registration and model
+closure. Items 1–5 are COMPLETE; item 6 remains handed off and paused per
+`GENERAL_ATTENTION_RESUME_BRIEF.md`. The 2026-09-14 preflight/bookkeeping pass does
+not start or split that implementation pass.
 The "Resume here" sequence in `GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md` and the
 ordering in `GENERAL_ATTENTION_CLOSURE_PLAN.md` are superseded on ordering only; their
 technical content stands.
@@ -51,21 +54,23 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
-Campaign 3 discovery is active (2026-09-10): start at `docs/planning/CURRENT.md` and
-`CAMPAIGN3_ENTRY_READINESS.md` in that directory. The seam ledger's front table is
-current; its older table/log is explicitly historical. Missing phenomena are BLOCKED
+Campaign 3 is active: start at `docs/planning/CURRENT.md` and
+`GENERAL_ATTENTION_RESUME_BRIEF.md` in that directory. `CAMPAIGN3_ENTRY_READINESS.md`
+preserves the dated entry audit with current routing; the seam ledger labels its
+current bounded coverage separately from historical summaries. Missing phenomena are BLOCKED
 or PARTIAL, not passed by Campaign2 completion. ATTN-001 and EMB-001 own newly explicit
-debts. PHEN-BIO-001 means biography and keeps its immutable ID. New corpus proposals
-are not yet members of the frozen corpus. Broad source/feedback extensions still
+debts. PHEN-BIO-001 means biography and keeps its immutable ID. Corpus `0.28.0` has
+21 members: ten preserved and eleven promoted obligations, entering as three PARTIAL
+and eight BLOCKED. Membership is not qualification. Broad source/feedback extensions still
 require accepted contracts; do not implement them from the external review alone.
 `CAMPAIGN3_BODY_RESEARCH_FRONTIER.md` opened that investigation and its BODY scope is
 now bounded-qualified; the work order above supersedes it as the current entry point.
 Missing coverage blocks affected verdicts, not all bounded research.
 
-Current checkpoint (2026-09-09): Campaign 2 is complete in the bounded thin-scaffold
+Preserved Campaign 2 checkpoint (2026-09-09): Campaign 2 is complete in the bounded thin-scaffold
 scope of `docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md`. The cognitive pipeline and
 complete-prefix RNG persistence are qualified under their exact frozen versions.
-Campaign 3's expanded corpus is next, not already passed. The Campaign 1 narrative
+Campaign 3's expanded corpus is now admitted, not already passed. The Campaign 1 narrative
 below is historical; current seam/decision dispositions are in the formal register
 and the latest planning receipts. Preserve their public/component limits and all
 unresolved broader decisions. Do not restart old Campaign 1 or Phase 3 plans.

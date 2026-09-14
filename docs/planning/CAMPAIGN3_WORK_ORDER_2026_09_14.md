@@ -11,6 +11,12 @@ semantics. Every prior qualification and exclusion stands exactly as recorded.
 
 ---
 
+**Current disposition:** items 1–5 COMPLETE. Salience, EMB and ATTN verdicts are
+recorded; corpus0.28.0 is promoted; both concern rulings and their comparison
+obligations are discharged. Item 6 is handed off and paused; see
+[GA resume brief](GENERAL_ATTENTION_RESUME_BRIEF.md). The task descriptions and
+pre-correction rationale below are retained as the issued work order.
+
 ## Why the order is changing
 
 Between 2026-09-10 and 2026-09-14 the program produced:
@@ -121,7 +127,7 @@ It carries the two program counters and the revision cap. Specifically:
 [`CAMPAIGN3_PENDING_OWNER_DECISIONS.md`](CAMPAIGN3_PENDING_OWNER_DECISIONS.md). Zero open
 owner decisions. The ruling created one new obligation and narrowed the GA blocker:
 
-- **Candidate B owed.** `residual × (1−q)` / `ω_A = 1+q` is Candidate A only, not
+- **Candidate B obligation — now DISCHARGED** by `VER-C3-CONCERN-001/002`. Original requirement: `residual × (1−q)` / `ω_A = 1+q` is Candidate A only, not
   architectural law. A **shape-different** comparator — thresholded/gated or saturating,
   not a recalibrated `1+q/2` — must be compared before GA treats the modulation law as
   settled. Selecting it is a local disposition; it does not return for a ruling unless it
@@ -138,9 +144,9 @@ owner decisions. The ruling created one new obligation and narrowed the GA block
 
 Registration closure, model packaging, allocation and public qualification resume after
 items 1–5, following the pause checkpoint's technical steps 2–5, which remain correct.
-Carry the `OD-C3-001` obligations with it: Candidate B before any verdict that leans on
-the modulation law, and the three feedback branches kept distinct rather than collapsed
-into `q = 0`.
+Carry both concern rulings and `VER-C3-CONCERN-002`: the comparison obligation is
+discharged, while the modulation law remains unresolved. Preserve the three feedback
+branches rather than collapsing them into `q = 0`.
 
 ---
 
