@@ -1,0 +1,763 @@
+{
+  "status": "DRAFT FINITE ADMISSION AND DISPATCH; NOT CANONICAL REGISTRATION ACCEPTANCE",
+  "rows": [
+    {
+      "stage": "world",
+      "phase": 0,
+      "input": "SeriesSceneOriginal",
+      "directParents": [],
+      "admission": "ExactOriginal",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "WorldEventTruth": 1
+      },
+      "freshSlots": {
+        "WorldEventOccurrenceId": 1,
+        "EventBindingOccurrenceId": 3
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "observe",
+      "phase": 10,
+      "input": "WorldEventTruth",
+      "directParents": [
+        "world"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "ExtendedObservation": 1
+      },
+      "freshSlots": {
+        "ObservationId": 1,
+        "DetectionOccurrenceId": "n",
+        "EventDetectionOccurrenceId": "positive",
+        "ReservedExperienceId": "positive"
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "track",
+      "phase": 11,
+      "input": "TrackingInput",
+      "directParents": [
+        "observe"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [
+        "ContinuantState",
+        "EventFileState",
+        "TrackingWindow"
+      ],
+      "writeLeaves": [
+        "ContinuantState",
+        "EventFileState",
+        "TrackingWindow"
+      ],
+      "authority": "perception",
+      "route": [],
+      "outputCardinalities": {
+        "PerceptualEventTransition": 1,
+        "PerceptualTrackTransition": "n"
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "bind",
+      "phase": 12,
+      "input": "BindingInput",
+      "directParents": [
+        "track"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "PerceivedBindingEvidence": "n"
+      },
+      "freshSlots": {
+        "PerceivedBindingOccurrenceId": "n"
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "classify",
+      "phase": 13,
+      "input": "ClassificationInput",
+      "directParents": [
+        "bind"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {},
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "freeze",
+      "phase": 14,
+      "input": "FreezeInput",
+      "directParents": [
+        "classify"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "PreRecognitionSemanticExperience": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "roles",
+      "phase": 15,
+      "input": "RoleInput",
+      "directParents": [
+        "freeze"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "CausalRoleEvidence": "q"
+      },
+      "freshSlots": {
+        "CausalRoleEvidenceOccurrenceId": "q"
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "spatial",
+      "phase": 15,
+      "input": "SpatialPreparationInput",
+      "directParents": [
+        "roles"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "SpatialPreparation": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "delivery",
+      "phase": 15,
+      "input": "FeedbackDelivery",
+      "directParents": [],
+      "admission": "ActualEarlierConcernGeneratedDelivery",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "FeedbackDelivery": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "select",
+      "phase": 40,
+      "input": "SelectionInput",
+      "directParents": [
+        "spatial"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "AttentionSelectionAudit": 1,
+        "ExtendedSelected": 1
+      },
+      "freshSlots": {
+        "SelectionOccurrenceId": 1
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "empty-select",
+      "phase": 40,
+      "input": "EmptySelectionInput",
+      "directParents": [
+        "observe"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "AttentionSelectionAudit": 1,
+        "ExtendedSelected": 1
+      },
+      "freshSlots": {
+        "SelectionOccurrenceId": 1
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "encoding-join",
+      "phase": 40,
+      "input": "EncodingJoinInput",
+      "directParents": [
+        "select",
+        "empty-select"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [
+        "delivery"
+      ],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN"
+      ],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "BoundEncodingInput": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "evaluate",
+      "phase": 40,
+      "input": "BoundEncodingInput",
+      "directParents": [
+        "encoding-join"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "EncodingEvaluation": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "retain",
+      "phase": 130,
+      "input": "RetentionInput",
+      "directParents": [
+        "evaluate"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinalities": {
+        "RetainedEncoding": "retains"
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "form",
+      "phase": 140,
+      "input": "FormationInput",
+      "directParents": [
+        "retain"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN",
+        "EpisodeLedger"
+      ],
+      "writeLeaves": [
+        "EpisodeLedger"
+      ],
+      "authority": "attention-episode-formation",
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinalities": {},
+      "freshSlots": {},
+      "terminal": true,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "associate",
+      "phase": 140,
+      "input": "FormationInput",
+      "directParents": [
+        "retain"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN",
+        "AssociationGraph"
+      ],
+      "writeLeaves": [
+        "AssociationGraph"
+      ],
+      "authority": "attention-association-update",
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinalities": {},
+      "freshSlots": {},
+      "terminal": true,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "seed-presentation",
+      "phase": 140,
+      "input": "FormationInput",
+      "directParents": [
+        "retain"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN",
+        "PresentationLedger"
+      ],
+      "writeLeaves": [
+        "PresentationLedger"
+      ],
+      "authority": "attention-presentation-update",
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinalities": {},
+      "freshSlots": {},
+      "terminal": true,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "cue",
+      "phase": 40,
+      "input": "CueExtractionInput",
+      "directParents": [
+        "observe",
+        "spatial"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "CueEvidence": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "recall-join",
+      "phase": 40,
+      "input": "RecallJoinInput",
+      "directParents": [
+        "cue"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [
+        "delivery"
+      ],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN"
+      ],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "BoundRecallInput": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "rank",
+      "phase": 40,
+      "input": "BoundRecallInput",
+      "directParents": [
+        "recall-join"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN",
+        "EpisodeLedger",
+        "AssociationGraph",
+        "PresentationLedger"
+      ],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "RecallResult": 1
+      },
+      "freshSlots": {},
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "recollect",
+      "phase": 40,
+      "input": "RecollectionInput",
+      "directParents": [
+        "rank"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "source-specific observer/support checks",
+      "projection": null,
+      "readLeaves": [],
+      "writeLeaves": [],
+      "authority": null,
+      "route": [],
+      "outputCardinalities": {
+        "AttentionRecollection": "w"
+      },
+      "freshSlots": {
+        "ProposedRecollectionOccurrenceId": "w"
+      },
+      "terminal": false,
+      "admissionBeforeReads": true
+    },
+    {
+      "stage": "reinforce",
+      "phase": 140,
+      "input": "ReinforcementInput",
+      "directParents": [
+        "recollect"
+      ],
+      "admission": "ExactExpectedGeneratedPayload",
+      "additionalParents": [],
+      "inputObserverEquality": "required ObserverId equals carried actual observer before projection",
+      "projection": {
+        "inputField": "ObserverId",
+        "algorithm": "accepted PRJ/IDN required roster projection",
+        "before": "all character owner-leaf reads",
+        "copiedSubject": "must equal actual projection when present"
+      },
+      "readLeaves": [
+        "IDN",
+        "PresentationLedger"
+      ],
+      "writeLeaves": [
+        "PresentationLedger"
+      ],
+      "authority": "attention-presentation-update",
+      "route": [
+        "route/character-learning"
+      ],
+      "outputCardinalities": {},
+      "freshSlots": {},
+      "terminal": true,
+      "admissionBeforeReads": true
+    }
+  ],
+  "batches": [
+    {
+      "name": "source-measurement",
+      "members": [
+        "measurement-episode-formation",
+        "measurement-prediction-application",
+        "task-measurement-settlement"
+      ],
+      "parent": "actual M1",
+      "payload": "same exact M1 bytes",
+      "instant": "probe",
+      "authority": "existing composed source barrier"
+    },
+    {
+      "name": "source-padding",
+      "members": [
+        "measurement-episode-formation-padding",
+        "measurement-prediction-application-padding",
+        "task-measurement-settlement-padding"
+      ],
+      "parent": "actual M1 padding",
+      "payload": "exact empty list",
+      "instant": "probe",
+      "authority": "existing composed source barrier"
+    },
+    {
+      "name": "attention-formation",
+      "members": [
+        "form",
+        "associate",
+        "seed-presentation"
+      ],
+      "parent": "retain",
+      "payload": "same exact FormationInput",
+      "instant": "formation",
+      "authority": "separate three owners, disjoint candidate patches"
+    },
+    {
+      "name": "attention-reinforcement",
+      "members": [
+        "reinforce"
+      ],
+      "parent": "recollect",
+      "payload": "actual emitted recollections only",
+      "instant": "cue",
+      "authority": "attention-presentation-update"
+    },
+    {
+      "name": "task-deadline",
+      "members": [
+        "task-deadline"
+      ],
+      "parent": "accepted parentless deadline association",
+      "payload": "exact committed task key",
+      "instant": "deadline",
+      "authority": "existing prospective-commitments"
+    }
+  ],
+  "preflight": [
+    "match exact committed event type/phase/profile and original or generated association",
+    "validate canonical payload and identity roles",
+    "check observer/source/target/parent equality and once-only association",
+    "perform required PRJ/IDN projection",
+    "read only declared qualified owner leaves from B0",
+    "evaluate sole-owner candidates without publication",
+    "validate disjoint patches and combined cross-leaf invariants",
+    "publish after successful complete-instant settlement"
+  ],
+  "batchRules": {
+    "membership": "exact multiset; reject missing, duplicate, mixed, extra and mixed-padding members",
+    "parents": "same actual authenticated M1 or retention parent for triples; no time-only grouping",
+    "B0": "all required source/subject/target preflight before candidate evaluation",
+    "emissions": "none from phase140 members",
+    "merge": "validate each patch under its sole owner and qualified target; reject overlapping target paths; compose all onto B0",
+    "failure": "discard candidate patches, pending consumption and tracking proposal on any failed instant",
+    "commit": "complete combined state and pending queue validated before publishing"
+  },
+  "identityRoles": {
+    "ObserverId": "reuse existing ObserverId role; required scalar in projected input",
+    "CharacterId": "reuse accepted character-content domain role; never narrow/replace it by raw namespace alone",
+    "stateMapKeys": "ObserverId for perception; actual qualified CharacterId for the three attention memory leaves",
+    "transport": "copied identity fields grant neither occurrence production nor resolver authority"
+  },
+  "prohibited": [
+    "AutomaticAdaptationInput on attention routes",
+    "state iterator or generic archive resolver",
+    "phase140 child emission",
+    "copied Subject replacing required projection",
+    "whole-source barrier bypass",
+    "old cognitive adapter silently stopped after concern"
+  ],
+  "pending": [
+    "numeric field/state-path/accessor roles and fixed registration members",
+    "source registration dependency closure and terminal-at-concern wrapper",
+    "complete canonical declaration codecs/content/model cohort",
+    "public admission, batch ownership, rollback, restore and work execution"
+  ],
+  "review": {
+    "checks": 121,
+    "rows": 22,
+    "batches": 5
+  },
+  "faults": [
+    {
+      "name": "remove-projection",
+      "reason": "missing actual projection",
+      "detected": true
+    },
+    {
+      "name": "read-before-admission",
+      "reason": "read before admission",
+      "detected": true
+    },
+    {
+      "name": "copied-subject-only",
+      "reason": "character writer missing IDN",
+      "detected": true
+    },
+    {
+      "name": "mixed-write-owner",
+      "reason": "missing expected-old read",
+      "detected": true
+    },
+    {
+      "name": "wrong-sibling-parent",
+      "reason": "wrong writer parent",
+      "detected": true
+    },
+    {
+      "name": "rank-writes",
+      "reason": "missing sole owner",
+      "detected": true
+    },
+    {
+      "name": "drop-source-padding",
+      "reason": "missing dispatch variant",
+      "detected": true
+    },
+    {
+      "name": "allow-barrier-child",
+      "reason": "barrier emission permitted",
+      "detected": true
+    },
+    {
+      "name": "overlapping-dispatch",
+      "reason": "ambiguous exact dispatch",
+      "detected": true
+    },
+    {
+      "name": "projection-after-read",
+      "reason": "owner read before projection",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_ADMISSION_DISPATCH_REV1.md",
+      "sha256": "391c36ed1775b3939271c67359c9b1b5c52873195af7fdf41eb659b7ba9a6335"
+    },
+    {
+      "path": "scripts/review-attention-memory-admission-dispatch.mjs",
+      "sha256": "ac2a07e9a521dede43d39ee3220e33a04dabbc05deb9ed5c525f6caf3ef8fc44"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_BARRIER_WORK_REVIEW_REV1.json",
+      "sha256": "03bbeebdb364a031e409cf0c2803af9ce34d8256c8c625e867a56cb3c04f115b"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_INVENTORY_REV1.json",
+      "sha256": "127a7737b2854372f58b005c76143373b43687010e8c6d1b525a3cec37cac49f"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_OUTPUT_INVENTORY_REV1.json",
+      "sha256": "c48428602c80f41764fa401aaf9c109a0584d509d1a0dbbf53fc757b0638a015"
+    }
+  ],
+  "limits": [
+    "Symbolic admission/dispatch checks only; no production registration, actual projected reads or batch authority validation executed."
+  ]
+}

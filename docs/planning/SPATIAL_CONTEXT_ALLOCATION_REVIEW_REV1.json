@@ -1,0 +1,79 @@
+{
+  "status": "SCA-A..H QUALIFIED AT COMPONENT SCOPE",
+  "tests": 8,
+  "faults": [
+    {
+      "name": "exclusive-boundary",
+      "removed": "x >= calibration.minX",
+      "inserted": "x > calibration.minX",
+      "baseline": "SpatialFocal",
+      "actual": "SpatialPeripheral",
+      "detected": true
+    },
+    {
+      "name": "unknown-consumes-pool",
+      "removed": "rows.filter(r => r.spatialClass === 'SpatialPeripheral').length",
+      "inserted": "rows.filter(r => r.spatialClass !== 'SpatialFocal').length",
+      "baseline": "1/5",
+      "actual": "1/10",
+      "detected": true
+    },
+    {
+      "name": "no-footprint-division",
+      "removed": "pool.divide(Q.of(BigInt(peripheralCount)))",
+      "inserted": "pool",
+      "baseline": "1/10",
+      "actual": "1/5",
+      "detected": true
+    },
+    {
+      "name": "unknown-as-zero",
+      "removed": "r.spatialClass === 'SpatialUnknown' ? r :",
+      "inserted": "r.spatialClass === 'SpatialUnknown' ? {...r,allocation:Q.of(0n)} :",
+      "baseline": false,
+      "actual": true,
+      "detected": true
+    },
+    {
+      "name": "coordinate-alias",
+      "removed": "position:{x,y},spatialClass:inside",
+      "inserted": "position:d.position!,spatialClass:inside",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "boundary": "SpatialFocal",
+    "residual": "1/5",
+    "unknown": false,
+    "dense": "1/10",
+    "detached": true,
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/spatialContextAllocation.ts",
+      "sha256": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7"
+    },
+    {
+      "path": "src/test/spatialContextAllocation.test.ts",
+      "sha256": "75a32c618abcd5d5152ac8921901f85e456061cca11439a2943c199101bc9034"
+    },
+    {
+      "path": "docs/formal/SPATIAL_CONTEXT_ALLOCATION_COMPONENT.md",
+      "sha256": "6b201ff6449c7dd4c6ea4fb7391ac0e57e46484d777563d9408456da0ee3b939"
+    },
+    {
+      "path": "scripts/review-spatial-context-allocation.mjs",
+      "sha256": "6286794f5a4221667d96ac45358138fb0fd5cdc18238165e82d382c261400903"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_TESTS_REV1.json",
+    "sha256": "c4aff0402eac56457bcb6da925368adc8df37dc93f3a10f321d244749494bd8e"
+  },
+  "limits": [
+    "Positive spatial classification only; no CausalRoleEvidence, Incidental derivation, authenticated public source or persistent encoding. MEC-005 historical membership control remains required. General ATTN and corpus remain open."
+  ]
+}

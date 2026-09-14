@@ -1,0 +1,85 @@
+{
+  "status": "POSITION PAIR AND PRIOR CONSUMPTION FAULTS DETECTED",
+  "faults": [
+    {
+      "name": "always-use-end",
+      "witness": "PP-B",
+      "detected": true
+    },
+    {
+      "name": "unordered-observations",
+      "witness": "PP-C",
+      "detected": true
+    },
+    {
+      "name": "future-observation",
+      "witness": "PP-C",
+      "detected": true
+    },
+    {
+      "name": "unadmitted-position",
+      "witness": "PP-D",
+      "detected": true
+    },
+    {
+      "name": "invalid-unread-position",
+      "witness": "PP-F",
+      "detected": true
+    },
+    {
+      "name": "bound-is-used",
+      "witness": "RU-B",
+      "detected": true
+    },
+    {
+      "name": "supported-only",
+      "witness": "RU-B",
+      "detected": true
+    },
+    {
+      "name": "omit-consumption",
+      "witness": "RU-A",
+      "detected": true
+    },
+    {
+      "name": "allow-same-instant",
+      "witness": "RU-D",
+      "detected": true
+    },
+    {
+      "name": "ignore-old-read-domain",
+      "witness": "RU-D",
+      "detected": true
+    },
+    {
+      "name": "keep-rational-alias",
+      "witness": "RU-I",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "006f210a611a95445560d8961441eeb839b8417771a0d59f83222d43774d12a8"
+    },
+    {
+      "path": "src/test/retainedPositionPairAttribution.test.ts",
+      "sha256": "ba424ef339f556a870d4a674d21bbb07eed9e3a2294774cd41c7322a5f558c0a"
+    },
+    {
+      "path": "src/test/retainedAttributionUse.test.ts",
+      "sha256": "0be8f45d22c99fc438fb9f40c68a2a0882be4c01dc3a0f28679f1cbf60a13927"
+    },
+    {
+      "path": "scripts/review-position-pair-attribution.mjs",
+      "sha256": "71c62650028d99a9422b1ab382891a504494b6425de990aebb86e3f27d6e192d"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/RETAINED_POSITION_PAIR_ATTRIBUTION_TESTS_REV1.json",
+    "sha256": "3f1830f4ee16140c3b537989cbf5474f621242d1a1ede81b72354a54ea746599"
+  },
+  "limits": [
+    "Trusted projection/admission inputs. Public source authenticity and persistence remain unqualified."
+  ]
+}

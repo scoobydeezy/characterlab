@@ -1,0 +1,55 @@
+{
+  "status": "POSITION SCENE OPPORTUNITY REVIEW PASS",
+  "faults": [
+    {
+      "name": "batch-binding-slot-reuse",
+      "file": "src/campaign3/positionSceneOpportunity.ts",
+      "witness": "PSO-A",
+      "detected": true
+    },
+    {
+      "name": "early-perception-publication",
+      "file": "src/campaign3/positionSceneOpportunity.ts",
+      "witness": "PSO-C",
+      "detected": true
+    },
+    {
+      "name": "false-experience-reservation",
+      "file": "src/campaign3/positionSceneOpportunity.ts",
+      "witness": "PSO-B",
+      "detected": true
+    },
+    {
+      "name": "fabricated-source-role",
+      "file": "src/campaign3/positionSceneOpportunity.ts",
+      "witness": "PSO-D",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/positionSceneOpportunity.ts",
+      "sha256": "634293ab731c6be6e37abb3fe0b45886bb73ea8d3e4404bf7d02736d68ac18d8"
+    },
+    {
+      "path": "src/test/positionSceneOpportunity.test.ts",
+      "sha256": "a5d04f892e5d0ae915e636ad256485fd602dd84c9f3f8fbdf78f27cac14fa63f"
+    },
+    {
+      "path": "src/campaign3/positionSceneOpportunity.ts",
+      "sha256": "634293ab731c6be6e37abb3fe0b45886bb73ea8d3e4404bf7d02736d68ac18d8"
+    },
+    {
+      "path": "src/test/positionSceneOpportunity.test.ts",
+      "sha256": "a5d04f892e5d0ae915e636ad256485fd602dd84c9f3f8fbdf78f27cac14fa63f"
+    },
+    {
+      "path": "scripts/review-position-scene-opportunity.mjs",
+      "sha256": "d57c1d9528f193cf07e83d105cfcecf5498597dea54256ec33050b4bb64fb441"
+    }
+  ],
+  "limits": [
+    "Actual component scene/SEM/selection/encoding, not public staged registration.",
+    "Enclosing allocator rollback, PRJ, content membership and complete-prefix state validation remain unqualified."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "status": "QUALIFICATION PROJECTION FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "copy-numeric-assessment",
+      "witness": "GQP-A",
+      "detected": true
+    },
+    {
+      "name": "erase-deterioration",
+      "witness": "GQP-A",
+      "detected": true
+    },
+    {
+      "name": "collapse-absence",
+      "witness": "GQP-C",
+      "detected": true
+    },
+    {
+      "name": "indeterminate-is-no-change",
+      "witness": "GQP-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/goalOutcomeQualification.ts",
+      "sha256": "34e5bd4df6933a0e6ad626e5c4c3b1b7fb998670585ed51c9636e36d47cb018a"
+    },
+    {
+      "path": "src/test/goalOutcomeQualification.test.ts",
+      "sha256": "8155a55a5678baea76b6384e1ad9c1268727ddfa8828cf36aa8628c0d995af53"
+    },
+    {
+      "path": "src/test/focalHistoricalHandoff.test.ts",
+      "sha256": "a15e8b81c1dbe1eeb5aeb68fadb65c886605a0e75660de30fe98be9681e91127"
+    },
+    {
+      "path": "scripts/review-goal-qualification-projection.mjs",
+      "sha256": "73e3f6cc82df32194354f1e5d1beb679fbc75b6d5882598f15944b8cb7869e9a"
+    },
+    {
+      "path": "docs/planning/GOAL_QUALIFICATION_PROJECTION_TESTS_REV1.json",
+      "sha256": "43e53d0c7d993af3b8e68a7e2ce437ff77bf32e52429203559b9cda29e23926e"
+    }
+  ],
+  "limits": [
+    "Trusted projection only; public result and delivery admission remain unqualified."
+  ]
+}

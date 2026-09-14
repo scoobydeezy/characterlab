@@ -1,0 +1,69 @@
+{
+  "status": "POSITION SOURCE AND FIXTURE COMPOSITION REVIEW PASS",
+  "faults": [
+    {
+      "name": "ignore-visibility",
+      "file": "src/campaign3/positionDisplaySource.ts",
+      "witness": "POS-B",
+      "detected": true
+    },
+    {
+      "name": "ignore-permission",
+      "file": "src/campaign3/positionDisplaySource.ts",
+      "witness": "POS-B",
+      "detected": true
+    },
+    {
+      "name": "reuse-last-frame",
+      "file": "src/campaign3/positionDisplaySource.ts",
+      "witness": "POS-B",
+      "detected": true
+    },
+    {
+      "name": "retain-live-frame",
+      "file": "src/campaign3/positionDisplaySource.ts",
+      "witness": "POS-D",
+      "detected": true
+    },
+    {
+      "name": "zero-is-absent",
+      "file": "src/campaign3/positionDisplaySource.ts",
+      "witness": "POS-A",
+      "detected": true
+    },
+    {
+      "name": "fixture-reconstructs-hidden-start",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-M",
+      "detected": true
+    },
+    {
+      "name": "fixture-reconstructs-hidden-end",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-M",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/positionDisplaySource.ts",
+      "sha256": "43dac73425e5e071b8fcb4f73a274b2a903c23401677803e2e812e58b56aea2a"
+    },
+    {
+      "path": "src/test/positionDisplaySource.test.ts",
+      "sha256": "793d2cb5c12b9a399342a0c412435977bf431d53b6ec07bfbd1395c1d72e993a"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "b5163319b88d2d9b4666847323901933bca921866fa7e53c6914204fba0e9e6a"
+    },
+    {
+      "path": "scripts/review-position-display-source.mjs",
+      "sha256": "1e791a669a7549100a914e4599de8f80428c099fb009a9181f22b3af5acf95ea"
+    }
+  ],
+  "limits": [
+    "No public observation/selection/PRJ authentication is inferred.",
+    "Two mutations target fixture coordination, not production admission."
+  ]
+}

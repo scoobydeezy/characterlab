@@ -1,0 +1,55 @@
+{
+  "status": "SYMBOLIC REQUESTED SOURCE REVIEW PASS",
+  "records": 5,
+  "faults": [
+    {
+      "name": "absence-reason",
+      "detected": true
+    },
+    {
+      "name": "mandatory-unsampled-panel",
+      "detected": true
+    },
+    {
+      "name": "drop-request-binding",
+      "detected": true
+    },
+    {
+      "name": "premature-experience",
+      "detected": true
+    },
+    {
+      "name": "truth-access",
+      "detected": true
+    },
+    {
+      "name": "new-wrapper-identity",
+      "detected": true
+    },
+    {
+      "name": "event-as-feature",
+      "detected": true
+    },
+    {
+      "name": "zero-request-body",
+      "detected": true
+    },
+    {
+      "name": "unsampled-clears-context",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV1.json",
+      "sha256": "f65e255afee4765ecc0c07223cf45c1a66506d361e686ace93c134cbd8f0faf5"
+    },
+    {
+      "path": "scripts/review-ga-requested-source-carrier.mjs",
+      "sha256": "8aef4d299e1cec021f7ec8e41e0fa8dedd9d3ce09db8a3af7cf3f5b9f14c39ce"
+    }
+  ],
+  "limits": [
+    "Structural inventory only. Branch equations, real source admission and public identity/PRJ/owner enforcement remain unqualified."
+  ]
+}

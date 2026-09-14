@@ -1,0 +1,114 @@
+{
+  "status": "GOAL RESULT STRUCTURAL REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 20,
+  "fields": 61,
+  "deliveryReachability": [
+    "CharacterId",
+    "ExperienceId",
+    "GoalDoesNotQualify",
+    "GoalOutcomeAssessmentId",
+    "GoalQualificationCarry",
+    "GoalQualificationDelivery",
+    "GoalQualificationIndeterminate",
+    "GoalQualificationUnavailable",
+    "GoalQualifies",
+    "Instant",
+    "MaintenanceGoalKey",
+    "ObserverId",
+    "OriginalAddress",
+    "SemanticReferentId",
+    "VersionText"
+  ],
+  "joinReachability": [
+    "AcquisitionOccurrenceId",
+    "BodyChildKey",
+    "CharacterId",
+    "EventChildKey",
+    "ExperienceId",
+    "GoalDoesNotQualify",
+    "GoalOutcomeAssessmentId",
+    "GoalQualificationCarry",
+    "GoalQualificationIndeterminate",
+    "GoalQualificationUnavailable",
+    "GoalQualifies",
+    "Instant",
+    "InteroceptiveSignalId",
+    "MaintenanceGoalKey",
+    "ObserverId",
+    "PerceptualReferentId",
+    "QualifiedSignificanceJoin",
+    "RetainedAttributionResult",
+    "RetainedAttributionResultId",
+    "RetainedChildAddress",
+    "SemanticReferentId",
+    "VersionText"
+  ],
+  "faults": [
+    {
+      "name": "carry-full-appraisal",
+      "rejected": true
+    },
+    {
+      "name": "indirect-numeric-qualification",
+      "rejected": true
+    },
+    {
+      "name": "join-view-archive",
+      "rejected": true
+    },
+    {
+      "name": "reuse-task-appraisal-identity",
+      "rejected": true
+    },
+    {
+      "name": "parallel-qualification-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "missing-target-original",
+      "rejected": true
+    },
+    {
+      "name": "absence-is-zero",
+      "rejected": true
+    },
+    {
+      "name": "erase-farther",
+      "rejected": true
+    },
+    {
+      "name": "credit-unrelated-siblings",
+      "rejected": true
+    },
+    {
+      "name": "force-use-for-unavailable",
+      "rejected": true
+    },
+    {
+      "name": "mutable-goal-baseline",
+      "rejected": true
+    },
+    {
+      "name": "new-numeric-record",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV1.json",
+      "sha256": "8791303c458eaf4b3752b98a30b6f7593369eaeebf99e24fefedbb98bd457e1f"
+    },
+    {
+      "path": "scripts/build-ga-goal-result-carrier.mjs",
+      "sha256": "055e424c72c651821dfae20a5a1c17d88e28ac7a2c095f2f0c5ff96b0c796e6d"
+    },
+    {
+      "path": "scripts/review-ga-goal-result-carrier.mjs",
+      "sha256": "44371c87c27b81bc804edef7a1bb580eced609aaf5910f988c30cc77fcfa44e2"
+    }
+  ],
+  "limits": [
+    "Structural reachability and field checks only; semantic role, source authenticity and state admission not qualified.",
+    "OriginalAddress and ExactInterval still need exact canonical substrate bindings before allocation."
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "status": "PARTIAL SYMBOLIC SUCCESSOR; NOT ALLOCATION INPUT",
+  "roots": [
+    {
+      "name": "AttentionTrackingWindowState",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "map",
+            "key": "ObserverId",
+            "value": "TrackingWindow"
+          }
+        }
+      ],
+      "family": "perception",
+      "owner": "authority/perception",
+      "accessor": "accessor/attention-marker-window",
+      "selector": "one exact mapKey",
+      "presence": "absent or complete value; no partial value",
+      "initial": "no leaf",
+      "removal": false
+    },
+    {
+      "name": "AttentionEpisodeState",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "map",
+            "key": "CharacterId",
+            "value": "EpisodeLedger"
+          }
+        }
+      ],
+      "family": "episodic-memory",
+      "owner": "authority/attention-episode-formation",
+      "accessor": "accessor/attention-memory-episodes",
+      "selector": "one exact mapKey",
+      "presence": "absent or complete value; no partial value",
+      "initial": "no leaf",
+      "removal": false
+    },
+    {
+      "name": "AttentionAssociationState",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "map",
+            "key": "CharacterId",
+            "value": "AssociationGraph"
+          }
+        }
+      ],
+      "family": "associations",
+      "owner": "authority/attention-association-update",
+      "accessor": "accessor/attention-memory-associations",
+      "selector": "one exact mapKey",
+      "presence": "absent or complete value; no partial value",
+      "initial": "no leaf",
+      "removal": false
+    },
+    {
+      "name": "AttentionPresentationState",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "map",
+            "key": "CharacterId",
+            "value": "PresentationLedger"
+          }
+        }
+      ],
+      "family": "episodic-memory",
+      "owner": "authority/attention-presentation-update",
+      "accessor": "accessor/attention-memory-presentations",
+      "selector": "one exact mapKey",
+      "presence": "absent or complete value; no partial value",
+      "initial": "no leaf",
+      "removal": false
+    }
+  ],
+  "retainedPerceptionAccessors": [
+    {
+      "member": "accessor/attention-continuant-counter",
+      "root": 241,
+      "field": 1,
+      "key": "ObserverId",
+      "selector": "mapKey(*)",
+      "value": "unsigned-counter",
+      "owner": "authority/perception",
+      "removalAllowed": false
+    },
+    {
+      "member": "accessor/attention-continuant-active",
+      "root": 241,
+      "field": 2,
+      "key": "212",
+      "selector": "mapKey(*)",
+      "value": "membership-marker",
+      "owner": "authority/perception",
+      "removalAllowed": true
+    },
+    {
+      "member": "accessor/attention-event-counter",
+      "root": 242,
+      "field": 1,
+      "key": "ObserverId",
+      "selector": "mapKey(*)",
+      "value": "unsigned-counter",
+      "owner": "authority/perception",
+      "removalAllowed": false
+    },
+    {
+      "member": "accessor/attention-event-active",
+      "root": 242,
+      "field": 2,
+      "key": "213",
+      "selector": "mapKey(*)",
+      "value": "membership-marker",
+      "owner": "authority/perception",
+      "removalAllowed": true
+    }
+  ],
+  "subjectProjection": {
+    "definition": "consume exact accepted required PRJ/IDN descriptor from committed source registration",
+    "input": "required ObserverId scalar",
+    "path": "descriptor roster path with exact input ObserverId map key",
+    "returnedValue": "qualified CharacterId",
+    "readEvidence": "existing derived projection record plus exact roster source",
+    "authority": "immutable identity binding; no write capability"
+  },
+  "reads": {
+    "subject": "exact accepted PRJ/IDN projected CharacterId; no sibling iteration",
+    "available": "independent exact leaf reads; absence never erases another present leaf",
+    "unavailable": "projection only; no memory reads",
+    "targets": "only acquisitions with surviving semantic children",
+    "directCue": "retained semantic keys independent of graph membership",
+    "graph": "graph-only keys may mediate; no target or forgotten-content resolver",
+    "presentation": "absence provides no presentation contributions; not proof of episode absence",
+    "history": "governance only; no forgotten child content read"
+  },
+  "lifecycle": {
+    "episode": "one ordinary owner; separate nonborrowing per-kind unit capacities; recency baseline; complete-child loss",
+    "graph": "separate association owner; exact positive directed edge loss; separate node/edge capacities; strength-priority baseline",
+    "presentation": "separate writer; acquisition address; source-authenticated completed use; cleanup/history bound unresolved",
+    "history": "payload-free formation/loss and source uniqueness; bounded replay representation unresolved"
+  },
+  "replacements": [
+    [
+      "EpisodeLedger min1/max4",
+      "survivor inventory permits complete loss; exact public bounds pending"
+    ],
+    [
+      "AssociationGraph min1/max12",
+      "exact empty graph possible; public node/edge parameters pending"
+    ],
+    [
+      "PresentationEntry.Selection",
+      "AcquisitionOccurrenceId; selection is provenance only"
+    ],
+    [
+      "all-three-leaves presence equivalence",
+      "independent membership with relation-specific validation"
+    ],
+    [
+      "graph equals retained file union",
+      "both / episodic-only / graph-only / neither"
+    ],
+    [
+      "full initial evidence as permanent current entry",
+      "current surviving children only; initial carrier not a retrieval archive"
+    ]
+  ],
+  "pending": [
+    "canonical absent-versus-empty representation and timestamp lifecycle",
+    "payload-free source replay history policy",
+    "presentation cleanup and bounded history policy",
+    "exact public child fields and finite parameters",
+    "complete routes/read/write roles and owner batch reconciliation",
+    "separate allocation then canonical codecs and public persistence"
+  ],
+  "review": {
+    "faults": [
+      {
+        "name": "coupled-presence",
+        "detected": true
+      },
+      {
+        "name": "history-resolver",
+        "detected": true
+      },
+      {
+        "name": "historical-target",
+        "detected": true
+      },
+      {
+        "name": "merge-writer",
+        "detected": true
+      },
+      {
+        "name": "early-allocation",
+        "detected": true
+      }
+    ],
+    "frontierCounterexample": "formed sets {2} and {1,2} share maximum 2 but differ on source1; sparse max is insufficient"
+  },
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_STATE_DECLARATIONS_REV1.json",
+      "sha256": "e06c7e912ef89215ad724b893d0b26c6cf72804fd48ef2383b8bfd32ed080131"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_INVENTORY_REV2.json",
+      "sha256": "f03c57098bdae2fae4da33334f471e2e8e1e1bb7c9326302d063a218cbba3602"
+    },
+    {
+      "path": "scripts/review-attention-memory-state-successor.mjs",
+      "sha256": "d763e40f3e5d6db300e14d170acb1c440b2c1aa82be6235531563b2d63bf89f9"
+    }
+  ],
+  "limits": [
+    "Static reconciliation only; no public schema or runtime admission proof.",
+    "Root names retained provisionally; pending items prohibit whole shape acceptance."
+  ]
+}

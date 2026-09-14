@@ -1,0 +1,95 @@
+{
+  "status": "EXPLICIT EDGE LOSS COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "ignore-node-bound",
+      "witness": "EL-A",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "ignore-edge-bound",
+      "witness": "EL-C",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-C: satisfying nodes alone does not satisfy edge capacity",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss"
+      ]
+    },
+    {
+      "name": "delete-reverse-too",
+      "witness": "EL-B",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-B: reverse and unrelated weights survive without redistribution",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "leave-selected-edge",
+      "witness": "EL-B",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-B: reverse and unrelated weights survive without redistribution",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "allow-duplicate",
+      "witness": "EL-E",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-E: duplicate, absent, zero and self edge addresses reject"
+      ]
+    },
+    {
+      "name": "count-weight-as-cost",
+      "witness": "EL-G",
+      "detected": true,
+      "failed": [
+        "explicit directed graph loss component EL-G: weights consume equal slots and capacities are bounded exact integers"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/graphEdgeLoss.ts",
+      "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+    },
+    {
+      "path": "src/campaign3/graphZeroState.ts",
+      "sha256": "d04c5614329bee486549ac01c9c85c7207a51f99ec7ebb60a470924f94ae17a4"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/graphEdgeLoss.test.ts",
+      "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+    },
+    {
+      "path": "docs/formal/GRAPH_EDGE_LOSS_COMPONENT.md",
+      "sha256": "7f9f5b7d2f72c7293e68fee0ad850e55977f3e304a82b0f1cb18f3746c6548f6"
+    },
+    {
+      "path": "scripts/review-graph-edge-loss.mjs",
+      "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/GRAPH_EDGE_LOSS_TESTS_REV1.json",
+    "sha256": "2a07a05605a94bd06ccd9ca5e0344f3bbcb5af022bd1226cb661ea694ec0bb0d"
+  },
+  "limits": [
+    "Explicit plan validation only; no victim selection.",
+    "No public scheduler, owner or persistence qualification."
+  ]
+}

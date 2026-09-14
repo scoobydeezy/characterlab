@@ -1,0 +1,533 @@
+{
+  "status": "REVIEWABLE STAGE INVENTORY; NOT CANONICAL DECLARATIONS",
+  "stages": [
+    {
+      "name": "world",
+      "phase": 0,
+      "input": "SeriesSceneOriginal",
+      "outputs": [
+        "WorldEventTruth"
+      ],
+      "next": [
+        "observe"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "exact admitted original",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "observe",
+      "phase": 10,
+      "input": "WorldEventTruth",
+      "outputs": [
+        "ExtendedObservation"
+      ],
+      "next": [
+        "track",
+        "empty-select",
+        "cue"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": [],
+      "branch": "positive detections -> track; empty formation -> empty-select; empty cue -> cue"
+    },
+    {
+      "name": "track",
+      "phase": 11,
+      "input": "TrackingInput",
+      "outputs": [
+        "PerceptualTrackTransition",
+        "PerceptualEventTransition"
+      ],
+      "next": [
+        "bind"
+      ],
+      "reads": [
+        "ContinuantState",
+        "EventFileState",
+        "TrackingWindow"
+      ],
+      "writes": [
+        "ContinuantState",
+        "EventFileState",
+        "TrackingWindow"
+      ],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": [],
+      "authority": "perception"
+    },
+    {
+      "name": "bind",
+      "phase": 12,
+      "input": "BindingInput",
+      "outputs": [
+        "PerceivedBindingEvidence"
+      ],
+      "next": [
+        "classify"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "classify",
+      "phase": 13,
+      "input": "ClassificationInput",
+      "outputs": [],
+      "next": [
+        "freeze"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "freeze",
+      "phase": 14,
+      "input": "FreezeInput",
+      "outputs": [
+        "PreRecognitionSemanticExperience"
+      ],
+      "next": [
+        "roles"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "roles",
+      "phase": 15,
+      "input": "RoleInput",
+      "outputs": [
+        "CausalRoleEvidence"
+      ],
+      "next": [
+        "spatial"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "spatial",
+      "phase": 15,
+      "input": "SpatialPreparationInput",
+      "outputs": [
+        "SpatialPreparation"
+      ],
+      "next": [
+        "select",
+        "cue"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": [],
+      "branch": "formation -> select; cue -> cue"
+    },
+    {
+      "name": "delivery",
+      "phase": 15,
+      "input": "FeedbackDelivery",
+      "outputs": [
+        "FeedbackDelivery"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "admission": "exact generated delivery from actual earlier concern/no-concern producer",
+      "projection": "none",
+      "route": [],
+      "transactionOnly": "completed output and target binding; not persistent affect"
+    },
+    {
+      "name": "select",
+      "phase": 40,
+      "input": "SelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "encoding-join"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "empty-select",
+      "phase": 40,
+      "input": "EmptySelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "encoding-join"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "encoding-join",
+      "phase": 40,
+      "input": "EncodingJoinInput",
+      "outputs": [
+        "BoundEncodingInput"
+      ],
+      "next": [
+        "evaluate"
+      ],
+      "reads": [
+        "IDN"
+      ],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [],
+      "additionalCompletedParent": "delivery",
+      "target": "exact receiving original event + instant"
+    },
+    {
+      "name": "evaluate",
+      "phase": 40,
+      "input": "BoundEncodingInput",
+      "outputs": [
+        "EncodingEvaluation"
+      ],
+      "next": [
+        "retain"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "retain",
+      "phase": 130,
+      "input": "RetentionInput",
+      "outputs": [
+        "RetainedEncoding"
+      ],
+      "next": [
+        "form"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": [
+        "route/character-learning"
+      ],
+      "conditional": "zero outputs/children iff no positive retained unit"
+    },
+    {
+      "name": "form",
+      "phase": 140,
+      "input": "FormationInput",
+      "outputs": [],
+      "next": [
+        "associate"
+      ],
+      "reads": [
+        "IDN",
+        "EpisodeLedger"
+      ],
+      "writes": [
+        "EpisodeLedger"
+      ],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [
+        "route/character-learning"
+      ],
+      "authority": "attention-episode-formation"
+    },
+    {
+      "name": "associate",
+      "phase": 140,
+      "input": "FormationInput",
+      "outputs": [],
+      "next": [
+        "seed-presentation"
+      ],
+      "reads": [
+        "IDN",
+        "AssociationGraph"
+      ],
+      "writes": [
+        "AssociationGraph"
+      ],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [
+        "route/character-learning"
+      ],
+      "authority": "attention-association-update"
+    },
+    {
+      "name": "seed-presentation",
+      "phase": 140,
+      "input": "FormationInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "IDN",
+        "PresentationLedger"
+      ],
+      "writes": [
+        "PresentationLedger"
+      ],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [
+        "route/character-learning"
+      ],
+      "authority": "attention-presentation-update"
+    },
+    {
+      "name": "cue",
+      "phase": 40,
+      "input": "CueExtractionInput",
+      "outputs": [
+        "CueEvidence"
+      ],
+      "next": [
+        "recall-join"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": []
+    },
+    {
+      "name": "recall-join",
+      "phase": 40,
+      "input": "RecallJoinInput",
+      "outputs": [
+        "BoundRecallInput"
+      ],
+      "next": [
+        "rank"
+      ],
+      "reads": [
+        "IDN"
+      ],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [],
+      "additionalCompletedParent": "delivery",
+      "target": "exact receiving original event + instant"
+    },
+    {
+      "name": "rank",
+      "phase": 40,
+      "input": "BoundRecallInput",
+      "outputs": [
+        "RecallResult"
+      ],
+      "next": [
+        "recollect"
+      ],
+      "reads": [
+        "IDN",
+        "EpisodeLedger",
+        "AssociationGraph",
+        "PresentationLedger"
+      ],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [],
+      "conditional": "UnavailableCue: IDN only, no memory reads; AvailableFile: all three owner reads, including absence"
+    },
+    {
+      "name": "recollect",
+      "phase": 40,
+      "input": "RecollectionInput",
+      "outputs": [
+        "AttentionRecollection"
+      ],
+      "next": [
+        "reinforce"
+      ],
+      "reads": [],
+      "writes": [],
+      "admission": "actual registered parent output",
+      "projection": "none",
+      "route": [],
+      "conditional": "one occurrence/output per winner, max2; no winners -> no outputs/children"
+    },
+    {
+      "name": "reinforce",
+      "phase": 140,
+      "input": "ReinforcementInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "IDN",
+        "PresentationLedger"
+      ],
+      "writes": [
+        "PresentationLedger"
+      ],
+      "admission": "actual registered parent output",
+      "projection": "required ObserverId -> qualified CharacterId",
+      "route": [
+        "route/character-learning"
+      ],
+      "authority": "attention-presentation-update"
+    }
+  ],
+  "wrappers": {
+    "SeriesSceneOriginal": [
+      "ObserverId",
+      "DueAt",
+      "SceneDefinitionId",
+      "Purpose(Formation|Cue)"
+    ],
+    "TrackingInput": [
+      "ExtendedObservation"
+    ],
+    "BindingInput": [
+      "ExtendedObservation",
+      "actual track/event outputs"
+    ],
+    "ClassificationInput": [
+      "ExtendedObservation",
+      "actual event output",
+      "actual bindings"
+    ],
+    "FreezeInput": [
+      "ExtendedObservation",
+      "actual event output",
+      "actual bindings"
+    ],
+    "RoleInput": [
+      "PreRecognitionSemanticExperience"
+    ],
+    "SpatialPreparationInput": [
+      "ExtendedObservation",
+      "actual track outputs",
+      "PreRecognitionSemanticExperience",
+      "actual causal-role outputs"
+    ],
+    "SpatialPreparation": [
+      "PreRecognitionSemanticExperience",
+      "actual causal-role outputs",
+      "scoped detection/file/position matches",
+      "preselection peripheral count"
+    ],
+    "SelectionInput": [
+      "SpatialPreparation"
+    ],
+    "EmptySelectionInput": [
+      "ExtendedObservation(empty)"
+    ],
+    "BoundEncodingInput": [
+      "ObserverId",
+      "qualified Subject",
+      "EncodingJoinInput"
+    ],
+    "RetentionInput": [
+      "ObserverId",
+      "EncodingEvaluation"
+    ],
+    "FormationInput": [
+      "ObserverId",
+      "RetainedEncoding"
+    ],
+    "CueExtractionInput": [
+      "ExtendedObservation",
+      "optional actual tracked/frozen scene"
+    ],
+    "RecallJoinInput": [
+      "ObserverId",
+      "CueEvidence",
+      "FeedbackDelivery"
+    ],
+    "BoundRecallInput": [
+      "ObserverId",
+      "qualified Subject",
+      "RecallJoinInput"
+    ],
+    "RecallResult": [
+      "ObserverId",
+      "qualified Subject",
+      "At",
+      "cue disposition",
+      "all candidate RecallScore rows",
+      "winning retained encodings only"
+    ],
+    "RecollectionInput": [
+      "ObserverId",
+      "RecallResult"
+    ],
+    "ReinforcementInput": [
+      "ObserverId",
+      "actual AttentionRecollection outputs"
+    ]
+  },
+  "invariants": {
+    "characterWriterInput": "required top-level ObserverId equals retained/recall source ObserverId before PRJ",
+    "subject": "projection precedes any owner-leaf read; all copied subjects must equal actual projection",
+    "charWrites": [
+      "EpisodeLedger",
+      "AssociationGraph",
+      "PresentationLedger"
+    ],
+    "candidateEnumeration": "exact complete owner-leaf reads; no state.entries capability",
+    "prohibitedInput": "AutomaticAdaptationInput",
+    "noBeliefOrderingDecision": true,
+    "outputs": "newly produced records only; transported copies never allocate a second identity"
+  },
+  "outputIdentity": {
+    "RetainedEncoding": "no fresh occurrence; source SelectionOccurrenceId retained",
+    "ExtendedSelected": "reuse actual SelectionOccurrenceId; no fresh view identity",
+    "EncodingEvaluation": "trace result slot only; no new semantic occurrence",
+    "AttentionRecollection": "fresh ProposedRecollectionOccurrenceId per actual selected episode",
+    "FeedbackDelivery": "scheduler event only; ConcernOccurrenceId copied from actual source",
+    "stateWriters": "patch/diff trace only; no episode/graph/history occurrence namespace"
+  },
+  "bounds": {
+    "positiveFormationStages": 16,
+    "positiveCueStages": 14,
+    "includesDelivery": true,
+    "excludesEarlierConcernAcquisition": true,
+    "notRuntimeWorkQualification": true
+  },
+  "unresolved": [
+    "exact canonical wrapper field schemas and union layouts",
+    "registration/input/output-role and occurrence-result declarations",
+    "perception state rehydration/replay bounds",
+    "earlier probe/workspace/concern producer declarations and total work",
+    "exact model/calibration cohort and whole-profile output maxima"
+  ]
+}

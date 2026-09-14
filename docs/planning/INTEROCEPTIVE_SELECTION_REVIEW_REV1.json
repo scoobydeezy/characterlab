@@ -1,0 +1,97 @@
+{
+  "status": "IB-A..G QUALIFIED AT COMPONENT SCOPE",
+  "faults": [
+    {
+      "name": "retain-all",
+      "removed": "views.set(view,selected)",
+      "inserted": "views.set(view,rows.map(r=>r.bytes))",
+      "witness": "IB-A",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-A: 0/1/2 capacity genuinely bounds three eligible samples",
+        "interoceptive-selection-component/0.1-candidate IB-B: within-body competitors displace a previously selected operand",
+        "interoceptive-selection-component/0.1-candidate IB-D: an absent sample is ineligible; a present high-level/zero-pressure range is not absence",
+        "interoceptive-selection-component/0.1-candidate IB-F: only detached selected bytes survive and views are opaque and single use"
+      ]
+    },
+    {
+      "name": "ignore-capacity",
+      "removed": "selected.length<capacity",
+      "inserted": "true",
+      "witness": "IB-A",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-A: 0/1/2 capacity genuinely bounds three eligible samples",
+        "interoceptive-selection-component/0.1-candidate IB-B: within-body competitors displace a previously selected operand",
+        "interoceptive-selection-component/0.1-candidate IB-F: only detached selected bytes survive and views are opaque and single use"
+      ]
+    },
+    {
+      "name": "select-absent",
+      "removed": "!r.present?'Unavailable':",
+      "inserted": "false?'Unavailable':",
+      "witness": "IB-D",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-D: an absent sample is ineligible; a present high-level/zero-pressure range is not absence"
+      ]
+    },
+    {
+      "name": "reusable-view",
+      "removed": "views.delete(view);return values",
+      "inserted": "return values",
+      "witness": "IB-F",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-F: only detached selected bytes survive and views are opaque and single use"
+      ]
+    },
+    {
+      "name": "ignore-observer-time",
+      "removed": "if(new Set(rows.map(r=>r.observer)).size>1||new Set(rows.map(r=>r.at)).size>1)",
+      "inserted": "if(false)",
+      "witness": "IB-E",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-E: malformed batches, identities and versions reject"
+      ]
+    },
+    {
+      "name": "duplicate-channels",
+      "removed": "new Set(rows.map(r=>r.channel)).size!==rows.length",
+      "inserted": "false",
+      "witness": "IB-E",
+      "detected": true,
+      "failed": [
+        "interoceptive-selection-component/0.1-candidate IB-E: malformed batches, identities and versions reject"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/interoceptiveSelection.ts",
+      "sha256": "2277a4e1f2a51320cc318a0cb7d2765ee363262b4cc12d9a3bac9bba10065f81"
+    },
+    {
+      "path": "src/test/interoceptiveSelection.test.ts",
+      "sha256": "ce4d710ff345401a77e8eb6a45a29ec221cb68d8ac1d57b7f4bc47d105177ee3"
+    },
+    {
+      "path": "docs/formal/INTEROCEPTIVE_SELECTION_COMPONENT.md",
+      "sha256": "cae74a61a5c95915c183bee6e81e5ac1e0878b79001180300ff47a48fbaaf363"
+    },
+    {
+      "path": "scripts/review-interoceptive-selection.mjs",
+      "sha256": "3d5accdba3a13ffe05295055611f8e055f1c9880b2bff97b26a1f9fbef83da3f"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/INTEROCEPTIVE_SELECTION_TESTS_REV2.json",
+    "sha256": "a212e9f277d6febd8bd13fd31f541bed5f587f94e12a81b917383f143cb1c44f"
+  },
+  "limits": [
+    "Test channels do not prove actual public sensing or distinct body candidate semantics.",
+    "Equal priority is a declared control, not body salience.",
+    "No permanent memory carrier, writer, source admission or restore qualified."
+  ]
+}

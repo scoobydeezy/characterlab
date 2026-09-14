@@ -1,0 +1,50 @@
+{
+  "status": "GOAL OUTCOME QUALIFICATION COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "exclude-progress-from-intact",
+      "witness": "GQ-A",
+      "detected": true
+    },
+    {
+      "name": "qualify-indeterminate",
+      "witness": "GQ-B",
+      "detected": true
+    },
+    {
+      "name": "qualify-same-distance",
+      "witness": "GQ-B",
+      "detected": true
+    },
+    {
+      "name": "erase-direction",
+      "witness": "GQ-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/goalOutcomeQualification.ts",
+      "sha256": "c0b6ced78717c2816d409d177806fec7f672a1ee84a8af09a3e2cc3aded9a80f"
+    },
+    {
+      "path": "src/test/goalOutcomeQualification.test.ts",
+      "sha256": "571bcc1ae7fdc402c224beda7259001c1a3d9008bf65e49c7fc8c7cd91bd0d24"
+    },
+    {
+      "path": "src/campaign3/goalDistanceRelation.ts",
+      "sha256": "ae8e698d830873b93fd1ba1ec343b9343eef942425f7620fc0bf10c2e2b3c724"
+    },
+    {
+      "path": "scripts/review-goal-outcome-qualification.mjs",
+      "sha256": "7c1399f76a7ef75e4b843cf639266c2e6cada286d226d707f7e98dda815dbfed"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/GOAL_OUTCOME_QUALIFICATION_TESTS_REV1.json",
+    "sha256": "2fbcc2d352e2a8ddb82e05525bd80dcdc6af9ffb2e090352b3f38cb5b80b1943"
+  },
+  "limits": [
+    "Qualification only. No authenticated attribution-target join, significance storage or retention authority."
+  ]
+}

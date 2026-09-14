@@ -8,8 +8,10 @@ The proposed names below are local intake labels, not allocated PhenomenonIds.
 
 2026-09-11 coverage reconciliation: [BODY and MULTISOURCE now have PARTIAL bounded
 coverage](CAMPAIGN3_POST_EMB_COVERAGE.md) from qualified EMB. Their remaining public
-comparisons are still blocked. ATTENTION and other unimplemented proposals remain
-blocked by their named seams. The requirements below are unchanged.
+comparisons are still blocked. [Bounded public ATTENTION](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md)
+now has PARTIAL active-selection coverage; its encoding footprint and later probe
+remain blocked by their named seams. Other unimplemented proposals remain blocked.
+The requirements below are unchanged, and no proposal becomes a corpus member.
 That is an expressibility result, not a failed behavior or permission to supply a
 psychological intermediate. Freeze exact parameters, time and observer channels with
 the eventual fixture; do not infer formulas or admit unspecified numeric defaults.

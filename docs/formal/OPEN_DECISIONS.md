@@ -1,6 +1,180 @@
 # Formal Open-Decision Register
 
+2026-09-13: [Pause checkpoint](../planning/GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md).
+Write-scope correction ACCEPTED and allocated705/706; old704 unchanged. Fixed boundary
+checks pass; exact model admission and GA OPEN. User requested pause, not escalation.
+
+2026-09-13: [Carrier checkpoint](../planning/GENERAL_ATTENTION_CARRIER_CHECKPOINT.md).
+Bounded carrier shape and numeric allocation ACCEPTED; records542..704 and namespaces
+1044/1045/1145..1148 frozen. Public/model closure and GA remain OPEN. Continue locally.
+
+2026-09-13: [Registration checkpoint](../planning/GENERAL_ATTENTION_REGISTRATION_CHECKPOINT.md). 282 affected tests pass. Recall projections, actual replenishment output and primitive grammar are implemented; the symbolic graph has67 templates and163 records. Public gates and GA remain OPEN. Continue locally; no owner ruling pending.
+
+2026-09-13: [Result production checkpoint](../planning/GENERAL_ATTENTION_RESULT_PRODUCTION_CHECKPOINT.md). 253 affected tests pass; actual recollection and attribution production now compose. Symbolic output ownership covers 66 templates; public registration and GA remain OPEN. Continue locally; no owner ruling is pending.
+
+**Current checkpoint:** [owner composition](../planning/GENERAL_ATTENTION_OWNER_COMPOSITION_CHECKPOINT.md).235 affected tests and62 injected source faults pass.
+159-record symbolic role coverage is reviewed. Public gates and GA remain OPEN;
+continue with recollection/presentation and whole public registration closure. No owner ruling is pending.
+
+**Current checkpoint:** [production boundaries](../planning/GENERAL_ATTENTION_PRODUCTION_BOUNDARIES_CHECKPOINT.md).
+210 affected tests and41 injected faults pass. Actual assessment, selected formation,
+narrow retained grouping and prior-committed memory batching now compose. The145-record
+role crosswalk remains symbolic; public gates and GA are OPEN. Continue locally with
+calibration/policy and remaining owner closure; no owner ruling is pending.
+
+[Actual formation evidence](../planning/GA_ACTUAL_FORMATION_EVIDENCE_REV1.md): both modalities now produce acquisition
+evidence from actual selected capabilities.169 affected tests and16 injected faults
+pass. Public registration and GA remain OPEN; no owner ruling is pending.
+
+[Actual body selection](../planning/GA_ACTUAL_BODY_SELECTION_REV1.md) removes the remaining
+fixture-selection fallback from the main acquisition path. Nine body and nine
+visual actual audits now account for18 sources.34 focused tests/four source faults
+pass; public registration and GA remain OPEN. Continue without an owner ruling.
+
+[Acquisition/recall stage slice](../planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.md)
+now names21 symbolic registrations and three required wrappers. The [revision10
+role crosswalk](../planning/GA_IDENTITY_ROLE_CLOSURE_REV10.md) covers132 records. Its23-event
+source-plus-slice subtotal is not a whole-model ceiling. Public consumer/join/owner
+closure and GA remain OPEN; no owner ruling pending.
+
+**Latest checkpoint:** [bounded perception and reservation](../planning/GENERAL_ATTENTION_BOUNDED_PERCEPTION_CHECKPOINT.md).
+Both actual learning fixtures now use last-window/SEM owners; sampling reserves the
+shared experience before binding.149 affected tests and11 injected faults pass.
+The129-record symbolic crosswalk now has128 scalar positions. Public gates and GA
+remain OPEN; no owner ruling is pending.
+
+
+[Actual-use retention](../planning/GA_ACTUAL_USE_RETENTION_RESOLUTION_REV1.md) and
+[observed context carriage](../planning/GA_ACTUAL_CONTEXT_CARRIAGE_REV1.md) remove supplied
+use/stage premises from the new discriminating component witness. Public gates and
+GA remain OPEN. No architecture-owner ruling is required.
+
+[Current local closure](../planning/GENERAL_ATTENTION_REQUESTED_MULTIMODAL_CHECKPOINT.md)
+implements one actual requested multimodal opportunity and bounded schedule checks.
+Source transport remains symbolic; no owner ruling pending. Public registration and
+GA remain OPEN under the existing autonomous decision policy.
+
 **Status:** active blocking register
+
+[Current local integration](../planning/GENERAL_ATTENTION_TENTH_SELECTION_CHECKPOINT.md)
+replaces the synthetic retention competitor and binds visual sources to actual
+selection audits. No owner decision pending; public registration and GA remain OPEN.
+
+[Requested-source checkpoint](../planning/GENERAL_ATTENTION_REQUESTED_SOURCE_CHECKPOINT.md)
+locally closes component request/absence and prepared positive projection boundaries.
+Physical key recursion is symbolic; public source/owner/allocation and GA remain OPEN.
+No architecture-owner decision is pending.
+
+[Combined source/declaration closure](../planning/GENERAL_ATTENTION_COMBINED_SOURCE_CHECKPOINT.md)
+executes the P/V/B branch table at component scope and advances the symbolic crosswalk
+to102 records. No owner decision pending; public source/owner and GA remain OPEN.
+
+[Current selected/feedback checkpoint](../planning/GENERAL_ATTENTION_SELECTED_FEEDBACK_CHECKPOINT.md)
+executes selected-only spatial encoding and the bounded earlier-concern comparison.
+The82-record role crosswalk closes the visual child reference; state/public gates
+remain OPEN. Continue locally under the escalation policy; no owner ruling pending.
+
+[Source integration revision7](../planning/GENERAL_ATTENTION_SOURCE_INTEGRATION_REV7.md)
+locally composes panel/body SEM reservation and transactional perception publication.
+[Identity-role closure](../planning/GA_IDENTITY_ROLE_CLOSURE_REV1.md) distinguishes
+scalar, collection and inherited record roles. No owner ruling is pending; numeric
+allocation, full public registration and GA qualification remain OPEN.
+
+[Earlier source integration revision5](../planning/GENERAL_ATTENTION_SOURCE_INTEGRATION_REV5.md)
+locally closes the visual fallback and recalled focal-child construction at component
+scope. No new owner decision is pending. Public source/registration and GA remain OPEN.
+
+[Earlier source integration revision3](../planning/GENERAL_ATTENTION_SOURCE_INTEGRATION_REV3.md)
+locally resolves neutral cue sourcing, separate retained position operands and
+significance-aware formation. These preserve accepted concepts and require no owner
+ruling. Public carrier/registration/qualification work remains OPEN.
+
+[Separate retrieval partitions A accepted](../planning/GENERAL_ATTENTION_RETRIEVAL_PARTITION_RESOLUTION.md).
+[Body law A is accepted](../planning/GENERAL_ATTENTION_BODY_RECALL_LAW_RESOLUTION.md).
+[Independent cue A is accepted](../planning/GENERAL_ATTENTION_BODY_CUE_SOURCE_RESOLUTION.md).
+[Binary acquired protection](../planning/GENERAL_ATTENTION_USE_PROTECTION_RESOLUTION.md)
+and [retained attribution use](../planning/GENERAL_ATTENTION_USE_CONSUMER_RESOLUTION.md)
+are accepted at their stated component scopes. Public binding remains open.
+[Concern-relative outcome significance](../planning/GENERAL_ATTENTION_OUTCOME_SIGNIFICANCE_RESOLUTION.md)
+is accepted in direction; [adopted maintenance goal](../planning/GENERAL_ATTENTION_MAINTENANCE_GOAL_RESOLUTION.md)
+is accepted as the first source. [The goal-relation law](../planning/GENERAL_ATTENTION_GOAL_RELATION_RESOLUTION.md)
+is accepted. [Both-direction significance qualification](../planning/GENERAL_ATTENTION_SIGNIFICANCE_QUALIFICATION_RESOLUTION.md)
+is accepted; [attributed-child granularity](../planning/GENERAL_ATTENTION_SIGNIFICANCE_TARGET_RESOLUTION.md)
+is accepted. [Directional significance state](../planning/GENERAL_ATTENTION_SIGNIFICANCE_STORAGE_RESOLUTION.md)
+is accepted. [Significance-first priority](../planning/GENERAL_ATTENTION_SIGNIFICANCE_RETENTION_RESOLUTION.md)
+is accepted at supplied-state scope. [One focal target](../planning/GENERAL_ATTENTION_ATTRIBUTION_FOCUS_RESOLUTION.md)
+is accepted. [Focal stroke membership](../planning/GENERAL_ATTENTION_FOCAL_TRIAL_RESOLUTION.md)
+is accepted. [Explicit context grouping A is locally resolved](../planning/TRIAL_CONTEXT_LOCAL_DISPOSITION.md)
+under the user's Campaign3 escalation policy. No owner decision is pending for that
+bounded fork. Public target authentication and persistence remain open.
+
+[Protocol candidate validation](../planning/FORMATION_PROTOCOL_TRANSITION_CHECKPOINT.md)
+passes seven new cases, twenty-six combined. Public source/result authentication and
+closed hook/classifier descriptor qualification remain pending; generic ownership is insufficient.
+
+Formation governance [dedicated protocol root A accepted](../planning/FORMATION_PROTOCOL_STATE_PLACEMENT_RESOLUTION.md).
+[First symbolic carrier](../planning/FORMATION_PROTOCOL_ROOT_SYMBOLIC_REV1.md) remains
+partial; source roles, hook/result join and public classifier closure are pending.
+
+[Admission/join revision1](../planning/FORMATION_PROTOCOL_ADMISSION_JOIN_REV1.md)
+specifies proposed source roles and transaction-local owner-result binding. Public
+eligibility/descriptor closure and FJ-A..J execution remain pending; no new allocation.
+
+Ordinary acquisition governance: [bounded-run A accepted](../planning/GENERAL_ATTENTION_ACQUISITION_HISTORY_RESOLUTION.md).
+The admitted distinct source domain is finite; successes alone do not define its bound.
+Eight component tests pass; public run/domain binding and persistence remain unqualified.
+
+[Source-domain component/binding proposal](../planning/FORMATION_SOURCE_DOMAIN_BINDING_REV1.md)
+adds six passing domain cases; full public metadata placement and the no-positive-output
+admission hook remain unresolved shape work, not runtime qualification.
+
+Graph positive-loss unit: [A accepted](../planning/GENERAL_ATTENTION_GRAPH_LOSS_UNIT_RESOLUTION.md).
+Explicit edge-plan validation passes seven cases; [strength priority A is accepted](../planning/GENERAL_ATTENTION_GRAPH_PRIORITY_RESOLUTION.md).
+[Selective-weakening split scope A is accepted](../planning/GENERAL_ATTENTION_GRAPH_WEAKENING_SCOPE_RESOLUTION.md).
+Selector reversal passes; future selective producer integration is conditional and OPEN.
+Twenty combined scheduler/component tests do not imply public owner/persistence closure.
+
+Graph orphan policy resolved: [zero-state normalization accepted](../planning/GENERAL_ATTENTION_GRAPH_ORPHAN_RESOLUTION.md).
+Only exact-zero incoming/outgoing structure with no node-local learned payload is
+removed after reconciliation. Seven component cases pass; positive-edge scarcity,
+public owner timing and persistence remain open.
+
+ATTN association lifecycle is [independently bounded, accepted](../planning/GENERAL_ATTENTION_ASSOCIATION_RETENTION_RESOLUTION.md).
+The [direct-cue ruling accepts independent matching](../planning/GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_RESOLUTION.md)
+for episodic-only keys with actual admitted cues. Direct zero-hop contribution counts
+once; working vertices are transient. Exact numeric composition, graph scarcity,
+orphan behavior and public cue admission remain open. Earlier11 tests are not a
+qualification of the new combined direct/spread contract.
+
+Ordinary-memory integration decision resolved: [formation then same-barrier loss accepted](../planning/GENERAL_ATTENTION_SAME_BARRIER_ACQUISITION_RESOLUTION.md).
+Historical acquisition remains even with no survivors, without payload lookup or an
+implicit transient-access seam. Exact bounded history, read and output closure remain
+open; public lifecycle branches are not passed by recency component tests.
+
+ATTN first survival policy resolved: [Recency Retention Baseline accepted](../planning/GENERAL_ATTENTION_RETENTION_PRIORITY_RESOLUTION.md).
+Original acquisition time alone drives newest-first baseline survival. Exact canonical
+ties, implementation and public proof remain pending. Acquired-protection reinforcement
+is a mandatory unresolved comparison; recency cannot close broad memory sufficiency
+or General Attention. No body-importance scalar or reinforcement law is accepted.
+
+2026-09-12 ATTN-001: [three-local-reserve source direction accepted with clarifications](../planning/LOCAL_RESERVE_PUBLIC_SOURCE_DIRECTION_ACCEPTANCE.md).
+This closes no whole-shape gate. SelectionOccurrenceId/1143 reuse for durable body
+acquisition is superseded by [accepted B](../planning/GENERAL_ATTENTION_ACQUISITION_IDENTITY_RESOLUTION.md):
+one distinct AcquisitionOccurrenceId role for successful ordinary acquisition;
+selection stays provenance and measurement memory is unchanged. Carrier, memory, cue,
+persistence, bounds and registration closure remain uncommitted. General ATTN is OPEN.
+
+ATTN retention scope resolved: [B accepted](../planning/GENERAL_ATTENTION_RETENTION_SCOPE_RESOLUTION.md).
+Non-borrowing per-kind budgets share ordinary-memory authority. Genuine within-kind
+forgetting is required; accessibility is not an eviction score. Exact typed retention,
+fragmentation, importance basis, bounds and pruning/persistence remain open. Shared
+competition is preserved as a future comparator, not an accepted current mechanism.
+
+Retention loss unit resolved: [complete semantic-unit loss accepted](../planning/GENERAL_ATTENTION_RETENTION_LOSS_UNIT_RESOLUTION.md).
+One surviving semantic child costs one per-kind slot; body groups keep all views.
+Partial loss preserves acquisition identity; final-child loss removes the individual
+recall target. Survival priority, exact survivor/read shape and bounded history remain
+open. Whole-acquisition retirement is preserved as a simpler comparator.
 
 Current Campaign 2 reconciliation (2026-09-09): the thin bounded scaffold is COMPLETE;
 see `../planning/CAMPAIGN2_COMPLETION_REVIEW.md`. Current scoped dispositions below
@@ -23,7 +197,7 @@ blocking are unblocked to the exact scope that acceptance proves, and no further
 
 | Decision | Priority | Formal owner | Blocks | Target disposition |
 |---|---|---|---|---|
-| `ATTN-001` perceptual attention and encoding salience | `P1` | perception/attention, encoding and retrieval | General capacity/attention/salience and affect-biased retrieval experiments; not the already qualified task slice | Preserve MEC-005 CONTROL+CONTRACT, MEC-007 CONTROL, CTL-004 and RET-001. Specify permitted evidence, selection/capacity, residual-pool and budget alternatives, observer-relative role factors and no flat-tag learning shortcut before implementation. Keep permission, active selection, encoding strength and later access distinct; residual-pool salience is a control. [ATTN inspection](../planning/CAMPAIGN3_ATTENTION_INSPECTION.md) and [selection revision1](../planning/CAMPAIGN3_ATTENTION_DRAFT.md), 2026-09-11, propose post-perception finite selection only. [Closure revision2](../planning/CAMPAIGN3_ATTENTION_CLOSURE_REV2.md) corrects unsupported Cause/Incidental to Actor/Target/Participant, proposes phase40 active control and selected-only capability. [Selection/access component qualified](../planning/CAMPAIGN3_ATTENTION_COMPONENT_CHECKPOINT.md) under attention-selection-component/0.1-candidate: AC-A..L pass, no public records or allocation. Public whole shape NOT accepted. [Three-port producer design/composition](../planning/CAMPAIGN3_ATTENTION_SOURCE_CLOSURE_REV1.md) reviewed:64 cases/96 hidden-role equalities; canonical reference-order component correction recorded forward. [Public integration inventory](../planning/CAMPAIGN3_ATTENTION_PUBLIC_INTEGRATION_REV1.md) reviewed:24 records/69 fields,10 stages and10 design checks. [Whole bounded public shape accepted](ATTENTION_PUBLIC_SHAPE_ACCEPTANCE.md):26 records/89 fields, dedicated finite admission/content compilers,62 scalar roles plus2 map-key roles,52 proposed members and32 model recipes. [Permanent allocation frozen](ATTENTION_PERMANENT_ALLOCATION.md):records516..541, namespaces1143/1144,52 text members and4 union members;277 numeric parity checks/11 negative controls/135 declaration round trips. [Exact32-model cohort frozen](../planning/CAMPAIGN3_ATTENTION_MODEL_CHECKPOINT.md):224 specimen run commitments,65 independent checks/seven corruption controls. Closed compiler/public factory implementation next; AT2-A..N FROZEN NOT PASSED. Residual-pool, encoding and later-access proof remain deferred. |
+| `ATTN-001` perceptual attention and encoding salience | `P1` | perception/attention, encoding and retrieval | General capacity/attention/salience and affect-biased retrieval experiments; not the already qualified task slice | Preserve MEC-005 CONTROL+CONTRACT, MEC-007 CONTROL, CTL-004 and RET-001. Specify permitted evidence, selection/capacity, residual-pool and budget alternatives, observer-relative role factors and no flat-tag learning shortcut before implementation. Keep permission, active selection, encoding strength and later access distinct; residual-pool salience is a control. [ATTN inspection](../planning/CAMPAIGN3_ATTENTION_INSPECTION.md) and [selection revision1](../planning/CAMPAIGN3_ATTENTION_DRAFT.md), 2026-09-11, propose post-perception finite selection only. [Closure revision2](../planning/CAMPAIGN3_ATTENTION_CLOSURE_REV2.md) corrects unsupported Cause/Incidental to Actor/Target/Participant, proposes phase40 active control and selected-only capability. [Selection/access component qualified](../planning/CAMPAIGN3_ATTENTION_COMPONENT_CHECKPOINT.md) under attention-selection-component/0.1-candidate: AC-A..L pass, no public records or allocation. Public whole shape was not yet accepted at that historical component checkpoint. [Three-port producer design/composition](../planning/CAMPAIGN3_ATTENTION_SOURCE_CLOSURE_REV1.md) reviewed:64 cases/96 hidden-role equalities; canonical reference-order component correction recorded forward. [Public integration inventory](../planning/CAMPAIGN3_ATTENTION_PUBLIC_INTEGRATION_REV1.md) reviewed:24 records/69 fields,10 stages and10 design checks. [Whole bounded public shape accepted](ATTENTION_PUBLIC_SHAPE_ACCEPTANCE.md):26 records/89 fields, dedicated finite admission/content compilers,62 scalar roles plus2 map-key roles,52 proposed members and32 model recipes. [Permanent allocation frozen](ATTENTION_PERMANENT_ALLOCATION.md):records516..541, namespaces1143/1144,52 text members and4 union members;277 numeric parity checks/11 negative controls/135 declaration round trips. [Exact32-model cohort frozen](../planning/CAMPAIGN3_ATTENTION_MODEL_CHECKPOINT.md):224 specimen run commitments,65 independent checks/seven corruption controls. [Bounded public ATTN qualified](../planning/CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md): AT2-A..N PASS with explicit public/component limits,32 models/224 runs,434 restores,11 runtime faults and1,160 active tests. Correct-forward set-S0 cohort preserves32 ModelIdentities and recomputes224 RunIdentities without aliasing. [General attention component advance](../planning/GENERAL_ATTENTION_COMPONENT_CHECKPOINT.md): 72 targeted tests/28 source faults; actual selected-capability encoding and explicit denominator comparisons, SEM marker tracking, spatial allocation without Incidental inference, and association/access math. Current forward receipts preserve earlier source commitments. [Public inventory revision2](../planning/ENCODING_ACCESS_PUBLIC_INVENTORY_REV2.md) records source, PRJ/admission, governed owner reads and delayed-feedback join gates. General ATTN stays OPEN; public encoding/retrieval/feedback and corpus promotion remain unqualified. |
 | `EMB-001` body kinetics, interoception and embodied motive | `P1` | physiology/interoception/Needs | Bounded reserve/interoception/adopted-action/shared-choice experiment; general biology is a later frontier | BOUNDED EXPERIMENT COMPLETE AND QUALIFIED, 2026-09-10, by authorized primary-agent adversarial review. [Forward qualification](../planning/CAMPAIGN3_EMBODIED_QUALIFICATION.md) closes EMB-A..O and ER-A..R in explicit public/component scope, preserving the76 body obligations and EPACK-A..I. [Receiving shape](EMBODIED_RECEIVING_SHAPE_ACCEPTANCE.md), [permanent allocation](EMBODIED_RECEIVING_PERMANENT_ALLOCATION.md) and13 exact model commitments remain frozen. General physiology, final Need ownership, mixed learning and general BODY/MULTISOURCE corpus qualification remain deferred; this is not Campaign3 completion. CTL-001 and the qualified task feedback loop remain controls. Historical draft and body-only dispositions are retained and superseded only within this bounded scope. |
 | `C2-TRACE-001` first-profile trace binding | `CLOSED (shape/commitment)` | trace / Campaign-2 factory | qualification remains; wrapper implementation authorized | Both members, trace profile, RulesVersion 0.2 and replacement ModelIdentity frozen. TRACE-C2-M COMPONENT / MATERIALIZATION PASS. Canonical wrappers implemented for 0.2 only; see CAMPAIGN2_TRACE_IMPLEMENTATION.md for scoped evidence. No global trace/VAL/FCT/PHEN pass. |
 | `C2-MODEL-PACK-001` first-model manifest composition | `CLOSED` | campaign2-registry/0.1-candidate + campaign2-parameters/0.1-candidate | concrete model freeze satisfied; FCT-5 unblocked to begin | Both version authorities anchored; seven artifacts frozen unchanged after MODEL-BYTE-A PASS. See CAMPAIGN2_FIRST_MODEL_BYTE_REVIEW.md and formal BOUNDED_NUMERIC_PROFILE.md. |
@@ -1773,6 +1947,27 @@ PHEN-DECISION/PHEN-BIO proof; it no longer blocks the accepted free-choice task
 qualifier. ORD-001 remains P1: later140-to-next40 reading does not decide same-event
 belief timing. ORD-002/005 and the other unexercised extensions remain open in their
 owners. None is a relevant unresolved P0 for the completed slice.
+
+2026-09-12 ATTN-001 lifecycle subdecision: [B accepted by supplied planning review](../planning/GENERAL_ATTENTION_ENCODING_LIFECYCLE_RESOLUTION.md).
+Immediate acquisition-time encoding precedes distinct append-only outcome-linked
+consolidation. This resolves A/B only; no consolidation law, public seam or general
+ATTN qualification follows. The former recommendation of A is historical.
+The distinct [consolidation credit subdecision is accepted](../planning/GENERAL_ATTENTION_CONSOLIDATION_CREDIT_RESOLUTION.md):
+fallible observer-side attribution gates the first outcome-linked consolidation.
+Insufficient support means unavailable credit, not zero effect. A conscious causal
+belief is not required. Noncausal experiential association remains a separate future
+candidate. Exact source/assessment/update contracts remain open; lifecycle B is unchanged.
+
+2026-09-12 ATTN/EMB integration subdecision [interoceptive encoding topology accepted](../planning/GENERAL_ATTENTION_INTEROCEPTIVE_ENCODING_RESOLUTION.md):
+separate bounded acquisition first, with real within-body contention and selected-only
+durable memory. Shared resources remain a future comparator. [Signal-per-opportunity
+units are accepted](../planning/GENERAL_ATTENTION_INTEROCEPTIVE_UNIT_RESOLUTION.md), with
+safe declared grouping, exact bounded evidence and no timestamp-based opportunity identity.
+The [first multi-signal bodily source scope is accepted](../planning/GENERAL_ATTENTION_MULTISIGNAL_BODY_SOURCE_RESOLUTION.md):
+three independently keyed local reserves as a synthetic acquisition fixture, with
+distinct physical/signal namespaces and no pressure aggregation or canonical physiology
+claim. Its component is qualified; exact public state/source/admission remains pending.
+Grouped/sample selection and attribution retain their component-only qualifications.
 
 Reopen a bounded closure when its source domain, state authority, evidence basis,
 mathematics, randomness/coupling or input/profile semantics change. Do not infer

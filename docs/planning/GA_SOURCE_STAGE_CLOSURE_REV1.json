@@ -1,0 +1,523 @@
+{
+  "version": "ga-source-stage-closure/0.1-draft",
+  "status": "SOURCE TOPOLOGY AND TRANSPORT ONLY; WHOLE PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "GeneralSamplingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Original",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralObservationOriginal"
+          }
+        },
+        {
+          "name": "World",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "WorldEventTruth"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralTrackingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBindingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFreezeInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        },
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceivedBindingEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralUseInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "BodyOpportunityEvidence"
+            }
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "VisualOpportunityEvidence"
+            }
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "world",
+      "phase": 0,
+      "input": "GeneralObservationOriginal",
+      "outputs": [
+        "WorldEventTruth"
+      ],
+      "next": [
+        "current-sample",
+        "consequence-sample"
+      ],
+      "childInput": "GeneralSamplingInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exactly the original lane; World iff visual requested"
+    },
+    {
+      "name": "current-sample",
+      "phase": 10,
+      "input": "GeneralSamplingInput",
+      "outputs": [
+        "CompletedRequestedSamples"
+      ],
+      "next": [
+        "current-track"
+      ],
+      "childInput": "GeneralTrackingInput",
+      "reads": [
+        "LocalReserveState via bound sampling channel and PRJ/IDN"
+      ],
+      "writes": [],
+      "route": [],
+      "subject": "ResolvedCharacterSubject for body request",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-track",
+      "phase": 11,
+      "input": "GeneralTrackingInput",
+      "outputs": [
+        "PerceptualTrackTransition",
+        "PerceptualEventTransition",
+        "PerceptualEventEnd"
+      ],
+      "next": [
+        "current-bind"
+      ],
+      "childInput": "GeneralBindingInput",
+      "reads": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "writes": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-bind",
+      "phase": 12,
+      "input": "GeneralBindingInput",
+      "outputs": [
+        "PerceivedBindingEvidence"
+      ],
+      "next": [
+        "current-classify"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-classify",
+      "phase": 13,
+      "input": "GeneralFreezeInput",
+      "outputs": [],
+      "next": [
+        "current-freeze"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "current-freeze",
+      "phase": 14,
+      "input": "GeneralFreezeInput",
+      "outputs": [
+        "PreRecognitionSemanticExperience"
+      ],
+      "next": [
+        "current-roles"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "one conditional shared reservation"
+    },
+    {
+      "name": "current-roles",
+      "phase": 15,
+      "input": "GeneralUseInput",
+      "outputs": [
+        "CausalRoleEvidence"
+      ],
+      "next": [
+        "current-dispatch"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "entry Claims empty; output only actual derivation"
+    },
+    {
+      "name": "current-dispatch",
+      "phase": 40,
+      "input": "GeneralUseInput",
+      "outputs": [],
+      "next": [],
+      "childInput": null,
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exact admitted use plan; separately registered consumers"
+    },
+    {
+      "name": "consequence-sample",
+      "phase": 120,
+      "input": "GeneralSamplingInput",
+      "outputs": [
+        "CompletedRequestedSamples"
+      ],
+      "next": [
+        "consequence-track"
+      ],
+      "childInput": "GeneralTrackingInput",
+      "reads": [
+        "LocalReserveState via bound sampling channel and PRJ/IDN"
+      ],
+      "writes": [],
+      "route": [],
+      "subject": "ResolvedCharacterSubject for body request",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-track",
+      "phase": 121,
+      "input": "GeneralTrackingInput",
+      "outputs": [
+        "PerceptualTrackTransition",
+        "PerceptualEventTransition",
+        "PerceptualEventEnd"
+      ],
+      "next": [
+        "consequence-bind"
+      ],
+      "childInput": "GeneralBindingInput",
+      "reads": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "writes": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-bind",
+      "phase": 122,
+      "input": "GeneralBindingInput",
+      "outputs": [
+        "PerceivedBindingEvidence"
+      ],
+      "next": [
+        "consequence-classify"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-classify",
+      "phase": 123,
+      "input": "GeneralFreezeInput",
+      "outputs": [],
+      "next": [
+        "consequence-freeze"
+      ],
+      "childInput": "GeneralFreezeInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "actual source products"
+    },
+    {
+      "name": "consequence-freeze",
+      "phase": 124,
+      "input": "GeneralFreezeInput",
+      "outputs": [
+        "PreRecognitionSemanticExperience"
+      ],
+      "next": [
+        "consequence-roles"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "one conditional shared reservation"
+    },
+    {
+      "name": "consequence-roles",
+      "phase": 125,
+      "input": "GeneralUseInput",
+      "outputs": [
+        "CausalRoleEvidence"
+      ],
+      "next": [
+        "consequence-dispatch"
+      ],
+      "childInput": "GeneralUseInput",
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "entry Claims empty; output only actual derivation"
+    },
+    {
+      "name": "consequence-dispatch",
+      "phase": 130,
+      "input": "GeneralUseInput",
+      "outputs": [],
+      "next": [],
+      "childInput": null,
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "subject": "None",
+      "branch": "exact admitted use plan; separately registered consumers"
+    }
+  ],
+  "sourceEventsPerOriginal": 8,
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.md",
+      "sha256": "7631038d4234f4444354551e222e0be43c792048692ce5471eda44babc6edcee"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV1.json",
+      "sha256": "d7127a41408b9cac25f800af283abbb1d0325a37daf67be5f5ffaf53a7b3fc72"
+    },
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV6.json",
+      "sha256": "9300f2e8f29f565dfb629cc53254201a5d816ded55e1bbaff5a0df8b7d3224fe"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    },
+    {
+      "path": "src/campaign3/generalSourceOpportunity.ts",
+      "sha256": "e41afbba0ba5ecf1e4625bfa86f1ec8de73f9e19cdce9fad96acc020eb2fd811"
+    }
+  ]
+}

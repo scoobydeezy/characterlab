@@ -1,0 +1,51 @@
+{
+  "status": "COMPONENT PRIMITIVE GRAMMAR REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "noncanonical-rational-admitted",
+      "file": "src/campaign3/generalPrimitiveGrammar.ts",
+      "witness": "GPG-B",
+      "detected": true
+    },
+    {
+      "name": "float-unit-comparison",
+      "file": "src/campaign3/generalPrimitiveGrammar.ts",
+      "witness": "GPG-B",
+      "detected": true
+    },
+    {
+      "name": "version-self-admission",
+      "file": "src/campaign3/generalPrimitiveGrammar.ts",
+      "witness": "GPG-C",
+      "detected": true
+    },
+    {
+      "name": "phase150-admitted",
+      "file": "src/campaign3/generalPrimitiveGrammar.ts",
+      "witness": "GPG-D",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalPrimitiveGrammar.ts",
+      "sha256": "eec49cc06004792923b11cc66a5c046fbac0d376954e6067b5c295e097efa5b5"
+    },
+    {
+      "path": "src/test/generalPrimitiveGrammar.test.ts",
+      "sha256": "e46fc1ff45c7f5bbd24c87b423824e14c592d4e276a20e4af4edb2df84a711d6"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_PRIMITIVE_GRAMMAR_COMPONENT.md",
+      "sha256": "e5fae01617e53ab83e2717f387f30e2270a17df67df92394b5fa8e8eca0e4037"
+    },
+    {
+      "path": "scripts/review-ga-primitive-grammar.mjs",
+      "sha256": "f042c2571111d2833aabccaf3721b802f77190ba110aa8d49e4dd1374de5b671"
+    }
+  ],
+  "limits": [
+    "Actual record relations, identity roles, compiled context and public admission remain upstream.",
+    "No memory state or public canonical codec is owned by this component."
+  ]
+}

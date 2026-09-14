@@ -1,0 +1,62 @@
+{
+  "status": "PRIOR CONCERN FEEDBACK REVIEW PASS",
+  "faults": [
+    {
+      "name": "same-instant-feedback",
+      "witness": "PCF-D",
+      "detected": true
+    },
+    {
+      "name": "foreign-subject-feedback",
+      "witness": "PCF-D",
+      "detected": true
+    },
+    {
+      "name": "reverse-residual-modulation",
+      "witness": "PCF-A",
+      "detected": true
+    },
+    {
+      "name": "zero-is-unavailable",
+      "witness": "PCF-B",
+      "detected": true
+    },
+    {
+      "name": "ignore-disabled-model",
+      "witness": "PCF-C",
+      "detected": true
+    },
+    {
+      "name": "borrow-other-task-response",
+      "witness": "PCF-E",
+      "detected": true
+    },
+    {
+      "name": "leak-appraisal-in-carry",
+      "witness": "PCF-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/priorConcernFeedback.ts",
+      "sha256": "79893414cdbf74f54e8d454534a2ca236566ee98acf7978f2d759f21ff2d8251"
+    },
+    {
+      "path": "src/test/priorConcernFeedback.test.ts",
+      "sha256": "3168997bf73b10954cd6a7fe9c461cc51b79425e6021955851dba0c3a80de667"
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "sha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f"
+    },
+    {
+      "path": "scripts/review-prior-concern-feedback.mjs",
+      "sha256": "4ffed97ec296362c63e48d7c787a22c7c8721d8ae1c6e81731807df8c1c060b8"
+    }
+  ],
+  "limits": [
+    "Actual character-side transformations execute, but forecast/status and producer instant are trusted fixture operands.",
+    "Public same-run completion, subject projection, scheduled delivery and persistence remain open."
+  ]
+}

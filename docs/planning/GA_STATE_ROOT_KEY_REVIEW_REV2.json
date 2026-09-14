@@ -1,0 +1,66 @@
+{
+  "status": "SYMBOLIC ROOT/KEY REVIEW PASS",
+  "roots": 7,
+  "newRecords": 12,
+  "stateMapKeyRoles": 6,
+  "faults": [
+    {
+      "name": "missing-root-key-role",
+      "detected": true
+    },
+    {
+      "name": "character-key-without-domain",
+      "detected": true
+    },
+    {
+      "name": "observer-key-as-character",
+      "detected": true
+    },
+    {
+      "name": "protocol-as-cognitive-map",
+      "detected": true
+    },
+    {
+      "name": "perception-as-learning",
+      "detected": true
+    },
+    {
+      "name": "old-selection-ledger",
+      "detected": true
+    },
+    {
+      "name": "delete-empty-root",
+      "detected": true
+    },
+    {
+      "name": "graph-cannot-be-empty",
+      "detected": true
+    },
+    {
+      "name": "silent-graph-bound-truncation",
+      "detected": true
+    },
+    {
+      "name": "tracking-payload-history",
+      "detected": true
+    },
+    {
+      "name": "permanent-active-context",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV2.json",
+      "sha256": "f27ab088683cea8c44c0ba108ba7123f68f1e5f8467e73ea137640c630757ddf"
+    },
+    {
+      "path": "scripts/review-ga-state-root-key-inventory-rev2.mjs",
+      "sha256": "5aa9f7e4042c208dff52e1efd5007cd6f226c1f3f957f2dc663ba01dca629e90"
+    }
+  ],
+  "limits": [
+    "Field/role topology only; no allocated type or public state compiler.",
+    "Graph cross-field invariants, nested subject equality, initial values and whole-prefix reconstruction remain actual compiler/runtime obligations."
+  ]
+}

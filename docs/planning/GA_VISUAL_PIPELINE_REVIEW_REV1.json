@@ -1,0 +1,67 @@
+{
+  "status": "SYMBOLIC VISUAL CARRIER REVIEW PASS",
+  "coverage": {
+    "records": 16,
+    "fields": 64
+  },
+  "faults": [
+    {
+      "name": "outcome-gates-immediate-encoding",
+      "detected": true
+    },
+    {
+      "name": "full-source-encoder-grant",
+      "detected": true
+    },
+    {
+      "name": "zero-strength-retained",
+      "detected": true
+    },
+    {
+      "name": "copied-initial-envelope",
+      "detected": true
+    },
+    {
+      "name": "multiple-role-claims",
+      "detected": true
+    },
+    {
+      "name": "empty-selection-forced-child",
+      "detected": true
+    },
+    {
+      "name": "cue-gated-on-encoding",
+      "detected": true
+    },
+    {
+      "name": "cue-sample-resolver",
+      "detected": true
+    },
+    {
+      "name": "missing-position-as-zero",
+      "detected": true
+    },
+    {
+      "name": "misidentified-sem-record",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV1.json",
+      "sha256": "089f5c2a41e24f75b56729a738d892375290069ebe0c844f955187f5fb548e11"
+    },
+    {
+      "path": "scripts/review-ga-visual-pipeline-carrier.mjs",
+      "sha256": "47e09d84d4573ece449688cf19abafd477a99449c85cfef8fb2f75a2914903ba"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    }
+  ],
+  "limits": [
+    "Structural inventory review only; no actual admission, byte codec, source authentication or runtime qualification.",
+    "Existing SEM record numbers verified against registry; proposed wrapper records remain unallocated."
+  ]
+}

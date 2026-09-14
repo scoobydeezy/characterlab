@@ -1,0 +1,73 @@
+{
+  "status": "ACCEPTED ROLE PROPAGATION PLAN; NOT A COMPLETE SCHEMA OR ALLOCATION INPUT",
+  "acceptedRole": "AcquisitionOccurrenceId",
+  "numericNamespace": null,
+  "changes": [
+    {
+      "record": "RetainedEncoding",
+      "operation": "add",
+      "field": "Acquisition",
+      "type": "AcquisitionOccurrenceId",
+      "purpose": "durable address"
+    },
+    {
+      "record": "RetainedEncoding",
+      "operation": "preserve",
+      "field": "Selection",
+      "type": "SelectionOccurrenceId",
+      "purpose": "source provenance only"
+    },
+    {
+      "record": "PresentationEntry",
+      "operation": "replace",
+      "field": "Selection",
+      "withField": "Acquisition",
+      "type": "AcquisitionOccurrenceId",
+      "purpose": "presentation target"
+    },
+    {
+      "record": "RecallScore",
+      "operation": "replace",
+      "field": "Selection",
+      "withField": "Acquisition",
+      "type": "AcquisitionOccurrenceId",
+      "purpose": "ranked acquisition target"
+    }
+  ],
+  "storageAddress": [
+    "qualified CharacterId",
+    "AcquisitionOccurrenceId"
+  ],
+  "peerKinds": [
+    "event-continuant",
+    "interoceptive"
+  ],
+  "bodyGroupAddress": [
+    "AcquisitionOccurrenceId",
+    "InteroceptiveSignalId"
+  ],
+  "commitCondition": "nonempty admitted formation AND successful whole-instant settlement",
+  "noCommittedOccurrence": [
+    "empty selection",
+    "unavailable formation",
+    "zero formation",
+    "rejected formation",
+    "rolled-back settlement"
+  ],
+  "sourceCardinality": {
+    "scope": "first bounded profile only",
+    "maximumInitialAcquisitions": 1
+  },
+  "sourceLookupAuthority": false,
+  "additionalEpisodeOrGroupIdentities": [],
+  "acceptedMeasurementMemoryMigration": false,
+  "pending": [
+    "exact occurrence-bearing formation/learning-evidence carrier; no redundant formation identity",
+    "body typed payload and producer admission;1143 reuse is not implied for a new producer",
+    "owner and read-domain propagation through retention, recollection, consolidation and pruning",
+    "shared family reconciliation and complete rollback/restore",
+    "conditional output/allocation counts and total work budgets; old totals are historical",
+    "symbolic declarations and field-role compiler closure",
+    "whole shape, separate numeric review, model packaging and public proof"
+  ]
+}

@@ -1,0 +1,929 @@
+{
+  "version": "ga-output-declarations/0.1-draft",
+  "status": "SYMBOLIC OUTPUT CARDINALITY AND OWNERSHIP; PUBLIC ADAPTER OPEN",
+  "stages": [
+    {
+      "name": "world",
+      "phase": 0,
+      "outputs": [
+        {
+          "record": "WorldEventTruth",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff visual source requested",
+          "identity": "FreshOwned",
+          "fresh": [
+            "WorldEventOccurrenceId"
+          ],
+          "nestedFresh": [
+            "EventBindingOccurrenceId: one per authored item, including hidden items"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "current-sample",
+      "phase": 10,
+      "outputs": [
+        {
+          "record": "CompletedRequestedSamples",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "NestedOwnedAndReserved",
+          "fresh": [
+            "ObservationId",
+            "CurrentDetectionId",
+            "CurrentEventDetectionId",
+            "ExperienceId"
+          ],
+          "rules": [
+            "Exactly one ObservationId per requested body channel, panel and visual surface, including unavailable observations",
+            "Exactly one CurrentDetectionId per actual visible item; no hidden-item detection",
+            "Exactly one CurrentEventDetectionId iff panel present or actual visible items nonempty",
+            "Exactly one reserved ExperienceId iff observer-safe supporting observations nonempty; reserve before binding",
+            "No occurrence belongs to the envelope itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "current-track",
+      "phase": 11,
+      "outputs": [
+        {
+          "record": "PerceptualTrackTransition",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual detected visual item",
+          "identity": "ObserverFileCounter",
+          "fresh": []
+        },
+        {
+          "record": "PerceptualEventTransition",
+          "min": 0,
+          "max": 2,
+          "condition": "Actual panel/visual event transitions only",
+          "identity": "ObserverFileCounter",
+          "fresh": []
+        },
+        {
+          "record": "PerceptualEventEnd",
+          "min": 0,
+          "max": 2,
+          "condition": "Actual prior-context end and/or current After/standalone-visual end",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-bind",
+      "phase": 12,
+      "outputs": [
+        {
+          "record": "PerceivedBindingEvidence",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual tracked visual item",
+          "identity": "FreshOwned",
+          "fresh": [
+            "PerceivedBindingOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "current-classify",
+      "phase": 13,
+      "outputs": []
+    },
+    {
+      "name": "current-freeze",
+      "phase": 14,
+      "outputs": [
+        {
+          "record": "PreRecognitionSemanticExperience",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff this opportunity reserved an experience",
+          "identity": "ReservedOwned",
+          "fresh": [],
+          "reserved": [
+            "ExperienceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "current-roles",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "CausalRoleEvidence",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual supported visual causal-role claim",
+          "identity": "FreshOwned",
+          "fresh": [
+            "CausalRoleClaimId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "current-dispatch",
+      "phase": 40,
+      "outputs": []
+    },
+    {
+      "name": "consequence-sample",
+      "phase": 120,
+      "outputs": [
+        {
+          "record": "CompletedRequestedSamples",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "NestedOwnedAndReserved",
+          "fresh": [
+            "ObservationId",
+            "CurrentDetectionId",
+            "CurrentEventDetectionId",
+            "ExperienceId"
+          ],
+          "rules": [
+            "Exactly one ObservationId per requested body channel, panel and visual surface, including unavailable observations",
+            "Exactly one CurrentDetectionId per actual visible item; no hidden-item detection",
+            "Exactly one CurrentEventDetectionId iff panel present or actual visible items nonempty",
+            "Exactly one reserved ExperienceId iff observer-safe supporting observations nonempty; reserve before binding",
+            "No occurrence belongs to the envelope itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consequence-track",
+      "phase": 121,
+      "outputs": [
+        {
+          "record": "PerceptualTrackTransition",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual detected visual item",
+          "identity": "ObserverFileCounter",
+          "fresh": []
+        },
+        {
+          "record": "PerceptualEventTransition",
+          "min": 0,
+          "max": 2,
+          "condition": "Actual panel/visual event transitions only",
+          "identity": "ObserverFileCounter",
+          "fresh": []
+        },
+        {
+          "record": "PerceptualEventEnd",
+          "min": 0,
+          "max": 2,
+          "condition": "Actual prior-context end and/or current After/standalone-visual end",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-bind",
+      "phase": 122,
+      "outputs": [
+        {
+          "record": "PerceivedBindingEvidence",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual tracked visual item",
+          "identity": "FreshOwned",
+          "fresh": [
+            "PerceivedBindingOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consequence-classify",
+      "phase": 123,
+      "outputs": []
+    },
+    {
+      "name": "consequence-freeze",
+      "phase": 124,
+      "outputs": [
+        {
+          "record": "PreRecognitionSemanticExperience",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff this opportunity reserved an experience",
+          "identity": "ReservedOwned",
+          "fresh": [],
+          "reserved": [
+            "ExperienceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consequence-roles",
+      "phase": 125,
+      "outputs": [
+        {
+          "record": "CausalRoleEvidence",
+          "min": 0,
+          "max": 3,
+          "condition": "One per actual supported visual causal-role claim",
+          "identity": "FreshOwned",
+          "fresh": [
+            "CausalRoleClaimId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consequence-dispatch",
+      "phase": 130,
+      "outputs": []
+    },
+    {
+      "name": "current-visual-selection",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "AttentionSelectionAudit",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "SelectionOccurrenceId"
+          ]
+        },
+        {
+          "record": "ExtendedSelected",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one, including empty selected list; borrows actual audit identity",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-visual-encoding",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "EncodingEvaluation",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        },
+        {
+          "record": "PositiveVisualCandidate",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one candidate envelope, including zero retained units; empty candidate forms nothing",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-body-selection",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "BodySelectionAudit",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "SelectionOccurrenceId"
+          ]
+        },
+        {
+          "record": "BodySelectedView",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one, including empty selection; borrows actual body audit identity",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-visual-cue",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "CueEvidence",
+          "min": 1,
+          "max": 1,
+          "condition": "One explicit available/absent cue result; no invented sensory occurrence",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-body-cue",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "BodySignalCue",
+          "min": 1,
+          "max": 1,
+          "condition": "One explicit available/absent cue result; independent of acquisition selection",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-event-rank",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "EventRecallResult",
+          "min": 1,
+          "max": 1,
+          "condition": "One rank result; unavailable/empty winner list allocates no recollections",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-body-rank",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "BodyRecallResult",
+          "min": 1,
+          "max": 1,
+          "condition": "One rank result; unavailable/empty winner list allocates no recollections",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "current-recollection",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "Recollection",
+          "min": 0,
+          "max": 32,
+          "condition": "Exactly one per actual winner, independently for each admitted partition evaluation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "ProposedRecollectionOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consequence-visual-selection",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "AttentionSelectionAudit",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "SelectionOccurrenceId"
+          ]
+        },
+        {
+          "record": "ExtendedSelected",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one, including empty selected list; borrows actual audit identity",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-visual-encoding",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "EncodingEvaluation",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        },
+        {
+          "record": "PositiveVisualCandidate",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one candidate envelope, including zero retained units; empty candidate forms nothing",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-body-selection",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "BodySelectionAudit",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "SelectionOccurrenceId"
+          ]
+        },
+        {
+          "record": "BodySelectedView",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one, including empty selection; borrows actual body audit identity",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-visual-cue",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "CueEvidence",
+          "min": 1,
+          "max": 1,
+          "condition": "One explicit available/absent cue result; no invented sensory occurrence",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-body-cue",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "BodySignalCue",
+          "min": 1,
+          "max": 1,
+          "condition": "One explicit available/absent cue result; independent of acquisition selection",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-event-rank",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "EventRecallResult",
+          "min": 1,
+          "max": 1,
+          "condition": "One rank result; unavailable/empty winner list allocates no recollections",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-body-rank",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "BodyRecallResult",
+          "min": 1,
+          "max": 1,
+          "condition": "One rank result; unavailable/empty winner list allocates no recollections",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "consequence-recollection",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "Recollection",
+          "min": 0,
+          "max": 32,
+          "condition": "Exactly one per actual winner, independently for each admitted partition evaluation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "ProposedRecollectionOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "visual-acquisition-evidence",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "AcquisitionFormationEvidence",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff the corresponding positive producer forms an acquisition",
+          "identity": "FreshOwned",
+          "fresh": [
+            "AcquisitionOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body-acquisition-evidence",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "AcquisitionFormationEvidence",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff the corresponding positive producer forms an acquisition",
+          "identity": "FreshOwned",
+          "fresh": [
+            "AcquisitionOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ordinary-memory-formation",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "event-association-formation",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "event-presentation-formation",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "prior-concern-workspace",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "TaskWorkspace/381",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "TaskWorkspaceOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "prior-concern-appraisal",
+      "phase": 50,
+      "outputs": [
+        {
+          "record": "TaskAppraisal/384",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "TaskAppraisalOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "prior-concern-producer",
+      "phase": 50,
+      "outputs": [
+        {
+          "record": "TaskConcern/388",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "ConcernOccurrenceId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "encoding-concern-delivery",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "FeedbackDelivery",
+          "min": 1,
+          "max": 1,
+          "condition": "Exact previously scheduled producer-derived delivery; no fresh feedback occurrence",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "recall-concern-delivery",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "FeedbackDelivery",
+          "min": 1,
+          "max": 1,
+          "condition": "Exact previously scheduled producer-derived delivery; no fresh feedback occurrence",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "prior-concern-visual-encoding",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "PriorConcernEncodingEvaluation",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        },
+        {
+          "record": "PositiveVisualCandidate",
+          "min": 1,
+          "max": 1,
+          "condition": "Exactly one candidate envelope, including zero retained units; empty candidate forms nothing",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "prior-concern-event-rank",
+      "phase": 40,
+      "outputs": [
+        {
+          "record": "PriorConcernRecallEvaluation",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "goal-command-proposal",
+      "phase": 40,
+      "outputs": []
+    },
+    {
+      "name": "goal-command-owner",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "goal-deadline-owner",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "goal-outcome-assessment",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "GoalOutcomeAssessment",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff actual consequence exists, including unavailable assessment",
+          "identity": "FreshOwned",
+          "fresh": [
+            "GoalOutcomeAssessmentId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "focal-consequence-delivery",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "FocalConsequenceDelivery",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "goal-qualification-delivery",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "GoalQualificationDelivery",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "retained-attribution",
+      "phase": 50,
+      "outputs": [
+        {
+          "record": "RetainedAttributionResult",
+          "min": 0,
+          "max": 1,
+          "condition": "Exactly one iff actual focal consequence exists, including unavailable attribution",
+          "identity": "FreshOwned",
+          "fresh": [
+            "RetainedAttributionResultId"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "attribution-use-dispatch",
+      "phase": 130,
+      "outputs": []
+    },
+    {
+      "name": "ordinary-memory-use",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "attribution-result-delivery",
+      "phase": 15,
+      "outputs": [
+        {
+          "record": "AttributionResultDelivery",
+          "min": 1,
+          "max": 1,
+          "condition": "One per admitted invocation",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "significance-opportunity",
+      "phase": 0,
+      "outputs": []
+    },
+    {
+      "name": "significance-join",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "QualifiedSignificanceJoin",
+          "min": 1,
+          "max": 1,
+          "condition": "One joined result for each admitted significance opportunity; qualification does not allocate an occurrence",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "ordinary-memory-significance",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "retention-original",
+      "phase": 0,
+      "outputs": []
+    },
+    {
+      "name": "retention-dispatch",
+      "phase": 130,
+      "outputs": []
+    },
+    {
+      "name": "ordinary-memory-retention",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "event-association-retention",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "event-presentation-cleanup",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "event-presentation-dispatch",
+      "phase": 130,
+      "outputs": []
+    },
+    {
+      "name": "event-presentation-owner",
+      "phase": 140,
+      "outputs": []
+    },
+    {
+      "name": "goal-baseline-cue",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "BodySignalCue",
+          "min": 1,
+          "max": 1,
+          "condition": "One explicit available/absent cue result; independent of acquisition selection",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "goal-baseline-rank",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "BodyRecallResult",
+          "min": 1,
+          "max": 1,
+          "condition": "One rank result; unavailable/empty winner list allocates no recollections",
+          "identity": "BorrowedOnly",
+          "fresh": []
+        }
+      ]
+    },
+    {
+      "name": "goal-baseline-recollection",
+      "phase": 130,
+      "outputs": [
+        {
+          "record": "Recollection",
+          "min": 0,
+          "max": 32,
+          "condition": "Exactly one per actual winner, independently for each admitted partition evaluation",
+          "identity": "FreshOwned",
+          "fresh": [
+            "ProposedRecollectionOccurrenceId"
+          ]
+        }
+      ]
+    }
+  ],
+  "allocationPolicy": "Existing transactional runtime ordinal allocator; no envelope identity and no second provenance allocator",
+  "validationOrder": [
+    "Authenticate admitted invocation and actual source/parent associations",
+    "Validate exact registered schema and recursive roles",
+    "Check output cardinality against actual branch facts",
+    "Check fresh/reserved identity slots against transaction allocation receipts",
+    "Validate output-to-child binding before commit"
+  ],
+  "numericAllocations": [],
+  "wholeModelWorkCeiling": null,
+  "limits": [
+    "Cardinality maxima are per invocation, not a whole-instant work ceiling.",
+    "The inherited probe/prediction producer slice remains separately registered.",
+    "The public adapter must implement branch predicates and exact nested slot checks; this symbolic inventory does not qualify it."
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV1.json",
+      "sha256": "2a0b30cb7c01d21b49c7162a7b6579466f6e69d493ccd347e5c77c08f2a45dda"
+    },
+    {
+      "path": "docs/planning/GA_OUTPUT_AND_OCCURRENCE_CLOSURE_REV1.md",
+      "sha256": "d346afa4a71bb6d0df3fcafd59822bd704d89f5a8b646eb8d66512d2dc55a2d8"
+    },
+    {
+      "path": "scripts/build-ga-output-declarations.mjs",
+      "sha256": "c5a9e959abb5232cecf169bd008a49b9221b51dd1d565dbd1e230fe26c243191"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "status": "MEMBER ALLOCATION REVIEW PASS; PUBLIC GATES OPEN",
+  "members": 218,
+  "newNamespaces": 0,
+  "newRecords": 0,
+  "priorArtifactsPreserved": 21,
+  "faults": [
+    {
+      "name": "namespace-substitution",
+      "rejected": true
+    },
+    {
+      "name": "member-omission",
+      "rejected": true
+    },
+    {
+      "name": "payload-renaming",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-member",
+      "rejected": true
+    },
+    {
+      "name": "new-namespace-smuggling",
+      "rejected": true
+    },
+    {
+      "name": "new-record-smuggling",
+      "rejected": true
+    },
+    {
+      "name": "early-permanence",
+      "rejected": true
+    },
+    {
+      "name": "existing-member-reuse",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_REGISTRY_MEMBER_ALLOCATION_DRAFT.json",
+      "sha256": "c062aa7defe90ab43b18b333f9975ffe9ebbd4b2b7de31825b9d6ea0ddf6793d"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_REGISTRY_MEMBER_SHAPE_MANIFEST.json",
+      "sha256": "df0943a14245258bb0c6a57cb6b2d5907b748e12194d7c16b019b0b64c2ca707"
+    },
+    {
+      "path": "scripts/review-ga-member-allocation.mjs",
+      "sha256": "e95e6a2b7df0f93b562d2597d94213dc3e5b65866c5bac85fbe04bdd7d612dba"
+    }
+  ]
+}

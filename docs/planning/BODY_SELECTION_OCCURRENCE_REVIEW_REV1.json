@@ -1,0 +1,55 @@
+{
+  "status": "BODY SELECTION OCCURRENCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "empty-selector-skips-occurrence",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "missing-sample-is-unavailable",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-C",
+      "detected": true
+    },
+    {
+      "name": "view-uses-experience-identity",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "acquisition-reused-as-body-source",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-AC",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/bodySelectionOccurrence.ts",
+      "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+    },
+    {
+      "path": "src/test/bodySelectionOccurrence.test.ts",
+      "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "9f46cb9fc6fecf80df70e806491059b3401ae39fb91e30d34eb02e604ff4dc17"
+    },
+    {
+      "path": "docs/formal/BODY_SELECTION_OCCURRENCE_COMPONENT.md",
+      "sha256": "66a1b13ca5438da6c0a98fe89ff2f926633b933eb1ef11e87a35ee49049db9db"
+    },
+    {
+      "path": "scripts/review-body-selection-occurrence.mjs",
+      "sha256": "742dd6caf24f3b7b2796cab6f1d901819e77970b1c4eeedbd093079959dfe551"
+    }
+  ],
+  "limits": [
+    "Actual component audit and selected capability; unallocated body codecs/public gates remain open.",
+    "Canonical fixture memory payload and PRJ are still trusted component boundaries."
+  ]
+}

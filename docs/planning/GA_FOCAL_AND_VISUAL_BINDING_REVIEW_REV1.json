@@ -1,0 +1,89 @@
+{
+  "status": "FOCAL / VISUAL COMPONENT AND COMPOSITION CONTROLS PASS",
+  "faults": [
+    {
+      "name": "suppress-visual-with-panel",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-B",
+      "detected": true
+    },
+    {
+      "name": "separate-fallback-counter",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-B",
+      "detected": true
+    },
+    {
+      "name": "leave-fallback-active",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-B",
+      "detected": true
+    },
+    {
+      "name": "mismatched-shared-detection",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-D",
+      "detected": true
+    },
+    {
+      "name": "fallback-is-trial-context",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-B",
+      "detected": true
+    },
+    {
+      "name": "credit-control-trial",
+      "file": "src/campaign3/retainedAttributionUse.ts",
+      "witness": "FPP-A",
+      "detected": true
+    },
+    {
+      "name": "mutable-focus-after-preparation",
+      "file": "src/campaign3/retainedAttributionUse.ts",
+      "witness": "FPP-B",
+      "detected": true
+    },
+    {
+      "name": "last-trial-is-focus",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-K",
+      "detected": true
+    },
+    {
+      "name": "silently-target-start-child",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-K",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "49789429e5552dbc3a277eebc9804271ba6275c9a19afd69c965b12c2d80ea4a"
+    },
+    {
+      "path": "src/test/panelVisualEventComposition.test.ts",
+      "sha256": "d314040996977923c0b86a98cc24865f3c3f556cd1e9077312c5b937f292b41f"
+    },
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "5e178168562cf906cd6d1f763ff1372935d1cdca71753a462db852d4c38a50cc"
+    },
+    {
+      "path": "src/test/retainedPositionPairAttribution.test.ts",
+      "sha256": "4093412dd1f83ea8bd5bb5cf866fc073ac386a7cca2d1925588d51de85177e5d"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "ae41f5fbcb0a8b2c21f5ae68a2c4ea41a73e042a970a517900f3635c29a6eab4"
+    },
+    {
+      "path": "scripts/review-ga-focal-and-visual-binding.mjs",
+      "sha256": "924030cfcd0f790c0ecf6b29275ea314de6c0439e05699e0718c222381409835"
+    }
+  ],
+  "limits": [
+    "Panel/visual detection inputs remain supplied; fallback does not qualify the public visual source.",
+    "Two focal-target substitutions alter fixture coordination; completed-result public authentication remains open."
+  ]
+}

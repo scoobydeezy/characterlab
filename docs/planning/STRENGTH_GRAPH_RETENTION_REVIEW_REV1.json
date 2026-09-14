@@ -1,0 +1,89 @@
+{
+  "status": "STRENGTH GRAPH COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "strongest-first",
+      "witness": "SR-A",
+      "detected": true,
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace",
+        "strength-priority graph retention baseline SR-G: weakest representable bridge gets no topology protection and survivors stay exact"
+      ]
+    },
+    {
+      "name": "reverse-tie",
+      "witness": "SR-C",
+      "detected": true,
+      "failed": [
+        "strength-priority graph retention baseline SR-C: canonical address ties are independent of input matrix order",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace"
+      ]
+    },
+    {
+      "name": "ignore-node-pressure",
+      "witness": "SR-B",
+      "detected": true,
+      "failed": [
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-D: zero bounds cause real complete loss; sufficient bounds cause none"
+      ]
+    },
+    {
+      "name": "ignore-edge-pressure",
+      "witness": "SR-A",
+      "detected": true,
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-C: canonical address ties are independent of input matrix order",
+        "strength-priority graph retention baseline SR-D: zero bounds cause real complete loss; sufficient bounds cause none",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace",
+        "strength-priority graph retention baseline SR-G: weakest representable bridge gets no topology protection and survivors stay exact"
+      ]
+    },
+    {
+      "name": "address-only",
+      "witness": "SR-E",
+      "detected": true,
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/strengthGraphRetention.ts",
+      "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+    },
+    {
+      "path": "src/campaign3/graphEdgeLoss.ts",
+      "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+    },
+    {
+      "path": "src/test/strengthGraphRetention.test.ts",
+      "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+    },
+    {
+      "path": "docs/formal/STRENGTH_GRAPH_RETENTION_COMPONENT.md",
+      "sha256": "2e14bb17c4906682fea6f8766150de3b654ec173eb7aad406261ceb11720ceb9"
+    },
+    {
+      "path": "scripts/review-strength-graph-retention.mjs",
+      "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/STRENGTH_GRAPH_RETENTION_TESTS_REV1.json",
+    "sha256": "5bd666d93adb0d9884576656a991d0aa1eed5e7709dcb42c07789ac2d95b09da"
+  },
+  "limits": [
+    "Supplied resolved graph only.",
+    "Selective weakening producer, public owner and persistence not qualified."
+  ]
+}

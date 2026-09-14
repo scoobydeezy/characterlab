@@ -1,0 +1,38 @@
+{
+  "status": "SOURCE INSPECTION AND DRAFT SEQUENCE; PUBLIC ACS-A..L NOT PASSED",
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_CONCERN_SOURCE_REVIEW_REV2.md",
+      "sha256": "6cd603cffdea7ed2564fccd9608d077145da0c8cb5e622df1fec7ace01b140d0"
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "sha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f"
+    },
+    {
+      "path": "src/campaign2/cognitiveExecution.ts",
+      "sha256": "3680f20a58ea145a0da5530c420e6312bb787b1b9a16fba9e0022b11427319ab"
+    },
+    {
+      "path": "src/campaign2/predictionExecution.ts",
+      "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+    },
+    {
+      "path": "src/campaign2/taskExecution.ts",
+      "sha256": "ff78dfbe307868bc0ebbb8f1d9a2f0918a1299b839877cd24f6c58447db08e61"
+    },
+    {
+      "path": "src/campaign2/probeExecution.ts",
+      "sha256": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e"
+    }
+  ],
+  "findings": [
+    "capacity2 selects one task and permits forecast; capacity1 does not permit forecast",
+    "preactivation probe avoids silently completing the known-zero task",
+    "prediction application precedes workspace by a committed instant",
+    "whole cognitive execution continues beyond concern and requires a successor restriction",
+    "pending prediction read, measurement/task descendants and deadline remain budget obligations"
+  ],
+  "runtimeChanges": false,
+  "numericAllocation": false
+}

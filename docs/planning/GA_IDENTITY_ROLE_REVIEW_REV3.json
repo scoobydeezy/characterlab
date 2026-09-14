@@ -1,0 +1,74 @@
+{
+  "status": "SYMBOLIC IDENTITY ROLE REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 102,
+  "identityPositions": 98,
+  "recordBoundaries": 141,
+  "faults": [
+    {
+      "name": "state-key-as-record-field",
+      "rejected": true
+    },
+    {
+      "name": "reuse-appraisal-id-for-concern",
+      "rejected": true
+    },
+    {
+      "name": "opaque-retained-encoding",
+      "rejected": true
+    },
+    {
+      "name": "unit-key-as-namespace",
+      "rejected": true
+    },
+    {
+      "name": "character-is-observer",
+      "rejected": true
+    },
+    {
+      "name": "namespace-only-character",
+      "rejected": true
+    },
+    {
+      "name": "goal-is-generic-referent",
+      "rejected": true
+    },
+    {
+      "name": "observation-is-experience",
+      "rejected": true
+    },
+    {
+      "name": "collection-as-scalar-role",
+      "rejected": true
+    },
+    {
+      "name": "allocate-new-result-as-old-evid",
+      "rejected": true
+    },
+    {
+      "name": "event-file-as-scalar",
+      "rejected": true
+    },
+    {
+      "name": "drop-composite-source-key",
+      "rejected": true
+    },
+    {
+      "name": "claim-unresolved-state-key-roles",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV3.json",
+      "sha256": "2bf8253f1ee8906c6df598ac9288fa1e84848af51817baa0dd0efc8f1e078c78"
+    },
+    {
+      "path": "scripts/review-ga-identity-role-closure-rev3.mjs",
+      "sha256": "aae20f399e2d4ef8ef8f6563b2d45c5cde9a5dd75f6d8e54d09a191d9a071ce9"
+    }
+  ],
+  "limits": [
+    "Structural crosswalk only; actual canonical role tables and domain/holder checks await final public closure.",
+    "RetainedEncodingUnit now recurses into declared fields; six new-root keys are symbolic; actual compiler checks remain pending."
+  ]
+}

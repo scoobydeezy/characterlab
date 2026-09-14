@@ -1,0 +1,60 @@
+{
+  "status": "COMPOSED LOGICAL TOPOLOGY REVIEW PASS; PUBLIC GATES OPEN",
+  "stageTemplates": 66,
+  "faults": [
+    {
+      "name": "owner-emits-child",
+      "rejected": true
+    },
+    {
+      "name": "unschedulable-phase",
+      "rejected": true
+    },
+    {
+      "name": "backward-current-feedback",
+      "rejected": true
+    },
+    {
+      "name": "instant-cycle",
+      "rejected": true
+    },
+    {
+      "name": "baseline-coupled-to-recall",
+      "rejected": true
+    },
+    {
+      "name": "baseline-becomes-presentation",
+      "rejected": true
+    },
+    {
+      "name": "graph-follows-episode-loss",
+      "rejected": true
+    },
+    {
+      "name": "presentation-writes-use",
+      "rejected": true
+    },
+    {
+      "name": "presentation-from-body",
+      "rejected": true
+    },
+    {
+      "name": "template-count-claimed-as-work-bound",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV1.json",
+      "sha256": "2a0b30cb7c01d21b49c7162a7b6579466f6e69d493ccd347e5c77c08f2a45dda"
+    },
+    {
+      "path": "scripts/review-ga-logical-topology.mjs",
+      "sha256": "174f27a892426a4fea12fefd922183f39f83aea231ac7b100705d4b2d23440f2"
+    }
+  ],
+  "limits": [
+    "Template graph only, not exact public input/parent/definition admission or whole-model work bound.",
+    "Future target time, join once-only binding and B0 owner hooks still need runtime execution."
+  ]
+}

@@ -1,0 +1,859 @@
+{
+  "status": "DRAFT FINITE REGISTRATION SHAPES; WHOLE ACCEPTANCE WITHHELD",
+  "records": {
+    "AttentionMemoryIngressDefinition": {
+      "Kind": "Original | CompletedParents | EarlierConcernDelivery",
+      "DirectParentAlternatives": "set0..2<EventTypeId>",
+      "AdditionalCompletedParents": "set0..1<EventTypeId>",
+      "Binding": "ExactOriginal | ExactExpectedPayload | ExactFutureTarget"
+    },
+    "AttentionMemoryOutputDefinition": {
+      "Schema": "existing SchemaReference254",
+      "Count": "One | DetectionCount | ClaimCount | RetentionIndicator | WinnerCount",
+      "Identity": "WorldBatch | ObservationBatch | DetectionKey | EventDetectionKey | FreshRoot | ReservedExperience | CopiedSelection | NoOccurrence"
+    },
+    "AttentionMemoryReadAccess": {
+      "AccessorId": "existing ProjectionAccessorId",
+      "PathPattern": "existing StatePathPattern149",
+      "Gate": "Always | AvailableCue"
+    },
+    "AttentionMemoryAllocationRule": {
+      "Kind": "WorldBatch | ObservationBranch | BindingBatch | ClaimBatch | Selection | RecollectionBatch"
+    },
+    "AttentionMemoryDefinitionBinding": {
+      "Purpose": "Observation | Selection | Spatial | Encoding | Association | Access | Feedback | Schedule",
+      "DefinitionId": "existing DefinitionId"
+    },
+    "AttentionMemoryStageRegistration": {
+      "TransitionKindId": "existing TransitionKindId",
+      "SeamId": "existing SeamId",
+      "SeamVersion": "exact proposed successor seam version",
+      "EventTypeId": "existing EventTypeId",
+      "Phase": "one of0,10,11,12,13,14,15,40,130,140",
+      "InputSchema": "existing SchemaReference254",
+      "Ingress": "AttentionMemoryIngressDefinition",
+      "Outputs": "list0..2<AttentionMemoryOutputDefinition>",
+      "Allocations": "set0..1<AttentionMemoryAllocationRule>",
+      "SubjectProjection": "optional existing required projection266",
+      "ReadAccess": "set0..6<AttentionMemoryReadAccess>",
+      "WritablePaths": "set0..5<existing StatePathPattern149>",
+      "MutationAuthority": "optional existing MutationAuthorityId",
+      "Routes": "set0..1<existing route identity>",
+      "Definitions": "set0..8<AttentionMemoryDefinitionBinding>",
+      "Batch": "None | Formation | Reinforcement"
+    },
+    "AttentionMemoryBatchDefinition": {
+      "Kind": "Formation | Reinforcement",
+      "MemberEventTypes": "set1..3<EventTypeId>",
+      "ParentEventType": "EventTypeId",
+      "InputSchema": "existing SchemaReference254",
+      "Settlement": "CommonB0DisjointOwnedPatches only"
+    },
+    "AttentionConcernTerminalDeclaration": {
+      "WorkspaceRegistration": "existing workspace417 descriptor",
+      "AppraisalRegistration": "existing ordinary272 descriptor",
+      "ConcernRegistration": "existing concern418 descriptor",
+      "Terminal": "AfterConcern only",
+      "DeliveryEventType": "existing EventTypeId",
+      "ScheduleDefinitionId": "existing DefinitionId"
+    }
+  },
+  "rows": [
+    {
+      "stage": "world",
+      "input": "SeriesSceneOriginal",
+      "phase": 0,
+      "ingress": {
+        "kind": "Original",
+        "directParentAlternatives": [],
+        "additionalCompletedParents": [],
+        "binding": "ExactOriginal"
+      },
+      "outputs": [
+        {
+          "schema": "WorldEventTruth",
+          "count": "One",
+          "identity": "WorldBatch"
+        }
+      ],
+      "allocation": "WorldBatch",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "observe",
+      "input": "WorldEventTruth",
+      "phase": 10,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "world"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "ExtendedObservation",
+          "count": "One",
+          "identity": "ObservationBatch"
+        }
+      ],
+      "allocation": "ObservationBranch",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "track",
+      "input": "TrackingInput",
+      "phase": 11,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "observe"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "PerceptualEventTransition",
+          "count": "One",
+          "identity": "EventDetectionKey"
+        },
+        {
+          "schema": "PerceptualTrackTransition",
+          "count": "DetectionCount",
+          "identity": "DetectionKey"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [
+        {
+          "leaf": "ContinuantState",
+          "gate": "Always"
+        },
+        {
+          "leaf": "EventFileState",
+          "gate": "Always"
+        },
+        {
+          "leaf": "TrackingWindow",
+          "gate": "Always"
+        }
+      ],
+      "writable": [
+        "ContinuantState",
+        "EventFileState",
+        "TrackingWindow"
+      ],
+      "authority": "perception",
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "bind",
+      "input": "BindingInput",
+      "phase": 12,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "track"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "PerceivedBindingEvidence",
+          "count": "DetectionCount",
+          "identity": "FreshRoot"
+        }
+      ],
+      "allocation": "BindingBatch",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "classify",
+      "input": "ClassificationInput",
+      "phase": 13,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "bind"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "freeze",
+      "input": "FreezeInput",
+      "phase": 14,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "classify"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "PreRecognitionSemanticExperience",
+          "count": "One",
+          "identity": "ReservedExperience"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "roles",
+      "input": "RoleInput",
+      "phase": 15,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "freeze"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "CausalRoleEvidence",
+          "count": "ClaimCount",
+          "identity": "FreshRoot"
+        }
+      ],
+      "allocation": "ClaimBatch",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "spatial",
+      "input": "SpatialPreparationInput",
+      "phase": 15,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "roles"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "SpatialPreparation",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "delivery",
+      "input": "FeedbackDelivery",
+      "phase": 15,
+      "ingress": {
+        "kind": "EarlierConcernDelivery",
+        "directParentAlternatives": [],
+        "additionalCompletedParents": [],
+        "binding": "ExactFutureTarget"
+      },
+      "outputs": [
+        {
+          "schema": "FeedbackDelivery",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "select",
+      "input": "SelectionInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "spatial"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "AttentionSelectionAudit",
+          "count": "One",
+          "identity": "FreshRoot"
+        },
+        {
+          "schema": "ExtendedSelected",
+          "count": "One",
+          "identity": "CopiedSelection"
+        }
+      ],
+      "allocation": "Selection",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "empty-select",
+      "input": "EmptySelectionInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "observe"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "AttentionSelectionAudit",
+          "count": "One",
+          "identity": "FreshRoot"
+        },
+        {
+          "schema": "ExtendedSelected",
+          "count": "One",
+          "identity": "CopiedSelection"
+        }
+      ],
+      "allocation": "Selection",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "encoding-join",
+      "input": "EncodingJoinInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "select",
+          "empty-select"
+        ],
+        "additionalCompletedParents": [
+          "delivery"
+        ],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "BoundEncodingInput",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        }
+      ],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "evaluate",
+      "input": "BoundEncodingInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "encoding-join"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "EncodingEvaluation",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "retain",
+      "input": "RetentionInput",
+      "phase": 130,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "evaluate"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "RetainedEncoding",
+          "count": "RetentionIndicator",
+          "identity": "CopiedSelection"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [
+        "route/character-learning"
+      ],
+      "batch": "None"
+    },
+    {
+      "stage": "form",
+      "input": "FormationInput",
+      "phase": 140,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "retain"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        },
+        {
+          "leaf": "EpisodeLedger",
+          "gate": "Always"
+        }
+      ],
+      "writable": [
+        "EpisodeLedger"
+      ],
+      "authority": "attention-episode-formation",
+      "routes": [
+        "route/character-learning"
+      ],
+      "batch": "Formation"
+    },
+    {
+      "stage": "associate",
+      "input": "FormationInput",
+      "phase": 140,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "retain"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        },
+        {
+          "leaf": "AssociationGraph",
+          "gate": "Always"
+        }
+      ],
+      "writable": [
+        "AssociationGraph"
+      ],
+      "authority": "attention-association-update",
+      "routes": [
+        "route/character-learning"
+      ],
+      "batch": "Formation"
+    },
+    {
+      "stage": "seed-presentation",
+      "input": "FormationInput",
+      "phase": 140,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "retain"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        },
+        {
+          "leaf": "PresentationLedger",
+          "gate": "Always"
+        }
+      ],
+      "writable": [
+        "PresentationLedger"
+      ],
+      "authority": "attention-presentation-update",
+      "routes": [
+        "route/character-learning"
+      ],
+      "batch": "Formation"
+    },
+    {
+      "stage": "cue",
+      "input": "CueExtractionInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "observe",
+          "spatial"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "CueEvidence",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "recall-join",
+      "input": "RecallJoinInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "cue"
+        ],
+        "additionalCompletedParents": [
+          "delivery"
+        ],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "BoundRecallInput",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        }
+      ],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "rank",
+      "input": "BoundRecallInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "recall-join"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "RecallResult",
+          "count": "One",
+          "identity": "NoOccurrence"
+        }
+      ],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        },
+        {
+          "leaf": "EpisodeLedger",
+          "gate": "AvailableCue"
+        },
+        {
+          "leaf": "AssociationGraph",
+          "gate": "AvailableCue"
+        },
+        {
+          "leaf": "PresentationLedger",
+          "gate": "AvailableCue"
+        }
+      ],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "recollect",
+      "input": "RecollectionInput",
+      "phase": 40,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "rank"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [
+        {
+          "schema": "AttentionRecollection",
+          "count": "WinnerCount",
+          "identity": "FreshRoot"
+        }
+      ],
+      "allocation": "RecollectionBatch",
+      "projection": null,
+      "reads": [],
+      "writable": [],
+      "authority": null,
+      "routes": [],
+      "batch": "None"
+    },
+    {
+      "stage": "reinforce",
+      "input": "ReinforcementInput",
+      "phase": 140,
+      "ingress": {
+        "kind": "CompletedParents",
+        "directParentAlternatives": [
+          "recollect"
+        ],
+        "additionalCompletedParents": [],
+        "binding": "ExactExpectedPayload"
+      },
+      "outputs": [],
+      "allocation": null,
+      "projection": "Required266",
+      "reads": [
+        {
+          "leaf": "IDN",
+          "gate": "Always"
+        },
+        {
+          "leaf": "PresentationLedger",
+          "gate": "Always"
+        }
+      ],
+      "writable": [
+        "PresentationLedger"
+      ],
+      "authority": "attention-presentation-update",
+      "routes": [
+        "route/character-learning"
+      ],
+      "batch": "Reinforcement"
+    }
+  ],
+  "taggedLayouts": [
+    {
+      "record": "FeedbackDelivery",
+      "field": "Value",
+      "tagField": "ValueTag",
+      "variants": [
+        {
+          "tag": "ActualConcern",
+          "payload": "ActualConcernCarry"
+        },
+        {
+          "tag": "NoConcern",
+          "payload": "NoConcernAvailable"
+        }
+      ]
+    },
+    {
+      "record": "CueExtractionInput",
+      "field": "Source",
+      "tagField": "SourceTag",
+      "variants": [
+        {
+          "tag": "Positive",
+          "payload": "PositiveCueSource"
+        },
+        {
+          "tag": "Empty",
+          "payload": "EmptyCueSource"
+        }
+      ]
+    }
+  ],
+  "invariants": {
+    "additionalParent": "exactly one completed delivery at joins; actual identity checked, not just event type",
+    "optionalProjection": "present iff stage declares IDN; required scalar ObserverId field must match266",
+    "optionalAuthority": "present iff WritablePaths nonempty",
+    "outputFreshness": "OutputDefinition identity law and allocation rule checked together; nested copies never allocate twice",
+    "collectionOrder": "set uniqueness and canonical ordering; outputs follow declared deterministic production order",
+    "batch": "all members terminal; candidate patch validation under each declared owner; no bypass of inherited source barrier",
+    "definitionBinding": "exact purpose/definition cardinality per stage; no missing or extra definitions; binding rows still pending"
+  },
+  "pending": [
+    "stage-specific definition bindings and exact finite calibration/model cohort",
+    "concrete inherited descriptor manifest and full schema/role closure",
+    "fixed symbolic member table and union canonical field positions",
+    "whole symbolic acceptance then separate numeric allocation"
+  ],
+  "limits": [
+    "Records541/539/538 remain unchanged; new successor registration shapes are separately proposed.",
+    "Existing417/272/418 semantics retained; terminal delivery override is a new outer declaration, not a mutation of frozen cognitive models."
+  ],
+  "review": {
+    "checks": 145,
+    "registrationRecords": 8,
+    "stages": 22,
+    "taggedLayouts": 2
+  },
+  "faults": [
+    {
+      "name": "reallocate-selected-carrier",
+      "reason": "output identity mismatch",
+      "detected": true
+    },
+    {
+      "name": "reallocate-reserved-experience",
+      "reason": "allocation pattern mismatch",
+      "detected": true
+    },
+    {
+      "name": "authority-without-write",
+      "reason": "authority/write mismatch",
+      "detected": true
+    },
+    {
+      "name": "drop-subject-requirement",
+      "reason": "projection/read mismatch",
+      "detected": true
+    },
+    {
+      "name": "drop-delivery-parent",
+      "reason": "missing completed second parent",
+      "detected": true
+    },
+    {
+      "name": "unconditional-rank-read",
+      "reason": "unavailable cue reads memory",
+      "detected": true
+    },
+    {
+      "name": "alias-union-tags",
+      "reason": "ambiguous union tag",
+      "detected": true
+    },
+    {
+      "name": "continue-through-choice",
+      "reason": "unbounded cognitive continuation",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_REGISTRATION_SHAPES_REV1.md",
+      "sha256": "d2d33f605195d877862443392ecc00efae22fefb83a4a301e79213e87f2ffdac"
+    },
+    {
+      "path": "scripts/review-attention-memory-registration-shapes.mjs",
+      "sha256": "e340c7d19c7e109c4ee28e12bdb2893bbec63a0d259bb35bd32546fbe81a7211"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_ADMISSION_DISPATCH_REV1.json",
+      "sha256": "0aa6fc8c8edb5d3e3cc39fc4a3c8964190f18131101c0fee4252bd8928dd947d"
+    },
+    {
+      "path": "scripts/build-attention-symbolic-declarations.mjs",
+      "sha256": "9653335be50c78ea966990a7732e56425897e9d444f7988ec8f2033f7ef3fc3a"
+    }
+  ]
+}

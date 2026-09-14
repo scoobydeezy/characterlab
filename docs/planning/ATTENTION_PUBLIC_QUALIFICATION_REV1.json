@@ -1,0 +1,127 @@
+{
+  "status": "BOUNDED PUBLIC ATTN QUALIFIED",
+  "reviewer": "Primary-agent adversarial self-review under autonomous authorization; no external verdict",
+  "contract": "attention-public-integration/0.1-candidate",
+  "declarations": "attention-public-declarations/0.1-candidate",
+  "selection": "attention-selection-component/0.1-candidate",
+  "models": 32,
+  "specimenRuns": 224,
+  "successfulRuns": 217,
+  "workLimitRejections": 7,
+  "wholePrefixRestores": 434,
+  "boundaryRollbackWitnesses": 58,
+  "traceFieldCorruptions": 247,
+  "currentRuntimeFaults": 11,
+  "activeTests": 1160,
+  "activeFiles": 136,
+  "execution": "Full1159 active run plus one new concurrency test; one worker and unchanged test timeouts. Previous unconstrained run retained with17 timeout failures.",
+  "preservedEMBFingerprints": 453,
+  "vectors": {
+    "AT2-A": "PASS:27 public denied-port role substitutions; observer-side outputs byte-identical.",
+    "AT2-B": "PASS:224 model/scene runs; K0/1/2, equal and unlimited controls; all-denied branch; work8 atomic rejection.",
+    "AT2-C": "PASS:public actual observed role swap and canonical tie scenes, independent selection oracle.",
+    "AT2-D": "PASS:all public audit priorities/exclusions checked exactly across visibility/unit interventions; no strength claim.",
+    "AT2-E": "PASS:shared actual observation across plural public units; duplicate binding/request component rejection; duplicate original rejection.",
+    "AT2-F": "PASS split:missing/unsupported public; multi-role actual SEM/component positive with public one-role profile exclusion.",
+    "AT2-G": "PASS split:public canonical tie/restore-original binding; actual component foreign observer/event/instant, stale/forged claim and strict-priority renaming rejection.",
+    "AT2-H": "PASS split:public selected receipts; actual component direct/indirect resolver rejection; live consumer omitted/repeated/observation-read faults reject.",
+    "AT2-I": "PASS:K-only SEM preservation; selector/consumer no-write faults; only tracking roots241/242 may change.",
+    "AT2-J": "PASS:actual positive15-to40-to40 and empty10-to40-to40 graph; phase20 fault rejects; legacy regression preserved.",
+    "AT2-K": "PASS:private exact parent-issued token, independent child/output carriage, allocation-table extraction and actual-slot freshness; no wrapper identities.",
+    "AT2-L": "PASS:434 whole-prefix restores;58 injected boundary rollbacks;247 trace-field corruptions; edited saves/incomplete prefixes reject.",
+    "AT2-M": "PASS:actual old Campaign2/EMB factories and codecs reject;453 EMB fingerprints and prior attention component faults preserved.",
+    "AT2-N": "PASS bounded:no learning/encoding/retrieval writes or verdict; generic ATTN/corpus remains open."
+  },
+  "correction": "Canonical set S0;32 model commitments unchanged,224 run commitments corrected forward; old bytes retained without alias.",
+  "limits": [
+    "Finite exact model cohort; no arbitrary model-authoring admission.",
+    "Multi-role/renaming and adversarial selected-view access use real components where the public profile excludes those inputs.",
+    "Adapter infrastructure owns omniscient source and transaction orchestration; the selector receives observer-safe SEM and the actual consumer receives only its selected capability.",
+    "ATTENTION intake is PARTIAL for active selection; encoding/later probe remains BLOCKED. No corpus member or whole ATTN PASS.",
+    "No residual-pool/salience reduction, character-state attachment, affect feedback, learning, memory or retrieval claim."
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/attentionCodecs.ts",
+      "sha256": "42707374e12c74ee36094f8407ad789439b48b5aea91a595dc3a26936205ae5d"
+    },
+    {
+      "path": "src/campaign3/attentionFactory.ts",
+      "sha256": "b8a4efbb5f1f09b8f410ce0142f979d60de238f169dba30dca768f4b85feed85"
+    },
+    {
+      "path": "src/campaign3/attentionInputs.ts",
+      "sha256": "95499d5c5bda97478f1c565ff0de3ae3cfb9b0ff47b88d8ad88ab86f861285d0"
+    },
+    {
+      "path": "src/campaign3/attentionModel.ts",
+      "sha256": "f96d886ad727c2a8791ab74c7e4aa21e45f6b8633db79c4ada92e2c2beacef08"
+    },
+    {
+      "path": "src/campaign3/attentionRuntime.ts",
+      "sha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "src/campaign3/attentionTrace.ts",
+      "sha256": "c10afd8124ca315037c603b597201f56f2ee3ef12238c817c450f972920e6bfb"
+    },
+    {
+      "path": "src/test/attentionPublic.test.ts",
+      "sha256": "6e109e3c05987f59b8cfb47844bce023609d4c954eeacef0814ac3c1e7324be7"
+    },
+    {
+      "path": "src/test/attentionBoundaries.test.ts",
+      "sha256": "59a08db18ffe8e725664a563eebc974b2dba1f2785060b76a27b21418035c0b4"
+    },
+    {
+      "path": "src/test/attentionPublicFixtures.ts",
+      "sha256": "b60648dfa83a9cdf7f48152b0cc8137ffd9b363d01a61706a3729e2474534b37"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/ATTENTION_ACTIVE_REGRESSION_REV3.json",
+      "sha256": "07e5a28843f54aed306a24e26ad6c9653ff87a43b88af2a86ff2cf739282954a"
+    },
+    {
+      "path": "docs/planning/ATTENTION_CONCURRENCY_TESTS_REV1.json",
+      "sha256": "87812d11be7c19e2d0393766900e26ac339f86d877abac57b3f5540c01524374"
+    },
+    {
+      "path": "docs/planning/ATTENTION_REFERENCE_REGRESSION_REV1.json",
+      "sha256": "e3767d02cc6e28e4b0579ff3942f8af35a8c8fb9789ef44e22ccc389ebfc657d"
+    },
+    {
+      "path": "docs/planning/ATTENTION_RUNTIME_MUTANTS_REV1.json",
+      "sha256": "894fffcb439c9c48a67587ff9174ffadf427bb07ca8facf457350ac50e35e23b"
+    },
+    {
+      "path": "docs/planning/campaign3-attention-model-rev2/FREEZE.json",
+      "sha256": "a237acf2b6a023f48c0386ca66df611c6e198d67471773bb7aeaea7ee6528348"
+    },
+    {
+      "path": "docs/planning/ATTENTION_INITIAL_STATE_CORRECTION.md",
+      "sha256": "0d53d1cface597ce649f7dcb928f07c7276b572606bf443afc2339ef38374604"
+    },
+    {
+      "path": "docs/planning/ATTENTION_ACTIVE_REGRESSION_REV2.json",
+      "sha256": "425bfc32a67aba11a3e5f9aa1f919fcf6119712e2a20aae0fc14ab5d8cf40e64"
+    },
+    {
+      "path": "docs/planning/ATTENTION_COMPONENT_MUTANTS_REV2.json",
+      "sha256": "341aff97102cb39b14d927362f7db611143795331e4335dfbaeedfeb6ed5e202"
+    },
+    {
+      "path": "docs/planning/ATTENTION_REFERENCE_ORDER_MUTANT_REV1.json",
+      "sha256": "49c5bbfd72700c7389abd68c2d345e83857897438bea5f06fec1d86063c3e858"
+    }
+  ],
+  "script": {
+    "path": "scripts/qualify-attention-public.mjs",
+    "sha256": "d9890070bc38bdd4f8cbad0693e6c9172ce7e53915795283ffec35a7d9d89417"
+  }
+}

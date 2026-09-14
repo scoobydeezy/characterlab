@@ -1,0 +1,94 @@
+{
+  "status": "SEC-A..H QUALIFIED AT COMPONENT SCOPE",
+  "tests": 8,
+  "faults": [
+    {
+      "name": "flatten-role",
+      "file": "selectedEncoding.ts",
+      "removed": "['causal-role/target',Q.of(9n,10n)]",
+      "inserted": "['causal-role/target',Q.of(1n)]",
+      "baseline": "243/1243",
+      "actual": "3/13",
+      "detected": true
+    },
+    {
+      "name": "ignore-attention-ablation",
+      "file": "selectedEncoding.ts",
+      "removed": "attentionLaw === 'disabled-attention' ? Q.of(1n)",
+      "inserted": "attentionLaw === 'disabled-attention' ? role",
+      "baseline": "27/127",
+      "actual": "243/1243",
+      "detected": true
+    },
+    {
+      "name": "ignore-budget-law",
+      "file": "selectedEncoding.ts",
+      "removed": ",budgetLaw,Q.of(1n),",
+      "inserted": ",'independent',Q.of(1n),",
+      "baseline": "1/1",
+      "actual": "3/13",
+      "detected": true
+    },
+    {
+      "name": "retain-selection-capability",
+      "file": "attentionSelection.ts",
+      "removed": "views.delete(view);\n    const seen",
+      "inserted": "// fault: retain capability\n    const seen",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "infer-need-zero",
+      "file": "selectedEncoding.ts",
+      "removed": "need:'Disabled' as const",
+      "inserted": "need:'ObservedZero' as const",
+      "baseline": "Disabled",
+      "actual": "ObservedZero",
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "target": "243/1243",
+    "disabled": "27/127",
+    "flat": "1/1",
+    "revoked": true,
+    "need": "Disabled",
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/selectedEncoding.ts",
+      "sha256": "aa40340b1832eb82539d1a52f6fea88c930aa85de884aa91d4b612948ad78150"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "c3c5c098006e37e689c5dccae69aac5d5c9e1ab9c76cc4bfbcc0c0ba509118ee"
+    },
+    {
+      "path": "src/test/selectedEncoding.test.ts",
+      "sha256": "abcdd2354e571ee00188df8d0bd3923acba8705d40942d6aaf310b0124547325"
+    },
+    {
+      "path": "docs/formal/SELECTED_ENCODING_COMPONENT.md",
+      "sha256": "ad9fdbd2a17ba6168f9df3331ee8a916ef4c6690eab81e29e900a00fdeffe850"
+    },
+    {
+      "path": "scripts/review-selected-encoding.mjs",
+      "sha256": "d5f3fd73cf5017fc4b6640722a1b8f9988566bf09829231b866f78e25c37687f"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/SELECTED_ENCODING_TESTS_REV1.json",
+    "sha256": "3ac0753ef11ca33814e1b0d61c1892271e076308548ef31218a855e9604efcaa"
+  },
+  "limits": [
+    "No public encoding record, subject projection, persistent state or corpus qualification.",
+    "Three units at raw strength <=3/10 imply sum <=9/10, below the shared budget1 threshold. These footprint comparisons do not discriminate its normalization branch.",
+    "Need and surprise channels disabled, not observed zero. No Incidental or spatial source admitted."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "ZERO-STATE COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "ignore-incoming-edges",
+      "removed": "||validated.some(row=>row[i].numerator!==0n)",
+      "inserted": "",
+      "witness": "GZ-A",
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "require-both-directions",
+      "removed": "||validated.some(row=>row[i].numerator!==0n)",
+      "inserted": "&&validated.some(row=>row[i].numerator!==0n)",
+      "witness": "GZ-A",
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "epsilon-removal",
+      "removed": ".filter(i=>validated[i].some(v=>v.numerator!==0n)||validated.some(row=>row[i].numerator!==0n))",
+      "inserted": ".filter(i=>validated[i].some(v=>v.numerator*1000n>v.denominator)||validated.some(row=>row[i].numerator*1000n>row[i].denominator))",
+      "witness": "GZ-B",
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution"
+      ]
+    },
+    {
+      "name": "retain-empty-membership",
+      "removed": ".filter(i=>validated[i].some(v=>v.numerator!==0n)||validated.some(row=>row[i].numerator!==0n))",
+      "inserted": "",
+      "witness": "GZ-C",
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-C: empty and all-zero graphs normalize to empty without a new identity/history surface",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "reweight-surviving-edge",
+      "removed": "Q.of(validated[i][j].numerator,validated[i][j].denominator)",
+      "inserted": "Q.of(validated[i][j].numerator===0n?0n:1n)",
+      "witness": "GZ-B",
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/graphZeroState.ts",
+      "sha256": "d04c5614329bee486549ac01c9c85c7207a51f99ec7ebb60a470924f94ae17a4"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/graphZeroState.test.ts",
+      "sha256": "1c1bf40f14aa423b77c09333eb30a8a4d9cab03aaddcc6a3fe597b9bc5f6c3e4"
+    },
+    {
+      "path": "docs/formal/GRAPH_ZERO_STATE_COMPONENT.md",
+      "sha256": "195ddb01eb25371672d4d400a02d04383255467da7ba5926433044f44f0286a0"
+    },
+    {
+      "path": "scripts/review-graph-zero-state.mjs",
+      "sha256": "23b7ec35d8667cf084a0d77781a22a7a3c4d30c3e6238366664b28bcfba8b3e2"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/GRAPH_ZERO_STATE_TESTS_REV1.json",
+    "sha256": "21b1a9bae4bc8af97c47426ed916f301f2d5de49995bc23310939577897af2ee"
+  },
+  "limits": [
+    "Structural normalization only; no cognitive edge loss or resource policy.",
+    "No public owner timing or persistence qualification."
+  ]
+}

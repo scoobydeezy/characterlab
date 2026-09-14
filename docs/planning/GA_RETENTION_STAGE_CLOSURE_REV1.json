@@ -1,0 +1,169 @@
+{
+  "version": "ga-retention-stage-closure/0.1-draft",
+  "status": "SYMBOLIC STAGE SLICE; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "GeneralRetentionControl",
+      "fields": [
+        {
+          "name": "Memory",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Graph",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Association",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRetentionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "retention-original",
+      "phase": 0,
+      "next": [
+        "retention-dispatch"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "retention-dispatch",
+      "phase": 130,
+      "next": [
+        "ordinary-memory-retention",
+        "event-association-retention",
+        "event-presentation-cleanup"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [
+        "route/character-learning"
+      ],
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "ordinary-memory-retention",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "event-association-retention",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralAssociationState"
+      ],
+      "writes": [
+        "GeneralAssociationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    },
+    {
+      "name": "event-presentation-cleanup",
+      "phase": 140,
+      "next": [],
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "Complete declared owner batch against B0; no sibling reads; shared validated memory result descriptor only for presentation cleanup",
+      "input": "GeneralRetentionInput",
+      "outputs": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact original/producer admission"
+    }
+  ],
+  "definitionKinds": {
+    "Memory": "GeneralRetentionCalibration",
+    "Graph": "GeneralGraphRetentionCalibration",
+    "Association": "GeneralAssociationCalibration"
+  },
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sliceEventSubtotal": 5,
+  "scope": "Actual presentation dispatch remains separate. Memory loss is not graph loss. Retention original does not enroll a selection source.",
+  "sources": [
+    {
+      "path": "docs/planning/GA_RETENTION_STAGE_CLOSURE_REV1.md",
+      "sha256": "6e988be31c28bf9a30f0745528537ba2dc6ba91598c8e123a4ca6e47cc048661"
+    },
+    {
+      "path": "docs/formal/ORDINARY_MEMORY_BATCH_CONTROLS_COMPONENT.md",
+      "sha256": "7dc8f2bf450b25c95ac488a9db39c7452dfd7561326b785ad65eb078cb61fc33"
+    },
+    {
+      "path": "docs/formal/EVENT_ASSOCIATION_SETTLEMENT_COMPONENT.md",
+      "sha256": "1b2aeef39f8eb44a7e79788287b126dda33e42a9af228394402cfb12b24fff59"
+    },
+    {
+      "path": "docs/formal/EVENT_PRESENTATION_SETTLEMENT_COMPONENT.md",
+      "sha256": "0a6077e4aa47623de96aa3bc38a591cef3e6e6378b693612737edc7cc1b252c9"
+    }
+  ]
+}

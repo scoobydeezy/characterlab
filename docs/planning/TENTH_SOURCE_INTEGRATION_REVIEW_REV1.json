@@ -1,0 +1,55 @@
+{
+  "status": "TENTH SOURCE INTEGRATION REVIEW PASS",
+  "faults": [
+    {
+      "name": "hide-competitor-absence",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-S",
+      "detected": true
+    },
+    {
+      "name": "literal-competing-payload",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-T",
+      "detected": true
+    },
+    {
+      "name": "keep-nine-bound",
+      "file": "src/campaign3/observedMarkerTracking.ts",
+      "witness": "N10-A",
+      "detected": true
+    },
+    {
+      "name": "unbounded-tenth-detections",
+      "file": "src/campaign3/observedMarkerTracking.ts",
+      "witness": "N10-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "2c43e21bf2afe8ec6f29e7deaeb151900d039a5c7b466804111f20cea6311a45"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "2c43e21bf2afe8ec6f29e7deaeb151900d039a5c7b466804111f20cea6311a45"
+    },
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "ae8129e4ba3058db7ad1f64f8791ef14eb3ebca96191f33b981bd8c21f606ebb"
+    },
+    {
+      "path": "src/test/tenSweepMarker.test.ts",
+      "sha256": "f4027bf80ef97af2ad308a4f78f010449b70096c1a85b67b8f00ced68abe57a9"
+    },
+    {
+      "path": "scripts/review-tenth-source-integration.mjs",
+      "sha256": "fe79ab04b6c6ad8d7a27f86af7aeadc9350c43b1ee1c3fd1ad0d7e93daf61dfe"
+    }
+  ],
+  "limits": [
+    "Actual tenth observation and positive encoding; world/channel declarations and source-audit identity remain component premises.",
+    "Later qualified use remains a supplied comparator premise, not public downstream-use authentication."
+  ]
+}

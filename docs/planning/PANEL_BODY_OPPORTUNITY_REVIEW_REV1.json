@@ -1,0 +1,73 @@
+{
+  "status": "PANEL/BODY SOURCE COMPONENT REVIEW PASS",
+  "faults": [
+    {
+      "name": "require-both-present",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-A",
+      "detected": true
+    },
+    {
+      "name": "body-absence-as-support",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-A",
+      "detected": true
+    },
+    {
+      "name": "omit-panel-support",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-A",
+      "detected": true
+    },
+    {
+      "name": "duplicate-experience-reservation",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-A",
+      "detected": true
+    },
+    {
+      "name": "publish-before-reservation",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-C",
+      "detected": true
+    },
+    {
+      "name": "alias-returned-context",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-F",
+      "detected": true
+    },
+    {
+      "name": "allow-stale-candidate",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "PVE-G",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/panelBodyOpportunity.ts",
+      "sha256": "f0493c03cdee750245da7976aeaf88b8b725bf0bd6d6922d753e718c0d7f3fc6"
+    },
+    {
+      "path": "src/test/panelBodyOpportunity.test.ts",
+      "sha256": "e88d545af59bf1740f8706fb947ecca8ea79a6aec40faae02844f81192d9c9e6"
+    },
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "0231a816f58cc217043fa163a6c84754513c4be44862ca6bd5e6fb08cb527fb7"
+    },
+    {
+      "path": "src/test/panelVisualEventComposition.test.ts",
+      "sha256": "188accc04856bff4b2e6fd43ec400dd2c01a0763b0ed8f21259af67b5ef3fba0"
+    },
+    {
+      "path": "scripts/review-panel-body-opportunity.mjs",
+      "sha256": "4cec9384f946fb324bc01aff8adf22d37c206010d50103725972cee02be32098"
+    }
+  ],
+  "limits": [
+    "Trusted source/lane/allocator; no public PRJ/completion or persistence proof.",
+    "The duplicate-reservation fault inserts an extra shared-allocator consumption; the exact branch allocation count detects it."
+  ]
+}

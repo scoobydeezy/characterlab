@@ -1,0 +1,47 @@
+{
+  "status": "WRITE-SCOPE ALLOCATION REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 2,
+  "fields": 13,
+  "roles": 3,
+  "priorArtifactsPreserved": 22,
+  "faults": [
+    {
+      "name": "old-type-reuse",
+      "rejected": true
+    },
+    {
+      "name": "field-renumber",
+      "rejected": true
+    },
+    {
+      "name": "union-alias",
+      "rejected": true
+    },
+    {
+      "name": "role-namespace-swap",
+      "rejected": true
+    },
+    {
+      "name": "stage-enum-shift",
+      "rejected": true
+    },
+    {
+      "name": "new-member",
+      "rejected": true
+    },
+    {
+      "name": "boundary-omission",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_WRITE_SCOPE_ALLOCATION_DRAFT.json",
+      "sha256": "8a696de8f27d22f8b849991082e52099663f365f7a0956fd5ec92f3be7921f6e"
+    },
+    {
+      "path": "scripts/review-ga-write-scope-allocation.mjs",
+      "sha256": "6219c0ee070581f1c54deb7bd88dd8dd567ce5e1d7f2b83d2e9df01b66fef0a6"
+    }
+  ]
+}

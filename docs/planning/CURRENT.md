@@ -1,16 +1,493 @@
 # Current research entry point
 
-Updated 2026-09-11. This index routes readers to authorities; it does not override
+**PAUSED at user request,2026-09-13:** [Resume checkpoint](GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md).
+Write-scope gap closed through the frozen705/706 successor and tested boundary checker.
+GA remains OPEN; no owner decision pending. Resume exact registration/model closure
+only when requested.
+
+2026-09-13: [Carrier checkpoint](GENERAL_ATTENTION_CARRIER_CHECKPOINT.md). The bounded
+163-record carrier allocation is frozen. The combined codec, canonical body production
+and recall projections pass their component tests and adversarial controls. General
+Attention/public gates remain OPEN; continue with registry and model closure locally.
+
+2026-09-13: [Registration checkpoint](GENERAL_ATTENTION_REGISTRATION_CHECKPOINT.md). 282 affected tests pass. Recall projections, actual replenishment output and primitive grammar are implemented; the symbolic graph has67 templates and163 records. Public gates and GA remain OPEN. Continue locally; no owner ruling pending.
+
+2026-09-13: [Result production checkpoint](GENERAL_ATTENTION_RESULT_PRODUCTION_CHECKPOINT.md). 253 affected tests pass; actual recollection and attribution production now compose. Symbolic output ownership covers 66 templates; public registration and GA remain OPEN. Continue locally; no owner ruling is pending.
+
+**Current checkpoint:** [owner composition](GENERAL_ATTENTION_OWNER_COMPOSITION_CHECKPOINT.md).235 affected tests and62 injected source faults pass.
+159-record symbolic role coverage is reviewed. Public gates and GA remain OPEN;
+continue with recollection/presentation and whole public registration closure. No owner ruling is pending.
+
+**Current checkpoint:** [production boundaries](GENERAL_ATTENTION_PRODUCTION_BOUNDARIES_CHECKPOINT.md).
+210 affected tests and41 injected faults pass. Actual assessment, selected formation,
+narrow retained grouping and prior-committed memory batching now compose. The145-record
+role crosswalk remains symbolic; public gates and GA are OPEN. Continue locally with
+calibration/policy and remaining owner closure; no owner ruling is pending.
+
+[Actual formation evidence](GA_ACTUAL_FORMATION_EVIDENCE_REV1.md): both modalities now produce acquisition
+evidence from actual selected capabilities.169 affected tests and16 injected faults
+pass. Public registration and GA remain OPEN; no owner ruling is pending.
+
+[Actual body selection](GA_ACTUAL_BODY_SELECTION_REV1.md) removes the remaining
+fixture-selection fallback from the main acquisition path. Nine body and nine
+visual actual audits now account for18 sources.34 focused tests/four source faults
+pass; public registration and GA remain OPEN. Continue without an owner ruling.
+
+[Acquisition/recall stage slice](GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.md)
+now names21 symbolic registrations and three required wrappers. The [revision10
+role crosswalk](GA_IDENTITY_ROLE_CLOSURE_REV10.md) covers132 records. Its23-event
+source-plus-slice subtotal is not a whole-model ceiling. Public consumer/join/owner
+closure and GA remain OPEN; no owner ruling pending.
+
+**Latest checkpoint:** [bounded perception and reservation](GENERAL_ATTENTION_BOUNDED_PERCEPTION_CHECKPOINT.md).
+Both actual learning fixtures now use last-window/SEM owners; sampling reserves the
+shared experience before binding.149 affected tests and11 injected faults pass.
+The129-record symbolic crosswalk now has128 scalar positions. Public gates and GA
+remain OPEN; no owner ruling is pending.
+
+
+Updated 2026-09-13. This index routes readers to authorities; it does not override
 the North Star, Architecture Map, Research Brief, accepted contracts or frozen bytes.
 
-**Latest checkpoint:** [public ATTN exact model cohort accepted and frozen](CAMPAIGN3_ATTENTION_MODEL_CHECKPOINT.md).
+**Active work:** [general attention closure](GENERAL_ATTENTION_CLOSURE_PLAN.md),
+authorized to continue through encoding, retrieval and corpus gates.
+
+**Latest source/use closure:** [actual-use retention](GA_ACTUAL_USE_RETENTION_RESOLUTION_REV1.md)
+and [actual retained context](GA_ACTUAL_CONTEXT_CARRIAGE_REV1.md). The discriminating
+earlier-focal witness uses only actual consumed memories; observed panel companions
+replace supplied stage labels. Public registration and GA remain OPEN; continue locally.
+
+**Current checkpoint:** [requested multimodal source and public transport](GENERAL_ATTENTION_REQUESTED_MULTIMODAL_CHECKPOINT.md).
+One actual request now shares SEM provenance across independent body/visual consumers.
+119 affected tests pass; broad active-source execution passed1679 earlier-version tests.
+The129-record crosswalk includes source wrappers and actual claim transport. Continue
+public registration/owner closure; GA OPEN and no owner ruling pending.
+
+**Earlier checkpoint:** [actual competitor and canonical selection](GENERAL_ATTENTION_TENTH_SELECTION_CHECKPOINT.md).
+The final competitor now passes actual sensing and positive encoding; visual
+formation sources reference actual1143 audits.79 affected tests pass. The116-record
+symbolic crosswalk uses the explicit ten-sweep/30-file bound. Public graph and GA OPEN.
+
+**Earlier checkpoint:** [requested sources and positive encoding](GENERAL_ATTENTION_REQUESTED_SOURCE_CHECKPOINT.md).
+Explicit request masks distinguish unsampled surfaces from observed absence. Actual
+SEM role projection and empty selection preserve source accounting. The111-record
+symbolic crosswalk includes the distinct physical composite key. Public gates and GA
+remain OPEN; continue locally with source declarations and registration closure.
+
+**Earlier source/declaration checkpoint:** [combined source](GENERAL_ATTENTION_COMBINED_SOURCE_CHECKPOINT.md).
+All eight presence cases execute in both lanes, with canonical SEM output checks and
+seven injected faults. The102-record symbolic crosswalk includes six new-root key roles.
+Actual role-source/registration/owner closure remains next; public gates and GA OPEN.
+
+**Latest executable checkpoint:** [selected boundary and prior feedback](GENERAL_ATTENTION_SELECTED_FEEDBACK_CHECKPOINT.md).
+One hundred affected checks pass. Encoding now consumes a one-use selected-only
+spatial capability; an explicit earlier-concern variant preserves focal allocation
+and the bound sensing time. Public state/source/owner closure remains next; GA OPEN.
+
+**Latest field integration:** [visual baseline carrier](GA_VISUAL_PIPELINE_CARRIER_REV1.md)
+with its [scope correction](GA_VISUAL_PIPELINE_SCOPE_CORRECTION_REV1.md):16 records,
+ten structural faults, and an [82-record role crosswalk](GA_IDENTITY_ROLE_CLOSURE_REV2.md)
+with11 rejected faults. Earlier-concern encoding/retrieval remains a separate lawful
+variant; immediate encoding cannot consume its own later outcome. Public gates remain OPEN.
+
+**Latest retention/recall integration:** [canonical recall checkpoint](GENERAL_ATTENTION_CANONICAL_RECALL_CHECKPOINT.md).
+Its [forward source integration](GENERAL_ATTENTION_VISUAL_RECALL_INTEGRATION_REV1.md)
+now connects selected spatial candidates and a real ninth cue through event recall.
+Thirty focused checks and five injected faults pass; the SEM output-version mismatch
+is corrected. Public source/owner registration and GA remain OPEN; continue locally.
+
+**Latest encoding integration:** [spatial binding checkpoint](GENERAL_ATTENTION_SPATIAL_BINDING_CHECKPOINT.md).
+Actual selected capabilities now join observed positions through SEM tracks and exact
+binding bytes, with separate spatial/role factors.52 focused checks and nine source
+mutations pass; public source/subject/wrapper/owner and GA closure remain OPEN.
+
+**Latest source integration:** [revision7](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV7.md).
+The before/after body observations now share an actual SEM reservation with their
+panel.21 focused checks, seven source faults and22 integration checks pass. A panel
+context alias is fixed; transactional preparation prevents failed freezing from
+publishing context. Full public visual/subject/carrier admission remains OPEN.
+
+**Previous source integration:** [revision6](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV6.md).
+The positional fixture now consumes actual bounded display observations; hidden
+endpoints cannot be reconstructed from the source schedule.33 focused tests and
+seven source/fixture mutations pass. Additive physical-root classification has six
+detected faults and preserves disjoint actual mutation authority. Public combined
+source/registration and GA remain OPEN; no owner decision is pending.
+
+**Previous source integration:** [revision5](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV5.md).
+One SEM event owner now supports visual fallback without trial context. Focal targeting
+comes from recalled consequence grouping, and control trials cannot borrow stroke
+support.42 focused tests and nine mutations pass. The earlier body-only source/SEM
+path and18-source budget remain covered. Combined-source/public registration stays OPEN.
+
+**Latest field closure:** [goal/result checkpoint](GA_GOAL_RESULT_CLOSURE_CHECKPOINT.md).
+The [identity-role crosswalk](GA_IDENTITY_ROLE_CLOSURE_REV1.md) now enumerates72 identity
+positions and82 record boundaries across66 proposed records; nine structural faults
+reject. Visual wrappers, actual state-key roles and public compiler joins remain OPEN.
+The delayed qualification excludes numerical appraisal data;19 focused checks and four
+source mutations pass. The21-record symbolic goal/result inventory has12 structural
+fault controls. Public registration, allocation, execution and GA closure remain OPEN.
+Continue combined source/owner registration work locally; no owner decision is pending.
+
+**Current source integration:** [source integration revision3](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV3.md)
+adds actual panel event-file perception and retained consequence-time baseline reads
+to the separate positional acquisitions and metadata-preserving formation. The surviving
+carrier has14 proposed records/40 fields with structural review; source branches and
+goal/result identity constraints are explicit. Public source, canonical memory carriers,
+result admission and persistence remain open.
+Continue locally under the escalation policy; no owner decision is pending.
+
+**Active local disposition:** [explicit perceived trial context A](TRIAL_CONTEXT_LOCAL_DISPOSITION.md).
+Apply the [Campaign 3 escalation policy](CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md);
+bounded source/representation choices are not owner blockers. Reuse SEM-001C's
+observer-relative event-file identity. [17 combined tests](PERCEIVED_TRIAL_GROUPING_CHECKPOINT.md)
+pass at supplied-projection scope. Authentic source/focus production, public target
+join and persistence remain open; continue source-contract work locally.
+
+**Retained attribution consumer A accepted:** [ruling](GENERAL_ATTENTION_USE_CONSUMER_RESOLUTION.md).
+[29 tests and six source faults](RETAINED_ATTRIBUTION_USE_CHECKPOINT.md) pass at component/
+scheduler-fixture scope. Early Unavailable credits only semantically consumed children;
+actual commit changes later retention and failed commit rolls both effects back.
+Public subject/source/read binding, result allocation and persistence remain open.
+Outcome significance still needs its own law; GA remains OPEN.
+
+**Independent body cue A accepted:** [resolution](GENERAL_ATTENTION_BODY_CUE_SOURCE_RESOLUTION.md).
+[Thirteen tests/five source faults](BODY_SIGNAL_CUE_COMPONENT_CHECKPOINT.md) pass. Actual
+observation records cue old memory with durable capacity zero; public completion binding
+and exact cue carrier remain unqualified. No new sensing or formation identity is created.
+
+**Protocol validation checkpoint:** [twenty-six tests](FORMATION_PROTOCOL_TRANSITION_CHECKPOINT.md).
+Exact candidate validation prevents history resets, changed mappings, invented loss
+and repairs of invalid prior state through new enrollment. [Hook inventory](FORMATION_HOOK_INVENTORY_REV1.md)
+distinguishes completed empty selection from no occurrence; eight static faults reject.
+Next: closed descriptor/result projection and atomic owner/protocol integration.
+No public allocation/activation or General Attention completion is claimed.
+
+**Protocol admission/join draft:** [source roles and two runtime hooks](FORMATION_PROTOCOL_ADMISSION_JOIN_REV1.md).
+Existing1143 uses the shared runtime allocator; no duplicate source or result identity
+is proposed. Enrollment precedes positive eligibility. Governance consumes a bounded
+projection of the actual memory-owner result at final reconciliation, not sibling
+content or a caller-supplied survivor list. FJ-A..J are frozen proposed vectors, NOT
+PASSED. Next: exact source eligibility and public hook/classifier descriptor inventory.
+
+**Protocol-root symbolic checkpoint:** [first carrier and nineteen tests](FORMATION_PROTOCOL_ROOT_SYMBOLIC_REV1.md).
+[Dedicated root A is accepted](FORMATION_PROTOCOL_STATE_PLACEMENT_RESOLUTION.md).
+Generic authority/read exclusion and state-value reconstruction pass at fixture scope.
+The proposed singleton keeps admission and success maps separate, with no cognitive
+read authority. Next: exact source roles, admission hook, memory-owner result join and
+noncognitive classifier declaration. No permanent allocation or public codec yet.
+
+**Source-domain checkpoint:** [binding proposal and fourteen tests](FORMATION_SOURCE_DOMAIN_BINDING_REV1.md).
+Runtime source identities require admission tracking rather than guessed future IDs.
+Never-successful sources consume the finite domain; revisits consume no new slot,
+while successful replay still rejects. Whole-set overflow is atomic and noncognitive.
+Next: exact public protocol-state placement/admission hook and complete carrier inventory.
+No public write authority, record allocation or canonical persistence is implied.
+
+**Governance component checkpoint:** [eight tests pass](FORMATION_GOVERNANCE_COMPONENT_CHECKPOINT.md).
+[Bounded-run history A is accepted](GENERAL_ATTENTION_ACQUISITION_HISTORY_RESOLUTION.md),
+with the bound on distinct admitted sources, not successful rows alone. Exact payload-free
+history survives cognitive loss; absent history means no committed success. No rollover.
+Next: public source-domain binding and complete metadata/state carrier before allocation
+and canonical persistence. No immediate history-policy decision; General Attention is OPEN.
+
+**Graph scheduler checkpoint:** [twenty combined tests pass](STRENGTH_GRAPH_SETTLEMENT_CHECKPOINT.md).
+[Split proof scope A is accepted](GENERAL_ATTENTION_GRAPH_WEAKENING_SCOPE_RESOLUTION.md).
+Common-B0 reads, order-independent final state, whole-instant rollback, zero-capacity
+loss and trusted snapshot continuation pass at fixture scope. Uniform weakening has
+135 regression cases; selective producer reversal remains a conditional future item.
+Next: successor symbolic owner/read/state inventory and canonical persistence closure.
+The subsequent history decision now owns the next gate; General Attention remains OPEN.
+
+**Graph orphan rule resolved:** [zero-state normalization accepted](GENERAL_ATTENTION_GRAPH_ORPHAN_RESOLUTION.md).
+[Component checkpoint](GRAPH_ZERO_STATE_COMPONENT_CHECKPOINT.md):15 combined tests pass,
+including seven normalization cases. Either positive edge direction preserves a node;
+only exact structural emptiness is removed after the resolved batch. No timestamp,
+history or identity is added. Positive-edge priority, graph capacity and public lifecycle
+remain open. Six direct/spread source mutations are also detected.
+
+**Direct/spread numeric checkpoint:** [exact composition and eight tests](DIRECT_ASSOCIATIVE_ACCESS_COMPONENT_CHECKPOINT.md).
+Learned spread uses exact a-b, direct cue counts once, and the sum is rounded once.
+Isolated membership invariance and graph-only mediation pass at component scope.
+No public cue or graph-lifecycle qualification. Next: adversarial source review and
+independent graph resource/orphan closure.
+
+**Direct-cue decision resolved:** [independent direct matching accepted](GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_RESOLUTION.md).
+Independent graph lifecycle is [accepted](GENERAL_ATTENTION_ASSOCIATION_RETENTION_RESOLUTION.md).
+The read-only access composition handles episodic-only keys without graph writes.
+11 earlier component tests expose the old coupling. The successor counts direct
+zero-hop cue once and keeps learned spread separate; temporary union vertices create
+no learned state or capacity use. Next: exact numeric decomposition and its proofs.
+Orphan policy, graph capacity/pruning and public source/read qualification remain open.
+
+**Settlement composition checkpoint:** [formation plus recency/fragmentation](RETENTION_SETTLEMENT_COMPONENT_CHECKPOINT.md).
+22 tests pass, including all four formation/loss dispositions, replay after complete
+loss and common-B0 same-barrier reconciliation. History is payload-free bounded fixture
+bookkeeping, not a public compaction or lifelong idempotency design. Public history,
+read authorization and auxiliary-state closure remain next; General Attention is OPEN.
+
+**Same-barrier decision resolved:** [formation then loss accepted](GENERAL_ATTENTION_SAME_BARRIER_ACQUISITION_RESOLUTION.md).
+A valid nonempty formation can commit alongside complete loss, retaining historical
+identity/disposition but no current recall target. Failed settlement commits neither.
+No implicit transient access, forgotten-payload history or automatic presentation is
+authorized. Next: bounded disposition/history and owner/read/output composition.
+[Recency checkpoint](RECENCY_RETENTION_COMPONENT_CHECKPOINT.md):16 tests pass and
+six policy source faults are detected. No public memory or persistence qualification.
+
+**Survival-priority decision resolved:** [Recency Retention Baseline accepted](GENERAL_ATTENTION_RETENTION_PRIORITY_RESOLUTION.md).
+Newest original acquisition time survives first within each kind; retrieval and
+survival never refresh age. Complete-barrier reconciliation and modeled zero-capacity
+loss are required. Exact canonical ties and component/public proofs remain next.
+Acquired-protection reinforcement is a mandatory comparison before broad sufficiency
+or General Attention closure, not an optional enhancement. Seven actual source
+mutations of fragmentation mechanics are detected; public retention remains open.
+
+**Fragmentation mechanics checkpoint:** [pure component and eight tests](RETENTION_FRAGMENTATION_COMPONENT_CHECKPOINT.md).
+Applies explicit child-loss plans with exact survivor bytes, stable acquisition IDs,
+final-unit target removal and independent kind capacities. No survival priority or
+public forgetting is qualified. No removed content is returned as a hidden archive.
+Next: typed survival policy/evidence basis and ordinary-owner integration.
+
+**Retention loss unit resolved:** [complete semantic-unit fragmentation accepted](GENERAL_ATTENTION_RETENTION_LOSS_UNIT_RESOLUTION.md).
+[Substrate inspection](ATTENTION_RETENTION_SUBSTRATE_REVIEW_REV1.md) finds no historical
+forgetting law to port. Each surviving semantic child costs one slot in its kind's
+partition. Body signal groups remain atomic with all retained views; partial loss
+preserves acquisition identity and exact surviving bytes. Final-child loss removes
+the current individual recall target. Non-vacuous partial survival and both-kind
+pressure remain unpassed public obligations. Next: typed survival priority and its
+evidence basis, survivor reads and bounded governance history.
+
+**Retention resource decision resolved:** [per-kind budgets accepted](GENERAL_ATTENTION_RETENTION_SCOPE_RESOLUTION.md).
+The [carrier/admission draft](ATTENTION_ACQUISITION_CARRIER_DRAFT_REV1.md) proposes
+one header and distinct positive event/body content, preserving PRJ/IDN and exact
+producer binding. First-profile partitions are non-borrowing under one lifecycle
+authority. Genuine same-kind forgetting is required; safety limits and current
+accessibility are not eviction rules. Consolidation cannot escape resource bounds.
+Next: typed within-kind retention/fragmentation policy and its evidence basis. The
+old four-entry visual horizon is not a combined retention/pruning policy.
+
+**Formation protocol checkpoint:** [phase130 evidence / phase140 commit draft](ATTENTION_ACQUISITION_FORMATION_PROTOCOL_REV1.md).
+One candidate acquisition identity is proposed for the formation-evidence output and
+retained acquisition; no second formation identity. Six actual-scheduler fixture tests
+pass for positive/empty output, same-instant reconciliation, rollback and source replay
+exclusion. The first failed test receipt preserves the corrected retry assumption:
+failed scheduler runs remain terminal. Public carrier/PRJ/admission, auxiliary-family
+closure, retention/pruning and restore proof remain pending. No allocation or public
+memory implementation is authorized by these fixture results.
+
+**Acquisition identity decision resolved:** [B accepted](GENERAL_ATTENTION_ACQUISITION_IDENTITY_RESOLUTION.md).
+AcquisitionOccurrenceId identifies successful durable ordinary acquisition;1143 stays
+selection provenance. The one-initial-acquisition rule is profile-local. Measurement
+memory is unchanged. [Propagation plan](ATTENTION_ACQUISITION_IDENTITY_PROPAGATION_REV1.json)
+inspects three existing direct selection references and specifies four changes;
+ten static corruptions reject. This is not a revised complete wrapper packet or
+public implementation. Next: exact occurrence-bearing formation/evidence carrier and
+owner/output closure, with conditional allocation and settlement proof. Five existing-SEM
+opportunity tests pass, including equal-time current/consequence separation and
+duplicate-identity rejection. No public source or memory qualification is implied.
+
+**Three-local-reserve source accepted:** [forward scope resolution](GENERAL_ATTENTION_MULTISIGNAL_BODY_SOURCE_RESOLUTION.md).
+This is a synthetic source fixture, not canonical physiology or three Needs. Physical
+and safe signal identity remain distinct. [Component checkpoint](LOCAL_RESERVE_SOURCE_COMPONENT_CHECKPOINT.md):
+eight tests/six source faults prove bounded independence and safe-projection properties
+at component scope. [Public source draft](LOCAL_RESERVE_PUBLIC_SOURCE_DRAFT_REV1.md)
+prepares identities, roots, source admission and selected-only peer memory.
+[Direction acceptance](LOCAL_RESERVE_PUBLIC_SOURCE_DIRECTION_ACCEPTANCE.md) tightens
+actual-sample reservation, separate consequence opportunities, ordinary-memory authority
+and downstream safe-evidence invariance. Whole shape remains OPEN;1143 is not the
+durable acquisition identity. The resolution above governs symbolic schema/owner/admission
+closure. No further source-scope decision is
+pending; no public source, allocation, persistent runtime or corpus promotion occurred.
+
+**Signal-per-opportunity unit accepted:** [forward resolution](GENERAL_ATTENTION_INTEROCEPTIVE_UNIT_RESOLUTION.md).
+Safe model-declared signal grouping and actual sensing opportunity remain separate
+from sample multiplicity and timestamp equality. Grouping preserves exact bounded
+evidence without fusion. The sample-level component remains an unchanged comparator.
+
+**Separate body gate accepted:** [forward resolution](GENERAL_ATTENTION_INTEROCEPTIVE_ENCODING_RESOLUTION.md).
+The supplied review requires genuine bounded body contention, selected-only durable
+memory and unchanged transient pressure. Shared acquisition/control remains a future
+comparator; no universally independent-resource claim. Lifecycle B and causal-credit
+rulings remain accepted. General ATTN remains OPEN.
+
+**Credit decision resolved:** [attribution-gated consolidation accepted](GENERAL_ATTENTION_CONSOLIDATION_CREDIT_RESOLUTION.md).
+The supplied review authorizes separately traceable fallible attribution as the first
+causal-credit path. No conscious causal belief is required. Insufficient support means
+unavailable credit, not zero effect or known absence of causation. Temporal association
+remains a separate future candidate. [First decomposition](ATTENTION_OUTCOME_ATTRIBUTION_DRAFT_REV1.md)
+separates attribution eligibility, evidence-valued effect and memory update. Next:
+permitted connection-source and exact inference-rule investigation. Prior13 tests
+remain component/fixture evidence only; no public attribution proof or allocation.
+
+**Lifecycle decision resolved:** [B — initial encoding followed by separate consolidation](GENERAL_ATTENTION_ENCODING_LIFECYCLE_RESOLUTION.md).
+The supplied planning review selects acquisition-time durable encoding and append-only
+outcome-linked consolidation. Historical encoding cannot acquire future factors;
+consolidation cannot resurrect an unencoded original. The old A recommendation is
+preserved as superseded history. Next: observer-safe consequence/episode association,
+assessment and explicit atomic batch composition. Twelve lifecycle proof obligations
+are frozen, not passed. No formula, allocation or public qualification is implied;
+General ATTN remains OPEN. The prior component retrieval-order witness is preserved.
+
+**Latest recipe checkpoint:** [finite comparison recipes and definition bindings](ATTENTION_MEMORY_COHORT_RECIPE_REV1.md).
+The [draft cohort](ATTENTION_MEMORY_COHORT_RECIPE_REV1.json) contains32 parameter
+recipes/31 comparisons and bindings for22 local stages. All229 structural checks pass;
+six corruptions reject. These are not the previously frozen32 public attention models
+and have no ModelIdentity yet. Concrete governed scenes, paired input specimens and
+inherited descriptor closure remain gates. No allocation or runtime change occurred.
+
+**Prior registration checkpoint:** [finite registration shapes](ATTENTION_MEMORY_REGISTRATION_SHAPES_REV1.md).
+Eight proposed declaration records bind22 stages and two tagged unions;145 structural
+checks pass and eight corruptions reject. A [correct-forward calibration fix](ATTENTION_CALIBRATION_REFERENCE_CORRECTION.md)
+then changes exactly three draft fields to actual registry DefinitionId, preserving
+the other136 fields. Current wrapper/role data are revision2; earlier receipts remain
+attached to their original bytes. Definition bindings, exact cohort and inherited
+descriptor closure still gate whole acceptance. No allocation or runtime changed.
+
+**Prior profile checkpoint:** [source/channel/calibration definition shapes](ATTENTION_MEMORY_PROFILE_DEFINITIONS_REV1.md).
+The [draft packet](ATTENTION_MEMORY_PROFILE_DEFINITIONS_REV1.json) defines eight
+records/41 fields;16 channel configurations pass design checks and ten malformed
+specimens reject. These are configuration checks, not executed channel or runtime
+proof. Nonfixed parameters still require an exact finite cohort. Next: tie committed
+definitions to concrete finite registration records, then whole symbolic review.
+No allocation, existing model change or general-attention qualification occurred.
+
+**Prior role checkpoint:** [field identity roles and source compiler boundaries](ATTENTION_MEMORY_IDENTITY_ROLES_REV1.md).
+The [classification packet](ATTENTION_MEMORY_IDENTITY_ROLES_REV1.json) covers139 field
+positions and four map-key positions:148 checks pass and eight corruptions reject.
+Scalar, composite, collection and structural scheduler IDs remain distinct. Existing
+exact-cohort factories stay unchanged; the successor needs its own compiler/model.
+Concrete registration shapes, source profile/calibration definitions and inherited
+descriptor closure still block whole symbolic acceptance and allocation.
+
+**Prior state checkpoint:** [symbolic root/path/accessor declarations](ATTENTION_MEMORY_STATE_DECLARATIONS_REV1.md).
+The [reviewed packet](ATTENTION_MEMORY_STATE_DECLARATIONS_REV1.json) proposes four
+separate roots and direct accessors while preserving the four existing SEM perception
+accessors. All34 structural checks pass; nine corrupted proposals reject. File
+membership keys remain full perceptual IDs; character leaves use actual qualified
+CharacterId and its accepted domain role. No permanent allocation or public state
+qualification occurred. Next: wrapper roles and source registration dependencies.
+
+**Prior declaration checkpoint:** [finite admission and batch dispatch](ATTENTION_MEMORY_ADMISSION_DISPATCH_REV1.md).
+The [packet](ATTENTION_MEMORY_ADMISSION_DISPATCH_REV1.json) covers22 local rows and
+five exact batch variants:121 structural checks and ten rejected corruptions. Actual
+admission precedes PRJ and owner reads; terminal siblings retain separate authorities.
+Read leaves describe permission domains, not unconditional reads: unavailable cue
+still performs no memory reads. Concrete schema/accessor/registration members and
+upstream source dependency closure remain gates. No canonical registration acceptance,
+allocation, public runtime or corpus promotion is claimed.
+
+**Prior integration checkpoint:** [phase140 sibling correction and whole fixture envelope](ATTENTION_MEMORY_BARRIER_AND_WORK_REVIEW_REV1.md).
+The installed scheduler barrier rejects the prior chained phase140 writers. Retention
+now proposes three terminal siblings with one actual parent, common-B0 preflight and
+separate owned patches. Four actual scheduler fixture tests pass; six graph/budget
+corruptions reject. The separated fixture's symbolic bound is139 events/172 outputs/
+152 runtime slots, at most16 events per instant, including future reads and deadline.
+These are not public model/work qualifications. Prior chained stage edges are
+superseded, their receipts preserved. Next: exact registrations and batch dispatch.
+
+**Prior source checkpoint:** [concern acquisition revision2](ATTENTION_CONCERN_SOURCE_REVIEW_REV2.md).
+Actual workspace capacity2 permits one task plus its forecast; capacity1 does not.
+The proposed preactivation measurement preserves an open task for the known-zero
+control. Source inspection also requires a new terminal-at-concern adapter restriction
+and preserves pending prediction reads, measurement/task descendants and deadlines.
+All12 retained cognitive-transform tests pass ([current report](ATTENTION_CONCERN_RETAINED_COMPONENT_TESTS_REV2.json));
+revision1 records a worker-configuration failure before any test executed. These tests
+do not pass public ACS-A..L. Exact upstream declarations, total work and combined
+model packaging remain open. No runtime, numeric allocation or corpus changed.
+
+**Prior design checkpoint:** [local output and slot inventory](ATTENTION_MEMORY_OUTPUT_REVIEW_REV1.md).
+The [review](ATTENTION_MEMORY_OUTPUT_REVIEW_REV1.json) checks138 symbolic branch
+combinations and rejects12 packet corruptions. Positive formation is bounded locally
+by16 events/20 outputs/17 runtime slots; positive cue by14/20/18. Observer file counters,
+copied identities and experience reservation are separate. These are design bounds,
+not runtime execution or total work qualification. Exact registrations/identity roles,
+upstream concern production and model packaging remain open; no allocation occurred.
+
+**Prior design checkpoint:** [exact wrapper field inventory](ATTENTION_MEMORY_WRAPPER_REVIEW_REV1.md).
+The [structural review](ATTENTION_MEMORY_WRAPPER_REVIEW_REV1.json) checks48 proposed
+records/139 fields and all22 local stage inputs:529 checks,13 rejected packet
+corruptions. The draft now carries the existing event-detection identity on positive
+observations and the existing detection identity on spatial witnesses. Prior reviewed
+artifacts remain unchanged. Exact registrations/identity roles, output/result slots,
+upstream concern production and model/work bounds still block whole-shape acceptance
+and allocation. No public runtime or corpus changed.
+
+**Prior component checkpoint:** [tracking transactions and reconstruction](ATTENTION_TRACKING_RESTORE_CHECKPOINT.md).
+Eight new controls and nine retained tracking controls pass; seven actual component
+faults are detected. Complete committed-prefix replay preserves old-ordinal and sweep
+guards; provisional tracking can abort without changing committed identities. Public
+restore and scheduler rollback remain unqualified until the adapter executes source,
+logged-read, settlement and whole-save checks. No allocation, public model or corpus
+changed. Next: exact wrappers, concern acquisition and output/result-slot closure.
+
+**Prior design checkpoint:** [stage, admission and ownership inventory](ATTENTION_MEMORY_DECLARATION_REVIEW_REV1.md).
+The [machine review](ATTENTION_MEMORY_STAGE_REVIEW_REV1.json) covers22 stages and19
+wrapper sketches with191 checks and ten rejected corruptions. Formation, read-only
+recall and presentation reinforcement have separate authorities; all character-state
+access requires actual PRJ/IDN. Local graph counts are16 formation /14 cue events,
+not runtime work qualification. Exact wrapper schemas, upstream concern acquisition,
+tracking rehydration and complete output/result-slot closure still block allocation.
+No production runtime or corpus changed. Next: close those remaining declarations.
+
+**Prior design checkpoint:** [retention boundary and symbolic domain inventory](ATTENTION_MEMORY_RETENTION_REVIEW_REV1.md).
+The [machine review](ATTENTION_MEMORY_SYMBOLIC_REVIEW_REV1.json) covers26 proposed
+records/84 fields with178 structural checks and nine rejected corruptions. Only
+positive-strength content may enter the proposed retained carrier; full selection,
+evaluation and feedback carriers stay outside character storage. Whole-shape acceptance
+is withheld: registrations, admitted-input roles, output/occurrence closure and model
+bounds remain pending. No production behavior, allocation or corpus changed.
+Next: complete that declaration layer over the reviewed domain inventory.
+
+**Prior design checkpoint:** [delayed-feedback join binding revision2](ATTENTION_FEEDBACK_JOIN_BINDING_REV2.md).
+Seven actual scheduler vectors pass and four fixture faults are detected
+([receipt](ATTENTION_JOIN_SCHEDULER_REVIEW_REV1.json)). Allocated parent IDs and opaque
+Dependencies do not establish source completion; the future adapter must check exact
+completed-parent/output/target binding before PRJ. The first feedback candidate
+changes continuous encoding allocation, preserving selection K. Public AJB-A..M are
+FROZEN, NOT PASSED. No scheduler semantics, production source, allocation or corpus
+changed. Next: combined source/carrier/join/owner-leaf symbolic declarations.
+
+**Prior component checkpoint:** Exact
+[encoding/access math](../formal/ENCODING_ACCESS_MATH.md) has 12 passing component tests
+and seven detected formula faults ([receipt](ENCODING_ACCESS_MATH_REVIEW_REV2.json)).
+Actual [marker tracking](OBSERVED_MARKER_TRACKING_REVIEW_REV2.json) has nine tests/six
+faults after a correct-forward dense-list correction. [Spatial allocation](SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json)
+has eight tests/five faults and makes no causal Incidental claim. The [selected-capability
+encoder](SELECTED_ENCODING_REVIEW_REV2.json) has eight tests/five faults using actual
+SEM bytes, with need/surprise disabled. These are component qualifications.
+The [revised public inventory](ENCODING_ACCESS_PUBLIC_INVENTORY_REV2.md) specifies
+bounded owner leaves, separate presentation ownership and exact candidate reads;
+source authentication, registration/PRJ extension and delayed feedback remain gates.
+The [current component checkpoint](GENERAL_ATTENTION_COMPONENT_CHECKPOINT.md) records
+72 passing tests and 28 detected faults, including isolation corrections and explicit
+denominator comparisons. Next: complete those source/feedback contracts and whole
+symbolic packaging.
+General ATTN remains OPEN; no allocation or corpus change is made by these components.
+
+**Latest public checkpoint:** [bounded public ATTN qualified](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md).
+AT2-A..N pass in their explicit public/component scopes:32 models/224 specimen runs,
+434 whole-prefix restores,58 boundary rollback witnesses and11 runtime fault controls.
+Verification covers1,160 active tests (full1,159 plus one concurrency test),328 historical
+tests and453 unchanged EMB fingerprints. The [receipt](ATTENTION_PUBLIC_QUALIFICATION_REV1.json)
+records the exact scope. The [corrected set-S0 cohort](campaign3-attention-model-rev2/FREEZE.json)
+preserves all32 ModelIdentities and recomputes224 RunIdentities; old list-S0 runs remain
+historical and inadmissible without aliasing.
+
+**Prior next checkpoint (advanced above):** encoding/footprint expressibility inventory. Inspect accepted
+episodic/association/access contracts and historical salience controls, identify the
+minimum permitted strength/readout seam, then freeze symbolic comparisons before
+allocation or implementation. ATTENTION intake is PARTIAL for active selection;
+encoding/later probe remains BLOCKED. General ATTN, Campaign3 and corpus intake remain
+open. No user decision is required for the inventory.
+
+**Prior checkpoint:** [public ATTN exact model cohort accepted and frozen](CAMPAIGN3_ATTENTION_MODEL_CHECKPOINT.md).
 The32 models and224 specimen run commitments passed independent image review:
 65 checks, seven rejected corruptions and all453 prior EMB fingerprints unchanged.
 Each model has323 schema descriptors and105 registry entries. The
 [exact freeze](campaign3-attention-model-rev1/FREEZE.json) preserves the reviewed bytes;
 the incomplete seed-length attempt remains historical and ineligible.
 
-**Next gate:** implement the closed declaration/content compiler and data-only public
+**Historical next gate (completed above):** implement the closed declaration/content compiler and data-only public
 factory against this cohort, then execute AT2-A..N, trace/rollback/restore and
 preservation controls. No public runtime or production compiler was qualified here.
 No user decision is needed for this implementation work.

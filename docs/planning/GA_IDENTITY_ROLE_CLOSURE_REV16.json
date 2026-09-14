@@ -1,0 +1,2234 @@
+{
+  "version": "ga-identity-role-closure/0.16-draft",
+  "status": "SYMBOLIC ROLE CROSSWALK; PUBLIC COMPILER AND ALLOCATION OPEN",
+  "recordCount": 163,
+  "positions": [
+    {
+      "path": "TrialPanelPresentObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "TrialPanelPresentObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PerceivedTrialContextEvidence.Experience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "PositiveBodySignalGroup.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "PositiveEventAcquisitionContent.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AcquisitionFormationEvidence.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "SurvivingEventContent.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "RetainedAcquisition.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RetainedAcquisition.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAcquisition.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "MaintenanceGoalKey.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "MaintenanceGoalKey.GoalReferent",
+      "identity": "SemanticReferentId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/maintenance-goal-qualification"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "MaintenanceGoalSpec.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "AdoptedMaintenanceGoal.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "MaintenanceGoalCommand.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GoalOutcomeAssessment.Assessment",
+      "identity": "GoalOutcomeAssessmentId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "GoalOutcomeAssessmentId"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalOutcomeAssessment.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "GoalQualificationCarry.Assessment",
+      "identity": "GoalOutcomeAssessmentId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "GoalOutcomeAssessmentId"
+    },
+    {
+      "path": "GoalQualificationCarry.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalQualificationCarry.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodyChildKey.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "RetainedChildAddress.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RetainedAttributionResult.Result",
+      "identity": "RetainedAttributionResultId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "RetainedAttributionResultId"
+    },
+    {
+      "path": "RetainedAttributionResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAttributionResult.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "RetainedAttributionResult.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "QualifiedFormationSource.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "QualifiedFormationSource.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "FormationSuccess.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "FormationSourceBinding.Producer",
+      "identity": "TransitionKindId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1009
+    },
+    {
+      "path": "FormationSourceBinding.Projection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.Authority",
+      "identity": "MutationAuthorityId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1025
+    },
+    {
+      "path": "FormationOwnerBinding.Owner",
+      "identity": "TransitionKindId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1009
+    },
+    {
+      "path": "FormationOwnerBinding.Authority",
+      "identity": "MutationAuthorityId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1025
+    },
+    {
+      "path": "FormationGovernanceProfile.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "FormationOwnerDisposition.NewCompleteLoss[*]",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "Recollection.Occurrence",
+      "identity": "ProposedRecollectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "ProposedRecollectionOccurrenceId"
+    },
+    {
+      "path": "Recollection.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "EventRecallScore.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "EventRecallResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EventRecallResult.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "BodyRecallResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodyRecallResult.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "BodyRecallResult.Eligible[*]",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "PresentationEntry.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecollectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PresentationInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SafeSignalDeclaration.Channel",
+      "identity": "ObservationChannelId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1005
+    },
+    {
+      "path": "SafeSignalDeclaration.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodyCueInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionAuditRow.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodySelectionAudit.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "BodySelectionAudit.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionAudit.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodySelectedView.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "BodySelectedView.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectedView.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodyAcquisitionEvidenceInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySignalCue.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySignalCue.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodySignalCue.Signals[*]",
+      "identity": "InteroceptiveSignalId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodySignalCue.SupportingObservationIds[*]",
+      "identity": "ObservationId",
+      "mode": "FixedCompilerCollectionElement",
+      "namespace": 1115
+    },
+    {
+      "path": "BodyRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "ExtendedObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "ExtendedObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SpatialPreparation.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "VisualSelectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "VisualSelectionInput.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "EncodingJoinInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EncodingJoinInput.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "PositiveVisualCandidate.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "PositiveVisualCandidate.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PositiveVisualCandidate.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "VisualCueInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CueEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CueEvidence.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "CueEvidence.Experience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "TrackingWindow.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "GeneralEpisodeState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralAssociationState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralPresentationState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "MaintenanceGoalState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralTrackingState.Value{key}",
+      "identity": "ObserverId",
+      "mode": "StateMapKey",
+      "namespace": 1000
+    },
+    {
+      "path": "TrialPanelContextState.Value{key}",
+      "identity": "ObserverId",
+      "mode": "StateMapKey",
+      "namespace": 1000
+    },
+    {
+      "path": "ActualConcernCarry.Concern",
+      "identity": "ConcernOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1130
+    },
+    {
+      "path": "ActualConcernCarry.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "NoConcernAvailable.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "PriorConcernEncodingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveKey.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "LocalReserveKey.Reserve",
+      "identity": "LocalReserveId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "LocalReserveId"
+    },
+    {
+      "path": "LocalReserveBodyBinding.Parameters",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "LocalReserveChannel.Channel",
+      "identity": "ObservationChannelId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1005
+    },
+    {
+      "path": "LocalReserveChannel.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveChannel.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "LocalReserveSamplingRequest.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveSamplingRequest.Channels[*]",
+      "identity": "ObservationChannelId",
+      "mode": "FixedCompilerCollectionElement",
+      "namespace": 1005
+    },
+    {
+      "path": "TrialPanelUnavailableObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "TrialPanelUnavailableObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RequestedBodySamples.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralSourceSamplingRequest.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CompletedRequestedSamples.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CompletedRequestedSamples.ReservedExperience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "SourcePerceptionInput.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PositionSceneItem.Marker",
+      "identity": "SceneObjectReferent",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002
+    },
+    {
+      "path": "PositionSceneItem.Role",
+      "identity": "EventRoleId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1003
+    },
+    {
+      "path": "PositionSceneDefinition.BindingSchema",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralSourceProfile.Body",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Channels",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Panel",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Visual",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationUsePlan.GoalAssessment",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationUsePlan.ExecutionPolicy",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralObservationOriginal.Profile",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSamplingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralTrackingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralBindingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralFreezeInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralUseInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "VisualAcquisitionEvidenceInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EventRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralFormationOwnerInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernAppraisalInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernProducerInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernDeliveryInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalCommandInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalDeadlineInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalDeadlineInput.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GoalAssessmentInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalAssessmentInput.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "FocalConsequenceDelivery.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "FocalConsequenceDelivery.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "GoalQualificationDeliveryInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAttributionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AttributionResultDelivery.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AttributionUseInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceJoinInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceOpportunity.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceOpportunity.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.BodySelection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.VisualSelection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.Spatial",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.Encoding",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.BodyRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.GoalBaselineRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.EventRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.GoalQualification",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Memory",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Graph",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Association",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralRetentionInput.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralDefinitionBinding.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralStageRegistration.Seam",
+      "identity": "SeamId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1036
+    },
+    {
+      "path": "GeneralStageRegistration.Event",
+      "identity": "EventTypeId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1001
+    }
+  ],
+  "boundaries": [
+    {
+      "path": "PerceivedTrialContextEvidence.Context",
+      "record": "PerceptualEventReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing213"
+    },
+    {
+      "path": "PerceivedTrialContextEvidence.Panel",
+      "record": "TrialPanelPresentObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventChildEvidence.Encoding",
+      "record": "RetainedEncodingUnit",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventChildEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedBodyView.Sample",
+      "record": "EmbodiedLevelObservation",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461"
+    },
+    {
+      "path": "RetainedBodyView.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveBodySignalGroup.Views[*]",
+      "record": "RetainedBodyView",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventAcquisitionContent.Children[*]",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveBodyAcquisitionContent.Children[*]",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Content<0>",
+      "record": "PositiveEventAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Content<1>",
+      "record": "PositiveBodyAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEventChild.Evidence",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingBodyChild.Evidence",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEventContent.Children[*]",
+      "record": "SurvivingEventChild",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingBodyContent.Children[*]",
+      "record": "SurvivingBodyChild",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAcquisition.Content<0>",
+      "record": "SurvivingEventContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAcquisition.Content<1>",
+      "record": "SurvivingBodyContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEpisodeLedger.Entries[*]",
+      "record": "RetainedAcquisition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Key",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Desired",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalLedger.Entries[*]",
+      "record": "AdoptedMaintenanceGoal",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalDistanceAssessment.BeforeDistance",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalDistanceAssessment.AfterDistance",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Goal",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.AssessmentValue<0>",
+      "record": "GoalAssessmentUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.AssessmentValue<1>",
+      "record": "GoalDistanceAssessment",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<0>",
+      "record": "GoalQualifies",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<1>",
+      "record": "GoalDoesNotQualify",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<2>",
+      "record": "GoalQualificationIndeterminate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<3>",
+      "record": "GoalQualificationUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Goal",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<0>",
+      "record": "GoalQualifies",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<1>",
+      "record": "GoalDoesNotQualify",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<2>",
+      "record": "GoalQualificationIndeterminate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<3>",
+      "record": "GoalQualificationUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationDelivery.Carry",
+      "record": "GoalQualificationCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventChildKey.Continuant",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "RetainedChildAddress.Child<0>",
+      "record": "EventChildKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedChildAddress.Child<1>",
+      "record": "BodyChildKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedViewAddress.Child",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionResult.Consumed[*]",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionResult.Targets[*]",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "QualifiedSignificanceJoin.Qualification",
+      "record": "GoalQualificationCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "QualifiedSignificanceJoin.Attribution",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.AdmittedSources{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.AdmittedSources{value}",
+      "record": "FormationAdmission",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.SuccessfulFormations{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.SuccessfulFormations{value}",
+      "record": "FormationSuccess",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceState.Value",
+      "record": "FormationGovernanceValue",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationSourceBinding.AuditSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "FormationSourceBinding.ViewSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.Path",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.ValueSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "FormationOwnerBinding.Path",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "FormationGovernanceProfile.State",
+      "record": "RuntimeProtocolStateDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceProfile.Sources[*]",
+      "record": "FormationSourceBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceProfile.Owner",
+      "record": "FormationOwnerBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationOwnerDisposition.Formed{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationOwnerDisposition.Formed{value}",
+      "record": "FormationSuccess",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Content<0>",
+      "record": "PositiveEventAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Content<1>",
+      "record": "PositiveBodyAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallWinner.Evidence",
+      "record": "RecalledAcquisitionEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallWinner.Evidence",
+      "record": "RecalledAcquisitionEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "Recollection.Content<0>",
+      "record": "EventRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "Recollection.Content<1>",
+      "record": "BodyRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallResult.Scores[*]",
+      "record": "EventRecallScore",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallResult.Winners[*]",
+      "record": "EventRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallResult.Winners[*]",
+      "record": "BodyRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PresentationLedger.Entries[*]",
+      "record": "PresentationEntry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecollectionInput.Result<0>",
+      "record": "EventRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecollectionInput.Result<1>",
+      "record": "BodyRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PresentationInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Samples[*]",
+      "record": "EmbodiedSample",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461/463"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Declarations[*]",
+      "record": "SafeSignalDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectionInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyCueInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectionAudit.Rows[*]",
+      "record": "BodySelectionAuditRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectedView.Groups[*]",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyAcquisitionEvidenceInput.Selected",
+      "record": "BodySelectedView",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallInput.Cue",
+      "record": "BodySignalCue",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ObservedFeatureDetection.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "ObservedFeatureDetection.Role",
+      "record": "EventRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing223"
+    },
+    {
+      "path": "ObservedFeatureDetection.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ExtendedObservation.EventDetection",
+      "record": "CurrentEventDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing215"
+    },
+    {
+      "path": "ExtendedObservation.Detections[*]",
+      "record": "ObservedFeatureDetection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Observation",
+      "record": "ExtendedObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SelectedSpatialWitness.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "SelectedSpatialWitness.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "SelectedSpatialWitness.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SpatialPreparation.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "SpatialPreparation.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "SpatialPreparation.Witnesses[*]",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualSelectionInput.Source",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualSelectionInput.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "ExtendedSelected.Selected",
+      "record": "SelectedEvidenceView",
+      "mode": "InheritedRecordRoles",
+      "source": "existing534"
+    },
+    {
+      "path": "ExtendedSelected.SpatialWitnesses[*]",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ExtendedSelected.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingJoinInput.Selected",
+      "record": "ExtendedSelected",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluationRow.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "EncodingEvaluationRow.Factors",
+      "record": "EncodingFactors",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluation.Input",
+      "record": "EncodingJoinInput",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluation.Rows[*]",
+      "record": "EncodingEvaluationRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedEncodingUnit.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "RetainedEncodingUnit.Bindings[*]",
+      "record": "PerceivedBindingEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing224"
+    },
+    {
+      "path": "RetainedEncodingUnit.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "RetainedEncodingUnit.Factors",
+      "record": "EncodingFactors",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedEncodingUnit.SpatialWitness",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveVisualCandidate.Children[*]",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualCueInput.Source",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CueEvidence.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "CueEvidence.File",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "AssociationGraph.Nodes[*]",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "AssociationGraph.Rows[*]",
+      "record": "AssociationMassRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrackingWindowItem.File",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "TrackingWindow.Items[*]",
+      "record": "TrackingWindowItem",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ActivePanelContext.Context",
+      "record": "PerceptualEventReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing213"
+    },
+    {
+      "path": "TrialPanelWindow.Active",
+      "record": "ActivePanelContext",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralEpisodeState.Value{value}",
+      "record": "SurvivingEpisodeLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralAssociationState.Value{value}",
+      "record": "AssociationGraph",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralPresentationState.Value{value}",
+      "record": "PresentationLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalState.Value{value}",
+      "record": "MaintenanceGoalLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralTrackingState.Value{value}",
+      "record": "TrackingWindow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrialPanelContextState.Value{value}",
+      "record": "TrialPanelWindow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ActualConcernCarry.Response",
+      "record": "TaskConcernResponse",
+      "mode": "InheritedRecordRoles",
+      "source": "existing386"
+    },
+    {
+      "path": "FeedbackDelivery.Value<0>",
+      "record": "ActualConcernCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FeedbackDelivery.Value<1>",
+      "record": "NoConcernAvailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingInput.Selected",
+      "record": "EncodingJoinInput",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingInput.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Evaluation",
+      "record": "EncodingEvaluation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Modulation",
+      "record": "PriorConcernModulation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallInput.Cue",
+      "record": "CueEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallInput.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Result",
+      "record": "EventRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Modulation",
+      "record": "PriorConcernModulation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveBodyBinding.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveBodyRegistry.Bindings[*]",
+      "record": "LocalReserveBodyBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveChannel.Reserve",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveChannelRegistry.Channels[*]",
+      "record": "LocalReserveChannel",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveState.Anchors{key}",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveState.Anchors{value}",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishment.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Prior",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Next",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Result",
+      "record": "ReserveReplenishmentResult",
+      "mode": "InheritedRecordRoles",
+      "source": "existing479"
+    },
+    {
+      "path": "RequestedBodySamples.Samples[*]",
+      "record": "EmbodiedSample",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461/463"
+    },
+    {
+      "path": "RequestedBodySamples.Declarations[*]",
+      "record": "SafeSignalDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSourceSamplingRequest.Body",
+      "record": "LocalReserveSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Request",
+      "record": "GeneralSourceSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Body",
+      "record": "RequestedBodySamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Panel<0>",
+      "record": "TrialPanelPresentObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Panel<1>",
+      "record": "TrialPanelUnavailableObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Visual",
+      "record": "ExtendedObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.EventDetection",
+      "record": "CurrentEventDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing215"
+    },
+    {
+      "path": "SourcePerceptionInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneItem.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneFrame.Items[*]",
+      "record": "PositionSceneItem",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneDefinition.Frames[*]",
+      "record": "PositionSceneFrame",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrialPanelDefinition.Frames[*]",
+      "record": "TrialPanelFrame",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralObservationOriginal.Request",
+      "record": "GeneralSourceSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralObservationOriginal.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSamplingInput.Original",
+      "record": "GeneralObservationOriginal",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSamplingInput.World",
+      "record": "WorldEventTruth",
+      "mode": "InheritedRecordRoles",
+      "source": "existing210"
+    },
+    {
+      "path": "GeneralTrackingInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralTrackingInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "GeneralBindingInput.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "GeneralFreezeInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFreezeInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFreezeInput.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "GeneralFreezeInput.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "GeneralFreezeInput.Bindings[*]",
+      "record": "PerceivedBindingEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing224"
+    },
+    {
+      "path": "GeneralUseInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Body",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Visual",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "VisualAcquisitionEvidenceInput.Candidate",
+      "record": "PositiveVisualCandidate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallInput.Cue",
+      "record": "CueEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFormationOwnerInput.Evidence",
+      "record": "AcquisitionFormationEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernAppraisalInput.Workspace",
+      "record": "TaskWorkspace",
+      "mode": "InheritedRecordRoles",
+      "source": "existing381"
+    },
+    {
+      "path": "PriorConcernProducerInput.Appraisal",
+      "record": "TaskAppraisal",
+      "mode": "InheritedRecordRoles",
+      "source": "existing384"
+    },
+    {
+      "path": "PriorConcernDeliveryInput.Delivery",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalCommandInput.Command",
+      "record": "MaintenanceGoalCommand",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalAssessmentInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalAssessmentInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationDeliveryInput.Delivery",
+      "record": "GoalQualificationDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionInput.Focus",
+      "record": "FocalConsequenceDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AttributionResultDelivery.Result",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AttributionUseInput.Result",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SignificanceJoinInput.Join",
+      "record": "QualifiedSignificanceJoin",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralOutputDeclaration.Schema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistration.Input",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistration.Outputs[*]",
+      "record": "GeneralOutputDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistration.ReadDomain[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistration.WriteAuthorization",
+      "record": "TransitionWriteAuthorization",
+      "mode": "InheritedRecordRoles",
+      "source": "existing322"
+    },
+    {
+      "path": "GeneralStageRegistration.SubjectProjection",
+      "record": "SubjectProjectionRequirement",
+      "mode": "InheritedRecordRoles",
+      "source": "existing266"
+    },
+    {
+      "path": "GeneralStageRegistration.Definitions[*]",
+      "record": "GeneralDefinitionBinding",
+      "mode": "RecurseDeclaredRecord"
+    }
+  ],
+  "stateMapKeyRoles": [
+    {
+      "root": "GeneralEpisodeState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralAssociationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralPresentationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "MaintenanceGoalState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralTrackingState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    },
+    {
+      "root": "TrialPanelContextState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    }
+  ],
+  "stateMapKeyDisposition": "Symbolic six scalar new-root key roles plus composite physical key recursion; actual compiler and inherited root coverage remain separate.",
+  "sources": [
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV3.json",
+      "sha256": "fd7c9cef23a33416e54b934510de814edb50e45c3dae0b054ccfef578a8e31bd"
+    },
+    {
+      "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REV2.json",
+      "sha256": "f1749ec448eed234cf5bfd72a6b55f96c019592266f6fa238ba70bc5d4d775b8"
+    },
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV3.json",
+      "sha256": "96812d46d96ac96be4381f3cd9644985da5e44d7c12561095bb863bf65e80b48"
+    },
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV2.json",
+      "sha256": "4fce49820a7d631fcdd104f981928914896b5daabcc91d1317120de2edac8f9d"
+    },
+    {
+      "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV2.json",
+      "sha256": "f27ab088683cea8c44c0ba108ba7123f68f1e5f8467e73ea137640c630757ddf"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_FEEDBACK_CARRIER_REV1.json",
+      "sha256": "bf14cf475c37285c825b69d5c70de5d0008fe80a120669d009d3319358933b4b"
+    },
+    {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+      "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+    },
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV2.json",
+      "sha256": "ec2cf2f0cf10ff5978a6a1e89fa7702a80426c8eb65478329a55de5f92b810b5"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV2.json",
+      "sha256": "c979835f8841d3b283814ec87c3085b1f2ccdd517a8ff016cd65af05f8903649"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.json",
+      "sha256": "fb000854da57773986ceb588d41c5188704a5fa33bb731c9eb6127cd7d45d597"
+    },
+    {
+      "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.json",
+      "sha256": "7e11885d9d87b326e4b6a2c87c5fa3b5cc31faf30f7613322a2b0f557b2e6bed"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_CONCERN_STAGE_CLOSURE_REV1.json",
+      "sha256": "1c6cd16d96212a749642e465f8771759f4b92968e23691875a3c38fc28204188"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_ATTRIBUTION_STAGE_CLOSURE_REV2.json",
+      "sha256": "9ad689694dced61c5904f34d128d9e9f08b9942324b208421fdffcde85c50671"
+    },
+    {
+      "path": "docs/planning/GA_CALIBRATION_DEFINITIONS_REV1.json",
+      "sha256": "a38e3e82a8b576bce9185b09c49c6d86a92d4acc4ec65b391709013ffcc6f34f"
+    },
+    {
+      "path": "docs/planning/GA_RETENTION_STAGE_CLOSURE_REV1.json",
+      "sha256": "6258037052ebeaa236cd49b6b6b7f543f1f2fbbadd765225bde0a664857d21cf"
+    },
+    {
+      "path": "docs/planning/GA_EVENT_PRESENTATION_STAGE_CLOSURE_REV1.json",
+      "sha256": "bbb2ae69827b55fb4ed5e7a353b1b699fa89291255c818807807418d0390cc81"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRATION_CARRIER_REV1.json",
+      "sha256": "6d92f3ce5111810ab6b4b9f3cbde8132847387615dc8968883fbe6a48c5e4b4e"
+    },
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV16.md",
+      "sha256": "cb698b9d7ef0afe3a399b53a59de461025818f6c68f6fb8ccb7289d0256e626e"
+    },
+    {
+      "path": "scripts/build-ga-identity-role-closure-rev16.mjs",
+      "sha256": "e3f810efc6a75b90b929e05db5b4c73a238b7dabad06d0dbf52031c73e831ec9"
+    }
+  ]
+}

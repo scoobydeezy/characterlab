@@ -1,0 +1,79 @@
+{
+  "status": "CANONICAL BODY/RECALL COMPONENT REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "same-instant-recall",
+      "file": "src/campaign3/canonicalRecallProjection.ts",
+      "witness": "CRP-C",
+      "detected": true
+    },
+    {
+      "name": "duplicate-acquisition",
+      "file": "src/campaign3/canonicalRecallProjection.ts",
+      "witness": "CRP-C",
+      "detected": true
+    },
+    {
+      "name": "foreign-observer",
+      "file": "src/campaign3/canonicalRecallProjection.ts",
+      "witness": "CRP-C",
+      "detected": true
+    },
+    {
+      "name": "wrong-recall-partition",
+      "file": "src/campaign3/canonicalRecallProjection.ts",
+      "witness": "CRP-B",
+      "detected": true
+    },
+    {
+      "name": "retention-wrapper-leak",
+      "file": "src/campaign3/canonicalRecallProjection.ts",
+      "witness": "CRP-A",
+      "detected": true
+    },
+    {
+      "name": "second-acquisition-allocation",
+      "file": "src/campaign3/canonicalBodyProduction.ts",
+      "witness": "CBP-A",
+      "detected": true
+    },
+    {
+      "name": "selection-acquisition-alias",
+      "file": "src/campaign3/canonicalBodyProduction.ts",
+      "witness": "CBP-A",
+      "detected": true
+    },
+    {
+      "name": "lost-safe-context",
+      "file": "src/campaign3/canonicalBodyProduction.ts",
+      "witness": "CBP-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/canonicalRecallProjection.ts",
+      "sha256": "dc60b687f8c9e881df7fa1b19e862158704cd504248e77443ad06395deb0a528"
+    },
+    {
+      "path": "src/campaign3/canonicalBodyProduction.ts",
+      "sha256": "23845661466c9fe80c134e8172aac6d028a33fbe0eaad18f1b6a302597e8e66f"
+    },
+    {
+      "path": "src/test/canonicalRecallProjection.test.ts",
+      "sha256": "2d01d74935d0a3d15769ec7ae1fed5ad862d15117ebd47282e7152ef4b5fa512"
+    },
+    {
+      "path": "src/test/canonicalBodyProduction.test.ts",
+      "sha256": "e4031fe1b7a44500414a45759821925d14811002be98921988a30836488fa2db"
+    },
+    {
+      "path": "scripts/review-ga-canonical-production.mjs",
+      "sha256": "3caba32bfde302cc9da625fa45a0402a8579c79941ef7386b5c28810db5b7021"
+    }
+  ],
+  "limits": [
+    "Actual record relations, identity roles, compiled context and public admission remain upstream.",
+    "No public source authentication or model activation follows from structural codec acceptance."
+  ]
+}

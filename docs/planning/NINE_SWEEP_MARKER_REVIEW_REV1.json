@@ -1,0 +1,50 @@
+{
+  "status": "NINE SWEEP COMPONENT REVIEW PASS",
+  "faults": [
+    {
+      "name": "expand-old-horizon",
+      "witness": "N9-A",
+      "detected": true
+    },
+    {
+      "name": "ninth-still-impossible",
+      "witness": "N9-A",
+      "detected": true
+    },
+    {
+      "name": "exceed-three-detections",
+      "witness": "N9-B",
+      "detected": true
+    },
+    {
+      "name": "replay-under-old-profile",
+      "witness": "N9-C",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "de54ed3b13a9ce68fac331c81aa13fb0f74f0648831b89562fc2ebae5cc31d0c"
+    },
+    {
+      "path": "src/campaign3/transactionalMarkerTracking.ts",
+      "sha256": "0c7dc1a40625d0d6e2a250f3fe4a574ff7040340fff21eeb57677d542978cfe5"
+    },
+    {
+      "path": "src/campaign3/positionDisplaySource.ts",
+      "sha256": "3c0b18dd47df68d8ad0184b4aefb3d95cdd2a6cc1facce1805108fdd824802dc"
+    },
+    {
+      "path": "src/test/nineSweepMarker.test.ts",
+      "sha256": "b9bb77346f2e2d2535137d12015f10c2955189e7e7b1b53c39316bd020c8690e"
+    },
+    {
+      "path": "scripts/review-nine-sweep-marker.mjs",
+      "sha256": "8bc9d93187ffeb9d772ab3647a87ee649fa8ade393825d5e89098624f6626d2a"
+    }
+  ],
+  "limits": [
+    "Public source closure is still required for the27-file union bound; no arbitrary preloaded graph is admitted by this component proof."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "status": "SELECTED SPATIAL COMPONENT REVIEW PASS",
+  "faults": [
+    {
+      "name": "join-by-array-index",
+      "file": "src/campaign3/spatialEvidenceBinding.ts",
+      "witness": "SEB-A",
+      "detected": true
+    },
+    {
+      "name": "ignore-event-detection",
+      "file": "src/campaign3/spatialEvidenceBinding.ts",
+      "witness": "SEB-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-current-binding-support",
+      "file": "src/campaign3/spatialEvidenceBinding.ts",
+      "witness": "SEB-E",
+      "detected": true
+    },
+    {
+      "name": "allow-unbound-track",
+      "file": "src/campaign3/spatialEvidenceBinding.ts",
+      "witness": "SEB-E",
+      "detected": true
+    },
+    {
+      "name": "role-is-spatial-attention",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "SSE-A",
+      "detected": true
+    },
+    {
+      "name": "unknown-is-numeric-zero",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "SSE-B",
+      "detected": true
+    },
+    {
+      "name": "ignore-experience-binding",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "SSE-C",
+      "detected": true
+    },
+    {
+      "name": "reusable-failed-join",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "SSE-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-selected-binding-bytes",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "SSE-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/spatialEvidenceBinding.ts",
+      "sha256": "ae2d08e21a61a04a5ada59900f5919dd45f3d856077189d31ece4c74a407c224"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "37402fd123cc177b638b03792e09c71c51454d577625edd4b4b3bbd76a71fc37"
+    },
+    {
+      "path": "src/test/spatialEvidenceBinding.test.ts",
+      "sha256": "00af5699063f92201b8c4c2435e521f7706a374645e5759dc3f20a268360836a"
+    },
+    {
+      "path": "scripts/review-selected-spatial-encoding.mjs",
+      "sha256": "7597ca4b4104dd3d1e35bee6054f0c22cbdf991cb0cfb1e35d9e31d408127619"
+    }
+  ],
+  "limits": [
+    "Actual selected capability and SEM structural joins; source completion, public registration and owner qualification remain open."
+  ]
+}

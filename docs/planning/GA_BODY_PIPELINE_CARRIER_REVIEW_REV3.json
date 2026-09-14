@@ -1,0 +1,73 @@
+{
+  "status": "BODY PIPELINE STRUCTURAL REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 10,
+  "fields": 35,
+  "cueReachability": [
+    "BodySignalCue",
+    "ExperienceId",
+    "Instant",
+    "InteroceptiveSignalId",
+    "ObservationId",
+    "ObserverId"
+  ],
+  "faults": [
+    {
+      "name": "missing-context-attachment",
+      "rejected": true
+    },
+    {
+      "name": "force-experience-for-absence",
+      "rejected": true
+    },
+    {
+      "name": "selection-gates-cue",
+      "rejected": true
+    },
+    {
+      "name": "selection-is-experience",
+      "rejected": true
+    },
+    {
+      "name": "no-empty-selection",
+      "rejected": true
+    },
+    {
+      "name": "selection-retains-source-archive",
+      "rejected": true
+    },
+    {
+      "name": "cue-carries-samples",
+      "rejected": true
+    },
+    {
+      "name": "physical-key-in-safe-declaration",
+      "rejected": true
+    },
+    {
+      "name": "widen-source-bound",
+      "rejected": true
+    },
+    {
+      "name": "premature-record-number",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV3.json",
+      "sha256": "96812d46d96ac96be4381f3cd9644985da5e44d7c12561095bb863bf65e80b48"
+    },
+    {
+      "path": "scripts/build-ga-body-pipeline-carrier-rev3.mjs",
+      "sha256": "8c51c8d25fea52d8fc040765ca1765ad5659883f3e894a2da5dfbeea91890ad7"
+    },
+    {
+      "path": "scripts/review-ga-body-pipeline-carrier.mjs",
+      "sha256": "4aa9c10b4b75b2063297faf0070856028c1aaad3a7c7f596cbe7e1252bc6fd29"
+    }
+  ],
+  "limits": [
+    "Field/bound checks only. Exact requested-channel bijection and completed producer/context/subject binding remain public qualification obligations.",
+    "Conditional support/experience presence must be enforced by actual combined-source admission, not inferred from schemas alone."
+  ]
+}

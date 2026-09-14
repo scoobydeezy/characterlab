@@ -1,0 +1,100 @@
+{
+  "status": "SURVIVING CHILD CARRIER STRUCTURAL REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 14,
+  "fields": 40,
+  "storageReachability": [
+    "AcquisitionOccurrenceId",
+    "Boolean",
+    "DefinitionId",
+    "EmbodiedLevelObservation",
+    "ExperienceId",
+    "Glyph",
+    "Instant",
+    "InteroceptiveSignalId",
+    "ObservationId",
+    "ObserverId",
+    "PerceivedTrialContextEvidence",
+    "PerceptualEventReferentId",
+    "PositiveBodySignalGroup",
+    "PositiveEventChildEvidence",
+    "RetainedAcquisition",
+    "RetainedBodyView",
+    "RetainedEncodingUnit",
+    "SelectionOccurrenceId",
+    "SurvivingBodyChild",
+    "SurvivingBodyContent",
+    "SurvivingEpisodeLedger",
+    "SurvivingEventChild",
+    "SurvivingEventContent",
+    "TrialPanelPresentObservation",
+    "VersionText"
+  ],
+  "faults": [
+    {
+      "name": "initial-envelope-archive",
+      "rejected": true
+    },
+    {
+      "name": "parallel-episode-identity",
+      "rejected": true
+    },
+    {
+      "name": "selection-is-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "fresh-self-credit",
+      "rejected": true
+    },
+    {
+      "name": "body-encoding-strength",
+      "rejected": true
+    },
+    {
+      "name": "retain-unavailable-sample",
+      "rejected": true
+    },
+    {
+      "name": "no-empty-memory",
+      "rejected": true
+    },
+    {
+      "name": "direction-list-count",
+      "rejected": true
+    },
+    {
+      "name": "open-content-union",
+      "rejected": true
+    },
+    {
+      "name": "unbounded-entries",
+      "rejected": true
+    },
+    {
+      "name": "premature-numeric-record",
+      "rejected": true
+    },
+    {
+      "name": "batch-bound-exceeds-horizon",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "scripts/build-ga-surviving-child-carrier.mjs",
+      "sha256": "a4edd3b8ea3bba323d33cb5ef7f190c708a7534ed031af1faf6769c6fd6afe70"
+    },
+    {
+      "path": "scripts/review-ga-surviving-child-carrier.mjs",
+      "sha256": "82e7ce9515b274ed7b694940af952c3f80b2cbb97b1a378b0b43e0f2abace87e"
+    }
+  ],
+  "limits": [
+    "Structural draft checks only. External SEM/positive-child definitions retain their separate authority.",
+    "Does not qualify source authenticity, scalar identity roles, public state writes or persistence."
+  ]
+}

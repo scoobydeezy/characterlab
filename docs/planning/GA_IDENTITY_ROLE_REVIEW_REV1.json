@@ -1,0 +1,58 @@
+{
+  "status": "SYMBOLIC IDENTITY ROLE REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 66,
+  "identityPositions": 72,
+  "recordBoundaries": 82,
+  "faults": [
+    {
+      "name": "character-is-observer",
+      "rejected": true
+    },
+    {
+      "name": "namespace-only-character",
+      "rejected": true
+    },
+    {
+      "name": "goal-is-generic-referent",
+      "rejected": true
+    },
+    {
+      "name": "observation-is-experience",
+      "rejected": true
+    },
+    {
+      "name": "collection-as-scalar-role",
+      "rejected": true
+    },
+    {
+      "name": "allocate-new-result-as-old-evid",
+      "rejected": true
+    },
+    {
+      "name": "event-file-as-scalar",
+      "rejected": true
+    },
+    {
+      "name": "drop-composite-source-key",
+      "rejected": true
+    },
+    {
+      "name": "claim-unresolved-state-key-roles",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV1.json",
+      "sha256": "d9a4f3912d119e9c35106943835c6ff42c7d377d617c4f2b2d9efcbf731900bc"
+    },
+    {
+      "path": "scripts/review-ga-identity-role-closure.mjs",
+      "sha256": "dce9d4e4ef83aacb9a7f74ef8559a709397321ea5237bcfefa8dcf75ce691cc3"
+    }
+  ],
+  "limits": [
+    "Structural crosswalk only; actual canonical role tables and domain/holder checks await final public closure.",
+    "RetainedEncodingUnit and state-root keys are explicitly pending, not inferred from this report."
+  ]
+}

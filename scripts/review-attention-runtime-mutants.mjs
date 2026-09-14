@@ -1,0 +1,25 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const destination='docs/planning/ATTENTION_RUNTIME_MUTANTS_REV1.json';assert(!fs.existsSync(destination));
+const runtime='src/campaign3/attentionRuntime.ts';
+const mutations=[
+ ['visibility-bypass','modes=items(f(channel,2n),\'list\').map(u)','modes=items(f(channel,2n),\'list\').map(()=>2n)','role-k1-channel-0','different'],
+ ['capacity-bypass','capacity=Number(u(f(policy,2n)))','capacity=2','role-k1-channel-13','different'],
+ ['reused-selection-slot','selectionId=occ(1143,allocate())','selectionId=(allocate(),occ(1143,0n))','role-k1-channel-13','output identity differs from allocated slot'],
+ ['omitted-selected-read','consumeSelected(view,refs).map(decode)','consumeSelected(view,refs.slice(1)).map(decode)','role-k1-channel-13','selected read ledger incomplete'],
+ ['repeated-selected-read','consumeSelected(view,refs).map(decode)','consumeSelected(view,[...refs,refs[0]]).map(decode)','role-k1-channel-13','reject'],
+ ['observation-envelope-read','consumeSelected(view,refs).map(decode)',"consumeSelected(view,[{kind:'observation',observationId}]).map(decode)",'role-k1-channel-13','reject'],
+ ['selector-state-clear','const count=detections.length,q=claims.length',"if(n===8)nextState=new AuthoritativeState([]);const count=detections.length,q=claims.length",'role-k1-channel-13','nontracking write'],
+ ['consumer-state-clear','const count=detections.length,q=claims.length',"if(n===10)nextState=new AuthoritativeState([]);const count=detections.length,q=claims.length",'role-k1-channel-13','nontracking write'],
+ ['child-carriage-reorder',"emit(6,r('AttentionFreezeInput',[observation!,eventTransition!,list(bindings.map(perceivedBindingEvidenceValue))]))","emit(6,r('AttentionFreezeInput',[observation!,eventTransition!,list([...bindings].reverse().map(perceivedBindingEvidenceValue))]))",'role-k1-channel-13','classification child'],
+ ['recognition-phase-reassignment','phase:u(f(stages.get(child.stage)!,5n))','phase:child.stage===8?20n:u(f(stages.get(child.stage)!,5n))','role-k1-channel-13','registered stage phase'],
+ ['event-token-mismatch','for(const child of children)expected.set(child.eventId,key(scheduledEventValue(child)))',"for(const child of children)expected.set(child.eventId,'not-the-issued-event')",'role-k1-channel-13','actual unconsumed parent-bound attention event required'],
+];
+async function execute(mutation,name){let replacements=0;const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom',plugins:mutation?[{name:'attention-runtime-fault',enforce:'pre',transform(code,id){if(id.replaceAll('\\','/').endsWith('/'+runtime)){assert.equal(code.split(mutation[1]).length-1,1);replacements++;return code.replace(mutation[1],mutation[2]);}}}]:[]});try{
+ const api=await server.ssrLoadModule('/src/campaign3/attentionFactory.ts'),f=JSON.parse(fs.readFileSync('docs/planning/campaign3-attention-model-rev2/FREEZE.json')),read=p=>new Uint8Array(Buffer.from(fs.readFileSync('docs/planning/campaign3-attention-model-rev2/'+p,'utf8').trim(),'hex'));
+ const handle=await api.prepareAttentionModel({...f.versions,content:read(name+'/content.cenc.hex'),registry:read(name+'/registry.cenc.hex'),parameters:read(name+'/parameters.cenc.hex')}),run=await api.createAttentionRun(handle,{initialState:read('initial-state.cenc.hex'),orderedInputs:read('input-base.cenc.hex'),runSeed:new Uint8Array(Buffer.from(f.seed,'hex'))}),before=run.snapshot();
+ let error;try{await run.settleNextInstant();}catch(e){error=e.message;}const after=run.snapshot();if(error){assert.deepEqual(after.state,before.state);assert.deepEqual(after.outputs,before.outputs);assert.deepEqual(after.trace,before.trace);}return {replacements,error,outputs:Buffer.from(after.outputs).toString('hex'),rollback:error?'PASS':undefined};
+ }finally{await server.close();}}
+const controls={};for(const name of new Set(mutations.map(m=>m[3]))){controls[name]=await execute(undefined,name);assert(!controls[name].error);}
+const results=[];for(const m of mutations){const result=await execute(m,m[3]);assert.equal(result.replacements,1);if(m[4]==='different'){assert(!result.error);assert.notEqual(result.outputs,controls[m[3]].outputs);}else{assert(result.error);if(m[4]!=='reject')assert(result.error.includes(m[4]),result.error);}results.push({name:m[0],removed:m[1],inserted:m[2],expectation:m[4],detected:true,error:result.error,rollback:result.rollback});console.log(m[0]+': detected');}
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+fs.writeFileSync(destination,JSON.stringify({status:'ELEVEN CURRENT-SOURCE ALTERNATIVES DETECTED',results,sources:[runtime,'src/campaign3/attentionTrace.ts','src/campaign3/attentionSelection.ts','scripts/review-attention-runtime-mutants.mjs'].map(fp),limits:['Visibility/capacity faults are detected by the public outcome oracle. Other faults reject with complete public state/output/trace rollback. Component capability and arbitrary-model limits remain explicit.']},null,2)+'\n');

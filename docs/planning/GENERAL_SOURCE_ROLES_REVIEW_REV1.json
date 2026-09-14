@@ -1,0 +1,55 @@
+{
+  "status": "GENERAL SOURCE ROLES REVIEW PASS",
+  "faults": [
+    {
+      "name": "reserve-on-unresolved",
+      "file": "src/campaign3/generalSourceRoles.ts",
+      "witness": "GSR-B",
+      "detected": true
+    },
+    {
+      "name": "reuse-placeholder",
+      "file": "src/campaign3/generalSourceRoles.ts",
+      "witness": "GSR-A",
+      "detected": true
+    },
+    {
+      "name": "infer-contiguous-slots",
+      "file": "src/campaign3/generalSourceRoles.ts",
+      "witness": "GSR-A",
+      "detected": true
+    },
+    {
+      "name": "duplicate-allocation-accepted",
+      "file": "src/campaign3/generalSourceRoles.ts",
+      "witness": "GSR-D",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalSourceRoles.ts",
+      "sha256": "ed2a84c29af8888a1e0ac92fc01541b71f38bc0f1e7b0be4019ab406d83e6a1c"
+    },
+    {
+      "path": "src/test/generalSourceRoles.test.ts",
+      "sha256": "7d30090b7203d1e4383b47a835aaa15473a7bee472a163025352a44597cfa66b"
+    },
+    {
+      "path": "docs/formal/GENERAL_SOURCE_ROLE_BATCH_COMPONENT.md",
+      "sha256": "0d8150d44dabbddee148ae6626f72ed531ea5f0e56fed15c1ab9058b93020e19"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "250ce5e74a874b759b3e068d234790bbdecc516650000a929f9ce1b313f4dca5"
+    },
+    {
+      "path": "scripts/review-general-source-roles.mjs",
+      "sha256": "412c3b0a02dcde899e312fca3efdf11448df5b3a530625540841380ce6e35b76"
+    }
+  ],
+  "limits": [
+    "Actual SEM-G output allocation; public producer matching remains open.",
+    "No new role mathematics, identity family or state authority."
+  ]
+}

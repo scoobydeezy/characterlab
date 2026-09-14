@@ -1,0 +1,106 @@
+{
+  "status": "ENCODING ISOLATION CORRECTIONS AND SBC-A..E QUALIFIED AT COMPONENT SCOPE",
+  "tests": 28,
+  "faults": [
+    {
+      "name": "mutable-constants",
+      "file": "encodingAccessMath.ts",
+      "removed": "const zero=Object.freeze(Q.of(0n)),one=Object.freeze(Q.of(1n));",
+      "inserted": "const zero=Q.of(0n),one=Q.of(1n);",
+      "baseline": "1/2",
+      "actual": "1/100",
+      "detected": true
+    },
+    {
+      "name": "skip-dense-raw",
+      "file": "encodingAccessMath.ts",
+      "removed": "keys(labels);dense(raw);",
+      "inserted": "keys(labels);",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "shared-role-object",
+      "file": "selectedEncoding.ts",
+      "removed": "const role = Q.of(calibratedRole.numerator,calibratedRole.denominator);",
+      "inserted": "const role = calibratedRole;",
+      "baseline": "243/1243",
+      "actual": "0/1",
+      "detected": true
+    },
+    {
+      "name": "erase-small-budget",
+      "file": "selectedEncodingBudgetControl.ts",
+      "removed": "calibration==='UnitBudget'?Q.of(1n):Q.of(1n,5n)",
+      "inserted": "calibration==='UnitBudget'?Q.of(1n):Q.of(1n)",
+      "baseline": "1/2",
+      "actual": "3/10",
+      "detected": true
+    },
+    {
+      "name": "erase-important-threshold",
+      "file": "selectedEncodingBudgetControl.ts",
+      "removed": "law,budget,Q.of(1n,4n)",
+      "inserted": "law,budget,Q.of(1n)",
+      "baseline": "3/13",
+      "actual": "25/34",
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "small": "1/2",
+    "hybrid": "3/13",
+    "role": "243/1243",
+    "sparse": true,
+    "constant": "1/2",
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/selectedEncoding.ts",
+      "sha256": "77ab07998dad545d8fdd5b53513b4a96251d79a9b7a2a0cea94c83d2a4ce50f3"
+    },
+    {
+      "path": "src/campaign3/selectedEncodingBudgetControl.ts",
+      "sha256": "c673995d73476595ab8b241b3c7efd002833948c57a0ba17f7bdf4a88fa99294"
+    },
+    {
+      "path": "src/test/encodingIsolation.test.ts",
+      "sha256": "c65081e0645c72570cdfd81b43015d8a3bf4f7feaa2b9aa5e151b42a2b67c18e"
+    },
+    {
+      "path": "src/test/selectedEncodingBudgetControl.test.ts",
+      "sha256": "09e233ef287400ae51c145578389a86913dc67a2134113d803e692d9b52fc6c7"
+    },
+    {
+      "path": "docs/formal/SELECTED_ENCODING_BUDGET_CONTROL.md",
+      "sha256": "801866898567371a268a8e2965946191095674ed07eb9b9dbaee4ab556712ad0"
+    },
+    {
+      "path": "scripts/review-encoding-isolation-and-budget.mjs",
+      "sha256": "8c61a596fb8687236cf39fbe36c58c3c0888de6eb9da0250875e8d86edc26e23"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/ENCODING_COMPONENT_TESTS_REV2.json",
+    "sha256": "4d4cdf62f104a5d0d55445494612f1d1b53084105a8e89330963ec290dd4edad"
+  },
+  "priorFaults": [
+    {
+      "path": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "sha256": "1f41582706308f3614377411d5b8e1ee24823059959763b38534f44ac174d57d"
+    },
+    {
+      "path": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "sha256": "1ce75eeea96507d3724e2d9b573b662d9c584971d16388410a025533cf7c6416"
+    }
+  ],
+  "limits": [
+    "Source-connected selected-component comparisons, not authenticated public encoding or character-state qualification. No corpus promotion."
+  ]
+}

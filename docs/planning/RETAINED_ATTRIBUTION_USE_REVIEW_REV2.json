@@ -1,0 +1,64 @@
+{
+  "status": "RETAINED ATTRIBUTION USE COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "bound-is-used",
+      "witness": "RU-B",
+      "detected": true
+    },
+    {
+      "name": "supported-only",
+      "witness": "RU-B",
+      "detected": true
+    },
+    {
+      "name": "omit-consumption",
+      "witness": "RU-A",
+      "detected": true
+    },
+    {
+      "name": "allow-same-instant",
+      "witness": "RU-D",
+      "detected": true
+    },
+    {
+      "name": "ignore-read-domain",
+      "witness": "RU-D",
+      "detected": true
+    },
+    {
+      "name": "keep-rational-alias",
+      "witness": "RU-I",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "30ce37e039d855004a9d1ccc09521443fd22c2e4455c1ce3facc40ee4e658272"
+    },
+    {
+      "path": "src/test/retainedAttributionUse.test.ts",
+      "sha256": "0be8f45d22c99fc438fb9f40c68a2a0882be4c01dc3a0f28679f1cbf60a13927"
+    },
+    {
+      "path": "src/campaign3/contrastiveAttribution.ts",
+      "sha256": "ae02299c1170aaea09a36137e0eca96009dd54bde2410fc12c201d6edf6f4fb5"
+    },
+    {
+      "path": "src/test/retainedAttributionScheduler.test.ts",
+      "sha256": "98064a777d76489b0265092d6e53c105fb14738ce92ec99bee950c02cb4632b2"
+    },
+    {
+      "path": "scripts/review-retained-attribution-use.mjs",
+      "sha256": "6045e2f9470ba1a73ca273f03f868ac95b4e1e460688119ce0778a886e622c8c"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/RETAINED_ATTRIBUTION_USE_TESTS_REV3.json",
+    "sha256": "8e311f2658daf382555d91ccb290a3947e1e3be2ee32d130c8216ffa638cbd7f"
+  },
+  "limits": [
+    "Trusted memory snapshot, admission set and projection adapter. Public subject/source/read/commit registration and canonical persistence not qualified."
+  ]
+}

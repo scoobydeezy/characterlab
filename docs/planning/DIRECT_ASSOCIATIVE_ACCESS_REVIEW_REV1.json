@@ -1,0 +1,100 @@
+{
+  "status": "DIRECT/SPREAD COMPONENT SOURCE CONTROLS PASS",
+  "faults": [
+    {
+      "name": "double-count-zero-hop",
+      "removed": "solved.exact[i].subtract(b[i])",
+      "inserted": "solved.exact[i]",
+      "witness": "DA-A",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-A: adding/removing an isolated graph node leaves direct contribution exactly equal",
+        "direct/learned access reference composition DA-B: zero-hop is counted once; beta zero removes learned influence even with edges",
+        "direct/learned access reference composition DA-D: exact components combine before one rounding, not separately rounded parts",
+        "direct/learned access reference composition DA-E: exact subtraction avoids negative spread from rounding a cue downward"
+      ]
+    },
+    {
+      "name": "gate-direct-by-graph",
+      "removed": "episodic.has(key)?cueSeed:zero",
+      "inserted": "episodic.has(key)&&i!==undefined?cueSeed:zero",
+      "witness": "DA-A",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-A: adding/removing an isolated graph node leaves direct contribution exactly equal"
+      ]
+    },
+    {
+      "name": "rounded-residual",
+      "removed": "solved.exact[i].subtract(b[i])",
+      "inserted": "solved.quantized[i].subtract(b[i])",
+      "witness": "DA-E",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-C: graph-only cue mediates retrieval of actual episodes without creating its own target",
+        "direct/learned access reference composition DA-E: exact subtraction avoids negative spread from rounding a cue downward"
+      ]
+    },
+    {
+      "name": "round-components-separately",
+      "removed": "roundEven(contribution.numerator*scale,contribution.denominator)",
+      "inserted": "roundEven(directMatch.numerator*scale,directMatch.denominator)+roundEven(learnedSpread.numerator*scale,learnedSpread.denominator)",
+      "witness": "DA-D",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-D: exact components combine before one rounding, not separately rounded parts"
+      ]
+    },
+    {
+      "name": "disable-graph-only-seed",
+      "removed": "graphKeys.map(k=>currentCue.get(k)??zero)",
+      "inserted": "graphKeys.map(k=>retained.includes(k)?currentCue.get(k)??zero:zero)",
+      "witness": "DA-C",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-C: graph-only cue mediates retrieval of actual episodes without creating its own target",
+        "direct/learned access reference composition DA-D: exact components combine before one rounding, not separately rounded parts"
+      ]
+    },
+    {
+      "name": "create-rows-for-unmatched-cues",
+      "removed": "[...retained,...graphKeys]",
+      "inserted": "[...retained,...graphKeys,...cues.keys()]",
+      "witness": "DA-F",
+      "detected": true,
+      "failed": [
+        "direct/learned access reference composition DA-F: neither-membership cue creates no row; inputs and graph remain unchanged"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/directAssociativeAccess.ts",
+      "sha256": "dad4f528969758fd8d0926ca49c477e3d6922ddf85768c088b088fa55be03478"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/directAssociativeAccess.test.ts",
+      "sha256": "0fc90e76ab3db06e9ca75bf94c9e2b217f759f8feae738b90e720016fa5d6e61"
+    },
+    {
+      "path": "docs/formal/DIRECT_ASSOCIATIVE_ACCESS_COMPONENT.md",
+      "sha256": "eb21f12701df4aba5e1369541a4e4bf664a76a4df9c43ed33cf967bcac48931c"
+    },
+    {
+      "path": "scripts/review-direct-associative-access.mjs",
+      "sha256": "2088e513151105bbb1b5cd96349e826bb034443532d55aaabead5a88e6859f27"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/DIRECT_ASSOCIATIVE_ACCESS_TESTS_REV1.json",
+    "sha256": "f4671536ef818a5343e21ba1fcb0651239f2952f87536cb58636d38b1c64d6be"
+  },
+  "limits": [
+    "No public cue authentication or model qualification.",
+    "Graph capacity, orphan lifecycle and survival policy remain open."
+  ]
+}

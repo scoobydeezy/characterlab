@@ -1,0 +1,57 @@
+{
+  "status": "CANONICAL EVENT RECALL REVIEW PASS",
+  "faults": [
+    {
+      "name": "gate-direct-match-on-graph",
+      "witness": "CER-A",
+      "detected": true
+    },
+    {
+      "name": "read-memory-for-absent-cue",
+      "witness": "CER-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-zero-slots",
+      "witness": "CER-C",
+      "detected": true
+    },
+    {
+      "name": "decimal-acquisition-ties",
+      "witness": "CER-D",
+      "detected": true
+    },
+    {
+      "name": "skip-history-domain",
+      "witness": "CER-E",
+      "detected": true
+    },
+    {
+      "name": "diagnostics-follow-input-order",
+      "witness": "CER-D",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/canonicalEventRecall.ts",
+      "sha256": "7f45b389daf7c8ed111ea26dbb9fa9b9f358ab37a63de9d5c7a25a994e516244"
+    },
+    {
+      "path": "src/test/canonicalEventRecall.test.ts",
+      "sha256": "eb744baec0bbe24d60194c923f9012e08ac48b89cfe3651697a28bea41f3b7ba"
+    },
+    {
+      "path": "src/campaign3/canonicalChildKeys.ts",
+      "sha256": "a631776f689e70a3db317abce1db28d81cabea4139a2a5cca9213d1ef506e322"
+    },
+    {
+      "path": "scripts/review-canonical-event-recall.mjs",
+      "sha256": "5d5a668d7ef75f5840cc5aa3ccf22cf04289a10a96907171766e3f5436fac626"
+    }
+  ],
+  "limits": [
+    "Source/PRJ/read authentication and public persistence remain open.",
+    "The decimal-key mutation fails closed at inverse translation; it cannot silently return an incorrectly identified acquisition."
+  ]
+}

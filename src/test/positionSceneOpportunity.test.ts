@@ -1,0 +1,33 @@
+import {describe,it,expect} from 'vitest';
+import {canonicalEncode,typedIdentifier,text} from '../substrate/canonicalEncoding';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
+import {EventRoleId} from '../semanticBinding/eventBindings';
+import {preRecognitionSemanticExperienceValue} from '../semanticBinding/semanticEvidenceCodecs';
+import {decodeSemanticValue} from '../semanticBinding/semanticCodecs';
+import {characterEvidenceRefKey,INITIAL_CAUSAL_ROLE_RULE,compileCausalRoleModel,deriveCausalRoleEvidence,type ObserverSafeEvidenceOccurrence} from '../semanticBinding/evidenceProvenance';
+import {createPositionSceneSource} from '../campaign3/positionSceneSource';
+import {observePositionSceneOpportunity} from '../campaign3/positionSceneOpportunity';
+import {createTrialPanelPerception,trialPanelPerceptionSnapshot,consumeTrialPanel} from '../campaign3/trialPanelPerception';
+import {createTenSweepMarkerTransactionManager,committedMarkerSnapshot} from '../campaign3/transactionalMarkerTracking';
+import {selectCanonicalVisual} from '../campaign3/canonicalVisualSelection';
+import {encodePositiveSpatialCandidate} from '../campaign3/positiveSpatialCandidate';
+const observer=typedIdentifier(1000,text('observer/a'));
+function fixture(visible=true){return {source:createPositionSceneSource([{at:1n,items:[EventRoleId.Actor,EventRoleId.Target,EventRoleId.Participant].map((role,i)=>({marker:semanticReferentFromAuthoredContent(governedContentDefinitionId('object/'+i)),role,x:BigInt(i),y:0n,glyph:BigInt(i),visible,permitted:true,roleMode:'Preserve' as const}))}]),tracker:createTenSweepMarkerTransactionManager('observer/a'),perception:createTrialPanelPerception('observer/a')};}
+const snapshot=(s:ReturnType<typeof fixture>)=>({marker:committedMarkerSnapshot(s.tracker),event:trialPanelPerceptionSnapshot(s.perception)});
+const run=(s:ReturnType<typeof fixture>,allocate:()=>bigint,lane:'Current'|'Consequence'='Current')=>observePositionSceneOpportunity(s.source,s.tracker,s.perception,observer,1n,lane,allocate);
+describe('actual multi-item source to observer experience',()=>{
+ it('PSO-A: all three actual bindings have separately allocated identities and canonical SEM output',()=>{for(const lane of ['Current','Consequence'] as const){let n=0n;const r=run(fixture(),()=>n++,lane);expect(n).toBe(13n);expect(r.staged!.stagedAtPhase).toBe(lane==='Current'?14n:124n);expect(r.staged!.experience.perceivedBindings.map(b=>b.perceivedBindingId)).toEqual([9n,10n,11n]);const bytes=canonicalEncode(preRecognitionSemanticExperienceValue(r.staged!.experience));expect(canonicalEncode(decodeSemanticValue(bytes))).toEqual(bytes);expect(r.tracks).toHaveLength(3);}});
+ it('PSO-B: wholly unavailable observation has no event, binding or experience reservation',()=>{let n=0n;const r=run(fixture(false),()=>n++);expect(n).toBe(5n);expect(r.staged).toBeNull();expect(r.event).toBeUndefined();expect(r.tracks).toEqual([]);expect(r.observation.detections).toEqual([]);});
+ it('PSO-C: every allocated-stage failure preserves both owners and retries with the same slots',()=>{let n=0n;const expected=run(fixture(),()=>n++);for(let failAt=0;failAt<13;failAt++){const s=fixture(),prior=snapshot(s);let calls=0;expect(()=>run(s,()=>calls===failAt?-1n:BigInt(calls++))).toThrow();expect(snapshot(s)).toEqual(prior);let retry=0n;expect(run(s,()=>retry++)).toEqual(expected);}});
+ it('PSO-D: actual safe role derivation and selection feed positive encoding with the preselection divisor',()=>{let n=0n;const r=run(fixture(),()=>n++),experience=r.staged!.experience,C='semantic-binding/0.1-candidate#SEM-001C';
+  const occurrences:ObserverSafeEvidenceOccurrence[]=experience.perceivedBindings.map(b=>({ref:{kind:'perceived-binding',perceivedBindingId:b.perceivedBindingId},observerId:'observer/a',occurredAt:1n,recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:C,scope:{experienceId:experience.experienceId,carrier:{kind:'continuant-in-event',perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId}}}));
+  occurrences.sort((a,b)=>characterEvidenceRefKey(a.ref)<characterEvidenceRefKey(b.ref)?-1:characterEvidenceRefKey(a.ref)>characterEvidenceRefKey(b.ref)?1:0);
+  const model=compileCausalRoleModel('fixture/source-role',[INITIAL_CAUSAL_ROLE_RULE]),claims=experience.perceivedBindings.flatMap(b=>deriveCausalRoleEvidence(model,{experience,perceptualEventReferentId:b.perceptualEventReferentId,perceptualReferentId:b.perceptualReferentId,evidenceOccurrences:occurrences,readDomain:{transitionKindId:'transition/derive-character-causal-role',permittedEvidenceSchemas:[{refKind:'perceived-binding',recordSchemaVersion:'perceived-binding/0.1-candidate',producingEpistemicSeamVersion:C}],temporalScope:'SameExperience'},transformationVersion:'semantic-binding/0.1-candidate#SEM-001G'},n++).evidence);
+  const selected=selectCanonicalVisual({kind:'Experience',experience,claims},2,()=>n++);
+  const result=encodePositiveSpatialCandidate(selected.view,{observation:{...r.observation,eventDetectionId:r.observation.eventDetectionId!},tracks:r.tracks,event:r.event!,experience},{minX:0n,maxX:0n,minY:0n,maxY:0n,focalWeight:Q.of(1n),residualPool:Q.of(1n,5n)},'independent');
+  expect(result.candidate.units).toHaveLength(2);expect(result.candidate.units.map(u=>u.spatialWitness.peripheralCount)).toEqual([2,2]);expect(result.candidate.units[1].factors.attention).toEqual(Q.of(1n,10n));expect(result.candidate).not.toHaveProperty('truth');
+ });
+ it('PSO-E: an unsampled active panel cannot be closed to admit a standalone scene',()=>{for(const visible of [true,false]){const s=fixture(visible);consumeTrialPanel(s.perception,{observer:'observer/a',observation:100n,detection:101n,sample:{kind:'Present',at:0n,glyph:0,stage:'Before'}});const prior=snapshot(s);let n=200n;if(visible){expect(()=>run(s,()=>n++)).toThrow('UNSAMPLED_ACTIVE_CONTEXT');expect(snapshot(s)).toEqual(prior);}else{expect(run(s,()=>n++).staged).toBeNull();expect(trialPanelPerceptionSnapshot(s.perception)).toEqual(prior.event);}}});
+});

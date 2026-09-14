@@ -1,0 +1,114 @@
+{
+  "status": "GOAL RESULT STRUCTURAL REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 21,
+  "fields": 63,
+  "deliveryReachability": [
+    "CharacterId",
+    "ExperienceId",
+    "GoalDoesNotQualify",
+    "GoalOutcomeAssessmentId",
+    "GoalQualificationCarry",
+    "GoalQualificationDelivery",
+    "GoalQualificationIndeterminate",
+    "GoalQualificationUnavailable",
+    "GoalQualifies",
+    "Instant",
+    "MaintenanceGoalKey",
+    "ObserverId",
+    "OriginalAddress",
+    "SemanticReferentId",
+    "VersionText"
+  ],
+  "joinReachability": [
+    "AcquisitionOccurrenceId",
+    "BodyChildKey",
+    "CharacterId",
+    "EventChildKey",
+    "ExperienceId",
+    "GoalDoesNotQualify",
+    "GoalOutcomeAssessmentId",
+    "GoalQualificationCarry",
+    "GoalQualificationIndeterminate",
+    "GoalQualificationUnavailable",
+    "GoalQualifies",
+    "Instant",
+    "InteroceptiveSignalId",
+    "MaintenanceGoalKey",
+    "ObserverId",
+    "PerceptualReferentId",
+    "QualifiedSignificanceJoin",
+    "RetainedAttributionResult",
+    "RetainedAttributionResultId",
+    "RetainedChildAddress",
+    "SemanticReferentId",
+    "VersionText"
+  ],
+  "faults": [
+    {
+      "name": "carry-full-appraisal",
+      "rejected": true
+    },
+    {
+      "name": "indirect-numeric-qualification",
+      "rejected": true
+    },
+    {
+      "name": "join-view-archive",
+      "rejected": true
+    },
+    {
+      "name": "reuse-task-appraisal-identity",
+      "rejected": true
+    },
+    {
+      "name": "parallel-qualification-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "missing-target-original",
+      "rejected": true
+    },
+    {
+      "name": "absence-is-zero",
+      "rejected": true
+    },
+    {
+      "name": "erase-farther",
+      "rejected": true
+    },
+    {
+      "name": "credit-unrelated-siblings",
+      "rejected": true
+    },
+    {
+      "name": "force-use-for-unavailable",
+      "rejected": true
+    },
+    {
+      "name": "mutable-goal-baseline",
+      "rejected": true
+    },
+    {
+      "name": "new-numeric-record",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV2.json",
+      "sha256": "e7a8e3e2a0f84cb463769948c908928f0ccbc886b52577706777c0170272c38d"
+    },
+    {
+      "path": "scripts/build-ga-goal-result-carrier-rev2.mjs",
+      "sha256": "bb91b2b447af55ea818cf4cc11a5a42fe247a247bf37670a59c96565445e2176"
+    },
+    {
+      "path": "scripts/review-ga-goal-result-carrier-rev2.mjs",
+      "sha256": "5243625df4776e3dbf0ec0cc8f58517e402054ce2ffac6766fafbd4219b336ad"
+    }
+  ],
+  "limits": [
+    "Structural reachability and field checks only; semantic role, source authenticity and state admission not qualified.",
+    "Closed intervals require their own new record; original index is unsigned, not a new identity. Public admission remains open."
+  ]
+}

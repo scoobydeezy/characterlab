@@ -1,0 +1,107 @@
+{
+  "status": "RECENCY BASELINE COMPONENT CHECKED",
+  "faults": [
+    {
+      "name": "oldest-first",
+      "removed": "a.at>b.at?-1:1",
+      "inserted": "a.at<b.at?-1:1",
+      "witness": "RR-A",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers"
+      ]
+    },
+    {
+      "name": "reverse-address-tie",
+      "removed": "compare(a.address,b.address)",
+      "inserted": "compare(b.address,a.address)",
+      "witness": "RR-B",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically"
+      ]
+    },
+    {
+      "name": "rejuvenate-survivors",
+      "removed": "acquiredAt:times.get(a.id)!",
+      "inserted": "acquiredAt:now",
+      "witness": "RR-C",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers",
+        "Recency Retention Baseline component RR-D: zero capacity is loss, with no borrowed slots or effect on the other kind",
+        "Recency Retention Baseline component RR-H: changing evaluation time alone does not change survival or retained original timestamps"
+      ]
+    },
+    {
+      "name": "zero-capacity-keeps-one",
+      "removed": "units.slice(capacity[kind])",
+      "inserted": "units.slice(Math.max(1,capacity[kind]))",
+      "witness": "RR-D",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-D: zero capacity is loss, with no borrowed slots or effect on the other kind"
+      ]
+    },
+    {
+      "name": "input-order-winners",
+      "removed": "units.sort((a,b)=>a.at!==b.at?(a.at>b.at?-1:1):compare(a.address,b.address));",
+      "inserted": "",
+      "witness": "RR-A",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers",
+        "Recency Retention Baseline component RR-E: complete barrier permutations produce identical survivors and loss addresses"
+      ]
+    },
+    {
+      "name": "permit-future-acquisition",
+      "removed": "||a.acquiredAt>now",
+      "inserted": "",
+      "witness": "RR-F",
+      "detected": true,
+      "failed": [
+        "Recency Retention Baseline component RR-F: future, missing, negative time and invalid capacity reject"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/recencyRetention.ts",
+      "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+    },
+    {
+      "path": "src/campaign3/retentionFragmentation.ts",
+      "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+    },
+    {
+      "path": "src/test/recencyRetention.test.ts",
+      "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+    },
+    {
+      "path": "src/test/retentionFragmentation.test.ts",
+      "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+    },
+    {
+      "path": "docs/formal/RECENCY_RETENTION_COMPONENT.md",
+      "sha256": "af0f9a521469702ad9a9a254c02d4c0c11fc7cf217369b3fea4b115a81c21d68"
+    },
+    {
+      "path": "scripts/review-recency-retention.mjs",
+      "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/RECENCY_RETENTION_TESTS_REV1.json",
+    "sha256": "d213b39efcd5ccdd6f3bfdee27b4e3067181b186d5d48597d971b160dcae584c"
+  },
+  "limits": [
+    "No public source/admission, acquisition commit semantics, owner or persistence qualification.",
+    "No reinforcement/importance law or general memory sufficiency."
+  ]
+}

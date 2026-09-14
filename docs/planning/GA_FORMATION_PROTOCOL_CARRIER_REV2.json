@@ -1,0 +1,368 @@
+{
+  "version": "ga-formation-protocol-carrier/0.2-draft",
+  "status": "SYMBOLIC DESCRIPTOR INVENTORY; PUBLIC HOOKS AND ALLOCATION OPEN",
+  "records": [
+    {
+      "name": "QualifiedFormationSource",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationAdmission",
+      "fields": [
+        {
+          "name": "AcquisitionKind",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EventContinuant",
+              "Interoceptive"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationSuccess",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "FormedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "CompleteLoss",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceValue",
+      "fields": [
+        {
+          "name": "AdmittedSources",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationAdmission"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "SuccessfulFormations",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationSuccess"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "ref",
+            "name": "FormationGovernanceValue"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationSourceBinding",
+      "fields": [
+        {
+          "name": "Producer",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionKindId"
+          }
+        },
+        {
+          "name": "AuditSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "SelectionField",
+          "type": {
+            "kind": "ref",
+            "name": "FieldOrdinal"
+          }
+        },
+        {
+          "name": "ViewSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Projection",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AcquisitionKind",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EventContinuant",
+              "Interoceptive"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RuntimeProtocolStateDeclaration",
+      "fields": [
+        {
+          "name": "Path",
+          "type": {
+            "kind": "ref",
+            "name": "StatePathPattern"
+          }
+        },
+        {
+          "name": "ValueSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Authority",
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "name": "Classification",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "RuntimeProtocol"
+            ]
+          }
+        },
+        {
+          "name": "RemovalAllowed",
+          "type": {
+            "kind": "ref",
+            "name": "False"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationOwnerBinding",
+      "fields": [
+        {
+          "name": "Owner",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionKindId"
+          }
+        },
+        {
+          "name": "Authority",
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "name": "Path",
+          "type": {
+            "kind": "ref",
+            "name": "StatePathPattern"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceProfile",
+      "fields": [
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "MaximumQualifiedSources",
+          "type": {
+            "kind": "ref",
+            "name": "SourceBound"
+          }
+        },
+        {
+          "name": "State",
+          "type": {
+            "kind": "ref",
+            "name": "RuntimeProtocolStateDeclaration"
+          }
+        },
+        {
+          "name": "Sources",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "FormationSourceBinding"
+            },
+            "min": 1,
+            "max": 8
+          }
+        },
+        {
+          "name": "Owner",
+          "type": {
+            "kind": "ref",
+            "name": "FormationOwnerBinding"
+          }
+        },
+        {
+          "name": "Hooks",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AdmitAndReconcile"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationOwnerDisposition",
+      "fields": [
+        {
+          "name": "Formed",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationSuccess"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "NewCompleteLoss",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "AcquisitionOccurrenceId"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "CharacterId": "existing qualified PRJ/IDN character identity",
+    "SelectionOccurrenceId": "existing1143; actual admitted completed producer only",
+    "AcquisitionOccurrenceId": "accepted symbolic acquisition family; unallocated",
+    "Instant": "existing SimInstant",
+    "Boolean": "canonical Boolean",
+    "False": "canonical Boolean restricted to false",
+    "TransitionKindId": "existing transition identity; exact successor member admission",
+    "CanonicalRecordSchemaRef": "existing254 exact type/version",
+    "FieldOrdinal": "canonical unsigned declared field ordinal",
+    "DefinitionId": "existing definition identity with exact kind/version",
+    "StatePathPattern": "existing149; exact declared owner/singleton selectors",
+    "MutationAuthorityId": "existing1025; exact owning member",
+    "SourceBound": "canonical unsigned32 for first profile"
+  },
+  "storage": [
+    "FormationGovernanceState"
+  ],
+  "runtimeOnly": [
+    "FormationOwnerDisposition"
+  ],
+  "cognitiveReadDomains": [],
+  "cognitiveWritableFamilies": [],
+  "invariants": {
+    "domain": "0..32 actual completed sources, including empty selections; cue alone creates no source.",
+    "success": "SuccessfulFormations subset of AdmittedSources; unique immutable acquisition/time; monotone complete loss.",
+    "dispatch": "Fixed runtime implementations only, actual completed producer and terminal-owner result associations.",
+    "atomicity": "Protocol and memory candidate pair settles under one whole-instant transaction.",
+    "classification": "RuntimeProtocol singleton excluded from every direct and derived cognitive read."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_FORMATION_PROTOCOL_DESCRIPTOR_REV2.md",
+      "sha256": "8c59d2f6b02c38ebd443435cebbff29d6ddc3938fc2c0b445ef7fc11c0ef7d75"
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_ROOT_SYMBOLIC_REV1.md",
+      "sha256": "a8bfc78e3a26703edc7a8b3cf4a32e9ad5307877385c573a6507f14a11d5b97a"
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_ADMISSION_JOIN_REV1.md",
+      "sha256": "3d0d1e4affb7d71925294d735f03a345aa9d370c88e85d172ab1c22d181c28fb"
+    },
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    }
+  ]
+}

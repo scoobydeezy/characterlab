@@ -1,0 +1,95 @@
+{
+  "status": "CA-A..I QUALIFIED AT COMPONENT SCOPE ONLY",
+  "faults": [
+    {
+      "name": "inclusive-contrast",
+      "removed": "l.compare(u)>0",
+      "inserted": "l.compare(u)>=0",
+      "witness": "CA-D",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-D: endpoint equality is insufficient, an exact strict gap suffices"
+      ]
+    },
+    {
+      "name": "optimistic-stroke-bound",
+      "removed": "r.trial.after!.lower.subtract(r.trial.before!.upper)",
+      "inserted": "r.trial.after!.upper.subtract(r.trial.before!.lower)",
+      "witness": "CA-C",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-C: coarse overlapping evidence does not become an exact effect",
+        "contrastive-attribution-component/0.1-candidate CA-D: endpoint equality is insufficient, an exact strict gap suffices",
+        "contrastive-attribution-component/0.1-candidate CA-I: a contrast without guaranteed positive movement-associated increase gives no support"
+      ]
+    },
+    {
+      "name": "ignore-baseline",
+      "removed": "if(trials.some(t=>!t.before!.lower.equals(baseline.lower)||!t.before!.upper.equals(baseline.upper)))return unavailable();",
+      "inserted": "",
+      "witness": "CA-G",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-G: missing, other-motion and baseline-mismatch inputs yield unavailable"
+      ]
+    },
+    {
+      "name": "ignore-replication",
+      "removed": "if(strokes.length!==2||controls.length!==2)return unavailable();",
+      "inserted": "",
+      "witness": "CA-G",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-B: removing motion support with identical level evidence removes eligibility",
+        "contrastive-attribution-component/0.1-candidate CA-G: missing, other-motion and baseline-mismatch inputs yield unavailable"
+      ]
+    },
+    {
+      "name": "omit-positive-change",
+      "removed": "l.compare(zero)>0&&",
+      "inserted": "",
+      "witness": "CA-I",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-I: a contrast without guaranteed positive movement-associated increase gives no support"
+      ]
+    },
+    {
+      "name": "accept-sparse-points",
+      "removed": "&&Array.from({length:n},(_,i)=>Object.hasOwn(a,i)).every(Boolean)",
+      "inserted": "",
+      "witness": "CA-E",
+      "detected": true,
+      "failed": [
+        "contrastive-attribution-component/0.1-candidate CA-E: malformed inputs reject rather than become absence evidence"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/contrastiveAttribution.ts",
+      "sha256": "8964d6c3f4229f3dd3f48199e593dec5c1bd821a07c4aaf3ccab1cee086cdd73"
+    },
+    {
+      "path": "src/test/contrastiveAttribution.test.ts",
+      "sha256": "e888bc4f38f6b4d4b185f611b7603379f43ce3ff83376a65a4802b34e8781ce2"
+    },
+    {
+      "path": "docs/formal/CONTRASTIVE_ATTRIBUTION_COMPONENT.md",
+      "sha256": "c38d95c0b37d6982b1fe5db081de3690cbd543f4d81bd506322e99ecfc0ba1e5"
+    },
+    {
+      "path": "scripts/review-contrastive-attribution.mjs",
+      "sha256": "10ece74e68534e5a42a458a753dcafe0be5395239899c835a4ef5c312db7824c"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/CONTRASTIVE_ATTRIBUTION_TESTS_REV2.json",
+    "sha256": "e67a94eb32e253a0ae48f166ed46f2a8f52e356d2bc246637cbccdde0eb8d203"
+  },
+  "limits": [
+    "Four trials are component arguments, not authenticated retained history.",
+    "The hidden-history label test establishes function-level invariance only, not a public false-attribution producer.",
+    "No physiological effect magnitude, consolidation state, model or corpus qualification."
+  ]
+}

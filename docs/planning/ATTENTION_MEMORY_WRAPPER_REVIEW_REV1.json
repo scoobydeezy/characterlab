@@ -1,0 +1,111 @@
+{
+  "status": "WRAPPER FIELD/REFERENCE INVENTORY REVIEWED; WHOLE SHAPE WITHHELD",
+  "checks": 529,
+  "records": 48,
+  "fields": 139,
+  "stageInputs": 22,
+  "faults": [
+    {
+      "name": "missing-event-detection",
+      "reason": "missing conditional existing event detection",
+      "detected": true
+    },
+    {
+      "name": "missing-spatial-detection",
+      "reason": "missing spatial detection attachment",
+      "detected": true
+    },
+    {
+      "name": "optional-owner-observer",
+      "reason": "missing required top-level observer FormationInput",
+      "detected": true
+    },
+    {
+      "name": "undefined-wrapper",
+      "reason": "unresolved stage input",
+      "detected": true
+    },
+    {
+      "name": "retain-full-evaluation",
+      "reason": "forbidden storage reachability ExtendedSelected",
+      "detected": true
+    },
+    {
+      "name": "cue-skips-frozen-scene",
+      "reason": "cue bypasses actual frozen source",
+      "detected": true
+    },
+    {
+      "name": "recall-leaks-ledger",
+      "reason": "winner does not carry retained bytes and score",
+      "detected": true
+    },
+    {
+      "name": "empty-reinforcement",
+      "reason": "reinforcement output bound",
+      "detected": true
+    },
+    {
+      "name": "unbounded-winners",
+      "reason": "unbounded list",
+      "detected": true
+    },
+    {
+      "name": "scene-identity-substitution",
+      "reason": "scene content identity substitution",
+      "detected": true
+    },
+    {
+      "name": "truth-in-encoding",
+      "reason": "encoding truth leak",
+      "detected": true
+    },
+    {
+      "name": "premature-record-allocation",
+      "reason": "unreviewed numeric allocation",
+      "detected": true
+    },
+    {
+      "name": "premature-whole-acceptance",
+      "reason": "premature whole acceptance",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_INVENTORY_REV1.json",
+      "sha256": "127a7737b2854372f58b005c76143373b43687010e8c6d1b525a3cec37cac49f"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_REVIEW_REV1.md",
+      "sha256": "e2fc9baee9d231d465b5f54baef1665a48985dbd0315324c3ac6d59a7154792c"
+    },
+    {
+      "path": "scripts/build-attention-memory-wrapper-inventory.mjs",
+      "sha256": "3b0724201bc98ae0ff2918b43511a5a5aca22a42ca24002c70cd2627f0c19173"
+    },
+    {
+      "path": "scripts/review-attention-memory-wrapper-inventory.mjs",
+      "sha256": "3ba73523be16b909d74e34935c5f573f90599fef3e373488a7206c1d4f29adf2"
+    }
+  ],
+  "preserved": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_SYMBOLIC_REVIEW_REV1.json",
+      "sha256": "f4f81e0e8697cc5fdcc2f00e33230f16324fde59d1a7eaf5aedcb99b2afce527"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_STAGE_REVIEW_REV1.json",
+      "sha256": "cb94d27b31a9b87373a2ee7c54e63d150c891127e7cd56fe9301f6d197008841"
+    },
+    {
+      "path": "docs/planning/TRANSACTIONAL_MARKER_TRACKING_REVIEW_REV1.json",
+      "sha256": "8695df017fe59ea29295184cd149be0815d5574425e820ec0088b7e5c866cc45"
+    }
+  ],
+  "limits": [
+    "Static symbolic field/reference/reachability checks and packet corruptions only. No runtime admission or conditional-value proof.",
+    "External accepted record implementations are consumed, not requalified by this graph.",
+    "No numeric allocation, output-slot closure, model or corpus qualification."
+  ]
+}

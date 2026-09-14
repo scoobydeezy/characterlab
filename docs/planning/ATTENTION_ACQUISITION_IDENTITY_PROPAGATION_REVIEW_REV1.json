@@ -1,0 +1,78 @@
+{
+  "status": "STATIC PROPAGATION CHECK PASS; NO RUNTIME QUALIFICATION",
+  "existingDirectSelectionFields": [
+    "RetainedEncoding.Selection",
+    "PresentationEntry.Selection",
+    "RecallScore.Selection"
+  ],
+  "plannedChanges": 4,
+  "faults": [
+    {
+      "name": "selection-is-durable-address",
+      "detected": true
+    },
+    {
+      "name": "drop-selection-provenance",
+      "detected": true
+    },
+    {
+      "name": "stale-recall-address",
+      "detected": true
+    },
+    {
+      "name": "commit-before-settlement",
+      "detected": true
+    },
+    {
+      "name": "global-one-to-one",
+      "detected": true
+    },
+    {
+      "name": "source-archive-resolver",
+      "detected": true
+    },
+    {
+      "name": "extra-episode-id",
+      "detected": true
+    },
+    {
+      "name": "measurement-migration",
+      "detected": true
+    },
+    {
+      "name": "premature-number",
+      "detected": true
+    },
+    {
+      "name": "hide-output-budget-gate",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_INVENTORY_REV2.json",
+      "sha256": "f03c57098bdae2fae4da33334f471e2e8e1e1bb7c9326302d063a218cbba3602"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_IDENTITY_ROLES_REV2.json",
+      "sha256": "4000e9c175a5c676c8aff3e23b06a0f32f5b84dc94f4d72ec2d71a4c356c0378"
+    },
+    {
+      "path": "docs/planning/ATTENTION_ACQUISITION_IDENTITY_PROPAGATION_REV1.json",
+      "sha256": "7b3e2bba70c95ed5e5d62fc09b0c69404b28248ff88508f45b4d5c6e0a2a2ab1"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_ACQUISITION_IDENTITY_RESOLUTION.md",
+      "sha256": "ce47e0c9f4af3d0c1f574ef42b2fcaf46b88891360070500a530b152f7a472ec"
+    },
+    {
+      "path": "scripts/review-attention-acquisition-identity.mjs",
+      "sha256": "3452905147b6ab0284fb38ab9a59ae66feca685c94d589c0d03281fa6f0f66b5"
+    }
+  ],
+  "limits": [
+    "Exact source fields/roles and calibration preservation inspected.",
+    "Corruptions test this bounded edit plan, not a production compiler or allocation.",
+    "Older wrapper and role packets remain historical; no integrated successor packet is claimed."
+  ]
+}

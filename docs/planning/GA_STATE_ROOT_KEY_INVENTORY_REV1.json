@@ -1,0 +1,477 @@
+{
+  "version": "ga-state-root-key-inventory/0.1-draft",
+  "status": "SYMBOLIC ROOT/KEY INVENTORY; PUBLIC COMPILER OPEN",
+  "records": [
+    {
+      "name": "AssociationMassRow",
+      "fields": [
+        {
+          "name": "Masses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "LatticeMass"
+            },
+            "min": 0,
+            "max": 27
+          }
+        }
+      ]
+    },
+    {
+      "name": "AssociationGraph",
+      "fields": [
+        {
+          "name": "Nodes",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualReferentId"
+            },
+            "min": 0,
+            "max": 27
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "AssociationMassRow"
+            },
+            "min": 0,
+            "max": 27
+          }
+        },
+        {
+          "name": "LastUpdatedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrackingWindowItem",
+      "fields": [
+        {
+          "name": "File",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualReferentId"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "Glyph"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrackingWindow",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ObservationId"
+            }
+          }
+        },
+        {
+          "name": "Items",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "TrackingWindowItem"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "ActivePanelContext",
+      "fields": [
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualEventReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelWindow",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Active",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ActivePanelContext"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEpisodeState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "SurvivingEpisodeLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralAssociationState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "AssociationGraph"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralPresentationState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "PresentationLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "MaintenanceGoalLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralTrackingState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "ObserverId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "TrackingWindow"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelContextState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "ObserverId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "TrialPanelWindow"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "root": "GeneralEpisodeState",
+      "field": "Value",
+      "value": "SurvivingEpisodeLedger",
+      "key": "CharacterId",
+      "classification": "episodic-memory",
+      "owner": "ordinary-memory-settlement",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "root": "GeneralAssociationState",
+      "field": "Value",
+      "value": "AssociationGraph",
+      "key": "CharacterId",
+      "classification": "associations",
+      "owner": "association-settlement",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "root": "GeneralPresentationState",
+      "field": "Value",
+      "value": "PresentationLedger",
+      "key": "CharacterId",
+      "classification": "episodic-memory",
+      "owner": "presentation-settlement",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "root": "MaintenanceGoalState",
+      "field": "Value",
+      "value": "MaintenanceGoalLedger",
+      "key": "CharacterId",
+      "classification": "prospective-commitments",
+      "owner": "maintenance-goal-lifecycle",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "CharacterId"
+        }
+      ]
+    },
+    {
+      "root": "GeneralTrackingState",
+      "field": "Value",
+      "value": "TrackingWindow",
+      "key": "ObserverId",
+      "classification": "Perception",
+      "owner": "authority/perception",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "ObserverId"
+        }
+      ]
+    },
+    {
+      "root": "TrialPanelContextState",
+      "field": "Value",
+      "value": "TrialPanelWindow",
+      "key": "ObserverId",
+      "classification": "Perception",
+      "owner": "authority/perception",
+      "removalAllowed": false,
+      "initial": "present empty owner value; time0 where applicable",
+      "selectors": [
+        {
+          "kind": "mapKey",
+          "type": "ObserverId"
+        }
+      ]
+    },
+    {
+      "root": "FormationGovernanceState",
+      "field": "Value",
+      "value": "FormationGovernanceValue",
+      "key": null,
+      "classification": "RuntimeProtocol",
+      "owner": "authority/formation-governance",
+      "removalAllowed": false,
+      "initial": "present empty maps",
+      "selectors": []
+    }
+  ],
+  "stateMapKeyRoles": [
+    {
+      "root": "GeneralEpisodeState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralAssociationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralPresentationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "MaintenanceGoalState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralTrackingState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    },
+    {
+      "root": "TrialPanelContextState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    }
+  ],
+  "external": {
+    "LatticeMass": "unsigned0..committed scale",
+    "Instant": "nonnegative SimInstant; only empty initial windows/graph use0",
+    "Glyph": "unsigned0..7",
+    "ObservationId": "existing1115",
+    "ObserverId": "existing1000",
+    "CharacterId": "existing1002 plus character qualification",
+    "PerceptualReferentId": "existing212",
+    "PerceptualEventReferentId": "existing213",
+    "SurvivingEpisodeLedger": "GA_SURVIVING_CHILD_CARRIER_REV3",
+    "PresentationLedger": "GA_RECOLLECTION_CARRIER_REV3",
+    "MaintenanceGoalLedger": "GA_GOAL_RESULT_CARRIER_REV2",
+    "FormationGovernanceState": "GA_FORMATION_PROTOCOL_CARRIER_REV2",
+    "FormationGovernanceValue": "GA_FORMATION_PROTOCOL_CARRIER_REV2"
+  },
+  "invariants": {
+    "cohort": "Exactly one compiled character/observer; key and every nested holder agree.",
+    "graph": "Canonical unique keys, square rows, zero diagonal, nonnegative bounded lattice and row sums.",
+    "perception": "No new1031 perception member; no copied SEM counter or full observation history.",
+    "protocol": "No map selector or cognitive role/read/family on singleton.",
+    "empty": "Initialized owner values remain present after complete loss; old roots unchanged."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV1.md",
+      "sha256": "ddf980d301c6c788c83050abf1c051a1e1eb43273b76a5fe6015a6f20d970f71"
+    },
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV2.json",
+      "sha256": "e7a8e3e2a0f84cb463769948c908928f0ccbc886b52577706777c0170272c38d"
+    },
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REV2.json",
+      "sha256": "f1749ec448eed234cf5bfd72a6b55f96c019592266f6fa238ba70bc5d4d775b8"
+    }
+  ]
+}

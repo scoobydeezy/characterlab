@@ -1,0 +1,40 @@
+{
+  "status": "VISUAL CLAIM TRANSPORT REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 16,
+  "faults": [
+    {
+      "name": "missing-actual-claims",
+      "detected": true
+    },
+    {
+      "name": "truth-in-place-of-claims",
+      "detected": true
+    },
+    {
+      "name": "unbounded-claim-batch",
+      "detected": true
+    },
+    {
+      "name": "full-source-encoder-read",
+      "detected": true
+    },
+    {
+      "name": "owner-allocates-second-identity",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV2.json",
+      "sha256": "4fce49820a7d631fcdd104f981928914896b5daabcc91d1317120de2edac8f9d"
+    },
+    {
+      "path": "scripts/review-ga-visual-claim-transport.mjs",
+      "sha256": "abf89bbaf946eabdc8eaccbc85e30cb37eb0ba7d2612ac50d3cc56c104bead6d"
+    }
+  ],
+  "limits": [
+    "Exact field delta and accepted allocation-stage correction only.",
+    "Public claim-producer authentication and selected-capability admission remain open."
+  ]
+}

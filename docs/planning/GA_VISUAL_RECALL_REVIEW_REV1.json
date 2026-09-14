@@ -1,0 +1,61 @@
+{
+  "status": "VISUAL RECALL INTEGRATION REVIEW PASS",
+  "faults": [
+    {
+      "name": "component-tag-in-sem",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "VCE-D",
+      "detected": true
+    },
+    {
+      "name": "borrow-unsampled-context",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "VCE-B",
+      "detected": true
+    },
+    {
+      "name": "repeat-visual-observation",
+      "file": "src/campaign3/trialPanelPerception.ts",
+      "witness": "VCE-C",
+      "detected": true
+    },
+    {
+      "name": "event-capacity-bypass",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-N",
+      "detected": true
+    },
+    {
+      "name": "manufacture-current-visual-cue",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-O",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "dcf2d78f0bc2459b2d446d3edcf852afafc60102a1ab0c801ffae0527e19aefa"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "dcf2d78f0bc2459b2d446d3edcf852afafc60102a1ab0c801ffae0527e19aefa"
+    },
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "19e0553a77c41b61ac5012d43403c9ec8a2bdefba4e1811c9029536043b1711b"
+    },
+    {
+      "path": "src/test/visualCueEvent.test.ts",
+      "sha256": "b078f4fb97e21dbb5f936ffea51e58935924f6970331faed8fc18f9865e6528a"
+    },
+    {
+      "path": "scripts/review-ga-visual-recall.mjs",
+      "sha256": "08009b6fa64896b98663c5cdf638c833ce593aca3c02189d50bf1d6175f70da7"
+    }
+  ],
+  "limits": [
+    "Supplied role/subject, fixture serialization and trusted source/lane/allocator remain component premises.",
+    "Source-fixture substitutions expose the coupled recall-capacity and current-sensing boundaries; public registration is not inferred."
+  ]
+}

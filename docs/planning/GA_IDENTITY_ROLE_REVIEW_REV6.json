@@ -1,0 +1,98 @@
+{
+  "status": "SYMBOLIC IDENTITY ROLE REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 124,
+  "identityPositions": 122,
+  "recordBoundaries": 168,
+  "faults": [
+    {
+      "name": "scene-object-as-file",
+      "rejected": true
+    },
+    {
+      "name": "event-role-as-cause",
+      "rejected": true
+    },
+    {
+      "name": "scene-object-as-character",
+      "rejected": true
+    },
+    {
+      "name": "physical-key-as-scalar",
+      "rejected": true
+    },
+    {
+      "name": "physical-as-signal",
+      "rejected": true
+    },
+    {
+      "name": "parallel-anchor",
+      "rejected": true
+    },
+    {
+      "name": "state-key-as-record-field",
+      "rejected": true
+    },
+    {
+      "name": "reuse-appraisal-id-for-concern",
+      "rejected": true
+    },
+    {
+      "name": "opaque-retained-encoding",
+      "rejected": true
+    },
+    {
+      "name": "unit-key-as-namespace",
+      "rejected": true
+    },
+    {
+      "name": "character-is-observer",
+      "rejected": true
+    },
+    {
+      "name": "namespace-only-character",
+      "rejected": true
+    },
+    {
+      "name": "goal-is-generic-referent",
+      "rejected": true
+    },
+    {
+      "name": "observation-is-experience",
+      "rejected": true
+    },
+    {
+      "name": "collection-as-scalar-role",
+      "rejected": true
+    },
+    {
+      "name": "allocate-new-result-as-old-evid",
+      "rejected": true
+    },
+    {
+      "name": "event-file-as-scalar",
+      "rejected": true
+    },
+    {
+      "name": "drop-composite-source-key",
+      "rejected": true
+    },
+    {
+      "name": "claim-unresolved-state-key-roles",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV6.json",
+      "sha256": "9300f2e8f29f565dfb629cc53254201a5d816ded55e1bbaff5a0df8b7d3224fe"
+    },
+    {
+      "path": "scripts/review-ga-identity-role-closure-rev6.mjs",
+      "sha256": "a14d6143783831883584ad4e9ab1823675287c7151fd731b6effaa1c4b0aa34d"
+    }
+  ],
+  "limits": [
+    "Structural crosswalk only; actual canonical role tables and domain/holder checks await final public closure.",
+    "RetainedEncodingUnit now recurses into declared fields; six new-root keys are symbolic; actual compiler checks remain pending."
+  ]
+}

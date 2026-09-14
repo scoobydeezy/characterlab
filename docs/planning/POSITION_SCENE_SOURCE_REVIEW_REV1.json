@@ -1,0 +1,61 @@
+{
+  "status": "POSITION SCENE SOURCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "ignore-visibility",
+      "file": "src/campaign3/positionSceneSource.ts",
+      "witness": "PSS-C",
+      "detected": true
+    },
+    {
+      "name": "reveal-unresolved-role",
+      "file": "src/campaign3/positionSceneSource.ts",
+      "witness": "PSS-C",
+      "detected": true
+    },
+    {
+      "name": "truth-marker-leak",
+      "file": "src/campaign3/positionSceneSource.ts",
+      "witness": "PSS-A",
+      "detected": true
+    },
+    {
+      "name": "authored-order-as-observed",
+      "file": "src/campaign3/positionSceneSource.ts",
+      "witness": "PSS-B",
+      "detected": true
+    },
+    {
+      "name": "world-binding-id-collision",
+      "file": "src/campaign3/positionSceneSource.ts",
+      "witness": "PSS-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/positionSceneSource.ts",
+      "sha256": "62f54127327abbcdb6d7f3a09ef907a4266bf2e5b99b790620e9e6459ad7ad39"
+    },
+    {
+      "path": "src/test/positionSceneSource.test.ts",
+      "sha256": "8bccea6438e78d4d24e6b94ec1e9c76ceb08b8d757fbb760c0419d0276667e80"
+    },
+    {
+      "path": "src/campaign3/positionSceneSource.ts",
+      "sha256": "62f54127327abbcdb6d7f3a09ef907a4266bf2e5b99b790620e9e6459ad7ad39"
+    },
+    {
+      "path": "src/test/positionSceneSource.test.ts",
+      "sha256": "8bccea6438e78d4d24e6b94ec1e9c76ceb08b8d757fbb760c0419d0276667e80"
+    },
+    {
+      "path": "scripts/review-position-scene-source.mjs",
+      "sha256": "b0984e5a3a4cac2de42934587e2e80a7cc84d7dd6046590a289423c27e250257"
+    }
+  ],
+  "limits": [
+    "Actual SEM world materialization and safe multi-item projection; scene-object content qualification remains a compiled-model premise.",
+    "Observation/detection, public producer registration and persistence remain unqualified."
+  ]
+}

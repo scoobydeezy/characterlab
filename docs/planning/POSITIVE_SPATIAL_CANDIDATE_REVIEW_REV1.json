@@ -1,0 +1,51 @@
+{
+  "status": "POSITIVE SPATIAL PROJECTION REVIEW PASS",
+  "faults": [
+    {
+      "name": "include-nonpositive",
+      "witness": "PSC-B",
+      "detected": true
+    },
+    {
+      "name": "retain-sibling-bindings",
+      "witness": "PSC-A",
+      "detected": true
+    },
+    {
+      "name": "retain-evaluation-archive",
+      "witness": "PSC-C",
+      "detected": true
+    },
+    {
+      "name": "alias-trace-rational",
+      "witness": "PSC-D",
+      "detected": true
+    },
+    {
+      "name": "alias-trace-file",
+      "witness": "PSC-D",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/positiveSpatialCandidate.ts",
+      "sha256": "51d9ef85eadc721d7190d44e3867dc558ef66e0ecf7c8d44529b3af29a2d0f9a"
+    },
+    {
+      "path": "src/test/positiveSpatialCandidate.test.ts",
+      "sha256": "344f60c58de8c8636b65b2d5bd6a39c5ad879511e35287b14c4cb324bdcc8eff"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "37402fd123cc177b638b03792e09c71c51454d577625edd4b4b3bbd76a71fc37"
+    },
+    {
+      "path": "scripts/review-positive-spatial-candidate.mjs",
+      "sha256": "a978069797f39670832172b6d9397386c3a0f5914108023468f4c72d2363531e"
+    }
+  ],
+  "limits": [
+    "Projection component only; no public producer/owner or allocation authority."
+  ]
+}

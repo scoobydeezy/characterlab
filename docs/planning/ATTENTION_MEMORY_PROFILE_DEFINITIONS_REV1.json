@@ -1,0 +1,193 @@
+{
+  "status": "DRAFT CLOSED PROFILE/CALIBRATION SHAPES; NOT MODEL COHORT ACCEPTANCE",
+  "definitions": [
+    {
+      "name": "AttentionFeaturePortPolicy",
+      "fields": {
+        "DetectionPermitted": "boolean",
+        "RoleMode": "Exact | Unresolved",
+        "GlyphAvailable": "boolean",
+        "PositionAvailable": "boolean"
+      }
+    },
+    {
+      "name": "AttentionSeriesObservationProfile",
+      "fields": {
+        "ObserverId": "existing ObserverId",
+        "Ports": "ordered list of exactly3 AttentionFeaturePortPolicy",
+        "CuePort": "integer0..2"
+      }
+    },
+    {
+      "name": "AttentionSpatialCalibration",
+      "fields": {
+        "MinX": "integer0..7",
+        "MaxX": "integer0..7",
+        "MinY": "integer0..7",
+        "MaxY": "integer0..7",
+        "FocalWeight": "rational[0,1]",
+        "ResidualPool": "rational[0,1]"
+      }
+    },
+    {
+      "name": "AttentionEncodingCalibration",
+      "fields": {
+        "Base": "exact3/10",
+        "RoleTable": "exact Actor1, Target9/10, Participant3/5",
+        "Allocation": "RoleCalibrated | Spatial | Disabled",
+        "BudgetLaw": "Independent | HistoricalShared | HistoricalHybrid | RetiredFlat",
+        "BudgetFloor": "exact1 or1/5",
+        "ImportantThreshold": "exact1/4",
+        "Need": "Disabled only",
+        "Surprise": "Disabled only"
+      }
+    },
+    {
+      "name": "AttentionAssociationCalibration",
+      "fields": {
+        "Scale": "positive integer",
+        "LearningRate": "nonnegative rational",
+        "DecayRate": "nonnegative rational"
+      }
+    },
+    {
+      "name": "AttentionAccessCalibration",
+      "fields": {
+        "ActivationScale": "positive integer",
+        "Beta": "rational[0,1)",
+        "PresentationDecayRate": "nonnegative rational",
+        "PresentationExponent": "integer1..16",
+        "OmegaBase": "exact1",
+        "OmegaPullBaseline": "exact1",
+        "WinnerCapacity": "integer0..2"
+      }
+    },
+    {
+      "name": "AttentionFeedbackPolicy",
+      "fields": {
+        "Encoding": "Disabled | SpatialResidualModulation",
+        "Retrieval": "Disabled | AssociativePullModulation",
+        "Unavailable": "BaselineWithoutAvailableFeedback only"
+      }
+    },
+    {
+      "name": "AttentionSeriesScheduleDefinition",
+      "fields": {
+        "ProbeAt": "exact0",
+        "TaskActiveFrom": "exact1",
+        "ConcernAt": "exact1",
+        "ReceiverTimes": "strictly increasing list1..8 of integers2..9",
+        "FormationCount": "integer0..4",
+        "CueCount": "integer0..4",
+        "TaskDeadline": "exact20"
+      }
+    }
+  ],
+  "constraints": {
+    "channels": "denied detection emits no role/glyph/position regardless of channel booleans; admitted missing fields stay missing",
+    "cue": "closed model CuePort selects actual physical port before permission/tracking; receiver obtains only its permitted detection/file; no authored memory key",
+    "roles": "derive from actual world binding through admitted role channel; calibration never authors a causal role",
+    "spatial": "Min<=Max on both axes; membership over all permitted preselection positions; peripheral does not mean Incidental",
+    "feedback": "encoding modulation requires Spatial allocation; Known q changes residual P to P*(1-q); retrieval changes omegaPull to1+q; unavailable remains distinct from known0",
+    "schedule": "exact counts equal receiver count; all formation receivers precede cue receivers; one original and one delivery per receiver; preserve source future reads and deadline",
+    "commitment": "every selected profile/calibration definition is committed content under the successor ModelIdentity; no callback/default/uncommitted setting"
+  },
+  "controls": {
+    "selection": "reuse unchanged committed attention policy519, including equal-priority/unlimited comparisons",
+    "continuity": "unchanged observed-marker-tracking law and eight-sweep bound",
+    "graph": "unchanged EAM quantize-before-normalize update; beta0 is local-access comparator",
+    "presentation": "ranking read-only; reinforce only actual emitted winners",
+    "missingSemantics": [
+      "category evidence",
+      "realized Need",
+      "evidence-aware surprise",
+      "positive Cause/Incidental",
+      "capacity narrowing"
+    ]
+  },
+  "pending": [
+    "exact finite model cohort and calibration values for nonfixed fields",
+    "canonical declaration/registration schema and fixed members",
+    "all role descriptors and upstream source manifest",
+    "whole symbolic acceptance before allocation and runtime implementation"
+  ],
+  "review": {
+    "definitions": 8,
+    "fields": 41,
+    "channelConfigurationCases": 16,
+    "faults": [
+      {
+        "name": "fourth-port",
+        "reason": "Expected values to be strictly equal:\n\n4 !== 3\n",
+        "detected": true
+      },
+      {
+        "name": "authored-incidental",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(['Exact','Unresolved'].includes(port.RoleMode))\n",
+        "detected": true
+      },
+      {
+        "name": "cue-memory-key",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(Number.isInteger(c.cuePort)&&c.cuePort>=0&&c.cuePort<=2)\n",
+        "detected": true
+      },
+      {
+        "name": "inverted-focus",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(s.MinX<=s.MaxX&&s.MinY<=s.MaxY)\n",
+        "detected": true
+      },
+      {
+        "name": "encoding-feedback-without-spatial",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(c.encodingFeedback==='Disabled'||c.encodingFeedback==='SpatialResidualModulation'&&c.allocation==='Spatial')\n",
+        "detected": true
+      },
+      {
+        "name": "unstable-beta",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(c.beta>=0&&c.beta<1)\n",
+        "detected": true
+      },
+      {
+        "name": "same-instant-receivers",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(Number.isInteger(t)&&t>=2&&t<=9&&(!i||c.times[i-1]<t))\n",
+        "detected": true
+      },
+      {
+        "name": "overlap-with-concern",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(Number.isInteger(t)&&t>=2&&t<=9&&(!i||c.times[i-1]<t))\n",
+        "detected": true
+      },
+      {
+        "name": "unbounded-formation-history",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(c.times.length>=1&&c.times.length<=8&&c.formations>=0&&c.formations<=4&&c.cues>=0&&c.cues<=4&&c.formations+c.cues===c.times.length)\n",
+        "detected": true
+      },
+      {
+        "name": "drop-counted-receiver",
+        "reason": "The expression evaluated to a falsy value:\n\n  assert(c.times.length>=1&&c.times.length<=8&&c.formations>=0&&c.formations<=4&&c.cues>=0&&c.cues<=4&&c.formations+c.cues===c.times.length)\n",
+        "detected": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_PROFILE_DEFINITIONS_REV1.md",
+      "sha256": "301442b4e97271e935f9ee9bf4f83946d89b51368b770a3f95290309ace228a5"
+    },
+    {
+      "path": "scripts/review-attention-memory-profile-definitions.mjs",
+      "sha256": "2eb336f0fc4e21f9163217666186b48f81ab9ce67188f43f72aa1dbc9b8cb9a0"
+    },
+    {
+      "path": "docs/formal/ENCODING_ACCESS_MATH.md",
+      "sha256": "85df022afbe9031aa46c0242e713b4c35f5bd1838b1c91f52fab395752e28239"
+    },
+    {
+      "path": "docs/formal/SPATIAL_CONTEXT_ALLOCATION_COMPONENT.md",
+      "sha256": "6b201ff6449c7dd4c6ea4fb7391ac0e57e46484d777563d9408456da0ee3b939"
+    }
+  ],
+  "limits": [
+    "Draft configuration constraints only; channels are not executed and numeric operands are not canonical rational codec tests.",
+    "No production profile compiler, exact model cohort or source permission qualification."
+  ]
+}

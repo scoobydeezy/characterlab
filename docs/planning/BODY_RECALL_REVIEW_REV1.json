@@ -1,0 +1,51 @@
+{
+  "status": "BODY RECALL COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "oldest-first",
+      "witness": "BR-A",
+      "detected": true
+    },
+    {
+      "name": "self-cue",
+      "witness": "BR-D",
+      "detected": true
+    },
+    {
+      "name": "reverse-tie",
+      "witness": "BR-F",
+      "detected": true
+    },
+    {
+      "name": "refresh-time",
+      "witness": "BR-H",
+      "detected": true
+    },
+    {
+      "name": "group-only-recall",
+      "witness": "BR-C",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/bodyRecall.ts",
+      "sha256": "8d1fd604f417a030574fa7f1d0057a559fc48c7bad03b24b985fb75493d0eee6"
+    },
+    {
+      "path": "src/test/bodyRecall.test.ts",
+      "sha256": "a3a28d20d5cdb793dbdcb2524a74c65dccd26e422a15265400e0c9d437ee659b"
+    },
+    {
+      "path": "scripts/review-body-recall.mjs",
+      "sha256": "29cd7ce6b43d35503dc2f45c5cac76be7468e12486352eb008446a67c0b816ac"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/BODY_RECALL_TESTS_REV1.json",
+    "sha256": "ab7c63ccb45c4e4e72881d4ff22f0151b0dc128de8d5445bfa5156e38378b494"
+  },
+  "limits": [
+    "Supplied cue identities only; no public cue authentication."
+  ]
+}

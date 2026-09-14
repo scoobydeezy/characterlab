@@ -1,0 +1,55 @@
+{
+  "status": "GENERAL SOURCE SCHEDULE REVIEW PASS",
+  "faults": [
+    {
+      "name": "one-slot-for-two-selectors",
+      "file": "src/campaign3/generalSourceSchedule.ts",
+      "witness": "GSS-B",
+      "detected": true
+    },
+    {
+      "name": "couple-cue-to-encoding",
+      "file": "src/campaign3/generalSourceSchedule.ts",
+      "witness": "GSS-A",
+      "detected": true
+    },
+    {
+      "name": "current-goal-assessment",
+      "file": "src/campaign3/generalSourceSchedule.ts",
+      "witness": "GSS-E",
+      "detected": true
+    },
+    {
+      "name": "lifecycle-assessment-overlap",
+      "file": "src/campaign3/generalSourceSchedule.ts",
+      "witness": "GSS-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalSourceSchedule.ts",
+      "sha256": "05e92fdcfd6aa9403301b5aef58d3ce8865701f0770b5f049c7e125e5fae6ced"
+    },
+    {
+      "path": "src/test/generalSourceSchedule.test.ts",
+      "sha256": "8a8601d364fc706e5cf62b9755428fde7ee64dd46d4731fe7c1867ef028dd4cf"
+    },
+    {
+      "path": "docs/formal/GENERAL_SOURCE_SCHEDULE_COMPONENT.md",
+      "sha256": "2e2e32a90559252fb6133a5037d3a0350fed6b349df5967ee9adebaed41c77d5"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "3780e6572969a919eb62edc55e20e28fc7f0d33b5f5b564f84e062e5d2483df6"
+    },
+    {
+      "path": "scripts/review-general-source-schedule.mjs",
+      "sha256": "1076c15f36d7e282b2c627894d796490bf9a87820b9bdfcda01946c617dc0907"
+    }
+  ],
+  "limits": [
+    "Compiled-data schedule controls; no public admission qualification.",
+    "Actual source coverage, work bounds, identities and runtime completion remain separate."
+  ]
+}

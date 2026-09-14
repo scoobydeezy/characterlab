@@ -1,0 +1,308 @@
+{
+  "version": "ga-registration-carrier/0.2-draft",
+  "status": "SYMBOLIC REGISTRATION WRAPPER; PUBLIC COMPILER OPEN",
+  "records": [
+    {
+      "name": "GeneralDefinitionBinding",
+      "fields": [
+        {
+          "name": "Purpose",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BodySelection",
+              "VisualSelection",
+              "Spatial",
+              "Encoding",
+              "BodyRecall",
+              "GoalBaselineRecall",
+              "EventRecall",
+              "GoalQualification",
+              "Retention",
+              "Association",
+              "GraphRetention",
+              "Feedback",
+              "Workspace",
+              "Concern"
+            ]
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralOutputDeclaration",
+      "fields": [
+        {
+          "name": "Schema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Minimum",
+          "type": {
+            "kind": "ref",
+            "name": "OutputCount"
+          }
+        },
+        {
+          "name": "Maximum",
+          "type": {
+            "kind": "ref",
+            "name": "OutputCount"
+          }
+        },
+        {
+          "name": "IdentityMode",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "FreshOwned",
+              "NestedOwnedAndReserved",
+              "BorrowedOnly",
+              "ObserverFileCounter",
+              "ReservedOwned"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralStageRegistration",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "world",
+              "current-sample",
+              "current-track",
+              "current-bind",
+              "current-classify",
+              "current-freeze",
+              "current-roles",
+              "current-dispatch",
+              "consequence-sample",
+              "consequence-track",
+              "consequence-bind",
+              "consequence-classify",
+              "consequence-freeze",
+              "consequence-roles",
+              "consequence-dispatch",
+              "current-visual-selection",
+              "current-visual-encoding",
+              "current-body-selection",
+              "current-visual-cue",
+              "current-body-cue",
+              "current-event-rank",
+              "current-body-rank",
+              "current-recollection",
+              "consequence-visual-selection",
+              "consequence-visual-encoding",
+              "consequence-body-selection",
+              "consequence-visual-cue",
+              "consequence-body-cue",
+              "consequence-event-rank",
+              "consequence-body-rank",
+              "consequence-recollection",
+              "visual-acquisition-evidence",
+              "body-acquisition-evidence",
+              "ordinary-memory-formation",
+              "event-association-formation",
+              "event-presentation-formation",
+              "prior-concern-workspace",
+              "prior-concern-appraisal",
+              "prior-concern-producer",
+              "encoding-concern-delivery",
+              "recall-concern-delivery",
+              "prior-concern-visual-encoding",
+              "prior-concern-event-rank",
+              "goal-command-proposal",
+              "goal-command-owner",
+              "goal-deadline-owner",
+              "goal-outcome-assessment",
+              "focal-consequence-delivery",
+              "goal-qualification-delivery",
+              "retained-attribution",
+              "attribution-use-dispatch",
+              "ordinary-memory-use",
+              "attribution-result-delivery",
+              "significance-opportunity",
+              "significance-join",
+              "ordinary-memory-significance",
+              "retention-original",
+              "retention-dispatch",
+              "ordinary-memory-retention",
+              "event-association-retention",
+              "event-presentation-cleanup",
+              "event-presentation-dispatch",
+              "event-presentation-owner",
+              "goal-baseline-cue",
+              "goal-baseline-rank",
+              "goal-baseline-recollection",
+              "local-reserve-replenishment"
+            ]
+          }
+        },
+        {
+          "name": "Seam",
+          "type": {
+            "kind": "ref",
+            "name": "SeamId"
+          }
+        },
+        {
+          "name": "Version",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "ref",
+            "name": "EventTypeId"
+          }
+        },
+        {
+          "name": "Phase",
+          "type": {
+            "kind": "ref",
+            "name": "PhaseOrdinal"
+          }
+        },
+        {
+          "name": "Input",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Outputs",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralOutputDeclaration"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "ReadDomain",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "name": "WriteAuthorization",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionWriteAuthorization"
+          }
+        },
+        {
+          "name": "SubjectProjection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "SubjectProjectionRequirement"
+            }
+          }
+        },
+        {
+          "name": "Definitions",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralDefinitionBinding"
+            },
+            "min": 0,
+            "max": 8
+          }
+        }
+      ]
+    }
+  ],
+  "inherited": {
+    "TransitionWriteAuthorization": "existing322",
+    "SubjectProjectionRequirement": "existing266",
+    "CanonicalRecordSchemaRef": "existing254",
+    "StatePathPattern": "existing149"
+  },
+  "primitives": {
+    "OutputCount": {
+      "canonical": "unsigned",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "PhaseOrdinal": {
+      "canonical": "unsigned",
+      "members": [
+        0,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        40,
+        50,
+        110,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        130,
+        140
+      ]
+    }
+  },
+  "constraints": [
+    "Stage selects one fixed reviewed handler contract; no supplied code, accessors or semantic dispatch callback.",
+    "Exact input/output schemas, phase, projection mode, definitions and ReadDomain must match that stage contract.",
+    "Output minima/maxima are declaration bounds; actual branch cardinality and fresh/reserved slots remain mandatory.",
+    "Definition purposes are unique and exactly those required by the selected stage and model.",
+    "All phase140 registrations have no outputs or children; write authority cannot confer runtime-protocol ownership.",
+    "Seam version comes from the implemented component contract; wrapper version does not replace mathematics versions.",
+    "Existing C2 source/prediction registrations retain their accepted wrappers; this wrapper does not reinterpret them."
+  ],
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV2.json",
+      "sha256": "8de392024fea8f836276556cb168590f7aedc519d13273596af3a543def74371"
+    },
+    {
+      "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REV3.json",
+      "sha256": "bd6a8f640d81a7abee08ed96b4e835a6c6db2ac4c7fc14084b60ed1e72a2fd06"
+    },
+    {
+      "path": "docs/planning/GA_LOCAL_REPLENISHMENT_STAGE_REV1.md",
+      "sha256": "186368ed23ad98964beed4d1ba04458b901343402c0015d4895ef14cb9a1c394"
+    }
+  ]
+}

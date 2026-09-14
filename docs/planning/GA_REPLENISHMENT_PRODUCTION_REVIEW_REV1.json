@@ -1,0 +1,45 @@
+{
+  "status": "COMPONENT REPLENISHMENT PRODUCTION REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "stored-anchor-is-materialized",
+      "file": "src/campaign3/localReserveSource.ts",
+      "witness": "LRP-A",
+      "detected": true
+    },
+    {
+      "name": "zero-reanchor-dropped",
+      "file": "src/campaign3/localReserveSource.ts",
+      "witness": "LRP-B",
+      "detected": true
+    },
+    {
+      "name": "mutate-prior-source",
+      "file": "src/campaign3/localReserveSource.ts",
+      "witness": "LRP-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "f91568689006686f00882444cb6313858a07da8c98cbb6f483f6bf9baa059b08"
+    },
+    {
+      "path": "src/test/localReserveReplenishmentProduction.test.ts",
+      "sha256": "061cc0738fbc807ea2e8319b9f21903b2d6b14676d0c28e0b627053e04df30fd"
+    },
+    {
+      "path": "docs/formal/LOCAL_RESERVE_REPLENISHMENT_PRODUCTION_COMPONENT.md",
+      "sha256": "b383b5cb24796aab32ceed713d0c0d6ead860a5b42192f605f65319d268db282"
+    },
+    {
+      "path": "scripts/review-ga-replenishment-production.mjs",
+      "sha256": "16db15146b1e12ba67c72d29963058e67e1f93ca61ff8aea75779a55f9250eed"
+    }
+  ],
+  "limits": [
+    "Actual physical-key admission, canonical state ownership and trace exclusion remain upstream.",
+    "No memory state or public canonical codec is owned by this component."
+  ]
+}

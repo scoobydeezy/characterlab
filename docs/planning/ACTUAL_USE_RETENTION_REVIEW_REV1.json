@@ -1,0 +1,49 @@
+{
+  "status": "ACTUAL USE RETENTION REVIEW PASS",
+  "faults": [
+    {
+      "name": "grant-unconsumed-newer-credit",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-Y",
+      "detected": true
+    },
+    {
+      "name": "discard-actual-consumer-use",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-Y",
+      "detected": true
+    },
+    {
+      "name": "discard-focal-significance",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-Y",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "c32c81b795e5c7bdc460881efadee57331dbb6df00d0a7a8ef98863d8370cb51"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "c32c81b795e5c7bdc460881efadee57331dbb6df00d0a7a8ef98863d8370cb51"
+    },
+    {
+      "path": "docs/planning/GA_ACTUAL_USE_RETENTION_RESOLUTION_REV1.md",
+      "sha256": "39d47e5788215029d2687b23763c4ac047ede2fba8e44a1281b90dd1d3ba771e"
+    },
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "5e178168562cf906cd6d1f763ff1372935d1cdca71753a462db852d4c38a50cc"
+    },
+    {
+      "path": "scripts/review-actual-use-retention.mjs",
+      "sha256": "631a9f14e1997a6be976774d5caa814c10a9b2d9a731f5fc4f6005254944a642"
+    }
+  ],
+  "limits": [
+    "Actual component consumer and retention contrast; public qualification remains open.",
+    "The supplied-use and focal-last controls remain explicit, not public proof."
+  ]
+}

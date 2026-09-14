@@ -1,5 +1,46 @@
 # Reference Mechanism Preservation Ledger
 
+2026-09-13: [Production boundary checkpoint](GENERAL_ATTENTION_PRODUCTION_BOUNDARIES_CHECKPOINT.md)
+executes MEC-007's small-floor footprint comparison through actual canonical Unlimited
+selection and preserves retired-flat1 and historical hybrid's nonconserved total.
+MEC-008/009/010 public model/owner qualification remains OPEN; no reference mechanism
+is retired by these component controls.
+
+2026-09-13 [observed association and bounded owners](GENERAL_ATTENTION_BOUNDED_PERCEPTION_CHECKPOINT.md):
+MEC-007/008/009/010 now compose actual sparse/dense observed acquisitions with
+independent learned-graph recall. Direct episodic cue matching survives graph loss.
+Perception reconstruction uses last windows and existing SEM owners, not a hidden
+source archive. The history-bearing tracker remains a differential control; no
+psychological reduction or public/corpus qualification is inferred.
+
+
+2026-09-13 [requested multimodal checkpoint](GENERAL_ATTENTION_REQUESTED_MULTIMODAL_CHECKPOINT.md):
+MEC-007/010 source, encoding and recall distinctions remain separate. Shared sensing
+does not couple cue admission to acquisition. Literal earlier physical preparation
+preserves accepted phase ordering and introduces no adaptive truth controller. The
+three-item source keeps sparse/dense and independent/shared/hybrid controls expressible;
+no reduction or public qualification is inferred.
+
+2026-09-13 [selected/prior-feedback checkpoint](GENERAL_ATTENTION_SELECTED_FEEDBACK_CHECKPOINT.md):
+MEC-007/010 keep exact encoding/access laws and their explicit earlier-concern
+comparison. Immediate encoding excludes its own later outcome, not lawful prior
+feedback. Known zero, unavailable feedback and disabled modulation remain distinct.
+No psychological reduction or public qualification follows from component passage.
+
+2026-09-13 [selected spatial composition](GENERAL_ATTENTION_SPATIAL_BINDING_CHECKPOINT.md):
+MEC-005's Incidental control remains distinct from the positive spatial candidate.
+MEC-007 semantic role and continuous spatial allocation remain separate operands;
+all four existing encoding-budget laws, including retired-flat, remain explicit
+controls. No mechanism is retired or promoted to public qualification by this join.
+
+2026-09-13 [source integration revision2](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV2.md):
+MEC-007 outcome-relevance and MEC-010 retention remain controls/corpus obligations.
+The explicit panel source, separate retained positional operands and independent
+hidden-delivery comparator preserve observer-side false attribution. The new formation
+component preserves use and significance; the earlier recency-only owner is retained
+as a control. No historical realized-effect law, Need semantics or public qualification
+is inferred. General event segmentation remains a separate future comparator.
+
 **Status:** active preservation gate
 
 **Purpose:** prevent valuable pre-refoundation mechanisms, findings, and fixtures from disappearing without a deliberate decision
@@ -285,3 +326,55 @@ preserve MEC-005 residual allocation, MEC-007/CTL-004 salience and MEC-008/009/0
 learning/access controls. Proposed hard capacity is a new selection candidate, not a
 claim that the historical continuous allocation already implemented top-K. RET-001/002
 remain retired; no copied truth-provenance/category-name shortcut.
+
+2026-09-11 bounded public ATTN: [qualification and deferred obligations](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md)
+establish the finite hard-capacity candidate through actual observer-safe SEM and a
+selected-only consumer. MEC-005 remains CONTROL+CONTRACT for residual allocation;
+MEC-007/CTL-004 remain CONTROL for multiplicative salience. The existing controls,
+dice grammar and identity loop pass all328 historical tests unchanged. No encoding,
+association or later-access mechanism is ported or retired by this qualification.
+The next inventory must give those mechanisms an explicit disposition before any
+strength/readout seam is implemented.
+
+2026-09-11 [general attention component advance](GENERAL_ATTENTION_COMPONENT_CHECKPOINT.md):
+MEC-007/CTL-004 now have selected-evidence multiplicative controls with explicit
+homogeneous prior and disabled need/surprise; these restricted factors do not satisfy
+the missing source clauses. MEC-008/009/010 exact arithmetic is implemented at pure
+component scope, with association/access composition comparisons and no public
+state-writing or cue authority. MEC-005's residual arithmetic has a separately named
+positive spatial candidate; it does not derive or replace historical Incidental.
+RET-001 is still only a named negative comparison; RET-002/006 remain prohibited.
+EXP-007/015 public encoding/probe coverage stays open. Current evidence:72 targeted
+tests,28 detected source faults, and preserved earlier bounded public qualification.
+No reduction verdict, corpus member, reference edit or import follows from this work.
+
+2026-09-12 [accepted encoding lifecycle B](GENERAL_ATTENTION_ENCODING_LIFECYCLE_RESOLUTION.md):
+MEC-007/CTL-004 outcome-dependent Need relevance is investigated as a candidate
+consolidation law over an already encoded episode, not retroactive initial encoding.
+The historical mechanism remains a control; no formula is promoted or retired.
+MEC-008/009/010 association/access/reinforcement distinctions and RET-003/006/010
+remain binding. Perceptual surprise and consequence surprise require separate
+time-local evidence. General public and corpus obligations remain open.
+
+2026-09-12 [causal-credit ruling](GENERAL_ATTENTION_CONSOLIDATION_CREDIT_RESOLUTION.md):
+MEC-007/CTL-004 outcome relevance requires separately traceable observer-side
+attribution in the first consolidation path. Historical EffectProvenance remains
+read-only control evidence, not a permitted source. Temporal experiential association
+is preserved as a distinct future candidate, not rejected or promoted as causal credit.
+
+2026-09-12 [contrastive attribution component](ATTENTION_CONTRASTIVE_ATTRIBUTION_CHECKPOINT.md):
+a replicated observer-side motion/stationary comparison is now a CANDIDATE prerequisite
+to MEC-007 outcome-relevance controls. Its nine tests/six source faults do not port
+the historical realized-effect law, decide final Need ontology or qualify a public
+false-attribution source. MEC-005/007 and EXP-007/015 remain open at integration scope.
+The interoceptive encoding gate has an [accepted separate bounded topology](GENERAL_ATTENTION_INTEROCEPTIVE_ENCODING_RESOLUTION.md);
+raw body samples cannot become an unselected hidden memory sidecar. Shared acquisition
+and shared control remain future comparators. The equal-priority sample gate is a
+qualified component CONTROL, not body salience or public retention. [Signal-per-opportunity
+granularity is accepted](GENERAL_ATTENTION_INTEROCEPTIVE_UNIT_RESOLUTION.md); the grouped
+gate is component-qualified, with the sample-level comparator unchanged. The [synthetic
+three-local-reserve source is authorized](GENERAL_ATTENTION_MULTISIGNAL_BODY_SOURCE_RESOLUTION.md)
+and component-qualified using existing reserve mathematics. The single-source/multiple-
+sensation alternative remains a future BODY comparator. No Need, urgency ranking,
+pressure aggregation or biological reduction follows. Sensor duplication cannot be
+silently counted as distinct bodily phenomena to satisfy a capacity witness.

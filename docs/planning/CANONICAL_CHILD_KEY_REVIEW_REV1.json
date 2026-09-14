@@ -1,0 +1,52 @@
+{
+  "status": "CANONICAL CHILD ADAPTER REVIEW PASS",
+  "faults": [
+    {
+      "name": "reverse-canonical-order",
+      "witness": "CK-B",
+      "detected": true
+    },
+    {
+      "name": "leak-survivor-label",
+      "witness": "CK-A",
+      "detected": true
+    },
+    {
+      "name": "leak-loss-label",
+      "witness": "CK-B",
+      "detected": true
+    },
+    {
+      "name": "share-decoded-key",
+      "witness": "CK-F",
+      "detected": true
+    },
+    {
+      "name": "remove-key-work-bound",
+      "witness": "CK-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/canonicalChildKeys.ts",
+      "sha256": "81fbfeb85242238413ea2ceb37ccd31ebf3b9c1408e66b8b8b721ae4fa41ee94"
+    },
+    {
+      "path": "src/test/canonicalChildKeys.test.ts",
+      "sha256": "9f38488f345b4735786bd6129e774dee018eac5379b3056eb95f65b6406df119"
+    },
+    {
+      "path": "src/campaign3/significanceFirstRetention.ts",
+      "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+    },
+    {
+      "path": "scripts/review-canonical-child-keys.mjs",
+      "sha256": "149b826d467332d2b46c6f1fa10aeb045fff324d8204c25803685155fce004fe"
+    }
+  ],
+  "limits": [
+    "Input key roles/subject and actual producing owner remain upstream obligations.",
+    "Temporary labels never leave the wrapper; no public canonical namespace is allocated here."
+  ]
+}

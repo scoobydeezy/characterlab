@@ -1,0 +1,46 @@
+{
+  "status": "BOUNDED PANEL SOURCE FAULTS DETECTED",
+  "faults": [
+    {
+      "name": "ignore-permission",
+      "witness": "TP-B",
+      "detected": true
+    },
+    {
+      "name": "ignore-visibility",
+      "witness": "TP-B",
+      "detected": true
+    },
+    {
+      "name": "last-display-fallback",
+      "witness": "TP-B",
+      "detected": true
+    },
+    {
+      "name": "zero-is-absent",
+      "witness": "TP-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/trialPanelSource.ts",
+      "sha256": "8a1f9f5c2d619c8d3252e3beb24e81bb80037d406623ae169eeafa032d2f9d9f"
+    },
+    {
+      "path": "src/test/trialPanelSource.test.ts",
+      "sha256": "8f93c40a1fc62af5f20eb58dbd51a94148299b65059186b8a95cca914319ef52"
+    },
+    {
+      "path": "scripts/review-trial-panel-source.mjs",
+      "sha256": "675902fa32992404364310d92260e0c5fb01ec879c0f6743956c61d45eb531a3"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/TRIAL_PANEL_SOURCE_COMPOSITION_TESTS_REV2.json",
+    "sha256": "1be0a22378c90d545e0b38e1331376b868698fb650c56a77708c48b24560641a"
+  },
+  "limits": [
+    "Controlled display source; public observation production/identity authentication not qualified."
+  ]
+}

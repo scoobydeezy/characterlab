@@ -1,0 +1,51 @@
+{
+  "status": "USE PROTECTION POLICY FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "ignore-protection",
+      "witness": "UP-A",
+      "detected": true
+    },
+    {
+      "name": "reverse-protected-recency",
+      "witness": "UP-C",
+      "detected": true
+    },
+    {
+      "name": "credit-siblings",
+      "witness": "UP-B",
+      "detected": true
+    },
+    {
+      "name": "reverse-tie",
+      "witness": "UP-G",
+      "detected": true
+    },
+    {
+      "name": "reject-no-use-bit",
+      "witness": "UP-H",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/useProtectedRetention.ts",
+      "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+    },
+    {
+      "path": "src/test/useProtectedRetention.test.ts",
+      "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+    },
+    {
+      "path": "scripts/review-use-protection.mjs",
+      "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/USE_PROTECTION_TESTS_REV1.json",
+    "sha256": "aa50b02a649feafbd46567f17d66ecd83e6536e7d1c63024c1a4f0b18851fc8a"
+  },
+  "limits": [
+    "Inputs supply qualified-use addresses. No consumer authentication, public write authority or same-barrier ordering is qualified."
+  ]
+}

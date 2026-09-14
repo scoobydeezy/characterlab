@@ -1,0 +1,277 @@
+{
+  "status": "GENERAL ATTENTION COMPONENT ADVANCE; GENERAL ATTN OPEN",
+  "reviewer": "Primary agent self-review under autonomous-work authorization",
+  "regression": {
+    "tests": 72,
+    "files": 11,
+    "newComponentTests": 49,
+    "retainedAttentionTests": 23,
+    "evidence": {
+      "path": "docs/planning/GENERAL_ATTENTION_COMPONENT_REGRESSION_REV1.json",
+      "sha256": "23ea75600f6ab10c1fcc8ad299c79c4f3369a058bea46d33deef5a98b2c60883"
+    }
+  },
+  "componentScopes": {
+    "mathematics": "EAM-A..L plus isolation correction",
+    "tracking": "OMT-A..H plus dense-list correction",
+    "spatial": "SCA-A..H; no Incidental claim",
+    "selectedEncoding": "SEC-A..H plus role isolation correction",
+    "budget": "SBC-A..E",
+    "composition": "EAC-A..D; no persistent writer or actual cue"
+  },
+  "faults": [
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "independent-footprint"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "shared-reinterpreted"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "truncation"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "remainder-tie"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "beta-endpoint"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "future-history"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "name": "summed-pull"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "current-collision"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "previous-collision"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "observation-replay"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "horizon"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "early-private-mutation"
+    },
+    {
+      "receipt": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "name": "sparse-admission"
+    },
+    {
+      "receipt": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "name": "exclusive-boundary"
+    },
+    {
+      "receipt": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "name": "unknown-consumes-pool"
+    },
+    {
+      "receipt": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "name": "no-footprint-division"
+    },
+    {
+      "receipt": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "name": "unknown-as-zero"
+    },
+    {
+      "receipt": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "name": "coordinate-alias"
+    },
+    {
+      "receipt": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "name": "flatten-role"
+    },
+    {
+      "receipt": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "name": "ignore-attention-ablation"
+    },
+    {
+      "receipt": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "name": "ignore-budget-law"
+    },
+    {
+      "receipt": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "name": "retain-selection-capability"
+    },
+    {
+      "receipt": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "name": "infer-need-zero"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "name": "mutable-constants"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "name": "skip-dense-raw"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "name": "shared-role-object"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "name": "erase-small-budget"
+    },
+    {
+      "receipt": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "name": "erase-important-threshold"
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/formal/ENCODING_ACCESS_MATH.md",
+      "sha256": "85df022afbe9031aa46c0242e713b4c35f5bd1838b1c91f52fab395752e28239"
+    },
+    {
+      "path": "docs/formal/OBSERVED_MARKER_TRACKING_COMPONENT.md",
+      "sha256": "cb395b4bb144c5e099107ed998f98ec72c3eb1dc3e71dbe87c0b00fc9f590e4b"
+    },
+    {
+      "path": "docs/formal/SELECTED_ENCODING_BUDGET_CONTROL.md",
+      "sha256": "801866898567371a268a8e2965946191095674ed07eb9b9dbaee4ab556712ad0"
+    },
+    {
+      "path": "docs/formal/SELECTED_ENCODING_COMPONENT.md",
+      "sha256": "ad9fdbd2a17ba6168f9df3331ee8a916ef4c6690eab81e29e900a00fdeffe850"
+    },
+    {
+      "path": "docs/formal/SPATIAL_CONTEXT_ALLOCATION_COMPONENT.md",
+      "sha256": "6b201ff6449c7dd4c6ea4fb7391ac0e57e46484d777563d9408456da0ee3b939"
+    },
+    {
+      "path": "docs/planning/ENCODING_ASSOCIATION_COMPOSITION_VECTORS.md",
+      "sha256": "00696286c9770b2a2445385e88de7e38dc17c0db8ef545b08d85dd565fa16e8a"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_CLOSURE_PLAN.md",
+      "sha256": "f06c6c07e34d5c15467b5b01fb3b77bc59ae6fd1488e9cd56a2558e290de92fc"
+    },
+    {
+      "path": "scripts/qualify-general-attention-components.mjs",
+      "sha256": "c57d055f35bd2cdec344dcff135191bd3b547e617a0636407c9e290722e74640"
+    },
+    {
+      "path": "scripts/review-encoding-access-math-forward.mjs",
+      "sha256": "326d0c1a74b9776de4a16d9cf0a419b6c2c339914f1f4fd99594f648343f9d70"
+    },
+    {
+      "path": "scripts/review-encoding-isolation-and-budget.mjs",
+      "sha256": "8c61a596fb8687236cf39fbe36c58c3c0888de6eb9da0250875e8d86edc26e23"
+    },
+    {
+      "path": "scripts/review-observed-marker-tracking-forward.mjs",
+      "sha256": "58b260d1040fd28ecb076abd6d6b7023cf76581ac230804d16c8631832ecfa2d"
+    },
+    {
+      "path": "scripts/review-selected-encoding-forward.mjs",
+      "sha256": "a4984105c1358efacfe583a29a76fc97128451b2193adaa4ce248aa202ce61bb"
+    },
+    {
+      "path": "scripts/review-spatial-context-allocation.mjs",
+      "sha256": "6286794f5a4221667d96ac45358138fb0fd5cdc18238165e82d382c261400903"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2"
+    },
+    {
+      "path": "src/campaign3/selectedEncoding.ts",
+      "sha256": "77ab07998dad545d8fdd5b53513b4a96251d79a9b7a2a0cea94c83d2a4ce50f3"
+    },
+    {
+      "path": "src/campaign3/selectedEncodingBudgetControl.ts",
+      "sha256": "c673995d73476595ab8b241b3c7efd002833948c57a0ba17f7bdf4a88fa99294"
+    },
+    {
+      "path": "src/campaign3/spatialContextAllocation.ts",
+      "sha256": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "src/test/encodingAccessMath.test.ts",
+      "sha256": "ff6053709ebb4da8729ac08cdd9d08b24913dd12f3fbc6216e4026028e58d5f2"
+    },
+    {
+      "path": "src/test/encodingAssociationComposition.test.ts",
+      "sha256": "fe1920a108afacce6fca0a210994bb1038edd843f3a66c44e0deb0ed23a45b82"
+    },
+    {
+      "path": "src/test/encodingIsolation.test.ts",
+      "sha256": "c65081e0645c72570cdfd81b43015d8a3bf4f7feaa2b9aa5e151b42a2b67c18e"
+    },
+    {
+      "path": "src/test/observedMarkerTracking.test.ts",
+      "sha256": "2e6cf1a0086478ad7732a1b82f4f51d68ea4dadf44b386418a95ee71dba0f466"
+    },
+    {
+      "path": "src/test/observedMarkerTrackingShape.test.ts",
+      "sha256": "8b37ce4eb0f37572d5ada75df77bf7879f35e3d47cac28cd5856b7379c299333"
+    },
+    {
+      "path": "src/test/selectedEncoding.test.ts",
+      "sha256": "abcdd2354e571ee00188df8d0bd3923acba8705d40942d6aaf310b0124547325"
+    },
+    {
+      "path": "src/test/selectedEncodingBudgetControl.test.ts",
+      "sha256": "09e233ef287400ae51c145578389a86913dc67a2134113d803e692d9b52fc6c7"
+    },
+    {
+      "path": "src/test/spatialContextAllocation.test.ts",
+      "sha256": "75a32c618abcd5d5152ac8921901f85e456061cca11439a2943c199101bc9034"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+      "sha256": "1f41582706308f3614377411d5b8e1ee24823059959763b38534f44ac174d57d"
+    },
+    {
+      "path": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV2.json",
+      "sha256": "19547c5886a993fb76ebec4ad90ea58835a560f4245e48e2dfca8230d89e98d1"
+    },
+    {
+      "path": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+      "sha256": "184abe1d42f6d9b5869b4c615f94bc51ad56a50e5f4cf348388228b5570d83bb"
+    },
+    {
+      "path": "docs/planning/SELECTED_ENCODING_REVIEW_REV2.json",
+      "sha256": "1ce75eeea96507d3724e2d9b573b662d9c584971d16388410a025533cf7c6416"
+    },
+    {
+      "path": "docs/planning/ENCODING_ISOLATION_AND_BUDGET_REVIEW_REV1.json",
+      "sha256": "e3b87de80698334c6e3099e47204f99ce4d0fbb973dfc224fbc9fa3ded66d0e9"
+    }
+  ],
+  "limits": [
+    "No new public encoding, owner projection, persistent memory/association writer, authenticated cue, delayed concern join or corpus promotion qualified.",
+    "Earlier reviewed hashes remain historical; current forward receipts govern corrected sources.",
+    "General ATTN, Campaign3 and corpus intake remain open. No new numeric allocation or model commitment."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "status": "MARKER WINDOW SOURCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "false-continuity-with-ambiguous-current-glyph",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-A",
+      "detected": true
+    },
+    {
+      "name": "namespace-collision",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-file-ceiling",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-G",
+      "detected": true
+    },
+    {
+      "name": "preview-aliases-owner-candidate",
+      "file": "src/campaign3/windowMarkerTransaction.ts",
+      "witness": "WMT-A",
+      "detected": true
+    },
+    {
+      "name": "skip-source-window-commit",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-H",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/markerWindowTracking.ts",
+      "sha256": "1673a9b4ac50c29d2de1bc7c4bf7945360d13bae0ce9eb341deb43b9953dcad9"
+    },
+    {
+      "path": "src/test/markerWindowTracking.test.ts",
+      "sha256": "1a3bf86a3c16567035456cc1d681b5cc04b4035c7f9b3d27b2d3243492a22f78"
+    },
+    {
+      "path": "src/campaign3/windowMarkerTransaction.ts",
+      "sha256": "6b5be550a535af24cf4383bdb4949223e554f50e2550a21869ad6f394d62d277"
+    },
+    {
+      "path": "src/test/windowMarkerTransaction.test.ts",
+      "sha256": "a329f9b05af185270d653d8c8c5421ecd973cab2ef42fb4704995c35f7ebc433"
+    },
+    {
+      "path": "src/campaign3/generalSourceOpportunity.ts",
+      "sha256": "e24dedffe0e7f24ab6bd33336523e19bdee55410d23b090581c00394f81c5201"
+    },
+    {
+      "path": "src/test/generalSourceOpportunity.test.ts",
+      "sha256": "88d0d24ac5e99d274ac6e301e367976b3eb0217b4e58cbc7c2d4f0f0f014aa72"
+    },
+    {
+      "path": "scripts/review-marker-window-source.mjs",
+      "sha256": "8527830f58d3ebd984e124a3b6f77ca802f60d532c2bb675e20a7b769896cbff"
+    }
+  ],
+  "limits": [
+    "Bounded source/window component; public state admission and whole-prefix restoration remain open.",
+    "Source replay protection and ten-sweep admission stay with runtime and compiled schedule."
+  ]
+}

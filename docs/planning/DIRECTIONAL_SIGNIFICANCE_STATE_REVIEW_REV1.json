@@ -1,0 +1,41 @@
+{
+  "status": "DIRECTIONAL SIGNIFICANCE STATE FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "overwrite-earlier-direction",
+      "witness": "DS-A",
+      "detected": true
+    },
+    {
+      "name": "leak-credit-into-use",
+      "witness": "DS-C",
+      "detected": true
+    },
+    {
+      "name": "erase-survivor-significance",
+      "witness": "DS-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/directionalSignificanceState.ts",
+      "sha256": "d54698a21827dc276b5c441e0f791d78365681c4d22cb64c804811b2edea90cb"
+    },
+    {
+      "path": "src/test/directionalSignificanceState.test.ts",
+      "sha256": "d6c0bf65e0c562f8872173b7e8f56eb69d877c05e93967860ee4f137be1f153b"
+    },
+    {
+      "path": "scripts/review-directional-significance-state.mjs",
+      "sha256": "c8c531fe1ec5dafc4c97588702ca2ea95916b74ea44f7a5cc0c6f711c92f9752"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/DIRECTIONAL_SIGNIFICANCE_STATE_TESTS_REV1.json",
+    "sha256": "d6d816ccfe99663072993ce0e63d476f85dcbf7b8ced7e7f374483067387658c"
+  },
+  "limits": [
+    "Supplied-qualified credit algebra, not public source authentication or transaction/persistence proof."
+  ]
+}

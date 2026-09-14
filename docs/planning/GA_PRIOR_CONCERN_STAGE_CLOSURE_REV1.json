@@ -1,0 +1,240 @@
+{
+  "version": "ga-prior-concern-stage-closure/0.1-draft",
+  "status": "SYMBOLIC SLICE; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "PriorConcernAppraisalInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Workspace",
+          "type": {
+            "kind": "ref",
+            "name": "TaskWorkspace"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernProducerInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Appraisal",
+          "type": {
+            "kind": "ref",
+            "name": "TaskAppraisal"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernDeliveryInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "prior-concern-workspace",
+      "phase": 40,
+      "input": "DeliberationOpportunity/377",
+      "outputs": [
+        "TaskWorkspace/381"
+      ],
+      "allocation": "One WorkspaceOccurrenceId/1128",
+      "next": [
+        "prior-concern-appraisal"
+      ],
+      "reads": [
+        "Existing subject TaskCommitmentState",
+        "Existing subject MeasurementPredictionState"
+      ],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "readGate": "Existing workspace availability/selection law; no unselected-task read"
+    },
+    {
+      "name": "prior-concern-appraisal",
+      "phase": 50,
+      "input": "PriorConcernAppraisalInput",
+      "outputs": [
+        "TaskAppraisal/384"
+      ],
+      "allocation": "One AppraisalOccurrenceId/1129",
+      "next": [
+        "prior-concern-producer"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject"
+    },
+    {
+      "name": "prior-concern-producer",
+      "phase": 50,
+      "input": "PriorConcernProducerInput",
+      "outputs": [
+        "TaskConcern/388"
+      ],
+      "allocation": "One ConcernOccurrenceId/1130",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "future": [
+        "encoding-concern-delivery",
+        "recall-concern-delivery"
+      ],
+      "futureGate": "Only declared target consumer slots; strict later instant, at most one per kind per receiving original",
+      "projectionOutput": "Exact projectPriorConcern result from this actual TaskConcern; NoSelectedTask omits concern identity"
+    },
+    {
+      "name": "encoding-concern-delivery",
+      "phase": 15,
+      "input": "PriorConcernDeliveryInput",
+      "outputs": [
+        "FeedbackDelivery"
+      ],
+      "allocation": "None",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "joinReadiness": "Actual completed delivery, not allocated parent",
+      "consumer": "prior-concern-visual-encoding"
+    },
+    {
+      "name": "recall-concern-delivery",
+      "phase": 15,
+      "input": "PriorConcernDeliveryInput",
+      "outputs": [
+        "FeedbackDelivery"
+      ],
+      "allocation": "None",
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "joinReadiness": "Actual completed delivery, not allocated parent",
+      "consumer": "prior-concern-event-rank"
+    },
+    {
+      "name": "prior-concern-visual-encoding",
+      "phase": 40,
+      "input": "PriorConcernEncodingInput",
+      "outputs": [
+        "PriorConcernEncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "allocation": "None",
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject"
+    },
+    {
+      "name": "prior-concern-event-rank",
+      "phase": 40,
+      "input": "PriorConcernRecallInput",
+      "outputs": [
+        "PriorConcernRecallEvaluation"
+      ],
+      "allocation": "None",
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "route": [],
+      "projection": "Required PRJ/IDN after exact event/output admission; nested CharacterId equals projected subject",
+      "readGate": "AvailableCue"
+    }
+  ],
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "join": {
+    "directParent": "Actual selected preparation or cue completion",
+    "additionalParent": "Exact completed consumer-specific delivery",
+    "expectedInput": "Exact run/event/payload/target-original/instant/subject association checked before PRJ and content reads",
+    "consumption": "One delivery per consumer; transactional once-only, no successful unresolved target",
+    "persistence": "Independent complete-prefix replay and exact pending-queue equality; private map is not a save certificate",
+    "nestedTruth": "No TaskConcern/Appraisal/Workspace/forecast payload reaches encoder/rank"
+  },
+  "variant": {
+    "scope": "Current lane only in this first bounded feedback model",
+    "selection": "Same selection and allocation slots; replace downstream encoding/rank registrations, never execute both variants",
+    "empty": "Empty selected and unavailable cue still complete expected joins; no acquisition/memory read respectively",
+    "disabled": "Delivery checks remain active; disabled numeric modulation is a named model comparator",
+    "body": "No body feedback variant or shared body/event recall budget"
+  },
+  "work": {
+    "producerInstant": 3,
+    "receivingOverheadMaximum": 2,
+    "deliveryCount": "One per declared encoding/recall consumer slot, at most two per target original",
+    "wholeModelCeiling": null
+  },
+  "externalTargets": [
+    "visual-acquisition-evidence",
+    "current-recollection"
+  ],
+  "sources": [
+    {
+      "path": "src/campaign2/cognitiveExecution.ts",
+      "sha256": "3680f20a58ea145a0da5530c420e6312bb787b1b9a16fba9e0022b11427319ab"
+    },
+    {
+      "path": "src/campaign3/priorConcernFeedback.ts",
+      "sha256": "79893414cdbf74f54e8d454534a2ca236566ee98acf7978f2d759f21ff2d8251"
+    },
+    {
+      "path": "src/campaign3/visualFormationEvidence.ts",
+      "sha256": "7766369e5712de9d0c34771e8c40b8c8c64e271afc3f7579014b7978177bd53b"
+    },
+    {
+      "path": "docs/planning/ATTENTION_FEEDBACK_JOIN_BINDING_REV2.md",
+      "sha256": "0d57a17fa90b807e38b60959d62530fd498681106636bc393c10bc3b311ff1fd"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_FEEDBACK_CARRIER_REV1.json",
+      "sha256": "bf14cf475c37285c825b69d5c70de5d0008fe80a120669d009d3319358933b4b"
+    }
+  ]
+}

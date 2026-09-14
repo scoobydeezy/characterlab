@@ -1,0 +1,81 @@
+{
+  "version": "ga-event-presentation-stage-closure/0.1-draft",
+  "status": "SYMBOLIC STAGE SLICE; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "GeneralEventPresentationPlan",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "event-presentation-dispatch",
+      "phase": 130,
+      "reads": [],
+      "writes": [],
+      "next": [
+        "event-presentation-owner"
+      ],
+      "input": "PresentationInput",
+      "outputs": [],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 after exact parent and recollection-output membership"
+    },
+    {
+      "name": "event-presentation-owner",
+      "phase": 140,
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "next": [],
+      "batch": "Common B0; actual ordinary-memory result descriptor for complete loss only; no sibling reads",
+      "input": "PresentationInput",
+      "outputs": [],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 after exact parent and recollection-output membership"
+    }
+  ],
+  "producer": "Actual event-recollection publisher for the exact targeted original; explicit plan and nonempty actual winner output required",
+  "excluded": [
+    "Body recollection",
+    "Cue alone",
+    "Rank alone",
+    "Baseline read",
+    "Attribution use alone",
+    "Empty publication"
+  ],
+  "sliceEventSubtotal": 2,
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_EVENT_PRESENTATION_STAGE_CLOSURE_REV1.md",
+      "sha256": "d3372f8d9b332c8bf6edc1e5c2320e29b5822c3c4cc54abc7b404c91d80811f2"
+    },
+    {
+      "path": "docs/formal/RECOLLECTION_PRODUCTION_COMPONENT.md",
+      "sha256": "f33f968cacace112827e66cb8b65610d9923a5f65244588c22e400a13feccf6d"
+    },
+    {
+      "path": "docs/formal/EVENT_PRESENTATION_SETTLEMENT_COMPONENT.md",
+      "sha256": "0a6077e4aa47623de96aa3bc38a591cef3e6e6378b693612737edc7cc1b252c9"
+    }
+  ]
+}

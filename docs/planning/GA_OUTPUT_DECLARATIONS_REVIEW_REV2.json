@@ -1,0 +1,85 @@
+{
+  "status": "SYMBOLIC OUTPUT DECLARATION REVIEW PASS; PUBLIC ADAPTER OPEN",
+  "stageTemplates": 67,
+  "distinctOutputs": 33,
+  "faults": [
+    {
+      "name": "replenishment-invents-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "unknown-parallel-family",
+      "rejected": true
+    },
+    {
+      "name": "freeze-reallocates",
+      "rejected": true
+    },
+    {
+      "name": "empty-selector-skips-identity",
+      "rejected": true
+    },
+    {
+      "name": "empty-recall-placeholder",
+      "rejected": true
+    },
+    {
+      "name": "missing-baseline-producer",
+      "rejected": true
+    },
+    {
+      "name": "owner-emits",
+      "rejected": true
+    },
+    {
+      "name": "transport-own-identity",
+      "rejected": true
+    },
+    {
+      "name": "unavailable-result-dropped",
+      "rejected": true
+    },
+    {
+      "name": "source-omits-observation-slot",
+      "rejected": true
+    },
+    {
+      "name": "hidden-truth-bindings-omitted",
+      "rejected": true
+    },
+    {
+      "name": "per-child-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "work-count-inferred",
+      "rejected": true
+    },
+    {
+      "name": "permanent-allocation-slipped-in",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REV3.json",
+      "sha256": "bd6a8f640d81a7abee08ed96b4e835a6c6db2ac4c7fc14084b60ed1e72a2fd06"
+    },
+    {
+      "path": "scripts/review-ga-output-declarations-rev2.mjs",
+      "sha256": "2cc1ed3f7c8f34d2b19adc164ccac3f3f81b5017ca74e0a283df35f87a671377"
+    },
+    {
+      "path": "docs/formal/ATTENTION_ALLOCATION_TABLE.json",
+      "sha256": "3afeaf28c4e3485bc4acdf96e544f42f3c83f2645e62859c9b4aa3f7c7812eea"
+    },
+    {
+      "path": "docs/formal/TASK_COGNITIVE_ALLOCATION_TABLE.json",
+      "sha256": "5f326e56d8da5591ca17795d5d5129aab091c43a52876b17fa2312374f8c516e"
+    }
+  ],
+  "limits": [
+    "Static coverage and ownership checks only, not executed runtime branch/slot validation.",
+    "Revision 1 used unregistered descriptive family names and is superseded by revision 2; no numbers were assigned."
+  ]
+}

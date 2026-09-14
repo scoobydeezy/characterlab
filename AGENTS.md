@@ -2,6 +2,14 @@
 
 Read this file before planning or implementing work in this repository.
 
+## Campaign 3 local decisions and escalation
+
+Follow `docs/planning/CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md` (user directive,
+effective 2026-09-13). Resolve conservative bounded choices locally using accepted
+architectural precedent, preserve meaningful comparators and report LOCAL DISPOSITION.
+Behavioral differences, finite fixture scope and deterministic representation choices
+alone are not owner blockers. Escalate only under that policy's architectural criteria.
+
 ## Architectural authority
 
 1. `CharacterLab — Ideal Character Architecture North Star.md` defines the required character capabilities, invariants, and research posture.

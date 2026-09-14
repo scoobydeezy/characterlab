@@ -1,0 +1,478 @@
+{
+  "version": "ga-acquisition-recall-stage-closure/0.1-draft",
+  "status": "SYMBOLIC SLICE; WHOLE PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "VisualAcquisitionEvidenceInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Candidate",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveVisualCandidate"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "CueEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFormationOwnerInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionFormationEvidence"
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "current-visual-selection",
+      "phase": 40,
+      "input": "VisualSelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "current-visual-encoding"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-visual-encoding",
+      "phase": 40,
+      "input": "EncodingJoinInput",
+      "outputs": [
+        "EncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-body-selection",
+      "phase": 40,
+      "input": "BodySelectionInput",
+      "outputs": [
+        "BodySelectionAudit",
+        "BodySelectedView"
+      ],
+      "next": [
+        "body-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-visual-cue",
+      "phase": 40,
+      "input": "VisualCueInput",
+      "outputs": [
+        "CueEvidence"
+      ],
+      "next": [
+        "current-event-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-body-cue",
+      "phase": 40,
+      "input": "BodyCueInput",
+      "outputs": [
+        "BodySignalCue"
+      ],
+      "next": [
+        "current-body-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "current-event-rank",
+      "phase": 40,
+      "input": "EventRecallInput",
+      "outputs": [
+        "EventRecallResult"
+      ],
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "AvailableCue"
+    },
+    {
+      "name": "current-body-rank",
+      "phase": 40,
+      "input": "BodyRecallInput",
+      "outputs": [
+        "BodyRecallResult"
+      ],
+      "next": [
+        "current-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "PresentCue"
+    },
+    {
+      "name": "current-recollection",
+      "phase": 40,
+      "input": "RecollectionInput",
+      "outputs": [
+        "Recollection"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "One ProposedRecollectionOccurrenceId per actual winner; 0..32",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-selection",
+      "phase": 130,
+      "input": "VisualSelectionInput",
+      "outputs": [
+        "AttentionSelectionAudit",
+        "ExtendedSelected"
+      ],
+      "next": [
+        "consequence-visual-encoding"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-encoding",
+      "phase": 130,
+      "input": "EncodingJoinInput",
+      "outputs": [
+        "EncodingEvaluation",
+        "PositiveVisualCandidate"
+      ],
+      "next": [
+        "visual-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-body-selection",
+      "phase": 130,
+      "input": "BodySelectionInput",
+      "outputs": [
+        "BodySelectionAudit",
+        "BodySelectedView"
+      ],
+      "next": [
+        "body-acquisition-evidence"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One SelectionOccurrenceId/1143",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-visual-cue",
+      "phase": 130,
+      "input": "VisualCueInput",
+      "outputs": [
+        "CueEvidence"
+      ],
+      "next": [
+        "consequence-event-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-body-cue",
+      "phase": 130,
+      "input": "BodyCueInput",
+      "outputs": [
+        "BodySignalCue"
+      ],
+      "next": [
+        "consequence-body-rank"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "consequence-event-rank",
+      "phase": 130,
+      "input": "EventRecallInput",
+      "outputs": [
+        "EventRecallResult"
+      ],
+      "next": [
+        "consequence-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState",
+        "GeneralAssociationState",
+        "GeneralPresentationState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "AvailableCue"
+    },
+    {
+      "name": "consequence-body-rank",
+      "phase": 130,
+      "input": "BodyRecallInput",
+      "outputs": [
+        "BodyRecallResult"
+      ],
+      "next": [
+        "consequence-recollection"
+      ],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [],
+      "allocation": "None",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "PresentCue"
+    },
+    {
+      "name": "consequence-recollection",
+      "phase": 130,
+      "input": "RecollectionInput",
+      "outputs": [
+        "Recollection"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "One ProposedRecollectionOccurrenceId per actual winner; 0..32",
+      "route": [],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "visual-acquisition-evidence",
+      "phase": 130,
+      "input": "VisualAcquisitionEvidenceInput",
+      "outputs": [
+        "AcquisitionFormationEvidence"
+      ],
+      "next": [
+        "ordinary-memory-formation",
+        "event-association-formation",
+        "event-presentation-formation"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One AcquisitionOccurrenceId iff positive; otherwise zero",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "body-acquisition-evidence",
+      "phase": 130,
+      "input": "BodyAcquisitionEvidenceInput",
+      "outputs": [
+        "AcquisitionFormationEvidence"
+      ],
+      "next": [
+        "ordinary-memory-formation"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One AcquisitionOccurrenceId iff positive; otherwise zero",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "NoReads"
+    },
+    {
+      "name": "ordinary-memory-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "Either acquisition kind"
+    },
+    {
+      "name": "event-association-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralAssociationState"
+      ],
+      "writes": [
+        "GeneralAssociationState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "EventContinuant only"
+    },
+    {
+      "name": "event-presentation-formation",
+      "phase": 140,
+      "input": "GeneralFormationOwnerInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralPresentationState"
+      ],
+      "writes": [
+        "GeneralPresentationState"
+      ],
+      "allocation": "None",
+      "route": [
+        "route/character-learning"
+      ],
+      "projection": "Required PRJ/IDN via field1 ObserverId after actual producer admission",
+      "readGate": "Always",
+      "batch": "Common B0; declared validated owner-result composition; no sibling reads",
+      "contentGate": "EventContinuant only"
+    }
+  ],
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sliceEventSubtotal": 15,
+  "withSourceEventSubtotal": 23,
+  "protocolHooks": {
+    "enroll": "After each actual completed selector, including empty; no cognitive read",
+    "reconcile": "Validated complete ordinary-owner result before whole-instant commit",
+    "eventCount": 0,
+    "route": []
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.md",
+      "sha256": "8ce0b3e06de8193d0ff6a3d43d97e28e4acb1c6cd787c178eb0c7f11622c6f84"
+    },
+    {
+      "path": "docs/planning/ATTENTION_ACQUISITION_FORMATION_PROTOCOL_REV1.md",
+      "sha256": "161a7826a032fbb2ae74d541aacca803bb48fafd6f10d944db100129d75e83ff"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.json",
+      "sha256": "fb000854da57773986ceb588d41c5188704a5fa33bb731c9eb6127cd7d45d597"
+    }
+  ]
+}

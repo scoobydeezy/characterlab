@@ -1,0 +1,65 @@
+{
+  "status": "LOCAL RESERVE SAMPLE BRIDGE COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "observe-unrequested-channels",
+      "file": "src/campaign3/localReserveSource.ts",
+      "witness": "LRO-E",
+      "detected": true
+    },
+    {
+      "name": "claim-old-producer",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-B",
+      "detected": true
+    },
+    {
+      "name": "reuse-observation",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-D",
+      "detected": true
+    },
+    {
+      "name": "observer-input-alias",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-F",
+      "detected": true
+    },
+    {
+      "name": "cue-accepts-foreign-producer",
+      "file": "src/campaign3/bodySignalCue.ts",
+      "witness": "LRO-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/localReserveObservation.ts",
+      "sha256": "d8c4a35e123b5407968e5ab41c48982ead6d6d38db3beb97312c284f0884181c"
+    },
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "e75a4987d153a532a5de42daee85cb146e0b5afcfdec83930dda3c3a01fa29b5"
+    },
+    {
+      "path": "src/campaign3/bodySignalCue.ts",
+      "sha256": "c2b5e8fe89e43f55edbb2605e565600aba4102e8fc3e150a3618e814569d9657"
+    },
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "373a75482eaa03ed3bc7e38631331d3a418d2d35468c15e094f2f30521a13914"
+    },
+    {
+      "path": "src/test/localReserveObservation.test.ts",
+      "sha256": "a1dd2440ea5be4611a2274d02a1744eae63a9c13f57e1ce1a995d368fb0449ca"
+    },
+    {
+      "path": "scripts/review-local-reserve-observation.mjs",
+      "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+    }
+  ],
+  "limits": [
+    "Actual source projection and exact component producer versions; public original/completion/subject authentication remain unqualified.",
+    "Allocator is supplied by the trusted fixture coordinator; scheduler rollback and public SEM reservation are separate gates."
+  ]
+}

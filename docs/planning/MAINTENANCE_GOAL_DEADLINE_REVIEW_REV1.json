@@ -1,0 +1,49 @@
+{
+  "status": "MAINTENANCE GOAL DEADLINE REVIEW PASS",
+  "faults": [
+    {
+      "name": "expire-withdrawn",
+      "file": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "witness": "GD-B",
+      "detected": true
+    },
+    {
+      "name": "deadline-time-not-bound",
+      "file": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "witness": "GD-C",
+      "detected": true
+    },
+    {
+      "name": "withdrawal-history-rewritten",
+      "file": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "witness": "GD-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "sha256": "85d74fc284a7b616af83f6e629ef892ffca171855824a029ff8ec4f0efa80205"
+    },
+    {
+      "path": "src/test/maintenanceGoalDeadline.test.ts",
+      "sha256": "dafabeb9da3db1af8d95c0d2589ec3ac611488b22f34d12d4223234b8428e0a5"
+    },
+    {
+      "path": "docs/formal/MAINTENANCE_GOAL_DEADLINE_COMPONENT.md",
+      "sha256": "ef39898707f0c03a7c94f74a038b9915327f365cf6c1425b48a214474ab89a52"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "a154c54d1c1ab6e26ce1541dc33f6134dc7f30959b0fb6329586c8dffe3bbfec"
+    },
+    {
+      "path": "scripts/review-maintenance-goal-deadline.mjs",
+      "sha256": "3c6ed87eb1ad7c92468f9dce0cab243b34ce2b4c313aa701f30b2a7732d13a18"
+    }
+  ],
+  "limits": [
+    "Actual lifecycle owner guard and source composition; not registered deadline authentication.",
+    "Scheduling association, once-only ingress, PRJ and public persistence remain open."
+  ]
+}

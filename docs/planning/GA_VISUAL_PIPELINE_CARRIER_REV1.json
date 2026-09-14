@@ -1,0 +1,689 @@
+{
+  "version": "ga-visual-pipeline-carrier/0.1-draft",
+  "status": "SYMBOLIC FIELD INVENTORY; NOT ALLOCATION INPUT",
+  "records": [
+    {
+      "name": "GridPosition",
+      "fields": [
+        {
+          "name": "X",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "Y",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservedFeatureDetection",
+      "fields": [
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "ref",
+            "name": "CurrentDetectionId"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "EventRoleEvidence"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "Glyph"
+            }
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "GridPosition"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ExtendedObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "EventDetection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentEventDetectionId"
+            }
+          }
+        },
+        {
+          "name": "Detections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "ObservedFeatureDetection"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualOpportunityEvidence",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ExtendedObservation"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PreRecognitionSemanticExperience"
+            }
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SelectedSpatialWitness",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "ref",
+            "name": "CurrentDetectionId"
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "GridPosition"
+            }
+          }
+        },
+        {
+          "name": "Class",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "SpatialFocal",
+              "SpatialPeripheral",
+              "SpatialUnknown"
+            ]
+          }
+        },
+        {
+          "name": "PeripheralCount",
+          "type": {
+            "kind": "ref",
+            "name": "ViewCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SpatialPreparation",
+      "fields": [
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "ref",
+            "name": "PreRecognitionSemanticExperience"
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Witnesses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            },
+            "min": 1,
+            "max": 3
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualSelectionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "VisualOpportunityEvidence"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ExtendedSelected",
+      "fields": [
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "SelectedEvidenceView"
+          }
+        },
+        {
+          "name": "SpatialWitnesses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingJoinInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "ExtendedSelected"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingFactors",
+      "fields": [
+        {
+          "name": "Base",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Attention",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Raw",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingEvaluationRow",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Positive",
+              "KnownZero",
+              "UnavailableAllocation"
+            ]
+          }
+        },
+        {
+          "name": "Factors",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "EncodingFactors"
+            }
+          }
+        },
+        {
+          "name": "Strength",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "UnitRational"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingEvaluation",
+      "fields": [
+        {
+          "name": "Input",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingJoinInput"
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EncodingEvaluationRow"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedEncodingUnit",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceivedBindingEvidence"
+            },
+            "min": 1,
+            "max": 6
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "name": "Factors",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingFactors"
+          }
+        },
+        {
+          "name": "Strength",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveUnitRational"
+          }
+        },
+        {
+          "name": "SpatialWitness",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveVisualCandidate",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveEventChildEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualCueInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "VisualOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CueEvidence",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AvailableFile",
+              "UnavailableCue"
+            ]
+          }
+        },
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentDetectionId"
+            }
+          }
+        },
+        {
+          "name": "File",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualReferentId"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "Cell": "unsigned0..7",
+    "Glyph": "unsigned0..7",
+    "ViewCount": "unsigned0..3",
+    "Instant": "existing SimInstant",
+    "UnitRational": "exact rational0..1",
+    "PositiveUnitRational": "exact rational0<q<=1",
+    "NonnegativeRational": "exact rational>=0",
+    "ObservationId": "existing1115",
+    "ObserverId": "existing1000",
+    "ExperienceId": "existing1106",
+    "DefinitionId": "existing1027",
+    "SelectionOccurrenceId": "existing1143; audit owns, candidates reference",
+    "CurrentDetectionId": "existing214",
+    "CurrentEventDetectionId": "existing215",
+    "PerceptualReferentId": "existing212",
+    "PerceptualTrackTransition": "existing217; admitted SEM-A",
+    "PerceptualEventTransition": "existing219; admitted SEM-C",
+    "EventRoleEvidence": "existing223 SEM union",
+    "PreRecognitionSemanticExperience": "existing227",
+    "PerceivedBindingEvidence": "existing224",
+    "CausalRoleEvidence": "existing240",
+    "AttentionUnitKey": "existing attention allocation",
+    "SelectedEvidenceView": "existing selected view; actual capability admission still required",
+    "PerceivedTrialContextEvidence": "GA_SURVIVING_CHILD_CARRIER_REV3",
+    "PositiveEventChildEvidence": "GA_SURVIVING_CHILD_CARRIER_REV3"
+  },
+  "invariants": {
+    "immediate": "No feedback prerequisite for encoding; later outcome significance stays separate.",
+    "selected": "Exactly selected bindings/claim/witness subset; full preparation never becomes encoder authority.",
+    "positive": "Unknown has no numbers; zero forms no child; positive projection carries only own evidence.",
+    "source": "Actual observation/track/event/experience/context joins, never fixture schedule recovery.",
+    "cue": "Current sensing independent of selection; no cue-owned occurrence, acquisition or presentation.",
+    "ownership": "One audit owns1143; formation owner alone allocates successful acquisition."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV1.md",
+      "sha256": "d9dc5321d66583a2dda67616c93c3bde91cec2a523987cef8cd70fbfa6e7cb3a"
+    },
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "37402fd123cc177b638b03792e09c71c51454d577625edd4b4b3bbd76a71fc37"
+    },
+    {
+      "path": "src/campaign3/positiveSpatialCandidate.ts",
+      "sha256": "51d9ef85eadc721d7190d44e3867dc558ef66e0ecf7c8d44529b3af29a2d0f9a"
+    },
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "19e0553a77c41b61ac5012d43403c9ec8a2bdefba4e1811c9029536043b1711b"
+    }
+  ]
+}

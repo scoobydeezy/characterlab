@@ -1,0 +1,45 @@
+{
+  "status": "COMPONENT RECALL PARTITION REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "retention-metadata-leaks",
+      "file": "src/campaign3/recallPartitionProjection.ts",
+      "witness": "RPP-A",
+      "detected": true
+    },
+    {
+      "name": "invalid-sibling-hidden",
+      "file": "src/campaign3/recallPartitionProjection.ts",
+      "witness": "RPP-C",
+      "detected": true
+    },
+    {
+      "name": "same-instant-prior",
+      "file": "src/campaign3/recallPartitionProjection.ts",
+      "witness": "RPP-C",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/recallPartitionProjection.ts",
+      "sha256": "960d401598933cb3ec01fc6d7cfd9f07d75144cd53ec04abdefa5737d811c462"
+    },
+    {
+      "path": "src/test/recallPartitionProjection.test.ts",
+      "sha256": "25a7525d321867554f08fac78ae5dcd9e9e4800d6fea2e049001367fae44ab08"
+    },
+    {
+      "path": "docs/formal/RECALL_PARTITION_PROJECTION_COMPONENT.md",
+      "sha256": "4ef323cf6a39f386e6669b803ba7389006197c4f2d3ab249540208b724519f1f"
+    },
+    {
+      "path": "scripts/review-ga-recall-partition.mjs",
+      "sha256": "0caff6afa30a128ab9355c6cb3b50495149b6c1ae6fd6af68c8a1d467b1051f4"
+    }
+  ],
+  "limits": [
+    "Actual PRJ/IDN, state admission and available-cue read gating remain upstream.",
+    "No memory state or public canonical codec is owned by this component."
+  ]
+}

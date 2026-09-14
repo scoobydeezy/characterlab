@@ -1,0 +1,55 @@
+{
+  "status": "WRITE-SCOPE BOUNDARY REVIEW PASS; EXACT MODEL GATE OPEN",
+  "faults": [
+    {
+      "name": "sibling-root-write",
+      "file": "src/campaign3/generalWriteScope.ts",
+      "witness": "GWS-C",
+      "detected": true
+    },
+    {
+      "name": "wrong-authority",
+      "file": "src/campaign3/generalWriteScope.ts",
+      "witness": "GWS-C",
+      "detected": true
+    },
+    {
+      "name": "learning-family-substitution",
+      "file": "src/campaign3/generalWriteScope.ts",
+      "witness": "GWS-B",
+      "detected": true
+    },
+    {
+      "name": "readonly-writer",
+      "file": "src/campaign3/generalWriteScope.ts",
+      "witness": "GWS-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalWriteScope.ts",
+      "sha256": "e334d9b6710bf6254246b00e6e70a3a37055b1cd3fde595c8c5db2abbefced91"
+    },
+    {
+      "path": "src/campaign3/generalAttentionCodecs.ts",
+      "sha256": "6a3322ef6ff6ece2ebff827f96f756a7de6d46a97cc2d9075df85283d910b22f"
+    },
+    {
+      "path": "src/test/generalWriteScope.test.ts",
+      "sha256": "e775944b677e3075d413f713480f45ea41110b123c90112730b33c853e331f85"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_POLICY.json",
+      "sha256": "5bf3950394912426dcd829b609e8224010396c6fe9447f8f0aad5a2a477b5bff"
+    },
+    {
+      "path": "scripts/review-ga-write-scope-component.mjs",
+      "sha256": "b1200d318892aa906b3e9f473b91147006f351d53e59461e05a06f73741f8eb5"
+    }
+  ],
+  "limits": [
+    "Actual record relations, identity roles, compiled context and public admission remain upstream.",
+    "No public source authentication or model activation follows from structural codec acceptance."
+  ]
+}

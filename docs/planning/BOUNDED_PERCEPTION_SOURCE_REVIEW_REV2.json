@@ -1,0 +1,117 @@
+{
+  "status": "BOUNDED PERCEPTION SOURCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "false-continuity-with-ambiguous-current-glyph",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-A",
+      "detected": true
+    },
+    {
+      "name": "namespace-collision",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-file-ceiling",
+      "file": "src/campaign3/markerWindowTracking.ts",
+      "witness": "MW-G",
+      "detected": true
+    },
+    {
+      "name": "preview-aliases-owner-candidate",
+      "file": "src/campaign3/windowMarkerTransaction.ts",
+      "witness": "WMT-A",
+      "detected": true
+    },
+    {
+      "name": "skip-source-window-commit",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-H",
+      "detected": true
+    },
+    {
+      "name": "panel-after-left-open",
+      "file": "src/campaign3/panelWindowPerception.ts",
+      "witness": "PW-A",
+      "detected": true
+    },
+    {
+      "name": "unsampled-context-closed",
+      "file": "src/campaign3/panelWindowPerception.ts",
+      "witness": "PW-C",
+      "detected": true
+    },
+    {
+      "name": "event-numeric-namespace-collision",
+      "file": "src/campaign3/panelWindowPerception.ts",
+      "witness": "PW-E",
+      "detected": true
+    },
+    {
+      "name": "ignore-event-ceiling",
+      "file": "src/campaign3/panelWindowPerception.ts",
+      "witness": "PW-E",
+      "detected": true
+    },
+    {
+      "name": "skip-panel-window-publication",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-J",
+      "detected": true
+    },
+    {
+      "name": "reserve-experience-after-binding",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-K",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/markerWindowTracking.ts",
+      "sha256": "8993e78a1f033016b10b6f1ab6e84c33df5388c3a756adb4611d1898ab5e41c0"
+    },
+    {
+      "path": "src/test/markerWindowTracking.test.ts",
+      "sha256": "1a3bf86a3c16567035456cc1d681b5cc04b4035c7f9b3d27b2d3243492a22f78"
+    },
+    {
+      "path": "src/campaign3/windowMarkerTransaction.ts",
+      "sha256": "6b5be550a535af24cf4383bdb4949223e554f50e2550a21869ad6f394d62d277"
+    },
+    {
+      "path": "src/test/windowMarkerTransaction.test.ts",
+      "sha256": "a329f9b05af185270d653d8c8c5421ecd973cab2ef42fb4704995c35f7ebc433"
+    },
+    {
+      "path": "src/campaign3/panelWindowPerception.ts",
+      "sha256": "a0f6455e643d9f1339250cbad7303b617c3077a2d4ccd460a415d07d75058c84"
+    },
+    {
+      "path": "src/test/panelWindowPerception.test.ts",
+      "sha256": "55bbbb5fe2e468520472a658bc0c87ade07324bb679e178124b52db17ce749df"
+    },
+    {
+      "path": "src/campaign3/windowPanelTransaction.ts",
+      "sha256": "967815c40abcd8db898e0f96b8ce37cb68a3631ff9be9b0bf0ae18f1c4824a1b"
+    },
+    {
+      "path": "src/campaign3/generalSourceOpportunity.ts",
+      "sha256": "96a8b0a6b1111c4a61e547236e013818a0a4c6ee67a28059daa9471767f8cdd8"
+    },
+    {
+      "path": "src/test/generalSourceOpportunity.test.ts",
+      "sha256": "a0f54f6375828dbb77c53b888e5cc838986e7e850fdcdf402752811443dc25df"
+    },
+    {
+      "path": "scripts/review-bounded-perception-source-rev2.mjs",
+      "sha256": "69b0f0cdeddae76b27e9718e095da3a65084a189638290f33d7925c2b03bc7f3"
+    }
+  ],
+  "limits": [
+    "Bounded source/window component; public state admission and whole-prefix restoration remain open.",
+    "Source replay protection and ten-sweep admission stay with runtime and compiled schedule."
+  ]
+}

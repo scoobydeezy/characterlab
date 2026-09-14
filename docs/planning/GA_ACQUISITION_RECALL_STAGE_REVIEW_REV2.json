@@ -1,0 +1,75 @@
+{
+  "status": "SYMBOLIC ACQUISITION/RECALL SLICE REVIEW PASS",
+  "records": 3,
+  "registrations": 21,
+  "maximalSliceEvents": 15,
+  "withSourceEvents": 23,
+  "faults": [
+    {
+      "name": "encoder-physical-read",
+      "rejected": true
+    },
+    {
+      "name": "early-evidence",
+      "rejected": true
+    },
+    {
+      "name": "allocate-empty-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "owner-reallocates-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "terminal-emits",
+      "rejected": true
+    },
+    {
+      "name": "body-graph-write",
+      "rejected": true
+    },
+    {
+      "name": "unavailable-cue-read",
+      "rejected": true
+    },
+    {
+      "name": "cue-requires-selection",
+      "rejected": true
+    },
+    {
+      "name": "recall-presents-automatically",
+      "rejected": true
+    },
+    {
+      "name": "unprojected-owner",
+      "rejected": true
+    },
+    {
+      "name": "cognitive-protocol-read",
+      "rejected": true
+    },
+    {
+      "name": "understated-work",
+      "rejected": true
+    },
+    {
+      "name": "second-evidence-identity",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.json",
+      "sha256": "7e11885d9d87b326e4b6a2c87c5fa3b5cc31faf30f7613322a2b0f557b2e6bed"
+    },
+    {
+      "path": "scripts/review-ga-acquisition-recall-stage-closure-rev2.mjs",
+      "sha256": "e90625c904b24bb924eaf5fd0c25393d34652d6ce4c883735ea301e5beb192bf"
+    }
+  ],
+  "limits": [
+    "Partial graph, not whole model work or acceptance.",
+    "Paths, actual joins, consumer branches, codecs and whole barrier closure remain open."
+  ]
+}

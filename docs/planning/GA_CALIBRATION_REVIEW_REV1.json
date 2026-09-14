@@ -1,0 +1,80 @@
+{
+  "status": "BOUNDED SYMBOLIC CALIBRATION REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 12,
+  "faults": [
+    {
+      "name": "graph-exceeds-carrier",
+      "rejected": true
+    },
+    {
+      "name": "graph-opens-self-edges",
+      "rejected": true
+    },
+    {
+      "name": "recall-requires-storage",
+      "rejected": true
+    },
+    {
+      "name": "body-gate-unbounded",
+      "rejected": true
+    },
+    {
+      "name": "merge-recall-policy-slots",
+      "rejected": true
+    },
+    {
+      "name": "new-policy-identity",
+      "rejected": true
+    },
+    {
+      "name": "early-allocation",
+      "rejected": true
+    },
+    {
+      "name": "body-recall-graph-coupling",
+      "rejected": true
+    },
+    {
+      "name": "erase-retired-control",
+      "rejected": true
+    },
+    {
+      "name": "current-credit-ranks",
+      "rejected": true
+    },
+    {
+      "name": "baseline-as-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "truth-parameter",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_CALIBRATION_DEFINITIONS_REV1.json",
+      "sha256": "a38e3e82a8b576bce9185b09c49c6d86a92d4acc4ec65b391709013ffcc6f34f"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV2.json",
+      "sha256": "c979835f8841d3b283814ec87c3085b1f2ccdd517a8ff016cd65af05f8903649"
+    },
+    {
+      "path": "src/campaign3/observationExecutionPolicy.ts",
+      "sha256": "452434da6efeae418ff7c2069a6f3577da91e17e7613ff94f2518df9f809cb95"
+    },
+    {
+      "path": "src/test/observationExecutionPolicy.test.ts",
+      "sha256": "e95bd33d5e4ba0e8238371c362fef3c30ac6c45d8178663b1eb538154797c548"
+    },
+    {
+      "path": "scripts/review-ga-calibration-definitions.mjs",
+      "sha256": "e5b8a98b887bbf7dc19775d3d2ce257b7e2e3bd3647e8f47a3319318821eacbf"
+    }
+  ],
+  "limits": [
+    "No numeric allocation, exact model instance, public schema/value admission or runtime activation.",
+    "Role coverage and component purpose binding are separate evidence; this audit does not execute canonical definition compilation."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "status": "ADDITIVE ROOT COMPONENT REVIEW PASS",
+  "faults": [
+    {
+      "name": "erase-additions",
+      "witness": "AFR-A",
+      "detected": true
+    },
+    {
+      "name": "allow-family-root-overwrite",
+      "witness": "AFR-B",
+      "detected": true
+    },
+    {
+      "name": "allow-protocol-overlap",
+      "witness": "AFR-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-route-override",
+      "witness": "AFR-C",
+      "detected": true
+    },
+    {
+      "name": "return-live-identity",
+      "witness": "AFR-D",
+      "detected": true
+    },
+    {
+      "name": "drop-composed-root-bound",
+      "witness": "AFR-G",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/additiveFamilyRoots.ts",
+      "sha256": "352a435bcadbd9bba890ba0985a55dc64ae3761d81f7dac8c87262861aa4b8b8"
+    },
+    {
+      "path": "src/test/additiveFamilyRoots.test.ts",
+      "sha256": "4161a605898b64c5282b31e4b0c3b0d9c6d7ffd0e86b7d62bdd027c54ea76fe1"
+    },
+    {
+      "path": "scripts/review-additive-family-roots.mjs",
+      "sha256": "14fe88d61aabab23cd6e7d7734ff93386d0cd1070e7662b3f264edc0f46e0c97"
+    }
+  ],
+  "limits": [
+    "Trusted descriptor component; public model/compiler activation remains open.",
+    "The independent authority check uses the actual state registry; this classifier itself grants no read or mutation permission."
+  ]
+}

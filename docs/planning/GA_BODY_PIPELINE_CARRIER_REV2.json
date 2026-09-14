@@ -1,0 +1,383 @@
+{
+  "version": "ga-body-pipeline-carrier/0.2-draft",
+  "status": "SYMBOLIC BODY FIELD INVENTORY; PUBLIC REGISTRATION AND ALLOCATION OPEN",
+  "records": [
+    {
+      "name": "SafeSignalDeclaration",
+      "fields": [
+        {
+          "name": "Channel",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationChannelId"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyOpportunityEvidence",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EmbodiedSample"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PreRecognitionSemanticExperience"
+            }
+          }
+        },
+        {
+          "name": "Declarations",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "SafeSignalDeclaration"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyCueInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionAuditRow",
+      "fields": [
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "ViewCount",
+          "type": {
+            "kind": "ref",
+            "name": "ViewCount"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Selected",
+              "Capacity",
+              "Unavailable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionAudit",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "BodySelectionAuditRow"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectedView",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Groups",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveBodySignalGroup"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyAcquisitionEvidenceInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "BodySelectedView"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySignalCue",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Present",
+              "Absent"
+            ]
+          }
+        },
+        {
+          "name": "Signals",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "InteroceptiveSignalId"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "SupportingObservationIds",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "ObservationId"
+            },
+            "min": 0,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "BodySignalCue"
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "ObservationChannelId": "existing1005",
+    "InteroceptiveSignalId": "accepted symbolic family; unallocated",
+    "ObserverId": "existing observer identity",
+    "Instant": "existing SimInstant",
+    "EmbodiedSample": "closed existing461/463 schema1 with exact local producer version; no pressure carrier",
+    "PreRecognitionSemanticExperience": "existing227 exact accepted SEM schema; actual same-opportunity freeze",
+    "ViewCount": "canonical unsigned0..3",
+    "SelectionOccurrenceId": "existing1143; actual new registered body audit owns it",
+    "ExperienceId": "existing1106; optional genuine absence, never a placeholder",
+    "PositiveBodySignalGroup": "GA_SURVIVING_CHILD_CARRIER_REV3 exact selected signal/view shape",
+    "ObservationId": "existing1115; actual supporting sample output identity"
+  },
+  "storage": [],
+  "invariants": {
+    "source": "Exact requested-channel/sample bijection, same observer/time/producer; declarations are compiled safe projection.",
+    "experience": "One combined reservation; body presence requires it, body absence alone does not exclude panel/visual reservation.",
+    "independence": "Cue input consumes actual opportunity, never selected view. Permission/capacity decisions are separate.",
+    "selection": "Actual audit owns one1143 even when empty; view only references it. Zero groups form no acquisition.",
+    "cue": "Present needs actual present signal/support and experience; Absent contains no signal/support. No interval or resolver.",
+    "recall": "Absent cue causes no public memory read. Present recall uses actual PRJ and ordinary owner read; no automatic reinforcement."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV2.md",
+      "sha256": "cd188f727357fee38ea012d7c40582bd676144584843bdb629af98920d39e2f9"
+    },
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "docs/formal/LOCAL_RESERVE_OPPORTUNITY_COMPONENT.md",
+      "sha256": "4ced1f361a99b6c1c353b4f8507c3bd68b631e22a800b7fd51c54bc7eef465ad"
+    },
+    {
+      "path": "docs/planning/GA_BODY_SOURCE_BRANCH_CLOSURE_REV2.md",
+      "sha256": "1632d8bee34cfd7191aca27ed47a76be2d218573c5efa4c16816da7bc22024fe"
+    }
+  ]
+}

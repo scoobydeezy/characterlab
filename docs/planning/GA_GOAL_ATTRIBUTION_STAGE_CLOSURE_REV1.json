@@ -1,0 +1,572 @@
+{
+  "version": "ga-goal-attribution-stage-closure/0.1-draft",
+  "status": "SYMBOLIC SLICE; WHOLE PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "GoalCommandInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Command",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalCommand"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDeadlineInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AdoptedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalAssessmentInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        },
+        {
+          "name": "Recollections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Recollection"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "FocalConsequenceDelivery",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "AssessedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationDeliveryInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "GoalQualificationDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedAttributionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Focus",
+          "type": {
+            "kind": "ref",
+            "name": "FocalConsequenceDelivery"
+          }
+        },
+        {
+          "name": "Recollections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Recollection"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "AttributionResultDelivery",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResult"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AttributionUseInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResult"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SignificanceJoinInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Join",
+          "type": {
+            "kind": "ref",
+            "name": "QualifiedSignificanceJoin"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SignificanceOpportunity",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "goal-command-proposal",
+      "phase": 40,
+      "input": "GoalCommandInput",
+      "outputs": [],
+      "next": [
+        "goal-command-owner"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "goal-deadline-owner"
+      ],
+      "futureGate": "Adopt only; exact model expiry; enqueue before140 and roll back with failed adoption"
+    },
+    {
+      "name": "goal-command-owner",
+      "phase": 140,
+      "input": "GoalCommandInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [
+        "MaintenanceGoalState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    },
+    {
+      "name": "goal-deadline-owner",
+      "phase": 140,
+      "input": "GoalDeadlineInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [
+        "MaintenanceGoalState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation",
+      "terminal": "Open expires at exact expiry; Withdrawn is unchanged; missing/already-expired/mismatched adoption rejects"
+    },
+    {
+      "name": "goal-outcome-assessment",
+      "phase": 130,
+      "input": "GoalAssessmentInput",
+      "outputs": [
+        "GoalOutcomeAssessment"
+      ],
+      "next": [],
+      "reads": [
+        "MaintenanceGoalState"
+      ],
+      "writes": [],
+      "allocation": "One GoalOutcomeAssessmentId",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "focal-consequence-delivery",
+        "goal-qualification-delivery"
+      ]
+    },
+    {
+      "name": "focal-consequence-delivery",
+      "phase": 15,
+      "input": "FocalConsequenceDelivery",
+      "outputs": [
+        "FocalConsequenceDelivery"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "goal-qualification-delivery",
+      "phase": 15,
+      "input": "GoalQualificationDeliveryInput",
+      "outputs": [
+        "GoalQualificationCarry"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "retained-attribution",
+      "phase": 50,
+      "input": "RetainedAttributionInput",
+      "outputs": [
+        "RetainedAttributionResult"
+      ],
+      "next": [
+        "attribution-use-dispatch"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "One RetainedAttributionResultId",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [],
+      "future": [
+        "attribution-result-delivery"
+      ]
+    },
+    {
+      "name": "attribution-use-dispatch",
+      "phase": 130,
+      "input": "AttributionUseInput",
+      "outputs": [],
+      "next": [
+        "ordinary-memory-use"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-use",
+      "phase": 140,
+      "input": "AttributionUseInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    },
+    {
+      "name": "attribution-result-delivery",
+      "phase": 15,
+      "input": "AttributionResultDelivery",
+      "outputs": [
+        "RetainedAttributionResult"
+      ],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "significance-opportunity",
+      "phase": 0,
+      "input": "SignificanceOpportunity",
+      "outputs": [],
+      "next": [],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": []
+    },
+    {
+      "name": "significance-join",
+      "phase": 130,
+      "input": "SignificanceJoinInput",
+      "outputs": [
+        "QualifiedSignificanceJoin"
+      ],
+      "next": [
+        "ordinary-memory-significance"
+      ],
+      "reads": [],
+      "writes": [],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-significance",
+      "phase": 140,
+      "input": "SignificanceJoinInput",
+      "outputs": [],
+      "next": [],
+      "reads": [
+        "GeneralEpisodeState"
+      ],
+      "writes": [
+        "GeneralEpisodeState"
+      ],
+      "allocation": "None",
+      "projection": "Required PRJ/IDN via direct field1 after exact producer/original admission",
+      "route": [
+        "route/character-learning"
+      ],
+      "batch": "One declared owner, common B0, no sibling reads; complete operation batch before commit; no child emissions or output allocation"
+    }
+  ],
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "joins": {
+    "assessment": {
+      "parents": [
+        "actual consequence body source",
+        "actual consequence body recollection publisher"
+      ],
+      "checks": "Exact observer/instant/source and completed output; required actual consequence SEM experience; source signal matches goal definition",
+      "operands": "Exactly one recalled Before in same observed context, otherwise missing baseline; current safe After sample; no full historical experience/archive lookup",
+      "reads": "Settled goal state only; lifecycle-coincident reads excluded in first profile"
+    },
+    "attribution": {
+      "parents": [
+        "actual current event recollection publisher",
+        "actual current body recollection publisher",
+        "actual focal-consequence delivery"
+      ],
+      "checks": "Exact target original/instant/run/observer; only completed winning payloads; no unselected memory reload",
+      "operands": "Narrow retained contexts group exactly four trials; one focal After identifies focal stroke and surviving event endpoint; no authored trial pairing or supplied focal child",
+      "unavailable": "Missing/ambiguous grouping or insufficient recalled operands yields Unavailable with no invented target; actual semantic consumption remains separate from validation"
+    },
+    "significance": {
+      "parents": [
+        "actual significance original",
+        "actual qualification delivery",
+        "actual attribution delivery"
+      ],
+      "checks": "Same observer/projected subject/consequence; qualification remains its actual assessed instant, attribution remains its actual evaluation instant",
+      "operands": "Narrow qualification plus actual attributed target only; no historical metric evidence or current goal reappraisal"
+    }
+  },
+  "binding": {
+    "completion": "Last producer may emit join as direct parent; every other parent already completed. Exact allocated child/input association is checked at ingress before PRJ/read.",
+    "future": "Consumer-specific target-original/instant/event type bound in admitted model; strictly later source instant; no delivery reuse",
+    "transaction": "Candidate delivery consumption and output facts roll back with whole instant; no unresolved expected target at successful commit",
+    "restore": "Independent complete-prefix replay with exact pending queue; no private-cache certificate"
+  },
+  "scope": {
+    "assessmentAbsence": "The first assessment profile requires a real consequence experience. No assessment identity or delivery is fabricated when none exists; missing-consequence target behavior remains a profile closure obligation.",
+    "assessmentLearning": "Baseline recall and assessment do not create use/presentation credit.",
+    "attributionUse": "Only actual consumed child addresses reach use owner, including lawful partial consumption on Unavailable.",
+    "bodyTarget": "Body operands may earn use but cannot become the focal event target.",
+    "qualification": "Both determinate directions qualify; withdrawn later goal does not revise the frozen carry.",
+    "owner": "Current target survival is checked against owner batch; writes only use/directional metadata, never payload/acquisition time."
+  },
+  "work": {
+    "wholeModelCeiling": null,
+    "assessmentAdditionalRecallEvents": 3,
+    "attributionReceivingEvents": 4,
+    "significanceReceivingEvents": 5,
+    "meaning": "Local maxima: attribution includes focal delivery plus evaluation/dispatch/use owner; significance includes original, two deliveries, join and owner; source/recall/other participants counted separately."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV2.json",
+      "sha256": "e7a8e3e2a0f84cb463769948c908928f0ccbc886b52577706777c0170272c38d"
+    },
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "docs/planning/GA_PHASE_SCHEDULE_RECONCILIATION_REV1.md",
+      "sha256": "21831952fc20d922b51718d58aa53b3e0e368eacd302565ba205ed7010072213"
+    },
+    {
+      "path": "src/campaign3/retainedContextGrouping.ts",
+      "sha256": "557e875d29890db92002eba64325ff7e5ee33e03ffdc92d40b9588b8258752b6"
+    },
+    {
+      "path": "src/campaign3/goalOutcomeQualification.ts",
+      "sha256": "34e5bd4df6933a0e6ad626e5c4c3b1b7fb998670585ed51c9636e36d47cb018a"
+    },
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "5e178168562cf906cd6d1f763ff1372935d1cdca71753a462db852d4c38a50cc"
+    },
+    {
+      "path": "src/test/maintenanceGoalSchedule.test.ts",
+      "sha256": "e6bff6287aeb12d94bee63a0ef93df1697261e613ba3e3f84484a120d35cba97"
+    }
+  ]
+}

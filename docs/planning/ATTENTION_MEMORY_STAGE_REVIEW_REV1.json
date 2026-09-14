@@ -1,0 +1,86 @@
+{
+  "status": "STAGE/AUTHORITY INVENTORY REVIEWED; WHOLE CANONICAL DECLARATIONS WITHHELD",
+  "checks": 191,
+  "stages": 22,
+  "wrappers": 19,
+  "formation": 16,
+  "cue": 14,
+  "faults": [
+    {
+      "name": "rank-writes-memory",
+      "reason": "wrong write owner",
+      "detected": true
+    },
+    {
+      "name": "episode-writer-updates-graph",
+      "reason": "wrong write owner",
+      "detected": true
+    },
+    {
+      "name": "drop-roster-projection",
+      "reason": "writer missing actual projection",
+      "detected": true
+    },
+    {
+      "name": "omit-presentation-candidates",
+      "reason": "incomplete rank read domain",
+      "detected": true
+    },
+    {
+      "name": "erase-second-parent-binding",
+      "reason": "unbound join subject/target",
+      "detected": true
+    },
+    {
+      "name": "phase150-domain-work",
+      "reason": "invalid phase",
+      "detected": true
+    },
+    {
+      "name": "admit-automatic-input",
+      "reason": "automatic adaptation input",
+      "detected": true
+    },
+    {
+      "name": "omit-learning-route",
+      "reason": "retention route absent",
+      "detected": true
+    },
+    {
+      "name": "count-as-runtime-proof",
+      "reason": "local count promoted to runtime work",
+      "detected": true
+    },
+    {
+      "name": "extra-work-cycle",
+      "reason": "cycle",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_STAGE_INVENTORY_REV1.json",
+      "sha256": "fffd6d30422c43497550cd744a938b16937eeabd51b7736032b8e47f41c7f221"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_DECLARATION_REVIEW_REV1.md",
+      "sha256": "d70ba19df321a4340e872061733c7e1f2c22537e1c2feb6b98ae2d480d043aff"
+    },
+    {
+      "path": "scripts/build-attention-memory-stage-inventory.mjs",
+      "sha256": "f5fd8cdea24f22f9a19f94e88307422d99bb47307ae012e989ba2dd87ada9945"
+    },
+    {
+      "path": "scripts/review-attention-memory-stage-inventory.mjs",
+      "sha256": "090ce5058d1e80df74e0c91ba343127e9f0448fbb270205134d2ce9b2a8e03bd"
+    }
+  ],
+  "preserved": {
+    "path": "docs/planning/ATTENTION_MEMORY_SYMBOLIC_REVIEW_REV1.json",
+    "sha256": "f4f81e0e8697cc5fdcc2f00e33230f16324fde59d1a7eaf5aedcb99b2afce527"
+  },
+  "limits": [
+    "Static graph/authority checks only; no production admission, state writer, output allocator or runtime work proof.",
+    "Exact wrapper schemas and upstream concern acquisition remain open. Tracking component rehydration requires explicit disposition."
+  ]
+}

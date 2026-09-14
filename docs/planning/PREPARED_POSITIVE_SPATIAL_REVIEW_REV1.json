@@ -1,0 +1,55 @@
+{
+  "status": "PREPARED POSITIVE SPATIAL REVIEW PASS",
+  "faults": [
+    {
+      "name": "bypass-earlier-concern",
+      "file": "src/campaign3/positiveSpatialCandidate.ts",
+      "witness": "PPC-B",
+      "detected": true
+    },
+    {
+      "name": "retain-zero-child",
+      "file": "src/campaign3/positiveSpatialCandidate.ts",
+      "witness": "PPC-B",
+      "detected": true
+    },
+    {
+      "name": "feedback-as-retained-content",
+      "file": "src/campaign3/positiveSpatialCandidate.ts",
+      "witness": "PPC-B",
+      "detected": true
+    },
+    {
+      "name": "retain-prepared-capability",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "PPC-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/positiveSpatialCandidate.ts",
+      "sha256": "db440dcafcaec73e9135c078d6fcf3dd674e458185ce151097283835b3d36447"
+    },
+    {
+      "path": "src/test/positiveSpatialCandidate.test.ts",
+      "sha256": "70961c167989f07dbb3a2962e990ee7ece18a5d6043f1bc97c7e22c944cfcc43"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "6728a8322136e8f468a49b386ac521eb8e000a543b59da8dac3ca0ed9d55ecb1"
+    },
+    {
+      "path": "src/test/spatialEvidenceBinding.test.ts",
+      "sha256": "8498aec9bfa237c0508c2ec77b674ff08126ee7998afd88bf11e1f6985ebc77d"
+    },
+    {
+      "path": "scripts/review-prepared-positive-spatial.mjs",
+      "sha256": "750e4a88e4ab012cd1165359cebfe5cd67cc5768e1b1d318da26eb3d865f7312"
+    }
+  ],
+  "limits": [
+    "Selected-only component projection and earlier-concern variant; completed producer and subject remain upstream premises.",
+    "No public formation or canonical persistence qualification."
+  ]
+}

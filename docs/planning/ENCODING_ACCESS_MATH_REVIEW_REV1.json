@@ -1,0 +1,101 @@
+{
+  "status": "EAM-A..L QUALIFIED AT MATHEMATICS COMPONENT SCOPE",
+  "tests": 12,
+  "faults": [
+    {
+      "name": "independent-footprint",
+      "removed": "return values.map(boundedEncodingResponse)",
+      "inserted": "return values.map(x=>x.divide(one.add(sum(values))))",
+      "baseline": "1/2",
+      "actual": "1/3",
+      "detected": true
+    },
+    {
+      "name": "shared-reinterpreted",
+      "removed": "return values.map(x=>denom.numerator?x.divide(denom):zero);",
+      "inserted": "return values.map(x=>denom.numerator?x.multiply(budget).divide(denom):zero);",
+      "baseline": "1/2",
+      "actual": "1/10",
+      "detected": true
+    },
+    {
+      "name": "truncation",
+      "removed": "roundEven(x.numerator*p.scale,x.denominator)",
+      "inserted": "x.numerator*p.scale/x.denominator",
+      "baseline": "4",
+      "actual": "3",
+      "detected": true
+    },
+    {
+      "name": "remainder-tie",
+      "removed": "compareKeys(labels[a.j],labels[b.j])",
+      "inserted": "compareKeys(labels[b.j],labels[a.j])",
+      "baseline": "0,1,2,2",
+      "actual": "0,2,2,1",
+      "detected": true
+    },
+    {
+      "name": "beta-endpoint",
+      "removed": "if(beta.compare(one)>=0)fail('beta must be below one');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "future-history",
+      "removed": "at>now||",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "summed-pull",
+      "removed": ".divide(Q.of(BigInt(e.retainedKeys.length)))",
+      "inserted": "",
+      "baseline": "1/1",
+      "actual": "2/1",
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "independent": "1/2",
+    "shared": "1/2",
+    "round": "4",
+    "mass": "0,1,2,2",
+    "beta": true,
+    "future": true,
+    "pull": "1/1",
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "c3c5c098006e37e689c5dccae69aac5d5c9e1ab9c76cc4bfbcc0c0ba509118ee"
+    },
+    {
+      "path": "src/test/encodingAccessMath.test.ts",
+      "sha256": "ff6053709ebb4da8729ac08cdd9d08b24913dd12f3fbc6216e4026028e58d5f2"
+    },
+    {
+      "path": "docs/formal/ENCODING_ACCESS_MATH.md",
+      "sha256": "85df022afbe9031aa46c0242e713b4c35f5bd1838b1c91f52fab395752e28239"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_CLOSURE_PLAN.md",
+      "sha256": "f06c6c07e34d5c15467b5b01fb3b77bc59ae6fd1488e9cd56a2558e290de92fc"
+    },
+    {
+      "path": "scripts/review-encoding-access-math.mjs",
+      "sha256": "fcd313ab3408c733c30406fe375ddca19104ea2fb948ca645156915e209beece"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/ENCODING_ACCESS_MATH_TESTS_REV1.json",
+    "sha256": "675ed3b2e90cdca391197d2b8f075658d219a4a23f929f26c001f88130d1a76f"
+  },
+  "limits": [
+    "No public evidence producer, canonical record, persistent writer, source/subject binding, retrieval event or corpus promotion. General attention remains OPEN."
+  ]
+}

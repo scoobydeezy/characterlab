@@ -1,0 +1,55 @@
+{
+  "status": "CANONICAL VISUAL SELECTION REVIEW PASS",
+  "faults": [
+    {
+      "name": "second-view-occurrence",
+      "file": "src/campaign3/canonicalVisualSelection.ts",
+      "witness": "CVS-A",
+      "detected": true
+    },
+    {
+      "name": "discard-ineligible-selection",
+      "file": "src/campaign3/canonicalVisualSelection.ts",
+      "witness": "CVS-B",
+      "detected": true
+    },
+    {
+      "name": "audit-view-alias",
+      "file": "src/campaign3/canonicalVisualSelection.ts",
+      "witness": "CVS-E",
+      "detected": true
+    },
+    {
+      "name": "acquisition-as-selection-source",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-U",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/canonicalVisualSelection.ts",
+      "sha256": "1b1cbbac7b6c8fad553a9b9c0397e9a62dde65d35ced6bc230f08ff5855a03b0"
+    },
+    {
+      "path": "src/test/canonicalVisualSelection.test.ts",
+      "sha256": "ca7fb6d5d7f691d1a2b100e19eb436560b242bc755d6695d1dd818749ee64cde"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "aee55c8887341d97e17dcbd1b4f10be55f92e2937e8e1e5e64601ad7d786b761"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "aee55c8887341d97e17dcbd1b4f10be55f92e2937e8e1e5e64601ad7d786b761"
+    },
+    {
+      "path": "scripts/review-canonical-visual-selection.mjs",
+      "sha256": "e44443f2c6a1e690f56c50e6f38dd5d0c2b107da50b95c66fd8e2df860f48233"
+    }
+  ],
+  "limits": [
+    "Actual component audit/view production and fixture source linkage; not registered public completion.",
+    "Body audit, PRJ/IDN and formation protocol hook admission remain public obligations."
+  ]
+}

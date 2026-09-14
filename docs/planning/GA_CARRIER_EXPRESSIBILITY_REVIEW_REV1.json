@@ -1,0 +1,58 @@
+{
+  "status": "CARRIER STRUCTURAL EXPRESSIBILITY PASS; NUMERIC AND PUBLIC GATES OPEN",
+  "records": 163,
+  "unionFields": 11,
+  "primitiveNames": 30,
+  "faults": [
+    {
+      "name": "duplicate-record",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-field",
+      "rejected": true
+    },
+    {
+      "name": "unknown-reference",
+      "rejected": true
+    },
+    {
+      "name": "optional-list-element",
+      "rejected": true
+    },
+    {
+      "name": "ambiguous-union",
+      "rejected": true
+    },
+    {
+      "name": "unbounded-collection",
+      "rejected": true
+    },
+    {
+      "name": "recursive-record",
+      "rejected": true
+    },
+    {
+      "name": "callable-field",
+      "rejected": true
+    },
+    {
+      "name": "enum-collision",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV17.json",
+      "sha256": "0bedc30632eac0336c65edecf1626bcfc1eff03bfd03f76a62d05b792c8e42a8"
+    },
+    {
+      "path": "scripts/review-ga-carrier-expressibility.mjs",
+      "sha256": "1643f7bd558294858d6a48d135bed64abd85098ea324dc3d93726b287c59fdc2"
+    }
+  ],
+  "limits": [
+    "Exact record layout expressibility only; not semantic relational invariants or public model admission.",
+    "Each union member still needs its distinct reviewed numeric record identity."
+  ]
+}

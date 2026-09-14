@@ -1,0 +1,144 @@
+{
+  "status": "LOCAL OUTPUT/SLOT ACCOUNTING REVIEWED; WHOLE PROFILE OPEN",
+  "checks": 10505,
+  "cases": 138,
+  "maxima": {
+    "emptyFormation": {
+      "events": 7,
+      "outputs": 7,
+      "runtimeSlots": 6
+    },
+    "positiveFormation": {
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    "emptyCue": {
+      "events": 7,
+      "outputs": 6,
+      "runtimeSlots": 5
+    },
+    "positiveCue": {
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    }
+  },
+  "examples": {
+    "positiveFormation": {
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    "positiveCue": {
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    }
+  },
+  "faults": [
+    {
+      "name": "double-experience",
+      "reason": "experience allocated twice",
+      "detected": true
+    },
+    {
+      "name": "denied-event-reservation",
+      "reason": "unconditional experience reservation",
+      "detected": true
+    },
+    {
+      "name": "tracking-shared-allocator",
+      "reason": "tracking allocated shared slots",
+      "detected": true
+    },
+    {
+      "name": "duplicate-selected-identity",
+      "reason": "duplicate selected identity",
+      "detected": true
+    },
+    {
+      "name": "patch-void-slot",
+      "reason": "unearned void slot",
+      "detected": true
+    },
+    {
+      "name": "recollect-per-candidate",
+      "reason": "recollection allocation not per winner",
+      "detected": true
+    },
+    {
+      "name": "concern-reallocation",
+      "reason": "duplicate concern occurrence",
+      "detected": true
+    },
+    {
+      "name": "skip-zero-winner-recollect",
+      "reason": "branch cue events mismatch",
+      "detected": true
+    },
+    {
+      "name": "omit-transport-output",
+      "reason": "branch formation outputs mismatch",
+      "detected": true
+    },
+    {
+      "name": "retention-unconditional",
+      "reason": "branch formation outputs mismatch",
+      "detected": true
+    },
+    {
+      "name": "drop-file-counter",
+      "reason": "observer counters conflated with shared allocator",
+      "detected": true
+    },
+    {
+      "name": "understate-runtime-bound",
+      "reason": "incorrect maximum positiveCue/runtimeSlots",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_OUTPUT_INVENTORY_REV1.json",
+      "sha256": "c48428602c80f41764fa401aaf9c109a0584d509d1a0dbbf53fc757b0638a015"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_OUTPUT_REVIEW_REV1.md",
+      "sha256": "b064a8c3dda046ae566ac90372a3a241a32d710026ed4ccf8c2eab78eeb53eac"
+    },
+    {
+      "path": "scripts/build-attention-memory-output-inventory.mjs",
+      "sha256": "1cd38f5086850d5a4c22af08537efcf6399ec47740d2bff8b660483a3f7dd62d"
+    },
+    {
+      "path": "scripts/review-attention-memory-output-inventory.mjs",
+      "sha256": "19e09c58ad4482b8cd66d0866bbd068f31922d53e3f52e5dfe56533e50c7ca49"
+    }
+  ],
+  "preserved": {
+    "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_REVIEW_REV1.json",
+    "sha256": "6c41b25865406390931f054b8c9669d9b850fd430a0fb0e75ad2d8eee790bbfb"
+  },
+  "limits": [
+    "Finite symbolic branch envelope, not reachable model executions or runtime mutants.",
+    "Local stage counts exclude upstream concern production; not MaxSettlementWork or whole-run allocation proof.",
+    "New finite declarations and numeric/model gates remain open."
+  ]
+}

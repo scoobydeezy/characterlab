@@ -1,0 +1,95 @@
+{
+  "status": "NUMERIC ALLOCATION REVIEW PASS; NOT RUNTIME QUALIFICATION",
+  "records": 163,
+  "fields": 523,
+  "fieldEnums": 38,
+  "unions": 11,
+  "roles": 165,
+  "namespaces": 6,
+  "faults": [
+    {
+      "name": "record-collision",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-record-id",
+      "rejected": true
+    },
+    {
+      "name": "record-omission",
+      "rejected": true
+    },
+    {
+      "name": "field-renumber",
+      "rejected": true
+    },
+    {
+      "name": "optionality-change",
+      "rejected": true
+    },
+    {
+      "name": "field-type-change",
+      "rejected": true
+    },
+    {
+      "name": "enum-tag-shift",
+      "rejected": true
+    },
+    {
+      "name": "enum-omission",
+      "rejected": true
+    },
+    {
+      "name": "union-alias",
+      "rejected": true
+    },
+    {
+      "name": "namespace-reuse",
+      "rejected": true
+    },
+    {
+      "name": "payload-change",
+      "rejected": true
+    },
+    {
+      "name": "role-omission",
+      "rejected": true
+    },
+    {
+      "name": "role-namespace-change",
+      "rejected": true
+    },
+    {
+      "name": "ownership-namespace-change",
+      "rejected": true
+    },
+    {
+      "name": "ownership-omission",
+      "rejected": true
+    },
+    {
+      "name": "early-freeze",
+      "rejected": true
+    }
+  ],
+  "priorArtifactsPreserved": 20,
+  "markdownParity": true,
+  "sources": [
+    {
+      "path": "docs/planning/GA_CARRIER_ALLOCATION_DRAFT.json",
+      "sha256": "7ed73063afd7bee8bcabfc0f176849773412c79f202a99777ad283f07ed439c1"
+    },
+    {
+      "path": "docs/planning/GA_CARRIER_ALLOCATION_DRAFT.md",
+      "sha256": "ee6a981764c0530014cba397e8a288019ef8a3da1794b48581c2f3213bf97d64"
+    },
+    {
+      "path": "scripts/review-ga-carrier-allocation.mjs",
+      "sha256": "b6d114ef88211b352867b193fa121ad01c290316792c99a7ba02430ad505de84"
+    }
+  ],
+  "limits": [
+    "Registry members and public model closure remain separate.",
+    "No output ownership execution, rollback, replay or General Attention qualification inferred."
+  ]
+}

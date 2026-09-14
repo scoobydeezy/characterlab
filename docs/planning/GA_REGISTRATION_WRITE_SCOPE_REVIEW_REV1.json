@@ -1,0 +1,126 @@
+{
+  "status": "WRITE-SCOPE SUCCESSOR SHAPE REVIEW PASS",
+  "records": 2,
+  "roles": [
+    {
+      "path": "GeneralPathWriteCapability.Authority",
+      "identity": "MutationAuthorityId",
+      "namespace": 1025,
+      "mode": "CanonicalRecordField"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Seam",
+      "identity": "SeamId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1036
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Event",
+      "identity": "EventTypeId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1001
+    }
+  ],
+  "boundaries": [
+    {
+      "path": "GeneralPathWriteCapability.Paths[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Input",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Outputs[*]",
+      "record": "GeneralOutputDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.ReadDomain[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.WriteAuthorization",
+      "record": "TransitionWriteAuthorization",
+      "mode": "InheritedRecordRoles",
+      "source": "existing322"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.SubjectProjection",
+      "record": "SubjectProjectionRequirement",
+      "mode": "InheritedRecordRoles",
+      "source": "existing266"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.Definitions[*]",
+      "record": "GeneralDefinitionBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistrationV02.WriteAuthorization",
+      "record": "GeneralPathWriteCapability",
+      "mode": "RecurseDeclaredRecord"
+    }
+  ],
+  "pathStages": [
+    "current-track",
+    "consequence-track",
+    "goal-command-owner",
+    "goal-deadline-owner",
+    "local-reserve-replenishment"
+  ],
+  "faults": [
+    {
+      "name": "rewrite-frozen-name",
+      "rejected": true
+    },
+    {
+      "name": "silent-read-domain-change",
+      "rejected": true
+    },
+    {
+      "name": "empty-path-permission",
+      "rejected": true
+    },
+    {
+      "name": "scalar-family-paths",
+      "rejected": true
+    },
+    {
+      "name": "capability-union-alias",
+      "rejected": true
+    },
+    {
+      "name": "physical-learning-route",
+      "rejected": true
+    },
+    {
+      "name": "perception-readonly-lie",
+      "rejected": true
+    },
+    {
+      "name": "protocol-writer",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_REGISTRATION_WRITE_SCOPE_CORRECTION_REV1.json",
+      "sha256": "0b98bc0437fdbf1c54b43b5ea33065c6581a83c2ca2b11a70f105a6d8d7bc710"
+    },
+    {
+      "path": "scripts/review-ga-write-scope-correction.mjs",
+      "sha256": "fafbbe35ab1814698507332bf24d47bbd53ef6a2ea0ac236ecefb4a80abe3744"
+    }
+  ],
+  "limits": [
+    "No numeric allocation or model qualification",
+    "Exact stage paths, role domains and holder equality remain compiler obligations"
+  ]
+}

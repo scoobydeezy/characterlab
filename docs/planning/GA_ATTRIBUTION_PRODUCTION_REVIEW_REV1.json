@@ -1,0 +1,79 @@
+{
+  "status": "COMPONENT ATTRIBUTION PRODUCTION REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "no-consequence-allocates",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-B",
+      "detected": true
+    },
+    {
+      "name": "result-reuses-consequence",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-A",
+      "detected": true
+    },
+    {
+      "name": "unavailable-drops-partial-consumption",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-C",
+      "detected": true
+    },
+    {
+      "name": "all-consumed-become-targets",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-A",
+      "detected": true
+    },
+    {
+      "name": "result-leaks-operand-memory",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-A",
+      "detected": true
+    },
+    {
+      "name": "result-capability-replay",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-F",
+      "detected": true
+    },
+    {
+      "name": "result-subject-from-observer",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-F",
+      "detected": true
+    },
+    {
+      "name": "allow-current-focal",
+      "file": "src/campaign3/attributionProduction.ts",
+      "witness": "AP-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/attributionProduction.ts",
+      "sha256": "26913ab989f54d95578ecd1000dff776ee145ede809ecfc7207774bb1bc3abf0"
+    },
+    {
+      "path": "src/test/attributionProduction.test.ts",
+      "sha256": "31791717445158ad022bbf773f9d012ab3c5d3cbb59a41ed36b191f5708ddb21"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "3d31ac0b6f4f03db64128564e16c7334154c6979cc80dca4ac4289660df8ce98"
+    },
+    {
+      "path": "docs/formal/ATTRIBUTION_PRODUCTION_COMPONENT.md",
+      "sha256": "ac8281f99e45d3baa845cc3fa2fd561f552aba5f24afd005054c40c81467644a"
+    },
+    {
+      "path": "scripts/review-ga-attribution-production.mjs",
+      "sha256": "a9ac46c64086fadf70909ca163715d44cd76cf6f50bb1b255216423c9c39d5e6"
+    }
+  ],
+  "limits": [
+    "Actual PRJ/IDN and recalled/focal source membership remain upstream.",
+    "No memory state or public canonical codec is owned by this component."
+  ]
+}

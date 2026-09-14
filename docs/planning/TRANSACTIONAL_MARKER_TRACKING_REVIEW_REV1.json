@@ -1,0 +1,121 @@
+{
+  "status": "MTX-A..H QUALIFIED AT COMPONENT SCOPE",
+  "tests": 8,
+  "retainedTests": 9,
+  "faults": [
+    {
+      "name": "publish-during-begin",
+      "removed": "replay(f.observer,f.history)",
+      "inserted": "{tracker:f.tracker,history:[...f.history]}",
+      "requiredWitness": "MTX-D",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-D: preview is provisional and abort leaves the committed prefix unchanged",
+        "marker-tracking-transaction/0.1-candidate MTX-H: a later-stage failure aborts tracking and retry preserves output identities"
+      ],
+      "detected": true
+    },
+    {
+      "name": "last-window-only",
+      "removed": "for(const sweep of prefix)",
+      "inserted": "for(const sweep of prefix.slice(-1))",
+      "requiredWitness": "MTX-A",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-A: all nine prefixes and their continued suffixes equal actual uninterrupted OMT",
+        "marker-tracking-transaction/0.1-candidate MTX-B: reconstruction preserves used ordinals even outside the last window",
+        "marker-tracking-transaction/0.1-candidate MTX-C: eight committed sweeps retain the horizon after reconstruction",
+        "marker-tracking-transaction/0.1-candidate MTX-G: caller prefix/input and preview mutation cannot alter committed authority",
+        "marker-tracking-transaction/0.1-candidate MTX-H: a later-stage failure aborts tracking and retry preserves output identities"
+      ],
+      "detected": true
+    },
+    {
+      "name": "wrong-manager-commit",
+      "removed": "!p||p.manager!==manager||f.pending!==proposal",
+      "inserted": "!p",
+      "requiredWitness": "MTX-F",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-F: wrong-manager, forged, pending and reused proposals do not steal another transaction"
+      ],
+      "detected": true
+    },
+    {
+      "name": "omit-committed-tracker",
+      "removed": "f.history=p.history;f.tracker=p.tracker;",
+      "inserted": "f.history=p.history;",
+      "requiredWitness": "MTX-A",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-A: all nine prefixes and their continued suffixes equal actual uninterrupted OMT",
+        "marker-tracking-transaction/0.1-candidate MTX-E: malformed prefix and failed begin cannot partially publish or leave a pending proposal",
+        "marker-tracking-transaction/0.1-candidate MTX-F: wrong-manager, forged, pending and reused proposals do not steal another transaction",
+        "marker-tracking-transaction/0.1-candidate MTX-G: caller prefix/input and preview mutation cannot alter committed authority",
+        "marker-tracking-transaction/0.1-candidate MTX-H: a later-stage failure aborts tracking and retry preserves output identities"
+      ],
+      "detected": true
+    },
+    {
+      "name": "allow-second-pending",
+      "removed": "if(f.pending)fail('proposal already pending');",
+      "inserted": "",
+      "requiredWitness": "MTX-F",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-F: wrong-manager, forged, pending and reused proposals do not steal another transaction"
+      ],
+      "detected": true
+    },
+    {
+      "name": "retain-caller-prefix",
+      "removed": "history.push(structuredClone(sweep))",
+      "inserted": "history.push(sweep)",
+      "requiredWitness": "MTX-G",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-G: caller prefix/input and preview mutation cannot alter committed authority"
+      ],
+      "detected": true
+    },
+    {
+      "name": "retain-caller-input",
+      "removed": "candidate.history.push(structuredClone(input))",
+      "inserted": "candidate.history.push(input)",
+      "requiredWitness": "MTX-G",
+      "failedWitnesses": [
+        "marker-tracking-transaction/0.1-candidate MTX-G: caller prefix/input and preview mutation cannot alter committed authority"
+      ],
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/transactionalMarkerTracking.ts",
+      "sha256": "06f061a8548c4ae6c3a3c6992ebe47834bc9c3adb1b4211c858a040a640b4a65"
+    },
+    {
+      "path": "src/test/transactionalMarkerTracking.test.ts",
+      "sha256": "d4d04a158e84b58449dc8575b8e8e8f95f424fe3e22202a72628a77dfde420e3"
+    },
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2"
+    },
+    {
+      "path": "docs/formal/TRANSACTIONAL_MARKER_TRACKING_COMPONENT.md",
+      "sha256": "c266f197c47cb3611ae0797393dd3bc3d6059336a55f388380e41e312f9c9629"
+    },
+    {
+      "path": "scripts/review-transactional-marker-tracking.mjs",
+      "sha256": "970e8a343fa009c960d364fd4cd7ee6fa193fcfdd81d8bec4b2e848f381c4982"
+    }
+  ],
+  "testEvidence": {
+    "path": "docs/planning/TRANSACTIONAL_MARKER_TRACKING_TESTS_REV2.json",
+    "sha256": "86c75def7396270a7c6eb5f90b851bc090bd68c85848a6e8170f5c786e5db031"
+  },
+  "preserved": {
+    "path": "docs/planning/GENERAL_ATTENTION_COMPONENT_QUALIFICATION_REV1.json",
+    "sha256": "a50ad0d995c72247dab8940d5eec9683f7697fd023bcd59b7b7829a1329db06b"
+  },
+  "limits": [
+    "Replay inputs remain component inputs, not authenticated originals or public save bytes.",
+    "Public adapter must bind actual canonical perception reads, commit/abort to scheduler outcome and verify complete original-prefix save equality.",
+    "No new persistent root, canonical allocation or public restoration qualification."
+  ]
+}

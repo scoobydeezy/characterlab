@@ -1,0 +1,3662 @@
+{
+  "status": "DRAFT EXACT PARAMETER RECIPES; NOT MODELIDENTITY COHORT",
+  "baseline": "baseline",
+  "models": [
+    {
+      "name": "baseline",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-Independent-1/1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/1",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-HistoricalShared-1/5",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "HistoricalShared",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-HistoricalShared-1/1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "HistoricalShared",
+          "floor": "1/1",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-HistoricalHybrid-1/5",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "HistoricalHybrid",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-HistoricalHybrid-1/1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "HistoricalHybrid",
+          "floor": "1/1",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-RetiredFlat-1/5",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "RetiredFlat",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "budget-RetiredFlat-1/1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "RetiredFlat",
+          "floor": "1/1",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "allocation-disabled",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Disabled",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "allocation-spatial",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "feedback-encoding",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "feedback-retrieval",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "feedback-both",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "local-access",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "0/1",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "association-decay",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "1/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "presentation-no-decay",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "0/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "recall-k0",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 0
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "recall-k1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 1
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "select-k0",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Priority",
+          "capacity": 0
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "select-k1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Priority",
+          "capacity": 1
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "select-k2",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Priority",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "select-equal-k2",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "RoleCalibrated",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "EqualPriority",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-capacity1",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 1,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-no-prediction-access",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": false,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-no-task-access",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": false,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-denied-probe",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": false,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-zero-concern",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 50,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "source-above-target",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "SpatialResidualModulation",
+          "retrieval": "AssociativePullModulation",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 100,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "denied-port",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": false,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "unresolved-role",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Unresolved",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "missing-glyph",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": false,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    },
+    {
+      "name": "missing-position",
+      "parameters": {
+        "encoding": {
+          "base": "3/10",
+          "roleTable": {
+            "Actor": "1/1",
+            "Target": "9/10",
+            "Participant": "3/5"
+          },
+          "allocation": "Spatial",
+          "law": "Independent",
+          "floor": "1/5",
+          "threshold": "1/4",
+          "need": "Disabled",
+          "surprise": "Disabled"
+        },
+        "spatial": {
+          "minX": 0,
+          "maxX": 3,
+          "minY": 0,
+          "maxY": 7,
+          "focal": "1/1",
+          "pool": "1/5"
+        },
+        "association": {
+          "scale": 100,
+          "eta": "1/1",
+          "decay": "0/1"
+        },
+        "access": {
+          "scale": 100,
+          "beta": "1/2",
+          "decay": "1/1",
+          "exponent": 1,
+          "omegaBase": "1/1",
+          "omegaPull": "1/1",
+          "capacity": 2
+        },
+        "feedback": {
+          "encoding": "Disabled",
+          "retrieval": "Disabled",
+          "unavailable": "BaselineWithoutAvailableFeedback"
+        },
+        "selection": {
+          "algorithm": "Unlimited",
+          "capacity": 2
+        },
+        "source": {
+          "capacity": 2,
+          "taskAccess": true,
+          "predictionAccess": true,
+          "probeAvailable": true,
+          "probePermitted": true,
+          "regReference": 0,
+          "regScale": 10,
+          "taskInterval": [
+            "4/1",
+            "6/1"
+          ],
+          "concernGain": "1/1",
+          "cuePort": 0,
+          "ports": [
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": false
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            },
+            {
+              "detected": true,
+              "role": "Exact",
+              "glyph": true,
+              "position": true
+            }
+          ]
+        },
+        "schedule": {
+          "probe": 0,
+          "activeFrom": 1,
+          "concern": 1,
+          "receivers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "formations": 4,
+          "cues": 4,
+          "deadline": 20
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "control": "baseline",
+      "candidate": "budget-Independent-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-disabled",
+      "changed": [
+        "encoding.allocation"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-spatial",
+      "changed": [
+        "encoding.allocation"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-encoding",
+      "changed": [
+        "feedback.encoding"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-retrieval",
+      "changed": [
+        "feedback.retrieval"
+      ]
+    },
+    {
+      "control": "feedback-encoding",
+      "candidate": "feedback-both",
+      "changed": [
+        "feedback.retrieval"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "local-access",
+      "changed": [
+        "access.beta"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "association-decay",
+      "changed": [
+        "association.decay"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "presentation-no-decay",
+      "changed": [
+        "access.decay"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k0",
+      "changed": [
+        "access.capacity"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k1",
+      "changed": [
+        "access.capacity"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k0",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k1",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k2",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ]
+    },
+    {
+      "control": "select-k2",
+      "candidate": "select-equal-k2",
+      "changed": [
+        "selection.algorithm"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-capacity1",
+      "changed": [
+        "source.capacity"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-prediction-access",
+      "changed": [
+        "source.predictionAccess"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-task-access",
+      "changed": [
+        "source.taskAccess"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-denied-probe",
+      "changed": [
+        "source.probePermitted"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-zero-concern",
+      "changed": [
+        "source.regReference"
+      ]
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-above-target",
+      "changed": [
+        "source.regReference"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "denied-port",
+      "changed": [
+        "source.ports.0.detected"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "unresolved-role",
+      "changed": [
+        "source.ports.0.role"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-glyph",
+      "changed": [
+        "source.ports.0.glyph"
+      ]
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-position",
+      "changed": [
+        "source.ports.0.position"
+      ]
+    }
+  ],
+  "bindings": {
+    "world": [
+      "Schedule"
+    ],
+    "observe": [
+      "Observation"
+    ],
+    "track": [
+      "Schedule"
+    ],
+    "bind": [],
+    "classify": [],
+    "freeze": [],
+    "roles": [],
+    "spatial": [
+      "Spatial"
+    ],
+    "delivery": [
+      "Schedule"
+    ],
+    "select": [
+      "Selection"
+    ],
+    "empty-select": [
+      "Selection"
+    ],
+    "encoding-join": [
+      "Feedback",
+      "Schedule"
+    ],
+    "evaluate": [
+      "Encoding",
+      "Feedback"
+    ],
+    "retain": [],
+    "form": [
+      "Schedule"
+    ],
+    "associate": [
+      "Association"
+    ],
+    "seed-presentation": [
+      "Schedule"
+    ],
+    "cue": [
+      "Observation"
+    ],
+    "recall-join": [
+      "Feedback",
+      "Schedule"
+    ],
+    "rank": [
+      "Access",
+      "Feedback"
+    ],
+    "recollect": [
+      "Access"
+    ],
+    "reinforce": [
+      "Schedule"
+    ]
+  },
+  "conditionalBindings": {
+    "evaluate": "add Spatial iff allocation=Spatial"
+  },
+  "invariants": {
+    "sourceAblation": "receiver feedback pairs have identical complete source and schedule parameters",
+    "sceneContent": "exact governed scene definitions resolved from admitted original references; same source originals within a comparison; scene catalog/RunIdentity specimens still pending",
+    "rationalEncoding": "n/d strings are draft exact rationals; canonical rational bytes must be constructed later",
+    "unusedBudgetFloor": "Independent/RetiredFlat floor variants are deliberate null comparisons, not evidence of floor sensitivity",
+    "sourceReference": "regReference is authored REG anchor in lattice units, not an authored forecast or concern; actual permitted probe divides by regScale",
+    "bindings": "no missing/extra stage-purpose binding; inherited fixed SEM rules and source registrations remain in dependency manifest"
+  },
+  "pending": [
+    "finite governed scene catalog and paired ordered-input specimens",
+    "exact inherited schema/role/declaration manifest",
+    "whole symbolic packet acceptance and separate allocation",
+    "canonical ModelIdentity/RunIdentity generation and public qualification"
+  ],
+  "review": {
+    "checks": 229,
+    "models": 32,
+    "comparisons": 31,
+    "stageBindings": 22
+  },
+  "faults": [
+    {
+      "name": "hidden-source-change",
+      "reason": "undeclared intervention",
+      "detected": true
+    },
+    {
+      "name": "feedback-with-role-allocation",
+      "reason": "undeclared intervention",
+      "detected": true
+    },
+    {
+      "name": "unbounded-beta",
+      "reason": "undeclared intervention",
+      "detected": true
+    },
+    {
+      "name": "extra-receiver",
+      "reason": "undeclared intervention",
+      "detected": true
+    },
+    {
+      "name": "invent-need-input",
+      "reason": "undeclared intervention",
+      "detected": true
+    },
+    {
+      "name": "omit-graph-calibration",
+      "reason": "missing mathematical binding",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_COHORT_RECIPE_REV1.md",
+      "sha256": "a6689a73266d4702ace81780e911af81394ff06533c783aa54715c032ac17811"
+    },
+    {
+      "path": "scripts/review-attention-memory-cohort-recipe.mjs",
+      "sha256": "99b007d59bc2d0dce8cf6034acc83c92363d2bb9e64daaea1573c0ccdacff1cd"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_REGISTRATION_SHAPES_REV1.json",
+      "sha256": "e0a8ceb69fed2c5337071d49b5d2a9a0fd01435e874d0905ea83ba3986608d2d"
+    }
+  ]
+}

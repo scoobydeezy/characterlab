@@ -1,0 +1,38 @@
+{
+  "status": "CONTROLLED SOURCE COMPOSITION WIRING FAULTS DETECTED",
+  "faults": [
+    {
+      "name": "bypass-body-recall-capacity",
+      "witness": "SC-D",
+      "detected": true
+    },
+    {
+      "name": "credit-all-consumed-children",
+      "witness": "SC-A",
+      "detected": true
+    },
+    {
+      "name": "reinterpret-after-withdrawal",
+      "witness": "SC-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "a1d272b8ff3c181b76e6917b3335119b3965e1acade4c0fb5f30739bd4782ebd"
+    },
+    {
+      "path": "scripts/review-concern-source-composition.mjs",
+      "sha256": "82bcd34b0c9ae50ca37ad848176bfc47f9347230cf3d75d9ddc42424e624d8cb"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/CONCERN_SIGNIFICANCE_SOURCE_COMPOSITION_TESTS_REV5.json",
+    "sha256": "c1b55215c552a47b7f4051f52771abc5a6944cc3008c9d1cdc8ce9f15b82e9ef"
+  },
+  "limits": [
+    "Faults alter the controlled integration fixture, not public source authentication.",
+    "Historical qualification is a local immutable value; committed result delivery and persistence remain open."
+  ]
+}

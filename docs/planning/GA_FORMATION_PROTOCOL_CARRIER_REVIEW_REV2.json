@@ -1,0 +1,78 @@
+{
+  "status": "PROTOCOL DESCRIPTOR STRUCTURAL REVIEW PASS; PUBLIC HOOKS OPEN",
+  "records": 10,
+  "fields": 31,
+  "metadataReachability": [
+    "AcquisitionOccurrenceId",
+    "Boolean",
+    "CharacterId",
+    "FormationAdmission",
+    "FormationGovernanceState",
+    "FormationGovernanceValue",
+    "FormationOwnerDisposition",
+    "FormationSuccess",
+    "Instant",
+    "QualifiedFormationSource",
+    "SelectionOccurrenceId"
+  ],
+  "faults": [
+    {
+      "name": "cognitive-classification",
+      "rejected": true
+    },
+    {
+      "name": "cognitive-read-grant",
+      "rejected": true
+    },
+    {
+      "name": "cognitive-write-grant",
+      "rejected": true
+    },
+    {
+      "name": "removable-history",
+      "rejected": true
+    },
+    {
+      "name": "unbounded-domain",
+      "rejected": true
+    },
+    {
+      "name": "missing-projection",
+      "rejected": true
+    },
+    {
+      "name": "kind-duplicated-in-success",
+      "rejected": true
+    },
+    {
+      "name": "source-is-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "payload-in-owner-result",
+      "rejected": true
+    },
+    {
+      "name": "numeric-root",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REV2.json",
+      "sha256": "f1749ec448eed234cf5bfd72a6b55f96c019592266f6fa238ba70bc5d4d775b8"
+    },
+    {
+      "path": "scripts/build-ga-formation-protocol-carrier.mjs",
+      "sha256": "e6b646913cfdfb62fafd268bf8b180f7f6712d77f426cc14d60e1391852bdc6a"
+    },
+    {
+      "path": "scripts/review-ga-formation-protocol-carrier.mjs",
+      "sha256": "c2716b827c1563095c15763a082add31561b1d854c3bab4f400a66fbddf51925"
+    }
+  ],
+  "limits": [
+    "Inventory checks do not execute public admission or prove the runtime success-subset/monotonicity invariant.",
+    "Existing protocol transition components retain their separate test scope; actual public source and owner binding remain open."
+  ]
+}

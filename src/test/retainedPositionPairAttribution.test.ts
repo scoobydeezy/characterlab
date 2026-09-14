@@ -1,0 +1,27 @@
+import {describe,it,expect} from 'vitest';
+import {ExactRational as Q} from '../substrate/exactMath';
+import {preparePositionPairAttributionUse as prepare,prepareFocalPositionPairAttributionUse as prepareFocal,type PositionPairTrial,type AttributionField,type ObservedPosition} from '../campaign3/retainedAttributionUse';
+import type {AttributionTrial} from '../campaign3/contrastiveAttribution';
+import type {UseProtectedAcquisition} from '../campaign3/useProtectedRetention';
+const interval=(lo:bigint,hi:bigint)=>({lower:Q.of(lo),upper:Q.of(hi)});
+function fixture(){
+ const memory:UseProtectedAcquisition[]=Array.from({length:8},(_,i)=>({id:BigInt(i+1),kind:'EventContinuant',acquiredAt:BigInt(i+1),units:[{key:'position',views:[new Uint8Array([i+1,i%4===1?1:0,0])],useProtection:false}]}));
+ const address=(i:number)=>({acquisition:BigInt(i+1),unit:'position'}),admitted=memory.map((_,i)=>address(i));
+ const trials:PositionPairTrial[]=Array.from({length:4},(_,i)=>({motion:{kind:'RetainedPositionPair',start:{address:address(i*2),view:0},end:{address:address(i*2+1),view:0}},before:{kind:'Detached',value:interval(20n,21n)},after:{kind:'Detached',value:i%2===0?interval(30n,31n):interval(20n,21n)}}));
+ return {memory,admitted,trials,now:20n};
+}
+const intervalProject=<K extends AttributionField>(_b:Uint8Array,_k:K):AttributionTrial[K]=>{throw Error('fixture uses detached intervals');};
+const positionProject=(b:Uint8Array):ObservedPosition=>({at:BigInt(b[0]),position:b[1]===255?null:[b[1],b[2]]});
+const setup=(input=fixture(),project=positionProject)=>prepare(input,intervalProject,project);
+describe('retained position pair attribution',()=>{
+ it('PP-A: distinct retained positions reproduce Supported and consume exactly their eight children',()=>{const f=fixture(),tx=setup(f),r=tx.finish(tx.evaluate());expect(r.assessment.kind).toBe('Supported');expect(r.consumed).toEqual(f.admitted);expect(r.memory.every(a=>a.units[0].useProtection)).toBe(true);expect(f.memory.every(a=>!a.units[0].useProtection)).toBe(true);tx.close();});
+ it('PP-B: missing or nonmatching start stops before end and every later trial',()=>{for(const start of [255,2]){const f=fixture();f.memory[0].units[0].views[0][1]=start;const tx=setup(f),r=tx.finish(tx.evaluate());expect(r.assessment.kind).toBe('Unavailable');expect(r.consumed).toEqual([f.admitted[0]]);expect(r.memory.map(a=>a.units[0].useProtection)).toEqual([true,false,false,false,false,false,false,false]);}});
+ it('PP-C: separate ordered observations must precede their own acquisitions and evaluation',()=>{const same=fixture();same.trials[0]={...same.trials[0],motion:{...same.trials[0].motion,end:same.trials[0].motion.start}};expect(()=>setup(same)).toThrow('POSITION_ORDER');const reverse=fixture(),m=reverse.trials[0].motion;reverse.trials[0]={...reverse.trials[0],motion:{...m,start:m.end,end:m.start}};expect(()=>setup(reverse)).toThrow('POSITION_ORDER');const future=fixture();future.memory[0].units[0].views[0][0]=2;expect(()=>setup(future)).toThrow('POSITION_TIME');const fresh=fixture();fresh.memory[0]={...fresh.memory[0],acquiredAt:20n};expect(()=>setup(fresh)).toThrow('POSITION_PRIOR_MEMORY');});
+ it('PP-D: read domain, view and content kind remain enforced for each position',()=>{const missing=fixture();missing.admitted.shift();expect(()=>setup(missing)).toThrow('READ_DOMAIN');const view=fixture();view.trials[0]={...view.trials[0],motion:{...view.trials[0].motion,start:{...view.trials[0].motion.start,view:1}}};expect(()=>setup(view)).toThrow('VIEW');const body=fixture();body.memory[0]={...body.memory[0],kind:'Interoceptive'};expect(()=>setup(body)).toThrow('POSITION_PRIOR_MEMORY');});
+ it('PP-E: prepared positional values detach and result tokens remain one-shot',()=>{const values=new Map<number,{at:bigint;position:[number,number]|null}>();const tx=setup(fixture(),b=>{const v={at:BigInt(b[0]),position:[b[1],b[2]] as [number,number]};values.set(b[0],v);return v;});values.get(1)!.position![0]=7;const token=tx.evaluate();expect(()=>tx.finish({...token})).toThrow('BINDING');expect(tx.finish(token).assessment.kind).toBe('Supported');expect(()=>tx.finish(token)).toThrow('BINDING');});
+ it('PP-F: an invalid unread end position rejects without credit even when the start is absent',()=>{const f=fixture();f.memory[0].units[0].views[0][1]=255;f.memory[1].units[0].views[0][1]=8;expect(()=>setup(f)).toThrow('POSITION_DOMAIN');expect(f.memory.every(a=>!a.units[0].useProtection)).toBe(true);});
+});
+describe('focal retained position-pair attribution',()=>{
+ it('FPP-A: both actual stroke trials support; control targets are unavailable with unchanged consumed use',()=>{for(let focalTrial=0;focalTrial<4;focalTrial++){const f=fixture(),tx=prepareFocal({...f,focalTrial},intervalProject,positionProject),r=tx.finish(tx.evaluate());expect(r.assessment.kind).toBe(focalTrial%2===0?'Supported':'Unavailable');expect(r.consumed).toEqual(f.admitted);expect(r.memory.every(a=>a.units[0].useProtection)).toBe(true);}});
+ it('FPP-B: invalid focus rejects before any operand projection and cannot be changed after preparation',()=>{for(const focalTrial of [-1,4,0.5,NaN]){let reads=0;expect(()=>prepareFocal({...fixture(),focalTrial},intervalProject,b=>{reads++;return positionProject(b);})).toThrow('FOCAL_TRIAL');expect(reads).toBe(0);}const f={...fixture(),focalTrial:1},tx=prepareFocal(f,intervalProject,positionProject);f.focalTrial=0;expect(tx.finish(tx.evaluate()).assessment.kind).toBe('Unavailable');});
+});

@@ -1,0 +1,67 @@
+{
+  "status": "GENERAL SOURCE OPPORTUNITY REVIEW PASS",
+  "faults": [
+    {
+      "name": "unrequested-scene",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-F",
+      "detected": true
+    },
+    {
+      "name": "unrequested-panel",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-F",
+      "detected": true
+    },
+    {
+      "name": "extra-body-experience",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-A",
+      "detected": true
+    },
+    {
+      "name": "binding-slot-reuse",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-A",
+      "detected": true
+    },
+    {
+      "name": "early-perception-publication",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "GSO-C",
+      "detected": true
+    },
+    {
+      "name": "erase-observed-role",
+      "file": "src/campaign3/generalSourceOpportunity.ts",
+      "witness": "SC-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalSourceOpportunity.ts",
+      "sha256": "e41afbba0ba5ecf1e4625bfa86f1ec8de73f9e19cdce9fad96acc020eb2fd811"
+    },
+    {
+      "path": "src/test/generalSourceOpportunity.test.ts",
+      "sha256": "78029b76c4f9da0a8859a8758ea2a14b9467bb4c63dae2aaf629cadca5117b5a"
+    },
+    {
+      "path": "docs/formal/GENERAL_SOURCE_OPPORTUNITY_COMPONENT.md",
+      "sha256": "ac9c61ecdb361e3937019294763d1f82b3b3a0851bc00666bf1983dc7951c904"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "3780e6572969a919eb62edc55e20e28fc7f0d33b5f5b564f84e062e5d2483df6"
+    },
+    {
+      "path": "scripts/review-general-source-opportunity.mjs",
+      "sha256": "3870687fb6990c2cc988c49264b10203960b31a49fa348965dcad20adc3f7ea2"
+    }
+  ],
+  "limits": [
+    "Actual multimodal source composition; public registration remains open.",
+    "No allocator rollback, public PRJ or whole-source qualification is inferred."
+  ]
+}

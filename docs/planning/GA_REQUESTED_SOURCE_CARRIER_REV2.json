@@ -1,0 +1,247 @@
+{
+  "version": "ga-requested-source-carrier/0.2-draft",
+  "status": "SYMBOLIC SOURCE CARRIER; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "TrialPanelUnavailableObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RequestedBodySamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EmbodiedSample"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Declarations",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "SafeSignalDeclaration"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSourceSamplingRequest",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "LocalReserveSamplingRequest"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CompletedRequestedSamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Request",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralSourceSamplingRequest"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "RequestedBodySamples"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "union",
+              "alternatives": [
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelPresentObservation"
+                },
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelUnavailableObservation"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExtendedObservation"
+            }
+          }
+        },
+        {
+          "name": "EventDetection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentEventDetectionId"
+            }
+          }
+        },
+        {
+          "name": "ReservedExperience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SourcePerceptionInput",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        }
+      ]
+    }
+  ],
+  "storage": [],
+  "newIdentityFamilies": [],
+  "truthReadsFromPerception": [],
+  "invariants": {
+    "request": "At least one requested modality; body observer equals outer observer; body channels nonempty.",
+    "outputs": "Presence of each product equals request, independently of sample availability.",
+    "body": "Exact requested channel/sample/declaration bijection; same observer/time.",
+    "event": "One shared detection iff present panel or nonempty visual; exact equality in any visual product.",
+    "freeze": "One later experience iff any admitted evidence; no current experience in raw samples.",
+    "unsampled": "No output and no source read; unsampled panel does not clear context.",
+    "reservation": "Actual sample-stage conditional1106 allocation; same field forwarded through tracking/binding to freeze; never an additional experience."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV1.json",
+      "sha256": "f65e255afee4765ecc0c07223cf45c1a66506d361e686ace93c134cbd8f0faf5"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_RESERVATION_CORRECTION_REV1.md",
+      "sha256": "4d3e00f4dd91cdb071f335a7aa34191541be43b04d21a31ebd030962aa8dc76a"
+    }
+  ],
+  "external": {
+    "ExperienceId": "existing1106"
+  }
+}

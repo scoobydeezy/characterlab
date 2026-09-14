@@ -1,0 +1,711 @@
+{
+  "version": "general-attention-registration-write-scope/0.1-draft",
+  "status": "SYMBOLIC CORRECTION; NO ALLOCATION",
+  "records": [
+    {
+      "name": "GeneralPathWriteCapability",
+      "fields": [
+        {
+          "name": "Authority",
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "name": "Paths",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 1,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralStageRegistrationV02",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "world",
+              "current-sample",
+              "current-track",
+              "current-bind",
+              "current-classify",
+              "current-freeze",
+              "current-roles",
+              "current-dispatch",
+              "consequence-sample",
+              "consequence-track",
+              "consequence-bind",
+              "consequence-classify",
+              "consequence-freeze",
+              "consequence-roles",
+              "consequence-dispatch",
+              "current-visual-selection",
+              "current-visual-encoding",
+              "current-body-selection",
+              "current-visual-cue",
+              "current-body-cue",
+              "current-event-rank",
+              "current-body-rank",
+              "current-recollection",
+              "consequence-visual-selection",
+              "consequence-visual-encoding",
+              "consequence-body-selection",
+              "consequence-visual-cue",
+              "consequence-body-cue",
+              "consequence-event-rank",
+              "consequence-body-rank",
+              "consequence-recollection",
+              "visual-acquisition-evidence",
+              "body-acquisition-evidence",
+              "ordinary-memory-formation",
+              "event-association-formation",
+              "event-presentation-formation",
+              "prior-concern-workspace",
+              "prior-concern-appraisal",
+              "prior-concern-producer",
+              "encoding-concern-delivery",
+              "recall-concern-delivery",
+              "prior-concern-visual-encoding",
+              "prior-concern-event-rank",
+              "goal-command-proposal",
+              "goal-command-owner",
+              "goal-deadline-owner",
+              "goal-outcome-assessment",
+              "focal-consequence-delivery",
+              "goal-qualification-delivery",
+              "retained-attribution",
+              "attribution-use-dispatch",
+              "ordinary-memory-use",
+              "attribution-result-delivery",
+              "significance-opportunity",
+              "significance-join",
+              "ordinary-memory-significance",
+              "retention-original",
+              "retention-dispatch",
+              "ordinary-memory-retention",
+              "event-association-retention",
+              "event-presentation-cleanup",
+              "event-presentation-dispatch",
+              "event-presentation-owner",
+              "goal-baseline-cue",
+              "goal-baseline-rank",
+              "goal-baseline-recollection",
+              "local-reserve-replenishment"
+            ]
+          }
+        },
+        {
+          "name": "Seam",
+          "type": {
+            "kind": "ref",
+            "name": "SeamId"
+          }
+        },
+        {
+          "name": "Version",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "ref",
+            "name": "EventTypeId"
+          }
+        },
+        {
+          "name": "Phase",
+          "type": {
+            "kind": "ref",
+            "name": "PhaseOrdinal"
+          }
+        },
+        {
+          "name": "Input",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Outputs",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralOutputDeclaration"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "ReadDomain",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "name": "WriteAuthorization",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "TransitionWriteAuthorization"
+              },
+              {
+                "kind": "ref",
+                "name": "GeneralPathWriteCapability"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SubjectProjection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "SubjectProjectionRequirement"
+            }
+          }
+        },
+        {
+          "name": "Definitions",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralDefinitionBinding"
+            },
+            "min": 0,
+            "max": 8
+          }
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "name": "world",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-sample",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-track",
+      "writeMode": "ExactPaths",
+      "roots": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": []
+    },
+    {
+      "name": "current-bind",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-classify",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-freeze",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-roles",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-dispatch",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-sample",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-track",
+      "writeMode": "ExactPaths",
+      "roots": [
+        "PerceptualContinuantFileState",
+        "PerceptualEventFileState",
+        "GeneralTrackingState",
+        "TrialPanelContextState"
+      ],
+      "route": []
+    },
+    {
+      "name": "consequence-bind",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-classify",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-freeze",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-roles",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-dispatch",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-visual-selection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-visual-encoding",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-body-selection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-visual-cue",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-body-cue",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-event-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-body-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "current-recollection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-visual-selection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-visual-encoding",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-body-selection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-visual-cue",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-body-cue",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-event-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-body-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "consequence-recollection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "visual-acquisition-evidence",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "body-acquisition-evidence",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-formation",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-association-formation",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralAssociationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-presentation-formation",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralPresentationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "prior-concern-workspace",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "prior-concern-appraisal",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "prior-concern-producer",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "encoding-concern-delivery",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "recall-concern-delivery",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "prior-concern-visual-encoding",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "prior-concern-event-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "goal-command-proposal",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "goal-command-owner",
+      "writeMode": "ExactPaths",
+      "roots": [
+        "MaintenanceGoalState"
+      ],
+      "route": []
+    },
+    {
+      "name": "goal-deadline-owner",
+      "writeMode": "ExactPaths",
+      "roots": [
+        "MaintenanceGoalState"
+      ],
+      "route": []
+    },
+    {
+      "name": "goal-outcome-assessment",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "focal-consequence-delivery",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "goal-qualification-delivery",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "retained-attribution",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "attribution-use-dispatch",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-use",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "attribution-result-delivery",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "significance-opportunity",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "significance-join",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-significance",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "retention-original",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "retention-dispatch",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "ordinary-memory-retention",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralEpisodeState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-association-retention",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralAssociationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-presentation-cleanup",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralPresentationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-presentation-dispatch",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "event-presentation-owner",
+      "writeMode": "LearningFamilies",
+      "roots": [
+        "GeneralPresentationState"
+      ],
+      "route": [
+        "route/character-learning"
+      ]
+    },
+    {
+      "name": "goal-baseline-cue",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "goal-baseline-rank",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "goal-baseline-recollection",
+      "writeMode": "ReadOnly",
+      "roots": [],
+      "route": []
+    },
+    {
+      "name": "local-reserve-replenishment",
+      "writeMode": "ExactPaths",
+      "roots": [
+        "LocalReserveState at admitted composite key"
+      ],
+      "route": []
+    }
+  ],
+  "roles": [
+    {
+      "path": "GeneralPathWriteCapability.Authority",
+      "identity": "MutationAuthorityId",
+      "namespace": 1025,
+      "mode": "CanonicalRecordField"
+    }
+  ],
+  "inherited": [
+    "TransitionWriteAuthorization is existing322 WriteCapabilityV06, unchanged",
+    "StatePathPattern is existing149, unchanged"
+  ],
+  "limits": [
+    "No protocol-root write through a transition",
+    "Exact path set must match the fixed stage and admitted model",
+    "No owner or family is merged",
+    "704/1 remains frozen; no alias to this successor"
+  ],
+  "sources": [
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_CARRIER_CANDIDATE.json",
+      "sha256": "0d5e3e7bfc26f625ee1297f8751b0371cf139c8016edec4e0bf197d63c3eeade"
+    },
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV2.json",
+      "sha256": "8de392024fea8f836276556cb168590f7aedc519d13273596af3a543def74371"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRATION_WRITE_SCOPE_CORRECTION_REV1.md",
+      "sha256": "5f7f4b893f1b80c0c96fab0beb403b1cd537548c1472d29f20e50d4c602f0034"
+    },
+    {
+      "path": "scripts/prepare-ga-write-scope-correction.mjs",
+      "sha256": "b47e77bfdb65d07067fb593f27e6cf8a93907fa666156591bfb9e44a2b799200"
+    }
+  ]
+}

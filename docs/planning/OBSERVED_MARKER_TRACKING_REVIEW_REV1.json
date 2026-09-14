@@ -1,0 +1,83 @@
+{
+  "status": "OMT-A..H QUALIFIED AT COMPONENT SCOPE",
+  "tests": 8,
+  "faults": [
+    {
+      "name": "current-collision",
+      "removed": "&&detections.filter(x=>x.glyph===d.glyph).length===1",
+      "inserted": "",
+      "baseline": 2,
+      "actual": 1,
+      "detected": true
+    },
+    {
+      "name": "previous-collision",
+      "removed": "old.length===1",
+      "inserted": "old.length>=1",
+      "baseline": "NewTrack",
+      "actual": "ContinuesPriorTrack",
+      "detected": true
+    },
+    {
+      "name": "observation-replay",
+      "removed": "if(used.has(input.observationId))fail('replayed observation');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "horizon",
+      "removed": "f.sweeps>=8",
+      "inserted": "f.sweeps>8",
+      "baseline": 8,
+      "actual": 9,
+      "detected": true
+    },
+    {
+      "name": "early-private-mutation",
+      "removed": "const f=get(token);own(input",
+      "inserted": "const f=get(token);f.sweeps++;own(input",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "current": 2,
+    "previous": "NewTrack",
+    "replay": true,
+    "horizon": 8,
+    "atomic": true,
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "a16b421cfd570e1f7997aa32d6e0a2fd2d4c665c323c505793db37828f51fc5c"
+    },
+    {
+      "path": "src/test/observedMarkerTracking.test.ts",
+      "sha256": "2e6cf1a0086478ad7732a1b82f4f51d68ea4dadf44b386418a95ee71dba0f466"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "docs/formal/OBSERVED_MARKER_TRACKING_COMPONENT.md",
+      "sha256": "cb395b4bb144c5e099107ed998f98ec72c3eb1dc3e71dbe87c0b00fc9f590e4b"
+    },
+    {
+      "path": "scripts/review-observed-marker-tracking.mjs",
+      "sha256": "f4c6cc22384a7a43cd7ff37707d1bd7bbf72577d9dd49692b6d23819a1bd5403"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/OBSERVED_MARKER_TRACKING_TESTS_REV1.json",
+    "sha256": "fae181922cbf237479ebf0d250bd630b5783fd11b7aeb14ce4ac75d71ca0be4f"
+  },
+  "limits": [
+    "No public world/observation source, authenticated ingress, persistent encoding/access state or corpus verdict. Actual SEM transitions are used; marker observations remain component inputs pending source contract."
+  ]
+}

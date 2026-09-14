@@ -1,0 +1,76 @@
+{
+  "status": "SYMBOLIC GOAL/ATTRIBUTION STAGE REVIEW PASS",
+  "records": 10,
+  "stages": 13,
+  "faults": [
+    {
+      "name": "assessment-physical-read",
+      "rejected": true
+    },
+    {
+      "name": "attribution-unselected-read",
+      "rejected": true
+    },
+    {
+      "name": "early-assessment",
+      "rejected": true
+    },
+    {
+      "name": "deadline-from-owner",
+      "rejected": true
+    },
+    {
+      "name": "reuse-old-evid-identity",
+      "rejected": true
+    },
+    {
+      "name": "delivery-allocates-again",
+      "rejected": true
+    },
+    {
+      "name": "terminal-output",
+      "rejected": true
+    },
+    {
+      "name": "authored-focal-child",
+      "rejected": true
+    },
+    {
+      "name": "metric-in-focal-delivery",
+      "rejected": true
+    },
+    {
+      "name": "missing-qualification-parent",
+      "rejected": true
+    },
+    {
+      "name": "recompute-withdrawn-goal",
+      "rejected": true
+    },
+    {
+      "name": "namespace-only-subject",
+      "rejected": true
+    },
+    {
+      "name": "pretend-whole-ceiling",
+      "rejected": true
+    },
+    {
+      "name": "claim-absent-consequence-closed",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_GOAL_ATTRIBUTION_STAGE_CLOSURE_REV1.json",
+      "sha256": "640d8f99702a2da9903d9d895382e3ac6d7e6d2baaf27396b746a156e9705099"
+    },
+    {
+      "path": "scripts/review-ga-goal-attribution-stages.mjs",
+      "sha256": "a35384b8873b59da626aa76f3d01491ff2e18b2221c5bdf4a3a8846c9b72073a"
+    }
+  ],
+  "limits": [
+    "Partial declaration consistency only; absent-consequence targets and whole public gates remain open."
+  ]
+}

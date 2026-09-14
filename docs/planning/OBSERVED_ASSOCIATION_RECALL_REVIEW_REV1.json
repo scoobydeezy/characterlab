@@ -1,0 +1,55 @@
+{
+  "status": "OBSERVED ASSOCIATION RECALL REVIEW PASS",
+  "faults": [
+    {
+      "name": "disable-actual-learning",
+      "file": "src/test/observedAssociationRecall.test.ts",
+      "witness": "OAR-B",
+      "detected": true
+    },
+    {
+      "name": "cue-from-old-file",
+      "file": "src/test/observedAssociationRecall.test.ts",
+      "witness": "OAR-D",
+      "detected": true
+    },
+    {
+      "name": "ignore-complete-graph-loss",
+      "file": "src/test/observedAssociationRecall.test.ts",
+      "witness": "OAR-C",
+      "detected": true
+    },
+    {
+      "name": "direct-cue-needs-graph-membership",
+      "file": "src/campaign3/directAssociativeAccess.ts",
+      "witness": "OAR-C",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/observedAssociationRecall.test.ts",
+      "sha256": "1e8483fcece8c2bb9a4712ba30e61b474e72d15f4904712d1b65c59f1a6e6bc2"
+    },
+    {
+      "path": "src/campaign3/directAssociativeAccess.ts",
+      "sha256": "dad4f528969758fd8d0926ca49c477e3d6922ddf85768c088b088fa55be03478"
+    },
+    {
+      "path": "docs/planning/GA_OBSERVED_ASSOCIATION_RECALL_REV1.md",
+      "sha256": "d5a45825cd391b448582cf2e01a356605d2322c447331906cbb0456eefc1e005"
+    },
+    {
+      "path": "src/campaign3/canonicalEventRecall.ts",
+      "sha256": "7f45b389daf7c8ed111ea26dbb9fa9b9f358ab37a63de9d5c7a25a994e516244"
+    },
+    {
+      "path": "scripts/review-observed-association-recall.mjs",
+      "sha256": "f798b5d3d5121e6879418bbe380ebae06d720f5422bf7d32382d0b343c6031cf"
+    }
+  ],
+  "limits": [
+    "Observed-source association/recall composition; public gates remain open.",
+    "Canonical retained-view bytes do not qualify unallocated public owner schemas."
+  ]
+}

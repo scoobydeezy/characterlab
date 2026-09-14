@@ -1,0 +1,538 @@
+{
+  "version": "ga-calibration-definitions/0.1-draft",
+  "status": "SYMBOLIC DEFINITION SHAPES; MODEL COMPILER AND PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "GeneralSpatialCalibration",
+      "fields": [
+        {
+          "name": "MinX",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MaxX",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MinY",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MaxY",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "FocalWeight",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "ResidualPool",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEncodingCalibration",
+      "fields": [
+        {
+          "name": "Law",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Independent",
+              "HistoricalShared",
+              "HistoricalHybrid",
+              "RetiredFlat"
+            ]
+          }
+        },
+        {
+          "name": "BudgetFloor",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveUnitRational"
+          }
+        },
+        {
+          "name": "ImportantThreshold",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralAssociationCalibration",
+      "fields": [
+        {
+          "name": "Scale",
+          "type": {
+            "kind": "ref",
+            "name": "GraphScale"
+          }
+        },
+        {
+          "name": "LearningRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "AssociationDecayRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEventAccessCalibration",
+      "fields": [
+        {
+          "name": "Beta",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Scale",
+          "type": {
+            "kind": "ref",
+            "name": "GraphScale"
+          }
+        },
+        {
+          "name": "PresentationDecayRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Exponent",
+          "type": {
+            "kind": "ref",
+            "name": "DecayExponent"
+          }
+        },
+        {
+          "name": "BaseWeight",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "AssociationWeight",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "RecallCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBodyRecallCalibration",
+      "fields": [
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "RecallCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRetentionCalibration",
+      "fields": [
+        {
+          "name": "EventSlots",
+          "type": {
+            "kind": "ref",
+            "name": "MemorySlotCount"
+          }
+        },
+        {
+          "name": "BodySlots",
+          "type": {
+            "kind": "ref",
+            "name": "MemorySlotCount"
+          }
+        },
+        {
+          "name": "Priority",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AgeOnly",
+              "UseOnly",
+              "SharedProtection",
+              "SignificanceFirst"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralGraphRetentionCalibration",
+      "fields": [
+        {
+          "name": "Nodes",
+          "type": {
+            "kind": "ref",
+            "name": "GraphNodeCount"
+          }
+        },
+        {
+          "name": "Edges",
+          "type": {
+            "kind": "ref",
+            "name": "GraphEdgeCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFeedbackCalibration",
+      "fields": [
+        {
+          "name": "EncodingEnabled",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "RetrievalEnabled",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRunBounds",
+      "fields": [
+        {
+          "name": "CompletedSelectionLimit",
+          "type": {
+            "kind": "ref",
+            "name": "SourceBound"
+          }
+        },
+        {
+          "name": "Horizon",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBodySelectionCalibration",
+      "fields": [
+        {
+          "name": "MaxSignals",
+          "type": {
+            "kind": "ref",
+            "name": "SignalLimit"
+          }
+        },
+        {
+          "name": "MaxViewsPerSignal",
+          "type": {
+            "kind": "ref",
+            "name": "SignalViewLimit"
+          }
+        },
+        {
+          "name": "MaxBytesPerSignal",
+          "type": {
+            "kind": "ref",
+            "name": "SignalByteLimit"
+          }
+        },
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "SignalCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralGoalQualificationCalibration",
+      "fields": [
+        {
+          "name": "Law",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BothDirections",
+              "DeteriorationOnly"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservationExecutionPolicy",
+      "fields": [
+        {
+          "name": "BodySelection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "VisualSelection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "Spatial",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "Encoding",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "BodyRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "GoalBaselineRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "EventRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "GoalQualification",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "primitives": {
+    "GraphScale": {
+      "canonical": "unsigned",
+      "min": 1,
+      "max": 1000
+    },
+    "DecayExponent": {
+      "canonical": "unsigned",
+      "min": 1,
+      "max": 16
+    },
+    "RecallCount": {
+      "canonical": "unsigned",
+      "min": 0,
+      "max": 32
+    },
+    "MemorySlotCount": {
+      "canonical": "unsigned",
+      "min": 0,
+      "max": 1024
+    },
+    "GraphNodeCount": {
+      "canonical": "unsigned",
+      "min": 0,
+      "max": 30
+    },
+    "GraphEdgeCount": {
+      "canonical": "unsigned",
+      "min": 0,
+      "max": 870
+    },
+    "SignalLimit": {
+      "canonical": "unsigned",
+      "min": 1,
+      "max": 3
+    },
+    "SignalViewLimit": {
+      "canonical": "unsigned",
+      "min": 1,
+      "max": 3
+    },
+    "SignalByteLimit": {
+      "canonical": "unsigned",
+      "min": 1,
+      "max": 65536
+    },
+    "SignalCount": {
+      "canonical": "unsigned",
+      "min": 0,
+      "max": 3
+    }
+  },
+  "reuse": {
+    "visualSelection": "Existing AttentionSelectionPolicy/519; RolePriority1, EqualPriority2, Unlimited3; capacity remains0..2; Unlimited ignores it.",
+    "identity": "Existing DefinitionId/1027 in governed registry envelope; no duplicate definition identity field or namespace.",
+    "bodySelection": "GeneralBodySelectionCalibration names the accepted signal gate limits; Capacity<=MaxSignals and complete channel/view coverage are required."
+  },
+  "refinements": {
+    "spatial": "Nonempty rectangle, coordinates0..7, independent focal and residual weights.",
+    "encoding": "Fixed homogeneous base3/10 and accepted actor1/target9/10/participant3/5 role factors; Need/Surprise disabled. First recipes use floor1 or1/5 and threshold1/4.",
+    "association": "Exact accepted lattice update; decay elapsed from actual LastUpdatedAt, no caller supplied elapsed or coactivation.",
+    "access": "Beta strictly below1; matrix dimension<=30; actual current cue and subject-owned leaves only; unavailable cue performs no memory read.",
+    "retention": "Independent child-slot budgets; priority reads B0 metadata. No new current credit affects current ranking.",
+    "graph": "Nodes<=30 follows the declared30-file public carrier; Edges<=Nodes*(Nodes-1). Weakest-weight-first directed positive edge loss and empty-node normalization unchanged.",
+    "feedback": "Exact prior-response1-q peripheral multiplier and1+q association weight; disabled numerical branch retains all producer/delivery checks.",
+    "bounds": "CompletedSelectionLimit1..32; positive Horizon<=100 in first cohort; includes empty selectors; not a psychological capacity or memory read.",
+    "execution": "UsePlan.ExecutionPolicy resolves the exact declared purpose table. Required policy fields iff corresponding use is requested; no unrelated optional fields. GoalBaselineRecall and GoalQualification iff GoalAssessment is present. BodyCue and goal baseline have independently bound capacities."
+  },
+  "definitionBindings": {
+    "visual-preparation": [
+      "GeneralSpatialCalibration",
+      "AttentionSelectionPolicy/519"
+    ],
+    "visual-encoding": [
+      "GeneralEncodingCalibration"
+    ],
+    "event-association-owner": [
+      "GeneralAssociationCalibration",
+      "GeneralGraphRetentionCalibration"
+    ],
+    "event-rank": [
+      "GeneralEventAccessCalibration"
+    ],
+    "body-rank": [
+      "GeneralBodyRecallCalibration"
+    ],
+    "ordinary-memory-owner": [
+      "GeneralRetentionCalibration"
+    ],
+    "prior-concern-join": [
+      "GeneralFeedbackCalibration"
+    ],
+    "run-compiler": [
+      "GeneralRunBounds"
+    ],
+    "body-selection": [
+      "GeneralBodySelectionCalibration"
+    ],
+    "goal-assessment": [
+      "GeneralGoalQualificationCalibration"
+    ],
+    "source-dispatch": [
+      "ObservationExecutionPolicy"
+    ]
+  },
+  "newIdentityFamilies": [],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_COHORT_RECIPE_REV1.json",
+      "sha256": "4043bdb5618ce2e4fe96d92de34102a333d96610686f7018fa83560f4595db04"
+    },
+    {
+      "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV2.json",
+      "sha256": "f27ab088683cea8c44c0ba108ba7123f68f1e5f8467e73ea137640c630757ddf"
+    },
+    {
+      "path": "docs/formal/ATTENTION_ALLOCATION_TABLE.json",
+      "sha256": "3afeaf28c4e3485bc4acdf96e544f42f3c83f2645e62859c9b4aa3f7c7812eea"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "6f54c4523faed79ffe00c29a242b1ee226a3880553921f4a9f124d73dcb02096"
+    },
+    {
+      "path": "src/campaign3/significanceFirstRetention.ts",
+      "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+    },
+    {
+      "path": "src/campaign3/strengthGraphRetention.ts",
+      "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+    },
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+    }
+  ]
+}

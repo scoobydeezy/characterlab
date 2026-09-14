@@ -1,0 +1,55 @@
+{
+  "status": "GOAL DISTANCE COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "drop-metric-gate",
+      "witness": "GR-E",
+      "detected": true
+    },
+    {
+      "name": "non-strict-closer",
+      "witness": "GR-B",
+      "detected": true
+    },
+    {
+      "name": "equal-ranges-as-same",
+      "witness": "GR-B",
+      "detected": true
+    },
+    {
+      "name": "collapse-side",
+      "witness": "GR-C",
+      "detected": true
+    },
+    {
+      "name": "bad-range-min",
+      "witness": "GR-H",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/goalDistanceRelation.ts",
+      "sha256": "ae8e698d830873b93fd1ba1ec343b9343eef942425f7620fc0bf10c2e2b3c724"
+    },
+    {
+      "path": "src/test/goalDistanceRelation.test.ts",
+      "sha256": "606b6936514a0622a540f1378d3c148b1df479d1aebc857221e50883c43ff2b7"
+    },
+    {
+      "path": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "sha256": "d69e73dc8a05ddfa2aa571d0f5d907a5e5203607c5899ee9d8fe8e729c0d23f3"
+    },
+    {
+      "path": "scripts/review-goal-distance-relation.mjs",
+      "sha256": "10019cd47a9d2aeed8d08523191219f4a2e797fc7fd8c43918a85788e0555467"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/GOAL_DISTANCE_RELATION_TESTS_REV1.json",
+    "sha256": "b38d7a96b786b5f8502894c76b3b2c53c039ea3efc2ec7e72ec80d5cd7fef1ab"
+  },
+  "limits": [
+    "Trusted metric-domain declaration and evidence/read inputs. No public admission, significance or retention credit."
+  ]
+}

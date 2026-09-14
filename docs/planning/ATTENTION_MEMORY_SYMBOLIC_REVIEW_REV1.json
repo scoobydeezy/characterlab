@@ -1,0 +1,79 @@
+{
+  "status": "DOMAIN INVENTORY STRUCTURE REVIEWED; WHOLE SHAPE WITHHELD",
+  "checks": 178,
+  "records": 26,
+  "fields": 84,
+  "faults": [
+    {
+      "name": "retain-full-selected",
+      "reason": "forbidden retained source ExtendedSelected",
+      "detected": true
+    },
+    {
+      "name": "retain-nested-forecast-carrier",
+      "reason": "forbidden retained source ActualConcernCarry",
+      "detected": true
+    },
+    {
+      "name": "zero-strength-retention",
+      "reason": "nonpositive retention",
+      "detected": true
+    },
+    {
+      "name": "empty-episode",
+      "reason": "empty retained encoding",
+      "detected": true
+    },
+    {
+      "name": "observer-as-owner",
+      "reason": "wrong storage subject",
+      "detected": true
+    },
+    {
+      "name": "second-presentation-writer",
+      "reason": "multiple storage writers",
+      "detected": true
+    },
+    {
+      "name": "episode-counter",
+      "reason": "duplicate occurrence family",
+      "detected": true
+    },
+    {
+      "name": "unknown-type",
+      "reason": "unresolved reference",
+      "detected": true
+    },
+    {
+      "name": "promote-partial-packet",
+      "reason": "premature closure",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_SYMBOLIC_INVENTORY_REV1.json",
+      "sha256": "ddbcdc738f2cc1e443a66260f9acf4f0d06a60d2197a54e366727a46b0e50edd"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_RETENTION_REVIEW_REV1.md",
+      "sha256": "9797ce96c086a4019e52e9e066cee8d9c8328f9f6950c35b46014fd4bd986c80"
+    },
+    {
+      "path": "scripts/build-attention-memory-symbolic-inventory.mjs",
+      "sha256": "00021e6e653b9ac340c29b7dfbb1e906fb8ce46499e2edc443575bef39bb712b"
+    },
+    {
+      "path": "scripts/review-attention-memory-symbolic-inventory.mjs",
+      "sha256": "44e2080f0d477d6c547ab0302e711427de26872ceb4d3e7097a20821f200f3a4"
+    }
+  ],
+  "preserved": {
+    "path": "docs/planning/GENERAL_ATTENTION_COMPONENT_QUALIFICATION_REV1.json",
+    "sha256": "a50ad0d995c72247dab8940d5eec9683f7697fd023bcd59b7b7829a1329db06b"
+  },
+  "limits": [
+    "Reference/storage-reachability review only; not canonical codecs or executed memory/feedback.",
+    "Conditional fields, complete stage registrations, admitted-input roles, model work bounds and public proof remain pending."
+  ]
+}

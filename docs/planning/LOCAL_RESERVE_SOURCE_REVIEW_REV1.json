@@ -1,0 +1,97 @@
+{
+  "status": "LR-A..H QUALIFIED AT COMPONENT SCOPE",
+  "faults": [
+    {
+      "name": "mutate-prior-source",
+      "removed": "const reserves=new Map(f.reserves)",
+      "inserted": "const reserves=f.reserves",
+      "witness": "LR-A",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte"
+      ]
+    },
+    {
+      "name": "read-first-reserve",
+      "removed": "f.reserves.get(c.physical)!",
+      "inserted": "[...f.reserves.values()][0]",
+      "witness": "LR-B",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-H: inventory order has no physical or safe identity meaning; invalid source domains reject"
+      ]
+    },
+    {
+      "name": "ignore-permission",
+      "removed": "!c.available||!c.permitted",
+      "inserted": "!c.available",
+      "witness": "LR-D",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload"
+      ]
+    },
+    {
+      "name": "leak-physical-key",
+      "removed": "channel:c.channel,lower:",
+      "inserted": "channel:c.channel,physical:c.physical,lower:",
+      "witness": "LR-C",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical"
+      ]
+    },
+    {
+      "name": "skip-zero-reanchor",
+      "removed": "const before=materializeReserve",
+      "inserted": "if(delivery.numerator===0n)return source;const before=materializeReserve",
+      "witness": "LR-G",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target"
+      ]
+    },
+    {
+      "name": "mutable-output-rational",
+      "removed": "return Object.freeze(Q.of(q.numerator,q.denominator));",
+      "inserted": "return Q.of(q.numerator,q.denominator);",
+      "witness": "LR-E",
+      "detected": true,
+      "failed": [
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "42bad04835eb28d05af97054092f6210f698751eeac03e5754743928d258c695"
+    },
+    {
+      "path": "src/test/localReserveSource.test.ts",
+      "sha256": "5a612a286c0739b52c2f6a544053f3f5d1412bdc8ea99eaff9ba4394cd127319"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+      "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+    },
+    {
+      "path": "scripts/review-local-reserve-source.mjs",
+      "sha256": "6a7070d4d1d4f9bb3f939ff4b351304d47bbc3aeca40a64ee6488b9a74f15cd4"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/LOCAL_RESERVE_SOURCE_TESTS_REV2.json",
+    "sha256": "94fb59c7159bb21212e28a432da25697239514c48cfb406c7213ba47f15b0260"
+  },
+  "limits": [
+    "Synthetic component physiology only.",
+    "No permanent physical/signal identity namespaces, canonical root or live-source authentication.",
+    "No pressure aggregation, Need, motive or public retention qualification."
+  ]
+}

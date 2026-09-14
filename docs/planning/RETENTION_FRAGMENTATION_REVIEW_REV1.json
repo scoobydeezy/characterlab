@@ -1,0 +1,108 @@
+{
+  "status": "LOSS MECHANICS CHECKED AT COMPONENT SCOPE",
+  "faults": [
+    {
+      "name": "retain-removed-content",
+      "removed": "!removed.get(a.id)?.has(u.key)",
+      "inserted": "true",
+      "witness": "RF-A",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-B: final-unit loss removes the current target and creates no replacement acquisition",
+        "retention fragmentation mechanics only RF-H: loss order is irrelevant and event acquisitions can partially survive too"
+      ]
+    },
+    {
+      "name": "keep-empty-acquisition",
+      "removed": "if(units.length)acquisitions.push",
+      "inserted": "if(true)acquisitions.push",
+      "witness": "RF-B",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-B: final-unit loss removes the current target and creates no replacement acquisition"
+      ]
+    },
+    {
+      "name": "count-views-as-slots",
+      "removed": "usage[a.kind]+=units.length",
+      "inserted": "usage[a.kind]+=units.reduce((n,u)=>n+u.views.length,0)",
+      "witness": "RF-C",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-C: view multiplicity does not change cost; same signal in another acquisition does",
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state",
+        "retention fragmentation mechanics only RF-H: loss order is irrelevant and event acquisitions can partially survive too"
+      ]
+    },
+    {
+      "name": "discard-survivor-view",
+      "removed": "views:u.views.map(b=>b.slice())",
+      "inserted": "views:u.views.slice(0,1).map(b=>b.slice())",
+      "witness": "RF-A",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state"
+      ]
+    },
+    {
+      "name": "borrow-kind-capacity",
+      "removed": "usage[k]>capacity[k]",
+      "inserted": "usage.EventContinuant+usage.Interoceptive>capacity.EventContinuant+capacity.Interoceptive",
+      "witness": "RF-D",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-D: body loss preserves event bytes and unused event capacity cannot rescue body overflow"
+      ]
+    },
+    {
+      "name": "alias-source-bytes",
+      "removed": "b=>b.slice()",
+      "inserted": "b=>b",
+      "witness": "RF-E",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state"
+      ]
+    },
+    {
+      "name": "ignore-duplicate-loss",
+      "removed": "if(set.has(loss.unit))fail('duplicate loss');",
+      "inserted": "",
+      "witness": "RF-F",
+      "detected": true,
+      "failed": [
+        "retention fragmentation mechanics only RF-F: unknown and duplicate loss addresses reject, including a view pretending to be a unit"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/retentionFragmentation.ts",
+      "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+    },
+    {
+      "path": "src/test/retentionFragmentation.test.ts",
+      "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+    },
+    {
+      "path": "docs/formal/RETENTION_FRAGMENTATION_COMPONENT.md",
+      "sha256": "8345b739befb6db5fb9d1524b478b76cd5cc9c0536450d4bcc6d85651a345bae"
+    },
+    {
+      "path": "scripts/review-retention-fragmentation.mjs",
+      "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/RETENTION_FRAGMENTATION_TESTS_REV1.json",
+    "sha256": "a73ebee966748278f796836f97b72745a13c5435b749c1ba99c121f312d5da8e"
+  },
+  "limits": [
+    "Loss plans are supplied; no survival-priority policy is qualified.",
+    "No public producer, subject, owner, metadata or persistence qualification.",
+    "Component symbols, ordinals and safety bounds are not permanent public allocations or parameters."
+  ]
+}

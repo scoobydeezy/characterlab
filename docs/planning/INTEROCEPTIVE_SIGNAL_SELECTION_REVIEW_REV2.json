@@ -1,0 +1,103 @@
+{
+  "status": "SG-A..H QUALIFIED AT COMPONENT SCOPE",
+  "faults": [
+    {
+      "name": "count-views-as-slots",
+      "removed": "retained.length<limits.capacity",
+      "inserted": "retained.reduce((n,g)=>n+g.bytes.length,0)<limits.capacity",
+      "witness": "SG-A",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-A: extra views of the same signal add evidence but no competing slot"
+      ]
+    },
+    {
+      "name": "opportunity-from-time",
+      "removed": "opportunityId:input.opportunityId",
+      "inserted": "opportunityId:input.at",
+      "witness": "SG-D",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-D: identical time and signal never replace the explicit opportunity identity"
+      ]
+    },
+    {
+      "name": "discard-contradictory-views",
+      "removed": "values.map(v=>v.bytes)",
+      "inserted": "values.slice(0,1).map(v=>v.bytes)",
+      "witness": "SG-C",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-A: extra views of the same signal add evidence but no competing slot",
+        "interoceptive-signal-selection-component/0.1-candidate SG-C: conflicting and differently resolved readings survive without fusion"
+      ]
+    },
+    {
+      "name": "ignore-byte-bound",
+      "removed": "if(values.reduce((n,v)=>n+v.bytes.length,0)>limits.maxBytesPerSignal)throw Error('signal retained byte budget exceeded');",
+      "inserted": "",
+      "witness": "SG-E",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-E: separate candidate, view, byte and selected-count bounds apply"
+      ]
+    },
+    {
+      "name": "reusable-view",
+      "removed": "views.delete(view);\n return",
+      "inserted": "\n return",
+      "witness": "SG-G",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-G: input enumeration, caller mutation and forged/reused/closed views cannot expose extra data"
+      ]
+    },
+    {
+      "name": "ignore-repeated-observation",
+      "removed": "||occurrences.has(o)",
+      "inserted": "",
+      "witness": "SG-F",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-F: malformed grouping, identities, time and repeated source observations reject"
+      ]
+    },
+    {
+      "name": "retain-absent-signal",
+      "removed": "!values.length?'Unavailable':",
+      "inserted": "false?'Unavailable':",
+      "witness": "SG-H",
+      "detected": true,
+      "failed": [
+        "interoceptive-signal-selection-component/0.1-candidate SG-H: absent views add no operand, while a present high range remains selectable"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+    },
+    {
+      "path": "src/test/interoceptiveSignalSelection.test.ts",
+      "sha256": "b8b81538fcdf202858918a7d24fbc27d9f39037f373dd7eb70f865bd568cf194"
+    },
+    {
+      "path": "docs/formal/INTEROCEPTIVE_SIGNAL_SELECTION_COMPONENT.md",
+      "sha256": "a85ed2ae101ee72c5e64bc4b8d54927ebe8d7b4843f9d00b4634829def7a5cce"
+    },
+    {
+      "path": "scripts/review-interoceptive-signal-selection-rev2.mjs",
+      "sha256": "911376cb2c2db37f670e043a54a81efc0327c1a71cb96d122d20278fbab1b862"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+    "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd"
+  },
+  "limits": [
+    "Safe grouping and opportunity identity are supplied component arguments, not public authenticated producer outputs.",
+    "Bounds in tests are not permanent public model parameters.",
+    "No physiological signal diversity, evidence integration or memory/restore qualification."
+  ]
+}

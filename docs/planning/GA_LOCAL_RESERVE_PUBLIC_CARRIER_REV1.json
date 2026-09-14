@@ -1,0 +1,296 @@
+{
+  "version": "ga-local-reserve-public-carrier/0.1-draft",
+  "status": "SYMBOLIC PHYSICAL SOURCE CARRIER; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "LocalReserveKey",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Reserve",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveBodyBinding",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Parameters",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveBodyRegistry",
+      "fields": [
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "LocalReserveBodyBinding"
+            },
+            "min": 3,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveChannel",
+      "fields": [
+        {
+          "name": "Channel",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationChannelId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Reserve",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "Width",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveRational"
+          }
+        },
+        {
+          "name": "Available",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveChannelRegistry",
+      "fields": [
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "LocalReserveChannel"
+            },
+            "min": 3,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveState",
+      "fields": [
+        {
+          "name": "Anchors",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "LocalReserveKey"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "ReserveAnchor"
+            },
+            "min": 3,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveSamplingRequest",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "ObservationChannelId"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveReplenishment",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveReplenishmentResult",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Prior",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveAnchor"
+          }
+        },
+        {
+          "name": "Next",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveAnchor"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveReplenishmentResult"
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "CharacterId": "existing1002 plus character qualification",
+    "LocalReserveId": "new owed physical family; unallocated",
+    "InteroceptiveSignalId": "already proposed distinct safe signal family; unallocated",
+    "DefinitionId": "existing1027; exact ReserveParameters453 definition binding",
+    "ObservationChannelId": "existing1005",
+    "ObserverId": "existing1000",
+    "ReserveAnchor": "existing454",
+    "ReserveParameters": "existing453 with existing unit/embodied-fuel-stock1039",
+    "PositiveRational": "exact>0",
+    "NonnegativeRational": "exact>=0",
+    "Boolean": "canonical boolean",
+    "Instant": "nonnegative SimInstant",
+    "ReserveReplenishmentResult": "existing479"
+  },
+  "newIdentityFamilies": [
+    {
+      "name": "LocalReserveId",
+      "payload": "canonical NFC text",
+      "scope": "model physical compartment vocabulary",
+      "members": [
+        "local-reserve/A",
+        "local-reserve/B",
+        "local-reserve/C"
+      ],
+      "allocator": null
+    }
+  ],
+  "root": {
+    "record": "LocalReserveState",
+    "field": "Anchors",
+    "keyRecord": "LocalReserveKey",
+    "valueRecord": "ReserveAnchor",
+    "classification": "PhysicalBody",
+    "owner": "authority/local-reserve",
+    "removalAllowed": false
+  },
+  "stateMapKeyRoles": [],
+  "traceOnly": [
+    "LocalReserveReplenishmentResult"
+  ],
+  "cognitiveReads": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.md",
+      "sha256": "2c0261a1d1c3e450a4f889765b80f04e69ac956e4806dc7fa32e27b90317d1cb"
+    },
+    {
+      "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+      "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+    },
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "e75a4987d153a532a5de42daee85cb146e0b5afcfdec83930dda3c3a01fa29b5"
+    }
+  ]
+}

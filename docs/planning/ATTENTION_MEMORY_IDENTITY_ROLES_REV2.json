@@ -1,0 +1,1444 @@
+{
+  "status": "DRAFT FIELD ROLE CLASSIFICATION REV2; THREE CALIBRATION REFERENCES CORRECTED",
+  "fields": [
+    {
+      "record": "GridPosition",
+      "field": "X",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Cell"
+      }
+    },
+    {
+      "record": "GridPosition",
+      "field": "Y",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Cell"
+      }
+    },
+    {
+      "record": "ExtendedScene",
+      "field": "Scene",
+      "validation": {
+        "kind": "existing-record",
+        "name": "AttentionSceneDefinition"
+      }
+    },
+    {
+      "record": "ExtendedScene",
+      "field": "Positions",
+      "validation": {
+        "kind": "collection",
+        "min": 3,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "GridPosition"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "ExtendedScene",
+      "field": "Glyphs",
+      "validation": {
+        "kind": "collection",
+        "min": 3,
+        "max": 3,
+        "element": {
+          "kind": "primitive-domain",
+          "name": "Glyph"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "ObservedFeatureDetection",
+      "field": "Detection",
+      "validation": {
+        "kind": "existing-record",
+        "name": "CurrentDetectionId"
+      }
+    },
+    {
+      "record": "ObservedFeatureDetection",
+      "field": "Role",
+      "validation": {
+        "kind": "existing-record",
+        "name": "EventRoleEvidence"
+      }
+    },
+    {
+      "record": "ObservedFeatureDetection",
+      "field": "Glyph",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "primitive-domain",
+          "name": "Glyph"
+        }
+      }
+    },
+    {
+      "record": "ObservedFeatureDetection",
+      "field": "Position",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "local-record",
+          "name": "GridPosition"
+        }
+      }
+    },
+    {
+      "record": "ExtendedObservation",
+      "field": "Observation",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObservationId",
+        "requirement": "existing ObservationId role unchanged"
+      }
+    },
+    {
+      "record": "ExtendedObservation",
+      "field": "Observer",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "ExtendedObservation",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "ExtendedObservation",
+      "field": "EventDetection",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "existing-record",
+          "name": "CurrentEventDetectionId"
+        }
+      }
+    },
+    {
+      "record": "ExtendedObservation",
+      "field": "Detections",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "ObservedFeatureDetection"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "TrackingWindowItem",
+      "field": "File",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PerceptualReferentId"
+      }
+    },
+    {
+      "record": "TrackingWindowItem",
+      "field": "Glyph",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "primitive-domain",
+          "name": "Glyph"
+        }
+      }
+    },
+    {
+      "record": "TrackingWindow",
+      "field": "Observer",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "TrackingWindow",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "TrackingWindow",
+      "field": "Observation",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObservationId",
+        "requirement": "existing ObservationId role unchanged"
+      }
+    },
+    {
+      "record": "TrackingWindow",
+      "field": "Items",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "TrackingWindowItem"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "SelectedSpatialWitness",
+      "field": "Unit",
+      "validation": {
+        "kind": "existing-record",
+        "name": "AttentionUnitKey"
+      }
+    },
+    {
+      "record": "SelectedSpatialWitness",
+      "field": "Detection",
+      "validation": {
+        "kind": "existing-record",
+        "name": "CurrentDetectionId"
+      }
+    },
+    {
+      "record": "SelectedSpatialWitness",
+      "field": "Position",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "local-record",
+          "name": "GridPosition"
+        }
+      }
+    },
+    {
+      "record": "SelectedSpatialWitness",
+      "field": "Class",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "SpatialFocal",
+          "SpatialPeripheral",
+          "SpatialUnknown"
+        ]
+      }
+    },
+    {
+      "record": "SelectedSpatialWitness",
+      "field": "PeripheralCount",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "SmallCount"
+      }
+    },
+    {
+      "record": "ExtendedSelected",
+      "field": "Selected",
+      "validation": {
+        "kind": "existing-record",
+        "name": "SelectedEvidenceView"
+      }
+    },
+    {
+      "record": "ExtendedSelected",
+      "field": "SpatialWitnesses",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "SelectedSpatialWitness"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "ActualConcernCarry",
+      "field": "Concern",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ConcernOccurrenceId",
+        "requirement": "existing ConcernOccurrenceId role unchanged"
+      }
+    },
+    {
+      "record": "ActualConcernCarry",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "ActualConcernCarry",
+      "field": "SourceAt",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "ActualConcernCarry",
+      "field": "Response",
+      "validation": {
+        "kind": "existing-record",
+        "name": "TaskConcernResponse"
+      }
+    },
+    {
+      "record": "NoConcernAvailable",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "NoConcernAvailable",
+      "field": "SourceAt",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "NoConcernAvailable",
+      "field": "Reason",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "NoSelectedTask"
+        ]
+      }
+    },
+    {
+      "record": "FeedbackDelivery",
+      "field": "TargetOriginal",
+      "validation": {
+        "kind": "scheduler-structural-id",
+        "requirement": "existing scheduler event identifier encoding; actual association required; no typed namespace"
+      }
+    },
+    {
+      "record": "FeedbackDelivery",
+      "field": "TargetAt",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "FeedbackDelivery",
+      "field": "Value",
+      "validation": {
+        "kind": "union",
+        "alternatives": [
+          {
+            "kind": "local-record",
+            "name": "ActualConcernCarry"
+          },
+          {
+            "kind": "local-record",
+            "name": "NoConcernAvailable"
+          }
+        ],
+        "validator": "exact admitted variant; no unknown tag"
+      }
+    },
+    {
+      "record": "EncodingJoinInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "EncodingJoinInput",
+      "field": "Selected",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedSelected"
+      }
+    },
+    {
+      "record": "EncodingJoinInput",
+      "field": "Feedback",
+      "validation": {
+        "kind": "local-record",
+        "name": "FeedbackDelivery"
+      }
+    },
+    {
+      "record": "EncodingFactors",
+      "field": "Base",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "UnitRational"
+      }
+    },
+    {
+      "record": "EncodingFactors",
+      "field": "Role",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "UnitRational"
+      }
+    },
+    {
+      "record": "EncodingFactors",
+      "field": "Attention",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "UnitRational"
+      }
+    },
+    {
+      "record": "EncodingFactors",
+      "field": "Raw",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "NonnegativeRational"
+      }
+    },
+    {
+      "record": "EncodingEvaluationRow",
+      "field": "Unit",
+      "validation": {
+        "kind": "existing-record",
+        "name": "AttentionUnitKey"
+      }
+    },
+    {
+      "record": "EncodingEvaluationRow",
+      "field": "Status",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "Positive",
+          "KnownZero",
+          "UnavailableAllocation"
+        ]
+      }
+    },
+    {
+      "record": "EncodingEvaluationRow",
+      "field": "Factors",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "local-record",
+          "name": "EncodingFactors"
+        }
+      }
+    },
+    {
+      "record": "EncodingEvaluationRow",
+      "field": "Strength",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "primitive-domain",
+          "name": "UnitRational"
+        }
+      }
+    },
+    {
+      "record": "EncodingEvaluation",
+      "field": "Input",
+      "validation": {
+        "kind": "local-record",
+        "name": "EncodingJoinInput"
+      }
+    },
+    {
+      "record": "EncodingEvaluation",
+      "field": "Rows",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "EncodingEvaluationRow"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "EncodingEvaluation",
+      "field": "Calibration",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "DefinitionId",
+        "requirement": "existing DefinitionId role unchanged"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "Unit",
+      "validation": {
+        "kind": "existing-record",
+        "name": "AttentionUnitKey"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "Bindings",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 6,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceivedBindingEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "Claims",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 1,
+        "element": {
+          "kind": "existing-record",
+          "name": "CausalRoleEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "Factors",
+      "validation": {
+        "kind": "local-record",
+        "name": "EncodingFactors"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "Strength",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "PositiveUnitRational"
+      }
+    },
+    {
+      "record": "RetainedEncodingUnit",
+      "field": "SpatialWitness",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "local-record",
+          "name": "SelectedSpatialWitness"
+        }
+      }
+    },
+    {
+      "record": "RetainedEncoding",
+      "field": "Selection",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "SelectionOccurrenceId",
+        "requirement": "existing SelectionOccurrenceId role unchanged"
+      }
+    },
+    {
+      "record": "RetainedEncoding",
+      "field": "Observer",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "RetainedEncoding",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "RetainedEncoding",
+      "field": "Calibration",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "DefinitionId",
+        "requirement": "existing DefinitionId role unchanged"
+      }
+    },
+    {
+      "record": "RetainedEncoding",
+      "field": "Units",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "RetainedEncodingUnit"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "EpisodeEntry",
+      "field": "Encoding",
+      "validation": {
+        "kind": "local-record",
+        "name": "RetainedEncoding"
+      }
+    },
+    {
+      "record": "EpisodeLedger",
+      "field": "Entries",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 4,
+        "element": {
+          "kind": "local-record",
+          "name": "EpisodeEntry"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "AssociationMassRow",
+      "field": "Masses",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 12,
+        "element": {
+          "kind": "primitive-domain",
+          "name": "LatticeMass"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "AssociationGraph",
+      "field": "Nodes",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 12,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceptualReferentId"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "AssociationGraph",
+      "field": "Rows",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 12,
+        "element": {
+          "kind": "local-record",
+          "name": "AssociationMassRow"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "AssociationGraph",
+      "field": "LastUpdatedAt",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "PresentationEntry",
+      "field": "Selection",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "SelectionOccurrenceId",
+        "requirement": "existing SelectionOccurrenceId role unchanged"
+      }
+    },
+    {
+      "record": "PresentationEntry",
+      "field": "Times",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 5,
+        "element": {
+          "kind": "primitive-domain",
+          "name": "Instant"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "PresentationLedger",
+      "field": "Entries",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 4,
+        "element": {
+          "kind": "local-record",
+          "name": "PresentationEntry"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "Observer",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "Observation",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObservationId",
+        "requirement": "existing ObservationId role unchanged"
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "Status",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "AvailableFile",
+          "UnavailableCue"
+        ]
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "Detection",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "existing-record",
+          "name": "CurrentDetectionId"
+        }
+      }
+    },
+    {
+      "record": "CueEvidence",
+      "field": "File",
+      "validation": {
+        "kind": "optional",
+        "whenPresent": {
+          "kind": "existing-record",
+          "name": "PerceptualReferentId"
+        }
+      }
+    },
+    {
+      "record": "RecallScore",
+      "field": "Selection",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "SelectionOccurrenceId",
+        "requirement": "existing SelectionOccurrenceId role unchanged"
+      }
+    },
+    {
+      "record": "RecallScore",
+      "field": "Base",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "NonnegativeRational"
+      }
+    },
+    {
+      "record": "RecallScore",
+      "field": "Pull",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "NonnegativeRational"
+      }
+    },
+    {
+      "record": "RecallScore",
+      "field": "Score",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "NonnegativeRational"
+      }
+    },
+    {
+      "record": "AttentionRecollection",
+      "field": "Occurrence",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ProposedRecollectionOccurrenceId",
+        "requirement": "proposed fresh occurrence family; allocation pending"
+      }
+    },
+    {
+      "record": "AttentionRecollection",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "AttentionRecollection",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "AttentionRecollection",
+      "field": "Encoding",
+      "validation": {
+        "kind": "local-record",
+        "name": "RetainedEncoding"
+      }
+    },
+    {
+      "record": "AttentionRecollection",
+      "field": "Score",
+      "validation": {
+        "kind": "local-record",
+        "name": "RecallScore"
+      }
+    },
+    {
+      "record": "SeriesSceneOriginal",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "SeriesSceneOriginal",
+      "field": "DueAt",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "SeriesSceneOriginal",
+      "field": "SceneDefinitionId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "DefinitionId",
+        "requirement": "existing DefinitionId role unchanged"
+      }
+    },
+    {
+      "record": "SeriesSceneOriginal",
+      "field": "Purpose",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "Formation",
+          "Cue"
+        ]
+      }
+    },
+    {
+      "record": "TrackingInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "BindingInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "BindingInput",
+      "field": "Event",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PerceptualEventTransition"
+      }
+    },
+    {
+      "record": "BindingInput",
+      "field": "Tracks",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceptualTrackTransition"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "ClassificationInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "ClassificationInput",
+      "field": "Event",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PerceptualEventTransition"
+      }
+    },
+    {
+      "record": "ClassificationInput",
+      "field": "Bindings",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceivedBindingEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "FreezeInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "FreezeInput",
+      "field": "Event",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PerceptualEventTransition"
+      }
+    },
+    {
+      "record": "FreezeInput",
+      "field": "Bindings",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceivedBindingEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "RoleInput",
+      "field": "Experience",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PreRecognitionSemanticExperience"
+      }
+    },
+    {
+      "record": "SpatialPreparationInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "SpatialPreparationInput",
+      "field": "Tracks",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "PerceptualTrackTransition"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "SpatialPreparationInput",
+      "field": "Experience",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PreRecognitionSemanticExperience"
+      }
+    },
+    {
+      "record": "SpatialPreparationInput",
+      "field": "Claims",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "CausalRoleEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "SpatialPreparation",
+      "field": "Experience",
+      "validation": {
+        "kind": "existing-record",
+        "name": "PreRecognitionSemanticExperience"
+      }
+    },
+    {
+      "record": "SpatialPreparation",
+      "field": "Claims",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 3,
+        "element": {
+          "kind": "existing-record",
+          "name": "CausalRoleEvidence"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "SpatialPreparation",
+      "field": "Witnesses",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 3,
+        "element": {
+          "kind": "local-record",
+          "name": "SelectedSpatialWitness"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "SpatialPreparation",
+      "field": "Calibration",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "DefinitionId",
+        "requirement": "existing DefinitionId role unchanged"
+      }
+    },
+    {
+      "record": "SelectionInput",
+      "field": "Preparation",
+      "validation": {
+        "kind": "local-record",
+        "name": "SpatialPreparation"
+      }
+    },
+    {
+      "record": "EmptySelectionInput",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "BoundEncodingInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "BoundEncodingInput",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "BoundEncodingInput",
+      "field": "Input",
+      "validation": {
+        "kind": "local-record",
+        "name": "EncodingJoinInput"
+      }
+    },
+    {
+      "record": "RetentionInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "RetentionInput",
+      "field": "Evaluation",
+      "validation": {
+        "kind": "local-record",
+        "name": "EncodingEvaluation"
+      }
+    },
+    {
+      "record": "FormationInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "FormationInput",
+      "field": "Encoding",
+      "validation": {
+        "kind": "local-record",
+        "name": "RetainedEncoding"
+      }
+    },
+    {
+      "record": "PositiveCueSource",
+      "field": "Preparation",
+      "validation": {
+        "kind": "local-record",
+        "name": "SpatialPreparation"
+      }
+    },
+    {
+      "record": "EmptyCueSource",
+      "field": "Observation",
+      "validation": {
+        "kind": "local-record",
+        "name": "ExtendedObservation"
+      }
+    },
+    {
+      "record": "CueExtractionInput",
+      "field": "Source",
+      "validation": {
+        "kind": "union",
+        "alternatives": [
+          {
+            "kind": "local-record",
+            "name": "PositiveCueSource"
+          },
+          {
+            "kind": "local-record",
+            "name": "EmptyCueSource"
+          }
+        ],
+        "validator": "exact admitted variant; no unknown tag"
+      }
+    },
+    {
+      "record": "RecallJoinInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "RecallJoinInput",
+      "field": "Cue",
+      "validation": {
+        "kind": "local-record",
+        "name": "CueEvidence"
+      }
+    },
+    {
+      "record": "RecallJoinInput",
+      "field": "Feedback",
+      "validation": {
+        "kind": "local-record",
+        "name": "FeedbackDelivery"
+      }
+    },
+    {
+      "record": "BoundRecallInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "BoundRecallInput",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "BoundRecallInput",
+      "field": "Input",
+      "validation": {
+        "kind": "local-record",
+        "name": "RecallJoinInput"
+      }
+    },
+    {
+      "record": "RecallWinner",
+      "field": "Encoding",
+      "validation": {
+        "kind": "local-record",
+        "name": "RetainedEncoding"
+      }
+    },
+    {
+      "record": "RecallWinner",
+      "field": "Score",
+      "validation": {
+        "kind": "local-record",
+        "name": "RecallScore"
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "Subject",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "CharacterId",
+        "requirement": "accepted character-content role including domain validator"
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "At",
+      "validation": {
+        "kind": "primitive-domain",
+        "name": "Instant"
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "Disposition",
+      "validation": {
+        "kind": "enum",
+        "values": [
+          "UnavailableCue",
+          "NoEpisodes",
+          "NoKnownAssociationMatch",
+          "KnownAssociationMatch"
+        ]
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "Scores",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 4,
+        "element": {
+          "kind": "local-record",
+          "name": "RecallScore"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "RecallResult",
+      "field": "Winners",
+      "validation": {
+        "kind": "collection",
+        "min": 0,
+        "max": 2,
+        "element": {
+          "kind": "local-record",
+          "name": "RecallWinner"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    },
+    {
+      "record": "RecollectionInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "RecollectionInput",
+      "field": "Result",
+      "validation": {
+        "kind": "local-record",
+        "name": "RecallResult"
+      }
+    },
+    {
+      "record": "ReinforcementInput",
+      "field": "ObserverId",
+      "validation": {
+        "kind": "scalar-role",
+        "family": "ObserverId",
+        "requirement": "existing ObserverId role unchanged"
+      }
+    },
+    {
+      "record": "ReinforcementInput",
+      "field": "Recollections",
+      "validation": {
+        "kind": "collection",
+        "min": 1,
+        "max": 2,
+        "element": {
+          "kind": "local-record",
+          "name": "AttentionRecollection"
+        },
+        "validator": "exact profile collection checker; not scalar VAL position"
+      }
+    }
+  ],
+  "mapKeys": [
+    {
+      "record": "AttentionTrackingWindowState",
+      "field": "Entries",
+      "kind": "StateMapKey",
+      "family": "ObserverId",
+      "requirement": "existing ObserverId role unchanged"
+    },
+    {
+      "record": "AttentionEpisodeState",
+      "field": "Entries",
+      "kind": "StateMapKey",
+      "family": "CharacterId",
+      "requirement": "accepted character-content role including domain validator"
+    },
+    {
+      "record": "AttentionAssociationState",
+      "field": "Entries",
+      "kind": "StateMapKey",
+      "family": "CharacterId",
+      "requirement": "accepted character-content role including domain validator"
+    },
+    {
+      "record": "AttentionPresentationState",
+      "field": "Entries",
+      "kind": "StateMapKey",
+      "family": "CharacterId",
+      "requirement": "accepted character-content role including domain validator"
+    }
+  ],
+  "dependencies": [
+    {
+      "layer": "SEM observation/experience/evidence",
+      "disposition": "reuse accepted record and role descriptors; no CharacterEvidenceRef extension"
+    },
+    {
+      "layer": "PRJ/IDN",
+      "disposition": "reuse exact required source roster descriptor; each new projected input needs its own registration attachment"
+    },
+    {
+      "layer": "probe/carriage/M1",
+      "disposition": "retain actual source registration, padding and occurrence descriptors"
+    },
+    {
+      "layer": "measurement memory/prediction/task",
+      "disposition": "retain formation/read/deadline descriptors and accepted versioned wrappers, including prediction-read schema2"
+    },
+    {
+      "layer": "workspace/appraisal/concern",
+      "disposition": "reuse actual381/384/388 and transforms; new terminal-at-concern admission/dispatch declaration required"
+    },
+    {
+      "layer": "old whole model factories",
+      "disposition": "preserve exact-cohort rejection; cannot compile the successor by widening old allowlists"
+    }
+  ],
+  "boundaries": {
+    "composite": "existing CurrentDetectionId/CurrentEventDetectionId and perceptual file records validate through accepted nested schemas, not scalar namespaces",
+    "event": "FeedbackDelivery.TargetOriginal is a scheduler structural ID, not a new TypedIdentifier family",
+    "freshness": "role validity never establishes occurrence freshness, same-run origin, completed parentage or permission to resolve",
+    "storage": "selection source identity does not grant an archive capability"
+  },
+  "pending": [
+    "concrete symbolic registration-record shapes and profile/calibration definitions",
+    "exact source dependency manifest and inherited schema descriptors",
+    "canonical role positions/union layouts and whole shape review before allocation"
+  ],
+  "limits": [
+    "Classification and dependency inspection only; canonical VAL descriptors and exact successor model are not implemented."
+  ],
+  "correctForwardFrom": {
+    "path": "docs/planning/ATTENTION_MEMORY_IDENTITY_ROLES_REV1.json",
+    "sha256": "42bf2e5cb5fa68e59cafeb3dc84f4e34df8d29c3fadd20456a939f041c8849e0"
+  }
+}

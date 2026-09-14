@@ -1,0 +1,75 @@
+{
+  "status": "CARRIER CODEC REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "namespace-role-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-B",
+      "detected": true
+    },
+    {
+      "name": "union-membership-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-C",
+      "detected": true
+    },
+    {
+      "name": "lower-collection-bound-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-F",
+      "detected": true
+    },
+    {
+      "name": "upper-collection-bound-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-F",
+      "detected": true
+    },
+    {
+      "name": "enum-zero-admitted",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-G",
+      "detected": true
+    },
+    {
+      "name": "typed-container-recursion-skipped",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-G",
+      "detected": true
+    },
+    {
+      "name": "inherited-domain-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-J",
+      "detected": true
+    },
+    {
+      "name": "referent-origin-bypass",
+      "file": "src/campaign3/generalAttentionCodecs.ts",
+      "witness": "GAC-H",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/generalAttentionCodecs.ts",
+      "sha256": "2b4416bbcb65bf457e522662cd09697aa44997d7bd2c81d954916dbbd7672be6"
+    },
+    {
+      "path": "src/test/generalAttentionCodecs.test.ts",
+      "sha256": "d4c977de5d6a08607bd52f7f7d95b8fa1a17dd20c08b7684bb505aaa0141428b"
+    },
+    {
+      "path": "docs/formal/GENERAL_ATTENTION_CODEC_COMPONENT.md",
+      "sha256": "3b48a43793d894dc573e3b101ff932eafaf495859eb9ce3f9b8813b8c4b6a3ae"
+    },
+    {
+      "path": "scripts/review-ga-carrier-codec.mjs",
+      "sha256": "18e1abc7b6da7c4d87d8116f952f079db98fd495f557455a24e3c0046ef036a1"
+    }
+  ],
+  "limits": [
+    "Actual record relations, identity roles, compiled context and public admission remain upstream.",
+    "No public source authentication or model activation follows from structural codec acceptance."
+  ]
+}

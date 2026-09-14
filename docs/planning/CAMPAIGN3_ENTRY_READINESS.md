@@ -13,7 +13,9 @@ general ranking awaits broader representation. The intake now has eleven proposa
 including HABIT, RELATIONSHIP and LONGITUDINAL, still unaccepted as corpus members.
 [Post-EMB coverage](CAMPAIGN3_POST_EMB_COVERAGE.md) records executed BODY/MULTISOURCE
 subsets as PARTIAL intake coverage; it supersedes blanket execution-blocked claims
-only for those named obligations. ATTENTION remains blocked pending its new draft.
+only for those named obligations. [Bounded public ATTN](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md)
+now supplies PARTIAL active-selection coverage; encoding and later-probe obligations
+remain BLOCKED. No whole ATTENTION or corpus-member PASS follows.
 Goals/prospection and addiction clauses remain partial/missing, not silently covered.
 See [BODY research frontier](CAMPAIGN3_BODY_RESEARCH_FRONTIER.md) for the first minimum
 seam investigation and four separate attention questions. No current table disposition

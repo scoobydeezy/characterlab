@@ -1,0 +1,51 @@
+{
+  "status": "BODY CUE COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "ignore-permission",
+      "witness": "BC-C",
+      "detected": true
+    },
+    {
+      "name": "absence-is-cue",
+      "witness": "BC-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-observer",
+      "witness": "BC-D",
+      "detected": true
+    },
+    {
+      "name": "repeat-observation",
+      "witness": "BC-D",
+      "detected": true
+    },
+    {
+      "name": "no-cue",
+      "witness": "BC-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/bodySignalCue.ts",
+      "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+    },
+    {
+      "path": "src/test/bodySignalCue.test.ts",
+      "sha256": "1c51149d881aef4a7724017e0fd745b26341e21890d55c22ca0bfcda60721aed"
+    },
+    {
+      "path": "scripts/review-body-signal-cue-rev2.mjs",
+      "sha256": "4e2877a2effcfc79f1c790f3bcc86a4c988e1aa32ce28f234bdf75bc3d6557de"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+    "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd"
+  },
+  "limits": [
+    "Canonical record validation does not authenticate actual producer completion or opportunity linkage."
+  ]
+}

@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const output='docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json';assert(!fs.existsSync(output));
+const ref=name=>({kind:'ref',name}),list=(name,min,max)=>({kind:'list',element:ref(name),min,max}),set=(name,min,max)=>({kind:'set',element:ref(name),min,max});
+const records=[],record=(name,fields)=>records.push({name,fields:Object.entries(fields).map(([name,type])=>({name,type:typeof type==='string'?ref(type):type}))});
+record('LocalReserveKey',{Character:'CharacterId',Reserve:'LocalReserveId'});
+record('LocalReserveBodyBinding',{Key:'LocalReserveKey',Parameters:'DefinitionId'});
+record('LocalReserveBodyRegistry',{Bindings:set('LocalReserveBodyBinding',3,3)});
+record('LocalReserveChannel',{Channel:'ObservationChannelId',Observer:'ObserverId',Reserve:'LocalReserveKey',Signal:'InteroceptiveSignalId',Width:'PositiveRational',Available:'Boolean',Permitted:'Boolean'});
+record('LocalReserveChannelRegistry',{Channels:set('LocalReserveChannel',3,9)});
+record('LocalReserveState',{Anchors:{kind:'map',key:ref('LocalReserveKey'),value:ref('ReserveAnchor'),min:3,max:3}});
+record('LocalReserveSamplingRequest',{Observer:'ObserverId',Channels:set('ObservationChannelId',1,9)});
+record('LocalReserveReplenishment',{Key:'LocalReserveKey',Delivery:'NonnegativeRational'});
+record('LocalReserveReplenishmentResult',{Key:'LocalReserveKey',At:'Instant',Prior:'ReserveAnchor',Next:'ReserveAnchor',Result:'ReserveReplenishmentResult'});
+const external={ReserveReplenishmentResult:'existing479',CharacterId:'existing1002 plus character qualification',LocalReserveId:'new owed physical family; unallocated',InteroceptiveSignalId:'already proposed distinct safe signal family; unallocated',DefinitionId:'existing1027; exact ReserveParameters453 definition binding',ObservationChannelId:'existing1005',ObserverId:'existing1000',ReserveAnchor:'existing454',ReserveParameters:'existing453 with existing unit/embodied-fuel-stock1039',PositiveRational:'exact>0',NonnegativeRational:'exact>=0',Boolean:'canonical boolean',Instant:'nonnegative SimInstant'};
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+fs.writeFileSync(output,JSON.stringify({version:'ga-local-reserve-public-carrier/0.1-draft',status:'SYMBOLIC PHYSICAL SOURCE CARRIER; PUBLIC GATES OPEN',records,external,newIdentityFamilies:[{name:'LocalReserveId',payload:'canonical NFC text',scope:'model physical compartment vocabulary',members:['local-reserve/A','local-reserve/B','local-reserve/C'],allocator:null}],root:{record:'LocalReserveState',field:'Anchors',keyRecord:'LocalReserveKey',valueRecord:'ReserveAnchor',classification:'PhysicalBody',owner:'authority/local-reserve',removalAllowed:false},stateMapKeyRoles:[],traceOnly:['LocalReserveReplenishmentResult'],cognitiveReads:[],sources:['docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.md','docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md','docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json','src/campaign3/localReserveSource.ts'].map(fp)},null,2)+'\n');

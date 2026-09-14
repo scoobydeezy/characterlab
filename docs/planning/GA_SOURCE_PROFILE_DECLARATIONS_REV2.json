@@ -1,0 +1,358 @@
+{
+  "version": "ga-source-profile-declarations/0.2-draft",
+  "status": "SYMBOLIC SOURCE/ORIGINAL INVENTORY; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "PositionSceneItem",
+      "fields": [
+        {
+          "name": "Marker",
+          "type": {
+            "kind": "ref",
+            "name": "SceneObjectReferent"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "EventRoleId"
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "ref",
+            "name": "GridPosition"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Visible",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "RoleMode",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Preserve",
+              "Unresolved"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositionSceneFrame",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Items",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositionSceneItem"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositionSceneDefinition",
+      "fields": [
+        {
+          "name": "BindingSchema",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Frames",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositionSceneFrame"
+            },
+            "min": 0,
+            "max": 10
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelFrame",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Before",
+              "Motion",
+              "After"
+            ]
+          }
+        },
+        {
+          "name": "Visible",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelDefinition",
+      "fields": [
+        {
+          "name": "Frames",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "TrialPanelFrame"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSourceProfile",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservationUsePlan",
+      "fields": [
+        {
+          "name": "BodySelection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "VisualSelection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "BodyCue",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "VisualCue",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "GoalAssessment",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "ExecutionPolicy",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralObservationOriginal",
+      "fields": [
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Profile",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Request",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralSourceSamplingRequest"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Lane",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Current",
+              "Consequence"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "newIdentityFamilies": [],
+  "storage": [],
+  "identityAliases": {
+    "SceneObjectReferent": {
+      "namespace": 1002,
+      "domainValidator": null,
+      "compiler": "existing attention-scene-object kind; exact compiled member and referent-origin checks"
+    },
+    "EventRoleId": {
+      "namespace": 1003
+    },
+    "DefinitionId": {
+      "namespace": 1027
+    },
+    "ObserverId": {
+      "namespace": 1000
+    }
+  },
+  "invariants": {
+    "source": "Exact governed reference closure; no content callbacks.",
+    "truth": "World210 and binding211 remain source/trace-side, never in safe perception input.",
+    "use": "Independently scheduled selectors and cues; no selection prerequisite for cue.",
+    "projection": "Visibility/permission and actual world role determine safe role; position/panel do not.",
+    "ordering": "Observer-safe detection ordering independent of hidden referent identity.",
+    "original": "Exact ordered-input address/time/bytes; no new original occurrence."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV1.md",
+      "sha256": "10c5190f8fcb17274bcf4ea6662a1c17ca4e9ea3028020707517ba3376f736ff"
+    },
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV1.json",
+      "sha256": "f65e255afee4765ecc0c07223cf45c1a66506d361e686ace93c134cbd8f0faf5"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_SCHEMA_INVENTORY.md",
+      "sha256": "6c4f287017d23bdc5a1cc79d95719d9aaa3ad373c05914955d30ad1e9d8b683c"
+    },
+    {
+      "path": "docs/formal/TEN_SWEEP_MARKER_COMPONENT.md",
+      "sha256": "c9c72c28388a2bf1383814d0c4eae26dd6d9643563b863e10ecd9f50845601d7"
+    },
+    {
+      "path": "docs/formal/TRIAL_PANEL_SOURCE_COMPONENT.md",
+      "sha256": "a2ff016fc800c83a942d4c60c730e2d14c40d85c63979ab28626f6fd35bef5cf"
+    },
+    {
+      "path": "docs/planning/GA_CALIBRATION_DEFINITIONS_REV1.json",
+      "sha256": "a38e3e82a8b576bce9185b09c49c6d86a92d4acc4ec65b391709013ffcc6f34f"
+    }
+  ],
+  "executionPolicy": "Immutable ObservationExecutionPolicy registry definition transported through Use; compiler checks every purpose and instantiates the exact corresponding stage registration. Original time alone cannot choose hidden capacity or calibration."
+}

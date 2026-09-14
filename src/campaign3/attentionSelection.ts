@@ -4,7 +4,7 @@ import { ExactRational as Q } from '../substrate/exactMath';
 import { assemblePreRecognitionExperience, compilePerceivedBindings, type PreRecognitionSemanticExperience, type PerceivedBindingEvidence } from '../semanticBinding/perceptualEventFiles';
 import { INITIAL_CAUSAL_ROLE_RULE, compileCausalRoleModel, deriveCausalRoleEvidence, characterEvidenceRefKey, type CharacterEvidenceRef, type CausalRoleEvidence, type ObserverSafeEvidenceOccurrence } from '../semanticBinding/evidenceProvenance';
 import { preRecognitionSemanticExperienceValue, perceivedBindingEvidenceValue, causalRoleEvidenceValue } from '../semanticBinding/semanticEvidenceCodecs';
-import { perceptualEventReferentIdValue, perceptualReferentIdValue } from '../semanticBinding/semanticCodecs';
+import { perceptualEventReferentIdValue, perceptualReferentIdValue, observerIdValue } from '../semanticBinding/semanticCodecs';
 export const ATTENTION_COMPONENT_VERSION = 'attention-selection-component/0.1-candidate';
 export class AttentionComponentError extends Error {
     constructor(readonly code: 'INVALID_POOL' | 'INVALID_CAPACITY' | 'INVALID_CAPABILITY' | 'READ_NOT_SELECTED', message: string) { super(message); this.name = 'AttentionComponentError'; }
@@ -40,6 +40,16 @@ interface View {
     refs: CharacterEvidenceRef[];
 }
 const pools = new WeakMap<AttentionPool, Pool>(), views = new WeakMap<SelectedView, View>();
+/** empty-visual-selection-component/0.1-candidate; actual completion is authenticated upstream. */
+export function prepareNoDetectionAttentionPool(input:{readonly observerId:string;readonly observationId:bigint;readonly occurredAt:bigint;readonly detections:readonly unknown[]}):AttentionPool{
+    if(!input||Object.getPrototypeOf(input)!==Object.prototype)fail('no-detection data');
+    const d=Object.getOwnPropertyDescriptors(input);
+    if(Reflect.ownKeys(d).length!==4||['observerId','observationId','occurredAt','detections'].some(k=>!d[k])||Object.values(d).some(v=>!('value'in v)))fail('no-detection fields');
+    if(typeof input.observerId!=='string'||!input.observerId||input.observerId!==input.observerId.normalize('NFC')||typeof input.observationId!=='bigint'||input.observationId<0n||typeof input.occurredAt!=='bigint'||input.occurredAt<0n)fail('no-detection header');
+    canonicalEncode(observerIdValue(input.observerId));
+    if(!Array.isArray(input.detections)||Object.getPrototypeOf(input.detections)!==Array.prototype||Reflect.ownKeys(input.detections).length!==1||input.detections.length!==0)fail('no-detection requires empty array');
+    const token:AttentionPool=Object.freeze({kind:'AttentionPool'});pools.set(token,{units:[]});return token;
+}
 const G = 'semantic-binding/0.1-candidate#SEM-001G';
 /** Validates consistent existing SEM products, without claiming their scheduler origin. */
 export function prepareAttentionPool(input: PreRecognitionSemanticExperience, companions: readonly CausalRoleEvidence[]): AttentionPool {

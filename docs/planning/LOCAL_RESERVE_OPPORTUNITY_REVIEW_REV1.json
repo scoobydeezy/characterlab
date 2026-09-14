@@ -1,0 +1,64 @@
+{
+  "status": "BODY-ONLY OPPORTUNITY COMPONENT FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "reserve-for-absence",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-H",
+      "detected": true
+    },
+    {
+      "name": "erase-experience-support",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-G",
+      "detected": true
+    },
+    {
+      "name": "force-current-lane",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "LRO-G",
+      "detected": true
+    },
+    {
+      "name": "select-without-experience",
+      "file": "src/campaign3/interoceptiveSignalSelection.ts",
+      "witness": "LRO-I",
+      "detected": true
+    },
+    {
+      "name": "cue-without-experience",
+      "file": "src/campaign3/bodySignalCue.ts",
+      "witness": "LRO-I",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/localReserveObservation.ts",
+      "sha256": "151130c093228f197e25846e1a9c8b5db2f146bbe9c23f63267c0d4437cba7e5"
+    },
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+    },
+    {
+      "path": "src/campaign3/bodySignalCue.ts",
+      "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+    },
+    {
+      "path": "src/test/localReserveObservation.test.ts",
+      "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+    },
+    {
+      "path": "scripts/review-local-reserve-opportunity.mjs",
+      "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+      "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd"
+    }
+  ],
+  "limits": [
+    "Real SEM reservation/freeze at component scope; combined source and public ingress/subject/settlement admission remain open."
+  ]
+}

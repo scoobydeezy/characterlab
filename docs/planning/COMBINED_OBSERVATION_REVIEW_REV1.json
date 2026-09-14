@@ -1,0 +1,73 @@
+{
+  "status": "COMBINED SOURCE COMPONENT REVIEW PASS",
+  "faults": [
+    {
+      "name": "body-only-reservation",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-A",
+      "detected": true
+    },
+    {
+      "name": "lose-visual-only-event",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-A",
+      "detected": true
+    },
+    {
+      "name": "unavailable-visual-as-support",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-A",
+      "detected": true
+    },
+    {
+      "name": "derive-actor-from-position",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-B",
+      "detected": true
+    },
+    {
+      "name": "publish-before-freeze",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-C",
+      "detected": true
+    },
+    {
+      "name": "panel-body-umbrella-tag",
+      "file": "src/campaign3/panelBodyOpportunity.ts",
+      "witness": "PB-E",
+      "detected": true
+    },
+    {
+      "name": "body-only-umbrella-tag",
+      "file": "src/campaign3/localReserveObservation.ts",
+      "witness": "PB-E",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/combinedObservationOpportunity.ts",
+      "sha256": "aabcc0c5f20a011c609c15309bea2834b19e7b767220951f36d6d7be0d81f175"
+    },
+    {
+      "path": "src/test/combinedObservationOpportunity.test.ts",
+      "sha256": "85c10e62fe76923884d58b3f8efc6f9c6f86ab110d97c09e4ccb5663d5de46b0"
+    },
+    {
+      "path": "src/campaign3/panelBodyOpportunity.ts",
+      "sha256": "04c1b0ac3178de88ba3f1af901df13c9c60a7efda38a74ac358711aebb98a2f2"
+    },
+    {
+      "path": "src/test/panelBodyOpportunity.test.ts",
+      "sha256": "556d6d4b404efe1ff415abc6bddecede4a3bb964af1901b2b05f1d63f8921f38"
+    },
+    {
+      "path": "scripts/review-combined-observation.mjs",
+      "sha256": "dc56f680f08ca0bc1ab10b658e4805d76a0eb98bceb3f760cf01fac29544624e"
+    }
+  ],
+  "limits": [
+    "Trusted source/lane/allocator; no public PRJ/completion or persistence proof.",
+    "All-three sampling is explicit; public request schedule and actual role channel remain open."
+  ]
+}

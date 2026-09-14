@@ -1,0 +1,292 @@
+{
+  "version": "ga-prior-feedback-carrier/0.1-draft",
+  "status": "SYMBOLIC PRIOR FEEDBACK CARRIER; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "ActualConcernCarry",
+      "fields": [
+        {
+          "name": "Concern",
+          "type": {
+            "kind": "ref",
+            "name": "ConcernOccurrenceId"
+          }
+        },
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Response",
+          "type": {
+            "kind": "ref",
+            "name": "TaskConcernResponse"
+          }
+        }
+      ]
+    },
+    {
+      "name": "NoConcernAvailable",
+      "fields": [
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "NoSelectedTask"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FeedbackDelivery",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "TargetAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Value",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "ActualConcernCarry"
+              },
+              {
+                "kind": "ref",
+                "name": "NoConcernAvailable"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernModulation",
+      "fields": [
+        {
+          "name": "SourceStatus",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "KnownIntensity",
+              "Unavailable",
+              "NoSelectedTask"
+            ]
+          }
+        },
+        {
+          "name": "Branch",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EnabledKnown",
+              "DisabledFeedback",
+              "BaselineWithoutAvailableFeedback"
+            ]
+          }
+        },
+        {
+          "name": "ResidualMultiplier",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "AssociativeWeight",
+          "type": {
+            "kind": "ref",
+            "name": "OneToTwoRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernEncodingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingJoinInput"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernEncodingEvaluation",
+      "fields": [
+        {
+          "name": "Evaluation",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingEvaluation"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        },
+        {
+          "name": "Modulation",
+          "type": {
+            "kind": "ref",
+            "name": "PriorConcernModulation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "CueEvidence"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernRecallEvaluation",
+      "fields": [
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "EventRecallResult"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        },
+        {
+          "name": "Modulation",
+          "type": {
+            "kind": "ref",
+            "name": "PriorConcernModulation"
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "ConcernOccurrenceId": "existing1130; TaskConcern sole producer",
+    "CharacterId": "existing1002 with character qualification",
+    "ObserverId": "existing1000",
+    "Instant": "nonnegative SimInstant",
+    "OriginalAddress": "existing unsigned original-input list index",
+    "TaskConcernResponse": "existing386",
+    "UnitRational": "exact0..1",
+    "OneToTwoRational": "exact1..2",
+    "EncodingJoinInput": "GA_VISUAL_PIPELINE_CARRIER_REV1 baseline",
+    "EncodingEvaluation": "GA_VISUAL_PIPELINE_CARRIER_REV1 baseline",
+    "CueEvidence": "GA_VISUAL_PIPELINE_CARRIER_REV1",
+    "EventRecallResult": "GA_RECOLLECTION_CARRIER_REV3"
+  },
+  "storage": [],
+  "newIdentityFamilies": [],
+  "invariants": {
+    "delivery": "Actual completed same-run parent and exact target/bytes/subject; never original ingress.",
+    "chronology": "Producer instant strictly earlier than actual sensing/cue instant; no receiver relabelling.",
+    "separation": "Earlier concern is neither later goal qualification nor persistent affect.",
+    "selected": "No full source/preparation reaches encoder.",
+    "provenance": "Feedback is explicit trace-side input/result; durable children retain historical encoding only."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_PRIOR_FEEDBACK_CARRIER_REV1.md",
+      "sha256": "e041478faa2f96c0aceebc1c9d6a1aeb871b55191b9177cfeb74a7f2fc837697"
+    },
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_SCOPE_CORRECTION_REV1.md",
+      "sha256": "60ea9dd26a305b69800c8a07ef534b2020179a42a0ee101ab6a0ad6e59e6b504"
+    },
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV1.json",
+      "sha256": "089f5c2a41e24f75b56729a738d892375290069ebe0c844f955187f5fb548e11"
+    },
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "docs/planning/ATTENTION_FEEDBACK_JOIN_BINDING_REV2.md",
+      "sha256": "0d57a17fa90b807e38b60959d62530fd498681106636bc393c10bc3b311ff1fd"
+    }
+  ]
+}

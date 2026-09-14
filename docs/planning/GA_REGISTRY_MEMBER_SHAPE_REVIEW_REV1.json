@@ -1,0 +1,75 @@
+{
+  "status": "BOUNDED REGISTRY MEMBER SHAPE REVIEW PASS",
+  "members": 218,
+  "stageTemplates": 67,
+  "accessors": 8,
+  "authorities": 6,
+  "faults": [
+    {
+      "name": "missing-stage",
+      "rejected": true
+    },
+    {
+      "name": "stage-identity-alias",
+      "rejected": true
+    },
+    {
+      "name": "phase150",
+      "rejected": true
+    },
+    {
+      "name": "changed-input",
+      "rejected": true
+    },
+    {
+      "name": "cognitive-protocol-access",
+      "rejected": true
+    },
+    {
+      "name": "body-full-metadata-return",
+      "rejected": true
+    },
+    {
+      "name": "observer-character-substitution",
+      "rejected": true
+    },
+    {
+      "name": "missing-leaf-as-empty",
+      "rejected": true
+    },
+    {
+      "name": "sibling-owner-write",
+      "rejected": true
+    },
+    {
+      "name": "goal-character-predicate-alias",
+      "rejected": true
+    },
+    {
+      "name": "role-family-substitution",
+      "rejected": true
+    },
+    {
+      "name": "member-omission",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_REGISTRY_MEMBER_SHAPE_REV1.json",
+      "sha256": "b5726559a19c642d27507d056d1fca6c96c776b651395564d6da3dbee602573c"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRY_MEMBER_SHAPE_REV1.md",
+      "sha256": "e68d8415dbab747e8fb47a86237f19bdbff35bf92ad5bf1612fa1103320aab7f"
+    },
+    {
+      "path": "scripts/review-ga-registry-members.mjs",
+      "sha256": "da15bdab27f460dbf2486e342f8ff4b0210a035d4b99ab53d8cd604667f98e8c"
+    }
+  ],
+  "limits": [
+    "Member naming and declared boundaries only; no permanent assignment or model activation.",
+    "Compiler must still enforce root permissions, exact roles, source authentication, phase/output and model membership."
+  ]
+}

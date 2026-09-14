@@ -1,0 +1,100 @@
+{
+  "status": "OMT-A..H QUALIFIED AT COMPONENT SCOPE; DENSE-LIST CORRECTION",
+  "tests": 9,
+  "faults": [
+    {
+      "name": "current-collision",
+      "removed": "&&detections.filter(x=>x.glyph===d.glyph).length===1",
+      "inserted": "",
+      "baseline": 2,
+      "actual": 1,
+      "detected": true
+    },
+    {
+      "name": "previous-collision",
+      "removed": "old.length===1",
+      "inserted": "old.length>=1",
+      "baseline": "NewTrack",
+      "actual": "ContinuesPriorTrack",
+      "detected": true
+    },
+    {
+      "name": "observation-replay",
+      "removed": "if(used.has(input.observationId))fail('replayed observation');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "horizon",
+      "removed": "f.sweeps>=8",
+      "inserted": "f.sweeps>8",
+      "baseline": 8,
+      "actual": 9,
+      "detected": true
+    },
+    {
+      "name": "early-private-mutation",
+      "removed": "const f=get(token);own(input",
+      "inserted": "const f=get(token);f.sweeps++;own(input",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "sparse-admission",
+      "removed": "if(Object.keys(properties).length!==input.detections.length+1)fail('dense detection array');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    }
+  ],
+  "baseline": {
+    "current": 2,
+    "previous": "NewTrack",
+    "replay": true,
+    "horizon": 8,
+    "atomic": true,
+    "denseBoundary": true,
+    "substitutions": 0
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2"
+    },
+    {
+      "path": "src/test/observedMarkerTracking.test.ts",
+      "sha256": "2e6cf1a0086478ad7732a1b82f4f51d68ea4dadf44b386418a95ee71dba0f466"
+    },
+    {
+      "path": "src/test/observedMarkerTrackingShape.test.ts",
+      "sha256": "8b37ce4eb0f37572d5ada75df77bf7879f35e3d47cac28cd5856b7379c299333"
+    },
+    {
+      "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+      "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+    },
+    {
+      "path": "docs/formal/OBSERVED_MARKER_TRACKING_COMPONENT.md",
+      "sha256": "cb395b4bb144c5e099107ed998f98ec72c3eb1dc3e71dbe87c0b00fc9f590e4b"
+    },
+    {
+      "path": "scripts/review-observed-marker-tracking-forward.mjs",
+      "sha256": "58b260d1040fd28ecb076abd6d6b7023cf76581ac230804d16c8631832ecfa2d"
+    }
+  ],
+  "evidence": {
+    "path": "docs/planning/OBSERVED_MARKER_TRACKING_TESTS_REV2.json",
+    "sha256": "657342cbe04603e8f69cccf83af2e9b8daa1b317b732658143ebd187c9ee67ac"
+  },
+  "history": {
+    "path": "docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV1.json",
+    "sha256": "c792d05f9911c992846f645e19ad0083e5ea4f5efa6b803e9aefc802f239e890"
+  },
+  "limits": [
+    "Component qualification only. No authenticated public source, persistent layout or corpus verdict. Sparse-list fault tests structural-stage rejection; original implementation also rejected later without publishing state."
+  ]
+}

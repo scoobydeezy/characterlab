@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {startVitest} from 'vitest/node';
+const output='docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json';assert(!fs.existsSync(output));
+const bridge='src/campaign3/localReserveObservation.ts',source='src/campaign3/localReserveSource.ts',cue='src/campaign3/bodySignalCue.ts',tests='src/test/localReserveObservation.test.ts';
+const faults=[
+ ['observe-unrequested-channels',source,'f.channels.filter(c=>requested.includes(c.channel))','f.channels.slice()','LRO-E'],
+ ['claim-old-producer',bridge,"='local-reserve-level-observation/0.1-candidate'","='embodied-level-observation/0.1-candidate'",'LRO-B'],
+ ['reuse-observation',bridge,'||used.has(ordinal)','','LRO-D'],
+ ['observer-input-alias',bridge,'observer=typedIdentifier(1000,text(observer.payload.value));','','LRO-F'],
+ ['cue-accepts-foreign-producer',cue,'||version.value!==producerVersion','','LRO-B']
+];const results=[];
+for(const [name,file,removed,inserted,witness] of faults){let substitutions=0;const temp=`docs/planning/.local-observation-${name}.json`;assert(!fs.existsSync(temp));const v=await startVitest('test',[tests],{config:false,watch:false,pool:'forks',minWorkers:1,maxWorkers:1,reporters:['json'],outputFile:temp},{plugins:[{name:'local-observation-fault',enforce:'pre',transform(code,id){if(id.replaceAll('\\','/').endsWith('/'+file)){assert.equal(code.split(removed).length-1,1);substitutions++;return code.replace(removed,inserted);}}}]});try{await v.close();const report=JSON.parse(fs.readFileSync(temp));assert.equal(substitutions,1);assert(report.testResults.flatMap(t=>t.assertionResults).some(t=>t.status==='failed'&&t.fullName.includes(witness)),name);results.push({name,file,witness,detected:true});}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});fs.writeFileSync(output,JSON.stringify({status:'LOCAL RESERVE SAMPLE BRIDGE COMPONENT FAULT CONTROLS PASS',faults:results,sources:[bridge,source,cue,'src/campaign3/interoceptiveSignalSelection.ts',tests,'scripts/review-local-reserve-observation.mjs'].map(fp),limits:['Actual source projection and exact component producer versions; public original/completion/subject authentication remain unqualified.','Allocator is supplied by the trusted fixture coordinator; scheduler rollback and public SEM reservation are separate gates.']},null,2)+'\n');process.exitCode=0;

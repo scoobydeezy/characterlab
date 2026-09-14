@@ -1,0 +1,107 @@
+{
+  "status": "SOURCE PERCEPTION / OWNER / BASELINE FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "bridge-missing-cue",
+      "source": "src/campaign3/trialPanelPerception.ts",
+      "witness": "TC-B",
+      "detected": true
+    },
+    {
+      "name": "ignore-new-before",
+      "source": "src/campaign3/trialPanelPerception.ts",
+      "witness": "TC-C",
+      "detected": true
+    },
+    {
+      "name": "ignore-glyph-change",
+      "source": "src/campaign3/trialPanelPerception.ts",
+      "witness": "TC-C",
+      "detected": true
+    },
+    {
+      "name": "omit-after-end",
+      "source": "src/campaign3/trialPanelPerception.ts",
+      "witness": "TC-A",
+      "detected": true
+    },
+    {
+      "name": "replay-observation",
+      "source": "src/campaign3/trialPanelPerception.ts",
+      "witness": "TC-D",
+      "detected": true
+    },
+    {
+      "name": "reset-old-significance",
+      "source": "src/campaign3/significantFormationSettlement.ts",
+      "witness": "SF-FORM-A",
+      "detected": true
+    },
+    {
+      "name": "skip-owner-retention",
+      "source": "src/campaign3/significantFormationSettlement.ts",
+      "witness": "SF-FORM-D",
+      "detected": true
+    },
+    {
+      "name": "accept-fresh-credit-fields",
+      "source": "src/campaign3/significantFormationSettlement.ts",
+      "witness": "SF-FORM-C",
+      "detected": true
+    },
+    {
+      "name": "source-baseline-cache",
+      "source": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-H",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "324cebc9f4e2123d41e5fd7cc01add12dad5aa3764c3d3ebf3cddc77404db66a"
+    },
+    {
+      "path": "src/test/trialPanelPerception.test.ts",
+      "sha256": "d84435bc0fe11f3f036e5027500da6c97ac8522198402b6b516c84e4ce090419"
+    },
+    {
+      "path": "src/campaign3/significantFormationSettlement.ts",
+      "sha256": "0d66d5d815b28d2b99c0b2189f371bbb0b7aa17666a285afcafaddf2043f7fd5"
+    },
+    {
+      "path": "src/test/significantFormationSettlement.test.ts",
+      "sha256": "d4e28df46b9dd71f6b967c2e6ae0a24fb5087500860c09131215bd7704528074"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "f0d1c942c9f880945c1899998db5659fff445e69c1e86ac1f62224fcb626ed83"
+    },
+    {
+      "path": "src/campaign3/directionalSignificanceState.ts",
+      "sha256": "99e9cb7c9da91b37052dc0e06b3fb8f1004e959580d26c9f0cf6ce6205d71377"
+    },
+    {
+      "path": "scripts/review-ga-source-owner-integration.mjs",
+      "sha256": "dff4382d1e94a58f7e62a45232d20492308d8347bcfdd0900f2db098cb1edacc"
+    }
+  ],
+  "baselines": [
+    {
+      "path": "docs/planning/TRIAL_PANEL_PERCEPTION_COMPOSITION_TESTS_REV1.json",
+      "sha256": "9fdcb02b844ca02a505b007764c4fd73a39ac16fd9f84d4695c95af814566e21"
+    },
+    {
+      "path": "docs/planning/CONSEQUENCE_BASELINE_RECALL_COMPOSITION_TESTS_REV1.json",
+      "sha256": "09ef5ed29870546a639cb528e04757c16b75a6f322fb1cc173b6aecd13a842e8"
+    },
+    {
+      "path": "docs/planning/SIGNIFICANT_FORMATION_SOURCE_COMPOSITION_TESTS_REV1.json",
+      "sha256": "d1d528da359b70d9910bb0c31684558828caac54944d404d13f42d321be37370"
+    }
+  ],
+  "limits": [
+    "Controlled source and owner components; public admission and persistence unqualified.",
+    "The baseline-cache substitution alters the integration fixture, not a public baseline reader."
+  ]
+}

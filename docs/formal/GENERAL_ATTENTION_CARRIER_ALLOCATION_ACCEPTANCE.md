@@ -1,0 +1,11 @@
+# General attention carrier allocation acceptance
+
+2026-09-13. PRIMARY-AGENT NUMERIC ACCEPTANCE under the Campaign3 decision and escalation policy.
+
+Accept and freeze general-attention-carrier-allocation/0.1-candidate. RecordTypeIds542..704, schema versions1, all523 field ordinals,38 field-local finite tag sets and11 distinct-record unions are permanent. Namespaces1044 LocalReserveId,1045 InteroceptiveSignalId,1145 AcquisitionOccurrenceId,1146 GoalOutcomeAssessmentId,1147 RetainedAttributionResultId and1148 ProposedRecollectionOccurrenceId are permanent. Exact payload grammar and scope are in the table. No renumbering, reuse or insertion by shifting. Numeric adjacency implies no semantic relation.
+
+The independent allocation audit passes16 injected faults, exhaustive layout/role comparison, actual inherited codec collision checks, Markdown table parity and preservation of20 prior allocation tables. The draft proposal remains historical and unchanged. This is one-to-one numeric realization of the accepted bounded carrier shape; no semantic redesign.
+
+The165 numeric role positions retain their symbolic domain-validator obligations. They do not constitute compiled CanonicalIdentityRole declarations, fixed-member allocation or namespace-only admission. Five owner-field annotations describe actual producer ownership; references allocate nothing. Public output-slot execution is not passed by these annotations.
+
+Codec implementation may proceed. Fixed registry members, contextual record relations, model packaging, public authentication, accessor and transition compilation, rollback, replay, corpus promotion and General Attention remain OPEN. No factory activation or frozen corpus change follows from this receipt.

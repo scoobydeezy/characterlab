@@ -1,0 +1,50 @@
+{
+  "status": "SIGNIFICANCE FIRST RETENTION POLICY FAULT CONTROLS PASS",
+  "faults": [
+    {
+      "name": "collapse-tiers",
+      "witness": "SF-A",
+      "detected": true
+    },
+    {
+      "name": "direction-count-bonus",
+      "witness": "SF-C",
+      "detected": true
+    },
+    {
+      "name": "reverse-recency",
+      "witness": "SF-C",
+      "detected": true
+    },
+    {
+      "name": "allow-fresh-credit",
+      "witness": "SF-G",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/significanceFirstRetention.ts",
+      "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+    },
+    {
+      "path": "src/test/significanceFirstRetention.test.ts",
+      "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+    },
+    {
+      "path": "src/campaign3/directionalSignificanceState.ts",
+      "sha256": "5916ea42b48d686de4bf8c4b2aad67ea25080178c8c6a03c70c0bf91883986e7"
+    },
+    {
+      "path": "scripts/review-significance-first-retention.mjs",
+      "sha256": "85bd11adc8306d5766552560684efc40c3cb1441fd12b7ad5085517743a1e96f"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/SIGNIFICANCE_FIRST_RETENTION_TESTS_REV2.json",
+    "sha256": "ab0eb71332de7cf3cbb2c311abf355be36a68bd5df8bec489ca31bc325aa212f"
+  },
+  "limits": [
+    "Supplied-state policy. Prior commit on older-child credit, authentic target production and public persistence remain unqualified."
+  ]
+}

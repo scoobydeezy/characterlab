@@ -1,0 +1,117 @@
+{
+  "status": "BODY FORMATION EVIDENCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "empty-selector-skips-occurrence",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "missing-sample-is-unavailable",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-C",
+      "detected": true
+    },
+    {
+      "name": "view-uses-experience-identity",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "acquisition-reused-as-body-source",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-AC",
+      "detected": true
+    },
+    {
+      "name": "wrong-panel-support-accepted",
+      "file": "src/campaign3/contextualBodySelection.ts",
+      "witness": "CB-B",
+      "detected": true
+    },
+    {
+      "name": "context-aliases-supplied-object",
+      "file": "src/campaign3/contextualBodySelection.ts",
+      "witness": "CB-C",
+      "detected": true
+    },
+    {
+      "name": "undeclared-context-fields-carried",
+      "file": "src/campaign3/contextualBodySelection.ts",
+      "witness": "CB-E",
+      "detected": true
+    },
+    {
+      "name": "accept-unfrozen-experience-producer",
+      "file": "src/campaign3/contextualBodySelection.ts",
+      "witness": "CB-B",
+      "detected": true
+    },
+    {
+      "name": "empty-selection-forms-acquisition",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-B",
+      "detected": true
+    },
+    {
+      "name": "selection-reused-as-acquisition",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-A",
+      "detected": true
+    },
+    {
+      "name": "one-acquisition-per-view",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/bodySelectionOccurrence.ts",
+      "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+    },
+    {
+      "path": "src/test/bodySelectionOccurrence.test.ts",
+      "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "0d92888652bc57d3e2d05a85cecde476c7b60118f4728d6ea0989dd73aa1d3ce"
+    },
+    {
+      "path": "docs/formal/BODY_SELECTION_OCCURRENCE_COMPONENT.md",
+      "sha256": "66a1b13ca5438da6c0a98fe89ff2f926633b933eb1ef11e87a35ee49049db9db"
+    },
+    {
+      "path": "src/campaign3/bodyFormationEvidence.ts",
+      "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+    },
+    {
+      "path": "docs/formal/BODY_FORMATION_EVIDENCE_COMPONENT.md",
+      "sha256": "f7cc622ec59d5c482551990ac1d4b6f211becaa1f005d321b4f377804a145a63"
+    },
+    {
+      "path": "src/campaign3/contextualBodySelection.ts",
+      "sha256": "c388cee147d7775fc80d4b9afc30bc4ee8f97e1b2a103ce826d90136f70eb697"
+    },
+    {
+      "path": "src/test/contextualBodySelection.test.ts",
+      "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+    },
+    {
+      "path": "docs/formal/CONTEXTUAL_BODY_SELECTION_COMPONENT.md",
+      "sha256": "dde7c17ae90cb76daf41a66cf5049d848df19b576c38e2eb9937dc575d3f9ce3"
+    },
+    {
+      "path": "scripts/review-body-formation-evidence.mjs",
+      "sha256": "fa8653136f20de038714f3983d30951d9bb357518cded12ce1384072d564402b"
+    }
+  ],
+  "limits": [
+    "Actual component audit and selected capability; unallocated body codecs/public gates remain open.",
+    "Canonical fixture memory payload and PRJ are still trusted component boundaries."
+  ]
+}

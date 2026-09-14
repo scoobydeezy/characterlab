@@ -1,0 +1,81 @@
+{
+  "status": "RECOLLECTION STRUCTURAL REVIEW PASS; PUBLIC GATES OPEN",
+  "records": 11,
+  "fields": 36,
+  "recollectionReachability": [
+    "AcquisitionOccurrenceId",
+    "BodyRecallWinner",
+    "CharacterId",
+    "EventRecallWinner",
+    "Instant",
+    "NonnegativeRational",
+    "ObserverId",
+    "PositiveBodyAcquisitionContent",
+    "PositiveEventAcquisitionContent",
+    "ProposedRecollectionOccurrenceId",
+    "RecalledAcquisitionEvidence",
+    "Recollection",
+    "SelectionOccurrenceId",
+    "VersionText"
+  ],
+  "faults": [
+    {
+      "name": "source-selection-as-memory-id",
+      "rejected": true
+    },
+    {
+      "name": "body-numeric-score",
+      "rejected": true
+    },
+    {
+      "name": "retention-credit-as-recollection",
+      "rejected": true
+    },
+    {
+      "name": "initial-formation-as-recall",
+      "rejected": true
+    },
+    {
+      "name": "old-two-winner-bound",
+      "rejected": true
+    },
+    {
+      "name": "empty-recall-allocates-winner",
+      "rejected": true
+    },
+    {
+      "name": "selection-history-key",
+      "rejected": true
+    },
+    {
+      "name": "unbounded-history",
+      "rejected": true
+    },
+    {
+      "name": "extra-acquisition-identity",
+      "rejected": true
+    },
+    {
+      "name": "premature-record-number",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "scripts/build-ga-recollection-carrier.mjs",
+      "sha256": "7cb7cd509f8333992495a1ee7d2da9fb407eddcca494385aa10756f84d881237"
+    },
+    {
+      "path": "scripts/review-ga-recollection-carrier.mjs",
+      "sha256": "890c618a6797e2633f783a87418d9215c9ae7b3038e9f5d0b8a2ac1293f73aad"
+    }
+  ],
+  "limits": [
+    "Checks proposed fields/bounds; actual kind/winner/header equality and producer authentication remain public execution obligations.",
+    "Imported positive-content definitions retain separate source and schema qualification gates."
+  ]
+}

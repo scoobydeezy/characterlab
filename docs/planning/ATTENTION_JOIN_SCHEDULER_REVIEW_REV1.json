@@ -1,0 +1,88 @@
+{
+  "status": "JOIN SCHEDULER EXPRESSIBILITY REVIEWED; PUBLIC AJB-A..M NOT PASSED",
+  "tests": 7,
+  "faults": [
+    {
+      "name": "omit-completion-guard",
+      "removed": "options.strict!==false&&(!state.delivery||parent!==state.delivery.id)",
+      "inserted": "false",
+      "requiredWitness": "JXP-D",
+      "failedWitnesses": [
+        "attention two-parent join: actual scheduler expressibility JXP-D: explicit adapter failure preserves the whole committed prefix",
+        "attention two-parent join: actual scheduler expressibility JXP-E: explicit adapter failure preserves the whole committed prefix"
+      ],
+      "detected": true
+    },
+    {
+      "name": "omit-second-parent",
+      "removed": "additionalCausalParentEventIds:[parent]",
+      "inserted": "additionalCausalParentEventIds:[]",
+      "requiredWitness": "JXP-A",
+      "failedWitnesses": [
+        "attention two-parent join: actual scheduler expressibility JXP-A: existing phases support a completed two-parent join",
+        "attention two-parent join: actual scheduler expressibility JXP-B: generic parent IDs admit allocated but unexecuted future events",
+        "attention two-parent join: actual scheduler expressibility JXP-G: explicit adapter failure preserves the whole committed prefix"
+      ],
+      "detected": true
+    },
+    {
+      "name": "omit-payload-equality",
+      "removed": "||key(event.payload)!==key(state.delivery.payload)",
+      "inserted": "",
+      "requiredWitness": "JXP-F",
+      "failedWitnesses": [
+        "attention two-parent join: actual scheduler expressibility JXP-F: explicit adapter failure preserves the whole committed prefix"
+      ],
+      "detected": true
+    },
+    {
+      "name": "deliver-after-join",
+      "removed": "options.late?50n:15n",
+      "inserted": "50n",
+      "requiredWitness": "JXP-A",
+      "failedWitnesses": [
+        "attention two-parent join: actual scheduler expressibility JXP-A: existing phases support a completed two-parent join",
+        "attention two-parent join: actual scheduler expressibility JXP-B: generic parent IDs admit allocated but unexecuted future events",
+        "attention two-parent join: actual scheduler expressibility JXP-C: opaque dependencies do not establish completed-source readiness",
+        "attention two-parent join: actual scheduler expressibility JXP-F: explicit adapter failure preserves the whole committed prefix",
+        "attention two-parent join: actual scheduler expressibility JXP-G: explicit adapter failure preserves the whole committed prefix"
+      ],
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/attentionJoinScheduler.test.ts",
+      "sha256": "acf1125172b3d3affcef1355c61859ed004a8770458adab1a7d42a4ecddd8dd8"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "docs/planning/ATTENTION_JOIN_SCHEDULER_VECTORS.md",
+      "sha256": "bd6add0fb5a1cef397918554031f4529db486d42c3c64c8896f7595a092a356c"
+    },
+    {
+      "path": "docs/planning/ATTENTION_FEEDBACK_JOIN_BINDING_REV2.md",
+      "sha256": "0d57a17fa90b807e38b60959d62530fd498681106636bc393c10bc3b311ff1fd"
+    },
+    {
+      "path": "scripts/review-attention-join-scheduler.mjs",
+      "sha256": "ea8038ab6cb53a91e4c9b2b0e090e0fc5b2757bff34cad396603f070e78436ed"
+    }
+  ],
+  "testEvidence": {
+    "path": "docs/planning/ATTENTION_JOIN_SCHEDULER_TESTS_REV1.json",
+    "sha256": "fcc6d7daf5cf237e2581bca6a24c9b75a29709dbe48bc74a233f95488016bb16"
+  },
+  "preserved": {
+    "path": "docs/planning/GENERAL_ATTENTION_COMPONENT_QUALIFICATION_REV1.json",
+    "sha256": "a50ad0d995c72247dab8940d5eec9683f7697fd023bcd59b7b7829a1329db06b"
+  },
+  "limits": [
+    "Fault substitutions operate on the fixture adapter, not a production feedback implementation.",
+    "Generic allocated-parent and opaque-dependency behavior is preserved.",
+    "No public source/subject/feedback, save decoder, allocation, model or corpus qualification."
+  ]
+}

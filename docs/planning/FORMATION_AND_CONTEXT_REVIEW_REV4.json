@@ -1,0 +1,231 @@
+{
+  "status": "FORMATION EVIDENCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "empty-selector-skips-occurrence",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "missing-sample-is-unavailable",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-C",
+      "detected": true
+    },
+    {
+      "name": "view-uses-experience-identity",
+      "file": "src/campaign3/bodySelectionOccurrence.ts",
+      "witness": "BO-A",
+      "detected": true
+    },
+    {
+      "name": "wrong-panel-support-accepted",
+      "file": "src/campaign3/perceivedTrialContext.ts",
+      "witness": "CB-B",
+      "detected": true
+    },
+    {
+      "name": "context-aliases-supplied-object",
+      "file": "src/campaign3/perceivedTrialContext.ts",
+      "witness": "CB-C",
+      "detected": true
+    },
+    {
+      "name": "undeclared-context-fields-carried",
+      "file": "src/campaign3/perceivedTrialContext.ts",
+      "witness": "CB-E",
+      "detected": true
+    },
+    {
+      "name": "accept-unfrozen-experience-producer",
+      "file": "src/campaign3/perceivedTrialContext.ts",
+      "witness": "CB-B",
+      "detected": true
+    },
+    {
+      "name": "empty-selection-forms-acquisition",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-B",
+      "detected": true
+    },
+    {
+      "name": "selection-reused-as-acquisition",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-A",
+      "detected": true
+    },
+    {
+      "name": "one-acquisition-per-view",
+      "file": "src/campaign3/bodyFormationEvidence.ts",
+      "witness": "BF-A",
+      "detected": true
+    },
+    {
+      "name": "visual-empty-forms",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-B",
+      "detected": true
+    },
+    {
+      "name": "visual-selection-becomes-acquisition",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-A",
+      "detected": true
+    },
+    {
+      "name": "visual-per-child-identity",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-A",
+      "detected": true
+    },
+    {
+      "name": "visual-encoded-cap-replayed",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-C",
+      "detected": true
+    },
+    {
+      "name": "visual-context-dropped",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-A",
+      "detected": true
+    },
+    {
+      "name": "visual-zero-positive",
+      "file": "src/campaign3/positiveSpatialCandidate.ts",
+      "witness": "VF-B",
+      "detected": true
+    },
+    {
+      "name": "skip-prior-concern",
+      "file": "src/campaign3/visualFormationEvidence.ts",
+      "witness": "VF-F",
+      "detected": true
+    },
+    {
+      "name": "modulate-focal",
+      "file": "src/campaign3/selectedSpatialEncoding.ts",
+      "witness": "VF-F",
+      "detected": true
+    },
+    {
+      "name": "permit-current-concern",
+      "file": "src/campaign3/priorConcernFeedback.ts",
+      "witness": "VF-G",
+      "detected": true
+    },
+    {
+      "name": "context-file-ignored",
+      "file": "src/campaign3/retainedContextGrouping.ts",
+      "witness": "RCG-B",
+      "detected": true
+    },
+    {
+      "name": "position-order-by-identity",
+      "file": "src/campaign3/retainedContextGrouping.ts",
+      "witness": "RCG-A",
+      "detected": true
+    },
+    {
+      "name": "duplicate-context-admitted",
+      "file": "src/campaign3/retainedContextGrouping.ts",
+      "witness": "RCG-C",
+      "detected": true
+    },
+    {
+      "name": "same-instant-after-admitted",
+      "file": "src/campaign3/retainedContextGrouping.ts",
+      "witness": "RCG-C",
+      "detected": true
+    },
+    {
+      "name": "wrong-position-identity",
+      "file": "src/campaign3/retainedContextGrouping.ts",
+      "witness": "RCG-A",
+      "detected": true
+    }
+  ],
+  "defendedSubstitution": {
+    "name": "visual-selected-cap-replayed",
+    "result": "Outer map deletion removal does not permit replay because the inner prepared encoding capability is independently consumed; not counted as a detected fault."
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/bodySelectionOccurrence.ts",
+      "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+    },
+    {
+      "path": "src/test/bodySelectionOccurrence.test.ts",
+      "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "a7804f8611481937c875ffa27d1bb527be952fc2f855c7a33a773bf7000c33d4"
+    },
+    {
+      "path": "docs/formal/BODY_SELECTION_OCCURRENCE_COMPONENT.md",
+      "sha256": "66a1b13ca5438da6c0a98fe89ff2f926633b933eb1ef11e87a35ee49049db9db"
+    },
+    {
+      "path": "src/campaign3/bodyFormationEvidence.ts",
+      "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+    },
+    {
+      "path": "docs/formal/BODY_FORMATION_EVIDENCE_COMPONENT.md",
+      "sha256": "f7cc622ec59d5c482551990ac1d4b6f211becaa1f005d321b4f377804a145a63"
+    },
+    {
+      "path": "src/campaign3/contextualBodySelection.ts",
+      "sha256": "7cb8f282ad34c4bd949e1eabbc9ca476dea0b2051a383103a05f006823d9cb24"
+    },
+    {
+      "path": "src/test/contextualBodySelection.test.ts",
+      "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+    },
+    {
+      "path": "docs/formal/CONTEXTUAL_BODY_SELECTION_COMPONENT.md",
+      "sha256": "dde7c17ae90cb76daf41a66cf5049d848df19b576c38e2eb9937dc575d3f9ce3"
+    },
+    {
+      "path": "src/campaign3/perceivedTrialContext.ts",
+      "sha256": "bf1f36c9b14fd9329a54debb266e846888fdbf79d9349fe6ae3207dd91b9c776"
+    },
+    {
+      "path": "src/campaign3/visualFormationEvidence.ts",
+      "sha256": "7766369e5712de9d0c34771e8c40b8c8c64e271afc3f7579014b7978177bd53b"
+    },
+    {
+      "path": "src/test/visualFormationEvidence.test.ts",
+      "sha256": "4fd0235274f10cd00a3c185ec2365c7d439992d9933b9c50044ef61bb9b16b91"
+    },
+    {
+      "path": "src/campaign3/retainedContextGrouping.ts",
+      "sha256": "557e875d29890db92002eba64325ff7e5ee33e03ffdc92d40b9588b8258752b6"
+    },
+    {
+      "path": "src/test/retainedContextGrouping.test.ts",
+      "sha256": "512e54f706587ba4535ad960e9163c74d61f7e360939bfdf0326f87db2c592b3"
+    },
+    {
+      "path": "src/campaign3/positiveSpatialCandidate.ts",
+      "sha256": "db440dcafcaec73e9135c078d6fcf3dd674e458185ce151097283835b3d36447"
+    },
+    {
+      "path": "src/campaign3/priorConcernFeedback.ts",
+      "sha256": "79893414cdbf74f54e8d454534a2ca236566ee98acf7978f2d759f21ff2d8251"
+    },
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "6728a8322136e8f468a49b386ac521eb8e000a543b59da8dac3ca0ed9d55ecb1"
+    },
+    {
+      "path": "scripts/review-formation-context-rev4.mjs",
+      "sha256": "a38f9da0335cfdc70e3343776f8249a0884aa455a616d0914eb908cb829785ea"
+    }
+  ],
+  "limits": [
+    "Actual component audit and selected capability; unallocated body codecs/public gates remain open.",
+    "Canonical fixture memory payload and PRJ are still trusted component boundaries."
+  ]
+}

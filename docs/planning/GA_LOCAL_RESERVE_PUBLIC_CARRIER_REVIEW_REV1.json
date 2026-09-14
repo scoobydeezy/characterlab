@@ -1,0 +1,56 @@
+{
+  "status": "SYMBOLIC LOCAL RESERVE CARRIER REVIEW PASS",
+  "records": 9,
+  "faults": [
+    {
+      "name": "physical-is-safe-signal",
+      "detected": true
+    },
+    {
+      "name": "runtime-physical-allocator",
+      "detected": true
+    },
+    {
+      "name": "premature-namespace",
+      "detected": true
+    },
+    {
+      "name": "merge-three-anchors",
+      "detected": true
+    },
+    {
+      "name": "scalar-composite-key",
+      "detected": true
+    },
+    {
+      "name": "physical-as-memory",
+      "detected": true
+    },
+    {
+      "name": "cognitive-physical-read",
+      "detected": true
+    },
+    {
+      "name": "parallel-numeric-result",
+      "detected": true
+    },
+    {
+      "name": "widen-old-owner",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+      "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+    },
+    {
+      "path": "scripts/review-ga-local-reserve-public-carrier.mjs",
+      "sha256": "b0029a6af4d70895e030111f8d11b7dceea0814258407a1b76430c7648c2fa7e"
+    }
+  ],
+  "limits": [
+    "No allocation, actual model compiler, source registration or physical-state persistence qualification.",
+    "Bijection, actual key/parameter and channel/observer binding remain fixed-compiler checks."
+  ]
+}

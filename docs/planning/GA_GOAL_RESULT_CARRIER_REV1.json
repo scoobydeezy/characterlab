@@ -1,0 +1,705 @@
+{
+  "version": "ga-goal-result-carrier/0.1-draft",
+  "status": "SYMBOLIC FIELD INVENTORY; PUBLIC SHAPE AND ALLOCATION OPEN",
+  "records": [
+    {
+      "name": "MaintenanceGoalKey",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "GoalReferent",
+          "type": {
+            "kind": "ref",
+            "name": "SemanticReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalSpec",
+      "fields": [
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "Desired",
+          "type": {
+            "kind": "ref",
+            "name": "ExactInterval"
+          }
+        },
+        {
+          "name": "ActiveFrom",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "ExpiresAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AdoptedMaintenanceGoal",
+      "fields": [
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AdoptedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Open",
+              "Withdrawn",
+              "Expired"
+            ]
+          }
+        },
+        {
+          "name": "ChangedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalLedger",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "AdoptedMaintenanceGoal"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalCommand",
+      "fields": [
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Action",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Adopt",
+              "Withdraw"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalAssessmentUnavailable",
+      "fields": [
+        {
+          "name": "Cause",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Absent",
+              "Pending",
+              "Withdrawn",
+              "Expired",
+              "MissingEvidence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDistanceAssessment",
+      "fields": [
+        {
+          "name": "BeforeDistance",
+          "type": {
+            "kind": "ref",
+            "name": "ExactInterval"
+          }
+        },
+        {
+          "name": "AfterDistance",
+          "type": {
+            "kind": "ref",
+            "name": "ExactInterval"
+          }
+        },
+        {
+          "name": "BeforePosition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BelowGoal",
+              "WithinGoal",
+              "AboveGoal",
+              "AmbiguousPosition"
+            ]
+          }
+        },
+        {
+          "name": "AfterPosition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BelowGoal",
+              "WithinGoal",
+              "AboveGoal",
+              "AmbiguousPosition"
+            ]
+          }
+        },
+        {
+          "name": "Relation",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "MovingCloser",
+              "MovingFarther",
+              "SameDistance",
+              "IndeterminateRelation"
+            ]
+          }
+        },
+        {
+          "name": "Boundary",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Attainment",
+              "Violation",
+              "NoBoundaryChange",
+              "IndeterminateBoundary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualifies",
+      "fields": [
+        {
+          "name": "Direction",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "MovingCloser",
+              "MovingFarther"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDoesNotQualify",
+      "fields": [
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "SameDistance",
+              "ComparatorExcludesProgress"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationIndeterminate",
+      "fields": [
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "IndeterminateRelation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationUnavailable",
+      "fields": [
+        {
+          "name": "Cause",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Absent",
+              "Pending",
+              "Withdrawn",
+              "Expired",
+              "MissingEvidence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalOutcomeAssessment",
+      "fields": [
+        {
+          "name": "Assessment",
+          "type": {
+            "kind": "ref",
+            "name": "GoalOutcomeAssessmentId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Goal",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "AssessmentValue",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalAssessmentUnavailable"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDistanceAssessment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalQualifies"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDoesNotQualify"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationIndeterminate"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationUnavailable"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationCarry",
+      "fields": [
+        {
+          "name": "Assessment",
+          "type": {
+            "kind": "ref",
+            "name": "GoalOutcomeAssessmentId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Goal",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "AssessedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalQualifies"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDoesNotQualify"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationIndeterminate"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationUnavailable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationDelivery",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Carry",
+          "type": {
+            "kind": "ref",
+            "name": "GoalQualificationCarry"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventChildKey",
+      "fields": [
+        {
+          "name": "Continuant",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyChildKey",
+      "fields": [
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedChildAddress",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Child",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "EventChildKey"
+              },
+              {
+                "kind": "ref",
+                "name": "BodyChildKey"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedViewAddress",
+      "fields": [
+        {
+          "name": "Child",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedChildAddress"
+          }
+        },
+        {
+          "name": "View",
+          "type": {
+            "kind": "ref",
+            "name": "ViewOrdinal"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedAttributionResult",
+      "fields": [
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResultId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Supported",
+              "Unavailable"
+            ]
+          }
+        },
+        {
+          "name": "Consumed",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedChildAddress"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "name": "Targets",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedChildAddress"
+            },
+            "min": 0,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "QualifiedSignificanceJoin",
+      "fields": [
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "ref",
+            "name": "GoalQualificationCarry"
+          }
+        },
+        {
+          "name": "Attribution",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResult"
+          }
+        }
+      ]
+    }
+  ],
+  "external": {
+    "CharacterId": "existing PRJ/IDN qualified identity",
+    "SemanticReferentId": "existing family; new exact goal-kind/holder admission required",
+    "DefinitionId": "existing exact immutable goal-spec definition; no lookup granted to carry consumer",
+    "InteroceptiveSignalId": "accepted symbolic family, unallocated",
+    "ExactInterval": "existing exact rational lower/upper interval semantics; exact record binding pending",
+    "Instant": "existing SimInstant",
+    "GoalOutcomeAssessmentId": "new symbolic sole bodily assessment occurrence; unallocated",
+    "ObserverId": "existing observer identity",
+    "ExperienceId": "existing1106; source association only, no archive resolver",
+    "VersionText": "exact admitted seam version",
+    "OriginalAddress": "existing ordered-original/scheduler structural association; exact carrier binding pending",
+    "PerceptualReferentId": "existing observer-relative continuant file",
+    "AcquisitionOccurrenceId": "accepted symbolic family; unallocated",
+    "ViewOrdinal": "bounded ordinal0..2",
+    "RetainedAttributionResultId": "new symbolic actual attribution result occurrence; unallocated"
+  },
+  "storage": [
+    "MaintenanceGoalLedger"
+  ],
+  "traceOnly": [
+    "GoalOutcomeAssessment"
+  ],
+  "delayedCharacterProjection": [
+    "GoalQualificationCarry"
+  ],
+  "invariants": {
+    "goal": "Exact immutable spec resolution, once-only adoption by key, no satisfaction retirement.",
+    "projection": "No numerical basis or source payload in the carry, delivery or significance join.",
+    "identity": "One assessment and one attribution occurrence; no separate qualification, use, target or motion identity.",
+    "attribution": "Consumed means actual semantic use; Supported targets exactly one prebound consumed surviving event child.",
+    "binding": "Actual completed outputs, PRJ/IDN, exact consequence, target original/time, once-only expected input and transactional consumption are mandatory."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV1.md",
+      "sha256": "303afe7a5fd85d50e29152b9bd92f7f4b06d04f94eb3e5e65987c3025b33c88d"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_AND_RESULT_IDENTITY_REVIEW_REV1.md",
+      "sha256": "900c39476be4b839530d08454626e12078fa04a19d1458063a4159af2c5af892"
+    },
+    {
+      "path": "docs/planning/GA_QUALIFICATION_CARRY_PROJECTION_REV2.md",
+      "sha256": "9dbb71fa890ca219b10c09d25b9ab5b063e87abed63332aae446e52fe7387350"
+    },
+    {
+      "path": "src/campaign3/goalOutcomeQualification.ts",
+      "sha256": "34e5bd4df6933a0e6ad626e5c4c3b1b7fb998670585ed51c9636e36d47cb018a"
+    },
+    {
+      "path": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "sha256": "d69e73dc8a05ddfa2aa571d0f5d907a5e5203607c5899ee9d8fe8e729c0d23f3"
+    }
+  ]
+}

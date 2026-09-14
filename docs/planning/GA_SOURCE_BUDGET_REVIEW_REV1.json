@@ -1,0 +1,50 @@
+{
+  "status": "SOURCE BUDGET COMPOSITION CONTROLS PASS",
+  "faults": [
+    {
+      "name": "empty-selection-evades-enrollment",
+      "witness": "SC-I",
+      "detected": true
+    },
+    {
+      "name": "acquisition-gated-cue",
+      "witness": "SC-I",
+      "detected": true
+    },
+    {
+      "name": "budget-counts-successes-only",
+      "witness": "SC-J",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "e9774cc9f365960cf2a53141ba9c6bb42065cf1804c47d764de99cccbbb95288"
+    },
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "e390aeb066cc6aba5348e6380fd15c759c1dec510f19c377ceefdebc633a0156"
+    },
+    {
+      "path": "src/campaign3/bodySignalCue.ts",
+      "sha256": "8604c13b30c1ae05f6a58c0c0f34c56e34abb33e8a04bbb36c9192148322309b"
+    },
+    {
+      "path": "src/campaign3/significantFormationSettlement.ts",
+      "sha256": "0d66d5d815b28d2b99c0b2189f371bbb0b7aa17666a285afcafaddf2043f7fd5"
+    },
+    {
+      "path": "scripts/review-ga-source-budget.mjs",
+      "sha256": "d8b17129c1e0d98353fa19becce0557f4b6ff040eef0127a89e90c19f3c6662a"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_BUDGET_COMPOSITION_TESTS_REV1.json",
+      "sha256": "b0bba63d28aaf19f3b82a16b8b7a7d1ff5d04a5d8c142406e8db075344f745e5"
+    }
+  ],
+  "limits": [
+    "Mutations alter fixture coordination of real components, not a public compiler.",
+    "Fixture sample encoding and opportunity/selection allocation do not qualify actual successor producer roles or public source completion."
+  ]
+}

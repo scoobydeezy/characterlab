@@ -1,0 +1,67 @@
+{
+  "status": "SOURCE TOPOLOGY/TRANSPORT REVIEW PASS",
+  "records": 5,
+  "registrations": 15,
+  "sourceEventsPerOriginal": 8,
+  "faults": [
+    {
+      "name": "truth-in-perception",
+      "detected": true
+    },
+    {
+      "name": "lost-use-plan",
+      "detected": true
+    },
+    {
+      "name": "wrong-subject-field",
+      "detected": true
+    },
+    {
+      "name": "early-consequence-sensing",
+      "detected": true
+    },
+    {
+      "name": "cognitive-body-read",
+      "detected": true
+    },
+    {
+      "name": "binding-state-write",
+      "detected": true
+    },
+    {
+      "name": "source-learning-route",
+      "detected": true
+    },
+    {
+      "name": "orphan-lane",
+      "detected": true
+    },
+    {
+      "name": "mismatched-child-wrapper",
+      "detected": true
+    },
+    {
+      "name": "early-numeric-allocation",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.json",
+      "sha256": "fb000854da57773986ceb588d41c5188704a5fa33bb731c9eb6127cd7d45d597"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "scripts/review-ga-source-stage-closure.mjs",
+      "sha256": "5d59e6656c45cc03188b2983573f9010d8582551216c1ed1922351a8bf175799"
+    }
+  ],
+  "limits": [
+    "Symbolic source-only graph; not whole public registration acceptance.",
+    "Exact state paths/accessors, output allocation clauses and downstream stages remain open.",
+    "The five wrappers are not yet included in the124-record identity crosswalk."
+  ]
+}

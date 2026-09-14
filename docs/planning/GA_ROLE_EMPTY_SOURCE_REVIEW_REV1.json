@@ -1,0 +1,61 @@
+{
+  "status": "ROLE PROJECTION AND EMPTY SOURCE REVIEW PASS",
+  "faults": [
+    {
+      "name": "ignore-role-channel-absence",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-P",
+      "detected": true
+    },
+    {
+      "name": "skip-no-detection-source",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-M",
+      "detected": true
+    },
+    {
+      "name": "skip-no-eligible-source",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-P",
+      "detected": true
+    },
+    {
+      "name": "retain-world-referent",
+      "file": "src/test/concernSignificanceSourceComposition.test.ts",
+      "witness": "SC-Q",
+      "detected": true
+    },
+    {
+      "name": "positive-as-no-detection",
+      "file": "src/campaign3/attentionSelection.ts",
+      "witness": "EVS-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "4e862724ff5155ab0870e62ca42c8ac176e6eeb75d559fd1e8256b647e9ce828"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "4e862724ff5155ab0870e62ca42c8ac176e6eeb75d559fd1e8256b647e9ce828"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "11662e718d419ecce120768f1faea6caefbf48951408a0c75ae84987a831c32e"
+    },
+    {
+      "path": "src/test/emptyVisualSelection.test.ts",
+      "sha256": "67cb2eea143462ae768b1034cf9c0a1e2441b9b154853f33414b2f25e26b0792"
+    },
+    {
+      "path": "scripts/review-ga-role-empty-source.mjs",
+      "sha256": "fd995648e5910d197a22d4887b11f77f6c9adb3d112ad41f0d5447dd96ca9e39"
+    }
+  ],
+  "limits": [
+    "Actual SEM-B role materialization/projection, with fixture-authored world and channel declarations.",
+    "Governed public source, selection audit identity and PRJ/owner joins remain unqualified."
+  ]
+}

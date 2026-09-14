@@ -1,0 +1,249 @@
+{
+  "version": "ga-requested-source-carrier/0.1-draft",
+  "status": "SYMBOLIC SOURCE CARRIER; PUBLIC GATES OPEN",
+  "records": [
+    {
+      "name": "TrialPanelUnavailableObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RequestedBodySamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EmbodiedSample"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Declarations",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "SafeSignalDeclaration"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSourceSamplingRequest",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "LocalReserveSamplingRequest"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CompletedRequestedSamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Request",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralSourceSamplingRequest"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "RequestedBodySamples"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "union",
+              "alternatives": [
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelPresentObservation"
+                },
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelUnavailableObservation"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExtendedObservation"
+            }
+          }
+        },
+        {
+          "name": "EventDetection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentEventDetectionId"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SourcePerceptionInput",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        }
+      ]
+    }
+  ],
+  "storage": [],
+  "newIdentityFamilies": [],
+  "truthReadsFromPerception": [],
+  "invariants": {
+    "request": "At least one requested modality; body observer equals outer observer; body channels nonempty.",
+    "outputs": "Presence of each product equals request, independently of sample availability.",
+    "body": "Exact requested channel/sample/declaration bijection; same observer/time.",
+    "event": "One shared detection iff present panel or nonempty visual; exact equality in any visual product.",
+    "freeze": "One later experience iff any admitted evidence; no current experience in raw samples.",
+    "unsampled": "No output and no source read; unsampled panel does not clear context."
+  },
+  "sources": [
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV1.md",
+      "sha256": "fb36501da7123096f146742c52c24e238dfa9a090a8c5a5ba42c9989c43552b5"
+    },
+    {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+      "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+    },
+    {
+      "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV3.json",
+      "sha256": "96812d46d96ac96be4381f3cd9644985da5e44d7c12561095bb863bf65e80b48"
+    },
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV1.json",
+      "sha256": "089f5c2a41e24f75b56729a738d892375290069ebe0c844f955187f5fb548e11"
+    },
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "docs/formal/REQUESTED_SOURCE_SAMPLING_COMPONENT.md",
+      "sha256": "c722e9d4647cecde71f34eecb528782139565db379c2941dae90e5514462edf5"
+    }
+  ]
+}

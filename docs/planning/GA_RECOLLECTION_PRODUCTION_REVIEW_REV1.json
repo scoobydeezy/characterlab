@@ -1,0 +1,83 @@
+{
+  "status": "COMPONENT RECOLLECTION PRODUCTION REVIEW PASS; PUBLIC GATES OPEN",
+  "faults": [
+    {
+      "name": "reuse-acquisition-as-recollection",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-A",
+      "detected": true
+    },
+    {
+      "name": "replay-recollection-capability",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-F",
+      "detected": true
+    },
+    {
+      "name": "publication-follows-mutable-evaluation",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-E",
+      "detected": true
+    },
+    {
+      "name": "absent-body-reads-state",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-B",
+      "detected": true
+    },
+    {
+      "name": "absent-event-reads-state",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-B",
+      "detected": true
+    },
+    {
+      "name": "repeat-presentation",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-H",
+      "detected": true
+    },
+    {
+      "name": "body-presentation-admitted",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-H",
+      "detected": true
+    },
+    {
+      "name": "recollection-subject-from-observer",
+      "file": "src/campaign3/recollectionProduction.ts",
+      "witness": "RP-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/recollectionProduction.ts",
+      "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+    },
+    {
+      "path": "src/test/recollectionProduction.test.ts",
+      "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+    },
+    {
+      "path": "src/test/observedAssociationRecall.test.ts",
+      "sha256": "2042916b0dc2b01ac2e4f20528a42bb1e6b07c4d9d8a776bafd14c416c3d50a3"
+    },
+    {
+      "path": "src/test/concernSignificanceSourceComposition.test.ts",
+      "sha256": "f29a9928a5e3b1671fb0b44abe20233e9a4fa4e5fcf35250e875d642b3d7f45a"
+    },
+    {
+      "path": "docs/formal/RECOLLECTION_PRODUCTION_COMPONENT.md",
+      "sha256": "f33f968cacace112827e66cb8b65610d9923a5f65244588c22e400a13feccf6d"
+    },
+    {
+      "path": "scripts/review-ga-recollection-production.mjs",
+      "sha256": "778a5a7af2670255ab0802cf749d6f2d73bdfb56409adc880b44f0098b3c45ae"
+    }
+  ],
+  "limits": [
+    "Actual PRJ/IDN, original/parent membership and public output descriptors remain upstream.",
+    "Component publication is not automatic presentation or persistent mutation."
+  ]
+}

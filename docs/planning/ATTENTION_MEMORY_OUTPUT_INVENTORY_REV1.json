@@ -1,0 +1,295 @@
+{
+  "status": "DRAFT LOCAL OUTPUT AND SLOT INVENTORY; NOT RUNTIME QUALIFICATION",
+  "stages": [
+    {
+      "name": "world",
+      "when": "always",
+      "outputs": {
+        "WorldEventTruth": 1
+      },
+      "slots": {
+        "WorldEventOccurrenceId": 1,
+        "EventBindingOccurrenceId": 3
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "observe",
+      "when": "always",
+      "outputs": {
+        "ExtendedObservation": 1
+      },
+      "slots": {
+        "ObservationId": 1,
+        "DetectionOccurrenceId": "n",
+        "EventDetectionOccurrenceId": "positive",
+        "ReservedExperienceId": "positive"
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "track",
+      "when": "positive",
+      "outputs": {
+        "PerceptualEventTransition": 1,
+        "PerceptualTrackTransition": "n"
+      },
+      "slots": {},
+      "fileCounters": {
+        "ObserverEventSequence": 1,
+        "ObserverTrackSequence": "newTracks"
+      }
+    },
+    {
+      "name": "bind",
+      "when": "positive",
+      "outputs": {
+        "PerceivedBindingEvidence": "n"
+      },
+      "slots": {
+        "PerceivedBindingOccurrenceId": "n"
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "classify",
+      "when": "positive",
+      "outputs": {},
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "freeze",
+      "when": "positive",
+      "outputs": {
+        "PreRecognitionSemanticExperience": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "roles",
+      "when": "positive",
+      "outputs": {
+        "CausalRoleEvidence": "q"
+      },
+      "slots": {
+        "CausalRoleEvidenceOccurrenceId": "q"
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "spatial",
+      "when": "positive",
+      "outputs": {
+        "SpatialPreparation": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "delivery",
+      "when": "always",
+      "outputs": {
+        "FeedbackDelivery": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "select",
+      "when": "positiveFormation",
+      "outputs": {
+        "AttentionSelectionAudit": 1,
+        "ExtendedSelected": 1
+      },
+      "slots": {
+        "SelectionOccurrenceId": 1
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "empty-select",
+      "when": "emptyFormation",
+      "outputs": {
+        "AttentionSelectionAudit": 1,
+        "ExtendedSelected": 1
+      },
+      "slots": {
+        "SelectionOccurrenceId": 1
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "encoding-join",
+      "when": "formation",
+      "outputs": {
+        "BoundEncodingInput": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "evaluate",
+      "when": "formation",
+      "outputs": {
+        "EncodingEvaluation": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "retain",
+      "when": "formation",
+      "outputs": {
+        "RetainedEncoding": "retains"
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "form",
+      "when": "retainedFormation",
+      "outputs": {},
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "associate",
+      "when": "retainedFormation",
+      "outputs": {},
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "seed-presentation",
+      "when": "retainedFormation",
+      "outputs": {},
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "cue",
+      "when": "cue",
+      "outputs": {
+        "CueEvidence": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "recall-join",
+      "when": "cue",
+      "outputs": {
+        "BoundRecallInput": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "rank",
+      "when": "cue",
+      "outputs": {
+        "RecallResult": 1
+      },
+      "slots": {},
+      "fileCounters": {}
+    },
+    {
+      "name": "recollect",
+      "when": "cue",
+      "outputs": {
+        "AttentionRecollection": "w"
+      },
+      "slots": {
+        "ProposedRecollectionOccurrenceId": "w"
+      },
+      "fileCounters": {}
+    },
+    {
+      "name": "reinforce",
+      "when": "winningCue",
+      "outputs": {},
+      "slots": {},
+      "fileCounters": {}
+    }
+  ],
+  "symbols": {
+    "n": "admitted detections 0..3",
+    "q": "actual derived role outputs 0..n",
+    "newTracks": "new continuant files 0..n; other tracks continue",
+    "positive": "1 iff n>0",
+    "retains": "1 iff at least one selected unit has final strength>0",
+    "w": "actual winners 0..min(2,episode count); zero for unavailable cue or absent episodes"
+  },
+  "accounting": {
+    "outputs": "top-level registered output records, including new identity-free carriers; nested copies not counted again",
+    "runtimeSlots": "only explicit fresh shared allocator calls; experience allocated at observation and discharged at freeze",
+    "fileCounters": "separate observer-owned file counters, not shared runtime slots",
+    "events": "local executed stages including one completed delivery; original event included, upstream producer excluded",
+    "generatedEvents": "local executed events minus two: receiving original and previously scheduled delivery; excludes delivery scheduling by upstream producer"
+  },
+  "identityRules": {
+    "tracking": "existing detection-keyed transitions carry resulting file identity; no fresh shared-runtime transition ID",
+    "freeze": "consumes exact observation reservation; no fresh allocation",
+    "selection": "one fresh audit selection occurrence; ExtendedSelected copies that same value",
+    "retention": "copies source SelectionOccurrenceId; no EpisodeId",
+    "recollection": "one new proposed occurrence per winner, never per candidate",
+    "delivery": "copies existing ConcernOccurrenceId when present; no fresh concern allocation",
+    "patches": "patch/diff trace only; no void-slot advance required by this proposed dedicated finite compiler"
+  },
+  "maxima": {
+    "positiveFormation": {
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    "emptyFormation": {
+      "events": 7,
+      "outputs": 7,
+      "runtimeSlots": 6
+    },
+    "positiveCue": {
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    },
+    "emptyCue": {
+      "events": 7,
+      "outputs": 6,
+      "runtimeSlots": 5
+    }
+  },
+  "pending": [
+    "exact output declarations/extractors and scalar identity roles",
+    "dedicated registration compiler and complete model commitment",
+    "earlier concern producer/delivery scheduling and whole-run work budget",
+    "public allocator/rollback/restore execution"
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_STAGE_INVENTORY_REV1.json",
+      "sha256": "fffd6d30422c43497550cd744a938b16937eeabd51b7736032b8e47f41c7f221"
+    },
+    {
+      "path": "docs/planning/ATTENTION_MEMORY_WRAPPER_INVENTORY_REV1.json",
+      "sha256": "127a7737b2854372f58b005c76143373b43687010e8c6d1b525a3cec37cac49f"
+    },
+    {
+      "path": "docs/formal/ATTENTION_PUBLIC_SHAPE_ACCEPTANCE.md",
+      "sha256": "9f0e17a6459dd05928bb86d73b59b59474a5d55f786ff55966e23d3f670fe8e3"
+    },
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_SCHEMA_INVENTORY.md",
+      "sha256": "6c4f287017d23bdc5a1cc79d95719d9aaa3ad373c05914955d30ad1e9d8b683c"
+    },
+    {
+      "path": "src/campaign3/attentionRuntime.ts",
+      "sha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    }
+  ]
+}

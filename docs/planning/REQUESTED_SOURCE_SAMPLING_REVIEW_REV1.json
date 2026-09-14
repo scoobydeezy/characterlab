@@ -1,0 +1,61 @@
+{
+  "status": "REQUESTED SOURCE SAMPLING REVIEW PASS",
+  "faults": [
+    {
+      "name": "sample-unrequested-panel",
+      "file": "src/campaign3/requestedSourceSampling.ts",
+      "witness": "RSS-A",
+      "detected": true
+    },
+    {
+      "name": "sample-unrequested-visual",
+      "file": "src/campaign3/requestedSourceSampling.ts",
+      "witness": "RSS-A",
+      "detected": true
+    },
+    {
+      "name": "erase-unavailable-observation",
+      "file": "src/campaign3/requestedSourceSampling.ts",
+      "witness": "RSS-B",
+      "detected": true
+    },
+    {
+      "name": "cross-modality-duplicate",
+      "file": "src/campaign3/requestedSourceSampling.ts",
+      "witness": "RSS-D",
+      "detected": true
+    },
+    {
+      "name": "omit-body-in-combined",
+      "file": "src/campaign3/combinedObservationOpportunity.ts",
+      "witness": "CO-A",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/requestedSourceSampling.ts",
+      "sha256": "1a00d65697d3abfb78a9e66ddd52ceb5b03cfc351b4828bc4426ff98c1f856f9"
+    },
+    {
+      "path": "src/test/requestedSourceSampling.test.ts",
+      "sha256": "14a0eed92e774dbace91b1f6968b7886dae7827c19769fae6a3fe0758af389e0"
+    },
+    {
+      "path": "src/campaign3/combinedObservationOpportunity.ts",
+      "sha256": "48a9f0f473d749e90c96eb201ed9b83e7c005f38086c7c755cbb12e137af1c9b"
+    },
+    {
+      "path": "src/test/combinedObservationOpportunity.test.ts",
+      "sha256": "85c10e62fe76923884d58b3f8efc6f9c6f86ab110d97c09e4ccb5663d5de46b0"
+    },
+    {
+      "path": "scripts/review-requested-source-sampling.mjs",
+      "sha256": "bbc7910029f28e261dc831ef15f78fd31e20943df95507d6941df614cec7d67f"
+    }
+  ],
+  "limits": [
+    "Explicit component requests only; public model and registration remain open.",
+    "Enclosing allocator rollback is not qualified by these pure sampling checks."
+  ]
+}

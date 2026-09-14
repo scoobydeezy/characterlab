@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {startVitest} from 'vitest/node';
+const output='docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json';assert(!fs.existsSync(output));
+const bridge='src/campaign3/localReserveObservation.ts',selection='src/campaign3/interoceptiveSignalSelection.ts',cue='src/campaign3/bodySignalCue.ts',tests='src/test/localReserveObservation.test.ts';
+const faults=[
+ ['reserve-for-absence',bridge,'emitsCharacterAccessibleEvidence:present.length>0','emitsCharacterAccessibleEvidence:true','LRO-H'],
+ ['erase-experience-support',bridge,'perceptualEventClassifications:[],supportingObservationIds,','perceptualEventClassifications:[],supportingObservationIds:[],','LRO-G'],
+ ['force-current-lane',bridge,'{observerId,lane,dueAt:at','{observerId,lane:\'Current\',dueAt:at','LRO-G'],
+ ['select-without-experience',selection,"if(input.opportunityId===null)throw Error('present sample requires experience');",'','LRO-I'],
+ ['cue-without-experience',cue,"if(r.schema.typeId===461n&&input.opportunityId===null)fail();",'','LRO-I']
+];const results=[];
+for(const [name,file,removed,inserted,witness] of faults){let substitutions=0;const temp=`docs/planning/.local-opportunity-${name}.json`;assert(!fs.existsSync(temp));const v=await startVitest('test',[tests],{config:false,watch:false,pool:'forks',minWorkers:1,maxWorkers:1,reporters:['json'],outputFile:temp},{plugins:[{name:'local-opportunity-fault',enforce:'pre',transform(code,id){if(id.replaceAll('\\','/').endsWith('/'+file)){assert.equal(code.split(removed).length-1,1);substitutions++;return code.replace(removed,inserted);}}}]});try{await v.close();const report=JSON.parse(fs.readFileSync(temp));assert.equal(substitutions,1);assert(report.testResults.flatMap(t=>t.assertionResults).some(t=>t.status==='failed'&&t.fullName.includes(witness)),name);results.push({name,file,witness,detected:true});}finally{if(fs.existsSync(temp))fs.unlinkSync(temp);}}
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});fs.writeFileSync(output,JSON.stringify({status:'BODY-ONLY OPPORTUNITY COMPONENT FAULT CONTROLS PASS',faults:results,sources:[bridge,selection,cue,tests,'scripts/review-local-reserve-opportunity.mjs','docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json'].map(fp),limits:['Real SEM reservation/freeze at component scope; combined source and public ingress/subject/settlement admission remain open.']},null,2)+'\n');process.exitCode=0;

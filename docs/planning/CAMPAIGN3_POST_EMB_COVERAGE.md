@@ -8,6 +8,8 @@ BODY, MULTISOURCE and ATTENTION remain local intake labels, not allocated member
 Authority: [bounded EMB qualification](CAMPAIGN3_EMBODIED_QUALIFICATION.md), its
 [exact receipt](CAMPAIGN3_EMBODIED_QUALIFICATION.json), and the unchanged requirements
 in [additional phenomenon intake](CAMPAIGN3_CORPUS_INTAKE_DRAFT.md).
+The later [bounded public ATTN qualification](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md)
+adds active-selection coverage only; it does not weaken the encoding/probe requirements.
 
 | Intake obligation | Current evidence | Disposition and remaining burden |
 |---|---|---|
@@ -20,15 +22,16 @@ in [additional phenomenon intake](CAMPAIGN3_CORPUS_INTAKE_DRAFT.md).
 | MULTISOURCE: duplicated support | ER-D: two body instructions, one ground; no-coverage comparison1/2 versus2/3 | Within-body duplication witnessed. It is not two heterogeneous families describing the same fact. |
 | MULTISOURCE: third aggregate basis | ER-G: actual kernel on{a},{b},{a,b}, pairwise-only mutant detected | Component-positive/public-profile-exclusion scope. No public three-basis witness. |
 | MULTISOURCE: cross-family shared fact, sign intervention and normalization alternative | Not in frozen receiving model | Still BLOCKED pending an admitted producer/comparison contract. Do not collapse independent motives just because they share evidence. |
-| ATTENTION: over-capacity perceptual selection | No current attention contract; task workspace selects commitments | BLOCKED. Workspace capacity is not an attention witness. |
+| ATTENTION: over-capacity perceptual selection | AT2-A..N under the exact bounded public attention profile; actual three-port SEM source, K0/1/2 and selected-only processing | Bounded active-selection distinction witnessed. This is separate from task workspace capacity, sensory gating and encoding strength. |
 | ATTENTION: encoding footprint and later probe | Historical controls preserved; no accepted attention-to-strength/access contract | BLOCKED for whole intake PASS even after a bounded selector exists. |
 
 **Whole BODY intake: PARTIAL. Whole MULTISOURCE intake: PARTIAL, with the listed
-remaining public comparisons BLOCKED. Whole ATTENTION intake: BLOCKED.** No intake
+remaining public comparisons BLOCKED. Whole ATTENTION intake: PARTIAL, with encoding
+and later-probe obligations BLOCKED and no whole PASS.** No intake
 obligation is deleted or weakened to obtain those dispositions. Bounded EMB remains
 complete; a broader intake and its eventual corpus member impose additional burdens.
 
-Next investigation is [ATTN-001](CAMPAIGN3_ATTENTION_DRAFT.md), beginning with
-[substrate inspection](CAMPAIGN3_ATTENTION_INSPECTION.md). Corpus registration can
+Next investigation is the encoding/footprint expressibility inventory described in
+the [current ATTN checkpoint](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md). Corpus registration can
 follow a separate exact fixture, comparison/coupling and manifest review. This pass
 changes neither canonical corpus bytes nor any accepted runtime/model/allocation.

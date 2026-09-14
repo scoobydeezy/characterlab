@@ -1,0 +1,121 @@
+{
+  "status": "ELEVEN CURRENT-SOURCE ALTERNATIVES DETECTED",
+  "results": [
+    {
+      "name": "visibility-bypass",
+      "removed": "modes=items(f(channel,2n),'list').map(u)",
+      "inserted": "modes=items(f(channel,2n),'list').map(()=>2n)",
+      "expectation": "different",
+      "detected": true
+    },
+    {
+      "name": "capacity-bypass",
+      "removed": "capacity=Number(u(f(policy,2n)))",
+      "inserted": "capacity=2",
+      "expectation": "different",
+      "detected": true
+    },
+    {
+      "name": "reused-selection-slot",
+      "removed": "selectionId=occ(1143,allocate())",
+      "inserted": "selectionId=(allocate(),occ(1143,0n))",
+      "expectation": "output identity differs from allocated slot",
+      "detected": true,
+      "error": "output identity differs from allocated slot",
+      "rollback": "PASS"
+    },
+    {
+      "name": "omitted-selected-read",
+      "removed": "consumeSelected(view,refs).map(decode)",
+      "inserted": "consumeSelected(view,refs.slice(1)).map(decode)",
+      "expectation": "selected read ledger incomplete",
+      "detected": true,
+      "error": "selected read ledger incomplete",
+      "rollback": "PASS"
+    },
+    {
+      "name": "repeated-selected-read",
+      "removed": "consumeSelected(view,refs).map(decode)",
+      "inserted": "consumeSelected(view,[...refs,refs[0]]).map(decode)",
+      "expectation": "reject",
+      "detected": true,
+      "error": "reference absent or repeated",
+      "rollback": "PASS"
+    },
+    {
+      "name": "observation-envelope-read",
+      "removed": "consumeSelected(view,refs).map(decode)",
+      "inserted": "consumeSelected(view,[{kind:'observation',observationId}]).map(decode)",
+      "expectation": "reject",
+      "detected": true,
+      "error": "reference absent or repeated",
+      "rollback": "PASS"
+    },
+    {
+      "name": "selector-state-clear",
+      "removed": "const count=detections.length,q=claims.length",
+      "inserted": "if(n===8)nextState=new AuthoritativeState([]);const count=detections.length,q=claims.length",
+      "expectation": "nontracking write",
+      "detected": true,
+      "error": "nontracking write",
+      "rollback": "PASS"
+    },
+    {
+      "name": "consumer-state-clear",
+      "removed": "const count=detections.length,q=claims.length",
+      "inserted": "if(n===10)nextState=new AuthoritativeState([]);const count=detections.length,q=claims.length",
+      "expectation": "nontracking write",
+      "detected": true,
+      "error": "nontracking write",
+      "rollback": "PASS"
+    },
+    {
+      "name": "child-carriage-reorder",
+      "removed": "emit(6,r('AttentionFreezeInput',[observation!,eventTransition!,list(bindings.map(perceivedBindingEvidenceValue))]))",
+      "inserted": "emit(6,r('AttentionFreezeInput',[observation!,eventTransition!,list([...bindings].reverse().map(perceivedBindingEvidenceValue))]))",
+      "expectation": "classification child",
+      "detected": true,
+      "error": "classification child",
+      "rollback": "PASS"
+    },
+    {
+      "name": "recognition-phase-reassignment",
+      "removed": "phase:u(f(stages.get(child.stage)!,5n))",
+      "inserted": "phase:child.stage===8?20n:u(f(stages.get(child.stage)!,5n))",
+      "expectation": "registered stage phase",
+      "detected": true,
+      "error": "registered stage phase",
+      "rollback": "PASS"
+    },
+    {
+      "name": "event-token-mismatch",
+      "removed": "for(const child of children)expected.set(child.eventId,key(scheduledEventValue(child)))",
+      "inserted": "for(const child of children)expected.set(child.eventId,'not-the-issued-event')",
+      "expectation": "actual unconsumed parent-bound attention event required",
+      "detected": true,
+      "error": "actual unconsumed parent-bound attention event required",
+      "rollback": "PASS"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/attentionRuntime.ts",
+      "sha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c"
+    },
+    {
+      "path": "src/campaign3/attentionTrace.ts",
+      "sha256": "c10afd8124ca315037c603b597201f56f2ee3ef12238c817c450f972920e6bfb"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    },
+    {
+      "path": "scripts/review-attention-runtime-mutants.mjs",
+      "sha256": "3da0815b001dd5d71797ab0abcbadf5705c84dd53d265784ca738d4c3cc13a2e"
+    }
+  ],
+  "limits": [
+    "Visibility/capacity faults are detected by the public outcome oracle. Other faults reject with complete public state/output/trace rollback. Component capability and arbitrary-model limits remain explicit."
+  ]
+}

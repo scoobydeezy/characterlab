@@ -1,0 +1,47 @@
+{
+  "status": "PRIOR CONCERN SPATIAL COMPOSITION REVIEW PASS",
+  "faults": [
+    {
+      "name": "narrow-focal-not-peripheral",
+      "witness": "PCS-A",
+      "detected": true
+    },
+    {
+      "name": "discard-preselection-divisor",
+      "witness": "PCS-A",
+      "detected": true
+    },
+    {
+      "name": "relabel-receiving-time",
+      "witness": "PCS-C",
+      "detected": true
+    },
+    {
+      "name": "reusable-prepared-result",
+      "witness": "PCS-B",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "6728a8322136e8f468a49b386ac521eb8e000a543b59da8dac3ca0ed9d55ecb1"
+    },
+    {
+      "path": "src/test/spatialEvidenceBinding.test.ts",
+      "sha256": "d314a0b01912e9e5b2298747e484b0188bb5b781be29f21d6d642cccb923442a"
+    },
+    {
+      "path": "src/campaign3/priorConcernFeedback.ts",
+      "sha256": "79893414cdbf74f54e8d454534a2ca236566ee98acf7978f2d759f21ff2d8251"
+    },
+    {
+      "path": "scripts/review-prior-concern-spatial.mjs",
+      "sha256": "88177925b7f923ff6abd9f60a8c0b75fae6a76003413882d02bb07b3bb2dcefc"
+    }
+  ],
+  "limits": [
+    "Selected-only capability and exact prior modulation execute; carried response and subject projection are component premises.",
+    "No public producer/delivery, canonical model or persistence qualification."
+  ]
+}

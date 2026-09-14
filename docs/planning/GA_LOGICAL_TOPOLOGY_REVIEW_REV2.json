@@ -1,0 +1,68 @@
+{
+  "status": "COMPOSED LOGICAL TOPOLOGY REVIEW PASS; PUBLIC GATES OPEN",
+  "stageTemplates": 67,
+  "faults": [
+    {
+      "name": "physical-writes-memory",
+      "rejected": true
+    },
+    {
+      "name": "physical-as-learning",
+      "rejected": true
+    },
+    {
+      "name": "owner-emits-child",
+      "rejected": true
+    },
+    {
+      "name": "unschedulable-phase",
+      "rejected": true
+    },
+    {
+      "name": "backward-current-feedback",
+      "rejected": true
+    },
+    {
+      "name": "instant-cycle",
+      "rejected": true
+    },
+    {
+      "name": "baseline-coupled-to-recall",
+      "rejected": true
+    },
+    {
+      "name": "baseline-becomes-presentation",
+      "rejected": true
+    },
+    {
+      "name": "graph-follows-episode-loss",
+      "rejected": true
+    },
+    {
+      "name": "presentation-writes-use",
+      "rejected": true
+    },
+    {
+      "name": "presentation-from-body",
+      "rejected": true
+    },
+    {
+      "name": "template-count-claimed-as-work-bound",
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/GA_COMPOSED_LOGICAL_TOPOLOGY_REV2.json",
+      "sha256": "8de392024fea8f836276556cb168590f7aedc519d13273596af3a543def74371"
+    },
+    {
+      "path": "scripts/review-ga-logical-topology-rev2.mjs",
+      "sha256": "c9bf42f841f40b081b96717dcfaa78f6e60bf9c28180ba04bdfa74aaad8e604e"
+    }
+  ],
+  "limits": [
+    "Template graph only, not exact public input/parent/definition admission or whole-model work bound.",
+    "Future target time, join once-only binding and B0 owner hooks still need runtime execution."
+  ]
+}

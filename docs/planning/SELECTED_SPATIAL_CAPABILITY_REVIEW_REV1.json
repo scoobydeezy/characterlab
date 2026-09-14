@@ -1,0 +1,47 @@
+{
+  "status": "SELECTED SPATIAL CAPABILITY REVIEW PASS",
+  "faults": [
+    {
+      "name": "reusable-capability",
+      "witness": "SSC-A",
+      "detected": true
+    },
+    {
+      "name": "ignored-close",
+      "witness": "SSC-B",
+      "detected": true
+    },
+    {
+      "name": "retain-source-resolver",
+      "witness": "SSC-A",
+      "detected": true
+    },
+    {
+      "name": "unselected-witness-transport",
+      "witness": "SSC-C",
+      "detected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/campaign3/selectedSpatialEncoding.ts",
+      "sha256": "e65a42014e6a4b708639d10c630c91bbb6b2979f9f736e39ab0655f7e8879beb"
+    },
+    {
+      "path": "src/test/spatialEvidenceBinding.test.ts",
+      "sha256": "0400ea8a0024b0d6d7572d9caeeb03f73b798118a8f310776fc96194b4a532e5"
+    },
+    {
+      "path": "src/campaign3/spatialEvidenceBinding.ts",
+      "sha256": "1d03d315a048da5a677b9044dd3607d318a53154e3e077ed0c576a5ffada21f8"
+    },
+    {
+      "path": "scripts/review-selected-spatial-capability.mjs",
+      "sha256": "b78b8b140c2b3a0b16a5865317c3051d6ff70ec879b7356652fff3acfa29772e"
+    }
+  ],
+  "limits": [
+    "Preparation is a trusted source join; downstream selected-only capability is not public source authentication.",
+    "No public codec, PRJ, scheduler or save qualification is claimed."
+  ]
+}
