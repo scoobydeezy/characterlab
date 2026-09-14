@@ -1,5 +1,17 @@
 # General attention closure work plan
 
+> **ORDERING SUPERSEDED 2026-09-14** by
+> [`CAMPAIGN3_WORK_ORDER_2026_09_14.md`](CAMPAIGN3_WORK_ORDER_2026_09_14.md).
+> The obligations below are unchanged and remain authoritative. What changed is the
+> order in which they run. **Closure obligation #2 — the independent `x/(1+x)` versus
+> shared `x/max(B,Sum x)` versus hybrid versus retired `RET-001` flat-tag comparison —
+> runs FIRST, as a pure arithmetic component with no identities, canonical records,
+> public ingress or state ownership, and terminates in a verdict-ledger entry.**
+> That is this plan's own "Immediate sequence", which execution drifted past: between
+> 2026-09-12 and 2026-09-14 the seam produced 163 permanent record types, 67 stage
+> templates and seventeen revisions of one role crosswalk, and obligation #2 was not run.
+> Registration, allocation and model packaging resume after work-order items 1-5.
+
 2026-09-11. User-authorized autonomous research, review and implementation. General
 ATTN-001 remains OPEN. This plan specifies completion obligations rather than treating
 the qualified finite selector as general attention. Existing accepted bytes and

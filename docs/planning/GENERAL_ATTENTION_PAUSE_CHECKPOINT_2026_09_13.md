@@ -69,6 +69,14 @@ receipt's exact source fingerprint remains historical, not a current-file hash c
 
 ## Resume here
 
+> **REDIRECTED 2026-09-14.** Before step 1 below, execute work-order items 1-5 in
+> [`CAMPAIGN3_WORK_ORDER_2026_09_14.md`](CAMPAIGN3_WORK_ORDER_2026_09_14.md): run the
+> salience-law arithmetic comparison and record its verdict, publish corpus `0.28.0`,
+> write the owed EMB and ATTN verdict entries, adopt `CHECKPOINT_TEMPLATE.md`, and
+> obtain the ruling in `CAMPAIGN3_PENDING_OWNER_DECISIONS.md`. The frozen artifacts
+> above and steps 2-5 below remain correct and unchanged; only their ordering moved.
+> Step 1's reading list should now begin with `CURRENT.md` (replaced) and the work order.
+
 1. Read CURRENT, this checkpoint, the carrier checkpoint and escalation policy. Preserve
    the large mixed worktree; no commits, resets, cleanup or delegation were performed.
 2. Continue **exact registration/model compilation using706**, not704. Bind each of67

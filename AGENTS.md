@@ -10,6 +10,11 @@ architectural precedent, preserve meaningful comparators and report LOCAL DISPOS
 Behavioral differences, finite fixture scope and deterministic representation choices
 alone are not owner blockers. Escalate only under that policy's architectural criteria.
 
+Items that **do** meet those criteria are tracked in
+`docs/planning/CAMPAIGN3_PENDING_OWNER_DECISIONS.md`. One is open: ratification of the
+concern -> attention feedback edge, which is criterion 3's first named example
+(affect -> retrieval). Do not close General Attention while it is open.
+
 ## Architectural authority
 
 1. `CharacterLab — Ideal Character Architecture North Star.md` defines the required character capabilities, invariants, and research posture.
@@ -26,6 +31,23 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**Work order (2026-09-14, owner-directed correction pass):**
+`docs/planning/CAMPAIGN3_WORK_ORDER_2026_09_14.md` governs the next increment. It
+reorders GA work only; it reopens no contract, allocation, model byte or digest.
+Sequence: (1) run the salience-law comparison as pure arithmetic and record a verdict;
+(2) publish corpus `0.28.0` from the prepared successor manifest; (3) write the owed
+EMB and ATTN verdict entries; (4) adopt `CHECKPOINT_TEMPLATE.md`; (5) obtain the one
+pending owner ruling; (6) only then resume GA registration and model closure.
+The "Resume here" sequence in `GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md` and the
+ordering in `GENERAL_ATTENTION_CLOSURE_PLAN.md` are superseded on ordering only; their
+technical content stands.
+
+`docs/planning/CURRENT.md` is now a one-page state index that is **replaced, never
+appended**; its prior chronology is preserved verbatim in `CAMPAIGN3_LOG.md`.
+Report the two program counters (highest allocated record type; record types allocated
+since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
+next work item must be an experiment or a corpus promotion, not another allocation.
+
 Campaign 3 discovery is active (2026-09-10): start at `docs/planning/CURRENT.md` and
 `CAMPAIGN3_ENTRY_READINESS.md` in that directory. The seam ledger's front table is
 current; its older table/log is explicitly historical. Missing phenomena are BLOCKED
@@ -33,8 +55,9 @@ or PARTIAL, not passed by Campaign2 completion. ATTN-001 and EMB-001 own newly e
 debts. PHEN-BIO-001 means biography and keeps its immutable ID. New corpus proposals
 are not yet members of the frozen corpus. Broad source/feedback extensions still
 require accepted contracts; do not implement them from the external review alone.
-The first new contract investigation is `CAMPAIGN3_BODY_RESEARCH_FRONTIER.md` in
-that directory. Missing coverage blocks affected verdicts, not all bounded research.
+`CAMPAIGN3_BODY_RESEARCH_FRONTIER.md` opened that investigation and its BODY scope is
+now bounded-qualified; the work order above supersedes it as the current entry point.
+Missing coverage blocks affected verdicts, not all bounded research.
 
 Current checkpoint (2026-09-09): Campaign 2 is complete in the bounded thin-scaffold
 scope of `docs/planning/CAMPAIGN2_COMPLETION_REVIEW.md`. The cognitive pipeline and

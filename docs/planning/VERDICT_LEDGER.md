@@ -834,3 +834,78 @@ Campaign2 completion and its bounded research exclusions remain as recorded abov
   CAMPAIGN3_IDENTITY_ABLATION_SUMMARY.json and CAMPAIGN3_PRE_ENTRY_REVIEW_DISPOSITION.md.
   Revision1 was exploratory full-run comparison; revision2 adds the owning matched
   prefix checks. Final-history inequality is an effect, not loss of pre-probe history.
+
+---
+
+## Outstanding verdict obligations — recorded 2026-09-14
+
+Appended by the owner-directed correction pass. **This section records debts. It asserts
+no verdict and changes nothing above it.** Every entry above remains exactly as written.
+
+As of 2026-09-14 this ledger holds **seven** entries: six Campaign 0/1 substrate verdicts
+and one psychological verdict (`VER-C3-PRE-IDENTITY-001`). In the four days to
+2026-09-14, Campaign 3 allocated 254 further permanent record types and produced no new
+entry here. The three obligations below are owed and are items 1 and 3 of
+`CAMPAIGN3_WORK_ORDER_2026_09_14.md`.
+
+A **bounded qualification receipt is not a verdict.** A qualification records that an
+implementation conforms to its accepted contract. A verdict records which distinction
+survived a comparison against a named alternative, on a declared corpus, with reopen
+conditions. Brief §9 stages C, D and E are what produce the second thing, and Campaign 3
+has not reached them on any seam.
+
+### `VER-C3-EMB-001` — owed
+
+- **Seam:** `embodied-reserve/0.1-candidate`, bounded qualification recorded
+  2026-09-11 (`CAMPAIGN3_EMBODIED_QUALIFICATION.md`).
+- **Executed evidence exists:** EMB-A/B (equal level, different kinetics → different
+  trajectories), EMB-E/F/H (hidden aliases, observer resolution), EMB-C/D/J/L
+  (delayed exposure and motive), plus the MULTISOURCE ER-A/E/F second-family results.
+- **Missing for a verdict:** the declared competing models. `CTL-001` stored meters and
+  the authored-reference model are preserved as controls but no matched three-model
+  public comparison has been run (`CAMPAIGN3_POST_EMB_COVERAGE.md` records this).
+- **Admissible outcome:** `UNRESOLVED` is correct and expected if the three-model
+  comparison has not run. Record it, and name the missing comparison — that is what makes
+  the coverage debt legible to Campaign 4 ranking.
+
+### `VER-C3-ATTN-001` — owed
+
+- **Seam:** `attention-public-integration/0.1-candidate` with
+  `attention-selection-component/0.1-candidate`, bounded public qualification recorded
+  2026-09-11 (`CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md`).
+- **Executed evidence exists:** AT2-A..N across 32 models / 224 specimen runs, 434
+  whole-prefix restores, 58 boundary rollback witnesses, 11 runtime fault controls.
+- **Competing models are already declared** in `CAMPAIGN3_ATTENTION_DRAFT.md`:
+  equal-priority finite selection, unlimited selection, and the historical residual
+  allocation component. Whether they were executed as a comparison — rather than as
+  profile controls — determines whether this is `RETAINED` or `UNRESOLVED`.
+- **Scope guard:** the qualification's own statement stands — *"a hard top-K selector
+  does not establish a continuous salience law."* Any verdict here is about bounded
+  capacity-limited selection, not about salience.
+
+### `VER-C3-SALIENCE-001` — owed, and it is the next experiment
+
+- **Obligation:** `GENERAL_ATTENTION_CLOSURE_PLAN.md` closure obligation #2, not yet run.
+- **Compared models:** independent `x/(1+x)`; shared `x/max(B, Σx)` (note that plan's own
+  correction — it is *not* `B·x/max(B, Σx)`); hybrid (important entries exempt, remaining
+  budget as denominator floor for low entries); and retired `RET-001` flat tagging as the
+  named negative comparison.
+- **Cost:** pure exact-rational arithmetic. No identities, canonical records, public
+  ingress, state ownership, allocation or new record types.
+- **Discriminating evidence already in the corpus obligations:** `EXP-007` (role,
+  attention gating, Need relevance, evidence-aware surprise) and `EXP-015` (semantic
+  footprint capping achievable association strength — the documented Habit case, an edge
+  capped at exactly `1/2` flat versus ≈`0.0014` derived).
+- **Dispositions that must survive whatever the result:** `MEC-005` `CONTROL+CONTRACT`;
+  `MEC-007`/`CTL-004` `CONTROL`; `MEC-008`/`MEC-009` `CONTROL` with their stated
+  invariants; `MEC-010` `CONTROL+CORPUS`; `RET-001` retired, executable only as a named
+  negative comparison. A passing arithmetic kernel authorizes no corpus promotion and
+  closes no expressibility gap.
+
+### Standing rule
+
+Every seam from here names its Brief §9 Stage C competitor **before** allocation, not
+after, and terminates in an entry in this ledger — `UNRESOLVED` where the comparison has
+not run. `VER-C3-PRE-IDENTITY-001` is the format to follow: it populates every field,
+declares its uncovered regions, and reports a result that falsified its own starting
+hypothesis. That is what a verdict looks like.
