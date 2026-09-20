@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-20",
+  "disposition": "PASS AFTER TARGETED CORRECTION; raw full-suite failure receipt preserved",
+  "fullSuite": {
+    "tests": 2236,
+    "passed": 2235,
+    "failed": 1,
+    "processSucceeded": false,
+    "failures": [
+      {
+        "file": "multisourcePublicCodecs.test.ts",
+        "name": "does not hide a new record substituted into an inherited boolean field"
+      }
+    ]
+  },
+  "finalFocused": {
+    "tests": 22,
+    "passed": 22,
+    "files": 5
+  },
+  "latestEvidenceCoverage": {
+    "tests": 2191,
+    "passed": 2191,
+    "method": "Full-run test results superseded only by the final focused results for the five affected new multisource files. This is not a claim that the original full-suite process passed."
+  },
+  "referenceTests": 328,
+  "productionBuild": "PASS after final decoder correction",
+  "referenceBoundary": "PASS",
+  "publicRuns": 62,
+  "distinctModels": 43,
+  "publicPrefixRestores": 227,
+  "finalWholeSaveReexecutions": 62,
+  "modelFilesHashChecked": 660,
+  "predecessorTrackedSourceAndReferenceDiff": "none",
+  "reasonNoSecondFullRun": "Only the new multisource decoder changed. All five affected new files were rerun (22 tests), and all62 public runs reproduced the exact complete-save bytes. All other full-suite tests passed.",
+  "artifacts": [
+    {
+      "path": "docs/planning/MULTISOURCE_FULL_TESTS_REV1.json",
+      "sha256": "b164d203630b6ab575d66cc90b87d24ed2571e387a8183802ae9c3d2b61245f2"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_FINAL_FOCUSED_TESTS_REV2.json",
+      "sha256": "130e0c38e85a499461458714db11c89b4fde61b834356510ac2875c4f0a754e3"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_REFERENCE_TESTS_REV1.json",
+      "sha256": "7bc1b449e87b41bbb37f94ef10dd8df3705024ee3f2553b9250f072d189aea1d"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "38f01db99ed56867a71e7245e765bf82a4cb38a9118e914f7a0a87a20b66753a"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_PUBLIC_INTERVENTIONS_REV1.json",
+      "sha256": "ddebf1e8432c64ab1b18f5a6fb9539a4abfe82c20314c68c6e0096319ea8df14"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_FINAL_REEXECUTION_REV1.json",
+      "sha256": "a415b66d68a56cfc49a9e6676906857995bfaf69306c4a82f4a682655888d604"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_CONSTRUCTION_FINDING_REV1.json",
+      "sha256": "992e377ad111dcca5766b0ee01e4194db29e0dc2e806b80e31150a42d5aea17b"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_CODEC_BOUNDARY_FINDING_REV1.json",
+      "sha256": "4d64558a6bb0bc983e8b6af8e865c9c0a69dce491ce60223ff52271449d8372d"
+    }
+  ]
+}

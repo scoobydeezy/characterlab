@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-20",
+  "disposition": "LOCAL DISPOSITION; component experiment complete; public common-evidence producer contract remains open",
+  "verdict": "VER-C3-MULTI-001",
+  "generalAttention": "COMPLETE in accepted bounded scope",
+  "counters": {
+    "highestAllocated": 706,
+    "allocatedSinceVerdictOrCorpusMember": 0
+  },
+  "corpus": {
+    "version": "0.29.0",
+    "members": 21,
+    "digest": "5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d",
+    "promoted": false
+  },
+  "namedVerdicts": 14,
+  "experiment": {
+    "fixtures": 13,
+    "lawRuns": 52,
+    "descriptionDiceRuns": 10,
+    "referencePartitionChecks": 22,
+    "sourceHashesVerified": true
+  },
+  "validation": {
+    "focusedTests": 21,
+    "files": 2,
+    "failedTests": 0,
+    "build": "PASS: npm run build executed this increment before final weighted-overlap test addition; production component unchanged afterward",
+    "referenceBoundary": "PASS as part of build",
+    "fullSourceSuite": "Not rerun; prior GA full-suite evidence remains historical",
+    "referenceSuite": "Not rerun; historical implementation unchanged"
+  },
+  "preservation": [
+    {
+      "path": "docs/planning/campaign3-embodied-receiving-model-rev1/FREEZE.json",
+      "workingCopySha256": "291ba57595b476327418e8ed50a50993daf073a5ddcebbe209681e019a2e6012",
+      "headSha256": "291ba57595b476327418e8ed50a50993daf073a5ddcebbe209681e019a2e6012",
+      "textEqualsHEAD": true
+    },
+    {
+      "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+      "workingCopySha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4",
+      "headSha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4",
+      "textEqualsHEAD": true
+    },
+    {
+      "path": "src/campaign3/receivingTransforms.ts",
+      "workingCopySha256": "6f8f39035eb299f2d2133a3ea5a29dcb7c37a48e1d602306f6fa2da1c17103ae",
+      "headSha256": "6f8f39035eb299f2d2133a3ea5a29dcb7c37a48e1d602306f6fa2da1c17103ae",
+      "textEqualsHEAD": true
+    },
+    {
+      "path": "src/campaign3/receivingRuntime.ts",
+      "workingCopySha256": "f64bdcf81f3b6dcddceb396f18dca34c94072c6db8f8d78874e34086bf690ca4",
+      "headSha256": "a476288ef8c223123cc0c8f339cacaeae1ed53c544fbb387e800f91ec2b22137",
+      "textEqualsHEAD": true
+    },
+    {
+      "path": "src/campaign2/cognitiveTransforms.ts",
+      "workingCopySha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f",
+      "headSha256": "f19a6555e80455139eecdfecf4bf809fff9bce24e4a52760c5a54d6bfcb7203f",
+      "textEqualsHEAD": true
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "workingCopySha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77",
+      "headSha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77",
+      "textEqualsHEAD": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/formal/MULTISOURCE_COVERAGE_COMPARISON.md",
+      "sha256": "6ab312df68fdb819163cb5ba8e7be3e15f4e7188c42011bcd201426e60203148"
+    },
+    {
+      "path": "src/campaign3/multisourceComparison.ts",
+      "sha256": "10a0417d28c40a098962dd3115d47c62decceee30d26c10194a7bfcc753cb7a5"
+    },
+    {
+      "path": "src/test/multisourceComparison.test.ts",
+      "sha256": "8fb2fc42f79d35bc52fbf07599ff4180e61496ba35d20eb72e073404ceba081b"
+    },
+    {
+      "path": "scripts/compare-multisource-coverage.mjs",
+      "sha256": "9a1c7b9fcf8b8c46b13376f07c02bec446d1a16b86d654efba580e68171d7867"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_COMPARISON_REV1.json",
+      "sha256": "c1d2c960c2e7558363cbf25d3df2f25fefdfda261c368657b5d4bd76f1db7635"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_COMPONENT_TESTS_2026_09_20.json",
+      "sha256": "0b9ab255d36ece7dc71d1bd687a216bf61df1a811128fb3cef721d4a8ffbca2b"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_EXPRESSIBILITY_AUDIT_2026_09_20.md",
+      "sha256": "f0494a81048fc60888a4926a8fb6f5e3ab28ab6c73120468c86f20ac88d01c69"
+    },
+    {
+      "path": "docs/planning/MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md",
+      "sha256": "2a8545cb67ae992eff3c2ff788caedce3d7574a0c989c8e5f7f137c7f259ff9f"
+    },
+    {
+      "path": "docs/planning/CURRENT.md",
+      "sha256": "0548fd4cfe99e5879cd99d7dde16276cfc3b8b706cd273f9ebb596d4a52039f6"
+    },
+    {
+      "path": "docs/planning/VERDICT_LEDGER.md",
+      "sha256": "b127db1f7e79b079b56a80a02c4789b88343efa81fce3ea778fbb01ffc95da40"
+    },
+    {
+      "path": "docs/planning/SEAM_LEDGER.md",
+      "sha256": "55fc6a8ab199c800d382ca50eabad9349f00a9875ca4f4c7a46d366d3c0a5192"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LOG.md",
+      "sha256": "59cfac875d1822d96d0f7f7117c8248afe412cda303bee7374c9e59875a83503"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "514aedbdbdf0a811775646d05e73bbbdf2b377255630aa747650b4285480f38f"
+    }
+  ],
+  "nextGate": "Complete and admit bounded common-evidence producer shape and comparison contract before allocation or public implementation",
+  "ownerDecisionPending": false
+}

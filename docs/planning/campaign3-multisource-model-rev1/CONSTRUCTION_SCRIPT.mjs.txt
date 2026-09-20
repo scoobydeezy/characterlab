@@ -1,0 +1,23 @@
+/** One-shot finite model images. Qualification must be established separately. */
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {createServer} from 'vite';
+const root='docs/planning/campaign3-multisource-model-rev1';assert(!fs.existsSync(root),'immutable freeze destination exists');
+const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom'});
+const hash=b=>createHash('sha256').update(b).digest('hex');
+try{
+ const {multisourceRecipe,MS_CASES,MS_LAWS}=await server.ssrLoadModule('/src/campaign3/multisourceModelRecipe.ts');
+ const {compileMultisourceModel}=await server.ssrLoadModule('/src/campaign3/multisourceModel.ts');
+ const models=[];let versions;
+ for(const c of MS_CASES)for(const law of MS_LAWS){if(law==='DescriptionDice'&&!['duplicate','aggregate','orphan-removed'].includes(c))continue;
+  const recipe=multisourceRecipe(c,law),model=await compileMultisourceModel(recipe.source);model.initialState(recipe.initialState);
+  versions=Object.fromEntries(Object.entries(recipe.source).filter(([,v])=>typeof v==='string'));
+  const directory=root+'/'+recipe.name;fs.mkdirSync(directory,{recursive:true});
+  const files=Object.entries({content:recipe.source.content,registry:recipe.source.registry,parameters:recipe.source.parameters,'model-identity':model.modelIdentity.canonicalBytes,'initial-state':recipe.initialState,'ordered-inputs':recipe.orderedInputs}).map(([name,bytes])=>{const path=directory+'/'+name+'.cenc.hex',value=Buffer.from(bytes).toString('hex')+'\n';fs.writeFileSync(path,value,{flag:'wx'});return {path,sha256:hash(value)};});
+  models.push({name:recipe.name,caseName:c,law,modelIdentity:Buffer.from(model.modelIdentity.canonicalBytes).toString('hex'),files});
+  if(models.length%10===0)console.log('Frozen construction images: '+models.length+'/55');
+ }
+ const freeze={date:'2026-09-20',status:'ACCEPTED AND FROZEN FINITE MODEL COHORT; RUNTIME QUALIFICATION NOT IMPLIED',reviewer:'Primary-agent local review under Campaign 3 policy; not external review',contract:'docs/formal/MULTISOURCE_PUBLIC_CONTRACT.md',allocationCorrection:'MS-ALLOC-CORR-001',versions,models,contractSha256:hash(fs.readFileSync('docs/formal/MULTISOURCE_PUBLIC_CONTRACT.md')),allocationSha256:hash(fs.readFileSync('docs/formal/MULTISOURCE_PUBLIC_ALLOCATION_TABLE.json'))};
+ assert.equal(models.length,55);fs.writeFileSync(root+'/FREEZE.json',JSON.stringify(freeze,null,2)+'\n',{flag:'wx'});console.log('55 finite models frozen; runtime qualification remains separate.');
+}finally{await server.close();}

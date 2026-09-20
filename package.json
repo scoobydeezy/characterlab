@@ -8,10 +8,11 @@
     "dev": "vite",
     "build": "npm run check:boundaries && tsc -b && vite build",
     "preview": "vite preview",
-    "test": "npm run check:boundaries && vitest run",
+    "test": "npm run check:boundaries && npm run check:research && vitest run",
     "test:watch": "vitest",
     "test:reference": "vitest run --config vite.reference.config.ts",
-    "check:boundaries": "node scripts/check-reference-boundary.mjs"
+    "check:boundaries": "node scripts/check-reference-boundary.mjs",
+    "check:research": "node scripts/check-research-obligations.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -1,0 +1,765 @@
+{
+  "version": "multisource-public-shape/0.1-draft",
+  "date": "2026-09-20",
+  "status": "Field-complete source/receiver proposal; NOT allocation-ready or public model admission",
+  "records": [
+    {
+      "name": "MultisourceCriterionDefinition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Signal",
+          "type": {
+            "atom": "SignalId/1045"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Threshold",
+          "type": {
+            "atom": "PositiveQ"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Direction",
+          "type": {
+            "enum": [
+              "FavorBelow",
+              "DisfavorBelow"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MultisourceDescriptionDefinition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Ground",
+          "type": {
+            "ref": "inherited/494"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Criterion",
+          "type": {
+            "atom": "DefinitionId/1027"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Channels",
+          "type": {
+            "list": {
+              "atom": "ObservationChannelId/1005"
+            },
+            "min": 1,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "AdoptedInstruction",
+          "type": {
+            "atom": "DefinitionId/1027"
+          },
+          "required": true
+        },
+        {
+          "field": 5,
+          "name": "Role",
+          "type": {
+            "enum": [
+              "Base",
+              "Situation"
+            ]
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Body ground admits Base only; task ground admits Situation only.",
+        "Criterion and action bindings must resolve in the same immutable model.",
+        "Description identity is its registry DefinitionId, distinct from ground identity."
+      ]
+    },
+    {
+      "name": "MultisourceSelectedSignalViews",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Signal",
+          "type": {
+            "atom": "SignalId/1045"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Samples",
+          "type": {
+            "list": {
+              "ref": "inherited/461"
+            },
+            "min": 1,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MultisourceSelectionSnapshot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Selection",
+          "type": {
+            "atom": "SelectionOccurrenceId/1143"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Observer",
+          "type": {
+            "atom": "ObserverId/1000"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "At",
+          "type": {
+            "atom": "SimInstant"
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "Opportunity",
+          "type": {
+            "atom": "ExperienceId/1106"
+          },
+          "required": false
+        },
+        {
+          "field": 5,
+          "name": "Groups",
+          "type": {
+            "list": {
+              "ref": "MultisourceSelectedSignalViews"
+            },
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Present groups require actual staged experience; no group may contain an unselected sample.",
+        "Snapshot identity is borrowed from actual selection output, never allocated by the receiver."
+      ]
+    },
+    {
+      "name": "MultisourceDescriptionAssessment",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Description",
+          "type": {
+            "atom": "DefinitionId/1027"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              "Unavailable",
+              "Known"
+            ]
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Interval",
+          "type": {
+            "ref": "inherited/462"
+          },
+          "required": false
+        },
+        {
+          "field": 4,
+          "name": "Strength",
+          "type": {
+            "atom": "SignedUnitQ"
+          },
+          "required": false
+        },
+        {
+          "field": 5,
+          "name": "Basis",
+          "type": {
+            "ref": "inherited/400"
+          },
+          "required": false
+        },
+        {
+          "field": 6,
+          "name": "Samples",
+          "type": {
+            "list": {
+              "ref": "inherited/461"
+            },
+            "min": 1,
+            "max": 2
+          },
+          "required": false
+        }
+      ],
+      "variants": {
+        "Unavailable": {
+          "required": [
+            1,
+            2
+          ],
+          "forbidden": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "Known": {
+          "required": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "forbidden": []
+        }
+      },
+      "constraints": [
+        "Known zero retains complete support.",
+        "All named channels must be selected for the named signal; hull support may not silently shrink."
+      ]
+    },
+    {
+      "name": "MultisourceOpportunity",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Observer",
+          "type": {
+            "atom": "ObserverId/1000"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Profile",
+          "type": {
+            "atom": "DefinitionId/1027"
+          },
+          "required": true
+        }
+      ],
+      "authority": "Proposed data-only original payload; no generated parent, sample, raw signal or state read supplied by caller."
+    },
+    {
+      "name": "MultisourceSourceOutput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Occurrence",
+          "type": {
+            "atom": "NEW SourceOutputOccurrenceId"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Observer",
+          "type": {
+            "atom": "ObserverId/1000"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Holder",
+          "type": {
+            "atom": "CharacterId/1002 (qualified SemanticReferentId)"
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "At",
+          "type": {
+            "atom": "SimInstant"
+          },
+          "required": true
+        },
+        {
+          "field": 5,
+          "name": "TaskRaw",
+          "type": {
+            "ref": "inherited/403"
+          },
+          "required": true
+        },
+        {
+          "field": 6,
+          "name": "Selection",
+          "type": {
+            "ref": "MultisourceSelectionSnapshot"
+          },
+          "required": true
+        },
+        {
+          "field": 7,
+          "name": "Assessments",
+          "type": {
+            "list": {
+              "ref": "MultisourceDescriptionAssessment"
+            },
+            "min": 1,
+            "max": 4
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Exact same instant, qualified holder and adopted instruction checks precede source production.",
+        "Four state-read witnesses belong in trace, not in evidence support.",
+        "Maximum four descriptions: up to three body descriptions and one task Situation.",
+        "Current max-three description component requires an explicit integration successor for four declarations; do not widen it silently."
+      ]
+    },
+    {
+      "name": "MultisourceRawKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Option",
+          "type": {
+            "ref": "inherited/395"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Ground",
+          "type": {
+            "ref": "inherited/494"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Role",
+          "type": {
+            "enum": [
+              "Base",
+              "Situation"
+            ]
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              "CommitmentBase",
+              "Description"
+            ]
+          },
+          "required": true
+        },
+        {
+          "field": 5,
+          "name": "Description",
+          "type": {
+            "atom": "DefinitionId/1027"
+          },
+          "required": false
+        }
+      ],
+      "variants": {
+        "CommitmentBase": {
+          "required": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "forbidden": [
+            5
+          ]
+        },
+        "Description": {
+          "required": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "forbidden": []
+        }
+      },
+      "constraints": [
+        "CommitmentBase requires task ground/Base role and inherits actual402 strength with empty basis.",
+        "Description binds exactly one compiled description under the same option/ground/role."
+      ]
+    },
+    {
+      "name": "MultisourceRawSignal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Source",
+          "type": {
+            "ref": "MultisourceRawKey"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Strength",
+          "type": {
+            "atom": "NonzeroSignedUnitQ"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Basis",
+          "type": {
+            "ref": "inherited/400"
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MultisourceRawOutput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Occurrence",
+          "type": {
+            "atom": "NEW RawOutputOccurrenceId"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Source",
+          "type": {
+            "ref": "MultisourceSourceOutput"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Signals",
+          "type": {
+            "list": {
+              "ref": "MultisourceRawSignal"
+            },
+            "min": 0,
+            "max": 5
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Unique complete raw keys, canonical key order; no authored additional support.",
+        "Zero assessments retained upstream but produce no raw signal."
+      ]
+    },
+    {
+      "name": "MultisourceCoverageWitness",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Source",
+          "type": {
+            "ref": "MultisourceRawKey"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Magnitude",
+          "type": {
+            "atom": "NonnegativeQ"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Normalization",
+          "type": {
+            "atom": "UnitQ"
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "Overlap",
+          "type": {
+            "atom": "UnitQ"
+          },
+          "required": true
+        },
+        {
+          "field": 5,
+          "name": "Effective",
+          "type": {
+            "atom": "NonnegativeQ"
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MultisourceRoleTotals",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Base",
+          "type": {
+            "atom": "SignedUnitQ"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Situation",
+          "type": {
+            "atom": "SignedUnitQ"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Witnesses",
+          "type": {
+            "list": {
+              "ref": "MultisourceCoverageWitness"
+            },
+            "min": 0,
+            "max": 5
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Partition by complete option/ground/role/sign; sum then bound once.",
+        "Standing is excluded in this profile, not reinterpreted as Situation."
+      ]
+    },
+    {
+      "name": "MultisourceReasonNucleus",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Key",
+          "type": {
+            "ref": "inherited/502"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Totals",
+          "type": {
+            "ref": "MultisourceRoleTotals"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Relevance",
+          "type": {
+            "atom": "NonnegativeQ"
+          },
+          "required": true
+        },
+        {
+          "field": 4,
+          "name": "Die",
+          "type": {
+            "enum": [
+              "d4",
+              "d6",
+              "d8",
+              "d10",
+              "d12"
+            ]
+          },
+          "required": true
+        },
+        {
+          "field": 5,
+          "name": "SituationModifier",
+          "type": {
+            "atom": "Integer"
+          },
+          "required": true
+        },
+        {
+          "field": 6,
+          "name": "Distribution",
+          "type": {
+            "atom": "ExactFiniteDistribution"
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        "Nonzero Base required before relevance/activation.",
+        "Use inherited reason-dice mathematics/calibration, with Standing zero; no new private dice law."
+      ]
+    },
+    {
+      "name": "MultisourceReasonsOutput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "field": 1,
+          "name": "Occurrence",
+          "type": {
+            "atom": "NEW ReasonsOutputOccurrenceId"
+          },
+          "required": true
+        },
+        {
+          "field": 2,
+          "name": "Raw",
+          "type": {
+            "ref": "MultisourceRawOutput"
+          },
+          "required": true
+        },
+        {
+          "field": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": {
+              "ref": "MultisourceReasonNucleus"
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ],
+  "allocation": {
+    "recordTypeIds": [],
+    "namespaceIds": [],
+    "registryMembers": []
+  },
+  "stageOwnership": [
+    {
+      "stage": "SourceJoin",
+      "reads": [
+        "268/1[observer]",
+        "373/1[task]",
+        "373/2[task]",
+        "487/1[holder]"
+      ],
+      "writes": [],
+      "fresh": [
+        "SourceOutputOccurrenceId"
+      ],
+      "borrowed": [
+        "actual task chain",
+        "actual observation/experience/selection"
+      ],
+      "outputs": [
+        "MultisourceSourceOutput"
+      ]
+    },
+    {
+      "stage": "RawReceiving",
+      "reads": [],
+      "writes": [],
+      "fresh": [
+        "RawOutputOccurrenceId"
+      ],
+      "borrowed": [
+        "SourceOutput"
+      ],
+      "outputs": [
+        "MultisourceRawOutput"
+      ]
+    },
+    {
+      "stage": "ReasonReceiving",
+      "reads": [],
+      "writes": [],
+      "fresh": [
+        "ReasonsOutputOccurrenceId"
+      ],
+      "borrowed": [
+        "RawOutput"
+      ],
+      "outputs": [
+        "MultisourceReasonsOutput"
+      ]
+    }
+  ],
+  "comparators": [
+    "GroundAggregate",
+    "GroundPairwise",
+    "GroundUncovered",
+    "FamilyNormalized (retained negative candidate)",
+    "DescriptionDice (Base-only diagnostic scope)"
+  ],
+  "unclosedGates": [
+    "Full immutable profile definition and inherited local-reserve source/state/content binding inventory",
+    "Input/event/phase and actual task/body output graph registrations",
+    "One selection transaction dispatching four description assessments under a separately versioned integration contract",
+    "Declared receiving law identities and exact baseline parity with inherited reason-dice/arbitration kernels",
+    "Successor arbitration/expression/intent/execution envelopes preserving actual ancestry",
+    "Typed namespace/member reservation and numeric allocation review",
+    "Public model/RunIdentity comparisons and full-prefix rollback/replay"
+  ],
+  "obligation": "RO-C3-001 ACTIVE"
+}
+

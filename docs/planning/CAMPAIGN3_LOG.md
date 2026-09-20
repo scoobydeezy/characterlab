@@ -1041,3 +1041,412 @@ references and honest scope. No historical ledger write or new execution is inve
 The ledger now actually contains13 named verdict entries, including VER-C3-GA-001.
 This is local bookkeeping under the escalation policy, not a new architectural choice.
 GA remains complete; counters706/0, corpus0.29.0/21, owner decisions0.
+
+## Archived state index before the 2026-09-20 multisource increment
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention: COMPLETE in the accepted bounded scope.** Work-order items
+1–6 and the single-owner registration/compiler pass are finished. Start at
+[the qualification report](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md) and
+[VER-C3-GA-001](VERDICT_LEDGER.md). No architectural decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 13 verdicts** |
+| Frozen GA cohort | **43 models / 36 public comparisons** |
+| Public reexecution/replay | **10 exact reexecutions; 2 restores / 10 continuation instants** |
+| Active source suite | **2,171 tests / 273 files PASS** |
+| Historical reference suite | **328 tests / 43 files PASS** |
+| Build / boundary / post-promotion governance | **PASS / PASS / 6 tests PASS** |
+
+[The qualification audit](GA_PUBLIC_QUALIFICATION_REV1.json) binds the experiment
+receipts. All 67 templates compile through 706; 77 active event types have rollback
+witnesses. Two current baseline templates remain replacement-only component/compiler
+exclusions. Whole-model limits are 92 invocations, 239 outputs and 228 fresh slots;
+observed maximum work is 21. All 35 predecessor GA models and 247 image files survive.
+
+[Corpus promotion](CORPUS_0_29_0_PROMOTION_REV1.json) advances PHEN-ATTN-001 to 1.1.0
+with every requirement preserved and its executable fixture attached; the other
+20 members are unchanged. Digest:
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+Prior corpus/experiment identities remain historical evidence. Three previously
+reported-but-missing verdict entries were repaired explicitly on September 20.
+
+**Finding:** unchanged focal encoding does not guarantee unchanged accessibility;
+denser retained contents alter later recall scores. Shared/hybrid/flat controls form
+different associations even where winners agree. Three protection policies retain
+identical final memory here. Psychological law/reduction choice stays **UNRESOLVED**.
+
+TaskConcern qualifies the ratified transient feedback edge, not general Affect.
+A/B/C laws, broader Need/surprise, modality/role inference, segmentation and long
+horizons remain scoped research frontiers. Other corpus phenomena retain their prior
+coverage; regression passage is not whole-corpus psychological PASS.
+
+**Next gate:** select the next Campaign 3 phenomenon from [SEAM_LEDGER.md](SEAM_LEDGER.md).
+No bounded GA implementation gate remains. Use CHECKPOINT_TEMPLATE.md; past 50 on
+the second allocation counter, run an experiment or promote corpus rather than allocate.
+
+
+## BODY/MULTISOURCE component checkpoint — 2026-09-20
+
+**Disposition:** LOCAL DISPOSITION; Stage C numerical comparison and scoped verdict.
+Public source Stage A remains open. **Counters:**706 /0. **Owner decision:** none.
+
+Implemented and executed multisource-coverage-comparison/0.1-candidate: thirteen
+fixtures,52 law runs,10 description-dice controls and22 exact reference partitions.
+VER-C3-MULTI-001 retains aggregate coverage as the conservative baseline and records
+role-blind family normalization's orphan-modifier effect (3/5 ->1/2). General law
+choice is UNRESOLVED. Twenty-one focused tests pass; build/reference boundary pass.
+No public model, allocation, corpus member or frozen implementation changed.
+
+Stage C competitors are GroundPairwise, GroundUncovered, FamilyNormalized and the
+Base-only HarnessDescriptionDice control. North Star transfer is separate body and
+commitment motives acting on shared knowledge. Next gate: finish and admit the
+bounded common-evidence producer shape in MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md.
+The expressibility audit explains why frozen EMB raw-basis edits cannot meet it.
+GA remains complete; the broader multisource public obligation is still open.
+
+## Archived state index before obligation bookkeeping — 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention is COMPLETE in its accepted bounded scope.** The active next
+frontier is BODY/MULTISOURCE common evidence. Start at the
+[expressibility audit](MULTISOURCE_EXPRESSIBILITY_AUDIT_2026_09_20.md) and
+[source draft](MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md).
+No architectural decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+| New component comparison | **13 fixtures / 52 coverage-law runs / 10 description-dice controls** |
+| Exact reference partition checks | **22 PASS** |
+| New focused validation | **21 tests / 2 files PASS; build and reference boundary PASS** |
+
+**Finding:** family-wide, role-blind evidence normalization allows a task modifier
+with no underlying task motive to weaken a separate body reason: exact choice
+probability changes from3/5 to1/2. The existing aggregate reference preserves3/5.
+Pairwise overlap also misses collective redundancy, even where dice quantization
+hides that difference. [VER-C3-MULTI-001](VERDICT_LEDGER.md) preserves the baseline
+and measured competitors; general cross-family law choice remains **UNRESOLVED**.
+
+These are synthetic component operands run through existing receiving/dice kernels,
+not actual shared-fact public producers. PHEN-MULTI-001 remains PARTIAL; its common-fact
+public path remains BLOCKED pending a successor source contract. Frozen EMB models
+cannot produce that path: their task forecast is disabled, and task commitment Base
+has no observation basis. Changing coverage maps would bypass the missing producer.
+
+**Next gate:** complete and admit the bounded common-evidence producer shape and
+comparison contract before permanent allocation or public implementation. Specify
+actual safe body evidence, task Situation interpretation, independent source controls
+and legitimate sign interventions while preserving separate commitment/body motives.
+This is local contract work, not an owner blocker.
+
+Preserved GA evidence: [qualification](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md),
+43 frozen models /36 public comparisons; prior full source suite2,171 tests /273 files,
+reference328 /43, and six post-promotion checks passed. Those full-suite runs are
+historical, not new validation of this increment. Corpus0.29.0 and all frozen model
+bytes remain unchanged; digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+
+**North Star transfer:** preserve separate bodily concern and adopted commitment
+when both address one action using shared knowledge. No new Need ownership or causal
+edge is adopted. Use CHECKPOINT_TEMPLATE.md; past50 on the second counter, the next
+item must be an experiment or corpus promotion.
+
+## Research obligation bookkeeping — 2026-09-20
+
+LOCAL DISPOSITION. Counters706/0. Seeded RO-C3-001..009: one active, eight
+conditional, zero unowned. All eight current Campaign 3 verdicts and eight named
+reports have structured disposition references. Established findings and unresolved
+hypotheses remain separate; deferral is not closure. Added reference/closure checks
+to npm test and explicit Campaign 3 exit / Campaign 4 reduction review rules.
+No experimental finding, corpus identity, allocation or frozen receipt changed.
+The previous checkpoint hashes remain historical snapshots, not current-file hashes.
+Stage C competitors and North Star transfer remain the GA/MULTISOURCE distinctions
+indexed by these entries. Next gate remains the common-evidence producer contract;
+no architectural decision is pending.
+
+Validation: `npm run check:research -- --self-test` passes all reference checks
+and ten in-memory bookkeeping faults; reference boundary and git whitespace checks
+pass. No model code changed in this update; full model suites were not rerun.
+
+## Archived state index before selected-source implementation — 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention is COMPLETE in its accepted bounded scope.** The active next
+frontier is BODY/MULTISOURCE common evidence. Start at the
+[expressibility audit](MULTISOURCE_EXPRESSIBILITY_AUDIT_2026_09_20.md) and
+[source draft](MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md).
+No architectural decision is pending.
+
+[Research obligations](RESEARCH_OBLIGATIONS.md) now index material findings and
+conditional reduction debts. The seed covers current Campaign 3 verdicts and named
+qualification reports; it is not an exhaustive historical-note audit.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 8 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+| New component comparison | **13 fixtures / 52 coverage-law runs / 10 description-dice controls** |
+| Exact reference partition checks | **22 PASS** |
+| New focused validation | **21 tests / 2 files PASS; build and reference boundary PASS** |
+
+**Finding:** family-wide, role-blind evidence normalization allows a task modifier
+with no underlying task motive to weaken a separate body reason: exact choice
+probability changes from3/5 to1/2. The existing aggregate reference preserves3/5.
+Pairwise overlap also misses collective redundancy, even where dice quantization
+hides that difference. [VER-C3-MULTI-001](VERDICT_LEDGER.md) preserves the baseline
+and measured competitors; general cross-family law choice remains **UNRESOLVED**.
+
+These are synthetic component operands run through existing receiving/dice kernels,
+not actual shared-fact public producers. PHEN-MULTI-001 remains PARTIAL; its common-fact
+public path remains BLOCKED pending a successor source contract. Frozen EMB models
+cannot produce that path: their task forecast is disabled, and task commitment Base
+has no observation basis. Changing coverage maps would bypass the missing producer.
+
+**Next gate:** complete and admit the bounded common-evidence producer shape and
+comparison contract before permanent allocation or public implementation. Specify
+actual safe body evidence, task Situation interpretation, independent source controls
+and legitimate sign interventions while preserving separate commitment/body motives.
+This is local contract work, not an owner blocker.
+
+Preserved GA evidence: [qualification](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md),
+43 frozen models /36 public comparisons; prior full source suite2,171 tests /273 files,
+reference328 /43, and six post-promotion checks passed. Those full-suite runs are
+historical, not new validation of this increment. Corpus0.29.0 and all frozen model
+bytes remain unchanged; digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+
+**North Star transfer:** preserve separate bodily concern and adopted commitment
+when both address one action using shared knowledge. No new Need ownership or causal
+edge is adopted. Use CHECKPOINT_TEMPLATE.md; past50 on the second counter, the next
+item must be an experiment or corpus promotion.
+
+## Selected common-evidence source implementation — 2026-09-20
+
+LOCAL DISPOSITION; counters706/0. Accepted multisource-selected-source/0.1-candidate
+for component implementation only. Implemented one-shot selected evidence consumption
+and separate body/task interval interpretations, preserving actual task Base and
+selected candidate origin.38 focused tests/four files and build pass. RO-C3-001
+remains ACTIVE; no new verdict or corpus promotion. Stage C retains aggregate,
+pairwise, uncovered and role-blind normalized controls. North Star transfer is
+separate motives sharing evidence. Next gate: public join/output shape and admission,
+including actual observer-holder/time/criterion authentication and aggregate source.
+No owner ruling; no frozen model/source change. Prior receipt hashes remain historical.
+
+## Archived state index before source join — 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention remains COMPLETE in its accepted bounded scope.** Active work is
+BODY/MULTISOURCE: [selected-source checkpoint](MULTISOURCE_SELECTED_SOURCE_CHECKPOINT.md).
+The new common-evidence source component is implemented; public integration is OPEN.
+No architectural decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 8 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+| Selected-source validation | **38 tests / 4 files PASS; build and reference boundary PASS** |
+
+The component consumes actual selected local-reserve observations and inherited task
+outputs. Body Base and task Situation independently interpret the same permitted
+sample; commitment Base remains unchanged or absent. Independent source intervention,
+negative task suitability, unavailable/zero, selection exclusion and hidden-bin
+controls pass. The orphan source preserves body aggregate strength1/3 but changes it
+to1/5 under the retained role-blind normalization control. These are component
+comparisons, not new public probability or whole-phenomenon qualification claims.
+
+**Next gate:** finish the public successor join and output shape: authenticate actual
+observer-holder/time/adopted criteria, preserve task/body source ancestry, and declare
+receiver and third-aggregate/duplicate source controls before allocation/model images.
+The versioned selected-source component admits no new permanent ID or public ingress.
+See [source draft](MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md) and
+[RO-C3-001](RESEARCH_OBLIGATIONS.json), which remains ACTIVE. The remaining eight
+obligations are conditional; broader law choice remains UNRESOLVED.
+
+Preserved GA:43 frozen models/36 public comparisons. Earlier full suites2,171 active
+and328 reference tests remain historical evidence, not new runs for this component.
+Corpus0.29.0 retains21 members and digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+Frozen producers/models and prior receipts are unchanged. PHEN-MULTI-001 remains
+PARTIAL; the public common-fact comparison is not yet qualified.
+
+**North Star transfer:** separate bodily concern and adopted commitment can use shared
+knowledge without becoming one motive. No new Need owner, efficacy law or causal edge.
+Use CHECKPOINT_TEMPLATE.md and check:research; past50 allocations since a verdict/member,
+run an experiment or corpus promotion next.
+
+## Common-evidence source join — 2026-09-20
+
+LOCAL DISPOSITION, counters706/0. Implemented compiler-issued trusted transaction
+with exact four-path state reads, real task/body production and single-instant join.
+49 tests/five files and build/reference boundary pass. RO-C3-001 remains ACTIVE.
+Existing numerical competitors and separate-motive North Star transfer are preserved.
+Next gate: exact public inventory/receiver and source-control shape before allocation;
+public registry/model/scheduler authority remains open. No architectural ruling.
+
+## Archived state index before selected descriptions — 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention remains COMPLETE in its accepted bounded scope.** Active work is
+BODY/MULTISOURCE: [source-join checkpoint](MULTISOURCE_SOURCE_JOIN_CHECKPOINT.md).
+The trusted source transaction is implemented; public model integration is OPEN.
+No architectural decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 8 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+| Source-join validation | **49 tests / 5 files PASS; build and reference boundary PASS** |
+
+The join now reads qualified observer/holder mapping, task status, selected task plan
+and adopted body instructions from four exact state paths, then generates the actual
+task and selected-body paths internally at one instant. It preserves Base-off and
+hidden-bin controls, enforces the task window and source mapping, and rejects forged
+profiles/sources and repeated allocations. No authoritative state writes occur.
+
+**Next gate:** exact public record/registry and receiver inventory, including actual
+duplicate/third-aggregate sources and the declared normalization comparison, before
+permanent allocation. The symbolic successor must preserve actual parent ancestry;
+frozen499 describes a different graph. Registry-authorized criterion/action binding,
+source commitments, event authority, public models and scheduler rollback/replay remain
+open. The new trusted transaction is not itself public model admission.
+
+[RO-C3-001](RESEARCH_OBLIGATIONS.json) stays ACTIVE; the remaining eight obligations
+are conditional. No new verdict, corpus promotion or architecture ruling is implied.
+
+Preserved GA:43 frozen models/36 public comparisons. Earlier full suites2,171 active
+and328 reference tests remain historical evidence, not new runs for this component.
+Corpus0.29.0 retains21 members and digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+Frozen producers/models and prior receipts are unchanged. PHEN-MULTI-001 remains
+PARTIAL; the public common-fact comparison is not yet qualified.
+
+**North Star transfer:** separate bodily concern and adopted commitment can use shared
+knowledge without becoming one motive. No new Need owner, efficacy law or causal edge.
+Use CHECKPOINT_TEMPLATE.md and check:research; past50 allocations since a verdict/member,
+run an experiment or corpus promotion next.
+
+## Selected descriptions and shape proposal — 2026-09-20
+
+LOCAL DISPOSITION, counters706/0. Added actual selected singleton/duplicate/hull
+descriptions and third-basis aggregate-versus-pairwise witness.57 tests/six files and
+build/boundary pass. Fourteen symbolic source/receiver records proposed; no allocation.
+RO-C3-001 and the existing verdict carry the scoped finding. Next gate: complete
+public integration/profile/receiver inventory and ancestry before allocation. Separate
+motive identity and descriptive redundancy are the North Star transfer. No owner ruling.
+
+
+## Superseded state index — public multisource integration, 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention remains COMPLETE in its accepted bounded scope.** Active work is
+BODY/MULTISOURCE: [description/inventory checkpoint](MULTISOURCE_DESCRIPTION_CHECKPOINT.md).
+Actual duplicate/aggregate descriptions are implemented; public model integration is OPEN.
+No architectural decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **706**, unchanged |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 8 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+| Description-source validation | **57 tests / 6 files PASS; build and reference boundary PASS** |
+
+Actual selected same-signal views now produce singleton, duplicate and two-view hull
+support. The third aggregate contribution is0 under aggregate coverage versus1/6
+under pairwise-max; bounded totals are5/11 versus1/2. This is a scoped provenance
+comparison, not proof of independent sensors or a final fusion law. The separate
+independently controlled A/B reserve experiment remains preserved.
+
+[The public shape proposal](MULTISOURCE_PUBLIC_SHAPE_REV1.json) defines fourteen
+source/receiver records without reserving IDs. Description identity must be separate
+from motive ground: frozen task495 cannot represent that distinction. Old schemas,
+source contracts and model bytes remain unchanged.
+
+**Next gate:** whole profile/registry and downstream receiver shape, including a
+separately versioned multi-description join, immutable criterion/action/source binding,
+and arbitration/expression ancestry. The draft lists its unclosed gates and is not
+allocation-ready. Public model execution and rollback/replay remain open.
+[RO-C3-001](RESEARCH_OBLIGATIONS.json) remains ACTIVE; broader law choice UNRESOLVED.
+
+Preserved GA:43 frozen models/36 public comparisons. Earlier full suites2,171 active
+and328 reference tests remain historical evidence, not new runs for this component.
+Corpus0.29.0 retains21 members and digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+Frozen producers/models and prior receipts are unchanged. PHEN-MULTI-001 remains
+PARTIAL; the public common-fact comparison is not yet qualified.
+
+**North Star transfer:** separate bodily concern and adopted commitment can use shared
+knowledge without becoming one motive. No new Need owner, efficacy law or causal edge.
+Use CHECKPOINT_TEMPLATE.md and check:research; past50 allocations since a verdict/member,
+run an experiment or corpus promotion next.
+
+
+## Superseded integration state index — bounded public closure, 2026-09-20
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**General Attention remains COMPLETE in its accepted bounded scope.** The active large
+milestone is the frozen public BODY/MULTISOURCE experiment under
+[MULTISOURCE_PUBLIC_CONTRACT.md](../formal/MULTISOURCE_PUBLIC_CONTRACT.md).
+Implementation continues through public contrasts, replay/rollback, preservation and
+scoped verdict; no architectural owner decision is pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **733** |
+| Allocated since last verdict/corpus member | **27** |
+| Research obligations | **1 active / 8 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 14 verdicts** |
+
+Accepted allocation707..733/namespace1149 has explicit pre-model selector/pattern
+correction MS-ALLOC-CORR-001. Actual staged sources, six-signal receivers, addressed
+arbitration and protocol execution compile; initial whole-transaction and rollback
+tests pass. These are implementation checks, not a completed qualification.
+
+55 successor model images are frozen in
+[campaign3-multisource-model-rev2/FREEZE.json](campaign3-multisource-model-rev2/FREEZE.json).
+The public cohort experiment and every-prefix replay checks are running. Revision1
+images are preserved rejected construction evidence: copied body instruction/action
+mismatch, now blocked by explicit compiler validation. See
+[MULTISOURCE_CONSTRUCTION_FINDING_REV1.json](MULTISOURCE_CONSTRUCTION_FINDING_REV1.json).
+
+**Next gate:** finish the public comparison and adversarial/preservation suite, then
+record the scoped verdict and RO-C3-001 disposition. Do not stop at a smaller component
+checkpoint. Broad receiving law and general Need/physiology remain unresolved.
+
+Preserved GA:43 frozen models/36 comparisons. Corpus0.29.0 retains21 members and digest
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+PHEN-MULTI-001 remains PARTIAL pending the bounded public evidence. No predecessor
+model/schema is rewritten; all new decisions are LOCAL DISPOSITION under policy.

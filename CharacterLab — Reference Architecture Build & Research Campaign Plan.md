@@ -193,6 +193,14 @@ whole biography qualification. Source-mutation detection alone is not a psycholo
 reduction verdict. Reserved old numeric IDs do not require a retired/ablated mechanism
 to execute; use distinct model commitments and preserve historical replay.
 
+The 2026-09-20 bounded public BODY/MULTISOURCE experiment is now complete under
+VER-C3-MULTI-002:43 distinct frozen models,62 public runs and227 prefix restores.
+See `docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md`. Its immediate
+common-evidence source debt is discharged; general receiving laws remain conditional.
+The next increment should select an underrepresented phenomenon from the current
+seam ledger, preserving GA and this completed bounded experiment. Neither closure
+promotes the full MULTISOURCE phenomenon or the whole campaign.
+
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,
 body/affect loop, retrieval law or observer view still requires its own accepted seam
@@ -212,7 +220,18 @@ Run the intact scaffold against the populated corpus. Initial mandatory set:
 
 The campaign may expose thin-mechanism failures and reopen contracts. Its output is a traversability baseline and list of discriminating gaps, not a claim that the intact scaffold is psychologically sufficient.
 
+Campaign 3 exit also requires zero unaccounted-for material findings: every material
+unresolved distinction in a verdict or qualification must have a disposition in
+`docs/planning/RESEARCH_OBLIGATIONS.json`. Explicit conditional transfer to a later
+seam/campaign preserves debt; it does not discharge mandatory corpus obligations.
+The reference check is necessary bookkeeping, not a substitute for the exit audit.
+
 ## 7. Campaign 4+ — Reduction sequence
+
+Before merging or retiring a mechanism, consult the research obligation registry
+for the affected distinctions and record the relevant IDs and disposition in the
+reduction verdict. Resolve the affected obligations or explicitly bound the claim
+to exclude their uncovered scope; justify an empty relevance set.
 
 Reduction order is chosen after Campaign 3 from:
 

@@ -2,6 +2,10 @@
 
 **Status:** active ledger; Campaign 0 substrate verdicts accepted 2026-09-01
 
+Material Campaign 3 findings are indexed in [RESEARCH_OBLIGATIONS.json](RESEARCH_OBLIGATIONS.json).
+Every new/amended verdict needs an obligation review there, including an explicit
+reason if none remain. See [bookkeeping policy](RESEARCH_OBLIGATIONS.md).
+
 Historical findings live in `reference/RESEARCH.md`. They become active evidence only when re-entered here with their original conditions and tested against the current formal contract and corpus.
 
 Each entry records:
@@ -1280,3 +1284,117 @@ model, allocation, old receipt or previously declared experimental scope.
   Reopen on new modalities, role semantics, selection/encoding merger or a reduced
   model satisfying the broader corpus. Existing component-only controls retain
   their component classification; no owner ruling is required for this ledger repair.
+
+## `VER-C3-MULTI-001` — Cross-family coverage component comparison
+
+- **Recorded:** 2026-09-20; LOCAL DISPOSITION, executed numerical comparison.
+- **Contract/identities:** `multisource-coverage-comparison/0.1-candidate`;
+  exact inputs, canonical component operands, outputs and source fingerprints in
+  `MULTISOURCE_COMPARISON_REV1.json`. No public ModelIdentity or RunIdentity exists
+  for this comparison; synthetic raw signals are not authenticated source outputs.
+- **Domain:** thirteen fixtures, at most five signals per option, Task/Body families,
+  separate semantic grounds, Base/Situation roles, positive/negative partitions,
+  finite weighted evidence maps. Four laws produce52 runs; ten Base-only fixtures
+  also receive the DescriptionDice control. Twenty-two reference partitions match
+  the existing receiving coverage component exactly in the tested domain.
+- **Corpus:** PHEN-MULTI-001 1.0.0-draft, corpus/0.29.0, digest
+  `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+  Component coverage only; no promotion or whole-phenomenon PASS.
+- **Competitors/coupling:** GroundAggregate baseline, GroundPairwise,
+  GroundUncovered, FamilyNormalized, and Base-only HarnessDescriptionDice. Exact
+  existing reason-dice distributions and analytical probabilities against a fixed
+  independent d8 opponent; no random draws. Matched inputs and reversed source
+  order, shared/disjoint support, signs, roles, duplicates and source removal.
+- **Witnesses:** collective {a},{b},{a,b} makes the third aggregate contribution0
+  versus pairwise1/8 (bounded totals5/9 versus11/19). Both calibrate to probability2/3,
+  so decision probability alone hides the arithmetic difference. A duplicate body
+  description keeps baseline probability2/3; DescriptionDice produces89/96.
+  Cross-family shared bases retain two grounds and baseline89/96; FamilyNormalized
+  yields221/256, while its independent-base control remains89/96.
+- **Decisive scope counterexample:** a task Situation with no task Base forms no
+  task reason. FamilyNormalized nevertheless weakens the body's reason, changing
+  probability3/5 to1/2; deleting that orphan modifier restores3/5. The reference
+  preserves3/5 in both cases. This role-blind normalization is not selected for the
+  first public baseline; retain it unchanged as a measured competitor.
+- **Verdict:** **UNRESOLVED** for general cross-family normalization and necessity.
+  Preserve the aggregate baseline and MEC-012/013/014, EXP-009/014 obligations.
+  This result neither retracts every normalizer nor establishes aggregate coverage
+  as a universal psychological law. No architectural ruling is required.
+- **Validation:**21 focused tests across the new comparison and existing receiving
+  transforms pass; build and reference-boundary check pass. See
+  `MULTISOURCE_COMPONENT_TESTS_2026_09_20.json` and the checkpoint receipt.
+- **Uncovered/reopen:** actual shared task/body fact production, legitimate signed
+  source interpretation, independently controlled fact domains, public third-basis
+  production, immutable model comparisons and replay. Complete the source shape
+  in `MULTISOURCE_COMMON_EVIDENCE_SOURCE_DRAFT.md` before allocation. Reopen the law
+  choice with an explicitly scoped role/active-ground successor or public evidence
+  that distinguishes legitimate independent motives from duplicated descriptions.
+
+### VER-C3-MULTI-001 scope extension — actual selected descriptions, 2026-09-20
+
+The UNRESOLVED verdict is unchanged. `MULTISOURCE_DESCRIPTION_CHECKPOINT.md` and
+`MULTISOURCE_DESCRIPTION_TESTS_REV1.json` add actual selected same-signal views with
+singleton and conservative hull support: third aggregate contribution0 versus
+pairwise1/6, bounded totals5/11 versus1/2. This uses a declared equal-magnitude source
+order and does not establish statistical independence, arbitrary renaming invariance
+or optimal fusion. Fifty-seven component tests pass; public models/replay remain
+open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
+
+## `VER-C3-MULTI-002` — Authentic common evidence and bounded receiving comparison
+
+- **Recorded:** 2026-09-20; LOCAL DISPOSITION. The large bounded public
+  BODY/MULTISOURCE checkpoint is COMPLETE. No architectural owner ruling opened.
+- **Contract/identities:** `multisource-public/0.1-candidate`, records707..733,
+  namespace1149;43 distinct frozen ModelIdentities across55 named scenarios in
+  `campaign3-multisource-model-rev2/FREEZE.json`. Seven additional interventions
+  freeze their S0, originals and seeds. The55 manifest entries are not55 distinct
+  models: state-only controls correctly share ModelIdentity.
+- **Sources/domain:** one governed character/observer, two adopted tasks/actions,
+  three independently controlled local reserves, selected one/two-view descriptions,
+  at most six raw signals and three ordinary/five DescriptionDice nuclei. Actual
+  task production and body adoption feed the registered source-to-execution path.
+  Task B is an actual competing commitment, not a benchmark-authored die.
+- **Corpus:** PHEN-MULTI-0011.0.0-draft shared/independent/duplicate clauses against
+  corpus0.29.0, digest
+  `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+  No corpus promotion, whole-phenomenon PASS or Campaign3 completion.
+- **Competitors/coupling:** GroundAggregate, GroundPairwise, GroundUncovered,
+  FamilyNormalized and Base-only DescriptionDice remain separately committed.
+  Compare exact intermediate values and analytical distributions. Shared seeds do
+  not imply universal cross-model address equality. The matched DescriptionDice
+  interventions prove identical actual raw bytes before changing the dice unit.
+- **Witnesses:** the same actual observation supports task Situation and a separate
+  body motive. Independent B replenishment changes task support1/2→0 while body
+  support remains1/2. With task-A Base absent, GroundAggregate keeps body Base1/3;
+  role-blind FamilyNormalized weakens it to1/5 and yields probability1/2, versus3/5
+  after orphan removal. The third collective description contributes0 versus
+  pairwise1/6; totals5/11 versus1/2 nevertheless both calibrate to349/384 in the
+  task-present scenario. Matched duplicate DescriptionDice changes3/5→73/80;
+  matched collective DescriptionDice changes2/3→2511/2560.
+- **Public proof:**62 runs,227 complete-prefix restorations;62 final-code
+  reexecutions reproduce the same whole-save bytes. Source absence, known-zero,
+  capacity exclusion, task/body adoption, signed interpretation, within-bin hidden
+  variation, owned replenishment and failed protocol execution are explicit controls.
+  Forced failure after every current stage, at commit, and during replenishment or
+  deadline retirement preserves state/trace/output/queue/allocator/RNG commitments.
+- **Verdict:** **RETAINED** for separate motive grounds, source descriptions,
+  role/sign partitions and permission/selection boundaries in this tested domain.
+  Role-blind FamilyNormalized is not selected as the baseline; DescriptionDice does
+  not earn a description-to-motive collapse. **UNRESOLVED** for the universal
+  receiving law. GroundAggregate remains a bounded candidate, not a settled law.
+- **Preservation:** full run2,235 passes/one codec regression failure; the failing
+  receipt is preserved. The final focused22-test rerun passes all affected files
+  including that regression, giving latest-result coverage of2,236 active tests.
+  All328 reference tests, build and boundary checks pass. Exact details are in
+  `MULTISOURCE_VALIDATION_CLOSURE_REV1.json`; the original full-suite process is
+  not relabeled as passing. No predecessor source/model/schema was rewritten.
+- **Finding preservation:** revision1 construction images remain rejected evidence
+  for the instruction/action mismatch. The explicit inherited-slot codec correction
+  has a permanent regression. Both findings and the counting clarification are linked
+  from `CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md` and RO-C3-001.
+- **Obligation disposition:** RO-C3-001 moves ACTIVE→CONDITIONAL. Its immediate
+  public-source debt is discharged; its general law/renaming/wider-domain constraints
+  remain in the denominator. Reopen on a receiving reduction, role-aware normalizer,
+  added motive family, broader source or arbitrary renaming/order-invariance claim.
+  No general Need ownership, physiology or learned efficacy is established.
+- **Counters:** highest733; allocated since this verdict0 (27 in this increment).

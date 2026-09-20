@@ -1,0 +1,7696 @@
+{
+  "status": "EXECUTED COMPONENT COMPARISON; PUBLIC MULTISOURCE REMAINS OPEN",
+  "contract": "multisource-coverage-comparison/0.1-candidate",
+  "corpusObligation": "PHEN-MULTI-001 1.0.0-draft, corpus/0.29.0",
+  "models": "No public ModelIdentity/RunIdentity; these are internal numerical component operands.",
+  "fixtureCount": 13,
+  "coverageLawRuns": 52,
+  "descriptionDiceRuns": 10,
+  "referencePartitionParityChecks": 22,
+  "distributionProbe": "Exact existing reason-dice calibration and analytical probability kernel, compared with one fixed independent d8 option. No RNG draw or sampled inference.",
+  "rows": [
+    {
+      "name": "single",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d61020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 1,
+        "probability": "2/3",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "1",
+            "1/12"
+          ],
+          [
+            "2",
+            "1/12"
+          ],
+          [
+            "3",
+            "1/12"
+          ],
+          [
+            "4",
+            "1/12"
+          ],
+          [
+            "5",
+            "1/12"
+          ],
+          [
+            "6",
+            "1/12"
+          ],
+          [
+            "7",
+            "1/12"
+          ],
+          [
+            "8",
+            "1/12"
+          ],
+          [
+            "9",
+            "1/12"
+          ],
+          [
+            "10",
+            "1/12"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "duplicate",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d61020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "89/96",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "2",
+            "1/120"
+          ],
+          [
+            "3",
+            "1/60"
+          ],
+          [
+            "4",
+            "1/40"
+          ],
+          [
+            "5",
+            "1/30"
+          ],
+          [
+            "6",
+            "1/24"
+          ],
+          [
+            "7",
+            "1/20"
+          ],
+          [
+            "8",
+            "7/120"
+          ],
+          [
+            "9",
+            "1/15"
+          ],
+          [
+            "10",
+            "3/40"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ],
+          [
+            "13",
+            "1/12"
+          ],
+          [
+            "14",
+            "3/40"
+          ],
+          [
+            "15",
+            "1/15"
+          ],
+          [
+            "16",
+            "7/120"
+          ],
+          [
+            "17",
+            "1/20"
+          ],
+          [
+            "18",
+            "1/24"
+          ],
+          [
+            "19",
+            "1/30"
+          ],
+          [
+            "20",
+            "1/40"
+          ],
+          [
+            "21",
+            "1/60"
+          ],
+          [
+            "22",
+            "1/120"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "independent",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "b",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d61020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025b03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "89/96",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "2",
+            "1/120"
+          ],
+          [
+            "3",
+            "1/60"
+          ],
+          [
+            "4",
+            "1/40"
+          ],
+          [
+            "5",
+            "1/30"
+          ],
+          [
+            "6",
+            "1/24"
+          ],
+          [
+            "7",
+            "1/20"
+          ],
+          [
+            "8",
+            "7/120"
+          ],
+          [
+            "9",
+            "1/15"
+          ],
+          [
+            "10",
+            "3/40"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ],
+          [
+            "13",
+            "1/12"
+          ],
+          [
+            "14",
+            "3/40"
+          ],
+          [
+            "15",
+            "1/15"
+          ],
+          [
+            "16",
+            "7/120"
+          ],
+          [
+            "17",
+            "1/20"
+          ],
+          [
+            "18",
+            "1/24"
+          ],
+          [
+            "19",
+            "1/30"
+          ],
+          [
+            "20",
+            "1/40"
+          ],
+          [
+            "21",
+            "1/60"
+          ],
+          [
+            "22",
+            "1/120"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "aggregate-third",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "b",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "c",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ],
+            [
+              "b",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d61020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025b03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d63020106020403010a90030101010108020a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a0003000602010a8f0301030101020102010aed01010a0101020102010bdb08025b03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ],
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "11/19",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ],
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "1/2",
+              "effective": "1/8"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/5",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ],
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ],
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 3,
+        "probability": "3791/3840",
+        "mode": "Auto",
+        "distribution": [
+          [
+            "3",
+            "1/960"
+          ],
+          [
+            "4",
+            "1/320"
+          ],
+          [
+            "5",
+            "1/160"
+          ],
+          [
+            "6",
+            "1/96"
+          ],
+          [
+            "7",
+            "1/64"
+          ],
+          [
+            "8",
+            "7/320"
+          ],
+          [
+            "9",
+            "7/240"
+          ],
+          [
+            "10",
+            "3/80"
+          ],
+          [
+            "11",
+            "11/240"
+          ],
+          [
+            "12",
+            "13/240"
+          ],
+          [
+            "13",
+            "59/960"
+          ],
+          [
+            "14",
+            "13/192"
+          ],
+          [
+            "15",
+            "23/320"
+          ],
+          [
+            "16",
+            "71/960"
+          ],
+          [
+            "17",
+            "71/960"
+          ],
+          [
+            "18",
+            "23/320"
+          ],
+          [
+            "19",
+            "13/192"
+          ],
+          [
+            "20",
+            "59/960"
+          ],
+          [
+            "21",
+            "13/240"
+          ],
+          [
+            "22",
+            "11/240"
+          ],
+          [
+            "23",
+            "3/80"
+          ],
+          [
+            "24",
+            "7/240"
+          ],
+          [
+            "25",
+            "7/320"
+          ],
+          [
+            "26",
+            "1/64"
+          ],
+          [
+            "27",
+            "1/96"
+          ],
+          [
+            "28",
+            "1/160"
+          ],
+          [
+            "29",
+            "1/320"
+          ],
+          [
+            "30",
+            "1/960"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "cross-shared",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/5",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/11",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "3/8"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "221/256",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/64"
+              ],
+              [
+                "3",
+                "1/32"
+              ],
+              [
+                "4",
+                "3/64"
+              ],
+              [
+                "5",
+                "1/16"
+              ],
+              [
+                "6",
+                "5/64"
+              ],
+              [
+                "7",
+                "3/32"
+              ],
+              [
+                "8",
+                "7/64"
+              ],
+              [
+                "9",
+                "1/8"
+              ],
+              [
+                "10",
+                "7/64"
+              ],
+              [
+                "11",
+                "3/32"
+              ],
+              [
+                "12",
+                "5/64"
+              ],
+              [
+                "13",
+                "1/16"
+              ],
+              [
+                "14",
+                "3/64"
+              ],
+              [
+                "15",
+                "1/32"
+              ],
+              [
+                "16",
+                "1/64"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "89/96",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "2",
+            "1/120"
+          ],
+          [
+            "3",
+            "1/60"
+          ],
+          [
+            "4",
+            "1/40"
+          ],
+          [
+            "5",
+            "1/30"
+          ],
+          [
+            "6",
+            "1/24"
+          ],
+          [
+            "7",
+            "1/20"
+          ],
+          [
+            "8",
+            "7/120"
+          ],
+          [
+            "9",
+            "1/15"
+          ],
+          [
+            "10",
+            "3/40"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ],
+          [
+            "13",
+            "1/12"
+          ],
+          [
+            "14",
+            "3/40"
+          ],
+          [
+            "15",
+            "1/15"
+          ],
+          [
+            "16",
+            "7/120"
+          ],
+          [
+            "17",
+            "1/20"
+          ],
+          [
+            "18",
+            "1/24"
+          ],
+          [
+            "19",
+            "1/30"
+          ],
+          [
+            "20",
+            "1/40"
+          ],
+          [
+            "21",
+            "1/60"
+          ],
+          [
+            "22",
+            "1/120"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "cross-independent",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "b",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025b03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "89/96",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "2",
+            "1/120"
+          ],
+          [
+            "3",
+            "1/60"
+          ],
+          [
+            "4",
+            "1/40"
+          ],
+          [
+            "5",
+            "1/30"
+          ],
+          [
+            "6",
+            "1/24"
+          ],
+          [
+            "7",
+            "1/20"
+          ],
+          [
+            "8",
+            "7/120"
+          ],
+          [
+            "9",
+            "1/15"
+          ],
+          [
+            "10",
+            "3/40"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ],
+          [
+            "13",
+            "1/12"
+          ],
+          [
+            "14",
+            "3/40"
+          ],
+          [
+            "15",
+            "1/15"
+          ],
+          [
+            "16",
+            "7/120"
+          ],
+          [
+            "17",
+            "1/20"
+          ],
+          [
+            "18",
+            "1/24"
+          ],
+          [
+            "19",
+            "1/30"
+          ],
+          [
+            "20",
+            "1/40"
+          ],
+          [
+            "21",
+            "1/60"
+          ],
+          [
+            "22",
+            "1/120"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "cross-duplicate",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "c",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d63020106020403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "1/1",
+              "effective": "0/1"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "3/7",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "541/576",
+            "mode": "QuietRoll",
+            "distribution": [
+              [
+                "2",
+                "1/144"
+              ],
+              [
+                "3",
+                "1/72"
+              ],
+              [
+                "4",
+                "1/48"
+              ],
+              [
+                "5",
+                "1/36"
+              ],
+              [
+                "6",
+                "5/144"
+              ],
+              [
+                "7",
+                "1/24"
+              ],
+              [
+                "8",
+                "7/144"
+              ],
+              [
+                "9",
+                "1/18"
+              ],
+              [
+                "10",
+                "1/16"
+              ],
+              [
+                "11",
+                "5/72"
+              ],
+              [
+                "12",
+                "11/144"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "11/144"
+              ],
+              [
+                "15",
+                "5/72"
+              ],
+              [
+                "16",
+                "1/16"
+              ],
+              [
+                "17",
+                "1/18"
+              ],
+              [
+                "18",
+                "7/144"
+              ],
+              [
+                "19",
+                "1/24"
+              ],
+              [
+                "20",
+                "5/144"
+              ],
+              [
+                "21",
+                "1/36"
+              ],
+              [
+                "22",
+                "1/48"
+              ],
+              [
+                "23",
+                "1/72"
+              ],
+              [
+                "24",
+                "1/144"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/5",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/11",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/4",
+              "normalization": "1/2",
+              "overlap": "1/1",
+              "effective": "0/1"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "3/8"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "221/256",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/64"
+              ],
+              [
+                "3",
+                "1/32"
+              ],
+              [
+                "4",
+                "3/64"
+              ],
+              [
+                "5",
+                "1/16"
+              ],
+              [
+                "6",
+                "5/64"
+              ],
+              [
+                "7",
+                "3/32"
+              ],
+              [
+                "8",
+                "7/64"
+              ],
+              [
+                "9",
+                "1/8"
+              ],
+              [
+                "10",
+                "7/64"
+              ],
+              [
+                "11",
+                "3/32"
+              ],
+              [
+                "12",
+                "5/64"
+              ],
+              [
+                "13",
+                "1/16"
+              ],
+              [
+                "14",
+                "3/64"
+              ],
+              [
+                "15",
+                "1/32"
+              ],
+              [
+                "16",
+                "1/64"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 3,
+        "probability": "3791/3840",
+        "mode": "Auto",
+        "distribution": [
+          [
+            "3",
+            "1/960"
+          ],
+          [
+            "4",
+            "1/320"
+          ],
+          [
+            "5",
+            "1/160"
+          ],
+          [
+            "6",
+            "1/96"
+          ],
+          [
+            "7",
+            "1/64"
+          ],
+          [
+            "8",
+            "7/320"
+          ],
+          [
+            "9",
+            "7/240"
+          ],
+          [
+            "10",
+            "3/80"
+          ],
+          [
+            "11",
+            "11/240"
+          ],
+          [
+            "12",
+            "13/240"
+          ],
+          [
+            "13",
+            "59/960"
+          ],
+          [
+            "14",
+            "13/192"
+          ],
+          [
+            "15",
+            "23/320"
+          ],
+          [
+            "16",
+            "71/960"
+          ],
+          [
+            "17",
+            "71/960"
+          ],
+          [
+            "18",
+            "23/320"
+          ],
+          [
+            "19",
+            "13/192"
+          ],
+          [
+            "20",
+            "59/960"
+          ],
+          [
+            "21",
+            "13/240"
+          ],
+          [
+            "22",
+            "11/240"
+          ],
+          [
+            "23",
+            "3/80"
+          ],
+          [
+            "24",
+            "7/240"
+          ],
+          [
+            "25",
+            "7/320"
+          ],
+          [
+            "26",
+            "1/64"
+          ],
+          [
+            "27",
+            "1/96"
+          ],
+          [
+            "28",
+            "1/160"
+          ],
+          [
+            "29",
+            "1/320"
+          ],
+          [
+            "30",
+            "1/960"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "cross-opposed",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "-1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106010203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "-1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": -1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "491/1920",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "-9",
+                "1/120"
+              ],
+              [
+                "-8",
+                "1/60"
+              ],
+              [
+                "-7",
+                "1/40"
+              ],
+              [
+                "-6",
+                "1/30"
+              ],
+              [
+                "-5",
+                "1/24"
+              ],
+              [
+                "-4",
+                "1/20"
+              ],
+              [
+                "-3",
+                "7/120"
+              ],
+              [
+                "-2",
+                "1/15"
+              ],
+              [
+                "-1",
+                "3/40"
+              ],
+              [
+                "0",
+                "1/12"
+              ],
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "3/40"
+              ],
+              [
+                "4",
+                "1/15"
+              ],
+              [
+                "5",
+                "7/120"
+              ],
+              [
+                "6",
+                "1/20"
+              ],
+              [
+                "7",
+                "1/24"
+              ],
+              [
+                "8",
+                "1/30"
+              ],
+              [
+                "9",
+                "1/40"
+              ],
+              [
+                "10",
+                "1/60"
+              ],
+              [
+                "11",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "-1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": -1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "491/1920",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "-9",
+                "1/120"
+              ],
+              [
+                "-8",
+                "1/60"
+              ],
+              [
+                "-7",
+                "1/40"
+              ],
+              [
+                "-6",
+                "1/30"
+              ],
+              [
+                "-5",
+                "1/24"
+              ],
+              [
+                "-4",
+                "1/20"
+              ],
+              [
+                "-3",
+                "7/120"
+              ],
+              [
+                "-2",
+                "1/15"
+              ],
+              [
+                "-1",
+                "3/40"
+              ],
+              [
+                "0",
+                "1/12"
+              ],
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "3/40"
+              ],
+              [
+                "4",
+                "1/15"
+              ],
+              [
+                "5",
+                "7/120"
+              ],
+              [
+                "6",
+                "1/20"
+              ],
+              [
+                "7",
+                "1/24"
+              ],
+              [
+                "8",
+                "1/30"
+              ],
+              [
+                "9",
+                "1/40"
+              ],
+              [
+                "10",
+                "1/60"
+              ],
+              [
+                "11",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "-1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": -1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "491/1920",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "-9",
+                "1/120"
+              ],
+              [
+                "-8",
+                "1/60"
+              ],
+              [
+                "-7",
+                "1/40"
+              ],
+              [
+                "-6",
+                "1/30"
+              ],
+              [
+                "-5",
+                "1/24"
+              ],
+              [
+                "-4",
+                "1/20"
+              ],
+              [
+                "-3",
+                "7/120"
+              ],
+              [
+                "-2",
+                "1/15"
+              ],
+              [
+                "-1",
+                "3/40"
+              ],
+              [
+                "0",
+                "1/12"
+              ],
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "3/40"
+              ],
+              [
+                "4",
+                "1/15"
+              ],
+              [
+                "5",
+                "7/120"
+              ],
+              [
+                "6",
+                "1/20"
+              ],
+              [
+                "7",
+                "1/24"
+              ],
+              [
+                "8",
+                "1/30"
+              ],
+              [
+                "9",
+                "1/40"
+              ],
+              [
+                "10",
+                "1/60"
+              ],
+              [
+                "11",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "-1/5",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/11",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": -1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "3/4",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "3/8"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "35/256",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "-7",
+                "1/64"
+              ],
+              [
+                "-6",
+                "1/32"
+              ],
+              [
+                "-5",
+                "3/64"
+              ],
+              [
+                "-4",
+                "1/16"
+              ],
+              [
+                "-3",
+                "5/64"
+              ],
+              [
+                "-2",
+                "3/32"
+              ],
+              [
+                "-1",
+                "7/64"
+              ],
+              [
+                "0",
+                "1/8"
+              ],
+              [
+                "1",
+                "7/64"
+              ],
+              [
+                "2",
+                "3/32"
+              ],
+              [
+                "3",
+                "5/64"
+              ],
+              [
+                "4",
+                "1/16"
+              ],
+              [
+                "5",
+                "3/64"
+              ],
+              [
+                "6",
+                "1/32"
+              ],
+              [
+                "7",
+                "1/64"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "491/1920",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "-9",
+            "1/120"
+          ],
+          [
+            "-8",
+            "1/60"
+          ],
+          [
+            "-7",
+            "1/40"
+          ],
+          [
+            "-6",
+            "1/30"
+          ],
+          [
+            "-5",
+            "1/24"
+          ],
+          [
+            "-4",
+            "1/20"
+          ],
+          [
+            "-3",
+            "7/120"
+          ],
+          [
+            "-2",
+            "1/15"
+          ],
+          [
+            "-1",
+            "3/40"
+          ],
+          [
+            "0",
+            "1/12"
+          ],
+          [
+            "1",
+            "1/12"
+          ],
+          [
+            "2",
+            "1/12"
+          ],
+          [
+            "3",
+            "3/40"
+          ],
+          [
+            "4",
+            "1/15"
+          ],
+          [
+            "5",
+            "7/120"
+          ],
+          [
+            "6",
+            "1/20"
+          ],
+          [
+            "7",
+            "1/24"
+          ],
+          [
+            "8",
+            "1/30"
+          ],
+          [
+            "9",
+            "1/40"
+          ],
+          [
+            "10",
+            "1/60"
+          ],
+          [
+            "11",
+            "1/120"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "cross-role-shared",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": []
+        },
+        {
+          "source": "b",
+          "ground": "task",
+          "family": "Task",
+          "role": "Situation",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "c",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a9003010101010800",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102020400020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d63020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/5",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/5"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "349/384",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/96"
+              ],
+              [
+                "3",
+                "1/48"
+              ],
+              [
+                "4",
+                "1/32"
+              ],
+              [
+                "5",
+                "1/24"
+              ],
+              [
+                "6",
+                "5/96"
+              ],
+              [
+                "7",
+                "1/16"
+              ],
+              [
+                "8",
+                "7/96"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "7/96"
+              ],
+              [
+                "15",
+                "1/16"
+              ],
+              [
+                "16",
+                "5/96"
+              ],
+              [
+                "17",
+                "1/24"
+              ],
+              [
+                "18",
+                "1/32"
+              ],
+              [
+                "19",
+                "1/48"
+              ],
+              [
+                "20",
+                "1/96"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": null
+    },
+    {
+      "name": "cross-role-independent",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": []
+        },
+        {
+          "source": "b",
+          "ground": "task",
+          "family": "Task",
+          "role": "Situation",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "c",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "b",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102010400020106060403010a9003010101010800",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102020400020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d63020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025b03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "3/7",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "c",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "b",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 2,
+            "probability": "89/96",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "2",
+                "1/120"
+              ],
+              [
+                "3",
+                "1/60"
+              ],
+              [
+                "4",
+                "1/40"
+              ],
+              [
+                "5",
+                "1/30"
+              ],
+              [
+                "6",
+                "1/24"
+              ],
+              [
+                "7",
+                "1/20"
+              ],
+              [
+                "8",
+                "7/120"
+              ],
+              [
+                "9",
+                "1/15"
+              ],
+              [
+                "10",
+                "3/40"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ],
+              [
+                "13",
+                "1/12"
+              ],
+              [
+                "14",
+                "3/40"
+              ],
+              [
+                "15",
+                "1/15"
+              ],
+              [
+                "16",
+                "7/120"
+              ],
+              [
+                "17",
+                "1/20"
+              ],
+              [
+                "18",
+                "1/24"
+              ],
+              [
+                "19",
+                "1/30"
+              ],
+              [
+                "20",
+                "1/40"
+              ],
+              [
+                "21",
+                "1/60"
+              ],
+              [
+                "22",
+                "1/120"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": null
+    },
+    {
+      "name": "orphan-modifier",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "task",
+          "family": "Task",
+          "role": "Situation",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee0301030101020102010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610300030102020400020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "0/1",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "0/1",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "0/1",
+              "situation": "1/3"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/5",
+              "situation": "0/1"
+            },
+            {
+              "ground": "task",
+              "family": "Task",
+              "base": "0/1",
+              "situation": "1/5"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            },
+            {
+              "source": "a",
+              "ground": "task",
+              "family": "Task",
+              "role": "Situation",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/2",
+              "overlap": "0/1",
+              "effective": "1/4"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "1/2",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/8"
+              ],
+              [
+                "2",
+                "1/8"
+              ],
+              [
+                "3",
+                "1/8"
+              ],
+              [
+                "4",
+                "1/8"
+              ],
+              [
+                "5",
+                "1/8"
+              ],
+              [
+                "6",
+                "1/8"
+              ],
+              [
+                "7",
+                "1/8"
+              ],
+              [
+                "8",
+                "1/8"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": null
+    },
+    {
+      "name": "orphan-removed",
+      "signals": [
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": [
+            [
+              "a",
+              "1/1"
+            ]
+          ]
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a90030101010108010a8f0301030101020102010aed01010a0101020102010bdb08025a03000400050006000700080009000a000300060201"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "1/3",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [
+                [
+                  "a",
+                  "1/1"
+                ]
+              ],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "3/5",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/10"
+              ],
+              [
+                "2",
+                "1/10"
+              ],
+              [
+                "3",
+                "1/10"
+              ],
+              [
+                "4",
+                "1/10"
+              ],
+              [
+                "5",
+                "1/10"
+              ],
+              [
+                "6",
+                "1/10"
+              ],
+              [
+                "7",
+                "1/10"
+              ],
+              [
+                "8",
+                "1/10"
+              ],
+              [
+                "9",
+                "1/10"
+              ],
+              [
+                "10",
+                "1/10"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 1,
+        "probability": "3/5",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "1",
+            "1/10"
+          ],
+          [
+            "2",
+            "1/10"
+          ],
+          [
+            "3",
+            "1/10"
+          ],
+          [
+            "4",
+            "1/10"
+          ],
+          [
+            "5",
+            "1/10"
+          ],
+          [
+            "6",
+            "1/10"
+          ],
+          [
+            "7",
+            "1/10"
+          ],
+          [
+            "8",
+            "1/10"
+          ],
+          [
+            "9",
+            "1/10"
+          ],
+          [
+            "10",
+            "1/10"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "empty-basis",
+      "signals": [
+        {
+          "source": "a",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "3/4",
+          "basis": []
+        },
+        {
+          "source": "b",
+          "ground": "body",
+          "family": "Body",
+          "role": "Base",
+          "strength": "1/2",
+          "basis": []
+        }
+      ],
+      "canonicalComponentSignals": [
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d61020106060403010a9003010101010800",
+        "0af003010301010aef03010401010a8b03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e6502010aee03010301010202020003010aed03010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010b8308051c646566696e6974696f6e2f656d626f646965642d70726573737572650301020104010b83080512636f6d706f6e656e742f736f757263652d62020106020203010a9003010101010800"
+      ],
+      "cases": [
+        {
+          "law": "GroundAggregate",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundPairwise",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "GroundUncovered",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        },
+        {
+          "law": "FamilyNormalized",
+          "totals": [
+            {
+              "ground": "body",
+              "family": "Body",
+              "base": "5/9",
+              "situation": "0/1"
+            }
+          ],
+          "witnesses": [
+            {
+              "source": "a",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "3/4",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "3/4"
+            },
+            {
+              "source": "b",
+              "ground": "body",
+              "family": "Body",
+              "role": "Base",
+              "sign": 1,
+              "basis": [],
+              "magnitude": "1/2",
+              "normalization": "1/1",
+              "overlap": "0/1",
+              "effective": "1/2"
+            }
+          ],
+          "decision": {
+            "nuclei": 1,
+            "probability": "2/3",
+            "mode": "PlayerFacingRoll",
+            "distribution": [
+              [
+                "1",
+                "1/12"
+              ],
+              [
+                "2",
+                "1/12"
+              ],
+              [
+                "3",
+                "1/12"
+              ],
+              [
+                "4",
+                "1/12"
+              ],
+              [
+                "5",
+                "1/12"
+              ],
+              [
+                "6",
+                "1/12"
+              ],
+              [
+                "7",
+                "1/12"
+              ],
+              [
+                "8",
+                "1/12"
+              ],
+              [
+                "9",
+                "1/12"
+              ],
+              [
+                "10",
+                "1/12"
+              ],
+              [
+                "11",
+                "1/12"
+              ],
+              [
+                "12",
+                "1/12"
+              ]
+            ]
+          }
+        }
+      ],
+      "descriptionDice": {
+        "nuclei": 2,
+        "probability": "89/96",
+        "mode": "PlayerFacingRoll",
+        "distribution": [
+          [
+            "2",
+            "1/120"
+          ],
+          [
+            "3",
+            "1/60"
+          ],
+          [
+            "4",
+            "1/40"
+          ],
+          [
+            "5",
+            "1/30"
+          ],
+          [
+            "6",
+            "1/24"
+          ],
+          [
+            "7",
+            "1/20"
+          ],
+          [
+            "8",
+            "7/120"
+          ],
+          [
+            "9",
+            "1/15"
+          ],
+          [
+            "10",
+            "3/40"
+          ],
+          [
+            "11",
+            "1/12"
+          ],
+          [
+            "12",
+            "1/12"
+          ],
+          [
+            "13",
+            "1/12"
+          ],
+          [
+            "14",
+            "3/40"
+          ],
+          [
+            "15",
+            "1/15"
+          ],
+          [
+            "16",
+            "7/120"
+          ],
+          [
+            "17",
+            "1/20"
+          ],
+          [
+            "18",
+            "1/24"
+          ],
+          [
+            "19",
+            "1/30"
+          ],
+          [
+            "20",
+            "1/40"
+          ],
+          [
+            "21",
+            "1/60"
+          ],
+          [
+            "22",
+            "1/120"
+          ]
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Synthetic component evidence atoms are not admitted source facts.",
+    "Task base with nonempty observational support is a diagnostic comparison operand, not the accepted task producer.",
+    "Body negative strength is a numerical sign control, not an admitted deficit producer.",
+    "DescriptionDice applies only to Base-only fixtures.",
+    "No schema allocation, source contract, public corpus qualification or final normalization law is implied."
+  ],
+  "sources": [
+    {
+      "path": "docs/formal/MULTISOURCE_COVERAGE_COMPARISON.md",
+      "sha256": "6ab312df68fdb819163cb5ba8e7be3e15f4e7188c42011bcd201426e60203148"
+    },
+    {
+      "path": "src/campaign3/multisourceComparison.ts",
+      "sha256": "10a0417d28c40a098962dd3115d47c62decceee30d26c10194a7bfcc753cb7a5"
+    },
+    {
+      "path": "src/campaign3/receivingTransforms.ts",
+      "sha256": "6f8f39035eb299f2d2133a3ea5a29dcb7c37a48e1d602306f6fa2da1c17103ae"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/test/receivingFixtures.ts",
+      "sha256": "8c05f353aa40b4a98fcd1e7ce18724a27d0c8211fe62f7839aa9e2f154eaab44"
+    },
+    {
+      "path": "scripts/compare-multisource-coverage.mjs",
+      "sha256": "9a1c7b9fcf8b8c46b13376f07c02bec446d1a16b86d654efba580e68171d7867"
+    }
+  ],
+  "counters": {
+    "highestAllocated": 706,
+    "allocatedSinceVerdictOrCorpusMember": 0
+  }
+}

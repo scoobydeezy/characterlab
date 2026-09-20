@@ -19,6 +19,16 @@ only. The comparison obligation is discharged by `VER-C3-CONCERN-001/002`;
 encoding suppression and retrieval amplification remain distinct, and A/B/C are
 retained candidates, not settled laws. No owner ruling is pending.
 
+## Research obligation preservation
+
+Every new or amended Campaign 3 verdict/qualification must create or reference its
+material obligations in `docs/planning/RESEARCH_OBLIGATIONS.json`, or record an
+explicit none-remaining rationale there. Follow `RESEARCH_OBLIGATIONS.md` in that
+directory. Conditional debt is not immediate work or an owner ruling; deferral does
+not close it. Before a reduction, check obligations naming the affected distinction.
+Run `npm run check:research`; Campaign 3 exit requires zero unaccounted-for material
+findings, without waiving mandatory corpus gates.
+
 ## Architectural authority
 
 1. `CharacterLab — Ideal Character Architecture North Star.md` defines the required character capabilities, invariants, and research posture.
@@ -43,7 +53,13 @@ Sequence: (1) run the salience-law comparison as pure arithmetic and record a ve
 EMB and ATTN verdict entries; (4) adopt `CHECKPOINT_TEMPLATE.md`; (5) resolve the concern-feedback owner ruling; (6) resume GA registration and model
 closure. Items 1–6 are COMPLETE. The bounded GA implementation and qualification
 closed on 2026-09-20; see `docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md`
-and `VER-C3-GA-001`. `docs/planning/CURRENT.md` routes to the completed checkpoint.
+and `VER-C3-GA-001`. The subsequent large bounded public BODY/MULTISOURCE checkpoint
+is also COMPLETE: `docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md` and
+`VER-C3-MULTI-002`. It has43 distinct models,62 public runs and227 prefix restores.
+Records707..733/namespace1149 implement the accepted public contract; counters733/0.
+RO-C3-001 is CONDITIONAL after discharging its immediate public-source debt; general
+receiving laws remain unresolved. Preserve the rejected construction cohort and codec
+regression receipts. No whole MULTISOURCE, general Need or Campaign3 PASS is implied.
 The 2026-09-14 preflight/bookkeeping pass does
 not start or split that implementation pass.
 The "Resume here" sequence in `GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md` and the
@@ -56,8 +72,10 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
-Campaign 3 is active: start at `docs/planning/CURRENT.md` and
-the GA qualification report in that directory. `GENERAL_ATTENTION_RESUME_BRIEF.md`
+Campaign 3 is active: start at `docs/planning/CURRENT.md` and the bounded public
+multisource qualification in that directory. Select the next underrepresented
+phenomenon before further allocation; do not automatically reopen the completed
+GA or multisource work items. `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its
 current bounded coverage separately from historical summaries. Missing phenomena are BLOCKED

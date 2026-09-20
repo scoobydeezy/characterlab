@@ -169,3 +169,21 @@ VAL-001 remains independent and must close before canonical reliance on affected
 executable closures, including the CONTENT character-kind validator. ADAPT-001 remains formally
 OPEN; PHEN-ADAPT-001, C2-F-ID-1/2 and all other unexecuted frozen gates remain NOT PASSED.
 Allocation is not implementation proof for EVID, REG, IDN or PRJ; previous WRT proof is preserved.
+
+## Multisource public allocation addendum — 2026-09-20
+
+[MULTISOURCE_PUBLIC_ALLOCATION_TABLE.json](MULTISOURCE_PUBLIC_ALLOCATION_TABLE.json)
+is the exact permanent inventory for records707..733, all at schema version1, and
+occurrence namespace1149. It specifies every field ID, required/optional status,
+semantic type, finite bound and tagged-union constraint. The accepted
+[public contract](MULTISOURCE_PUBLIC_CONTRACT.md) preceded implementation; this
+registry index link was added during the integration audit. The dated allocation
+receipt and explicit MS-ALLOC-CORR-001 correction preserve the selector/pattern
+transcription history before any model admission.
+
+No existing record or namespace is reinterpreted. All new stage outputs use typed
+namespace1149 over the existing runtime allocator; actual observations, experience,
+selection and task outputs retain their inherited namespaces. Physical649 and task373
+state ownership is unchanged. Future additions append IDs; incompatible schema changes
+require an explicit successor version and model identity. No migration of frozen GA,
+EMB or prior task images is authorized by this addendum.

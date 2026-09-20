@@ -386,3 +386,15 @@ and component-qualified using existing reserve mathematics. The single-source/mu
 sensation alternative remains a future BODY comparator. No Need, urgency ranking,
 pressure aggregation or biological reduction follows. Sensor duplication cannot be
 silently counted as distinct bodily phenomena to satisfy a capacity witness.
+
+2026-09-20 [bounded public multisource qualification](CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md)
+and VER-C3-MULTI-002 retain MEC-012 independent motive grounds, MEC-013 separate
+Base/Situation roles and MEC-014 consolidation before one bounded transform. The
+new description identity does not become a motive ID. GroundPairwise, GroundUncovered,
+role-blind FamilyNormalized and Base-only DescriptionDice remain explicit controls;
+matched public raw bytes distinguish the dice-unit control. The inherited dice
+calibration/arbitration is preserved by overlap-domain parity and full reference tests.
+EXP-009/014 receive bounded public source/control evidence, not a general reduction.
+Standing/identity learning, general ContextModulating sources, Need ownership and
+broader receiving laws are not ported or retired by this increment. RO-C3-001 preserves
+the general-law, wider-source and ordering/renaming obligations conditionally.

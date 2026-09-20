@@ -68,6 +68,16 @@ checkpoint from here.
 <yes + link to CAMPAIGN3_PENDING_OWNER_DECISIONS.md, or "no">
 ```
 
+## Research obligation disposition (adopted 2026-09-20)
+
+At every checkpoint, name new/affected `RO-C3-*` entries or explicitly state that no
+material obligation changed. New or amended verdicts and qualifications must have a
+review entry in `RESEARCH_OBLIGATIONS.json` with obligation references or an explicit
+none-remaining rationale. Keep ACTIVE and CONDITIONAL distinct; deferral is not
+closure. Report active/conditional/unowned counts in CURRENT and run
+`npm run check:research`. Zero unowned entries is a structural check, not proof that
+the historical finding audit is complete. See `RESEARCH_OBLIGATIONS.md`.
+
 ## Why "Stage C competitor" is on the template
 
 Brief §9 has five stages: **A** make the seam exist, **B** make the intact path work,

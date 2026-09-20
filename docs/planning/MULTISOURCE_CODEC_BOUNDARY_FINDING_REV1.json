@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-20",
+  "finding": "The inherited-envelope validator used false as a surrogate for a new record, which could disguise an invalid record in an inherited Boolean slot.",
+  "scope": "Closed-codec structural validation. Exact finite model matching and the admitted public state/input grammar separately rejected the affected shape; no public source bypass was demonstrated.",
+  "repair": "Permit canonical byte surrogates only at the inherited GA codecs explicit open canonical-value field positions, after validating the actual value. Reject new records in every other inherited typed slot. Replacing false universally with bytes alone is insufficient because it could disguise an invalid record in a Bytes slot.",
+  "regression": "multisourcePublicCodecs.test.ts: new record substituted into inherited workspace Boolean field",
+  "modelImpact": "No model, input, output, formula, schema, allocation or model-identity byte changes.",
+  "researchObligation": "RO-C3-001",
+  "disposition": "LOCAL DISPOSITION: validation hardening with explicit regression and focused replay revalidation."
+}
