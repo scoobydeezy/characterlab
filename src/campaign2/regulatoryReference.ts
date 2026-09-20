@@ -5,7 +5,7 @@ import {INT64_MAX,LinearParameterRegistry,materializeLinear,simInstant,type Line
 import {decodeCampaign2} from './codecs';
 import {dataField as f,dataRecord as rec,dataItems,dataIdentity as id,dataUnsigned as u,dataText,dataKey as key,invalidModel,type RecordValue} from './canonicalData';
 import type {compileValDeclarations} from './valDeclarations';
-type Content=Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>;
+type Content=Pick<Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>,'recordRole'|'canonicalBytes'|'qualifyCharacter'|'validateRecordRoles'>;
 type MapValue=Extract<CanonicalValue,{kind:'map'}>;
 export type RegulatoryReferenceFailureCode='REG_UNKNOWN_VARIABLE'|'REG_ADAPTED_REFERENCE_OUT_OF_RANGE';
 export type ReferenceResult={kind:'ReferenceValue';value:ReturnType<typeof signed>}|{kind:'Failure';code:'REG_UNKNOWN_VARIABLE'};

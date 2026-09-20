@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-19",
+  "status": "PARTIAL internal compiler increment; registration/compiler and public GA closure OPEN",
+  "counters": {
+    "highestAllocatedRecordType": 706,
+    "allocatedSinceLastVerdictOrCorpusMember": 0
+  },
+  "focused": {
+    "tests": 24,
+    "files": 4,
+    "passed": true,
+    "newTests": 15
+  },
+  "fullDefaultRun": {
+    "command": "npm test",
+    "files": 251,
+    "passedFiles": 243,
+    "failedFiles": 8,
+    "tests": 1866,
+    "passedTests": 1851,
+    "failedTests": 15,
+    "failureKind": "Existing tests exceeded unchanged 5/15/30-second timeouts; no assertion failure reported"
+  },
+  "fullLimitedWorkersRun": {
+    "command": "npm test -- --maxWorkers=2 --minWorkers=1 --reporter=json",
+    "success": true,
+    "files": 251,
+    "tests": 1866,
+    "passedTests": 1866,
+    "failedTests": 0,
+    "timeoutSettingsChanged": false
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "boundaries": true
+  },
+  "frozenManifestFileCommitmentsVerified": 28,
+  "sources": [
+    {
+      "path": "src/campaign3/generalRegistration.ts",
+      "sha256": "9d8a3399e6e1231dc01ea63252a06ad9524c2111afbe739f45912d38178a2ad7"
+    },
+    {
+      "path": "src/campaign3/generalAccessors.ts",
+      "sha256": "f990c5648fce111cb9a7165b79473fb2e73bd4d968825ac51d7b86f1dd94fdf6"
+    },
+    {
+      "path": "src/test/generalRegistration.test.ts",
+      "sha256": "d1449a0c9ed77faad75c832f37c9baa92fc319155d847c5fcaf0e46e75e8b509"
+    },
+    {
+      "path": "src/test/generalAccessors.test.ts",
+      "sha256": "c44811b860096add7b4774acf72005b87b69d63a42247173afe6c6eed2af168c"
+    }
+  ],
+  "evidenceScope": [
+    "All67 frozen template schema/member bindings resolve; exact706 comparison tested with synthetic implementation bindings",
+    "Eight fixed accessor descriptors compile; wrong subject/root/grammar, absent cue, missing leaf and detached-result controls pass"
+  ],
+  "remaining": [
+    "Concrete component versions, definition/content instances and role/domain validators",
+    "Exact PRJ requirements and qualified model state/write/output-slot bindings",
+    "Goal/spec/content/referent/holder coupling",
+    "Source-authenticated input integration, runtime rollback and public replay",
+    "Whole-model inherited work and slot accounting; no new ModelIdentity"
+  ]
+}

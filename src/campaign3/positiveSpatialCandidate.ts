@@ -18,11 +18,11 @@ export function encodePositiveSpatialCandidate(view:SelectedView,source:SpatialE
 export function encodePreparedPositiveSpatialCandidate(token:PreparedSpatialEncoding,law:EncodingBudget){
  return projectPositive(encodePreparedSpatialEvidence(token,law));
 }
-export function encodePreparedPositiveSpatialWithPriorConcern(token:PreparedSpatialEncoding,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean){
- return projectPositive(encodePreparedSpatialWithPriorConcern(token,law,carry,subject,enabled));
+export function encodePreparedPositiveSpatialWithPriorConcern(token:PreparedSpatialEncoding,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean,calibration?:Parameters<typeof encodePreparedSpatialWithPriorConcern>[5]){
+ return projectPositive(encodePreparedSpatialWithPriorConcern(token,law,carry,subject,enabled,calibration));
 }
 export function encodePreparedPositiveSpatialWithCalibration(token:PreparedSpatialEncoding,calibration:Parameters<typeof encodePreparedSpatialWithCalibration>[1]){return projectPositive(encodePreparedSpatialWithCalibration(token,calibration));}
-function projectPositive<T extends Omit<ReturnType<typeof encodeSelectedSpatialEvidence>,'version'>&{version:string}>(evaluation:T){
+export function projectPositive<T extends Omit<ReturnType<typeof encodeSelectedSpatialEvidence>,'version'>&{version:string}>(evaluation:T){
  const units=evaluation.rows.filter(r=>r.status==='Positive').map(r=>{
   if(!('factors'in r)||!('strength'in r)||r.witness.spatialClass==='SpatialUnknown')throw Error('POSITIVE_SPATIAL_INVARIANT');
   const bindings=evaluation.evidence.filter(e=>e.ref.kind==='perceived-binding'&&key(f(rec(decodeSemanticValue(e.bytes),224n),4n))===r.continuantKey).map(e=>e.bytes.slice());

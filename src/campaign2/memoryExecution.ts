@@ -17,6 +17,8 @@ type Model=Awaited<ReturnType<typeof compileMemoryModel>>;
 const id=(n:number,s:string)=>typedIdentifier(n,text(s));
 const eventNames=['event/measurement-episode-evidence','event/measurement-episode-formation','event/measurement-exact-recall','event/measurement-episode-evidence-padding','event/measurement-episode-formation-padding','event/measurement-future-padding'] as const;
 function fail(message:string):never {throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
+/** M1 production after actual carriage admission; no persistent memory mutation. */
+export function measurementEpisodeEvidence(source:CanonicalValue,occurrence:CanonicalValue){return r(342,[occurrence,rec(source,337n),text(MEMORY_VERSION)]);}
 export function createMemoryExecution(model:Model,validate337:(v:CanonicalValue)=>void,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,restoredFacts:readonly MemoryPendingFact[]=[]){
  const slots=items(decodeMemory(model.source.registry),'list'),rows=items(slots[0],'set');
  const definition=(name:string)=>{const row=rows.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(id(1009,name)));if(!row)invalidModel('memory row missing');return f(rec(row,171n),4n);};
@@ -69,7 +71,7 @@ export function createMemoryExecution(model:Model,validate337:(v:CanonicalValue)
    const n=name(event),reads:ActualReadRecord[]=[],outputs:CanonicalValue[]=[],subjects:TypedIdentifierValue[]=[],sources:TypedIdentifierValue[]=[];
    let nextState=state,patch:StatePatch={operations:[]},diffs:ReturnType<Model['stateModel']['applyPatch']>['diffs']=[],domain:typeof formDomain=[],version=MEMORY_VERSION;
    let children=plan([]);
-   if(n===eventNames[0]){const source=rec(event.payload,337n);validate337(source);outputs.push(r(342,[typedIdentifier(1125,{kind:'unsigned',value:allocator.allocateRuntimeId()}),source,text(MEMORY_VERSION)]));subjects.push(ident(f(rec(f(source,2n),203n),2n)));sources.push(ident(f(source,1n)));children=plan([emit(event,eventNames[1],140n,outputs[0])],event);}
+   if(n===eventNames[0]){const source=rec(event.payload,337n);validate337(source);outputs.push(measurementEpisodeEvidence(source,typedIdentifier(1125,{kind:'unsigned',value:allocator.allocateRuntimeId()})));subjects.push(ident(f(rec(f(source,2n),203n),2n)));sources.push(ident(f(source,1n)));children=plan([emit(event,eventNames[1],140n,outputs[0])],event);}
    else if(n===eventNames[3]){allocator.allocateRuntimeId();children=plan([emit(event,eventNames[4],140n,list([]))],event);}
    else if(n===eventNames[1]){
     const evidence=rec(event.payload,342n),source=rec(f(evidence,2n),337n);validate337(source);if(txt(f(evidence,3n))!==MEMORY_VERSION)fail('M1 version');

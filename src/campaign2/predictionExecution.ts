@@ -19,6 +19,18 @@ const names=['event/measurement-prediction-application','event/measurement-predi
 const eventKey=(e:ScheduledEvent)=>key(scheduledEventValue(e)),name=(e:ScheduledEvent)=>txt(e.eventTypeId.payload);
 function fail(message:string):never{throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stage(message:string):never{throw new SchedulerContractError('PREDICTION_STAGE_VIOLATION',message);}
+/** Exact owned value update shared by admitted prediction adapters. Producer,
+ * subject projection and target authority must be authenticated by the caller. */
+export function measurementPredictionValue(prior:CanonicalValue|undefined,observation:CanonicalValue,limit:bigint){
+ const o=rec(observation,203n),interval=rec(f(o,6n),204n),x=f(interval,2n);
+ if(f(interval,1n)!==true||f(interval,3n)!==true||key(x)!==key(f(interval,4n))||typeof x==='boolean'||x.kind!=='rational'||x.numerator<0n||x.numerator>10n*x.denominator||(10n*x.numerator)%x.denominator!==0n)fail('prediction exact point domain');
+ const ref=characterEvidenceRefValue({kind:'observation',observationId:u(id(f(o,1n)).payload)}),old=prior===undefined?undefined:rec(prior,361n),basis=old?items(f(old,2n),'set'):[],count=BigInt(basis.length);
+ if(basis.some(v=>key(v)===key(ref)))throw new SchedulerContractError('PREDICTION_OBSERVATION_ALREADY_APPLIED','observation already in prediction support');
+ if(count>=limit)throw new SchedulerContractError('PREDICTION_EVIDENCE_LIMIT_EXCEEDED','prediction support limit');
+ const m=old?f(old,1n):rational(0,1);if(typeof m==='boolean'||m.kind!=='rational')fail('prediction prior rational');
+ const mean=rational(count*m.numerator*x.denominator+x.numerator*m.denominator,(count+1n)*m.denominator*x.denominator);
+ return r(361,[mean,set([...basis,ref])]);
+}
 export function createPredictionExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,restored:readonly PredictionPendingFact[]=[]){
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),active=false,instant=0n,preparedCommit:Map<string,ScheduledEvent>|undefined;
  const targets=new Set<string>();
@@ -87,12 +99,7 @@ export function createPredictionExecution(model:Model,modelIdentity:CanonicalVal
      if(application){const k=key(predictionKey);if(targets.has(k))throw new SchedulerContractError('PREDICTION_TARGET_COLLISION','duplicate prediction target');targets.add(k);}
      const prior=model.stateModel.read(state,path);reads.push({accessorId:id(f(q,4n)),path,presence:prior.presence,value:prior.value,derivedSources:[]});
      if(application){
-      const ref=characterEvidenceRefValue({kind:'observation',observationId:u(id(f(admitted!.observation,1n)).payload)}),old=prior.presence?rec(prior.value!,361n):undefined,basis=old?items(f(old,2n),'set'):[],count=BigInt(basis.length);
-      if(basis.some(v=>key(v)===key(ref)))throw new SchedulerContractError('PREDICTION_OBSERVATION_ALREADY_APPLIED','observation already in prediction support');
-      if(count>=u(f(model.definition,4n)))throw new SchedulerContractError('PREDICTION_EVIDENCE_LIMIT_EXCEEDED','prediction support limit');
-      const x=admitted!.x,m=old?f(old,1n):rational(0,1);if(typeof m==='boolean'||m.kind!=='rational')fail('prediction prior rational');
-      const mean=rational(count*m.numerator*x.denominator+x.numerator*m.denominator,(count+1n)*m.denominator*x.denominator);
-      patch={operations:[{kind:'set',path,expected:prior.presence?{presence:true,value:prior.value!}:{presence:false},newValue:r(361,[mean,set([...basis,ref])])}]};
+      patch={operations:[{kind:'set',path,expected:prior.presence?{presence:true,value:prior.value!}:{presence:false},newValue:measurementPredictionValue(prior.value,admitted!.observation,u(f(model.definition,4n)))}]};
       const applied=model.stateModel.applyPatch(state,patch,atom(1025,'authority/belief-expectation'),{writableRoots:[362n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;
      }else if(prior.presence){const output=r(366,[typedIdentifier(model.readoutNamespace,unsigned(ordinal!)),predictionKey,prior.value!]);model.content.validateRecordRoles(enc(output));if(key(model.occurrences.extract(enc(output)))!==key(f(rec(output,366n),1n)))fail('readout occurrence rule');outputs.push(output);}
     }else version=application?PREDICTION_APPLICATION_ABLATION:PREDICTION_READ_ABLATION;

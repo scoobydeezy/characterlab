@@ -1064,3 +1064,219 @@ when a phenomenon demands it rather than being rediscovered then.
 Also confirmed: the effect is **not an artifact of top-1 selection.** Over four episodes at
 `K = 2` the selected *set* changes with `q`, so concern reorders membership rather than
 only the winner.
+
+## `VER-C3-GA-001` — Bounded public General Attention and memory comparisons
+
+- **Date:** 2026-09-20.
+- **Candidate distinction/contracts:** permission, capacity-limited selection,
+  role/spatial allocation, encoding strength, retained evidence, learned association,
+  presentation accessibility, transient earlier concern, use and significance remain
+  distinct. Implements `general-attention-carrier/0.1-candidate`,
+  `general-attention-registration-write-scope/0.1-candidate`, the exact component
+  versions in706, `general-attention-trace-binding/0.1-candidate` and
+  `general-attention-complete-prefix/0.1-candidate`. New role/disabled controls have
+  their separately named0.1-candidate versions; old spatial laws are unchanged.
+- **Exact models/runs:**43 distinct frozen images in
+  `campaign3-general-attention-model-rev2/FREEZE.json`. The public comparison receipt
+  lists each full ModelIdentity/RunIdentity and36 canonical ComparisonCases. All35
+  predecessor models and247 image files are byte-preserved. No new record allocation.
+- **Declared domain:** `fixture/general-attention/1.0.0`, one observer/qualified
+  holder, the fixed permitted visual/body/panel source, explicit positive roles,
+  four formation/four later cue opportunities, independent current/consequence
+  lanes, actual inherited probe/prediction/concern, and the separate four-trial
+  retained-credit calendar. Whole-model limits92 invocations/239 outputs/228 fresh
+  slots; observed maximum21 invocations. No authored learned memory or graph.
+- **Corpus and coverage:** actual execution declares **corpus/0.28.0**, digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+  Intentional successor **corpus/0.29.0**, digest
+  `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`,
+  advances PHEN-ATTN-001 to1.1.0 and preserves all twenty other members. The promotion
+  receipt preserves the old execution identity and names the successor aggregate
+  identity without inventing new runs. PHEN-ATTN's declared bounded source-footprint
+  and later-probe obligations now have public witnesses. PHEN-MEM recency, selected-only
+  reinforcement, decay, top-K and canonical ties have bounded evidence. DET/EPI
+  preservation is qualified in its existing scope; other members are not whole PASS.
+- **Coupling:** deterministic common seed, no random draws. Align focal evidence by
+  observed Actor role and controlled geometry/time, and episodes by acquired time.
+  Opaque occurrence IDs are never psychological magnitudes. The exact comparison
+  specification is committed in each ComparisonCase.
+- **Discriminating witnesses:** sparse→dense focal strengths are Independent
+  `3/13→3/13`, Shared `1→50/53`, Hybrid `3/13→3/13`, RetiredFlat `1→1`.
+  Dense symmetric graph edge masses at scale100 are respectively `0,20,92,100`;
+  all sparse graphs are empty. First-cue newest-episode scores are respectively
+  `3/2→1`, `3/2→211/200`, `3/2→57/40`, `3/2→3/2`. Winner membership agrees,
+  so these are strength/association/score distinctions, not winner discrimination.
+  The independent law protects focal encoding here but not the later average across
+  retained episode contents. The earlier salience-law verdict remains in force.
+- **Counterfactuals:** K0 and K2 first scores agree; later retrieval raises the
+  selected episode's base from its unretrieved `1/3` to `5/6`, while the unselected
+  episode receives no reinforcement. Initial base was `1/2`, exposing decay.
+  No-decay gives an exact `83/60` tie with canonical selection. Encoding-only concern
+  changes peripheral encoding and graph; retrieval-only preserves both and changes
+  scores. Known-zero, unavailable, no-task and disabled branches remain distinct.
+  Denied and unresolved-role sources cannot supply the focal Actor. Source/owner/
+  accessor negatives and preserved hidden-truth controls retain their public versus
+  component classification; internal fault hooks are not public input.
+- **Retained-credit comparison:** actual attribution consumes16 experiences and
+  targets one endpoint child. Age-only retains14 used children plus two fresh
+  acquisitions; use-only/shared-protection/significance-first retain16 used children
+  and reject the fresh pressure. All retain one significant child. The three
+  protection candidates have identical final memory bytes; significance-first is
+  not shown necessary over the simpler controls on this fixture. Perceived trial
+  context and attribution do not establish objective causality.
+- **Verdict:** **UNRESOLVED** for psychological law choice and reduction necessity;
+  **bounded public qualification PASS**, closing the planned GA implementation work
+  item. Preserve the tested distinctions and competing models. Do not merge from
+  winner equality, select a universal budget law, or rehabilitate RET-001.
+  Candidate A witnesses the ratified transient character-state feedback edge only;
+  A/B/C remain unresolved under VER-C3-CONCERN-001/002.
+- **Known uncovered regions:** general Affect, Need, surprise, arbitrary modality/
+  glyph/position/role inference, Incidental/Cause derivation, unguided segmentation,
+  unrestricted retention horizons, whole frightened/angry-person behavior and the
+  remaining broader Campaign3 corpus obligations. Priority/equal K2 and the three
+  protection models are not discriminated here. Two current baseline templates are
+  replacement-only, with compiler/component rather than active-stage execution proof.
+- **Reopen conditions:** a required phenomenon outside this source/horizon, a
+  competitor surviving the full enlarged corpus, changed contracts/numeric laws,
+  failure of identity/epistemic/owner/replay preservation, or the existing concern
+  response-bound condition. Broader uncertainty is not a current owner blocker.
+- **Evidence:** `GA_PUBLIC_QUALIFICATION_REV1.json`,
+  `GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md`, `CORPUS_0_29_0_PROMOTION_REV1.json`,
+  `general-attention-public-comparisons-rev1/RESULTS.json`,
+  `general-attention-public-replay-rev1/RESULTS.json`.43 public runs/36 comparisons;
+  ten exact reexecutions; public complete-prefix restores across ten continuation
+  instants;77 active-stage rollback witnesses plus six final-commit faults.
+  **2,171 active tests/273 files,328 historical tests/43 files and production build
+  PASS.** Mutation sensitivity and regression preservation are not necessity proofs.
+
+**LOCAL DISPOSITION — no owner ruling required:** finish the accepted bounded GA
+scope, preserve all comparator and epistemic distinctions, and record the honest
+uncovered frontier. The North Star transfer is experimentally traversable attention,
+encoding and history-dependent accessibility within the §30 frightened/angry-person
+archetypes; it is not a general emotional-state model. Counters **706 / 0**.
+
+## Ledger correction — three previously reported entries were absent, 2026-09-20
+
+The September 14 work-order/CURRENT checkpoint reported VER-C3-SALIENCE-001,
+VER-C3-EMB-001 and VER-C3-ATTN-001 as recorded, and counted twelve entries. Inspection
+of the actual ledger and its handoff commit found those three entries absent. The
+underlying experiment/qualification receipts exist. The entries below are recorded
+now from those receipts, without backdating a ledger write or claiming a new run.
+This repairs the count to thirteen including VER-C3-GA-001. It changes no frozen
+model, allocation, old receipt or previously declared experimental scope.
+
+## `VER-C3-SALIENCE-001` — Four-law arithmetic comparison, recovered entry
+
+- **Recorded:** 2026-09-20; evidence is the September 14 work-order item 1 receipt
+  `SALIENCE_LAW_COMPARISON_REV1.json` and `scripts/compare-salience-laws.mjs`.
+- **Contracts/models:** `encoding-access-math/0.1-candidate` EAM-2; independent,
+  historical-shared, historical-hybrid and retired-flat arithmetic candidates.
+  No ModelIdentity or public ingress exists for this deliberately pure comparison.
+- **Declared domain:** one focal vector, raw9/20 at the historical Cause label;
+  historical Cause/Target/Incidental role controls, conserved residual pool1/5 versus
+  unconserved attention, budget/threshold1/5, footprints1/2/4/8, empty prior graph,
+  eta1, no decay and scales100/10,000/1,000,000. These historical labels and Need
+  factors are arithmetic operands, not admitted GA psychological producers.
+- **Corpus coverage:** EXP-007/015 and the attention footprint obligation; coverage
+  assessed against corpus/0.28.0, digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+  Component-only comparison, not an executed whole corpus or public fixture. The
+  subsequent GA public verdict remains separately identified.
+- **Comparison/coupling:** exact rational output equality across allocation,
+  quantized edge and total-row-mass observations; deterministic, no RNG. All six
+  law pairs have discriminating witnesses in the receipt.
+- **Witnesses:** independent/hybrid focal allocation stays9/29. Shared changes
+  from1 with no partner to75/77 with conserved incidental partners. Retired-flat
+  always assigns1 and saturates the learned row at every nonempty footprint,
+  overflowing from two partners. At resolving scale, even allocation-invariant
+  candidates have footprint-dependent per-partner edges. Independent zero edges
+  at scale100 are a quantization-floor artifact, not general invariance.
+- **Counterfactuals:** conserved versus unconserved residual allocation, role swaps,
+  footprint changes and three quantization scales distinguish resource division,
+  encoding response and association saturation.
+- **Verdict:** **UNRESOLVED** among the three derived laws; RET-001 remains
+  **RETRACTED** in its already declared domain. The shared resource counterfactual
+  is informative but does not choose a universal psychological equation.
+- **Uncovered:** nonempty priors, multiple focal units, nonzero decay, actual
+  observer-safe source, public learned state and later retrieval in this receipt.
+- **Reopen:** a new source/phenomenon, calibration or resolving-scale comparison
+  changes the discrimination or a reduced candidate survives the broader corpus.
+  Preserve MEC-005 CONTROL+CONTRACT, MEC-007/CTL-004 CONTROL and MEC-008 CONTROL.
+
+## `VER-C3-EMB-001` — Bounded body/receiving distinctions, recovered entry
+
+- **Recorded:** 2026-09-20 from the September 10 bounded qualification; no new run.
+- **Contracts/identities:** `embodied-reserve/0.1-candidate`,
+  `rules/campaign3-embodied-receiving/0.1-candidate` and the exact component bundle
+  in `campaign3-embodied-receiving-model-rev1/FREEZE.json`. Its thirteen frozen
+  ModelIdentities and the exact RunIdentities in
+  `embodied-receiving-execution-rev4/REVIEW.json` are the compared models/runs.
+- **Declared domain:** finite local reserves, safe interoception, pressure, adopted
+  body instructions, shared task/body options and the frozen dice/arbitration
+  vocabulary. Physiology, observation, motive, reasons and execution stay separate.
+- **Corpus coverage:** bounded BODY/MULTISOURCE obligations assessed against
+  corpus/0.28.0, digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+  Original pre-promotion evidence keeps its own identities; no retroactive corpus
+  execution is asserted. This is not whole BODY/MULTISOURCE qualification.
+- **Comparison/coupling:** exact canonical equality of preserved pressure/task
+  operands and exact choice-probability comparisons. Frozen run seeds/addressing
+  remain in the source receipts. The probability witnesses compare distributions,
+  not an unsupported claim that one paired random outcome proves necessity.
+- **Witnesses/counterfactuals:** a shared option with independent task/body support
+  has probability221/256; deleting either ground yields1/2. Removing/rebinding
+  adopted instructions changes association while pressure/task inputs stay equal.
+  Duplicate body descriptions retain two origins but one nucleus and probability1/2;
+  the explicit no-coverage control gives2/3. Aggregate versus pairwise overlap has
+  a separate component witness and is not promoted to a broader public vocabulary.
+- **Verdict:** **UNRESOLVED** for final body/Need ownership and general necessity.
+  Preserve the qualified finite distinctions and competitors; the required richer
+  ownership comparison remains a named debt. Bounded implementation qualification
+  does not settle that comparison.
+- **Evidence:** `CAMPAIGN3_EMBODIED_QUALIFICATION.json` and its Markdown report:
+  EMB-A..O / ER-A..R with public/component limits, 28 public runs/688 checks,
+  86 whole-prefix restores across29 specimens and all13 models, and explicit
+  deletion/substitution controls. The GA-era full source/reference suites preserve
+  those existing fixtures without enlarging their scope.
+- **Uncovered/reopen:** general physiology, constitutive adaptation, final Need
+  ownership, learned efficacy, action-conditioned relief, mixed learning and full
+  cross-family equivalence. Reopen on those required phenomena or failed epistemic,
+  source, shared-ground, execution-order or replay preservation.
+
+## `VER-C3-ATTN-001` — Finite public selection boundary, recovered entry
+
+- **Recorded:** 2026-09-20 from the September 11 public qualification; no new run.
+- **Contracts/identities:** `attention-public-integration/0.1-candidate`,
+  `attention-public-declarations/0.1-candidate`,
+  `attention-selection-component/0.1-candidate`. The32 exact model identities and
+  corrected224 run identities are in `campaign3-attention-model-rev2/FREEZE.json`;
+  old list-S0 run commitments remain explicitly inadmissible historical evidence.
+- **Domain:** one positive-time three-port scene, actual SEM roles, K0/1/2,
+  role-priority/equal-priority/unlimited selectors, denied/unsupported-role inputs
+  and an actual selected-only consumer. This source has one role per port.
+- **Corpus coverage:** PHEN-ATTN-001 active-selection clause, assessed against
+  corpus/0.28.0 and digest
+  `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
+  Encoding-footprint and later retrieval were unqualified by this old receipt;
+  their later GA closure is VER-C3-GA-001, not a rewritten September 11 claim.
+- **Comparison/coupling:** deterministic exact selected-set and permitted-history
+  equality on matched scene originals; no random draws. Compare committed selector
+  policies, capacity, role swaps and denied-port hidden-role substitutions.
+- **Witnesses:** capacity policies enforce K separately from source history;
+  unlimited is the explicit violating control. Observed role changes alter priority
+  selection. Twenty-seven denied-port hidden-role comparisons preserve observer-side
+  bytes. Actual consumer reads equal the unique selected set; visibility does not
+  authorize access to unselected evidence or mutation of perception state.
+- **Verdict:** **RETAINED** as the bounded permission/selection/consumption boundary
+  against the named controls. General attention/salience law necessity remains
+  **UNRESOLVED**; this hard selector alone establishes no continuous encoding law.
+- **Evidence:** `ATTENTION_PUBLIC_QUALIFICATION_REV1.json`,
+  `CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md`: AT2-A..N in stated scope,
+  224 cases/217 successes/seven work-bound rejections,434 successful restores,
+  58 boundary failures,247 trace corruptions and eleven runtime substitutions.
+  Fault detection establishes sensitivity, not general psychological necessity.
+- **Uncovered/reopen:** multiple-role source production, arbitrary identifier
+  renaming, encoding/association/accessibility, general Affect and broader sources.
+  Reopen on new modalities, role semantics, selection/encoding merger or a reduced
+  model satisfying the broader corpus. Existing component-only controls retain
+  their component classification; no owner ruling is required for this ledger repair.

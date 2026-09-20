@@ -1,24 +1,25 @@
 # Retained Phenomenon Corpus
 
-**CorpusVersion:** `corpus/0.28.0`
+**CorpusVersion:** `corpus/0.29.0`
 
 **CorpusManifestSchema:** `CorpusManifestEntry` type 174, schema version 1
 
-**CorpusManifestDigest:** `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`
+**CorpusManifestDigest:** `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`
 
 **Status:** initial populated corpus; fixtures require formal seam contracts before implementation
 
-**Current commitment:** corpus/0.28.0, accepted 2026-09-14. The ten corpus/0.27.0 members are
-preserved byte-for-byte in identity, version and obligation. Eleven reviewed Campaign 3
-intake proposals are promoted to membership with their requirement text carried verbatim
-from CAMPAIGN3_CORPUS_INTAKE_DRAFT.md. **Membership asserts that an obligation exists; it
-does not assert that the obligation passes** — ten of the eleven enter BLOCKED or PARTIAL.
-Thirteen of the Brief's fifteen required families now have at least one named member.
-See CORPUS_0_28_0_PROMOTION_REV1.json and CORPUS_0_28_0_SUCCESSOR_MANIFEST.md.
+**Current commitment:** corpus/0.29.0, accepted 2026-09-20. PHEN-ATTN-001
+advances to 1.1.0 with its requirements preserved and an exact executable GA fixture.
+The other twenty member identities, versions and requirement sections are unchanged.
+Bounded qualification is recorded by VER-C3-GA-001; membership does not imply that
+other phenomena pass. See CORPUS_0_29_0_PROMOTION_REV1.json.
 
-**Prior commitment:** corpus/0.27.0 at digest
-`3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276` remains a distinct historical
-commitment. Verdicts recorded against it keep that version and digest.
+**Prior commitments:** corpus/0.28.0 at `1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`
+and corpus/0.27.0 at `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`
+remain distinct historical commitments. Corpus0.28.0 admitted eleven obligations
+as three PARTIAL and eight BLOCKED; admission did not qualify them. The exact prior
+document is preserved in CORPUS_0_28_0_PRESERVED_AT_GA.md. Earlier verdicts and GA
+execution identities retain their originally declared corpus versions.
 
 Acceptance of this manifest does not imply every member phenomenon has passed.
 
@@ -38,7 +39,7 @@ The `EXP-*` and `P3-*` entries in the [Reference Mechanism Preservation Ledger](
 |---|---|---|---|
 | `PHEN-ADAPT-001` | `1.11.0` | `P3-012`, North-Star embodied adaptation | hidden exposure may update adaptation but never cognition directly |
 | `PHEN-AFFECT-001` | `1.0.0-draft` | Campaign 3 intake, promoted 2026-09-14 | see the entry below; BLOCKED at promotion |
-| `PHEN-ATTN-001` | `1.0.0-draft` | Campaign 3 intake, promoted 2026-09-14 | see the entry below; PARTIAL at promotion |
+| `PHEN-ATTN-001` | `1.1.0` | Campaign 3 intake, promoted 2026-09-14 | see the entry below; PARTIAL at promotion |
 | `PHEN-BELIEF-001` | `1.0.0-draft` | Campaign 3 intake, promoted 2026-09-14 | see the entry below; BLOCKED at promotion |
 | `PHEN-BIO-001` | `1.0.0-draft` | `MEC-017`, `MEC-018`, `EXP-011`, `EXP-012` | stochastic biography changes future decision boundaries |
 | `PHEN-BODY-001` | `1.0.0-draft` | Campaign 3 intake, promoted 2026-09-14 | see the entry below; PARTIAL at promotion |
@@ -463,7 +464,7 @@ Each observation lane sees only truth/state available strictly before its entry 
 
 ## `PHEN-ATTN-001` — Evidence selection and encoding footprint
 
-**Version:** `1.0.0-draft`. **Historical intake:** MEC-005/007/008, EXP-007/015,
+**Version:** `1.1.0`. **Historical intake:** MEC-005/007/008, EXP-007/015,
 CTL-004, RET-001. **Brief coverage:**12.3/12.6.
 
 **Required setup domain:** One observer, fixed permitted sensory inputs, more eligible
@@ -503,6 +504,15 @@ or an equivalent reduced candidate surviving footprint controls.
 
 **Brief family:** 12.3 / 12.6.
 **Status at promotion:** PARTIAL — bounded active selection witnessed (VER-C3-ATTN-001); encoding footprint and later retrieval probe BLOCKED.
+
+
+**Executable fixture update, 2026-09-20:** `fixture/general-attention/1.0.0`,
+`GA_CORPUS_FIXTURE_1_0_0.md`, freezes 43 exact public models, including four
+matched sparse/dense pairs and later cue probes. All requirements above are
+preserved. `GA_PUBLIC_QUALIFICATION_REV1.json` and `VER-C3-GA-001` record bounded
+qualification, exact footprint dependence, separate feedback effects and retained
+comparators. This qualifies the declared finite domain, not general Affect, Need,
+surprise, unrestricted role/position inference or every North-Star attention case.
 
 ---
 

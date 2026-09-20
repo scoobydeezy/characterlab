@@ -5,7 +5,7 @@ import allocation from '../../docs/formal/GENERAL_ATTENTION_CARRIER_ALLOCATION_T
 import writeScopeAllocation from '../../docs/formal/GENERAL_ATTENTION_WRITE_SCOPE_ALLOCATION_TABLE.json';
 import shape from '../../docs/formal/GENERAL_ATTENTION_CARRIER_CANDIDATE.json';
 import attentionAllocation from '../../docs/formal/ATTENTION_ALLOCATION_TABLE.json';
-import {canonicalDecode,canonicalEncode,record,RecordSchemaRegistry,type CanonicalValue,type RecordSchema} from '../substrate/canonicalEncoding';
+import {canonicalDecode,canonicalEncode,record,list,bytes,RecordSchemaRegistry,type CanonicalValue,type RecordSchema} from '../substrate/canonicalEncoding';
 import {attentionSupportedSchemas,decodeAttention} from './attentionCodecs';
 import {receivingSupportedSchemas,decodeReceiving} from './receivingCodecs';
 import {validateSemanticReferent} from '../substrate/referentOrigin';
@@ -24,7 +24,33 @@ for(const s of [...attentionSupportedSchemas(),...receivingSupportedSchemas()]){
 }
 const schemas=[...prior.values(),...added],registry=new RecordSchemaRegistry(schemas),byName=new Map(added.map(s=>[s.name,s])),byId=new Map(declarations.map(d=>[BigInt(d.typeId),d]));
 const attentionTypes=new Set(attentionAllocation.records.map(r=>BigInt(r.typeId)));
-function validateInherited(value:R):void{(attentionTypes.has(value.schema.typeId)?decodeAttention:decodeReceiving)(canonicalEncode(value));}
+function validateInherited(value:R,context:GeneralPrimitiveContext):void{
+ // These inherited slots admit arbitrary canonical values: definition payloads,
+ // canonical map keys, and authoritative StateLeaf values. Validate the old grammar with a
+ // canonical scalar in that slot, then validate its actual value in this union.
+ // All other inherited fields still pass through their original decoder.
+ function envelope(v:CanonicalValue):CanonicalValue{
+  if(typeof v==='boolean')return v;
+  if(v.kind==='record')return record(v.schema,new Map([...v.fields].map(([f,child])=>{
+   const canonicalSlots:Readonly<Record<string,readonly bigint[]>>={'130':[6n,7n],'132':[8n,9n,10n,11n,12n],'142':[1n],'145':[3n,4n],'146':[2n],'147':[4n],'148':[3n,5n],'151':[2n],'160':[12n,13n],'162':[11n],'171':[4n]};
+   if(canonicalSlots[String(v.schema.typeId)]?.includes(f)){
+    // Preserve distinctions between canonical keys inside sets/maps; a common
+    // false placeholder would collapse distinct exact owner paths.
+    validate(child,context);return [f,child===false?false:bytes(canonicalEncode(child))];
+   }
+   if(v.schema.typeId===147n&&f===5n){
+    if(typeof child==='boolean'||child.kind!=='list')fail('read derived-source list');
+    const sources=child.items.map(source=>{if(typeof source==='boolean'||source.kind!=='list'||source.items.length!==3)fail('read derived-source tuple');const [path,presence,actual]=source.items;if(typeof presence!=='boolean')fail('read derived-source presence');if(!isRecord(path,[140n]))fail('read derived-source path');validate(actual,context);return list([envelope(path),presence,false]);});
+    return [f,list(sources)];
+   }
+   return [f,envelope(child)];
+  })));
+  if(v.kind==='list'||v.kind==='set')return {...v,items:v.items.map(envelope)};
+  if(v.kind==='map')return {...v,entries:v.entries.map(([k,c])=>[envelope(k),envelope(c)] as const)};
+  return v;
+ }
+ (attentionTypes.has(value.schema.typeId)?decodeAttention:decodeReceiving)(canonicalEncode(envelope(value)));
+}
 const identities=new Map(allocation.rolePositions.map(p=>[p.identity,BigInt(p.requiredNamespace)]));
 // Some inherited carrier names describe a closed existing-record union (461/463).
 const inherited=new Map(shape.recordBoundaries.filter(b=>b.mode==='InheritedRecordRoles').map(b=>[b.record,b.source!.replace('existing','').split('/').map(BigInt)]));
@@ -33,7 +59,7 @@ function isRecord(value:CanonicalValue,ids:readonly bigint[]):value is R{return 
 function typed(value:CanonicalValue,type:Type,context:GeneralPrimitiveContext):void{
  if(type.kind==='ref'){
   const s=byName.get(type.name);if(s){if(!isRecord(value,[s.typeId]))fail('record '+type.name);validate(value,context);return;}
-  const old=inherited.get(type.name);if(old){if(!isRecord(value,old))fail('inherited record '+type.name);validateInherited(value);return;}
+  const old=inherited.get(type.name);if(old){if(!isRecord(value,old))fail('inherited record '+type.name);validateInherited(value,context);return;}
   const ns=identities.get(type.name);if(ns!==undefined){
    if(typeof value==='boolean'||value.kind!=='typedIdentifier'||value.namespaceId!==ns)fail('identity '+type.name);
    if(ns===1002n)validateSemanticReferent(value);
@@ -62,7 +88,7 @@ function validate(value:CanonicalValue,context:GeneralPrimitiveContext):void{
  if(typeof value==='boolean')return;
  if(value.kind==='record'){
   const d=byId.get(value.schema.typeId);
-  if(!d){validateInherited(value);return;}
+  if(!d){validateInherited(value,context);return;}
   if(value.schema.schemaVersion!==BigInt(d.schemaVersion))fail('schema version');
   for(const f of d.fields){const v=value.fields.get(BigInt(f.id));if(v!==undefined)typed(v,f.type,context);}
  }else if(value.kind==='list'||value.kind==='set')for(const v of value.items)validate(v,context);

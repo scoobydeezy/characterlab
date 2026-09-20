@@ -6,7 +6,7 @@ import {campaign2SchemaByType,decodeCampaign2} from './codecs';
 import {dataRecord as rec,dataField as f,dataUnsigned as u,invalidModel} from './canonicalData';
 import {identityRolesCompatible} from './identityRoles';
 import type {compileValDeclarations} from './valDeclarations';
-type Content=Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>;
+type Content=Pick<Awaited<ReturnType<ReturnType<typeof compileValDeclarations>['compileContent']>>,'recordRole'|'validateRole'>;
 export function compileOccurrenceIdentities(mapBytes:Uint8Array,content:Content,codec={decode:decodeCampaign2,schema:campaign2SchemaByType}){
   const value=codec.decode(mapBytes);
   if(typeof value==='boolean'||value.kind!=='map')return invalidModel('occurrence rules require canonical map');

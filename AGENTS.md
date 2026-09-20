@@ -41,8 +41,10 @@ reorders GA work only; it reopens no contract, allocation, model byte or digest.
 Sequence: (1) run the salience-law comparison as pure arithmetic and record a verdict;
 (2) publish corpus `0.28.0` from the prepared successor manifest; (3) write the owed
 EMB and ATTN verdict entries; (4) adopt `CHECKPOINT_TEMPLATE.md`; (5) resolve the concern-feedback owner ruling; (6) resume GA registration and model
-closure. Items 1–5 are COMPLETE; item 6 remains handed off and paused per
-`GENERAL_ATTENTION_RESUME_BRIEF.md`. The 2026-09-14 preflight/bookkeeping pass does
+closure. Items 1–6 are COMPLETE. The bounded GA implementation and qualification
+closed on 2026-09-20; see `docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md`
+and `VER-C3-GA-001`. `docs/planning/CURRENT.md` routes to the completed checkpoint.
+The 2026-09-14 preflight/bookkeeping pass does
 not start or split that implementation pass.
 The "Resume here" sequence in `GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md` and the
 ordering in `GENERAL_ATTENTION_CLOSURE_PLAN.md` are superseded on ordering only; their
@@ -55,12 +57,14 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at `docs/planning/CURRENT.md` and
-`GENERAL_ATTENTION_RESUME_BRIEF.md` in that directory. `CAMPAIGN3_ENTRY_READINESS.md`
+the GA qualification report in that directory. `GENERAL_ATTENTION_RESUME_BRIEF.md`
+preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its
 current bounded coverage separately from historical summaries. Missing phenomena are BLOCKED
 or PARTIAL, not passed by Campaign2 completion. ATTN-001 and EMB-001 own newly explicit
-debts. PHEN-BIO-001 means biography and keeps its immutable ID. Corpus `0.28.0` has
-21 members: ten preserved and eleven promoted obligations, entering as three PARTIAL
+debts. PHEN-BIO-001 means biography and keeps its immutable ID. Corpus `0.29.0` has
+21 members; PHEN-ATTN-001 1.1.0 adds the qualified bounded GA fixture, preserving
+the other twenty members. Corpus0.28.0's eleven additions entered as three PARTIAL
 and eight BLOCKED. Membership is not qualification. Broad source/feedback extensions still
 require accepted contracts; do not implement them from the external review alone.
 `CAMPAIGN3_BODY_RESEARCH_FRONTIER.md` opened that investigation and its BODY scope is

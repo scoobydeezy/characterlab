@@ -54,22 +54,35 @@ function finish(operands:ReturnType<typeof prepareOperands>,law:EncodingBudget,b
 /** calibrated-selected-spatial-encoding/0.1-candidate. Exact model calibration, not a runtime budget source. */
 export function encodePreparedSpatialWithCalibration(token:PreparedSpatialEncoding,calibration:{readonly law:EncodingBudget;readonly budget:Q;readonly threshold:Q}){
  const operands=consumePrepared(token);
+ validateCalibration(calibration);
+ return {...finish(operands,calibration.law,calibration.budget,calibration.threshold),version:'calibrated-selected-spatial-encoding/0.1-candidate' as const,calibration:{law:calibration.law,budget:Q.of(calibration.budget.numerator,calibration.budget.denominator),threshold:Q.of(calibration.threshold.numerator,calibration.threshold.denominator)}};
+}
+/** selected-role/disabled-allocation-control/0.1-candidate. The same actual
+ * selected evidence and spatial provenance, but the existing nonspatial law.
+ * SpatialUnknown remains unavailable in this complete-position-only profile. */
+export function encodePreparedAllocationControl(token:PreparedSpatialEncoding,calibration:Parameters<typeof encodePreparedSpatialWithCalibration>[1],law:'role-calibrated'|'disabled-attention'){
+ const operands=consumePrepared(token);validateCalibration(calibration);
+ if(!['role-calibrated','disabled-attention'].includes(law))throw Error('SELECTED_ALLOCATION_CONTROL');
+ const rows=operands.rows.map(row=>{if(row.witness.spatialClass==='SpatialUnknown')return row;const attention=law==='role-calibrated'?row.role:Q.of(1n);return {...row,attention,raw:row.base.multiply(row.role).multiply(attention)};});
+ return {...finish({...operands,rows},calibration.law,calibration.budget,calibration.threshold),version:(law==='role-calibrated'?'selected-role-allocation-control/0.1-candidate':'selected-disabled-allocation-control/0.1-candidate')};
+}
+function validateCalibration(calibration:{readonly law:EncodingBudget;readonly budget:Q;readonly threshold:Q}){
  if(!calibration||Object.getPrototypeOf(calibration)!==Object.prototype)throw Error('SPATIAL_ENCODING_CALIBRATION');
  const fields=Object.getOwnPropertyDescriptors(calibration);if(Reflect.ownKeys(fields).length!==3||['law','budget','threshold'].some(k=>!fields[k]||!('value'in fields[k])))throw Error('SPATIAL_ENCODING_CALIBRATION');
  if(!['independent','historical-shared','historical-hybrid','retired-flat'].includes(calibration.law))throw Error('SPATIAL_ENCODING_CALIBRATION');
  // Validate the bounded model shape even for independent/flat laws that ignore the floor.
  if(!calibration||!(calibration.budget instanceof Q)||calibration.budget.compare(Q.of(0n))<=0||calibration.budget.compare(Q.of(1n))>0||!(calibration.threshold instanceof Q)||calibration.threshold.compare(Q.of(0n))<0||calibration.threshold.compare(Q.of(1n))>0)throw Error('SPATIAL_ENCODING_CALIBRATION');
- return {...finish(operands,calibration.law,calibration.budget,calibration.threshold),version:'calibrated-selected-spatial-encoding/0.1-candidate' as const,calibration:{law:calibration.law,budget:Q.of(calibration.budget.numerator,calibration.budget.denominator),threshold:Q.of(calibration.threshold.numerator,calibration.threshold.denominator)}};
 }
 /** prior-concern-spatial-encoding/0.1-candidate; subject/delivery authentication upstream. */
-export function encodePreparedSpatialWithPriorConcern(token:PreparedSpatialEncoding,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean){
+export function encodePreparedSpatialWithPriorConcern(token:PreparedSpatialEncoding,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean,calibration?:{readonly budget:Q;readonly threshold:Q}){
  const operands=consumePrepared(token),feedback=modulatePriorConcern(carry,subject,operands.at,Q.of(1n),enabled);
+ if(calibration)validateCalibration({law,budget:calibration.budget,threshold:calibration.threshold});
  const rows=operands.rows.map(row=>{
   if(row.witness.spatialClass!=='SpatialPeripheral')return row;
   const attention=row.attention!.multiply(feedback.residualPool);
   return {...row,attention,raw:row.base.multiply(row.role).multiply(attention),witness:{...row.witness,allocation:attention}};
  });
- return {...finish({...operands,rows},law),feedback};
+ return {...finish({...operands,rows},law,calibration?.budget,calibration?.threshold),feedback};
 }
 /** Existing immediate convenience composition; it grants no public full-source encoder read. */
 export function encodeSelectedSpatialEvidence(view:SelectedView,source:SpatialEvidenceBindingInput,calibration:SpatialCalibration,law:EncodingBudget){

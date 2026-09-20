@@ -51,9 +51,13 @@ export function replenishLocalReserve(source:LocalReserveSource,target:string,at
 /** local-reserve-replenishment-production/0.1-candidate; result is truth-side only. */
 export function replenishLocalReserveWithResult(source:LocalReserveSource,target:string,at:bigint,delivery:Q){
  const f=facts(source),d=f.reserves.get(target);if(!d)throw Error('unknown local reserve');
- const before=materializeReserve(d.amount,d.anchoredAt,d.capacity,d.rate,at),result=replenishReserve(before,d.capacity,copy(delivery));
- const reserves=new Map(f.reserves);reserves.set(target,Object.freeze({...d,amount:copy(result.after),anchoredAt:at}));
- return {source:issue({reserves,channels:f.channels}),result:{target,at,
+ const changed=replenishLocalReserveDefinition(d,at,delivery),reserves=new Map(f.reserves);reserves.set(target,changed.definition);
+ return {source:issue({reserves,channels:f.channels}),result:changed.result};
+}
+/** Same producer for an exact state-backed target; it requires no unrelated anchors. */
+export function replenishLocalReserveDefinition(d:LocalReserveDefinition,at:bigint,delivery:Q){
+ symbol(d.key,'local-reserve/');const before=materializeReserve(d.amount,d.anchoredAt,d.capacity,d.rate,at),result=replenishReserve(before,d.capacity,copy(delivery));
+ return {definition:Object.freeze({...d,amount:copy(result.after),anchoredAt:at}),result:{target:d.key,at,
   prior:{amount:copy(d.amount),anchoredAt:d.anchoredAt},next:{amount:copy(result.after),anchoredAt:at},
   numeric:{before:copy(result.before),potential:copy(result.potential),applied:copy(result.applied),overflow:copy(result.overflow),after:copy(result.after)}}};
 }

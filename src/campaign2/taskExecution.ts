@@ -21,6 +21,8 @@ const name=(e:ScheduledEvent)=>txt(e.eventTypeId.payload);
 function fail(message:string):never{throw new SchedulerContractError('INPUT_NOT_ADMITTED',message);}
 function stage(message:string):never{throw new SchedulerContractError('TASK_STAGE_VIOLATION',message);}
 function compare(a:CanonicalValue,b:CanonicalValue){if(typeof a==='boolean'||a.kind!=='rational'||typeof b==='boolean'||b.kind!=='rational')fail('task exact rational required');return a.numerator*b.denominator-b.numerator*a.denominator;}
+/** Shared terminal deadline value; scheduling and owner authentication upstream. */
+export function taskDeadlineValue(prior:CanonicalValue|undefined){return prior!==undefined&&u(f(rec(prior,372n),1n))===1n?r(372,[unsigned(3)]):undefined;}
 export function createTaskExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,facts:readonly TaskPendingFact[]){
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),prepared:Map<string,ScheduledEvent>|undefined,active=false,sealed=false,instant=0n;
  const plans=new Map<string,{event:ScheduledEvent;state:AuthoritativeState;tasks:Model['tasks'];reads:ActualReadRecord[];subjects:TypedIdentifierValue[];sources:TypedIdentifierValue[];domain:StatePathPattern[];observation?:CanonicalValue;x?:CanonicalValue}>(),targets=new Set<string>();
@@ -59,7 +61,7 @@ export function createTaskExecution(model:Model,modelIdentity:CanonicalValue,run
    const reads=[...p.reads],patch:StatePatch={operations:[]},operations=[] as StatePatch['operations'][number][];
    const accessor=name(event)===names[2]?id(f(model.deadline,9n)):id(f(rec(items(f(model.measurement,9n),'set')[0],374n),4n));
    for(const t of p.tasks){const prior=model.stateModel.read(state,t.path);reads.push({accessorId:accessor,path:t.path,presence:prior.presence,value:prior.value,derivedSources:[]});if(!prior.presence||u(f(rec(prior.value!,372n),1n))!==1n)continue;
-    let value:CanonicalValue|undefined;if(name(event)===names[2])value=r(372,[unsigned(3)]);else if(compare(p.x!,t.minimum)>=0n&&compare(p.x!,t.maximum)<=0n)value=r(372,[unsigned(2),characterEvidenceRefValue({kind:'observation',observationId:u(id(f(rec(p.observation!,203n),1n)).payload)}),signed(instant)]);
+    let value:CanonicalValue|undefined;if(name(event)===names[2])value=taskDeadlineValue(prior.value);else if(compare(p.x!,t.minimum)>=0n&&compare(p.x!,t.maximum)<=0n)value=r(372,[unsigned(2),characterEvidenceRefValue({kind:'observation',observationId:u(id(f(rec(p.observation!,203n),1n)).payload)}),signed(instant)]);
     if(value)operations.push({kind:'set',path:t.path,expected:{presence:true,value:prior.value!},newValue:value});
    }
    const owned={...patch,operations},applied=model.stateModel.applyPatch(state,owned,atom(1025,'authority/prospective-commitments'),{writableRoots:[373n],targetPaths:p.tasks.map(t=>t.path)});

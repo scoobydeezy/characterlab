@@ -1,30 +1,46 @@
 # Current research entry point
 
-**Updated 2026-09-14. Replace this index; chronology belongs in [CAMPAIGN3_LOG.md](CAMPAIGN3_LOG.md).**
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**GA: OPEN; implementation PAUSED and handed off.** Start at [GENERAL_ATTENTION_RESUME_BRIEF.md](GENERAL_ATTENTION_RESUME_BRIEF.md). The primary implementation agent owns registration/compiler steps 2–3 end-to-end, scheduled to resume on or after 2026-09-19. The separately authorized September 14 preflight/bookkeeping did not start or split that pass.
-
-[Work order](CAMPAIGN3_WORK_ORDER_2026_09_14.md) items 1–5 are COMPLETE. Item 6 is next. [Owner decisions](CAMPAIGN3_PENDING_OWNER_DECISIONS.md): **0 open**. Both concern rulings and their comparison obligations are discharged; A/B/C remain candidates, not settled laws.
-
-## Program counters
+**General Attention: COMPLETE in the accepted bounded scope.** Work-order items
+1–6 and the single-owner registration/compiler pass are finished. Start at
+[the qualification report](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md) and
+[VER-C3-GA-001](VERDICT_LEDGER.md). No architectural decision is pending.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **706**, unchanged by September 14 work |
+| Highest permanently allocated record type | **706**, unchanged |
 | Allocated since last verdict/corpus member | **0** |
-| Corpus members | **21**, corpus/0.28.0 |
-| Verdict entries | **12**: 6 substrate, 6 psychological |
-| Active tests, last reported full run | ~1,679; not rerun for bookkeeping |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 13 verdicts** |
+| Frozen GA cohort | **43 models / 36 public comparisons** |
+| Public reexecution/replay | **10 exact reexecutions; 2 restores / 10 continuation instants** |
+| Active source suite | **2,171 tests / 273 files PASS** |
+| Historical reference suite | **328 tests / 43 files PASS** |
+| Build / boundary / post-promotion governance | **PASS / PASS / 6 tests PASS** |
 
-**Past 50 allocations on the second counter, the next item must be an experiment or corpus promotion.** Use [CHECKPOINT_TEMPLATE.md](CHECKPOINT_TEMPLATE.md): revision cap 5, named competitor before allocation, explicit North Star transfer. Mutation sensitivity is not mechanism necessity.
+[The qualification audit](GA_PUBLIC_QUALIFICATION_REV1.json) binds the experiment
+receipts. All 67 templates compile through 706; 77 active event types have rollback
+witnesses. Two current baseline templates remain replacement-only component/compiler
+exclusions. Whole-model limits are 92 invocations, 239 outputs and 228 fresh slots;
+observed maximum work is 21. All 35 predecessor GA models and 247 image files survive.
 
-## Current gates
+[Corpus promotion](CORPUS_0_29_0_PROMOTION_REV1.json) advances PHEN-ATTN-001 to 1.1.0
+with every requirement preserved and its executable fixture attached; the other
+20 members are unchanged. Digest:
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+Prior corpus/experiment identities remain historical evidence. Three previously
+reported-but-missing verdict entries were repaired explicitly on September 20.
 
-- Campaign 2 remains complete in bounded scope. EMB and finite public attention are bounded-qualified with comparison verdicts recorded. Neither implies whole GA or PHEN-ATTN-001 PASS.
-- Next: exact registration/model compiler using 706. Codecs and fixed scope checks do not prove public admission. The GA-local 80 invocations/58 outputs are an input to the whole-model budget; inherited work and runtime slots remain outstanding.
-- Full seam state and missing phenomena: [SEAM_LEDGER.md](SEAM_LEDGER.md), [CAMPAIGN3_ENTRY_READINESS.md](CAMPAIGN3_ENTRY_READINESS.md). Evidence and unresolved comparisons: [VERDICT_LEDGER.md](VERDICT_LEDGER.md).
-- Concern feedback is a transient character-state seam, not general Affect. Encoding suppression and retrieval amplification stay separate; C6 is fixture-relative. No speculative higher-bound family is owed.
+**Finding:** unchanged focal encoding does not guarantee unchanged accessibility;
+denser retained contents alter later recall scores. Shared/hybrid/flat controls form
+different associations even where winners agree. Three protection policies retain
+identical final memory here. Psychological law/reduction choice stays **UNRESOLVED**.
 
-Current corpus: **corpus/0.28.0**, digest
-1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902.
-Membership records obligations: all eleven promoted members entered as **3 PARTIAL + 8 BLOCKED**. The promotion prose's “ten of eleven” is a counting error, corrected forward in CAMPAIGN3_LOG; the historical receipt and its hashed source documents remain intact. Corpus 0.27.0 and verdicts resting on it retain their distinct historical commitment. Frozen contracts, allocations and model bytes are unchanged.
+TaskConcern qualifies the ratified transient feedback edge, not general Affect.
+A/B/C laws, broader Need/surprise, modality/role inference, segmentation and long
+horizons remain scoped research frontiers. Other corpus phenomena retain their prior
+coverage; regression passage is not whole-corpus psychological PASS.
+
+**Next gate:** select the next Campaign 3 phenomenon from [SEAM_LEDGER.md](SEAM_LEDGER.md).
+No bounded GA implementation gate remains. Use CHECKPOINT_TEMPLATE.md; past 50 on
+the second allocation counter, run an experiment or promote corpus rather than allocate.

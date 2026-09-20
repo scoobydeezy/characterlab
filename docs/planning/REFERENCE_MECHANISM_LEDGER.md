@@ -1,5 +1,13 @@
 # Reference Mechanism Preservation Ledger
 
+**2026-09-20 current GA disposition:** [bounded public qualification](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md)
+and VER-C3-GA-001 complete the planned General Attention work item. MEC-005 remains
+CONTROL+CONTRACT; MEC-007/CTL-004 CONTROL; MEC-008/009 CONTROL; MEC-010 CONTROL+CORPUS.
+Their exact public competitors now execute under 43 frozen models, including four
+matched footprint pairs and later probes. RET-001 remains retired. No numerical law,
+general Affect representation or significance-first necessity is declared settled.
+The dated component/source checkpoints below retain their historical scope.
+
 2026-09-13: [Production boundary checkpoint](GENERAL_ATTENTION_PRODUCTION_BOUNDARIES_CHECKPOINT.md)
 executes MEC-007's small-floor footprint comparison through actual canonical Unlimited
 selection and preserves retired-flat1 and historical hybrid's nonconserved total.

@@ -1,0 +1,1357 @@
+{
+  "status": "BOUNDED GENERAL ATTENTION PUBLIC QUALIFICATION PASS",
+  "fixture": {
+    "path": "docs/planning/GA_CORPUS_FIXTURE_1_0_0.md",
+    "sha256": "ff7ad8c6c12c5078b466dbc4aa222a42f98d5fd85e80386eb3cad8ab8eb5224f"
+  },
+  "corpusVersion": "corpus/0.28.0",
+  "experimentIdentity": "0a6901030101050d636f727075732f302e32382e300201052a636f6d70617269736f6e2f67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465030105276861726e6573732f67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465",
+  "experimentDigest": "a4466eddaf5368fa349605a0e4cadaf51497ebff643c5b001d9217fe634aac2c",
+  "publicRuns": 43,
+  "comparisons": 36,
+  "maximumObservedInstantWork": 21,
+  "wholeModelBounds": {
+    "baseline": {
+      "work": 80,
+      "outputs": 229,
+      "slots": 221,
+      "stages": [
+        {
+          "stage": "world",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 4
+        },
+        {
+          "stage": "current-sample",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 16
+        },
+        {
+          "stage": "current-track",
+          "invocations": 1,
+          "outputMaximum": 7,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-bind",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "current-classify",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-freeze",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-roles",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "current-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-sample",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 16
+        },
+        {
+          "stage": "consequence-track",
+          "invocations": 1,
+          "outputMaximum": 7,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-bind",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "consequence-classify",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-freeze",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-roles",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "consequence-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-visual-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "current-visual-encoding",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "current-visual-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-event-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-recollection",
+          "invocations": 2,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "consequence-visual-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "consequence-visual-encoding",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "consequence-visual-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-event-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-recollection",
+          "invocations": 2,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "visual-acquisition-evidence",
+          "invocations": 2,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "body-acquisition-evidence",
+          "invocations": 2,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "ordinary-memory-formation",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-association-formation",
+          "invocations": 2,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-formation",
+          "invocations": 2,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-workspace",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "prior-concern-appraisal",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "prior-concern-producer",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "encoding-concern-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "recall-concern-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-visual-encoding",
+          "invocations": 0,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-event-rank",
+          "invocations": 0,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-command-proposal",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-command-owner",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-deadline-owner",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-outcome-assessment",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "focal-consequence-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-qualification-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retained-attribution",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "attribution-use-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-use",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "attribution-result-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "significance-opportunity",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "significance-join",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-significance",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retention-original",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retention-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-retention",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-association-retention",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-cleanup",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-dispatch",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-owner",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-recollection",
+          "invocations": 1,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "local-reserve-replenishment",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        }
+      ]
+    },
+    "feedback": {
+      "work": 80,
+      "outputs": 229,
+      "slots": 221,
+      "stages": [
+        {
+          "stage": "world",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 4
+        },
+        {
+          "stage": "current-sample",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 16
+        },
+        {
+          "stage": "current-track",
+          "invocations": 1,
+          "outputMaximum": 7,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-bind",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "current-classify",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-freeze",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-roles",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "current-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-sample",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 16
+        },
+        {
+          "stage": "consequence-track",
+          "invocations": 1,
+          "outputMaximum": 7,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-bind",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "consequence-classify",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-freeze",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-roles",
+          "invocations": 1,
+          "outputMaximum": 3,
+          "slotMaximum": 3
+        },
+        {
+          "stage": "consequence-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-visual-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "current-visual-encoding",
+          "invocations": 0,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "current-visual-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-event-rank",
+          "invocations": 0,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-body-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "current-recollection",
+          "invocations": 2,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "consequence-visual-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "consequence-visual-encoding",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-selection",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "consequence-visual-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-event-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-body-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "consequence-recollection",
+          "invocations": 2,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "visual-acquisition-evidence",
+          "invocations": 2,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "body-acquisition-evidence",
+          "invocations": 2,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "ordinary-memory-formation",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-association-formation",
+          "invocations": 2,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-formation",
+          "invocations": 2,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-workspace",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "prior-concern-appraisal",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "prior-concern-producer",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "encoding-concern-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "recall-concern-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-visual-encoding",
+          "invocations": 1,
+          "outputMaximum": 2,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "prior-concern-event-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-command-proposal",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-command-owner",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-deadline-owner",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-outcome-assessment",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "focal-consequence-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-qualification-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retained-attribution",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 1
+        },
+        {
+          "stage": "attribution-use-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-use",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "attribution-result-delivery",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "significance-opportunity",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "significance-join",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-significance",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retention-original",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "retention-dispatch",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "ordinary-memory-retention",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-association-retention",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-cleanup",
+          "invocations": 1,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-dispatch",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "event-presentation-owner",
+          "invocations": 4,
+          "outputMaximum": 0,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-cue",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-rank",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        },
+        {
+          "stage": "goal-baseline-recollection",
+          "invocations": 1,
+          "outputMaximum": 32,
+          "slotMaximum": 32
+        },
+        {
+          "stage": "local-reserve-replenishment",
+          "invocations": 1,
+          "outputMaximum": 1,
+          "slotMaximum": 0
+        }
+      ]
+    },
+    "inherited": {
+      "work": 12,
+      "outputs": 10,
+      "slots": 7
+    },
+    "work": "92",
+    "outputs": "239",
+    "slots": "228"
+  },
+  "footprint": [
+    {
+      "law": "Independent",
+      "sparseFocal": [
+        "3/13",
+        "3/13",
+        "3/13",
+        "3/13"
+      ],
+      "denseFocal": [
+        "3/13",
+        "3/13",
+        "3/13",
+        "3/13"
+      ],
+      "focalEqual": true,
+      "graphMass": [
+        [],
+        []
+      ],
+      "scale": 100,
+      "firstScores": [
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/1",
+            "score": "6/5"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/1",
+            "score": "5/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/1",
+            "score": "4/3"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/1",
+            "score": "3/2"
+          }
+        ],
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/2",
+            "score": "7/10"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/2",
+            "score": "3/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/2",
+            "score": "5/6"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/2",
+            "score": "1/1"
+          }
+        ]
+      ],
+      "winnerAcquiredAt": [
+        [
+          "6",
+          "5"
+        ],
+        [
+          "6",
+          "5"
+        ]
+      ]
+    },
+    {
+      "law": "HistoricalShared",
+      "sparseFocal": [
+        "1/1",
+        "1/1",
+        "1/1",
+        "1/1"
+      ],
+      "denseFocal": [
+        "50/53",
+        "50/53",
+        "50/53",
+        "50/53"
+      ],
+      "focalEqual": false,
+      "graphMass": [
+        [],
+        [
+          [
+            0,
+            20
+          ],
+          [
+            20,
+            0
+          ]
+        ]
+      ],
+      "scale": 100,
+      "firstScores": [
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/1",
+            "score": "6/5"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/1",
+            "score": "5/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/1",
+            "score": "4/3"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/1",
+            "score": "3/2"
+          }
+        ],
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "111/200",
+            "score": "151/200"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "111/200",
+            "score": "161/200"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "111/200",
+            "score": "533/600"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "111/200",
+            "score": "211/200"
+          }
+        ]
+      ],
+      "winnerAcquiredAt": [
+        [
+          "6",
+          "5"
+        ],
+        [
+          "6",
+          "5"
+        ]
+      ]
+    },
+    {
+      "law": "HistoricalHybrid",
+      "sparseFocal": [
+        "3/13",
+        "3/13",
+        "3/13",
+        "3/13"
+      ],
+      "denseFocal": [
+        "3/13",
+        "3/13",
+        "3/13",
+        "3/13"
+      ],
+      "focalEqual": true,
+      "graphMass": [
+        [],
+        [
+          [
+            0,
+            92
+          ],
+          [
+            92,
+            0
+          ]
+        ]
+      ],
+      "scale": 100,
+      "firstScores": [
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/1",
+            "score": "6/5"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/1",
+            "score": "5/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/1",
+            "score": "4/3"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/1",
+            "score": "3/2"
+          }
+        ],
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "37/40",
+            "score": "9/8"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "37/40",
+            "score": "47/40"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "37/40",
+            "score": "151/120"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "37/40",
+            "score": "57/40"
+          }
+        ]
+      ],
+      "winnerAcquiredAt": [
+        [
+          "6",
+          "5"
+        ],
+        [
+          "6",
+          "5"
+        ]
+      ]
+    },
+    {
+      "law": "RetiredFlat",
+      "sparseFocal": [
+        "1/1",
+        "1/1",
+        "1/1",
+        "1/1"
+      ],
+      "denseFocal": [
+        "1/1",
+        "1/1",
+        "1/1",
+        "1/1"
+      ],
+      "focalEqual": true,
+      "graphMass": [
+        [],
+        [
+          [
+            0,
+            100
+          ],
+          [
+            100,
+            0
+          ]
+        ]
+      ],
+      "scale": 100,
+      "firstScores": [
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/1",
+            "score": "6/5"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/1",
+            "score": "5/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/1",
+            "score": "4/3"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/1",
+            "score": "3/2"
+          }
+        ],
+        [
+          {
+            "acquiredAt": "3",
+            "base": "1/5",
+            "pull": "1/1",
+            "score": "6/5"
+          },
+          {
+            "acquiredAt": "4",
+            "base": "1/4",
+            "pull": "1/1",
+            "score": "5/4"
+          },
+          {
+            "acquiredAt": "5",
+            "base": "1/3",
+            "pull": "1/1",
+            "score": "4/3"
+          },
+          {
+            "acquiredAt": "6",
+            "base": "1/2",
+            "pull": "1/1",
+            "score": "3/2"
+          }
+        ]
+      ],
+      "winnerAcquiredAt": [
+        [
+          "6",
+          "5"
+        ],
+        [
+          "6",
+          "5"
+        ]
+      ]
+    }
+  ],
+  "memory": {
+    "firstK0AndK2ScoresEqual": true,
+    "laterSelectedOnlyReinforcement": true,
+    "initialBaseAt6": "1/2",
+    "laterUnretrievedBaseAt6": "1/3",
+    "laterRetrievedBaseAt6": "5/6",
+    "exactTie": {
+      "older": "79",
+      "newer": "103",
+      "score": "83/60",
+      "selected": [
+        "55",
+        "79"
+      ]
+    }
+  },
+  "feedback": {
+    "encodingChangesGraph": true,
+    "retrievalPreservesEncodingAndGraph": true,
+    "knownZeroUnavailableDisabledRemainDistinct": true,
+    "law": "Candidate A only; A/B/C unresolved per VER-C3-CONCERN-002"
+  },
+  "retention": [
+    {
+      "name": "credit-age-only",
+      "attribution": [
+        {
+          "disposition": "1",
+          "consumed": 16,
+          "targets": 1
+        }
+      ],
+      "memory": {
+        "acquisitions": 16,
+        "usedChildren": 14,
+        "significantChildren": 1,
+        "lateAcquisitions": 2,
+        "digest": "8b2cf320a9fcfc5dd0b6cd315d325a60af91281003878fd9437a87b3cf800611"
+      }
+    },
+    {
+      "name": "credit-use-only",
+      "attribution": [
+        {
+          "disposition": "1",
+          "consumed": 16,
+          "targets": 1
+        }
+      ],
+      "memory": {
+        "acquisitions": 16,
+        "usedChildren": 16,
+        "significantChildren": 1,
+        "lateAcquisitions": 0,
+        "digest": "3a1ba085bcf4a6bd2a7588c2fd4604a3772b3c107ca6d7564ad0f4b93addfd91"
+      }
+    },
+    {
+      "name": "credit-shared-protection",
+      "attribution": [
+        {
+          "disposition": "1",
+          "consumed": 16,
+          "targets": 1
+        }
+      ],
+      "memory": {
+        "acquisitions": 16,
+        "usedChildren": 16,
+        "significantChildren": 1,
+        "lateAcquisitions": 0,
+        "digest": "3a1ba085bcf4a6bd2a7588c2fd4604a3772b3c107ca6d7564ad0f4b93addfd91"
+      }
+    },
+    {
+      "name": "credit-significance-first",
+      "attribution": [
+        {
+          "disposition": "1",
+          "consumed": 16,
+          "targets": 1
+        }
+      ],
+      "memory": {
+        "acquisitions": 16,
+        "usedChildren": 16,
+        "significantChildren": 1,
+        "lateAcquisitions": 0,
+        "digest": "3a1ba085bcf4a6bd2a7588c2fd4604a3772b3c107ca6d7564ad0f4b93addfd91"
+      }
+    }
+  ],
+  "preservation": {
+    "priorModels": 35,
+    "priorImageFiles": 247,
+    "referenceUnchanged": true
+  },
+  "tests": [
+    {
+      "file": {
+        "path": "docs/planning/GA_FULL_SOURCE_TESTS_2026_09_20.json",
+        "sha256": "56e26b33f1efd11b31d00f99bdc97e9f9686f64c94d9efb19dd420fc470926e0"
+      },
+      "tests": 2171,
+      "files": 273
+    },
+    {
+      "file": {
+        "path": "docs/planning/GA_REFERENCE_TESTS_2026_09_20.json",
+        "sha256": "b28cdd0d6c4131089f60388b394759d335ca910b93eddceb871bc9d5f88acad4"
+      },
+      "tests": 328,
+      "files": 43
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/general-attention-public-comparisons-rev1/RESULTS.json",
+      "sha256": "f26e1f0b738e0fc1bd27afc3c852f2a24e9df92fbdbb7521b24b0b707dfb8da2"
+    },
+    {
+      "path": "docs/planning/general-attention-public-replay-rev1/RESULTS.json",
+      "sha256": "eca9bd43559fdbd8a366da5c692a21a83df4accc9ab115d44ada21c3e58613e6"
+    },
+    {
+      "path": "docs/planning/campaign3-general-attention-model-rev2/FREEZE.json",
+      "sha256": "27ba4b12edda9c284ef03bf4dd52744f395639429f16077dcf6a0f28c05ef8c4"
+    },
+    {
+      "path": "docs/planning/GA_MODEL_IMAGE_REVIEW_REV2_2026_09_19.json",
+      "sha256": "c671fadd1d19a395ab8fe7d30a70a4ec601913c904b8b77fb59ea90636ac3638"
+    }
+  ],
+  "script": {
+    "path": "scripts/audit-general-attention-qualification.mjs",
+    "sha256": "7c156c49efc459591f3dcf4ceefa11e6b9e665eb493b4fed1c0f6268982e7ab4"
+  },
+  "limits": [
+    "This finite fixture does not qualify general Affect, Need, surprise, arbitrary modalities or long-horizon cognition.",
+    "RetiredFlat remains a negative control; score or graph differences do not establish psychological necessity.",
+    "Two current baseline templates are replacement-only; 77 active GA/inherited event types have rollback witnesses.",
+    "Full source regression preserves existing bounded corpus fixtures, not PASS for every corpus member."
+  ],
+  "counters": {
+    "highestAllocated": 706,
+    "allocatedSinceVerdictOrCorpusMember": 0
+  }
+}

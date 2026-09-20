@@ -12,8 +12,10 @@
 > templates and seventeen revisions of one role crosswalk, and obligation #2 was not run.
 > **Current disposition, 2026-09-14:** work-order items 1–5 are complete. The arithmetic
 > comparison above is discharged by `VER-C3-SALIENCE-001`; its preceding rationale
-> describes the pre-correction state. Registration/compiler closure remains paused;
-> resume through `GENERAL_ATTENTION_RESUME_BRIEF.md`.
+> describes the pre-correction state. **Completion update, 2026-09-20:** all seven
+> obligations below have tested dispositions in
+> `GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md`; the bounded GA pass is COMPLETE.
+> Earlier planning language below is historical, not a new implementation queue.
 
 2026-09-11. User-authorized autonomous research, review and implementation. General
 ATTN-001 remains OPEN. This plan specifies completion obligations rather than treating

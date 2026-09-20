@@ -1,0 +1,471 @@
+{
+  "name": "credit-shared-protection",
+  "modelIdentity": "0a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e6469646174650201042042a6cd07aabf59500ab56703754cf7e5547af832880e8f534c743d530b4e1b6c040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420f30480de03deb16ab54b8da52e8e268d5c50425ce44a6d27b7cc62328be299ed",
+  "runIdentity": "0a68010401010a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e6469646174650201042042a6cd07aabf59500ab56703754cf7e5547af832880e8f534c743d530b4e1b6c040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420f30480de03deb16ab54b8da52e8e268d5c50425ce44a6d27b7cc62328be299ed02010420fc6df3f5fac26ebd0b37b34aaa7c508080c5605906050e2adbf3446b96f00fbb030104206ae9ab94f02f949acb5ee2f7001313bf86674ae2bfccd50b9be0c9c517917a0d040104200102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "instants": 24,
+  "finalClock": "100",
+  "events": 288,
+  "outputs": 224,
+  "maximumInstantWork": 21,
+  "stageCounts": {
+    "event/general-attention-goal-command-proposal": 1,
+    "event/regulatory-diagnostic-probe": 1,
+    "event/regulatory-diagnostic-probe-observation": 1,
+    "event/regulatory-diagnostic-probe-tracking": 1,
+    "event/regulatory-diagnostic-probe-binding": 1,
+    "event/regulatory-diagnostic-probe-classification": 1,
+    "event/regulatory-diagnostic-probe-freeze": 1,
+    "event/measurement-evidence-intake": 1,
+    "event/measurement-episode-evidence": 1,
+    "event/general-attention-goal-command-owner": 1,
+    "event/measurement-prediction-application": 1,
+    "event/general-attention-prior-concern-workspace": 1,
+    "event/general-attention-prior-concern-appraisal": 1,
+    "event/general-attention-prior-concern-producer": 1,
+    "event/general-attention-world": 19,
+    "event/general-attention-current-sample": 17,
+    "event/general-attention-current-track": 17,
+    "event/general-attention-current-bind": 17,
+    "event/general-attention-current-classify": 17,
+    "event/general-attention-current-freeze": 17,
+    "event/general-attention-current-roles": 17,
+    "event/general-attention-current-dispatch": 17,
+    "event/general-attention-current-body-selection": 7,
+    "event/general-attention-body-acquisition-evidence": 9,
+    "event/general-attention-ordinary-memory-formation": 18,
+    "event/general-attention-encoding-concern-delivery": 9,
+    "event/general-attention-current-visual-selection": 9,
+    "event/general-attention-prior-concern-visual-encoding": 9,
+    "event/general-attention-visual-acquisition-evidence": 9,
+    "event/general-attention-event-association-formation": 9,
+    "event/general-attention-event-presentation-formation": 9,
+    "event/general-attention-local-reserve-replenishment": 3,
+    "event/general-attention-consequence-sample": 2,
+    "event/general-attention-consequence-track": 2,
+    "event/general-attention-consequence-bind": 2,
+    "event/general-attention-consequence-classify": 2,
+    "event/general-attention-consequence-freeze": 2,
+    "event/general-attention-consequence-roles": 2,
+    "event/general-attention-consequence-dispatch": 2,
+    "event/general-attention-consequence-body-selection": 2,
+    "event/general-attention-goal-baseline-cue": 1,
+    "event/general-attention-goal-baseline-rank": 1,
+    "event/general-attention-goal-baseline-recollection": 1,
+    "event/general-attention-goal-outcome-assessment": 1,
+    "event/task-deadline": 1,
+    "event/general-attention-recall-concern-delivery": 1,
+    "event/general-attention-focal-consequence-delivery": 1,
+    "event/general-attention-current-body-cue": 1,
+    "event/general-attention-current-visual-cue": 1,
+    "event/general-attention-current-body-rank": 1,
+    "event/general-attention-prior-concern-event-rank": 1,
+    "event/general-attention-current-recollection": 2,
+    "event/general-attention-retained-attribution": 1,
+    "event/general-attention-event-presentation-dispatch": 1,
+    "event/general-attention-attribution-use-dispatch": 1,
+    "event/general-attention-event-presentation-owner": 1,
+    "event/general-attention-ordinary-memory-use": 1,
+    "event/general-attention-significance-opportunity": 1,
+    "event/general-attention-goal-qualification-delivery": 1,
+    "event/general-attention-attribution-result-delivery": 1,
+    "event/general-attention-significance-join": 1,
+    "event/general-attention-ordinary-memory-significance": 1,
+    "event/general-attention-retention-original": 1,
+    "event/general-attention-retention-dispatch": 1,
+    "event/general-attention-ordinary-memory-retention": 1,
+    "event/general-attention-event-association-retention": 1,
+    "event/general-attention-event-presentation-cleanup": 1,
+    "event/general-attention-goal-deadline-owner": 1
+  },
+  "readRoots": {
+    "241": 20,
+    "242": 67,
+    "268": 79,
+    "302": 1,
+    "362": 2,
+    "373": 2,
+    "630": 24,
+    "631": 11,
+    "632": 12,
+    "633": 3,
+    "634": 10,
+    "635": 18,
+    "649": 13
+  },
+  "selected": {
+    "algorithm": 3,
+    "capacity": 2,
+    "counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "candidates": [
+    {
+      "at": "4",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "5",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "17",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "18",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "21",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "22",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "34",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "35",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "41",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "at": "37",
+      "scores": [
+        {
+          "acquisition": "24",
+          "acquiredAt": "4",
+          "base": "1/34",
+          "pull": "1/1",
+          "score": "35/34"
+        },
+        {
+          "acquisition": "35",
+          "acquiredAt": "5",
+          "base": "1/33",
+          "pull": "1/1",
+          "score": "34/33"
+        },
+        {
+          "acquisition": "60",
+          "acquiredAt": "17",
+          "base": "1/21",
+          "pull": "1/1",
+          "score": "22/21"
+        },
+        {
+          "acquisition": "71",
+          "acquiredAt": "18",
+          "base": "1/20",
+          "pull": "1/1",
+          "score": "21/20"
+        },
+        {
+          "acquisition": "94",
+          "acquiredAt": "21",
+          "base": "1/17",
+          "pull": "1/1",
+          "score": "18/17"
+        },
+        {
+          "acquisition": "105",
+          "acquiredAt": "22",
+          "base": "1/16",
+          "pull": "1/1",
+          "score": "17/16"
+        },
+        {
+          "acquisition": "128",
+          "acquiredAt": "34",
+          "base": "1/4",
+          "pull": "1/1",
+          "score": "5/4"
+        },
+        {
+          "acquisition": "139",
+          "acquiredAt": "35",
+          "base": "1/3",
+          "pull": "1/1",
+          "score": "4/3"
+        }
+      ],
+      "winners": [
+        "139",
+        "128",
+        "105",
+        "94",
+        "71",
+        "60",
+        "35",
+        "24"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "acquisition": "24",
+      "acquiredAt": "4",
+      "presentations": [
+        "4",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "35",
+      "acquiredAt": "5",
+      "presentations": [
+        "5",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "60",
+      "acquiredAt": "17",
+      "presentations": [
+        "17",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "71",
+      "acquiredAt": "18",
+      "presentations": [
+        "18",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "94",
+      "acquiredAt": "21",
+      "presentations": [
+        "21",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "105",
+      "acquiredAt": "22",
+      "presentations": [
+        "22",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "128",
+      "acquiredAt": "34",
+      "presentations": [
+        "34",
+        "37"
+      ]
+    },
+    {
+      "acquisition": "139",
+      "acquiredAt": "35",
+      "presentations": [
+        "35",
+        "37"
+      ]
+    }
+  ],
+  "graphDigest": "688af9c64516695a9233e9ca398f44825435854868f95f89a644046686b56287",
+  "finalMemory": {
+    "acquisitions": 16,
+    "usedChildren": 16,
+    "significantChildren": 1,
+    "lateAcquisitions": 0,
+    "digest": "3a1ba085bcf4a6bd2a7588c2fd4604a3772b3c107ca6d7564ad0f4b93addfd91"
+  },
+  "attribution": [
+    {
+      "disposition": "1",
+      "consumed": 16,
+      "targets": 1
+    }
+  ],
+  "modulations": [
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    }
+  ],
+  "hashes": {
+    "initial": "fc6df3f5fac26ebd0b37b34aaa7c508080c5605906050e2adbf3446b96f00fbb",
+    "originals": "6ae9ab94f02f949acb5ee2f7001313bf86674ae2bfccd50b9be0c9c517917a0d",
+    "state": "ff3d39e2cb12917807a5c415a31ef4b6aa6d28b49cb862db440d4c9f952ea15a",
+    "outputs": "0355ad1c9c732593b930818b380badd61337619f6e2fc94dcb6fd1766f3fa963",
+    "trace": "d2d9722ebb249cdb009136f788f8f9a79141457af59d0cf41a731e77852bf6b9",
+    "save": "bbca162d4c7978b1b836d329d85e507ec06cd0d575fc9f06e63eaf1106232cf1"
+  }
+}

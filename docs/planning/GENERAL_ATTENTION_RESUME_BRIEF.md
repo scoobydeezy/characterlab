@@ -3,6 +3,14 @@
 **This is the GA entry point.** Written 2026-09-14 by the external review agent for the
 primary implementation agent, who resumes on or after 2026-09-19.
 
+**Completion annotation, 2026-09-20:** the same primary owner completed steps 2–5
+without delegation. All 67 concrete706 bindings, 43 frozen public models, actual
+source/owner/feedback/credit paths, rollback and complete-prefix replay are qualified.
+See `GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md`, `GA_PUBLIC_QUALIFICATION_REV1.json`
+and `VER-C3-GA-001`. Corpus0.29.0 preserves twenty members and advances the bounded
+attention fixture. This document's dated instructions below remain historical;
+the bounded GA work item is COMPLETE, with broader laws and phenomena still scoped.
+
 **Read this before `GENERAL_ATTENTION_PAUSE_CHECKPOINT_2026_09_13.md`.** That checkpoint's
 frozen-artifact list and technical steps remain correct, but a great deal changed in the
 repository on 2026-09-14 while GA was paused, and its "Resume here" ordering is superseded.
@@ -243,4 +251,5 @@ fork needs a decision. This checklist creates no additional approval gate.
 7. `GA_ACCESSOR_CLOSURE_REV1.md`, `GA_WORK_CEILING_REV1.json` — direct inputs to your pass
 8. `CAMPAIGN3_LOG.md` — your own prior chronology, if you need it
 
-General Attention remains **OPEN**. No owner decision is pending.
+General Attention's planned bounded pass is **COMPLETE** as of 2026-09-20.
+No owner decision is pending; see the completion annotation above.

@@ -1,0 +1,391 @@
+{
+  "name": "footprint-HistoricalHybrid-sparse",
+  "modelIdentity": "0a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465020104204287e0eee6331a09525790c6bc0dedb70d3f814b14102118eb7b8f1e86082ed0040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420ac1e5dbedc5a2b3326c82628c8633a02825682d4e6ca5f9edfe9e6a14746445b",
+  "runIdentity": "0a68010401010a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465020104204287e0eee6331a09525790c6bc0dedb70d3f814b14102118eb7b8f1e86082ed0040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420ac1e5dbedc5a2b3326c82628c8633a02825682d4e6ca5f9edfe9e6a14746445b020104204192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c50301042016a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd040104200102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "instants": 11,
+  "finalClock": "21",
+  "events": 153,
+  "outputs": 138,
+  "maximumInstantWork": 18,
+  "stageCounts": {
+    "event/regulatory-diagnostic-probe": 1,
+    "event/regulatory-diagnostic-probe-observation": 1,
+    "event/regulatory-diagnostic-probe-tracking": 1,
+    "event/regulatory-diagnostic-probe-binding": 1,
+    "event/regulatory-diagnostic-probe-classification": 1,
+    "event/regulatory-diagnostic-probe-freeze": 1,
+    "event/measurement-evidence-intake": 1,
+    "event/measurement-episode-evidence": 1,
+    "event/measurement-prediction-application": 1,
+    "event/general-attention-prior-concern-workspace": 1,
+    "event/general-attention-prior-concern-appraisal": 1,
+    "event/general-attention-prior-concern-producer": 1,
+    "event/general-attention-world": 8,
+    "event/general-attention-current-sample": 8,
+    "event/general-attention-current-track": 8,
+    "event/general-attention-current-bind": 8,
+    "event/general-attention-current-classify": 8,
+    "event/general-attention-current-freeze": 8,
+    "event/general-attention-encoding-concern-delivery": 4,
+    "event/general-attention-current-roles": 8,
+    "event/general-attention-current-dispatch": 8,
+    "event/general-attention-current-body-selection": 4,
+    "event/general-attention-current-visual-selection": 4,
+    "event/general-attention-prior-concern-visual-encoding": 4,
+    "event/general-attention-body-acquisition-evidence": 4,
+    "event/general-attention-visual-acquisition-evidence": 4,
+    "event/general-attention-ordinary-memory-formation": 8,
+    "event/general-attention-event-association-formation": 4,
+    "event/general-attention-event-presentation-formation": 4,
+    "event/general-attention-recall-concern-delivery": 4,
+    "event/general-attention-current-body-cue": 4,
+    "event/general-attention-current-visual-cue": 4,
+    "event/general-attention-current-body-rank": 4,
+    "event/general-attention-prior-concern-event-rank": 4,
+    "event/general-attention-current-recollection": 8,
+    "event/general-attention-event-presentation-dispatch": 4,
+    "event/general-attention-event-presentation-owner": 4,
+    "event/task-deadline": 1
+  },
+  "readRoots": {
+    "241": 16,
+    "242": 20,
+    "268": 42,
+    "302": 1,
+    "362": 2,
+    "373": 2,
+    "630": 12,
+    "631": 8,
+    "632": 12,
+    "634": 8,
+    "635": 8,
+    "649": 24
+  },
+  "selected": {
+    "algorithm": 1,
+    "capacity": 2,
+    "counts": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "candidates": [
+    {
+      "at": "3",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "4",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "5",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    },
+    {
+      "at": "6",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "at": "7",
+      "scores": [
+        {
+          "acquisition": "23",
+          "acquiredAt": "3",
+          "base": "1/5",
+          "pull": "1/1",
+          "score": "6/5"
+        },
+        {
+          "acquisition": "39",
+          "acquiredAt": "4",
+          "base": "1/4",
+          "pull": "1/1",
+          "score": "5/4"
+        },
+        {
+          "acquisition": "55",
+          "acquiredAt": "5",
+          "base": "1/3",
+          "pull": "1/1",
+          "score": "4/3"
+        },
+        {
+          "acquisition": "71",
+          "acquiredAt": "6",
+          "base": "1/2",
+          "pull": "1/1",
+          "score": "3/2"
+        }
+      ],
+      "winners": [
+        "71",
+        "55"
+      ]
+    },
+    {
+      "at": "8",
+      "scores": [
+        {
+          "acquisition": "23",
+          "acquiredAt": "3",
+          "base": "1/6",
+          "pull": "1/1",
+          "score": "7/6"
+        },
+        {
+          "acquisition": "39",
+          "acquiredAt": "4",
+          "base": "1/5",
+          "pull": "1/1",
+          "score": "6/5"
+        },
+        {
+          "acquisition": "55",
+          "acquiredAt": "5",
+          "base": "3/4",
+          "pull": "1/1",
+          "score": "7/4"
+        },
+        {
+          "acquisition": "71",
+          "acquiredAt": "6",
+          "base": "5/6",
+          "pull": "1/1",
+          "score": "11/6"
+        }
+      ],
+      "winners": [
+        "71",
+        "55"
+      ]
+    },
+    {
+      "at": "9",
+      "scores": [
+        {
+          "acquisition": "23",
+          "acquiredAt": "3",
+          "base": "1/7",
+          "pull": "1/1",
+          "score": "8/7"
+        },
+        {
+          "acquisition": "39",
+          "acquiredAt": "4",
+          "base": "1/6",
+          "pull": "1/1",
+          "score": "7/6"
+        },
+        {
+          "acquisition": "55",
+          "acquiredAt": "5",
+          "base": "31/30",
+          "pull": "1/1",
+          "score": "61/30"
+        },
+        {
+          "acquisition": "71",
+          "acquiredAt": "6",
+          "base": "13/12",
+          "pull": "1/1",
+          "score": "25/12"
+        }
+      ],
+      "winners": [
+        "71",
+        "55"
+      ]
+    },
+    {
+      "at": "10",
+      "scores": [
+        {
+          "acquisition": "23",
+          "acquiredAt": "3",
+          "base": "1/8",
+          "pull": "1/1",
+          "score": "9/8"
+        },
+        {
+          "acquisition": "39",
+          "acquiredAt": "4",
+          "base": "1/7",
+          "pull": "1/1",
+          "score": "8/7"
+        },
+        {
+          "acquisition": "55",
+          "acquiredAt": "5",
+          "base": "5/4",
+          "pull": "1/1",
+          "score": "9/4"
+        },
+        {
+          "acquisition": "71",
+          "acquiredAt": "6",
+          "base": "77/60",
+          "pull": "1/1",
+          "score": "137/60"
+        }
+      ],
+      "winners": [
+        "71",
+        "55"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "acquisition": "23",
+      "acquiredAt": "3",
+      "presentations": [
+        "3"
+      ]
+    },
+    {
+      "acquisition": "39",
+      "acquiredAt": "4",
+      "presentations": [
+        "4"
+      ]
+    },
+    {
+      "acquisition": "55",
+      "acquiredAt": "5",
+      "presentations": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "acquisition": "71",
+      "acquiredAt": "6",
+      "presentations": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "graphDigest": "3b05ea3950f8365dfb478412f3dc8d05f8120d47f5df700da00030ab8e341c71",
+  "finalMemory": {
+    "acquisitions": 8,
+    "usedChildren": 0,
+    "significantChildren": 0,
+    "lateAcquisitions": 0,
+    "digest": "f18b2df662112340a55e3ed0b1ef59530d94f73bdc3cc47a3f915e5f08bb924e"
+  },
+  "attribution": [],
+  "modulations": [
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "1",
+      "branch": "2",
+      "residual": "1/1",
+      "omega": "1/1"
+    }
+  ],
+  "hashes": {
+    "initial": "4192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c5",
+    "originals": "16a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd",
+    "state": "f16e7cde67bd28e43fb3bdc69d9979b547b272666ddbebf35b42fa5c6bd18372",
+    "outputs": "9da4b6f53d09d8a2ed423303e14abe27a58cab527922e3ee94d4a7604a994f31",
+    "trace": "de9d71bf86e70617207d304ecd02b61d76f7dc9df649e508e1aaff0561dc0043",
+    "save": "c1e36332f4d91e51059b4341b48c74a709a48756714dae72e8869d7d8d716c29"
+  }
+}

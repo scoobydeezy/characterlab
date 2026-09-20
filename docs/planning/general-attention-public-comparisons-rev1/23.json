@@ -1,0 +1,436 @@
+{
+  "name": "source-no-prediction-access",
+  "modelIdentity": "0a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465020104204287e0eee6331a09525790c6bc0dedb70d3f814b14102118eb7b8f1e86082ed0040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420db0b685156f5c171efac3a082b7b0ce6be2936e2cde79e1e9be5863a6b09cd0e",
+  "runIdentity": "0a68010401010a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e646964617465020104204287e0eee6331a09525790c6bc0dedb70d3f814b14102118eb7b8f1e86082ed0040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420db0b685156f5c171efac3a082b7b0ce6be2936e2cde79e1e9be5863a6b09cd0e020104204192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c50301042016a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd040104200102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "instants": 11,
+  "finalClock": "21",
+  "events": 153,
+  "outputs": 162,
+  "maximumInstantWork": 18,
+  "stageCounts": {
+    "event/regulatory-diagnostic-probe": 1,
+    "event/regulatory-diagnostic-probe-observation": 1,
+    "event/regulatory-diagnostic-probe-tracking": 1,
+    "event/regulatory-diagnostic-probe-binding": 1,
+    "event/regulatory-diagnostic-probe-classification": 1,
+    "event/regulatory-diagnostic-probe-freeze": 1,
+    "event/measurement-evidence-intake": 1,
+    "event/measurement-episode-evidence": 1,
+    "event/measurement-prediction-application": 1,
+    "event/general-attention-prior-concern-workspace": 1,
+    "event/general-attention-prior-concern-appraisal": 1,
+    "event/general-attention-prior-concern-producer": 1,
+    "event/general-attention-world": 8,
+    "event/general-attention-current-sample": 8,
+    "event/general-attention-current-track": 8,
+    "event/general-attention-current-bind": 8,
+    "event/general-attention-current-classify": 8,
+    "event/general-attention-current-freeze": 8,
+    "event/general-attention-encoding-concern-delivery": 4,
+    "event/general-attention-current-roles": 8,
+    "event/general-attention-current-dispatch": 8,
+    "event/general-attention-current-body-selection": 4,
+    "event/general-attention-current-visual-selection": 4,
+    "event/general-attention-prior-concern-visual-encoding": 4,
+    "event/general-attention-body-acquisition-evidence": 4,
+    "event/general-attention-visual-acquisition-evidence": 4,
+    "event/general-attention-ordinary-memory-formation": 8,
+    "event/general-attention-event-association-formation": 4,
+    "event/general-attention-event-presentation-formation": 4,
+    "event/general-attention-recall-concern-delivery": 4,
+    "event/general-attention-current-body-cue": 4,
+    "event/general-attention-current-visual-cue": 4,
+    "event/general-attention-current-body-rank": 4,
+    "event/general-attention-prior-concern-event-rank": 4,
+    "event/general-attention-current-recollection": 8,
+    "event/general-attention-event-presentation-dispatch": 4,
+    "event/general-attention-event-presentation-owner": 4,
+    "event/task-deadline": 1
+  },
+  "readRoots": {
+    "241": 32,
+    "242": 20,
+    "268": 42,
+    "302": 1,
+    "362": 1,
+    "373": 2,
+    "630": 12,
+    "631": 8,
+    "632": 12,
+    "634": 8,
+    "635": 8,
+    "649": 24
+  },
+  "selected": {
+    "algorithm": 3,
+    "capacity": 2,
+    "counts": [
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "candidates": [
+    {
+      "at": "3",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "1/10",
+          "raw": "27/1000",
+          "strength": "27/1027"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "1/10",
+          "raw": "9/500",
+          "strength": "9/509"
+        }
+      ]
+    },
+    {
+      "at": "4",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "1/10",
+          "raw": "27/1000",
+          "strength": "27/1027"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "1/10",
+          "raw": "9/500",
+          "strength": "9/509"
+        }
+      ]
+    },
+    {
+      "at": "5",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "1/10",
+          "raw": "27/1000",
+          "strength": "27/1027"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "1/10",
+          "raw": "9/500",
+          "strength": "9/509"
+        }
+      ]
+    },
+    {
+      "at": "6",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "1/10",
+          "raw": "27/1000",
+          "strength": "27/1027"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "1/10",
+          "raw": "9/500",
+          "strength": "9/509"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "at": "7",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "1/4",
+          "pull": "51/100",
+          "score": "19/25"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/3",
+          "pull": "17/50",
+          "score": "101/150"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "1/2",
+          "pull": "17/50",
+          "score": "21/25"
+        }
+      ],
+      "winners": [
+        "103",
+        "55"
+      ]
+    },
+    {
+      "at": "8",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "7/10",
+          "pull": "51/100",
+          "score": "121/100"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/4",
+          "pull": "17/50",
+          "score": "59/100"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "5/6",
+          "pull": "17/50",
+          "score": "88/75"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    },
+    {
+      "at": "9",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "1/1",
+          "pull": "51/100",
+          "score": "151/100"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/5",
+          "pull": "17/50",
+          "score": "27/50"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "13/12",
+          "pull": "17/50",
+          "score": "427/300"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    },
+    {
+      "at": "10",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "103/84",
+          "pull": "51/100",
+          "score": "1823/1050"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/6",
+          "pull": "17/50",
+          "score": "38/75"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "77/60",
+          "pull": "17/50",
+          "score": "487/300"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "acquisition": "55",
+      "acquiredAt": "4",
+      "presentations": [
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "acquisition": "79",
+      "acquiredAt": "5",
+      "presentations": [
+        "5"
+      ]
+    },
+    {
+      "acquisition": "103",
+      "acquiredAt": "6",
+      "presentations": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "graphDigest": "61bfd7252ff393109a8794e6e154715ae0ed4141867b6559fd5849b116a0bd3a",
+  "finalMemory": {
+    "acquisitions": 7,
+    "usedChildren": 0,
+    "significantChildren": 0,
+    "lateAcquisitions": 0,
+    "digest": "92bbba753cd6bc099ff994b2341a34fd1feca17d3e34e3f58c7ed9d8a98330a9"
+  },
+  "attribution": [],
+  "modulations": [
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    },
+    {
+      "source": "2",
+      "branch": "3",
+      "residual": "1/1",
+      "omega": "1/1"
+    }
+  ],
+  "hashes": {
+    "initial": "4192989e1f94dedd1c426da49ea8f6b71801615306de2ada79fc3d2c2c4136c5",
+    "originals": "16a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd",
+    "state": "22e3f15fc9af8d68f443aa45cbc3902eeade1dbf63f7fb19f84ac1eee2d35e5e",
+    "outputs": "55b35da93623579d9ac8000e56eb62388cb704a0721d52c99ab3ce7626fb2eac",
+    "trace": "cd14ddb19d748c65ea494bfa2c60c3e61a15cd60b588715cba1e6df66725f703",
+    "save": "c6ab2ae1a2778e54920203ca7d622f26afa45ea874d374460083eddc340844e4"
+  }
+}

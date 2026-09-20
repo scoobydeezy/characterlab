@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-19",
+  "status": "Concrete declaration admission implemented; whole registration/compiler and public GA closure OPEN",
+  "counters": {
+    "highestAllocatedRecordType": 706,
+    "allocatedSinceLastVerdictOrCorpusMember": 0
+  },
+  "fullRun": {
+    "command": "npm test -- --maxWorkers=2 --minWorkers=1",
+    "success": true,
+    "files": 252,
+    "tests": 1918,
+    "passedTests": 1918,
+    "failedTests": 0,
+    "timeoutSettingsChanged": false
+  },
+  "newCompilerTests": 52,
+  "packagingTargetCalibrationProjections": 30,
+  "concreteRegistrations": 67,
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "finalTypecheck": "npx tsc --noEmit --incremental false",
+    "boundaries": true
+  },
+  "frozenManifestFileCommitmentsVerified": 28,
+  "componentVersionSourceDeclarationsVerified": 52,
+  "sources": [
+    {
+      "path": "src/campaign3/generalAttentionCodecs.ts",
+      "sha256": "4dfbc7ae48eebb7834d17d44e8b8245a39eaf64a6abe43f70d79209e57a93ba8"
+    },
+    {
+      "path": "src/campaign3/generalAccessors.ts",
+      "sha256": "923bf770919d2e90e1eb775653d640cd5bff188dba753d3dea10b30cd82db84d"
+    },
+    {
+      "path": "src/campaign3/generalBindingProfile.ts",
+      "sha256": "905392e86d99022803abebace6ac892e064e5b3d737634bdd42128c36317cacd"
+    },
+    {
+      "path": "src/campaign3/generalDefinitionProfile.ts",
+      "sha256": "d7e1924fb5bbfad8417ddac8dca259ee38c7b08c5cb282e1fb67ecc36bcf573e"
+    },
+    {
+      "path": "src/campaign3/generalDeclarations.ts",
+      "sha256": "83ff4112613269c8421303e4cf59b3a13ed9dfdfbc18aae136956eb27b8ef1b0"
+    },
+    {
+      "path": "src/test/generalDeclarationProfile.test.ts",
+      "sha256": "c7dc05350d50ec1172c7c916310a1af988c8f8aa0f9eb3ec600c50f94da907ad"
+    }
+  ],
+  "checkpoint": "docs/planning/GA_CONCRETE_DECLARATION_CHECKPOINT_2026_09_19.md",
+  "remaining": [
+    "Source/profile/scene/panel and formation-protocol instance closure",
+    "Inherited accessor integration and runtime output slots",
+    "Whole-model state ownership, identity and inherited work/slot budgets",
+    "Source-authenticated producer joins, rollback and public replay"
+  ]
+}

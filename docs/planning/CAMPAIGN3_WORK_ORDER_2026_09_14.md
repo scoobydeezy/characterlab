@@ -11,10 +11,11 @@ semantics. Every prior qualification and exclusion stands exactly as recorded.
 
 ---
 
-**Current disposition:** items 1–5 COMPLETE. Salience, EMB and ATTN verdicts are
+**Current disposition, 2026-09-20:** items 1–6 COMPLETE. Salience, EMB and ATTN verdicts are
 recorded; corpus0.28.0 is promoted; both concern rulings and their comparison
-obligations are discharged. Item 6 is handed off and paused; see
-[GA resume brief](GENERAL_ATTENTION_RESUME_BRIEF.md). The task descriptions and
+obligations are discharged. Item 6's bounded GA qualification and VER-C3-GA-001 are
+complete; see [GA qualification](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md).
+Corpus0.29.0 is the preserved successor with the tested attention fixture. The task descriptions and
 pre-correction rationale below are retained as the issued work order.
 
 ## Why the order is changing

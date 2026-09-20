@@ -837,3 +837,207 @@ Read-only recompilation with the project’s canonical encoder reproduced both c
 Correct-forward clarification: the promotion receipt lists **three PARTIAL and eight BLOCKED** statuses, so **all eleven**, not ten, promoted members entered BLOCKED or PARTIAL. The contrary count in the receipt’s limits prose, its hashed PHENOMENON_CORPUS source, the successor-manifest narrative, and the historical seam-ledger entry is a prose counting error. Preserve those historical commitments; this correction changes no member, version, status, canonical digest, or verdict. Current routing uses the corrected count.
 
 Counters remain **706 / 0**. This is additional bookkeeping evidence for the checkpoint above; no implementation, allocation, behavioral test, or mechanism qualification was performed.
+
+## General Attention compiler implementation resumed — 2026-09-19
+
+**Disposition:** LOCAL DISPOSITION — no owner ruling required; GA and registration/compiler closure remain OPEN.
+**Stage (Brief §9):** A — internal compiler fragments; no new public Stage B claim.
+
+### Counters
+
+| Counter | Value |
+|---|---|
+| Highest allocated record type | 706 |
+| Allocated since last verdict/corpus member | 0 |
+
+### What changed
+
+Resumed the single-owner steps 2–3 pass: `generalRegistration.ts` derives all 67 template bindings to frozen stage/member IDs, input/output schemas, output cardinalities and ownership, and compares complete 706 rows against compiler-owned implementation bindings. `generalAccessors.ts` compiles the eight accepted accessor descriptors with exact subject/root/field/return grammar checks, authoritative roster resolution, cue-before-owner-read gating, canonical recall erasure and detached results. No contract, allocation, model identity, corpus byte or reference source changed.
+
+### Evidence
+
+`GA_REGISTRATION_COMPILER_PROGRESS_REV1.json` records the focused tests, full-suite runs, production build and 28 verified frozen-manifest file commitments. The new tests exercise all 67 template schema resolutions, exact registration differences (including optional PRJ, versions, definitions and write selectors), all eight accessor descriptors, wrong subject/root/domain/return grammar, absent body/event cues, missing owner leaves and mutation of returned derived values/read receipts. These are internal compiler-component controls, not source-authenticated public admission or runtime rollback evidence.
+
+Validation: 24 focused tests passed (15 new). The default `npm test` run passed 1,851 tests and timed out on 15 existing tests across eight files. A complete rerun with `npm test -- --maxWorkers=2 --minWorkers=1` passed **all 1,866 tests in 251 files**, with existing timeout settings unchanged. `npm run build` passed, including reference boundaries and TypeScript. No reference implementation validation is claimed.
+
+### Stage C competitor
+
+Existing independent/shared/hybrid/retired-flat encoding controls and concern candidates A/B/C, including DisabledFeedback, remain the named psychological comparisons. No allocation or mechanism reduction occurred. Registration rejection and mutation-isolation tests establish implementation constraints, not mechanism necessity.
+
+### North Star transfer
+
+Supports §11's separation of retained content from current accessibility and §30's angry person who disproportionately retrieves prior insults: the ranker receives only its permitted modality's surviving evidence after an available cue and subject resolution. The canonical view omits retention-protection metadata; this implementation does not itself demonstrate that behavioral archetype or general affect.
+
+### Next gate
+
+Build concrete compiler-owned implementation bindings and connect these fragments to actual model admission. **The registration tests deliberately use synthetic versions and bindings; all 67 concrete component-version/definition/content bindings remain owed.** Canonical role/domain validators, exact 266 PRJ declarations, goal/spec/content/referent/holder coupling, model-qualified state roots and output-slot execution remain OPEN. The accessor compiler requires already qualified model subjects and authenticated operands from its caller; it is not a new public input route. Existing SEM counters/active files, task/prediction and physical-source accessors retain their separate admission obligations.
+
+Runtime source/subject/owner joins, common-B0 rollback, replay, cohort identities, inherited work and runtime slot budgets remain OPEN. The 80/58 calculation remains GA-local only. Continue steps 2–3 with the same owner; this checkpoint neither closes nor splits the pass.
+
+### Owner decision pending
+
+No. Counters remain **706 / 0**; corpus/0.28.0 still has 21 members and 12 verdict entries remain recorded.
+
+## General Attention concrete declaration admission — 2026-09-19
+
+**Disposition:** LOCAL DISPOSITION; complete registration/compiler and public GA closure remain OPEN.
+**Stage (Brief §9):** A — executable declaration admission.
+
+| Counter | Value |
+|---|---|
+| Highest allocated record type | 706 |
+| Allocated since last verdict/corpus member | 0 |
+
+The same primary owner continued steps 2–3. `generalBindingProfile.ts` now supplies concrete 706 bindings for all 67 stages; `generalDefinitionProfile.ts` supplies calibration/content/predicate instances; `generalDeclarations.ts` performs actual closed-profile admission, content commitment, goal/spec/referent/holder coupling, composed role checks, qualified accessor construction and GA-domain state-leaf validation. Inherited definition/map-key envelopes carry GA values without weakening their surrounding grammar. Mandatory PRJ also runs at stages without memory reads.
+
+Evidence and exact limits are in `GA_REGISTRATION_COMPILER_PROGRESS_REV2.json` and `GA_CONCRETE_DECLARATION_CHECKPOINT_2026_09_19.md`. The 52 new compiler tests exercise all 30 packaging-target calibration projections and explicit malformed-but-decodable controls. All 28 frozen-manifest file commitments remain unchanged. Existing component controls and public-model receipts are preserved.
+
+Full validation passed **1,918 tests in 252 files** with two workers and unchanged timeouts. Production build, final TypeScript check and reference-boundary check passed. No reference-tree edits or reference test result are claimed.
+
+**Stage C competitor:** independent/shared/hybrid/retired-flat encoding and concern A/B/C remain distinct; declaration tests do not establish mechanism necessity. **North Star transfer:** qualified holder binding and evidence-only recall access support separate retention/accessibility and the §30 angry-person retrieval archetype, without claiming general Affect or public behavioral coverage.
+
+**Next gate:** source/profile/scene/panel and formation-protocol instance closure, inherited accessor integration and runtime output slots, followed by cohort identities and whole-model budgets. Runtime must still authenticate producing events before internal accessor construction. The 80/58 count remains GA-local. This checkpoint neither closes nor delegates the single-owner pass. **Owner decision pending:** no.
+
+## General Attention source/protocol declarations — 2026-09-19
+
+**Disposition:** LOCAL DISPOSITION; Stage A declaration admission; public GA OPEN. Counters: **706 highest allocated / 0 since last verdict or corpus member**.
+
+Added concrete GA scene/panel/source profiles, eight observation originals and exact selection/cue use policies. The compiler invokes source constructors and schedule/policy checks, qualifies marker content and requires exact frame coverage. Four visual/body current/consequence selector bindings now identify actual audit/view schemas, selection fields and PRJ; the formation profile checks its runtime-only singleton against a separate substrate ownership declaration and the ordinary formation owner. No runtime hook completion is inferred.
+
+Integration found and corrected five fixed collection-element roles incorrectly represented as scalar 265 RecordField roles in the prior increment. Valid channel/cue/loss collections now pass their fixed carrier grammar; invalid namespace/occurrence operands still reject. Previous source fingerprints remain historical.
+
+`GA_REGISTRATION_COMPILER_PROGRESS_REV3.json` records **146 affected tests / 12 files PASS**, including 22 new controls, plus production build, reference boundaries and 28 preserved frozen commitments. The preceding 1,918-test full run was not repeated or relabeled. Details, fixture choices and limits are in `GA_SOURCE_PROTOCOL_CHECKPOINT_2026_09_19.md`.
+
+**Stage C competitor:** zero-capacity, denied-port and unresolved-role source controls remain distinct; existing encoding and concern competitors remain unchanged. **North Star transfer:** cue availability stays independent of acquisition capacity, and actual observer evidence remains distinct from authored identity, supporting the §30 retrieval archetype without claiming public qualification.
+
+**Next gate:** inherited accessors and runtime output slots, source/subject/owner authentication, and whole-model state composition. The local source calendar does not yet exercise goal-assessment or attribution schedules; inherited probe state/originals and physical anchors remain owed. The same primary owner retains the pass. **Owner decision pending:** no.
+
+## General Attention inherited workspace reads — 2026-09-19
+
+**Disposition:** LOCAL DISPOSITION; bounded internal Stage B workspace path. Public GA OPEN. Counters: **706 highest allocated / 0 since last verdict or corpus member**.
+
+The concrete compiler now binds inherited task/prediction reads to the existing task-cognitive workspace transformation. Exact committed keys, roster qualification, actual read records and leaf validation preserve capacity/access/lifecycle gates and distinguish absent prediction from known zero. Input observer/agenda and occurrence grammar reject before reads; actual source authentication and slot freshness still belong to the unfinished runtime.
+
+**Evidence:** 120 affected tests / 7 files PASS, including 13 new workspace tests; typecheck, production build and reference-boundary check PASS. See `GA_WORKSPACE_READ_CHECKPOINT_2026_09_19.md` for the test inventory and scope. The prior full-suite run was not repeated or relabeled.
+
+**Stage C competitors:** source-capacity1, source-no-task-access and source-no-prediction-access remain committed comparators; no mechanism necessity or new verdict follows from read-exclusion tests. **North Star transfer:** retain accessible task, prediction and concern as separate operands for the §30 retrieval archetype. MEC-020 lifecycle and MEC-007 relevance obligations remain preserved.
+
+**Next gate:** inherited SEM/physical read integration and transactional runtime output slots, followed by source/owner authentication and whole-model ownership. The 80/58 count remains GA-local; the same primary owner retains steps 2–3. **Owner decision pending:** no.
+
+## General Attention integrated producers — 2026-09-19
+
+**LOCAL DISPOSITION; GA OPEN; active work continues.** Counters: **706 / 0**.
+Actual physical and SEM producers now join selection, formation, bounded memory retention,
+association settlement, safe cue recall, recollection publication and presentation ownership.
+Source/state integration covers all eight committed opportunities with canonical state
+round trips. Focused controls: 11 inherited reads, 11 output slots, 8 source/state integration,
+5 concern production; existing visual formation10 and concern6 controls also pass.
+Full suite/build evidence is pending. See `GA_INTEGRATED_PRODUCERS_CHECKPOINT_2026_09_19.md`.
+
+Terminal concern production and strictly later delivery preserve known-zero, unavailable
+and disabled branches; the inherited probe interpreter is bound to GA's subject and recipe.
+This does not qualify a public model or general Affect. Stage C retains source, budget,
+selection, association, retention and separate encoding/retrieval feedback comparators.
+North Star transfer: safe retained evidence, graph access and presentation history remain
+distinct for the §30 retrieval archetypes. Next: inherited prediction and remaining owner
+joins, then whole-model work/slot closure and public replay. **No owner decision pending.**
+The user directs continued work until GA completion or an architectural blocker.
+
+### 2026-09-19 — actual inherited/terminal joins and source scheduler
+
+LOCAL DISPOSITION; GA OPEN; continued execution under the user's stop condition.
+Counters **706 / 0**, corpus0.28.0 **21**, verdicts **12**, owner decisions **0**.
+Actual probe-to-carriage-to-M1-to-prediction, terminal concern, goal lifecycle,
+consequence/qualification delivery, unavailable attribution, significance join and
+capped replenishment adapters are integrated. Source-only scheduler tests execute
+all eight committed opportunities for four comparators and prove injected terminal
+rollback. Common-B0 terminal preflight rejects collisions before callbacks; runtime
+protocol enrollment handles zero acquisition without reading memory. Cue-only
+presentation settlement uses its own history. Latest full suite: 1,983/257 PASS,
+before the newest modules; latest focused scheduler5, terminal6, source/state9,
+feedback1 PASS. TypeScript clean. Public identities/traces, positive attribution/
+credit, complete work accounting and replay remain owed. See the integrated producer
+checkpoint for the named competitor, North Star transfer and next gate. This entry
+records progress; it is not a stop or handoff.
+
+### 2026-09-20 — frozen public GA comparison and replay completed
+
+LOCAL DISPOSITION; Stage C/D complete, final regression/promotion gate in progress.
+Counters **706 / 0**, corpus0.28.0 **21**, verdicts **12**, owner decisions **0**.
+The primary owner retains the pass under the user's continue-until-complete direction.
+
+The runtime now executes real source/formation/recall, inherited prediction and
+concern, goal baseline/outcome, sixteen-experience attribution, child significance
+and retention. Canonical TraceRecord160 separates protocol governance from cognitive
+patches; canonical save132 authenticates the entire prefix by execution. The composed
+bound is92 invocations/239 outputs/228 slots, not the earlier GA-local80 estimate.
+All77 active event types have rollback witnesses; two current baseline templates
+are explicit replacement-only compiler/component exclusions.
+
+Materialized image review1 was rejected before freeze: allocation recipes aliased,
+S0 admission was not committed, and Windows source-path normalization hid the source
+inventory. Corrected review2 froze35 distinct models. Review3 added eight predeclared
+footprint models while preserving those35 models and247 image files byte-for-byte.
+The public data-only factory now admits only the43 frozen images. This required no
+record allocation or owner ruling. The large canonical encoder append fix preserves
+wire bytes while removing JavaScript argument-count overflow.
+
+Actual public execution completed43 models/36 comparison cases/7,074 event traces.
+Ten independent reexecutions match all final state/output/trace/save hashes. Public
+consequence and retained-credit saves replay their whole prefixes and five later
+instants each exactly. Independent/shared/hybrid/retired-flat footprint witnesses
+show distinct strength, association and accessibility behavior even when winners
+agree. Full results and limits are in GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md.
+Stage C retention comparison does not establish significance-first necessity over
+use-only/shared protection; their final memory bytes agree on this fixture.
+
+Focused45 factory plus9 spatial integration checks PASS; reference328/43 PASS;
+production build and boundary check PASS. The earlier full run is retained as failed
+historical evidence: eight failures came from old recipe modules loaded before the
+footprint extension, and one fixture implicitly selected the role baseline while
+asserting spatial quantization. It now explicitly selects allocation-spatial. A fresh
+stable-source full suite is running; no failed receipt is relabelled as passage.
+North Star transfer is the attention/memory portion of the frightened/angry character
+archetypes, not a whole affect theory. Next gate: final audit, exact corpus promotion
+and coverage verdict. No architectural blocker or handoff is asserted.
+
+### 2026-09-20 — General Attention bounded work item COMPLETE
+
+QUALIFIED; Brief stages A–E complete. Counters **706 / 0**; verdicts **13**;
+corpus **0.29.0 / 21 members**; owner decisions **0**. The final source run passes
+**2,171 tests / 273 files**; historical reference passes **328 / 43**; production
+build and boundary check pass. `GA_PUBLIC_QUALIFICATION_REV1.json` verifies the
+frozen files,43 public executions/36 comparisons, ten independent reexecutions,
+exact matrices, feedback separation, selected-only reinforcement and retention
+comparisons. No unsuccessful run was relabelled as passing.
+
+The accepted corpus compiler reproduced0.28.0 before publishing0.29.0 at digest
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+PHEN-ATTN-0011.1.0 retains every requirement and attaches the exact GA fixture;
+the other twenty member versions and requirement sections are unchanged. The prior
+corpus document and both aggregate identities are preserved. Execution remains
+identified against0.28.0; promotion does not pretend the unchanged runs were rerun.
+
+VER-C3-GA-001 closes the planned bounded work item with a public qualification PASS
+and an UNRESOLVED psychological law/reduction verdict. Independent focal encoding
+is stable under the footprint intervention while later averaging still changes its
+recall score; winner equality alone hides this distinction. Protection-policy
+necessity remains unresolved on the finite credit source. Candidate A/B/C, broad
+Affect/Need/surprise and other North-Star phenomena retain their explicit limits.
+The seven closure obligations are mapped in the qualification report. Work-order
+items1–6 and the single-owner registration/compiler pass are complete. No broader
+Campaign3 completion, new allocation, historical source edit or owner escalation.
+Next gate: select the next Campaign3 phenomenon from the remaining frontier.
+
+### 2026-09-20 — final ledger integrity correction
+
+A literal verdict-header audit found three entries absent despite the September14
+checkpoint reporting them recorded: VER-C3-SALIENCE-001, VER-C3-EMB-001 and
+VER-C3-ATTN-001. Git handoff history also lacked the completed entries; the earlier
+agent-switch commit called them owed. Their arithmetic/public qualification receipts
+were present and were reviewed. The missing entries are now recorded with a
+September20 correction date, their original evidence dates, exact source/identity
+references and honest scope. No historical ledger write or new execution is invented.
+The ledger now actually contains13 named verdict entries, including VER-C3-GA-001.
+This is local bookkeeping under the escalation policy, not a new architectural choice.
+GA remains complete; counters706/0, corpus0.29.0/21, owner decisions0.

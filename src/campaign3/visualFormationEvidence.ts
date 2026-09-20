@@ -5,8 +5,8 @@ import type {SpatialEvidenceBindingInput} from './spatialEvidenceBinding';
 import type {SpatialCalibration} from './spatialContextAllocation';
 import type {EncodingBudget} from './encodingAccessMath';
 import {selectCanonicalVisual,selectCanonicalVisualEqualPriorityControl,selectCanonicalVisualUnlimitedControl} from './canonicalVisualSelection';
-import {prepareSelectedSpatialEncoding,closePreparedSpatialEncoding,type PreparedSpatialEncoding} from './selectedSpatialEncoding';
-import {encodePreparedPositiveSpatialCandidate,encodePreparedPositiveSpatialWithPriorConcern,encodePreparedPositiveSpatialWithCalibration} from './positiveSpatialCandidate';
+import {prepareSelectedSpatialEncoding,closePreparedSpatialEncoding,encodePreparedAllocationControl,type PreparedSpatialEncoding} from './selectedSpatialEncoding';
+import {encodePreparedPositiveSpatialCandidate,encodePreparedPositiveSpatialWithPriorConcern,encodePreparedPositiveSpatialWithCalibration,projectPositive} from './positiveSpatialCandidate';
 import type {PriorConcernCarry} from './priorConcernFeedback';
 import type {CanonicalValue} from '../substrate/canonicalEncoding';
 import {bindPerceivedTrialContext,type PerceivedTrialContext} from './perceivedTrialContext';
@@ -34,14 +34,19 @@ export function encodeVisualFormation(view:SelectedVisualFormation,law:EncodingB
  const {prepared,...header}=facts;encoded.set(candidateView,{...header,candidate:result.candidate});return {evaluation:result.evaluation,view:candidateView};
 }
 /** Prior producer/delivery and projected subject authentication belong to the outer adapter. */
-export function encodeVisualFormationWithPriorConcern(view:SelectedVisualFormation,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean){
+export function encodeVisualFormationWithPriorConcern(view:SelectedVisualFormation,law:EncodingBudget,carry:PriorConcernCarry,subject:CanonicalValue,enabled:boolean,calibration?:Parameters<typeof encodePreparedPositiveSpatialWithPriorConcern>[5]){
  const facts=selected.get(view);if(!facts)throw Error('VISUAL_FORMATION_SELECTED');selected.delete(view);
- const result=encodePreparedPositiveSpatialWithPriorConcern(facts.prepared,law,carry,subject,enabled),candidateView=Object.freeze({}) as EncodedVisualFormation;
+ const result=encodePreparedPositiveSpatialWithPriorConcern(facts.prepared,law,carry,subject,enabled,calibration),candidateView=Object.freeze({}) as EncodedVisualFormation;
  const {prepared,...header}=facts;encoded.set(candidateView,{...header,candidate:result.candidate});return {evaluation:result.evaluation,view:candidateView};
 }
 export function encodeVisualFormationWithCalibration(view:SelectedVisualFormation,calibration:Parameters<typeof encodePreparedPositiveSpatialWithCalibration>[1]){
  const facts=selected.get(view);if(!facts)throw Error('VISUAL_FORMATION_SELECTED');selected.delete(view);
  const result=encodePreparedPositiveSpatialWithCalibration(facts.prepared,calibration),candidateView=Object.freeze({}) as EncodedVisualFormation;
+ const {prepared,...header}=facts;encoded.set(candidateView,{...header,candidate:result.candidate});return {evaluation:result.evaluation,view:candidateView};
+}
+export function encodeVisualFormationWithAllocationControl(view:SelectedVisualFormation,calibration:Parameters<typeof encodePreparedAllocationControl>[1],law:Parameters<typeof encodePreparedAllocationControl>[2]){
+ const facts=selected.get(view);if(!facts)throw Error('VISUAL_FORMATION_SELECTED');selected.delete(view);
+ const result=projectPositive(encodePreparedAllocationControl(facts.prepared,calibration,law)),candidateView=Object.freeze({}) as EncodedVisualFormation;
  const {prepared,...header}=facts;encoded.set(candidateView,{...header,candidate:result.candidate});return {evaluation:result.evaluation,view:candidateView};
 }
 export function produceVisualFormationEvidence(view:EncodedVisualFormation,allocate:()=>bigint){

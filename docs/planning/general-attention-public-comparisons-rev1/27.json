@@ -1,0 +1,436 @@
+{
+  "name": "source-above-target",
+  "modelIdentity": "0a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420a75893dba02bd9a918529e65ef7b84d69c115f4fc299d8a60af3233c9e4d1327040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420e9758f16f309515c87f259e1777c284afa2d08ab0d9f7523ce66be527f9cc6e2",
+  "runIdentity": "0a68010401010a6701060101052f72756c65732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420eae19e14e3172dbdd97e88c1d6f1f4c0835ec05f0330219878f852672fbd236f03010a65010201010534706172616d65746572732f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420a75893dba02bd9a918529e65ef7b84d69c115f4fc299d8a60af3233c9e4d1327040105316e756d657269632f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053272656769737472792f63616d706169676e332d67656e6572616c2d617474656e74696f6e2f302e312d63616e64696461746502010420e9758f16f309515c87f259e1777c284afa2d08ab0d9f7523ce66be527f9cc6e202010420a258294637e8fbc75b8c7207c62bdf70d33754c0042c991a12058b638311c4e50301042016a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd040104200102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+  "instants": 11,
+  "finalClock": "21",
+  "events": 153,
+  "outputs": 162,
+  "maximumInstantWork": 18,
+  "stageCounts": {
+    "event/regulatory-diagnostic-probe": 1,
+    "event/regulatory-diagnostic-probe-observation": 1,
+    "event/regulatory-diagnostic-probe-tracking": 1,
+    "event/regulatory-diagnostic-probe-binding": 1,
+    "event/regulatory-diagnostic-probe-classification": 1,
+    "event/regulatory-diagnostic-probe-freeze": 1,
+    "event/measurement-evidence-intake": 1,
+    "event/measurement-episode-evidence": 1,
+    "event/measurement-prediction-application": 1,
+    "event/general-attention-prior-concern-workspace": 1,
+    "event/general-attention-prior-concern-appraisal": 1,
+    "event/general-attention-prior-concern-producer": 1,
+    "event/general-attention-world": 8,
+    "event/general-attention-current-sample": 8,
+    "event/general-attention-current-track": 8,
+    "event/general-attention-current-bind": 8,
+    "event/general-attention-current-classify": 8,
+    "event/general-attention-current-freeze": 8,
+    "event/general-attention-encoding-concern-delivery": 4,
+    "event/general-attention-current-roles": 8,
+    "event/general-attention-current-dispatch": 8,
+    "event/general-attention-current-body-selection": 4,
+    "event/general-attention-current-visual-selection": 4,
+    "event/general-attention-prior-concern-visual-encoding": 4,
+    "event/general-attention-body-acquisition-evidence": 4,
+    "event/general-attention-visual-acquisition-evidence": 4,
+    "event/general-attention-ordinary-memory-formation": 8,
+    "event/general-attention-event-association-formation": 4,
+    "event/general-attention-event-presentation-formation": 4,
+    "event/general-attention-recall-concern-delivery": 4,
+    "event/general-attention-current-body-cue": 4,
+    "event/general-attention-current-visual-cue": 4,
+    "event/general-attention-current-body-rank": 4,
+    "event/general-attention-prior-concern-event-rank": 4,
+    "event/general-attention-current-recollection": 8,
+    "event/general-attention-event-presentation-dispatch": 4,
+    "event/general-attention-event-presentation-owner": 4,
+    "event/task-deadline": 1
+  },
+  "readRoots": {
+    "241": 32,
+    "242": 20,
+    "268": 42,
+    "302": 1,
+    "362": 2,
+    "373": 2,
+    "630": 12,
+    "631": 8,
+    "632": 12,
+    "634": 8,
+    "635": 8,
+    "649": 24
+  },
+  "selected": {
+    "algorithm": 3,
+    "capacity": 2,
+    "counts": [
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "candidates": [
+    {
+      "at": "3",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "3/50",
+          "raw": "81/5000",
+          "strength": "81/5081"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "3/50",
+          "raw": "27/2500",
+          "strength": "27/2527"
+        }
+      ]
+    },
+    {
+      "at": "4",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "3/50",
+          "raw": "81/5000",
+          "strength": "81/5081"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "3/50",
+          "raw": "27/2500",
+          "strength": "27/2527"
+        }
+      ]
+    },
+    {
+      "at": "5",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "3/50",
+          "raw": "81/5000",
+          "strength": "81/5081"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "3/50",
+          "raw": "27/2500",
+          "strength": "27/2527"
+        }
+      ]
+    },
+    {
+      "at": "6",
+      "units": [
+        {
+          "roles": [
+            "causal-role/actor"
+          ],
+          "base": "3/10",
+          "role": "1/1",
+          "attention": "1/1",
+          "raw": "3/10",
+          "strength": "3/13"
+        },
+        {
+          "roles": [
+            "causal-role/target"
+          ],
+          "base": "3/10",
+          "role": "9/10",
+          "attention": "3/50",
+          "raw": "81/5000",
+          "strength": "81/5081"
+        },
+        {
+          "roles": [
+            "causal-role/participant"
+          ],
+          "base": "3/10",
+          "role": "3/5",
+          "attention": "3/50",
+          "raw": "27/2500",
+          "strength": "27/2527"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "at": "7",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "1/4",
+          "pull": "1/2",
+          "score": "19/20"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/3",
+          "pull": "1/3",
+          "score": "4/5"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "1/2",
+          "pull": "1/3",
+          "score": "29/30"
+        }
+      ],
+      "winners": [
+        "103",
+        "55"
+      ]
+    },
+    {
+      "at": "8",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "7/10",
+          "pull": "1/2",
+          "score": "7/5"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/4",
+          "pull": "1/3",
+          "score": "43/60"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "5/6",
+          "pull": "1/3",
+          "score": "13/10"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    },
+    {
+      "at": "9",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "1/1",
+          "pull": "1/2",
+          "score": "17/10"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/5",
+          "pull": "1/3",
+          "score": "2/3"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "13/12",
+          "pull": "1/3",
+          "score": "31/20"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    },
+    {
+      "at": "10",
+      "scores": [
+        {
+          "acquisition": "55",
+          "acquiredAt": "4",
+          "base": "103/84",
+          "pull": "1/2",
+          "score": "809/420"
+        },
+        {
+          "acquisition": "79",
+          "acquiredAt": "5",
+          "base": "1/6",
+          "pull": "1/3",
+          "score": "19/30"
+        },
+        {
+          "acquisition": "103",
+          "acquiredAt": "6",
+          "base": "77/60",
+          "pull": "1/3",
+          "score": "7/4"
+        }
+      ],
+      "winners": [
+        "55",
+        "103"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "acquisition": "55",
+      "acquiredAt": "4",
+      "presentations": [
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "acquisition": "79",
+      "acquiredAt": "5",
+      "presentations": [
+        "5"
+      ]
+    },
+    {
+      "acquisition": "103",
+      "acquiredAt": "6",
+      "presentations": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "graphDigest": "3b05ea3950f8365dfb478412f3dc8d05f8120d47f5df700da00030ab8e341c71",
+  "finalMemory": {
+    "acquisitions": 7,
+    "usedChildren": 0,
+    "significantChildren": 0,
+    "lateAcquisitions": 0,
+    "digest": "c143c4cccfa853758f992fc45804f413e528070eb2dfb0fc23cad6bf91fff74b"
+  },
+  "attribution": [],
+  "modulations": [
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    },
+    {
+      "source": "1",
+      "branch": "1",
+      "residual": "3/5",
+      "omega": "7/5"
+    }
+  ],
+  "hashes": {
+    "initial": "a258294637e8fbc75b8c7207c62bdf70d33754c0042c991a12058b638311c4e5",
+    "originals": "16a0c044b736f75b7c5105abe315f3100a6c81ec45a60398c5bcdf36ff0848fd",
+    "state": "e4d42d28e1f4af7769560462434a838a8a39fab833a59edd7bfc869bed4fff86",
+    "outputs": "f40ec2c50082887f1d8d85c3991911987881fc85d72579b33d634c16f1e49f0f",
+    "trace": "1f9b0cba6d16daeafefc3b192c95217a1b6870795a742470b3a67c2bd82e8585",
+    "save": "a4132497f671f0f2bff332f3382f416f4b4acd7c6890ac73e1e3c68158d3e639"
+  }
+}

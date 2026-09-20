@@ -141,12 +141,14 @@ function encodeValue(value: CanonicalValue, output: number[]): void {
       output.push(Tag.Signed, ...encodeUnsigned(zigZagEncode(value.value)));
       return;
     case 'bytes':
-      output.push(Tag.Bytes, ...encodeUnsigned(BigInt(value.value.length)), ...value.value);
+      output.push(Tag.Bytes, ...encodeUnsigned(BigInt(value.value.length)));
+      appendBytes(output, value.value);
       return;
     case 'text': {
       if (value.value !== value.value.normalize('NFC')) fail('text must already be NFC-normalized');
       const encoded = new TextEncoder().encode(value.value);
-      output.push(Tag.Text, ...encodeUnsigned(BigInt(encoded.length)), ...encoded);
+      output.push(Tag.Text, ...encodeUnsigned(BigInt(encoded.length)));
+      appendBytes(output, encoded);
       return;
     }
     case 'rational':
@@ -163,7 +165,7 @@ function encodeValue(value: CanonicalValue, output: number[]): void {
       assertStrictlyIncreasing(entries.map((entry) => entry.encodedKey), 'duplicate canonical map key');
       output.push(Tag.Map, ...encodeUnsigned(BigInt(entries.length)));
       for (const entry of entries) {
-        output.push(...entry.encodedKey);
+        appendBytes(output, entry.encodedKey);
         encodeValue(entry.entryValue, output);
       }
       return;
@@ -173,7 +175,7 @@ function encodeValue(value: CanonicalValue, output: number[]): void {
       items.sort((left, right) => compareBytes(left.encoded, right.encoded));
       assertStrictlyIncreasing(items.map((item) => item.encoded), 'duplicate canonical set item');
       output.push(Tag.Set, ...encodeUnsigned(BigInt(items.length)));
-      for (const item of items) output.push(...item.encoded);
+      for (const item of items) appendBytes(output, item.encoded);
       return;
     }
     case 'record':
@@ -185,6 +187,12 @@ function encodeValue(value: CanonicalValue, output: number[]): void {
       encodeValue(value.payload, output);
       return;
   }
+}
+
+/** Byte length is independent of the JavaScript function-argument limit. This
+ * preserves the exact wire representation for large canonical saves/keys. */
+function appendBytes(output:number[], value:Uint8Array):void {
+  for (const byte of value) output.push(byte);
 }
 
 function encodeRecord(schema: RecordSchema, values: ReadonlyMap<bigint, CanonicalValue>, output: number[]): void {
