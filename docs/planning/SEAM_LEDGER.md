@@ -1,11 +1,12 @@
 # Seam Ledger
 
-**Current routing, 2026-09-21:** [state index](CURRENT.md), [RELATIONSHIP qualification](CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members. Bounded RELATIONSHIP and earlier Campaign3 domains are complete; zero owner rulings. Counters862/0. Research obligations:0 active/16 conditional/0 unowned.
+**Current routing, 2026-09-21:** [state index](CURRENT.md), [LONGITUDINAL qualification](CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md), [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members. Bounded LONGITUDINAL and earlier domains are complete; zero owner rulings. Counters883/0. Research obligations:0 active/17 conditional/0 unowned.
 
-Current person estimates and admitted dyadic history remain distinct under VER-C3-REL-001.
-Matched estimates/different histories change contact responses; explanation, rupture
-and absence remain distinct. Derived/cache equivalence is bounded; RO-C3-016 retains
-broader claims. PHEN-LONG-001 readiness is next; implementation not started.
+VER-C3-LONG-001 qualifies biography plus skill and relationship across actual episode
+loss, interference and relearning. Full/compact learned projections agree over the
+declared horizon; episodic-only/shared-slot controls fail. RO-C3-017 retains wider
+retention, development and knowledge-boundary obligations. Next: Campaign3 coverage/
+exit-readiness audit; whole Campaign3 remains unqualified.
 
 ## Historical checkpoint summaries through 2026-09-13
 

@@ -234,7 +234,11 @@ complete-prefix restores/continuation equalities. See
 docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md. Equal person estimates with
 different own histories change effective contact responses; derived/stored summaries
 agree. RO-C3-016 preserves broader relationship, attribution, grief and integration.
-Next natural frontier: PHEN-LONG-001 readiness and historical intake. These bounded
+Bounded LONGITUDINAL is complete under VER-C3-LONG-001:15 models,32 runs and513
+whole-prefix restores/continuations. See docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md.
+Biography, skill and relationship coexist across actual episode loss/interference/
+relearning; RO-C3-017 preserves broader scope. Next natural checkpoint: Campaign3
+coverage/exit-readiness audit against mandatory corpus clauses and obligations. These bounded
 closures do not qualify whole Brief12.6/12.8 families or the whole campaign.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are

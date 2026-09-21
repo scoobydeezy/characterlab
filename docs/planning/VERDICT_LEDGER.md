@@ -1652,3 +1652,30 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   asymmetric attachment, reconciliation, grief, longer separation, memory/compression,
   enacted reciprocal interaction and identity/body/control integration. No owner ruling.
 - **Counters:** highest862; allocated since verdict0 (21 this increment).
+
+
+## `VER-C3-LONG-001` — Acquired families across actual detail loss and relearning
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded LONGITUDINAL COMPLETE.
+- **Contract:** longitudinal-public/0.2-candidate; records863..883, namespace1157;
+  existing typed cognitive occurrences retain their meanings. Corpus0.29.0 unchanged.
+- **Evidence:**15 frozen models/75 files,32 public runs,513 complete-prefix
+  restores and continuation equalities (481 advancing,32 terminal),
+  120 affected tests,328 reference tests, TypeScript/build/boundary checks.
+  See CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md and LONGITUDINAL_VALIDATION_CLOSURE_REV2.json.
+- **Witnesses:** actual biography/dice/identity plus skill and relationship acquisition;
+  independent-family preservation; actual episode loss with surviving learned state;
+  skill interference/relearning and discriminating execution; fallible social history;
+  evidence gating, history order and committed gap interventions.
+- **Competitors:** FullHistory, CompactRelationship, EpisodicOnly, DestructiveSharedSlot,
+  isolated families, NoLearning, KeepAll, NoRust/HalfAtGap, two rupture laws, StandingOff.
+- **Verdict:** RETAINED acquired-family ownership and learned structure beyond recent
+  episodes. Rich relationship journal NOT REQUIRED for the fixed folds/horizon, with
+  different accessible detail explicitly preserved. General compression/lifelong and
+  psychological law claims UNRESOLVED. No architecture box is deleted.
+- **Preservation:**15 nondiscriminating0.1 models remain frozen; two failed-gate public
+  terminal saves replay exactly. Workspace capacity error, symmetric standing/calibration,
+  nondiscriminating execution difficulty and diagnostic-versus-knowledge limits remain
+  durable findings. No whole active-suite or Campaign3 PASS.
+- **Obligations:** RO-C3-009/013/016/017 CONDITIONAL; no owner ruling pending.
+- **Counters:** highest883; allocated since verdict0 (21 this increment).

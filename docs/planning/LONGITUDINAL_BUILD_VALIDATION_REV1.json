@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "commands": [
+    {
+      "command": "npm exec tsc -- --noEmit",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "includes": [
+        "check:boundaries",
+        "tsc -b",
+        "vite build"
+      ]
+    }
+  ],
+  "referenceTests": 328
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "models": 15,
+  "frozenFiles": 75,
+  "retainedPredecessorModels": 15,
+  "failedPairExactReplay": [
+    {
+      "model": "representation-2-law-1",
+      "terminalSaveSha256": "fba165f06ee4bfa899aab6579a779aafdc7c461b2a87b92c65441b0885e5527f"
+    },
+    {
+      "model": "standing-off",
+      "terminalSaveSha256": "15937bc7d7393d3469b5904f63179d41000f8eeee682b6d5d2eaf95fe4b4dcd7"
+    }
+  ],
+  "publicRuns": 32,
+  "prefixRestores": 513,
+  "continuationEqualities": 513,
+  "terminalNoOpEqualities": 32,
+  "affectedTests": 120,
+  "referenceTests": 328,
+  "exactInterventions": [
+    {
+      "a": "representation-2-law-1",
+      "b": "no-interference",
+      "field": "9",
+      "paths": [
+        "/items/10/fields/9"
+      ]
+    },
+    {
+      "a": "representation-2-law-1",
+      "b": "no-relearning",
+      "field": "2",
+      "paths": [
+        "/items/11/fields/2/value"
+      ]
+    },
+    {
+      "a": "representation-2-law-1",
+      "b": "denied-social",
+      "field": "4",
+      "paths": [
+        "/items/3/fields/4",
+        "/items/5/fields/4",
+        "/items/12/fields/4",
+        "/items/14/fields/4"
+      ]
+    },
+    {
+      "a": "representation-2-law-1",
+      "b": "witness-only",
+      "field": "6",
+      "paths": [
+        "/items/3/fields/6",
+        "/items/5/fields/6",
+        "/items/12/fields/6",
+        "/items/14/fields/6"
+      ]
+    },
+    {
+      "a": "fixed-display-false",
+      "b": "fixed-display-true",
+      "field": "3",
+      "paths": [
+        "/items/3/fields/3",
+        "/items/5/fields/3",
+        "/items/12/fields/3",
+        "/items/14/fields/3"
+      ]
+    },
+    {
+      "a": "rust",
+      "b": "short-gap",
+      "field": "1",
+      "paths": [
+        "/items/8/fields/1/value"
+      ]
+    },
+    {
+      "a": "representation-2-law-1",
+      "b": "no-claim",
+      "field": "4",
+      "paths": [
+        "/items/6/fields/4"
+      ]
+    }
+  ],
+  "executionProbeChangedPaths": [
+    "/items/11/fields/8/denominator"
+  ],
+  "reacquisitionHistoryChangedPaths": [
+    "/items/2/fields/2/value",
+    "/items/4/fields/2/value"
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/longitudinalCodecs.ts",
+      "sha256": "8357930d0c34332c3959777527bb452dcaf04f35e2874bac02409da58945cb40"
+    },
+    {
+      "path": "src/campaign3/longitudinalFactory.ts",
+      "sha256": "7d1a2128b583ea0a6110f5abded1e489c34faed774a77f710d69ba10d26feb0f"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "src/campaign3/longitudinalModel.ts",
+      "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+    },
+    {
+      "path": "src/campaign3/longitudinalRuntime.ts",
+      "sha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75"
+    },
+    {
+      "path": "src/test/longitudinalBoundary.test.ts",
+      "sha256": "5510efee9217ad9f43a78b69404b509303a28dc7fbc9d6f6a4e9754964339263"
+    },
+    {
+      "path": "src/test/longitudinalFixtures.ts",
+      "sha256": "58c1f291cbe9f219bf5e5d978a8dd6ebc1cc7d948469c6b0fe4fd903ef13bf13"
+    },
+    {
+      "path": "src/test/longitudinalInspection.test.ts",
+      "sha256": "109e6f567056b104ff9adc3f5258aaa6e72ef0938ae6d51476038f3466702390"
+    },
+    {
+      "path": "src/test/longitudinalPublic.test.ts",
+      "sha256": "888e9685c386ade36d0575ee8628ec71cc6e28bd1c2aaf480ca4e78a5a9a135f"
+    }
+  ],
+  "limitations": "One actor, fixed meanings, controlled instruction/identity/social apparatus, at most16 instants through64, explicit event-sampled retention; no lifelong equivalence, generalized reconstruction, developmental transition, universal learning law or whole Campaign3 closure."
+}

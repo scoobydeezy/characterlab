@@ -524,3 +524,18 @@ passes. RO-C3-016 preserves broader integration and attribution/repair claims.
 SharedHistory's nonrecipient leak and simultaneous-participant ordering failure are
 durable diagnostic findings. Derived/cache equality does not delete relationship
 history or reduce it to the tested current person estimate.
+
+
+## 2026-09-21 — bounded LONGITUDINAL disposition
+
+LONGITUDINAL_READINESS.md and VER-C3-LONG-001 port EXP-011/012 and MEC-012..018 through
+actual reasons/dice/frozen expression/qualification/ordered identity and matching
+standing feedback. P3-009/MEC-019 preserve instructed attempt/execution and independent
+procedural learning; P3-006/007/012 preserve fallible directional history and rupture.
+MEC-008/009/010 remain separate recall/association/reinforcement controls: the bounded
+age cutoff and incremental relational fold do not replace them. EXP-013/P3-010 wider
+lifecycle/development and RET-013 historical immutability remain preserved. No reference
+import or architecture deletion. RO-C3-009/013/016/017 retain broader obligations.
+The0.1 symmetric-standing failure, capacity adapter error, execution-threshold finding
+and research-diagnostic boundary are preserved. Transfer: acquired structure may
+outlast individual episodes, but compression must earn the future queries it preserves.

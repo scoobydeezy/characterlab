@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-09-21",
-  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-REL-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
+  "scope": "Seeded from Campaign3 verdicts and qualification reports, extended through VER-C3-LONG-001. Not a completed audit of all historical or Campaign0–2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -224,10 +224,12 @@
       "established": "Matched-prefix ablation changes later probabilities/mode even where the integer standing modifier is zero.",
       "unresolved": "General identity necessity, long-run biography and broader source controls remain open.",
       "verdicts": [
-        "VER-C3-PRE-IDENTITY-001"
+        "VER-C3-PRE-IDENTITY-001",
+        "VER-C3-LONG-001"
       ],
       "evidence": [
-        "docs/planning/CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json"
+        "docs/planning/CAMPAIGN3_IDENTITY_ABLATION_REVIEW_REV2.json",
+        "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md"
       ],
       "owner": "PHEN-BIO-001 / identity-reason seam",
       "reopenTrigger": "Changed activation/calibration, added motive sources, long-run biography or proposed identity/history merger.",
@@ -355,7 +357,8 @@
       "established": "VER-C3-SKILL-001 qualifies bounded PHEN-SKILL-001 with27 frozen models,52 public runs,279 complete-prefix restores/continuation equalities. Actual skill and impairment change execution with equal intent/expression; practice can improve competence without observed feedback; false feedback changes performance belief without competence; recovery preserves retained skill.",
       "unresolved": "General practice/impairment and competence representation laws, multiple procedures, rust, transfer, automaticity, precision/error distributions, execution noise, ordinary recognition, attribution/source quality, latent competence inference, separately composed outcome prediction, confidence-sensitive choice and body/control/workspace integration remain unqualified.",
       "verdicts": [
-        "VER-C3-SKILL-001"
+        "VER-C3-SKILL-001",
+        "VER-C3-LONG-001"
       ],
       "evidence": [
         "docs/planning/SKILL_READINESS.md",
@@ -366,7 +369,8 @@
         "docs/planning/SKILL_VALIDATION_CLOSURE_REV1.json",
         "docs/planning/CAMPAIGN3_SKILL_QUALIFICATION.md",
         "src/test/skillPublic.test.ts",
-        "src/test/skillBoundary.test.ts"
+        "src/test/skillBoundary.test.ts",
+        "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md"
       ],
       "owner": "Procedural adaptation, execution and capability-belief seams",
       "reopenTrigger": "A new skill/practice/impairment domain, another learning law, richer performance attribution or capability inference, confidence-sensitive choice, proposed skill/memory/habit reduction or new body/control/workspace integration.",
@@ -447,7 +451,8 @@
       "established": "VER-C3-REL-001 qualifies bounded PHEN-REL-001 with11 models,24 runs,256 complete-prefix restores/continuations. Equal current person estimates with different own histories change effective contact responses; a positive explanation changes estimate without erasing rupture; absence preserves history. Derived and stored summaries have equal observer views under both laws and processing orders.",
       "unresolved": "General relationship formation/repair, trust/comfort/respect/attachment/reliance dimensions, ordinary recognition and causal attribution correction, asymmetric attachment, reconciliation, grief, long separation, richer person-model/history alternatives, compression, enacted reciprocal interaction, privacy tooling and identity/body/control integration remain unqualified. A complete-history cache equivalence does not delete architecture distinctions.",
       "verdicts": [
-        "VER-C3-REL-001"
+        "VER-C3-REL-001",
+        "VER-C3-LONG-001"
       ],
       "evidence": [
         "docs/planning/RELATIONSHIP_READINESS.md",
@@ -458,7 +463,8 @@
         "docs/planning/RELATIONSHIP_VALIDATION_CLOSURE_REV2.json",
         "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
         "src/test/relationshipPublic.test.ts",
-        "src/test/relationshipBoundary.test.ts"
+        "src/test/relationshipBoundary.test.ts",
+        "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md"
       ],
       "owner": "Relationship learning, person-model, social appraisal, memory and interaction seams",
       "reopenTrigger": "A new relational dimension or source/recognition/attribution domain, proposed person-model/relationship reduction, forgetting/compression, longer separation, attachment asymmetry, repair/grief, enacted reciprocal action or identity/body/control coupling.",
@@ -470,6 +476,41 @@
       ],
       "doesNotBlock": "Completed bounded RELATIONSHIP, HABIT, SOCIAL, SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-LONG-001 readiness.",
       "closureRequirement": "Accept successor contracts and preserve matched person estimates with changed admitted own history, nonrecipient isolation, hidden-truth equivalence, rupture/explanation/absence distinctions and explicit/derived/person-only comparisons. Qualify each new attribution, relationship dimension, interaction and retention clause independently. Preserve SharedHistory's directional and simultaneous-participant failures and REL-FIND-005: the frozen0.1 zero-modifier cohort failed the behavioral gate despite changed appraisal records.",
+      "closure": null
+    },
+    {
+      "id": "RO-C3-017",
+      "title": "Longitudinal composition beyond the finite retained-summary profile",
+      "status": "CONDITIONAL",
+      "distinction": "Retained episodic detail, acquired identity/skill/relationship state, separate mutation ownership, and research diagnostics versus character knowledge",
+      "established": "VER-C3-LONG-001 qualifies biography plus skill and relationship in one public timeline with15 models,32 runs and513 whole-prefix restores/continuations. Individual episodes expire while compact learned state survives; isolation, destructive storage, interference, relearning and actual execution probes discriminate.",
+      "unresolved": "General lifelong/developmental behavior, arbitrary history compression, defining-memory individuality, reconstructive recall, source trust/provenance-sensitive relational queries, coupled family retention laws, capability self-belief, social-action/skill/identity feedback, broader identity matching and psychological calibration remain open. The observerView method is a holder-scoped research diagnostic that includes actual competence, not an admitted character evidence interface.",
+      "verdicts": [
+        "VER-C3-LONG-001"
+      ],
+      "evidence": [
+        "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md",
+        "docs/planning/LONGITUDINAL_READINESS.md",
+        "docs/planning/LONGITUDINAL_IMPLEMENTATION_FINDINGS.md",
+        "docs/planning/LONGITUDINAL_STANDING_FAILURE_REV1.json",
+        "docs/planning/LONGITUDINAL_WORKSPACE_CONSTRUCTION_FAILURE_REV1.json",
+        "docs/planning/LONGITUDINAL_EXECUTION_PROBE_REV1.json",
+        "docs/planning/LONGITUDINAL_PUBLIC_EXPERIMENT_REV2.json",
+        "docs/planning/LONGITUDINAL_VALIDATION_CLOSURE_REV2.json",
+        "src/test/longitudinalPublic.test.ts",
+        "src/test/longitudinalBoundary.test.ts",
+        "src/test/longitudinalInspection.test.ts"
+      ],
+      "owner": "Longitudinal composition, memory/identity, procedural learning and relationship seams",
+      "reopenTrigger": "A longer/different temporal horizon, retention schedule or coupled family law; a new provenance-sensitive query, defining-memory/reconstruction/developmental phenomenon; proposed deletion of an acquired-family distinction; or admission of diagnostic actual competence to character cognition.",
+      "blocks": [
+        "Whole Brief12.15, lifelong equivalence or whole Campaign3 qualification",
+        "General compression or architecture-box deletion from finite fold equality",
+        "Treating research diagnostic competence as character knowledge",
+        "Universal signed identity matching, forgetting or rust laws"
+      ],
+      "doesNotBlock": "Completed bounded LONGITUDINAL and earlier bounded domains; Campaign3 coverage/exit-readiness audit.",
+      "closureRequirement": "Accept the appropriate successor contracts and compare matched public acquisition/retention horizons, isolated/composed/destructive controls, real detail loss and relearning, explicit evidence boundaries and all-prefix replay. Preserve LONG-IMPL-001 and LONG-FIND-002/003 counterexamples and LONG-SCOPE-004 diagnostic limits. Qualify every newly claimed family, feedback and horizon independently.",
       "closure": null
     }
   ],
@@ -578,6 +619,15 @@
       "verdict": "VER-C3-REL-001",
       "obligations": [
         "RO-C3-016"
+      ]
+    },
+    {
+      "verdict": "VER-C3-LONG-001",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-013",
+        "RO-C3-016",
+        "RO-C3-017"
       ]
     }
   ],
@@ -690,6 +740,15 @@
       "path": "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
       "obligations": [
         "RO-C3-016"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-013",
+        "RO-C3-016",
+        "RO-C3-017"
       ]
     }
   ]

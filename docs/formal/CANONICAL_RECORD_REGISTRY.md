@@ -258,3 +258,17 @@ to authority/relationship-summary. Existing808 keys identify each holder/local t
 Content861 enumerates48 authored1038 probe roots for observer/order-stable random
 addresses. Profile occurrences are not implicit SEM experiences or ObservationRef237.
 No predecessor allocation/frozen bytes change. Counters862/21 before verdict,862/0 after.
+
+
+## LONGITUDINAL successor — 2026-09-21
+
+LONGITUDINAL_PUBLIC_ALLOCATION_TABLE.json accepts863..883/schema1, occurrence
+namespace1157 under longitudinal-public/0.1-candidate. Separate roots867/868/870/
+871/872/873 preserve memory/relationship/person/skill/identity/detail ownership;
+root875 is the explicitly destructive shared-slot diagnostic. Existing cognitive
+occurrence families retain their meanings. No old frozen bytes change. Counters883/21
+before qualification. See LONGITUDINAL_PUBLIC_CONTRACT.md.
+
+LONGITUDINAL qualification uses the separately frozen0.2 successor; the0.1 cohort
+remains replayable. Allocation bytes and record meanings are unchanged. VER-C3-LONG-001
+resets counters to883/0. No general compression or knowledge-view admission follows.

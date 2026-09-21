@@ -73,16 +73,14 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md in that directory. Bounded RELATIONSHIP is
-COMPLETE: VER-C3-REL-001,11 models,24 runs,256 whole-prefix restores/continuations;
-counters862/0. Earlier bounded GA, BODY/MULTISOURCE, BELIEF, AFFECT, WORKSPACE/CONTROL,
-SKILL, SOCIAL and HABIT stay complete. RO-C3-016 preserves wider relationship,
-attribution, grief, memory/compression and integration limits. Derived and cached
-relationship summaries agree in this profile; no architecture distinction is deleted.
-ORD-002/TRC-003 have bounded snapshot/projection coverage, not global closure;
-ORD-001/005 remain open outside qualified profiles. No owner ruling is pending.
-Next natural frontier: PHEN-LONG-001 readiness and historical intake. Do not reopen
-completed bounded domains or implement from an external review alone.
+CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md in that directory. Bounded LONGITUDINAL is
+COMPLETE: VER-C3-LONG-001,15 models,32 public runs,513 whole-prefix restores/
+continuations; counters883/0. Earlier bounded domains remain complete. RO-C3-017
+preserves wider retention/development/knowledge boundaries; RO-C3-009/013/016 remain
+conditional. No architecture distinction is deleted; no owner ruling is pending.
+The inspection view includes actual competence and is not character evidence.
+Next natural checkpoint: Campaign3 coverage/exit-readiness audit against all mandatory
+corpus clauses. Do not silently equate bounded domain closures with whole Campaign3 PASS.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its
