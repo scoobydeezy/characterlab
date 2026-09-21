@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-09-21",
-  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-AFFECT-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
+  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-WORK-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -314,6 +314,38 @@
       "doesNotBlock": "Completed bounded PHEN-AFFECT-001, BELIEF, GA and BODY/MULTISOURCE; workspace/control readiness using their qualified boundaries.",
       "closureRequirement": "For each triggered extension, admit its sources, owners, ordering and receivers explicitly and run discriminating public comparisons. Retain false-belief, unknown/zero, no-evidence inertia, genuine reason grounds, matched affect/competing motive and strictly later feedback controls. Establish representation necessity or equivalence on independently motivated psychological observables, not a receiver selected solely to reward the representation.",
       "closure": null
+    },
+    {
+      "id": "RO-C3-012",
+      "title": "Workspace/control beyond retained-history reconstruction",
+      "status": "CONDITIONAL",
+      "distinction": "Retained availability versus maintained active access; maintenance/control versus stateless priority; retained intention versus expired goal",
+      "established": "VER-C3-WORK-001 qualifies the bounded PHEN-WORK-001 realization with 48 models,78 public runs,624 complete-prefix restores and continuation equalities. StoredSet and IndexedReplay have equal cognitive outputs; the latter derives active access without a cache. Overload, distractor-only displacement/protection, cue return, expiry, source safety and grounded choice are executable.",
+      "unresolved": "General maintenance/indexing law and efficiency, larger/changing pools, decaying history, new adoption or fulfillment, ordinary cue recognition, retrieval integration, inhibition under load, fatigue, rumination, strategy switching, performance monitoring, reappraisal and control costs remain unqualified.",
+      "verdicts": [
+        "VER-C3-WORK-001"
+      ],
+      "evidence": [
+        "docs/planning/WORKSPACE_CONTROL_READINESS.md",
+        "docs/planning/WORK_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/WORK_DISTRACTOR_DESIGN_FINDING.md",
+        "docs/planning/WORK_DISTRACTOR_PLAN_REV1.json",
+        "docs/planning/WORK_DISTRACTOR_REV1.json",
+        "docs/planning/WORK_VALIDATION_CLOSURE_REV1.json",
+        "docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md",
+        "src/test/workPublic.test.ts",
+        "src/test/workBoundary.test.ts"
+      ],
+      "owner": "Workspace/control and prospective-access seam",
+      "reopenTrigger": "Any larger or changing source/lifecycle domain, history deletion, control-order change, alternate maintenance mechanism, claimed cache reduction beyond the tested domain, or newly required Brief12.6 phenomenon.",
+      "blocks": [
+        "Universal workspace/control qualification",
+        "Removing maintained access or all active-set caches from the architecture",
+        "Claiming inhibition, fatigue, strategy switching, monitoring or reappraisal from this bounded fixture"
+      ],
+      "doesNotBlock": "Completed bounded WORKSPACE/CONTROL, GA, BODY/MULTISOURCE, BELIEF and AFFECT; readiness for PHEN-SKILL-001.",
+      "closureRequirement": "When triggered, preserve separately traceable retained/active state and replay matched public discrimination tests, including genuine overload, exact single-factor interventions and expired-cue controls. Re-derive indexed access for any new lifecycle or missing-history case; do not silently reuse the fixed-deadline proof. WORK-DESIGN-001 requires isolating the manipulated factor.",
+      "closure": null
     }
   ],
   "verdictReviews": [
@@ -391,6 +423,12 @@
       "obligations": [
         "RO-C3-010",
         "RO-C3-011"
+      ]
+    },
+    {
+      "verdict": "VER-C3-WORK-001",
+      "obligations": [
+        "RO-C3-012"
       ]
     }
   ],
@@ -473,6 +511,12 @@
       "obligations": [
         "RO-C3-010",
         "RO-C3-011"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-012"
       ]
     }
   ]

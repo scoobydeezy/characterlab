@@ -1,11 +1,10 @@
 # Seam Ledger
 
-**Current routing, 2026-09-21:** [state index](CURRENT.md), [bounded AFFECT qualification](CAMPAIGN3_AFFECT_QUALIFICATION.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members; bounded GA, public multisource, BELIEF and AFFECT are complete; zero owner rulings. Counters765/0. Research obligations:0 active/11 conditional/0 unowned.
+**Current routing, 2026-09-21:** [state index](CURRENT.md), [workspace/control qualification](CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members; bounded GA, public multisource, BELIEF, AFFECT and WORKSPACE/CONTROL are complete; zero owner rulings. Counters781/0. Research obligations:0 active/12 conditional/0 unowned.
 
-AFFECT's controlled mitigation source, factor appraisal, grounded receiving and
-strictly later appraisal feedback are qualified under VER-C3-AFFECT-001. Its universal
-laws, uncertainty and broader domains remain conditional under RO-C3-010/011.
-Workspace/control readiness is the next natural frontier; it has not started.
+Maintained access is retained; the independent active-set cache is derivable from the
+bounded safe journal under VER-C3-WORK-001. RO-C3-012 preserves wider control and
+source/lifecycle claims. PHEN-SKILL-001 readiness is next; implementation not started.
 
 ## Historical checkpoint summaries through 2026-09-13
 
@@ -258,6 +257,7 @@ Qualification scope below is preserved. Current corpus membership and comparison
 | Measurement belief/prediction | measurement-prediction/0.1-candidate and accepted successor packaging | Qualified bounded forecast | PHEN-LEARN exact precision-update semantics remain outside this profile; ORD-001 isolated |
 | Fallible trial belief → later appraisal | belief-public/0.1-candidate; VER-C3-BELIEF-001 | Qualified bounded PHEN-BELIEF-001 realization:9 models,48 public runs,381 prefix restores and next-step equalities; false belief/correction, goal separation and opportunity gating | RO-C3-010 retains general inference/confidence, correlated reports and causal learning. Consequence-only140/later50 does not settle ORD-001 current-lane use. |
 | Belief-relative appraisal → affect → grounded response/later appraisal | affect-public/0.1-candidate; VER-C3-AFFECT-001 | [Qualified bounded PHEN-AFFECT-001](CAMPAIGN3_AFFECT_QUALIFICATION.md):18 models,91 main runs,1236 prefix restores/continuation equalities; independent factors, matched affect/different choice, relief-not-evidence and later feedback | RO-C3-011 retains universal factor/control/feedback laws, scalar equivalence, uncertainty, social/retrospective affect, extinction/generalization and broader action discovery. No TaskConcern relabeling or ORD-005 regulation claim. |
+| Retained source/intention → maintained workspace → grounded choice | workspace-control/0.1-candidate; VER-C3-WORK-001 | [Qualified bounded PHEN-WORK-001](CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md):48 models,78 runs,624 prefix restores; overload, displacement/protection, cue and expiry; StoredSet/IndexedReplay equivalence | RO-C3-012 retains wider control, history, lifecycle, ordinary reminder recognition, costs and integration. |
 | Workspace → appraisal → transient concern | task-workspace/0.1-candidate; task-appraisal-affect/0.1-candidate; ratified transient feedback | Qualified bounded workspace/discrepancy; GA now executes actual earlier concern and strictly later encoding/retrieval delivery | General competing control and factorized Affect remain unqualified; Candidate A/B/C laws remain unresolved |
 | Task motives/instructions → options | task-motive-context/0.1-candidate; task-plan-context/0.1-candidate; task-option-construction/0.1-candidate | Qualified two adopted tasks/actions, immutable instructions | Bounded body source/shared-option receiving qualified under EMB; general planning and social ownership remain open |
 | Raw reasons → nuclei → arbitration | task-reason-source/0.1-candidate; reason-dice/0.1-candidate; task-arbitration/0.1-candidate | Qualified retained exact grammar, bounded public source | General motives/Avoid/multi-source public corpus not inferred from component controls |

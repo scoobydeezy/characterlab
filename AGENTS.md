@@ -72,16 +72,16 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
-Campaign 3 is active: start at `docs/planning/CURRENT.md` and
-`CAMPAIGN3_AFFECT_QUALIFICATION.md` in that directory. Bounded AFFECT is now COMPLETE:
-VER-C3-AFFECT-001,18 frozen models,91 main runs,1236 whole-prefix restores and
-continuation equalities; counters765/0. GA, BODY/MULTISOURCE and BELIEF stay complete.
-RO-C3-010/011 preserve broader inference, control, uncertainty, factor/feedback laws
-and general affect conditionally. ORD-001 current-lane belief and ORD-005 regulation
-are not closed by this profile. No owner ruling is pending. The next natural frontier
-is workspace/control readiness for PHEN-WORK-001; begin from its phenomenon and
-reference-mechanism intake before accepting new contracts. Do not automatically
-reopen completed bounded domains or implement from the external review alone.
+Campaign 3 is active: start at docs/planning/CURRENT.md and
+CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md in that directory. Bounded
+WORKSPACE/CONTROL is COMPLETE: VER-C3-WORK-001,48 frozen models,78 public runs,
+624 whole-prefix restores and continuation equalities; counters781/0. GA,
+BODY/MULTISOURCE, BELIEF and AFFECT stay complete. RO-C3-012 preserves broader
+workspace/control and history/lifecycle limits; RO-C3-010/011 preserve belief/affect
+limits. ORD-001 and ORD-005 are not closed. No owner ruling is pending. The next
+natural frontier is PHEN-SKILL-001 readiness, beginning with phenomenon and historical
+intake before contract acceptance. Do not automatically reopen completed bounded
+domains or implement from an external review alone.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its

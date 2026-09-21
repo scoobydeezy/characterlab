@@ -1480,3 +1480,38 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   Known valuation, controlled displays and fixed adopted plans bound this qualification.
   No TaskConcern relabeling, general Fear state, new Need ownership or ORD-005 closure.
 - **Counters:** highest765; allocated since this verdict0 (19 in this increment).
+
+## `VER-C3-WORK-001` — Maintained access with a derivable active set
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded WORKSPACE/CONTROL COMPLETE.
+- **Contract:** workspace-control/0.1-candidate; records766..781, namespace1152.
+  Existing task lifecycle authority retained. No frozen predecessor is widened.
+- **Corpus:** bounded PHEN-WORK-0011.0.0-draft in corpus0.29.0;21 members,
+  unchanged digest. No whole Brief12.6 or Campaign3 qualification.
+- **Evidence:**48 frozen models/240 files;70 main plus8 supplementary public runs;
+  624 complete-prefix restores and continuation equalities (546 next-instant,
+  78 terminal no-op). WORK_PUBLIC_EXPERIMENT_REV1.json, WORK_DISTRACTOR_REV1.json,
+  WORK_VALIDATION_CLOSURE_REV1.json and CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md.
+- **Witnesses:** three eligible items exceed capacity one/two; independently changed
+  capacity, support and distractor priority; unchanged retained task bytes despite
+  absent active access; protection versus displacement; cue reinstatement before
+  expiry and inert cue afterward. Selected genuine task grounds change action.
+  Neutral C cannot manufacture a motive. Safe-source and strictly later timing hold.
+- **Competitors:** StoredSet and IndexedReplay produce exactly equal cognitive
+  outputs throughout the compared domain, while the latter has no active-set cache.
+  UnlimitedWorkspace, AvailabilityEqualsAccess, StatelessPriority and ImmortalGoal
+  each fail a named required contrast; these remain labelled diagnostic controls.
+- **Verdict:** RETAINED for availability/access, capacity, maintenance/protection,
+  retained/active intention, cue/expiry and epistemic/timing boundaries. DERIVED for
+  the separate active-set cache from this bounded safe history. UNRESOLVED for
+  general indexing, costs, maintenance/control law or cache necessity outside this
+  domain. Reconstruction cost and source retention are not eliminated by derivation.
+- **Finding preservation:** WORK-DESIGN-001 restricts the main multi-field priority
+  contrast. Four supplementary pairs alter exactly one physical distractor priority
+  and establish the owed single-factor counterfactual. Original evidence preserved.
+- **Validation:**40 affected tests,328 reference tests, TypeScript/build/boundary
+  checks; rollback at all nine stage kinds and commit. No full active-suite claim.
+- **Obligation:** RO-C3-012 CONDITIONAL for wider lifecycle/history/source domains,
+  alternate maintenance, habitual inhibition/load, fatigue, rumination, monitoring,
+  strategy switching and reappraisal. No owner ruling is pending.
+- **Counters:** highest781; allocated since this verdict0 (16 this increment).

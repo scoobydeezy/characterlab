@@ -1,0 +1,647 @@
+{
+  "version": "workspace-control-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1152,
+  "records": [
+    {
+      "typeId": 766,
+      "name": "WorkProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Capacity",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 767,
+      "name": "WorkPhysicalCard",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Item",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Priority",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 768,
+      "name": "WorkOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Cards",
+          "type": {
+            "list": "ref:767",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "BoardVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ReminderLamp",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "PrivateTruth",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 769,
+      "name": "WorkSafeDisplay",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Items",
+          "type": {
+            "list": "ref:770",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reminder",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 770,
+      "name": "WorkAvailableItem",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Item",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Priority",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 771,
+      "name": "WorkObservationState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Journal",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:780"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 772,
+      "name": "WorkActiveState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Active",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:781"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 773,
+      "name": "WorkSelection",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": {
+            "list": "ref:770",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Selected",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Control",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Prior",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Reminder",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Statuses",
+          "type": {
+            "list": "ref:372",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Access",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Source",
+          "type": "ref:769",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 774,
+      "name": "WorkRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Workspace",
+          "type": "ref:773",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 775,
+      "name": "WorkReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:774",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 776,
+      "name": "WorkDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:775",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Draws",
+          "type": {
+            "list": "ref:411",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Scores",
+          "type": {
+            "map": [
+              "ref:395",
+              "i"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 777,
+      "name": "WorkIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1152",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:776",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 778,
+      "name": "WorkContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Arbitration",
+          "type": "ref:440",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Deadline",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 779,
+      "name": "WorkStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 780,
+      "name": "WorkJournal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Frames",
+          "type": {
+            "list": "ref:769",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 781,
+      "name": "WorkCache",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Items",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

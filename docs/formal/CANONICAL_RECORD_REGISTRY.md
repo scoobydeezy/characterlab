@@ -202,3 +202,15 @@ a successor version and model identity, never rewriting a frozen image.
 ## AFFECT successor — 2026-09-21
 
 [AFFECT_PUBLIC_ALLOCATION_TABLE.json](AFFECT_PUBLIC_ALLOCATION_TABLE.json) accepts records747..765, schema1, occurrence namespace1151, under [affect-public/0.1-candidate](AFFECT_PUBLIC_CONTRACT.md). Root753 is owned solely by authority/belief-expectation. Existing schemas and frozen images are unchanged. Counters765/19 before qualification.
+
+## Workspace/control successor — 2026-09-21
+
+[WORKSPACE_CONTROL_ALLOCATION_TABLE.json](WORKSPACE_CONTROL_ALLOCATION_TABLE.json)
+accepts records766..781, schema1, occurrence namespace1152 under
+[workspace-control/0.1-candidate](WORKSPACE_CONTROL_CONTRACT.md). Root771 retains
+safe source journals through authority/workspace-observation; root772 caches active
+sets only for StoredSet through authority/active-workspace. Existing task373 remains
+owned by authority/prospective-commitments. Leaf wrappers780/781 were appended before
+model freeze to use the existing closed canonical-record mutation grammar; no generic
+canonical-value authority was added. Existing allocations and frozen images are
+unchanged. Counters781/16 before qualification,781/0 after VER-C3-WORK-001.

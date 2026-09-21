@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "models": 48,
+  "frozenFiles": 240,
+  "publicRuns": 78,
+  "prefixRestores": 624,
+  "continuationEqualities": 624,
+  "terminalNoOpEqualities": 78,
+  "affectedTests": 40,
+  "referenceTests": 328,
+  "exactSingleFieldPairs": [
+    {
+      "candidate": 1,
+      "support": 0,
+      "differences": [
+        "/items/1/fields/2/items/1/fields/3/value"
+      ],
+      "preInterventionEqual": true
+    },
+    {
+      "candidate": 1,
+      "support": 1,
+      "differences": [
+        "/items/1/fields/2/items/1/fields/3/value"
+      ],
+      "preInterventionEqual": true
+    },
+    {
+      "candidate": 2,
+      "support": 0,
+      "differences": [
+        "/items/1/fields/2/items/1/fields/3/value"
+      ],
+      "preInterventionEqual": true
+    },
+    {
+      "candidate": 2,
+      "support": 1,
+      "differences": [
+        "/items/1/fields/2/items/1/fields/3/value"
+      ],
+      "preInterventionEqual": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/workCodecs.ts",
+      "sha256": "58bd4bf39c27be9ef31408131b89688a26304ad7c27d25061421e534a6b4be2f"
+    },
+    {
+      "path": "src/campaign3/workFactory.ts",
+      "sha256": "134399825228092fdc3ae454d8939193bd12ed6b830677a8b4718ac39ef6ba18"
+    },
+    {
+      "path": "src/campaign3/workMath.ts",
+      "sha256": "0436cfc40d0a581c0596d913f15300ea404ac985b80dbdf20afe5e34b20f79e9"
+    },
+    {
+      "path": "src/campaign3/workModel.ts",
+      "sha256": "8a702014a0d57b2d2973f256ef201931b44231396494e3aa82acf4c116b60361"
+    },
+    {
+      "path": "src/campaign3/workRuntime.ts",
+      "sha256": "d7a5efd017c8891217d401d30061b0378d34a23218c98d0aa38dd6591ec621b6"
+    },
+    {
+      "path": "src/campaign3/workSelection.ts",
+      "sha256": "6fa1765c8e7f7cac0b688136ba47fa92216324149f6466e475b0cd66244130f9"
+    }
+  ],
+  "limits": "No full active-suite claim. Explicit identity channel, two adopted tasks, three cards, eight source instants, fixed deadline and control law. Broader Brief12.6 is conditional."
+}

@@ -450,3 +450,19 @@ appraisal consumes belief with goals/context; affect can bias later readiness wi
 becoming evidence or an action command. Missing evidence, observed negative evidence,
 unknown belief and known neutral belief stay distinct. The selected arithmetic does
 not thereby become Vivarium's permanent affect law.
+
+
+## 2026-09-21 — bounded WORKSPACE/CONTROL disposition
+
+VER-C3-WORK-001 and WORKSPACE_CONTROL_READINESS.md record the intake. MEC-011/
+EXP-004 availability versus access and MEC-020/EXP-013 lifecycle distinctions are
+RETAINED by public overload/distraction/cue/expiry contrasts. MEC-012..016 inherited
+grounds/dice/arbitration execute downstream; C has no motive authority. P3-011 strict
+later delivery and full-prefix replay are preserved. MEC-005/007/009/010 remain
+separate attention/memory mechanisms, not silently replaced by the controlled board.
+StoredSet versus IndexedReplay earns DERIVED for a separate active-set cache only
+under the fixed-deadline, fully retained safe-history domain. RO-C3-012 carries broader
+control, lifecycle, history and integration obligations. WORK-DESIGN-001 preserves
+the confounded priority fixture and its exact one-field counterfactual correction.
+Transfer: retained information, maintained selection and permission to supply a reason
+remain separate even when active-set representation can be reconstructed.

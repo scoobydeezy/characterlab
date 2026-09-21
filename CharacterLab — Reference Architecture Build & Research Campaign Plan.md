@@ -206,10 +206,15 @@ The bounded AFFECT increment is now complete under VER-C3-AFFECT-001:18 models,
 91 main public runs and1236 complete-prefix restores/continuation equalities. See
 `docs/planning/CAMPAIGN3_AFFECT_QUALIFICATION.md`. Independent belief-relative factors,
 grounded competing motives, relief-not-evidence and strictly later appraisal feedback
-are traversable; general affect/control/feedback laws remain conditional. The next
-natural frontier is workspace/control readiness for PHEN-WORK-001, beginning with
-its phenomenon and historical-mechanism intake. These closures do not promote the
-full MULTISOURCE phenomenon or the whole campaign.
+are traversable; general affect/control/feedback laws remain conditional.
+Bounded WORKSPACE/CONTROL is now complete under VER-C3-WORK-001:48 models,78 public
+runs and624 complete-prefix restores/continuation equalities. See
+docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md. Maintained access,
+distraction/protection and cue/expiry are traversable; the active-set cache is derived
+from retained safe history in this domain. RO-C3-012 conditionally preserves wider
+control and history/lifecycle limits. Next natural frontier: PHEN-SKILL-001 readiness,
+beginning with its phenomenon and historical-mechanism intake. These bounded closures
+do not qualify the full Brief12.6 family or the whole campaign.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,
