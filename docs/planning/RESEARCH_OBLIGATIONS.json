@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-09-21",
-  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-HABIT-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
+  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-REL-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -438,6 +438,39 @@
       "doesNotBlock": "Completed bounded HABIT, SOCIAL, SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-REL-001 readiness.",
       "closureRequirement": "Accept successor contracts and compare acquired-history effects under equal current belief and other contributors. Preserve current-reward-only, explicit-belief-only, NoHistory, serious learning laws and derived/stored alternatives. Independently qualify stronger preference/control, richer memory, body and addiction clauses when triggered.",
       "closure": null
+    },
+    {
+      "id": "RO-C3-016",
+      "title": "Relationships beyond finite directional cooperation and rupture history",
+      "status": "CONDITIONAL",
+      "distinction": "Current person estimate, admitted dyadic history, relational appraisal, contact feasibility and prospective response",
+      "established": "VER-C3-REL-001 qualifies bounded PHEN-REL-001 with11 models,24 runs,256 complete-prefix restores/continuations. Equal current person estimates with different own histories change effective contact responses; a positive explanation changes estimate without erasing rupture; absence preserves history. Derived and stored summaries have equal observer views under both laws and processing orders.",
+      "unresolved": "General relationship formation/repair, trust/comfort/respect/attachment/reliance dimensions, ordinary recognition and causal attribution correction, asymmetric attachment, reconciliation, grief, long separation, richer person-model/history alternatives, compression, enacted reciprocal interaction, privacy tooling and identity/body/control integration remain unqualified. A complete-history cache equivalence does not delete architecture distinctions.",
+      "verdicts": [
+        "VER-C3-REL-001"
+      ],
+      "evidence": [
+        "docs/planning/RELATIONSHIP_READINESS.md",
+        "docs/planning/RELATIONSHIP_IMPLEMENTATION_FINDINGS.md",
+        "docs/planning/RELATIONSHIP_CALIBRATION_AUDIT_REV1.json",
+        "docs/planning/RELATIONSHIP_PUBLIC_EXPERIMENT_FAILURE_REV1.json",
+        "docs/planning/RELATIONSHIP_PUBLIC_EXPERIMENT_REV2.json",
+        "docs/planning/RELATIONSHIP_VALIDATION_CLOSURE_REV2.json",
+        "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
+        "src/test/relationshipPublic.test.ts",
+        "src/test/relationshipBoundary.test.ts"
+      ],
+      "owner": "Relationship learning, person-model, social appraisal, memory and interaction seams",
+      "reopenTrigger": "A new relational dimension or source/recognition/attribution domain, proposed person-model/relationship reduction, forgetting/compression, longer separation, attachment asymmetry, repair/grief, enacted reciprocal action or identity/body/control coupling.",
+      "blocks": [
+        "Whole Brief12.11 or universal relationship qualification",
+        "Treating witnessed shared-world events as another observer's personal history",
+        "Deleting relationship/person-model distinctions or discarding history based on summary equivalence",
+        "General ORD-002/TRC-003 closure"
+      ],
+      "doesNotBlock": "Completed bounded RELATIONSHIP, HABIT, SOCIAL, SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-LONG-001 readiness.",
+      "closureRequirement": "Accept successor contracts and preserve matched person estimates with changed admitted own history, nonrecipient isolation, hidden-truth equivalence, rupture/explanation/absence distinctions and explicit/derived/person-only comparisons. Qualify each new attribution, relationship dimension, interaction and retention clause independently. Preserve SharedHistory's directional and simultaneous-participant failures and REL-FIND-005: the frozen0.1 zero-modifier cohort failed the behavioral gate despite changed appraisal records.",
+      "closure": null
     }
   ],
   "verdictReviews": [
@@ -539,6 +572,12 @@
       "verdict": "VER-C3-HABIT-001",
       "obligations": [
         "RO-C3-015"
+      ]
+    },
+    {
+      "verdict": "VER-C3-REL-001",
+      "obligations": [
+        "RO-C3-016"
       ]
     }
   ],
@@ -645,6 +684,12 @@
       "path": "docs/planning/CAMPAIGN3_HABIT_QUALIFICATION.md",
       "obligations": [
         "RO-C3-015"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-016"
       ]
     }
   ]

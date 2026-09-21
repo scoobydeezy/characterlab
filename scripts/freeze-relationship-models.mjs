@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const root='docs/planning/campaign3-relationship-model-rev2';assert(!fs.existsSync(root));const hash=b=>createHash('sha256').update(b).digest('hex'),server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{const {relationshipRecipe,compileRelationshipModel}=await server.ssrLoadModule('/src/campaign3/relationshipModel.ts'),{canonicalEncode:enc}=await server.ssrLoadModule('/src/substrate/canonicalEncoding.ts'),models=[];
+ for(const candidate of [1,2])for(const law of [1,2])for(const reverse of [false,true])await add("candidate-"+candidate+"-law-"+law+"-reverse-"+Number(reverse),{candidate,law,reverse}); for(const candidate of [3,4,5])await add("candidate-"+candidate,{candidate}); async function add(name,settings){const source=relationshipRecipe(settings),model=await compileRelationshipModel(source),directory=root+'/'+name;fs.mkdirSync(directory,{recursive:true});const files=Object.entries({...source,'model-identity':model.modelIdentity.canonicalBytes,'initial-state':enc(model.initial.canonicalValue())}).map(([name,bytes])=>{const path=directory+'/'+name+'.cenc.hex',data=Buffer.from(bytes).toString('hex')+'\n';fs.writeFileSync(path,data,{flag:'wx'});return {path,sha256:hash(data)};});models.push({name,settings:model.settings,modelIdentity:Buffer.from(model.modelIdentity.canonicalBytes).toString('hex'),files});}
+ fs.writeFileSync(root+'/FREEZE.json',JSON.stringify({date:'2026-09-21',status:'FROZEN before qualification',contractSha256:hash(fs.readFileSync('docs/formal/RELATIONSHIP_PUBLIC_CONTRACT_REV2.md')),allocationSha256:hash(fs.readFileSync('docs/formal/RELATIONSHIP_PUBLIC_ALLOCATION_TABLE.json')),models},null,2)+'\n',{flag:'wx'});console.log('Frozen '+models.length+' relationship models');
+}finally{await server.close();}
+
+
+

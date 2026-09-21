@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "retainedFailedModels": 11,
+  "failedCohortReplay": "exact prior terminal save hash",
+  "models": 11,
+  "frozenFiles": 55,
+  "publicRuns": 24,
+  "prefixRestores": 256,
+  "continuationEqualities": 256,
+  "terminalNoOpEqualities": 24,
+  "affectedTests": 86,
+  "referenceTests": 328,
+  "exactInterventions": [
+    {
+      "a": "candidate-1-law-1-reverse-0",
+      "b": "no-shared-acquisition",
+      "changedField": "3",
+      "paths": [
+        "/items/0/fields/3/value",
+        "/items/1/fields/3/value"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1-reverse-0",
+      "b": "denied-acquisition",
+      "changedField": "4",
+      "paths": [
+        "/items/0/fields/4",
+        "/items/1/fields/4"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1-reverse-0",
+      "b": "no-explanation",
+      "changedField": "4",
+      "paths": [
+        "/items/5/fields/4"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1-reverse-0",
+      "b": "no-rupture",
+      "changedField": "2",
+      "paths": [
+        "/items/4/fields/2/value"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1-reverse-0",
+      "b": "contact-present",
+      "changedField": "8",
+      "paths": [
+        "/items/7/fields/8"
+      ]
+    },
+    {
+      "a": "fixed-display-cooperation",
+      "b": "fixed-display-breach",
+      "changedField": "2",
+      "paths": [
+        "/items/0/fields/2/value",
+        "/items/1/fields/2/value"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/relationshipCodecs.ts",
+      "sha256": "615dc2cb1c2702d128c01cd363761292e94c1a335d354256057dee14867d6b9d"
+    },
+    {
+      "path": "src/campaign3/relationshipFactory.ts",
+      "sha256": "764a121b3d50a7d1ca9d2c0549371e3caf0f6451f0406521e1f25f7ee820a859"
+    },
+    {
+      "path": "src/campaign3/relationshipMath.ts",
+      "sha256": "943c2f5c4cac6047505f8f91a53ddeca7da346dad1da7821f1df5a5a4b73b224"
+    },
+    {
+      "path": "src/campaign3/relationshipModel.ts",
+      "sha256": "5d8fdafc350626923995d3409e377ac0a2423154f37aeb3fd11de449e77bbdf7"
+    },
+    {
+      "path": "src/campaign3/relationshipRuntime.ts",
+      "sha256": "09b621ab50db7518588451d620a307a6ae9fbf02d924bc88b52b5603f6e77d94"
+    }
+  ],
+  "limitations": "Two observers, controlled identity and interaction classification, latest stated-willingness estimate, finite cooperation/rupture profile and prospective contact response. No enacted interaction, general relationship vector, grief, attribution correction or history compression."
+}

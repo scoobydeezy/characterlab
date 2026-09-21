@@ -1617,3 +1617,38 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   identity/body/skill integration and addiction/dependence/withdrawal/relapse.
   No architectural owner ruling pending.
 - **Counters:** highest841; allocated since verdict0 (25 this increment).
+
+
+## `VER-C3-REL-001` — Dyadic history beyond current person estimates
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded RELATIONSHIP COMPLETE.
+- **Contract:** relationship-public/0.2-candidate; records842..862, namespace1156.
+  Independently keyed history/person/cache authorities; fixed identity/body0,skill1.
+- **Corpus:** bounded PHEN-REL-0011.0.0-draft, unchanged corpus0.29.0. No whole
+  Brief12.11, general ordering/privacy, or Campaign3 qualification.
+- **Evidence:**11 frozen models/55 files,24 public runs,256 whole-prefix restores
+  and continuations (232 advancing,24 terminal), including observer-view equality.
+  See CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md and RELATIONSHIP_VALIDATION_CLOSURE_REV2.json.
+- **Witnesses:** exactly matched same-observer person estimate/different admitted
+  history changes effective contact response; rupture survives positive explanation;
+  absence changes feasibility without erasure; witnesses do not inherit participants'
+  histories; hidden-source and nonrecipient exact view equality. Analytical score-win
+  and effective Auto/roll probabilities are distinguished. No executed-action claim.
+- **Competitors:** DerivedHistory/StoredSummary, PersonEstimateOnly, StickyRupture/
+  LatestInteraction. SharedHistory and DirectTruth fail named contrasts; SharedHistory
+  also fails transactionally with two simultaneous participants. Reverse-order semantic
+  views and actual draws agree under frozen authored probe roots.
+- **Verdict:** RETAINED history-relative appraisal distinct from the tested current
+  person estimate. Separate stored summary NOT REQUIRED in the complete finite journal
+  domain. General relational dimensions/learning/repair laws UNRESOLVED. No architecture
+  deletion, general person-model reduction, episodic equivalence or compression claim.
+- **Validation:**86 affected tests,328 reference tests, TypeScript/build/boundary;
+  all17 stages plus commit reached-fault rollback during an actual rupture/cache change.
+  Own-key and forbidden-view audits pass. The0.1 cohort failed effective-response
+  discrimination because unit1 truncated bounded modifiers to0. It remains frozen
+  and replayable; the0.2 successor uses existing unit1/4 calibration. Findings are preserved in
+  RELATIONSHIP_IMPLEMENTATION_FINDINGS.md. No full active-suite claim.
+- **Obligation:** RO-C3-016 CONDITIONAL for richer dimensions, recognition/attribution,
+  asymmetric attachment, reconciliation, grief, longer separation, memory/compression,
+  enacted reciprocal interaction and identity/body/control integration. No owner ruling.
+- **Counters:** highest862; allocated since verdict0 (21 this increment).

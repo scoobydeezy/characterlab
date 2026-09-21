@@ -73,15 +73,15 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_HABIT_QUALIFICATION.md in that directory. Bounded HABIT is COMPLETE:
-VER-C3-HABIT-001,12 frozen models,23 runs,291 complete-prefix restores/continuation
-equalities; counters841/0. Earlier bounded GA, BODY/MULTISOURCE, BELIEF, AFFECT,
-WORKSPACE/CONTROL, SKILL and SOCIAL stay complete. RO-C3-015 retains general habit,
-memory/control/integration and addiction limits. Derived and cached tendency are
-equivalent in this profile; no general memory reduction or architecture deletion.
-ORD-002/TRC-003 have bounded SOCIAL snapshot/projection coverage, not global closure;
+CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md in that directory. Bounded RELATIONSHIP is
+COMPLETE: VER-C3-REL-001,11 models,24 runs,256 whole-prefix restores/continuations;
+counters862/0. Earlier bounded GA, BODY/MULTISOURCE, BELIEF, AFFECT, WORKSPACE/CONTROL,
+SKILL, SOCIAL and HABIT stay complete. RO-C3-016 preserves wider relationship,
+attribution, grief, memory/compression and integration limits. Derived and cached
+relationship summaries agree in this profile; no architecture distinction is deleted.
+ORD-002/TRC-003 have bounded snapshot/projection coverage, not global closure;
 ORD-001/005 remain open outside qualified profiles. No owner ruling is pending.
-Next natural frontier: PHEN-REL-001 readiness and historical intake. Do not reopen
+Next natural frontier: PHEN-LONG-001 readiness and historical intake. Do not reopen
 completed bounded domains or implement from an external review alone.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`

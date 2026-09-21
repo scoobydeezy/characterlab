@@ -1,0 +1,894 @@
+{
+  "version": "relationship-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1156,
+  "records": [
+    {
+      "typeId": 842,
+      "name": "RelationshipProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reverse",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 843,
+      "name": "RelationshipOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Participants",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Display",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Claim",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ContactA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ContactB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 844,
+      "name": "RelationshipTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Participants",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 845,
+      "name": "RelationshipObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Admitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Claim",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 846,
+      "name": "RelationshipEntry",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 847,
+      "name": "RelationshipJournal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:846",
+            "min": 0,
+            "max": 12
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 848,
+      "name": "RelationshipHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Dyads",
+          "type": {
+            "map": [
+              "ref:808",
+              "ref:847"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 849,
+      "name": "RelationshipPersonEstimate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "type": "id:1156",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 850,
+      "name": "RelationshipPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Dyads",
+          "type": {
+            "map": [
+              "ref:808",
+              "ref:849"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 851,
+      "name": "RelationshipSummary",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "CooperationCount",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Rupture",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 852,
+      "name": "RelationshipSummaryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Dyads",
+          "type": {
+            "map": [
+              "ref:808",
+              "ref:851"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 853,
+      "name": "RelationshipAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Contact",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Summary",
+          "type": "ref:851",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Comfort",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Caution",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "MissingContact",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Person",
+          "type": "ref:849",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 854,
+      "name": "RelationshipRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:853",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 855,
+      "name": "RelationshipReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:854",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 856,
+      "name": "RelationshipResponse",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Reasons",
+          "type": "ref:855",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Draws",
+          "type": {
+            "list": "ref:411",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 857,
+      "name": "RelationshipHistoryUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:845",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:847",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:847",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 858,
+      "name": "RelationshipPersonUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:845",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:849",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:849",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 859,
+      "name": "RelationshipCacheUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:851",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Next",
+          "type": "ref:851",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 860,
+      "name": "RelationshipView",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observations",
+          "type": {
+            "list": "ref:845",
+            "min": 0,
+            "max": 12
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Appraisals",
+          "type": {
+            "list": "ref:853",
+            "min": 0,
+            "max": 12
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Responses",
+          "type": {
+            "list": "ref:856",
+            "min": 0,
+            "max": 12
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Journal",
+          "type": "ref:847",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Person",
+          "type": "ref:849",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 861,
+      "name": "RelationshipContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observers",
+          "type": {
+            "list": "id:1000",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Actors",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Targets",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Identity",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Body",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Skill",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "ProbeRoots",
+          "type": {
+            "list": "id:1038",
+            "min": 0,
+            "max": 48
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 862,
+      "name": "RelationshipStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

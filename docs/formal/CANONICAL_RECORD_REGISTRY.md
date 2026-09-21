@@ -246,3 +246,15 @@ authority/habit-history, root823 to authority/reward-expectation, optional root8
 to authority/habit-summary. Occurrences are profile-local, not implicit SEM experience
 or ObservationRef237. No prior allocation or frozen bytes change. Counters841/25 before
 verdict,841/0 after VER-C3-HABIT-001.
+
+
+## RELATIONSHIP successor — 2026-09-21
+
+[RELATIONSHIP_PUBLIC_ALLOCATION_TABLE.json](RELATIONSHIP_PUBLIC_ALLOCATION_TABLE.json)
+accepts842..862/schema1, occurrence namespace1156 under
+[relationship-public/0.2-candidate](RELATIONSHIP_PUBLIC_CONTRACT_REV2.md). Root848 belongs
+to authority/relationship-history, root850 to authority/person-model, optional root852
+to authority/relationship-summary. Existing808 keys identify each holder/local target.
+Content861 enumerates48 authored1038 probe roots for observer/order-stable random
+addresses. Profile occurrences are not implicit SEM experiences or ObservationRef237.
+No predecessor allocation/frozen bytes change. Counters862/21 before verdict,862/0 after.

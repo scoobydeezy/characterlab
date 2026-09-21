@@ -508,3 +508,19 @@ CTL-001 embodied Need, CTL-008 addiction and CTL-010 general experienced Reward 
 broader comparisons under RO-C3-015. No reference import or universal habit reduction.
 DerivedHistory/StoredSummary equivalence earns a bounded NOT REQUIRED verdict for
 the separate cached summary, not for historical influence itself.
+
+
+## 2026-09-21 — bounded RELATIONSHIP disposition
+
+RELATIONSHIP_READINESS.md and VER-C3-REL-001 port P3-006 observer-local evidence,
+P3-007 derived relational appraisal candidates and P3-012 bounded rupture. P3-008
+embarrassment/jealousy and P3-012 grief/loss remain future phenomena. MEC-004 is a
+controlled identity channel; MEC-008/009/010 general memory/association alternatives
+remain distinct from this finite journal. MEC-011/EXP-004 preserve contact feasibility
+versus historical appraisal. MEC-012..018 reason/modifier/dice/identity controls remain
+preserved; modifiers never generate motivation from zero. MEC-019 marks response
+selection as prospective, not executed interaction. EXP-008 hidden-truth equivalence
+passes. RO-C3-016 preserves broader integration and attribution/repair claims.
+SharedHistory's nonrecipient leak and simultaneous-participant ordering failure are
+durable diagnostic findings. Derived/cache equality does not delete relationship
+history or reduce it to the tested current person estimate.
