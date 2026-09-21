@@ -73,14 +73,22 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md in that directory. Bounded LONGITUDINAL is
-COMPLETE: VER-C3-LONG-001,15 models,32 public runs,513 whole-prefix restores/
-continuations; counters883/0. Earlier bounded domains remain complete. RO-C3-017
-preserves wider retention/development/knowledge boundaries; RO-C3-009/013/016 remain
-conditional. No architecture distinction is deleted; no owner ruling is pending.
-The inspection view includes actual competence and is not character evidence.
-Next natural checkpoint: Campaign3 coverage/exit-readiness audit against all mandatory
-corpus clauses. Do not silently equate bounded domain closures with whole Campaign3 PASS.
+CAMPAIGN3_COMMIT_QUALIFICATION.md. Bounded COMMIT is COMPLETE
+(VER-C3-COMMIT-001):4 models,10 public runs,70 exact prefix continuations.
+Counters970/0;3 active/17 conditional/1 closed/0 unowned obligations. Coverage is
+16 bounded,3 prior,2 partial,0 blocked in unchanged21-member corpus0.29.0;
+whole Campaign3 remains NOT EXIT-READY. All15 Brief families stay in the denominator.
+RO-C3-018 is resolved by its bounded LEARN/EPI/REASON/DECISION/COMMIT verdicts.
+BODY ownership (RO-C3-008), BIO (009) and broader Brief coverage (019) remain active.
+Next: BODY stored-meter/reference ownership comparison. COMMIT's broader lifecycle,
+social source and calibration limits remain RO-C3-014/020. RO-C3-010 preserves
+scalar inference limits, including repeated established-below-bound precision credit.
+RO-C3-021 requires canonical historical reconciliation before final exit and does
+not block admitted implementation. DECISION significance/grammar/control/multi-option
+limits remain RO-C3-020; REASON source, direction and calibration remain RO-C3-001/020.
+Additional EPI consumers/sources/horizons reopen under RO-C3-007.
+No architecture distinction is deleted; no owner ruling is pending.
+LONG's actual-competence inspection remains a research diagnostic, not evidence.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its

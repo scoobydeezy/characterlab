@@ -539,3 +539,72 @@ import or architecture deletion. RO-C3-009/013/016/017 retain broader obligation
 The0.1 symmetric-standing failure, capacity adapter error, execution-threshold finding
 and research-diagnostic boundary are preserved. Transfer: acquired structure may
 outlast individual episodes, but compression must earn the future queries it preserves.
+
+
+## Bounded LEARN port/control disposition — 2026-09-21
+
+VER-C3-LEARN-001 and CAMPAIGN3_LEARN_QUALIFICATION.md re-enter MEC-001/002 under
+learn-public/0.1-candidate, not a universal estimate law. MEC-003 supplies bounded
+measurement/classification; MEC-006 surprise remains a preserved control with no
+new consumer. EXP-002/005 censoring controls and RET-003..006 remain binding.
+UnconditionalPrecision is a named retired negative control; PointOnly is a safe
+but insufficient comparator. Historical millionth commit arithmetic is separately
+frozen beside exact rationals. No reference source was imported or modified.
+Fresh-prior repeated bounds stop credit after the first; established below-bound
+priors can keep accepting identical bounds. Full-point accepted-bound precision
+and general scalar inference remain RO-C3-010. PHEN-LEARN's exact lower-bound
+public debt is discharged; other RO-C3-018 clauses remain active.896/0.
+
+
+## Bounded EPI port/control disposition —2026-09-21
+
+VER-C3-EPI-001 ports MEC-003 measurement, MEC-006 evidence-aware surprise and
+MEC-007 independent-budget encoding into the exact saturation receiving fixture.
+MEC-002 Gated learning is retained under the accepted LEARN approximation;
+MEC-004/005 fixed admitted classification/attention are explicit controlled inputs.
+EXP-002/007/008 and RET-003/004/006/014 preserve censoring/hidden-truth constraints.
+SUB-008/009/011 preserve source, ordering and deterministic transaction boundaries.
+PotentialLeak/OverflowLeak are diagnostic controls, not legitimate alternatives;
+previous serious EAM/GA and LEARN candidates remain available. No source imports,
+new generic Need formula, general surprise-law selection or memory reduction.
+RO-C3-007/010 preserve broader limits; RO-C3-018 EPI debt discharged.912/0.
+
+
+## Joined REASON port/control disposition —2026-09-21
+
+VER-C3-REASON-001 and CAMPAIGN3_REASON_QUALIFICATION.md join MEC-012 exact semantic
+keys, MEC-013 separate source roles, MEC-014 role/sign coverage then bounding,
+MEC-015/016 actual dice/modifiers and weak-base rescue. EXP-009/014 now execute
+together through permitted source observations and actual acquired standing.
+MEC-017/018 supply genuine choice/expression/qualification/identity history;
+MEC-022 preserves the two failed model/plan/test cohorts and their calibrations.
+PooledChannel, PairwiseOnly, PerFactDie and IdentityIndependentDie remain explicit
+comparators. No generic coverage law, direction identity or numeric calibration
+is settled. Larger-union subset residual and arbitrary renaming limits survive
+under RO-C3-001/020; whole BIO remains RO-C3-009. No reference imports or edits.929/0.
+
+
+## Public DECISION port/control disposition —2026-09-21
+
+VER-C3-DECISION-001 retains MEC-015 authoritative dice/arbitration, MEC-017 frozen
+contextual expression, MEC-019 intent/attempt/outcome separation and MEC-022 exact
+historical calibration. SUB-004/005/008/009 preserve addressed draws, exact finite
+probabilities, rollback and whole-prefix replay. EXP-010 retains multiple independent
+reasons and presentation of the actual authoritative draw. RET-013 stays prohibited:
+later history does not rewrite earlier expressions. All five required alternatives
+are public controls, including exact balanced opaque marginal sampling and historical
+intent-equals-outcome. The broader identity loop remains the existing control, not
+new DECISION learning. RO-C3-020 retains general significance/grammar/multi-option
+limits; RO-C3-018 retains COMMIT. No reference edits or imports. Counters951/0.
+
+
+## Joined COMMIT lifecycle/identity/witness disposition —2026-09-21
+VER-C3-COMMIT-001 and CAMPAIGN3_COMMIT_QUALIFICATION.md retain MEC-020/EXP-013
+active-only concrete instance pressure and distinct recurrence under fixed earned
+identity. MEC-012..018 execute actual source/dice/choice/identity prelude and standing
+feedback; no authored trait bonus replaces it. RET-010/011 remain explicit failing
+CoreNeed/Immortal controls; ReusedId fails recurrence identity. SOCIAL's controlled
+identified LastObservation extends to per-observer/per-instance statuses. Unobserved
+retirement can leave stale knowledge. SUB-004/008/009 preserve addressed draws,
+rollback and exact prefixes. RO-C3-018 is resolved; RO-C3-014/020 retain wider
+lifecycle/source/calibration limits. No reference edits/imports; counters970/0.

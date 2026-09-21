@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "Bounded LEARN model/plan/result/test/source closure; not full active-suite or general inference qualification.",
+  "models": 6,
+  "imageFiles": 24,
+  "runs": 39,
+  "restores": 580,
+  "advancing": 541,
+  "terminal": 39,
+  "tests": [
+    {
+      "path": "docs/planning/LEARN_PRESERVATION_TESTS_REV2.json",
+      "passed": 44,
+      "sha256": "8e0e97970041ac7102ca7cfecd5e7836d76252c4d9afd6dc6dab18addce6cc87"
+    },
+    {
+      "path": "docs/planning/LEARN_REFERENCE_TESTS_REV1.json",
+      "passed": 328,
+      "sha256": "2f14a73b360f04435f68d4f946eee06e1a3391d2dfbf904592b9800200c7f047"
+    }
+  ],
+  "files": [
+    {
+      "path": "src/campaign3/learnCodecs.ts",
+      "sha256": "89ecdd2967a81d55b0e9addf19a831ddeed8e7e4c04c4345947e04481904b156"
+    },
+    {
+      "path": "src/campaign3/learnModel.ts",
+      "sha256": "4b0c7162061df8ad272a2a7798c8fb30b7fdf60e535bb83ea53b26b2f52e8fab"
+    },
+    {
+      "path": "src/campaign3/learnRuntime.ts",
+      "sha256": "6cd4265d73082375adf00a3909ec0da40d9455a4e7a753a384451c2bec233151"
+    },
+    {
+      "path": "src/campaign3/learnFactory.ts",
+      "sha256": "e1e34b2d02ef031fe1bad9cb932e02ffa60f8038c3ee1132b53653e3e21cb9b2"
+    },
+    {
+      "path": "src/campaign3/learnMath.ts",
+      "sha256": "7aebd5adf07b82b1711665f522b576e5dc7c4be3341ca29ec9e4b2a933713fd0"
+    },
+    {
+      "path": "src/test/learnFixtures.ts",
+      "sha256": "81961d463ffcf2bf5575f32b46973d63a5f81de9648ea7744abab0a219de6d05"
+    },
+    {
+      "path": "src/test/learnPublic.test.ts",
+      "sha256": "06f401519cfec381cf93cf3d8280b9c33ec6ea08020d4b5b53ed4b2bbc18dd76"
+    },
+    {
+      "path": "scripts/qualify-learn-public.mjs",
+      "sha256": "12ca1a0c6e033a4035e83d00d19494dd434df48f565bc60def61f0f1f69f1201"
+    },
+    {
+      "path": "scripts/freeze-learn-models.mjs",
+      "sha256": "e40b6de7bc5d1db6e2c7bb0143aa354ee54392e3331fb8e02d75a65aec1d8748"
+    },
+    {
+      "path": "docs/formal/LEARN_PUBLIC_CONTRACT.md",
+      "sha256": "3d0ad80c09e3d6ae08ffa4c8c8fc975a0e7c95a2b7ea61ffdf9ce4c10d709b1e"
+    },
+    {
+      "path": "docs/formal/LEARN_PUBLIC_ALLOCATION_TABLE.json",
+      "sha256": "6b8db0ae6bd98dc65aaab5f8866443415044e2d23a4a26e3d27dafac0c39c3e6"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "6a2244bc23b83a9c53ae9e65baaab250545bdbb3506cf410159eee0565f6cf5d"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "d125e2d112078606bf3420df6810b621a20e264ffc7ebbf93e6a7adb52db2527"
+    }
+  ]
+}

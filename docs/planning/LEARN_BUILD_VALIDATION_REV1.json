@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "commands": [
+    "npm exec tsc -- --noEmit",
+    "npm run build",
+    "node scripts/check-reference-boundary.mjs"
+  ],
+  "scope": "Executed this increment; production build includes TypeScript and boundary checks. No full active-suite claim.",
+  "generatedBuildInfo": "Restored tracked tsconfig.tsbuildinfo to HEAD after successful build.",
+  "files": [
+    {
+      "path": "src/campaign3/learnCodecs.ts",
+      "sha256": "89ecdd2967a81d55b0e9addf19a831ddeed8e7e4c04c4345947e04481904b156"
+    },
+    {
+      "path": "src/campaign3/learnFactory.ts",
+      "sha256": "e1e34b2d02ef031fe1bad9cb932e02ffa60f8038c3ee1132b53653e3e21cb9b2"
+    },
+    {
+      "path": "src/campaign3/learnMath.ts",
+      "sha256": "7aebd5adf07b82b1711665f522b576e5dc7c4be3341ca29ec9e4b2a933713fd0"
+    },
+    {
+      "path": "src/campaign3/learnModel.ts",
+      "sha256": "4b0c7162061df8ad272a2a7798c8fb30b7fdf60e535bb83ea53b26b2f52e8fab"
+    },
+    {
+      "path": "src/campaign3/learnRuntime.ts",
+      "sha256": "6cd4265d73082375adf00a3909ec0da40d9455a4e7a753a384451c2bec233151"
+    }
+  ]
+}

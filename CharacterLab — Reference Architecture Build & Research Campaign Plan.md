@@ -237,9 +237,55 @@ agree. RO-C3-016 preserves broader relationship, attribution, grief and integrat
 Bounded LONGITUDINAL is complete under VER-C3-LONG-001:15 models,32 runs and513
 whole-prefix restores/continuations. See docs/planning/CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md.
 Biography, skill and relationship coexist across actual episode loss/interference/
-relearning; RO-C3-017 preserves broader scope. Next natural checkpoint: Campaign3
-coverage/exit-readiness audit against mandatory corpus clauses and obligations. These bounded
-closures do not qualify whole Brief12.6/12.8 families or the whole campaign.
+relearning; RO-C3-017 preserves broader scope. The coverage/exit-readiness audit is
+complete under VER-C3-AUDIT-001: see docs/planning/CAMPAIGN3_EXIT_AUDIT_2026_09_21.md
+and its exact clause register. Campaign3 is NOT EXIT-READY:11 bounded member
+qualifications,3 accepted prior scopes,6 partial members and1 blocked member; all15
+Brief families remain in the denominator. RO-C3-008/009/018/019 are active;
+RO-C3-020 preserves historical representation limits conditionally. Next bounded
+implementation checkpoint: PHEN-LEARN-001 scalar censored-bound readiness and its
+four exact contrasts, through accepted seam/model gates. No model implementation
+is part of this audit. These bounded closures do not qualify the whole campaign.
+
+Forward update2026-09-21: VER-C3-LEARN-001 qualifies the four exact scalar lower-bound
+contrasts:6 models,39 runs,580 complete-prefix continuations. See
+`docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md`. Corpus remains0.29.0; current
+coverage becomes12 bounded/3 prior/6 partial/0 blocked. Earlier audit snapshots keep
+their dated counts. Next: exact EPI saturation-pair receiving-horizon readiness;
+remaining gap order stays risk-based. General scalar inference remains RO-C3-010,
+other retained-member gaps RO-C3-018. Final historical gate RO-C3-021 remains open.
+
+Forward update2026-09-21: VER-C3-EPI-001 qualifies the exact saturation pair through
+the declared observation/SEM/learning/encoding/later-probe roster:6 models,72 runs,
+240 prefix continuations. See docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md and
+forward audit REV4:13 bounded/3 prior/5 partial/0 blocked; counters912/0.
+Next: REASON exact joined comparator/domain readiness. Additional consumers,
+sources/horizons and general inference remain RO-C3-007/010. Campaign3 is not closed.
+
+Forward update2026-09-21: VER-C3-REASON-001 joins exact motive/referent keys,
+collective evidence coverage, role/sign consolidation, weak-motive rescue and
+zero-base exclusion with actual acquired standing:5 models,115 runs,350 prefix
+continuations. See docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md and audit REV5:
+14 bounded/3 prior/4 partial/0 blocked; counters929/0. Next DECISION's exact
+always/never/decorative/opaque comparator matrix. Broader source/BIO/direction/
+calibration and final-history obligations remain open; no Campaign3 closure.
+
+Forward update2026-09-21: VER-C3-DECISION-001 qualifies the three exact arbitration
+regimes and five named alternatives through intent, frozen expression, execution,
+admitted consequence and historical recording:6 models,174 runs,360 prefix
+continuations. See docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md and audit REV6:
+15 bounded/3 prior/3 partial/0 blocked; counters951/0. Next COMMIT's exact joined
+lifecycle/strong-identity/retirement/recurrence/selective-witness matrix. General
+significance, grammar, control and historical reconciliation remain open.
+
+Forward update2026-09-21: VER-C3-COMMIT-001 qualifies concrete obligation lifecycle
+under fixed earned identity and selective positive social witnesses:4 models,
+10 public runs,70 exact prefix continuations. See
+ docs/planning/CAMPAIGN3_COMMIT_QUALIFICATION.md and audit REV7:
+16 bounded/3 prior/2 partial/0 blocked; counters970/0. RO-C3-018's five named
+bounded comparison debts are resolved. Next: BODY stored-meter/reference ownership
+comparison, then BIO and broader Brief coverage by invalidation risk. General
+lifecycle/source/calibration and final historical reconciliation remain open.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,
@@ -265,6 +311,14 @@ unresolved distinction in a verdict or qualification must have a disposition in
 `docs/planning/RESEARCH_OBLIGATIONS.json`. Explicit conditional transfer to a later
 seam/campaign preserves debt; it does not discharge mandatory corpus obligations.
 The reference check is necessary bookkeeping, not a substitute for the exit audit.
+
+Before final exit, RO-C3-021 additionally requires a formally defined, mechanically
+enumerable canonical historical evidence set and complete marker/finding
+reconciliation over it. See docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md for the
+manifest, inclusion/exclusion, occurrence mapping and freshness proof requirements.
+The current readiness inventory does not satisfy that final gate; the gate does
+not block LEARN. After LEARN, order remaining gaps by importance/invalidation risk,
+not a rigid reading of the audit's list.
 
 ## 7. Campaign 4+ — Reduction sequence
 

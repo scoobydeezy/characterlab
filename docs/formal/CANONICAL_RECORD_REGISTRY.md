@@ -272,3 +272,48 @@ before qualification. See LONGITUDINAL_PUBLIC_CONTRACT.md.
 LONGITUDINAL qualification uses the separately frozen0.2 successor; the0.1 cohort
 remains replayable. Allocation bytes and record meanings are unchanged. VER-C3-LONG-001
 resets counters to883/0. No general compression or knowledge-view admission follows.
+
+
+## LEARN scalar successor — 2026-09-21
+
+LEARN_PUBLIC_ALLOCATION_TABLE.json accepts884..896/schema1, namespace1158 under
+learn-public/0.1-candidate (LEARN_PUBLIC_CONTRACT.md). Root890 belongs to the
+existing belief-expectation authority; safe samples use observation namespace1115.
+No predecessor bytes change. Counters896/13 before qualification.
+
+VER-C3-LEARN-001 qualifies the bounded lower-bound profile and resets counters896/0.
+
+
+## EPI receiving successor —2026-09-21
+
+EPI_PUBLIC_ALLOCATION_TABLE.json accepts897..912/schema1, namespace1159 under
+epi-public/0.1-candidate. Root903 belief and911 latest encoding have separate
+authorities;912 is researcher-only truth. Counters912/16 before qualification.
+
+VER-C3-EPI-001 qualifies the bounded receiving roster and resets counters912/0.
+
+
+## Joined REASON successor —2026-09-21
+
+REASON_PUBLIC_ALLOCATION_TABLE.json accepts913..929/schema1, namespace1160
+under reason-public/0.1-candidate. Root925 owns the actual acquired identity history;
+new source/nucleus records preserve governed semantic keys. Counters929/17 before verdict.
+
+Corrected reason-public/0.3-candidate retains the same913..929 allocation.
+VER-C3-REASON-001 qualifies the joined bounded comparison and resets counters929/0.
+
+
+## Public DECISION successor —2026-09-21
+
+DECISION_PUBLIC_ALLOCATION_TABLE.json accepts930..951/schema1,namespace1161
+under decision-public/0.1-candidate. Root946 owns safe historical episodes.
+Counters951/22 before verdict. Existing contracts and allocations remain unchanged.
+
+VER-C3-DECISION-001 qualifies the bounded public successor and resets counters951/0.
+
+
+## Public COMMIT successor —2026-09-21
+COMMIT_PUBLIC_ALLOCATION_TABLE.json accepts952..970/schema1,namespace1162.
+Separate lifecycle956,identity958 and social965 owners. Counters970/19 before verdict.
+
+VER-C3-COMMIT-001 qualifies the bounded public successor; counters970/0.

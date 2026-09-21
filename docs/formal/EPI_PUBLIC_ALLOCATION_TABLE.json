@@ -1,0 +1,569 @@
+{
+  "version": "epi-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1159,
+  "records": [
+    {
+      "typeId": 897,
+      "name": "EpiProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Projection",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "NumericProfile",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 898,
+      "name": "EpiTrialFrame",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PotentialEffect",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 899,
+      "name": "EpiOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Frames",
+          "type": {
+            "list": "ref:898",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 900,
+      "name": "EpiSafeSample",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "SampleId",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Measurement",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 901,
+      "name": "EpiKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 902,
+      "name": "EpiEstimate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Support",
+          "type": {
+            "set": "id:1115",
+            "min": 1,
+            "max": 64
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 903,
+      "name": "EpiState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Epis",
+          "type": {
+            "map": [
+              "ref:901",
+              "ref:902"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 904,
+      "name": "EpiEpiingEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1159",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sample",
+          "type": "ref:900",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Class",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 905,
+      "name": "EpiApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1159",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Evidence",
+          "type": "ref:904",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:902",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Posterior",
+          "type": "ref:902",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "RawMean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "RawPrecision",
+          "type": "nonnegativeQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 906,
+      "name": "EpiProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1159",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Key",
+          "type": "ref:901",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "NumericProfile",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Epi",
+          "type": "ref:902",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": false
+        },
+        {
+          "id": 6,
+          "name": "Precision",
+          "type": "positiveQ",
+          "required": false
+        },
+        {
+          "id": 7,
+          "name": "Encoding",
+          "type": "ref:910",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 907,
+      "name": "EpiFrozenSamples",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1159",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Samples",
+          "type": {
+            "list": "ref:900",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 908,
+      "name": "EpiStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventType",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 909,
+      "name": "EpiContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Propositions",
+          "type": {
+            "list": "id:1027",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 910,
+      "name": "EpiEncoding",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1159",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sample",
+          "type": "ref:900",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:902",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Surprise",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Raw",
+          "type": "nonnegativeQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Strength",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 911,
+      "name": "EpiEncodingState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Latest",
+          "type": {
+            "map": [
+              "ref:901",
+              "ref:910"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 912,
+      "name": "EpiPhysicalTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Potential",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Applied",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Overflow",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Capacity",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

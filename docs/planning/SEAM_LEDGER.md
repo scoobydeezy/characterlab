@@ -1,12 +1,14 @@
 # Seam Ledger
 
-**Current routing, 2026-09-21:** [state index](CURRENT.md), [LONGITUDINAL qualification](CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md), [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members. Bounded LONGITUDINAL and earlier domains are complete; zero owner rulings. Counters883/0. Research obligations:0 active/17 conditional/0 unowned.
+**Current routing,2026-09-21:** [CURRENT](CURRENT.md), [COMMIT qualification](CAMPAIGN3_COMMIT_QUALIFICATION.md), [verdicts](VERDICT_LEDGER.md). Bounded COMMIT and earlier qualified domains COMPLETE; whole Campaign3 NOT EXIT-READY. Corpus0.29.0 unchanged21 members. Counters970/0;3 active/17 conditional/1 closed/0 unowned. Zero owner rulings.
 
-VER-C3-LONG-001 qualifies biography plus skill and relationship across actual episode
-loss, interference and relearning. Full/compact learned projections agree over the
-declared horizon; episodic-only/shared-slot controls fail. RO-C3-017 retains wider
-retention, development and knowledge-boundary obligations. Next: Campaign3 coverage/
-exit-readiness audit; whole Campaign3 remains unqualified.
+VER-C3-COMMIT-001 joins concrete lifecycle, fixed earned identity and selective
+positive witnesses:4 models,10 runs,70 exact prefix continuations. Retirement
+removes commitment pressure without erasing identity; recurrence uses a new instance.
+RO-C3-018's five bounded debts are resolved. RO-C3-014/020 preserve broader lifecycle,
+source and calibration limits. Next: BODY stored-meter/reference ownership comparison.
+REV7 records16 bounded/3 prior/2 partial/0 blocked. Final historical reconciliation
+remains unsatisfied under RO-C3-021. Prior snapshots and failed artifacts survive.
 
 ## Historical checkpoint summaries through 2026-09-13
 

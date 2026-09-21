@@ -1,0 +1,69 @@
+{
+  "scope": "Component experiment only; not public model qualification",
+  "status": "FROZEN before this recorded execution",
+  "laws": [
+    "Baseline",
+    "AlwaysRoll",
+    "NeverRoll",
+    "DecorativeDice",
+    "OpaqueWeightedChoice",
+    "IntentEqualsOutcome"
+  ],
+  "regimes": [
+    "settled",
+    "low",
+    "high"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "permissions": [
+    true,
+    false
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/DECISION_COMPARATOR_PREFLIGHT.md",
+      "sha256": "6d1b1f11c96141b77ad45d50d3ed9e4898739b8d4462ec513e263bc6588bad70"
+    },
+    {
+      "path": "src/campaign3/decisionComparators.ts",
+      "sha256": "38dff4a5787b84b80501979d73564e1fce7263968f398639cfd17016af9a9388"
+    },
+    {
+      "path": "src/test/decisionComparatorFixtures.ts",
+      "sha256": "6c9cc1982247cb664de597ef24fa11e64c2371c660e153ade320964c1be3090a"
+    },
+    {
+      "path": "src/test/decisionComparators.test.ts",
+      "sha256": "2da74cf96a482a3cc2e0fcf63fb84c33eda14f47a37adc5be9d83f51267d0a7d"
+    },
+    {
+      "path": "src/campaign2/cognitiveArbitration.ts",
+      "sha256": "d8d1fd7fa287d1d61164aa3e8f646f8d9169cf9b67ea0b5ebf625e0485348656"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveChoice.ts",
+      "sha256": "a045d61d884a738cb3064683315ebb7985e33ab3fcddda6f22ae0cdd35749ba1"
+    }
+  ]
+}

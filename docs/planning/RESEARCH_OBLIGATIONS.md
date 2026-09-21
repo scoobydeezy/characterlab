@@ -57,6 +57,17 @@ adequacy of evidence. Do not treat a green check as a research verdict.
 **Stage C comparator / North Star transfer:** no new model in this bookkeeping pass;
 preserve the named GA and MULTISOURCE competitors so later reduction cannot silently
 erase separately traceable motivation, evidence, encoding and accessibility.
-**Current routing:** common-evidence, bounded BELIEF and bounded AFFECT public work
-are complete. See CURRENT.md;0 active/11 conditional/0 unowned. Broader receiving,
-belief and affect/control/feedback laws remain conditional, not closed.
+**Current routing — 2026-09-21:** bounded domains through LONGITUDINAL are complete.
+[The exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md) records the inspected source
+inventory and mandatory coverage; Campaign3 is NOT EXIT-READY. See CURRENT.md:
+4 active/17 conditional/0 unowned. RO-C3-008/009/018/019 own remaining mandatory
+comparisons/family coverage; RO-C3-020 conditionally preserves historical graph,
+attribution, calibration and representation limits. The table above is the dated
+seed inventory, not current counts. Next: PHEN-LEARN-001 scalar-bound readiness.
+Run `node scripts/check-campaign3-exit-audit.mjs` to verify the recorded denominator,
+source hashes and references. Changed sources require substantive review before
+`--write` refreshes the snapshot; regenerating it is not a qualification procedure.
+
+The external audit review adds RO-C3-021: [canonical historical reconciliation](CAMPAIGN3_FINAL_HISTORY_GATE.md) is mandatory before final exit, but does not block current implementation. The readiness audit REV1 is preserved; REV2 records the review and refreshed inventory.
+
+Forward LEARN closure: VER-C3-LEARN-001 discharges only RO-C3-018's scalar lower-bound public realization. That entry remains ACTIVE for EPI/REASON/DECISION/COMMIT; RO-C3-010 preserves broader inference. Current routing is CURRENT.md and coverage snapshot REV3; earlier snapshots remain preserved. Counts4 active/17 conditional/0 unowned;896/0.

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "commands": [
+    "npm exec tsc -- --noEmit",
+    "npm run build"
+  ],
+  "scope": "Executed EPI increment; build includes boundary and TypeScript checks; no full active-suite claim.",
+  "generatedBuildInfo": "Restored tracked buildinfo to HEAD.",
+  "files": [
+    {
+      "path": "src/campaign3/epiCodecs.ts",
+      "sha256": "0a3d4a5799241715a9c256e4b1937dab4071adb44391244ba0f8c4ea5f402a6b"
+    },
+    {
+      "path": "src/campaign3/epiFactory.ts",
+      "sha256": "7e66160b3a4f80ad513df714a2b9621a553414931b96125512a5fb9d2f0bc48d"
+    },
+    {
+      "path": "src/campaign3/epiMath.ts",
+      "sha256": "6216e00433edde2ab36e861103da172354950e83522ec3305e3723ee15d4ab32"
+    },
+    {
+      "path": "src/campaign3/epiModel.ts",
+      "sha256": "4566b3f7aacaf24d4014ef28d286126f796be63724b899d2a1d978ac457ddcd4"
+    },
+    {
+      "path": "src/campaign3/epiRuntime.ts",
+      "sha256": "9d1431ec974be7a338dbdca8fc9e20101d39f1b39fa4ade82154298a5d90e7c1"
+    }
+  ]
+}

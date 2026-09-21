@@ -1891,3 +1891,297 @@ One actor and scheduler compose actual biography/dice/identity acquisition, skil
 Eight public/rollback tests pass. The 29-case public matrix is running every committed-prefix restore/continuation under longitudinal-public/0.2-candidate. Do not claim qualification until the comparison and preservation receipts pass. The nondiscriminating 0.1 standing cohort remains frozen/replayable; its failed pair and the corrected workspace-adapter error are preserved.
 
 No architectural owner ruling is pending. This is not whole Campaign3 or lifelong-memory qualification. Existing RO-C3-009/013/016 general obligations remain conditional; new longitudinal limits will be indexed with the verdict.
+
+
+## Archived CURRENT before exit-readiness audit — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded LONGITUDINAL is COMPLETE / QUALIFIED. No owner ruling is open.**
+Start at [the qualification](CAMPAIGN3_LONGITUDINAL_QUALIFICATION.md) and
+[VER-C3-LONG-001](VERDICT_LEDGER.md). Earlier bounded domains stay complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **883** |
+| Allocated since last verdict/corpus member | **0** (21 this increment) |
+| Research obligations | **0 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 23 verdicts** |
+| Frozen qualified models / public runs | **15 / 32** |
+| Whole-prefix restores / continuation equalities | **513 / 513** |
+| Affected tests / preserved reference tests | **120 / 328** |
+
+Public biography, procedural skill and relationship learning coexist in one actor,
+state and scheduler. Actual episode loss can leave compact learned structure intact;
+interference and relearning distinguish retention models and later execution. Full
+and compact relationship histories match their declared learned projections, while
+their accessible details differ. Episodic-only and shared-slot shortcuts fail.
+
+All17 stages and commit roll back; all prefixes restore and continue exactly.
+The failed0.1 standing cohort remains frozen and its paired terminal saves replay.
+The public inspection view includes actual skill: it is a holder-scoped research
+diagnostic, not a character-knowledge/evidence interface. General compression,
+developmental/lifelong claims and whole Campaign3 remain open under RO-C3-017 and
+earlier obligations. TypeScript/build/boundary/research checks pass; no full-suite claim.
+
+**Next natural large checkpoint:** Campaign3 coverage/exit-readiness audit against
+mandatory corpus clauses and unresolved obligations. No further implementation is
+implied by this bounded closure; do not declare whole Campaign3 complete automatically.
+
+Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before external exit-audit review — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Campaign3 coverage audit complete: NOT EXIT-READY. No owner ruling is open.**
+Start at [the exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md),
+[clause register](CAMPAIGN3_EXIT_AUDIT_REV1.json) and VER-C3-AUDIT-001.
+Bounded LONGITUDINAL and earlier qualified domains remain complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **883** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **4 active / 16 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 24 verdicts** |
+| Coverage dispositions | **11 bounded / 3 accepted prior / 6 partial / 1 blocked** |
+| Broader Brief families retained | **15; none wholly qualified by this audit** |
+
+LEARN scalar bounds remain blocked; EPI/REASON/DECISION/COMMIT need exact
+clause-complete comparison receipts. BODY ownership and BIO coupling/contradiction
+remain active obligations. RO-C3-019 explicitly retains broader family gaps,
+including goals/prospection; RO-C3-020 preserves historical representation limits.
+The audit records derivation assumptions and semantic transfer without deleting boxes.
+Zero unowned is bookkeeping, not exhaustive historical or psychological proof.
+
+**Next implementation checkpoint:** PHEN-LEARN-001 readiness, accepted minimum
+scalar seam and the four censored-bound contrasts under the escalation policy.
+No new implementation was started by this documentation audit. Do not infer a
+whole Campaign3 pass or begin general Campaign4 ranking from bounded closures.
+
+Validation: documentation denominator/source/evidence checks and research-registry
+fault self-tests; no new behavioral run or full active-suite claim. Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded LEARN closure — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Campaign3 coverage audit complete: NOT EXIT-READY. No owner ruling is open.**
+Start at [the exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md),
+[clause register](CAMPAIGN3_EXIT_AUDIT_REV2.json) and VER-C3-AUDIT-001.
+Bounded LONGITUDINAL and earlier qualified domains remain complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **883** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 24 verdicts** |
+| Coverage dispositions | **11 bounded / 3 accepted prior / 6 partial / 1 blocked** |
+| Broader Brief families retained | **15; none wholly qualified by this audit** |
+
+LEARN scalar bounds remain blocked; EPI/REASON/DECISION/COMMIT need exact
+clause-complete comparison receipts. BODY ownership and BIO coupling/contradiction
+remain active obligations. RO-C3-019 explicitly retains broader family gaps,
+including goals/prospection; RO-C3-020 preserves historical representation limits.
+The audit records derivation assumptions and semantic transfer without deleting boxes.
+Zero unowned is bookkeeping, not exhaustive historical or psychological proof.
+The external review accepts this audit. RO-C3-021 makes the stronger
+[canonical historical reconciliation](CAMPAIGN3_FINAL_HISTORY_GATE.md) mandatory
+before final exit; that gate is unsatisfied and does not block LEARN.
+
+**Next implementation checkpoint:** PHEN-LEARN-001 readiness, accepted minimum
+scalar seam and the four censored-bound contrasts under the escalation policy.
+No new implementation was started by this documentation audit. Do not infer a
+whole Campaign3 pass or begin general Campaign4 ranking from bounded closures.
+
+Validation: documentation denominator/source/evidence checks and research-registry
+fault self-tests; no new behavioral run or full active-suite claim. Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded EPI closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded LEARN COMPLETE / QUALIFIED. Campaign3 remains NOT EXIT-READY.**
+Start at [LEARN qualification](CAMPAIGN3_LEARN_QUALIFICATION.md), VER-C3-LEARN-001
+and [forward coverage register](CAMPAIGN3_EXIT_AUDIT_REV3.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **896** |
+| Allocated since last verdict/corpus member | **0** (13 this increment) |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 25 verdicts** |
+| Coverage dispositions | **12 bounded / 3 accepted prior / 6 partial / 0 blocked** |
+| Frozen models / public runs / prefix continuations | **6 / 39 / 580** |
+| Affected / reference tests | **44 / 328** |
+
+Scalar point/lower-bound evidence now reaches sole-owner learning and later probes.
+Gated learning passes the four required contrasts; unconditional precision growth
+fails, and PointOnly misses informative bounds. Established priors are acquired
+from empty S0. Exact and millionth-lattice candidates remain separately committed.
+Repeated-bound credit suppression is fresh-prior-specific; accepted-bound precision
+overcredit and general inference remain RO-C3-010. Earlier bounded closures stand.
+
+RO-C3-018 remains ACTIVE for EPI/REASON/DECISION/COMMIT; BODY ownership, BIO and
+broader Brief-family obligations remain active. RO-C3-021's canonical historical
+reconciliation gate is unsatisfied. No whole Campaign3 or full active-suite claim.
+
+**Next:** exact EPI saturation-pair receiving-horizon readiness under the escalation
+policy. Later gap ordering remains risk-based. Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded REASON closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded EPI COMPLETE / QUALIFIED. Campaign3 remains NOT EXIT-READY.**
+Start at [EPI qualification](CAMPAIGN3_EPI_QUALIFICATION.md), VER-C3-EPI-001 and
+[forward coverage register](CAMPAIGN3_EXIT_AUDIT_REV4.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **912** |
+| Allocated since last verdict/corpus member | **0** (16 this increment) |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 26 verdicts** |
+| Coverage dispositions | **13 bounded / 3 accepted prior / 5 partial / 0 blocked** |
+| Frozen models / public runs / prefix continuations | **6 / 72 / 240** |
+| Affected / reference tests | **49 / 328** |
+
+Exact before19/20, potential1/10 versus4/5 gives identical character observations,
+SEM, surprise/salience, learning, retained encoding and later probes. Both hidden
+leak controls are detected. Permitted measurement changes remain effective.
+Encoding freezes the old belief before independent140 writers. Raw research
+outputs include truth; only the checked character projection is epistemically safe.
+
+RO-C3-018 retains REASON/DECISION/COMMIT; BODY ownership, BIO and broader Brief
+coverage remain active. Additional EPI consumers/sources/horizons are RO-C3-007;
+scalar inference remains RO-C3-010. Final-history RO-C3-021 is unsatisfied.
+Earlier qualifications stand; no whole Campaign3 or full active-suite claim.
+
+**Next:** REASON exact joined comparator/domain readiness under the escalation
+policy, followed by remaining risk-ranked gaps. Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived before DECISION component checkpoint —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded REASON COMPLETE / QUALIFIED. Campaign3 remains NOT EXIT-READY.**
+Start at [REASON qualification](CAMPAIGN3_REASON_QUALIFICATION.md), VER-C3-REASON-001
+and [forward coverage register](CAMPAIGN3_EXIT_AUDIT_REV5.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **929** |
+| Allocated since last verdict/corpus member | **0** (17 this increment) |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 27 verdicts** |
+| Coverage dispositions | **14 bounded / 3 accepted prior / 4 partial / 0 blocked** |
+| Frozen models / public runs / prefix continuations | **5 / 115 / 350** |
+| Affected / reference tests | **67 / 328** |
+
+Joined REASON preserves exact motive/referent identity, role/sign partitions,
+collective redundancy, zero-base exclusion and genuine weak-motive rescue. Actual
+qualified choice history supplies standing. Four named alternatives are
+distinguished under identical raw sources/history. Two failed cohorts survive.
+
+RO-C3-018 retains DECISION/COMMIT; BODY ownership, BIO and broader Brief coverage
+remain active. RO-C3-001/020 retain general correlation, direction and calibration
+limits. Final-history RO-C3-021 remains unsatisfied. No full active-suite claim.
+
+**Next:** DECISION's exact always/never/decorative/opaque comparator matrix under
+the escalation policy, followed by remaining risk-ranked gaps. Corpus digest:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before public DECISION closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**DECISION component comparisons complete; public DECISION remains PARTIAL.**
+Start at [DECISION component checkpoint](DECISION_COMPONENT_CHECKPOINT.md).
+Bounded REASON remains qualified by VER-C3-REASON-001. No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **929** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 27 verdicts** |
+| Coverage dispositions | **14 bounded / 3 accepted prior / 4 partial / 0 blocked** |
+| DECISION component cases / exact fresh replays | **576 / 576** |
+| DECISION public runs / prefix continuations | **0 / 0** |
+| Component and existing arbitration/math tests | **29 passed** |
+
+AlwaysRoll, NeverRoll, DecorativeDice, OpaqueWeightedChoice and
+IntentEqualsOutcome have discriminating component witnesses. Low/high significance
+preserves authoritative draws and changes QuietRoll/PlayerFacingRoll. The failed
+tie-transcript extraction receipt is preserved; accepted arbitration is unchanged.
+
+**Next:** public DECISION successor through consequence observation and historical
+recording, with frozen model/plan, character-safe projection, rollback and exact
+whole-prefix continuation. Component replay does not discharge these gates.
+
+RO-C3-018 retains DECISION/COMMIT. BODY ownership, BIO and broader Brief coverage
+remain active. Final-history RO-C3-021 remains unsatisfied. Campaign3 is NOT
+EXIT-READY. Coverage remains in CAMPAIGN3_EXIT_AUDIT_REV5.json. No whole-suite claim.
+Corpus digest:5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded COMMIT closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded DECISION COMPLETE / QUALIFIED. Campaign3 remains NOT EXIT-READY.**
+Start at [DECISION qualification](CAMPAIGN3_DECISION_QUALIFICATION.md),
+VER-C3-DECISION-001 and [forward coverage register](CAMPAIGN3_EXIT_AUDIT_REV6.json).
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **951** |
+| Allocated since last verdict/corpus member | **0** (22 this increment) |
+| Research obligations | **4 active / 17 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 28 verdicts** |
+| Coverage dispositions | **15 bounded / 3 accepted prior / 3 partial / 0 blocked** |
+| Frozen models / public runs / prefix continuations | **6 / 174 / 360** |
+| Affected / reference tests | **72 / 328** |
+
+The three exact regimes and five named competitors execute through actual intent,
+frozen expression, world outcome, admitted consequence and safe historical recording.
+Low/high significance preserves the authoritative roll; prevention preserves intent.
+Missing observations remain distinct from negative evidence. Failed tests survive.
+
+RO-C3-018 retains COMMIT; BODY ownership, BIO and broader Brief coverage remain
+active. RO-C3-020 preserves wider significance/grammar/control/calibration limits.
+Final-history RO-C3-021 remains unsatisfied. No owner ruling or full-suite claim.
+
+**Next:** exact joined COMMIT lifecycle/strong-identity/retirement/recurrence and
+selective positive-witness matrix under the escalation policy. Corpus digest:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.

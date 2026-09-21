@@ -1,0 +1,661 @@
+{
+  "version": "commit-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1162,
+  "records": [
+    {
+      "typeId": 952,
+      "name": "CommitProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 953,
+      "name": "CommitContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observers",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TrainingDice",
+          "type": "ref:437",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 954,
+      "name": "CommitOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Training",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Command",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Communicate",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Recipients",
+          "type": {
+            "set": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Hidden",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 955,
+      "name": "CommitInstance",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Version",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Status",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Cause",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 956,
+      "name": "CommitState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Instances",
+          "type": {
+            "map": [
+              "ref:371",
+              "ref:955"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 957,
+      "name": "CommitTransition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Command",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": {
+            "list": "ref:955",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": {
+            "list": "ref:955",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 958,
+      "name": "CommitIdentityState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Histories",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:414"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 959,
+      "name": "CommitProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Instances",
+          "type": {
+            "list": "ref:955",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Identity",
+          "type": "ref:414",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Raw",
+          "type": "ref:403",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Reasons",
+          "type": "ref:408",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 960,
+      "name": "CommitIdentityApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:414",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:414",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Qualification",
+          "type": "ref:429",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 961,
+      "name": "CommitCommunicationTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 962,
+      "name": "CommitObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 963,
+      "name": "CommitEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:962",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 964,
+      "name": "CommitKnownClaim",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Source",
+          "type": "id:1162",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 965,
+      "name": "CommitSocialState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Knowledge",
+          "type": {
+            "map": [
+              "ref:966",
+              "ref:967"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 966,
+      "name": "CommitSocialKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 967,
+      "name": "CommitKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "type": "id:1162",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 968,
+      "name": "CommitSocialProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Claims",
+          "type": {
+            "list": "ref:964",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 969,
+      "name": "CommitStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 970,
+      "name": "CommitSocialApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1162",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Evidence",
+          "type": "ref:963",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Next",
+          "type": "ref:967",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Prior",
+          "type": "ref:967",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

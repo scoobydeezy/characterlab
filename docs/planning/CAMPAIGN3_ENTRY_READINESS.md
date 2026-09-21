@@ -1,14 +1,14 @@
 # Campaign 3 readiness and coverage
 
-**Current routing — 2026-09-14:** use [CURRENT.md](CURRENT.md) and
-[GENERAL_ATTENTION_RESUME_BRIEF.md](GENERAL_ATTENTION_RESUME_BRIEF.md) for active work.
-Corpus **0.28.0** now contains 21 members at digest
-`1ada9864e4617bf4b83b43d13dfb098049eb374610c421a175395dc33a4e9902`.
-All eleven intake obligations were promoted: three PARTIAL and eight BLOCKED at
-promotion. Named Brief-family representation increased from 6 to 13 of 15; this is
-membership coverage, not completed behavioral coverage. Current scoped verdicts are in
-[VERDICT_LEDGER.md](VERDICT_LEDGER.md). GA remains OPEN and its implementation paused;
-no owner decision is pending.
+**Current routing — 2026-09-21:** use [CURRENT.md](CURRENT.md) and
+[the exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md). Corpus **0.29.0** has21 members,
+digest `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+GA through bounded LONGITUDINAL are complete. The forward REV7 register retains16 bounded
+qualifications,3 accepted prior scopes,2 partial members and0 blocked members;
+all15 Brief families remain visible. Whole Campaign3 is NOT EXIT-READY.
+Bounded LEARN/EPI/REASON/DECISION/COMMIT are qualified by their C3 verdicts.
+RO-C3-018 is resolved. Next: BODY stored-meter/reference ownership comparison.
+No owner decision is pending.
 
 ## Historical entry audit — September 11
 

@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "scope": "Bounded public DECISION; six comparison models, admitted post-attempt history and whole-prefix continuations. No general significance, multi-option or memory law; failed tests preserved.",
+  "models": 6,
+  "imageFiles": 24,
+  "runs": 174,
+  "restores": 360,
+  "advancing": 186,
+  "terminal": 174,
+  "tests": [
+    {
+      "path": "docs/planning/DECISION_PRESERVATION_TESTS_REV1.json",
+      "passed": 72,
+      "sha256": "67433a859a61af84fc98a1bcf177283e361443e19793d5d684ddd43aa4173f36"
+    },
+    {
+      "path": "docs/planning/DECISION_REFERENCE_TESTS_REV1.json",
+      "passed": 328,
+      "sha256": "1ad2e87e1bf48afe1e998ebf06626f66239356d64658899f28294b8b7d2d6d77"
+    }
+  ],
+  "files": [
+    {
+      "path": "src/campaign3/decisionCodecs.ts",
+      "sha256": "2a4a738882272213253c7166c6b83801393ad58ae399607fe12e2aa2b1ee4663"
+    },
+    {
+      "path": "src/campaign3/decisionFactory.ts",
+      "sha256": "896f3dad6430d7e8e2bbb54673533b206968ed01aeab7530d733a93926627f42"
+    },
+    {
+      "path": "src/campaign3/decisionModel.ts",
+      "sha256": "80c7ff8ee622e590858ba1dc6f0ef3067e1d7f109301c483265aba95790cfbd2"
+    },
+    {
+      "path": "src/campaign3/decisionMath.ts",
+      "sha256": "a1f76b5b6b14103e41dbb2ec327326a13f4aa075aeaf626164862193b8f82948"
+    },
+    {
+      "path": "src/campaign3/decisionRuntime.ts",
+      "sha256": "fc5877e31a3371574d3c49a1d0017e17f590d73c56d1dba368e00342853100ad"
+    },
+    {
+      "path": "src/test/decisionFixtures.ts",
+      "sha256": "f0c8ed3a5a67f4c72f6fdd92d48c233fce87ad4e72558b1292fe6a7264bcf03a"
+    },
+    {
+      "path": "src/test/decisionPublic.test.ts",
+      "sha256": "d045f22516f0a098d74eeadedb824f4c5f32dac09f3e302bf02c35abeab21fb5"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveArbitration.ts",
+      "sha256": "d8d1fd7fa287d1d61164aa3e8f646f8d9169cf9b67ea0b5ebf625e0485348656"
+    },
+    {
+      "path": "src/campaign2/cognitiveChoice.ts",
+      "sha256": "a045d61d884a738cb3064683315ebb7985e33ab3fcddda6f22ae0cdd35749ba1"
+    },
+    {
+      "path": "src/campaign3/longitudinalMath.ts",
+      "sha256": "bc135f1bf235ee32e0bc0bc4f17f3b51de2264c23dac9526de16e2b6d8640bf9"
+    },
+    {
+      "path": "scripts/qualify-decision-public.mjs",
+      "sha256": "14cad0439dea2aacfaf1bb07ee2321aaa1233f5e58fec9f2efeb02ff8f839ff1"
+    },
+    {
+      "path": "scripts/freeze-decision-models.mjs",
+      "sha256": "fc6699d73bcdabdf520e89217255ffcb2d5ff79a48b987c198aaf30e174437a2"
+    },
+    {
+      "path": "docs/formal/DECISION_PUBLIC_CONTRACT.md",
+      "sha256": "8b799bc1a8e9dfdd8e7024a3fff5bd2aeef5727a108f7ad33f0356e491f153c8"
+    },
+    {
+      "path": "docs/formal/DECISION_PUBLIC_ALLOCATION_TABLE.json",
+      "sha256": "b5eb72dfb6e368e46d5eeaa2e8e338d103fc76b8262c10d2208c7995fe9fbe5a"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "b2c080ac429dcaba6a0504b27a0b07b60b3c8fd4bf5c97c4b7596e9173e186cd"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "84490e901443444a76bbe04a4e71e4a64ec180f2a95f63881eec85314da90f27"
+    },
+    {
+      "path": "docs/planning/DECISION_IMPLEMENTATION_FINDINGS.md",
+      "sha256": "d787c64f47aabb398ddcc3d54488823d7fa2d62f0e6ec3c06facf44841a5c196"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_TESTS_REV1.json",
+      "sha256": "77da565ee1d2efe62bbb31956852c65671801a37bb2ed116ba88166f66d70d58"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_TESTS_REV2.json",
+      "sha256": "5b24b6aabb33d59ce2f3b97f45d2f8edd757b471563a415132765f06a5aa57b3"
+    },
+    {
+      "path": "docs/planning/DECISION_BUILD_VALIDATION_REV1.json",
+      "sha256": "28a00cd67e42b8d57da88db8d0abae02131c316184977e5e454437d94ea76106"
+    }
+  ]
+}

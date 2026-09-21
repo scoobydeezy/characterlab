@@ -1679,3 +1679,149 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   durable findings. No whole active-suite or Campaign3 PASS.
 - **Obligations:** RO-C3-009/013/016/017 CONDITIONAL; no owner ruling pending.
 - **Counters:** highest883; allocated since verdict0 (21 this increment).
+
+## `VER-C3-AUDIT-001` — Coverage audit withholds Campaign 3 exit
+
+- **Date:** 2026-09-21; LOCAL DISPOSITION, documentation/evidence audit only.
+- **Verdict:** whole Campaign3 **UNRESOLVED / NOT EXIT-READY**. No new model,
+  behavioral qualification, reduction, allocation or corpus identity is created.
+- **Denominator:** unchanged corpus0.29.0, all21 members and all15 Brief families.
+  Eleven members have bounded qualifications, three retain accepted prior scope,
+  six are PARTIAL and scalar-bound LEARN is BLOCKED. These are not21 fresh runs.
+- **Evidence:** CAMPAIGN3_EXIT_AUDIT_2026_09_21.md and
+  CAMPAIGN3_EXIT_AUDIT_REV1.json preserve obligation-field text, individual Brief
+  cases, source hashes, independent findings reconciliation, reduction limits and
+  semantic transfer. Missing joined comparisons remain untested, not behavioral FAIL.
+- **Finding disposition:** RO-C3-008/009 become ACTIVE for owed BODY ownership/BIO
+  comparisons. RO-C3-018 owns retained mandatory LEARN/EPI/REASON/DECISION/COMMIT
+  gaps; RO-C3-019 owns the remaining broader-family cases, explicitly including
+  goals/prospection. RO-C3-020 conditionally preserves historical graph/attribution/
+  calibration/representation constraints. Existing bounded closures remain valid.
+- **Scope:** scanned current verdicts/qualification reports and declared cited
+  findings/history inventory. Not exhaustive review of every historical draft or
+  fresh runtime verification. The structural checker is not scientific proof.
+- **Next:** PHEN-LEARN-001 scalar censored-evidence readiness and four required
+  contrasts, through accepted seam/model gates. No implementation starts in this audit.
+- **Reopen:** new evidence or source/denominator changes, newly found material
+  findings, or a proposed broader exit/reduction claim. No owner ruling pending.
+- **Counters:** highest883; allocated since verdict/member0.
+
+**External review disposition, 2026-09-21:** audit and NOT EXIT-READY conclusion
+accepted within the declared inventory. RO-C3-021 adds a mandatory final-exit
+canonical historical evidence universe/reconciliation gate; current metadata checks
+do not discharge it. See CAMPAIGN3_FINAL_HISTORY_GATE.md. LEARN remains first;
+later gap ordering remains risk-based. No new experiment or qualification.
+
+
+## `VER-C3-LEARN-001` — Informative scalar censoring without precision manufacture
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded LEARN COMPLETE.
+- **Contract:**learn-public/0.1-candidate;884..896/schema1, namespace1158.
+- **Corpus:**PHEN-LEARN-0011.0.0-draft in unchanged corpus0.29.0; no whole Brief12.4 pass.
+- **Evidence:**CAMPAIGN3_LEARN_QUALIFICATION.md;6 models,39 runs,580 exact prefix
+  restores/continuations; LEARN_PUBLIC_EXPERIMENT_REV1.json and closure receipt.
+- **Verdict:**RETAINED informativeness/precision and epistemic distinctions;
+  UNRESOLVED general update/precision/quantization laws. Gated satisfies the four
+  lower-bound contrasts. PointOnly misses inconsistent-bound learning;
+  UnconditionalPrecision fails compatible/zero/repeated-bound controls.
+- **Limits:**fresh-prior repetition is not universal deduplication; established
+  below-bound repetition still grows precision. Full point-like credit for accepted
+  bounds remains an approximation. Exact and lattice candidates remain distinct.
+- **Preservation:**failed lattice assertion receipt preserved;44 affected/328
+  reference tests and build/type/boundary pass. No full active-suite claim.
+- **Obligations:**RO-C3-018 LEARN clause discharged; other mandatory gaps stay ACTIVE.
+  RO-C3-010 retains upper/decay/source/uncertainty and repeated-bound limitations.
+- **Reopen:**new scalar domain, upper bounds, decay, correlation, accepted-bound
+  precision requirement or richer posterior. No architectural ruling pending.
+- **Counters:**896/0 (13 allocated this increment).
+
+
+## `VER-C3-EPI-001` — Exact hidden saturation through learning and encoding
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded EPI COMPLETE.
+- **Contract:**epi-public/0.1-candidate;897..912/schema1; namespace1159.
+- **Corpus:**PHEN-EPI-001/1.3.0-draft, unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_EPI_QUALIFICATION.md;6 models,72 runs,240 exact prefix
+  restores/continuations; EPI_PUBLIC_EXPERIMENT_REV1.json and closure receipt.
+- **Verdict:**RETAINED epistemic distinction: before19/20, potential1/10 versus4/5
+  yield identical admitted1/20 evidence through six character output kinds and
+  two retained owners. Truth/overflow differ. Both deliberate leak controls are
+  detected; lawful permitted-measurement changes affect encoding and learning.
+- **Comparison limit:**leak profiles are diagnostic violations, not lawful
+  psychological competitors or a salience-necessity proof. Exact/lattice candidates
+  remain distinct; no general numerical law, memory topology or reduction selected.
+- **Causality:**prior130 encoding is frozen before independent140 writers; later50
+  sees learning and retained encoding separately. Unknown belief can coexist with
+  known encoding; missing observations remain distinct.
+- **Validation:**49 affected/328 reference tests, build/type/boundary PASS. Earlier
+  rejected seed receipt preserved. No full active-suite claim.
+- **Obligations:**RO-C3-018 exact EPI clause discharged within the declared roster;
+  REASON/DECISION/COMMIT remain active. RO-C3-007 and010 retain broader source,
+  consumer, surprise, retention and scalar inference limits.
+- **Reopen:**new consumer/source, permitted sensor or hedonic signal, evidence
+  linkability, horizon or ordering. No owner decision pending.
+- **Counters:**912/0 (16 allocated this increment).
+
+
+## `VER-C3-REASON-001` — Independent reasons without duplicate evidence or identity dice
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded REASON COMPLETE.
+- **Contract:**reason-public/0.3-candidate;913..929/schema1; namespace1160.
+- **Corpus:**PHEN-REASON-001/1.0.0-draft, unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_REASON_QUALIFICATION.md;5 frozen models,115 public runs,
+  350 exact prefix continuations; matched raw sources/history across every case.
+- **Verdict:**RETAINED exact motive/referent/role distinctions and one base die
+  per resolved reason. Aggregate collective redundancy contributes0; PairwiseOnly
+  admits1/8. PooledChannel collapses separate motives/referents; PerFactDie adds
+  description dice; IdentityIndependentDie violates zero-base exclusion.
+- **Standing:**actual choice/expression/qualification history rescues a genuine
+  weak motive with d4+1; neither standing nor situation creates a zero-base reason.
+- **Limits:**controlled task/panel mapping; one compilation plus acquired history.
+  UNRESOLVED universal coverage, direction identity, new roles/referents, arbitrary
+  renaming and numeric calibration. No architectural reduction.
+- **Preservation:**two failed model/plan/test cohorts retained and rejected;
+  67 affected/328 reference tests, type/build/boundary checks pass.
+- **Obligations:**RO-C3-018 REASON clause discharged; DECISION/COMMIT still active.
+  RO-C3-001/009/020 retain broader source, BIO, direction and calibration limits.
+- **Reopen:**new source/role, causal nonparticipant, identity representation,
+  coverage ordering or reduction. No owner decision pending.
+- **Counters:**929/0 (17 allocated this increment).
+
+
+## `VER-C3-DECISION-001` — Authoritative unresolved choice survives failed execution
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded DECISION COMPLETE.
+- **Contract:**decision-public/0.1-candidate;930..951/schema1;namespace1161.
+- **Corpus:**PHEN-DECISION-001/1.0.0-draft; unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_DECISION_QUALIFICATION.md;6 frozen models,174 public runs,
+  360 exact prefix continuations;72 affected/328 reference tests.
+- **Verdict:**RETAINED conditional authoritative arbitration, independent reason
+  dice, separate player presentation, frozen intent/expression and post-attempt
+  observation/history. AlwaysRoll, NeverRoll, DecorativeDice, OpaqueWeightedChoice
+  and historical IntentEqualsOutcome each lose a required bounded obligation.
+- **Limits:**two options, reason-mass significance, balanced opaque marginal;
+  no universal grammar, significance, control/uncertainty or memory theory.
+- **Obligations:**RO-C3-018 DECISION discharged, COMMIT remains; RO-C3-020 retains
+  wider calibration/representation limits and preserved test failures.
+- **Reopen:**significance changes authoritative math; more options; control versus
+  uncertainty; another grammar meeting all requirements; wider history consumers.
+- **Counters:**951/0 (22 allocated this increment). No owner ruling.
+
+
+## `VER-C3-COMMIT-001` — Concrete obligations retire without erasing earned identity
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded COMMIT COMPLETE.
+- **Contract:**commit-public/0.1-candidate;952..970/schema1;namespace1162.
+- **Corpus:**PHEN-COMMIT-001/1.0.0-draft; unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_COMMIT_QUALIFICATION.md;4 models,10 public runs,70 exact
+  prefix continuations;144 affected and328 reference tests.
+- **Verdict:**RETAINED concrete lifecycle gating, terminal A/new B identity,
+  separate persistent earned standing and observer-specific admitted knowledge.
+  Baseline counts0/1/0/1/1; CoreNeed1/1/1/1/1; Immortal0/1/1/2/2; ReusedId repeats A.
+- **Limits:**fixed+3 receiving calibration, cancellation, two concrete instances,
+  controlled truthful communication; no general Need/commitment/identity/social law.
+- **Obligations:**RO-C3-018 resolved by its five bounded public verdicts;
+  RO-C3-014/020 preserve wider lifecycle, source, identity and calibration limits.
+- **Reopen:**partial fulfillment, beneficiaries, delegation, series identity,
+  lifecycle consequences, new evidence/recognition source or representation reduction.
+- **Counters:**970/0 (19 this increment). No owner ruling.
