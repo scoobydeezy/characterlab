@@ -1437,3 +1437,46 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   correlations, confidence calibration and broader causal learning. ORD-001 remains
   OPEN outside this consequence-only profile. No architectural ruling is required.
 - **Counters:** highest746; allocated since this verdict0 (13 this increment).
+
+
+## `VER-C3-AFFECT-001` — Belief-relative affect without a commanded response
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded AFFECT COMPLETE.
+- **Contract:** affect-public/0.1-candidate; records747..765, namespace1151.
+  Root753 belongs solely to the existing belief-expectation authority. The successor
+  uses semantic character identity and preserves frozen BELIEF profiles unchanged.
+- **Corpus:** bounded PHEN-AFFECT-0011.0.0-draft, corpus0.29.0, digest
+  `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+  No corpus promotion or whole Campaign3 PASS.
+- **Evidence:**18 frozen models/90 files;91 main public runs,1236 complete-prefix
+  restores and1236 next-step save equalities. Fourteen supplementary executions
+  establish exact pre-intervention timing and interior feedback for all candidates.
+  See CAMPAIGN3_AFFECT_QUALIFICATION.md, AFFECT_PUBLIC_EXPERIMENT_REV1.json,
+  AFFECT_PREFIX_CONTRASTS_REV1.json and AFFECT_INTERIOR_FEEDBACK_REV1.json.
+- **Witnesses:** three separately learned observer-side conditional estimates;
+  independently varied likelihood/severity/vulnerability/control; hidden truth with
+  equal safe observations leaves all character outputs unchanged. Equal affect with
+  changed competing commitment changes action at seeds4/7 of the frozen0..7 grid.
+  Prior affect changes a strictly later appraisal and actual situation modifier.
+  Relief changes affect1→1/2 while danger belief remains1. Missing action/context,
+  censoring and no opportunity cannot manufacture mitigation evidence.
+- **Competitors:** HistoricalProduct, SplitExposure, ScalarUncontrolled;
+  RelativeReduction/AbsoluteReduction; EvidenceMean/LastObservation/NoLearning;
+  Feedback/NoFeedback. All three affect candidates show interior1/2→5/8 feedback.
+  FearAsCommand, FearAsExtraDie and ReliefAsBeliefEvidence fail distinct researcher-
+  side controls; those violations are not granted public cognitive capabilities.
+- **Verdict:** RETAINED for belief/appraisal/affect/motive/action separation,
+  independent factor interventions, unknown/zero, observed trial/action context,
+  genuine reason grounds and strictly later delivery. UNRESOLVED for universal
+  factor/control/feedback laws, scalar equivalence and affect representation necessity.
+  The chosen receiver is not independent proof that SplitExposure is necessary.
+- **Validation:**82 distinct affected tests,328 preserved reference tests, build,
+  TypeScript and boundary checks pass. Every one of15 stages plus commit has reached-
+  fault rollback after a learned prefix. Final restore requires whole-save byte
+  equality and rejects semantic/draw corruption. No full active-suite claim.
+- **Obligations:** RO-C3-011 becomes CONDITIONAL for broader uncertainty, temporal
+  feedback, causal/source domains, social/retrospective affect, extinction/generalization,
+  physiology and general action discovery. RO-C3-010 retains wider belief limits.
+  Known valuation, controlled displays and fixed adopted plans bound this qualification.
+  No TaskConcern relabeling, general Fear state, new Need ownership or ORD-005 closure.
+- **Counters:** highest765; allocated since this verdict0 (19 in this increment).

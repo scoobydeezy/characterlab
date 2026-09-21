@@ -1496,3 +1496,117 @@ This checkpoint does not claim whole PHEN-MULTI-001 or Campaign3 PASS.
 Corpus0.29.0 remains21 members, digest
 `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
 No corpus promotion or predecessor model/schema rewrite occurred.
+
+
+## Archived state index before AFFECT source work
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**The bounded BELIEF checkpoint is COMPLETE.**
+[Qualification and limits](CAMPAIGN3_BELIEF_QUALIFICATION.md),
+[VER-C3-BELIEF-001](VERDICT_LEDGER.md) and the
+[public receipt](BELIEF_PUBLIC_EXPERIMENT_REV1.json) own this closure.
+General Attention and bounded public BODY/MULTISOURCE remain complete.
+No architectural owner ruling is open.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **746** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **0 active / 10 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 16 verdicts** |
+| Public belief proof | **9 models / 48 runs / 381 prefix restores** |
+
+Fallible displayed evidence produces confidently wrong candidate beliefs and later
+correction. Goals change appraisal while belief stays exactly equal. Safe observed
+absence teaches; unobserved opportunity, censoring and silence do not. Hidden-world
+changes preserve safe bytes. Every prefix also passes a next-step continuation check.
+
+Latest affected validation:101 distinct tests,328 reference tests, production build
+and boundary checks pass. This increment did not rerun the entire active suite.
+Source, codec, authority, input and complete-save checks are recorded in the report.
+
+RO-C3-010 is CONDITIONAL for broader inference, correlated reports, confidence
+calibration, current-lane timing and causal learning. ORD-001 remains OPEN outside
+the qualified consequence140/later-read profile. EvidenceMean is a bounded candidate,
+not a universal law. Corpus membership/digest are unchanged; whole Campaign3 is open.
+
+**Next program gate:** bounded AFFECT readiness, using the phenomenon and mechanism
+ledgers before designing any factorization or feedback extension. Do not relabel
+TaskConcern as general Affect or reopen completed BELIEF without a triggered claim.
+
+Corpus0.29.0 digest:
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+
+
+## Archived entry index — 2026-09-21 AFFECT implementation
+
+# Current research entry point
+
+**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**AFFECT is active; public qualification is OPEN.**
+[Readiness and intake](CAMPAIGN3_AFFECT_READINESS.md) and
+[mitigation-source draft](AFFECT_MITIGATION_SOURCE_DRAFT.md) own the next gate.
+Bounded BELIEF, GA and BODY/MULTISOURCE remain complete. No owner ruling is open.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **746** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 10 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 16 verdicts** |
+| Affect arithmetic comparison | **81 cells / 243 candidate evaluations** |
+
+HistoricalProduct, SplitExposure and ScalarUncontrolled are preserved arithmetic
+candidates. Equal uncontrolled threat can hide distinct exposure; psychological
+necessity is not yet established. Six component tests pass. No AFFECT allocation,
+frozen runtime model, public qualification or new verdict follows from this result.
+
+**Next implementation gate:** close the observer-safe mitigation-contingency source
+contract. Generic BELIEF channel B and option availability are not efficacy. Preserve
+observed trial/action/outcome context, unknown versus ineffective control, and actual
+learning ownership. Then integrate factor appraisal, grounded competing motives,
+execution and named later feedback. RO-C3-011 owns that active public debt; broader
+BELIEF limitations remain conditional under RO-C3-010.
+
+No full active suite was rerun for this arithmetic component. The preceding BELIEF
+checkpoint retains9 models/48 runs/381 prefix restores,101 affected tests and328
+reference tests; see CAMPAIGN3_BELIEF_QUALIFICATION.md.
+
+Corpus digest unchanged:
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+
+
+## Archived entry index — 2026-09-21 AFFECT qualification
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**AFFECT public qualification is running; no owner ruling is open.**
+The source and public contracts are accepted, and all fifteen scheduler stages are
+implemented. Bounded BELIEF, GA and BODY/MULTISOURCE remain complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **765** |
+| Allocated since last verdict/corpus member | **19** |
+| Research obligations | **1 active / 10 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 16 verdicts** |
+| Frozen AFFECT models / planned public runs | **18 / 91** |
+
+[AFFECT_PUBLIC_CONTRACT.md](../formal/AFFECT_PUBLIC_CONTRACT.md) closes the mitigation
+source gate. The three conditional estimates come from actual perceived trial
+membership and observed action/outcome. Affect remains derived; adopted commitments
+supply genuine reasons, with inherited dice and separate intent/execution stages.
+
+Initial integrated validation:18 tests passed, including every-stage rollback.
+The complete public factorial/feedback/choice matrix and whole-prefix persistence
+checks are in progress. RO-C3-011 remains ACTIVE until their receipt and verdict are
+complete. No public qualification or new verdict is claimed yet.
+
+Corpus digest unchanged:
+`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.

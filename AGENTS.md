@@ -73,12 +73,15 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at `docs/planning/CURRENT.md` and
-`CAMPAIGN3_BELIEF_QUALIFICATION.md` in that directory. Bounded BELIEF is now COMPLETE:
-VER-C3-BELIEF-001,9 frozen models,48 runs,381 prefix restores; counters746/0.
-RO-C3-010 preserves broader inference/confidence and causal-learning obligations.
-ORD-001 remains open for current-lane belief application; the completed profile is
-consequence-only140 with later50 appraisal. The next frontier is bounded AFFECT
-readiness. Do not automatically reopen completed GA, multisource or BELIEF.
+`CAMPAIGN3_AFFECT_QUALIFICATION.md` in that directory. Bounded AFFECT is now COMPLETE:
+VER-C3-AFFECT-001,18 frozen models,91 main runs,1236 whole-prefix restores and
+continuation equalities; counters765/0. GA, BODY/MULTISOURCE and BELIEF stay complete.
+RO-C3-010/011 preserve broader inference, control, uncertainty, factor/feedback laws
+and general affect conditionally. ORD-001 current-lane belief and ORD-005 regulation
+are not closed by this profile. No owner ruling is pending. The next natural frontier
+is workspace/control readiness for PHEN-WORK-001; begin from its phenomenon and
+reference-mechanism intake before accepting new contracts. Do not automatically
+reopen completed bounded domains or implement from the external review alone.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its

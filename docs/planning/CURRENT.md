@@ -1,39 +1,36 @@
 # Current research entry point
 
-**Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**The bounded BELIEF checkpoint is COMPLETE.**
-[Qualification and limits](CAMPAIGN3_BELIEF_QUALIFICATION.md),
-[VER-C3-BELIEF-001](VERDICT_LEDGER.md) and the
-[public receipt](BELIEF_PUBLIC_EXPERIMENT_REV1.json) own this closure.
-General Attention and bounded public BODY/MULTISOURCE remain complete.
-No architectural owner ruling is open.
+**Bounded AFFECT is COMPLETE / QUALIFIED. No owner ruling is open.**
+Start with [the qualification](CAMPAIGN3_AFFECT_QUALIFICATION.md) and
+[VER-C3-AFFECT-001](VERDICT_LEDGER.md). GA, BODY/MULTISOURCE and BELIEF remain complete.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **746** |
-| Allocated since last verdict/corpus member | **0** |
-| Research obligations | **0 active / 10 conditional / 0 unowned** |
-| Corpus / named verdict entries | **0.29.0 — 21 members / 16 verdicts** |
-| Public belief proof | **9 models / 48 runs / 381 prefix restores** |
+| Highest permanently allocated record type | **765** |
+| Allocated since last verdict/corpus member | **0** (19 this increment) |
+| Research obligations | **0 active / 11 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 17 verdicts** |
+| Frozen AFFECT models / main public runs | **18 / 91** |
+| Whole-prefix restores / continuation equalities | **1,236 / 1,236** |
+| Affected tests / preserved reference tests | **82 / 328** |
 
-Fallible displayed evidence produces confidently wrong candidate beliefs and later
-correction. Goals change appraisal while belief stays exactly equal. Safe observed
-absence teaches; unobserved opportunity, censoring and silence do not. Hidden-world
-changes preserve safe bytes. Every prefix also passes a next-step continuation check.
+Actual perceived trials supply three conditional beliefs; independent likelihood,
+severity, vulnerability and control feed derived affect. Genuine commitments own
+reason grounds. Equal affect permits different choices; later feedback changes
+appraisal without becoming danger evidence. Fourteen supplementary executions prove
+exact timing and interior feedback for every serious candidate.
 
-Latest affected validation:101 distinct tests,328 reference tests, production build
-and boundary checks pass. This increment did not rerun the entire active suite.
-Source, codec, authority, input and complete-save checks are recorded in the report.
+HistoricalProduct, SplitExposure and ScalarUncontrolled remain distinct candidates.
+General factor/feedback/control laws, uncertainty and broader affect remain
+conditional under RO-C3-011; wider belief limits remain under RO-C3-010. Build,
+TypeScript, boundary and research checks pass; no full active-suite rerun is claimed.
 
-RO-C3-010 is CONDITIONAL for broader inference, correlated reports, confidence
-calibration, current-lane timing and causal learning. ORD-001 remains OPEN outside
-the qualified consequence140/later-read profile. EvidenceMean is a bounded candidate,
-not a universal law. Corpus membership/digest are unchanged; whole Campaign3 is open.
+**Next natural large frontier:** workspace/control readiness for PHEN-WORK-001,
+including its reference-mechanism intake and accepted source/contract gates.
+That implementation has not started. Do not reopen completed bounded domains
+without a named new phenomenon or conditional trigger.
 
-**Next program gate:** bounded AFFECT readiness, using the phenomenon and mechanism
-ledgers before designing any factorization or feedback extension. Do not relabel
-TaskConcern as general Affect or reopen completed BELIEF without a triggered claim.
-
-Corpus0.29.0 digest:
+Corpus digest unchanged:
 `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.

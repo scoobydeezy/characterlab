@@ -1,0 +1,23 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const part=Number(process.argv[2]??0),parts=Number(process.argv[3]??1),path=`docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1_PART${part}.json`;
+assert(!fs.existsSync(path),'immutable receipt exists');assert(Number.isInteger(part)&&part>=0&&part<parts);
+const hash=b=>createHash('sha256').update(b).digest('hex'),unhex=s=>new Uint8Array(Buffer.from(s.trim(),'hex'));
+const plan=JSON.parse(fs.readFileSync('docs/planning/AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json')),freezePath='docs/planning/campaign3-affect-model-rev1/FREEZE.json',freeze=JSON.parse(fs.readFileSync(freezePath));assert.equal(hash(fs.readFileSync(freezePath)),plan.modelFreezeSha256);
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{
+ const {prepareAffectModel,createAffectRun,restoreAffectRun}=await server.ssrLoadModule('/src/campaign3/affectFactory.ts');
+ const {decodeAffect:decode}=await server.ssrLoadModule('/src/campaign3/affectCodecs.ts');
+ const {canonicalEncode:enc}=await server.ssrLoadModule('/src/substrate/canonicalEncoding.ts');
+ const f=(v,n)=>v.fields.get(BigInt(n)),q=v=>v?`${v.numerator}/${v.denominator}`:null,is=(v,n)=>v?.schema?.typeId===BigInt(n),hex=v=>v?Buffer.from(enc(v)).toString('hex'):null;
+ const models=new Map();for(const m of freeze.models){const source={};let initialState;for(const file of m.files){const bytes=fs.readFileSync(file.path);assert.equal(hash(bytes),file.sha256);const name=file.path.split('/').at(-1).split('.')[0];if(['parameters','content','registry'].includes(name))source[name]=unhex(bytes.toString());if(name==='initial-state')initialState=unhex(bytes.toString());}models.set(m.name,{source,initialState,handle:await prepareAffectModel(source)});}
+ const results=[];
+ for(const [index,spec] of plan.runs.entries()){if(index%parts!==part)continue;const m=models.get(spec.model),orderedInputs=unhex(spec.orderedInputs),runSeed=new Uint8Array(32).fill(spec.seed),run=await createAffectRun(m.handle,{initialState:m.initialState,orderedInputs,runSeed});let prefixes=0,nextSteps=0,continueMain=true;
+  while(continueMain){const saved=run.save(),restored=await restoreAffectRun(m.source,{initialState:m.initialState,orderedInputs,save:saved});assert(Buffer.from(restored.save()).equals(Buffer.from(saved)),spec.name+' prefix');prefixes++;continueMain=await run.settleNextInstant();assert.equal(await restored.settleNextInstant(),continueMain);assert(Buffer.from(restored.save()).equals(Buffer.from(run.save())),spec.name+' continuation');nextSteps++;}
+  const snap=run.snapshot(),outputs=decode(snap.outputs).items,apps=outputs.filter(v=>is(v,754)),reasons=outputs.filter(v=>is(v,756)),decisions=outputs.filter(v=>is(v,757)),outcomes=outputs.filter(v=>is(v,762)),applications=outputs.filter(v=>is(v,742));
+  const app=a=>({at:String(f(a,2).value),severity:q(f(a,4)),likelihood:q(f(a,8)),vulnerability:q(f(a,9)),control:q(f(a,10)),efficacy:q(f(a,14)),raw:f(a,5).items.map(q),affect:f(a,6).items.map(q),previousAt:f(a,12)?String(f(a,12).value):null,feedback:q(f(a,13)),beliefs:f(a,3).entries.map(([k,b])=>({target:f(k,2).payload.value,mean:q(f(b,1)),weight:String(f(b,2).value)}))});
+  results.push({name:spec.name,model:spec.model,seed:spec.seed,prefixes,nextSteps,runIdentity:Buffer.from(run.runIdentity()).toString('hex'),appraisals:apps.map(app),applications:applications.map(a=>({applied:f(a,5),classification:Number(f(f(a,2),3).value),prior:f(a,3)?q(f(f(a,3),1)):null,posterior:f(a,4)?q(f(f(a,4),1)):null})),nuclei:reasons.map(a=>f(a,3).items.map(n=>({ground:hex(f(f(n,1),3)),option:hex(f(f(n,1),1)),die:String(f(n,4).value),situation:String(f(n,6).value)}))),decisions:decisions.map(a=>({chosen:hex(f(a,8)),mode:String(f(a,5).value),draws:f(a,6).items.length,probabilities:f(a,4).items.map(p=>({option:hex(f(p,1)),probability:q(f(p,2))}))})),execution:outcomes.map(a=>f(a,3)),safeOutputSha256:hash(snap.outputs),stateSha256:hash(snap.state),traceSha256:hash(snap.trace),saveSha256:hash(run.save()),semanticExperienceCount:outputs.filter(v=>is(v,751)).length});
+  console.log(`${part}/${parts}: ${results.length} complete: ${spec.name} (${prefixes} prefixes)`);
+ }
+ const codePaths=['affectCodecs','affectModel','affectSource','affectMath','affectRuntime','affectFactory','affectFactorComparison'].map(n=>'src/campaign3/'+n+'.ts');
+ fs.writeFileSync(path,JSON.stringify({date:'2026-09-21',part,parts,planSha256:hash(fs.readFileSync('docs/planning/AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json')),code:codePaths.map(path=>({path,sha256:hash(fs.readFileSync(path))})),runs:results},null,2)+'\n',{flag:'wx'});
+}finally{await server.close();}

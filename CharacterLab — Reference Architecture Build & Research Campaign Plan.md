@@ -202,9 +202,14 @@ nine frozen models,48 public runs,381 prefix restores and next-step equalities.
 See `docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md`. False-belief correction,
 opportunity gating and separate appraisal are traversable; general inference and
 confidence calibration remain conditional. ORD-001 current-lane timing is isolated.
-The next frontier is bounded AFFECT readiness from the phenomenon and mechanism
-ledgers. These closures do not promote the full MULTISOURCE phenomenon or the
-whole campaign.
+The bounded AFFECT increment is now complete under VER-C3-AFFECT-001:18 models,
+91 main public runs and1236 complete-prefix restores/continuation equalities. See
+`docs/planning/CAMPAIGN3_AFFECT_QUALIFICATION.md`. Independent belief-relative factors,
+grounded competing motives, relief-not-evidence and strictly later appraisal feedback
+are traversable; general affect/control/feedback laws remain conditional. The next
+natural frontier is workspace/control readiness for PHEN-WORK-001, beginning with
+its phenomenon and historical-mechanism intake. These closures do not promote the
+full MULTISOURCE phenomenon or the whole campaign.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,

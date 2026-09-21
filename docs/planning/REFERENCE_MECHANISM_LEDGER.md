@@ -415,3 +415,38 @@ learning remain unimplemented in this profile and conditional under RO-C3-010.
 SUB-001/008/009/011 provide exact arithmetic, actual stage trace, matched public
 comparisons,381 complete-prefix/continuation equalities and preserved receipts.
 Counters746/0; no owner ruling.
+
+## AFFECT pre-allocation intake — 2026-09-20
+
+CAMPAIGN3_AFFECT_READINESS.md records explicit P3-004/005/008/011 and
+MEC-012..019 dispositions before allocation. Historical threat product remains
+a candidate alongside SplitExposure and ScalarUncontrolled. The81-cell arithmetic
+receipt demonstrates a scalar collision, not a psychological reduction verdict.
+RO-C3-011 owns source/public obligations; learned mitigation cannot be fabricated
+from BELIEF channel B, raw availability, dispatch ancestry or relief.
+
+
+## Bounded AFFECT disposition — 2026-09-21
+
+VER-C3-AFFECT-001 and CAMPAIGN3_AFFECT_QUALIFICATION.md qualify the controlled
+P3-004/005/011 factor, no-command/no-extra-die/relief-not-evidence and later-feedback
+clauses. HistoricalProduct is ported as a candidate, alongside SplitExposure and
+ScalarUncontrolled; no universal factorization or scalar reduction is earned.
+MEC-001/002 and P3-001/002/003 retain separate observer evidence and learned state:
+three observed-trial conditions now supply fallible likelihood and mitigation
+contrasts. Action availability alone remains insufficient for efficacy. Newkey765
+preserves inherited semantic character identity without widening frozen BELIEF738.
+MEC-012/013/014/015/016/017/019 retain actual commitment grounds, role partitions,
+inherited dice/arbitration and separate intent/expression/attempt/execution. No Fear
+ground is manufactured. P3-008 social/retrospective affect, P3-005 extinction and
+generalization, physiology, uncertain/partial-factor affect and broader planning
+remain conditional under RO-C3-011, not silently retired. ORD-005 is not exercised.
+SUB-001/008/009/011 support exact arithmetic,15 actual stages,18 frozen models,
+91 main runs and1236 whole-prefix/continuation equalities.82 affected and328 reference
+tests pass. Counters765/0; no owner ruling.
+
+Durable North-Star transfer: admitted evidence changes explicit fallible belief;
+appraisal consumes belief with goals/context; affect can bias later readiness without
+becoming evidence or an action command. Missing evidence, observed negative evidence,
+unknown belief and known neutral belief stay distinct. The selected arithmetic does
+not thereby become Vivarium's permanent affect law.

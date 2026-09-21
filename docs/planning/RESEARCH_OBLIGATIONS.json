@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "date": "2026-09-20",
-  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-BELIEF-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
+  "date": "2026-09-21",
+  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-AFFECT-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -244,10 +244,11 @@
       "title": "Bounded belief versus general inference and confidence",
       "status": "CONDITIONAL",
       "distinction": "Observer evidence versus truth, belief versus appraisal, opportunity versus silence, evidence weight versus calibrated uncertainty",
-      "established": "VER-C3-BELIEF-001 qualifies nine frozen models/48 public runs/381 whole-prefix restores and next-step equalities. Fixed-truth false belief, contradiction, goal-only appraisal, observer-safe opportunity gating, absent-versus-zero and exclusive consequence ownership are traversable.",
-      "unresolved": "General belief law, correlated evidence/repeated reports, learned trust or quality, scalar censored inference, calibrated uncertainty, causal attribution, controllability, efficacy and current-phase30 application remain unqualified. Confidence tau/(tau+1) measures accumulated admitted weight and can rise under contradiction; it is not probability of correctness.",
+      "established": "VER-C3-BELIEF-001 qualifies nine frozen models/48 public runs/381 whole-prefix restores and next-step equalities. Fixed-truth false belief, contradiction, goal-only appraisal, observer-safe opportunity gating, absent-versus-zero and exclusive consequence ownership are traversable. VER-C3-AFFECT-001 adds a separately contracted three-key observed-trial successor and fallible relative/absolute mitigation contrasts without widening frozen BELIEF.",
+      "unresolved": "General belief law, correlated evidence/repeated reports, learned trust or quality, scalar censored inference, calibrated uncertainty, general causal attribution, controllability and efficacy outside the qualified controlled AFFECT contrast and current-phase30 application remain unqualified. Confidence tau/(tau+1) measures accumulated admitted weight and can rise under contradiction; it is not probability of correctness.",
       "verdicts": [
-        "VER-C3-BELIEF-001"
+        "VER-C3-BELIEF-001",
+        "VER-C3-AFFECT-001"
       ],
       "evidence": [
         "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
@@ -259,7 +260,9 @@
         "docs/planning/BELIEF_FINAL_TESTS_REV1.json",
         "docs/planning/BELIEF_REFERENCE_TESTS_REV1.json",
         "src/test/beliefPublic.test.ts",
-        "docs/planning/BELIEF_VALIDATION_CLOSURE_REV1.json"
+        "docs/planning/BELIEF_VALIDATION_CLOSURE_REV1.json",
+        "docs/planning/CAMPAIGN3_AFFECT_QUALIFICATION.md",
+        "docs/formal/AFFECT_PUBLIC_CONTRACT.md"
       ],
       "owner": "BELIEF evidence/application/appraisal seam",
       "reopenTrigger": "New evidence class, repeated/correlated reports, current-lane or same-event use, trust/quality inference, broader condition recognition, confidence calibration, scalar censoring, causal attribution/controllability/efficacy, or a belief/appraisal reduction.",
@@ -268,8 +271,48 @@
         "General Research Brief12.4 qualification",
         "Current-lane belief application inferred from this profile"
       ],
-      "doesNotBlock": "Completed bounded PHEN-BELIEF-001 realization; a separately contracted bounded Affect investigation using permitted belief operands.",
+      "doesNotBlock": "Completed bounded PHEN-BELIEF-001 and PHEN-AFFECT-001 realizations; separately contracted future consumers using admitted operands.",
       "closureRequirement": "For each triggered extension, specify exact admitted sources and owner/boundary semantics, retain historical MEC-001/002 and P3-001/002/003/011 controls, and run matched public contrasts preserving false belief, correction, absent-versus-zero and no-evidence inertia. Resolve ORD-001 explicitly before current-lane application.",
+      "closure": null
+    },
+    {
+      "id": "RO-C3-011",
+      "title": "Affect factor sources and public psychological discrimination",
+      "status": "CONDITIONAL",
+      "distinction": "Predicted threat, mitigation belief, derived affect, grounded motive and later cognitive influence",
+      "established": "VER-C3-AFFECT-001 qualifies the bounded public source/appraisal/affect/reasons/execution/later-feedback path:18 frozen models,91 main runs,1236 complete-prefix restores and1236 continuation equalities, plus14 supplementary timing/interior-feedback executions. Actual observed trial membership/action/outcome produces three conditional estimates. Independent factors, same affect/different action, relief without belief learning and strict later feedback are executable. All three serious affect candidates have nonzero interior feedback witnesses.",
+      "unresolved": "Universal factor/control/feedback laws and scalar equivalence remain unresolved. The selected receiving maps do not establish a necessary two-coordinate psychology. Unknown/partial-factor affect, calibrated uncertainty, broader mitigation/causal identification, social and retrospective affect, extinction/generalization, physiology, long-horizon dynamics and general action/affordance discovery remain outside this controlled source and fixed-plan profile.",
+      "verdicts": [
+        "VER-C3-BELIEF-001",
+        "VER-C3-CONCERN-002",
+        "VER-C3-AFFECT-001"
+      ],
+      "evidence": [
+        "docs/planning/CAMPAIGN3_AFFECT_READINESS.md",
+        "docs/planning/AFFECT_MITIGATION_SOURCE_DRAFT.md",
+        "docs/formal/AFFECT_FACTOR_COMPARISON.md",
+        "docs/planning/AFFECT_FACTOR_COMPARISON_REV1.json",
+        "docs/planning/AFFECT_FACTOR_TESTS_REV1.json",
+        "src/test/affectFactorComparison.test.ts",
+        "docs/formal/AFFECT_PUBLIC_CONTRACT.md",
+        "docs/formal/AFFECT_PUBLIC_ALLOCATION_TABLE.json",
+        "docs/planning/CAMPAIGN3_AFFECT_QUALIFICATION.md",
+        "docs/planning/AFFECT_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/AFFECT_PREFIX_CONTRASTS_REV1.json",
+        "docs/planning/AFFECT_INTERIOR_FEEDBACK_REV1.json",
+        "docs/planning/AFFECT_VALIDATION_CLOSURE_REV1.json",
+        "src/test/affectPublic.test.ts",
+        "src/test/affectBoundary.test.ts"
+      ],
+      "owner": "AFFECT factor sources, appraisal feedback and future representation reduction",
+      "reopenTrigger": "A proposed affect reduction or scalar-equivalence claim; new mitigation/source or uncertainty domain; a new feedback target/horizon; social or retrospective affect, extinction/generalization, physiological dynamics or general action discovery.",
+      "blocks": [
+        "Universal affect/control/feedback law",
+        "Scalar psychological equivalence or necessity of SplitExposure without independent receiving evidence",
+        "General affect under uncertainty, social/retrospective affect or broad causal efficacy inferred from controlled trials"
+      ],
+      "doesNotBlock": "Completed bounded PHEN-AFFECT-001, BELIEF, GA and BODY/MULTISOURCE; workspace/control readiness using their qualified boundaries.",
+      "closureRequirement": "For each triggered extension, admit its sources, owners, ordering and receivers explicitly and run discriminating public comparisons. Retain false-belief, unknown/zero, no-evidence inertia, genuine reason grounds, matched affect/competing motive and strictly later feedback controls. Establish representation necessity or equivalence on independently motivated psychological observables, not a receiver selected solely to reward the representation.",
       "closure": null
     }
   ],
@@ -297,7 +340,8 @@
       "verdict": "VER-C3-CONCERN-002",
       "obligations": [
         "RO-C3-002",
-        "RO-C3-003"
+        "RO-C3-003",
+        "RO-C3-011"
       ]
     },
     {
@@ -338,7 +382,15 @@
     {
       "verdict": "VER-C3-BELIEF-001",
       "obligations": [
-        "RO-C3-010"
+        "RO-C3-010",
+        "RO-C3-011"
+      ]
+    },
+    {
+      "verdict": "VER-C3-AFFECT-001",
+      "obligations": [
+        "RO-C3-010",
+        "RO-C3-011"
       ]
     }
   ],
@@ -408,6 +460,19 @@
       "path": "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
       "obligations": [
         "RO-C3-010"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_AFFECT_READINESS.md",
+      "obligations": [
+        "RO-C3-011"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_AFFECT_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-010",
+        "RO-C3-011"
       ]
     }
   ]

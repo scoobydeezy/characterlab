@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "modelFiles": 90,
+  "mainRuns": 91,
+  "supplementaryExecutions": 14,
+  "prefixRestores": 1236,
+  "nextStepEqualities": 1236,
+  "affectedTests": 82,
+  "referenceTests": 328,
+  "receipts": [
+    {
+      "path": "docs/planning/AFFECT_PUBLIC_TESTS_REV2.json",
+      "passed": 18,
+      "sha256": "ebbfabf4c0137ed325695fc126867c691025d3854f2422358a996b3fde81324b"
+    },
+    {
+      "path": "docs/planning/AFFECT_PRESERVATION_TESTS_REV1.json",
+      "passed": 64,
+      "sha256": "e514c1605e15b78295ff19bdc29f2b47116f2e6ed6c71a87d77b56a64906d088"
+    },
+    {
+      "path": "docs/planning/AFFECT_REFERENCE_TESTS_REV1.json",
+      "passed": 328,
+      "sha256": "9a50a73ab2748fc03572a2edeaecec44310c9fdd6c70eb670daff3d03f666ebc"
+    }
+  ],
+  "finalCode": [
+    {
+      "path": "src/campaign3/affectCodecs.ts",
+      "sha256": "ec1073d5e23b7debcce28653f066831df9305f4c42be02c93189af8cd7e3c1ad"
+    },
+    {
+      "path": "src/campaign3/affectModel.ts",
+      "sha256": "45743ec9a1cbfee908ba97514db125d8a5fb9a48be8e82fc8d5922086825bfd9"
+    },
+    {
+      "path": "src/campaign3/affectSource.ts",
+      "sha256": "ac5882caf0727c3a6a67fd3d19b8b063fdfe03bc22fd35e16e1db16a45014a22"
+    },
+    {
+      "path": "src/campaign3/affectMath.ts",
+      "sha256": "ae671eadd7fcc512e6fc279eaf432cebcc2afc90dd06c042095cfe710a459d9c"
+    },
+    {
+      "path": "src/campaign3/affectRuntime.ts",
+      "sha256": "787bad8826cd24c2cdd6323a76cfd6a194e9c7a2f1757fcc00e89a6ab3267fb0"
+    },
+    {
+      "path": "src/campaign3/affectFactory.ts",
+      "sha256": "f23cd221919c4ea25af4276f453566c6e26a315c54d1b216f35d82d58ebc7a58"
+    },
+    {
+      "path": "src/campaign3/affectFactorComparison.ts",
+      "sha256": "04a14d57a148b1134911d45af88a7eaf408968759cb856a5857fc533b02085b9"
+    }
+  ],
+  "predecessorDependencies": [
+    {
+      "path": "src/campaign3/beliefMath.ts",
+      "sha256": "8b12ca95809f7b20b70a487284718e21c86ce1e6425f678a3ed1cb1acd0ba6a9"
+    },
+    {
+      "path": "src/campaign3/beliefCodecs.ts",
+      "sha256": "c60a4dfa992b4c69519c79033c1256ef35016faf51025f7f33e2a92cb280df48"
+    },
+    {
+      "path": "src/campaign3/beliefModel.ts",
+      "sha256": "20e20ce38409c602e3004c5c22ae9afbe8fb8b43865f8c3dbf904349f4a1becd"
+    },
+    {
+      "path": "src/campaign3/trialPanelSource.ts",
+      "sha256": "4cf0fdf44787a9a44f6758ee6d37fb05f1dbbf8900e02169738b88ed4fc2e939"
+    },
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "f797171928ddcf5e25f0ce29d1822dafcf0b190349c188e61676eb74c71183be"
+    },
+    {
+      "path": "src/campaign3/perceivedTrialGrouping.ts",
+      "sha256": "16a9c126f94fc7bc2614a6148ba9bc44ed85795224d0f61b4a0aaf99a31fcfc5"
+    },
+    {
+      "path": "src/campaign3/multisourceModelRecipe.ts",
+      "sha256": "5500a8167c47bdb2263fb1b8a73ac184b3ebbfed500ed7105bc183a49615220e"
+    },
+    {
+      "path": "src/campaign2/cognitiveMath.ts",
+      "sha256": "3d2ced68676b4fcb2c41046ea08e9fe8fb80fc47a331fa73b8ed0ca77d1fbb77"
+    },
+    {
+      "path": "src/campaign2/cognitiveCodecs.ts",
+      "sha256": "7ba605d092d65aef4d1f143de5e89540ad2ee3af6f4314304810d2e9ac1a6fb8"
+    },
+    {
+      "path": "src/semanticBinding/phaseOrdering.ts",
+      "sha256": "dad03c3c616db20265dd2c5e1253db2fdf020b0996f266c68d726aaf9d39e0e6"
+    },
+    {
+      "path": "src/semanticBinding/perceptualEventFiles.ts",
+      "sha256": "df179fdcca89872ba75acd46f0fefa31fcddeb07dc2478d3efd2304686ead740"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/substrate/random.ts",
+      "sha256": "a01aeae52c0c43f1533e35dcd01c23acb1c44b02059c909960966cdb0de24596"
+    },
+    {
+      "path": "src/substrate/persistence.ts",
+      "sha256": "41c1bebcc31aa28a0c194202e74fbacc75a302221ee8ee77a04a80fc682c727f"
+    }
+  ],
+  "counters": {
+    "highestAllocated": 765,
+    "allocatedInIncrement": 19
+  },
+  "scope": "Latest focused82-test coverage plus328 reference tests; no full active-suite claim. Initial5-second timeout receipt retained; final restore implementation additionally verified by four boundary tests and the full main public matrix."
+}

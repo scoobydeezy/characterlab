@@ -198,3 +198,7 @@ use1150. Root740 belongs exclusively to authority/belief-expectation. Existing
 schemas and images are unchanged. Counters746/13. Exact field grammars are in the
 table; absent optional fields are not default values. Incompatible changes require
 a successor version and model identity, never rewriting a frozen image.
+
+## AFFECT successor — 2026-09-21
+
+[AFFECT_PUBLIC_ALLOCATION_TABLE.json](AFFECT_PUBLIC_ALLOCATION_TABLE.json) accepts records747..765, schema1, occurrence namespace1151, under [affect-public/0.1-candidate](AFFECT_PUBLIC_CONTRACT.md). Root753 is owned solely by authority/belief-expectation. Existing schemas and frozen images are unchanged. Counters765/19 before qualification.
