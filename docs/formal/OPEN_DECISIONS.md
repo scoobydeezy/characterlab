@@ -1987,3 +1987,15 @@ appraisal. This uses the accepted later-cycle prediction precedent and closes
 no current-lane timing question: **ORD-001 remains P1 OPEN**. MATH-004 covariance
 is not required by the exact scalar candidate. No new owner ruling was opened;
 broader evidence/uncertainty/causal-learning limits are RO-C3-010.
+
+
+## Bounded SOCIAL ordering and projection — 2026-09-21
+
+SOCIAL_PUBLIC_CONTRACT.md and VER-C3-SOCIAL-001 accept and qualify immutable source
+snapshot fan-out, disjoint observer updates and reversed-order semantic equality.
+This discharges ORD-002's prerequisite for this first multi-character fixture only.
+Reciprocal decisions and conflicting simultaneous interactions remain OPEN.
+ObserverView814 passes forbidden-field and full-read-path audits, discharging TRC-003
+for this closed projection. Research save/trace remains omniscient; general UI tooling,
+authentication and new consumers remain OPEN. RO-C3-014 preserves both broader scopes.
+LOCAL DISPOSITION under the escalation policy; no owner ruling was required.

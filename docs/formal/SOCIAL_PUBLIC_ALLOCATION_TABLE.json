@@ -1,0 +1,607 @@
+{
+  "version": "social-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1154,
+  "records": [
+    {
+      "typeId": 803,
+      "name": "SocialProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PrivateCommitment",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "LearningLaw",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Control",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ReverseOrder",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 804,
+      "name": "SocialOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Delivered",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 805,
+      "name": "SocialTargetTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1154",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Committed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Delivered",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Claim",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 806,
+      "name": "SocialEvidenceKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 807,
+      "name": "SocialObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1154",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Permitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Delivered",
+          "type": "bool",
+          "required": false
+        },
+        {
+          "id": 9,
+          "name": "Claim",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 808,
+      "name": "SocialPersonKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 809,
+      "name": "SocialEstimate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Count",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Support",
+          "type": {
+            "set": "ref:806",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 810,
+      "name": "SocialPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Models",
+          "type": {
+            "map": [
+              "ref:808",
+              "ref:809"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 811,
+      "name": "SocialProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1154",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Classification",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Belief",
+          "type": "ref:809",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 812,
+      "name": "SocialEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1154",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:807",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Source",
+          "type": "ref:806",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Value",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 813,
+      "name": "SocialUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1154",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Evidence",
+          "type": "ref:812",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Prior",
+          "type": "ref:809",
+          "required": false
+        },
+        {
+          "id": 6,
+          "name": "Next",
+          "type": "ref:809",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 814,
+      "name": "SocialObserverView",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "LocalTarget",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observations",
+          "type": {
+            "list": "ref:807",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probes",
+          "type": {
+            "list": "ref:811",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Belief",
+          "type": "ref:809",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 815,
+      "name": "SocialContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observers",
+          "type": {
+            "list": "id:1000",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Characters",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "LocalTargets",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "TargetTask",
+          "type": "ref:371",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 816,
+      "name": "SocialStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

@@ -214,3 +214,35 @@ owned by authority/prospective-commitments. Leaf wrappers780/781 were appended b
 model freeze to use the existing closed canonical-record mutation grammar; no generic
 canonical-value authority was added. Existing allocations and frozen images are
 unchanged. Counters781/16 before qualification,781/0 after VER-C3-WORK-001.
+
+## SKILL successor — 2026-09-21
+
+[SKILL_PUBLIC_ALLOCATION_TABLE.json](SKILL_PUBLIC_ALLOCATION_TABLE.json) accepts
+records782..802, schema1, occurrence namespace1153 under
+[skill-public/0.1-candidate](SKILL_PUBLIC_CONTRACT.md). Root785 is owned by existing
+authority/procedural-skill; root787 by authority/capability-belief. Safe performance
+occurrences are profile-local1153, never implicit SEM experiences or ObservationRef237.
+Existing ADAPT representations, allocations and frozen models are unchanged.
+Counters802/21 before qualification,802/0 after VER-C3-SKILL-001.
+
+
+## SOCIAL successor — 2026-09-21
+
+[SOCIAL_PUBLIC_ALLOCATION_TABLE.json](SOCIAL_PUBLIC_ALLOCATION_TABLE.json) accepts
+records803..816, schema1, occurrence namespace1154 under
+[social-public/0.1-candidate](SOCIAL_PUBLIC_CONTRACT.md). Root810 is owned by
+authority/person-model with separate holder/local-target keys. Target task373 is
+read-only in this profile. Occurrences are profile-local, not implicit SEM experiences.
+No predecessor allocations or frozen bytes change. Counters816/14 before verdict,
+816/0 after VER-C3-SOCIAL-001.
+
+
+## HABIT successor — 2026-09-21
+
+[HABIT_PUBLIC_ALLOCATION_TABLE.json](HABIT_PUBLIC_ALLOCATION_TABLE.json) accepts
+records817..841, schema1, occurrence namespace1155 under
+[habit-public/0.1-candidate](HABIT_PUBLIC_CONTRACT.md). Root821 belongs to
+authority/habit-history, root823 to authority/reward-expectation, optional root825
+to authority/habit-summary. Occurrences are profile-local, not implicit SEM experience
+or ObservationRef237. No prior allocation or frozen bytes change. Counters841/25 before
+verdict,841/0 after VER-C3-HABIT-001.

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-09-21",
-  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-WORK-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
+  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-HABIT-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -346,6 +346,98 @@
       "doesNotBlock": "Completed bounded WORKSPACE/CONTROL, GA, BODY/MULTISOURCE, BELIEF and AFFECT; readiness for PHEN-SKILL-001.",
       "closureRequirement": "When triggered, preserve separately traceable retained/active state and replay matched public discrimination tests, including genuine overload, exact single-factor interventions and expired-cue controls. Re-derive indexed access for any new lifecycle or missing-history case; do not silently reuse the fixed-deadline proof. WORK-DESIGN-001 requires isolating the manipulated factor.",
       "closure": null
+    },
+    {
+      "id": "RO-C3-013",
+      "title": "Procedural skill beyond the controlled single exercise",
+      "status": "CONDITIONAL",
+      "distinction": "Actual competence, observed performance belief, temporary impairment, intention and outcome; truth-side practice versus character-side evidence",
+      "established": "VER-C3-SKILL-001 qualifies bounded PHEN-SKILL-001 with27 frozen models,52 public runs,279 complete-prefix restores/continuation equalities. Actual skill and impairment change execution with equal intent/expression; practice can improve competence without observed feedback; false feedback changes performance belief without competence; recovery preserves retained skill.",
+      "unresolved": "General practice/impairment and competence representation laws, multiple procedures, rust, transfer, automaticity, precision/error distributions, execution noise, ordinary recognition, attribution/source quality, latent competence inference, separately composed outcome prediction, confidence-sensitive choice and body/control/workspace integration remain unqualified.",
+      "verdicts": [
+        "VER-C3-SKILL-001"
+      ],
+      "evidence": [
+        "docs/planning/SKILL_READINESS.md",
+        "docs/planning/SKILL_IMPLEMENTATION_FINDINGS.md",
+        "docs/planning/SKILL_PUBLIC_TESTS_REV1.json",
+        "docs/planning/SKILL_PUBLIC_TESTS_REV2.json",
+        "docs/planning/SKILL_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/SKILL_VALIDATION_CLOSURE_REV1.json",
+        "docs/planning/CAMPAIGN3_SKILL_QUALIFICATION.md",
+        "src/test/skillPublic.test.ts",
+        "src/test/skillBoundary.test.ts"
+      ],
+      "owner": "Procedural adaptation, execution and capability-belief seams",
+      "reopenTrigger": "A new skill/practice/impairment domain, another learning law, richer performance attribution or capability inference, confidence-sensitive choice, proposed skill/memory/habit reduction or new body/control/workspace integration.",
+      "blocks": [
+        "Universal SKILL or Brief12.8 qualification",
+        "Treating empirical performance expectation as identified latent competence or calibrated confidence",
+        "Reducing procedural adaptation to observation-based belief updates"
+      ],
+      "doesNotBlock": "Completed bounded SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-SOCIAL-001 readiness.",
+      "closureRequirement": "On a trigger, accept the new source/contract and run matched public controls retaining exact intent/expression equality under hidden physical changes, separate actual/observed performance, lawful practice without feedback, impairment-only recovery without practice, and separate mutation authorities. Preserve serious learning/impairment alternatives and explicitly test any new competence-belief/outcome-prediction distinction.",
+      "closure": null
+    },
+    {
+      "id": "RO-C3-014",
+      "title": "Social inference beyond the controlled two-observer commitment profile",
+      "status": "CONDITIONAL",
+      "distinction": "Target private state, observer-permitted communication, observer-owned person belief, source correlation and relationship history",
+      "established": "VER-C3-SOCIAL-001 qualifies bounded PHEN-SOCIAL-001 with 18 frozen models, 26 runs and 127 complete-prefix restores/continuation equalities. Fixed displays hide private commitment; selective fallible explanations alter only recipient belief; repeated receipts do not supply independent corroboration.",
+      "unresolved": "Ordinary recognition, trust/source quality, uncertain correlation, hearsay, richer person states and dispositions, nested beliefs, relationship history, downstream social appraisal/actions, reciprocal interaction and general privacy tooling remain unqualified. Snapshot ordering and closed observer projection do not close general ORD-002/TRC-003.",
+      "verdicts": [
+        "VER-C3-SOCIAL-001"
+      ],
+      "evidence": [
+        "docs/planning/SOCIAL_READINESS.md",
+        "docs/planning/SOCIAL_IMPLEMENTATION_FINDINGS.md",
+        "docs/planning/SOCIAL_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/SOCIAL_VALIDATION_CLOSURE_REV1.json",
+        "docs/planning/CAMPAIGN3_SOCIAL_QUALIFICATION.md",
+        "src/test/socialPublic.test.ts",
+        "src/test/socialBoundary.test.ts"
+      ],
+      "owner": "Person-model, communication, interaction-ordering and epistemic projection seams",
+      "reopenTrigger": "A new communication or recognition channel, hidden source correlation, source reliability, another person-model proposition, nested or reciprocal inference, relationship coupling, social appraisal/action or a new projection consumer.",
+      "blocks": [
+        "Whole Brief12.10/12.13 or universal SOCIAL qualification",
+        "General ORD-002/TRC-003 closure",
+        "Treating communication as truth transfer or person belief as relationship history"
+      ],
+      "doesNotBlock": "Completed bounded SOCIAL, SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-HABIT-001 readiness.",
+      "closureRequirement": "Accept successor contracts and run private-only/access-only/explanation-only pairs preserving observer isolation, mistaken inference and correction, false explanation, correlation and alternative learners. Qualify newly exercised ordering, recognition, relationship and privacy clauses independently.",
+      "closure": null
+    },
+    {
+      "id": "RO-C3-015",
+      "title": "Habit beyond availability-mediated acquisition and reversal",
+      "status": "CONDITIONAL",
+      "distinction": "Acquired action history, current explicit expectation, candidate availability, deliberate preference, identity, skill and physiological adaptation",
+      "established": "VER-C3-HABIT-001 qualifies bounded PHEN-HABIT-001 with 12 models,23 runs,291 complete-prefix restores/continuation equalities. Rewarded action history preserves target availability after corrective evidence makes expectation neutral; later observed negative action outcomes remove it. DerivedHistory and StoredSummary produce equal safe behavioral bytes under all three laws; a separate stored summary is not required in this domain.",
+      "unresolved": "General habit acquisition/extinction/threshold and reward laws, stronger deliberate counter-reasons, inhibition/control, broader cues/attribution, partial schedules, episodic or associative alternatives, compression, long horizons, identity/body/skill integration, substitutes, dependence, tolerance, withdrawal, craving and relapse remain unqualified. No architecture-box deletion or general memory/habit reduction follows.",
+      "verdicts": [
+        "VER-C3-HABIT-001"
+      ],
+      "evidence": [
+        "docs/planning/HABIT_READINESS.md",
+        "docs/planning/HABIT_IMPLEMENTATION_FINDINGS.md",
+        "docs/planning/HABIT_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/HABIT_VALIDATION_CLOSURE_REV1.json",
+        "docs/planning/CAMPAIGN3_HABIT_QUALIFICATION.md",
+        "src/test/habitPublic.test.ts",
+        "src/test/habitBoundary.test.ts"
+      ],
+      "owner": "Habit learning, candidate construction, explicit expectation, control and embodied adaptation seams",
+      "reopenTrigger": "A stronger counter-motive or control demand, new cue or reward/source domain, partial reinforcement schedule, a proposed history compression or memory/habit reduction, identity/body/skill coupling, addiction/dependence or longer retention horizon.",
+      "blocks": [
+        "Whole Brief12.9 or general addiction qualification",
+        "Interpreting candidate availability as compulsive preference",
+        "Deleting habit/episodic/association/identity distinctions from the architecture on the basis of cache equivalence"
+      ],
+      "doesNotBlock": "Completed bounded HABIT, SOCIAL, SKILL, WORKSPACE/CONTROL, AFFECT, BELIEF, BODY/MULTISOURCE and GA; PHEN-REL-001 readiness.",
+      "closureRequirement": "Accept successor contracts and compare acquired-history effects under equal current belief and other contributors. Preserve current-reward-only, explicit-belief-only, NoHistory, serious learning laws and derived/stored alternatives. Independently qualify stronger preference/control, richer memory, body and addiction clauses when triggered.",
+      "closure": null
     }
   ],
   "verdictReviews": [
@@ -429,6 +521,24 @@
       "verdict": "VER-C3-WORK-001",
       "obligations": [
         "RO-C3-012"
+      ]
+    },
+    {
+      "verdict": "VER-C3-SKILL-001",
+      "obligations": [
+        "RO-C3-013"
+      ]
+    },
+    {
+      "verdict": "VER-C3-SOCIAL-001",
+      "obligations": [
+        "RO-C3-014"
+      ]
+    },
+    {
+      "verdict": "VER-C3-HABIT-001",
+      "obligations": [
+        "RO-C3-015"
       ]
     }
   ],
@@ -517,6 +627,24 @@
       "path": "docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md",
       "obligations": [
         "RO-C3-012"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_SKILL_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-013"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_SOCIAL_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-014"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HABIT_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-015"
       ]
     }
   ]

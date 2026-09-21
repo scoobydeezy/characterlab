@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "models": 27,
+  "frozenFiles": 135,
+  "publicRuns": 52,
+  "prefixRestores": 279,
+  "continuationEqualities": 279,
+  "terminalNoOpEqualities": 52,
+  "affectedTests": 60,
+  "referenceTests": 328,
+  "exactInterventions": [
+    {
+      "a": "impair-0",
+      "b": "impair-0.5",
+      "onlySemanticField": "/items/0/fields/2",
+      "differences": [
+        "/items/0/fields/2/numerator",
+        "/items/0/fields/2/denominator"
+      ]
+    },
+    {
+      "a": "belief-1",
+      "b": "belief-2",
+      "onlySemanticField": "/items/0/fields/7",
+      "differences": [
+        "/items/0/fields/7/value"
+      ]
+    }
+  ],
+  "hiddenSkillWithFixedReports": "exact cognitive output equality PASS",
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/skillCodecs.ts",
+      "sha256": "e40d8d1aae43aa43dd4e6105eee07d1ae6ddff502ba3a96b5795f0c7fce15040"
+    },
+    {
+      "path": "src/campaign3/skillFactory.ts",
+      "sha256": "c28a5e01720d0e10bae55d69cedbbfbb72206bbe314e47912c247b5c5b1bac94"
+    },
+    {
+      "path": "src/campaign3/skillMath.ts",
+      "sha256": "96abe2c36a3b2216fa7e7ccb7af21fa02f1050d248eb7ba78ebed3e77dc4fc44"
+    },
+    {
+      "path": "src/campaign3/skillModel.ts",
+      "sha256": "2261371c5d2be2679d017c8a97a3af357a1e464b6937d33388f73127da554fee"
+    },
+    {
+      "path": "src/campaign3/skillRuntime.ts",
+      "sha256": "aba7c14136214f9d3bfc975e050b2f345d85653a43c3731d802cdb79365914fe"
+    }
+  ],
+  "limitations": "One exercise and an instruction-bound Auto choice. Belief estimates observed performance, not latent competence or calibrated confidence. No full active-suite claim."
+}

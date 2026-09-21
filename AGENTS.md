@@ -73,15 +73,16 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md in that directory. Bounded
-WORKSPACE/CONTROL is COMPLETE: VER-C3-WORK-001,48 frozen models,78 public runs,
-624 whole-prefix restores and continuation equalities; counters781/0. GA,
-BODY/MULTISOURCE, BELIEF and AFFECT stay complete. RO-C3-012 preserves broader
-workspace/control and history/lifecycle limits; RO-C3-010/011 preserve belief/affect
-limits. ORD-001 and ORD-005 are not closed. No owner ruling is pending. The next
-natural frontier is PHEN-SKILL-001 readiness, beginning with phenomenon and historical
-intake before contract acceptance. Do not automatically reopen completed bounded
-domains or implement from an external review alone.
+CAMPAIGN3_HABIT_QUALIFICATION.md in that directory. Bounded HABIT is COMPLETE:
+VER-C3-HABIT-001,12 frozen models,23 runs,291 complete-prefix restores/continuation
+equalities; counters841/0. Earlier bounded GA, BODY/MULTISOURCE, BELIEF, AFFECT,
+WORKSPACE/CONTROL, SKILL and SOCIAL stay complete. RO-C3-015 retains general habit,
+memory/control/integration and addiction limits. Derived and cached tendency are
+equivalent in this profile; no general memory reduction or architecture deletion.
+ORD-002/TRC-003 have bounded SOCIAL snapshot/projection coverage, not global closure;
+ORD-001/005 remain open outside qualified profiles. No owner ruling is pending.
+Next natural frontier: PHEN-REL-001 readiness and historical intake. Do not reopen
+completed bounded domains or implement from an external review alone.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its

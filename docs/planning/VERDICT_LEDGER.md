@@ -1515,3 +1515,105 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   alternate maintenance, habitual inhibition/load, fatigue, rumination, monitoring,
   strategy switching and reappraisal. No owner ruling is pending.
 - **Counters:** highest781; allocated since this verdict0 (16 this increment).
+
+## `VER-C3-SKILL-001` — Competence, performance belief and temporary impairment
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded SKILL COMPLETE.
+- **Contract:** skill-public/0.1-candidate; records782..802, namespace1153.
+  Separate procedural-skill and capability-belief mutation authorities. Existing
+  Campaign2 ADAPT and all Campaign3 predecessor models remain unchanged.
+- **Corpus:** bounded PHEN-SKILL-0011.0.0-draft in corpus0.29.0, unchanged21-member
+  manifest. No whole Brief12.8 or Campaign3 qualification.
+- **Evidence:**27 frozen models/135 files;52 public runs,279 complete-prefix restores
+  and279 continuation equalities (227 advancing,52 terminal). See
+  CAMPAIGN3_SKILL_QUALIFICATION.md, SKILL_PUBLIC_EXPERIMENT_REV1.json and
+  SKILL_VALIDATION_CLOSURE_REV1.json.
+- **Witnesses:** exact cognitive/intent/expression/plan equality under hidden
+  competence or impairment changes; different execution; skilled/pessimistic and
+  unskilled/optimistic performance beliefs; unobserved practice with stale belief;
+  exact retained skill through impairment/recovery; blocked/no-feedback/unknown-zero
+  controls and strictly later skill/epistemic updates. Single-field interventions
+  are structurally checked, and false displays never become actual competence.
+- **Competitors:** linear/residual practice, multiplicative/additive impairment,
+  NoPractice, EvidenceMean/LastObservation/NoLearning. IntentEqualsSuccess,
+  BeliefAsSkill and ImpairmentAsUnlearning fail distinct contrasts. Serious laws
+  differ in a later task outcome; no universal law is selected.
+- **Verdict:** RETAINED for competence/belief/impairment/intent/attempt/outcome
+  distinctions and independent adaptation/learning routes. UNRESOLVED for general
+  competence, practice, impairment and belief laws. No skill-to-memory or skill-to-
+  confidence reduction. The belief is observed performance expectation in one
+  exercise, not latent competence inference or calibrated correctness confidence.
+- **Validation:**60 affected tests,328 reference tests, build/TypeScript/boundary
+  checks; all12 stage kinds plus commit have reached-fault rollback. Failed initial
+  arbitration API use is preserved in SKILL-IMPL-001 and corrected without changing
+  frozen model bytes. No full active-suite claim.
+- **Obligation:** RO-C3-013 CONDITIONAL for broader skills, rust, transfer,
+  automaticity, execution noise, feedback recognition/attribution, latent competence
+  inference, confidence-sensitive choice and body/control/workspace integration.
+  The sole adopted exercise option holds choice fixed; it does not qualify general
+  confidence-sensitive decision making. No owner ruling is pending.
+- **Counters:** highest802; allocated since this verdict0 (21 this increment).
+
+
+## `VER-C3-SOCIAL-001` — Observer-owned person models and fallible communication
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded SOCIAL COMPLETE.
+- **Contract:** social-public/0.1-candidate; records803..816, namespace1154;
+  authority/person-model with independently keyed observers. Target task373 unchanged.
+- **Corpus:** bounded PHEN-SOCIAL-0011.0.0-draft, corpus0.29.0's unchanged21 members.
+  No whole Brief12.10/12.13 or Campaign3 claim.
+- **Evidence:**18 frozen models/90 files,26 runs,127 complete-prefix restores and
+  continuation equalities (101 advancing,26 terminal). See
+  CAMPAIGN3_SOCIAL_QUALIFICATION.md and SOCIAL_VALIDATION_CLOSURE_REV1.json.
+- **Witnesses:** fixed displays/opposite private commitment yield exact observer views;
+  selective truthful or false explanation changes recipient belief only; wrong initial
+  inference and later correction; unknown/zero; visible receipt deduplication; reversed
+  observer processing with semantic equality. Exact input interventions are audited.
+- **Competitors:** SourceGroupedMean, LastStatement, NoLearning remain distinct.
+  GlobalPersonModel, DirectPrivateReader and PresentationCounting fail named contrasts.
+- **Verdict:** RETAINED observer ownership, epistemic separation, fallible evidence and
+  source correlation. UNRESOLVED general social-learning laws; no global belief or
+  relationship reduction. Controlled identity channel and one fixed commitment only.
+- **Validation:**67 affected tests,328 reference tests, TypeScript/build/boundary checks;
+  every stage and commit rollback after learning; closed observer projection and exact
+  own-key reads. Initial fixture/evaluator failures retained in SOCIAL_IMPLEMENTATION_FINDINGS.md.
+  No full active-suite claim. ORD-002/TRC-003 bounded-qualified, globally OPEN.
+- **Obligation:** RO-C3-014 CONDITIONAL for richer recognition, trust, hearsay, uncertain
+  correlation, target states, relationships, social action, reciprocal interaction and
+  privacy tooling. No architectural decision or owner ruling pending.
+- **Counters:** highest816; allocated since verdict0 (14 this increment).
+
+
+## `VER-C3-HABIT-001` — Acquired action availability after reward correction
+
+- **Recorded:** 2026-09-21, LOCAL DISPOSITION; bounded HABIT COMPLETE.
+- **Contract:** habit-public/0.1-candidate; records817..841, namespace1155.
+  Separate history, expectation and optional derived-summary owners.
+- **Corpus:** bounded PHEN-HABIT-0011.0.0-draft in unchanged corpus0.29.0.
+  No whole Brief12.9 or Campaign3 claim.
+- **Evidence:**12 frozen models/60 files,23 public runs,291 complete-prefix restores
+  and continuations (268 advancing,23 terminal). See CAMPAIGN3_HABIT_QUALIFICATION.md
+  and HABIT_VALIDATION_CLOSURE_REV1.json; exact single-field interventions audited.
+- **Witnesses:** equal corrected expectation but different acquired candidate
+  availability; persistence then change under negative observed action results;
+  cue-specific retrieval; invisible execution without learning; false positive reports;
+  hidden-reward noninterference and distinct unknown/negative state. Skill1, identity0
+  and body-adaptation0 remain inspectable fixed controls, not dynamically integrated.
+- **Competitors:** DerivedHistory/StoredSummary, Residual/Linear/NoHistory,
+  ExplicitBeliefOnly and labelled violating CurrentRewardOnly. Two serious learning
+  laws differ on later probabilities. Derived and cached safe behavior is byte-equal
+  for all three laws. All comparison models remain frozen and replayable.
+- **Verdict:** RETAINED acquired-history contribution independent of current belief;
+  separate stored tendency summary NOT REQUIRED in this bounded domain. General
+  learning/reward/threshold laws UNRESOLVED. No architecture-box deletion, general
+  memory/habit equivalence or compulsive preference claim. Persistence operates through
+  candidate availability under a neutral alternative, using inherited exact arbitration.
+- **Validation:**75 affected tests,328 reference tests, TypeScript/build/boundary;
+  all14 stages plus commit rollback after acquisition/correction, including random
+  draws and intermediate cache mismatch. Failed initial type/evaluator checks retained
+  in HABIT_IMPLEMENTATION_FINDINGS.md. No full active-suite claim.
+- **Obligation:** RO-C3-015 CONDITIONAL for stronger reasons/control, richer cues,
+  attribution and schedules, episodic alternatives, compression/long horizons,
+  identity/body/skill integration and addiction/dependence/withdrawal/relapse.
+  No architectural owner ruling pending.
+- **Counters:** highest841; allocated since verdict0 (25 this increment).

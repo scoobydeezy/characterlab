@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "models": 18,
+  "frozenFiles": 90,
+  "publicRuns": 26,
+  "prefixRestores": 127,
+  "continuationEqualities": 127,
+  "terminalNoOpEqualities": 26,
+  "affectedTests": 67,
+  "referenceTests": 328,
+  "exactInterventions": [
+    {
+      "name": "denied",
+      "changedField": "5",
+      "paths": [
+        "/items/1/fields/5",
+        "/items/2/fields/5"
+      ]
+    },
+    {
+      "name": "lie",
+      "changedField": "3",
+      "paths": [
+        "/items/1/fields/3/value",
+        "/items/2/fields/3/value"
+      ]
+    },
+    {
+      "name": "duplicate",
+      "changedField": "4",
+      "paths": [
+        "/items/2/fields/4/value"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/socialCodecs.ts",
+      "sha256": "d9ccf59c2237972d01288e79cb50436210b5b981a739938d6a6090a6ce65cd6f"
+    },
+    {
+      "path": "src/campaign3/socialFactory.ts",
+      "sha256": "029b8be98f4d597aef0ca3723e4e46164b33ed9fbbcf4c57cc339f6c6345cbb2"
+    },
+    {
+      "path": "src/campaign3/socialMath.ts",
+      "sha256": "38378bac0e611fba31abdb5e74bad29066c4796101269b682688973bef6f0622"
+    },
+    {
+      "path": "src/campaign3/socialModel.ts",
+      "sha256": "b7e524c04edbc9cfe06696c61db48588de4ef7b664a6f7c59dabc6a56092edf9"
+    },
+    {
+      "path": "src/campaign3/socialRuntime.ts",
+      "sha256": "329671a22fac47a3cdb299a0cf993d4d43ee0414e7f28a0a14c6bb88894a6e74"
+    }
+  ],
+  "limitations": "Controlled identity channel, fixed commitment proposition, snapshot fan-out, visible receipt correlation. No general social attribution, trust, relationships, reciprocal interaction or UI security claim."
+}

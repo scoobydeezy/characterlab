@@ -1,0 +1,8 @@
+import fs from 'node:fs';import {createServer} from 'vite';import {createHash} from 'node:crypto';
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{const {socialInputs,socialScenario}=await server.ssrLoadModule('/src/test/socialFixtures.ts'),freeze=JSON.parse(fs.readFileSync('docs/planning/campaign3-social-model-rev1/FREEZE.json')),runs=[],base='private-1-law-1-reverse-0',add=(name,model,xs=socialScenario())=>runs.push({name,model,orderedInputs:Buffer.from(socialInputs(xs)).toString('hex')});
+for(const m of freeze.models)add(m.name,m.name);
+for(const [name,transform] of [['denied',x=>x.kind===2?{...x,a:false}:x],['lie',x=>x.kind===2?{...x,mode:4}:x],['duplicate',x=>x.kind===2?{...x,receipt:2}:x],['unattributed',x=>x.kind===2?{...x,receipt:0}:x]])add(name,base,socialScenario().map(transform));
+add('duplicate-control','private-1-control-4',socialScenario().map(x=>x.kind===2?{...x,receipt:2}:x));add('silence',base,[{at:1,mode:0}]);add('max',base,Array.from({length:8},(_,i)=>({at:i+1,mode:i%2?3:4})));add('empty',base,[]);
+fs.writeFileSync('docs/planning/SOCIAL_PUBLIC_EXPERIMENT_PLAN_REV1.json',JSON.stringify({date:'2026-09-21',status:'FROZEN BEFORE PUBLIC QUALIFICATION',contract:'social-public/0.1-candidate',freezeSha256:createHash('sha256').update(fs.readFileSync('docs/planning/campaign3-social-model-rev1/FREEZE.json')).digest('hex'),claims:['private-truth noninterference','nonrecipient exact view equality','fallible explanation and delayed correction','receipt correlation versus counting','three learning laws and reverse fan-out','every complete prefix restore and continuation'],runs},null,2)+'\n',{flag:'wx'});
+}finally{await server.close();}

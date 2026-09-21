@@ -466,3 +466,45 @@ control, lifecycle, history and integration obligations. WORK-DESIGN-001 preserv
 the confounded priority fixture and its exact one-field counterfactual correction.
 Transfer: retained information, maintained selection and permission to supply a reason
 remain separate even when active-set representation can be reconstructed.
+
+
+## 2026-09-21 — bounded SKILL disposition
+
+SKILL_READINESS.md and VER-C3-SKILL-001 preserve MEC-019 intent/attempt/outcome;
+P3-009 competence/belief/identity separation; MEC-001/002/006 and P3-001/002/003
+observed opportunity and update controls; MEC-012..017 genuine reason/frozen-expression
+boundaries; P3-011 strictly later updates. MEC-018 identity controls and existing
+Campaign2 ADAPT ownership remain preserved and tested. No historical import or
+skill-to-habit/memory reduction. Linear/residual practice and multiplicative/additive
+impairment remain candidates. RO-C3-013 owns wider skill and capability-inference debt.
+SKILL-IMPL-001 preserves the initial arbitration API failure and correction. Transfer:
+practice may change what the character can do without changing what they believe;
+observations may change that belief without changing actual competence.
+
+
+## 2026-09-21 — bounded SOCIAL disposition
+
+SOCIAL_READINESS.md and VER-C3-SOCIAL-001 port P3-006's observer-specific person models,
+wrong inference, correction and correlation; EXP-008 hidden-state noninterference;
+MEC-001/002/006 evidence controls; MEC-019/020 public outcome/private commitment.
+MEC-004 is an explicit identity-establishing control only. P3-007 trust/suspicion and
+P3-008 social affect remain future candidates under RO-C3-014, not silently omitted.
+MEC-012..018 reason/dice/expression/identity controls remain preserved. No reference
+imports or reduction to relationship history. Communication is evidence for each
+recipient's own model; it neither copies private truth nor synchronizes observers.
+
+
+## 2026-09-21 — bounded HABIT disposition
+
+HABIT_READINESS.md and VER-C3-HABIT-001 port EXP-003 context-conditioned action
+availability and P3-012 acquisition/reversal. Historical flat-tag strengths remain
+retired; Residual/Linear learning are explicit candidates. MEC-001/002/006 and CTL-002
+preserve separate evidence-dependent expectation. MEC-008/009/010 association,
+episodic accessibility and retrieval reinforcement remain distinct alternatives,
+not silently identified with this profile's safe journal. MEC-012..019 reasons/dice,
+intent/expression and identity controls are preserved; identity is fixed in this fixture.
+CTL-009 universal options is not canonical: candidate availability is explicitly tested.
+CTL-001 embodied Need, CTL-008 addiction and CTL-010 general experienced Reward remain
+broader comparisons under RO-C3-015. No reference import or universal habit reduction.
+DerivedHistory/StoredSummary equivalence earns a bounded NOT REQUIRED verdict for
+the separate cached summary, not for historical influence itself.

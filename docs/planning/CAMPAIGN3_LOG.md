@@ -1650,3 +1650,133 @@ without a named new phenomenon or conditional trigger.
 
 Corpus digest unchanged:
 `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+
+
+## Archived CURRENT before SKILL closure — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded WORKSPACE/CONTROL is COMPLETE / QUALIFIED. No owner ruling is open.**
+Start with [the qualification](CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md) and
+[VER-C3-WORK-001](VERDICT_LEDGER.md). GA, BODY/MULTISOURCE, BELIEF and AFFECT stay complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **781** |
+| Allocated since last verdict/corpus member | **0** (16 this increment) |
+| Research obligations | **0 active / 12 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 18 verdicts** |
+| Frozen WORK models / public runs | **48 / 78** |
+| Whole-prefix restores / continuation equalities | **624 / 624** |
+| Affected tests / preserved reference tests | **40 / 328** |
+
+Retained intention, active selection and accessible reason remain distinct. Three
+available items overload capacities one/two. Maintenance protects against distraction;
+a later cue restores an inactive intention before expiry and cannot recreate it after.
+StoredSet and IndexedReplay have exactly equal tested cognitive outputs: the separate
+active-set cache is DERIVED in this finite retained-history domain. Maintained access
+is RETAINED; stateless priority, unlimited access and immortal goals fail named controls.
+
+WORK-DESIGN-001 preserves a confounded priority fixture and its matched single-field
+correction. RO-C3-012 conditionally owns wider maintenance/history/lifecycle domains,
+inhibition, fatigue, rumination, monitoring, strategy switching, reappraisal and costs.
+Build, TypeScript, boundary and research checks pass. No full active-suite claim.
+The624 continuation checks include546 next-instant and78 terminal no-op equalities.
+
+**Next natural large frontier:** PHEN-SKILL-001 readiness: competence, believed
+competence and temporary impairment. Begin with historical intake and contract gates.
+That implementation has not started. Do not reopen completed bounded domains without
+a named phenomenon or conditional trigger. Whole Campaign3 remains open.
+
+Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before SOCIAL closure — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded SKILL is COMPLETE / QUALIFIED. No owner ruling is open.**
+Start with [the qualification](CAMPAIGN3_SKILL_QUALIFICATION.md) and
+[VER-C3-SKILL-001](VERDICT_LEDGER.md). Earlier bounded Campaign3 domains stay complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **802** |
+| Allocated since last verdict/corpus member | **0** (21 this increment) |
+| Research obligations | **0 active / 13 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 19 verdicts** |
+| Frozen SKILL models / public runs | **27 / 52** |
+| Whole-prefix restores / continuation equalities | **279 / 279** |
+| Affected tests / preserved reference tests | **60 / 328** |
+
+Actual competence and temporary impairment change execution while intent/expression
+remain fixed. Practice can change competence without feedback; misleading reports
+can change self-belief without competence. Impairment-only recovery preserves exact
+retained skill. Procedural adaptation and epistemic learning have separate owners.
+
+Linear/residual practice, multiplicative/additive impairment and evidence-learning
+comparators remain distinct. RO-C3-013 conditionally owns broader laws, latent
+competence inference, rust, transfer, automaticity, confidence-sensitive choice and
+body/control/workspace integration. The belief estimates observed performance in one
+exercise; the adopted instruction fixes a sole Auto choice. Neither is universal.
+
+SKILL-IMPL-001 preserves and corrects initial arbitration API misuse. Build,
+TypeScript, boundary and research checks pass. No full active-suite claim. The279
+continuation checks include227 next-instant and52 terminal no-op equalities.
+
+**Next natural large frontier:** PHEN-SOCIAL-001 readiness—independent observers,
+misleading evidence and correction. Start with historical intake and contract gates.
+That implementation has not started. Whole Campaign3 remains open; do not reopen
+completed bounded domains without a named phenomenon or conditional trigger.
+
+Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before HABIT closure — 2026-09-21
+
+# Current research entry point
+
+**Updated 2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded SOCIAL is COMPLETE / QUALIFIED. No owner ruling is open.**
+Start with [the qualification](CAMPAIGN3_SOCIAL_QUALIFICATION.md) and
+[VER-C3-SOCIAL-001](VERDICT_LEDGER.md). Earlier bounded Campaign3 domains stay complete.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **816** |
+| Allocated since last verdict/corpus member | **0** (14 this increment) |
+| Research obligations | **0 active / 14 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 20 verdicts** |
+| Frozen SOCIAL models / public runs | **18 / 26** |
+| Whole-prefix restores / continuation equalities | **127 / 127** |
+| Affected tests / preserved reference tests | **67 / 328** |
+
+Observer-owned estimates follow permitted evidence rather than target-private truth.
+Selective explanations can correct one observer while the other's complete view
+remains byte-identical. Explanations can also be false. Repeated visible receipts do
+not independently corroborate. SourceGroupedMean, LastStatement and NoLearning remain
+distinct; global belief, private truth reading and presentation counting fail controls.
+
+The profile uses controlled identity and one fixed commitment proposition. ORD-002
+is bounded-qualified for snapshot fan-out; TRC-003 for a closed observer projection.
+General simultaneous interaction and privacy tooling stay open. RO-C3-014 preserves
+trust, hearsay, uncertain correlation, richer social inference and relationship limits.
+No whole Brief12.10/12.13 or Campaign3 completion is claimed.
+
+127 continuation checks comprise101 advancing and26 terminal equalities. TypeScript,
+build, boundary and research checks pass. Initial fixture/evaluator failures remain
+documented in SOCIAL_IMPLEMENTATION_FINDINGS.md. No full active-suite claim.
+
+**Next natural large frontier:** PHEN-HABIT-001 readiness and historical intake,
+then relationship and longitudinal history. That implementation has not started.
+Do not reopen completed bounded domains without a named phenomenon or trigger.
+
+Corpus digest unchanged:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.

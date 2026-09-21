@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-21",
+  "status": "PASS",
+  "models": 12,
+  "frozenFiles": 60,
+  "publicRuns": 23,
+  "prefixRestores": 291,
+  "continuationEqualities": 291,
+  "terminalNoOpEqualities": 23,
+  "affectedTests": 75,
+  "referenceTests": 328,
+  "exactInterventions": [
+    {
+      "a": "candidate-1-law-1",
+      "b": "unrewarded-training",
+      "changedField": "3",
+      "paths": [
+        "/items/0/fields/3",
+        "/items/1/fields/3",
+        "/items/2/fields/3"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1",
+      "b": "uncorrected",
+      "changedField": "4",
+      "paths": [
+        "/items/3/fields/4",
+        "/items/4/fields/4",
+        "/items/5/fields/4",
+        "/items/6/fields/4",
+        "/items/7/fields/4",
+        "/items/8/fields/4",
+        "/items/9/fields/4",
+        "/items/10/fields/4",
+        "/items/11/fields/4"
+      ]
+    },
+    {
+      "a": "candidate-1-law-1",
+      "b": "other-cue",
+      "changedField": "6",
+      "paths": [
+        "/items/4/fields/6",
+        "/items/5/fields/6",
+        "/items/6/fields/6",
+        "/items/7/fields/6",
+        "/items/8/fields/6",
+        "/items/9/fields/6",
+        "/items/10/fields/6",
+        "/items/11/fields/6"
+      ]
+    },
+    {
+      "a": "hidden-reversal",
+      "b": "hidden-unchanged",
+      "changedField": "3",
+      "paths": [
+        "/items/3/fields/3",
+        "/items/4/fields/3",
+        "/items/5/fields/3",
+        "/items/6/fields/3",
+        "/items/7/fields/3",
+        "/items/8/fields/3",
+        "/items/9/fields/3",
+        "/items/10/fields/3",
+        "/items/11/fields/3"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/campaign3/habitCodecs.ts",
+      "sha256": "3a42bca26fa7cfd8a0d5d9d41d5bea4e79136ec3e50b908f2e1fd684ba52afc4"
+    },
+    {
+      "path": "src/campaign3/habitFactory.ts",
+      "sha256": "da25bfcecd50017f0da53b3c7b82e3d799237ce5999c25e2be14e8074a2a0cf0"
+    },
+    {
+      "path": "src/campaign3/habitMath.ts",
+      "sha256": "a020b23984c5e58c03f8d25a2908ea9091806425d776a5e9303120791aba6624"
+    },
+    {
+      "path": "src/campaign3/habitModel.ts",
+      "sha256": "f3883a6f07330f2c61c68fe66a4616696f2b488df3aca40f474e326ff1c2d64d"
+    },
+    {
+      "path": "src/campaign3/habitRuntime.ts",
+      "sha256": "453e3925ac5d2f7aba36d523bd6dbe041a53f92e6e6b2c32ec2f0c069703887b"
+    }
+  ],
+  "limitations": "Availability-mediated persistence in one controlled action domain, two cues, binary admitted results and neutral alternative. No compulsion, general episodic-memory reduction, identity/body/control integration or addiction qualification."
+}

@@ -212,9 +212,25 @@ runs and624 complete-prefix restores/continuation equalities. See
 docs/planning/CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md. Maintained access,
 distraction/protection and cue/expiry are traversable; the active-set cache is derived
 from retained safe history in this domain. RO-C3-012 conditionally preserves wider
-control and history/lifecycle limits. Next natural frontier: PHEN-SKILL-001 readiness,
-beginning with its phenomenon and historical-mechanism intake. These bounded closures
-do not qualify the full Brief12.6 family or the whole campaign.
+control and history/lifecycle limits.
+Bounded SKILL is complete under VER-C3-SKILL-001:27 models,52 public runs and279
+complete-prefix restores/continuation equalities. See
+docs/planning/CAMPAIGN3_SKILL_QUALIFICATION.md. Actual competence, observed performance
+belief, temporary impairment and intent/outcome are separately testable. Procedural
+practice and epistemic learning have separate sources and owners. RO-C3-013 preserves
+broader laws, rust, transfer, automaticity, competence inference and integration.
+Bounded SOCIAL is complete under VER-C3-SOCIAL-001:18 models,26 runs and127
+complete-prefix restores/continuation equalities. See
+docs/planning/CAMPAIGN3_SOCIAL_QUALIFICATION.md. Private commitment, permitted display,
+observer-owned belief and correlation remain distinct. RO-C3-014 preserves broader
+social inference, relationships, recognition, reciprocal ordering and privacy tooling.
+Bounded HABIT is complete under VER-C3-HABIT-001:12 models,23 runs and291
+complete-prefix restores/continuation equalities. See
+docs/planning/CAMPAIGN3_HABIT_QUALIFICATION.md. Acquired history affects availability
+independently of corrected expectation; derived and cached representations agree.
+RO-C3-015 preserves stronger counter-reasons/control, memory equivalence, integration
+and addiction. Next natural frontier: PHEN-REL-001 readiness and historical intake. These bounded
+closures do not qualify whole Brief12.6/12.8 families or the whole campaign.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,

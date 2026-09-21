@@ -1,10 +1,11 @@
 # Seam Ledger
 
-**Current routing, 2026-09-21:** [state index](CURRENT.md), [workspace/control qualification](CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members; bounded GA, public multisource, BELIEF, AFFECT and WORKSPACE/CONTROL are complete; zero owner rulings. Counters781/0. Research obligations:0 active/12 conditional/0 unowned.
+**Current routing, 2026-09-21:** [state index](CURRENT.md), [HABIT qualification](CAMPAIGN3_HABIT_QUALIFICATION.md), and [verdict ledger](VERDICT_LEDGER.md). Corpus0.29.0 has21 members. Bounded HABIT and prior Campaign3 domains are complete; zero owner rulings. Counters841/0. Research obligations:0 active/15 conditional/0 unowned.
 
-Maintained access is retained; the independent active-set cache is derivable from the
-bounded safe journal under VER-C3-WORK-001. RO-C3-012 preserves wider control and
-source/lifecycle claims. PHEN-SKILL-001 readiness is next; implementation not started.
+Acquired history and explicit expectation remain distinct under VER-C3-HABIT-001.
+History-dependent availability persists after correction, then changes with negative
+experience. Derived/cache equivalence is bounded; RO-C3-015 retains broader claims.
+PHEN-REL-001 readiness is next; implementation not started.
 
 ## Historical checkpoint summaries through 2026-09-13
 
@@ -257,6 +258,9 @@ Qualification scope below is preserved. Current corpus membership and comparison
 | Measurement belief/prediction | measurement-prediction/0.1-candidate and accepted successor packaging | Qualified bounded forecast | PHEN-LEARN exact precision-update semantics remain outside this profile; ORD-001 isolated |
 | Fallible trial belief → later appraisal | belief-public/0.1-candidate; VER-C3-BELIEF-001 | Qualified bounded PHEN-BELIEF-001 realization:9 models,48 public runs,381 prefix restores and next-step equalities; false belief/correction, goal separation and opportunity gating | RO-C3-010 retains general inference/confidence, correlated reports and causal learning. Consequence-only140/later50 does not settle ORD-001 current-lane use. |
 | Belief-relative appraisal → affect → grounded response/later appraisal | affect-public/0.1-candidate; VER-C3-AFFECT-001 | [Qualified bounded PHEN-AFFECT-001](CAMPAIGN3_AFFECT_QUALIFICATION.md):18 models,91 main runs,1236 prefix restores/continuation equalities; independent factors, matched affect/different choice, relief-not-evidence and later feedback | RO-C3-011 retains universal factor/control/feedback laws, scalar equivalence, uncertainty, social/retrospective affect, extinction/generalization and broader action discovery. No TaskConcern relabeling or ORD-005 regulation claim. |
+| Admitted action history → cue-dependent candidate availability | habit-public/0.1-candidate; VER-C3-HABIT-001 | [Qualified bounded PHEN-HABIT-001](CAMPAIGN3_HABIT_QUALIFICATION.md):12 models,23 runs,291 restores; equal expectation/different acquired availability; derived/cache equality | RO-C3-015 retains stronger preference/control, memory alternatives, integration and addiction. |
+| Private commitment → permitted display → observer-owned person estimate | social-public/0.1-candidate; VER-C3-SOCIAL-001 | [Qualified bounded PHEN-SOCIAL-001](CAMPAIGN3_SOCIAL_QUALIFICATION.md):18 models,26 runs,127 restores; fallible correction and exact nonrecipient isolation | RO-C3-014 retains trust, recognition, relationships, reciprocal ordering and wider projection. |
+| Practice → actual skill → execution; observed performance → belief | skill-public/0.1-candidate; VER-C3-SKILL-001 | [Qualified bounded PHEN-SKILL-001](CAMPAIGN3_SKILL_QUALIFICATION.md):27 models,52 runs,279 prefix restores; fixed intent/different execution, false self-belief, unobserved practice and impairment recovery | RO-C3-013 retains broader laws, competence inference, rust, transfer, automaticity, choice and integration. |
 | Retained source/intention → maintained workspace → grounded choice | workspace-control/0.1-candidate; VER-C3-WORK-001 | [Qualified bounded PHEN-WORK-001](CAMPAIGN3_WORKSPACE_CONTROL_QUALIFICATION.md):48 models,78 runs,624 prefix restores; overload, displacement/protection, cue and expiry; StoredSet/IndexedReplay equivalence | RO-C3-012 retains wider control, history, lifecycle, ordinary reminder recognition, costs and integration. |
 | Workspace → appraisal → transient concern | task-workspace/0.1-candidate; task-appraisal-affect/0.1-candidate; ratified transient feedback | Qualified bounded workspace/discrepancy; GA now executes actual earlier concern and strictly later encoding/retrieval delivery | General competing control and factorized Affect remain unqualified; Candidate A/B/C laws remain unresolved |
 | Task motives/instructions → options | task-motive-context/0.1-candidate; task-plan-context/0.1-candidate; task-option-construction/0.1-candidate | Qualified two adopted tasks/actions, immutable instructions | Bounded body source/shared-option receiving qualified under EMB; general planning and social ownership remain open |
