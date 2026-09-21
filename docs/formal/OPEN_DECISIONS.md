@@ -1978,3 +1978,12 @@ Grouped/sample selection and attribution retain their component-only qualificati
 Reopen a bounded closure when its source domain, state authority, evidence basis,
 mathematics, randomness/coupling or input/profile semantics change. Do not infer
 broader decision closure or a new corpus member from this implementation qualification.
+
+## Bounded trial belief qualification — 2026-09-20
+
+[BELIEF_PUBLIC_CONTRACT.md](BELIEF_PUBLIC_CONTRACT.md) and VER-C3-BELIEF-001
+qualify fallible trial evidence, owned consequence140 learning and later50
+appraisal. This uses the accepted later-cycle prediction precedent and closes
+no current-lane timing question: **ORD-001 remains P1 OPEN**. MATH-004 covariance
+is not required by the exact scalar candidate. No new owner ruling was opened;
+broader evidence/uncertainty/causal-learning limits are RO-C3-010.

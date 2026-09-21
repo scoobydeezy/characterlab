@@ -121,3 +121,17 @@ This is evidence against the shared/independent/duplicate clauses of PHEN-MULTI-
 `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
 The corpus remains21 members. No corpus promotion, whole PHEN-MULTI-001 PASS,
 whole Campaign3 PASS or general BODY reduction is inferred.
+
+## Preserved transfer constraints — review disposition, 2026-09-20
+
+RO-C3-001 retains six lessons for successor candidates: (1) evidence support and
+motive grounds are separate axes; (2) description count does not itself establish
+motive multiplicity; (3) an orphan modifier cannot create or dilute an independent
+motive solely through normalization bookkeeping; (4) redundancy may be collective;
+(5) with model, prior state, permitted observations and other character operands
+held fixed, altered hidden truth cannot change character-side results; (6) execution
+failure preserves requested action separately from actual execution. These are
+scoped preservation constraints, not a universal receiving equation. The orphan
+constraint does not prohibit separately contracted effects of evidence on belief
+or attention. The observation constraint does not assert equality across different
+priors, goals, adopted instructions or models. GroundAggregate remains a candidate.

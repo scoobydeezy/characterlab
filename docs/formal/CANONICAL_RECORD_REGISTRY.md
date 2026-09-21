@@ -187,3 +187,14 @@ selection and task outputs retain their inherited namespaces. Physical649 and ta
 state ownership is unchanged. Future additions append IDs; incompatible schema changes
 require an explicit successor version and model identity. No migration of frozen GA,
 EMB or prior task images is authorized by this addendum.
+
+## Belief public allocation — 2026-09-20
+
+[BELIEF_PUBLIC_ALLOCATION_TABLE.json](BELIEF_PUBLIC_ALLOCATION_TABLE.json) accepts
+records734..746 at schema1 and occurrence namespace1150 before implementation of
+[belief-public/0.1-candidate](BELIEF_PUBLIC_CONTRACT.md). Safe observations retain
+1115; experience retains1106; all new evidence/application/appraisal/freeze outputs
+use1150. Root740 belongs exclusively to authority/belief-expectation. Existing
+schemas and images are unchanged. Counters746/13. Exact field grammars are in the
+table; absent optional fields are not default values. Incompatible changes require
+a successor version and model identity, never rewriting a frozen image.

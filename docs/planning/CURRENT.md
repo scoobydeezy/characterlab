@@ -2,41 +2,38 @@
 
 **Updated 2026-09-20. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**The large bounded public BODY/MULTISOURCE checkpoint is COMPLETE.**
-[Qualification and limits](CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md),
-[VER-C3-MULTI-002](VERDICT_LEDGER.md), and
-[validation closure](MULTISOURCE_VALIDATION_CLOSURE_REV1.json) own the receipt.
-General Attention remains COMPLETE in its prior accepted bounded scope.
+**The bounded BELIEF checkpoint is COMPLETE.**
+[Qualification and limits](CAMPAIGN3_BELIEF_QUALIFICATION.md),
+[VER-C3-BELIEF-001](VERDICT_LEDGER.md) and the
+[public receipt](BELIEF_PUBLIC_EXPERIMENT_REV1.json) own this closure.
+General Attention and bounded public BODY/MULTISOURCE remain complete.
 No architectural owner ruling is open.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **733** |
+| Highest permanently allocated record type | **746** |
 | Allocated since last verdict/corpus member | **0** |
-| Research obligations | **0 active / 9 conditional / 0 unowned** |
-| Corpus / named verdict entries | **0.29.0 — 21 members / 15 verdicts** |
-| Public multisource proof | **43 distinct models / 62 runs / 227 prefix restores** |
+| Research obligations | **0 active / 10 conditional / 0 unowned** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 16 verdicts** |
+| Public belief proof | **9 models / 48 runs / 381 prefix restores** |
 
-Actual shared task/body evidence, independent reserves, orphan removal, duplicate
-and collective descriptions execute through registered sources, receiving, arbitration
-and protocol execution. Matched DescriptionDice contrasts have identical raw bytes.
-All62 runs reproduce their prior complete-save bytes under the final decoder.
+Fallible displayed evidence produces confidently wrong candidate beliefs and later
+correction. Goals change appraisal while belief stays exactly equal. Safe observed
+absence teaches; unobserved opportunity, censoring and silence do not. Hidden-world
+changes preserve safe bytes. Every prefix also passes a next-step continuation check.
 
-The full suite recorded2,235 passes and one codec regression; the final22-test affected
-suite passes including that regression. Latest-result coverage is2,236 active tests,
-with328 reference tests, build and boundary checks passing. Preserve the failing
-full-run receipt alongside the passing rerun; do not relabel the original process.
+Latest affected validation:101 distinct tests,328 reference tests, production build
+and boundary checks pass. This increment did not rerun the entire active suite.
+Source, codec, authority, input and complete-save checks are recorded in the report.
 
-RO-C3-001 is CONDITIONAL: its immediate public fixture debt is discharged, while
-universal receiving laws and broader domains remain unresolved. Retain motive grounds,
-description identity, role/sign boundaries and exact intermediate witnesses. The
-rejected construction cohort and codec flaw have preserved findings and regressions.
+RO-C3-010 is CONDITIONAL for broader inference, correlated reports, confidence
+calibration, current-lane timing and causal learning. ORD-001 remains OPEN outside
+the qualified consequence140/later-read profile. EvidenceMean is a bounded candidate,
+not a universal law. Corpus membership/digest are unchanged; whole Campaign3 is open.
 
-**Next program gate:** select the next underrepresented Campaign3 phenomenon using
-the seam ledger and conditional obligations. Do not reopen GA or continue allocating
-multisource schemas without a new required phenomenon or explicit triggered claim.
-This checkpoint does not claim whole PHEN-MULTI-001 or Campaign3 PASS.
+**Next program gate:** bounded AFFECT readiness, using the phenomenon and mechanism
+ledgers before designing any factorization or feedback extension. Do not relabel
+TaskConcern as general Affect or reopen completed BELIEF without a triggered claim.
 
-Corpus0.29.0 remains21 members, digest
+Corpus0.29.0 digest:
 `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
-No corpus promotion or predecessor model/schema rewrite occurred.

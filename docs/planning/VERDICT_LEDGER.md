@@ -1398,3 +1398,42 @@ open. RO-C3-001 preserves this extension and its limits. No corpus promotion.
   added motive family, broader source or arbitrary renaming/order-invariance claim.
   No general Need ownership, physiology or learned efficacy is established.
 - **Counters:** highest733; allocated since this verdict0 (27 in this increment).
+
+## `VER-C3-BELIEF-001` — Fallible trial belief and separate appraisal
+
+- **Recorded:** 2026-09-20, LOCAL DISPOSITION; bounded BELIEF COMPLETE.
+- **Contract:** belief-public/0.1-candidate, records734..746, namespace1150;
+  sole existing authority/belief-expectation role owns new root740.
+- **Corpus:** PHEN-BELIEF-0011.0.0-draft, corpus0.29.0, digest
+  `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
+  The bounded controlled realization meets its contrasts; no corpus promotion or
+  whole Research Brief12.4/Campaign3 PASS.
+- **Public evidence:** nine frozen models,48 original-data runs,381 complete-prefix
+  restores and381 next-step save equalities. See BELIEF_EXPERIMENT_PLAN_REV1.json
+  and BELIEF_PUBLIC_EXPERIMENT_REV1.json. One observer/character, two named trial
+  channels,32 instants maximum, consequence-only learning and later appraisal.
+- **Competitors:** EvidenceMean, LastObservation, NoLearning; three goal signs.
+  Exact deterministic comparisons; no random draws. TruthLookup, GoalAsBelief and
+  UnconditionalAbsence remain unlicensed researcher-side negative arithmetic controls.
+- **Witnesses:** eight misleading observations under fixed false truth yield mean1
+  and confidence diagnostic8/9. A contradiction changes mean to8/9; nine to8/17.
+  LastObservation instead returns0; NoLearning produces no learned estimate.
+  Hidden truth/opportunity changes preserve all safe bytes. Goal-only changes
+  preserve belief and change appraisal. Five safe negative trials after one positive
+  yield1/6; no-opportunity/censored/unavailable controls retain1 and precision1.
+  Missing belief differs from known zero. Independent target permutation preserves
+  safe outputs; consequence140 cannot revise the preceding50 appraisal.
+- **Verdict:** RETAINED for truth/evidence/belief/appraisal separation, unknown
+  versus zero, qualifying-opportunity gating and delayed consequence influence.
+  UNRESOLVED for general learning/confidence law; no unique necessity of mean/precision
+  is inferred. LastObservation remains a candidate despite weaker contradiction
+  resistance. NoLearning fails acquisition/correction in this controlled domain.
+- **Validation:**101 distinct affected tests by latest result,328 preserved
+  reference tests, production build and boundary check pass. All six stages and
+  commit have reached-fault rollback checks, including a later failed contradiction
+  after committed learning. Exact validation limits and source scope are in
+  CAMPAIGN3_BELIEF_QUALIFICATION.md; no full active-suite rerun is claimed.
+- **Obligation:** RO-C3-010 CONDITIONAL for current-lane timing, wider evidence,
+  correlations, confidence calibration and broader causal learning. ORD-001 remains
+  OPEN outside this consequence-only profile. No architectural ruling is required.
+- **Counters:** highest746; allocated since this verdict0 (13 this increment).

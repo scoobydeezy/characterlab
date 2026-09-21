@@ -197,9 +197,14 @@ The 2026-09-20 bounded public BODY/MULTISOURCE experiment is now complete under
 VER-C3-MULTI-002:43 distinct frozen models,62 public runs and227 prefix restores.
 See `docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md`. Its immediate
 common-evidence source debt is discharged; general receiving laws remain conditional.
-The next increment should select an underrepresented phenomenon from the current
-seam ledger, preserving GA and this completed bounded experiment. Neither closure
-promotes the full MULTISOURCE phenomenon or the whole campaign.
+The subsequent bounded BELIEF increment is complete under VER-C3-BELIEF-001:
+nine frozen models,48 public runs,381 prefix restores and next-step equalities.
+See `docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md`. False-belief correction,
+opportunity gating and separate appraisal are traversable; general inference and
+confidence calibration remain conditional. ORD-001 current-lane timing is isolated.
+The next frontier is bounded AFFECT readiness from the phenomenon and mechanism
+ledgers. These closures do not promote the full MULTISOURCE phenomenon or the
+whole campaign.
 
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,

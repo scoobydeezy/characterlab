@@ -32,6 +32,7 @@ claim. Split an entry if part is settled and part remains open.
 | RO-C3-007 | Broader GA source and horizon limits | CONDITIONAL |
 | RO-C3-008 | Body/Need ownership and receiving scope | CONDITIONAL |
 | RO-C3-009 | Earned identity versus retained history | CONDITIONAL |
+| RO-C3-010 | Bounded belief versus general inference, confidence and causal learning | CONDITIONAL (added at VER-C3-BELIEF-001) |
 
 The seed covers all eight current Campaign 3 verdicts and eight named reports,
 including historical qualification support documents. It is not a claim that every
@@ -55,4 +56,5 @@ adequacy of evidence. Do not treat a green check as a research verdict.
 **Stage C comparator / North Star transfer:** no new model in this bookkeeping pass;
 preserve the named GA and MULTISOURCE competitors so later reduction cannot silently
 erase separately traceable motivation, evidence, encoding and accessibility.
-**Next gate:** the common-evidence producer contract remains the active research work.
+**Current routing:** the common-evidence and bounded BELIEF public work are complete.
+See CURRENT.md; broader receiving and belief laws remain conditional, not closed.

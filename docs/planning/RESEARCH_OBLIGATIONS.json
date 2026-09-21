@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-09-20",
-  "scope": "Seeded from all eight current Campaign 3 verdicts and the listed qualification reports. This is not a completed audit of every historical note or Campaign 0-2 limitation.",
+  "scope": "Seeded from Campaign 3 verdicts and qualification reports, extended through VER-C3-BELIEF-001. Not a completed audit of all historical or Campaign 0-2 limitations.",
   "obligations": [
     {
       "id": "RO-C3-001",
@@ -45,7 +45,7 @@
         "Receiving reduction claiming shared/independent motive equivalence"
       ],
       "doesNotBlock": "Unrelated bounded Campaign 3 work; completed bounded GA qualification.",
-      "closureRequirement": "The immediate authentic public fixture requirement is discharged by VER-C3-MULTI-002. When a broader claim triggers this obligation, run matched public controls over its affected domain and explicitly retain or supersede the orphan-influence, description/motive and collective-redundancy constraints.",
+      "closureRequirement": "The immediate authentic public fixture requirement is discharged by VER-C3-MULTI-002. When a broader claim triggers this obligation, run matched public controls over its affected domain and explicitly retain or supersede the orphan-influence, description/motive and collective-redundancy constraints. The qualification report collects six scoped transfer constraints, including safe-observation noninterference and intent/execution separation; preserve their held-fixed assumptions and do not turn orphan inertness into a ban on separately contracted evidence effects.",
       "closure": null
     },
     {
@@ -238,6 +238,39 @@
       "doesNotBlock": "Unrelated bounded Campaign 3 work; completed bounded GA qualification.",
       "closureRequirement": "Compare distributions and activation with matched prior history and declared coupling; qualify broader biography obligations separately.",
       "closure": null
+    },
+    {
+      "id": "RO-C3-010",
+      "title": "Bounded belief versus general inference and confidence",
+      "status": "CONDITIONAL",
+      "distinction": "Observer evidence versus truth, belief versus appraisal, opportunity versus silence, evidence weight versus calibrated uncertainty",
+      "established": "VER-C3-BELIEF-001 qualifies nine frozen models/48 public runs/381 whole-prefix restores and next-step equalities. Fixed-truth false belief, contradiction, goal-only appraisal, observer-safe opportunity gating, absent-versus-zero and exclusive consequence ownership are traversable.",
+      "unresolved": "General belief law, correlated evidence/repeated reports, learned trust or quality, scalar censored inference, calibrated uncertainty, causal attribution, controllability, efficacy and current-phase30 application remain unqualified. Confidence tau/(tau+1) measures accumulated admitted weight and can rise under contradiction; it is not probability of correctness.",
+      "verdicts": [
+        "VER-C3-BELIEF-001"
+      ],
+      "evidence": [
+        "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
+        "docs/planning/CAMPAIGN3_BELIEF_PLAN.md",
+        "docs/formal/BELIEF_PUBLIC_CONTRACT.md",
+        "docs/planning/BELIEF_EXPERIMENT_PLAN_REV1.json",
+        "docs/planning/BELIEF_PUBLIC_EXPERIMENT_REV1.json",
+        "docs/planning/BELIEF_FOCUSED_TESTS_REV1.json",
+        "docs/planning/BELIEF_FINAL_TESTS_REV1.json",
+        "docs/planning/BELIEF_REFERENCE_TESTS_REV1.json",
+        "src/test/beliefPublic.test.ts",
+        "docs/planning/BELIEF_VALIDATION_CLOSURE_REV1.json"
+      ],
+      "owner": "BELIEF evidence/application/appraisal seam",
+      "reopenTrigger": "New evidence class, repeated/correlated reports, current-lane or same-event use, trust/quality inference, broader condition recognition, confidence calibration, scalar censoring, causal attribution/controllability/efficacy, or a belief/appraisal reduction.",
+      "blocks": [
+        "Universal belief/confidence law",
+        "General Research Brief12.4 qualification",
+        "Current-lane belief application inferred from this profile"
+      ],
+      "doesNotBlock": "Completed bounded PHEN-BELIEF-001 realization; a separately contracted bounded Affect investigation using permitted belief operands.",
+      "closureRequirement": "For each triggered extension, specify exact admitted sources and owner/boundary semantics, retain historical MEC-001/002 and P3-001/002/003/011 controls, and run matched public contrasts preserving false belief, correction, absent-versus-zero and no-evidence inertia. Resolve ORD-001 explicitly before current-lane application.",
+      "closure": null
     }
   ],
   "verdictReviews": [
@@ -301,6 +334,12 @@
       "obligations": [
         "RO-C3-001"
       ]
+    },
+    {
+      "verdict": "VER-C3-BELIEF-001",
+      "obligations": [
+        "RO-C3-010"
+      ]
     }
   ],
   "reportReviews": [
@@ -363,6 +402,12 @@
       "path": "docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md",
       "obligations": [
         "RO-C3-001"
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
+      "obligations": [
+        "RO-C3-010"
       ]
     }
   ]

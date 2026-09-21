@@ -56,7 +56,7 @@ closed on 2026-09-20; see `docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09
 and `VER-C3-GA-001`. The subsequent large bounded public BODY/MULTISOURCE checkpoint
 is also COMPLETE: `docs/planning/CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md` and
 `VER-C3-MULTI-002`. It has43 distinct models,62 public runs and227 prefix restores.
-Records707..733/namespace1149 implement the accepted public contract; counters733/0.
+Records707..733/namespace1149 implement that contract; its closure counters were733/0.
 RO-C3-001 is CONDITIONAL after discharging its immediate public-source debt; general
 receiving laws remain unresolved. Preserve the rejected construction cohort and codec
 regression receipts. No whole MULTISOURCE, general Need or Campaign3 PASS is implied.
@@ -72,10 +72,14 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
-Campaign 3 is active: start at `docs/planning/CURRENT.md` and the bounded public
-multisource qualification in that directory. Select the next underrepresented
-phenomenon before further allocation; do not automatically reopen the completed
-GA or multisource work items. `GENERAL_ATTENTION_RESUME_BRIEF.md`
+Campaign 3 is active: start at `docs/planning/CURRENT.md` and
+`CAMPAIGN3_BELIEF_QUALIFICATION.md` in that directory. Bounded BELIEF is now COMPLETE:
+VER-C3-BELIEF-001,9 frozen models,48 runs,381 prefix restores; counters746/0.
+RO-C3-010 preserves broader inference/confidence and causal-learning obligations.
+ORD-001 remains open for current-lane belief application; the completed profile is
+consequence-only140 with later50 appraisal. The next frontier is bounded AFFECT
+readiness. Do not automatically reopen completed GA, multisource or BELIEF.
+`GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its
 current bounded coverage separately from historical summaries. Missing phenomena are BLOCKED

@@ -398,3 +398,20 @@ EXP-009/014 receive bounded public source/control evidence, not a general reduct
 Standing/identity learning, general ContextModulating sources, Need ownership and
 broader receiving laws are not ported or retired by this increment. RO-C3-001 preserves
 the general-law, wider-source and ordering/renaming obligations conditionally.
+
+## Bounded BELIEF disposition — 2026-09-20
+
+VER-C3-BELIEF-001 and CAMPAIGN3_BELIEF_QUALIFICATION.md qualify the controlled
+P3-001/002/003 truth/evidence/belief/appraisal and opportunity distinctions.
+MEC-001/EXP-001 contribute the explicitly selected weighted-mean candidate and
+contradiction-resistance/prediction-error controls; LastObservation remains a public
+competitor. This exact-rational binary profile is not a silent port of historical
+quantization, decay or Need-dependent observation precision. MEC-002/EXP-002/005
+scalar-bound controls remain preserved by reference validation, including their
+accepted-bound overcredit limitation. Binary censored trials are inert here.
+P3-011 consequence ordering is qualified; current30 remains ORD-001 work.
+MEC-006 surprise, broader P3-004/005/006, source trust, correlations and causal
+learning remain unimplemented in this profile and conditional under RO-C3-010.
+SUB-001/008/009/011 provide exact arithmetic, actual stage trace, matched public
+comparisons,381 complete-prefix/continuation equalities and preserved receipts.
+Counters746/0; no owner ruling.
