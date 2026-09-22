@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "kind": "Recorded Vitest terminal result; not a Vitest JSON reporter export",
+  "command": "npm exec vitest run src/test/agencyPublic.test.ts src/test/agencyInterferenceSource.test.ts src/test/agencyRuntimeDevelopment.test.ts --reporter=json --outputFile=docs/planning/AGENCY_TESTS_REV1.json",
+  "note": "npm warned that reporter/outputFile flags were treated as npm options. Tests ran successfully; this receipt records the returned terminal counts. No reporter JSON was produced by that command.",
+  "testFiles": 3,
+  "tests": 35,
+  "passed": 35,
+  "failed": 0,
+  "groups": {
+    "sourceBoundary": 8,
+    "developmentIntegration": 1,
+    "publicBehaviorAndConformance": 26
+  },
+  "durationSeconds": 42.2,
+  "artifacts": [
+    {
+      "path": "src/test/agencyPublic.test.ts",
+      "sha256": "49c5349f10cf71dbe1e25354778ffbb2a519389a9310e72db830d0d6d6c808af"
+    },
+    {
+      "path": "src/test/agencyInterferenceSource.test.ts",
+      "sha256": "01c0deb6dac7a540fc648ed00db2b2874109a5bcca921f96af49df45d430830a"
+    },
+    {
+      "path": "src/test/agencyRuntimeDevelopment.test.ts",
+      "sha256": "6836b9de533b7c0aa5fa5b3fd3676356a2eb377dcce9c5f594ef324331512871"
+    }
+  ]
+}

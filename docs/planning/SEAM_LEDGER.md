@@ -1,14 +1,15 @@
 # Seam Ledger
 
-**Current routing,2026-09-21:** [CURRENT](CURRENT.md), [COMMIT qualification](CAMPAIGN3_COMMIT_QUALIFICATION.md), [verdicts](VERDICT_LEDGER.md). Bounded COMMIT and earlier qualified domains COMPLETE; whole Campaign3 NOT EXIT-READY. Corpus0.29.0 unchanged21 members. Counters970/0;3 active/17 conditional/1 closed/0 unowned. Zero owner rulings.
+**Current routing,2026-09-21:** [CURRENT](CURRENT.md), [BIO qualification](CAMPAIGN3_BIO_QUALIFICATION.md), [verdicts](VERDICT_LEDGER.md). Bounded BIO comparison COMPLETE; whole Campaign3 NOT EXIT-READY. Corpus0.29.0 unchanged21 members. Counters970/0;1 active/19 conditional/1 closed/0 unowned. Zero owner rulings.
 
-VER-C3-COMMIT-001 joins concrete lifecycle, fixed earned identity and selective
-positive witnesses:4 models,10 runs,70 exact prefix continuations. Retirement
-removes commitment pressure without erasing identity; recurrence uses a new instance.
-RO-C3-018's five bounded debts are resolved. RO-C3-014/020 preserve broader lifecycle,
-source and calibration limits. Next: BODY stored-meter/reference ownership comparison.
-REV7 records16 bounded/3 prior/2 partial/0 blocked. Final historical reconciliation
-remains unsatisfied under RO-C3-021. Prior snapshots and failed artifacts survive.
+VER-C3-BIO-001 qualifies6 component candidates/13 cases/260 component prefixes plus13
+canonical identity-bound reruns. Early-only seed variation changes later standing;
+sustained contrary authorship reverses it while old expressions remain frozen.
+Refold matches; retrospective reinterpretation fails. No public RNG admission or
+history compression follows. RO-C3-009 broader scope is conditional;020 preserves
+representation limits. Next: risk-ranked Brief-family intake under019. REV9 records
+18 bounded/3 prior/0 partial/0 blocked; all15 Brief families remain visible. Final
+historical reconciliation021 is unsatisfied. Failed calibration and all snapshots survive.
 
 ## Historical checkpoint summaries through 2026-09-13
 
@@ -2257,3 +2258,27 @@ attains the ceiling and only while driving incidental encoding to zero, so the
 `≥ 2` makes the response bound itself a comparator. Until then `ω_A ≤ 2` is a property of
 the family and not a defect. No higher-bound family is to be implemented, no candidate is
 reopened, no verdict is added, and General Attention closure is not blocked.
+
+
+### Bounded agency/interference — 2026-09-22
+VER-C3-AGENCY-001 adds5 models/19 public runs/71 prefix continuations under
+agency-public/0.3-candidate,988/0. See CAMPAIGN3_AGENCY_QUALIFICATION.md.
+Intent/expression, execution and observer-relative causal evidence remain distinct.
+Brief12.14 clause5 expectations and coercion remain outside the qualified slice.
+RO-C3-019 remains ACTIVE;014/020 broader scope remains CONDITIONAL.
+
+
+## Forward goal/strategy closure — 2026-09-22
+VER-C3-GOAL-001 / goal-strategy-public/0.1-candidate qualifies bounded adopted goal,
+mutable strategy and admitted desired-state evidence:4 models/19 runs/94 prefixes.
+See CAMPAIGN3_GOAL_STRATEGY_QUALIFICATION.md. Counters1007/0; Brief12.7 clauses1/3/4
+bounded in auditREV13. No corpus member change or universal persistence law.
+Next CONTROL readiness;019 ACTIVE,012/014/020 CONDITIONAL; no owner ruling.
+
+
+## Forward CONTROL closure — 2026-09-22
+VER-C3-CONTROL-001/control-public0.2 qualifies maintained-goal inhibition and its
+failure under neutral-card load:7 models/17 runs/142 prefixes. Counters1024/0.
+See CAMPAIGN3_CONTROL_QUALIFICATION.md and preserved schema failure findings.
+AuditREV14 adds Brief12.6 clauses3/4 only; no corpus member change or general control
+law. Next inference correction;019 ACTIVE,012/015/020 CONDITIONAL; no owner ruling.

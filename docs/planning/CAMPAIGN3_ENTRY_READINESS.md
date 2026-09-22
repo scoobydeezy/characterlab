@@ -3,11 +3,14 @@
 **Current routing — 2026-09-21:** use [CURRENT.md](CURRENT.md) and
 [the exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md). Corpus **0.29.0** has21 members,
 digest `5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.
-GA through bounded LONGITUDINAL are complete. The forward REV7 register retains16 bounded
-qualifications,3 accepted prior scopes,2 partial members and0 blocked members;
+GA through bounded LONGITUDINAL are complete. The forward REV9 register retains18 bounded
+qualifications,3 accepted prior scopes,0 partial members and0 blocked members;
 all15 Brief families remain visible. Whole Campaign3 is NOT EXIT-READY.
 Bounded LEARN/EPI/REASON/DECISION/COMMIT are qualified by their C3 verdicts.
-RO-C3-018 is resolved. Next: BODY stored-meter/reference ownership comparison.
+RO-C3-018 is resolved. BODY ownership comparison is bounded-qualified through
+public-source/component evidence. BIO coupling/contradiction and named alternatives
+are now bounded-qualified at composed component scope. Next: broader Brief-family intake
+under RO-C3-019; final-history reconciliation remains mandatory before exit.
 No owner decision is pending.
 
 ## Historical entry audit — September 11
@@ -133,3 +136,26 @@ from coverage debt. Broad Campaign4 reduction cannot be justified using only the
 implemented slice's favorable cases. Pilot comparisons may run earlier, but only
 their declared domains earn a verdict. Numerical IDs remain reserved when a candidate
 is ablated/retired; reservations do not require that mechanism to keep executing.
+
+
+Current routing2026-09-22: bounded agency/interference source qualified under
+VER-C3-AGENCY-001 (5 models/19 runs/71 public prefixes),988/0.
+Coverage snapshotREV12 adds corrected bounded Brief12.14 witnesses without corpus changes.
+Whole Campaign3 remains NOT EXIT-READY; remaining expectations/coercion are not waived.
+Next: goals/strategy persistence readiness; see CURRENT.md.
+
+
+## Forward goal/strategy closure — 2026-09-22
+VER-C3-GOAL-001 / goal-strategy-public/0.1-candidate qualifies bounded adopted goal,
+mutable strategy and admitted desired-state evidence:4 models/19 runs/94 prefixes.
+See CAMPAIGN3_GOAL_STRATEGY_QUALIFICATION.md. Counters1007/0; Brief12.7 clauses1/3/4
+bounded in auditREV13. No corpus member change or universal persistence law.
+Next CONTROL readiness;019 ACTIVE,012/014/020 CONDITIONAL; no owner ruling.
+
+
+## Forward CONTROL closure — 2026-09-22
+VER-C3-CONTROL-001/control-public0.2 qualifies maintained-goal inhibition and its
+failure under neutral-card load:7 models/17 runs/142 prefixes. Counters1024/0.
+See CAMPAIGN3_CONTROL_QUALIFICATION.md and preserved schema failure findings.
+AuditREV14 adds Brief12.6 clauses3/4 only; no corpus member change or general control
+law. Next inference correction;019 ACTIVE,012/015/020 CONDITIONAL; no owner ruling.

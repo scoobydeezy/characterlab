@@ -1,0 +1,705 @@
+{
+  "version": "agency-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-22",
+  "namespace": 1163,
+  "records": [
+    {
+      "typeId": 971,
+      "name": "AgencyProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 972,
+      "name": "AgencyContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observers",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Blockers",
+          "type": {
+            "list": "id:1002",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 973,
+      "name": "AgencyOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Episode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Competent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Blocker",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "OutcomeAccess",
+          "type": {
+            "set": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ObstructionAccess",
+          "type": {
+            "set": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Positive",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Recipients",
+          "type": {
+            "set": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 974,
+      "name": "AgencyExecutionTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Attempt",
+          "type": "ref:988",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Competent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Blocker",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Success",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 975,
+      "name": "AgencyObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Episode",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Positive",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Source",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Actor",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 976,
+      "name": "AgencyEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observations",
+          "type": {
+            "list": "ref:975",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 977,
+      "name": "AgencySupport",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Positive",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Actor",
+          "type": {
+            "list": "id:1002",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 978,
+      "name": "AgencyBelief",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Episode",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Numerator",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Denominator",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": {
+            "list": "ref:977",
+            "min": 1,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 979,
+      "name": "AgencyKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Beliefs",
+          "type": {
+            "list": "ref:978",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 980,
+      "name": "AgencyObserverState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Knowledge",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:979"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 981,
+      "name": "AgencyProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:979",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 982,
+      "name": "AgencyApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Evidence",
+          "type": "ref:976",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:979",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:979",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 983,
+      "name": "AgencyActorHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:985",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 984,
+      "name": "AgencyActorState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Histories",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:983"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 985,
+      "name": "AgencyActorEntry",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:426",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Execution",
+          "type": "ref:974",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 986,
+      "name": "AgencyActorApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:983",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:983",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 987,
+      "name": "AgencyStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 988,
+      "name": "AgencyAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1163",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Episode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Attempt",
+          "type": "ref:432",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Expression",
+          "type": "ref:426",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

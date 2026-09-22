@@ -1,0 +1,268 @@
+{
+  "version": "control-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": null,
+  "records": [
+    {
+      "typeId": 1008,
+      "name": "ControlProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1009,
+      "name": "ControlStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1010,
+      "name": "ControlOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Opportunity",
+          "type": "ref:818",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Instruction",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reminder",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Card",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BoardVisible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1011,
+      "name": "ControlGoal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1012,
+      "name": "ControlGoalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1011"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1013,
+      "name": "ControlWorkspace",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "NeutralCard",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1014,
+      "name": "ControlWorkspaceState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1013"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1015,
+      "name": "ControlEvaluation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Appraisal",
+          "type": "ref:826",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Card",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Inhibited",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1016,
+      "name": "ControlGoalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Prior",
+          "type": "ref:1011",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Next",
+          "type": "ref:1011",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

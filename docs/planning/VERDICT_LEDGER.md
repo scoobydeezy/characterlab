@@ -1825,3 +1825,107 @@ later gap ordering remains risk-based. No new experiment or qualification.
 - **Reopen:**partial fulfillment, beneficiaries, delegation, series identity,
   lifecycle consequences, new evidence/recognition source or representation reduction.
 - **Counters:**970/0 (19 this increment). No owner ruling.
+
+
+## `VER-C3-BODY-001` — Storage does not determine embodied pressure authority
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded BODY ownership comparison COMPLETE.
+- **Contract:**body-ownership-comparison/0.1-candidate; no allocation or new state owner.
+- **Corpus:**PHEN-BODY-001/1.0.0-draft; unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md;16 public source runs,
+  five component candidates,79 exact source prefix continuations;47+328 tests.
+- **Verdict:**RETAIN the interoceptive boundary. MeterBehindSensor and CachedEvidence
+  are bounded-equivalent to Mediated at sampled probes. IndependentNeed fails hidden
+  alias/availability; AuthoredReference fails as a replacement for current body state.
+- **Limits:**component ownership comparison using existing public sources; no new
+  integrated public model, general Need ontology, whole physiology or box retirement.
+- **Obligations:**RO-C3-008 immediate comparison discharged, broader scope CONDITIONAL;
+  RO-C3-020 retains representation and public/component limits.
+- **Reopen:**new kinetics, adaptation, learned efficacy, action-conditioned relief,
+  mixed learning, between-opportunity persistence or different legitimate histories.
+- **Counters:**970/0; no owner ruling.
+
+
+## `VER-C3-BIO-001` — Earned disposition changes; historical meaning stays frozen
+
+- **Date:**2026-09-21; LOCAL DISPOSITION; bounded BIO comparison COMPLETE.
+- **Contract:**bio-coupled-comparison/0.2-candidate plus canonical identity binding.
+- **Corpus:**PHEN-BIO-001/1.0.0-draft; unchanged corpus0.29.0.
+- **Evidence:**CAMPAIGN3_BIO_QUALIFICATION.md;6 component candidates,13 cases,
+  260 exact component prefix continuations;13 additional identity-bound complete
+  reruns;56 affected and328 reference tests. No new public factory qualification.
+- **Verdict:**RETAIN earned feedback and frozen contextual expressions. Early-only
+  seed variation changes standing and matched-probe intent. One contradiction weakens;
+  sustained contrary authorship reverses. Refold matches; retrospective reinterpretation
+  fails historical integrity. DisplayOnly/HistoryOnly remain behaviorally equivalent.
+- **Preservation:**first failed32-seed calibration, revised32-seed calibration,
+  unexecuted predecessor plan and identity packaging correction all remain explicit.
+- **Obligations:**RO-C3-009 immediate debt discharged, broader scope CONDITIONAL;
+  RO-C3-020 retains general direction/calibration/compression/public-integration limits.
+- **Reopen:**source eligibility, coercion, cross-context identity, mature uncertainty,
+  longer history, different weighting or proposed history/identity reduction.
+- **Counters:**970/0; no owner ruling.
+
+
+## `VER-C3-AGENCY-001` — Chosen intent survives obstruction; attribution follows admitted evidence
+
+- **Date:**2026-09-22; LOCAL DISPOSITION; corrected bounded public obstruction slice COMPLETE.
+- **Contract:**agency-public/0.3-candidate;971..988/schema1,namespace1163.
+- **Scope:**Brief12.14 clauses4/6/7/8 bounded; unchanged corpus0.29.0/21 members.
+- **Evidence:**CAMPAIGN3_AGENCY_QUALIFICATION.md;5 models,19 public runs,71 exact
+  prefix continuations (52 advancing/19 terminal);38 agency and328 reference tests.
+- **Verdict:**RETAIN chosen intent/expression, execution and observer-specific causal
+  evidence separately. OutcomeOnly, OmniscientCause and SuccessAsIntent fail named
+  witnesses. GroupedMean and LastClaim remain serious, behaviorally distinct candidates.
+- **Preservation:**first cohort missed later nonrecipient occurrence leakage; the failed
+  regression and exact source archives survive. Version0.2 fixes empty source reservations;
+  version0.3 fixes inherited intent80 to the declared intent70, verified from actual traces.
+- **Limits:**controlled identified obstruction/report source; no blame, calibrated trust,
+  counterfactual efficacy, coercion, cross-episode prediction or generic SEM admission.
+- **Obligations:**RO-C3-019 remains ACTIVE;014/020 preserve broader source and attribution.
+  No obligation closes. Final historical reconciliation021 remains unsatisfied.
+- **Reopen:**broader explanation, source credibility, generalization/controllability,
+  coerced action or a proposed intent/outcome/evidence reduction.
+- **Counters:**988/0 (18 this increment). No owner ruling.
+
+
+## `VER-C3-GOAL-001` — Retain the goal while replacing its strategy
+
+- **Date:**2026-09-22; LOCAL DISPOSITION; bounded public goal/strategy COMPLETE.
+- **Contract:**goal-strategy-public/0.1-candidate;989..1007/schema1,namespace1164.
+- **Scope:**Brief12.7 clauses1/3/4 bounded; corpus0.29.0 remains21 members.
+- **Evidence:**CAMPAIGN3_GOAL_STRATEGY_QUALIFICATION.md;4 models,19 public runs,
+  94 exact prefixes (75 advancing/19 terminal),26 affected and328 reference tests.
+- **Verdict:**RETAIN desired goal, selected plan and admitted evidence separately.
+  GoalEqualsPlan loses the goal during a no-route gap; FixedRoute cannot complete
+  via the available alternative; FailureAbandonsGoal confuses failure with retirement.
+  SeparateGoalPlan resumes and completes via B without readoption.
+- **Boundary:**external or false perceived attainment can fulfill; hidden attainment
+  cannot. Denied evidence preserves later full observer provenance. No random draws.
+- **Limits:**one goal/two authored routes; no generic persistence, planning, efficacy,
+  control, forgetting, procrastination or temporal-goal conflict law.
+- **Obligations:**RO-C3-019 ACTIVE;012/014/020 CONDITIONAL. No obligation closes.
+- **Reopen:**multi-goal, contested arbitration, new sensors, longer horizons or reduction.
+- **Counters:**1007/0 (19 this increment). No owner ruling. Next CONTROL readiness.
+
+
+## `VER-C3-CONTROL-001` — Inhibit a learned candidate without erasing the habit
+
+- **Date:**2026-09-22; LOCAL DISPOSITION; bounded public CONTROL COMPLETE.
+- **Contract:**control-public/0.2-candidate;1008..1024/schema1, no new namespace.
+- **Scope:**Brief12.6 clauses3/4 bounded; corpus0.29.0 remains21 members.
+- **Evidence:**CAMPAIGN3_CONTROL_QUALIFICATION.md;7 models,17 public runs,142 exact
+  prefixes (125 advancing/17 terminal),22 affected and328 reference tests.
+- **Verdict:**RETAIN learned habit, retained goal, active maintenance, inhibition,
+  motive and competence separately. A competing neutral card prevents inhibition
+  while upstream habit/goal/belief stay fixed; actual habitual action follows.
+  Removing load restores inhibition. Retiring the goal exposes the preserved habit.
+- **Comparators:**NoInhibition, LoadBlind, RetainedEqualsMaintained, EraseHistory,
+  NoHistory; Residual and Linear acquisition laws remain distinct candidates.
+- **Preservation:**first development cohort exceeded inherited HABIT one-reason
+  grammar. Failed tests/source/model identities remain archived. Successor typed
+  records admit the two-reason contest without widening HABIT's frozen codec.
+- **Limits:**two-slot/one-card candidate, controlled source; no universal resource,
+  physiological fatigue, learned control, monitoring, rumination or reappraisal.
+- **Obligations:**RO-C3-012/015/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1024/0 (17 this increment). No owner ruling. Next inference correction.

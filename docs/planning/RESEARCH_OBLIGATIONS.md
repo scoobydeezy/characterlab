@@ -57,13 +57,12 @@ adequacy of evidence. Do not treat a green check as a research verdict.
 **Stage C comparator / North Star transfer:** no new model in this bookkeeping pass;
 preserve the named GA and MULTISOURCE competitors so later reduction cannot silently
 erase separately traceable motivation, evidence, encoding and accessibility.
-**Current routing — 2026-09-21:** bounded domains through LONGITUDINAL are complete.
-[The exit audit](CAMPAIGN3_EXIT_AUDIT_2026_09_21.md) records the inspected source
-inventory and mandatory coverage; Campaign3 is NOT EXIT-READY. See CURRENT.md:
-4 active/17 conditional/0 unowned. RO-C3-008/009/018/019 own remaining mandatory
-comparisons/family coverage; RO-C3-020 conditionally preserves historical graph,
-attribution, calibration and representation limits. The table above is the dated
-seed inventory, not current counts. Next: PHEN-LEARN-001 scalar-bound readiness.
+**Current routing — 2026-09-21:** see CURRENT.md and coverage snapshot REV9.
+Bounded BIO is complete; Campaign3 remains NOT EXIT-READY. Counts1 active/19
+conditional/1 closed/0 unowned. RO-C3-019 owns remaining mandatory Brief-family work;
+009 broader biography and008 broader body scope remain conditional. RO-C3-018 is
+resolved. Historical reconciliation021 remains mandatory before exit. The table
+above is the dated seed inventory, not current counts. Next: risk-ranked family intake.
 Run `node scripts/check-campaign3-exit-audit.mjs` to verify the recorded denominator,
 source hashes and references. Changed sources require substantive review before
 `--write` refreshes the snapshot; regenerating it is not a qualification procedure.

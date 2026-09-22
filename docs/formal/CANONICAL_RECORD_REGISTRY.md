@@ -317,3 +317,23 @@ COMMIT_PUBLIC_ALLOCATION_TABLE.json accepts952..970/schema1,namespace1162.
 Separate lifecycle956,identity958 and social965 owners. Counters970/19 before verdict.
 
 VER-C3-COMMIT-001 qualifies the bounded public successor; counters970/0.
+
+
+## Public agency successor — 2026-09-22
+AGENCY_PUBLIC_ALLOCATION_TABLE.json accepts971..988/schema1, namespace1163.
+Observer980 and actor archive984 have separate owners. Counters988/18 before verdict.
+
+
+## Public goal/strategy successor — 2026-09-22
+GOAL_STRATEGY_PUBLIC_ALLOCATION_TABLE.json accepts989..1007/schema1,namespace1164.
+Goal994,plan996 and knowledge1000 have separate owners. Counters1007/19 before verdict.
+Record1000 is distinct from identifier namespace1000; no ordinal is skipped.
+
+
+## CONTROL public allocation — 2026-09-22
+control-public/0.1-candidate allocates1008..1016/schema1; no new typed namespace.
+See CONTROL_PUBLIC_ALLOCATION_TABLE.json. Inherited habit occurrences retain1155.
+Counters1016/9 before verdict.
+
+CONTROL0.2 adds1017..1024/schema1 for the two-reason typed successor chain;
+no namespace change. Prior1008..1016 layouts unchanged. Counters1024/17.

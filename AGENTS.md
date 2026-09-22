@@ -73,22 +73,36 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_COMMIT_QUALIFICATION.md. Bounded COMMIT is COMPLETE
-(VER-C3-COMMIT-001):4 models,10 public runs,70 exact prefix continuations.
-Counters970/0;3 active/17 conditional/1 closed/0 unowned obligations. Coverage is
-16 bounded,3 prior,2 partial,0 blocked in unchanged21-member corpus0.29.0;
-whole Campaign3 remains NOT EXIT-READY. All15 Brief families stay in the denominator.
-RO-C3-018 is resolved by its bounded LEARN/EPI/REASON/DECISION/COMMIT verdicts.
-BODY ownership (RO-C3-008), BIO (009) and broader Brief coverage (019) remain active.
-Next: BODY stored-meter/reference ownership comparison. COMMIT's broader lifecycle,
-social source and calibration limits remain RO-C3-014/020. RO-C3-010 preserves
-scalar inference limits, including repeated established-below-bound precision credit.
-RO-C3-021 requires canonical historical reconciliation before final exit and does
-not block admitted implementation. DECISION significance/grammar/control/multi-option
-limits remain RO-C3-020; REASON source, direction and calibration remain RO-C3-001/020.
-Additional EPI consumers/sources/horizons reopen under RO-C3-007.
-No architecture distinction is deleted; no owner ruling is pending.
-LONG's actual-competence inspection remains a research diagnostic, not evidence.
+CAMPAIGN3_CONTROL_QUALIFICATION.md. Bounded public CONTROL COMPLETE
+(VER-C3-CONTROL-001, control-public/0.2-candidate):7 models,17 runs,142 prefixes;
+22 affected/328 reference tests. Bounded public goal/strategy COMPLETE
+(VER-C3-GOAL-001):4 models,19 runs,94 prefixes;26 affected/328 reference tests. Corrected bounded agency/interference COMPLETE
+(VER-C3-AGENCY-001, agency-public/0.3-candidate):5 models,19 public runs,71 exact
+prefix continuations (52 advancing/19 terminal),38 agency and328 reference tests.
+Counters1024/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
+remains21 members with18 bounded/3 prior/0 partial/0 blocked member scopes; all15
+Brief families and132 clauses remain in the denominator (54 bounded/35 partial/43
+blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV14 adds CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
+first drafted agency coverage after correction; no owner ruling is pending.
+The first agency cohort missed later nonrecipient occurrence leakage. Preserve
+AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json.
+Fixed empty source/observer reservations pass the expanded comparison. The second
+cohort also inherited intent/expression co-location at80 despite required intent70;
+0.3 separates them and verifies actual trace phases. Preserve agency-rev2 and
+AGENCY_PHASE_FAILURE_REV1.json. Final closure receipt is AGENCY_CLOSURE_REV2.json.
+Equal belief
+values alone do not prove observer-safe public provenance. RO-C3-014/020 retain that
+receiving-horizon obligation. Repeated-interference cross-episode expectation,
+coercion, blame, efficacy and general recognition remain outside bounded closure.
+RO-C3-019 broader Brief coverage stays ACTIVE. Goal/strategy separates adopted desired state, mutable plan and admitted evidence.
+CONTROL retains habit during inhibition and exposes it after goal retirement.
+Preserve CONTROL_IMPLEMENTATION_FINDINGS.md and its failed schema cohort.
+Next: inference correction from new admitted evidence about mistaken causal attribution. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
+snapshot, not current qualification counts. Prior BODY/BIO/COMMIT closures stand;
+RO-C3-018 is closed,008/009 broader scope conditional. RO-C3-021 final historical
+reconciliation remains unsatisfied and mandatory before exit. No state root or
+architectural distinction is retired. LONG's actual-competence inspection remains
+a research diagnostic, not character evidence.
 `GENERAL_ATTENTION_RESUME_BRIEF.md`
 preserves the completed pass's instructions. `CAMPAIGN3_ENTRY_READINESS.md`
 preserves the dated entry audit with current routing; the seam ledger labels its

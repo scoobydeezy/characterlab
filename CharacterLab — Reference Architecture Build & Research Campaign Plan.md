@@ -287,6 +287,27 @@ bounded comparison debts are resolved. Next: BODY stored-meter/reference ownersh
 comparison, then BIO and broader Brief coverage by invalidation risk. General
 lifecycle/source/calibration and final historical reconciliation remain open.
 
+Forward update2026-09-21: VER-C3-BODY-001 qualifies the bounded ownership comparison:
+16 existing public EMB source runs,5 component candidates,79 source prefix continuations.
+MeterBehindSensor and CachedEvidence match sampled pressure; direct urgency violates
+the boundary and authored reference cannot replace dynamic body state. See
+ docs/planning/CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md and audit REV8:
+17 bounded/3 prior/1 partial/0 blocked; counters970/0. RO-C3-008's immediate debt is
+discharged; broader physiology/efficacy/pressure dynamics remain conditional. Next:
+BIO exact coupling/contradiction and named alternatives, then broader-family coverage.
+No new public character model or state-root retirement follows from component equality.
+
+Forward update2026-09-21: VER-C3-BIO-001 qualifies early-only coupling, fixed probe
+randomness, sustained contrary authorship and named alternatives:6 component candidates,
+13 cases,260 component prefix continuations plus13 canonical identity-bound reruns.
+See docs/planning/CAMPAIGN3_BIO_QUALIFICATION.md and audit REV9:18 bounded/3 prior/
+0 partial/0 blocked; counters970/0. This is no new public factory or general biography
+claim. RO-C3-009's immediate comparison is discharged; its wider scope stays conditional.
+Next: public agency/interference source and observer-evidence contract under019
+(see docs/planning/CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md and
+docs/planning/AGENCY_INTERFERENCE_READINESS.md); goals/strategy persistence follows, with final
+canonical historical reconciliation021 mandatory before exit. Preserve failed calibration.
+
 Whole Campaign3 PASS remains unavailable until its full declared obligations are
 executed or explicitly amended through the authority hierarchy. A new motive source,
 body/affect loop, retrieval law or observer view still requires its own accepted seam
@@ -341,3 +362,14 @@ Likely early candidates include observation/interoception alternatives, memory l
 ## 8. Plan change control
 
 A newly discovered upstream distinction may reorder later campaigns. The plan must record the dependency and invalidated assumptions; it must not insert another decimal “phase” into an additive ladder. Completed evidence remains in the corpus and verdict ledgers, while affected verdicts are explicitly reopened.
+
+
+### Current Campaign3 frontier — 2026-09-22
+Bounded public CONTROL closes under VER-C3-CONTROL-001 and control-public/0.2-candidate:
+7 models/17 runs/142 prefixes. Counters1024/0. Maintain goal and habit separately;
+competing neutral load impairs inhibition without changing motive or competence.
+Preserve the failed one-reason-schema development cohort and typed successor correction.
+Next: inference-correction readiness for revising mistaken causal attribution from new
+admitted evidence. AuditREV14 adds Brief12.6 clauses3/4; all15 families remain.
+RO-C3-019 ACTIVE;012/015/020 broader scope CONDITIONAL. Prior closures stand.
+Whole Campaign3 is NOT EXIT-READY; historical reconciliation021 remains mandatory.

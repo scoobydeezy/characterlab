@@ -1,0 +1,798 @@
+{
+  "version": "goal-strategy-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-22",
+  "namespace": 1164,
+  "records": [
+    {
+      "typeId": 989,
+      "name": "GoalStrategyProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 990,
+      "name": "GoalStrategyContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Desired",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Routes",
+          "type": {
+            "list": "id:1027",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 991,
+      "name": "GoalRouteDisplay",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Route",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Available",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "IssuedAt",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ValidUntil",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 992,
+      "name": "GoalOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Adopt",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Displays",
+          "type": {
+            "list": "ref:991",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OpenA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "OpenB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Blocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Competent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ExternalDelivery",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ExecutionVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "CriterionMode",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 993,
+      "name": "GoalInstance",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Goal",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Status",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "AdoptedAt",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Criterion",
+          "type": {
+            "list": "id:1164",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 994,
+      "name": "GoalLifecycleState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Goals",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:993"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 995,
+      "name": "GoalSelectedPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Goal",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Route",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "SelectedAt",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 996,
+      "name": "GoalPlanState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Plans",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:995"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 997,
+      "name": "GoalKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Routes",
+          "type": {
+            "list": "ref:998",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "LastExecution",
+          "type": {
+            "list": "ref:998",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 998,
+      "name": "GoalObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Positive",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Receipt",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "IssuedAt",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ValidUntil",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 999,
+      "name": "GoalEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observations",
+          "type": {
+            "list": "ref:998",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1000,
+      "name": "GoalKnowledgeState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Knowledge",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:997"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1001,
+      "name": "GoalEvaluation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "list": "ref:993",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "PriorPlan",
+          "type": {
+            "list": "ref:995",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Desire",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Route",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Abandon",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "AvailabilityA",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "AvailabilityB",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1002,
+      "name": "GoalRouteAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Evaluation",
+          "type": "ref:1001",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1003,
+      "name": "GoalExecutionTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Route",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Success",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Destination",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Blocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Competent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "RouteOpen",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1004,
+      "name": "GoalLifecycleApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": {
+            "list": "ref:993",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": {
+            "list": "ref:993",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Cause",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1005,
+      "name": "GoalPlanApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": {
+            "list": "ref:995",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": {
+            "list": "ref:995",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Evaluation",
+          "type": "ref:1001",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1006,
+      "name": "GoalKnowledgeApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1164",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:997",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:997",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Evidence",
+          "type": "ref:999",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1007,
+      "name": "GoalStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

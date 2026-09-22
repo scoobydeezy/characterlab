@@ -2185,3 +2185,428 @@ Final-history RO-C3-021 remains unsatisfied. No owner ruling or full-suite claim
 **Next:** exact joined COMMIT lifecycle/strong-identity/retirement/recurrence and
 selective positive-witness matrix under the escalation policy. Corpus digest:
 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded BODY ownership closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded COMMIT COMPLETE / QUALIFIED. Campaign3 remains NOT EXIT-READY.**
+Start at [COMMIT qualification](CAMPAIGN3_COMMIT_QUALIFICATION.md), VER-C3-COMMIT-001
+and [forward coverage register](CAMPAIGN3_EXIT_AUDIT_REV7.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **970** |
+| Allocated since last verdict/corpus member | **0** (19 this increment) |
+| Research obligations | **3 active / 17 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018, resolved by experiment** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 29 verdicts** |
+| Coverage dispositions | **16 bounded / 3 accepted prior / 2 partial / 0 blocked** |
+| Frozen models / public runs / prefix continuations | **4 / 10 / 70** |
+| Affected / reference tests | **144 / 328** |
+
+Actual earned identity supplies+3 standing and stays fixed across none/active/
+retired/new recurrence. Baseline counts0/1/0/1/1; all three required controls fail.
+Positive permitted witnesses learn the correct concrete instance. Nonrecipients
+do not acquire private state; unobserved retirement may leave belief stale.
+
+RO-C3-018's LEARN/EPI/REASON/DECISION/COMMIT debts are resolved. BODY ownership,
+BIO and broader Brief coverage remain ACTIVE; RO-C3-014/020 preserve broader
+lifecycle/social/calibration limits. Final-history RO-C3-021 remains unsatisfied.
+
+**Next:** BODY stored-meter/reference ownership comparison under RO-C3-008,
+then remaining BIO and broader-family coverage by invalidation risk. No full-suite
+or whole Campaign3 claim. Corpus digest:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived CURRENT before bounded BIO closure —2026-09-21
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded BODY ownership comparison COMPLETE. Campaign3 remains NOT EXIT-READY.**
+Start at [BODY ownership qualification](CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md),
+VER-C3-BODY-001 and [coverage register](CAMPAIGN3_EXIT_AUDIT_REV8.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **970** |
+| Allocated since last verdict/corpus member | **0** (none this increment) |
+| Research obligations | **2 active / 18 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 30 verdicts** |
+| Coverage dispositions | **17 bounded / 3 accepted prior / 1 partial / 0 blocked** |
+| Public source runs / component candidates / source prefix continuations | **16 / 5 / 79** |
+| Affected / reference tests | **47 / 328** |
+
+A stored body level behind the sensor matches the reserve. Direct meter urgency
+violates hidden-state alias and availability; authored operating point cannot replace
+current physiology. A cache wholly replaced from evidence matches sampled pressure.
+This is public-source/component comparison, not five new public character models.
+
+RO-C3-008's immediate comparison is discharged; its broader scope is CONDITIONAL.
+BIO (009) and broader Brief coverage (019) remain ACTIVE. Representation limits remain
+020; final-history021 is unsatisfied. No state root or historical mechanism is retired.
+
+**Next:** BIO exact coupling/contradiction and named alternatives, followed by remaining
+broader-family coverage ranked by invalidation risk. All15 Brief families remain in
+the denominator. Corpus digest:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived index before Brief frontier intake — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-21. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded BIO comparison COMPLETE. Campaign3 remains NOT EXIT-READY.**
+Start at [BIO qualification](CAMPAIGN3_BIO_QUALIFICATION.md), VER-C3-BIO-001
+and [coverage register](CAMPAIGN3_EXIT_AUDIT_REV9.json). No owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **970** |
+| Allocated since last verdict/corpus member | **0** (none this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 31 verdicts** |
+| Coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Component candidates / cases / component prefix continuations | **6 / 13 / 260** |
+| Additional canonical identity-bound complete reruns | **13** |
+| Affected / reference tests | **56 / 328** |
+
+Early choices earn different standing under fixed later probe randomness. Feedback
+ablation preserves history but removes its decision effect. One contradiction weakens;
+sustained contrary authorship reverses. Refold matches; retrospective reinterpretation
+breaks historical integrity. This is component scope, not a new public factory.
+
+RO-C3-009's immediate comparison is discharged; broader biography is CONDITIONAL.
+RO-C3-019 broader Brief coverage remains ACTIVE. Final-history021 is unsatisfied.
+All15 Brief families remain in the denominator; bounded corpus coverage is not exit.
+The failed calibration and identity-packaging correction remain preserved.
+
+**Next:** risk-ranked intake for remaining Brief-family phenomena under RO-C3-019,
+with canonical historical reconciliation still mandatory before exit. Corpus digest:
+5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived before agency source implementation — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Brief frontier intake COMPLETE. Campaign3 remains NOT EXIT-READY.**
+Start at [frontier intake](CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md) and
+[agency/interference readiness](AGENCY_INTERFERENCE_READINESS.md).
+LOCAL DISPOSITION; no owner ruling. Prioritization is not qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **970** |
+| Allocated since last verdict/corpus member | **0** (none this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 31 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **45 bounded / 39 partial / 48 blocked** |
+
+Agency/interference/attribution comes first because bad causal credit can invalidate
+identity, social, control, relationship and strategy learning. Goals/strategy
+persistence follows. The intake preserves every REV9 clause and evidence reference;
+no corpus, implementation, allocation or qualification changes.
+
+**Next:** accept the minimal public interference source and observer-specific evidence
+contract from the readiness matrix, then implement and freeze its bounded comparison.
+Preserve chosen intent through failed execution, observer-specific causal evidence,
+and later attribution correction. Post-choice obstruction does not settle coercion.
+No architecture decision is currently blocking this contract work.
+
+Bounded BIO remains complete under VER-C3-BIO-001. RO-C3-019 owns remaining broader
+Brief coverage. Final historical reconciliation021 remains unsatisfied and mandatory
+before exit. Coverage audit REV9 stays frozen; the separate intake checker validates
+routing without generating another unchanged qualification snapshot.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived before bounded public agency closure — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Agency source kernel implemented; public qualification OPEN. Campaign3 remains NOT EXIT-READY.**
+Start at [source checkpoint](AGENCY_INTERFERENCE_SOURCE_CHECKPOINT.md) and
+[accepted source contract](../formal/AGENCY_INTERFERENCE_SOURCE_CONTRACT.md).
+LOCAL DISPOSITION; no owner ruling. Eight boundary tests and TypeScript check pass.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **970** |
+| Allocated since last verdict/corpus member | **0** (none this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 31 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **45 bounded / 39 partial / 48 blocked** |
+
+Agency/interference/attribution comes first because bad causal credit can invalidate
+identity, social, control, relationship and strategy learning. Goals/strategy
+persistence follows. The intake preserves every REV9 clause and evidence reference;
+no corpus, allocation or qualification changes. The source kernel is implemented.
+
+**Next:** accept the public allocation/schema packet and integrate the source with
+actual frozen decision outputs, scoped state owners and the public scheduler; freeze
+canonical research identities and comparison inputs before qualification execution.
+Preserve chosen intent through failed execution, observer-specific causal evidence,
+and later attribution correction. Post-choice obstruction does not settle coercion.
+No architecture decision is currently blocking this contract work.
+
+Bounded BIO remains complete under VER-C3-BIO-001. RO-C3-019 owns remaining broader
+Brief coverage. Final historical reconciliation021 remains unsatisfied and mandatory
+before exit. Coverage audit REV9 stays frozen; the separate intake checker validates
+routing without generating another unchanged qualification snapshot.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived correction-in-progress index — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Agency requalification RUNNING after a nonrecipient occurrence leak. Campaign3 remains NOT EXIT-READY.**
+Start at [agency qualification](CAMPAIGN3_AGENCY_QUALIFICATION.md),
+VER-C3-AGENCY-001 and [coverage register](CAMPAIGN3_EXIT_AUDIT_REV10.json).
+LOCAL DISPOSITION; no owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **988** |
+| Allocated since last verdict/corpus member | **18** (requalification pending) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 32 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **49 bounded / 36 partial / 47 blocked** |
+| Models / public runs / prefix continuations | **5 / 19 / pending** in corrected frozen PlanREV2 |
+| Agency / reference tests | **36 / 328** |
+
+Chosen intent/expression survive external obstruction. Differential witnessing and
+fallible later reports change observer-local attribution. GroupedMean and LastClaim
+remain distinct candidates; outcome-only, omniscient-cause and success-as-intent
+controls fail. Production build and TypeScript pass.
+
+Brief12.14 clauses4/6/7/8 gain bounded witnesses. Repeated-interference expectations
+remain PARTIAL: local episode beliefs are not cross-episode prediction. Coercion,
+blame, efficacy, source trust and generic recognition remain outside this slice.
+RO-C3-019 remains ACTIVE;014/020 retain wider limits. Final historical021 is unsatisfied.
+The original risk intake remains a dated REV9-based snapshot, not current coverage.
+
+**Next:** finish the corrected public matrix and closure integrity checks; then goals
+and strategy persistence readiness under the risk-ranked intake.
+Preserve obstruction as a control against misattributing execution failure to intent,
+strategy or competence. No architectural decision is currently blocking that work.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+The first cohort and drafted REV10 coverage are superseded pending correction.
+AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json
+preserve the failure. Version0.2 fixes reservations; expanded tests pass.
+
+The first drafted closure and auditREV10 were superseded after the later nonrecipient regression. Corrected19-run/71-prefix matrix passed; current routing is CURRENT.md.
+
+
+## Archived exact-phase correction index — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Agency exact-phase requalification RUNNING. Campaign3 remains NOT EXIT-READY.**
+Start at [agency qualification](CAMPAIGN3_AGENCY_QUALIFICATION.md),
+VER-C3-AGENCY-001 and [coverage register](CAMPAIGN3_EXIT_AUDIT_REV11.json).
+LOCAL DISPOSITION; no owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **988** |
+| Allocated since last verdict/corpus member | **18** (final requalification pending) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 32 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **49 bounded / 36 partial / 47 blocked** |
+| Models / public runs / prefix continuations | **5 / 19 / 71** (52 advancing,19 terminal) |
+| Agency / reference tests | **36 / 328** |
+
+Chosen intent/expression survive external obstruction. Differential witnessing and
+fallible later reports change observer-local attribution. GroupedMean and LastClaim
+remain distinct candidates; outcome-only, omniscient-cause and success-as-intent
+controls fail. Production build and TypeScript pass.
+
+Brief12.14 clauses4/6/7/8 gain bounded witnesses. Repeated-interference expectations
+remain PARTIAL: local episode beliefs are not cross-episode prediction. Coercion,
+blame, efficacy, source trust and generic recognition remain outside this slice.
+RO-C3-019 remains ACTIVE;014/020 retain wider limits. Final historical021 is unsatisfied.
+The original risk intake remains a dated REV9-based snapshot, not current coverage.
+
+**Next:** goals and strategy persistence readiness under the risk-ranked intake.
+Preserve obstruction as a control against misattributing execution failure to intent,
+strategy or competence. No architectural decision is currently blocking that work.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+The first cohort and drafted REV10 coverage are superseded by corrected version0.2.
+AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json
+preserve the failure. Version0.2 fixes reservations; expanded tests and the complete public matrix pass.
+
+Final phase audit found0.2 intent emitted at80 despite required70. Source0.3 splits
+intent70/expression80; PlanREV3/tests/public matrix are running. Prior0.2 cohort is
+preserved in agency-rev2/PRESERVATION.json, with AGENCY_PHASE_FAILURE_REV1.json.
+
+Final0.3 completed19 public runs/71 prefixes and38 tests, preserving both failed admission findings.
+
+
+## Archived before goal/strategy component checkpoint — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded public agency/interference COMPLETE under0.3. Campaign3 remains NOT EXIT-READY.**
+Start at [agency qualification](CAMPAIGN3_AGENCY_QUALIFICATION.md),
+VER-C3-AGENCY-001 and [coverage register](CAMPAIGN3_EXIT_AUDIT_REV12.json).
+LOCAL DISPOSITION; no owner ruling.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **988** |
+| Allocated since last verdict/corpus member | **0** (18 this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 32 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **49 bounded / 36 partial / 47 blocked** |
+| Models / public runs / prefix continuations | **5 / 19 / 71** (52 advancing,19 terminal) |
+| Agency / reference tests | **38 / 328** |
+
+Chosen intent/expression survive external obstruction. Differential witnessing and
+fallible later reports change observer-local attribution. GroupedMean and LastClaim
+remain distinct candidates; outcome-only, omniscient-cause and success-as-intent
+controls fail. Production build and TypeScript pass.
+
+Brief12.14 clauses4/6/7/8 gain bounded witnesses. Repeated-interference expectations
+remain PARTIAL: local episode beliefs are not cross-episode prediction. Coercion,
+blame, efficacy, source trust and generic recognition remain outside this slice.
+RO-C3-019 remains ACTIVE;014/020 retain wider limits. Final historical021 is unsatisfied.
+The original risk intake remains a dated REV9-based snapshot, not current coverage.
+
+**Next:** goals and strategy persistence readiness under the risk-ranked intake.
+Preserve obstruction as a control against misattributing execution failure to intent,
+strategy or competence. No architectural decision is currently blocking that work.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+The earlier cohorts and draft REV10/11 coverage are superseded by0.3. Both the
+nonrecipient occurrence leak and exact-phase mismatch remain preserved in failure
+receipts and agency-rev1/agency-rev2 archives. Final PlanREV3/ResultREV3 and
+AGENCY_CLOSURE_REV2.json bind the qualified evidence.
+
+Actual trace tests verify intent70/expression80/plan90/attempt100/execution110.
+No schema, namespace or psychological mechanism changed during correction.
+
+
+## Archived before public goal/strategy closure — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Goal/strategy component implemented; public qualification OPEN.**
+Start at [component checkpoint](GOAL_STRATEGY_COMPONENT_CHECKPOINT.md) and
+[readiness matrix](GOAL_STRATEGY_READINESS.md). LOCAL DISPOSITION; no owner ruling.
+Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **988** |
+| Allocated since last verdict/corpus member | **0** (none this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 32 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **49 bounded / 36 partial / 47 blocked** |
+| New component tests | **8 passed**, plus TypeScript no-emit validation |
+
+The selector preserves an adopted goal through route replacement and a no-route gap.
+Failure alone does not remove a goal or establish route impossibility. Missing,
+expired and known-unavailable evidence remain distinct. SeparateGoalPlan is the
+baseline; GoalEqualsPlan, FixedRoute and FailureAbandonsGoal are explicit controls.
+The immutable373 instruction leaf is not a mutable strategy owner.
+
+**Next:** public goal/strategy source and ownership packet: real adoption, perceived
+fulfillment, selected-plan mutation, admitted route evidence and downstream execution.
+Freeze canonical research identities and full inputs before public qualification;
+verify actual trace phases and later observer provenance as learned from agency.
+
+No Brief clause is newly qualified by component tests. AuditREV12 remains current.
+Agency0.3 closure stands (5 models/19 runs/71 prefixes,38+328 tests); both earlier
+failed cohorts remain preserved. RO-C3-019 broader Brief coverage remains ACTIVE;
+012/014/020 preserve limits. Final historical reconciliation021 remains unsatisfied.
+
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived before CONTROL closure — 2026-09-22
+
+# Current research entry point
+
+**Updated2026-09-22. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded public goal/strategy COMPLETE: VER-C3-GOAL-001.**
+Start at [qualification](CAMPAIGN3_GOAL_STRATEGY_QUALIFICATION.md).
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1007** |
+| Allocated since last verdict/corpus member | **0** (19 this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 33 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **52 bounded / 35 partial / 45 blocked** |
+| Public evidence | **4 models / 19 runs / 94 prefixes** (75 advancing/19 terminal) |
+| Validation | **26 affected + 328 reference tests; production build passed** |
+
+An adopted goal survives route replacement and a no-route gap, then completes via B.
+Goal, plan and received evidence have separate writers. Hidden attainment leaves the
+character unchanged; external or false admitted attainment can fulfill the goal.
+GoalEqualsPlan, FixedRoute and FailureAbandonsGoal remain explicit controls.
+This ordinary bounded planner consumes no random draws and makes no new Decision claim.
+
+**Next: CONTROL readiness** — maintained goal versus competing habit under controlled
+load. Consult the mechanism ledger and accept source/owner contracts and comparators
+before allocation. No procrastination, general persistence or multi-goal claim follows.
+
+AuditREV13 qualifies only Brief12.7 clauses1/3/4. RO-C3-019 broader coverage remains
+ACTIVE;012/014/020 preserve access/control, lifecycle/source and representation limits.
+No obligation closes. Agency0.3 and earlier closures stand, including both archived
+failed agency cohorts. Historical reconciliation021 remains unsatisfied before exit.
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.

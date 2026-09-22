@@ -1,0 +1,109 @@
+# BIO coupled comparison — 2026-09-21
+
+**ACCEPTED / LOCAL DISPOSITION.** `bio-coupled-comparison/0.2-candidate`.
+Stage C, before implementation/execution. Counters970/0; no new allocation.
+
+## Scope and precedent
+PHEN-BIO-001, RO-C3-009 and MEC-015..018/022, EXP-011/012 require early stochastic
+authorship, later feedback, contradiction and frozen history. Use existing canonical
+task choice/expression/qualification/identity-fold kernels and LONG's accepted
+two-option direction mapping (+identity on A, -identity on B). This finite mapping
+is not general direction identity, personality, values or recognition.
+
+This is a composed **component experiment**, not a new scheduler/public factory.
+Original inputs, candidate profile and exact RNG routing are committed before the
+qualification matrix. Existing canonical schemas retain their meanings. No new
+production state authority, imported learned S0, reference import or frozen-model
+mutation is permitted. Earlier public LONG/REASON/DECISION qualifications remain
+separate evidence; component prefix replay is not a new public save qualification.
+
+## Fixed transition and causal order
+Each positive integer instant produces candidate context40, raw51, reasons52,
+arbitration60, frozen intent/expression80, qualification130, append140. Training and
+contradiction steps append only actual accepted contributions413 to ordered414.
+Probes produce expressions but do not learn. No world success operand is accepted.
+All prior expressions remain immutable in the baseline; callers receive canonical
+copies. State is empty history initially and a research archive of frozen expressions.
+
+K=1 and the accepted 10^-6 support/opposition fold. Two task motives are1 and1/2;
+base-die bands1/10,1/5,3/5,4/5,9/10; activation0; modifier cap3. Learning steps use
+standing unit1, preserving contested authorship while strength remains strictly
+inside(-1,1). Probe steps use unit1/16 to expose earned influence. This authored
+context calibration is identical across compared biographies, not a trait bonus.
+Roll threshold1/2; player-facing authorship threshold1/2. Display/action meaning
+comes from actual unfiltered motive context, never the standing feedback itself.
+
+Schedule: contested decisions1..4, nonlearning matched probe5; contrary decisions
+6..17; nonlearning probe18; reversed contextual-motive probe19. Reversing context
+swaps task motive magnitudes, not historical facts. Training and contrary steps use
+the same motives. Sustained contrary evidence must come from actual draws selecting
+B with authorship>=1/2; no fabricated qualification or forced chosen intent.
+
+## Coupling and witness selection
+Research RNG routing is explicit: early1..4 uses one cohort seed (32 repeated bytes),
+probe5/18/19 uses third seed byte255, non-decision diagnostic draws use seed byte254
+at identical fixed addresses, independent of cohort. Contrary6..17 uses a fixed
+per-instant selected seed map common to both biographies. These seeds are research
+protocol, not character evidence. No current state selects a seed during a run.
+All addresses, draws and committed cognitive address keys are recorded.
+
+Before qualification, enumerate early seed bytes0..31 with all four steps and retain
+every calibration result. Select the first cohort with four positive contributions,
+then the first with a different signed history yielding a different probe modifier.
+For each contrary instant select the lowest byte0..253 producing an actual negative
+qualified contribution under the fixed learning context. Retain every attempted
+calibration result. Freeze that selection and all source hashes before the matrix.
+Selection proves finite witnesses, not a population estimate or typicality claim.
+If no witness exists, preserve the failed calibration and revise explicitly.
+
+The coupled control repeats the first early seed exactly. Before the first differing
+draw, candidate/raw/reason payloads must match. Downstream intent/expression/evidence
+must differ because of that draw. Identical non-decision draws are actually executed,
+not inferred from their absence. The later probe's seed is held fixed; distributions
+and standing modifiers must differ independently of whether its selected intent does.
+
+## Candidates
+1. **Earned**: append actual qualification; current fold supplies standing feedback.
+2. **AuthoredTrait**: fixed+1/2 standing replaces earned feedback. It cannot explain
+   later divergence from identical authored state or transformation; keep real history
+   alongside the explicit authored control, without labeling it earned evidence.
+3. **DisplayOnly**: same learned history and derived displayed trait, zero standing.
+4. **HistoryOnly**: same learned history, neither trait display nor standing. Its
+   choices can equal DisplayOnly; that equality is retained, not forced apart.
+5. **RecomputedHistory**: on the reversed-context probe, reinterpret old chosen intents
+   using current contextual meaning and replace archived expressions/contributions.
+   This deliberately wrong retrospective control must fail historical immutability.
+6. **Refold**: reconstruct history from the actual frozen expressions/qualifications
+   on each step rather than treating a stored fold as authority. Preserve as a serious
+   equivalence candidate, with full history retained, not a compression proof.
+
+Compare baseline and ablations over identical original early draws: learned histories
+must match and probe feedback must vanish under DisplayOnly/HistoryOnly. Do not claim
+all later histories match if altered choices legitimately change later learning.
+One contrary contribution must reduce but not erase the four-positive history;
+twelve high-authorship contrary contributions must reverse its sign. Probe18 must
+show the changed standing. Context19 cannot rewrite earlier Earned/Refold expressions.
+
+## Verification and limits
+Exact component prefix snapshots include original inputs/profile, immutable expression
+archive, contribution history, RNG route and used addresses. Restore by replaying the
+committed original prefix, compare every byte, then compare the next transition.
+Malformed/altered snapshots reject; injected failure before append must commit nothing.
+No cross-observer evidence or world truth enters identity. Research RNG transcripts
+are not a character inspection surface. Candidate outputs are research diagnostics.
+
+RO-C3-009/020 retain broader biography, calibration, source eligibility, coercion,
+cross-context generality, general direction, history compression and public integration
+of this RNG protocol. All15 Brief families remain. No state root or conceptual
+identity/history distinction is retired; no owner ruling is required.
+
+## Revision2 calibration disposition
+The first accepted calibration failed: all32 probe modifiers remained0/0. Its
+contract/source/script and all cohorts are preserved in bio-calibration-rev1 and
+BIO_CALIBRATION_REV1.json. Actual smooth bounding yielded contribution10/147,
+not the stronger preliminary estimate; authorship10/21 also fell below the planned
+1/2 high-authorship gate. Revision2 uses equal d6 learning dice (distinct motive
+meaning retained) and the already-precedented LONG unit1/16 probe calibration.
+Both are declared finite fixture choices, not amendments to inherited mathematics.
+No failed qualification is relabeled PASS. Re-enumerate all32 seeds and freeze a
+successor plan before executing the matrix.

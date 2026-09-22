@@ -608,3 +608,26 @@ identified LastObservation extends to per-observer/per-instance statuses. Unobse
 retirement can leave stale knowledge. SUB-004/008/009 preserve addressed draws,
 rollback and exact prefixes. RO-C3-018 is resolved; RO-C3-014/020 retain wider
 lifecycle/source/calibration limits. No reference edits/imports; counters970/0.
+
+
+## BODY ownership comparison disposition —2026-09-21
+VER-C3-BODY-001 / CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md retains CTL-001 as
+an explicit comparison: normalized stored level/passive rate/bounded effects and
+K=1,p=1 deficit urgency. The selected values lie on the historical lattice. Storage
+behind interoception matches the public reserve; direct urgency violates aliasing
+and availability. Current-evidence cache equality is sampled component scope only.
+Existing REG0.5 executes as authored reference, not a changing reserve. MEC-003/006
+and P3-009/010 remain preserved; general dynamics, adaptation and efficacy remain
+RO-C3-008, representation/public-query limits RO-C3-020. No retirement, reference
+import/edit, allocation or new psychological authority. Counters970/0.
+
+
+## BIO coupled comparison disposition —2026-09-21
+VER-C3-BIO-001 / CAMPAIGN3_BIO_QUALIFICATION.md executes MEC-015..018/022 and
+EXP-011/012 through actual cognitive kernels, declared early-only seed variation,
+common later probe and sustained contrary authorship. Earned standing changes;
+prior contextual expressions remain frozen. AuthoredTrait, DisplayOnly, HistoryOnly
+and RecomputedHistory are explicit controls; Refold matches with full history retained.
+First failed calibration and identity-packaging correction survive. RO-C3-009/020
+retain broader source/direction/coercion/calibration/compression/public-admission limits.
+No state-root retirement, reference import/edit or new allocation; counters970/0.
