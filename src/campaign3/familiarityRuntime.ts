@@ -1,0 +1,41 @@
+/** familiarity-public/0.1-candidate: authenticated ordinary planning and disjoint owners. */
+import {canonicalEncode as enc,list,text,unsigned as u,signed,rational as q,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {AuthoritativeState,applyStatePatch,restoreAuthoritativeState,statePathPatternValue,type ActualReadRecord,type StatePatch,type StructuralMutationDiff,type StatePath} from '../substrate/state';
+import {DeterministicScheduler,SchedulerContractError,type EventHandlerContext,type EventEmission,type ScheduledEvent,type ConformanceInstrumentation} from '../substrate/scheduler';
+import {createCanonicalSave,scheduledEventValue} from '../substrate/persistence';
+import {traceRecordValue} from '../substrate/trace';
+import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {simInstant} from '../substrate/time';
+import {createCognitiveRandomSession} from '../campaign2/cognitiveArbitration';
+import {familiarityRecord as r,decodeFamiliarity as decode} from './familiarityCodecs';
+import {VERSION,STAGES,OBSERVER,ACTOR,sid,eventId,path,pattern,owner,reads,writes,type FamiliarityCompiled,compileFamiliarityInputs} from './familiarityModel';
+import {recognize,consolidate,emptyMemory} from './familiarityMath';
+const instantValue=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('FAMILIARITY_TIME');return v.value;};
+export function createFamiliarityRuntime(model:FamiliarityCompiled,input:Awaited<ReturnType<typeof compileFamiliarityInputs>>){
+ const originals=new Map(input.events.map(e=>[e.eventId,key(scheduledEventValue(e))])),world=new Map(input.events.map(e=>[e.dueAt,rec(e.payload,1056n)])),random=createCognitiveRandomSession(input.runSeed);let active=false,expected=new Map<bigint,string>();const fail=(why:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED',why);};
+ const adapter={clone:(s:AuthoritativeState)=>new AuthoritativeState(s.entries()),validate:model.validateState,canonicalValue:(s:AuthoritativeState)=>s.canonicalValue(),restore:restoreAuthoritativeState,analyticalAnchors:()=>list([]),randomRelevantAuthoritativeIds:()=>list([])};
+ async function handler({event,state,allocateRuntimeId}:EventHandlerContext<AuthoritativeState>){
+  if(!active)fail('inactive familiarity transaction');const stage=STAGES.find(([n])=>key(event.eventTypeId)===key(eventId(n)));if(!stage)fail('familiarity stage');const [name,phase]=stage!;if(event.phase!==BigInt(phase))fail('familiarity phase');const fingerprint=key(scheduledEventValue(event));if(['source'].includes(name)){if(originals.get(event.eventId)!==fingerprint)fail('familiarity original');}else{if(expected.get(event.eventId)!==fingerprint)fail('familiarity generated');expected.delete(event.eventId);}
+  const occurrence=(ns=1167)=>typedIdentifier(ns,u(allocateRuntimeId())),paths=reads(name),domain=paths.map(pattern),actualReads:ActualReadRecord[]=[],pk=(p:StatePath)=>key(statePathPatternValue(pattern(p))),read=(p:StatePath)=>{if(!paths.some(x=>pk(x)===pk(p)))return fail('familiarity read domain');const prior=state.read(p);actualReads.push({accessorId:sid(1028,'accessor/familiarity/'+name),path:p,presence:prior.presence,value:prior.value,derivedSources:[]});return prior.value;};
+  const outputs:CanonicalValue[]=[],emittedEvents:EventEmission[]=[];let nextState=state,patch:StatePatch={operations:[]},diffs:readonly StructuralMutationDiff[]=[],randomDrawRecords:CanonicalValue[]=[],quantizationOperations:CanonicalValue[]=[];
+  const emit=(next:string,payload:CanonicalValue)=>emittedEvents.push({dueAt:event.dueAt,phase:BigInt(STAGES.find(([n])=>n===next)![1]),eventTypeId:eventId(next),payload,dependencies:list([])}),write=(changes:{path:StatePath;prior:CanonicalValue|undefined;next:CanonicalValue}[])=>{if(changes.some(c=>!writes(name).some(p=>pk(p)===pk(c.path))))fail('familiarity write domain');patch={operations:changes.map(c=>({kind:'set' as const,path:c.path,expected:c.prior?{presence:true as const,value:c.prior}:{presence:false as const},newValue:c.next}))};const applied=applyStatePatch(state,patch,owner(name),model.authority);nextState=applied.state;diffs=applied.diffs;};
+  if(name==='source'){
+   const source=world.get(event.dueAt)!;outputs.push(r(1064,[occurrence(),signed(event.dueAt),f(source,3n),f(source,4n)]));emit('observe',list([]));
+  }else if(name==='observe'){
+   const source=world.get(event.dueAt)!,visible=f(source,2n)===true&&f(source,8n)===true,obs=r(1057,[occurrence(),OBSERVER,signed(event.dueAt),visible?f(source,3n):u(0),...([5n,6n,7n].map(n=>list(visible&&f(source,n+4n)===true?[f(source,n)]:[])))]);outputs.push(obs);emit('freeze',obs);
+  }else if(name==='freeze'){
+   const frozen=r(1067,[occurrence(),event.payload,read(path())??emptyMemory()]);outputs.push(frozen);emit('recognize',frozen);
+  }else if(name==='recognize'){
+   const frozen=rec(event.payload,1067n),obs=rec(f(frozen,2n),1057n),memory=f(frozen,3n);
+   // Only the named violating comparator consults hidden identity. No value is stored.
+   const matches=model.law===5?items(f(rec(memory,1059n),1n),'list').map(v=>rec(v,1058n)).filter(v=>uint(f(v,3n))===uint(f(obs,4n))).map(v=>uint(f(world.get(simInstant(instantValue(f(v,2n))))!,4n))===uint(f(world.get(event.dueAt)!,4n))):[];
+   outputs.push(recognize(obs,memory,model.law,event.dueAt,occurrence(),matches));emit('consolidate',obs);
+  }else if(name==='consolidate'){
+   const prior=read(path()),before=prior??emptyMemory(),next=consolidate(before,event.payload,event.dueAt);if(key(before)!==key(next))write([{path:path(),prior,next}]);outputs.push(r(1063,[occurrence(),before,next]));
+  }else fail('familiarity unknown stage');
+  outputs.forEach(v=>decode(enc(v)));return {nextState,outputs,emittedEvents,traceContributions:[],traceFactory:(children:readonly ScheduledEvent[])=>{if(children.length!==emittedEvents.length)fail('familiarity child count');children.forEach((e,i)=>{if(e.causalParentEventIds.length!==1||e.causalParentEventIds[0]!==event.eventId||key(e.payload)!==key(emittedEvents[i].payload))fail('familiarity child association');expected.set(e.eventId,key(scheduledEventValue(e)));});return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model.modelIdentity.value,runIdentity:input.runIdentity.value,event,seamId:sid(1036,'seam/familiarity/'+name),seamVersion:VERSION,recordKind:event.eventTypeId,subjectIds:[ACTOR],sourceRecordIds:[],registeredReadDomain:domain,actualReadRecords:actualReads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords,quantizationOperations,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];}};
+ }
+ const scheduler=new DeterministicScheduler({initialState:new AuthoritativeState([]),stateAdapter:adapter,handlers:new Map(STAGES.map(([n])=>[key(eventId(n)),handler])),initialQueue:input.events,initialAllocators:{nextRuntimeId:0n,nextEventId:BigInt(input.events.length),nextEventSequence:BigInt(input.events.length)},maxSettlementWorkPerSimulationInstant:32n,invariants:[state=>{if(expected.size)fail('familiarity pending children');model.validateState(state);random.prepareCommit();}]});
+ async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('familiarity concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}
+ return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};
+}

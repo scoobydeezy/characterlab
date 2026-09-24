@@ -73,16 +73,37 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_CONTROL_QUALIFICATION.md. Bounded public CONTROL COMPLETE
+CAMPAIGN3_LYING_QUALIFICATION.md. Bounded deliberate/failed lying COMPLETE
+(VER-C3-LYING-001):8 models,30 runs,143 prefixes;31 new/328 reference tests.
+Speaker belief/purpose, intended assertion, delivery and recipient belief remain separate.
+A lie can accidentally be true; execution failure, denied receipt, NoLearning and prior
+history can defeat its target belief. Whole later safe views and contested draws replay.
+Prior CAMPAIGN3_COMMUNICATION_QUALIFICATION.md bounded chosen disclosure/concealment
+COMPLETE (VER-C3-COMM-001):8 models,27 runs,130 prefixes;31 new/328 reference tests.
+Actual reasons/dice, intent, expression, delivery and recipient-owned learning remain
+separate; balanced choice draws replay exactly. Serial execution packaging is preserved;
+successor completes all cases in four workers. That prior COMM scope makes no deliberate lying claim. Bounded feature familiarity COMPLETE
+(VER-C3-FAMILIAR-001):5 models,24 runs,94 prefixes;16 new/328 reference tests.
+Surviving signatures support familiarity after detail loss and familiar-but-different
+comparison; no instance identity, reward or downstream action claim. Bounded routine recollection COMPLETE
+(VER-C3-RECOLLECT-001):5 models,20 runs,159 prefixes;15 new/328 reference tests.
+Original observation, surviving fragment, category summary and reconstructed recall
+remain distinct. Type annotation build failure/source are preserved; REV2 public
+results match REV1 exactly. No general recognition claim. Bounded instructed reappraisal COMPLETE
+(VER-C3-REAPPRAISAL-001):5 models,20 runs,103 prefixes;15 new/328 reference tests.
+It changes a hypothetical conditional frame, preserving learned belief and evidence;
+no physical protection or downstream action claim. Bounded report-supported correction
+COMPLETE (VER-C3-INFER-001):5 reused models,15 runs,120 prefixes;7 new/328 reference
+tests; no new allocation or model identity. Bounded public CONTROL COMPLETE
 (VER-C3-CONTROL-001, control-public/0.2-candidate):7 models,17 runs,142 prefixes;
 22 affected/328 reference tests. Bounded public goal/strategy COMPLETE
 (VER-C3-GOAL-001):4 models,19 runs,94 prefixes;26 affected/328 reference tests. Corrected bounded agency/interference COMPLETE
 (VER-C3-AGENCY-001, agency-public/0.3-candidate):5 models,19 public runs,71 exact
 prefix continuations (52 advancing/19 terminal),38 agency and328 reference tests.
-Counters1024/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
+Counters1097/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
 remains21 members with18 bounded/3 prior/0 partial/0 blocked member scopes; all15
-Brief families and132 clauses remain in the denominator (54 bounded/35 partial/43
-blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV14 adds CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
+Brief families and132 clauses remain in the denominator (65 bounded/28 partial/39
+blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV20 adds bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
 first drafted agency coverage after correction; no owner ruling is pending.
 The first agency cohort missed later nonrecipient occurrence leakage. Preserve
 AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json.
@@ -97,7 +118,11 @@ coercion, blame, efficacy and general recognition remain outside bounded closure
 RO-C3-019 broader Brief coverage stays ACTIVE. Goal/strategy separates adopted desired state, mutable plan and admitted evidence.
 CONTROL retains habit during inhibition and exposes it after goal retirement.
 Preserve CONTROL_IMPLEMENTATION_FINDINGS.md and its failed schema cohort.
-Next: inference correction from new admitted evidence about mistaken causal attribution. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
+Report-supported event-local correction is now bounded-qualified; general causal
+discovery, alternative diagnosis and calibrated trust remain unresolved.
+Next: private distress and emotional display under EMOTIONAL_DISPLAY_READINESS.md,
+with exact private affect/appraisal, purpose, display and recipient contracts before implementation.
+Remaining memory clauses stay in the denominator. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
 snapshot, not current qualification counts. Prior BODY/BIO/COMMIT closures stand;
 RO-C3-018 is closed,008/009 broader scope conditional. RO-C3-021 final historical
 reconciliation remains unsatisfied and mandatory before exit. No state root or

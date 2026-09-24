@@ -215,3 +215,12 @@ actual acquired standing. REV5 records14 bounded/3 prior/4 partial/0 blocked.
 Earlier snapshots and the two failed REASON cohorts remain intact. Broad source,
 direction, correlation and identity laws remain unresolved. Campaign3 NOT EXIT-READY.
 Next DECISION comparator matrix; counters929/0. See CAMPAIGN3_REASON_QUALIFICATION.md.
+
+
+### Deliberate lying closure routing — 2026-09-24
+VER-C3-LYING-001 qualifies belief-relative lying/failed lying under lying-public/0.1-candidate.
+See CAMPAIGN3_LYING_QUALIFICATION.md:8 models/30 runs/143 prefixes;31 new/328 reference tests.
+Counters1097/0; AuditREV20 adds bounded Brief12.13 clauses3/4 (65 bounded/28 partial/39 blocked).
+A lie can accidentally match truth; receipt need not achieve its target belief. No general
+language, listener mentalizing or moral identity claim;014/020 conditional,019 active.
+Next EMOTIONAL_DISPLAY_READINESS.md. Campaign3 remains NOT EXIT-READY.

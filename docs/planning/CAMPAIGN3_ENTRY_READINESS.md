@@ -159,3 +159,44 @@ failure under neutral-card load:7 models/17 runs/142 prefixes. Counters1024/0.
 See CAMPAIGN3_CONTROL_QUALIFICATION.md and preserved schema failure findings.
 AuditREV14 adds Brief12.6 clauses3/4 only; no corpus member change or general control
 law. Next inference correction;019 ACTIVE,012/015/020 CONDITIONAL; no owner ruling.
+
+
+## Forward inference correction closure — 2026-09-23
+VER-C3-INFER-001 qualifies report-supported revision of the same event-local
+obstruction proposition:5 reused models/15 runs/120 prefixes, no new allocation.
+See CAMPAIGN3_INFERENCE_CORRECTION_QUALIFICATION.md. Counters1024/0. AuditREV15 adds
+Brief12.4 clauses5/9 only; general causal discovery and source trust remain open.
+Next AFFECT_REGULATION_READINESS.md;019 ACTIVE,010/014/020 CONDITIONAL. No owner ruling.
+
+
+### Reappraisal closure routing — 2026-09-23
+VER-C3-REAPPRAISAL-001 qualifies instructed conditional framing under reappraisal-public/0.1-candidate.
+See CAMPAIGN3_REAPPRAISAL_QUALIFICATION.md:5 models/20 runs/103 prefixes;15 new/328 reference tests.
+Counters1039/0; AuditREV16 adds bounded Brief12.6 clause8 only (57 bounded/34 partial/41 blocked).
+No whole regulation or downstream action claim;010/011/012/020 conditional,019 active; none closes.
+Next memory/recognition intake; Campaign3 NOT EXIT-READY.
+
+
+### Recollection closure routing — 2026-09-23
+VER-C3-RECOLLECT-001 qualifies routine fragmentation/reconstruction under recollection-public/0.1-candidate.
+See CAMPAIGN3_RECOLLECTION_QUALIFICATION.md:5 models/20 runs/159 prefixes;15 new/328 reference tests.
+Counters1054/0; AuditREV17 adds bounded Brief12.3 clauses3/8 (59 bounded/33 partial/40 blocked).
+No general recognition or defining-memory law;005/006/007/017/020 conditional,019 active; none closes.
+Next familiarity/recognition intake. Campaign3 remains NOT EXIT-READY.
+
+
+### Familiarity closure routing — 2026-09-23
+VER-C3-FAMILIAR-001 qualifies feature familiarity under familiarity-public/0.1-candidate.
+See CAMPAIGN3_FAMILIARITY_QUALIFICATION.md:5 models/24 runs/94 prefixes;16 new/328 reference tests.
+Counters1067/0; AuditREV18 adds bounded Brief12.3 clauses6/7 (61 bounded/31 partial/40 blocked).
+No instance-identity or reward claim;005/006/007/017/020 conditional,019 active; none closes.
+Next social communication intake; remaining memory clauses stay in the denominator.
+Campaign3 remains NOT EXIT-READY.
+
+
+### Chosen communication closure routing — 2026-09-23
+VER-C3-COMM-001 qualifies actual disclosure/concealment under communication-public/0.1-candidate.
+See CAMPAIGN3_COMMUNICATION_QUALIFICATION.md:8 models/27 runs/130 prefixes;31 new/328 reference tests.
+Counters1082/0; AuditREV19 adds bounded Brief12.13 clauses1/2 (63 bounded/29 partial/40 blocked).
+No lying or general mentalizing claim;014/020 conditional,019 active; none closes.
+Next DELIBERATE_LYING_READINESS.md. Campaign3 remains NOT EXIT-READY.

@@ -1,0 +1,11 @@
+{
+  "status": "PRESERVED DEVELOPMENT BUILD FAILURE",
+  "command": "npm run build",
+  "exitCode": 1,
+  "error": "TS2345: raw bigint used to look up a Map keyed by branded SimInstant in the explicit oracle comparator",
+  "artifact": {
+    "path": "docs/planning/familiarity-development/familiarityRuntime.ts",
+    "sha256": "017660d03e592f0721657ea9dd8fda47124c98db89329cb877dcc6dfc8beae14"
+  },
+  "disposition": "Use the existing validated simInstant constructor for the oracle lookup. No contract/model change; public comparison plan has not yet been frozen."
+}

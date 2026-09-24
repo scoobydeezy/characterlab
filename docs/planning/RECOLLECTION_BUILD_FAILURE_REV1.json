@@ -1,0 +1,24 @@
+{
+  "status": "PRESERVED BUILD FAILURE",
+  "command": "npm run build",
+  "exitCode": 1,
+  "errors": [
+    "recollectionMath.ts:8 TS4104 readonly CanonicalValue[] assigned to mutable CanonicalValue[]",
+    "recollectionMath.ts:11 TS4104 readonly CanonicalValue[] assigned to mutable CanonicalValue[]"
+  ],
+  "priorPublicResult": "RECOLLECTION_PUBLIC_RESULT_REV1.json",
+  "priorPlan": "RECOLLECTION_PUBLIC_PLAN_REV1.json",
+  "artifacts": [
+    {
+      "path": "src/campaign3/recollectionMath.ts",
+      "archived": "docs/planning/recollection-rev1/recollectionMath.ts",
+      "sha256": "0ff1180e2dcf5c7e4b6450f413ac26374a2ed02244aaa3b751774ec647f8b891"
+    },
+    {
+      "path": "scripts/qualify-recollection-public.mjs",
+      "archived": "docs/planning/recollection-rev1/qualify-recollection-public.mjs",
+      "sha256": "4c46502ede38fb489af67109e2204a100e183d9c4077d8b05dbfbc9a17f0805d"
+    }
+  ],
+  "disposition": "Type annotation correction only; no contract, model recipe or behavioral law change. Successor plan REV2 binds final source and reruns the public matrix."
+}

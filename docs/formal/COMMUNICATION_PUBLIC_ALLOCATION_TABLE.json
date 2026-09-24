@@ -1,0 +1,504 @@
+{
+  "version": "communication-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1168,
+  "records": [
+    {
+      "typeId": 1068,
+      "name": "CommunicationProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Pressure",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1069,
+      "name": "CommunicationOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Truth",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Display",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "PrivateAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "DeliveryEnabled",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "ReceiveA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReceiveB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1070,
+      "name": "CommunicationObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1071,
+      "name": "CommunicationKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observations",
+          "type": {
+            "list": "ref:1070",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1072,
+      "name": "CommunicationKnowledgeState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1071"
+            ],
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1073,
+      "name": "CommunicationProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1071",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Estimate",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1074,
+      "name": "CommunicationContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Knowledge",
+          "type": "ref:1071",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": "ref:398",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1075,
+      "name": "CommunicationIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:425",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:1074",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1076,
+      "name": "CommunicationExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1075",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:426",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1077,
+      "name": "CommunicationAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:432",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:1076",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1078,
+      "name": "CommunicationExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1077",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Delivered",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1079,
+      "name": "CommunicationTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1080,
+      "name": "CommunicationUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1168",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1071",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1071",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1081,
+      "name": "CommunicationStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1082,
+      "name": "CommunicationContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

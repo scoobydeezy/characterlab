@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const p='docs/planning/',read=path=>JSON.parse(fs.readFileSync(path)),sha=path=>createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+const planPath=p+'COMMUNICATION_PUBLIC_PLAN_REV2.json',resultPath=p+'COMMUNICATION_PUBLIC_RESULT_REV2.json';
+const plan=read(planPath),result=read(resultPath),tests=read(p+'COMMUNICATION_TESTS_REV1.json'),reference=read(p+'COMMUNICATION_REFERENCE_TESTS_REV1.json');
+assert.equal(result.status,'PASS');assert.equal(result.planSha256,sha(planPath));
+assert.equal(result.models,8);assert.equal(result.runs,27);assert.equal(result.restores,130);assert.equal(result.advancing,103);assert.equal(result.terminal,27);
+assert.equal(plan.runs.length,27);assert.equal(new Set(plan.runs.map(r=>r.modelIdentity)).size,8);
+assert.equal(new Set(plan.runs.map(r=>r.runIdentity)).size,27);
+assert(plan.experimentIdentity.length>0&&plan.comparisonCase.length>0);
+for(const [i,row] of result.results.entries()) {
+  assert.equal(row.runIdentity,plan.runs[i].runIdentity);assert.equal(row.modelIdentity,plan.runs[i].modelIdentity);assert.equal(row.orderedInputs,plan.runs[i].orderedInputs);
+}
+for(const a of plan.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+assert.equal(tests.numPassedTests,31);assert.equal(tests.numFailedTests,0);
+assert.equal(reference.numPassedTests,328);assert.equal(reference.numFailedTests,0);
+assert.equal(read(p+'COMMUNICATION_BUILD_REV1.json').status,'PASS');
+const freeze=read(p+'campaign3-communication-model-rev1/FREEZE.json');
+assert.equal(freeze.models.length,8);for(const m of freeze.models)for(const a of m.files)assert.equal(sha(a.path),a.sha256,a.path);
+assert.deepEqual(new Set(plan.runs.map(r=>r.modelIdentity)),new Set(freeze.models.map(m=>m.modelIdentity)));
+const allocation=read('docs/formal/COMMUNICATION_PUBLIC_ALLOCATION_TABLE.json');
+assert.equal(allocation.namespace,1168);assert.deepEqual(allocation.records.map(r=>r.typeId),Array.from({length:15},(_,i)=>1068+i));
+assert.equal(freeze.contractSha256,sha('docs/formal/COMMUNICATION_PUBLIC_CONTRACT.md'));assert.equal(freeze.allocationSha256,sha('docs/formal/COMMUNICATION_PUBLIC_ALLOCATION_TABLE.json'));
+const packaging=read(p+'COMMUNICATION_EXECUTION_PACKAGING_REV1.json');assert.equal(sha(packaging.artifact.path),packaging.artifact.sha256);
+const predecessor=read(p+'COMMUNICATION_PUBLIC_PLAN_REV1.json');assert.deepEqual(predecessor.runs,plan.runs);assert.equal(predecessor.experimentIdentity,plan.experimentIdentity);assert.equal(predecessor.comparisonCase,plan.comparisonCase);
+for(const a of predecessor.artifacts)assert.equal(sha(a.path==='scripts/qualify-communication-public.mjs'?packaging.artifact.path:a.path),a.sha256,a.path);
+const workers=Array.from({length:4},(_,i)=>p+'communication-public-workers-rev2/'+i+'.json');
+const workerRows=workers.flatMap(path=>{const w=read(path);assert.equal(w.planSha256,sha(planPath));return w.results;});assert.equal(workerRows.length,27);for(const row of result.results)assert.deepEqual(workerRows.find(r=>r.runIdentity===row.runIdentity),row);
+const files=[...workers,p+'COMMUNICATION_EXECUTION_PACKAGING_REV1.json',p+'COMMUNICATION_PUBLIC_PLAN_REV1.json',planPath,resultPath,p+'COMMUNICATION_TESTS_REV1.json',p+'COMMUNICATION_REFERENCE_TESTS_REV1.json',p+'COMMUNICATION_BUILD_REV1.json',p+'CAMPAIGN3_COMMUNICATION_QUALIFICATION.md','scripts/check-communication-closure.mjs','docs/formal/COMMUNICATION_PUBLIC_CONTRACT.md'];
+const closure={status:'PASS',contract:'communication-public/0.1-candidate',newModels:8,models:8,runs:27,prefixes:130,advancing:103,terminal:27,tests:31,referenceTests:328,artifacts:files.map(path=>({path,sha256:sha(path)}))};
+const path=p+'COMMUNICATION_CLOSURE_REV1.json';
+if(process.argv.includes('--write'))fs.writeFileSync(path,JSON.stringify(closure,null,2)+'\n',{flag:'wx'});
+assert.deepEqual(read(path),closure,'Communication closure evidence drift');
+console.log('PASS communication:8 models/27 runs/130 prefixes;31+328 tests; counters1082/0.');

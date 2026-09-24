@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const p='docs/planning/',read=path=>JSON.parse(fs.readFileSync(path)),sha=path=>createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+const planPath=p+'FAMILIARITY_PUBLIC_PLAN_REV1.json',resultPath=p+'FAMILIARITY_PUBLIC_RESULT_REV1.json';
+const plan=read(planPath),result=read(resultPath),tests=read(p+'FAMILIARITY_TESTS_REV2.json'),reference=read(p+'FAMILIARITY_REFERENCE_TESTS_REV1.json');
+assert.equal(result.status,'PASS');assert.equal(result.planSha256,sha(planPath));
+assert.equal(result.models,5);assert.equal(result.runs,24);assert.equal(result.restores,94);assert.equal(result.advancing,70);assert.equal(result.terminal,24);
+assert.equal(plan.runs.length,24);assert.equal(new Set(plan.runs.map(r=>r.modelIdentity)).size,5);
+assert.equal(new Set(plan.runs.map(r=>r.runIdentity)).size,24);
+assert(plan.experimentIdentity.length>0&&plan.comparisonCase.length>0);
+for(const [i,row] of result.results.entries()) {
+  assert.equal(row.runIdentity,plan.runs[i].runIdentity);assert.equal(row.modelIdentity,plan.runs[i].modelIdentity);assert.equal(row.orderedInputs,plan.runs[i].orderedInputs);
+}
+for(const a of plan.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+assert.equal(tests.numPassedTests,16);assert.equal(tests.numFailedTests,0);
+assert.equal(reference.numPassedTests,328);assert.equal(reference.numFailedTests,0);
+assert.equal(read(p+'FAMILIARITY_BUILD_REV2.json').status,'PASS');
+const freeze=read(p+'campaign3-familiarity-model-rev1/FREEZE.json');
+assert.equal(freeze.models.length,5);for(const m of freeze.models)for(const a of m.files)assert.equal(sha(a.path),a.sha256,a.path);
+assert.deepEqual(new Set(plan.runs.map(r=>r.modelIdentity)),new Set(freeze.models.map(m=>m.modelIdentity)));
+const allocation=read('docs/formal/FAMILIARITY_PUBLIC_ALLOCATION_TABLE.json');
+assert.equal(allocation.namespace,1167);assert.deepEqual(allocation.records.map(r=>r.typeId),Array.from({length:13},(_,i)=>1055+i));
+assert.equal(freeze.contractSha256,sha('docs/formal/FAMILIARITY_PUBLIC_CONTRACT.md'));assert.equal(freeze.allocationSha256,sha('docs/formal/FAMILIARITY_PUBLIC_ALLOCATION_TABLE.json'));
+const failure=read(p+'FAMILIARITY_BUILD_FAILURE_REV1.json');assert.equal(sha(failure.artifact.path),failure.artifact.sha256);
+const files=[p+'FAMILIARITY_BUILD_FAILURE_REV1.json',planPath,resultPath,p+'FAMILIARITY_TESTS_REV2.json',p+'FAMILIARITY_REFERENCE_TESTS_REV1.json',p+'FAMILIARITY_BUILD_REV2.json',p+'CAMPAIGN3_FAMILIARITY_QUALIFICATION.md','scripts/check-familiarity-closure.mjs','docs/formal/FAMILIARITY_PUBLIC_CONTRACT.md'];
+const closure={status:'PASS',contract:'familiarity-public/0.1-candidate',newModels:5,models:5,runs:24,prefixes:94,advancing:70,terminal:24,tests:16,referenceTests:328,artifacts:files.map(path=>({path,sha256:sha(path)}))};
+const path=p+'FAMILIARITY_CLOSURE_REV1.json';
+if(process.argv.includes('--write'))fs.writeFileSync(path,JSON.stringify(closure,null,2)+'\n',{flag:'wx'});
+assert.deepEqual(read(path),closure,'Familiarity closure evidence drift');
+console.log('PASS familiarity:5 models/24 runs/94 prefixes;16+328 tests; counters1067/0.');

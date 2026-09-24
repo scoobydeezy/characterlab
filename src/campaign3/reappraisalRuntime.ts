@@ -1,0 +1,46 @@
+/** reappraisal-public/0.1-candidate: authenticated ordinary planning and disjoint owners. */
+import {canonicalEncode as enc,list,text,unsigned as u,signed,rational as q,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {AuthoritativeState,applyStatePatch,restoreAuthoritativeState,statePathPatternValue,type ActualReadRecord,type StatePatch,type StructuralMutationDiff,type StatePath} from '../substrate/state';
+import {DeterministicScheduler,SchedulerContractError,type EventHandlerContext,type EventEmission,type ScheduledEvent,type ConformanceInstrumentation} from '../substrate/scheduler';
+import {createCanonicalSave,scheduledEventValue} from '../substrate/persistence';
+import {traceRecordValue} from '../substrate/trace';
+import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {ONE,readQ,compileReasonNuclei,appendIdentityContribution} from '../campaign2/cognitiveMath';
+import {rawSignalOutput} from '../campaign2/cognitiveTransforms';
+import {createCognitiveRandomSession,arbitrationOutput} from '../campaign2/cognitiveArbitration';
+import {intentOutput,expressionOutput,planOutput,attemptOutput,chosenData} from '../campaign2/cognitiveChoice';
+import {receivingRecord as old} from './receivingCodecs';
+import {biographyContext} from './longitudinalMath';
+import {reappraisalRecord as r,decodeReappraisal as decode} from './reappraisalCodecs';
+import {VERSION,STAGES,OBSERVER,ACTOR,GOAL,sid,eventId,path,pattern,owner,reads,writes,type ReappraisalCompiled,compileReappraisalInputs} from './reappraisalModel';
+import {reappraise,contextKnowledge,emptyKnowledge} from './reappraisalMath';
+export function createReappraisalRuntime(model:ReappraisalCompiled,input:Awaited<ReturnType<typeof compileReappraisalInputs>>){
+ const originals=new Map(input.events.map(e=>[e.eventId,key(scheduledEventValue(e))])),world=new Map(input.events.map(e=>[e.dueAt,rec(e.payload,1026n)])),random=createCognitiveRandomSession(input.runSeed);let active=false,expected=new Map<bigint,string>();const fail=(why:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED',why);};
+ const adapter={clone:(s:AuthoritativeState)=>new AuthoritativeState(s.entries()),validate:model.validateState,canonicalValue:(s:AuthoritativeState)=>s.canonicalValue(),restore:restoreAuthoritativeState,analyticalAnchors:()=>list([]),randomRelevantAuthoritativeIds:()=>list([])};
+ async function handler({event,state,allocateRuntimeId}:EventHandlerContext<AuthoritativeState>){
+  if(!active)fail('inactive reappraisal transaction');const stage=STAGES.find(([n])=>key(event.eventTypeId)===key(eventId(n)));if(!stage)fail('reappraisal stage');const [name,phase]=stage!;if(event.phase!==BigInt(phase))fail('reappraisal phase');const fingerprint=key(scheduledEventValue(event));if(['appraise'].includes(name)){if(originals.get(event.eventId)!==fingerprint)fail('reappraisal original');}else{if(expected.get(event.eventId)!==fingerprint)fail('reappraisal generated');expected.delete(event.eventId);}
+  const occurrence=(ns=1165)=>typedIdentifier(ns,u(allocateRuntimeId())),paths=reads(name),domain=paths.map(pattern),actualReads:ActualReadRecord[]=[],pk=(p:StatePath)=>key(statePathPatternValue(pattern(p))),read=(p:StatePath)=>{if(!paths.some(x=>pk(x)===pk(p)))return fail('reappraisal read domain');const prior=state.read(p);actualReads.push({accessorId:sid(1028,'accessor/reappraisal/'+name),path:p,presence:prior.presence,value:prior.value,derivedSources:[]});return prior.value;};
+  const outputs:CanonicalValue[]=[],emittedEvents:EventEmission[]=[];let nextState=state,patch:StatePatch={operations:[]},diffs:readonly StructuralMutationDiff[]=[],randomDrawRecords:CanonicalValue[]=[],quantizationOperations:CanonicalValue[]=[];
+  const emit=(next:string,payload:CanonicalValue)=>emittedEvents.push({dueAt:event.dueAt,phase:BigInt(STAGES.find(([n])=>n===next)![1]),eventTypeId:eventId(next),payload,dependencies:list([])}),write=(changes:{path:StatePath;prior:CanonicalValue|undefined;next:CanonicalValue}[])=>{if(changes.some(c=>!writes(name).some(p=>pk(p)===pk(c.path))))fail('reappraisal write domain');patch={operations:changes.map(c=>({kind:'set' as const,path:c.path,expected:c.prior?{presence:true as const,value:c.prior}:{presence:false as const},newValue:c.next}))};const applied=applyStatePatch(state,patch,owner(name),model.authority);nextState=applied.state;diffs=applied.diffs;};
+  if(name==='appraise'){
+   const knowledge=read(path(1029))??emptyKnowledge(),frame=read(path(1031)),out=reappraise(model,knowledge,frame,event.dueAt,occurrence());outputs.push(out);emit('intent',list([out,f(world.get(event.dueAt)!,8n)]));
+  }else if(name==='intent'){
+   const pair=items(event.payload,'list'),k=contextKnowledge(read(path(1029))??emptyKnowledge()),eligible=model.law===3||k.catalogue===2n&&k.means.every(x=>x!==undefined),out=r(1033,[occurrence(),signed(event.dueAt),pair[1],eligible,list(k.sources)]);outputs.push(out);emit('attempt',out);
+  }else if(name==='attempt'){occurrence();emit('execute',event.payload);
+  }else if(name==='execute'){
+   const intent=rec(event.payload,1033n),source=world.get(event.dueAt)!,out=r(1034,[occurrence(),intent,f(intent,3n)===true&&f(intent,4n)===true&&f(source,9n)===true]);outputs.push(out,r(1038,[occurrence(),signed(event.dueAt),f(source,3n)]));emit('observe',out);
+  }else if(name==='observe'){
+   const source=world.get(event.dueAt)!,obs=r(1027,[occurrence(),OBSERVER,signed(event.dueAt),f(source,2n),list(uint(f(source,2n))>0n&&f(source,5n)===true?[f(source,4n)]:[]),f(source,7n)===true?f(source,6n):u(0)]);outputs.push(obs);emit('learn',list([obs,event.payload]));
+  }else if(name==='learn'){
+   const pair=items(event.payload,'list'),obs=rec(pair[0],1027n),execution=rec(pair[1],1034n),prior=read(path(1029)),before=prior??emptyKnowledge(),known=rec(before,1028n),xs=items(f(known,1n),'list'),admitted=items(f(obs,5n),'list').length>0||uint(f(obs,6n))>0n,next=r(1028,[list([...xs,...(admitted?[obs]:[])]),f(known,2n)===true||model.law===4&&f(execution,3n)===true]);
+   if(key(before)!==key(next))write([{path:path(1029),prior,next}]);outputs.push(r(1036,[occurrence(),before,next]));emit('frame',execution);
+  }else if(name==='frame'){
+   const prior=read(path(1031)),execution=rec(event.payload,1034n),intent=rec(f(execution,2n),1033n),completed=f(execution,3n)===true,next=completed&&model.law!==2?r(1030,[u(model.law===3?2:1),f(intent,5n),signed(event.dueAt)]):prior;
+   if(next&&(!prior||key(next)!==key(prior)))write([{path:path(1031),prior,next}]);outputs.push(r(1035,[occurrence(),list(prior?[prior]:[]),list(next?[next]:[]),completed]));
+  }else fail('reappraisal unknown stage');
+  outputs.forEach(v=>decode(enc(v)));return {nextState,outputs,emittedEvents,traceContributions:[],traceFactory:(children:readonly ScheduledEvent[])=>{if(children.length!==emittedEvents.length)fail('reappraisal child count');children.forEach((e,i)=>{if(e.causalParentEventIds.length!==1||e.causalParentEventIds[0]!==event.eventId||key(e.payload)!==key(emittedEvents[i].payload))fail('reappraisal child association');expected.set(e.eventId,key(scheduledEventValue(e)));});return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model.modelIdentity.value,runIdentity:input.runIdentity.value,event,seamId:sid(1036,'seam/reappraisal/'+name),seamVersion:VERSION,recordKind:event.eventTypeId,subjectIds:[ACTOR],sourceRecordIds:[],registeredReadDomain:domain,actualReadRecords:actualReads,inputProjection:event.payload,outputProjection:list(outputs),randomDrawRecords,quantizationOperations,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];}};
+ }
+ const scheduler=new DeterministicScheduler({initialState:new AuthoritativeState([]),stateAdapter:adapter,handlers:new Map(STAGES.map(([n])=>[key(eventId(n)),handler])),initialQueue:input.events,initialAllocators:{nextRuntimeId:0n,nextEventId:BigInt(input.events.length),nextEventSequence:BigInt(input.events.length)},maxSettlementWorkPerSimulationInstant:32n,invariants:[state=>{if(expected.size)fail('reappraisal pending children');model.validateState(state);random.prepareCommit();}]});
+ async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('reappraisal concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}
+ return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};
+}

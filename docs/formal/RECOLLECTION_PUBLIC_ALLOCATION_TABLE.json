@@ -1,0 +1,552 @@
+{
+  "version": "recollection-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1166,
+  "records": [
+    {
+      "typeId": 1040,
+      "name": "RecollectionProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1041,
+      "name": "RecollectionOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Label",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TruthDetail",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "DisplayedDetail",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "DetailVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Query",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1042,
+      "name": "RecollectionObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Label",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Category",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1043,
+      "name": "RecollectionFragment",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Source",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Label",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1044,
+      "name": "RecollectionMemory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Fragments",
+          "type": {
+            "list": "ref:1043",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1045,
+      "name": "RecollectionMemoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1044"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1046,
+      "name": "RecollectionCategorySummary",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "FalseCount",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "TrueCount",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Sources",
+          "type": {
+            "list": "id:1166",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1047,
+      "name": "RecollectionSummary",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Categories",
+          "type": {
+            "list": "ref:1046",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1048,
+      "name": "RecollectionSummaryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1047"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1049,
+      "name": "RecollectionRecollection",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Query",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Category",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "EpisodeSource",
+          "type": {
+            "list": "id:1166",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "SummarySources",
+          "type": {
+            "list": "id:1166",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1050,
+      "name": "RecollectionMemoryUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1044",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1044",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1051,
+      "name": "RecollectionSummaryUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1047",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1047",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1052,
+      "name": "RecollectionTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1166",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Label",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Detail",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1053,
+      "name": "RecollectionStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1054,
+      "name": "RecollectionContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "DetailLifetime",
+          "type": "u",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

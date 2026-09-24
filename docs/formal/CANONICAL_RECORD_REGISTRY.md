@@ -337,3 +337,32 @@ Counters1016/9 before verdict.
 
 CONTROL0.2 adds1017..1024/schema1 for the two-reason typed successor chain;
 no namespace change. Prior1008..1016 layouts unchanged. Counters1024/17.
+
+
+## REAPPRAISAL public allocation — 2026-09-23
+reappraisal-public/0.1-candidate accepts1025..1039/schema1, namespace1165.
+See REAPPRAISAL_PUBLIC_ALLOCATION_TABLE.json. Counters1039/15 before verdict.
+
+
+## Recollection public allocation — 2026-09-23
+Accepted recollection-public/0.1-candidate; records1040..1054/schema1, namespace1166.
+Exact layouts: RECOLLECTION_PUBLIC_ALLOCATION_TABLE.json. Before implementation;
+ModalFill, FragmentOnly, KeepDetail, TruthRestore and ReencodeGuess named in contract.
+Counters1054/15 before verdict; no existing record or namespace is changed.
+
+
+## Familiarity public allocation — 2026-09-23
+Accepted familiarity-public/0.1-candidate; records1055..1067/schema1, namespace1167.
+Exact layouts: FAMILIARITY_PUBLIC_ALLOCATION_TABLE.json. Named comparison laws precede
+implementation. Counters1067/13 before verdict; existing records/namespaces unchanged.
+
+
+## Communication public allocation — 2026-09-23
+Accepted communication-public/0.1-candidate; records1068..1082/schema1, namespace1168.
+Exact layouts: COMMUNICATION_PUBLIC_ALLOCATION_TABLE.json. Named comparisons precede
+implementation. Counters1082/15 before verdict; existing records/namespaces unchanged.
+
+## Deliberate lying — 2026-09-24
+Accepted lying-public/0.1-candidate before implementation. Records1083..1097/schema1,
+namespace1169. Exact layouts: LYING_PUBLIC_ALLOCATION_TABLE.json. Counters1097/15
+before verdict; existing allocations and frozen communication cohort unchanged.

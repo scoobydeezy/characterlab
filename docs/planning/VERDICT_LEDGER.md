@@ -1929,3 +1929,117 @@ later gap ordering remains risk-based. No new experiment or qualification.
   physiological fatigue, learned control, monitoring, rumination or reappraisal.
 - **Obligations:**RO-C3-012/015/020 CONDITIONAL;019 ACTIVE. None closes.
 - **Counters:**1024/0 (17 this increment). No owner ruling. Next inference correction.
+
+
+## `VER-C3-INFER-001` — Correct the same event-local causal claim from new evidence
+
+- **Date:**2026-09-23; LOCAL DISPOSITION; bounded report-supported correction COMPLETE.
+- **Contract:**inference-correction-experiment/0.1-candidate over unchanged agency-public0.3.
+- **Evidence:**CAMPAIGN3_INFERENCE_CORRECTION_QUALIFICATION.md;5 reused models,
+  15 public runs,120 prefixes (105 advancing/15 terminal);7 new and328 reference tests.
+- **Scope:**Brief12.4 clauses5/9 bounded. No new model identity, record or learning law.
+- **Verdict:**RETAIN observer-local episode/proposition identity, unique source support,
+  history and truth/evidence separation. Correction changes the existing obstruction
+  belief without rewriting earlier intent/expression. Duplicate, denied, absent and
+  other-episode reports do not provide new corrective credit for the focal claim.
+- **Comparators:**GroupedMean and LastClaim remain distinct. OutcomeOnly stays unknown;
+  OmniscientCause leaks hidden facts; SuccessAsIntent drops failed-action expression.
+- **Limits:**received causal claims only; not alternative diagnosis, blame, calibrated
+  trust, source independence, explicit retraction or unguided causal discovery.
+  Misleading correction under identical admitted evidence remains possible.
+- **Obligations:**RO-C3-010/014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1024/0; no allocation. No owner ruling. Next deliberate reappraisal.
+
+
+## `VER-C3-REAPPRAISAL-001` — Consider learned protection without changing belief
+
+- **Date:**2026-09-23; LOCAL DISPOSITION; bounded instructed reappraisal COMPLETE.
+- **Contract:**reappraisal-public/0.1-candidate;1025..1039/schema1, namespace1165.
+- **Evidence:**CAMPAIGN3_REAPPRAISAL_QUALIFICATION.md;5 models,20 runs,103 prefixes
+  (83 advancing/20 terminal);15 new and328 reference tests; production build passed.
+- **Scope:**Brief12.6 clause8 bounded; hypothetical conditional framing, not physical protection.
+- **Verdict:**RETAIN observations, learned estimates, appraisal frame and derived affect.
+  Frame140 changes only later appraisal50; ineffective/harmful protection does not force relief.
+- **Controls:**NoReappraisal, DirectAffectOverride, ReliefAsEvidence; HistoricalProduct
+  and SplitExposure remain distinct candidates. Missing knowledge or failed operation prevents framing.
+- **Limits:**instructed uncontested operation only; no downstream motive/action qualification,
+  spontaneous strategy choice, general regulation, causal efficacy or universal resource law.
+- **Obligations:**RO-C3-010/011/012/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1039/0 (15 this increment). No owner ruling. Next memory/recognition intake.
+
+
+## `VER-C3-RECOLLECT-001` — Reconstruct lost detail without rewriting the episode
+
+- **Date:**2026-09-23; LOCAL DISPOSITION; bounded routine recollection COMPLETE.
+- **Contract:**recollection-public/0.1-candidate;1040..1054/schema1, namespace1166.
+- **Evidence:**CAMPAIGN3_RECOLLECTION_QUALIFICATION.md;5 models,20 runs,159 prefixes
+  (139 advancing/20 terminal);15 new/328 reference tests; production build passed.
+- **Scope:**Brief12.3 clauses3/8 bounded. Routine Boolean detail, controlled episode labels.
+- **Verdict:**RETAIN observation, surviving imprint, category summary and recollection
+  separately. Wrong recall follows acquired regularities after actual detail loss.
+  Recall does not learn again; new evidence changes later guesses without rewriting history.
+- **Alternatives:**FragmentOnly and KeepDetail remain serious controls. TruthRestore
+  leaks hidden facts; ReencodeGuess relabels a guess as retained detail.
+- **Preservation:**first public matrix passed, but build found readonly annotation errors.
+  Archived source/harness and failure receipt preserved; REV2 repeats identical results.
+- **Limits:**no general recognition, defining-memory law, affect bias or downstream action.
+- **Obligations:**005/006/007/017/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1054/0 (15 allocated). No owner ruling. Next familiarity/recognition intake.
+
+
+## `VER-C3-FAMILIAR-001` — Familiarity survives episodic detail loss without asserting identity
+
+- **Date:**2026-09-23; LOCAL DISPOSITION; bounded feature familiarity COMPLETE.
+- **Contract:**familiarity-public/0.1-candidate;1055..1067/schema1, namespace1167.
+- **Evidence:**CAMPAIGN3_FAMILIARITY_QUALIFICATION.md;5 models,24 runs,94 prefixes
+  (70 advancing/24 terminal);16 new/328 reference tests; production build passed.
+- **Scope:**Brief12.3 clauses6/7 bounded; controlled person/place feature displays.
+- **Verdict:**RETAIN appearance, surviving signature, episodic detail, familiarity
+  and instance identity separately. Partial match survives actual detail removal.
+  Current observation cannot self-match; tied sources do not assert unique identity.
+- **Alternatives:**ExactOnly remains a stricter candidate; DetailRequired fails after
+  loss; MissingAsFalse invents evidence; TruthIdentity leaks hidden information.
+- **Preservation:**development branded-time build failure/source archived and corrected
+  before public freeze. No contract/model changed.
+- **Limits:**no general recognition, reward, valence, novelty Need or downstream action.
+- **Obligations:**005/006/007/017/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1067/0 (13 allocated). No owner ruling. Next social communication intake.
+
+
+## `VER-C3-COMM-001` — Chosen disclosure changes recipient evidence through actual delivery
+
+- **Date:**2026-09-23; LOCAL DISPOSITION; bounded chosen disclosure/concealment COMPLETE.
+- **Contract:**communication-public/0.1-candidate;1068..1082/schema1, namespace1168.
+- **Evidence:**CAMPAIGN3_COMMUNICATION_QUALIFICATION.md;8 models,27 runs,130 prefixes
+  (103 advancing/27 terminal);31 new/328 reference tests; production build passed.
+- **Scope:**Brief12.13 clauses1/2 bounded. Acquired speaker belief; two actual options.
+- **Verdict:**RETAIN private knowledge, choice, intent, expression, execution, recipient
+  evidence and recipient learning. Failed disclosure preserves choice but supplies no
+  assertion; concealment retains knowledge. A mistaken honest assertion can be false.
+- **Alternatives:**EvidenceMean/LastReceipt remain serious laws; NoLearning separates
+  evidence from update. PrivateCopy and IntentAsDelivery fail their named boundaries.
+- **Preservation:**interrupted serial plan/harness retained; successor parallel plan
+  completes all identical cases. Inherited reasons/dice and actual draw replay retained.
+- **Limits:**no deliberate lying, listener mentalizing, trust or general language.
+- **Obligations:**RO-C3-014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1082/0 (15 allocated). No owner ruling. Next deliberate lying readiness.
+
+
+## `VER-C3-LYING-001` — A lie follows speaker belief and purpose, not hidden truth
+
+- **Date:**2026-09-24; LOCAL DISPOSITION; bounded deliberate/failed lying COMPLETE.
+- **Contract:**lying-public/0.1-candidate;1083..1097/schema1, namespace1169.
+- **Evidence:**CAMPAIGN3_LYING_QUALIFICATION.md;8 models,30 runs,143 prefixes
+  (113 advancing/30 terminal);31 new/328 reference tests; production build passed.
+- **Scope:**Brief12.13 clauses3/4 bounded; acquired belief and adopted communicative purpose.
+- **Verdict:**RETAIN speaker belief, purpose, intended assertion, produced assertion,
+  receipt and recipient belief. A deliberate lie can accidentally be true; failed
+  execution or denied receipt preserves intent without granting recipient evidence.
+- **Alternatives:**EvidenceMean/LastReceipt disagree after contrary assertions;
+  NoLearning admits without updating. TruthDefinedContent, IntentAsDelivery and
+  PrivateCopy fail their named epistemic or execution boundaries.
+- **Preservation:**frozen disclosure/concealment cohort remains separate. Actual
+  inherited dice, stage/commit rollback and complete later recipient provenance retained.
+- **Limits:**no general language, trust, listener mentalizing, emotional leakage or moral identity.
+- **Obligations:**RO-C3-014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1097/0 (15 allocated). No owner ruling. Next emotional display intake.

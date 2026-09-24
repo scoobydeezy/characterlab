@@ -364,12 +364,23 @@ Likely early candidates include observation/interoception alternatives, memory l
 A newly discovered upstream distinction may reorder later campaigns. The plan must record the dependency and invalidated assumptions; it must not insert another decimal “phase” into an additive ladder. Completed evidence remains in the corpus and verdict ledgers, while affected verdicts are explicitly reopened.
 
 
-### Current Campaign3 frontier — 2026-09-22
-Bounded public CONTROL closes under VER-C3-CONTROL-001 and control-public/0.2-candidate:
-7 models/17 runs/142 prefixes. Counters1024/0. Maintain goal and habit separately;
-competing neutral load impairs inhibition without changing motive or competence.
-Preserve the failed one-reason-schema development cohort and typed successor correction.
-Next: inference-correction readiness for revising mistaken causal attribution from new
-admitted evidence. AuditREV14 adds Brief12.6 clauses3/4; all15 families remain.
-RO-C3-019 ACTIVE;012/015/020 broader scope CONDITIONAL. Prior closures stand.
-Whole Campaign3 is NOT EXIT-READY; historical reconciliation021 remains mandatory.
+### Preserved Campaign3 frontier — 2026-09-23
+Bounded chosen disclosure/concealment closes under VER-C3-COMM-001:8 models/27 runs/130
+exact prefixes;31 new/328 reference tests. Counters1082/0. Acquired private knowledge
+informs actual choice through inherited reasons/dice; delivery and recipient access
+govern evidence and separate owned learning. Failed disclosure retains expression.
+See CAMPAIGN3_COMMUNICATION_QUALIFICATION.md; AuditREV19 adds Brief12.13 clauses1/2.
+Next: DELIBERATE_LYING_READINESS.md. Accept exact purpose, choice and message construction
+before implementation. Honest but inaccurate disclosure is not a lying witness.
+All15 families/132 clauses remain (63 bounded,29 partial,40 blocked).019 ACTIVE;
+014/020 CONDITIONAL; none closes. Prior closures stand. Campaign3 NOT EXIT-READY;
+021 historical reconciliation remains mandatory.
+
+
+### Current Campaign3 frontier — 2026-09-24
+VER-C3-LYING-001 qualifies belief-relative lying/failed lying under lying-public/0.1-candidate.
+See CAMPAIGN3_LYING_QUALIFICATION.md:8 models/30 runs/143 prefixes;31 new/328 reference tests.
+Counters1097/0; AuditREV20 adds bounded Brief12.13 clauses3/4 (65 bounded/28 partial/39 blocked).
+A lie can accidentally match truth; receipt need not achieve its target belief. No general
+language, listener mentalizing or moral identity claim;014/020 conditional,019 active.
+Next EMOTIONAL_DISPLAY_READINESS.md. Campaign3 remains NOT EXIT-READY.
