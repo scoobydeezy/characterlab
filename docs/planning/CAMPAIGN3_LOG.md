@@ -2912,3 +2912,443 @@ Next gate: complete the frozen public matrix and record its bounded verdict.
 EMOTIONAL_DISPLAY_READINESS.md is the subsequent intake only; no allocation there.
 RO-C3-014/020 conditional,019 active; none closes. Historical reconciliation021
 remains unsatisfied and mandatory before exit. Prior closure receipts remain intact.
+
+
+## Archived before emotional-display public qualification — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded deliberate/failed lying COMPLETE: VER-C3-LYING-001.**
+Start at [qualification](CAMPAIGN3_LYING_QUALIFICATION.md) and
+[next emotional display intake](EMOTIONAL_DISPLAY_READINESS.md).
+LOCAL DISPOSITION; no architectural owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1097** |
+| Allocated since last verdict/corpus member | **0** (15 this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 40 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **65 bounded / 28 partial / 39 blocked** |
+| Public evidence | **8 models / 30 runs / 143 prefixes** (113 advancing/30 terminal) |
+| Validation | **31 new + 328 reference tests; production build passed** |
+
+Acquired private belief and actual informing/misdirection choice construct a frozen
+intended assertion before execution. A deliberate lie can accidentally match truth.
+Failed execution and denied receipt preserve intent without fabricating evidence.
+Received lies need not achieve their intended belief: prior history and NoLearning
+provide distinct controls. Unknown belief cannot manufacture an assertion.
+
+EvidenceMean/LastReceipt remain alternatives. TruthDefinedContent, IntentAsDelivery
+and PrivateCopy fail their named boundaries. Complete later safe views preserve hidden
+truth and nonrecipient invariance, including contested addressed draws and exact replay.
+Prior disclosure/concealment and other frozen closures remain intact.
+
+**Next: private distress and emotional display**, under EMOTIONAL_DISPLAY_READINESS.md.
+Accept the private affect/appraisal/display/recipient contract before implementation.
+DecisionExpression records choice meaning; it is not a facial or vocal display.
+No general language, trust, listener mentalizing or moral identity claim.
+
+AuditREV20 adds only bounded Brief12.13 clauses3/4. RO-C3-019 stays ACTIVE;014/020
+preserve wider scope. No obligation closes or distinction is retired. Prior closures
+stand;021 historical reconciliation remains mandatory before exit.
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+## Archived emotional-display Stage D index — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Emotional display: Stage D public qualification RUNNING.**
+LOCAL DISPOSITION; no owner ruling. Prior VER-C3-LYING-001 remains frozen.
+Campaign3 is NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1113** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 40 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **65 bounded / 28 partial / 39 blocked** |
+
+Contract emotional-display-public/0.1-candidate derives private SplitExposure affect
+from admitted conditional evidence and separates chosen assertion from produced cue.
+Ten models/32 runs frozen in EMOTIONAL_DISPLAY_PUBLIC_PLAN_REV1.json. Every complete
+prefix is being restored and advanced; no public PASS or new coverage is yet claimed.
+Test-helper, timeout and confounded likelihood-only fixture corrections are preserved
+in EMOTIONAL_DISPLAY_DEVELOPMENT_FAILURE_REV1.json. No runtime/model change.
+
+Next gate: complete public replay and qualification. Subsequent intake is
+COMMUNICATION_INTERPRETATION_READINESS.md. No whole communication/affect qualification.
+RO-C3-011/014/020 remain conditional,019 active; none closes. Historical gate021 remains.
+
+
+## Archived before interpretation public qualification — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded private distress and emotional leakage COMPLETE: VER-C3-DISPLAY-001.**
+Start at [qualification](CAMPAIGN3_EMOTIONAL_DISPLAY_QUALIFICATION.md) and
+[next interpretation intake](COMMUNICATION_INTERPRETATION_READINESS.md).
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1113** |
+| Allocated since last verdict/corpus member | **0** (16 this increment) |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 41 verdicts** |
+| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **67 bounded / 28 partial / 37 blocked** |
+| Public evidence | **10 models / 32 runs / 160 prefixes** (128 advancing/32 terminal) |
+| Validation | **32 new + 328 reference tests; production build passed** |
+
+Admitted private outcomes and context supply independent affect factors. SplitExposure
+retains E and U. Actual reassurance may coexist with private distress and an unchosen
+observable cue. Semantic delivery and cue production/access are independent; recipients
+retain separate assertion and cue estimates. DecisionExpression is frozen choice
+meaning, not observable emotional display.
+
+GradedDisplay/ThresholdDisplay remain competing rules. NoLeak and NoLearning remain
+distinct ablations; PrivateCopy and IntentEqualsDisplay fail their named boundaries.
+Complete later safe views remain invariant under hidden truth, denied private changes
+and nonrecipient changes, including contested addressed draws and exact prefix replay.
+
+Preserve EMOTIONAL_DISPLAY_DEVELOPMENT_FAILURE_REV1.json and its earlier fixtures:
+a broad calm intervention also changed control evidence. The final likelihood-only
+fixture preserves that evidence and checks reassurance across the whole sequence.
+Helper/timeout receipts are preserved; final conformance uses30000ms. No model changed.
+
+**Next: misunderstood explanation**, under COMMUNICATION_INTERPRETATION_READINESS.md.
+Separate intended content, produced signal, perceived signal, interpretation and belief
+before accepting the next contract. No general language, trust/fusion, physiological
+display, learned suppression, listener mentalizing or moral identity claim.
+
+AuditREV21 adds only bounded Brief12.13 clauses5/6. RO-C3-019 stays ACTIVE;011/014/020
+preserve wider scope. None closes or retires a distinction. Prior closures stand;
+021 historical reconciliation remains unsatisfied and mandatory before exit.
+Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Communication interpretation: Stage D public qualification RUNNING.**
+LOCAL DISPOSITION; no owner ruling. Prior VER-C3-DISPLAY-001 remains frozen.
+Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1130** |
+| Allocated since last verdict/corpus member | **17** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 41 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **67 bounded / 28 partial / 37 blocked** |
+| Validation so far | **33 new + 328 reference tests; production build passed** |
+
+INTERPRETATION_PUBLIC_CONTRACT.md accepts a controlled two-glyph, two-convention
+channel for one causal proposition. Intended content, produced/perceived glyph,
+context-based interpretation and belief remain distinct. Fixed conventions are
+explicit channel controls, not learned vocabulary or general causal discovery.
+Eight models/29 RunIdentities are frozen; exact prefix replay is running. No new
+public PASS or coverage disposition is claimed before the aggregate result.
+The negative/misleading fixture aliases share one public run and are not double-counted.
+
+Next gate: complete public qualification and verdict. Subsequent intake:
+ATTRIBUTED_KNOWLEDGE_READINESS.md. RO-C3-014/020 conditional,019 active; none closes.
+All prior receipts and historical reconciliation021 remain preserved.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded misunderstood explanation COMPLETE — VER-C3-INTERPRET-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1130** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 42 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **68 bounded / 28 partial / 36 blocked** |
+| New public qualification | **8 models / 29 runs / 116 prefixes** |
+| Validation | **33 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_INTERPRETATION_QUALIFICATION.md and INTERPRETATION_CLOSURE_REV1.json.
+Intended content, produced/perceived glyph, interpreted meaning and belief remain
+separate. Fixed channel conventions are not learned vocabulary. Changed private
+intent with identical raw observations preserves lawful whole recipient views;
+IntentOracle fails. Later correction preserves earlier misunderstanding.
+LiteralMean/LastInterpretation remain competitors; NoLearning/NoInterpretation distinct.
+The negative/misleading fixture alias is counted once publicly.
+
+Next: ATTRIBUTED_KNOWLEDGE_READINESS.md, Stage A intake. Test fallible beliefs about
+what another character knows with an actual communication-choice consumer.
+Accept exact source, ownership, finite depth and consumer contract before implementation.
+RO-C3-014/020 conditional,019 active; none closes. All nine communication clauses
+have separate bounded witnesses, not an integrated general communication qualification.
+Prior receipts remain frozen. Historical reconciliation021 remains mandatory/unsatisfied.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Attributed knowledge Stage D — public qualification pending.** LOCAL DISPOSITION.
+No architectural owner ruling. Prior VER-C3-INTERPRET-001 remains frozen.
+
+Counters: **1147 allocated / 17 since verdict**. Six models frozen;34 new tests
+and328 reference tests passed; production build passed. Public plan/execution next.
+Corpus0.29.0:21 members;42 named verdicts/36 C3;132 clauses/15 families remain
+68 bounded/28 partial/36 blocked until aggregate qualification. Campaign3 NOT EXIT-READY.
+Obligations1 active/19 conditional/1 closed/0 unowned.021 historical gate unsatisfied.
+
+ATTRIBUTED_PUBLIC_CONTRACT.md keeps own belief, actual target belief and keyed
+observer attribution distinct. Latest/majority reports and NoPersonModel are compared
+with a private-state Oracle. Actual reasons/dice select explanation or defer.
+See ATTRIBUTED_DEVELOPMENT_FINDINGS.md for preserved construction failures and
+strengthened fixed-target-state comparison. No public PASS yet.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Attributed knowledge Stage D — public qualification pending.** LOCAL DISPOSITION.
+No architectural owner ruling. Prior VER-C3-INTERPRET-001 remains frozen.
+
+Counters: **1147 allocated / 17 since verdict**. Six models frozen;34 new tests
+and328 reference tests passed; production build passed. Public plan/execution next.
+Corpus0.29.0:21 members;42 named verdicts/36 C3;132 clauses/15 families remain
+68 bounded/28 partial/36 blocked until aggregate qualification. Campaign3 NOT EXIT-READY.
+| Counter | Value |
+|---|---|
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+
+021 historical gate unsatisfied.
+
+ATTRIBUTED_PUBLIC_CONTRACT.md keeps own belief, actual target belief and keyed
+observer attribution distinct. Latest/majority reports and NoPersonModel are compared
+with a private-state Oracle. Actual reasons/dice select explanation or defer.
+See ATTRIBUTED_DEVELOPMENT_FINDINGS.md for preserved construction failures and
+strengthened fixed-target-state comparison. No public PASS yet.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded attributed knowledge COMPLETE — VER-C3-ATTRIBUTED-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1147** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 43 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **70 bounded / 28 partial / 34 blocked** |
+| New public qualification | **6 models / 30 runs / 120 prefixes** |
+| Validation | **34 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_ATTRIBUTED_QUALIFICATION.md and ATTRIBUTED_CLOSURE_REV1.json.
+A's own belief, B's actual belief and A's fallible model of B remain separate.
+Reports can alter actual explanation choice with B's entire actual state fixed.
+Unknown attribution differs from reported ignorance; successful delivery does not
+automatically update the speaker. LatestReport/MajorityReport remain competitors;
+NoPersonModel and PrivateStateOracle preserve distinct controls. Controlled semantic
+reports do not establish general mentalizing, recognition, trust or factive knowledge.
+Preserve ATTRIBUTED_DEVELOPMENT_FINDINGS.md and both archived construction cohorts.
+
+Next: PERSON_STATE_DISSOCIATION_READINESS.md, Stage A intake: durable impression
+versus fallible current-intent inference. Accept exact source, ownership and
+behavioral consumer before implementation.014/020 conditional,019 active; none closes.
+All prior closures remain frozen. Historical reconciliation021 is mandatory/unsatisfied.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Person-state dissociation Stage D — public qualification pending.**
+LOCAL DISPOSITION; no owner ruling. Prior VER-C3-ATTRIBUTED-001 remains frozen.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1164** |
+| Allocated since last verdict/corpus member | **17** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 43 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **70 bounded / 28 partial / 34 blocked** |
+| Validation | **35 new + 328 reference tests; production build passed** |
+
+Eight personstate-public/0.1-candidate models are frozen. Public plan/execution next.
+Learned conduct impression and current cue estimate remain separate, feeding
+goal-relative appraisal and existing SplitExposure arithmetic. Default target policy
+is a research control, not earned personality. No downstream observer action claim.
+PERSONSTATE_DEVELOPMENT_FINDINGS.md preserves corrected inherited namespaces and
+the strengthened fifth-request privacy horizon. No public PASS or new coverage yet.
+Campaign3 NOT EXIT-READY; historical reconciliation021 remains unsatisfied.
+
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Person-state dissociation Stage D — public qualification pending.**
+LOCAL DISPOSITION; no owner ruling. Prior VER-C3-ATTRIBUTED-001 remains frozen.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1164** |
+| Allocated since last verdict/corpus member | **17** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 43 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **70 bounded / 28 partial / 34 blocked** |
+| Validation | **35 new + 328 reference tests; production build passed** |
+
+Eight corrected personstate-public/0.2-candidate models are frozen. Public qualification next.
+The0.1 timing cohort is superseded: appraisal50 preceded actual intent70.
+Corrected consequence appraisal130 follows intent/execution and precedes learning140.
+Preserve personstate-rev1/PRESERVATION.json and PERSONSTATE_PRESERVATION_REV1.json.
+Learned conduct impression and current cue estimate remain separate, feeding
+goal-relative appraisal and existing SplitExposure arithmetic. Default target policy
+is a research control, not earned personality. No downstream observer action claim.
+PERSONSTATE_DEVELOPMENT_FINDINGS.md preserves corrected inherited namespaces and
+the strengthened fifth-request privacy horizon. No public PASS or new coverage yet.
+Campaign3 NOT EXIT-READY; historical reconciliation021 remains unsatisfied.
+
+
+## Archived before fear/guilt closure — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded person-state dissociation COMPLETE — VER-C3-PERSONSTATE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1164** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 44 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **72 bounded / 28 partial / 32 blocked** |
+| New public qualification | **8 models / 28 runs / 168 prefixes** |
+| Validation | **35 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_PERSONSTATE_QUALIFICATION.md and PERSONSTATE_CLOSURE_REV1.json.
+Corrected personstate-public/0.2-candidate appraises130 after actual target intent70,
+before conduct learning140. Learned disposition estimate, current-intent estimate,
+actual intent, perceived conduct, goal-relative appraisal and affect remain distinct.
+Default policy is a research control, not earned personality. No downstream observer
+action or calibrated confidence claim. Split/Pooled/HistoryOnly/CueOnly and Oracle
+remain explicit competitors.
+
+Preserve PERSONSTATE_DEVELOPMENT_FINDINGS.md and PERSONSTATE_PRESERVATION_REV1.json:
+the0.1 timing cohort and original terminal-only privacy fixture are unqualified.
+A common fifth observation now exercises later provenance after hidden changes.
+
+Next: FEAR_GUILT_ATTRIBUTION_READINESS.md, Stage A intake. Distinguish private fear,
+observable cue and attributed cause; accept exact source/inference/consumer first.
+011/014/020 conditional,019 active; none closes. All earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived before person-goal closure — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded fear/guilt attribution COMPLETE — VER-C3-FEAR-GUILT-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1177** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 45 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **73 bounded / 28 partial / 31 blocked** |
+| New public qualification | **5 models / 19 runs / 95 prefixes** |
+| Validation | **21 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md and FEAR_GUILT_CLOSURE_REV1.json.
+Private threat appraisal, nervous display, observer evidence, attributed wrongdoing
+and goal-relative appraisal remain separate. ContextOdds/CueOnly/NoLearning and
+TruthOracle remain explicit candidates; exact weights are not calibrated probability.
+No downstream action, general causal inference, guilt emotion or moral identity claim.
+Preserve FEAR_GUILT_DEVELOPMENT_FINDINGS.md and FEAR_GUILT_PRESERVATION_REV1.json.
+
+Next: PERSON_GOAL_INFERENCE_READINESS.md, Stage A intake for Brief12.10 clause4.
+Distinguish target desired state, selected strategy, action and observer-inferred goal.
+011/014/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived before hearsay closure — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded person-goal inference COMPLETE — VER-C3-PERSON-GOAL-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1194** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 46 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **74 bounded / 27 partial / 31 blocked** |
+| New public qualification | **5 models / 21 runs / 126 prefixes** |
+| Validation | **24 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md and PERSON_GOAL_CLOSURE_REV1.json.
+Target adopted goal, ordinary strategy, attempt, achieved outcome, observer evidence,
+inferred desired state and observer appraisal remain distinct. RouteAndOutcome/
+OutcomeOnly/NoLearning/GoalOracle remain explicit candidates. Known route catalogue
+and weights are bounded controls, not learned affordances or calibrated confidence.
+Preserve PERSON_GOAL_IMPLEMENTATION_FINDINGS.md, particularly correlated action/outcome
+evidence. No contested Decision, fulfillment, identity or observer-action claim.
+
+Next: REPUTATION_HEARSAY_READINESS.md, Stage A for Brief12.10 clause8. Distinguish
+received reports about a person from directly observed conduct and hidden truth.
+014/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.

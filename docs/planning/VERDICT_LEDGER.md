@@ -2043,3 +2043,137 @@ later gap ordering remains risk-based. No new experiment or qualification.
 - **Limits:**no general language, trust, listener mentalizing, emotional leakage or moral identity.
 - **Obligations:**RO-C3-014/020 CONDITIONAL;019 ACTIVE. None closes.
 - **Counters:**1097/0 (15 allocated). No owner ruling. Next emotional display intake.
+
+
+## `VER-C3-DISPLAY-001` — Observable emotional cues can conflict with chosen reassurance
+
+- **Date:**2026-09-24; LOCAL DISPOSITION; bounded distress/display COMPLETE.
+- **Contract:**emotional-display-public/0.1-candidate;1098..1113/schema1, namespace1170.
+- **Evidence:**CAMPAIGN3_EMOTIONAL_DISPLAY_QUALIFICATION.md;10 models,32 runs,160 prefixes
+  (128 advancing/32 terminal);32 new/328 reference tests; production build passed.
+- **Scope:**Brief12.13 clauses5/6 bounded. Private learned risk, independent appraisal
+  factors, actual chosen content and independently produced observable cue.
+- **Verdict:**RETAIN private affect, chosen assertion, frozen choice meaning, produced
+  display, receipt and recipient belief. Reassurance may coexist with an unchosen
+  distress cue; failure/access can affect each channel independently.
+- **Alternatives:**GradedDisplay/ThresholdDisplay remain serious candidates; NoLeak
+  and NoLearning preserve distinct ablations. PrivateCopy and IntentEqualsDisplay
+  fail their named privacy/production boundaries.
+- **Preservation:**missing helper and timeout receipts retained. The first calm fixture
+  also changed control evidence; final likelihood-only fixture and whole-horizon
+  assertion check correct that confound without changing model or runtime.
+- **Limits:**no physiological/learned display, general inhibition, trust/fusion,
+  language misunderstanding, listener mentalizing or moral identity qualification.
+- **Obligations:**RO-C3-011/014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1113/0 (16 allocated). No owner ruling. Next communication interpretation.
+
+
+## `VER-C3-INTERPRET-001` — Received signals do not grant private intended meaning
+
+- **Date:**2026-09-24; LOCAL DISPOSITION; bounded misunderstood explanation COMPLETE.
+- **Contract:**interpretation-public/0.1-candidate;1114..1130/schema1, namespace1171.
+- **Evidence:**CAMPAIGN3_INTERPRETATION_QUALIFICATION.md;8 models,29 runs,116 prefixes
+  (87 advancing/29 terminal);33 new/328 reference tests; production build passed.
+- **Scope:**Brief12.13 clause7 bounded; one causal proposition and two fixed conventions.
+- **Verdict:**RETAIN intended meaning, produced/perceived signal, context, interpretation
+  and recipient belief. Later correction preserves earlier misunderstanding.
+  Honest mistaken reports are distinct from misunderstood reports.
+- **Alternatives:**ContextualMean/LiteralMean and LastInterpretation remain serious
+  competitors. NoLearning and NoInterpretation are distinct ablations. IntentOracle
+  violates the private-intent boundary with identical raw recipient evidence.
+- **Preservation:**whole later views, actual inherited dice, acquired-state stage/commit
+  rollback and every complete-prefix continuation. Prior profiles remain frozen.
+  Negative/misleading fixture aliases count once in the public matrix.
+- **Limits:**no learned lexicon, general language/pragmatics, trust, causal discovery
+  or listener mentalizing. Separate bounded witnesses do not qualify joint communication.
+- **Obligations:**RO-C3-014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1130/0 (17 allocated). No owner ruling. Next attributed knowledge intake.
+
+
+## `VER-C3-ATTRIBUTED-001` — Beliefs about another's belief guide communication without reading their mind
+
+- **Date:**2026-09-24; LOCAL DISPOSITION; bounded attributed knowledge COMPLETE.
+- **Contract:**attributed-public/0.1-candidate;1131..1147/schema1, namespace1172.
+- **Evidence:**CAMPAIGN3_ATTRIBUTED_QUALIFICATION.md;6 models,30 runs,120 prefixes
+  (90 advancing/30 terminal);34 new/328 reference tests; production build passed.
+- **Scope:**Brief12.10 clauses5/6 bounded; fixed target/proposition and perceived reports.
+- **Verdict:**RETAIN own belief, target actual belief, observer-attributed belief,
+  relevance and chosen communication. Misleading reports can suppress explanation;
+  later correction changes choice without rewriting past intent.
+- **Alternatives:**LatestReport/MajorityReport remain serious candidates.
+  NoPersonModel loses report-specific relevance; PrivateStateOracle leaks hidden state.
+- **Preservation:**whole later views, actual dice and all stage/commit rollback.
+  Stale copied IDs, inherited read bound and type-narrowing failures are preserved.
+  Strengthened report-only comparison keeps B's entire actual state identical.
+- **Limits:**no factivity, general mentalizing, trust, natural recognition,
+  exposure-to-comprehension inference or universal relevance/update law.
+- **Obligations:**RO-C3-014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1147/0 (17 allocated). Next disposition/current-intent intake.
+
+
+## `VER-C3-PERSONSTATE-001` — A fitting conduct impression does not guarantee correct current-intent inference
+
+- **Date:**2026-09-24; LOCAL DISPOSITION; bounded person-state dissociation COMPLETE.
+- **Contract:**personstate-public/0.2-candidate;1148..1164/schema1, namespace1173.
+- **Evidence:**CAMPAIGN3_PERSONSTATE_QUALIFICATION.md;8 models,28 runs,168 prefixes
+  (140 advancing/28 terminal);35 new/328 reference tests; production build passed.
+- **Scope:**Brief12.10 clauses1/2 bounded; controlled helping domain and stable default
+  policy. The default is a research benchmark, not earned personality or identity.
+- **Verdict:**RETAIN learned conduct impression, current-intent estimate, actual
+  target intent, execution, observer evidence, goal-relative appraisal and affect.
+  Changed cue can alter current appraisal while history/impression remain fixed.
+- **Alternatives:**Pooled is a serious single-estimate comparator; HistoryOnly loses
+  current-cue sensitivity, CueOnly lacks disposition, PrivateGoalOracle leaks context.
+- **Preservation:**the initial cohort appraised before intent existed. Preserve
+  personstate-rev1 and its unqualified frozen plan;0.2 uses consequence130 after intent70.
+  Added a fifth common observation to test later provenance after hidden changes.
+  Actual dice, all stage/commit faults and whole-prefix restores remain.
+- **Limits:**no calibrated trait confidence, general personality, trust, natural
+  recognition, universal timescale or downstream observer action.
+- **Obligations:**RO-C3-011/014/020 CONDITIONAL;019 ACTIVE. None closes.
+- **Counters:**1164/0 (17 allocated). Next fear/guilt attribution intake.
+
+## VER-C3-FEAR-GUILT-001 — bounded fear/guilt attribution, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under fear-guilt-public/0.1-candidate.
+Five models,19 runs,95 complete prefixes (76 advancing/19 terminal),21 new and328
+reference tests; production build passed. RETAIN private appraisal, produced cue,
+observer evidence, guilt attribution and goal-relative appraisal separately. Innocent
+nervousness can support a mistaken judgment that revises with admitted context.
+ContextOdds/CueOnly/NoLearning and TruthOracle remain distinct; weights are not
+calibrated causal likelihoods. Whole later observer views preserve hidden truth/cause
+and other-observer noninterference; Oracle violates the boundary. No downstream
+action, moral identity or general guilt-detection claim. See CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md,
+FEAR_GUILT_CLOSURE_REV1.json and FEAR_GUILT_PRESERVATION_REV1.json.
+RO-C3-011/014/019/020 carry all material limits; none closes. Counters1177/0.
+
+## VER-C3-PERSON-GOAL-001 — bounded person-goal inference, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under person-goal-public/0.1-candidate.
+5 models/21 runs/126 exact prefixes (105 advancing/21 terminal);24 new+328 reference
+tests and build passed. RETAIN adopted goal, ordinary strategy, attempt, outcome,
+observer evidence, inferred goal and observer appraisal. A shared route can serve
+different goals; different routes can serve the same goal. Misclassified attempted
+motion can mislead and later evidence revise inference; failed attempts inform
+RouteAndOutcome while OutcomeOnly stays unknown. NoLearning and GoalOracle remain
+explicit controls. Full later-view hidden-goal/nonrecipient comparisons pass lawfully
+and fail for Oracle. Catalogue and factor weights are controls, not learned affordances
+or calibrated independent evidence. No Decision, identity reduction or observer action
+claim. See CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md, PERSON_GOAL_CLOSURE_REV1.json and
+PERSON_GOAL_IMPLEMENTATION_FINDINGS.md. RO-C3-014/019/020 retain all material limits;
+none closes. Counters1194/0.
+
+## VER-C3-HEARSAY-001 — bounded hearsay versus direct observation, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under hearsay-public/0.1-candidate.
+5 models/23 runs/138 exact prefixes (115 advancing/23 terminal);23 new+328 reference
+tests and build passed. RETAIN target conduct, speaker evidence/belief/report, recipient
+testimony, direct perception and resulting estimate separately. DirectPriority and
+LatestEvidence differ with the same channel-labelled history; direct perception can
+still be wrong. Visible speaker/ticket duplicates add no second testimony; delayed
+first receipt remains valid. NoLearning and TruthOracle remain controls. Whole later
+views preserve hidden conduct, denied private changes and nonrecipient information;
+Oracle violates the boundary. No chosen speech, learned trust, independent corroboration
+or global reputation claim. CAMPAIGN3_HEARSAY_QUALIFICATION.md, HEARSAY_CLOSURE_REV1.json
+and HEARSAY_IMPLEMENTATION_FINDINGS.md preserve evidence/limits. RO-C3-014/019/020;
+none closes. Counters1206/0.

@@ -73,7 +73,54 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
-CAMPAIGN3_LYING_QUALIFICATION.md. Bounded deliberate/failed lying COMPLETE
+CAMPAIGN3_HEARSAY_QUALIFICATION.md. Bounded hearsay/direct evidence COMPLETE
+(VER-C3-HEARSAY-001, hearsay-public/0.1-candidate):5 models/23 runs/138 prefixes;
+23 new/328 reference tests. Named testimony/direct evidence remain separate; visible
+ticket deduplication, sincere mistake and later direct revision are bounded. Preserve
+HEARSAY_IMPLEMENTATION_FINDINGS.md: direct evidence can be wrong; no learned trust,
+independent corroboration or new chosen speech policy.
+Next RELATIONSHIP_DIMENSIONS_READINESS.md. Prior
+CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md. Bounded person-goal inference COMPLETE
+(VER-C3-PERSON-GOAL-001, person-goal-public/0.1-candidate):5 models/21 runs/126
+prefixes;24 new/328 reference tests. Adopted goal, ordinary plan, attempted motion,
+achieved outcome, evidence and inferred desired state remain separate. Preserve
+PERSON_GOAL_IMPLEMENTATION_FINDINGS.md: known catalogue and correlated action/outcome
+factors do not qualify calibrated inverse planning. No observer-action claim.
+Its then-next hearsay intake is qualified above. Prior
+CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md. Bounded fear/guilt attribution COMPLETE
+(VER-C3-FEAR-GUILT-001, fear-guilt-public/0.1-candidate):5 models/19 runs/95 prefixes;
+21 new/328 reference tests. Private appraisal, produced nervousness, safe evidence,
+attributed wrongdoing and goal-relative appraisal remain separate. Weights are candidate
+controls, not calibrated probabilities; no downstream action or moral identity claim.
+Its then-next person-goal intake is qualified above. Prior
+CAMPAIGN3_PERSONSTATE_QUALIFICATION.md. Corrected bounded disposition/current-intent
+dissociation COMPLETE (VER-C3-PERSONSTATE-001, personstate-public/0.2-candidate):
+8 models,28 runs,168 prefixes;35 new/328 reference tests. Appraisal130 follows
+actual intent70 and precedes conduct learning140. Preserve personstate-rev1 and
+PERSONSTATE_DEVELOPMENT_FINDINGS.md: the first cohort appraised before intent and
+the first fixture lacked later observation after hidden changes. Default policy is
+a research control, not earned personality; no downstream observer action claim.
+Its then-next fear/guilt intake is qualified above. Prior
+CAMPAIGN3_ATTRIBUTED_QUALIFICATION.md. Bounded target-belief attribution COMPLETE
+(VER-C3-ATTRIBUTED-001):6 models,30 runs,120 prefixes;34 new/328 reference tests.
+Own belief, target actual belief and observer-attributed belief remain separate; actual
+communication choice consumes attribution. Successful receipt does not automatically
+update the speaker. Preserve ATTRIBUTED_DEVELOPMENT_FINDINGS.md and archived cohorts.
+Its then-next PERSON_STATE_DISSOCIATION_READINESS.md intake is qualified above;
+that attributed profile makes no general mentalizing or trust claim.
+Prior CAMPAIGN3_INTERPRETATION_QUALIFICATION.md. Bounded misunderstood explanation COMPLETE
+(VER-C3-INTERPRET-001):8 models,29 runs,116 prefixes;33 new/328 reference tests.
+Intended assertion, received glyph/context, interpretation and recipient belief remain
+separate. Fixed conventions are controls, not learned vocabulary. Its then-next
+ATTRIBUTED_KNOWLEDGE_READINESS.md intake is now qualified above; that interpretation
+profile makes no general language or listener mentalizing claim.
+Prior CAMPAIGN3_EMOTIONAL_DISPLAY_QUALIFICATION.md. Bounded private distress/leakage COMPLETE
+(VER-C3-DISPLAY-001):10 models,32 runs,160 prefixes;32 new/328 reference tests.
+Private SplitExposure affect, chosen assertion, produced cue and recipient-owned learning
+remain separate. Graded/threshold display rules remain competitors. Preserve the
+confounded calm fixture and helper/timeout receipts; final likelihood-only comparison
+holds control evidence fixed. No physiological/learned display or trust/fusion claim.
+Prior CAMPAIGN3_LYING_QUALIFICATION.md bounded deliberate/failed lying COMPLETE
 (VER-C3-LYING-001):8 models,30 runs,143 prefixes;31 new/328 reference tests.
 Speaker belief/purpose, intended assertion, delivery and recipient belief remain separate.
 A lie can accidentally be true; execution failure, denied receipt, NoLearning and prior
@@ -100,10 +147,10 @@ tests; no new allocation or model identity. Bounded public CONTROL COMPLETE
 (VER-C3-GOAL-001):4 models,19 runs,94 prefixes;26 affected/328 reference tests. Corrected bounded agency/interference COMPLETE
 (VER-C3-AGENCY-001, agency-public/0.3-candidate):5 models,19 public runs,71 exact
 prefix continuations (52 advancing/19 terminal),38 agency and328 reference tests.
-Counters1097/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
+Counters1206/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
 remains21 members with18 bounded/3 prior/0 partial/0 blocked member scopes; all15
-Brief families and132 clauses remain in the denominator (65 bounded/28 partial/39
-blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV20 adds bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
+Brief families and132 clauses remain in the denominator (75 bounded/27 partial/30
+blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV27 adds bounded hearsay/direct clause8; REV26 added bounded person-goal clause4; REV25 added bounded fear/guilt clause3; REV24 added bounded disposition/current-intent clauses1/2; REV23 added bounded target-belief clauses5/6; REV22 added misunderstood explanation clause7; REV21 added bounded distress/leakage clauses5/6; REV20 added bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
 first drafted agency coverage after correction; no owner ruling is pending.
 The first agency cohort missed later nonrecipient occurrence leakage. Preserve
 AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json.
@@ -120,8 +167,8 @@ CONTROL retains habit during inhibition and exposes it after goal retirement.
 Preserve CONTROL_IMPLEMENTATION_FINDINGS.md and its failed schema cohort.
 Report-supported event-local correction is now bounded-qualified; general causal
 discovery, alternative diagnosis and calibrated trust remain unresolved.
-Next: private distress and emotional display under EMOTIONAL_DISPLAY_READINESS.md,
-with exact private affect/appraisal, purpose, display and recipient contracts before implementation.
+Next: relationship dimensions under RELATIONSHIP_DIMENSIONS_READINESS.md,
+with exact observer-safe source, inference and consumer contracts before implementation.
 Remaining memory clauses stay in the denominator. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
 snapshot, not current qualification counts. Prior BODY/BIO/COMMIT closures stand;
 RO-C3-018 is closed,008/009 broader scope conditional. RO-C3-021 final historical

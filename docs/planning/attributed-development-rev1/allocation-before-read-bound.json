@@ -1,0 +1,693 @@
+{
+  "version": "attributed-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1172,
+  "records": [
+    {
+      "typeId": 1131,
+      "name": "AttributedProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Pressure",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1132,
+      "name": "AttributedOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Truth",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "OwnDisplay",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OwnAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TargetDisplay",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "TargetAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReportSpeaker",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ReportOther",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Delivery",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "TargetReceipt",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1133,
+      "name": "AttributedObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Report",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Channel",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1134,
+      "name": "AttributedKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observations",
+          "type": {
+            "list": "ref:1133",
+            "min": 0,
+            "max": 16
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "PersonModel",
+          "type": "ref:1147",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1135,
+      "name": "AttributedKnowledgeState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1134"
+            ],
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1136,
+      "name": "AttributedProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1134",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "OwnBelief",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "AttributedStatus",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1137,
+      "name": "AttributedContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Knowledge",
+          "type": "ref:1134",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": "ref:398",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "AttributedStatus",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1138,
+      "name": "AttributedIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:425",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:1137",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Purpose",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "IntendedAssertion",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1139,
+      "name": "AttributedExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1138",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:426",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1140,
+      "name": "AttributedAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:432",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:1139",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1141,
+      "name": "AttributedExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1140",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Delivered",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1142,
+      "name": "AttributedTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1143,
+      "name": "AttributedUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1172",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1134",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1134",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1144,
+      "name": "AttributedStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1145,
+      "name": "AttributedContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Proposition",
+          "type": "id:1002",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1146,
+      "name": "AttributedReportSample",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "ref:1133",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Status",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1147,
+      "name": "AttributedPersonModel",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reports",
+          "type": {
+            "list": "ref:1146",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

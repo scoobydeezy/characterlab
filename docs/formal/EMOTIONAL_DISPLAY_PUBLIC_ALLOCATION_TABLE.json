@@ -1,0 +1,743 @@
+{
+  "version": "emotional-display-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1170,
+  "records": [
+    {
+      "typeId": 1098,
+      "name": "EmotionalDisplayProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Pressure",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SeverityStep",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1099,
+      "name": "EmotionalDisplayOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Truth",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Display",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "PrivateAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "DeliveryEnabled",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "ReceiveA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReceiveB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Condition",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Reserve",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Catalogue",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "DisplayEnabled",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "CueA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "CueB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1100,
+      "name": "EmotionalDisplayObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Condition",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Reserve",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Catalogue",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Cue",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1101,
+      "name": "EmotionalDisplayKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observations",
+          "type": {
+            "list": "ref:1100",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1102,
+      "name": "EmotionalDisplayKnowledgeState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1101"
+            ],
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1103,
+      "name": "EmotionalDisplayProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1101",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Estimate",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "CueEstimate",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1104,
+      "name": "EmotionalDisplayContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Knowledge",
+          "type": "ref:1101",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": "ref:398",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Affect",
+          "type": {
+            "list": "ref:1113",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1105,
+      "name": "EmotionalDisplayIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:425",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:1104",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Purpose",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "IntendedAssertion",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1106,
+      "name": "EmotionalDisplayExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1105",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:426",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1107,
+      "name": "EmotionalDisplayAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:432",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Expression",
+          "type": "ref:1106",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1108,
+      "name": "EmotionalDisplayExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1107",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Delivered",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Claim",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "ProducedCue",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1109,
+      "name": "EmotionalDisplayTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1110,
+      "name": "EmotionalDisplayUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1101",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1101",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1111,
+      "name": "EmotionalDisplayStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1112,
+      "name": "EmotionalDisplayContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "SafetyGoal",
+          "type": "id:1002",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1113,
+      "name": "EmotionalDisplayAffect",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1170",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Knowledge",
+          "type": "ref:1101",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Likelihood",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Severity",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Vulnerability",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Control",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

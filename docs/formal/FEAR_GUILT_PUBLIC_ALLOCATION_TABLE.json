@@ -1,0 +1,538 @@
+{
+  "version": "fear-guilt-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1174,
+  "records": [
+    {
+      "typeId": 1165,
+      "name": "FearGuiltProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1166,
+      "name": "FearGuiltOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Wrongdoing",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "AnimalThreat",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "AccusationThreat",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Display",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "CueAccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "CueAccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "AnimalA",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "AnimalB",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "PossessionA",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "PossessionB",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1167,
+      "name": "FearGuiltPrivateObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "AnimalThreat",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "AccusationThreat",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1168,
+      "name": "FearGuiltFear",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:1167",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Likelihood",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1169,
+      "name": "FearGuiltDisplay",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Cue",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1170,
+      "name": "FearGuiltObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Incident",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Cue",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Animal",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Possession",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1171,
+      "name": "FearGuiltKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "History",
+          "type": {
+            "list": "ref:1170",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1172,
+      "name": "FearGuiltState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1171"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1173,
+      "name": "FearGuiltJudgment",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1171",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Odds",
+          "type": {
+            "list": "positiveQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Weight",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1174,
+      "name": "FearGuiltAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Judgment",
+          "type": "ref:1173",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Adverse",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1175,
+      "name": "FearGuiltUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1174",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1171",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1171",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1176,
+      "name": "FearGuiltStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1177,
+      "name": "FearGuiltContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Incident",
+          "type": "id:1002",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV20.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV27.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -63,9 +63,9 @@ const familyStatuses=[
  [P,B,Q,Q,Q,Q,Q,Q,P,P], [P,Q,Q,P,Q,P,Q,Q,Q],
  [Q,Q,P,B,Q,P,B,P], [Q,Q,Q,Q,B,B,B,Q,Q],
  [Q,Q,Q,Q,B,B,P,B], [Q,Q,Q,Q,Q,Q,Q,Q],
- [P,Q,B,B,B,B,P,B,B,B,B], [B,B,B,P,B,B,Q,B],
+ [P,Q,B,B,B,B,P,B,B,B,B], [Q,Q,Q,Q,Q,Q,Q,Q],
  [B,B,B,B,P,P,B,B,B,Q], [P,P,B,P,Q,B,B,P],
- [Q,Q,Q,Q,B,B,B,Q,Q], [Q,Q,Q,Q,P,Q,Q,Q],
+ [Q,Q,Q,Q,Q,Q,Q,Q,Q], [Q,Q,Q,Q,P,Q,Q,Q],
  [B,P,Q,Q,Q,P,Q,P,Q,Q,P,Q]
 ];
 const familySources=[['BODY','ADAPT'],['BODY','MULTI'],['MEM','SEM','ATTN','LONG'],['LEARN','BELIEF','AFFECT'],['AFFECT','ATTN'],['WORK','HABIT'],['WORK','COMMIT'],['SKILL','LONG'],['HABIT','ADAPT'],['SOCIAL'],['REL'],['BIO','LONG'],['SOCIAL'],['DECISION','SKILL','SOCIAL'],['LONG']];
@@ -79,10 +79,10 @@ const familyLimits=[
  'VER-C3-GOAL-001 qualifies separately owned adopted goal and mutable strategy: switching, no-route gap, resumption and actual route-B completion. Perceived fulfillment follows admitted evidence even when false or externally caused. Prior retention/cue scope stands. Procrastination, delay valuation, general forgetting and competing temporal goals remain unqualified.',
  'SKILL qualifies performance belief/competence/impairment/practice; LONG adds event-sampled rust and execution after episode loss. These are bounded instances, not latent competence inference or automaticity laws.',
  'HABIT is availability under a neutral alternative. No joint dependence, substitute, craving, withdrawal, relapse or deliberate inhibition witness; ADAPT alone is not an addiction phenomenon.',
- 'Two observers of one commitment are qualified. No general disposition/current-intent dissociation, second-order belief, fear-as-guilt or trust/hearsay inference.',
+ 'Two observers of one commitment are qualified. VER-C3-ATTRIBUTED-001 adds mistaken target-belief attribution and bounded second-order belief consumed by actual explanation choice, preserving own versus target actual versus attributed belief. Latest/majority report competitors and hidden-target whole-view controls remain explicit. VER-C3-PERSONSTATE-001 adds mixed conduct impression and mistaken current-intent inference under a stable default-policy control. Corrected consequence appraisal130 follows actual intent70; goal-relative SplitExposure affect is derived before conduct learning140. General personality, calibrated confidence, natural recognition, recursive mentalizing, downstream observer action and learned trust remain unqualified. VER-C3-FEAR-GUILT-001 adds controlled innocent nervousness, context-relative mistaken attribution and later revision, with independent observer goals, whole later-view privacy and a truth Oracle. Candidate weights do not qualify calibration, causal discovery, guilt emotion or moral identity. VER-C3-PERSON-GOAL-001 adds adopted desired state versus ordinary strategy, visible failed attempts, ambiguity, mistaken route classification and later goal-inference correction; no calibrated inverse planning, learned affordances or downstream observer action. VER-C3-HEARSAY-001 adds named testimony/direct perception, sincere mistake, visible report-ticket deduplication and later correction. Direct evidence remains fallible; no learned trust, hidden-source correlation, global reputation or new chosen speech policy.',
  'REL qualifies history specificity and a controlled rupture. No multidimensional affection/respect/comfort dissociation, grief, causal blame correction or reliance learning.',
  'Bounded acquired feedback, resistance to one contrary contribution and sustained reversal are qualified. Identity belief is not the standing fold. Cross-context generality, coercion exclusion, observer-specific self-concept, general reversal/recovery and dispositional adaptation remain incomplete.',
- 'VER-C3-COMM-001 adds actual disclosure/concealment choice through inherited reasons/dice, independent delivery and recipient-owned learning. VER-C3-LYING-001 adds belief-relative deliberately contrary assertion and failed lying, including accidentally true lies, absent receipt and resistant prior history. Emotional leakage, private distress communication, listener mentalizing, trust and linguistic misunderstanding remain unqualified.',
+ 'VER-C3-COMM-001 adds actual disclosure/concealment choice through inherited reasons/dice, independent delivery and recipient-owned learning. VER-C3-LYING-001 adds belief-relative deliberately contrary assertion and failed lying, including accidentally true lies, absent receipt and resistant prior history. VER-C3-DISPLAY-001 adds private distress with chosen reassurance and independent accidental emotional leakage, preserving SplitExposure coordinates and separate assertion/cue recipient estimates. VER-C3-INTERPRET-001 adds misunderstood explanation under two fixed conventions: intended meaning, received glyph/context, interpreted meaning and belief remain separate. All nine communication clauses have bounded witnesses across separate profiles, not a joint integration qualification. Physiological or learned display, inhibition, listener mentalizing, trust/fusion and general language/pragmatics remain unqualified.',
  'Actual frozen intent, governed external obstruction, selective witnessing and later fallible report-based obstruction attribution now execute together under corrected VER-C3-AGENCY-001/agency-public0.3; prior cohorts missed later nonrecipient occurrence leakage and exact intent phase admission. Cross-episode expectation learning, efficacy, blame and coercion remain unqualified.',
  'LONG composes biography, skill and relationship acquisition, fixed retention/interference and relearning. It does not jointly qualify all twelve long-run ingredients or lifelong individuality.'
 ];
@@ -104,12 +104,25 @@ for (const clause of families[2].clauses) { clause.evidence.push(p+'CAMPAIGN3_RE
 for (const clause of families[2].clauses) clause.evidence.push(p+'CAMPAIGN3_FAMILIARITY_QUALIFICATION.md');
 for (const clause of families[12].clauses) { clause.evidence.push(p+'CAMPAIGN3_COMMUNICATION_QUALIFICATION.md'); clause.obligations.push(ro(20)); }
 for (const clause of families[12].clauses) clause.evidence.push(p+'CAMPAIGN3_LYING_QUALIFICATION.md');
+for (const clause of families[12].clauses) { clause.evidence.push(p+'CAMPAIGN3_EMOTIONAL_DISPLAY_QUALIFICATION.md'); clause.obligations.push(ro(11)); }
+for (const clause of families[12].clauses) clause.evidence.push(p+'CAMPAIGN3_INTERPRETATION_QUALIFICATION.md');
+for (const clause of families[9].clauses) { clause.evidence.push(p+'CAMPAIGN3_ATTRIBUTED_QUALIFICATION.md'); clause.obligations.push(ro(20)); }
+for (const clause of families[9].clauses) { clause.evidence.push(p+'CAMPAIGN3_PERSONSTATE_QUALIFICATION.md'); clause.obligations.push(ro(11)); }
+for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md');
+for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md');
+for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_HEARSAY_QUALIFICATION.md');
 const reportNames=fs.readdirSync(path.join(root,p)).filter(n=>/^(CAMPAIGN3_|GENERAL_ATTENTION_|GA_).*QUALIFICATION.*\.md$/.test(n));
 const supplemental=[
+ 'RELATIONSHIP_DIMENSIONS_READINESS.md','HEARSAY_IMPLEMENTATION_FINDINGS.md',
+ 'REPUTATION_HEARSAY_READINESS.md','PERSON_GOAL_IMPLEMENTATION_FINDINGS.md',
+ 'PERSON_GOAL_INFERENCE_READINESS.md','FEAR_GUILT_DEVELOPMENT_FINDINGS.md',
+ 'FEAR_GUILT_ATTRIBUTION_READINESS.md','PERSONSTATE_DEVELOPMENT_FINDINGS.md',
+ 'PERSON_STATE_DISSOCIATION_READINESS.md','ATTRIBUTED_DEVELOPMENT_FINDINGS.md',
+ 'ATTRIBUTED_KNOWLEDGE_READINESS.md',
  'CAMPAIGN3_FINAL_HISTORY_GATE.md','LEARN_IMPLEMENTATION_FINDINGS.md','LEARN_READINESS.md','EPI_IMPLEMENTATION_FINDINGS.md','EPI_READINESS.md','REASON_IMPLEMENTATION_FINDINGS.md','REASON_READINESS.md','DECISION_IMPLEMENTATION_FINDINGS.md','DECISION_COMPONENT_CHECKPOINT.md','COMMIT_IMPLEMENTATION_FINDINGS.md','BODY_OWNERSHIP_FINDINGS.md','BIO_COMPARISON_FINDINGS.md','AGENCY_IMPLEMENTATION_FINDINGS.md','CONTROL_IMPLEMENTATION_FINDINGS.md',
  'CAMPAIGN2_COMPLETION_REVIEW.md','CAMPAIGN2_COGNITIVE_QUALIFICATION.md','CAMPAIGN2_COGNITIVE_PERSISTENCE_QUALIFICATION.md',
  'CAMPAIGN3_ENTRY_READINESS.md','CAMPAIGN3_PRE_ENTRY_REVIEW_DISPOSITION.md','REFERENCE_MECHANISM_LEDGER.md',
- 'EMOTIONAL_DISPLAY_READINESS.md','DELIBERATE_LYING_READINESS.md','AFFECT_REGULATION_READINESS.md','CAMPAIGN3_BELIEF_PLAN.md','MULTISOURCE_EXPRESSIBILITY_AUDIT_2026_09_20.md','CAMPAIGN3_AFFECT_READINESS.md',
+ 'COMMUNICATION_INTERPRETATION_READINESS.md','EMOTIONAL_DISPLAY_DEVELOPMENT_FAILURE_REV1.json','EMOTIONAL_DISPLAY_READINESS.md','DELIBERATE_LYING_READINESS.md','AFFECT_REGULATION_READINESS.md','CAMPAIGN3_BELIEF_PLAN.md','MULTISOURCE_EXPRESSIBILITY_AUDIT_2026_09_20.md','CAMPAIGN3_AFFECT_READINESS.md',
  'WORK_DISTRACTOR_DESIGN_FINDING.md','SKILL_IMPLEMENTATION_FINDINGS.md','SOCIAL_IMPLEMENTATION_FINDINGS.md','HABIT_IMPLEMENTATION_FINDINGS.md','RELATIONSHIP_IMPLEMENTATION_FINDINGS.md','LONGITUDINAL_IMPLEMENTATION_FINDINGS.md',
  'MULTISOURCE_CONSTRUCTION_FINDING_REV1.json','MULTISOURCE_CODEC_BOUNDARY_FINDING_REV1.json',
  'GENERAL_ATTENTION_ASSOCIATION_RETENTION_DECISION.md','GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_DECISION.md','GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_RESOLUTION.md','GENERAL_ATTENTION_GRAPH_ORPHAN_DECISION.md','GENERAL_ATTENTION_GRAPH_ORPHAN_RESOLUTION.md',
@@ -126,10 +139,10 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=20;
+result.snapshotRevision=27;
 result.date='2026-09-24';
-result.counters.highestAllocatedRecordType=1097;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV19.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV19.json'),disposition:'Adds only bounded deliberate/failed lying for Brief12.13 clauses3/4:8 models,30 runs,143 prefixes. Speaker belief and purpose determine intended assertion; execution, receipt and recipient belief remain distinct. Private distress, emotional leakage, listener mentalizing and general communication remain unqualified. Complete132-clause denominator retained.'};
+result.counters.highestAllocatedRecordType=1206;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV26.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV26.json'),disposition:'Adds only bounded hearsay/direct observation for Brief12.10 clause8:5 models,23 runs,138 prefixes. Named testimony, direct perception and source belief remain distinct; visible-ticket deduplication is not hidden-correlation discovery. All8 social clauses now have separate bounded witnesses, not joint integration. Complete132-clause denominator retained.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n');

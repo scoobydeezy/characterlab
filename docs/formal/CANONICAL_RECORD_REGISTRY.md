@@ -366,3 +366,43 @@ implementation. Counters1082/15 before verdict; existing records/namespaces unch
 Accepted lying-public/0.1-candidate before implementation. Records1083..1097/schema1,
 namespace1169. Exact layouts: LYING_PUBLIC_ALLOCATION_TABLE.json. Counters1097/15
 before verdict; existing allocations and frozen communication cohort unchanged.
+
+## Emotional display — 2026-09-24
+Accepted emotional-display-public/0.1-candidate before implementation. Records1098..1113/schema1,
+namespace1170. Exact EMOTIONAL_DISPLAY_PUBLIC_ALLOCATION_TABLE.json. Counters1113/16
+before verdict; no prior allocation or frozen cohort changes.
+
+## Communication interpretation — 2026-09-24
+Accepted interpretation-public/0.1-candidate before implementation. Records1114..1130/schema1,
+namespace1171. Exact INTERPRETATION_PUBLIC_ALLOCATION_TABLE.json. Counters1130/17
+before verdict. Previous allocations and frozen cohorts are unchanged.
+
+
+### Attributed knowledge public allocation — 2026-09-24
+Accepted attributed-public/0.1-candidate allocates1131..1147/schema1 and occurrence
+namespace1172 before implementation. ATTRIBUTED_PUBLIC_ALLOCATION_TABLE.json is exact.
+Prior allocations/contracts remain frozen. At allocation: counters1147/17 pending
+qualification. VER-C3-ATTRIBUTED-001 subsequently closes this bounded profile at1147/0.
+
+
+### Person-state dissociation allocation — 2026-09-24
+Accepted personstate-public/0.1-candidate allocates1148..1164/schema1 and occurrence
+namespace1173 before implementation. PERSONSTATE_PUBLIC_ALLOCATION_TABLE.json governs.
+At allocation: counters1164/17; qualification pending. No prior allocation changed.
+
+The0.1 personstate timing cohort is superseded by0.2: appraisal130 follows actual
+intent70, before learning140. Exact schema/allocation bytes are unchanged; corrected
+contract and model identities are refrozen. Preserve personstate-rev1.
+VER-C3-PERSONSTATE-001 closes the corrected bounded0.2 profile at counters1164/0.
+
+## Fear/guilt attribution public profile — 2026-09-24
+
+LOCAL DISPOSITION: records1165..1177/schema1 and occurrence namespace1174 are permanently allocated by FEAR_GUILT_PUBLIC_ALLOCATION_TABLE.json under fear-guilt-public/0.1-candidate. No prior allocation is changed. Counters1177/13 before verdict.
+
+## Person-goal inference — 2026-09-24
+
+LOCAL DISPOSITION: records1178..1194/schema1 and occurrence namespace1175 allocated by PERSON_GOAL_PUBLIC_ALLOCATION_TABLE.json under person-goal-public/0.1-candidate. Prior allocations unchanged. Counters1194/17 before verdict.
+
+## Hearsay versus direct evidence — 2026-09-24
+
+LOCAL DISPOSITION: records1195..1206/schema1 and occurrence namespace1176 allocated by HEARSAY_PUBLIC_ALLOCATION_TABLE.json under hearsay-public/0.1-candidate. Prior allocations unchanged. Counters1206/12 before verdict.

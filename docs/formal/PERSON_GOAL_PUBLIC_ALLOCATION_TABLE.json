@@ -1,0 +1,666 @@
+{
+  "version": "person-goal-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1175,
+  "records": [
+    {
+      "typeId": 1178,
+      "name": "PersonGoalProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1179,
+      "name": "PersonGoalOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "AdoptGoal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Routing",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Success",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ActionAccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "ActionAccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "OutcomeAccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "OutcomeAccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "MirrorA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "MirrorB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1180,
+      "name": "PersonGoalRoutingObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1181,
+      "name": "PersonGoalPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "list": "ref:1191",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Route",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1182,
+      "name": "PersonGoalExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1190",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Success",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Destination",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1183,
+      "name": "PersonGoalObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Setting",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Route",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Destination",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1184,
+      "name": "PersonGoalKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "History",
+          "type": {
+            "list": "ref:1183",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1185,
+      "name": "PersonGoalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1184"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1186,
+      "name": "PersonGoalJudgment",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1184",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Odds",
+          "type": {
+            "list": "positiveQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Weight",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1187,
+      "name": "PersonGoalAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Judgment",
+          "type": "ref:1186",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Adverse",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1188,
+      "name": "PersonGoalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1184",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1184",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1189,
+      "name": "PersonGoalStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1190,
+      "name": "PersonGoalAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:1181",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1191,
+      "name": "PersonGoalAdoptedGoal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1175",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "AdoptedAt",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "DesiredDestination",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1192,
+      "name": "PersonGoalGoalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Goal",
+          "type": "ref:1191",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1193,
+      "name": "PersonGoalContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Setting",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Catalogue",
+          "type": {
+            "list": "ref:1194",
+            "min": 5,
+            "max": 5
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1194,
+      "name": "PersonGoalRouteDefinition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Route",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Destinations",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 1,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const p='docs/planning/',read=path=>JSON.parse(fs.readFileSync(path)),sha=path=>createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+const planPath=p+'PERSONSTATE_PUBLIC_PLAN_REV2.json',resultPath=p+'PERSONSTATE_PUBLIC_RESULT_REV2.json';
+const plan=read(planPath),result=read(resultPath),tests=read(p+'PERSONSTATE_TESTS_REV3.json'),reference=read(p+'PERSONSTATE_REFERENCE_TESTS_REV1.json');
+assert.equal(result.status,'PASS');assert.equal(result.planSha256,sha(planPath));
+assert.equal(result.models,8);assert.equal(result.runs,28);assert.equal(result.restores,168);assert.equal(result.advancing,140);assert.equal(result.terminal,28);
+assert.equal(plan.runs.length,28);assert.equal(new Set(plan.runs.map(r=>r.modelIdentity)).size,8);
+assert.equal(new Set(plan.runs.map(r=>r.runIdentity)).size,28);
+assert(plan.experimentIdentity.length>0&&plan.comparisonCase.length>0);
+assert.equal(result.restores,result.results.reduce((n,r)=>n+r.prefixes,0));
+assert.equal(result.terminal,result.runs);assert.equal(result.advancing,result.restores-result.runs);
+for(const [i,row] of result.results.entries()) {
+  assert.equal(row.runIdentity,plan.runs[i].runIdentity);assert.equal(row.modelIdentity,plan.runs[i].modelIdentity);assert.equal(row.orderedInputs,plan.runs[i].orderedInputs);
+}
+for(const a of plan.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+assert.equal(tests.success,true);assert.equal(reference.success,true);
+assert.equal(tests.numPassedTests,35);assert.equal(tests.numFailedTests,0);
+assert.equal(reference.numPassedTests,328);assert.equal(reference.numFailedTests,0);
+assert.equal(read(p+'PERSONSTATE_BUILD_REV2.json').status,'PASS');
+const freeze=read(p+'campaign3-personstate-model-rev2/FREEZE.json');
+assert.equal(freeze.models.length,8);for(const m of freeze.models)for(const a of m.files)assert.equal(sha(a.path),a.sha256,a.path);
+assert.deepEqual(new Set(plan.runs.map(r=>r.modelIdentity)),new Set(freeze.models.map(m=>m.modelIdentity)));
+const allocation=read('docs/formal/PERSONSTATE_PUBLIC_ALLOCATION_TABLE.json');
+assert.equal(allocation.namespace,1173);assert.deepEqual(allocation.records.map(r=>r.typeId),Array.from({length:17},(_,i)=>1148+i));
+assert.equal(freeze.contractSha256,sha('docs/formal/PERSONSTATE_PUBLIC_CONTRACT.md'));assert.equal(freeze.allocationSha256,sha('docs/formal/PERSONSTATE_PUBLIC_ALLOCATION_TABLE.json'));
+const workers=Array.from({length:4},(_,i)=>p+'personstate-public-workers-rev2/'+i+'.json');
+const workerRows=workers.flatMap(path=>{const w=read(path);assert.equal(w.planSha256,sha(planPath));return w.results;});assert.equal(workerRows.length,28);for(const row of result.results)assert.deepEqual(workerRows.find(r=>r.runIdentity===row.runIdentity),row);
+let workerPrefixes=0,workerAdvancing=0;const viewKeys=new Set();
+for(const file of workers){const w=read(file);workerPrefixes+=w.restores;workerAdvancing+=w.advancing;
+ for(const [key,v] of w.views){assert(!viewKeys.has(key));viewKeys.add(key);const row=w.results.find(r=>r.law+'/'+r.pressure+'/'+r.goal+'/'+r.name===key);assert(row);
+  const hashHex=h=>createHash('sha256').update(Buffer.from(h,'hex')).digest('hex');assert.equal(hashHex(v.outputs),row.outputSha256);assert.deepEqual(v.observerViews.map(hashHex),row.observerSha256);
+ }}
+assert.equal(viewKeys.size,28);assert.equal(workerPrefixes,result.restores);assert.equal(workerAdvancing,result.advancing);
+const preservationPath=p+'PERSONSTATE_PRESERVATION_REV1.json';
+for(const a of read(preservationPath).artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+const files=[preservationPath,p+'PERSONSTATE_DEVELOPMENT_FINDINGS.md',...workers,planPath,resultPath,p+'PERSONSTATE_TESTS_REV3.json',p+'PERSONSTATE_REFERENCE_TESTS_REV1.json',p+'PERSONSTATE_BUILD_REV2.json',p+'CAMPAIGN3_PERSONSTATE_QUALIFICATION.md','scripts/check-personstate-closure.mjs','docs/formal/PERSONSTATE_PUBLIC_CONTRACT.md'];
+const closure={status:'PASS',contract:'personstate-public/0.2-candidate',newModels:8,models:8,runs:28,prefixes:168,advancing:140,terminal:28,tests:35,referenceTests:328,artifacts:files.map(path=>({path,sha256:sha(path)}))};
+const path=p+'PERSONSTATE_CLOSURE_REV1.json';
+if(process.argv.includes('--write'))fs.writeFileSync(path,JSON.stringify(closure,null,2)+'\n',{flag:'wx'});
+assert.deepEqual(read(path),closure,'PersonState closure evidence drift');
+console.log('PASS personstate:8 models/28 runs/168 prefixes;35+328 tests; counters1164/0.');

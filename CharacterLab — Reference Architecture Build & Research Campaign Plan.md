@@ -377,10 +377,89 @@ All15 families/132 clauses remain (63 bounded,29 partial,40 blocked).019 ACTIVE;
 021 historical reconciliation remains mandatory.
 
 
-### Current Campaign3 frontier — 2026-09-24
+### Preserved Campaign3 frontier — 2026-09-24
 VER-C3-LYING-001 qualifies belief-relative lying/failed lying under lying-public/0.1-candidate.
 See CAMPAIGN3_LYING_QUALIFICATION.md:8 models/30 runs/143 prefixes;31 new/328 reference tests.
 Counters1097/0; AuditREV20 adds bounded Brief12.13 clauses3/4 (65 bounded/28 partial/39 blocked).
 A lie can accidentally match truth; receipt need not achieve its target belief. No general
 language, listener mentalizing or moral identity claim;014/020 conditional,019 active.
 Next EMOTIONAL_DISPLAY_READINESS.md. Campaign3 remains NOT EXIT-READY.
+
+
+### Preserved Campaign3 frontier — 2026-09-24
+VER-C3-DISPLAY-001 qualifies private distress/reassurance and accidental leakage under
+emotional-display-public/0.1-candidate. See CAMPAIGN3_EMOTIONAL_DISPLAY_QUALIFICATION.md:
+10 models/32 runs/160 prefixes;32 new/328 reference tests. Counters1113/0.
+AuditREV21 adds only Brief12.13 clauses5/6 (67 bounded/28 partial/37 blocked).
+Private affect, chosen assertion, produced cue and recipient belief remain separate.
+Preserve the confounded calm fixture and development helper/timeout receipts.
+Next COMMUNICATION_INTERPRETATION_READINESS.md.011/014/020 conditional,019 active;
+none closes. No physiology, learned inhibition, trust/fusion or language interpretation
+claim. Campaign3 remains NOT EXIT-READY; historical reconciliation021 is mandatory.
+
+
+### Preserved Campaign3 frontier — 2026-09-24
+VER-C3-INTERPRET-001 qualifies misunderstood explanation under interpretation-public/0.1-candidate.
+See CAMPAIGN3_INTERPRETATION_QUALIFICATION.md:8 models/29 runs/116 prefixes;
+33 new/328 reference tests; production build passed. Counters1130/0.
+AuditREV22 adds only Brief12.13 clause7 (68 bounded/28 partial/36 blocked).
+Intended assertion, glyph, perceived context, interpreted meaning and recipient belief
+remain distinct. Fixed conventions are channel controls, not learned vocabulary.
+All nine communication clauses have bounded witnesses across separate profiles,
+not a joint universal qualification.014/020 conditional,019 active; none closes.
+Next ATTRIBUTED_KNOWLEDGE_READINESS.md. Campaign3 remains NOT EXIT-READY;
+historical reconciliation021 remains unsatisfied and mandatory.
+
+
+### Preserved Campaign3 frontier — 2026-09-24
+VER-C3-ATTRIBUTED-001 qualifies mistaken target-belief attribution with an actual
+communication consumer under attributed-public/0.1-candidate.
+See CAMPAIGN3_ATTRIBUTED_QUALIFICATION.md:6 models/30 runs/120 prefixes;
+34 new/328 reference tests; production build passed. Counters1147/0.
+AuditREV23 adds only Brief12.10 clauses5/6 (70 bounded/28 partial/34 blocked).
+Own belief, target actual belief and observer-attributed belief remain distinct.
+Successful delivery does not automatically inform the speaker that B learned.
+LatestReport/MajorityReport remain competitors; NoPersonModel and PrivateStateOracle
+expose distinct inference/epistemic boundaries. Preserve construction failures and
+the strengthened fixed-target comparison.014/020 conditional,019 active; none closes.
+Next PERSON_STATE_DISSOCIATION_READINESS.md. Campaign3 remains NOT EXIT-READY;
+historical reconciliation021 remains unsatisfied and mandatory.
+
+
+### Current Campaign3 frontier — 2026-09-24
+VER-C3-PERSONSTATE-001 qualifies learned conduct impression versus mistaken current
+intent inference under corrected personstate-public/0.2-candidate.
+See CAMPAIGN3_PERSONSTATE_QUALIFICATION.md:8 models/28 runs/168 prefixes;
+35 new/328 reference tests; production build passed. Counters1164/0.
+AuditREV24 adds only Brief12.10 clauses1/2 (72 bounded/28 partial/32 blocked).
+The impression can agree with cooperative default while current intention is misread.
+Default policy remains a research control, not earned personality. Observer appraisal
+and derived affect consume current estimate/goal; no downstream observer action claim.
+Preserve the superseded0.1 appraisal50-before-intent70 cohort and terminal-only
+privacy fixture. Corrected appraisal130 and the common fifth observation close those
+bounded proof gaps. Split/Pooled/HistoryOnly/CueOnly/PrivateGoalOracle remain distinct.
+011/014/020 conditional,019 active; none closes. Next FEAR_GUILT_ATTRIBUTION_READINESS.md.
+Campaign3 remains NOT EXIT-READY; historical reconciliation021 remains mandatory.
+
+## Preserved frontier — fear/guilt closure, 2026-09-24
+
+VER-C3-FEAR-GUILT-001: bounded fear/guilt attribution COMPLETE,5 models/19 runs/95
+prefixes;21+328 tests and build passed. See CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md.
+Next PERSON_GOAL_INFERENCE_READINESS.md under existing escalation policy.
+Counters1177/0; auditREV25 has73 bounded/28 partial/31 blocked Brief clauses.
+Campaign3 NOT EXIT-READY; RO019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier — person-goal closure, 2026-09-24
+
+VER-C3-PERSON-GOAL-001 COMPLETE:5 models/21 runs/126 prefixes;24+328 tests/build.
+See CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md. Next REPUTATION_HEARSAY_READINESS.md
+under existing escalation policy. Counters1194/0; auditREV26 has74 bounded/27 partial/
+31 blocked Brief clauses. Campaign3 NOT EXIT-READY;019 active and021 unsatisfied.
+
+## Current frontier — hearsay closure, 2026-09-24
+
+VER-C3-HEARSAY-001 COMPLETE:5 models/23 runs/138 prefixes;23+328 tests/build.
+See CAMPAIGN3_HEARSAY_QUALIFICATION.md. Next RELATIONSHIP_DIMENSIONS_READINESS.md
+under existing escalation policy. Counters1206/0; auditREV27 has75 bounded/27 partial/
+30 blocked Brief clauses. All8 social clauses have separate bounded witnesses, not
+a joint integration. Campaign3 NOT EXIT-READY;019 active and021 unsatisfied.

@@ -1,0 +1,561 @@
+{
+  "version": "hearsay-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1176,
+  "records": [
+    {
+      "typeId": 1195,
+      "name": "HearsayProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1196,
+      "name": "HearsayOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ConductTruth",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "DirectDisplay",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "PrivateDisplay",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "PrivateAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Delivery",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Ticket",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ReportAccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ReportAccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "DirectAccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "DirectAccessB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1197,
+      "name": "HearsayPrivateObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Value",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1198,
+      "name": "HearsayReport",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Source",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Ticket",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Assertion",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1199,
+      "name": "HearsayObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Proposition",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Channel",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Source",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Ticket",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Value",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1200,
+      "name": "HearsayKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "History",
+          "type": {
+            "list": {
+              "oneOf": [
+                "ref:1197",
+                "ref:1199"
+              ]
+            },
+            "min": 0,
+            "max": 16
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1201,
+      "name": "HearsayState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "map": [
+              "id:1000",
+              "ref:1200"
+            ],
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1202,
+      "name": "HearsayJudgment",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1200",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Direct",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Hearsay",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Estimate",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1203,
+      "name": "HearsayAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Judgment",
+          "type": "ref:1202",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Adverse",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1204,
+      "name": "HearsayUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1176",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1200",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1200",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1205,
+      "name": "HearsayStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1206,
+      "name": "HearsayContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Speaker",
+          "type": "id:1000",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -2,41 +2,30 @@
 
 **Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Bounded deliberate/failed lying COMPLETE: VER-C3-LYING-001.**
-Start at [qualification](CAMPAIGN3_LYING_QUALIFICATION.md) and
-[next emotional display intake](EMOTIONAL_DISPLAY_READINESS.md).
-LOCAL DISPOSITION; no architectural owner ruling. Campaign3 remains NOT EXIT-READY.
+**Bounded hearsay/direct evidence COMPLETE — VER-C3-HEARSAY-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **1097** |
-| Allocated since last verdict/corpus member | **0** (15 this increment) |
+| Highest permanently allocated record type | **1206** |
+| Allocated since last verdict/corpus member | **0** |
 | Research obligations | **1 active / 19 conditional / 0 unowned** |
 | Closed obligations | **1: RO-C3-018** |
-| Corpus / named verdict entries | **0.29.0 — 21 members / 40 verdicts** |
-| Corpus coverage dispositions | **18 bounded / 3 accepted prior / 0 partial / 0 blocked** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 47 verdicts** |
 | Brief clauses / families | **132 / 15** |
-| Brief clause dispositions | **65 bounded / 28 partial / 39 blocked** |
-| Public evidence | **8 models / 30 runs / 143 prefixes** (113 advancing/30 terminal) |
-| Validation | **31 new + 328 reference tests; production build passed** |
+| Brief clause dispositions | **75 bounded / 27 partial / 30 blocked** |
+| New public qualification | **5 models / 23 runs / 138 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
 
-Acquired private belief and actual informing/misdirection choice construct a frozen
-intended assertion before execution. A deliberate lie can accidentally match truth.
-Failed execution and denied receipt preserve intent without fabricating evidence.
-Received lies need not achieve their intended belief: prior history and NoLearning
-provide distinct controls. Unknown belief cannot manufacture an assertion.
+Start at CAMPAIGN3_HEARSAY_QUALIFICATION.md and HEARSAY_CLOSURE_REV1.json.
+Target conduct, speaker evidence/belief/report, direct perception, named testimony
+and observer estimate remain distinct. DirectPriority/LatestEvidence/NoLearning/
+TruthOracle remain candidates. Visible ticket duplicates do not add testimony; direct
+perception can still be wrong. Preserve HEARSAY_IMPLEMENTATION_FINDINGS.md.
+No learned trust, independent corroboration, new chosen speech or global reputation.
+All8 Brief12.10 clauses have separate bounded witnesses, not joint integration.
 
-EvidenceMean/LastReceipt remain alternatives. TruthDefinedContent, IntentAsDelivery
-and PrivateCopy fail their named boundaries. Complete later safe views preserve hidden
-truth and nonrecipient invariance, including contested addressed draws and exact replay.
-Prior disclosure/concealment and other frozen closures remain intact.
-
-**Next: private distress and emotional display**, under EMOTIONAL_DISPLAY_READINESS.md.
-Accept the private affect/appraisal/display/recipient contract before implementation.
-DecisionExpression records choice meaning; it is not a facial or vocal display.
-No general language, trust, listener mentalizing or moral identity claim.
-
-AuditREV20 adds only bounded Brief12.13 clauses3/4. RO-C3-019 stays ACTIVE;014/020
-preserve wider scope. No obligation closes or distinction is retired. Prior closures
-stand;021 historical reconciliation remains mandatory before exit.
-Corpus digest: 5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d.
+Next: RELATIONSHIP_DIMENSIONS_READINESS.md, Stage A for Brief12.11 clauses1/2/3.
+Affection without respect, respect without affection, trust without comfort.
+014/016/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
