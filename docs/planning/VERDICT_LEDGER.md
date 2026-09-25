@@ -2177,3 +2177,121 @@ Oracle violates the boundary. No chosen speech, learned trust, independent corro
 or global reputation claim. CAMPAIGN3_HEARSAY_QUALIFICATION.md, HEARSAY_CLOSURE_REV1.json
 and HEARSAY_IMPLEMENTATION_FINDINGS.md preserve evidence/limits. RO-C3-014/019/020;
 none closes. Counters1206/0.
+
+## VER-C3-REL-DIMENSIONS-001 — bounded relationship dimensions, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under rel-dimensions-public/0.1-candidate.
+6 models/23 runs/161 exact prefixes (138 advancing/23 terminal);23 new+328 reference
+tests and build passed. RETAIN dyadic history, person evidence, current context and
+derived relational appraisals. Assistance/competence/commitment/threat sources yield
+affection without respect, respect without affection, and trust without comfort.
+Selective interventions selectively change inherited reason/dice response distributions
+(7/9 versus2/9 at extremes); modifier-disabled control leaves1/2. This is prospective
+distribution qualification, not sampled or executed behavior. SingleScore/PersonOnly/
+NoRetention/TruthOracle retained. Whole later hidden/denied/nonrecipient privacy passes
+lawfully and fails for Oracle. Initial test assumptions and unchanged production cohort
+are preserved in REL_DIMENSIONS_PRESERVATION_REV1.json. See
+CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md and REL_DIMENSIONS_CLOSURE_REV1.json.
+RO-C3-014/016/019/020 retain broad derivation/calibration/interaction limits; none closes.
+Counters1220/0.
+
+## VER-C3-REL-ATTRIBUTION-001 - bounded relationship attribution, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under rel-attribution-public/0.1-candidate.
+6 models/25 runs/225 exact prefixes (200 advancing/25 terminal);23 new+328 reference
+tests and build passed. RETAIN experienced dyadic harm, event-linked attribution,
+current willingness and current appraisal separately. A later false explanation
+changes cause/caution and prospective contact while preserving harm and prior
+judgments; willingness-only changes affect a separate cooperation probe.
+Absent/denied/unlinked/foreign explanations do not correct the original incident.
+InitialCause/CurrentBeliefOnly/NoLearning/TruthOracle remain controls; no state
+reduction. Whole later hidden/denied/nonrecipient views pass lawfully; Oracle fails.
+No enacted behavior, verified alternative cause, calibrated blame, forgiveness or
+relationship-repair claim. CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md,
+REL_ATTRIBUTION_CLOSURE_REV1.json and REL_ATTRIBUTION_IMPLEMENTATION_FINDINGS.md
+preserve evidence and limits. RO-C3-014/016/019/020; none closes. Counters1234/0.
+
+## VER-C3-RELIANCE-001 - bounded reliance after commitment history, 2026-09-24
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED. reliance-history-experiment/0.1-candidate
+uses six unchanged rel-dimensions-public/0.1-candidate models:22 public runs,
+176 exact prefixes (154 advancing/22 terminal);7 new+328 reference tests/build.
+No new allocation, model or production law. Fulfillment then failure changes the
+reliability estimate1 to1/2 and prospective entrust probability7/9 to1/2; reverse
+order converges at equal counts. Missing opportunity is not failure; unknown is
+not known mixed evidence despite an equal distribution. Own participation and
+target keys govern history. SplitLenses separates commitment from task evidence;
+SingleScore/PersonOnly/NoRetention/TruthOracle and modifier-disabled controls remain.
+Whole later privacy passes lawfully and fails for Oracle. No enacted delegation
+or general trust/commitment/repair claim. See CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md,
+RELIANCE_HISTORY_CLOSURE_REV1.json and RELIANCE_HISTORY_IMPLEMENTATION_FINDINGS.md.
+Preserve first timeout/unexecuted plan via RELIANCE_HISTORY_PRESERVATION_REV1.json.
+RO-C3-014/016/019/020; none closes. Counters1234/0.
+
+## VER-C3-FAMILIAR-VALENCE-001 - bounded familiarity without liking, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under familiar-valence-public/0.1-candidate.
+7 models/27 runs/216 exact prefixes (189 advancing/27 terminal);23 new+328 reference
+tests/build. RETAIN appearance memory, identity channel, own outcome history and
+signed appraisal separately. Neutral, positive and adverse histories preserve
+matched familiarity while contact distributions differ1/2,7/9,2/9. Appearance
+changes preserve outcome appraisal; cross-target familiar appearance transfers
+neither identity nor interaction history. FamiliarityAsLiking loses adverse appraisal;
+ValenceOnly/NoMemory/ExactOnly/TruthValence and modifier-disabled controls remain.
+Whole later hidden/denied/nonrecipient views pass lawfully; Oracle fails.
+No instance-recognition, general liking law, enacted interaction or attachment claim.
+CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md and FAMILIAR_VALENCE_CLOSURE_REV1.json
+bind evidence. Preserve FAMILIAR_VALENCE_IMPLEMENTATION_FINDINGS.md and prior cohorts.
+RO-C3-007/016/017/019/020; none closes. Counters1249/0.
+
+## VER-C3-ATTACHMENT-001 - bounded perceived-dependence attachment, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under attachment-public/0.1-candidate.
+6 models/25 runs/200 exact prefixes (175 advancing/25 terminal);23 new+328 reference
+tests/build. RETAIN perceived meaningful-dependence history, expected relief,
+current practical demand/alternatives, target presence and missing-contact appraisal.
+Repeated history supports a prospective reconnection-information response despite
+an adequate alternative or no current demand. PositiveHistory and CurrentUtilityOnly
+lose different required distinctions; NoHistory/TruthOracle/modifier disabling remain.
+MEC-001/EXP-001 mean-learning contradiction resistance is preserved, not replaced
+by an authored attachment meter. No universal counting law, actual caregiving,
+physiological distress, grief or enacted search claim. Whole later privacy passes
+lawfully and fails for Oracle. CAMPAIGN3_ATTACHMENT_QUALIFICATION.md,
+ATTACHMENT_CLOSURE_REV1.json and ATTACHMENT_IMPLEMENTATION_FINDINGS.md bind limits.
+RO-C3-010/011/016/019/020; none closes. Counters1263/0.
+
+## VER-C3-BETRAYAL-001 - bounded betrayal versus failed commitment, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under betrayal-public/0.1-candidate.
+6 models/32 runs/288 exact prefixes (256 advancing/32 terminal);27 new+328 reference
+tests/build. RETAIN prior observer-admitted promise, experienced failure, incident
+intent/control, present willingness and current appraisal separately. Missing,
+simultaneous or late promise cannot fabricate prior commitment. Same failure with
+changed admitted intent/control changes appraisal; false explanation can mislead.
+OutcomeOnly/CurrentPersonBeliefOnly preserve journals but lose distinct contrasts;
+NoLearning/TruthOracle/modifier-disabled controls remain. Correction removes a
+prospective information-seeking modifier without repairing history or restoring
+cooperation. Whole later privacy passes lawfully, fails for Oracle. No general
+moral/blame law, natural recognition, verified explanation or enacted response.
+CAMPAIGN3_BETRAYAL_QUALIFICATION.md and BETRAYAL_CLOSURE_REV1.json bind evidence.
+BETRAYAL_IMPLEMENTATION_FINDINGS.md and preservation inventory retain first build
+failure, type-only correction and scope limits. RO010/011/014/016/019/020;
+none closes, no reduction or owner ruling. Counters1277/0.
+
+## VER-C3-GRIEF-001 - bounded grief after believed loss, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under grief-public/0.1-candidate.
+7 models/31 runs/279 exact prefixes (248 advancing/31 terminal);27 new+328 reference
+tests/build. RETAIN acquired dependence history, current absence, future-contact
+belief, practical utility and loss/reunion appraisal coordinates separately.
+Matched absence/history with temporary, uncertain or enduring-loss reports changes
+prospective keepsake/reunion-information responses. An adequate substitute does not
+erase loss; false reports/corrections remain possible under fixed truth. Missing
+report is not known uncertainty or no future contact. History and past judgments
+are immutable. TemporaryAbsenceOnly/CurrentUtilityOnly preserve journals but lose
+different comparisons; NoHistory/NoReturnInference/TruthOracle/modifier controls
+remain. Whole later privacy passes lawfully and fails for Oracle. No general grief
+law, clinical time course, physical death model or enacted mourning/search.
+CAMPAIGN3_GRIEF_QUALIFICATION.md and GRIEF_CLOSURE_REV1.json bind evidence;
+GRIEF_IMPLEMENTATION_FINDINGS.md and preservation inventory retain source limits.
+RO010/011/016/019/020; none closes. No reduction or owner ruling. Counters1291/0.

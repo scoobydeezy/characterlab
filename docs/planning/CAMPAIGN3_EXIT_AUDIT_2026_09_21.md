@@ -313,3 +313,85 @@ independent corroboration or learned trust.75 bounded/27 partial/30 blocked acro
 not joint integration. Corpus21 members remains18 bounded/3 prior. Counters1206/0.
 Prior findings preserved; historical021 unsatisfied. Next relationship dimensions
 intake. Campaign3 remains NOT EXIT-READY.
+
+## REV28 supplement — 2026-09-24
+
+VER-C3-REL-DIMENSIONS-001 upgrades only Brief12.11 clauses1/2/3 from BLOCKED to
+QUALIFIED BOUNDED:6 models/23 runs/161 prefixes;23+328 tests/build. See
+CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md and REL_DIMENSIONS_IMPLEMENTATION_FINDINGS.md.
+Four independently sourced finite appraisal proxies selectively alter inherited reason/
+dice prospective response distributions. No enacted behavior or general emotion-axis
+claim.78 bounded/27 partial/27 blocked across132 clauses/15 families; corpus21 members
+remains18 bounded/3 prior. Counters1220/0. Failed test assumptions preserved; historical
+gate021 unsatisfied. Next relationship attribution correction. Campaign3 NOT EXIT-READY.
+
+## REV29 supplement - relationship attribution, 2026-09-24
+
+VER-C3-REL-ATTRIBUTION-001 advances only Brief12.11 clause7 to bounded qualification.
+6 models/25 runs/225 exact prefixes;23+328 tests/build. New event-linked evidence
+changes current appraisal while preserving harm and frozen earlier judgments.
+Current willingness is independent; false explanation and privacy controls execute.
+No verified cause, blame, forgiveness, repair or enacted interaction qualification.
+Totals79 bounded/27 partial/26 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1234/0. Campaign3 NOT EXIT-READY.
+RO014/016/020 conditional,019 active,021 unsatisfied. Prior snapshots stay preserved.
+
+## REV30 supplement - reliance after commitment history, 2026-09-24
+
+VER-C3-RELIANCE-001 advances only Brief12.11 clause9 to bounded qualification.
+6 existing frozen models/22 runs/176 exact prefixes;7 new+328 reference tests/build.
+New observations of own commitments change target-specific prospective entrust
+through the existing reliability estimate. Unknown, mixed and adverse evidence
+remain distinct; no new model or allocation. No enacted delegation or general
+trust/commitment/repair claim. Timeout receipt and unexecuted first plan are retained.
+Totals80 bounded/27 partial/25 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1234/0. Campaign3 NOT EXIT-READY.
+RO014/016/020 conditional,019 active,021 unsatisfied. Earlier snapshots remain preserved.
+
+## REV31 supplement - familiarity without liking, 2026-09-25
+
+VER-C3-FAMILIAR-VALENCE-001 advances only Brief12.11 clause4 to bounded qualification.
+7 models/27 runs/216 exact prefixes;23+328 tests/build. Matched appearance familiarity
+coexists with neutral, positive or adverse own-outcome appraisal; changed appearance
+preserves that appraisal. Familiarity-as-liking and cross-target controls discriminate.
+No instance recognition, universal valence law, attachment or enacted interaction.
+Totals81 bounded/27 partial/24 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1249/0. Campaign3 NOT EXIT-READY.
+RO007/016/017/020 conditional,019 active,021 unsatisfied. Prior snapshots preserved.
+
+## REV32 supplement - attachment after perceived dependence, 2026-09-25
+
+VER-C3-ATTACHMENT-001 advances only Brief12.11 clause5 from PARTIAL to bounded.
+6 models/25 runs/200 exact prefixes;23+328 tests/build. Own meaningful-dependence
+history differs from matched beneficial support and current utility in a bounded
+missing-contact/prospective reconnection witness. EXP-001 learning controls retained.
+No universal attachment law, actual caregiving, physiological distress or grief.
+Totals82 bounded/26 partial/24 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1263/0. Campaign3 NOT EXIT-READY.
+RO010/011/016/020 conditional,019 active,021 unsatisfied. Prior snapshots preserved.
+
+## REV33 supplement - betrayal versus failed commitment, 2026-09-25
+
+VER-C3-BETRAYAL-001 advances only Brief12.11 clause6 from PARTIAL to bounded.
+6 models/32 runs/288 exact prefixes;27+328 tests/build. Prior admitted commitment,
+observed failure, attributed intent/control and current person estimate remain
+separate. Changed explanation or perceived constraint changes current appraisal
+without repairing history or granting forgiveness; false correction remains possible.
+OutcomeOnly/CurrentPersonBeliefOnly and whole later privacy discriminate. No general
+moral appraisal, verified intention or enacted response. Preserve type-only build fix.
+Totals83 bounded/25 partial/24 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1277/0. Campaign3 NOT EXIT-READY.
+RO010/011/014/016/020 conditional,019 active,021 unsatisfied. Prior snapshots preserved.
+
+## REV34 supplement - grief after believed loss, 2026-09-25
+
+VER-C3-GRIEF-001 advances only Brief12.11 clause8 from BLOCKED to bounded.
+7 models/31 runs/279 exact prefixes;27+328 tests/build. Acquired history, current
+absence, fallible future-contact belief, loss/reunion orientation and practical
+utility remain separate. False report/correction and serious absence-only/utility-
+only controls discriminate. Prospective responses only; no universal grief law,
+clinical dynamics, actual mourning or joint relationship-family integration.
+Totals84 bounded/25 partial/23 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. All ten relationship clauses have separate bounded
+witnesses. Counters1291/0; Campaign3 NOT EXIT-READY. RO010/011/016/020 conditional,
+019 active,021 unsatisfied. Prior snapshots preserved; next performance monitoring.

@@ -1,0 +1,13 @@
+import {canonicalEncode as enc,list,set,signed,unsigned as u,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {relAttributionRecord as r} from '../campaign3/relAttributionCodecs';
+export const initialState=enc(set([])),seed=new Uint8Array(32).fill(13);
+export type Row={target:number;episode:number;worldCause:boolean;worldHarm:boolean;worldWill:boolean;harmOpportunity:boolean;harm:boolean;causeOpportunity:boolean;cause:boolean;willOpportunity:boolean;will:boolean;link:boolean;partA:boolean;partB:boolean;accessA:boolean;accessB:boolean;cueA:boolean;cueB:boolean};
+const row=(x:Partial<Row>={}):Row=>({target:1,episode:1,worldCause:true,worldHarm:true,worldWill:true,harmOpportunity:true,harm:true,causeOpportunity:true,cause:true,willOpportunity:true,will:true,link:true,partA:true,partB:true,accessA:true,accessB:true,cueA:true,cueB:true,...x});
+export function cases(){
+ const probe=()=>row({harmOpportunity:false,causeOpportunity:false,willOpportunity:false,accessA:false,accessB:false});
+ const main=[row(),probe(),row({harmOpportunity:false,cause:false}),probe(),row({target:2,episode:2}),row({harmOpportunity:false,causeOpportunity:false}),row({...probe(),episode:2}),probe()];
+ const change=(fn:(r:Row,i:number)=>Row)=>main.map((r,i)=>fn({...r},i)),third=(x:Partial<Row>)=>change((r,i)=>i===2?{...r,...x}:r);
+ return {main,noExplanation:third({causeOpportunity:false}),deniedExplanation:third({accessA:false,accessB:false}),missingLink:third({link:false}),foreignEpisode:third({episode:2}),foreignTarget:third({target:2}),willOnly:third({causeOpportunity:false,will:false}),correctionWillFalse:third({will:false}),hiddenWorld:change(r=>({...r,worldCause:false,worldHarm:false,worldWill:false})),denied:change((r,i)=>i===1?{...r,harmOpportunity:true,harm:false,causeOpportunity:true,cause:false,willOpportunity:true,will:false}:r),noA:change(r=>({...r,accessA:false,cueA:false})),noB:change(r=>({...r,accessB:false,cueB:false})),witnessA:change(r=>({...r,partA:false})),unknownCause:change(r=>({...r,causeOpportunity:false})),unknownHarm:change(r=>({...r,harmOpportunity:false})),missingCue:change(r=>({...r,cueA:false})),unknown:change(r=>({...r,accessA:false,accessB:false,cueA:false,cueB:false}))};
+}
+export const ordered=(rows:Row[])=>enc(list(rows.map((x,i)=>r(1222,[signed(i+1),u(x.target),u(x.episode),x.worldCause,x.worldHarm,x.worldWill,x.harmOpportunity,x.harm,x.causeOpportunity,x.cause,x.willOpportunity,x.will,x.link,x.partA,x.partB,x.accessA,x.accessB,x.cueA,x.cueB]))));
+export const records=(xs:readonly CanonicalValue[],type:bigint)=>xs.filter(x=>typeof x!=='boolean'&&x.kind==='record'&&x.schema.typeId===type);

@@ -1,0 +1,43 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const p='docs/planning/',read=path=>JSON.parse(fs.readFileSync(path)),sha=path=>createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+const planPath=p+'BETRAYAL_PUBLIC_PLAN_REV1.json',resultPath=p+'BETRAYAL_PUBLIC_RESULT_REV1.json';
+const plan=read(planPath),result=read(resultPath),tests=read(p+'BETRAYAL_TESTS_REV1.json'),reference=read(p+'BETRAYAL_REFERENCE_TESTS_REV1.json');
+assert.equal(result.status,'PASS');assert.equal(result.planSha256,sha(planPath));
+assert.equal(result.models,6);assert.equal(result.runs,32);assert.equal(result.restores,288);assert.equal(result.advancing,256);assert.equal(result.terminal,32);
+assert.equal(plan.runs.length,32);assert.equal(new Set(plan.runs.map(r=>r.modelIdentity)).size,6);
+assert.equal(new Set(plan.runs.map(r=>r.runIdentity)).size,32);
+assert(plan.experimentIdentity.length>0&&plan.comparisonCase.length>0);
+assert.equal(result.restores,result.results.reduce((n,r)=>n+r.prefixes,0));
+assert.equal(result.terminal,result.runs);assert.equal(result.advancing,result.restores-result.runs);
+for(const [i,row] of result.results.entries()) {
+  assert.equal(row.runIdentity,plan.runs[i].runIdentity);assert.equal(row.modelIdentity,plan.runs[i].modelIdentity);assert.equal(row.orderedInputs,plan.runs[i].orderedInputs);
+}
+for(const a of plan.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+assert.equal(tests.success,true);assert.equal(reference.success,true);
+assert.equal(tests.numPassedTests,24);assert.equal(tests.numFailedTests,0);
+const supplement=read(p+'BETRAYAL_OUTCOME_ROLLBACK_TESTS_REV1.json');assert.equal(supplement.success,true);assert.equal(supplement.numPassedTests,3);assert.equal(supplement.numFailedTests,0);
+assert.equal(reference.numPassedTests,328);assert.equal(reference.numFailedTests,0);
+const build=read(p+'BETRAYAL_BUILD_REV3.json');assert.equal(build.status,'PASS');for(const a of build.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+const freeze=read(p+'campaign3-betrayal-model-rev1/FREEZE.json');
+assert.equal(freeze.models.length,6);for(const m of freeze.models)for(const a of m.files)assert.equal(sha(a.path),a.sha256,a.path);
+assert.deepEqual(new Set(plan.runs.map(r=>r.modelIdentity)),new Set(freeze.models.map(m=>m.modelIdentity)));
+const allocation=read('docs/formal/BETRAYAL_PUBLIC_ALLOCATION_TABLE.json');
+assert.equal(allocation.namespace,1181);assert.deepEqual(allocation.records.map(r=>r.typeId),Array.from({length:14},(_,i)=>1264+i));
+assert.equal(freeze.contractSha256,sha('docs/formal/BETRAYAL_PUBLIC_CONTRACT.md'));assert.equal(freeze.allocationSha256,sha('docs/formal/BETRAYAL_PUBLIC_ALLOCATION_TABLE.json'));
+const workers=Array.from({length:4},(_,i)=>p+'betrayal-public-workers-rev1/'+i+'.json');
+const workerRows=workers.flatMap(path=>{const w=read(path);assert.equal(w.planSha256,sha(planPath));return w.results;});assert.equal(workerRows.length,32);for(const row of result.results)assert.deepEqual(workerRows.find(r=>r.runIdentity===row.runIdentity),row);
+let workerPrefixes=0,workerAdvancing=0;const viewKeys=new Set();
+for(const file of workers){const w=read(file);workerPrefixes+=w.restores;workerAdvancing+=w.advancing;
+ for(const [key,v] of w.views){assert(!viewKeys.has(key));viewKeys.add(key);const row=w.results.find(r=>r.law+'/'+r.goal+'/'+r.name===key);assert(row);
+  const hashHex=h=>createHash('sha256').update(Buffer.from(h,'hex')).digest('hex');assert.equal(hashHex(v.outputs),row.outputSha256);assert.deepEqual(v.observerViews.map(hashHex),row.observerSha256);
+ }}
+assert.equal(viewKeys.size,32);assert.equal(workerPrefixes,result.restores);assert.equal(workerAdvancing,result.advancing);
+const preservationPath=p+'BETRAYAL_PRESERVATION_REV1.json';for(const a of read(preservationPath).artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+const files=[p+'BETRAYAL_OUTCOME_ROLLBACK_TESTS_REV1.json','src/test/betrayalOutcomeRollback.test.ts',preservationPath,p+'BETRAYAL_IMPLEMENTATION_FINDINGS.md',...workers,planPath,resultPath,p+'BETRAYAL_TESTS_REV1.json',p+'BETRAYAL_REFERENCE_TESTS_REV1.json',p+'BETRAYAL_BUILD_REV3.json',p+'CAMPAIGN3_BETRAYAL_QUALIFICATION.md','scripts/check-betrayal-closure.mjs','docs/formal/BETRAYAL_PUBLIC_CONTRACT.md'];
+const closure={status:'PASS',contract:'betrayal-public/0.1-candidate',newModels:6,models:6,runs:32,prefixes:288,advancing:256,terminal:32,tests:27,referenceTests:328,artifacts:files.map(path=>({path,sha256:sha(path)}))};
+const path=p+'BETRAYAL_CLOSURE_REV1.json';
+if(process.argv.includes('--write'))fs.writeFileSync(path,JSON.stringify(closure,null,2)+'\n',{flag:'wx'});
+assert.deepEqual(read(path),closure,'Betrayal closure evidence drift');
+console.log('PASS betrayal:6 models/32 runs/288 prefixes;27+328 tests; counters1277/0.');

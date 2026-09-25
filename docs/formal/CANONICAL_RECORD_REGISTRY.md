@@ -406,3 +406,37 @@ LOCAL DISPOSITION: records1178..1194/schema1 and occurrence namespace1175 alloca
 ## Hearsay versus direct evidence — 2026-09-24
 
 LOCAL DISPOSITION: records1195..1206/schema1 and occurrence namespace1176 allocated by HEARSAY_PUBLIC_ALLOCATION_TABLE.json under hearsay-public/0.1-candidate. Prior allocations unchanged. Counters1206/12 before verdict.
+
+## Relationship dimensions — 2026-09-24
+
+LOCAL DISPOSITION: records1207..1220/schema1 and occurrence namespace1177 allocated by REL_DIMENSIONS_PUBLIC_ALLOCATION_TABLE.json under rel-dimensions-public/0.1-candidate. No prior allocation changes. Counters1220/14 before verdict.
+
+## rel-attribution-public/0.1-candidate — 2026-09-24
+
+Records1221..1234/schema1 and occurrence namespace1178 permanently allocated
+by REL_ATTRIBUTION_PUBLIC_ALLOCATION_TABLE.json under REL_ATTRIBUTION_PUBLIC_CONTRACT.md.
+14 records this increment; counters1234/14 before verdict. Prior allocations unchanged.
+
+## familiar-valence-public/0.1-candidate - 2026-09-25
+
+Records1235..1249/schema1, namespace1179 permanently allocated by
+FAMILIAR_VALENCE_PUBLIC_ALLOCATION_TABLE.json under FAMILIAR_VALENCE_PUBLIC_CONTRACT.md.
+Counters1249/15 before verdict; no prior allocation changed.
+
+## attachment-public/0.1-candidate - 2026-09-25
+
+Records1250..1263/schema1, namespace1180 permanently allocated under
+ATTACHMENT_PUBLIC_CONTRACT.md and ATTACHMENT_PUBLIC_ALLOCATION_TABLE.json.
+Counters1263/14 before verdict; prior allocations unchanged.
+
+## betrayal-public/0.1-candidate - 2026-09-25
+
+Records1264..1277/schema1, namespace1181 permanently allocated under
+BETRAYAL_PUBLIC_CONTRACT.md and BETRAYAL_PUBLIC_ALLOCATION_TABLE.json.
+Counters1277/14 before verdict; prior allocations unchanged.
+
+## grief-public/0.1-candidate - 2026-09-25
+
+Records1278..1291/schema1, namespace1182 permanently allocated under
+GRIEF_PUBLIC_CONTRACT.md and GRIEF_PUBLIC_ALLOCATION_TABLE.json.
+Counters1291/14 before verdict; prior allocations unchanged.

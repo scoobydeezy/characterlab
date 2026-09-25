@@ -1,0 +1,818 @@
+{
+  "version": "grief-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1182,
+  "records": [
+    {
+      "typeId": 1278,
+      "name": "GriefProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1279,
+      "name": "GriefOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "WorldSupport",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WorldBlocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "WorldResolved",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "WorldPresent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Support",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Resolved",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "PriorDemand",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Blocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Present",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "ParticipantA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "ParticipantB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 16,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 17,
+          "name": "CueA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 18,
+          "name": "CueB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 19,
+          "name": "Alternative",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 20,
+          "name": "CurrentDemand",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 21,
+          "name": "ReturnOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 22,
+          "name": "ReturnClaim",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 23,
+          "name": "WorldReturn",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1280,
+      "name": "GriefObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1182",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Support",
+          "type": {
+            "list": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Resolved",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Blocked",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "PriorDemand",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "ReturnClaim",
+          "type": {
+            "list": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1281,
+      "name": "GriefCue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1182",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Present",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Alternative",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "CurrentDemand",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1282,
+      "name": "GriefHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1280",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1283,
+      "name": "GriefPerson",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1280",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1284,
+      "name": "GriefHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1286",
+              "ref:1282"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1285,
+      "name": "GriefPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1286",
+              "ref:1283"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1286,
+      "name": "GriefPair",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1287,
+      "name": "GriefAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1182",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "History",
+          "type": "ref:1282",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Person",
+          "type": "ref:1283",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Cue",
+          "type": "ref:1281",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Bond",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ExpectedRelief",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "LossExposure",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "ReunionOrientation",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "ReturnExpectation",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "MissingContact",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "CurrentUtility",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1288,
+      "name": "GriefProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1182",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1287",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1289,
+      "name": "GriefUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1182",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Domain",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Before",
+          "type": {
+            "oneOf": [
+              "ref:1282",
+              "ref:1283"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "type": {
+            "oneOf": [
+              "ref:1282",
+              "ref:1283"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1290,
+      "name": "GriefStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1291,
+      "name": "GriefContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Targets",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Actors",
+          "type": {
+            "list": "id:1002",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

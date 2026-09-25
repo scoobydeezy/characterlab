@@ -73,13 +73,58 @@ since the last verdict or corpus member) at every checkpoint. Past 50 on the sec
 next work item must be an experiment or a corpus promotion, not another allocation.
 
 Campaign 3 is active: start at docs/planning/CURRENT.md and
+CAMPAIGN3_GRIEF_QUALIFICATION.md. Bounded grief after believed loss COMPLETE
+(VER-C3-GRIEF-001, grief-public/0.1-candidate):7 models/31 runs/279 prefixes;
+27 new/328 reference tests and build passed. Acquired history, absence, fallible
+future-contact belief, practical utility and loss/reunion orientation remain separate.
+False corrections preserve prior judgments. Prospective responses only; no universal
+grief law or enacted mourning. All ten relationship clauses have separate bounded
+witnesses, not joint integration. Next PERFORMANCE_MONITORING_READINESS.md. Prior
+CAMPAIGN3_BETRAYAL_QUALIFICATION.md. Bounded betrayal versus failed commitment COMPLETE
+(VER-C3-BETRAYAL-001, betrayal-public/0.1-candidate):6 models/32 runs/288 prefixes;
+27 new/328 reference tests and build passed. Prior admitted promise, observed failure,
+incident intent/control and present willingness remain separate. False explanations
+can change appraisal without rewriting history or automatically restoring cooperation.
+Prospective response only; no general moral law or enacted response.
+Its then-next grief intake is qualified above. Prior
+CAMPAIGN3_ATTACHMENT_QUALIFICATION.md. Bounded perceived-dependence attachment COMPLETE
+(VER-C3-ATTACHMENT-001, attachment-public/0.1-candidate):6 models/25 runs/200 prefixes;
+23 new/328 reference tests and build passed. Own history, expected relief, current
+utility and missing-contact appraisal remain separate. EXP-001 controls preserved.
+Prospective reconnection only; no universal attachment law, enacted search or grief.
+Its then-next betrayal intake is qualified above. Prior
+CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md. Bounded familiarity without liking COMPLETE
+(VER-C3-FAMILIAR-VALENCE-001, familiar-valence-public/0.1-candidate):7 models/27 runs/
+216 prefixes;23 new/328 reference tests and build passed. Feature familiarity and
+signed own-outcome appraisal remain independent. Familiarity transfers neither
+identity nor another target history. Prospective contact only, no attachment claim.
+Its then-next attachment intake is qualified above. Prior
+CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md. Bounded reliance history COMPLETE
+(VER-C3-RELIANCE-001, reliance-history-experiment/0.1-candidate):6 reused models/
+22 runs/176 prefixes;7 new/328 reference tests and build passed. No new allocation,
+model or production law. Own commitment outcomes change prospective entrust distributions;
+unknown/mixed/negative evidence stay distinct. No enacted delegation claim.
+Its then-next familiarity/valence intake is qualified above. Prior
+CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md. Bounded relationship attribution COMPLETE
+(VER-C3-REL-ATTRIBUTION-001, rel-attribution-public/0.1-candidate):6 models/25 runs/
+225 prefixes;23 new/328 reference tests and build passed. Event-linked evidence
+revises current caution while preserving harm, historical judgment and current
+willingness. Prospective distributions only; no enacted behavior or repair claim.
+Its then-next reliance intake is qualified above. Prior
+CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md. Bounded relationship dimensions COMPLETE
+(VER-C3-REL-DIMENSIONS-001, rel-dimensions-public/0.1-candidate):6 models/23 runs/
+161 prefixes;23 new/328 reference tests. Affection/respect/trust/comfort proxies have
+independent evidence and selective inherited reason/dice response-distribution effects.
+No sampled/executed behavior claim. Preserve REL_DIMENSIONS_IMPLEMENTATION_FINDINGS.md
+and REL_DIMENSIONS_PRESERVATION_REV1.json for initial test-assumption failures.
+Its then-next attribution intake is qualified above. Prior
 CAMPAIGN3_HEARSAY_QUALIFICATION.md. Bounded hearsay/direct evidence COMPLETE
 (VER-C3-HEARSAY-001, hearsay-public/0.1-candidate):5 models/23 runs/138 prefixes;
 23 new/328 reference tests. Named testimony/direct evidence remain separate; visible
 ticket deduplication, sincere mistake and later direct revision are bounded. Preserve
 HEARSAY_IMPLEMENTATION_FINDINGS.md: direct evidence can be wrong; no learned trust,
 independent corroboration or new chosen speech policy.
-Next RELATIONSHIP_DIMENSIONS_READINESS.md. Prior
+Its then-next relationship-dimensions intake is qualified above. Prior
 CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md. Bounded person-goal inference COMPLETE
 (VER-C3-PERSON-GOAL-001, person-goal-public/0.1-candidate):5 models/21 runs/126
 prefixes;24 new/328 reference tests. Adopted goal, ordinary plan, attempted motion,
@@ -147,10 +192,10 @@ tests; no new allocation or model identity. Bounded public CONTROL COMPLETE
 (VER-C3-GOAL-001):4 models,19 runs,94 prefixes;26 affected/328 reference tests. Corrected bounded agency/interference COMPLETE
 (VER-C3-AGENCY-001, agency-public/0.3-candidate):5 models,19 public runs,71 exact
 prefix continuations (52 advancing/19 terminal),38 agency and328 reference tests.
-Counters1206/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
+Counters1291/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
 remains21 members with18 bounded/3 prior/0 partial/0 blocked member scopes; all15
-Brief families and132 clauses remain in the denominator (75 bounded/27 partial/30
-blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV27 adds bounded hearsay/direct clause8; REV26 added bounded person-goal clause4; REV25 added bounded fear/guilt clause3; REV24 added bounded disposition/current-intent clauses1/2; REV23 added bounded target-belief clauses5/6; REV22 added misunderstood explanation clause7; REV21 added bounded distress/leakage clauses5/6; REV20 added bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
+Brief families and132 clauses remain in the denominator (84 bounded/25 partial/23
+blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV34 adds bounded grief clause8; REV33 added bounded betrayal clause6; REV32 added bounded attachment clause5; REV31 added bounded familiarity-without-liking clause4; REV30 added bounded reliance-history clause9; REV29 added bounded relationship attribution clause7; REV28 added bounded relationship-dimension clauses1/2/3; REV27 added bounded hearsay/direct clause8; REV26 added bounded person-goal clause4; REV25 added bounded fear/guilt clause3; REV24 added bounded disposition/current-intent clauses1/2; REV23 added bounded target-belief clauses5/6; REV22 added misunderstood explanation clause7; REV21 added bounded distress/leakage clauses5/6; REV20 added bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
 first drafted agency coverage after correction; no owner ruling is pending.
 The first agency cohort missed later nonrecipient occurrence leakage. Preserve
 AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json.
@@ -167,8 +212,8 @@ CONTROL retains habit during inhibition and exposes it after goal retirement.
 Preserve CONTROL_IMPLEMENTATION_FINDINGS.md and its failed schema cohort.
 Report-supported event-local correction is now bounded-qualified; general causal
 discovery, alternative diagnosis and calibrated trust remain unresolved.
-Next: relationship dimensions under RELATIONSHIP_DIMENSIONS_READINESS.md,
-with exact observer-safe source, inference and consumer contracts before implementation.
+Next: performance monitoring under PERFORMANCE_MONITORING_READINESS.md; preserve
+admitted own-performance feedback, monitored discrepancy, goal and later strategy.
 Remaining memory clauses stay in the denominator. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
 snapshot, not current qualification counts. Prior BODY/BIO/COMMIT closures stand;
 RO-C3-018 is closed,008/009 broader scope conditional. RO-C3-021 final historical

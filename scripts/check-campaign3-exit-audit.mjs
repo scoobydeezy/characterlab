@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV27.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV34.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -64,7 +64,7 @@ const familyStatuses=[
  [Q,Q,P,B,Q,P,B,P], [Q,Q,Q,Q,B,B,B,Q,Q],
  [Q,Q,Q,Q,B,B,P,B], [Q,Q,Q,Q,Q,Q,Q,Q],
  [P,Q,B,B,B,B,P,B,B,B,B], [Q,Q,Q,Q,Q,Q,Q,Q],
- [B,B,B,B,P,P,B,B,B,Q], [P,P,B,P,Q,B,B,P],
+ [Q,Q,Q,Q,Q,Q,Q,Q,Q,Q], [P,P,B,P,Q,B,B,P],
  [Q,Q,Q,Q,Q,Q,Q,Q,Q], [Q,Q,Q,Q,P,Q,Q,Q],
  [B,P,Q,Q,Q,P,Q,P,Q,Q,P,Q]
 ];
@@ -80,7 +80,7 @@ const familyLimits=[
  'SKILL qualifies performance belief/competence/impairment/practice; LONG adds event-sampled rust and execution after episode loss. These are bounded instances, not latent competence inference or automaticity laws.',
  'HABIT is availability under a neutral alternative. No joint dependence, substitute, craving, withdrawal, relapse or deliberate inhibition witness; ADAPT alone is not an addiction phenomenon.',
  'Two observers of one commitment are qualified. VER-C3-ATTRIBUTED-001 adds mistaken target-belief attribution and bounded second-order belief consumed by actual explanation choice, preserving own versus target actual versus attributed belief. Latest/majority report competitors and hidden-target whole-view controls remain explicit. VER-C3-PERSONSTATE-001 adds mixed conduct impression and mistaken current-intent inference under a stable default-policy control. Corrected consequence appraisal130 follows actual intent70; goal-relative SplitExposure affect is derived before conduct learning140. General personality, calibrated confidence, natural recognition, recursive mentalizing, downstream observer action and learned trust remain unqualified. VER-C3-FEAR-GUILT-001 adds controlled innocent nervousness, context-relative mistaken attribution and later revision, with independent observer goals, whole later-view privacy and a truth Oracle. Candidate weights do not qualify calibration, causal discovery, guilt emotion or moral identity. VER-C3-PERSON-GOAL-001 adds adopted desired state versus ordinary strategy, visible failed attempts, ambiguity, mistaken route classification and later goal-inference correction; no calibrated inverse planning, learned affordances or downstream observer action. VER-C3-HEARSAY-001 adds named testimony/direct perception, sincere mistake, visible report-ticket deduplication and later correction. Direct evidence remains fallible; no learned trust, hidden-source correlation, global reputation or new chosen speech policy.',
- 'REL qualifies history specificity and a controlled rupture. No multidimensional affection/respect/comfort dissociation, grief, causal blame correction or reliance learning.',
+ 'REL qualifies history specificity and a controlled rupture. VER-C3-REL-DIMENSIONS-001 adds independent assistance/competence/commitment/threat-derived appraisal proxies for affection without respect, respect without affection and trust without comfort. Separate history/person owners and selective inherited reason/dice distribution effects are qualified; no enacted behavior, general emotion definitions, attachment, grief, causal blame correction or broader reliance learning. VER-C3-REL-ATTRIBUTION-001 adds report-supported event-local attribution correction preserving harm and past judgment; broader causation, blame, repair and enacted interaction remain unqualified. VER-C3-RELIANCE-001 qualifies prospective reliance changes after admitted own commitment outcomes using the existing mean; enacted delegation and general trust remain unqualified. VER-C3-FAMILIAR-VALENCE-001 separates feature familiarity and own-outcome valence under an independent identity channel; general recognition, affective learning and attachment remain unqualified. VER-C3-ATTACHMENT-001 adds a bounded perceived-dependence and missing-contact witness with reliable-satisfier controls retained; general attachment laws, distress and grief remain unqualified. VER-C3-BETRAYAL-001 adds prior observer-admitted promise versus observed failure versus incident intent/control, fallible later revision and an independent present-willingness consumer. No general moral law, natural intent recognition, repair or enacted response. VER-C3-GRIEF-001 adds acquired history versus current absence versus fallible future-contact belief and practical utility; temporary, uncertain and lasting-loss reports alter prospective loss/reunion responses. All ten relationship clauses have separate bounded witnesses, not a joint integration qualification. General grief dynamics, calibrated prognosis and enacted mourning remain unqualified.',
  'Bounded acquired feedback, resistance to one contrary contribution and sustained reversal are qualified. Identity belief is not the standing fold. Cross-context generality, coercion exclusion, observer-specific self-concept, general reversal/recovery and dispositional adaptation remain incomplete.',
  'VER-C3-COMM-001 adds actual disclosure/concealment choice through inherited reasons/dice, independent delivery and recipient-owned learning. VER-C3-LYING-001 adds belief-relative deliberately contrary assertion and failed lying, including accidentally true lies, absent receipt and resistant prior history. VER-C3-DISPLAY-001 adds private distress with chosen reassurance and independent accidental emotional leakage, preserving SplitExposure coordinates and separate assertion/cue recipient estimates. VER-C3-INTERPRET-001 adds misunderstood explanation under two fixed conventions: intended meaning, received glyph/context, interpreted meaning and belief remain separate. All nine communication clauses have bounded witnesses across separate profiles, not a joint integration qualification. Physiological or learned display, inhibition, listener mentalizing, trust/fusion and general language/pragmatics remain unqualified.',
  'Actual frozen intent, governed external obstruction, selective witnessing and later fallible report-based obstruction attribution now execute together under corrected VER-C3-AGENCY-001/agency-public0.3; prior cohorts missed later nonrecipient occurrence leakage and exact intent phase admission. Cross-episode expectation learning, efficacy, blame and coercion remain unqualified.',
@@ -111,8 +111,22 @@ for (const clause of families[9].clauses) { clause.evidence.push(p+'CAMPAIGN3_PE
 for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md');
 for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md');
 for (const clause of families[9].clauses) clause.evidence.push(p+'CAMPAIGN3_HEARSAY_QUALIFICATION.md');
+for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md'); clause.obligations.push(ro(14),ro(20)); }
+for (const clause of families[10].clauses) clause.evidence.push(p+'CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md');
+for (const clause of families[10].clauses) clause.evidence.push(p+'CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md');
+for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md'); clause.obligations.push(ro(7),ro(17)); }
+for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_ATTACHMENT_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(11)); }
+for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_BETRAYAL_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(11),ro(14)); }
+for (const clause of families[10].clauses) clause.evidence.push(p+'CAMPAIGN3_GRIEF_QUALIFICATION.md');
 const reportNames=fs.readdirSync(path.join(root,p)).filter(n=>/^(CAMPAIGN3_|GENERAL_ATTENTION_|GA_).*QUALIFICATION.*\.md$/.test(n));
 const supplemental=[
+ 'PERFORMANCE_MONITORING_READINESS.md','GRIEF_IMPLEMENTATION_FINDINGS.md',
+ 'GRIEF_LOSS_READINESS.md','BETRAYAL_IMPLEMENTATION_FINDINGS.md',
+ 'BETRAYAL_READINESS.md','ATTACHMENT_IMPLEMENTATION_FINDINGS.md',
+ 'ATTACHMENT_DEPENDENCE_READINESS.md','FAMILIAR_VALENCE_IMPLEMENTATION_FINDINGS.md',
+ 'FAMILIARITY_VALENCE_READINESS.md','RELIANCE_HISTORY_IMPLEMENTATION_FINDINGS.md',
+ 'RELIANCE_HISTORY_READINESS.md','REL_ATTRIBUTION_IMPLEMENTATION_FINDINGS.md',
+ 'RELATIONSHIP_ATTRIBUTION_READINESS.md','REL_DIMENSIONS_IMPLEMENTATION_FINDINGS.md',
  'RELATIONSHIP_DIMENSIONS_READINESS.md','HEARSAY_IMPLEMENTATION_FINDINGS.md',
  'REPUTATION_HEARSAY_READINESS.md','PERSON_GOAL_IMPLEMENTATION_FINDINGS.md',
  'PERSON_GOAL_INFERENCE_READINESS.md','FEAR_GUILT_DEVELOPMENT_FINDINGS.md',
@@ -139,10 +153,10 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=27;
-result.date='2026-09-24';
-result.counters.highestAllocatedRecordType=1206;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV26.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV26.json'),disposition:'Adds only bounded hearsay/direct observation for Brief12.10 clause8:5 models,23 runs,138 prefixes. Named testimony, direct perception and source belief remain distinct; visible-ticket deduplication is not hidden-correlation discovery. All8 social clauses now have separate bounded witnesses, not joint integration. Complete132-clause denominator retained.'};
+result.snapshotRevision=34;
+result.date='2026-09-25';
+result.counters.highestAllocatedRecordType=1291;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV33.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV33.json'),disposition:'Advances only Brief12.11 clause8 from BLOCKED to QUALIFIED BOUNDED:7 models,31 runs,279 prefixes. Acquired history, current absence, fallible future-contact belief and practical utility yield distinct loss/reunion orientations. Prospective responses only; no general grief law or enacted mourning. All ten relationship clauses have separately bounded witnesses, not joint integration. Complete132-clause denominator retained.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n');

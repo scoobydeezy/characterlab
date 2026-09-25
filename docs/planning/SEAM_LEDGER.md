@@ -2418,3 +2418,78 @@ and whole later receiving privacy. DirectPriority/LatestEvidence/NoLearning/Trut
 preserved. No global reputation, learned trust or new chosen speech policy.
 See CAMPAIGN3_HEARSAY_QUALIFICATION.md and HEARSAY_CLOSURE_REV1.json. Counters1206/0;
 RO014/019/020. Next RELATIONSHIP_DIMENSIONS_READINESS.md.
+
+## Relationship dimensions bounded closure — 2026-09-24
+
+VER-C3-REL-DIMENSIONS-001: rel-dimensions-public/0.1-candidate; records1207..1220/namespace1177.
+6 models/23 runs/161 prefixes;23+328 tests/build. Separate history/person owners by
+observer/target derive four finite appraisal proxies; independent existing reason/dice
+probes verify selective prospective response-distribution effects. No enacted behavior
+or general emotion-axis claim. SingleScore/PersonOnly/NoRetention/TruthOracle preserved.
+CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md and REL_DIMENSIONS_CLOSURE_REV1.json bind
+evidence; REL_DIMENSIONS_IMPLEMENTATION_FINDINGS.md preserves failed test assumptions.
+RO014/016/019/020; counters1220/0. Next RELATIONSHIP_ATTRIBUTION_READINESS.md.
+
+## Relationship attribution closure - 2026-09-24
+
+VER-C3-REL-ATTRIBUTION-001 / rel-attribution-public/0.1-candidate COMPLETE bounded:
+6 models/25 runs/225 prefixes;23+328 tests/build. Records1221..1234, namespace1178.
+New linked causal evidence revises current caution without rewriting dyadic harm,
+historical judgment or current willingness. Distribution effects are prospective;
+general blame, repair and enacted reciprocity remain unqualified.
+See CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md and REL_ATTRIBUTION_CLOSURE_REV1.json.
+RO-C3-014/016/019/020 retained; no owner ruling. Counters1234/0.
+Next RELIANCE_HISTORY_READINESS.md; prior frozen closures remain valid.
+
+## Reliance history experiment closure - 2026-09-24
+
+VER-C3-RELIANCE-001 COMPLETE bounded:6 reused models/22 runs/176 prefixes;7+328 tests/build.
+Unchanged rel-dimensions-public/0.1-candidate expresses commitment-history learning
+and prospective entrust changes. No allocation or model change; counters1234/0.
+Unknown/negative/mixed evidence, own history and prospective use remain distinct.
+CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md and RELIANCE_HISTORY_CLOSURE_REV1.json
+bind the result. RO014/016/019/020 retained. No enacted delegation or owner ruling.
+Next FAMILIARITY_VALENCE_READINESS.md; all prior frozen closures remain valid.
+
+## Familiarity/valence closure - 2026-09-25
+
+VER-C3-FAMILIAR-VALENCE-001 COMPLETE bounded:7 models/27 runs/216 prefixes;
+23+328 tests/build. Records1235..1249/schema1, namespace1179. Independent feature-memory
+and outcome-history owners yield familiar neutral/positive/adverse appraisals.
+Appearance is not identity or liking; contact effects are prospective distributions.
+CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md / FAMILIAR_VALENCE_CLOSURE_REV1.json.
+RO007/016/017/019/020 retained. No owner ruling or reduction. Counters1249/0.
+Next ATTACHMENT_DEPENDENCE_READINESS.md; all earlier frozen closures remain valid.
+
+## Perceived-dependence attachment closure - 2026-09-25
+
+VER-C3-ATTACHMENT-001 COMPLETE bounded:6 models/25 runs/200 prefixes;23+328 tests/build.
+Records1250..1263/schema1, namespace1180. Derived own-history Bond remains distinct
+from expected relief and current utility; target absence yields a bounded
+missing-contact/prospective reconnection witness. Reliable-satisfier and positive-
+history competitors remain. No universal attachment law or enacted search.
+See CAMPAIGN3_ATTACHMENT_QUALIFICATION.md and ATTACHMENT_CLOSURE_REV1.json.
+RO010/011/016/019/020 retained. No owner ruling or reduction. Counters1263/0.
+Next BETRAYAL_READINESS.md; previous frozen closures remain valid.
+
+## Betrayal versus failed commitment closure - 2026-09-25
+
+VER-C3-BETRAYAL-001 COMPLETE bounded:6 models/32 runs/288 prefixes;27+328 tests/build.
+Records1264..1277/schema1, namespace1181. Observer-admitted prior promise and outcome
+remain separate from incident intent/control and present willingness. False reports
+can revise current appraisal without rewriting prior evidence. OutcomeOnly and
+CurrentPersonBeliefOnly fail different contrasts. Prospective response only; no
+moral-law, repair or enacted-interaction qualification. Preserve first build cohort.
+CAMPAIGN3_BETRAYAL_QUALIFICATION.md / BETRAYAL_CLOSURE_REV1.json. RO010/011/014/016/
+019/020 retained. Counters1277/0; no owner ruling. Next GRIEF_LOSS_READINESS.md.
+
+## Grief after believed loss closure - 2026-09-25
+
+VER-C3-GRIEF-001 COMPLETE bounded:7 models/31 runs/279 prefixes;27+328 tests/build.
+Records1278..1291/schema1, namespace1182. Observer-admitted future-contact belief
+and acquired history distinguish temporary absence, uncertainty and enduring-loss
+appraisal. Practical alternatives need not erase loss; false correction changes
+present appraisal without rewriting the past. Prospective response only, no general
+grief dynamics or enacted mourning. See CAMPAIGN3_GRIEF_QUALIFICATION.md and
+GRIEF_CLOSURE_REV1.json. RO010/011/016/019/020 retained; no owner ruling or reduction.
+Counters1291/0. Next PERFORMANCE_MONITORING_READINESS.md; prior closures preserved.

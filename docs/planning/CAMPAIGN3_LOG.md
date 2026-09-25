@@ -3352,3 +3352,237 @@ Next: REPUTATION_HEARSAY_READINESS.md, Stage A for Brief12.10 clause8. Distingui
 received reports about a person from directly observed conduct and hidden truth.
 014/020 conditional,019 active; none closes. Earlier closures remain frozen.
 Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived before relationship-dimensions closure — 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded hearsay/direct evidence COMPLETE — VER-C3-HEARSAY-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1206** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 47 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **75 bounded / 27 partial / 30 blocked** |
+| New public qualification | **5 models / 23 runs / 138 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_HEARSAY_QUALIFICATION.md and HEARSAY_CLOSURE_REV1.json.
+Target conduct, speaker evidence/belief/report, direct perception, named testimony
+and observer estimate remain distinct. DirectPriority/LatestEvidence/NoLearning/
+TruthOracle remain candidates. Visible ticket duplicates do not add testimony; direct
+perception can still be wrong. Preserve HEARSAY_IMPLEMENTATION_FINDINGS.md.
+No learned trust, independent corroboration, new chosen speech or global reputation.
+All8 Brief12.10 clauses have separate bounded witnesses, not joint integration.
+
+Next: RELATIONSHIP_DIMENSIONS_READINESS.md, Stage A for Brief12.11 clauses1/2/3.
+Affection without respect, respect without affection, trust without comfort.
+014/016/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Archived CURRENT before relationship attribution closure - 2026-09-24
+
+# Current research entry point
+
+**Updated2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded relationship dimensions COMPLETE — VER-C3-REL-DIMENSIONS-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1220** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 — 21 members / 48 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **78 bounded / 27 partial / 27 blocked** |
+| New public qualification | **6 models / 23 runs / 161 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md and REL_DIMENSIONS_CLOSURE_REV1.json.
+Independent assistance/competence/commitment/threat sources derive bounded affection,
+respect, trust and comfort proxies. Separate observer/target history and person owners.
+SingleScore/PersonOnly/NoRetention/TruthOracle remain candidates. Selective inherited
+reason/dice distribution effects qualify prospective responses, not executed behavior.
+Preserve REL_DIMENSIONS_IMPLEMENTATION_FINDINGS.md and REL_DIMENSIONS_PRESERVATION_REV1.json:
+the initial two failed expectations did not require production/model/contract changes.
+
+Next: RELATIONSHIP_ATTRIBUTION_READINESS.md, Stage A for Brief12.11 clause7.
+Revise attributed cause for an earlier relationship event without erasing history.
+014/016/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Archived CURRENT before reliance-history closure - 2026-09-24
+
+# Current research entry point
+
+**Updated 2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded relationship attribution COMPLETE - VER-C3-REL-ATTRIBUTION-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1234** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 49 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **79 bounded / 27 partial / 26 blocked** |
+| New public qualification | **6 models / 25 runs / 225 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md and REL_ATTRIBUTION_CLOSURE_REV1.json.
+Event-linked evidence revises current attribution/caution without rewriting experienced
+dyadic harm, frozen earlier judgment or current willingness. False explanation,
+missing/foreign links and whole later privacy comparisons are bounded-qualified.
+InitialCause/CurrentBeliefOnly/NoLearning/TruthOracle remain controls.
+Prospective distributions only; no enacted behavior, general blame or repair claim.
+Preserve REL_ATTRIBUTION_IMPLEMENTATION_FINDINGS.md and its preservation inventory.
+
+Next: RELIANCE_HISTORY_READINESS.md, Stage A for Brief12.11 clause9.
+First check whether existing frozen relationship-dimension models suffice.
+014/016/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Archived CURRENT before familiarity/valence closure - 2026-09-25
+
+# Current research entry point
+
+**Updated 2026-09-24. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded reliance history COMPLETE - VER-C3-RELIANCE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1234** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 50 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **80 bounded / 27 partial / 25 blocked** |
+| New public qualification | **6 reused models / 22 runs / 176 prefixes** |
+| Validation | **7 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md and RELIANCE_HISTORY_CLOSURE_REV1.json.
+Existing frozen relationship-dimension models express changing prospective reliance
+after own commitment outcomes. No new model, production module or allocation.
+Unknown/mixed/negative evidence, own history and downstream use remain separate.
+No enacted delegation or general trust/commitment/repair claim.
+Preserve RELIANCE_HISTORY_IMPLEMENTATION_FINDINGS.md and its preservation inventory:
+the first timeout/unexecuted plan was superseded without changing model or fixture.
+
+Next: FAMILIARITY_VALENCE_READINESS.md, Stage A for Brief12.11 clause4.
+Audit existing familiarity and relational-appraisal contracts before composition.
+014/016/020 conditional,019 active; none closes. Earlier closures remain frozen.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Archived CURRENT before attachment closure - 2026-09-25
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded familiarity without liking COMPLETE - VER-C3-FAMILIAR-VALENCE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1249** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 51 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **81 bounded / 27 partial / 24 blocked** |
+| New public qualification | **7 models / 27 runs / 216 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md and FAMILIAR_VALENCE_CLOSURE_REV1.json.
+Independent feature-memory and own-outcome history yield familiar neutral/positive/
+adverse appraisal. Familiarity is not identity or liking. Prospective contact responds
+to signed valence; no executed interaction, universal liking law or attachment claim.
+Preserve FAMILIAR_VALENCE_IMPLEMENTATION_FINDINGS.md and its preservation inventory;
+all earlier frozen closures and failed cohorts remain valid and preserved.
+
+Next: ATTACHMENT_DEPENDENCE_READINESS.md, Stage A for Brief12.11 clause5.
+Do not rename familiarity, reliability or positive valence as attachment.
+007/016/017/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded perceived-dependence attachment COMPLETE - VER-C3-ATTACHMENT-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1263** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 52 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **82 bounded / 26 partial / 24 blocked** |
+| New public qualification | **6 models / 25 runs / 200 prefixes** |
+| Validation | **23 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_ATTACHMENT_QUALIFICATION.md and ATTACHMENT_CLOSURE_REV1.json.
+Own perceived meaningful-dependence history supports a bounded missing-contact and
+prospective reconnection witness despite an adequate practical alternative.
+PositiveHistory/CurrentUtilityOnly/NoHistory/TruthOracle remain competitors.
+Historical EXP-001 learning controls are retained; no universal attachment law,
+actual caregiving, physiological distress, grief or enacted search is claimed.
+Preserve ATTACHMENT_IMPLEMENTATION_FINDINGS.md and its preservation inventory.
+
+Next: BETRAYAL_READINESS.md, Stage A for Brief12.11 clause6.
+Distinguish observed failure from attributed intentional commitment violation.
+010/011/016/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded betrayal versus failed commitment COMPLETE - VER-C3-BETRAYAL-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1277** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 53 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **83 bounded / 25 partial / 24 blocked** |
+| New public qualification | **6 models / 32 runs / 288 prefixes** |
+| Validation | **27 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_BETRAYAL_QUALIFICATION.md and BETRAYAL_CLOSURE_REV1.json.
+Prior admitted promise, experienced failure, incident intent/control and present
+willingness remain separate. A false explanation can change current appraisal
+without repairing history or automatically restoring cooperation.
+OutcomeOnly/CurrentPersonBeliefOnly/NoLearning/TruthOracle remain competitors.
+Prospective response only; no general moral appraisal or enacted confrontation.
+Preserve BETRAYAL_IMPLEMENTATION_FINDINGS.md and the first failed build cohort.
+
+Next: GRIEF_LOSS_READINESS.md, Stage A for Brief12.11 clause8.
+Separate temporary absence, loss belief, acquired history and practical substitutes.
+010/011/014/016/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.

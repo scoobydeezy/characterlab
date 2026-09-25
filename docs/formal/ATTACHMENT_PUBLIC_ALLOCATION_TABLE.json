@@ -1,0 +1,741 @@
+{
+  "version": "attachment-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1180,
+  "records": [
+    {
+      "typeId": 1250,
+      "name": "AttachmentProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1251,
+      "name": "AttachmentOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "WorldSupport",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WorldBlocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "WorldResolved",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "WorldPresent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Support",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Resolved",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "PriorDemand",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Blocked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Present",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "ParticipantA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "ParticipantB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 16,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 17,
+          "name": "CueA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 18,
+          "name": "CueB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 19,
+          "name": "Alternative",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 20,
+          "name": "CurrentDemand",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1252,
+      "name": "AttachmentObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1180",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Support",
+          "type": {
+            "list": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Resolved",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Blocked",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "PriorDemand",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1253,
+      "name": "AttachmentCue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1180",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Present",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Alternative",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "CurrentDemand",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1254,
+      "name": "AttachmentHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1252",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1255,
+      "name": "AttachmentPerson",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1252",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1256,
+      "name": "AttachmentHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1258",
+              "ref:1254"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1257,
+      "name": "AttachmentPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1258",
+              "ref:1255"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1258,
+      "name": "AttachmentPair",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1259,
+      "name": "AttachmentAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1180",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "History",
+          "type": "ref:1254",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Person",
+          "type": "ref:1255",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Cue",
+          "type": "ref:1253",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Bond",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ExpectedRelief",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "MissingContact",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "CurrentUtility",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1260,
+      "name": "AttachmentProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1180",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1259",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1261,
+      "name": "AttachmentUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1180",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Domain",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Before",
+          "type": {
+            "oneOf": [
+              "ref:1254",
+              "ref:1255"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "type": {
+            "oneOf": [
+              "ref:1254",
+              "ref:1255"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1262,
+      "name": "AttachmentStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1263,
+      "name": "AttachmentContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Targets",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Actors",
+          "type": {
+            "list": "id:1002",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

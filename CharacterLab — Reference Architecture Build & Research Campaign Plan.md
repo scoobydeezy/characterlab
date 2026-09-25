@@ -456,10 +456,78 @@ See CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md. Next REPUTATION_HEARSAY_READINESS.md
 under existing escalation policy. Counters1194/0; auditREV26 has74 bounded/27 partial/
 31 blocked Brief clauses. Campaign3 NOT EXIT-READY;019 active and021 unsatisfied.
 
-## Current frontier — hearsay closure, 2026-09-24
+## Preserved frontier — hearsay closure, 2026-09-24
 
 VER-C3-HEARSAY-001 COMPLETE:5 models/23 runs/138 prefixes;23+328 tests/build.
 See CAMPAIGN3_HEARSAY_QUALIFICATION.md. Next RELATIONSHIP_DIMENSIONS_READINESS.md
 under existing escalation policy. Counters1206/0; auditREV27 has75 bounded/27 partial/
 30 blocked Brief clauses. All8 social clauses have separate bounded witnesses, not
 a joint integration. Campaign3 NOT EXIT-READY;019 active and021 unsatisfied.
+
+## Preserved frontier — relationship dimensions closure, 2026-09-24
+
+VER-C3-REL-DIMENSIONS-001 COMPLETE:6 models/23 runs/161 prefixes;23+328 tests/build.
+See CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md. Prospective response distributions only,
+not enacted behavior. Next RELATIONSHIP_ATTRIBUTION_READINESS.md under existing
+escalation policy. Counters1220/0; auditREV28 has78 bounded/27 partial/27 blocked Brief
+clauses. Campaign3 NOT EXIT-READY;019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier - relationship attribution closure, 2026-09-24
+
+VER-C3-REL-ATTRIBUTION-001 COMPLETE:6 models/25 runs/225 prefixes;23+328 tests/build.
+See CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md. Event-linked explanation changes
+prospective contact while preserving experienced harm, historical judgments and
+current willingness. No enacted behavior or relationship-repair claim.
+Next RELIANCE_HISTORY_READINESS.md under existing escalation policy.
+Counters1234/0; auditREV29 has79 bounded/27 partial/26 blocked Brief clauses.
+Campaign3 NOT EXIT-READY;019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier - reliance history closure, 2026-09-24
+
+VER-C3-RELIANCE-001 COMPLETE:6 reused models/22 runs/176 prefixes;7+328 tests/build.
+See CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md. Commitment history changes prospective
+entrust distributions; no new allocation/model or enacted delegation.
+Next FAMILIARITY_VALENCE_READINESS.md under the existing escalation policy.
+Counters1234/0; auditREV30 has80 bounded/27 partial/25 blocked Brief clauses.
+Campaign3 NOT EXIT-READY;019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier - familiarity/valence closure, 2026-09-25
+
+VER-C3-FAMILIAR-VALENCE-001 COMPLETE:7 models/27 runs/216 prefixes;23+328 tests/build.
+See CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md. Feature familiarity is independent
+of signed outcome appraisal and identified target history. Prospective contact only;
+no attachment or instance-recognition claim. Next ATTACHMENT_DEPENDENCE_READINESS.md
+under the existing escalation policy. Counters1249/0; auditREV31 has81 bounded/
+27 partial/24 blocked Brief clauses. Campaign3 NOT EXIT-READY;019 active,021 unsatisfied.
+
+## Preserved frontier - perceived-dependence attachment closure, 2026-09-25
+
+VER-C3-ATTACHMENT-001 COMPLETE:6 models/25 runs/200 prefixes;23+328 tests/build.
+See CAMPAIGN3_ATTACHMENT_QUALIFICATION.md. Meaningful-dependence history distinguishes
+the bounded missing-contact response from current practical utility or positive
+support alone. Prospective probes only; no general attachment law, distress or grief.
+Next BETRAYAL_READINESS.md under existing escalation policy. Counters1263/0;
+auditREV32 has82 bounded/26 partial/24 blocked Brief clauses. Campaign3 NOT EXIT-READY;
+019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier - betrayal versus failed commitment closure, 2026-09-25
+
+VER-C3-BETRAYAL-001 COMPLETE:6 models/32 runs/288 prefixes;27+328 tests/build.
+See CAMPAIGN3_BETRAYAL_QUALIFICATION.md. Admitted prior promise and observed failure
+remain separate from incident intent/control, current willingness and revisable
+betrayal appraisal. OutcomeOnly/CurrentPersonBeliefOnly comparisons are retained.
+No automatic forgiveness, repair or enacted response. Next GRIEF_LOSS_READINESS.md
+under existing escalation policy. Counters1277/0; auditREV33 has83 bounded/
+25 partial/24 blocked clauses. Campaign3 NOT EXIT-READY;019 active,021 unsatisfied.
+
+## Current frontier - grief after believed loss closure, 2026-09-25
+
+VER-C3-GRIEF-001 COMPLETE:7 models/31 runs/279 prefixes;27+328 tests/build.
+See CAMPAIGN3_GRIEF_QUALIFICATION.md. Current absence, acquired history, fallible
+future-contact belief and practical utility remain distinct; loss/reunion consumers
+are prospective only. No universal grief law or enacted mourning. All ten relationship
+clauses have separate bounded witnesses, not joint integration qualification.
+Next PERFORMANCE_MONITORING_READINESS.md returns to the unresolved control frontier
+under existing escalation policy: own-performance evidence versus route availability.
+Counters1291/0; auditREV34 has84 bounded/25 partial/23 blocked clauses.
+Campaign3 NOT EXIT-READY;019 active,021 historical reconciliation unsatisfied.

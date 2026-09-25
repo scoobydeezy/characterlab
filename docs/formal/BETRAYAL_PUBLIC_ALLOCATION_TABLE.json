@@ -1,0 +1,782 @@
+{
+  "version": "betrayal-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1181,
+  "records": [
+    {
+      "typeId": 1264,
+      "name": "BetrayalProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1265,
+      "name": "BetrayalOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Episode",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WorldIntent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "WorldFailure",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "WorldWill",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "FailureOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Failure",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "IntentOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Intent",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "WillOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Will",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "Link",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "ParticipantA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "ParticipantB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 16,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 17,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 18,
+          "name": "CueA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 19,
+          "name": "CueB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 20,
+          "name": "CommitmentOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 21,
+          "name": "Commitment",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 22,
+          "name": "ControlOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 23,
+          "name": "Control",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 24,
+          "name": "WorldControl",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1266,
+      "name": "BetrayalObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1181",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Episode",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Failure",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Intent",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Will",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Commitment",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Control",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1267,
+      "name": "BetrayalCue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1181",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Episode",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1268,
+      "name": "BetrayalHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1266",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1269,
+      "name": "BetrayalPerson",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1266",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1270,
+      "name": "BetrayalHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1272",
+              "ref:1268"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1271,
+      "name": "BetrayalPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1272",
+              "ref:1269"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1272,
+      "name": "BetrayalPair",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1273,
+      "name": "BetrayalAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1181",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "History",
+          "type": "ref:1268",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Person",
+          "type": "ref:1269",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Cue",
+          "type": "ref:1267",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Failure",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Intent",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Will",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Betrayal",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "PriorCommitment",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "Control",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1274,
+      "name": "BetrayalProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1181",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1273",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1275,
+      "name": "BetrayalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1181",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Domain",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Before",
+          "type": {
+            "oneOf": [
+              "ref:1268",
+              "ref:1269"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "type": {
+            "oneOf": [
+              "ref:1268",
+              "ref:1269"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1276,
+      "name": "BetrayalStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1277,
+      "name": "BetrayalContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Targets",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Actors",
+          "type": {
+            "list": "id:1002",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

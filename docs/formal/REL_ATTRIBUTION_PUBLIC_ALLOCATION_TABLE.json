@@ -1,0 +1,712 @@
+{
+  "version": "rel-attribution-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1178,
+  "records": [
+    {
+      "typeId": 1221,
+      "name": "RelAttributionProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1222,
+      "name": "RelAttributionOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Episode",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WorldCause",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "WorldHarm",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "WorldWill",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "HarmOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Harm",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "CauseOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Cause",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "WillOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Will",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "Link",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "ParticipantA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "ParticipantB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 16,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 17,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 18,
+          "name": "CueA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 19,
+          "name": "CueB",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1223,
+      "name": "RelAttributionObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1178",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Episode",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Harm",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Cause",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Will",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1224,
+      "name": "RelAttributionCue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1178",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Episode",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1225,
+      "name": "RelAttributionHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1223",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1226,
+      "name": "RelAttributionPerson",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1223",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1227,
+      "name": "RelAttributionHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1229",
+              "ref:1225"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1228,
+      "name": "RelAttributionPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Pairs",
+          "type": {
+            "map": [
+              "ref:1229",
+              "ref:1226"
+            ],
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1229,
+      "name": "RelAttributionPair",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1230,
+      "name": "RelAttributionAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1178",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "History",
+          "type": "ref:1225",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Person",
+          "type": "ref:1226",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Cue",
+          "type": "ref:1224",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Harm",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Cause",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Will",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Caution",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1231,
+      "name": "RelAttributionProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1178",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1230",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1232,
+      "name": "RelAttributionUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1178",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Domain",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Before",
+          "type": {
+            "oneOf": [
+              "ref:1225",
+              "ref:1226"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "type": {
+            "oneOf": [
+              "ref:1225",
+              "ref:1226"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1233,
+      "name": "RelAttributionStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1234,
+      "name": "RelAttributionContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holders",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Targets",
+          "type": {
+            "list": "id:1000",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 8,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Actors",
+          "type": {
+            "list": "id:1002",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}
