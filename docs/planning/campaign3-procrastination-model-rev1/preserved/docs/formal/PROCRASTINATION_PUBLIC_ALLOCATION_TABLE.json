@@ -1,0 +1,861 @@
+{
+  "version": "procrastination-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": null,
+  "records": [
+    {
+      "typeId": 1353,
+      "name": "ProcrastinationProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1354,
+      "name": "ProcrastinationStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 5
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1355,
+      "name": "ProcrastinationOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Opportunity",
+          "type": "ref:818",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Instruction",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reminder",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Support",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "ImmediateAvailable",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BoardVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "FutureReport",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "ReportVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ReportRecipient",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "ActualFeasible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "ExecutionBlocked",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1356,
+      "name": "ProcrastinationGoal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "LeisureAdopted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Progress",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1357,
+      "name": "ProcrastinationGoalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1356"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1358,
+      "name": "ProcrastinationWorkspace",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ImmediateAvailable",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Discounted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "KnownFuture",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1359,
+      "name": "ProcrastinationWorkspaceState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1358"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1360,
+      "name": "ProcrastinationEvaluation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Appraisal",
+          "type": "ref:1375",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Active",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Maintained",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "ImmediateAvailable",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "CurrentFeasible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "ForecastHistory",
+          "type": "ref:1371",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Discounted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "KnownFuture",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "FutureCode",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1361,
+      "name": "ProcrastinationGoalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Prior",
+          "type": "ref:1356",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Next",
+          "type": "ref:1356",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1362,
+      "name": "ProcrastinationRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Options",
+          "type": "ref:1376",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1363,
+      "name": "ProcrastinationReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:1362",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1364,
+      "name": "ProcrastinationDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:1363",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Draws",
+          "type": {
+            "list": "ref:411",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1365,
+      "name": "ProcrastinationIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:1364",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1366,
+      "name": "ProcrastinationExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1365",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Alignment",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1367,
+      "name": "ProcrastinationPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:1366",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1368,
+      "name": "ProcrastinationAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:1367",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1369,
+      "name": "ProcrastinationOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:1368",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Performed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reward",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1370,
+      "name": "ProcrastinationObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "FutureAvailable",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1371,
+      "name": "ProcrastinationProcrastination",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Evidence",
+          "type": {
+            "list": "ref:1370",
+            "min": 0,
+            "max": 16
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1372,
+      "name": "ProcrastinationProcrastinationState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Characters",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1371"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1373,
+      "name": "ProcrastinationProcrastinationApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observation",
+          "type": "ref:1370",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:1371",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:1371",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1374,
+      "name": "ProcrastinationContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Skill",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Identity",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "BodyAdaptation",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ImmediateTask",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Deadline",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "RequiredUnits",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1375,
+      "name": "ProcrastinationAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "CurrentFeasible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "WorkValue",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1376,
+      "name": "ProcrastinationOptions",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1375",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ]
+}

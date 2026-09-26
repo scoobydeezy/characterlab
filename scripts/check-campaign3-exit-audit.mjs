@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV34.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV40.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -61,8 +61,8 @@ const corpusMembers=headings.map((h,i)=>{
 const familyStatuses=[
  [Q,Q,Q,P,Q,B,B,P], [Q,P,Q,Q,Q,P],
  [P,B,Q,Q,Q,Q,Q,Q,P,P], [P,Q,Q,P,Q,P,Q,Q,Q],
- [Q,Q,P,B,Q,P,B,P], [Q,Q,Q,Q,B,B,B,Q,Q],
- [Q,Q,Q,Q,B,B,P,B], [Q,Q,Q,Q,Q,Q,Q,Q],
+ [Q,Q,P,B,Q,P,B,P], [Q,Q,Q,Q,Q,Q,Q,Q,Q],
+ [Q,Q,Q,Q,Q,Q,Q,B], [Q,Q,Q,Q,Q,Q,Q,Q],
  [P,Q,B,B,B,B,P,B,B,B,B], [Q,Q,Q,Q,Q,Q,Q,Q],
  [Q,Q,Q,Q,Q,Q,Q,Q,Q,Q], [P,P,B,P,Q,B,B,P],
  [Q,Q,Q,Q,Q,Q,Q,Q,Q], [Q,Q,Q,Q,P,Q,Q,Q],
@@ -75,8 +75,8 @@ const familyLimits=[
  'GA accessibility and finite SEM recognition retain their bounded scope. VER-C3-RECOLLECT-001 adds routine detail loss and category-based reconstruction that can differ from truth, preserving frozen observation and provenance tags. VER-C3-FAMILIAR-001 adds person/place feature familiarity after detail loss and familiar-but-different comparison, with no instance identity claim. General defining-memory retention, identity recognition, affect bias and downstream consumers remain unqualified.',
  'BELIEF and controlled AFFECT mitigation supply fallible estimates, contradiction and contingency operands. VER-C3-INFER-001 adds correction of the same observer-local obstruction proposition from new admitted reports, preserving past expression and mistaken correction under hidden truth. General cause discovery, alternative diagnosis, calibrated trust and scalar inference beyond the lower-bound LEARN profile remain unqualified.',
  'Factor and grounded-response contrasts qualify bounded appraisal; general fear/social affect and salience/retrieval integration remain partial or absent; instructed conditional reappraisal is separately bounded in Brief12.6 clause8.',
- 'WORK qualifies finite distraction/protection and reminders. VER-C3-CONTROL-001 adds maintained-goal inhibition and failure under a neutral-card load with fixed habit, goal, belief and competence; release exposes preserved habit. VER-C3-REAPPRAISAL-001 adds instructed prospective conditional framing with unchanged belief and later derived affect. Monitoring, fatigue, rumination, learned control, spontaneous reappraisal and downstream action integration remain unqualified.',
- 'VER-C3-GOAL-001 qualifies separately owned adopted goal and mutable strategy: switching, no-route gap, resumption and actual route-B completion. Perceived fulfillment follows admitted evidence even when false or externally caused. Prior retention/cue scope stands. Procrastination, delay valuation, general forgetting and competing temporal goals remain unqualified.',
+ 'WORK qualifies finite distraction/protection and reminders. VER-C3-CONTROL-001 adds maintained-goal inhibition and failure under a neutral-card load with fixed habit, goal, belief and competence; release exposes preserved habit. VER-C3-REAPPRAISAL-001 adds instructed prospective conditional framing with unchanged belief and later derived affect. VER-C3-PERFORMANCE-001 adds own-performance monitoring and later actual route switching under fixed goal/availability. Visit-local threshold2, OutcomeBlind and AnyFailure remain candidates; success after blocker removal does not prove alternative superiority. VER-C3-RUMINATION-001 adds recurrent unresolved content consuming cognition and actual inhibition with interruption/rebound and evidence-based release. NoRecurrence, StaticLoad and Alternating remain; static external load can mimic immediate cost.4 models/22 distinct runs/198 distinct prefixes; one duplicate alias adds checks, not coverage. VER-C3-FATIGUE-001 adds experienced fatigue impairing actual inhibition at fixed goal/history/load, with distinct sensor evidence, missing/recovery and motor-only execution.4 models/20 distinct runs/180 prefixes. All nine clauses have separate bounded witnesses, not joint integration. Endogenous fatigue accumulation/recovery, natural sensing, general monitoring/control, clinical rumination and spontaneous regulation remain unqualified.',
+ 'VER-C3-GOAL-001 qualifies separately owned adopted goal and mutable strategy: switching, no-route gap, resumption and actual route-B completion. Perceived fulfillment follows admitted evidence even when false or externally caused. Prior retention/cue scope stands. VER-C3-PROCRASTINATION-001 adds actual defer under retained accessible feasible goal with positive work reason, independent immediate activity and fallible future expectation.4 corrected0.2 models/20 runs/180 prefixes. Preserve late-adoption failure and future opportunity versus sufficient completion capacity. VER-C3-DELAYED-001 adds same-benefit immediate/later actual choice, genuine waiting, physical delivery and safe learned receipt:3 models/26 runs/234 prefixes. Hyperbolic/NoDiscount/Exponential remain; unknown/unavailable and missing/zero receipt stay distinct. No universal temporal law, learned promise trust, optimal patience or subsequent adaptive choice. VER-C3-INTENTION-001 adds a composed component witness for inaccessible retained versus lost prospective action content, cue recovery and actual execution:3 models/54 runs/486 prefixes. NoLoss/PersistentAccess retained. Zero-score top-K behavior and superseded identity binding remain preserved. General prospective memory, natural cue/source authentication and public integration remain unqualified, as do conflicting temporal goals.',
  'SKILL qualifies performance belief/competence/impairment/practice; LONG adds event-sampled rust and execution after episode loss. These are bounded instances, not latent competence inference or automaticity laws.',
  'HABIT is availability under a neutral alternative. No joint dependence, substitute, craving, withdrawal, relapse or deliberate inhibition witness; ADAPT alone is not an addiction phenomenon.',
  'Two observers of one commitment are qualified. VER-C3-ATTRIBUTED-001 adds mistaken target-belief attribution and bounded second-order belief consumed by actual explanation choice, preserving own versus target actual versus attributed belief. Latest/majority report competitors and hidden-target whole-view controls remain explicit. VER-C3-PERSONSTATE-001 adds mixed conduct impression and mistaken current-intent inference under a stable default-policy control. Corrected consequence appraisal130 follows actual intent70; goal-relative SplitExposure affect is derived before conduct learning140. General personality, calibrated confidence, natural recognition, recursive mentalizing, downstream observer action and learned trust remain unqualified. VER-C3-FEAR-GUILT-001 adds controlled innocent nervousness, context-relative mistaken attribution and later revision, with independent observer goals, whole later-view privacy and a truth Oracle. Candidate weights do not qualify calibration, causal discovery, guilt emotion or moral identity. VER-C3-PERSON-GOAL-001 adds adopted desired state versus ordinary strategy, visible failed attempts, ambiguity, mistaken route classification and later goal-inference correction; no calibrated inverse planning, learned affordances or downstream observer action. VER-C3-HEARSAY-001 adds named testimony/direct perception, sincere mistake, visible report-ticket deduplication and later correction. Direct evidence remains fallible; no learned trust, hidden-source correlation, global reputation or new chosen speech policy.',
@@ -118,8 +118,20 @@ for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_F
 for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_ATTACHMENT_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(11)); }
 for (const clause of families[10].clauses) { clause.evidence.push(p+'CAMPAIGN3_BETRAYAL_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(11),ro(14)); }
 for (const clause of families[10].clauses) clause.evidence.push(p+'CAMPAIGN3_GRIEF_QUALIFICATION.md');
+for (const clause of families[5].clauses) { clause.evidence.push(p+'CAMPAIGN3_PERFORMANCE_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(13)); }
+for (const clause of families[5].clauses) { clause.evidence.push(p+'CAMPAIGN3_RUMINATION_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(11),ro(17),ro(20)); }
+for (const clause of families[5].clauses) { clause.evidence.push(p+'CAMPAIGN3_FATIGUE_QUALIFICATION.md'); clause.obligations.push(ro(8),ro(11),ro(13),ro(20)); }
+for (const clause of families[6].clauses) { clause.evidence.push(p+'CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(12),ro(14),ro(20)); }
 const reportNames=fs.readdirSync(path.join(root,p)).filter(n=>/^(CAMPAIGN3_|GENERAL_ATTENTION_|GA_).*QUALIFICATION.*\.md$/.test(n));
+for (const clause of families[6].clauses) { clause.evidence.push(p+'CAMPAIGN3_DELAYED_QUALIFICATION.md'); clause.obligations.push(ro(10),ro(12),ro(14),ro(20)); }
+for (const clause of families[6].clauses) { clause.evidence.push(p+'CAMPAIGN3_INTENTION_QUALIFICATION.md'); clause.obligations.push(ro(5),ro(6),ro(7),ro(12),ro(14),ro(20)); }
 const supplemental=[
+ 'TEMPORAL_GOAL_CONFLICT_READINESS.md','INTENTION_IMPLEMENTATION_FINDINGS.md',
+ 'INTENTION_FORGETTING_READINESS.md','DELAYED_IMPLEMENTATION_FINDINGS.md',
+ 'DELAYED_GRATIFICATION_READINESS.md','PROCRASTINATION_IMPLEMENTATION_FINDINGS.md',
+ 'PROCRASTINATION_READINESS.md','FATIGUE_IMPLEMENTATION_FINDINGS.md',
+ 'COGNITIVE_FATIGUE_READINESS.md','RUMINATION_IMPLEMENTATION_FINDINGS.md','RUMINATION_DUPLICATE_CASE_FINDING_REV1.json',
+ 'RUMINATION_READINESS.md','PERFORMANCE_IMPLEMENTATION_FINDINGS.md',
  'PERFORMANCE_MONITORING_READINESS.md','GRIEF_IMPLEMENTATION_FINDINGS.md',
  'GRIEF_LOSS_READINESS.md','BETRAYAL_IMPLEMENTATION_FINDINGS.md',
  'BETRAYAL_READINESS.md','ATTACHMENT_IMPLEMENTATION_FINDINGS.md',
@@ -153,10 +165,10 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=34;
-result.date='2026-09-25';
-result.counters.highestAllocatedRecordType=1291;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV33.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV33.json'),disposition:'Advances only Brief12.11 clause8 from BLOCKED to QUALIFIED BOUNDED:7 models,31 runs,279 prefixes. Acquired history, current absence, fallible future-contact belief and practical utility yield distinct loss/reunion orientations. Prospective responses only; no general grief law or enacted mourning. All ten relationship clauses have separately bounded witnesses, not joint integration. Complete132-clause denominator retained.'};
+result.snapshotRevision=40;
+result.date='2026-09-26';
+result.counters.highestAllocatedRecordType=1400;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV39.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV39.json'),disposition:'Advances only Brief12.7 clause7 PARTIAL to QUALIFIED BOUNDED:3 models/54 runs/486 component prefixes. Existing retention/recall supports actual action after cue recovery but cannot recover removed instruction bytes. Component scope, not public admission; retain zero-score recall and identity-binding findings. Complete132-clause denominator retained.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n');

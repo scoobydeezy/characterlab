@@ -1,0 +1,25 @@
+{
+  "status": "PRESERVED RUN-INVENTORY FINDING",
+  "finding": "Two frozen case names have identical canonical run identity. This is repeated execution, not independent coverage. No mechanism or behavior repair required.",
+  "planSha256": "733eef0a59e18c53a4305ddc0cc3a305bd5fea21b7a5b863435f9665125eb18d",
+  "executions": 23,
+  "distinctRuns": 22,
+  "expectedReplayChecks": 207,
+  "distinctPrefixes": 198,
+  "duplicateReplayChecks": 9,
+  "duplicates": [
+    {
+      "runIdentity": "0a68010401010a6701060101051f72756d696e6174696f6e2d7075626c69632f302e312d63616e64696461746502010a6401020101051f72756d696e6174696f6e2d7075626c69632f302e312d63616e6469646174650201042012ef54bf03fbf568a5344fdcc844c935e4ae6cf57ee7736ad7dfe8c281e4da0803010a6501020101051f72756d696e6174696f6e2d7075626c69632f302e312d63616e64696461746502010420877c0921ff20b93df903a3654566a02c934e5aaea2a2dd18de63e4db86707e1e0401052772756d696e6174696f6e2d65786163742d726174696f6e616c2f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101051f72756d696e6174696f6e2d7075626c69632f302e312d63616e6469646174650201042012a258e390ee1bfb95fae4c8e0bd421f0eaabf5b02409f4a8fe902c1e431c36c020104202bf9f71475991d1002efdeae56dff5bf86bab5671d3d9a9305e33935aa79f0200301042009ab514307c2ec846481a5f8a565f81d6e76d4f151265c1e3171d38679cac476040104200707070707070707070707070707070707070707070707070707070707070707",
+      "caseNames": [
+        "unbroken",
+        "noInterruption"
+      ]
+    }
+  ],
+  "disposition": "Retain the frozen plan and all executions. Closure/audit report unique coverage and duplicate checks separately; guard the exact duplicate pair in closure validation.",
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020"
+  ],
+  "metadataLimit": "Frozen plan scope caption retains inherited neutral-card wording and understates recurrent concern. The bound RUMINATION_PUBLIC_CONTRACT.md and exact cases/assertions govern; no frozen caption is rewritten."
+}

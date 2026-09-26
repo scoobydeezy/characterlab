@@ -520,7 +520,7 @@ No automatic forgiveness, repair or enacted response. Next GRIEF_LOSS_READINESS.
 under existing escalation policy. Counters1277/0; auditREV33 has83 bounded/
 25 partial/24 blocked clauses. Campaign3 NOT EXIT-READY;019 active,021 unsatisfied.
 
-## Current frontier - grief after believed loss closure, 2026-09-25
+## Preserved frontier - grief after believed loss closure, 2026-09-25
 
 VER-C3-GRIEF-001 COMPLETE:7 models/31 runs/279 prefixes;27+328 tests/build.
 See CAMPAIGN3_GRIEF_QUALIFICATION.md. Current absence, acquired history, fallible
@@ -531,3 +531,62 @@ Next PERFORMANCE_MONITORING_READINESS.md returns to the unresolved control front
 under existing escalation policy: own-performance evidence versus route availability.
 Counters1291/0; auditREV34 has84 bounded/25 partial/23 blocked clauses.
 Campaign3 NOT EXIT-READY;019 active,021 historical reconciliation unsatisfied.
+
+## Preserved frontier - performance monitoring closure, 2026-09-25
+
+VER-C3-PERFORMANCE-001 COMPLETE:4 models/22 runs/198 prefixes;19+328 tests/build.
+See CAMPAIGN3_PERFORMANCE_QUALIFICATION.md. Own admitted performance changes an
+ordinary strategy under fixed goal/availability and reaches actual attempt/execution.
+Threshold2, OutcomeBlind, AnyFailure and TruthOracle remain candidates/controls;
+no inferred alternative superiority or general control law. Next RUMINATION_READINESS.md
+under the escalation policy. Counters1310/0; auditREV35 has85 bounded/25 partial/
+22 blocked clauses. Campaign3 NOT EXIT-READY;019 active,021 reconciliation unsatisfied.
+
+## Preserved frontier - rumination consuming cognition closure, 2026-09-25
+
+VER-C3-RUMINATION-001 COMPLETE:4 models/22 distinct runs/198 distinct prefixes;
+25+328 tests/build.23 executions/207 checks include one documented duplicate.
+See CAMPAIGN3_RUMINATION_QUALIFICATION.md. Recurrent unresolved content consumes
+control capacity without new evidence. Interruption/rebound and admitted resolution
+remain distinct; NoRecurrence/StaticLoad/Alternating competitors retained.
+Next COGNITIVE_FATIGUE_READINESS.md under the escalation policy.
+Counters1331/0; auditREV36 has86 bounded/25 partial/21 blocked clauses.
+Campaign3 NOT EXIT-READY;019 active,021 historical reconciliation unsatisfied.
+
+## Preserved frontier - experienced fatigue closure, 2026-09-25
+
+VER-C3-FATIGUE-001 COMPLETE:4 models/20 distinct runs/180 prefixes;25+328 tests/build.
+See CAMPAIGN3_FATIGUE_QUALIFICATION.md. Admitted fatigue affects actual inhibition;
+physical condition, retained experience, workload, goal/habit and motor execution
+remain distinct. NoFatigue/MotorOnly/AnyFatigue retained. No endogenous fatigue law.
+All nine Brief12.6 clauses have separate bounded witnesses, not joint integration.
+Next PROCRASTINATION_READINESS.md under the escalation policy. Counters1352/0;
+auditREV37 has87 bounded/25 partial/20 blocked clauses. Campaign3 NOT EXIT-READY;
+019 active and021 historical reconciliation unsatisfied.
+
+## Preserved frontier - retained-goal postponement closure, 2026-09-25
+
+VER-C3-PROCRASTINATION-001 COMPLETE under corrected0.2:4 models/20 runs/180 prefixes;
+26+328 tests/build. See CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md.
+Positive work reasons persist during actual defer choice; future expectation and
+immediate motive remain distinct. Preserve late-adoption failure/original0.1 cohort
+and the future-opportunity versus completion-capacity limitation.
+Next DELAYED_GRATIFICATION_READINESS.md under the escalation policy.
+Counters1376/0; auditREV38 has88 bounded/25 partial/19 blocked clauses.
+Campaign3 NOT EXIT-READY;019 active,021 historical reconciliation unsatisfied.
+
+## Preserved frontier - delayed gratification closure, 2026-09-25
+
+VER-C3-DELAYED-001 qualifies bounded same-benefit immediate/later actual choice,
+genuine waiting and delivery/failure, with separately learned safe receipt.
+See CAMPAIGN3_DELAYED_QUALIFICATION.md:3 models/26 runs/234 prefixes,27+328 tests/build.
+Hyperbolic/NoDiscount/Exponential retained; no universal temporal law or learned trust.
+Counters1400/0. Campaign3 NOT EXIT-READY; next INTENTION_FORGETTING_READINESS.md.
+
+## Current frontier - intention forgetting closure, 2026-09-26
+
+VER-C3-INTENTION-001 qualifies retained/inaccessible versus lost prospective action
+content through existing retention/recall kernels and actual action. Component scope,
+3 models/54 runs/486 prefixes;15+328 tests/build. No new allocation/public scheduler.
+See CAMPAIGN3_INTENTION_QUALIFICATION.md. Preserve zero-score and identity findings.
+Counters1400/0. Next TEMPORAL_GOAL_CONFLICT_READINESS.md; Campaign3 NOT EXIT-READY.

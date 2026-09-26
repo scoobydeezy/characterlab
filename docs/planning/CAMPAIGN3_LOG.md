@@ -3586,3 +3586,210 @@ Next: GRIEF_LOSS_READINESS.md, Stage A for Brief12.11 clause8.
 Separate temporary absence, loss belief, acquired history and practical substitutes.
 010/011/014/016/020 conditional,019 active; none closes.
 Historical reconciliation021 remains mandatory and unsatisfied.
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded grief after believed loss COMPLETE - VER-C3-GRIEF-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1291** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 54 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **84 bounded / 25 partial / 23 blocked** |
+| New public qualification | **7 models / 31 runs / 279 prefixes** |
+| Validation | **27 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_GRIEF_QUALIFICATION.md and GRIEF_CLOSURE_REV1.json.
+Acquired history, current absence, fallible future-contact belief and practical
+utility remain separate. Temporary, uncertain and enduring-loss reports yield
+separate loss/reunion orientations; a practical substitute does not erase loss.
+TemporaryAbsenceOnly/CurrentUtilityOnly/NoHistory/NoReturnInference/TruthOracle remain.
+Prospective responses only; no general grief law, time course or enacted mourning.
+Preserve GRIEF_IMPLEMENTATION_FINDINGS.md and its exact source limits.
+All ten relationship clauses have separate bounded witnesses, not joint integration.
+
+Next: PERFORMANCE_MONITORING_READINESS.md, Stage A for Brief12.6 clause5.
+Separate own-performance feedback, monitoring, goal and later strategy switching.
+010/011/012/013/016/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved CURRENT before rumination closure - 2026-09-25
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded performance monitoring COMPLETE - VER-C3-PERFORMANCE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1310** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 55 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **85 bounded / 25 partial / 22 blocked** |
+| New public qualification | **4 models / 22 runs / 198 prefixes** |
+| Validation | **19 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_PERFORMANCE_QUALIFICATION.md and PERFORMANCE_CLOSURE_REV1.json.
+Own admitted performance changes later strategy with fixed goal/availability,
+through an actual plan/attempt/execution consumer. Visit-local counting prevents
+stale failure reuse; missing feedback is neither new failure nor observed success.
+OutcomeBlind/AnyFailure/TruthOracle remain. False feedback can cause needless switching.
+Preserve PERFORMANCE_IMPLEMENTATION_FINDINGS.md: success after switching is not
+proof of alternative superiority when the apparatus also removes a blocker.
+No universal threshold, causal diagnosis, general control or new Decision law.
+
+Next: RUMINATION_READINESS.md, Stage A for Brief12.6 clause6.
+Separate recurrent cognitive use, original evidence, workspace and control opportunity.
+010/011/012/013/017/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved CURRENT before fatigue closure - 2026-09-25
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded rumination COMPLETE - VER-C3-RUMINATION-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1331** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 56 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **86 bounded / 25 partial / 21 blocked** |
+| New public qualification | **4 models / 22 distinct runs / 198 distinct prefixes** |
+| Validation | **25 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_RUMINATION_QUALIFICATION.md and RUMINATION_CLOSURE_REV1.json.
+Earlier unresolved content occupies cognition and affects actual inhibition/choice.
+Interruption frees capacity without erasure; recurrence returns; admitted resolution
+affects the next40. Repeated access never supplies new evidence. NoRecurrence,
+StaticLoad and Alternating remain; ordinary external load can mimic immediate cost.
+Preserve RUMINATION_IMPLEMENTATION_FINDINGS.md and the duplicate-case finding:
+23 executions/207 replay checks include one alias, excluded from unique coverage.
+No universal recurrence, clinical law, natural concern source or fatigue claim.
+
+Next: COGNITIVE_FATIGUE_READINESS.md, Stage A for Brief12.6 clause7.
+Keep fatigue/capability, admitted experience, workload, goal and control distinct.
+010/011/012/017/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved CURRENT before procrastination closure - 2026-09-25
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded experienced fatigue COMPLETE - VER-C3-FATIGUE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1352** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 57 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **87 bounded / 25 partial / 20 blocked** |
+| New public qualification | **4 models / 20 distinct runs / 180 prefixes** |
+| Validation | **25 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_FATIGUE_QUALIFICATION.md and FATIGUE_CLOSURE_REV1.json.
+Admitted fatigue impairs otherwise available inhibition at fixed goal/habit/load.
+Missing feedback persists; admitted recovery changes next40. Physical condition,
+experience, occupancy and motor execution stay separate. NoFatigue/MotorOnly/
+AnyFatigue remain. Preserve FATIGUE_IMPLEMENTATION_FINDINGS.md: no endogenous
+accumulation, recovery kinetics, clinical or universal resource claim.
+All nine Brief12.6 clauses have separate bounded witnesses, not joint integration.
+
+Next: PROCRASTINATION_READINESS.md, Stage A for Brief12.7 clause5.
+Keep retained goal, present access/feasibility, future expectation and postponement distinct.
+008/011/012/013/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved checkpoint before delayed gratification closure
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded procrastination COMPLETE - VER-C3-PROCRASTINATION-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1376** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 58 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **88 bounded / 25 partial / 19 blocked** |
+| New public qualification | **4 models / 20 distinct runs / 180 prefixes** |
+| Validation | **26 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md and PROCRASTINATION_CLOSURE_REV1.json.
+Corrected procrastination-public/0.2-candidate preserves positive work reasons and
+actual postponement under retained accessible feasible goal. Independent immediate
+motive and future expectation remain distinct. NoTemporalBias/PresentFocused/
+NoImmediateMotive retained. Completion, cancellation and deadline failure stay separate.
+Preserve original0.1 cohort and late-adoption failure;0.2 rejects adoption at/after6.
+A future opening is not sufficient completion capacity. No optimal planning,
+clinical procrastination or universal temporal valuation claim.
+
+Next: DELAYED_GRATIFICATION_READINESS.md, Stage A for Brief12.7 clause6.
+Keep future prediction, actual waiting, delivery and received benefit distinct.
+010/012/014/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved checkpoint before intention forgetting closure
+
+# Current research entry point
+
+**Updated 2026-09-25. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded delayed gratification COMPLETE - VER-C3-DELAYED-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 59 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **89 bounded / 25 partial / 18 blocked** |
+| New public qualification | **3 models / 26 distinct runs / 234 prefixes** |
+| Validation | **27 new + 328 reference tests; production build passed** |
+
+Start at CAMPAIGN3_DELAYED_QUALIFICATION.md and DELAYED_CLOSURE_REV1.json.
+Delayed-public/0.1-candidate separates admitted prediction, anticipated same-benefit
+value, actual now/later choice, waiting, physical delivery and safe learned receipt.
+Hyperbolic/NoDiscount/Exponential retained. Unknown, unavailable, missing receipt
+and known zero remain distinct. Repeated receipt does not add evidence.
+Preserve schema rejection and DELAYED_IMPLEMENTATION_FINDINGS.md.
+No universal discount law, cross-benefit currency, learned forecast trust,
+optimal patience or subsequent adaptive-choice claim.
+
+Next: INTENTION_FORGETTING_READINESS.md, Stage A for Brief12.7 clause7.
+Preserve retained content, accessibility, content loss and cancellation.
+010/012/014/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.

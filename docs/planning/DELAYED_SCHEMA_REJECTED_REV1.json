@@ -1,0 +1,860 @@
+{
+  "status": "REJECTED before any model freeze or public run",
+  "failure": "DELAYED_CODEC: ref:142; stage read/write patterns are record149, not state path142",
+  "allocationSha256": "641d6acc78091f40871d6437d2720806e8b4c60d0c6bcb418cf7cfd57e0e91d6",
+  "allocation": {
+    "version": "delayed-public-allocation/0.1-candidate",
+    "status": "ACCEPTED before implementation",
+    "date": "2026-09-25",
+    "namespace": 1155,
+    "records": [
+      {
+        "typeId": 1377,
+        "name": "DelayedProfile",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Version",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Law",
+            "type": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1378,
+        "name": "DelayedContent",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Actor",
+            "type": "id:1002",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Observer",
+            "type": "id:1000",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Task",
+            "type": "ref:371",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Options",
+            "type": {
+              "list": "ref:395",
+              "min": 3,
+              "max": 3
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "Dice",
+            "type": "ref:437",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1379,
+        "name": "DelayedStage",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Event",
+            "type": "id:1001",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Phase",
+            "type": "u",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Reads",
+            "type": {
+              "list": "ref:142",
+              "min": 0,
+              "max": 3
+            },
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Writes",
+            "type": {
+              "list": "ref:142",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "Owner",
+            "type": "id:1025",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1380,
+        "name": "DelayedOffer",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Immediate",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Later",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Delay",
+            "type": {
+              "enum": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Future",
+            "type": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "Cost",
+            "type": "unitQ",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1381,
+        "name": "DelayedOriginal",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Offer",
+            "type": {
+              "list": "ref:1380",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "OfferVisible",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "OfferRecipient",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "DeliveryAllowed",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 6,
+            "name": "ActualImmediate",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 7,
+            "name": "ActualLater",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 8,
+            "name": "ReceiptVisible",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 9,
+            "name": "ReceiptRecipient",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 10,
+            "name": "ReceiptMode",
+            "type": {
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1382,
+        "name": "DelayedOfferObservation",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Observer",
+            "type": "id:1000",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Offer",
+            "type": "ref:1380",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1383,
+        "name": "DelayedReceiptObservation",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Observer",
+            "type": "id:1000",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Ticket",
+            "type": {
+              "enum": [
+                1
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "Amount",
+            "type": "unitQ",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1384,
+        "name": "DelayedKnowledge",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Offer",
+            "type": {
+              "list": "ref:1382",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Receipt",
+            "type": {
+              "list": "ref:1383",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1385,
+        "name": "DelayedKnowledgeRoot",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "ByActor",
+            "type": {
+              "map": [
+                "id:1002",
+                "ref:1384"
+              ],
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1386,
+        "name": "DelayedAppraisal",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Knowledge",
+            "type": "ref:1384",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Plan",
+            "type": {
+              "list": "ref:1393",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "ImmediateValue",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 6,
+            "name": "LaterValue",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 7,
+            "name": "ChoiceOpen",
+            "type": "bool",
+            "required": true
+          },
+          {
+            "id": 8,
+            "name": "LaterAdmitted",
+            "type": "bool",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1387,
+        "name": "DelayedOptions",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Appraisal",
+            "type": "ref:1386",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Candidates",
+            "type": {
+              "list": "ref:395",
+              "min": 1,
+              "max": 2
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1388,
+        "name": "DelayedRaw",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Options",
+            "type": "ref:1387",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Signals",
+            "type": {
+              "list": "ref:402",
+              "min": 0,
+              "max": 2
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1389,
+        "name": "DelayedReasons",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Raw",
+            "type": "ref:1388",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Nuclei",
+            "type": {
+              "list": "ref:407",
+              "min": 0,
+              "max": 2
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1390,
+        "name": "DelayedDecision",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Reasons",
+            "type": "ref:1389",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "Probabilities",
+            "type": {
+              "list": "ref:421",
+              "min": 1,
+              "max": 2
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "Mode",
+            "type": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": 6,
+            "name": "Draws",
+            "type": {
+              "list": "ref:411",
+              "min": 0,
+              "max": 3
+            },
+            "required": true
+          },
+          {
+            "id": 7,
+            "name": "Chosen",
+            "type": "ref:395",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1391,
+        "name": "DelayedIntent",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Decision",
+            "type": "ref:1390",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1392,
+        "name": "DelayedExpression",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Intent",
+            "type": "ref:1391",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1393,
+        "name": "DelayedPlan",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Choice",
+            "type": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Due",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "ExpectedAmount",
+            "type": "unitQ",
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1394,
+        "name": "DelayedPlanRoot",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "ByActor",
+            "type": {
+              "map": [
+                "id:1002",
+                "ref:1393"
+              ],
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1395,
+        "name": "DelayedPlanUpdate",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Expression",
+            "type": "ref:1392",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Before",
+            "type": {
+              "list": "ref:1393",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "After",
+            "type": {
+              "list": "ref:1393",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1396,
+        "name": "DelayedAttempt",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Plan",
+            "type": {
+              "list": "ref:1393",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1397,
+        "name": "DelayedDelivery",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "SettledAt",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Amount",
+            "type": "unitQ",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Choice",
+            "type": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1398,
+        "name": "DelayedDeliveryRoot",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "ByActor",
+            "type": {
+              "map": [
+                "id:1002",
+                "ref:1397"
+              ],
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1399,
+        "name": "DelayedTruth",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "At",
+            "type": "i",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "Delivery",
+            "type": {
+              "list": "ref:1397",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "typeId": 1400,
+        "name": "DelayedLearning",
+        "schemaVersion": 1,
+        "fields": [
+          {
+            "id": 1,
+            "name": "Occurrence",
+            "type": "id:1155",
+            "required": true
+          },
+          {
+            "id": 2,
+            "name": "Before",
+            "type": "ref:1384",
+            "required": true
+          },
+          {
+            "id": 3,
+            "name": "After",
+            "type": "ref:1384",
+            "required": true
+          },
+          {
+            "id": 4,
+            "name": "OfferObservations",
+            "type": {
+              "list": "ref:1382",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          },
+          {
+            "id": 5,
+            "name": "ReceiptObservations",
+            "type": {
+              "list": "ref:1383",
+              "min": 0,
+              "max": 1
+            },
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+}

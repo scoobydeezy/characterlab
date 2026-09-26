@@ -440,3 +440,33 @@ Counters1277/14 before verdict; prior allocations unchanged.
 Records1278..1291/schema1, namespace1182 permanently allocated under
 GRIEF_PUBLIC_CONTRACT.md and GRIEF_PUBLIC_ALLOCATION_TABLE.json.
 Counters1291/14 before verdict; prior allocations unchanged.
+
+## performance-public/0.1-candidate - 2026-09-25
+
+Records1292..1310/schema1, namespace1183 permanently allocated under
+PERFORMANCE_PUBLIC_CONTRACT.md and PERFORMANCE_PUBLIC_ALLOCATION_TABLE.json.
+Counters1310/19 before verdict; prior allocations unchanged.
+
+## Rumination public successor — 2026-09-25
+
+Records1311..1331/schema1 are allocated by RUMINATION_PUBLIC_ALLOCATION_TABLE.json
+under RUMINATION_PUBLIC_CONTRACT.md before implementation. Reuse namespace1155;
+no new namespace. Counter1331/21 since VER-C3-PERFORMANCE-001.
+
+## Fatigue public successor — 2026-09-25
+
+Records1332..1352/schema1 allocated before implementation by FATIGUE_PUBLIC_ALLOCATION_TABLE.json
+under FATIGUE_PUBLIC_CONTRACT.md. Reuse namespace1155; no new namespace. Counter1352/21.
+
+## Procrastination public successor — 2026-09-25
+
+Records1353..1376/schema1 allocated before implementation by PROCRASTINATION_PUBLIC_ALLOCATION_TABLE.json
+under PROCRASTINATION_PUBLIC_CONTRACT.md. Reuse namespace1155; no new namespace. Counter1376/24.
+
+Procrastination0.2 tightens the adoption window; records1353..1376/schema1 and
+namespace1155 unchanged. Preserved0.1 cohort was not publicly qualified. Counters1376/24.
+
+## Delayed gratification public successor — 2026-09-25
+
+Records1377..1400/schema1 allocated before implementation by DELAYED_PUBLIC_ALLOCATION_TABLE.json
+under DELAYED_PUBLIC_CONTRACT.md. Reuse namespace1155; no new namespace. Counters1400/24.

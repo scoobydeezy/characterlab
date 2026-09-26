@@ -2493,3 +2493,78 @@ present appraisal without rewriting the past. Prospective response only, no gene
 grief dynamics or enacted mourning. See CAMPAIGN3_GRIEF_QUALIFICATION.md and
 GRIEF_CLOSURE_REV1.json. RO010/011/016/019/020 retained; no owner ruling or reduction.
 Counters1291/0. Next PERFORMANCE_MONITORING_READINESS.md; prior closures preserved.
+
+## Performance monitoring closure - 2026-09-25
+
+VER-C3-PERFORMANCE-001 COMPLETE bounded:4 models/22 runs/198 prefixes;19+328 tests/build.
+Records1292..1310/schema1, namespace1183. Retained own performance changes later
+ordinary strategy with fixed goal/availability and an actual attempt/execution
+consumer. Visit boundaries prevent stale failure reuse; missing feedback is unknown.
+No general threshold, causal superiority or new Decision/intent claim. Preserve
+PERFORMANCE_IMPLEMENTATION_FINDINGS.md; prior GOAL component remains unchanged.
+CAMPAIGN3_PERFORMANCE_QUALIFICATION.md / PERFORMANCE_CLOSURE_REV1.json.
+RO010/012/013/019/020 retained. Counters1310/0; no owner ruling or reduction.
+Next RUMINATION_READINESS.md under the existing escalation policy.
+
+## Rumination consuming cognition closure - 2026-09-25
+
+VER-C3-RUMINATION-001 COMPLETE bounded:4 models/22 distinct public runs/198 distinct
+prefixes;25+328 tests/build.23 executions/207 checks include one preserved duplicate.
+Records1311..1331/schema1, inherited namespace1155. Earlier unresolved content
+consumes the spare inhibition slot; interruption permits control and later rebound
+without new evidence or history deletion. Admitted resolution affects next40 only.
+NoRecurrence/StaticLoad/Alternating and external load remain controls/candidates.
+No universal recurrence, resource law, natural concern source or fatigue claim.
+See CAMPAIGN3_RUMINATION_QUALIFICATION.md, RUMINATION_CLOSURE_REV1.json and duplicate
+case finding. RO010/011/012/017/019/020 retained. Counters1331/0; no owner ruling.
+Next COGNITIVE_FATIGUE_READINESS.md.
+
+## Cognitive fatigue closure - 2026-09-25
+
+VER-C3-FATIGUE-001 COMPLETE bounded:4 models/20 distinct runs/180 exact prefixes;
+25+328 tests/build. Records1332..1352/schema1, inherited namespace1155.
+Retained admitted fatigue impairs an otherwise available inhibitory operation;
+missing/recovery evidence affects next40 without changing learned habit or goal.
+Fatigue is not external occupancy; MotorOnly separates execution incapacity from
+cognitive-control failure. NoFatigue and lower threshold remain explicit.
+No endogenous fatigue, recovery kinetics, clinical or universal resource claim.
+CAMPAIGN3_FATIGUE_QUALIFICATION.md / FATIGUE_CLOSURE_REV1.json.
+RO008/011/012/013/019/020 retained; no owner ruling. Counters1352/0.
+All nine Brief12.6 clauses have separate bounded witnesses, not joint integration.
+Next PROCRASTINATION_READINESS.md.
+
+## Retained-goal postponement closure - 2026-09-25
+
+VER-C3-PROCRASTINATION-001 COMPLETE bounded, corrected0.2:4 models/20 distinct runs/
+180 prefixes;26+328 tests/build. Records1353..1376/schema1, namespace1155 reused.
+Actual defer can coexist with maintained feasible goal and positive work reason;
+independent immediate motive and future expectation remain distinct.
+NoTemporalBias/PresentFocused/NoImmediateMotive retained. No clinical, universal
+discount or optimal planning claim. Preserve late-adoption failure and0.1 cohort;
+0.2 admits adoption only before6. Later availability is not enough completion capacity.
+CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md / PROCRASTINATION_CLOSURE_REV1.json.
+RO010/012/014/019/020 retained; no owner ruling. Counters1376/0.
+Next DELAYED_GRATIFICATION_READINESS.md.
+
+## Delayed gratification closure - 2026-09-25
+
+VER-C3-DELAYED-001 COMPLETE bounded:3 models/26 distinct runs/234 prefixes;
+27+328 tests/build. Records1377..1400/schema1, namespace1155 reused.
+Same-benefit now/later choice keeps admitted prediction, anticipation, choice,
+waiting, world delivery and safe receipt separate. Hyperbolic/NoDiscount/Exponential
+retained. False promise, no receipt, known zero and duplicate receipt remain distinct.
+No general temporal planner, trust calibration, optimal patience or new Need.
+CAMPAIGN3_DELAYED_QUALIFICATION.md / DELAYED_CLOSURE_REV1.json.
+RO010/012/014/019/020 retained; no owner ruling. Counters1400/0.
+Next INTENTION_FORGETTING_READINESS.md.
+
+## Intention forgetting closure - 2026-09-26
+
+VER-C3-INTENTION-001 COMPLETE bounded component:3 models/54 runs/486 prefixes;
+15+328 tests/build. Reuses actual retention/recall/reason kernels; no new public
+scheduler/factory, record or namespace. Goal adoption survives unavailable access
+and actual instruction loss. Cue recovery produces action only from surviving content.
+NoLoss/PersistentAccess retained. Preserve zero-score recall and identity-binding
+findings. CAMPAIGN3_INTENTION_QUALIFICATION.md / INTENTION_CLOSURE_REV1.json.
+RO005/006/007/012/014/019/020 retained; counters1400/0. No owner ruling.
+Next TEMPORAL_GOAL_CONFLICT_READINESS.md.

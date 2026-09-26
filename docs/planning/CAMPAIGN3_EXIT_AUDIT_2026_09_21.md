@@ -395,3 +395,76 @@ Totals84 bounded/25 partial/23 blocked across132 clauses/15 families; corpus21 m
 with18 bounded/3 prior unchanged. All ten relationship clauses have separate bounded
 witnesses. Counters1291/0; Campaign3 NOT EXIT-READY. RO010/011/016/020 conditional,
 019 active,021 unsatisfied. Prior snapshots preserved; next performance monitoring.
+
+## REV35 supplement - performance monitoring, 2026-09-25
+
+VER-C3-PERFORMANCE-001 advances only Brief12.6 clause5 from BLOCKED to bounded.
+4 models/22 runs/198 prefixes;19+328 tests/build. Fixed goal and route availability
+with changed admitted performance changes the later plan and actual attempt.
+OutcomeBlind/AnyFailure and visit-local/denied/false-feedback controls discriminate.
+The route-B success witness does not establish B is better: blocker removal would
+permit either route. No general control, causal diagnosis or Decision-law claim.
+Totals85 bounded/25 partial/22 blocked across132 clauses/15 families; corpus21 members
+with18 bounded/3 prior unchanged. Counters1310/0; Campaign3 NOT EXIT-READY.
+RO010/012/013/020 conditional,019 active,021 unsatisfied. Prior snapshots preserved.
+Next rumination consuming active cognition, not a renamed external load card.
+
+## REV36 supplement - bounded rumination, 2026-09-25
+
+VER-C3-RUMINATION-001 advances only Brief12.6 clause6 from BLOCKED to QUALIFIED
+BOUNDED:4 models/22 distinct runs/198 distinct prefixes;25+328 tests/build.
+23 executions/207 replay checks include one preserved duplicate, excluded from
+unique coverage. Original evidence, retained concern, recurrent access, occupancy
+and actual inhibition/choice stay separate. Interruption/rebound and admitted
+resolution discriminate NoRecurrence, StaticLoad and alternate scheduling.
+No universal recurrence, natural concern acquisition, fatigue or clinical claim.
+86 bounded/25 partial/21 blocked;132 clauses/15 families unchanged.
+Corpus0.29.0 remains21 members/18 bounded/3 prior. Counters1331/0.
+Campaign3 NOT EXIT-READY; final historical reconciliation021 remains unsatisfied.
+
+## REV37 supplement - bounded experienced fatigue, 2026-09-25
+
+VER-C3-FATIGUE-001 advances only Brief12.6 clause7 from BLOCKED to QUALIFIED BOUNDED.
+4 models/20 distinct runs/180 prefixes;25+328 tests/build. Experienced fatigue
+modulates actual inhibition under fixed goal/history/load; missing versus recovery
+evidence and motor-only failure remain distinct. No endogenous fatigue, natural
+sensing, clinical or universal resource law. All nine workspace/control clauses
+have separately bounded witnesses, not joint integration qualification.
+87 bounded/25 partial/20 blocked across132 clauses/15 families. Corpus0.29.0 remains
+21 members/18 bounded/3 prior. Counters1352/0. Campaign3 NOT EXIT-READY;
+historical reconciliation021 remains mandatory and unsatisfied.
+
+## REV38 supplement - bounded postponement, 2026-09-25
+
+VER-C3-PROCRASTINATION-001 advances only Brief12.7 clause5 BLOCKED→QUALIFIED BOUNDED.
+Corrected0.2:4 models/20 runs/180 prefixes;26+328 tests/build. A retained accessible
+feasible goal remains positively reason-bearing during actual defer choice.
+NoTemporalBias/PresentFocused/NoImmediateMotive distinguish bounded predictions.
+Original0.1 late-adoption failure is preserved and corrected before public qualification.
+No universal discount, clinical or optimal scheduling claim; a future opening does
+not guarantee sufficient completion capacity.88 bounded/25 partial/19 blocked;
+132 clauses/15 families unchanged. Corpus0.29.0 remains21 members/18 bounded/3 prior.
+Counters1376/0. Campaign3 NOT EXIT-READY; historical gate021 unsatisfied.
+
+## REV39 supplement - delayed gratification, 2026-09-25
+
+Only Brief12.7 clause6 advances BLOCKED -> QUALIFIED BOUNDED.
+VER-C3-DELAYED-001 / CAMPAIGN3_DELAYED_QUALIFICATION.md:3 models/26 distinct runs/
+234 prefixes;27+328 tests/build. Same-benefit temporal choice, actual waiting,
+world delivery and learned safe receipt are distinct. Three discount laws retained.
+No universal patience, calibrated temporal discount, learned promise trust or general
+temporal planner. Preserve schema rejection and full safe-view receipts.
+132 clauses/15 families:89 bounded/25 partial/18 blocked. Corpus0.29.0 unchanged,
+21 members/18 bounded/3 prior. Counters1400/0. RO010/012/014/020 conditional,019 active;
+021 history gate unsatisfied. Campaign3 NOT EXIT-READY. Next intention forgetting.
+
+## REV40 supplement - intention forgetting, 2026-09-26
+
+Only Brief12.7 clause7 advances PARTIAL -> QUALIFIED BOUNDED. VER-C3-INTENTION-001
+qualifies a composed component witness, not new public admission:3 models/54 runs/
+486 prefixes;15+328 tests/build. Recall recovers retained prospective instructions
+for action but cannot reload removed content. NoLoss/PersistentAccess retained.
+Preserve zero-score top-K finding and superseded model-identity binding cohort.
+No general memory/forgetting law or prospective-state reduction.90 bounded/24 partial/
+18 blocked clauses;132 clauses/15 families. Corpus unchanged21 members/18 bounded/
+3 prior. Counters1400/0.021 historical gate unsatisfied; Campaign3 NOT EXIT-READY.

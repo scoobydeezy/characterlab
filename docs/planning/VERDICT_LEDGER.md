@@ -2295,3 +2295,93 @@ law, clinical time course, physical death model or enacted mourning/search.
 CAMPAIGN3_GRIEF_QUALIFICATION.md and GRIEF_CLOSURE_REV1.json bind evidence;
 GRIEF_IMPLEMENTATION_FINDINGS.md and preservation inventory retain source limits.
 RO010/011/016/019/020; none closes. No reduction or owner ruling. Counters1291/0.
+
+## VER-C3-PERFORMANCE-001 - bounded performance monitoring, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under performance-public/0.1-candidate.
+4 models/22 runs/198 exact prefixes (176 advancing/22 terminal);19 new+328 reference
+tests/build. RETAIN goal, route visit, attempt/execution, admitted performance and
+monitoring diagnostic separately. At fixed goal/availability, two admitted failures
+change the later ordinary plan and actual route attempt. Single/transient failure,
+missing feedback and fresh-visit controls discriminate. OutcomeBlind/AnyFailure/
+TruthOracle remain explicit. False feedback can prompt a switch after real success;
+whole later hidden/denied views pass lawfully and fail for Oracle. No alternative
+superiority, causal diagnosis, new Decision law or universal threshold claim.
+CAMPAIGN3_PERFORMANCE_QUALIFICATION.md and PERFORMANCE_CLOSURE_REV1.json bind evidence;
+PERFORMANCE_IMPLEMENTATION_FINDINGS.md preserves the blocker-removal confound for
+any improvement claim. RO010/012/013/019/020; none closes. Counters1310/0.
+
+## VER-C3-RUMINATION-001 - bounded recurrent concern, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under rumination-public/0.1-candidate.
+4 models/22 distinct runs/198 distinct prefixes;23 executions/207 replay checks
+include one preserved duplicate case, not extra coverage.25 new+328 reference tests/build.
+RETAIN original evidence, retained concern, recurrent access, workspace occupancy,
+control opportunity and actual behavior. Repeated access changes inhibition without
+new evidence; interruption/rebound and admitted resolution preserve history.
+NoRecurrence, StaticLoad, Alternating and external-card controls remain. Whole later
+hidden/denied/nonrecipient views and all-prefix restores pass. No general recurrence,
+fatigue, clinical law, natural concern source or self-chosen regulation claim.
+CAMPAIGN3_RUMINATION_QUALIFICATION.md / RUMINATION_CLOSURE_REV1.json bind evidence;
+RUMINATION_IMPLEMENTATION_FINDINGS.md and RUMINATION_DUPLICATE_CASE_FINDING_REV1.json
+preserve limits and accounting flaw. RO010/011/012/017/019/020; none closes.
+Counters1331/0. No reduction or owner ruling.
+
+## VER-C3-FATIGUE-001 - bounded experienced fatigue, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under fatigue-public/0.1-candidate.
+4 models/20 distinct runs/180 exact prefixes (160 advancing/20 terminal);
+25 new+328 reference tests/build. RETAIN physical condition, sensor evidence,
+retained experience, workload, control effectiveness and motor execution separately.
+Severe experienced fatigue impairs actual inhibition with fixed goal/habit/load;
+missing feedback persists and admitted rest releases next40. Unknown differs from
+rested. NoFatigue/MotorOnly/AnyFatigue remain. Motor challenge preserves prior intent
+while physical execution fails. False/hidden/denied whole later views and all-prefix
+restores pass. No endogenous accumulation, clinical or universal resource law.
+CAMPAIGN3_FATIGUE_QUALIFICATION.md / FATIGUE_CLOSURE_REV1.json bind evidence;
+FATIGUE_IMPLEMENTATION_FINDINGS.md preserves source and motor/control limits.
+RO008/011/012/013/019/020; none closes. Counters1352/0; no owner ruling or reduction.
+
+## VER-C3-PROCRASTINATION-001 - bounded retained-goal postponement, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under procrastination-public/0.2-candidate.
+4 models/20 distinct runs/180 exact prefixes;26 new+328 reference tests/build.
+RETAIN active goal, maintained access, current feasibility, future expectation,
+independent immediate motive, exact reasons/dice and actual choice/execution.
+A positive work reason survives actual defer choices; missing access and inability
+are separate controls. NoTemporalBias/PresentFocused/NoImmediateMotive remain.
+Progress, fulfillment, cancellation and deadline failure are distinct. Whole later
+hidden/denied views and all-prefix replay pass. No universal temporal valuation,
+clinical or optimal scheduling claim. Available later is not sufficient completion
+capacity. Preserve original0.1 cohort and PROCRASTINATION_ADOPTION_FAILURE_REV1.json:
+first tests missed late adoption; corrected0.2 rejects adoption at/after deadline.
+CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md / PROCRASTINATION_CLOSURE_REV1.json bind
+the evidence. RO010/012/014/019/020; none closes. Counters1376/0; no owner ruling.
+
+## VER-C3-DELAYED-001 - bounded delayed gratification, 2026-09-25
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED under delayed-public/0.1-candidate.
+3 models/26 distinct runs/234 exact prefixes;27 new+328 reference tests/build.
+RETAIN admitted offer, anticipation, actual choice/wait, physical delivery and
+learned receipt. Hyperbolic/NoDiscount/Exponential remain candidates; exact reason
+dice mediate actual now/later choice for the same benefit task. Failed promise and
+missing/false/late receipts preserve earlier expression. Duplicate receipt does not
+add evidence; hidden/denied whole safe views and all-prefix replay pass.
+No calibrated discount curve, trust learning, cross-benefit exchange rate, optimal
+patience or later adaptive-choice claim. Preserve DELAYED_SCHEMA_REJECTED_REV1.json
+and DELAYED_IMPLEMENTATION_FINDINGS.md. CAMPAIGN3_DELAYED_QUALIFICATION.md /
+DELAYED_CLOSURE_REV1.json bind evidence. RO010/012/014/019/020 retained; none closes.
+Counters1400/0; no owner ruling or reduction.
+
+## VER-C3-INTENTION-001 - bounded intention forgetting, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, intention-forgetting-component/0.1-candidate.
+Composed component scope:3 models/54 runs/486 component prefixes;15+328 tests/build.
+RETAIN adopted goal, prospective action content, access, cue, opportunity and execution.
+Reminder recovers surviving instruction for actual action, but not removed content.
+NoLoss/PersistentAccess remain. Cancellation/expiry and hidden physical failure remain
+separate. Preserve zero-score recall test failure and superseded identity cohort;
+REV2 binds exact content and reproduces every prior behavior hash. No public scheduler/
+save API or universal forgetting law. CAMPAIGN3_INTENTION_QUALIFICATION.md /
+INTENTION_CLOSURE_REV1.json. RO005/006/007/012/014/019/020 remain; none closes.
+Counters1400/0; no new allocation, reduction or owner ruling.

@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {createServer} from 'vite';
+const p='docs/planning/',planPath=p+'INTENTION_PLAN_REV1.json',resultPath=p+'INTENTION_RESULT_REV1.json';
+const hash=b=>createHash('sha256').update(b).digest('hex'),hex=b=>Buffer.from(b).toString('hex');
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{
+ const m=await server.ssrLoadModule('/src/campaign3/intentionForgetting.ts'),fx=await server.ssrLoadModule('/src/test/intentionForgettingFixtures.ts'),ids=await server.ssrLoadModule('/src/substrate/identity.ts'),c=await server.ssrLoadModule('/src/substrate/canonicalEncoding.ts');
+ const cases=fx.intentionCases(),seed=new Uint8Array(32),paths=['docs/formal/INTENTION_FORGETTING_COMPONENT_CONTRACT.md','src/campaign3/intentionForgetting.ts','src/test/intentionForgettingFixtures.ts','src/test/intentionForgetting.test.ts','src/campaign3/canonicalChildKeys.ts','src/campaign3/canonicalEventRecall.ts','src/campaign3/significanceFirstRetention.ts','src/campaign3/directionalSignificanceState.ts','src/campaign3/retentionFragmentation.ts','src/campaign3/encodingAccessMath.ts','src/campaign2/cognitiveMath.ts','scripts/qualify-intention-forgetting.mjs'];
+ const artifacts=paths.map(path=>({path,sha256:hash(fs.readFileSync(path))})),models=[],runs=[];
+ for(const law of m.LAWS){
+  const model=await ids.createModelIdentity({rulesVersion:m.VERSION,contentSchemaVersion:m.VERSION,contentManifest:await ids.commitManifest(c.text(JSON.stringify(artifacts))),parameterSchemaVersion:m.VERSION,parameterSet:await ids.commitManifest(c.text(law)),numericProfileVersion:'exact-rational/component',randomAlgorithmVersion:'rng/sha256-addressed-128-v1-candidate',registrySchemaVersion:m.VERSION,registryManifest:await ids.commitManifest(c.list([]))});
+  models.push({law,model});for(const [name,input] of Object.entries(cases)){const run=await ids.createRunIdentity({modelIdentity:model,initialState:await ids.commitManifest(c.list([])),orderedInputSequence:await ids.commitManifest(c.text(JSON.stringify(input))),runSeed:seed});runs.push({law,name,input,run,model});}
+ }
+ if(process.argv.includes('--plan')){
+  const experiment=await ids.createExperimentIdentity('corpus/0.29.0',m.VERSION,'intention-component-harness/0.1-candidate'),comparison=await ids.createComparisonCase(models.map(x=>x.model),runs.map(x=>x.run),c.list([c.text('same admitted frames; exact Auto/no random draws; component prefix replay, not public saves'),c.bytes(seed)]));
+  assert.equal(new Set(runs.map(x=>hex(x.run.canonicalBytes))).size,runs.length);
+  fs.writeFileSync(planPath,JSON.stringify({status:'FROZEN BEFORE COMPONENT EXPERIMENT',date:'2026-09-26',scope:m.VERSION,artifacts,experimentIdentity:hex(experiment.canonicalBytes),comparisonCase:hex(comparison.canonicalBytes),models:models.map(x=>({law:x.law,identity:hex(x.model.canonicalBytes)})),runs:runs.map(x=>({law:x.law,name:x.name,input:x.input,modelIdentity:hex(x.model.canonicalBytes),runIdentity:hex(x.run.canonicalBytes)}))},null,2)+'\n',{flag:'wx'});console.log('Frozen3 models/54 distinct component runs.');
+ }else{
+  const plan=JSON.parse(fs.readFileSync(planPath));assert.deepEqual(plan.artifacts,artifacts);assert(!fs.existsSync(resultPath));const results=[],views=[];let prefixes=0;
+  for(const row of plan.runs){const current=runs.find(x=>x.law===row.law&&x.name===row.name);assert.equal(hex(current.run.canonicalBytes),row.runIdentity);const full=m.runIntention(row.law,row.input),prefixHashes=[];
+   for(let i=0;i<=8;i++){const partial=m.runIntention(row.law,row.input,i);assert.deepEqual(partial.rows,full.rows.slice(0,i));assert.deepEqual(partial.world,full.world.slice(0,i));if(i)assert.equal(partial.state.goal,partial.rows.at(-1).goal);prefixHashes.push(hash(m.intentionBytes(partial)));prefixes++;}
+   const safe=m.intentionSafeView(full);results.push({law:row.law,name:row.name,modelIdentity:row.modelIdentity,runIdentity:row.runIdentity,prefixHashes,finalSha256:hash(m.intentionBytes(full)),safeSha256:hash(m.intentionBytes(safe))});views.push({law:row.law,name:row.name,full,safe});console.log(row.law+'/'+row.name+':9 component prefixes');
+  }
+  const get=(name,law='RetainedCue')=>views.find(x=>x.law===law&&x.name===name),intent=(name,law)=>get(name,law).full.rows.map(x=>x.expression.intent);
+  assert.deepEqual(intent('main'),[0,0,0,0,1,0,0,0]);assert.equal(get('main').full.world[4].success,true);
+  for(const name of ['lost','lostB','noCue','wrongCue','cancelled','expired','noOpportunity','denied'])assert.deepEqual(intent(name),Array(8).fill(0));
+  assert.equal(intent('routeB')[4],2);assert.equal(intent('lost','NoLoss')[4],1);assert.equal(intent('lostB','NoLoss')[4],2);assert.equal(intent('noCue','PersistentAccess')[2],1);assert.deepEqual(intent('lost','PersistentAccess'),Array(8).fill(0));
+  assert.equal(get('lost').full.rows[4].goal,'Open');assert.equal(get('lost').full.state.goal,'Expired');assert.equal(get('cancelled').full.state.goal,'Cancelled');assert.equal(get('main').full.state.goal,'Fulfilled');
+  assert.deepEqual(get('blocked').full.rows[4].expression,get('main').full.rows[4].expression);assert.equal(get('blocked').full.world[4].success,false);assert.equal(get('hidden').full.state.goal,'Expired');
+  for(const [a,b] of [['hidden','hiddenBlocked'],['falseReceipt','trueReceipt'],['denied','deniedB']])assert.deepEqual(get(a).safe,get(b).safe);
+  assert.equal(intent('noNeutral')[4],1);assert.equal(intent('lateCue')[5],1);
+  fs.writeFileSync(p+'INTENTION_VIEWS_REV1.json',JSON.stringify({planSha256:hash(fs.readFileSync(planPath)),views},null,2)+'\n',{flag:'wx'});
+  fs.writeFileSync(resultPath,JSON.stringify({status:'PASS',scope:'composed component, not public scheduler/save API',planSha256:hash(fs.readFileSync(planPath)),models:3,runs:results.length,prefixes,results},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({models:3,runs:results.length,prefixes}));
+ }
+}finally{await server.close();}
