@@ -3793,3 +3793,345 @@ Next: INTENTION_FORGETTING_READINESS.md, Stage A for Brief12.7 clause7.
 Preserve retained content, accessibility, content loss and cancellation.
 010/012/014/020 conditional,019 active; none closes.
 Historical reconciliation021 remains mandatory and unsatisfied.
+
+## Preserved checkpoint before temporal goal closure
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded intention forgetting COMPLETE - VER-C3-INTENTION-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 60 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **90 bounded / 24 partial / 18 blocked** |
+| New component qualification | **3 models / 54 distinct runs / 486 prefixes** |
+| Validation | **15 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_INTENTION_QUALIFICATION.md and INTENTION_CLOSURE_REV1.json.
+Existing retention/recall kernels recover inaccessible retained future-action content
+but cannot reload removed instruction bytes. Goal adoption, cancellation, expiry,
+opportunity and execution stay distinct. NoLoss/PersistentAccess retained.
+Preserve zero-score recall finding, build/test source and superseded identity cohort.
+This is composed component scope, not a new public scheduler/source/save API or
+universal forgetting law. No new allocation or prospective-state reduction.
+
+Next TEMPORAL_GOAL_CONFLICT_READINESS.md, Stage A for Brief12.7 clause8.
+Preserve independent adopted goals, horizons, reasons and lifecycle through actual
+contest and later action.005/006/007/012/014/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived CURRENT before habit resistance reconciliation — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded temporal goal conflict COMPLETE - VER-C3-TEMPORAL-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 61 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **91 bounded / 24 partial / 17 blocked** |
+| New component qualification | **4 models / 27 distinct runs / 243 prefixes** |
+| Validation | **16 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_TEMPORAL_QUALIFICATION.md and TEMPORAL_CLOSURE_REV1.json.
+Two adopted goals supply independent reasons, retain the losing goal and permit
+later actual pursuit. Progress, cancellation, fulfillment and expiry stay selective.
+Full original dice/intent/expression/execution kernels run; NoTemporalBias retained.
+DropLoser/SharedRetirement fail the primary witness and coincide in that case.
+No universal valuation law, completion-capacity reasoning or public scheduler admission.
+All eight Brief12.7 clauses have separate bounded witnesses, not joint integration.
+
+Next HABIT_RESISTANCE_READINESS.md, Stage A evidence audit for Brief12.9 clause3.
+Check existing CONTROL/HABIT/FATIGUE witnesses before adding new machinery.
+001/010/012/014/020 conditional,019 active; none closes.
+Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived CURRENT before habit acquisition reconciliation — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded habit resistance COMPLETE - VER-C3-HABIT-RESIST-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 62 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **92 bounded / 24 partial / 16 blocked** |
+| Replayed existing CONTROL evidence | **7 models / 17 runs / 142 prefixes** |
+| New models / runs / production allocations | **0 / 0 / 0** |
+
+Start CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md and HABIT_RESISTANCE_CLOSURE_REV1.json.
+CONTROL already contains acquired cue history, maintained-goal inhibition, actual
+load-sensitive action and return after goal retirement. Fresh replay matches all
+frozen result hashes. FATIGUE/HABIT frozen evidence and source hashes also verified.
+No new test cohort/build; prior CONTROL22/FATIGUE25 and328-reference receipts stand.
+Only Brief12.9 clause3 advances; the old family rationale omitted existing evidence.
+No addiction, universal control-resource or combined-model qualification.
+
+Next HABIT_ACQUISITION_COVERAGE_READINESS.md: audit remaining PARTIAL Brief12.9 clause1
+before designing dependence/substitute extensions. RO012/015/020 conditional,019 active;
+none closes. Historical reconciliation021 remains mandatory and unsatisfied.
+
+
+## Archived CURRENT before substitution closure — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded habit acquisition COMPLETE - VER-C3-HABIT-ACQUIRE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 63 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **93 bounded / 23 partial / 16 blocked** |
+| Replayed existing HABIT evidence | **12 models / 23 runs / 291 prefixes** |
+| New models / runs / production allocations | **0 / 0 / 0** |
+
+Start CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md and HABIT_ACQUISITION_CLOSURE_REV1.json.
+Admitted successful practice from empty history supports actual later cue-dependent
+free action after reward-expectation correction. Every old result row/prefix matches.
+Preserve HABIT_ACQUISITION_AUDIT_FINDING_REV1.json: initial wrapper assumed absent
+legacy RunIdentity fields; no original commitments or frozen receipt were rewritten.
+No new test/build cohort; original75 affected/328-reference validation stands.
+Only Brief12.9 clause1 advances; no general automaticity, compulsion or addiction.
+
+Next DEPENDENCE_SUBSTITUTES_READINESS.md: bounded concentration versus alternative
+satisfiers, requiring actual alternative-sensitive behavior and admitted feedback.
+RO012/015/020 conditional,019 active; none closes. Broader source/learning obligations
+008/010 also inform intake.021 historical reconciliation remains mandatory/unsatisfied.
+
+
+## Archived CURRENT before reinforcement closure — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded dependence/substitution COMPLETE - VER-C3-SUBSTITUTION-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 64 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **95 bounded / 23 partial / 14 blocked** |
+| Component qualification | **5 models / 29 runs / 261 prefixes** |
+| Validation | **15 scoped + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md and SUBSTITUTION_CLOSURE_REV1.json.
+Contract dependence-substitutes-component/0.2-candidate. Same total training,
+different repertoire: A removal permits actual B substitution only when learned.
+ExpectationOnly explains the primary contrast; history is not necessary for it.
+HistoryOnly misses informational alternatives. At zero estimates, history changes
+candidate availability but NoActiveReasons produces no action. Preserve HABIT's
+neutral-choice control and both failed development cohorts. No new allocation,
+public scheduler admission, physiological withdrawal or general addiction claim.
+
+Next REINFORCEMENT_ESCALATION_READINESS.md: define/audit actual feedback before
+interpreting rising habit strength as escalation. RO008/010/012/015/020 conditional,
+019 active; none closes.021 historical gate remains mandatory and unsatisfied.
+
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded reinforcement feedback COMPLETE - VER-C3-REINFORCEMENT-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 65 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **96 bounded / 23 partial / 13 blocked** |
+| Component qualification | **5 reused models / 31 runs / 279 prefixes** |
+| Validation | **8 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md and REINFORCEMENT_CLOSURE_REV1.json.
+Actual chosen outcomes change mean expectation, later reasons and subsequent action.
+Withheld feedback breaks the route while physical relief remains. All eight seed
+pairs retained: six sequence divergences, two equal. LatestHistory remains a serious
+nonaccumulating comparator; no universal repetition or increasing objective reward.
+Production source/model identities unchanged; no new allocation/public admission.
+BIO identity feedback and HABIT neutral-choice controls remain distinct.
+
+Next TOLERANCE_READINESS.md: audit accepted physical ADAPT evidence before claiming
+perceived tolerance or compensatory action. RO008/009/010/015/020 conditional,019 active;
+none closes.021 historical gate remains mandatory and unsatisfied.
+
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded physical tolerance COMPLETE - VER-C3-TOLERANCE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 66 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **97 bounded / 22 partial / 13 blocked** |
+| Component qualification | **3 models / 18 composed runs / 90 prefix comparisons** |
+| Validation | **4 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_TOLERANCE_QUALIFICATION.md and TOLERANCE_CLOSURE_REV1.json.
+Repeated ADAPT exposure reduces the effect of equal later stimulus under two candidate
+laws. Unattenuated retains state accumulation without effect loss. Current reserve,
+other adaptation leaves and exposure key remain separate. Four underlying public
+input/state conditions reused; these are not18 new public runs or90 unique saves.
+TOLERANCE_FINDINGS.md preserves the missing-consumer audit finding. No new public
+transition, sensor, perceived tolerance, recovery or compensatory behavior claim.
+
+Next ABSENCE_DEFICIT_READINESS.md. Audit adapted versus naive absence without
+confusing unavailable satisfier or ordinary task demand with physiological deficit.
+RO008/010/015/020 conditional,019 active; none closes.021 historical gate remains
+mandatory and unsatisfied. Corpus membership unchanged; no state root retired.
+
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded absence deficit COMPLETE - VER-C3-ABSENCE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 67 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **98 bounded / 22 partial / 12 blocked** |
+| Component qualification | **3 models / 27 composed runs / 135 prefix comparisons** |
+| Validation | **4 new + 328 reference tests; corrected production build passed** |
+
+Start CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md and ABSENCE_CLOSURE_REV1.json.
+Acquired displacement creates excess physical deficit under matched absence; support
+removes it without erasing adaptation. Ordinary shortfall, other leaves and unrelated
+key remain separate. LinearGap/ThresholdGap retained; FixedReference ablates D use.
+Four underlying public conditions reused, no new public sensor or cognitive consumer.
+Preserve ABSENCE_FINDINGS.md, initial wrong-reference draft, build annotation failure
+and original unexecuted plan. Corrected REV2 froze before qualification.
+
+Next CRAVING_READINESS.md: audit admitted body/cue/learned relief sources and keep
+urge separate from access, actual deficit and action. No experienced distress, recovery
+or craving claim yet. RO008/010/011/015/020 conditional,019 active; none closes.
+021 historical gate remains mandatory and unsatisfied. No state root retired.
+
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded represented craving COMPLETE - VER-C3-CRAVING-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 68 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **99 bounded / 22 partial / 11 blocked** |
+| Component qualification | **4 models / 56 distinct runs / 60 comparisons** |
+| Replay | **300 component checks (280 distinct prefixes);15 public source prefixes** |
+| Validation | **7 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_CRAVING_QUALIFICATION.md and CRAVING_CLOSURE_REV1.json.
+Admitted body pressure and learned relief produce represented urge independently of
+current action access/restraint. MeanProduct/MeanBottleneck/LatestProduct/NoLearning
+retain different predictions. Five actual public BODY sources reused. Preserve
+CRAVING_FINDINGS.md: hidden-body aliases share safe inputs/RunIdentity; the initial
+60-unique assumption failed before freeze. No fabricated identity salts or discarded
+witnesses. Component observer label is the fixed character-subject owner, not a new
+semantic ObserverId conversion. Fixed recognized cue/recall/restraint are controls.
+
+Next RELAPSE_READINESS.md: require actual acquisition, intervening adaptation and
+later enacted return. Prospective eligibility is not action. No earned control,
+recovery or general addiction claim. RO008/010/011/012/015/020 conditional,019 active;
+none closes.021 historical gate remains mandatory and unsatisfied. No root retired.
+
+
+## Preserved index before costly-reward closure — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded relapse after goal-supported adjustment COMPLETE - VER-C3-RELAPSE-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 69 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **100 bounded / 22 partial / 10 blocked** |
+| Public experiment | **7 reused models / 31 new runs / 279 prefixes** |
+| Validation | **5 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_RELAPSE_QUALIFICATION.md and RELAPSE_CLOSURE_REV1.json.
+Three actual withholding opportunities precede neutral load against a retained and
+maintained goal. Seeds1/7 return target at7; six others retain idle. All recover
+withholding at8. Matched noLoad withholds4..8. Goal retirement, lost maintenance,
+cue access and reward correction remain distinct. Transient lapse only, not learned
+abstinence/control, physiological recovery or sustained relapse. No production change.
+Preserve RELAPSE_FINDINGS.md: Buffer wrapper failed before settlement; REV2 exact
+Uint8Array conversion preserves all original model/run/input identities.
+
+Next ADDICTION_INTEGRATION_READINESS.md. Ten separate bounded habit-family witnesses
+do not qualify joint addiction-like behavior. Audit interfaces/actual feedback before
+combining profiles. RO008/010/011/012/015/020 conditional,019 active; none closes.
+021 historical gate remains mandatory and unsatisfied. No root or distinction retired.

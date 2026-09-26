@@ -1,0 +1,34 @@
+{
+  "status": "RECONSTRUCTED PRIOR DOCUMENTATION SNAPSHOT",
+  "cause": "Bookkeeping Python stopped at stale AGENTS text anchor; a subsequent unchecked --write refreshed REV49 with new inventory/verdicts before routing to REV50.",
+  "unaffected": "All frozen model, run, test, result, build and closure artifacts; source clause dispositions and generator remained unchanged.",
+  "erroneous": {
+    "path": "docs/planning/COSTLY_REWARD_AUDIT_OVERWRITE_REV1.json",
+    "sha256": "60e65780d7a2cf7c7c1a3d3822203bf4ffe1c8ca261ba79b0e35e639a94ae8b0"
+  },
+  "reconstruction": {
+    "path": "docs/planning/CAMPAIGN3_EXIT_AUDIT_REV49.json",
+    "sha256": "0df00eae2625a28c244f0987bfcaf45e29ba4a296aa608169f86793d9e303b5a",
+    "removedVerdict": "VER-C3-COSTLY-REWARD-001",
+    "removedInventoryPath": "docs/planning/CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md",
+    "trimmed": [
+      {
+        "path": "docs/planning/VERDICT_LEDGER.md",
+        "preAppendSha256": "1ee7e484a3e630a2c4fff229003566798626c131b6b30dab71d37aeb1f4f929e",
+        "prefixBytes": 186965
+      },
+      {
+        "path": "docs/planning/SEAM_LEDGER.md",
+        "preAppendSha256": "9389481ef66fcf145a7b57cb3b9c603f7202a6c45cfa075b0ed9645208fbffce",
+        "prefixBytes": 201382
+      },
+      {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "preAppendSha256": "ce47f6be8232fec01299c9efe389546a84e033af96e059a613ca04f4a089c3b0",
+        "prefixBytes": 63396
+      }
+    ]
+  },
+  "limitation": "No independent pre-overwrite digest was captured. Reconstruction uses unchanged prior generator/dispositions and exact prefixes before this turn appended three inventory sources; do not call it independently hash-proven recovery.",
+  "prevention": "Successor generator uses REV50 and --write refuses an existing target."
+}

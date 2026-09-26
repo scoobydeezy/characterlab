@@ -2,7 +2,7 @@
 
 **Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Bounded intention forgetting COMPLETE - VER-C3-INTENTION-001.**
+**Bounded acquired costly reward-seeking COMPLETE - VER-C3-COSTLY-REWARD-001.**
 LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
 
 | Counter | Value |
@@ -11,21 +11,25 @@ LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
 | Allocated since last verdict/corpus member | **0** |
 | Research obligations | **1 active / 19 conditional / 0 unowned** |
 | Closed obligations | **1: RO-C3-018** |
-| Corpus / named verdict entries | **0.29.0 - 21 members / 60 verdicts** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 70 verdicts** |
 | Brief clauses / families | **132 / 15** |
-| Brief clause dispositions | **90 bounded / 24 partial / 18 blocked** |
-| New component qualification | **3 models / 54 distinct runs / 486 prefixes** |
-| Validation | **15 new + 328 reference tests; production build passed** |
+| Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
+| Component experiment | **6 models / 50 runs / 650 prefixes** |
+| Validation | **17 new + 328 reference tests; production build passed** |
 
-Start CAMPAIGN3_INTENTION_QUALIFICATION.md and INTENTION_CLOSURE_REV1.json.
-Existing retention/recall kernels recover inaccessible retained future-action content
-but cannot reload removed instruction bytes. Goal adoption, cancellation, expiry,
-opportunity and execution stay distinct. NoLoss/PersistentAccess retained.
-Preserve zero-score recall finding, build/test source and superseded identity cohort.
-This is composed component scope, not a new public scheduler/source/save API or
-universal forgetting law. No new allocation or prospective-state reduction.
+Start CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md and COSTLY_REWARD_CLOSURE_REV1.json.
+Separate benefit/harm beliefs, cue history, protective goal, load-sensitive inhibition,
+actual reasons/dice/choice and later feedback compose without an Addicted trait.
+Seven of eight seeds repeat actual costly choices under load; all noLoad runs withhold
+and all main runs restore withholding. Feedback changes four sequences, preserves four,
+and does not universally reduce harm. BeliefAccess matches primary behavior; cue
+change discriminates it. Whole safe views match false/denied-outcome pairs.
+Preserve COSTLY_REWARD_FINDINGS.md/all99 exploration trajectories and
+COSTLY_REWARD_AUDIT_RECOVERY_REV1.json (documentation-only overwrite/reconstruction).
 
-Next TEMPORAL_GOAL_CONFLICT_READINESS.md, Stage A for Brief12.7 clause8.
-Preserve independent adopted goals, horizons, reasons and lifecycle through actual
-contest and later action.005/006/007/012/014/020 conditional,019 active; none closes.
-Historical reconciliation021 remains mandatory and unsatisfied.
+No full addiction, physiology/withdrawal integration, clinical or public scheduler claim.
+All eleven habit-family clauses have separate bounded witnesses, not joint integration.
+Next IDENTITY_EVIDENCE_READINESS.md: audit meaningful/trivial/coerced identity evidence
+against existing BIO eligibility before extending. RO008/010/011/012/015/020 conditional,
+019 active; none closes.021 historical gate remains mandatory and unsatisfied.
+No root or distinction retired. Counters1400/0; no architecture-owner ruling pending.

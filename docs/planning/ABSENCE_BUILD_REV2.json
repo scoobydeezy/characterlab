@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "date": "2026-09-26",
+  "command": "npm run build",
+  "exitCode": 0,
+  "checks": [
+    "reference boundary",
+    "tsc -b",
+    "vite build"
+  ],
+  "artifacts": [
+    {
+      "path": "src/campaign3/absenceDeficit.ts",
+      "sha256": "434a883322f5ebca2861cda6352f2a9126ab1c1586ad37ec008b6fa375fb221a"
+    },
+    {
+      "path": "src/test/absenceFixtures.ts",
+      "sha256": "bfb8cb078d882f78d7f0739a416e9155b6975f03979b89e428cec694105a544c"
+    },
+    {
+      "path": "src/test/absenceDeficit.test.ts",
+      "sha256": "a1ed3521ba0c7a3ade9d55b3a62df4d9678a85e6d8f52459362280434228be53"
+    }
+  ]
+}

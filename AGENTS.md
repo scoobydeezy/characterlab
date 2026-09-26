@@ -72,7 +72,116 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
-Campaign 3 current checkpoint: bounded intention forgetting COMPLETE
+Campaign 3 current frontier: acquired costly reward-seeking COMPLETE
+(VER-C3-COSTLY-REWARD-001, costly-reward-component/0.1-candidate):6 component models/
+50 runs/650 prefixes;17+328 tests/build. Start CURRENT.md and
+CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md. Benefit/harm beliefs, acquired cue history,
+maintained protective goal, control, actual choice and feedback stay separate.
+Seven of eight seeds repeat costly choices under load; all restore withholding.
+Feedback is not pathwise harm-reducing. Preserve COSTLY_REWARD_FINDINGS.md/all99
+exploratory trajectories. No full addiction, physiological or public scheduler claim.
+AuditREV50:101 bounded/22 partial/9 blocked;1400/0. Next IDENTITY_EVIDENCE_READINESS.md.
+Preserve COSTLY_REWARD_AUDIT_RECOVERY_REV1.json: prior snapshot reconstructed after
+bookkeeping overwrite; no independent pre-overwrite digest claim. Experiments unaffected.
+No owner ruling pending;021 historical reconciliation remains mandatory. Prior:
+
+Campaign 3 current frontier: bounded relapse after goal-supported adjustment COMPLETE
+(VER-C3-RELAPSE-001, relapse-experiment/0.1-candidate):7 reused models/31 new public
+runs/279 prefixes;5+328 tests/build. Start CURRENT.md and CAMPAIGN3_RELAPSE_QUALIFICATION.md.
+Three actual withholding opportunities, then load-triggered return in seeds1/7 while
+goal maintained; all eight seeds retained and withholding returns after load clears.
+AuditREV49:100 bounded/22 partial/10 blocked;1400/0. Next ADDICTION_INTEGRATION_READINESS.md.
+Preserve RELAPSE_FINDINGS.md Buffer rejection and REV2 same-identity wrapper correction.
+No physiological recovery, learned abstinence, sustained relapse or joint addiction claim.
+The craving routing below is historical; its then-next relapse is closed.
+
+Prior frontier: bounded represented craving COMPLETE
+(VER-C3-CRAVING-001, craving-component/0.1-candidate):4 models/56 unique runs/
+60 comparisons/300 component prefix checks (280 distinct),5 public BODY runs/
+15 prefixes;7+328 tests/build. Start CURRENT.md and CAMPAIGN3_CRAVING_QUALIFICATION.md.
+AuditREV48:99 bounded/22 partial/11 blocked;1400/0. Next RELAPSE_READINESS.md.
+Preserve CRAVING_FINDINGS.md and pre-freeze identity-alias assertion failure.
+Urge differs from access/eligibility/action; fixed cue and restraint are controls,
+not learned recognition or earned control. No enacted relapse or new public consumer.
+The absence routing below is historical; its then-next craving is closed.
+
+Prior frontier: bounded absence deficit COMPLETE
+(VER-C3-ABSENCE-001, absence-deficit-component/0.1-candidate):3 component models/
+27 runs/135 prefix comparisons from four public ADAPT conditions;4+328 tests/build.
+Start CURRENT.md and CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md. AuditREV47:
+98 bounded/22 partial/12 blocked;1400/0. Next CRAVING_READINESS.md. Preserve
+ABSENCE_FINDINGS.md and both source-reference/build-typing correction cohorts.
+Reference, acquired displacement and current physical condition remain separate.
+No new public consumer, subjective distress, recovery or craving qualification.
+The tolerance routing below is historical; its then-next absence deficit is closed.
+
+Prior frontier: bounded physical tolerance COMPLETE
+(VER-C3-TOLERANCE-001, tolerance-effect-component/0.1-candidate):3 component models/
+18 runs/90 prefix comparisons from four public ADAPT conditions;4+328 tests/build.
+Start CURRENT.md and CAMPAIGN3_TOLERANCE_QUALIFICATION.md. AuditREV46:97 bounded/
+22 partial/13 blocked.1400/0. Next ABSENCE_DEFICIT_READINESS.md. Preserve
+TOLERANCE_FINDINGS.md: prior tolerance state updates and R0+D probe did not prove
+attenuated effect. No new public consumer, recovery or perceived tolerance claim.
+The reinforcement routing below is historical; its then-next tolerance is closed.
+
+Prior checkpoint: bounded reinforcement feedback COMPLETE
+(VER-C3-REINFORCEMENT-001, reinforcement-feedback-experiment/0.1-candidate):5 reused
+models/31 runs/279 component prefixes;8 new/328 reference tests and build pass.
+Start docs/planning/CURRENT.md and CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md.
+Chosen admitted outcomes change mean expectation, later reasons and actual action;
+withheld receipts break the route despite physical relief. All eight seeds retained:
+six sequence divergences, two equal. LatestHistory remains; no general reinforcement
+law or objective reward escalation. No production model/source/allocation changes.
+Counters1400/0. AuditREV45 advances only Brief12.9 clause6:96 bounded/23 partial/13 blocked.
+Next TOLERANCE_READINESS.md; no physiological withdrawal or general addiction claim.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+Prior checkpoint: bounded dependence/substitution COMPLETE
+(VER-C3-SUBSTITUTION-001, dependence-substitutes-component/0.2-candidate):5 models/
+29 runs/261 exact component prefixes;15 scoped/328 reference tests and build pass.
+Start docs/planning/CURRENT.md and CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md.
+Equal training success with different repertoire supports actual learned substitution.
+ExpectationOnly explains primary behavior; history effects after zero correction are
+candidate-only under NoActiveReasons. Preserve HABIT neutral-choice policy and both
+failed development cohorts (assumed chosen idle; three-option contract violation).
+Counters1400/0; no allocation or public scheduler admission. AuditREV44 advances only
+Brief12.9 clauses4/5:95 bounded/23 partial/14 blocked. No physiological withdrawal or
+whole addiction claim. Next REINFORCEMENT_ESCALATION_READINESS.md. No owner ruling;
+Campaign3 NOT EXIT-READY.
+
+Prior checkpoint: bounded habit acquisition COMPLETE
+(VER-C3-HABIT-ACQUIRE-001):12 existing HABIT models/23 replayed runs/291 exact prefixes;
+all original result rows unchanged. No new model/run/production code/allocation.
+Start docs/planning/CURRENT.md and CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md.
+Admitted practice produces actual free cue response after expectation correction.
+Preserve HABIT_ACQUISITION_AUDIT_FINDING_REV1.json: absent legacy RunIdentity field
+caused wrapper assertion failure; no old commitment or result was rewritten.
+Counters1400/0. AuditREV43 advances only Brief12.9 clause1:93 bounded/23 partial/16 blocked.
+Next DEPENDENCE_SUBSTITUTES_READINESS.md; no general automaticity or addiction claim.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+Prior checkpoint: bounded habit resistance COMPLETE
+(VER-C3-HABIT-RESIST-001):7 existing CONTROL models/17 replayed runs/142 prefixes,
+all frozen hashes unchanged; no new model, run, production code or allocation.
+Start docs/planning/CURRENT.md and CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md.
+Acquired history survives inhibition and goal retirement exposes it again. Counters1400/0.
+AuditREV42 advances only Brief12.9 clause3:92 bounded/24 partial/16 blocked.
+Next HABIT_ACQUISITION_COVERAGE_READINESS.md; no addiction or general control law.
+No owner ruling. Campaign3 remains NOT EXIT-READY.
+
+Prior checkpoint: bounded temporal goal conflict COMPLETE
+(VER-C3-TEMPORAL-001, temporal-goal-conflict-component/0.1-candidate):4 models/
+27 distinct runs/243 exact component prefixes;16 new/328 reference tests/build.
+Counters1400/0, no allocation. Start CURRENT.md and CAMPAIGN3_TEMPORAL_QUALIFICATION.md.
+Independent adopted goals retain reasons/progress/lifecycle after actual contest;
+losing goal can be pursued later. NoTemporalBias retained. DropLoser/SharedRetirement
+fail the primary witness and coincide there. Component scope, no new public scheduler.
+AuditREV41:91 bounded/24 partial/17 blocked. All eight prospection clauses have separate
+bounded witnesses, not joint integration. Next HABIT_RESISTANCE_READINESS.md: audit
+existing CONTROL/HABIT/FATIGUE evidence before adding machinery. No owner ruling;
+Campaign3 NOT EXIT-READY.
+
+Prior checkpoint: bounded intention forgetting COMPLETE
 (VER-C3-INTENTION-001, intention-forgetting-component/0.1-candidate):3 models/
 54 distinct runs/486 component prefixes;15 new/328 reference tests and build passed.
 Counters1400/0, no new allocation. Start CURRENT.md and CAMPAIGN3_INTENTION_QUALIFICATION.md.
@@ -80,7 +189,7 @@ Retained future-action instruction versus access versus actual loss stays separa
 from goal adoption/cancellation/expiry and execution. NoLoss/PersistentAccess retained.
 Preserve zero-score recall and superseded identity-binding findings. Component scope,
 not new public scheduler/source/save admission. AuditREV40:90 bounded/24 partial/
-18 blocked clauses. Next TEMPORAL_GOAL_CONFLICT_READINESS.md. No owner ruling;
+18 blocked clauses. Its then-next temporal goal intake is qualified above. No owner ruling;
 Campaign3 NOT EXIT-READY.
 
 Prior checkpoint: bounded delayed gratification COMPLETE
@@ -247,8 +356,8 @@ tests; no new allocation or model identity. Bounded public CONTROL COMPLETE
 prefix continuations (52 advancing/19 terminal),38 agency and328 reference tests.
 Counters1400/0;1 active/19 conditional/1 closed/0 unowned obligations. Corpus0.29.0
 remains21 members with18 bounded/3 prior/0 partial/0 blocked member scopes; all15
-Brief families and132 clauses remain in the denominator (90 bounded/24 partial/18
-blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV40 adds bounded intention forgetting clause7; REV39 added bounded delayed gratification clause6; REV38 added bounded procrastination clause5; REV37 added bounded fatigue clause7; REV36 added bounded rumination clause6; REV35 added bounded monitoring clause5; REV34 added bounded grief clause8; REV33 added bounded betrayal clause6; REV32 added bounded attachment clause5; REV31 added bounded familiarity-without-liking clause4; REV30 added bounded reliance-history clause9; REV29 added bounded relationship attribution clause7; REV28 added bounded relationship-dimension clauses1/2/3; REV27 added bounded hearsay/direct clause8; REV26 added bounded person-goal clause4; REV25 added bounded fear/guilt clause3; REV24 added bounded disposition/current-intent clauses1/2; REV23 added bounded target-belief clauses5/6; REV22 added misunderstood explanation clause7; REV21 added bounded distress/leakage clauses5/6; REV20 added bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
+Brief families and132 clauses remain in the denominator (101 bounded/22 partial/9
+blocked clauses). Whole Campaign3 remains NOT EXIT-READY. AuditREV45 adds bounded reinforcement feedback clause6; REV44 added bounded dependence/substitution clauses4/5; REV43 added bounded habit acquisition clause1; REV42 added bounded habit resistance clause3; REV41 added bounded temporal goal conflict clause8; REV40 added bounded intention forgetting clause7; REV39 added bounded delayed gratification clause6; REV38 added bounded procrastination clause5; REV37 added bounded fatigue clause7; REV36 added bounded rumination clause6; REV35 added bounded monitoring clause5; REV34 added bounded grief clause8; REV33 added bounded betrayal clause6; REV32 added bounded attachment clause5; REV31 added bounded familiarity-without-liking clause4; REV30 added bounded reliance-history clause9; REV29 added bounded relationship attribution clause7; REV28 added bounded relationship-dimension clauses1/2/3; REV27 added bounded hearsay/direct clause8; REV26 added bounded person-goal clause4; REV25 added bounded fear/guilt clause3; REV24 added bounded disposition/current-intent clauses1/2; REV23 added bounded target-belief clauses5/6; REV22 added misunderstood explanation clause7; REV21 added bounded distress/leakage clauses5/6; REV20 added bounded lying clauses3/4; REV19 added chosen communication clauses1/2; REV18 added bounded familiarity clauses6/7; REV17 added bounded memory clauses3/8; REV16 added bounded reappraisal clause8; REV15 added inference correction clauses5/9; REV14 added CONTROL clauses3/4; REV13 added bounded goal/strategy clauses1/3/4; REV12 superseded the
 first drafted agency coverage after correction; no owner ruling is pending.
 The first agency cohort missed later nonrecipient occurrence leakage. Preserve
 AGENCY_UNRECEIVED_REPORT_FAILURE_REV1.json and agency-rev1/PRESERVATION.json.
@@ -265,8 +374,8 @@ CONTROL retains habit during inhibition and exposes it after goal retirement.
 Preserve CONTROL_IMPLEMENTATION_FINDINGS.md and its failed schema cohort.
 Report-supported event-local correction is now bounded-qualified; general causal
 discovery, alternative diagnosis and calibrated trust remain unresolved.
-Next: temporal goal conflict under TEMPORAL_GOAL_CONFLICT_READINESS.md; preserve
-independent adopted goals, horizons, reason grounds and lifecycle.
+Next: habit resistance under HABIT_RESISTANCE_READINESS.md; audit existing public
+CONTROL/HABIT/FATIGUE evidence before adding new machinery.
 Remaining memory clauses stay in the denominator. CAMPAIGN3_BRIEF_FRONTIER_INTAKE.md is a dated REV9
 snapshot, not current qualification counts. Prior BODY/BIO/COMMIT closures stand;
 RO-C3-018 is closed,008/009 broader scope conditional. RO-C3-021 final historical

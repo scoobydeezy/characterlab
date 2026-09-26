@@ -2385,3 +2385,174 @@ REV2 binds exact content and reproduces every prior behavior hash. No public sch
 save API or universal forgetting law. CAMPAIGN3_INTENTION_QUALIFICATION.md /
 INTENTION_CLOSURE_REV1.json. RO005/006/007/012/014/019/020 remain; none closes.
 Counters1400/0; no new allocation, reduction or owner ruling.
+
+## VER-C3-TEMPORAL-001 - independent temporal goal conflict, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, temporal-goal-conflict-component/0.1-candidate.
+4 models/27 runs/243 exact component saves,216 advancing/27 terminal;16+328 tests/build.
+RETAIN independent adoption, reasons, horizon, progress and lifecycle. A genuine
+contested choice preserves the losing goal for later actual pursuit; selective
+cancellation/expiry removes only its own pressure. Full inherited arbitration and
+frozen expression execute; physical and perceived progress remain distinct.
+NoTemporalBias changes distributions but shares the primary choice sequence.
+DropLoser/SharedRetirement fail the baseline witness and coincide in that primary case;
+no unique diagnosis or general lifecycle reduction follows. Hidden/denied whole views,
+transaction rollback and prefix continuation pass. CAMPAIGN3_TEMPORAL_QUALIFICATION.md /
+TEMPORAL_CLOSURE_REV1.json bind evidence. RO001/010/012/014/019/020 remain; none closes.
+Counters1400/0; no allocation, public scheduler admission or owner ruling.
+
+## VER-C3-HABIT-RESIST-001 - habit resistance reconciliation, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, Brief12.9 clause3 under existing
+control-public/0.2-candidate.7 existing models/17 replayed runs/142 exact prefixes
+(125 advancing/17 terminal), all frozen result hashes unchanged. No new model/run.
+RETAIN acquired history, cue, maintained goal, inhibitory operation and execution.
+Actual idle under control, target under load and target after goal retirement occur
+in one public run without post-training history change. NoInhibition/LoadBlind/
+RetainedEqualsMaintained/EraseHistory/NoHistory and Residual/Linear remain.
+FATIGUE's frozen closure separately preserves impairment versus motor failure;
+no new combined model or universal control law. The stale family coverage omission
+is corrected; only clause3 advances. CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md and
+HABIT_RESISTANCE_CLOSURE_REV1.json bind evidence. RO012/015/019/020 remain; none closes.
+Counters1400/0; no new allocation, production code, reduction or owner ruling.
+
+## VER-C3-HABIT-ACQUIRE-001 - habit acquisition reconciliation, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, Brief12.9 clause1 under habit-public/0.1-candidate.
+12 existing models/23 replayed runs/291 exact prefixes (268 advancing/23 terminal);
+all original result rows unchanged. No new model/run/production code or allocation.
+Three admitted successful practices from empty history support a later actual free
+response after reward-expectation correction; unobserved/unrewarded/other-cue controls
+do not. False positive reports match safe behavior despite physical nonreward.
+RETAIN acquired history versus expectation versus cue availability versus execution.
+Residual/Linear/NoHistory, derived/cache and belief/truth diagnostics remain.
+Preserve HABIT_ACQUISITION_AUDIT_FINDING_REV1.json: the first wrapper expected a
+nonexistent legacy RunIdentity field; corrected replay preserves original commitments
+and compares exact result/prefix hashes. No production/behavioral failure inferred.
+CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md / HABIT_ACQUISITION_CLOSURE_REV1.json.
+RO012/015/019/020 remain; no automaticity, addiction or general memory reduction.
+Counters1400/0; no owner ruling. Next DEPENDENCE_SUBSTITUTES_READINESS.md.
+
+## VER-C3-SUBSTITUTION-001 - concentrated reliance and substitutes, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, dependence-substitutes-component/0.2-candidate.
+Brief12.9 clauses4/5:5 models/29 runs/261 exact component prefixes (232 advancing/
+29 terminal);15 scoped/328 reference tests and production build pass. Same total
+successful training concentrates on A or diversifies A/B. Removing A strands the
+concentrated learner while the diversified learner actually uses B and receives relief.
+Information alone can establish a substitute. ExpectationOnly explains the primary
+contrast too; acquired history is not necessary for that witness. HistoryOnly misses
+the informational route; MeanHistory/LatestHistory retain different correction laws.
+RETAIN learned relief, acquired cue history, current demand/availability, actual
+choice/delivery and safe feedback. Matched zero estimates retain different candidate
+sets but NoActiveReasons yields no action: no downstream necessity claim or replacement
+of HABIT neutral-choice control. Preserve both failed development cohorts (assumed
+chosen idle; excessive three-option domain). Corrected0.2 freezes before experiment;
+no old kernel/codec changes. CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md and
+SUBSTITUTION_CLOSURE_REV1.json bind evidence. RO008/010/012/015/019/020 remain.
+Counters1400/0; no allocation, public scheduler admission, reduction or owner ruling.
+No withdrawal/craving/tolerance/escalation/addiction claim. Next reinforcement intake.
+
+## VER-C3-REINFORCEMENT-001 - experienced reinforcement feedback, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, reinforcement-feedback-experiment/0.1-candidate.
+Brief12.9 clause6:5 reused models/31 runs/279 exact component prefixes (248 advancing/
+31 terminal);8 new/328 reference tests and build pass. No new production law/model.
+Actual chosen success gates admitted learning, raises mean expectation and later reason
+probability, then changes later action and its future evidence. Matched withheld
+receipts retain physical delivery and break the learning route. All seeds0..7 retained:
+six later sequence divergences, two equal sequences; some changed sequences have equal
+aggregate counts. No universal monotonic repetition or increasing objective reward.
+LatestHistory reaches1 after practice and remains a serious nonaccumulating comparator.
+NoLearning, missing practice/demand/access and failure feedback preserve mechanism
+boundaries. Whole safe false/denied pairs and exact RNG prefix continuations pass.
+REINFORCEMENT_FINDINGS.md / CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md /
+REINFORCEMENT_CLOSURE_REV1.json bind the evidence. BIO identity feedback and HABIT
+neutral-choice policy remain distinct; no new habit-strength die. RO008/009/010/015/
+019/020 remain; none closes.1400/0, no allocation/public admission/owner ruling.
+Next TOLERANCE_READINESS.md; no tolerance, craving, withdrawal or general addiction claim.
+
+## VER-C3-TOLERANCE-001 - physical effect attenuation, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, tolerance-effect-component/0.1-candidate.
+Brief12.9 clause7:3 component models/18 runs/90 prefix comparisons (72 advancing/
+18 terminal), reusing four public ADAPT input/state conditions.4 scoped/328 reference
+tests and build pass. Repeated actual exposure changes tolerance; equal later stimulus
+has lower potential effect under Reciprocal and Linear. Unattenuated preserves the
+state update but removes its effect. Naive/spaced/key/other-leaf/saturation controls
+separate exposure, tolerance, efficacy and current reserve. No unique universal law.
+TOLERANCE_FINDINGS.md preserves the prior gap: R0+D probe was not a tolerance consumer.
+CAMPAIGN3_TOLERANCE_QUALIFICATION.md / TOLERANCE_CLOSURE_REV1.json bind evidence.
+World-only component challenge, no new public transition or character truth read.
+No recovery, perceived tolerance, compensation or addiction claim. RO008/010/015/019/
+020 remain;021 historical gate unsatisfied.1400/0, no allocation or owner ruling.
+Next ABSENCE_DEFICIT_READINESS.md.
+
+## VER-C3-ABSENCE-001 - adaptation-dependent absence deficit, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, absence-deficit-component/0.1-candidate.
+Brief12.9 clause8:3 component models/27 runs/135 prefix comparisons (108 advancing/
+27 terminal);4 scoped/328 reference tests and corrected build pass. Four underlying
+public ADAPT conditions reused; no new public consumer. Acquired displacement shifts
+reference while current baseline/support remain separate. Same absence yields acquired
+excess deficit; support4 removes the gap without erasing D4. LinearGap/ThresholdGap
+remain serious alternatives; FixedReference ablates adaptation use. Ordinary shortfall,
+other leaves and unrelated-key controls preserve distinctions. No universal law,
+subjective distress, craving, recovery or action claim. Preserve initial wrong-reference
+draft and build annotation failure under ABSENCE_FINDINGS.md; corrected REV2 frozen
+before execution. CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md / ABSENCE_CLOSURE_REV1.json
+bind evidence. RO008/010/011/015/019/020 remain;021 unsatisfied.1400/0, no owner ruling,
+allocation or retirement. Next CRAVING_READINESS.md.
+
+## VER-C3-CRAVING-001 - represented relief-directed urge, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, craving-component/0.1-candidate.
+Brief12.9 clause9:4 candidates/56 distinct component runs/60 comparison rows/300
+prefix checks (280 distinct tuples);5 public BODY runs/15 source prefixes.7 scoped/
+328 reference tests and build pass. Admitted pressure and learned mean/latest relief
+produce current urge separately from cue access, availability and restraint. Product/
+bottleneck laws remain serious alternatives; NoLearning preserves unknown. Known zero,
+unavailable body, unknown belief and inaccessible content remain separate. False-report
+and hidden-body whole safe views agree. No action, earned control or relapse claim.
+Preserve CRAVING_DEVELOPMENT_FINDING_REV1.json: initial60-unique assumption rejected
+because hidden-body aliases share safe inputs;56 identities retained without salting
+case names. No failed plan/result was written. CRAVING_FINDINGS.md /
+CAMPAIGN3_CRAVING_QUALIFICATION.md / CRAVING_CLOSURE_REV1.json bind evidence.
+RO008/010/011/012/015/019/020 remain;021 unsatisfied.1400/0, no allocation, reduction,
+new public consumer or owner ruling. Next RELAPSE_READINESS.md.
+
+## VER-C3-RELAPSE-001 - actual return after goal-supported adjustment, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, relapse-experiment/0.1-candidate on unchanged
+control-public/0.2-candidate. Brief12.9 clause10:7 reused models/31 new public runs/
+279 prefixes (248 advancing/31 terminal);5 scoped/328 reference tests and build pass.
+Three actual withholding opportunities precede load7; retained/maintained goal and
+learned history remain unchanged. Seeds1/7 return target, six others retain idle;
+all resume withholding at8. Matched noLoad withholds4..8 for all seeds. No inevitable
+return or population-rate claim. Cue, acquisition, contrary belief, denied card,
+retired goal and lost maintenance controls retain distinct explanations. Serious
+Linear/Residual/control comparators preserved. No new trait or production law.
+RELAPSE_FINDINGS.md preserves Buffer rejection before any settlement; corrected
+plain-byte wrapper freezes REV2 with all REV1 model/run/input identities unchanged.
+CAMPAIGN3_RELAPSE_QUALIFICATION.md / RELAPSE_CLOSURE_REV1.json bind evidence.
+Transient lapse only, no physiological recovery, learned control, sustained relapse
+or joint addiction qualification. RO008/010/011/012/015/019/020 remain;021 unsatisfied.
+1400/0, no allocation or owner ruling. Next ADDICTION_INTEGRATION_READINESS.md.
+
+## VER-C3-COSTLY-REWARD-001 - acquired costly reward-seeking, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED BOUNDED, costly-reward-component/0.1-candidate.
+Brief12.9 clause11:6 component models/50 distinct runs/650 prefix continuations;
+17 scoped/328 reference tests/build. Separate learned benefit and harm support actual
+competing reward/protection reasons against a maintained goal. Seven of eight seeds
+repeat costly action under load; all resume withholding. NoLoad withholds throughout
+free opportunities. Feedback changes four seed sequences, preserves four, and does
+not universally reduce harm. False/denied reports preserve whole safe views despite
+hidden world differences. NoLearning, LatestHistory, BeliefAccess, NoControl and
+RewardOnly remain; primary repetition does not prove habit-history necessity.
+COSTLY_REWARD_FINDINGS.md retains compatibility audit, all99 exploration trajectories
+and non-monotonic counterexamples. CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md /
+COSTLY_REWARD_CLOSURE_REV1.json bind evidence. No full biological addiction, natural
+acquisition, clinical claim or public scheduler admission. RO008/010/011/012/015/019/
+020 remain;021 unsatisfied.1400/0. No allocation or owner ruling.
+Next IDENTITY_EVIDENCE_READINESS.md. Campaign3 NOT EXIT-READY.

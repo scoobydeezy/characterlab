@@ -583,10 +583,101 @@ See CAMPAIGN3_DELAYED_QUALIFICATION.md:3 models/26 runs/234 prefixes,27+328 test
 Hyperbolic/NoDiscount/Exponential retained; no universal temporal law or learned trust.
 Counters1400/0. Campaign3 NOT EXIT-READY; next INTENTION_FORGETTING_READINESS.md.
 
-## Current frontier - intention forgetting closure, 2026-09-26
+## Preserved frontier - intention forgetting closure, 2026-09-26
 
 VER-C3-INTENTION-001 qualifies retained/inaccessible versus lost prospective action
 content through existing retention/recall kernels and actual action. Component scope,
 3 models/54 runs/486 prefixes;15+328 tests/build. No new allocation/public scheduler.
 See CAMPAIGN3_INTENTION_QUALIFICATION.md. Preserve zero-score and identity findings.
 Counters1400/0. Next TEMPORAL_GOAL_CONFLICT_READINESS.md; Campaign3 NOT EXIT-READY.
+
+## Preserved frontier - temporal goal conflict closure, 2026-09-26
+
+VER-C3-TEMPORAL-001 qualifies actual independent-goal contest, retained losing goal,
+later pursuit and selective progress/retirement. Component scope,4 models/27 runs/
+243 exact component prefixes;16+328 tests/build. No new allocation/public scheduler.
+See CAMPAIGN3_TEMPORAL_QUALIFICATION.md; counters1400/0. No general valuation law.
+Next HABIT_RESISTANCE_READINESS.md: reconcile existing CONTROL/HABIT/FATIGUE witnesses
+before duplicating machinery. Campaign3 NOT EXIT-READY.
+
+## Preserved frontier - habit resistance reconciliation, 2026-09-26
+
+VER-C3-HABIT-RESIST-001 qualifies Brief12.9 clause3 from CONTROL's existing complete
+public witness.7 models/17 replayed runs/142 prefixes match frozen results; no new
+mechanism or allocation. Retain history versus inhibition versus execution; separate
+FATIGUE evidence is not a new joint model.92 bounded/24 partial/16 blocked,1400/0.
+Next HABIT_ACQUISITION_COVERAGE_READINESS.md for remaining clause1 evidence audit;
+dependence/substitute intake follows its disposition.021 historical gate remains.
+
+## Preserved frontier - habit acquisition reconciliation, 2026-09-26
+
+VER-C3-HABIT-ACQUIRE-001 qualifies Brief12.9 clause1 from existing HABIT evidence:
+12 models/23 rerun runs/291 exact prefixes; original results unchanged. Acquisition
+leads to actual free action independent of corrected expectation. Preserve audit
+wrapper failure and original identity commitment scope. No new source/model/allocation.
+93 bounded/23 partial/16 blocked;1400/0. Next DEPENDENCE_SUBSTITUTES_READINESS.md;
+require actual alternative-sensitive behavior beyond ATTACHMENT's prospective proxy.
+021 historical gate remains mandatory and unsatisfied.
+
+## Preserved frontier - dependence/substitution closure, 2026-09-26
+
+VER-C3-SUBSTITUTION-001 qualifies Brief12.9 clauses4/5 under component0.2:
+5 models/29 runs/261 prefixes;15+328 tests/build. Equal successful training supports
+actual substitution after a familiar satisfier is removed. ExpectationOnly is sufficient
+for primary behavior; no necessity or addiction law. Preserve neutral-policy distinction
+and both failed development cohorts. No allocation/public authority;1400/0.
+95 bounded/23 partial/14 blocked; next REINFORCEMENT_ESCALATION_READINESS.md.021 remains.
+
+## Current frontier - reinforcement feedback closure, 2026-09-26
+
+VER-C3-REINFORCEMENT-001 qualifies Brief12.9 clause6 with5 reused models/31 runs/
+279 component prefixes;8+328 tests/build. Actual outcome-mediated choice feedback
+under fixed reward differs from physical delivery without receipts. Full eight-seed
+cohort retained, including two equal action sequences. No general escalation law,
+new model or allocation;1400/0.96 bounded/23 partial/13 blocked. Next
+TOLERANCE_READINESS.md; inspect existing ADAPT evidence.021 remains unsatisfied.
+
+## Current frontier - bounded tolerance, 2026-09-26
+
+VER-C3-TOLERANCE-001 qualifies Brief12.9 clause7 with3 component candidates/18 runs/
+90 prefix comparisons;4+328 tests/build. Equal later stimulus has less effect after
+accepted ADAPT exposure; reserve saturation and other leaves remain distinct. World
+component only, no new public consumer.97 bounded/22 partial/13 blocked;1400/0.
+Next ABSENCE_DEFICIT_READINESS.md;021 historical gate remains unsatisfied.
+
+## Current frontier - bounded absence deficit, 2026-09-26
+
+VER-C3-ABSENCE-001 qualifies Brief12.9 clause8:3 component laws/27 composed runs/
+135 prefix checks;4+328 tests/corrected build. Same absence with acquired displacement
+has excess physical deficit; support removes it without resetting adaptation. Current
+condition and reference remain distinct. No new public sensor, subjective distress or
+craving claim.98 bounded/22 partial/12 blocked;1400/0. Next CRAVING_READINESS.md.
+Preserve both correction cohorts.021 historical gate remains unsatisfied.
+
+## Current frontier - bounded represented craving, 2026-09-26
+
+VER-C3-CRAVING-001 qualifies Brief12.9 clause9:4 candidates/56 distinct component
+runs/60 comparisons/300 prefix checks;5 public BODY sources/15 prefixes;7+328 tests/
+build. Admitted body and learned relief produce urge separately from action access
+and restraint. Prospective eligibility only; no actual control or relapse claim.
+Preserve identity-alias accounting failure.99 bounded/22 partial/11 blocked;1400/0.
+Next RELAPSE_READINESS.md.021 historical gate remains unsatisfied.
+
+## Current frontier - bounded relapse after adjustment, 2026-09-26
+
+VER-C3-RELAPSE-001 qualifies Brief12.9 clause10:7 reused CONTROL models/31 new public
+runs/279 prefixes;5+328 tests/build. Actual withholding4..6 precedes load7 against a
+maintained goal; seeds1/7 return target, six retain idle; all withhold8. No new model
+or law. Preserve pre-settlement wrapper rejection.100 bounded/22 partial/10 blocked;
+1400/0. Next ADDICTION_INTEGRATION_READINESS.md; separate bounded witnesses are not a
+joint addiction qualification.021 historical gate remains unsatisfied.
+
+## Current frontier - acquired costly reward-seeking, 2026-09-26
+
+VER-C3-COSTLY-REWARD-001 qualifies bounded Brief12.9 clause11:6 component models/
+50 runs/650 prefixes;17+328 tests/build. Separate reward/harm estimates, retained goal,
+load-sensitive control, actual choice and feedback compose without an Addicted trait.
+All eleven habit-family clauses have separate bounded witnesses, not whole addiction
+integration. AuditREV50:101 bounded/22 partial/9 blocked;1400/0. Campaign3 NOT EXIT-READY.
+Next IDENTITY_EVIDENCE_READINESS.md; audit existing BIO eligibility before extending.
+021 historical gate remains mandatory and unsatisfied.

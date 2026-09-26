@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const p='docs/planning/',read=x=>JSON.parse(fs.readFileSync(x)),sha=x=>createHash('sha256').update(fs.readFileSync(x)).digest('hex');
+execFileSync(process.execPath,['scripts/check-habit-resistance-closure.mjs'],{stdio:'inherit'});
+const replay=read(p+'HABIT_ACQUISITION_REPLAY_REV1.json'),result=read(p+'HABIT_PUBLIC_EXPERIMENT_REV1.json');
+assert.equal(replay.status,'PASS');assert.equal(replay.models,12);assert.equal(replay.runs,23);assert.equal(replay.prefixes,291);assert.equal(replay.advancing,268);assert.equal(replay.terminal,23);assert.equal(new Set(replay.actions.map(r=>r.runIdentity)).size,23);
+for(const a of replay.artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+for(const a of read(p+'HABIT_ACQUISITION_AUDIT_FINDING_REV1.json').artifacts)assert.equal(sha(a.path),a.sha256,a.path);
+const get=n=>result.results.find(r=>r.name===n),base=get('candidate-1-law-1');
+assert.deepEqual(base.appraisals.slice(0,4).map(a=>a.h),['0/1','1/2','3/4','7/8']);assert.equal(base.appraisals[4].belief,false);assert.equal(base.probabilities[4],'1/2');assert.equal(base.chosen[4],true);
+for(const name of ['unrewarded-training','unseen-training','other-cue','candidate-1-law-3','candidate-3-law-1'])assert.equal(get(name).probabilities[4],'0/1');
+assert.equal(base.safeSha256,get('false-training-reports').safeSha256);
+for(const row of replay.actions)assert.deepEqual(row.execution.map(v=>v.performed),get(row.name).chosen);
+assert.deepEqual(replay.actions.find(r=>r.name===base.name).execution.slice(0,3),Array.from({length:3},()=>({performed:true,reward:true})));
+for(const [file,n] of [['HABIT_PRESERVATION_TESTS_REV1.json',75],['HABIT_REFERENCE_TESTS_REV1.json',328]]){const r=read(p+file);assert.equal(r.success,true);assert.equal(r.numPassedTests,n);assert.equal(r.numFailedTests,0);}
+const files=['HABIT_ACQUISITION_REPLAY_REV1.json','HABIT_ACQUISITION_AUDIT_FINDING_REV1.json','CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md','HABIT_RESISTANCE_CLOSURE_REV1.json','HABIT_PRESERVATION_TESTS_REV1.json','HABIT_REFERENCE_TESTS_REV1.json','DEPENDENCE_SUBSTITUTES_READINESS.md'];
+const closure={status:'PASS',scope:'Existing habit-public/0.1-candidate evidence reconciliation for Brief12.9 clause1',replayedModels:12,replayedRuns:23,prefixes:291,advancing:268,terminal:23,newModels:0,newRuns:0,counters:[1400,0],artifacts:[...files.map(f=>({path:p+f,sha256:sha(p+f)})),{path:'scripts/check-habit-acquisition-closure.mjs',sha256:sha('scripts/check-habit-acquisition-closure.mjs')}]};
+const file=p+'HABIT_ACQUISITION_CLOSURE_REV1.json';if(process.argv.includes('--write'))fs.writeFileSync(file,JSON.stringify(closure,null,2)+'\n',{flag:'wx'});assert.deepEqual(read(file),closure);console.log('PASS acquisition:12 existing models/23 replayed runs/291 exact prefixes;1400/0; wrapper failure preserved.');

@@ -1,0 +1,38 @@
+{
+  "status": "FAILED BEFORE FIRST PUBLIC SETTLEMENT",
+  "error": "BELIEF_DATA_BYTES",
+  "cause": "The runner passed Node Buffer decoded bytes to the closed factory. It requires exact plain Uint8Array instances.",
+  "correction": "Convert decoded original initialState and orderedInputs with Uint8Array.from. Preserve original plan and artifacts; refreeze successor plan, assert all production model/run identities remain exactly equal. No law, model, source data or production factory changes.",
+  "artifacts": [
+    {
+      "source": "docs/formal/RELAPSE_EXPERIMENT_CONTRACT.md",
+      "preserved": "docs/planning/relapse-harness-rev1/docs/formal/RELAPSE_EXPERIMENT_CONTRACT.md",
+      "sha256": "5b2b814b0120a254a58eaef3c02328e781256a58ae983557635f608025757c5c"
+    },
+    {
+      "source": "src/test/relapseFixtures.ts",
+      "preserved": "docs/planning/relapse-harness-rev1/src/test/relapseFixtures.ts",
+      "sha256": "fd60b9b3e8c2ab45c152e876e43485da6a4e31c493a30700560b4f15abbe61c7"
+    },
+    {
+      "source": "src/test/relapse.test.ts",
+      "preserved": "docs/planning/relapse-harness-rev1/src/test/relapse.test.ts",
+      "sha256": "32e4e470966c0af01f210119f0d0a12c3ac6c1fe8e4a03024f23d327ed57cc30"
+    },
+    {
+      "source": "scripts/qualify-relapse.mjs",
+      "preserved": "docs/planning/relapse-harness-rev1/scripts/qualify-relapse.mjs",
+      "sha256": "0286981d0f392153e4ac276cb4b88146ec0332341f2be18b8e632c90aa1e1bbc"
+    },
+    {
+      "source": "docs/planning/CONTROL_PUBLIC_PLAN_REV2.json",
+      "preserved": "docs/planning/relapse-harness-rev1/docs/planning/CONTROL_PUBLIC_PLAN_REV2.json",
+      "sha256": "ada2997b8fb0105456d6f2c235f71f39e1bf422380beff4135bd3bc2d98ca42c"
+    },
+    {
+      "source": "docs/planning/CONTROL_CLOSURE_REV1.json",
+      "preserved": "docs/planning/relapse-harness-rev1/docs/planning/CONTROL_CLOSURE_REV1.json",
+      "sha256": "fa8301fc41e2c7c4e9fc4ad966e72f0ed7afd86d5bba7505fdf011e5a87d3039"
+    }
+  ]
+}

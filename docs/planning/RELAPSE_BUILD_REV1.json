@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": "npm run build",
+  "exitCode": 0,
+  "checks": [
+    "reference boundary",
+    "tsc -b",
+    "vite build"
+  ],
+  "artifacts": [
+    {
+      "path": "src/test/relapseFixtures.ts",
+      "sha256": "fd60b9b3e8c2ab45c152e876e43485da6a4e31c493a30700560b4f15abbe61c7"
+    },
+    {
+      "path": "src/test/relapse.test.ts",
+      "sha256": "32e4e470966c0af01f210119f0d0a12c3ac6c1fe8e4a03024f23d327ed57cc30"
+    }
+  ]
+}

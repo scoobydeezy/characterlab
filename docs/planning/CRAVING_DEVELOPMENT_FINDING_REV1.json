@@ -1,0 +1,33 @@
+{
+  "status": "PRESERVED PRE-FREEZE IDENTITY ASSERTION FAILURE",
+  "expectedDistinctRuns": 60,
+  "actualDistinctRuns": 56,
+  "finding": "The hidden6/hidden9 public BODY runs correctly emit equal safe inputs. Therefore each candidate has one identical component RunIdentity across those two named comparisons. Case names must not be salted into scientific input merely to manufacture distinct IDs. Freeze56 unique runs, retain all60 comparison rows and all5 distinct public sources; report300 restore comparisons and280 distinct model/run/prefix tuples. The mistaken assertion prevented writing any plan or experiment result. A repeated invocation failed at the same pre-freeze assertion; no scientific run was discarded.",
+  "artifacts": [
+    {
+      "source": "docs/formal/CRAVING_COMPONENT_CONTRACT.md",
+      "preserved": "docs/planning/craving-development-rev1/CRAVING_COMPONENT_CONTRACT.md",
+      "sha256": "b757a2167c85fd30c435d591b1f54b740d30e31a727a22e2c26a9994f6a7e838"
+    },
+    {
+      "source": "scripts/qualify-craving.mjs",
+      "preserved": "docs/planning/craving-development-rev1/qualify-craving.mjs",
+      "sha256": "d4946df5289f9d38f42107ffe589837d2fc4c5866dcecc749576d72c5ac8fbfe"
+    },
+    {
+      "source": "src/campaign3/craving.ts",
+      "preserved": "docs/planning/craving-development-rev1/craving.ts",
+      "sha256": "e5444c91f77ae478020e8b3312089cbe4bb0598766141b0721d959ed569e73e5"
+    },
+    {
+      "source": "src/test/cravingFixtures.ts",
+      "preserved": "docs/planning/craving-development-rev1/cravingFixtures.ts",
+      "sha256": "2dd408ddcc6586c955c42a0c6608d01fdf4c36fceb92a96d6039bc7a0c5d2056"
+    },
+    {
+      "source": "src/test/craving.test.ts",
+      "preserved": "docs/planning/craving-development-rev1/craving.test.ts",
+      "sha256": "af92ac86943dd16aec0d1600249f6c65bd89d8e7a387b6476c9c8c5c0756cff5"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "date": "2026-09-26",
+  "command": "npm run build",
+  "exitCode": 0,
+  "checks": [
+    "reference boundary",
+    "tsc -b",
+    "vite build"
+  ],
+  "artifacts": [
+    {
+      "path": "src/campaign3/toleranceEffect.ts",
+      "sha256": "485086cf0ed3759bb043d970ccf5dbd34886fca0ee3a944773e83ee2c0d204a7"
+    },
+    {
+      "path": "src/test/toleranceFixtures.ts",
+      "sha256": "59b3bb10f6e48f8ea6d1e9feb656fd82bd5fc04f58db9fe67889eee28d0b4bae"
+    },
+    {
+      "path": "src/test/toleranceEffect.test.ts",
+      "sha256": "aba2209544db7f02334e64b94f66daa3a831fa02b53f2a372e6599df58b7b223"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "command": "npm run build",
+  "exitCode": 0,
+  "checks": [
+    "reference boundary",
+    "tsc -b",
+    "vite build"
+  ],
+  "artifacts": [
+    {
+      "path": "src/campaign3/craving.ts",
+      "sha256": "e5444c91f77ae478020e8b3312089cbe4bb0598766141b0721d959ed569e73e5"
+    },
+    {
+      "path": "src/test/cravingFixtures.ts",
+      "sha256": "2dd408ddcc6586c955c42a0c6608d01fdf4c36fceb92a96d6039bc7a0c5d2056"
+    },
+    {
+      "path": "src/test/craving.test.ts",
+      "sha256": "af92ac86943dd16aec0d1600249f6c65bd89d8e7a387b6476c9c8c5c0756cff5"
+    }
+  ]
+}

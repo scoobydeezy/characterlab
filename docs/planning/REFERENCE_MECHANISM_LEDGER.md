@@ -631,3 +631,59 @@ and RecomputedHistory are explicit controls; Refold matches with full history re
 First failed calibration and identity-packaging correction survive. RO-C3-009/020
 retain broader source/direction/coercion/calibration/compression/public-admission limits.
 No state-root retirement, reference import/edit or new allocation; counters970/0.
+
+## 2026-09-26 - tolerance component disposition
+
+VER-C3-TOLERANCE-001 reuses accepted ADAPT truth state and MEC003/EXP002 embodied
+bounded-effect decomposition as CONTROL/CONTRACT. Reciprocal and Linear are new
+explicit CANDIDATE laws, not historical physiological formula ports. Unattenuated
+is an effect-link ablation. EXP001/MEC019 and identity feedback remain separate
+controls without new cognition or action claims. No reference imports or edits.
+Prior displacement probe does not qualify tolerance effect; preserve
+TOLERANCE_FINDINGS.md. No reduction; wider integration stays RO008/010/015/019/020.
+
+## 2026-09-26 - absence-deficit disposition
+
+VER-C3-ABSENCE-001 retains BODY target/reference versus current-state separation and
+accepted ADAPT as CONTROL/CONTRACT. LinearGap and ThresholdGap are explicit CANDIDATE
+world discrepancy laws, FixedReference an effect-link ablation. MEC003/EXP002 preserve
+physical decomposition; no saturation/sensor formula port or character evidence claim.
+EXP001/MEC019 and acquired identity remain separate controls. No reference imports,
+state retirement or historical formula substitution. ABSENCE_FINDINGS.md preserves
+borrowed-reference and build-typing corrections. Wider scope RO008/010/011/015/019/020.
+
+## 2026-09-26 - craving disposition
+
+VER-C3-CRAVING-001 reuses public BODY sensing under MEC003/EXP002 and preserves
+MEC001/EXP001 mean/latest comparisons through admitted informational reports.
+MEC011/EXP004 mental access versus physical availability remains CONTROL/CONTRACT.
+Product and bottleneck conjunctions are explicit CANDIDATE laws. Fixed recognized
+cue and instructed recall are controls, not acquired association/habit. MEC012..019
+reason/dice/action/identity remain prior controls; no private dice, enacted control
+or identity feedback port here. No reference imports or retirement. Preserve
+CRAVING_FINDINGS.md identity-alias accounting finding; wider scope RO008/010/011/
+012/015/019/020. Tolerance/absence diagnostics never become character pressure.
+
+## 2026-09-26 - relapse experiment disposition
+
+VER-C3-RELAPSE-001 retains MEC011/EXP003/004 acquired cue access versus temporary
+inhibition; MEC012..017/019 actual reasons/dice/intent/expression/execution and
+MEC020 goal lifecycle. Seven original CONTROL models remain CONTROL/CANDIDATE,
+including distinct Linear/Residual acquisition. New source histories extend actual
+withholding before load without changing production law. Identity and physiological
+adaptation remain separate controls, not relabeled recovery. No imports/retirement.
+RELAPSE_FINDINGS.md preserves typed-byte harness rejection. RO008/010/011/012/015/
+019/020 retain integrated addiction, natural recovery and broader behavior limits.
+
+## 2026-09-26 - bounded costly reward integration
+
+VER-C3-COSTLY-REWARD-001 / costly-reward-component/0.1-candidate:6 models/50 runs/
+650 component prefixes;17+328 tests/build. Existing reason/dice/choice kernels and
+active-source habit/control precedent compose with separate learned benefit/harm.
+MEC001/EXP001 evidence/mean/latest, MEC011/EXP003/004 cue access/filtering,
+MEC012..017/019 reasons through actual execution, MEC020 active goal pressure retained.
+CONTROL single reward bit is not repurposed; no new public source, third option,
+identity feedback merger, permanent allocation or reference import. All seed results
+and serious BeliefAccess/LatestHistory alternatives preserved. See qualification and
+COSTLY_REWARD_FINDINGS.md; broader RO008/010/011/012/015/019/020 remain;021 mandatory.
+1400/0. Next IDENTITY_EVIDENCE_READINESS.md.

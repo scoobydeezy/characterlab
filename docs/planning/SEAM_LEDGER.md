@@ -2568,3 +2568,98 @@ NoLoss/PersistentAccess retained. Preserve zero-score recall and identity-bindin
 findings. CAMPAIGN3_INTENTION_QUALIFICATION.md / INTENTION_CLOSURE_REV1.json.
 RO005/006/007/012/014/019/020 retained; counters1400/0. No owner ruling.
 Next TEMPORAL_GOAL_CONFLICT_READINESS.md.
+
+## Temporal goal conflict closure - 2026-09-26
+
+VER-C3-TEMPORAL-001 COMPLETE bounded component:4 models/27 runs/243 exact component
+prefixes;16+328 tests/build. Independent goals survive an actual lost contest and
+have selective progress/retirement. NoTemporalBias retained; DropLoser/SharedRetirement
+fail the primary witness but are equivalent there. Full original reason/dice and
+intent/expression/execution pipeline reused. No new record/root/public scheduler.
+CAMPAIGN3_TEMPORAL_QUALIFICATION.md / TEMPORAL_CLOSURE_REV1.json.
+RO001/010/012/014/019/020 retained; counters1400/0. No owner ruling or reduction.
+All eight Brief12.7 clauses have separate bounded witnesses, not joint integration.
+Next HABIT_RESISTANCE_READINESS.md: audit existing evidence before new implementation.
+
+## Habit resistance coverage reconciliation — 2026-09-26
+
+VER-C3-HABIT-RESIST-001 reuses control-public/0.2-candidate:7 existing models,
+17 replayed public runs,142 exact prefixes. Habit acquisition, actual inhibition,
+load-sensitive failure and return after retirement already coexist in the same run.
+No new seam/model/source; counters1400/0. RO012/015/019/020 retain broader limits.
+See CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md; next HABIT_ACQUISITION_COVERAGE_READINESS.md.
+
+## Habit acquisition coverage reconciliation — 2026-09-26
+
+VER-C3-HABIT-ACQUIRE-001: existing habit-public/0.1-candidate supplies Brief12.9 clause1.
+12 models/23 rerun public runs/291 exact prefixes; acquired cue response actually
+executes after informational expectation correction. No new mechanism/model/allocation.
+Preserve legacy-plan wrapper failure; no rewrite of original identity commitments.
+Counters1400/0. RO012/015/019/020 remain. Next DEPENDENCE_SUBSTITUTES_READINESS.md.
+
+## Concentrated reliance and alternative satisfiers — 2026-09-26
+
+VER-C3-SUBSTITUTION-001 bounded component COMPLETE under
+ dependence-substitutes-component/0.2-candidate.5 models/29 runs/261 prefixes;
+15+328 tests/build. Learned alternative actually restores relief after A removal.
+Expectation-only remains sufficient for primary behavior; acquired-history differences
+at matched zero belief are candidate-only under NoActiveReasons. Preserve HABIT neutral
+choice and both development failures. No public authority or new permanent allocation;
+1400/0. RO008/010/012/015/019/020 remain. Next REINFORCEMENT_ESCALATION_READINESS.md.
+
+## Reinforcement feedback — 2026-09-26
+
+VER-C3-REINFORCEMENT-001 bounded component experiment COMPLETE. Reuses unchanged
+substitution0.2 models:5 models/31 runs/279 prefixes,8+328 tests/build. Actual chosen
+outcomes alter later expectation, reason probability and action; withheld feedback
+breaks the route despite physical delivery. Six of eight seed pairs diverge; retain
+two equal sequences and LatestHistory comparator. No new law/model/allocation;1400/0.
+RO008/009/010/015/019/020 remain. Next TOLERANCE_READINESS.md.
+
+## 2026-09-26 - bounded physical tolerance
+
+VER-C3-TOLERANCE-001: tolerance-effect-component/0.1-candidate composes unchanged
+ADAPT state with a world-only exact effect challenge.3 candidates/18 runs/90 prefix
+comparisons;4+328 tests/build. Preserve potential/applied/overflow, other leaves and
+key isolation. No new public authority or receiving seam, recovery or compensation.
+TOLERANCE_FINDINGS.md records prior state-versus-effect coverage gap.1400/0.
+RO008/010/015/019/020 remain. Next ABSENCE_DEFICIT_READINESS.md.
+
+## 2026-09-26 - bounded absence deficit
+
+VER-C3-ABSENCE-001, absence-deficit-component/0.1-candidate:3 component laws/27 runs/
+135 prefix checks;4+328 tests/corrected build. Acquired REG displacement, reference,
+current physical level/support and discrepancy remain distinct. No new public source,
+sensor, Need root or cognitive truth read. Preserve ABSENCE_FINDINGS.md corrections.
+RO008/010/011/015/019/020 remain;1400/0; next CRAVING_READINESS.md.
+
+## 2026-09-26 - bounded represented craving
+
+VER-C3-CRAVING-001, craving-component/0.1-candidate:4 candidates/56 unique runs/
+60 comparisons/300 component prefix checks;5 public BODY runs/15 prefixes;7+328
+tests/build. Safe interoception and learned relief support derived urge; cue access,
+action availability and instructed restraint remain distinct. Prospective eligibility
+only, no public scheduling/ownership admission or enacted resistance. Preserve
+CRAVING_FINDINGS.md identity-alias failure;1400/0; next RELAPSE_READINESS.md.
+
+## 2026-09-26 - bounded relapse experiment
+
+VER-C3-RELAPSE-001 reuses control-public/0.2-candidate unchanged:7 models/31 new
+public runs/279 prefixes;5+328 tests/build. After three executed withholding steps,
+load can restore actual target choice against maintained goal; load removal restores
+inhibition. All eight seeds preserved, two returns. No new source grammar, mechanism,
+owner or allocation. Preserve RELAPSE_FINDINGS.md wrapper failure and same-identity
+refreeze.1400/0; next ADDICTION_INTEGRATION_READINESS.md; broader scope remains open.
+
+## 2026-09-26 - bounded costly reward integration
+
+VER-C3-COSTLY-REWARD-001 / costly-reward-component/0.1-candidate:6 models/50 runs/
+650 component prefixes;17+328 tests/build. Existing reason/dice/choice kernels and
+active-source habit/control precedent compose with separate learned benefit/harm.
+MEC001/EXP001 evidence/mean/latest, MEC011/EXP003/004 cue access/filtering,
+MEC012..017/019 reasons through actual execution, MEC020 active goal pressure retained.
+CONTROL single reward bit is not repurposed; no new public source, third option,
+identity feedback merger, permanent allocation or reference import. All seed results
+and serious BeliefAccess/LatestHistory alternatives preserved. See qualification and
+COSTLY_REWARD_FINDINGS.md; broader RO008/010/011/012/015/019/020 remain;021 mandatory.
+1400/0. Next IDENTITY_EVIDENCE_READINESS.md.

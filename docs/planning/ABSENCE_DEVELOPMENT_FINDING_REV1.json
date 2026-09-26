@@ -1,0 +1,26 @@
+{
+  "status": "CORRECTED BEFORE TEST OR IDENTITY FREEZE",
+  "finding": "Initial draft borrowed R0=80 from BODY ownership control. The unchanged firstTraceModel actually declares R0=50. Reusing 80 would misidentify the source reference and confound the intended matched baseline. Correct to50 and verify source anchor/rate in the frozen harness. No public model or prior verdict changed. No failed execution cohort exists.",
+  "artifacts": [
+    {
+      "source": "docs/formal/ABSENCE_DEFICIT_CONTRACT.md",
+      "preserved": "docs/planning/absence-development-rev1/ABSENCE_DEFICIT_CONTRACT.md",
+      "sha256": "2f559310d64bc1fd78fa6c1d8aacfb636f3976aafbea4adae0c40fddb6a34add"
+    },
+    {
+      "source": "src/campaign3/absenceDeficit.ts",
+      "preserved": "docs/planning/absence-development-rev1/absenceDeficit.ts",
+      "sha256": "2eb12f9f0d616492bc1c33cf8da0d6f11c811c62ad3fd024f9ee6e9906ea8f5f"
+    },
+    {
+      "source": "src/test/absenceFixtures.ts",
+      "preserved": "docs/planning/absence-development-rev1/absenceFixtures.ts",
+      "sha256": "b6e7d8b03c2b55975197974d73793a4d66c38151ba534d776f390e7373fac311"
+    },
+    {
+      "source": "src/test/absenceDeficit.test.ts",
+      "preserved": "docs/planning/absence-development-rev1/absenceDeficit.test.ts",
+      "sha256": "02ff647d322debac4f2cb28c56a78bd60ae3703ab723fe3333e67f7b2f492ac2"
+    }
+  ]
+}

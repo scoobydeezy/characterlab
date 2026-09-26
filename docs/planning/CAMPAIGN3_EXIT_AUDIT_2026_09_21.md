@@ -468,3 +468,126 @@ Preserve zero-score top-K finding and superseded model-identity binding cohort.
 No general memory/forgetting law or prospective-state reduction.90 bounded/24 partial/
 18 blocked clauses;132 clauses/15 families. Corpus unchanged21 members/18 bounded/
 3 prior. Counters1400/0.021 historical gate unsatisfied; Campaign3 NOT EXIT-READY.
+
+## REV41 supplement - independent temporal goals, 2026-09-26
+
+Only Brief12.7 clause8 advances BLOCKED -> QUALIFIED BOUNDED.
+VER-C3-TEMPORAL-001:4 models/27 runs/243 canonical component prefixes;16+328 tests/build.
+Full original reason/dice/intent/expression/execution mediates independent goals;
+losing goal persists and later receives actual pursuit. Selective retirement and
+physical/perceived progress remain distinct. NoTemporalBias retained; diagnostic
+lifecycle collapses coincide in the primary case and both fail its baseline witness.
+No universal temporal law or new public scheduler admission.91 bounded/24 partial/
+17 blocked;132 clauses/15 families. All eight prospection clauses have separate
+bounded witnesses, not a joint general model. Corpus unchanged21 members/18 bounded/
+3 prior. Counters1400/0.021 unsatisfied; Campaign3 NOT EXIT-READY.
+
+## REV42 supplement - habit resistance reconciliation, 2026-09-26
+
+Only Brief12.9 clause3 advances BLOCKED -> QUALIFIED BOUNDED.
+VER-C3-HABIT-RESIST-001 reexecutes CONTROL's7 existing models/17 runs/142 prefixes
+with every frozen result hash unchanged. Same-run acquisition, maintained-goal
+inhibition, actual load-sensitive behavior and return after retirement preserve
+history. Separate FATIGUE evidence retains control impairment versus motor failure.
+The old family rationale omitted this existing witness. No new production law,
+model or allocation.92 bounded/24 partial/16 blocked across132 clauses/15 families.
+Other habit clauses remain unchanged; no addiction or joint integration claim.
+Corpus unchanged21 members/18 bounded/3 prior. Counters1400/0;021 unsatisfied;
+Campaign3 NOT EXIT-READY. Next habit-acquisition clause1 evidence audit.
+
+## REV43 supplement - habit acquisition reconciliation, 2026-09-26
+
+Only Brief12.9 clause1 advances PARTIAL -> QUALIFIED BOUNDED.
+VER-C3-HABIT-ACQUIRE-001 replays HABIT's12 existing models/23 runs/291 prefixes with
+identical original results. Actual acquired free action after corrected expectation
+contrasts with unrewarded/unseen/other-cue controls. Scope is availability-mediated
+habit, not general automaticity or addiction. Preserve wrapper failure caused by an
+absent legacy RunIdentity field; no old receipt rewritten.93 bounded/23 partial/
+16 blocked of132 clauses/15 families. Corpus21 members/18 bounded/3 prior unchanged;
+1400/0;021 unsatisfied; Campaign3 NOT EXIT-READY. Next dependence/substitute intake.
+
+## REV44 supplement - concentrated reliance and substitutes, 2026-09-26
+
+Only Brief12.9 clauses4/5 advance BLOCKED -> QUALIFIED BOUNDED.
+VER-C3-SUBSTITUTION-001:5 models/29 runs/261 component prefixes;15+328 tests/build.
+Equal total training, different learned repertoires and current A removal discriminate
+actual B substitution from no-action/unserved opportunity. ExpectationOnly explains
+primary behavior; no history necessity. Matched zero beliefs retain history-dependent
+candidates but no chosen action under NoActiveReasons; HABIT neutral policy preserved.
+Component task demand, not physiological withdrawal or general addiction. Preserve
+no-choice/three-option development failures; no public scheduler admission or allocation.
+95 bounded/23 partial/14 blocked of132 clauses/15 families. Corpus21 members/18 bounded/
+3 prior unchanged;1400/0;021 unsatisfied; Campaign3 NOT EXIT-READY. Next escalation intake.
+
+## REV45 supplement - experienced reinforcement feedback, 2026-09-26
+
+Only Brief12.9 clause6 advances BLOCKED -> QUALIFIED BOUNDED.
+VER-C3-REINFORCEMENT-001 uses5 unchanged models/31 runs/279 component prefixes;
+8+328 tests/build. Chosen outcome feedback raises expectation/later reasons and can
+alter subsequent behavior under fixed unit reward. Full eight-seed cohort retained:
+six sequence divergences, two equal; no universal frequency or magnitude escalation.
+LatestHistory remains. BIO identity feedback stays distinct. No new production code,
+model or allocation.96 bounded/23 partial/13 blocked across132 clauses/15 families.
+Corpus21 members/18 bounded/3 prior unchanged;1400/0.021 unsatisfied, Campaign3 NOT
+EXIT-READY. Next tolerance evidence intake; no withdrawal/craving/addiction qualification.
+
+## REV46 supplement - physical tolerance, 2026-09-26
+
+Only Brief12.9 clause7 advances PARTIAL -> QUALIFIED BOUNDED.
+VER-C3-TOLERANCE-001:3 component models/18 composed runs/90 prefix comparisons
+from four underlying public ADAPT conditions;4+328 tests/build. Reciprocal/Linear
+attenuate equal stimulus; Unattenuated retains adaptation without attenuation.
+Potential/applied/overflow and other leaves remain separate. No new public consumer,
+sensor, recovery or compensatory action. Preserve the missing-consumer finding.
+97 bounded/22 partial/13 blocked of132 clauses/15 families; corpus21/18 bounded/
+3 prior unchanged.1400/0;021 unsatisfied. Next absence deficit intake.
+
+## REV47 supplement - adaptation-dependent absence deficit, 2026-09-26
+
+Only Brief12.9 clause8 advances BLOCKED -> QUALIFIED BOUNDED. VER-C3-ABSENCE-001:
+3 component laws/27 composed runs/135 prefix checks;4+328 tests/corrected build.
+Four underlying public ADAPT conditions reused. Matched absence/acquisition and
+present support separate acquired excess from ordinary shortfall. ThresholdGap and
+LinearGap remain; FixedReference ablates D use. No new public consumer, distress,
+craving or recovery claim. Preserve wrong-reference draft and test-typing failure.
+98 bounded/22 partial/12 blocked of132 clauses/15 families; corpus21/18 bounded/
+3 prior unchanged;1400/0.021 unsatisfied; next CRAVING_READINESS.md.
+
+## REV48 supplement - represented craving, 2026-09-26
+
+Only Brief12.9 clause9 advances BLOCKED -> QUALIFIED BOUNDED. VER-C3-CRAVING-001:
+4 candidates/56 unique component runs/60 comparisons/300 prefix checks (280 distinct);
+5 public BODY runs/15 prefixes;7+328 tests/build. Represented urge depends on admitted
+body/learned relief and survives unavailable or restrained action. Fixed cues,
+informational learning and instructed restraint are controls. No enacted response,
+compulsion or relapse. Preserve failed60-unique assumption; equal-safe aliases share
+identity.99 bounded/22 partial/11 blocked of132 clauses/15 families; corpus21 members/
+18 bounded/3 prior unchanged;1400/0.021 unsatisfied; next RELAPSE_READINESS.md.
+
+## REV49 supplement - actual return after behavioral adjustment, 2026-09-26
+
+Only Brief12.9 clause10 advances BLOCKED -> QUALIFIED BOUNDED. VER-C3-RELAPSE-001:
+7 reused models/31 new public runs/279 prefixes;5+328 tests/build. Three actual
+withholding opportunities precede load; two of eight seeds return target while the
+goal remains maintained. All restore withholding after load clears. No-load/cue/
+learning/retirement/maintenance controls retained. Transient lapse only, not biological
+recovery, learned control or sustained relapse. Preserve typed-byte harness failure.
+100 bounded/22 partial/10 blocked of132 clauses/15 families; corpus21/18 bounded/
+3 prior unchanged;1400/0;021 unsatisfied. Next addiction integration intake.
+
+## REV50 supplement - bounded costly reward-seeking, 2026-09-26
+
+Only Brief12.9 clause11 advances BLOCKED -> QUALIFIED BOUNDED. VER-C3-COSTLY-REWARD-001:
+6 component models/50 runs/650 full prefix continuations;17+328 tests/build. Acquired
+benefit and harm, protective goal, load-sensitive inhibition, actual choice and later
+feedback compose without an authored Addicted trait. All eight seed pairs retained;
+seven repeat costly action, all restore withholding; feedback is not monotonically
+harm-reducing. No new public scheduler or whole biological addiction qualification.
+All eleven habit-family clauses now have separate bounded witnesses; family integration
+remains partial.101 bounded/22 partial/9 blocked of132 clauses/15 families;70 verdicts.
+Corpus21/18 bounded/3 prior unchanged;1400/0.021 remains unsatisfied.
+Next IDENTITY_EVIDENCE_READINESS.md. Preserve all99 exploratory trajectories and
+COSTLY_REWARD_AUDIT_RECOVERY_REV1.json. A stale-anchor bookkeeping failure caused an
+in-place REV49 inventory refresh; exact pre-append source prefixes reconstruct its
+prior inventory, but no independent prior digest was captured. The erroneous file
+is preserved. Scientific receipts are unchanged; new --write guard refuses overwrite.
