@@ -687,3 +687,31 @@ identity feedback merger, permanent allocation or reference import. All seed res
 and serious BeliefAccess/LatestHistory alternatives preserved. See qualification and
 COSTLY_REWARD_FINDINGS.md; broader RO008/010/011/012/015/019/020 remain;021 mandatory.
 1400/0. Next IDENTITY_EVIDENCE_READINESS.md.
+
+## 2026-09-26 - continuous functional biological system
+
+VER-C3-BIOLOGY-001:25 models/53 distinct runs/2389 unique prefixes (2438 checks),
+33+328 tests/build. biological-dynamics/0.1-candidate and biological-choice/0.1-candidate
+compose through biological-integration/0.1-candidate. Eight options/32 reason nuclei
+retain exact dice and frozen two-option kernels. MEC001/003/004/011..020 and
+EXP001..005/008..013/P3-009..012 retain the work-order dispositions. CTL010 now has
+an explicit bounded sensed pleasure candidate; CTL001/008 remain broader competitors.
+No implicit physiology-to-belief shortcut, root retirement or reference import.
+BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md preserves timing/attribution corrections and
+unearned necessity; no public scheduler or organ-level/clinical qualification.
+1400/0. The18 declared functional behaviors are expressible; broader obligations and
+Campaign3 exit gates remain. No automatic return to the prior identity intake.
+
+## 2026-09-26 — biological public integration
+
+VER-C3-BIOLOGY-PUBLIC-001 / biology-public/0.1-candidate is bounded-qualified:
+28 models/58 distinct runs/270 unique public prefixes;59 executions/273 checks include
+one excluded redundant writer. All53 component trajectories match.56 scoped (23 native
++33 prior biology)/328 reference tests and build pass. Typed sources and separate
+physical/adaptation/learning/goal/affect authorities, native intent/expression and
+whole Save132 are admitted. Matched learning/goals separate dependence from cue access.
+MEC001/003/004/011..020, EXP001..005/008..013/P3-009..012 retain port/control/candidate
+roles; CTL001/008 stay broader controls. No reference import, state retirement or
+identity/forecasting claim. Preserve both development cohorts, large-save admission
+failure and duplicate-writer receipt. RO008/009/010/011/012/015/019/020 persist;021
+mandatory.1426/0, no owner ruling. Next IDENTITY_EVIDENCE_READINESS.md.

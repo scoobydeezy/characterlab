@@ -470,3 +470,10 @@ namespace1155 unchanged. Preserved0.1 cohort was not publicly qualified. Counter
 
 Records1377..1400/schema1 allocated before implementation by DELAYED_PUBLIC_ALLOCATION_TABLE.json
 under DELAYED_PUBLIC_CONTRACT.md. Reuse namespace1155; no new namespace. Counters1400/24.
+
+## Biological public successor — 2026-09-26
+
+Records1401..1426/schema1 allocated by BIOLOGY_PUBLIC_ALLOCATION_TABLE.json under
+BIOLOGY_PUBLIC_CONTRACT.md. Namespace1156 is BiologyOccurrence, unsigned runtime
+ordinal. Typed biological sources preserve homeostatic/hedonic/adopted-goal/protective
+roles; no inherited closed vocabulary is widened. Counters1426/26 before verdict.

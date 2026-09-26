@@ -1,0 +1,19 @@
+{
+  "status": "SCHEDULING ONLY; SAME FROZEN ROWS AND CHECKS",
+  "parent": "scripts/qualify-biology-public.mjs",
+  "parentSha256": "93c818ef649f3bdd8be4445c09067f04d9387eed4d020bddd1ce4de494f5034e",
+  "planSha256": "6bad71a385c28d1d2c39ce568c3940ebcc69e230699934e78dbd5333a9ed0e04",
+  "dispatcherSha256": "9676b8acde3615e52bc9d2b2e6c8eaa9b4ee5b41721a66d043c29def39fb4968",
+  "generated": "docs/planning/biology-public-dispatch-rev1.mjs",
+  "generatedSha256": "ad836facd37ef6b1a5fcae5f37fd2d0c379f66d05bc63f7c0e9b0084aa6321ef",
+  "indices": [
+    55,
+    51,
+    47,
+    43,
+    39,
+    35,
+    31
+  ],
+  "explanation": "A completed worker takes the final original partition rows in reverse order while its all-prefix main run continues. The exact frozen computation, comparisons and restore checks are unchanged. The original worker reuses completed per-run receipts. No cohort selection or new run."
+}

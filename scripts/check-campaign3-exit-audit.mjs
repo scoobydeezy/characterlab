@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV50.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV53.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -142,7 +142,14 @@ families[8].clauses[10].evidence.push(p+'CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.m
 families[8].clauses[10].rationale='Bounded acquired costly pursuit with separate benefit/harm, maintained goal, actual choice and feedback:6 component models/50 runs/650 prefixes. All eight seeds retained; seven repeat harm and all restore withholding. No full biological addiction or public scheduler qualification.';
 families[8].rationale+=' VER-C3-COSTLY-REWARD-001 supplies a narrow joint costly-pursuit witness; all eleven clauses have separate bounded witnesses, not whole family integration. Physiological progression, natural acquisition and learned recovery remain unqualified.';
 for(const n of [8,10,11,12,15,19,20])if(!families[8].clauses[10].obligations.includes(ro(n)))families[8].clauses[10].obligations.push(ro(n));
+for(const i of [0,1,4,5,8]){
+ families[i].rationale+=' VER-C3-BIOLOGY-001 adds18 connected functional biological behaviors,25 models/53 distinct runs/2389 unique prefixes. Exact broader Brief/public-source coverage remains separately audited; no clause automatically advances.';
+ for(const clause of families[i].clauses)clause.evidence.push(p+'CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md');
+}
 const supplemental=[
+ 'BIOLOGY_PUBLIC_BOOKKEEPING_REV1.json',
+ 'CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md','BIOLOGY_PUBLIC_SCOPE_AND_FINDINGS.md','BIOLOGY_PUBLIC_DEVELOPMENT_FINDINGS.md','BIOLOGY_PUBLIC_DISPATCH_DUPLICATE_REV1.json',
+ 'BIOLOGICAL_SYSTEM_WORK_ORDER.md','BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md','BIOLOGICAL_SYSTEM_BEHAVIOR_COVERAGE.md','BIOLOGICAL_DEVELOPMENT_FINDING_REV1.json','BIOLOGICAL_DEVELOPMENT_FINDING_REV2.json','BIOLOGICAL_TEST_TYPING_FINDING_REV1.json',
  'COSTLY_REWARD_FINDINGS.md','COSTLY_REWARD_AUDIT_RECOVERY_REV1.json','IDENTITY_EVIDENCE_READINESS.md',
  'RELAPSE_FINDINGS.md','RELAPSE_HARNESS_FAILURE_REV1.json','ADDICTION_INTEGRATION_READINESS.md',
  'CRAVING_FINDINGS.md','CRAVING_DEVELOPMENT_FINDING_REV1.json','RELAPSE_READINESS.md',
@@ -192,10 +199,10 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=50;
+result.snapshotRevision=53;
 result.date='2026-09-26';
-result.counters.highestAllocatedRecordType=1400;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV49.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV49.json'),disposition:'Advances only Brief12.9 clause11 BLOCKED to QUALIFIED BOUNDED:6 component models/50 runs/650 prefixes;17+328 tests/build. Acquired costly pursuit with separate harm/reward and maintained protective goal. All seeds retained; no full biological addiction or new public source claim. All132 clauses remain. REV49 documentation reconstruction is disclosed in COSTLY_REWARD_AUDIT_RECOVERY_REV1.json.'};
+result.counters.highestAllocatedRecordType=1426;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV52.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV52.json'),disposition:'Documentation-only successor after correcting Windows line endings in the new biological qualification and registry and restoring the exactly doubled log prefix. BIOLOGY_PUBLIC_BOOKKEEPING_REV1.json preserves the affected pre-correction report/checker. Native closure REV2 binds the readable report; all28 models/58 runs/270 unique prefixes, tests, claims and132-clause dispositions remain unchanged.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

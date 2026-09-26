@@ -1,0 +1,33 @@
+{
+  "status": "PRESERVED PRE-FREEZE CAUSAL REVIEW",
+  "findings": [
+    "REV2 correctly separates elapsed and action physics and shows a reward-to-relief motive shift.",
+    "Consequence sensing still included new same-tick adaptation, contrary to consequence120 before adaptation140; retain a pre-adaptation consequence projection.",
+    "Positive expected outcome provided unconditional catalog access, bypassing cue-history contrast; explicitly restrict drug cue access and preserve KnownAccess comparator.",
+    "Canonical architecture already admits Appraisal -> named regulatory impulse; a delayed bounded stress impulse can be integrated locally, preserving NoAppraisalImpulse.",
+    "No result is a final qualification; REV1/REV2 trajectories remain preserved."
+  ],
+  "artifacts": [
+    {
+      "source": "src/campaign3/biologicalDynamics.ts",
+      "preserved": "docs/planning/biological-development-rev2/biologicalDynamics.ts",
+      "sha256": "9fa160398f19883c6b9d83697014c72d802ce219ef4ea6c45815c62b77628391"
+    },
+    {
+      "source": "src/campaign3/biologicalIntegration.ts",
+      "preserved": "docs/planning/biological-development-rev2/biologicalIntegration.ts",
+      "sha256": "bc524b0f60aa32df8b5bd9e728df27408254cdd3fbb967a2f72510118f148dc2"
+    },
+    {
+      "source": "src/test/biologicalIntegrationFixtures.ts",
+      "preserved": "docs/planning/biological-development-rev2/biologicalIntegrationFixtures.ts",
+      "sha256": "12396abb3b1630c47fc7ec4208d48e4f9b7f0d34468abce6680a387ed3fcd724"
+    },
+    {
+      "source": "scripts/explore-biological-integration.mjs",
+      "preserved": "docs/planning/biological-development-rev2/explore-biological-integration.mjs",
+      "sha256": "60f975090726611e211ae926d54d5072e3d33405f421c1276e0d30dbf5e745e8"
+    }
+  ],
+  "exploration": "docs/planning/BIOLOGICAL_INTEGRATION_EXPLORATION_REV2.json"
+}

@@ -2556,3 +2556,52 @@ COSTLY_REWARD_CLOSURE_REV1.json bind evidence. No full biological addiction, nat
 acquisition, clinical claim or public scheduler admission. RO008/010/011/012/015/019/
 020 remain;021 unsatisfied.1400/0. No allocation or owner ruling.
 Next IDENTITY_EVIDENCE_READINESS.md. Campaign3 NOT EXIT-READY.
+
+## VER-C3-BIOLOGY-001 - continuous functional biology, 2026-09-26
+
+LOCAL DISPOSITION / QUALIFIED bounded expressibility of the18 owner-directed work-order
+behaviors. biological-integration/0.1-candidate composes versioned biology and multi-ground
+choice.25 models/53 distinct runs/54 execution rows/2389 distinct prefixes (2438 checks);
+33 scoped/328 reference tests/build. Main package24 models/52 runs/2340 prefixes;
+constitutional pair adds one model/run and49 unique prefixes, rechecking one existing run.
+Physical resources, sleep/phase, damage, intoxicant burden and reward/stress/arousal
+with independent adaptation now feed safe observations, separate pleasure/relief/harm
+learning, maintained goals/control, exact reason dice, intent and actual effects.
+Motive shifts toward withdrawal relief within one history; Latest can pursue with
+learned pleasure0. Four of eight seeds return under load; all resume avoidance.
+Alternative relief/recovery/retained history and delayed appraisal-to-stress are actual.
+Domain distinctions are testable, not proven irreducible meters or calibrated biology.
+No new public scheduler admission, clinical diagnosis, natural exploration or whole
+Campaign3 exit. Earlier AFFECT/identity/recognition profiles remain separately scoped.
+Preserve BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md, both development source cohorts and
+all exploratory results. CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md /
+BIOLOGICAL_SYSTEM_CLOSURE_REV1.json bind evidence. RO008/009/010/011/012/015/019/020
+remain;021 mandatory.1400/0, no allocation or owner ruling. Declared functional
+checkpoint complete; next review exact broader coverage/public-integration gates.
+
+## VER-C3-BIOLOGY-PUBLIC-001 — native biological integration — 2026-09-26
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION. biology-public/0.1-candidate admits the18
+owner-directed functional behaviors through typed native sources, ownership, phases
+and Save132.28 models/58 distinct runs/270 unique selected public prefixes (212
+advancing/58 terminal);59 row executions/273 checks include one excluded redundant
+writer. All53 prior continuous trajectories match timestep-for-timestep.56 scoped
+(23 native+33 preserved biology)/328 reference tests and build pass. Records1401..1426,
+namespace1156; counters1426/0. No owner ruling, root retirement or reference import.
+
+Homeostatic, hedonic, adopted-goal and protective sources remain distinct from private
+task-shaped numerical intermediates. Native intent70/expression80, execution110,
+consequence sensing120 and learning/adaptation140 preserve causality. Matched admitted
+beliefs/cue history/goals isolate adaptation-driven withdrawal and actual choice;
+missing cue access retains dependence. Whole safe views survive hidden body/execution
+changes. Alternative relief and all original candidates remain. No law is canonized.
+
+See CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md, BIOLOGY_PUBLIC_SCOPE_AND_FINDINGS.md and
+BIOLOGY_PUBLIC_CLOSURE_REV2.json. Preserve both public development cohorts, the
+large-save byte-enumeration failure and redundant-writer receipt. The local intrinsic
+byte adapter fixes native admission without changing legacy helpers. General future-
+abstinence forecasting, identity eligibility/update, natural exploration, general
+recognition/control and calibrated/organ-level biology remain outside this closure.
+No Addicted trait, global Craving primitive or whole Campaign3 PASS. RO008/009/010/
+011/012/015/019/020 persist;021 historical gate remains. Next IDENTITY_EVIDENCE_READINESS.md.
+No broader Brief clause is automatically promoted.

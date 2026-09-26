@@ -591,3 +591,43 @@ COSTLY_REWARD_AUDIT_RECOVERY_REV1.json. A stale-anchor bookkeeping failure cause
 in-place REV49 inventory refresh; exact pre-append source prefixes reconstruct its
 prior inventory, but no independent prior digest was captured. The erroneous file
 is preserved. Scientific receipts are unchanged; new --write guard refuses overwrite.
+
+## REV51 supplement - continuous functional biology, 2026-09-26
+
+VER-C3-BIOLOGY-001 adds a continuous18-behavior functional system:25 models/53 distinct
+runs/2389 distinct prefixes (2438 checks),33+328 tests/build. This closes the declared
+owner work-order expressibility gap without aggregating independent proofs into broader
+Brief claims. All132 source clauses remain and no clause status changes:101 bounded/
+22 partial/9 blocked. Compound intoxication-across-characters, general interoceptive
+uncertainty and broader physiological/public-source gates require exact reconciliation.
+Biological domain necessity remains bounded; no public scheduler or clinical completion.
+The domain report retains timing/attribution/cue corrections and negative action results.
+Corpus0.29.0 remains21 members/18 bounded/3 prior.71 verdicts;1400/0.021 remains unsatisfied.
+
+## REV52 supplement — native biological admission, 2026-09-26
+
+VER-C3-BIOLOGY-PUBLIC-001 qualifies the native bounded18-behavior profile:
+28 models/58 distinct runs/270 unique complete-instant public prefixes.59 executions/
+273 checks include one redundant writer, excluded from coverage.56 scoped tests
+(23 native+33 biology),328 reference tests/build pass. All53 prior trajectories match.
+Correctly typed biological sources, separate authorities, native intent/expression
+and actual queue/state/trace/RNG persistence close the named public admission gate.
+Matched learning/goals isolate dependence/access, and whole observer views preserve
+hidden-state noninterference. Both failed public cohorts and duplicate receipt remain.
+
+No clause status is automatically promoted:101 bounded/22 partial/9 blocked, all132
+clauses/15 families retained. Corpus0.29.0 remains21 members/18 bounded/3 prior;
+72 named verdicts;1426/0. General future-abstinence forecasting and identity eligibility
+are distinct further questions; clinical/organ-level and compound cross-profile claims
+remain outside scope.021 historical reconciliation is unsatisfied. Next identity
+eligibility intake; Campaign3 remains NOT EXIT-READY.
+
+## REV53 supplement — documentation normalization, 2026-09-26
+
+Scientific claims, models, runs, checks and clause statuses are unchanged from REV52.
+A Windows text-codec correction introduced doubled carriage returns in the new
+qualification/registry and doubled log line breaks. Byte normalization restores
+readable documentation and the preserved historical prefix. The prior report/checker
+are retained under BIOLOGY_PUBLIC_BOOKKEEPING_REV1.json; native closure REV2 binds
+the corrected report. No earlier snapshot or scientific receipt was overwritten.
+Counts remain72 verdicts,101 bounded/22 partial/9 blocked,1426/0; NOT EXIT-READY.

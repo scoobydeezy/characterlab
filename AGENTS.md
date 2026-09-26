@@ -72,6 +72,31 @@ Report the two program counters (highest allocated record type; record types all
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
 
+Campaign 3 current frontier: bounded native biological integration COMPLETE
+(VER-C3-BIOLOGY-PUBLIC-001, biology-public/0.1-candidate). Start CURRENT.md and
+CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md.28 models/58 distinct runs/270 unique public
+prefixes;59 row executions/273 checks include one redundant writer.56 scoped tests
+(23 native+33 preserved biology),328 reference tests/build pass. Records1401..1426,
+namespace1156;1426/0. All53 prior trajectories match through the native runtime.
+Typed biological sources and disjoint owners preserve intent70/expression80,
+consequence sensing120 before adaptation140. Preserve both public development cohorts,
+large-save byte-admission failure and duplicate-writer receipts. No new forecasting,
+identity update, organ-level or whole Campaign3 claim. No owner ruling pending.
+Next IDENTITY_EVIDENCE_READINESS.md. Prior biological component checkpoint follows:
+
+Campaign 3 current frontier: owner-directed functional biological integration COMPLETE
+for the18 behaviors in BIOLOGICAL_SYSTEM_WORK_ORDER.md (VER-C3-BIOLOGY-001).
+Start CURRENT.md and CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md.25 models/53 distinct
+runs/2389 distinct prefixes (2438 checks);33+328 tests/build;1400/0. Continuous body,
+safe sensing, pleasure/relief/harm learning, cue access, goals/control, reason dice,
+actual action effects and delayed appraisal-to-stress are integrated. Dopamine and
+other analog names are permitted without 1:1 biological fidelity. Preserve domain
+findings and both failed causal-development cohorts; distinct domains are not proven
+irreducible meters. No public scheduler, clinical, organ-level or whole Campaign3 PASS.
+AuditREV51 keeps101 bounded/22 partial/9 blocked;71 verdicts. No owner ruling pending.
+Next biological coverage/public-integration review; do not automatically resume identity.
+Prior checkpoint/routing below is historical:
+
 Campaign 3 current frontier: acquired costly reward-seeking COMPLETE
 (VER-C3-COSTLY-REWARD-001, costly-reward-component/0.1-candidate):6 component models/
 50 runs/650 prefixes;17+328 tests/build. Start CURRENT.md and

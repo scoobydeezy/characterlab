@@ -1,0 +1,18 @@
+{
+  "status": "DOCUMENTATION CORRECTION ONLY; SCIENTIFIC RECEIPTS UNCHANGED",
+  "finding": "A Windows text-codec correction introduced CRCRLF into the new qualification and allocation registry, and doubled historical log line breaks. git diff --check detected it.",
+  "disposition": "Normalize line endings using bytes, restore the exactly doubled log prefix, preserve pre-correction report/checker, and publish a successor closure binding the readable report. No source, model, law, run, test, or prefix result changed.",
+  "predecessorClosure": "docs/planning/BIOLOGY_PUBLIC_CLOSURE_REV1.json",
+  "artifacts": [
+    {
+      "path": "docs/planning/CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+      "preserved": "docs/planning/biology-public-bookkeeping-rev1/docs/planning/CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+      "sha256": "6562a81533e4dfae954394757582aa2187fec368dc18323723858838c6ab4a6d"
+    },
+    {
+      "path": "scripts/check-biology-public-closure.mjs",
+      "preserved": "docs/planning/biology-public-bookkeeping-rev1/scripts/check-biology-public-closure.mjs",
+      "sha256": "180596524a4c1f3e0aa58424cb220332077ad11eea756f06f68eb15d8e573dbd"
+    }
+  ]
+}

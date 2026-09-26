@@ -681,3 +681,30 @@ All eleven habit-family clauses have separate bounded witnesses, not whole addic
 integration. AuditREV50:101 bounded/22 partial/9 blocked;1400/0. Campaign3 NOT EXIT-READY.
 Next IDENTITY_EVIDENCE_READINESS.md; audit existing BIO eligibility before extending.
 021 historical gate remains mandatory and unsatisfied.
+
+## Owner-directed biological workstream - functional expressibility, 2026-09-26
+
+The owner replaced the next identity intake with BIOLOGICAL_SYSTEM_WORK_ORDER.md.
+VER-C3-BIOLOGY-001 now qualifies its18 functional behaviors in a continuous system:
+25 models/53 distinct runs/2389 distinct prefixes (2438 checks);33+328 tests/build.
+Reward, relief, physiology, acquired adaptation, evidence, goals, control and actual
+choices are connected. Biological analog names are allowed without 1:1 fidelity.
+Domain discrimination does not prove a minimal biological ontology. No public
+scheduler/organ-level/clinical completion is implied. AuditREV51 retains101 bounded/
+22 partial/9 blocked and132 clauses;71 verdicts;1400/0. Campaign3 NOT EXIT-READY.
+Next review exact remaining biological/public-integration gates before returning to
+identity.021 historical reconciliation remains mandatory and unsatisfied.
+
+## 2026-09-26 — biological public integration
+
+VER-C3-BIOLOGY-PUBLIC-001 / biology-public/0.1-candidate is bounded-qualified:
+28 models/58 distinct runs/270 unique public prefixes;59 executions/273 checks include
+one excluded redundant writer. All53 component trajectories match.56 scoped (23 native
++33 prior biology)/328 reference tests and build pass. Typed sources and separate
+physical/adaptation/learning/goal/affect authorities, native intent/expression and
+whole Save132 are admitted. Matched learning/goals separate dependence from cue access.
+MEC001/003/004/011..020, EXP001..005/008..013/P3-009..012 retain port/control/candidate
+roles; CTL001/008 stay broader controls. No reference import, state retirement or
+identity/forecasting claim. Preserve both development cohorts, large-save admission
+failure and duplicate-writer receipt. RO008/009/010/011/012/015/019/020 persist;021
+mandatory.1426/0, no owner ruling. Next IDENTITY_EVIDENCE_READINESS.md.

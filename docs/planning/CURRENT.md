@@ -2,34 +2,45 @@
 
 **Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Bounded acquired costly reward-seeking COMPLETE - VER-C3-COSTLY-REWARD-001.**
-LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+**Bounded biological public integration COMPLETE — VER-C3-BIOLOGY-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. The18 owner-directed behaviors now
+run through typed native sources, owners, scheduling, intent/expression and Save132.
+Campaign3 remains NOT EXIT-READY; no organ-level or general identity claim.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **1400** |
+| Highest permanently allocated record type | **1426** |
 | Allocated since last verdict/corpus member | **0** |
 | Research obligations | **1 active / 19 conditional / 0 unowned** |
 | Closed obligations | **1: RO-C3-018** |
-| Corpus / named verdict entries | **0.29.0 - 21 members / 70 verdicts** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 72 verdicts** |
 | Brief clauses / families | **132 / 15** |
 | Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
-| Component experiment | **6 models / 50 runs / 650 prefixes** |
-| Validation | **17 new + 328 reference tests; production build passed** |
+| Native biological qualification | **28 models / 58 distinct runs / 270 unique prefixes** |
+| Execution accounting | **59 row executions / 273 checks; one excluded duplicate** |
+| Validation | **23 native + 33 preserved biology + 328 reference tests; build passed** |
 
-Start CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md and COSTLY_REWARD_CLOSURE_REV1.json.
-Separate benefit/harm beliefs, cue history, protective goal, load-sensitive inhibition,
-actual reasons/dice/choice and later feedback compose without an Addicted trait.
-Seven of eight seeds repeat actual costly choices under load; all noLoad runs withhold
-and all main runs restore withholding. Feedback changes four sequences, preserves four,
-and does not universally reduce harm. BeliefAccess matches primary behavior; cue
-change discriminates it. Whole safe views match false/denied-outcome pairs.
-Preserve COSTLY_REWARD_FINDINGS.md/all99 exploration trajectories and
-COSTLY_REWARD_AUDIT_RECOVERY_REV1.json (documentation-only overwrite/reconstruction).
+Start CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md and BIOLOGY_PUBLIC_CLOSURE_REV2.json.
+BIOLOGY_PUBLIC_SCOPE_AND_FINDINGS.md gives exact integration/identity/forecast limits.
+All53 prior continuous trajectories match, including actual choices and world effects.
+All prefixes of main Full/seed7 and five supplements pass; other runs check initial,
+acquisition and terminal boundaries. Original2389 component prefixes stand separately.
+Matched admitted beliefs/cue history/goals isolate adaptation-driven withdrawal/choice;
+missing cue access retains dependence. Hidden body/execution changes preserve whole
+safe observer views. Existing alternative relief, recovery and competitors remain.
 
-No full addiction, physiology/withdrawal integration, clinical or public scheduler claim.
-All eleven habit-family clauses have separate bounded witnesses, not joint integration.
-Next IDENTITY_EVIDENCE_READINESS.md: audit meaningful/trivial/coerced identity evidence
-against existing BIO eligibility before extending. RO008/010/011/012/015/020 conditional,
-019 active; none closes.021 historical gate remains mandatory and unsatisfied.
-No root or distinction retired. Counters1400/0; no architecture-owner ruling pending.
+Preserve BIOLOGY_PUBLIC_DEVELOPMENT_FINDINGS.md and both public development cohorts:
+the large native save exposed an inherited byte-enumeration ceiling. A local intrinsic
+byte adapter fixes it; legacy helpers remain unchanged. The duplicate writer was
+rejected without overwriting evidence. No failed cohort becomes a successful verdict.
+
+Next: IDENTITY_EVIDENCE_READINESS.md. Biological expressions preserve authentic choice
+meaning/authorship; eligibility and identity updates need their own qualified join.
+Future-abstinence forecasting is not current discomfort or consumption-harm belief and
+remains conditional under RO010/019. No Addicted trait or new global Craving. No state
+root is retired. RO021 historical reconciliation remains unsatisfied.
+
+External review accepted within bounded scope; see BIOLOGY_PUBLIC_EXTERNAL_REVIEW_DISPOSITION.md.
+RO010/019 explicitly preserve current withdrawal discomfort vs anticipated future
+withdrawal discomfort. The absent-cue counterexample is Full-profile specific;
+KnownAccess remains a comparator. Biology does not automatically qualify identity evidence.

@@ -1,0 +1,12 @@
+{
+  "status": "REDUNDANT WRITER REJECTED; AUTHORITATIVE ROW PRESERVED",
+  "error": "EEXIST while creating BIOLOGY_PUBLIC_RUN_35_REV3.json with flag wx",
+  "runIndex": 35,
+  "run": "arousalControl/Full/seed1",
+  "cause": "The tail dispatcher and original worker overlapped on their final in-flight row. Both completed the existing numerical and three-prefix assertions; the auxiliary exclusive write rejected replacement of the original receipt.",
+  "disposition": "Keep the original receipt and all four completed final partitions. Resume dispatcher only to collect already completed per-run receipts. Exclude the redundant row from unique coverage. No source/model/law change.",
+  "distinctRuns": 58,
+  "rowExecutions": 59,
+  "distinctPrefixChecks": 270,
+  "executedPrefixChecks": 273
+}

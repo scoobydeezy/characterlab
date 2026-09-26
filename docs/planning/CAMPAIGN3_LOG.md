@@ -4135,3 +4135,218 @@ Next ADDICTION_INTEGRATION_READINESS.md. Ten separate bounded habit-family witne
 do not qualify joint addiction-like behavior. Audit interfaces/actual feedback before
 combining profiles. RO008/010/011/012/015/020 conditional,019 active; none closes.
 021 historical gate remains mandatory and unsatisfied. No root or distinction retired.
+
+
+## Preserved index before biological work order — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded acquired costly reward-seeking COMPLETE - VER-C3-COSTLY-REWARD-001.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 70 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
+| Component experiment | **6 models / 50 runs / 650 prefixes** |
+| Validation | **17 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md and COSTLY_REWARD_CLOSURE_REV1.json.
+Separate benefit/harm beliefs, cue history, protective goal, load-sensitive inhibition,
+actual reasons/dice/choice and later feedback compose without an Addicted trait.
+Seven of eight seeds repeat actual costly choices under load; all noLoad runs withhold
+and all main runs restore withholding. Feedback changes four sequences, preserves four,
+and does not universally reduce harm. BeliefAccess matches primary behavior; cue
+change discriminates it. Whole safe views match false/denied-outcome pairs.
+Preserve COSTLY_REWARD_FINDINGS.md/all99 exploration trajectories and
+COSTLY_REWARD_AUDIT_RECOVERY_REV1.json (documentation-only overwrite/reconstruction).
+
+No full addiction, physiology/withdrawal integration, clinical or public scheduler claim.
+All eleven habit-family clauses have separate bounded witnesses, not joint integration.
+Next IDENTITY_EVIDENCE_READINESS.md: audit meaningful/trivial/coerced identity evidence
+against existing BIO eligibility before extending. RO008/010/011/012/015/020 conditional,
+019 active; none closes.021 historical gate remains mandatory and unsatisfied.
+No root or distinction retired. Counters1400/0; no architecture-owner ruling pending.
+
+
+## Preserved active biological work-order index — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**ACTIVE: full functional biological integration — owner-directed.**
+LOCAL DISPOSITION; no owner ruling. Campaign3 remains NOT EXIT-READY.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 70 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
+| Component experiment | **6 models / 50 runs / 650 prefixes** |
+| Validation | **17 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md and COSTLY_REWARD_CLOSURE_REV1.json.
+Separate benefit/harm beliefs, cue history, protective goal, load-sensitive inhibition,
+actual reasons/dice/choice and later feedback compose without an Addicted trait.
+Seven of eight seeds repeat actual costly choices under load; all noLoad runs withhold
+and all main runs restore withholding. Feedback changes four sequences, preserves four,
+and does not universally reduce harm. BeliefAccess matches primary behavior; cue
+change discriminates it. Whole safe views match false/denied-outcome pairs.
+Preserve COSTLY_REWARD_FINDINGS.md/all99 exploration trajectories and
+COSTLY_REWARD_AUDIT_RECOVERY_REV1.json (documentation-only overwrite/reconstruction).
+
+No full addiction, physiology/withdrawal integration, clinical or public scheduler claim.
+All eleven habit-family clauses have separate bounded witnesses, not joint integration.
+Next BIOLOGICAL_SYSTEM_WORK_ORDER.md. Identity intake is deferred by owner direction.
+Build the declared integrated behavior set and test necessary functional domains;
+do not stop at another isolated component qualification. RO008/010/011/012/015/020 conditional,
+019 active; none closes.021 historical gate remains mandatory and unsatisfied.
+No root or distinction retired. Counters1400/0; no architecture-owner ruling pending.
+
+
+## Preserved before biological public integration — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Continuous functional biology EXPRESSIBLE — VER-C3-BIOLOGY-001.**
+Owner-directed18-behavior set qualified. LOCAL DISPOSITION; no architectural blocker.
+Campaign3 remains NOT EXIT-READY; no public scheduler or organ-level completion claim.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1400** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 71 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
+| Biological qualification | **25 models / 53 distinct runs / 2389 unique prefixes** |
+| Replay accounting | **54 execution rows / 2438 prefix checks** |
+| Validation | **33 new + 328 reference tests; production build passed** |
+
+Start CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md and BIOLOGICAL_SYSTEM_CLOSURE_REV1.json.
+BIOLOGICAL_SYSTEM_BEHAVIOR_COVERAGE.md maps the18 owner-directed behaviors.
+Actual action changes body; safe sensing changes learned pleasure/relief/harm;
+physiology, goals/control and multiple reason dice change later choice. Acquired
+withdrawal relief overtakes pleasure in one history. Four seeds return under load,
+four do not; all restore avoidance. Alternative relief and recovery retain cue history.
+Delayed appraised-threat input changes later stress, not its own triggering appraisal.
+
+BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md distinguishes necessary behavioral operands
+from unproven minimal stored domains. Preserve both causal-development cohorts and
+typing failure. Original profiles remain unchanged; no root retired. Biological analog
+names are permitted without scientific fidelity claims. No authored Addicted trait.
+
+Next: BIOLOGICAL_PUBLIC_INTEGRATION_AUDIT.md, not automatic identity intake.
+Task-shaped numerical nuclei and component expressions are not yet general public
+biological reason or identity sources; preserve this adapter/public distinction.
+The functional component result does not silently close compound Brief clauses,
+organ-specific biology, natural exploration, learned control or general identity.
+RO008/009/010/011/012/015/020 conditional;019 active.021 historical gate unsatisfied.
+No owner decision pending. Counters1400/0.
+
+
+## Preserved public integration qualification index — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Biological public integration IN QUALIFICATION.** Owner directs work until closure
+or genuine architectural escalation. No owner decision pending. Counters **1426 /26**.
+Start BIOLOGY_PUBLIC_CONTRACT.md (formal) and BIOLOGY_PUBLIC_PLAN_REV3.json (planning).
+Native sources/owners/stages/factory/save implemented;23 native+33 preserved biology
+unit tests and328 reference tests pass. Production build passed; frozen qualification
+is running; do not infer completion before their receipts.
+
+Frozen public roster:28 models/58 runs/270 selected complete-instant prefix restores.
+All53 prior trajectories are compared exactly; five matched/observer-boundary runs
+supplement them. Every prefix for main Full/seed7 and all five supplements; three
+prefixes (initial/acquisition/terminal) for other runs. Four runner partitions write
+separate BIOLOGY_PUBLIC_RESULT_PART0..3_REV3.json. Never overwrite frozen receipts.
+BIOLOGY_PUBLIC_DEVELOPMENT_FINDINGS.md preserves compiler, performance and large-save
+admission failures. REV3 fixes intrinsic byte copying; legacy helpers remain unchanged.
+
+Prior VER-C3-BIOLOGY-001 remains qualified:25 models/53 runs/2389 unique component
+prefixes. No old source/model/digest changed. Public integration is separate evidence.
+| Counter | Value |
+|---|---|
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | 1 | Corpus0.29.0 retains
+21 members/71 verdicts. Brief:132 clauses/15 families;101 bounded/22 partial/9 blocked.
+Campaign3 NOT EXIT-READY. RO021 final historical reconciliation stays unsatisfied.
+No identity update or future-abstinence forecasting law is added by public admission.
+
+
+## 2026-09-26 — biological public integration
+
+VER-C3-BIOLOGY-PUBLIC-001 / biology-public/0.1-candidate is bounded-qualified:
+28 models/58 distinct runs/270 unique public prefixes;59 executions/273 checks include
+one excluded redundant writer. All53 component trajectories match.56 scoped (23 native
++33 prior biology)/328 reference tests and build pass. Typed sources and separate
+physical/adaptation/learning/goal/affect authorities, native intent/expression and
+whole Save132 are admitted. Matched learning/goals separate dependence from cue access.
+MEC001/003/004/011..020, EXP001..005/008..013/P3-009..012 retain port/control/candidate
+roles; CTL001/008 stay broader controls. No reference import, state retirement or
+identity/forecasting claim. Preserve both development cohorts, large-save admission
+failure and duplicate-writer receipt. RO008/009/010/011/012/015/019/020 persist;021
+mandatory.1426/0, no owner ruling. Next IDENTITY_EVIDENCE_READINESS.md.
+
+## 2026-09-26 - index before biological external review disposition
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded biological public integration COMPLETE — VER-C3-BIOLOGY-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. The18 owner-directed behaviors now
+run through typed native sources, owners, scheduling, intent/expression and Save132.
+Campaign3 remains NOT EXIT-READY; no organ-level or general identity claim.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1426** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 72 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **101 bounded / 22 partial / 9 blocked** |
+| Native biological qualification | **28 models / 58 distinct runs / 270 unique prefixes** |
+| Execution accounting | **59 row executions / 273 checks; one excluded duplicate** |
+| Validation | **23 native + 33 preserved biology + 328 reference tests; build passed** |
+
+Start CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md and BIOLOGY_PUBLIC_CLOSURE_REV2.json.
+BIOLOGY_PUBLIC_SCOPE_AND_FINDINGS.md gives exact integration/identity/forecast limits.
+All53 prior continuous trajectories match, including actual choices and world effects.
+All prefixes of main Full/seed7 and five supplements pass; other runs check initial,
+acquisition and terminal boundaries. Original2389 component prefixes stand separately.
+Matched admitted beliefs/cue history/goals isolate adaptation-driven withdrawal/choice;
+missing cue access retains dependence. Hidden body/execution changes preserve whole
+safe observer views. Existing alternative relief, recovery and competitors remain.
+
+Preserve BIOLOGY_PUBLIC_DEVELOPMENT_FINDINGS.md and both public development cohorts:
+the large native save exposed an inherited byte-enumeration ceiling. A local intrinsic
+byte adapter fixes it; legacy helpers remain unchanged. The duplicate writer was
+rejected without overwriting evidence. No failed cohort becomes a successful verdict.
+
+Next: IDENTITY_EVIDENCE_READINESS.md. Biological expressions preserve authentic choice
+meaning/authorship; eligibility and identity updates need their own qualified join.
+Future-abstinence forecasting is not current discomfort or consumption-harm belief and
+remains conditional under RO010/019. No Addicted trait or new global Craving. No state
+root is retired. RO021 historical reconciliation remains unsatisfied.
