@@ -1,0 +1,3336 @@
+{
+  "status": "PASS",
+  "planSha256": "773d740f1886c351cb27e6f0594c940d72e437aafc5b86dd4a8600e7320d297e",
+  "index": 61,
+  "family": "Biological",
+  "law": "NoFeedback",
+  "scenario": "matched",
+  "seed": 4,
+  "unit": 16,
+  "runIdentity": "0a68010401010a6701060101051d6964656e746974792d7075626c69632f302e312d63616e64696461746502010a6401020101051d6964656e746974792d7075626c69632f302e312d63616e64696461746502010420dd26e3fa4f7ae643abcf34a0d391609662352de70da0a84fcd9e55144da845ae03010a6501020101051d6964656e746974792d7075626c69632f302e312d63616e64696461746502010420ccd769e9bcdb1c595b3ab4753880e1ad53a740f2abf8e2fa587de63ef22e33a30401051a6964656e746974792d65786163742d6c6174746963652f302e3105010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101051d6964656e746974792d7075626c69632f302e312d63616e64696461746502010420a15fd318f08ff39ce92b7cf7ff26e2bc3551cdc417c12c11a2a379ab38c3191902010420ef3ec3a631ef6991c8e769a13ff67c58947fd59cd6f2ed5b3250be32a056691a0301042073cce5d47eaaede6c438aa29630f824d9542c1e9c7194b42b8355928ddcd3e74040104200404040404040404040404040404040404040404040404040404040404040404",
+  "prefixes": [
+    {
+      "at": 0,
+      "sha256": "1d857d92cda9591593cb46d6e20bba45841ea46e7f2b0f0d86b715201d385d20",
+      "nextSha256": "cf65390fd5f606405155ac74bc585595a2a700db0332976745980a0b6104710a"
+    },
+    {
+      "at": 8,
+      "sha256": "5b8b83957b317627b1260605e3ac9b0d157307a3446bc32dd0e04ce73c3c2916",
+      "nextSha256": "004e87ec96f1753bbb7b318522852f6163237f4fea60ea3a05a9bf71275c682d"
+    },
+    {
+      "at": 12,
+      "sha256": "828fed3554796dfb9c9ed8103e7af9a93522c617dea22c4e63f982e031fd8c8a",
+      "nextSha256": "828fed3554796dfb9c9ed8103e7af9a93522c617dea22c4e63f982e031fd8c8a"
+    }
+  ],
+  "saveSha256": "828fed3554796dfb9c9ed8103e7af9a93522c617dea22c4e63f982e031fd8c8a",
+  "observerSha256": "0b6c5dfbeb6c1bbbd9deafc2c681055582626a509fd85260382a478a93d823f5",
+  "stateSha256": "02408ae8ccddd82446082c3075ec6070ada4ae68f9086d4b54ad38ae694e3c3a",
+  "priorMatch": true,
+  "semantic": [
+    {
+      "at": 1,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 0,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": null,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 300,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 1,
+            "fuel": 800,
+            "phase": 9,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 900,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 150
+                },
+                "displacement": 108,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 300,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 600,
+                  "potential": 600,
+                  "satiation": 0,
+                  "tolerance": 0,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 900
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 1,
+            "fuel": 800,
+            "phase": 9,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 900,
+                "satiation": 90,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 2,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 500,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 390,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 2,
+            "fuel": 800,
+            "phase": 10,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 912,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 300
+                },
+                "displacement": 216,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 408,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 522,
+                  "potential": 522,
+                  "satiation": 0,
+                  "tolerance": 150,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 912
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 2,
+            "fuel": 800,
+            "phase": 10,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 912,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 150
+                },
+                "displacement": 108,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 3,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 750,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 390,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 3,
+            "fuel": 800,
+            "phase": 11,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 854,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 450
+                },
+                "displacement": 324,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 516,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 462,
+                  "potential": 462,
+                  "satiation": 0,
+                  "tolerance": 300,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 854
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 3,
+            "fuel": 800,
+            "phase": 11,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 854,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 300
+                },
+                "displacement": 216,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 4,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 875,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 380,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 4,
+            "fuel": 800,
+            "phase": 12,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 797,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 600
+                },
+                "displacement": 432,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 624,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 414,
+                  "potential": 414,
+                  "satiation": 0,
+                  "tolerance": 450,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 797
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 4,
+            "fuel": 800,
+            "phase": 12,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 797,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 450
+                },
+                "displacement": 324,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 5,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 938,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 370,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 5,
+            "fuel": 800,
+            "phase": 13,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 750,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 750
+                },
+                "displacement": 540,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 732,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 375,
+                  "potential": 375,
+                  "satiation": 0,
+                  "tolerance": 600,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 750
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 5,
+            "fuel": 800,
+            "phase": 13,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 750,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 600
+                },
+                "displacement": 432,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 6,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 969,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 360,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 6,
+            "fuel": 800,
+            "phase": 14,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 711,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 900
+                },
+                "displacement": 648,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 840,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 343,
+                  "potential": 343,
+                  "satiation": 0,
+                  "tolerance": 750,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 711
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 6,
+            "fuel": 800,
+            "phase": 14,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 711,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 750
+                },
+                "displacement": 540,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 7,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 984,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 360,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 7,
+            "fuel": 800,
+            "phase": 15,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 678,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 756,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 948,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 316,
+                  "potential": 316,
+                  "satiation": 0,
+                  "tolerance": 900,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 678
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 7,
+            "fuel": 800,
+            "phase": 15,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 678,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 900
+                },
+                "displacement": 648,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 8,
+      "choice": {
+        "mode": "Auto",
+        "draws": [],
+        "chosen": "drug",
+        "authorship": "0/1",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "1/1"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": false,
+          "protection": false
+        },
+        "habit": {
+          "drug": 992,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 0,
+          "distress": 1000,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 350,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 1000,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 1000,
+        "grounds": [
+          {
+            "domain": "practice",
+            "option": "drug",
+            "strength": 1000
+          }
+        ],
+        "options": [
+          "drug"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 5,
+        "contribution": "0/1",
+        "alignment": "0/1"
+      },
+      "strength": "0/1",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 8,
+            "fuel": 800,
+            "phase": 16,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 657,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 864,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 1000,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 300,
+                  "potential": 300,
+                  "satiation": 0,
+                  "tolerance": 1000,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 657
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 8,
+            "fuel": 800,
+            "phase": 16,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 657,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 756,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 9,
+      "choice": {
+        "mode": "PlayerFacingRoll",
+        "draws": [
+          {
+            "span": 4,
+            "result": 3,
+            "address": "0a6e010401010bef08020902010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f70726f74656374696f6e0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 10,
+            "result": 6,
+            "address": "0a6e010401010bef08020902010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f7769746864726177616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 4,
+            "result": 3,
+            "address": "0a6e010401010bef08020902010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051f636f6e74656e742f62696f6c6f67792f70726f746563746976652d676f616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080517616374696f6e2f62696f6c6f67792f77697468686f6c6404010200"
+          }
+        ],
+        "chosen": "withhold",
+        "authorship": "9/14",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "11/20"
+          },
+          {
+            "name": "withhold",
+            "probability": "9/20"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": true,
+          "protection": true
+        },
+        "habit": {
+          "drug": 996,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 25,
+          "distress": 640,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 350,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 640,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 200,
+        "grounds": [
+          {
+            "domain": "withdrawal",
+            "option": "drug",
+            "strength": 640
+          },
+          {
+            "domain": "protection",
+            "option": "drug",
+            "strength": -50
+          },
+          {
+            "domain": "protective-goal",
+            "option": "withhold",
+            "strength": 50
+          }
+        ],
+        "options": [
+          "drug",
+          "withhold"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 1,
+        "contribution": "9/154",
+        "alignment": "1/11"
+      },
+      "strength": "29221/529221",
+      "physical": {
+        "executed": "withhold",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 9,
+            "fuel": 800,
+            "phase": 17,
+            "water": 800,
+            "burden": 0,
+            "damage": 0,
+            "channels": {
+              "reward": {
+                "level": 354,
+                "satiation": 0,
+                "tolerance": {
+                  "drug": 990
+                },
+                "displacement": 852,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 1000,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 354
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 0
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 9,
+            "fuel": 800,
+            "phase": 17,
+            "water": 800,
+            "burden": 0,
+            "damage": 0,
+            "channels": {
+              "reward": {
+                "level": 354,
+                "satiation": 0,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 864,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 0,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 10,
+      "choice": {
+        "mode": "PlayerFacingRoll",
+        "draws": [
+          {
+            "span": 4,
+            "result": 0,
+            "address": "0a6e010401010bef08020a02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f70726f74656374696f6e0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 12,
+            "result": 5,
+            "address": "0a6e010401010bef08020a02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f7769746864726177616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 4,
+            "result": 0,
+            "address": "0a6e010401010bef08020a02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051f636f6e74656e742f62696f6c6f67792f70726f746563746976652d676f616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080517616374696f6e2f62696f6c6f67792f77697468686f6c6404010200"
+          }
+        ],
+        "chosen": "drug",
+        "authorship": "15/28",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "5/8"
+          },
+          {
+            "name": "withhold",
+            "probability": "3/8"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": true,
+          "protection": true
+        },
+        "habit": {
+          "drug": 996,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 25,
+          "distress": 690,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 300,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 690,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 200,
+        "grounds": [
+          {
+            "domain": "withdrawal",
+            "option": "drug",
+            "strength": 690
+          },
+          {
+            "domain": "protection",
+            "option": "drug",
+            "strength": -50
+          },
+          {
+            "domain": "protective-goal",
+            "option": "withhold",
+            "strength": 50
+          }
+        ],
+        "options": [
+          "drug",
+          "withhold"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 1,
+        "contribution": "-15/308",
+        "alignment": "-1/11"
+      },
+      "strength": "9741/1107143",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 10,
+            "fuel": 800,
+            "phase": 18,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 610,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 960,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 12,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 1000,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 302,
+                  "potential": 302,
+                  "satiation": 0,
+                  "tolerance": 990,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 610
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [
+                {
+                  "dose": 12,
+                  "channel": "stress",
+                  "exposure": "appraised-threat",
+                  "direction": 1,
+                  "effective": 12,
+                  "potential": 12,
+                  "satiation": 0,
+                  "tolerance": 0,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 12
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 10,
+            "fuel": 800,
+            "phase": 18,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 610,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 990
+                },
+                "displacement": 852,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 12,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 11,
+      "choice": {
+        "mode": "PlayerFacingRoll",
+        "draws": [
+          {
+            "span": 4,
+            "result": 0,
+            "address": "0a6e010401010bef08020b02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f70726f74656374696f6e0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 10,
+            "result": 9,
+            "address": "0a6e010401010bef08020b02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f7769746864726177616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 4,
+            "result": 3,
+            "address": "0a6e010401010bef08020b02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051f636f6e74656e742f62696f6c6f67792f70726f746563746976652d676f616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080517616374696f6e2f62696f6c6f67792f77697468686f6c6404010200"
+          }
+        ],
+        "chosen": "drug",
+        "authorship": "9/14",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "11/20"
+          },
+          {
+            "name": "withhold",
+            "probability": "9/20"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": true,
+          "protection": true
+        },
+        "habit": {
+          "drug": 996,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 25,
+          "distress": 650,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 340,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 650,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 200,
+        "grounds": [
+          {
+            "domain": "withdrawal",
+            "option": "drug",
+            "strength": 650
+          },
+          {
+            "domain": "protection",
+            "option": "drug",
+            "strength": -50
+          },
+          {
+            "domain": "protective-goal",
+            "option": "withhold",
+            "strength": 50
+          }
+        ],
+        "options": [
+          "drug",
+          "withhold"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 1,
+        "contribution": "-9/154",
+        "alignment": "-1/11"
+      },
+      "strength": "-48701/1165585",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 11,
+            "fuel": 800,
+            "phase": 19,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 646,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 1000,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 18,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 1000,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 300,
+                  "potential": 300,
+                  "satiation": 0,
+                  "tolerance": 1000,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 646
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [
+                {
+                  "dose": 12,
+                  "channel": "stress",
+                  "exposure": "appraised-threat",
+                  "direction": 1,
+                  "effective": 12,
+                  "potential": 12,
+                  "satiation": 0,
+                  "tolerance": 0,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 18
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 11,
+            "fuel": 800,
+            "phase": 19,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 646,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 960,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 18,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    },
+    {
+      "at": 12,
+      "choice": {
+        "mode": "PlayerFacingRoll",
+        "draws": [
+          {
+            "span": 4,
+            "result": 0,
+            "address": "0a6e010401010bef08020c02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f70726f74656374696f6e0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 10,
+            "result": 7,
+            "address": "0a6e010401010bef08020c02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051a636f6e74656e742f62696f6c6f67792f7769746864726177616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080513616374696f6e2f62696f6c6f67792f6472756704010200"
+          },
+          {
+            "span": 4,
+            "result": 2,
+            "address": "0a6e010401010bef08020c02010b92080518707572706f73652f7461736b2d726561736f6e2d66616365030107030a6f010201010b9308050c7375626a6563742f7461736b02010bea070b8d080b8e08051f636f6e74656e742f62696f6c6f67792f70726f746563746976652d676f616c0a6f010201010b9308050d7375626a6563742f6163746f7202010bea070b8d080b8e08051a636f6e74656e742f6c6f6e6769747564696e616c2f6163746f720a6f010201010b9308050e7375626a6563742f616374696f6e02010b83080517616374696f6e2f62696f6c6f67792f77697468686f6c6404010200"
+          }
+        ],
+        "chosen": "drug",
+        "authorship": "9/14",
+        "probabilities": [
+          {
+            "name": "drug",
+            "probability": "11/20"
+          },
+          {
+            "name": "withhold",
+            "probability": "9/20"
+          }
+        ]
+      },
+      "appraisal": {
+        "goals": {
+          "work": false,
+          "maintained": true,
+          "protection": true
+        },
+        "habit": {
+          "drug": 996,
+          "meal": 0,
+          "work": 0,
+          "drink": 0,
+          "relax": 0,
+          "sleep": 0,
+          "withhold": 0,
+          "alternative": 0
+        },
+        "affect": {
+          "threat": 25,
+          "distress": 640,
+          "pleasure": 0
+        },
+        "before": {
+          "pain": 0,
+          "hunger": 200,
+          "reward": 350,
+          "stress": 0,
+          "thirst": 200,
+          "arousal": 500,
+          "pleasure": 0,
+          "sleepiness": 0,
+          "intoxication": 0,
+          "withdrawalReward": 640,
+          "withdrawalStress": 0,
+          "withdrawalArousal": 0
+        },
+        "beliefs": {
+          "drug": {
+            "harm": 1000,
+            "pain": 0,
+            "sleep": 0,
+            "hunger": 0,
+            "stress": 0,
+            "thirst": 0,
+            "pleasure": 0,
+            "withdrawal": 1000
+          },
+          "meal": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "work": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "drink": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "relax": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "sleep": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "withhold": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          },
+          "alternative": {
+            "harm": null,
+            "pain": null,
+            "sleep": null,
+            "hunger": null,
+            "stress": null,
+            "thirst": null,
+            "pleasure": null,
+            "withdrawal": null
+          }
+        },
+        "control": 200,
+        "grounds": [
+          {
+            "domain": "withdrawal",
+            "option": "drug",
+            "strength": 640
+          },
+          {
+            "domain": "protection",
+            "option": "drug",
+            "strength": -50
+          },
+          {
+            "domain": "protective-goal",
+            "option": "withhold",
+            "strength": 50
+          }
+        ],
+        "options": [
+          "drug",
+          "withhold"
+        ],
+        "inhibited": false
+      },
+      "qualification": {
+        "status": 1,
+        "contribution": "-9/154",
+        "alignment": "-1/11"
+      },
+      "strength": "-107143/1224027",
+      "physical": {
+        "executed": "drug",
+        "challenge": 0,
+        "transition": {
+          "state": {
+            "at": 12,
+            "fuel": 800,
+            "phase": 20,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 652,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 1000,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 21,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          },
+          "terms": {
+            "reward": {
+              "decay": 0,
+              "target": 1000,
+              "effects": [
+                {
+                  "dose": 600,
+                  "channel": "reward",
+                  "exposure": "drug",
+                  "direction": 1,
+                  "effective": 300,
+                  "potential": 300,
+                  "satiation": 0,
+                  "tolerance": 1000,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 652
+            },
+            "stress": {
+              "decay": 0,
+              "target": 0,
+              "effects": [
+                {
+                  "dose": 12,
+                  "channel": "stress",
+                  "exposure": "appraised-threat",
+                  "direction": 1,
+                  "effective": 12,
+                  "potential": 12,
+                  "satiation": 0,
+                  "tolerance": 0,
+                  "sensitization": 0
+                }
+              ],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 21
+            },
+            "arousal": {
+              "decay": 0,
+              "target": 500,
+              "effects": [],
+              "network": 0,
+              "overflow": 0,
+              "beforeClip": 500
+            }
+          },
+          "consequenceState": {
+            "at": 12,
+            "fuel": 800,
+            "phase": 20,
+            "water": 800,
+            "burden": 100,
+            "damage": 20,
+            "channels": {
+              "reward": {
+                "level": 652,
+                "satiation": 90,
+                "tolerance": {
+                  "drug": 1000
+                },
+                "displacement": 1000,
+                "sensitization": {}
+              },
+              "stress": {
+                "level": 21,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              },
+              "arousal": {
+                "level": 500,
+                "satiation": 0,
+                "tolerance": {},
+                "displacement": 0,
+                "sensitization": {}
+              }
+            },
+            "sleepDebt": 0
+          }
+        }
+      }
+    }
+  ]
+}

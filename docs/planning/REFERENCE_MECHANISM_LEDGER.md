@@ -715,3 +715,122 @@ roles; CTL001/008 stay broader controls. No reference import, state retirement o
 identity/forecasting claim. Preserve both development cohorts, large-save admission
 failure and duplicate-writer receipt. RO008/009/010/011/012/015/019/020 persist;021
 mandatory.1426/0, no owner ruling. Next IDENTITY_EVIDENCE_READINESS.md.
+
+## 2026-09-26 — bounded identity eligibility
+
+VER-C3-IDENTITY-ELIGIBILITY-001 / identity-eligibility/0.1-candidate is bounded
+component-qualified:6 models/52 runs/312 exact prefixes (260 advancing/52 terminal),
+60 affected (12 new)/328 reference tests and build. No allocation;1426/0.
+Separate frozen choice, admitted safe context, eligibility and acquired standing.
+Trivial repetition and admitted full constraint do not automatically create identity;
+ordinary instruction, forced movement and failed execution remain distinct. Four of
+eight probes differ; balanced and nonzero subthreshold equalities are retained.
+Threshold/Graded remain candidates, Frequency/IgnorePressure countermodels;
+NoFeedback and Refold preserve receiving/representation comparisons.
+MEC015..018/022 and EXP011/012 are extended as components, not replaced or retired.
+Preserve IDENTITY_ELIGIBILITY_FINDINGS.md and identity-eligibility-development-rev1.
+The original wrapper carried fixed task context and world permission; corrected
+research expressions omit both. No public admission, biological source join,
+represented self-belief or enacted coercion claim. Clause12.12-2 bounded;1 partial;
+3 now partial.102 bounded/22 partial/8 blocked, all132 clauses/15 families retained.
+RO009/014/019/020/021 preserve limits. No owner ruling or reference import.
+Next IDENTITY_PUBLIC_ADMISSION_READINESS.md.
+
+### 2026-09-26 — identity eligibility restricted-capability correction
+
+Final review superseded passing REV1: output exclusion did not establish restricted
+helper inputs. REV2 passes fresh safe context to decision/qualification and isolates
+world execution.52 reruns/312 prefixes match every prior row/snapshot exactly;
+60 affected tests/build rerun pass,328 reference tests unchanged. Both cohorts remain:
+104 executions/624 checks; final coverage6 models/52 cases/312 component prefixes.
+IDENTITY_ELIGIBILITY_CLOSURE_REV2.json binds final sources and preserved REV1 evidence.
+identity-eligibility-development-rev2/PRESERVATION.json owns the discovered flaw.
+Clause dispositions and1426/0 unchanged. AuditREV55; next public admission.
+
+
+## 2026-09-26 — native identity admission
+
+VER-C3-IDENTITY-PUBLIC-001 / identity-public/0.1-candidate is bounded-qualified:
+16 models/84 runs/428 selected native prefixes (344 advancing/84 terminal),
+119 affected (36 new)/328 reference tests and production build. Records1427..1442;
+no new namespace. Counters1442/0. No architectural blocker or state retirement.
+Task fidelity and biological protective expression have separate actors, source
+admission and histories. Actual choice/intent/expression/qualification/identity keep
+native phases and authority. Task52 semantic trajectories match the component;
+biological NoFeedback matches prior choice/sensing/belief in9 runs. Native body-state
+and whole-observer tests preserve hidden-world boundaries. Pleasure, withdrawal or
+success alone does not confer identity eligibility; Frequency also rejects no channel.
+Inherited standing unit1 was structurally inert. Explicit unit1/16 changes later
+biological probabilities for seeds0/2/7; all8 sampled sequences remain equal over12
+instants. Coarse1, Threshold/Graded, Frequency/IgnorePressure, NoFeedback and Refold
+remain. No universal law, represented self-concept, enacted coercion, shared
+cross-domain direction, lossy-history or throughput claim. Task5/Biological12 only;
+selected prefixes are not a64-instant qualification.
+CAMPAIGN3_IDENTITY_PUBLIC_QUALIFICATION.md / IDENTITY_PUBLIC_CLOSURE_REV1.json bind
+closure. IDENTITY_PUBLIC_FINDINGS.md preserves developmental failures, two archived
+source cohorts and both exploratory rosters. MEC015..018/022 and EXP011/012 gain
+explicit native source admission; prior biological port/control/candidate roles
+stand. No reference import or prior model/schema change. RO008/009/014/019/020/021
+persist. No Brief promotion:102 bounded/22 partial/8 blocked,132 clauses/15 families,
+21 corpus members,74 named verdicts. AuditREV56; Campaign3 remains NOT EXIT-READY.
+Next IDENTITY_BELIEF_READINESS.md: represented self-concept and observer-specific
+identity belief, without relabeling the standing fold.
+
+
+## 2026-09-26 — represented identity belief
+
+VER-C3-IDENTITY-BELIEF-001 / identity-belief/0.1-candidate is bounded component-
+qualified:5 final models/37 runs/222 exact prefixes (185 advancing/37 terminal),
+34 affected (16 new)/328 reference tests and build. No allocation;1442/0.
+Acquired standing, self evidence/estimate, observer evidence/estimate and prospective
+appraisal remain separate. The known seed1 A/A/A/B witness leaves Mean positive+1/2
+while Latest becomes-1; the contrary act remains in both histories.7/8 primary
+Mean/Latest estimates differ, seed6 equality retained. Withheld self evidence leaves
+standing unchanged but self belief unknown. Lawful observer views exclude private
+self changes and hidden biography; PrivateOracle fails. StandingAlias fails the
+withheld-self-evidence distinction. Goal-only changes preserve belief and change
+appraisal. Unknown, known neutral, false evidence, later correction, failed execution,
+triviality and force remain distinct. No new source-choice bonus or social action.
+MEC004/015..019/022 and EXP011/012 retain source/control roles; no reference import,
+old source-law change, state retirement or native public admission claim.
+CAMPAIGN3_IDENTITY_BELIEF_QUALIFICATION.md / IDENTITY_BELIEF_CLOSURE_REV1.json bind
+closure. IDENTITY_BELIEF_FINDINGS.md and identity-belief-validation-rev1 preserve
+29 passes/5 validation timeouts alongside the first passing37-run cohort. Explicit
+time limits affect only tests; successor manifest reruns every case with identical
+rows, saves and observer views.74 executions/444 checks across both cohorts are not
+extra behavioral coverage. Final cohort remains37 cases/222 component prefixes.
+Brief12.12 clauses4/6 become bounded:104 bounded/21 partial/7 blocked,132 clauses/
+15 families,75 named verdicts; corpus0.29.0 remains21 members. AuditREV57.
+RO009/010/014/019/020/021 preserve source trust/correlation, richer identity,
+recognition, coercion, adaptation and public admission; historical gate remains.
+No architectural escalation; Campaign3 NOT EXIT-READY.
+Next IDENTITY_BELIEF_PUBLIC_READINESS.md: native sources, holder authority, phase
+placement and exact observer-safe replay without double-counting identity feedback.
+
+## 2026-09-26 — native represented identity-belief closure
+
+VER-C3-IDENTITY-BELIEF-PUBLIC-001 qualifies native represented self/observer belief:
+5 models/37 runs/222 exact whole native prefixes;69 affected (35 native)/328 reference
+tests and build pass. Existing authentic Task Threshold source choices and standing
+remain unchanged. Separate holder-owned evidence/history/estimate feeds next50
+appraisal after prior140; no retroactive learning or second identity bonus. All
+component observations/estimates/source choices correspond. Whole-view private-self,
+hidden-biography and failed-execution comparisons pass; unknown/known0, false/later
+correct evidence and goal-only appraisal remain distinct. Mean/Latest differ7/8,
+seed6 equality retained. StandingAlias/PrivateOracle remain failed negative controls;
+NoLearning remains distinct. Source is explicitly controlled semantic reporting,
+not natural recognition or private-authorship access. Preserve13/15 development
+receipt,23/5 timeout receipt and development-rev1 source/contract; final corrected69 tests
+pass with exact-byte validation memo and changed-invalid-source rejection.
+Records1443..1450/schema1, namespace1155 reused; counters1450/0. No owner escalation. RO-C3-022 remains ACTIVE for older public-wrapper quiescence.
+Brief coverage remains104 bounded/21 partial/7 blocked,132 clauses/15 families;
+76 named verdicts and21 corpus members. RO009/010/014/019/020/021 retain broader scope;
+2 active/19 conditional/1 closed/0 unowned. AuditREV58; Campaign3 NOT EXIT-READY.
+Closure: CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md and
+IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json. Next PUBLIC_WRAPPER_QUIESCENCE_READINESS.md; identity recovery is deferred.
+The first serial cohort exposed a torn save at the scheduler/wrapper commit gap.
+Final whole-wrapper gating rejects it; all37 successor runs/222 restores match prior
+ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra coverage.
+The prior identity Task wrapper also exposes the gap; its serial scope is preserved
+by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
+MEC004 controlled semantic source; MEC015..019/022 and EXP011/012 retain their inherited roles. No state root or source law retired.

@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV53.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV58.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -188,6 +188,36 @@ const supplemental=[
  'GENERAL_ATTENTION_ASSOCIATION_RETENTION_DECISION.md','GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_DECISION.md','GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_RESOLUTION.md','GENERAL_ATTENTION_GRAPH_ORPHAN_DECISION.md','GENERAL_ATTENTION_GRAPH_ORPHAN_RESOLUTION.md',
  'VERDICT_LEDGER.md','SEAM_LEDGER.md','PHENOMENON_CORPUS.md'
 ];
+// REV54: component eligibility closes only the controlled triviality clause.
+for(const i of [0,1,2]){
+ const clause=families[11].clauses[i];
+ clause.evidence=[...clause.evidence,p+'CAMPAIGN3_IDENTITY_ELIGIBILITY_QUALIFICATION.md',p+'IDENTITY_ELIGIBILITY_FINDINGS.md'];
+ clause.obligations=[...new Set([...clause.obligations,'RO-C3-014'])];
+ clause.status=i===1?Q:P;
+ clause.rationale=i===0?'Two actual motive contexts share task referents and a fixed semantic channel. Bounded context-sensitive eligibility is demonstrated, but independent cross-domain identity expression remains partial.':i===1?'VER-C3-IDENTITY-ELIGIBILITY-001: equal-frequency actual meaningful/trivial choice histories have different eligibility and later standing.6 models/52 runs/312 component prefixes; controlled character-side significance, no natural significance inference or public source admission.':'Controlled admitted refusal pressure can exclude voluntary identity evidence while ordinary instruction remains eligible. Forced movement produces no expression, and execution failure preserves frozen evidence. No enacted coercive interaction, natural coercion inference or public source admission; partial.';
+}
+families[11].rationale+=' VER-C3-IDENTITY-ELIGIBILITY-001 adds controlled triviality exclusion and a partial constraint-eligibility component; Threshold/Graded remain candidates. That component did not include biological source admission or represented self-belief.';
+supplemental.push('IDENTITY_ELIGIBILITY_FINDINGS.md','IDENTITY_PUBLIC_ADMISSION_READINESS.md','BIOLOGY_PUBLIC_EXTERNAL_REVIEW_DISPOSITION.md');
+// REV56: native identity admission preserves the clause denominator and scope.
+for(const i of [0,1,2])families[11].clauses[i].evidence.push(p+'CAMPAIGN3_IDENTITY_PUBLIC_QUALIFICATION.md',p+'IDENTITY_PUBLIC_FINDINGS.md');
+families[11].clauses[0].rationale='Two actual task motive contexts still share referents. VER-C3-IDENTITY-PUBLIC-001 separately admits a biological protective-expression channel through native sources:16 models/84 runs/428 selected prefixes. No shared cross-domain identity dimension is established; PARTIAL remains.';
+families[11].clauses[1].rationale='Controlled trivial-repetition exclusion remains bounded-qualified by the component and native Task/Biological admission. Safe significance remains fixture evidence, not natural inference. Mere pleasure, withdrawal or success does not confer a biological identity channel; Frequency also rejects no channel.';
+families[11].clauses[2].rationale='Native admission preserves safe refusal-pressure exclusion, instruction versus force, and failed execution with identical observer evidence. No enacted coercive interaction or natural coercion inference; PARTIAL remains.';
+families[11].rationale+=' VER-C3-IDENTITY-PUBLIC-001 admits native separate task/biological channels without representing self-belief or a shared cross-domain direction. Fine standing changes probabilities for3/8 biological seeds, while all8 sampled sequences remain equal over12 instants. Coarse unit1 is structurally inert and retained. Native whole-prefix, source, actor and authority controls pass. That native integration did not promote Brief clauses or qualify broader horizons, throughput or represented identity belief.';
+supplemental.push('IDENTITY_PUBLIC_FINDINGS.md','IDENTITY_BELIEF_READINESS.md');
+// REV57: represented identity belief, bounded component evidence only.
+for(const i of [3,5]){
+ const clause=families[11].clauses[i];clause.status=Q;
+ clause.evidence.push(p+'CAMPAIGN3_IDENTITY_BELIEF_QUALIFICATION.md',p+'IDENTITY_BELIEF_FINDINGS.md');
+ clause.obligations=[...new Set([...clause.obligations,'RO-C3-010','RO-C3-014'])];
+ clause.rationale=i===3?'VER-C3-IDENTITY-BELIEF-001: the actual qualified A/A/A/B source leaves represented self Mean positive+1/2 after the contrary act, while Latest becomes-1. Every observation remains.5 models/37 runs/222 component prefixes, all eight primary seeds retained. No universal inertia, calibrated confidence or native public admission claim.':'VER-C3-IDENTITY-BELIEF-001: self and two observer-owned estimates learn from separate controlled evidence; false observer reports can oppose self-concept at fixed actual biography. Withheld self evidence preserves lawful observer whole views; PrivateOracle fails. Goal-only changes affect prospective appraisal without changing belief. No general recognition, learned trust, native public admission or sampled social action.';
+}
+families[11].rationale+=' Represented self/observer belief is now separately bounded by VER-C3-IDENTITY-BELIEF-001 (Brief12.12-4/6). Source standing is not relabeled as belief. Mean/Latest differ in7/8 primary final estimates with seed6 equality; StandingAlias/PrivateOracle counterexamples, unknown versus known neutral, false reports and selective later correction remain.5 final models/37 cases/222 component prefixes; timeout-driver successor reproduces all prior rows/saves/views. Native admission and broader identity remain open.';
+supplemental.push('IDENTITY_BELIEF_FINDINGS.md','IDENTITY_BELIEF_PUBLIC_READINESS.md');
+// REV58: native admission supplies stronger execution evidence without another clause promotion.
+for(const i of [3,5]){const clause=families[11].clauses[i];clause.evidence.push(p+'CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md',p+'IDENTITY_BELIEF_PUBLIC_FINDINGS.md');clause.rationale+=' VER-C3-IDENTITY-BELIEF-PUBLIC-001 now supplies bounded native task reports, independent holder authority and complete Save132 replay:5 models/37 runs/222 prefixes. Native50 consumes prior140; no retroactive appraisal, biological belief join or sampled downstream social action.';}
+families[11].rationale+=' Native represented identity-belief admission is now bounded-qualified without promoting another clause. Prior component-era public limits remain historical. Mean/Latest/NoLearning and explicit negative access controls survive native correspondence and whole-view comparisons. General recognition, trust, shared cross-domain identity, dispositional adaptation and wider horizons remain open.';
+supplemental.push('IDENTITY_BELIEF_PUBLIC_FINDINGS.md','IDENTITY_RECOVERY_READINESS.md','PUBLIC_WRAPPER_QUIESCENCE_READINESS.md','IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md');
 const inventory=[...new Set([...reportNames,...supplemental].map(n=>p+n).concat([briefPath,'reference/RESEARCH.md',report]))].sort().map(file=>({path:file,sha256:sha(file),inspection:file==='reference/RESEARCH.md'?'Selected Phase2.97 closure/attribution/calibration/reduction sections; not whole historical log':'Coverage/limits/findings audit; linked raw receipts retain their reported public/component scope, not freshly reexecuted.'}));
 const ledger=read(p+'VERDICT_LEDGER.md');
 const verdicts=[...ledger.matchAll(/^## `?(VER-[A-Z0-9-]+)/gm)].map(m=>m[1]);
@@ -199,10 +229,11 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=53;
+result.snapshotRevision=58;
 result.date='2026-09-26';
-result.counters.highestAllocatedRecordType=1426;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV52.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV52.json'),disposition:'Documentation-only successor after correcting Windows line endings in the new biological qualification and registry and restoring the exactly doubled log prefix. BIOLOGY_PUBLIC_BOOKKEEPING_REV1.json preserves the affected pre-correction report/checker. Native closure REV2 binds the readable report; all28 models/58 runs/270 unique prefixes, tests, claims and132-clause dispositions remain unchanged.'};
+result.counters.highestAllocatedRecordType=1450;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV57.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV57.json'),disposition:'Native identity-belief admission adds controlled source, independent holder authority and next-instant appraisal evidence:5 models/37 runs/222 prefixes,69 affected/328 reference/build. No clause promotion:104 bounded/21 partial/7 blocked;76 verdicts. Development failures/timeouts preserved; broader identity and historical gate remain open.'};
+result.publicWrapperGate={path:p+'PUBLIC_WRAPPER_QUIESCENCE_READINESS.md',obligation:'RO-C3-022',status:'ACTIVE',blocks:'Unrestricted public read/save quiescence claims and final Campaign3 exit until the inventory and confirmed exposures are resolved.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

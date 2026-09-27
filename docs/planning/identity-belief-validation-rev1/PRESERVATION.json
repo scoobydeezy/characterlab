@@ -1,0 +1,18 @@
+{
+  "status": "VALIDATION TIMEOUT; FIRST SCIENTIFIC COHORT PASSED",
+  "finding": "Combined test run while four qualification workers were active:29 passing/5 default5000ms timeouts, no assertion mismatch. Isolated development tests16/0 and all37 qualification runs/222 prefixes passed. Give new multi-run tests explicit30000ms limits; production source and contract unchanged. Freeze successor manifest and repeat cohort because test/harness artifact hashes participate in model identity. Preserve both cohorts and require identical semantic rows and saved bytes.",
+  "artifacts": [
+    {
+      "original": "src/test/identityBelief.test.ts",
+      "path": "docs/planning/identity-belief-validation-rev1/identityBelief.test.ts",
+      "sha256": "c4e9a936a486ecff379e44c14661056f346daa07aeab387ac13a7f4de1ab19f6"
+    },
+    {
+      "original": "scripts/qualify-identity-belief.mjs",
+      "path": "docs/planning/identity-belief-validation-rev1/qualify-identity-belief.mjs",
+      "sha256": "f1b7ab176d3dc73b432dce19e4f10e9f9f0fe1bc264ee138a128459b7b84cd0d"
+    }
+  ],
+  "tests": "docs/planning/IDENTITY_BELIEF_TESTS_REV1.json",
+  "result": "docs/planning/IDENTITY_BELIEF_RESULT_REV1.json"
+}

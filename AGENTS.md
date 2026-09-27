@@ -45,6 +45,39 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**Current routing (2026-09-26):** bounded native represented identity belief COMPLETE:
+VER-C3-IDENTITY-BELIEF-PUBLIC-001, identity-belief-public/0.1-candidate. Start CURRENT.md
+and CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md.5 models/37 runs/222 native
+prefixes;69 affected/328 reference tests/build. Independent holder authority and
+next50 after prior140 preserve source/component distinctions. Counters1450/0;
+104 bounded/21 partial/7 blocked clauses;76 verdicts. No owner ruling. RO-C3-022 is ACTIVE. Next
+PUBLIC_WRAPPER_QUIESCENCE_READINESS.md before identity recovery. Controlled reports only; wider identity remains open.
+
+**Prior routing (2026-09-26):** bounded represented identity belief COMPLETE:
+VER-C3-IDENTITY-BELIEF-001, identity-belief/0.1-candidate, composed component only.
+Start docs/planning/CURRENT.md and CAMPAIGN3_IDENTITY_BELIEF_QUALIFICATION.md;
+authoritative IDENTITY_BELIEF_CLOSURE_REV1.json.5 models/37 runs/222 prefixes;
+34 affected (16 new)/328 reference tests/build.1442/0, no allocation. Self belief,
+observer belief and source standing differ under independent evidence. Mean persists
+positive after the known A/A/A/B contradiction; Latest becomes negative.7/8 final
+estimates differ; seed6 equality retained. Preserve the validation-timeout cohort;
+REV2 matches every earlier row/save/view. No native public admission or social-action
+claim. Brief12.12-4/6 bounded;104 bounded/21 partial/7 blocked,75 verdicts; auditREV57.
+Next IDENTITY_BELIEF_PUBLIC_READINESS.md. No owner ruling pending.
+
+
+**Prior native identity routing (2026-09-26):** bounded native identity admission COMPLETE:
+VER-C3-IDENTITY-PUBLIC-001, identity-public/0.1-candidate. Start docs/planning/CURRENT.md
+and CAMPAIGN3_IDENTITY_PUBLIC_QUALIFICATION.md; authoritative IDENTITY_PUBLIC_CLOSURE_REV1.json.
+16 models/84 runs/428 selected native prefixes;119 affected (36 new)/328 reference
+tests/build.1442/0. Separate task/biological channels; no goal channel means no identity
+evidence. Fine standing changes biological probabilities in3/8 seeds;8/8 sampled
+sequences remain equal. Preserve coarse-unit/development findings and comparators.
+No Brief promotion:102 bounded/22 partial/8 blocked,74 verdicts; auditREV56. Next
+IDENTITY_BELIEF_READINESS.md. No represented self-belief, enacted coercion or64-instant
+scaling claim. No owner ruling pending.
+
+
 **Work order (2026-09-14, owner-directed correction pass):**
 `docs/planning/CAMPAIGN3_WORK_ORDER_2026_09_14.md` governs the next increment. It
 reorders GA work only; it reopens no contract, allocation, model byte or digest.
@@ -71,6 +104,14 @@ appended**; its prior chronology is preserved verbatim in `CAMPAIGN3_LOG.md`.
 Report the two program counters (highest allocated record type; record types allocated
 since the last verdict or corpus member) at every checkpoint. Past 50 on the second, the
 next work item must be an experiment or a corpus promotion, not another allocation.
+
+Campaign 3 current frontier: bounded identity eligibility component COMPLETE
+(VER-C3-IDENTITY-ELIGIBILITY-001);6 models/52 runs/312 prefixes;60 affected/328 reference
+tests/build.1426/0. Start CURRENT.md and CAMPAIGN3_IDENTITY_ELIGIBILITY_QUALIFICATION.md.
+IDENTITY_ELIGIBILITY_FINDINGS.md preserves the rejected development wrapper.
+Next IDENTITY_PUBLIC_ADMISSION_READINESS.md. No public/biological source eligibility,
+represented self-belief or enacted coercion claim. AuditREV55:102 bounded/22 partial/
+8 blocked. No owner ruling. Prior biological closure follows:
 
 Campaign 3 current frontier: bounded native biological integration COMPLETE
 (VER-C3-BIOLOGY-PUBLIC-001, biology-public/0.1-candidate). Start CURRENT.md and

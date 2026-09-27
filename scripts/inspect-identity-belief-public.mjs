@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {createServer} from 'vite';
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});try{const f=await server.ssrLoadModule('/src/test/identityBeliefPublicFixtures.ts');const t=Date.now(),r=await f.nativeRun();console.log('created '+(Date.now()-t));for(let i=0;i<5;i++){await r.settleNextInstant();console.log('instant '+(i+1)+' '+(Date.now()-t));}console.log('rows',JSON.stringify(f.beliefRows(f.outputs(r))));}finally{await server.close();}

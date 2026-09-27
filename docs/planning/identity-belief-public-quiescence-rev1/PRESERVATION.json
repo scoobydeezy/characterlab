@@ -1,0 +1,47 @@
+{
+  "status": "SERIAL COHORT PASSED; PUBLIC QUIESCENCE FAILED",
+  "plan": "docs/planning/IDENTITY_BELIEF_PUBLIC_PLAN_REV1.json",
+  "result": "docs/planning/IDENTITY_BELIEF_PUBLIC_RESULT_REV1.json",
+  "probe": "docs/planning/IDENTITY_BELIEF_PUBLIC_QUIESCENCE_PROBE_REV2.json",
+  "models": 5,
+  "runs": 37,
+  "prefixes": 222,
+  "finding": "Scheduler quiescence precedes wrapper RNG commit; deterministic nonmutating microtask obtains a torn save. Preserve completed serial cohort and correct the full wrapper boundary.",
+  "artifacts": [
+    {
+      "original": "src/campaign3/identityBeliefRuntime.ts",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/identityBeliefRuntime.ts",
+      "sha256": "412d803c7f88db51a7bbfae83c4f78842d7de47886660796331c94a5983d3211"
+    },
+    {
+      "original": "src/campaign3/identityBeliefPublicFactory.ts",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/identityBeliefPublicFactory.ts",
+      "sha256": "18e3b0a22502f3cb7a9df4f27e37c750bd2452619ec47432c6b142bf3cd3cf10"
+    },
+    {
+      "original": "src/campaign3/identityBeliefPublicCodecs.ts",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/identityBeliefPublicCodecs.ts",
+      "sha256": "f21c8a4cc4f45f37b0aa684c8ad5e8d7f8ae97de81f409498ce34ff186f5c713"
+    },
+    {
+      "original": "docs/formal/IDENTITY_BELIEF_PUBLIC_CONTRACT.md",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/IDENTITY_BELIEF_PUBLIC_CONTRACT.md",
+      "sha256": "b50e0686be0f2cc491a0b3df928c8899c0d9d3b68512595f925da3d3626f7b46"
+    },
+    {
+      "original": "scripts/qualify-identity-belief-public.mjs",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/qualify-identity-belief-public.mjs",
+      "sha256": "e501678fcf8b0aa1211ad94c4e7a50e336f0cc65fdea24135d4d14adfa6754d0"
+    },
+    {
+      "original": "scripts/check-identity-belief-public.mjs",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/check-identity-belief-public.mjs",
+      "sha256": "56826ab1bef94bf68bd2f63683d9a56f01ed87e4fdee974cf6c20cd76810bed0"
+    },
+    {
+      "original": "scripts/check-identity-belief-public-closure.mjs",
+      "path": "docs/planning/identity-belief-public-quiescence-rev1/check-identity-belief-public-closure.mjs",
+      "sha256": "25c6a649f2f15f689620cd9a0b35b8d42b86065e1b68347452050b1d9b29bc2f"
+    }
+  ]
+}

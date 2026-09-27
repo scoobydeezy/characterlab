@@ -1,0 +1,43 @@
+{
+  "status": "PREQUALIFICATION BUILD FAILURE",
+  "finding": "TS7053 dynamic stage-map indexing inferred union without string index signature; cascaded TS7006 implicit-any errors. Add explicit Record<string,number[]> typing. Initial source also named biological random algorithm with a noncanonical label; replace with existing RANDOM_ALGORITHM_VERSION before any model freeze.",
+  "artifacts": [
+    {
+      "original": "src/campaign3/identityPublicCodecs.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityPublicCodecs.ts",
+      "sha256": "217c9ed51b4f89c85ff67544307cd6538eee2988db9d29088622f2c99ec854fc"
+    },
+    {
+      "original": "src/campaign3/identityPublicFactory.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityPublicFactory.ts",
+      "sha256": "99485d83429acafecba621c9fc993a448b0495eeafa191008b257fb7ebabc7bb"
+    },
+    {
+      "original": "src/campaign3/identityPublicMath.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityPublicMath.ts",
+      "sha256": "d95001796dcdf93a0908669aae273564083211f48426366897015e344eeb221c"
+    },
+    {
+      "original": "src/campaign3/identityPublicModel.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityPublicModel.ts",
+      "sha256": "49c01930bb101fd7be58342ee30da631a8df2829193ee788c41ece66011f603f"
+    },
+    {
+      "original": "src/campaign3/identityTaskRuntime.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityTaskRuntime.ts",
+      "sha256": "1ec41bccddf9dc37f419d429b6941d9c13d5853f30cc8934ae14bb6abd1fe89d"
+    },
+    {
+      "original": "src/campaign3/identityBiologyRuntime.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityBiologyRuntime.ts",
+      "sha256": "9c65c94b3b938e5715cff3678bd89b573df4fc5fd8bc8f5b0c1347b8646d2f2f"
+    },
+    {
+      "original": "src/test/identityPublic.test.ts",
+      "path": "docs/planning/identity-public-development-rev1/identityPublic.test.ts",
+      "sha256": "d9f7f628f8109316fe36b79b0830941599d25ac3689f67e0b7d45b3d0747cf08"
+    }
+  ],
+  "testFinding": "First native tests:1 passed/33 failed. Public test helper passed extra source/config keys to exact public input wrapper; admitted factory correctly rejected. Rollback assertions incorrectly included scheduler failure status, which legitimately records the injected fault; compare authoritative state, clock, queue, allocations, outputs, trace and RNG instead.",
+  "tests": "docs/planning/IDENTITY_PUBLIC_DEVELOPMENT_TESTS_REV1.json"
+}

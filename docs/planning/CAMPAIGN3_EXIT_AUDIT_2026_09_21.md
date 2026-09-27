@@ -631,3 +631,77 @@ readable documentation and the preserved historical prefix. The prior report/che
 are retained under BIOLOGY_PUBLIC_BOOKKEEPING_REV1.json; native closure REV2 binds
 the corrected report. No earlier snapshot or scientific receipt was overwritten.
 Counts remain72 verdicts,101 bounded/22 partial/9 blocked,1426/0; NOT EXIT-READY.
+
+## REV54 — identity eligibility component
+
+Bounded controlled trivial-repetition exclusion qualifies Brief12.12-2. Two actual
+motive contexts still share task referents, so12.12-1 remains PARTIAL. Explicit safe
+refusal-pressure exclusion supplies a component for12.12-3, now PARTIAL rather than
+BLOCKED; enacted coercion and public admission remain unqualified. See
+CAMPAIGN3_IDENTITY_ELIGIBILITY_QUALIFICATION.md and IDENTITY_ELIGIBILITY_FINDINGS.md.
+Counts102 bounded/22 partial/8 blocked; all132 clauses/15 families;73 named verdicts.
+Corpus0.29.0/21 members unchanged.1426/0; NOT EXIT-READY.
+
+### 2026-09-26 — identity eligibility restricted-capability correction
+
+Final review superseded passing REV1: output exclusion did not establish restricted
+helper inputs. REV2 passes fresh safe context to decision/qualification and isolates
+world execution.52 reruns/312 prefixes match every prior row/snapshot exactly;
+60 affected tests/build rerun pass,328 reference tests unchanged. Both cohorts remain:
+104 executions/624 checks; final coverage6 models/52 cases/312 component prefixes.
+IDENTITY_ELIGIBILITY_CLOSURE_REV2.json binds final sources and preserved REV1 evidence.
+identity-eligibility-development-rev2/PRESERVATION.json owns the discovered flaw.
+Clause dispositions and1426/0 unchanged. AuditREV55; next public admission.
+
+
+## REV56 - bounded native identity admission
+
+VER-C3-IDENTITY-PUBLIC-001 admits independent Task and Biological identity channels:
+16 models/84 runs/428 native prefixes,119 affected/328 reference tests/build.
+No Brief clause promotion follows from integration. Controlled significance/pressure
+and separate dimensions remain bounded; represented self-belief and observer-specific
+identity belief are next. Biological probabilities change in3/8 seeds while all8
+sampled sequences remain equal. Coarse-unit ineffectiveness remains preserved.
+See CAMPAIGN3_IDENTITY_PUBLIC_QUALIFICATION.md and IDENTITY_PUBLIC_FINDINGS.md.
+102 bounded/22 partial/8 blocked; all132 clauses/15 families;74 named verdicts.
+Corpus0.29.0/21 members unchanged.1442/0; NOT EXIT-READY. RO021 remains unsatisfied.
+
+
+## REV57 - represented self and observer identity belief
+
+VER-C3-IDENTITY-BELIEF-001 qualifies bounded Brief12.12 clauses4/6 through the
+actual qualified task source and separate evidence/estimates/appraisal.5 models/
+37 runs/222 component prefixes;34 affected/328 reference tests/build. Source standing
+is not represented belief; observer evidence is not target self-state. All eight
+Mean/Latest primary seeds and countermodel failures remain. The validation timeout
+cohort and identical successor reruns are preserved. No native admission is implied.
+104 bounded/21 partial/7 blocked;132 clauses/15 families;75 named verdicts. Corpus
+0.29.0/21 members unchanged.1442/0; NOT EXIT-READY. RO021 remains unsatisfied.
+
+## REV58 — native represented identity belief,2026-09-26
+
+VER-C3-IDENTITY-BELIEF-PUBLIC-001 qualifies native represented self/observer belief:
+5 models/37 runs/222 exact whole native prefixes;69 affected (35 native)/328 reference
+tests and build pass. Existing authentic Task Threshold source choices and standing
+remain unchanged. Separate holder-owned evidence/history/estimate feeds next50
+appraisal after prior140; no retroactive learning or second identity bonus. All
+component observations/estimates/source choices correspond. Whole-view private-self,
+hidden-biography and failed-execution comparisons pass; unknown/known0, false/later
+correct evidence and goal-only appraisal remain distinct. Mean/Latest differ7/8,
+seed6 equality retained. StandingAlias/PrivateOracle remain failed negative controls;
+NoLearning remains distinct. Source is explicitly controlled semantic reporting,
+not natural recognition or private-authorship access. Preserve13/15 development
+receipt,23/5 timeout receipt and development-rev1 source/contract; final corrected69 tests
+pass with exact-byte validation memo and changed-invalid-source rejection.
+Records1443..1450/schema1, namespace1155 reused; counters1450/0. No owner escalation. RO-C3-022 remains ACTIVE for older public-wrapper quiescence.
+Brief coverage remains104 bounded/21 partial/7 blocked,132 clauses/15 families;
+76 named verdicts and21 corpus members. RO009/010/014/019/020/021 retain broader scope;
+2 active/19 conditional/1 closed/0 unowned. AuditREV58; Campaign3 NOT EXIT-READY.
+Closure: CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md and
+IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json. Next PUBLIC_WRAPPER_QUIESCENCE_READINESS.md; identity recovery is deferred.
+The first serial cohort exposed a torn save at the scheduler/wrapper commit gap.
+Final whole-wrapper gating rejects it; all37 successor runs/222 restores match prior
+ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra coverage.
+The prior identity Task wrapper also exposes the gap; its serial scope is preserved
+by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
+No clause promotion or denominator change. Earlier native-admission limitations remain dated component scope, now supplemented by bounded native evidence. Historical gate remains unsatisfied.

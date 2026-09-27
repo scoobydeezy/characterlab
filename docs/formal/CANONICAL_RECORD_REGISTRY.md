@@ -477,3 +477,13 @@ Records1401..1426/schema1 allocated by BIOLOGY_PUBLIC_ALLOCATION_TABLE.json unde
 BIOLOGY_PUBLIC_CONTRACT.md. Namespace1156 is BiologyOccurrence, unsigned runtime
 ordinal. Typed biological sources preserve homeostatic/hedonic/adopted-goal/protective
 roles; no inherited closed vocabulary is widened. Counters1426/26 before verdict.
+
+## Identity eligibility public successor - 2026-09-26
+
+Records1427..1442/schema1 allocated before implementation by IDENTITY_PUBLIC_ALLOCATION_TABLE.json
+under IDENTITY_PUBLIC_CONTRACT.md. Reuse profile-local namespace1155; no new namespace.
+Counters1442/16. Task and biological producer kinds and source-specific channels stay distinct.
+
+## Identity belief public successor — 2026-09-26
+
+Records1443..1450/schema1 allocated before implementation by IDENTITY_BELIEF_PUBLIC_ALLOCATION_TABLE.json under IDENTITY_BELIEF_PUBLIC_CONTRACT.md. Reuse1155; counters1450/8. Independent holder leaves; prior schemas unchanged.

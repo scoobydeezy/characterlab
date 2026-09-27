@@ -1,0 +1,33 @@
+{
+  "status": "REJECTED DEVELOPMENT DRAFT; NOT QUALIFIED",
+  "findings": [
+    "Old expression426 embeds fixed qualification context428 and cannot represent admitted constraint.",
+    "Input serialization wrongly retained execution permission inside qualification, despite numerical non-use.",
+    "Later whole-expression equality was an invalid assumption once eligibility/history diverged.",
+    "All-prefix test exceeded default5s timeout; no replay failure was reported.",
+    "Initial sandbox Vite config load denied parent enumeration; retry with normal filesystem access ran tests."
+  ],
+  "tests": "docs/planning/IDENTITY_ELIGIBILITY_DEVELOPMENT_TESTS_REV1.json",
+  "artifacts": [
+    {
+      "original": "src/campaign3/identityEligibility.ts",
+      "path": "docs/planning/identity-eligibility-development-rev1/identityEligibility.ts",
+      "sha256": "1da2a6d4a21ef5a9e8be0c3416d57e592d618a52c7a9856920280cec8b7fdb09"
+    },
+    {
+      "original": "src/test/identityEligibility.test.ts",
+      "path": "docs/planning/identity-eligibility-development-rev1/identityEligibility.test.ts",
+      "sha256": "35d54c9214981e6ab118ed852574fbb41af734925b041753d9160b1b9ff5d78e"
+    },
+    {
+      "original": "src/test/identityEligibilityFixtures.ts",
+      "path": "docs/planning/identity-eligibility-development-rev1/identityEligibilityFixtures.ts",
+      "sha256": "2c0b44f10b32935770c87763c08fc4d08e44b535d147e3bc1ce233f935720f57"
+    },
+    {
+      "original": "docs/formal/IDENTITY_ELIGIBILITY_CONTRACT.md",
+      "path": "docs/planning/identity-eligibility-development-rev1/IDENTITY_ELIGIBILITY_CONTRACT.md",
+      "sha256": "c7939d4ac10cd7a0fbb36781b207f84896dd1c035839aad31cb013f9a91f1e6c"
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "status": "PASS",
+  "planSha256": "dce86f887fb9ef188ac1b72ebab89470f12b6dfc42d525055c0bd255721db24e",
+  "index": 35,
+  "law": "PrivateOracle",
+  "scenario": "Blind",
+  "seed": 1,
+  "runIdentity": "0a68010401010a670106010105246964656e746974792d62656c6965662d7075626c69632f302e312d63616e64696461746502010a640102010105246964656e746974792d62656c6965662d7075626c69632f302e312d63616e646964617465020104203a8e37f48fe93a8a02c975bd90912cff546abaafb30ea1d83a5a382ba61f7a4903010a650102010105246964656e746974792d62656c6965662d7075626c69632f302e312d63616e64696461746502010420fa691b7512a7862e2e0712f5264322026d8529ff084f6c75f40a162f6cc7a45c040105196964656e746974792d62656c6965662d65786163742f302e3105010534726e672f6964656e746974792d656c69676962696c6974792d726f757465642d7368613235362f302e312d63616e64696461746506010a660102010105246964656e746974792d62656c6965662d7075626c69632f302e312d63616e64696461746502010420896de90d9acdcc62755509057406056f103764aed7c7d7d3f78a8d8f854b27470201042049af29328917a5c973256d02487adf4409ccf4e824eacb3fe1edcf8810e2ddc503010420be4c199bb6e302696991afb4ec1444008812b18f761054a470d0b931071a35ee040104200101010101010101010101010101010101010101010101010101010101010101",
+  "prefixes": [
+    {
+      "at": 0,
+      "sha256": "4fc4958618a82e6a78bd0a30a7454d64299edfe149689c5bf83faaed8475ae62",
+      "nextSha256": "ba24f7d3623e6f65d45dc0e95152786edfba484758d778512f92e2ebea8efc8a"
+    },
+    {
+      "at": 1,
+      "sha256": "ba24f7d3623e6f65d45dc0e95152786edfba484758d778512f92e2ebea8efc8a",
+      "nextSha256": "678ca537938e558a620f22ef76ca17142cb0095b216165edb4ee1d6fa7742eb5"
+    },
+    {
+      "at": 2,
+      "sha256": "678ca537938e558a620f22ef76ca17142cb0095b216165edb4ee1d6fa7742eb5",
+      "nextSha256": "631374f93fd3fd89ba54a9e8d25d0132ccbd06bb31f9254deabe792df28465cc"
+    },
+    {
+      "at": 3,
+      "sha256": "631374f93fd3fd89ba54a9e8d25d0132ccbd06bb31f9254deabe792df28465cc",
+      "nextSha256": "008df0a73e6d85cf61b09a4e0da3265f5516ee9a148ecb4bb782e67084f21a40"
+    },
+    {
+      "at": 4,
+      "sha256": "008df0a73e6d85cf61b09a4e0da3265f5516ee9a148ecb4bb782e67084f21a40",
+      "nextSha256": "9b833d9adb0acce9bed9216277a87188ef248ad1d5e4388286e1eb4571e8d9b6"
+    },
+    {
+      "at": 5,
+      "sha256": "9b833d9adb0acce9bed9216277a87188ef248ad1d5e4388286e1eb4571e8d9b6",
+      "nextSha256": "9b833d9adb0acce9bed9216277a87188ef248ad1d5e4388286e1eb4571e8d9b6"
+    }
+  ],
+  "saveSha256": "9b833d9adb0acce9bed9216277a87188ef248ad1d5e4388286e1eb4571e8d9b6",
+  "observerSha256": [
+    "635695dbe78df7a92d09eb8bb25220eb1e99f60f5b8e4accba988554946945cf",
+    "e46b39618221f45519b09c0e763306239b8d572e77f356dce891b5cff28565a6",
+    "3f33d261ba980d877d5f63f7c1980c4f779c663cc8838d192c017344d83476f3"
+  ],
+  "rows": [
+    {
+      "at": 1,
+      "observations": [
+        {
+          "holder": "self",
+          "target": "target",
+          "proposition": "positive-task-fidelity",
+          "ticket": 1,
+          "polarity": 1
+        },
+        null,
+        null
+      ],
+      "states": [
+        {
+          "history": [
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 1,
+              "polarity": 1
+            }
+          ],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 1
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 1
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 1
+          }
+        }
+      ],
+      "appraisals": [
+        {
+          "estimate": null,
+          "adverse": null,
+          "affect": null
+        },
+        {
+          "estimate": null,
+          "adverse": null,
+          "affect": null
+        },
+        {
+          "estimate": null,
+          "adverse": null,
+          "affect": null
+        }
+      ]
+    },
+    {
+      "at": 2,
+      "observations": [
+        {
+          "holder": "self",
+          "target": "target",
+          "proposition": "positive-task-fidelity",
+          "ticket": 2,
+          "polarity": 1
+        },
+        null,
+        null
+      ],
+      "states": [
+        {
+          "history": [
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 1,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 2,
+              "polarity": 1
+            }
+          ],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 2
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 2
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 2
+          }
+        }
+      ],
+      "appraisals": [
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        }
+      ]
+    },
+    {
+      "at": 3,
+      "observations": [
+        {
+          "holder": "self",
+          "target": "target",
+          "proposition": "positive-task-fidelity",
+          "ticket": 3,
+          "polarity": 1
+        },
+        null,
+        null
+      ],
+      "states": [
+        {
+          "history": [
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 1,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 2,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 3,
+              "polarity": 1
+            }
+          ],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 3
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 3
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/1",
+            "evidence": 3
+          }
+        }
+      ],
+      "appraisals": [
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        }
+      ]
+    },
+    {
+      "at": 4,
+      "observations": [
+        {
+          "holder": "self",
+          "target": "target",
+          "proposition": "positive-task-fidelity",
+          "ticket": 4,
+          "polarity": -1
+        },
+        null,
+        null
+      ],
+      "states": [
+        {
+          "history": [
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 1,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 2,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 3,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 4,
+              "polarity": -1
+            }
+          ],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        }
+      ],
+      "appraisals": [
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        },
+        {
+          "estimate": "1/1",
+          "adverse": "0/1",
+          "affect": [
+            "0/1",
+            "0/1"
+          ]
+        }
+      ]
+    },
+    {
+      "at": 5,
+      "observations": [
+        null,
+        null,
+        null
+      ],
+      "states": [
+        {
+          "history": [
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 1,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 2,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 3,
+              "polarity": 1
+            },
+            {
+              "holder": "self",
+              "target": "target",
+              "proposition": "positive-task-fidelity",
+              "ticket": 4,
+              "polarity": -1
+            }
+          ],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        },
+        {
+          "history": [],
+          "estimate": {
+            "value": "1/2",
+            "evidence": 4
+          }
+        }
+      ],
+      "appraisals": [
+        {
+          "estimate": "1/2",
+          "adverse": "1/4",
+          "affect": [
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "estimate": "1/2",
+          "adverse": "1/4",
+          "affect": [
+            "1/4",
+            "1/4"
+          ]
+        },
+        {
+          "estimate": "1/2",
+          "adverse": "1/4",
+          "affect": [
+            "1/4",
+            "1/4"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceRows": [
+    {
+      "at": 1,
+      "chosen": "A",
+      "authorship": "7/9",
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "contribution": "1/9",
+      "strength": "111111/1111111",
+      "executed": 1
+    },
+    {
+      "at": 2,
+      "chosen": "A",
+      "authorship": "7/9",
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "contribution": "56/387",
+      "strength": "127907/627907",
+      "executed": 1
+    },
+    {
+      "at": 3,
+      "chosen": "A",
+      "authorship": "7/9",
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "contribution": "1/9",
+      "strength": "14677/54677",
+      "executed": 1
+    },
+    {
+      "at": 4,
+      "chosen": "B",
+      "authorship": "7/9",
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "contribution": "-56/387",
+      "strength": "37037/251938",
+      "executed": 2
+    },
+    {
+      "at": 5,
+      "chosen": "A",
+      "authorship": "1/15",
+      "probabilities": [
+        "17/18",
+        "1/18"
+      ],
+      "contribution": "0/1",
+      "strength": "37037/251938",
+      "executed": 1
+    }
+  ],
+  "traceCount": 90,
+  "phaseCounts": {
+    "1450@50": 15,
+    "1431@60": 5,
+    "1432@70": 5,
+    "1433@80": 5,
+    "1434@130": 5,
+    "1448@130": 15,
+    "1449@140": 15
+  },
+  "componentCorrespondence": true
+}

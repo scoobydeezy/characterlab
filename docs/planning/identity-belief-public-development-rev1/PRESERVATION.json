@@ -1,0 +1,35 @@
+{
+  "status": "PRESERVED DEVELOPMENT FAILURE",
+  "receipt": "docs/planning/IDENTITY_BELIEF_PUBLIC_DEVELOPMENT_TESTS_REV1.json",
+  "findings": [
+    "Fixture passed metadata into exact public byte-input API, correctly rejected.",
+    "Proposed receive131 is not an admitted scheduling phase; scheduler rejects it before qualification trace. Correct to causally emitted receive130, after qualify130, before learning140. No phase registry extension."
+  ],
+  "artifacts": [
+    {
+      "original": "docs/formal/IDENTITY_BELIEF_PUBLIC_CONTRACT.md",
+      "path": "docs/planning/identity-belief-public-development-rev1/IDENTITY_BELIEF_PUBLIC_CONTRACT.md",
+      "sha256": "c25afe20592037c66ade57eb4f451f4cffca3f6815c7bd337cf8312ad8a12bde"
+    },
+    {
+      "original": "src/campaign3/identityBeliefPublicModel.ts",
+      "path": "docs/planning/identity-belief-public-development-rev1/identityBeliefPublicModel.ts",
+      "sha256": "c0e84fd62009a8eea7e0a1a974912b312d2f32e3ee502ca7762001f80552a75b"
+    },
+    {
+      "original": "src/campaign3/identityBeliefRuntime.ts",
+      "path": "docs/planning/identity-belief-public-development-rev1/identityBeliefRuntime.ts",
+      "sha256": "412d803c7f88db51a7bbfae83c4f78842d7de47886660796331c94a5983d3211"
+    },
+    {
+      "original": "src/test/identityBeliefPublicFixtures.ts",
+      "path": "docs/planning/identity-belief-public-development-rev1/identityBeliefPublicFixtures.ts",
+      "sha256": "d25c5eb1496f73bb400e661178ac9d82f04873962e84a5897c688759a9cab1d2"
+    },
+    {
+      "original": "src/test/identityBeliefPublic.test.ts",
+      "path": "docs/planning/identity-belief-public-development-rev1/identityBeliefPublic.test.ts",
+      "sha256": "b540b295cc5a55f1d3731be873142db128caf596d567b1c97bb3c0a611036d5e"
+    }
+  ]
+}

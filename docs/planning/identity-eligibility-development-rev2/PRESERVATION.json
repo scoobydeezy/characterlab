@@ -1,0 +1,59 @@
+{
+  "status": "SUPERSEDED DESPITE PASSING NUMERICAL TESTS",
+  "finding": "Qualification received the full input object including world execution permission; cognitive decide also executed world effects. Removing permission from the serialized safe context proved output noninterference but not restricted input capability. REV2 separates decision/qualification safe context from the execution helper.",
+  "priorPlan": "docs/planning/IDENTITY_ELIGIBILITY_PLAN_REV1.json",
+  "priorResult": "docs/planning/IDENTITY_ELIGIBILITY_RESULT_REV1.json",
+  "priorClosure": "docs/planning/IDENTITY_ELIGIBILITY_CLOSURE_REV1.json",
+  "artifacts": [
+    {
+      "original": "src/campaign3/identityEligibility.ts",
+      "path": "docs/planning/identity-eligibility-development-rev2/identityEligibility.ts",
+      "sha256": "490a0997228cdca58ee7e661f4c892b0fc3fa4e7752daa97ba72382cf4dca187"
+    },
+    {
+      "original": "src/test/identityEligibility.test.ts",
+      "path": "docs/planning/identity-eligibility-development-rev2/identityEligibility.test.ts",
+      "sha256": "f82029895d9270a0b1d9acb83825ac3012fa6dbe595b982d932c19032e0a24c6"
+    },
+    {
+      "original": "src/test/identityEligibilityFixtures.ts",
+      "path": "docs/planning/identity-eligibility-development-rev2/identityEligibilityFixtures.ts",
+      "sha256": "2c0b44f10b32935770c87763c08fc4d08e44b535d147e3bc1ce233f935720f57"
+    },
+    {
+      "original": "docs/formal/IDENTITY_ELIGIBILITY_CONTRACT.md",
+      "path": "docs/planning/identity-eligibility-development-rev2/IDENTITY_ELIGIBILITY_CONTRACT.md",
+      "sha256": "82e89eedf536171339a179935027cd2e79efa0fe1e2590d0a3fc383e24f21a13"
+    },
+    {
+      "original": "scripts/qualify-identity-eligibility.mjs",
+      "path": "docs/planning/identity-eligibility-development-rev2/qualify-identity-eligibility.mjs",
+      "sha256": "6a2c9355e8b7106d7b484c1dd93d880a229212fea52a3029223f75e3ba5efc39"
+    },
+    {
+      "original": "scripts/check-identity-eligibility.mjs",
+      "path": "docs/planning/identity-eligibility-development-rev2/check-identity-eligibility.mjs",
+      "sha256": "fcae1205742aff2ef4772d3ed1f1a0c65ce34de9aa2863e7d2b13077771ed3d4"
+    },
+    {
+      "original": "scripts/check-identity-eligibility-closure.mjs",
+      "path": "docs/planning/identity-eligibility-development-rev2/check-identity-eligibility-closure.mjs",
+      "sha256": "feee917d3c688d1ed6753fe6196b5c81ab360f59e9110c2837cd14ba3d4db628"
+    },
+    {
+      "original": "docs/planning/IDENTITY_ELIGIBILITY_FINDINGS.md",
+      "path": "docs/planning/identity-eligibility-development-rev2/IDENTITY_ELIGIBILITY_FINDINGS.md",
+      "sha256": "07ee9412d5542abaf5bbf22911c4e1cf37d61dc9d67441cc2e829e77d7362094"
+    },
+    {
+      "original": "docs/planning/CAMPAIGN3_IDENTITY_ELIGIBILITY_QUALIFICATION.md",
+      "path": "docs/planning/identity-eligibility-development-rev2/CAMPAIGN3_IDENTITY_ELIGIBILITY_QUALIFICATION.md",
+      "sha256": "90961e6f2ae894b620391f443d983d8cea8e0aed70e2966f086ebbaac00fc6b4"
+    },
+    {
+      "original": "scripts/check-campaign3-exit-audit.mjs",
+      "path": "docs/planning/identity-eligibility-development-rev2/check-campaign3-exit-audit.mjs",
+      "sha256": "d4c2043da4896fe99bb84f915765c1cf74a2159113592d4aca75b077c96beb21"
+    }
+  ]
+}
