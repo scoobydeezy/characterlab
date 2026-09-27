@@ -1,0 +1,70 @@
+/** bio-coupled-comparison/0.2-candidate: composed research components.
+ * No scheduler/state-owner or character-facing RNG capability is introduced. */
+import {canonicalEncode as enc,list,set,text,unsigned as u,signed,rational as q,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {RandomRunOracle,randomAddressValue} from '../substrate/random';
+import {dataRecord as rec,dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint} from '../campaign2/canonicalData';
+import {ONE,ZERO,readQ,qValue,foldIdentityHistory,compileReasonNuclei,appendIdentityContribution} from '../campaign2/cognitiveMath';
+import {rawSignalOutput} from '../campaign2/cognitiveTransforms';
+import {arbitrationOutput,createCognitiveRandomSession} from '../campaign2/cognitiveArbitration';
+import {chosenData,intentOutput,expressionOutput,qualificationOutput} from '../campaign2/cognitiveChoice';
+import {receivingRecord as r,decodeReceiving as decode} from './receivingCodecs';
+import {biographyContext} from './longitudinalMath';
+import {OPTIONS,TASKS,ACTOR,sid} from './longitudinalModel';
+export const BIO_VERSION='bio-coupled-comparison/0.2-candidate';
+export const BIO_LAWS=['Earned','AuthoredTrait','DisplayOnly','HistoryOnly','RecomputedHistory','Refold'] as const;
+export type BioLaw=typeof BIO_LAWS[number];
+export interface BioInputs {earlySeed:number;contrarySeeds:readonly number[];}
+const clone=(v:CanonicalValue)=>decode(enc(v));
+const history=(xs:readonly CanonicalValue[])=>r(414,[list(xs)]);
+const rows=(h:CanonicalValue)=>items(f(rec(h,414n),1n),'list');
+const fraction=(v:CanonicalValue)=>{const n=readQ(v);return `${n.numerator}/${n.denominator}`;};
+export function bioContext(at:bigint,occ:(ns:number)=>CanonicalValue,reverse=false){
+ const original=rec(biographyContext(at,occ),398n),motive=rec(f(original,2n),394n);
+ return r(398,[f(original,1n),r(394,[f(motive,1n),f(motive,2n),list(TASKS.map((t,i)=>r(393,[t,q(1,reverse?2-i:i+1)])))]),f(original,3n)]);
+}
+function raw(at:bigint,context:CanonicalValue,h:CanonicalValue,law:BioLaw,occ:(ns:number)=>CanonicalValue){
+ const earned=rawSignalOutput(occ(1133),context,true,ONE,()=>h).output,x=rec(earned,403n),signals=items(f(x,3n),'set').filter(v=>uint(f(rec(f(rec(v,402n),1n),401n),3n))!==3n);
+ const strength=law==='AuthoredTrait'?readQ(q(1,2)):law==='DisplayOnly'||law==='HistoryOnly'?ZERO:foldIdentityHistory(rows(h),ONE).strength;
+ if(!strength.equals(ZERO)){const original=items(f(x,3n),'set').find(v=>uint(f(rec(f(rec(v,402n),1n),401n),3n))===3n),basis=law==='AuthoredTrait'?r(400,[{kind:'map',entries:[]}]):f(rec(original!,402n),3n);
+  for(let i=0;i<2;i++)signals.push(r(402,[r(401,[OPTIONS[i],TASKS[i],u(3)]),qValue(i===0?strength:ZERO.subtract(strength)),basis]));}
+ return r(403,[f(x,1n),context,set(signals),f(x,4n)]);
+}
+function contribution(qualification:CanonicalValue){const x=rec(qualification,429n),result=rec(f(x,3n),430n);if(uint(f(result,1n))!==1n)return undefined;const resolution=rec(f(rec(f(rec(f(x,2n),426n),2n),425n),2n),409n);return r(413,[f(x,1n),f(resolution,1n),f(resolution,2n),f(result,3n)]);}
+function refold(archive:readonly CanonicalValue[]){let h=history([]);for(const a of archive){const c=contribution(a);if(c)h=appendIdentityContribution(rows(h),c,ONE).history;}return h;}
+function reinterpret(a:CanonicalValue,meaning:CanonicalValue){const qual=rec(a,429n),expression=rec(f(qual,2n),426n),intent=rec(f(expression,2n),425n),resolution=rec(f(intent,2n),409n),reason=rec(f(resolution,3n),408n),oldRaw=rec(f(reason,2n),403n);
+ const newRaw=r(403,[f(oldRaw,1n),f(oldRaw,2n),f(oldRaw,3n),meaning]),newReason=r(408,[f(reason,1n),newRaw,f(reason,3n)]),newResolution=r(409,[f(resolution,1n),f(resolution,2n),newReason,f(resolution,4n)]);
+ return qualificationOutput(f(qual,1n),expressionOutput(f(expression,1n),intentOutput(f(intent,1n),newResolution)));
+}
+export async function bioStep(at:bigint,seed:number,h:CanonicalValue,law:BioLaw,reverse=false){
+ if(at<1n||at>19n||!Number.isInteger(seed)||seed<0||seed>255||!BIO_LAWS.includes(law))throw Error('BIO step domain');
+ let ordinal=at*100n;const occ=(ns:number)=>typedIdentifier(ns,u(ordinal++));const context=bioContext(at,occ,reverse),signal=raw(at,context,h,law,occ),learning=at<=4n||at>=6n&&at<=17n,unit=learning?1:16;
+ const bands=r(438,[q(1,10),q(1,5),q(3,5),q(4,5),q(9,10)]),modifier=r(439,[q(1,unit),u(3)]),dice=r(437,[bands,q(0,1),modifier,modifier]),reason=r(408,[occ(1134),signal,list(compileReasonNuclei(items(f(rec(signal,403n),3n),'set'),dice))]);
+ const session=createCognitiveRandomSession(new Uint8Array(32).fill(seed)),root=typedIdentifier(1135,u(at));session.begin();let resolution:CanonicalValue,addresses:string[];
+ try{resolution=await arbitrationOutput(root,at,reason,r(440,[q(1,2),q(1,2)]),session.forResolution(root,reason));session.prepareCommit();session.commit();}finally{session.close();}addresses=session.committedAddressKeys();
+ const intent=intentOutput(occ(1136),resolution!),expression=expressionOutput(occ(1137),intent),qualification=qualificationOutput(occ(1138),expression),append=contribution(qualification);
+ const address={causalRootId:root,purposeId:sid(1042,'purpose/bio-nondecision-control'),subjectBindings:[{subjectRoleId:sid(1043,'subject/actor'),subjectId:ACTOR}],drawIndex:0n},noise=await new RandomRunOracle(new Uint8Array(32).fill(254)).drawBounded(address,256n);
+ return {context,raw:signal,reasons:reason,resolution:resolution!,intent,expression,qualification,contribution:append,addresses,nondecision:list([randomAddressValue(address),noise.effectiveKey,u(noise.result)]),learning};
+}
+export function createBioComparison(law:BioLaw,input:BioInputs){
+ if(!BIO_LAWS.includes(law)||!Number.isInteger(input.earlySeed)||input.earlySeed<0||input.earlySeed>31||input.contrarySeeds.length!==12||input.contrarySeeds.some(v=>!Number.isInteger(v)||v<0||v>253))throw Error('BIO inputs');
+ const original={earlySeed:input.earlySeed,contrarySeeds:[...input.contrarySeeds]},commitment=list([text(BIO_VERSION),text(law),u(original.earlySeed),list(original.contrarySeeds.map(u)),u(255),u(254)]);
+ let at=0n,h=history([]),archive:CanonicalValue[]=[],log:CanonicalValue[]=[],busy=false;
+ const save=()=>enc(list([commitment,u(at),h,list(archive),list(log)]));
+ return Object.freeze({
+  async step(failBeforeAppend=false){if(busy)throw Error('BIO concurrent');if(at===19n)return false;busy=true;try{const next=at+1n,seed=next<=4n?original.earlySeed:next>=6n&&next<=17n?original.contrarySeeds[Number(next-6n)]:255;
+   const result=await bioStep(next,seed,law==='Refold'?refold(archive):h,law,next===19n);let nextArchive=archive,nextHistory=h;
+   if(result.learning){nextArchive=[...archive,result.qualification];if(result.contribution)nextHistory=appendIdentityContribution(rows(h),result.contribution,ONE).history;}
+   if(law==='RecomputedHistory'&&next===19n){nextArchive=archive.map(a=>reinterpret(a,f(rec(result.raw,403n),4n)));nextHistory=refold(nextArchive);}
+   if(law==='Refold')nextHistory=refold(nextArchive);
+   const strength=foldIdentityHistory(rows(nextHistory),ONE).strength,display=law==='HistoryOnly'?list([]):list([qValue(law==='AuthoredTrait'?readQ(q(1,2)):strength)]);
+   const row=list([u(next),u(seed),result.context,result.raw,result.reasons,result.resolution,result.intent,result.expression,result.qualification,nextHistory,list(nextArchive),list(result.addresses.map(text)),result.nondecision,display]);decode(enc(row));
+   if(failBeforeAppend)throw Error('BIO injected before append');at=next;h=nextHistory;archive=nextArchive;log=[...log,row];return true;
+  }finally{busy=false;}},
+  save:()=>save().slice(),
+  snapshot:()=>clone(list([u(at),h,list(archive),list(log)])),
+ });
+}
+export async function restoreBioComparison(law:BioLaw,input:BioInputs,saved:Uint8Array){
+ const copy=saved.slice(),v=items(decode(copy),'list');if(v.length!==5)throw Error('BIO snapshot shape');const count=uint(v[1]);if(count>19n)throw Error('BIO snapshot prefix');const run=createBioComparison(law,input);for(let i=0n;i<count;i++)await run.step();if(key(decode(run.save()))!==key(decode(copy)))throw Error('BIO original/prefix mismatch');return run;
+}
+export function bioSummary(row:CanonicalValue){const x=items(row,'list'),data=chosenData(x[5]),qs=rec(f(rec(x[8],429n),3n),430n),nuclei=items(f(rec(x[4],408n),3n),'list'),hs=foldIdentityHistory(rows(x[9]),ONE);return {at:String(uint(x[0])),seed:Number(uint(x[1])),chosen:key(f(data,1n))===key(OPTIONS[0])?'A':'B',authorship:fraction(f(data,7n)),mode:String(uint(f(data,8n))),probabilities:items(f(data,2n),'list').map(p=>fraction(f(rec(p,421n),2n))),modifiers:nuclei.map(n=>String((f(rec(n,407n),5n) as {value:bigint}).value)),evidence:uint(f(qs,1n))===1n?fraction(f(qs,3n)):'None',strength:`${hs.strength.numerator}/${hs.strength.denominator}`,history:key(x[9]),archive:key(x[10]),expression:key(x[7]),context:key(x[2]),raw:key(x[3]),reasons:key(x[4]),nondecision:key(x[12]),display:key(x[13]),addresses:items(x[11],'list').map(v=>(v as {value:string}).value),draws:items(f(data,9n),'list').map(v=>key(f(rec(v,422n),5n)))};}

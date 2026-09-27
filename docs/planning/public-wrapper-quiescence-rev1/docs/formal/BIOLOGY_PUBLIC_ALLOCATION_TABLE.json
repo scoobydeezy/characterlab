@@ -1,0 +1,560 @@
+{
+  "version": "biology-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-26",
+  "namespace": 1156,
+  "records": [
+    {
+      "typeId": 1401,
+      "name": "BiologyProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Parameters",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1402,
+      "name": "BiologyInitial",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Body",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1403,
+      "name": "BiologyInput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Frame",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1404,
+      "name": "BiologyPhysicalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Physical",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1405,
+      "name": "BiologyAdaptationState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Adaptation",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1406,
+      "name": "BiologyKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Samples",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1407,
+      "name": "BiologyGoals",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Goals",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1408,
+      "name": "BiologyFeedback",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Threat",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1409,
+      "name": "BiologyObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Lane",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Signal",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1410,
+      "name": "BiologyContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:1409",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1411,
+      "name": "BiologyAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "ref:1410",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Appraisal",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1412,
+      "name": "BiologyReasonSource",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Option",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Domain",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Strength",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1413,
+      "name": "BiologyReasonNucleus",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "type": "ref:1412",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Numerics",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1414,
+      "name": "BiologyDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1411",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:1413",
+            "min": 0,
+            "max": 32
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Resolution",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1415,
+      "name": "BiologyIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:1414",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1416,
+      "name": "BiologyExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:1415",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1417,
+      "name": "BiologyAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:1416",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1418,
+      "name": "BiologyPhysicalConsequence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Transition",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1419,
+      "name": "BiologyOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Expression",
+          "type": "ref:1416",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Observation",
+          "type": "ref:1409",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Receipt",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1420,
+      "name": "BiologyLearning",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1406",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1406",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1421,
+      "name": "BiologyAdaptationTransition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1156",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1405",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1405",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1422,
+      "name": "BiologyPhysicalRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1423,
+      "name": "BiologyAdaptationRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1424,
+      "name": "BiologyKnowledgeRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1425,
+      "name": "BiologyGoalsRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1426,
+      "name": "BiologyFeedbackRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Values",
+          "type": "data",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

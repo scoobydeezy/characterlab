@@ -1,0 +1,1779 @@
+{
+  "date": "2026-09-20",
+  "status": "ACCEPTED AND FROZEN FINITE MODEL COHORT; RUNTIME QUALIFICATION NOT IMPLIED",
+  "reviewer": "Primary-agent local review under Campaign 3 policy; not external review",
+  "contract": "docs/formal/MULTISOURCE_PUBLIC_CONTRACT.md",
+  "allocationCorrection": "MS-ALLOC-CORR-001",
+  "versions": {
+    "rulesVersion": "multisource-public/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "parameterSchemaVersion": "multisource-parameters/0.1-candidate",
+    "registrySchemaVersion": "multisource-registry/0.1-candidate",
+    "numericProfileVersion": "numeric/multisource-exact/0.1-candidate",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "models": [
+    {
+      "name": "shared--GroundAggregate",
+      "caseName": "shared",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b290a09053a2120660ef4640b2ab50a16d3c27ccb16dc9a0e89f435a3aaa11a3040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202d34ff9f66ea8bd63c7ec1b2312d2afeb202f7041f0e2da4fa09ee039ba76bff",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/registry.cenc.hex",
+          "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/parameters.cenc.hex",
+          "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "shared--GroundPairwise",
+      "caseName": "shared",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c8fda81961c5f5f39767707cc95647e801117596b801fe101b8b96b610a3d1e4040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420d5992ce3836aa95c8604c09837d0558f304efd70d45347016e840c01f0ec47eb",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/registry.cenc.hex",
+          "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/parameters.cenc.hex",
+          "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "shared--GroundUncovered",
+      "caseName": "shared",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104201ab04f3fee5a987c70a8b42fe6d3b8c92363a7733ebe0babb4d40201e1159a3f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209c9aaf6c03d9da8d3be215a5ff74c270de485313f4bd719021ad89368f749270",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/registry.cenc.hex",
+          "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/parameters.cenc.hex",
+          "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "shared--FamilyNormalized",
+      "caseName": "shared",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042068b8d3c1234a35a7f32c46027b42e63473f4810a505bd2616865990f90652551040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209d58206d795a93bf20340694f5602ccfbe162dfa74c10c1becc5d515dabb4192",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/registry.cenc.hex",
+          "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/shared--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "independent--GroundAggregate",
+      "caseName": "independent",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042061e82f422cdcd77c63dd6605ab9fe7ea4de0564444eed0b9fe82d2f63019fefa040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420418e1f67c1e4d2e23e2986d83124f52e956873eb13388dd390b67fe688441e0c",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/registry.cenc.hex",
+          "sha256": "5d6ffa73afd2710cb5c4e1912a5b5709146c4cb1f2d055b2894a668ca48cfa92"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/parameters.cenc.hex",
+          "sha256": "523e55a226663c59daa66c69a97c11505c06b487d1f3bf053ab547f73db4443e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "10590d126c0f02e18e4660319937e53dca76f78b76a5aa9cb9bd52e4307ed401"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "independent--GroundPairwise",
+      "caseName": "independent",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420fe9de5e31d93d2ff7206ea19a76a5b8a0b6da5331d6e229acb75b8b9f801d104040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104203cc33f5be8500fdd9587f5cb6b0e4ec0754a1dc5677c3682b808476687acd17b",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/registry.cenc.hex",
+          "sha256": "a8d90d8a704e948dd8ae58cad7a069bce739c9c146e310fb061026f1569fba12"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/parameters.cenc.hex",
+          "sha256": "cddb420c6068feeccaaff636b37a47ef7387b62053d4815f42a0fb7c8afc9b08"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "8377a978608ddb945fbc039e41cd2266fe30e9bb120550bebfc134c5ee10bcaa"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "independent--GroundUncovered",
+      "caseName": "independent",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420a75da6b43c5611c5894519103d8cda0f2bb406907b81ad7c241c193d5ef441e9040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420e8689f7bbcda4bb96a45ad6fa13f1c8f0d124d975c427de563b540e067d65f22",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/registry.cenc.hex",
+          "sha256": "bdb822658345a0222cf5672bcbbff2ca5a03f7f0c17d8cc214c2ba968d33eb15"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/parameters.cenc.hex",
+          "sha256": "158ca03e10dbf3ae4ee9629d88e561544c23b1f824eff15f34655f220e35bdef"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "f2ee37633ff6d4490ba2c2f62da140c11ce277104b0e7d8354917fff76a7adca"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "independent--FamilyNormalized",
+      "caseName": "independent",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420ef4d11a4e79fd6effc4a42c987191e3a28fa1b3125207585bc114f6712190e95040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202b273876ead5571dcc8bbc11de98f6782b0cf7d189d48ba827e1833bdddb3033",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/registry.cenc.hex",
+          "sha256": "307058c7ba8c8a0ca0eb204f74444545b975df4f551beac79e61fb6b75118eb8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "0fa1777abbc550545bca02db22f629fbfc52b3d86066fc00a501b1a70276c6cf"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "542394aad1c45d44579b774fc91d801e252044570f422b410532c99ebf073ed1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/independent--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan--GroundAggregate",
+      "caseName": "orphan",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420da3b98ebcfbc37120177530282ad5e087c304fcbfc33dd441cfd0c87451fb389040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104204da918c7deab571b9a3fc6bbbfa7744888f3e56a0cf448a5ed6bbd81c4085964",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/registry.cenc.hex",
+          "sha256": "5bd78a5a5d62f21a280778d3c30e49ce6e38a93586e65261b617dd55409d28df"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/parameters.cenc.hex",
+          "sha256": "069784fcc655a6997826b1b8885b57d0ba75524cc54a3beb976bae86c501d1a8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "08bcdbb6cbd18aa0aed337d3dd3bc259c2fc8051a9ebc63fa754416a2abae371"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan--GroundPairwise",
+      "caseName": "orphan",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c913bafd38bde74192b510a78fa9be80e94c1657c5a076a8be9922a8dd75e446040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042015f5de177d6ea2fd74b416a9799377fe415c72cf493caa8d7cf7fddf736f4d7e",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/registry.cenc.hex",
+          "sha256": "b4b7cceeda533e5183bced506194393ffda65136dc7efc993671b49dbbe58a5d"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/parameters.cenc.hex",
+          "sha256": "de556798258e7f2ee13bb853b50546beb8d81d99431f8ab0a790d78c1927f297"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "6674313564478c03d6344cf9736107db45dadd3931618a04c779f351e268e8c7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan--GroundUncovered",
+      "caseName": "orphan",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420d7fc3b4b063b49c20c77b98e3ebd338bcc0191c19a73280746f67fe917d9ab4a040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104204ace849333c00906bbde0f7d3f9d99c934a95448f704e6fb0f456588721e0b47",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/registry.cenc.hex",
+          "sha256": "8a21172b34078af5880848dbbe370eecb82790b5e954dc7c4c62d1cd48434d40"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/parameters.cenc.hex",
+          "sha256": "2e96f394612a6ef9929b3e5ec0841834cf1004b043ef4473caf02812735266d0"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "4c7d3ddc069f68941ea6c568b9ef4b819ea6d5db8345cd4e0bfb1f3ca3e98db3"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan--FamilyNormalized",
+      "caseName": "orphan",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042023a324addd5645fa372fa49d828cf2ccb5e1e849277d87dbd018c48492dd3f18040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420f02c75cf729291b9574feda9585ed76a380f13d3f8fc6d469a4b8871c6a87f0e",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/registry.cenc.hex",
+          "sha256": "350b5361b638dda98877d44beab9ed3bb4ac5dafe425de7aa6801685376f0a06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "703dcccb1889ed4deeef5f2441823d4a631421b6af71371438b5575c6765b439"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "7be87988bc92f0ede41e5f372474c4f612d3cb1cf29185ed2b1d5d8fda6cb3a9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan-removed--GroundAggregate",
+      "caseName": "orphan-removed",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104206c8d0767960a9594bfbda63ca0d93a22bf888690b6218885335f3e50aaadd675040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042082ee2aad57b26e7af536d0e3a05f1b5362699bd0c46f46cb37fbaa98943aea92",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/registry.cenc.hex",
+          "sha256": "5915d9cfa8546a0432addb5599c6a54aba0dd70f45697b7825cea20a0efb1e2e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/parameters.cenc.hex",
+          "sha256": "b8296a391237c8e8b5c14d1e69b1cc6c465941939281dc4e81f8386ff2c25d60"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "6c8da1a87e83e12f31bb80613b92ce89e7322a5f9b76c911e22896b97eac15f9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan-removed--GroundPairwise",
+      "caseName": "orphan-removed",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420bf62177d7c96292932cd8e7754daf26f5ef1a6cdf9f5228af8a8000f3f3a407b040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420357564a36676adf81eef44c7a64c997ab536aefccc44e5d3e54dd867eb29f008",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/registry.cenc.hex",
+          "sha256": "efe6ac8390e23091e055e6dcc087c3420c2f511c381b8e01a6b62952351d7d3f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/parameters.cenc.hex",
+          "sha256": "52a79aff8259185b16480c5f8573a5c479b10e88b93adb3666e41b7520081cfb"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "4cccdb35c57c0474e16f897222baf6aba5ecd67d3196ccc5acaf75c6c0866eb0"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan-removed--GroundUncovered",
+      "caseName": "orphan-removed",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420afc9b4193a7323176c80d96883c7e41ef7c8f14573e81fa901abc9e63696d7d2040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042013cdc6107508d02cbf5760141eb505749e6a019b0587dd5c6bbd3d06a4f26204",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/registry.cenc.hex",
+          "sha256": "5f4902e5d1ad0a8006d3b94dd87e7e8a676e67f0d2d053c3d82cc3e4940058da"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/parameters.cenc.hex",
+          "sha256": "2418238ae019cdcf98ba1b8bfc4d4bc30c9a1cab4747c5c5f8d8043415535536"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "f5326752a16971e053821a1686907846f9f50ec69eee4b8a3f9deeb3820317ce"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan-removed--FamilyNormalized",
+      "caseName": "orphan-removed",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420cae4b9886118b8b907d0065daf89572fefae8b4c0e2e8ff60353393364853645040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104201fc2c8b1de5fcc587ef136cb685f778d50ebc2517c38c35b824bbe3751ee9002",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/registry.cenc.hex",
+          "sha256": "1efba257c8b44d91f4d6cb2c26c70d620164a231aacf64a977f2d303b9fd871e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "437be031fb258e7f85f1f36f3102cbfddc42fb464d2eaa66e1c1df3391bbf27c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "4ca530904857884796dd42cf29c6b5822316cfbda95db90e99b93a0545d40ee9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "orphan-removed--DescriptionDice",
+      "caseName": "orphan-removed",
+      "law": "DescriptionDice",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420854ddbe285e94f7b9702775635abfff1de4b0ead33a1f6bd0e32a190a82a885f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420bb92d03c9d0495599f2984fbb84c317b855b50d9f2365dc0aad809c032f985df",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/registry.cenc.hex",
+          "sha256": "4c229ed74690658750635d50494806a0c455c89cb4ebca3f35460e18b99a2d08"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/parameters.cenc.hex",
+          "sha256": "f518bbdf99c841e4e3e7165992637ec14e9f5c28ca3094ae47a62e5cc0b2dd16"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/model-identity.cenc.hex",
+          "sha256": "c9865143c1647776f809852ff8dd95aa8ed53c3d62b1a072c8d39c74d6607066"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/orphan-removed--DescriptionDice/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "duplicate--GroundAggregate",
+      "caseName": "duplicate",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420eb8845c95068f7b4becb02e93eb9f51da6be227c163963167a1761b0f8c4be79040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104203965b903ad9ab3992b75041bfb74dc8acc269e5f17b1aefae57077b48acdfe48",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/registry.cenc.hex",
+          "sha256": "d6288769fa56bb3c2fe5f63912b15e2f05e6baf6a1b5b132cdd87315ac5caaab"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/parameters.cenc.hex",
+          "sha256": "292d2e5c31d73e4c46e65a7fc11d4521153284c6705557410a15adc20bd725da"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "3e9a356753357af544f9d17beb8860af8da4a05919dddff5caf35e873e806cec"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "duplicate--GroundPairwise",
+      "caseName": "duplicate",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420a759bfd3390eedd1ad44f53c8e08e459371ed9005aaf804dd10f52c0bb73ea0f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420abaf592c51d7c3d56451f97f928bff747ccb0556df640d6d57511d404a0da307",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/registry.cenc.hex",
+          "sha256": "ff0e945b220ab153d14f778da282a8777edc252d3c0f8772972c24cda828fb4f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/parameters.cenc.hex",
+          "sha256": "9522d323a7817cd7f50d8a754831a19b5bdd08a5d9656e0611c90ee9c2d5c5c4"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "67a7681e4df921b7200a3413da3392c73ef59cc0b657d555786b5d3c0d121b4f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "duplicate--GroundUncovered",
+      "caseName": "duplicate",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420ca7f0b160ccd717bcdfefe50f9b1be2d81d363b1428aae34e78e056a546fad4d040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104205f65de36ffd0ff6bd443d9f10795a3c54975f91c127ebb6438cb440c0832f515",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/registry.cenc.hex",
+          "sha256": "f780c6c867699e37a1cdf918c8f68a2d052bcd8397260e9082647ec28deda7f2"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/parameters.cenc.hex",
+          "sha256": "a4417fae152f916f4bbfcde7a646300c439f8ad3f66728992f49f71175eda2c0"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "4d5e30794d9a156ecb1a3036396511ea52fd27cba0eaff0bba41c9bda94e2453"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "duplicate--FamilyNormalized",
+      "caseName": "duplicate",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042074df76e66c4935cddfa1e590a667daf0d2904c093aa014747a9984d25795dcb9040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209ada0cae68b3caea22d660388e8b45324548fa7f01d9dada239744be8d31f5b7",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/registry.cenc.hex",
+          "sha256": "ed365ff4c126c345eb15c73440534f3ec14f9a2bf70975f92588339f81f7e5b5"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "21c22a5375c5a0551ed07435ac5c0d8e5c75c86085723ea01417e90654cc15fb"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "278e25edfd7f95589ded933a04e2ad4770342d608662dded0385fb6a935b017e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "duplicate--DescriptionDice",
+      "caseName": "duplicate",
+      "law": "DescriptionDice",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420de6a34acc5fbb4dd4461d4b26e35c4518bb27c2aaf6b8c0685f608cfa4fdc611040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042030a1cd403893877029bd9a5548c40aac336b2a97c2d036432d5ebee1ce1b1029",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/registry.cenc.hex",
+          "sha256": "a8147300d676495abae082898aadb52d1b6de2cf654c0653652f48e1f3b59a80"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/parameters.cenc.hex",
+          "sha256": "6058152cdf510efd3579b675e3368e1a7ed10c02204c5bf9e4a0b9ff590823f5"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/model-identity.cenc.hex",
+          "sha256": "9cc720da22ed1b949488443664558bc3cfc0bd40f87ef18cf3ba54e1a0e38e87"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/duplicate--DescriptionDice/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "aggregate--GroundAggregate",
+      "caseName": "aggregate",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420e09a6ac11b8a0b45817339d93b0c9cd297579e931a1f9a968396343ef3316da9040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420d22d8df3df5b44e96962091db6c61e6adf88bba00b8de8d36097fa0a496eaeb9",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/registry.cenc.hex",
+          "sha256": "5b2ebd08136a5a0f3809cd57d19d881fa68866c1d1a529c17b3c812d8f7b588e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/parameters.cenc.hex",
+          "sha256": "1d70abe7c58865c20e2dd4f9a508fb38b047f84797751b631b291fdb6405cf03"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "f2c1d5afe0b90b7f00627c862a7dc1b7e857026740687f5cc7b094535836528f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "aggregate--GroundPairwise",
+      "caseName": "aggregate",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104204bd42561df5bd3445dc5be9360c5096808fef496734b23961f6bf52c536edfc9040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042031ae56ca54821e3230b58b1e637f2776877b51fd0f68e9210ff9e27b897fa2ea",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/registry.cenc.hex",
+          "sha256": "e162b6af15e96c4f314739fcfff281be00e1a3640df6bf0d3bc5727afb2ac650"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/parameters.cenc.hex",
+          "sha256": "0fb05e09d48a7aae479c1aad0b194d15fb72577ec1844b1ad757ed2168f9b8e9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "476de3a9d0c5a6ec3c4887ce65edfad638858a620f116645e70fa71ee46d520f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "aggregate--GroundUncovered",
+      "caseName": "aggregate",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b05d46edb30ced1a6719083e94baa7250c9e58cfa2c735bc9c23b4c41711b95b040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202ff7072437a86ee4c55dd3d7fe6432884597899eb1799190522c5122f962be59",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/registry.cenc.hex",
+          "sha256": "ac6a97911b664fa5e3d4cd1812ff4f9bbe5faa86bf2f1a9b16198b7bbae88b5e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/parameters.cenc.hex",
+          "sha256": "56adb421d121456e85613f3a7890ddf8507760d99fad624041c1ac10bd5216db"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "1f3f7ffca1ddd2bd5daf48dcb887ce225962a30cfb35d9d6b4d68a56321945bf"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "aggregate--FamilyNormalized",
+      "caseName": "aggregate",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104205f1dfd96dda1d2bd3bee06ab72a41fc734b7c4a46a74027e6fd1908f7d5418a8040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104203d1575b30f378f5ec33de0c906db05d09d93131f1d4bf5036b58ace44e49f2fe",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/registry.cenc.hex",
+          "sha256": "4dd19fa40bc164d7e28365e33ec33d93ad9d81b7f51b8f13908404bb2aa51860"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "064dbb7dd0032b75dc3c002de1dd5fd1e17ba44fb2b9fc6e35e7a8433d233302"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "e22d573884892f235c18782127553e136f5d5078c4bbb77aea7e6ee33e5f7302"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "aggregate--DescriptionDice",
+      "caseName": "aggregate",
+      "law": "DescriptionDice",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104205a5a1056d3f6765c0cfe3d6f78c0b48c54ffc3ac6848333aaf2c41d15ebcb96d040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420157341daa8014688c5a1a9f6dfa18dab53f703228f32b761e06cd42cdf471520",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/registry.cenc.hex",
+          "sha256": "23ad16becd2662a974ec9af596e209724d0cbddfa8ec7c7172329d65527633c5"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/parameters.cenc.hex",
+          "sha256": "6f510d6386a36d0d65b3a09a7e23dca92ca42c7deee85310781e3a5ba22b29e1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/model-identity.cenc.hex",
+          "sha256": "4280857688a2cec4fa6da20f3008890a23a9febe94bcb8f16f798764ea89d7f6"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/aggregate--DescriptionDice/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "negative--GroundAggregate",
+      "caseName": "negative",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c43fae1dc6fdafc0d14fdcc416acc732dda61c1aeb35587b0aa7c95a9519bc70040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420776a5ee796eba53ab1c4c08c4a7c6baae02882d48237c64c0d6e758d81c1e66f",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/registry.cenc.hex",
+          "sha256": "21b763f99d7358e7d780eaddea1126ae441a287f674b3cb5944d4c7b298c83bc"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/parameters.cenc.hex",
+          "sha256": "a2ada7cc00c184691d518cc1ff27053e57cb5e4b8177ddbc92b4601e18648c4c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "2695c4699c805dcfd4b5b117853cf0c86e7d75c9173661baad0c1937b448d5f1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "negative--GroundPairwise",
+      "caseName": "negative",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420ba4d8cbda7df3244138694c4b4afbd0a4c098dcff213939b720de49790398f3c040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420641809a9bc2b38e2aeb765ae92aea135a1986e07a05ce69b10f2fb480e141c7c",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/registry.cenc.hex",
+          "sha256": "56c8cbf5dff2c75a7d668cc2ade1483a65dee720b13d9cc130e63f152cda8c3f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/parameters.cenc.hex",
+          "sha256": "fb425e39f7d4adb9bbe2c535910846381efdcaa751fb6001ce71bfb48c29445a"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "b420e1202da9c1c6de83e45415996f2d66ad04b6d71701cdaa623fe5415b99e7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "negative--GroundUncovered",
+      "caseName": "negative",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420ba0f1c21884057a4d9f00bb1305d760d094000d18b18f03a0a2b07fef32f4b91040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420de671a8bc46ff8f8bc4b510a3538232a44a4085e8db3e183270223e735ce2b77",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/registry.cenc.hex",
+          "sha256": "192b0bc5c6bb25a0db5e6ab68cb855a575f9f011e02d7461b850d27b58f546c9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/parameters.cenc.hex",
+          "sha256": "58f8f942942ecc4ae86ace5fd3001a980f59d9796db47d05becf9888e732b666"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "101b4b5d9b0cc574c7071116bcb4cdd1b7e2ca0e765dcc0f067a05ec6fe9dd22"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "negative--FamilyNormalized",
+      "caseName": "negative",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104208dbc5edf3e440a8ab6de715cecf0ec1e73d1afe523f1528b386e5a333ff53b67040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209dd1d68ac3ef10b5bea0bb114d8d7a65649bd092bf215aacacf1b264d3a5790f",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/registry.cenc.hex",
+          "sha256": "0e4df83562bc81957b26290a1da22a11fcefca22e55bcfcbf7dc52c73f8a9367"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "2df332fbea71a9d310ef7025891e2889a458052d3473adf7309c41945e507f93"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "442a408a5afb1296f2bf13f4dcd15609ebb995d40d70394e686a2007ffe8be5f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/negative--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "unavailable--GroundAggregate",
+      "caseName": "unavailable",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b6e98f5a6772c484eec36119406f0340f434b9ba9e64a76b55fda17f6f544ddd040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420ac9cc3f675330ba8db4d6ddcad64e489502a10c420f290638dd2e6c271359bca",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/registry.cenc.hex",
+          "sha256": "743826bb4a8bd581c1e103dab9d48340d4083a28823b2b2af7e18e4c61cce9c3"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/parameters.cenc.hex",
+          "sha256": "4a7ca63ac979f2559632efb7c0ac7e45d8857e409655ba9b598b817d4709489a"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "b3df18d2a94933ec3c2f7437534c32ffff7947b8686f79cea702d1be43c5ad02"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "unavailable--GroundPairwise",
+      "caseName": "unavailable",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104202f2416a43a87f7c08de12f7f407a16ce7079610f0f2cdfdb462e69fd2806741c040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042094be659965df1c669d8a1a7dcda3d586763eed07b70e91a95fbe812953cf502c",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/registry.cenc.hex",
+          "sha256": "0a6d66cd4287d5a21879db38bf6ad317038913e97bbfa3b5cb99b6d01dfb35e7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/parameters.cenc.hex",
+          "sha256": "04209b23ec1157783b1b4b42298d858fbc68551a86bba0e68d2a1a8abd073391"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "3c5b02c7adf1fc2ff48e3187f8685a5c561a8e54464dc5731988568e3c802448"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "unavailable--GroundUncovered",
+      "caseName": "unavailable",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104200ebe55002a63add8ba4d2a19dc81ae89cba0c46e596b5be09873fdced2d4cd3a040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104203d809dd2e7c56d057883dd741a67b2e58eb9ad2bd74e3d27a63b813c81434337",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/registry.cenc.hex",
+          "sha256": "dee30ac7cc43b4d7882b2b37a029d5cf8b3c6e1e27b8ded73651e48be7016146"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/parameters.cenc.hex",
+          "sha256": "66c7c37890b6c28c603a0670380c9ba0f9c322d195c8424ac17bba18404ad8f2"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "3f693c3c0d79426e76f8e4ab2f144f3b2d5ac56406c90bb28e67d9d3d297a0b1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "unavailable--FamilyNormalized",
+      "caseName": "unavailable",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104206956b0a1dd24be607d42f16ab3c2bba726ba49e65a36b96336b96ed88d801438040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042006906224905f212306b5e9764f3a84a9e1aeee7a38938b88322d88aa350202d3",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/registry.cenc.hex",
+          "sha256": "2d10c1d02a31903dd1924e26117c8ddc6cb0e3b9bbeede66ae92f3597bd68095"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "5a8cd1da2c7c1a0c59950f3b825d71f86aab27aeb9bef3647ae2bcd690b5e81c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "f03ec4252563348862dc4d4bc8576f0128e7c971b30033809b46b0ebc6d2bbd3"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/unavailable--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "known-zero--GroundAggregate",
+      "caseName": "known-zero",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b290a09053a2120660ef4640b2ab50a16d3c27ccb16dc9a0e89f435a3aaa11a3040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202d34ff9f66ea8bd63c7ec1b2312d2afeb202f7041f0e2da4fa09ee039ba76bff",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/registry.cenc.hex",
+          "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/parameters.cenc.hex",
+          "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "known-zero--GroundPairwise",
+      "caseName": "known-zero",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c8fda81961c5f5f39767707cc95647e801117596b801fe101b8b96b610a3d1e4040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420d5992ce3836aa95c8604c09837d0558f304efd70d45347016e840c01f0ec47eb",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/registry.cenc.hex",
+          "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/parameters.cenc.hex",
+          "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "known-zero--GroundUncovered",
+      "caseName": "known-zero",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104201ab04f3fee5a987c70a8b42fe6d3b8c92363a7733ebe0babb4d40201e1159a3f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209c9aaf6c03d9da8d3be215a5ff74c270de485313f4bd719021ad89368f749270",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/registry.cenc.hex",
+          "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/parameters.cenc.hex",
+          "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "known-zero--FamilyNormalized",
+      "caseName": "known-zero",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042068b8d3c1234a35a7f32c46027b42e63473f4810a505bd2616865990f90652551040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209d58206d795a93bf20340694f5602ccfbe162dfa74c10c1becc5d515dabb4192",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/registry.cenc.hex",
+          "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "40f846e46ac7c847580034b157bf8f3eb8fa1f4b5fe370df691c10b0a7e2da1c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/known-zero--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "capacity-zero--GroundAggregate",
+      "caseName": "capacity-zero",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104201b0700e07f56d3a39e3b5b9cbe42c4b85fa65bfac03cacdead424bfcfad0dafd040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042027e18050deedcc4ad6449f7005854328d15b16ae763bcd6bc0abfc2ac27ca85a",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/registry.cenc.hex",
+          "sha256": "efde25f01222dc77cfb210ebaa21aaff620d9f9a083abd61a1e942340e6af8b5"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/parameters.cenc.hex",
+          "sha256": "72f4764b6f0dfb25f01974cd25744d1b7f3d702b1da36a3bdd23851a68d1a5eb"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "5ecf7ee5576be7bffa834b9dc1db2e2490d3c3f41d0af0bd73093c560300ff70"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "capacity-zero--GroundPairwise",
+      "caseName": "capacity-zero",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420fdb627b0bafeacc69281c95d0c38ffea4701ff3755840c26dcf930f854edbf69040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202e00e6b763653fcf12b0d629172cf823f9d6640f915d02f9a9171953bf99fd76",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/registry.cenc.hex",
+          "sha256": "da0f76e3b2e49d2fe178f91b5b37fd07947553d56386ca3f7da35d68bc0fd6d7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/parameters.cenc.hex",
+          "sha256": "ccde1334aade6aecc740f8700b5c50ccfa8506807dc8004fe0cd8e869d8f7ea8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "56dda48775cc76cda073a662284b2b221adc6b3a6b947ef17535cb31ffae9408"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "capacity-zero--GroundUncovered",
+      "caseName": "capacity-zero",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420d47c852fe317f90111f8c7c914827afc0ed524cd4a54f0145fdc3f821e6dabba040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042000cf73392ee24325117c5c5e6133be7082c6cb5f6db4dc1ce41f795ab736c37b",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/registry.cenc.hex",
+          "sha256": "552ade98ef9e04f8b6b6f7cf1cedb40a6089be117f9e605936cc2fc0a019df3d"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/parameters.cenc.hex",
+          "sha256": "7380620e011eb3ab51fff07259a7e7ca231666b23f163b73ef1578910c9c39e5"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "ba02026c9c72b346599d2d4a276b12201ca946a42d03bfc723f1a31dac0a1c7e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "capacity-zero--FamilyNormalized",
+      "caseName": "capacity-zero",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104200a69061001f28449c73b315a47fa8615129aa6ce06950e3e93e7909f04a8b05c040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104208705cef8e73a9089de9bef8cbea75eb50ba8a09a940c22c3c6fdf7e4a4951c4c",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/registry.cenc.hex",
+          "sha256": "a29da549370ef2c30b6787996e93578ae5c5d85d4f45000d75a8e0c0c3e2b6ec"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "2ecea3363038e2fe22bf786fc3af7a36fd2401e24a1360e633df82e16b8452d9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "523fc1d373d36c89e8e349d5b988348e9e622eb538d96c44ebeb3a71fdc0ad0f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/capacity-zero--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-task--GroundAggregate",
+      "caseName": "no-task",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b290a09053a2120660ef4640b2ab50a16d3c27ccb16dc9a0e89f435a3aaa11a3040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202d34ff9f66ea8bd63c7ec1b2312d2afeb202f7041f0e2da4fa09ee039ba76bff",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/registry.cenc.hex",
+          "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/parameters.cenc.hex",
+          "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-task--GroundPairwise",
+      "caseName": "no-task",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c8fda81961c5f5f39767707cc95647e801117596b801fe101b8b96b610a3d1e4040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420d5992ce3836aa95c8604c09837d0558f304efd70d45347016e840c01f0ec47eb",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/registry.cenc.hex",
+          "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/parameters.cenc.hex",
+          "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-task--GroundUncovered",
+      "caseName": "no-task",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104201ab04f3fee5a987c70a8b42fe6d3b8c92363a7733ebe0babb4d40201e1159a3f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209c9aaf6c03d9da8d3be215a5ff74c270de485313f4bd719021ad89368f749270",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/registry.cenc.hex",
+          "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/parameters.cenc.hex",
+          "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-task--FamilyNormalized",
+      "caseName": "no-task",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042068b8d3c1234a35a7f32c46027b42e63473f4810a505bd2616865990f90652551040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209d58206d795a93bf20340694f5602ccfbe162dfa74c10c1becc5d515dabb4192",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/registry.cenc.hex",
+          "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "8a498cf29b28c9ea58cc12d789b9a906d5dc164c3a95d53a22c1804944ecd1e8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-task--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-body--GroundAggregate",
+      "caseName": "no-body",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420b290a09053a2120660ef4640b2ab50a16d3c27ccb16dc9a0e89f435a3aaa11a3040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104202d34ff9f66ea8bd63c7ec1b2312d2afeb202f7041f0e2da4fa09ee039ba76bff",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/registry.cenc.hex",
+          "sha256": "5f8cf7cc6b111e313d0373be4b7f183d9db23c77f415dfcd7427ba1c5d12fa9f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/parameters.cenc.hex",
+          "sha256": "96251e7ddbac13c3edbc84d6ea1491b601e18d9ce87aa43de32b8864b50a59ed"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "5f109e2d15adf48c3f9c40575c18a05afee4d9349d8fb3162196fcf1f9c99f60"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-body--GroundPairwise",
+      "caseName": "no-body",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420c8fda81961c5f5f39767707cc95647e801117596b801fe101b8b96b610a3d1e4040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420d5992ce3836aa95c8604c09837d0558f304efd70d45347016e840c01f0ec47eb",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/registry.cenc.hex",
+          "sha256": "e4868958cf19afeadc0bbc8026a630ad8b9fa30d819f0b30122b8705408acd09"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/parameters.cenc.hex",
+          "sha256": "e2f80d91009ecd830c8c335081612bcd2a1312dd041c91b41c200b80854e4fe7"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "efab884856029c5e2ba035bd4f6af5f5d80a6d90a4081ca3b66a8f4e8f0df7c9"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-body--GroundUncovered",
+      "caseName": "no-body",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e646964617465020104201ab04f3fee5a987c70a8b42fe6d3b8c92363a7733ebe0babb4d40201e1159a3f040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209c9aaf6c03d9da8d3be215a5ff74c270de485313f4bd719021ad89368f749270",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/registry.cenc.hex",
+          "sha256": "a395b8457a10717787f596de0b7b1c546a91b710693dd553e6c370487d842e3e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/parameters.cenc.hex",
+          "sha256": "1bf36c8d8afe94bcbec621eb30d2f4c068cddfe84cdb86b9dc04271d2216b822"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "16184de254e46f90aaf49d41f9fc2074c4e65c66d4b70a1d6431329024f2ee32"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "no-body--FamilyNormalized",
+      "caseName": "no-body",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042068b8d3c1234a35a7f32c46027b42e63473f4810a505bd2616865990f90652551040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e646964617465020104209d58206d795a93bf20340694f5602ccfbe162dfa74c10c1becc5d515dabb4192",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/registry.cenc.hex",
+          "sha256": "57a8fed863f45e7ed997acf17af280ea0da381ab7541f75fa8e887f9b89417d1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "44da5323a56e0244654a94cdcdfac9fb27345beceb0f9b5307774be7018a4555"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "c6454f95696bf992a24657da72e73343eca0e3dfd9bdd0bef73a11e6391dd53f"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "5acc84498e2e767e7d42d727400f4e4554d30241596118846dae1c464808c969"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/no-body--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked--GroundAggregate",
+      "caseName": "execution-blocked",
+      "law": "GroundAggregate",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420306af88fc4efd8ab2b026826f62059b40711630a2c507cb118a04c57120a97e0040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420c60515cb0cbb4f2aeb8c72452468563be22683296fa07a7de51646d6b050ff45",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/registry.cenc.hex",
+          "sha256": "53d839e77015d8411ae66e242d9f5d9b9b16e274f766ff357dc7833107ffddab"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/parameters.cenc.hex",
+          "sha256": "a4035824c9d7c6a467f99c1d42d9f34ea32746cd69f5a962ce391a79c4ff0a1a"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/model-identity.cenc.hex",
+          "sha256": "2ed673621c67f551510d4fe0bfb0c20986e7ad44ad2204d6ea4c05932c6bfb10"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundAggregate/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked--GroundPairwise",
+      "caseName": "execution-blocked",
+      "law": "GroundPairwise",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420190584677f5b5b9cdfe3435dbc9a72739f5199b8202ef034a5c7cc9a5b9eaa62040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e64696461746502010420c4f3d3d3c98153261dbbae21b152b499d5c44e689cd645c9d2113a138bf674d9",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/registry.cenc.hex",
+          "sha256": "7d367abc4ff2c6e05faf31a06afcb2c5db6d20429a9c41d8430f53c5a31b5a08"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/parameters.cenc.hex",
+          "sha256": "88f34ddf48c196c3751d3f4dc5b6c93c5ed9b0c7e8f9210e9219c550d5ce285e"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/model-identity.cenc.hex",
+          "sha256": "08978a6006b8510fde815d002e07371d7d714d3a10c0d89b88b87a84b53e8125"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundPairwise/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked--GroundUncovered",
+      "caseName": "execution-blocked",
+      "law": "GroundUncovered",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e6469646174650201042019f01d38a4bd0cd4bd4512fef05d98055f7a477603c324090a51d3c58ddc63d7040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042082e784fbeaa65c74d3748c28cf7e78e4db3592cb835deee4c810cdf6e2ccb46d",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/registry.cenc.hex",
+          "sha256": "ddcc4b59a618319e92fa1c47d905cc21e1aa4f151d37125e9bc515c32e51e64b"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/parameters.cenc.hex",
+          "sha256": "7f6fb004b437ff1a885f8312a8172856f132b830f110eed07dee406300465ae8"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/model-identity.cenc.hex",
+          "sha256": "c255da978bed056c0830fce433c319aff47407a3fa04ae260f283ce522be104c"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--GroundUncovered/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked--FamilyNormalized",
+      "caseName": "execution-blocked",
+      "law": "FamilyNormalized",
+      "modelIdentity": "0a670106010105206d756c7469736f757263652d7075626c69632f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420ae5a84f49a7baf086bf46c083d4b7eeefb3b8aa1d4408878104fb4a275dce8ca03010a650102010105246d756c7469736f757263652d706172616d65746572732f302e312d63616e64696461746502010420aabe219824887ba8cb875c0bf3b940d98dbfceef182744c9be75fb41645d346c040105276e756d657269632f6d756c7469736f757263652d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a660102010105226d756c7469736f757263652d72656769737472792f302e312d63616e6469646174650201042007b24907c8166fa5fe32db54e49e27432155638c422861077e739ab074bdcae1",
+      "files": [
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/content.cenc.hex",
+          "sha256": "7cc0a21a531bcd0cf194bfc8115575809251324753ac6cb7956b9e67a62e5e06"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/registry.cenc.hex",
+          "sha256": "4f3abf8eb9a75054d529be6ef4c44151fac59d88f2088199a221d41f96badff3"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/parameters.cenc.hex",
+          "sha256": "164403fd0d91e9271ddce1ee553ca2b5fc04b8daab20ae09a7988ecd8c222dd3"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/model-identity.cenc.hex",
+          "sha256": "18cabc0e14f452c85a250c20ff4a3f9e27d02b6c1edfd4bb2bd022351c2b61c1"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/initial-state.cenc.hex",
+          "sha256": "ab7d551ff76fb5df67c621e5924d1a7b91f501c9e1a157fae78e31aaec342c90"
+        },
+        {
+          "path": "docs/planning/campaign3-multisource-model-rev2/execution-blocked--FamilyNormalized/ordered-inputs.cenc.hex",
+          "sha256": "b28af57a1b1dc00aa082a8e23fdca14c2f89ec2fb36cff328a57a4523a988839"
+        }
+      ]
+    }
+  ],
+  "contractSha256": "fbc5078c9957e82d6a69721499bfcfb3dbe6e816eef4ff37739b2bcd90633c14",
+  "allocationSha256": "07e9f022572973d641fd25c4437a49d27aaaa100567d7d780f97b6d5fd650f40"
+}

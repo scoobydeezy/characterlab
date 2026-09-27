@@ -1,0 +1,384 @@
+{
+  "status": "PASS",
+  "scope": "47 native Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation runtime. Data-only native public factory routing; not a psychological qualification.",
+  "dispositions": [
+    {
+      "path": "src/campaign3/affectRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "787bad8826cd24c2cdd6323a76cfd6a194e9c7a2f1757fcc00e89a6ab3267fb0",
+      "preservedSha256": "787bad8826cd24c2cdd6323a76cfd6a194e9c7a2f1757fcc00e89a6ab3267fb0"
+    },
+    {
+      "path": "src/campaign3/agencyRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "8b0ce8140c91cb27292eb16c4a46cf6d09af38066a4ec34a17ed6945b77262ef",
+      "preservedSha256": "8b0ce8140c91cb27292eb16c4a46cf6d09af38066a4ec34a17ed6945b77262ef",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/agency-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/attachmentRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "9a3db1e1efbfdcc765b092de9f1e3bd8d01883158ac920a9107c610f8fa1fdb6",
+      "preservedSha256": "9a3db1e1efbfdcc765b092de9f1e3bd8d01883158ac920a9107c610f8fa1fdb6",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/attachment-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/attentionRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "Exactly one admitted source instant; all saved fields scheduler-owned, empty continuation. During settlement scheduler queue reads reject; after commit the queue is empty, so another call cannot reset live ingress.",
+      "sourceSha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c",
+      "preservedSha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c"
+    },
+    {
+      "path": "src/campaign3/attributedRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "34ac52d44cd4c4ead9d95215f6784087043f711042972eac5cef37a14ea273ef",
+      "preservedSha256": "34ac52d44cd4c4ead9d95215f6784087043f711042972eac5cef37a14ea273ef",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/attributed-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/beliefRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "89592b46d7b8ab983616f9bc5cd99c1a6066707be172f2b64efe866ce499a6cd",
+      "preservedSha256": "89592b46d7b8ab983616f9bc5cd99c1a6066707be172f2b64efe866ce499a6cd"
+    },
+    {
+      "path": "src/campaign3/betrayalRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "1abf6a3aeb82e4cb4b7c36c3895d279029f2437c6bb67969fcbaa24133bf2380",
+      "preservedSha256": "1abf6a3aeb82e4cb4b7c36c3895d279029f2437c6bb67969fcbaa24133bf2380",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/betrayal-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/biologyPublicRuntime.ts",
+      "classification": "EXPOSED_REPAIRED",
+      "reason": "Raw continuation ledger published after scheduler commit; whole-wrapper barrier now rejects save and snapshot through cleanup.",
+      "sourceSha256": "811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4",
+      "preservedSha256": "7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/biologyPublic-probe-rev2.json"
+    },
+    {
+      "path": "src/campaign3/commitRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "9fd09260cb09071ea63b51a198a46b47630413256c6db7c01d92019361b5ced9",
+      "preservedSha256": "9fd09260cb09071ea63b51a198a46b47630413256c6db7c01d92019361b5ced9",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/commit-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/communicationRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "7ada22ba5ae07ccd4dd0f64c4101a199db23c4a91eab1b7bc56fc06c62349e9f",
+      "preservedSha256": "7ada22ba5ae07ccd4dd0f64c4101a199db23c4a91eab1b7bc56fc06c62349e9f",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/communication-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/controlRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "465cb907b24f2def46eb53d70e9e37a2405234ca6f39d07bb555c1c49d2877ec",
+      "preservedSha256": "465cb907b24f2def46eb53d70e9e37a2405234ca6f39d07bb555c1c49d2877ec"
+    },
+    {
+      "path": "src/campaign3/decisionRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "fc5877e31a3371574d3c49a1d0017e17f590d73c56d1dba368e00342853100ad",
+      "preservedSha256": "fc5877e31a3371574d3c49a1d0017e17f590d73c56d1dba368e00342853100ad",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/decision-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/delayedRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "5f785fe40ec6b4e4af0f6d2883da5c92d5ca1c381dc61feb53562c3fc1d1ed53",
+      "preservedSha256": "5f785fe40ec6b4e4af0f6d2883da5c92d5ca1c381dc61feb53562c3fc1d1ed53",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/delayed-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "classification": "EXPOSED_REPAIRED",
+      "reason": "Second settlement overlapped prior ingress cleanup and failed the run. Whole-wrapper settlement/read barrier repairs lifecycle without changing serial bytes.",
+      "sourceSha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313",
+      "preservedSha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/embodied-concurrent-rev2.json"
+    },
+    {
+      "path": "src/campaign3/emotionalDisplayRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "413a99295c7b8afa67aa2e9a7665344ab1d6f1b9353bfa9912460a0b9086643d",
+      "preservedSha256": "413a99295c7b8afa67aa2e9a7665344ab1d6f1b9353bfa9912460a0b9086643d",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/emotionalDisplay-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/epiRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "9d1431ec974be7a338dbdca8fc9e20101d39f1b39fa4ade82154298a5d90e7c1",
+      "preservedSha256": "9d1431ec974be7a338dbdca8fc9e20101d39f1b39fa4ade82154298a5d90e7c1"
+    },
+    {
+      "path": "src/campaign3/familiarValenceRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "2423186ff1f2d8fe8be5e32173259208817266d93708b11c0f0532753ec67f4b",
+      "preservedSha256": "2423186ff1f2d8fe8be5e32173259208817266d93708b11c0f0532753ec67f4b",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/familiarValence-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/familiarityRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "a215e802a1d9d9d47bb072e9f38fe17a103994e7db4ff301341ee4c907ba0d45",
+      "preservedSha256": "a215e802a1d9d9d47bb072e9f38fe17a103994e7db4ff301341ee4c907ba0d45",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/familiarity-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/fatigueRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "62b05310126a6eabda7ff6218af5780ff7de51e4a4f7db6c038b554347998267",
+      "preservedSha256": "62b05310126a6eabda7ff6218af5780ff7de51e4a4f7db6c038b554347998267"
+    },
+    {
+      "path": "src/campaign3/fearGuiltRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "ea3fc418ffc3b2618e067e26e6b0ae0368a336bade4ee62364ec3cda4c9b423a",
+      "preservedSha256": "ea3fc418ffc3b2618e067e26e6b0ae0368a336bade4ee62364ec3cda4c9b423a",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/fearGuilt-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/goalStrategyRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "aaadf7382c4e1586d15c0e29171eeb514c07d000c681dab28a930a8f139a169e",
+      "preservedSha256": "aaadf7382c4e1586d15c0e29171eeb514c07d000c681dab28a930a8f139a169e",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/goalStrategy-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/griefRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "e1bd295b799192d906dc807c10053e7b383dd224065648239e60bff32f15deff",
+      "preservedSha256": "e1bd295b799192d906dc807c10053e7b383dd224065648239e60bff32f15deff",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/grief-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/habitRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "453e3925ac5d2f7aba36d523bd6dbe041a53f92e6e6b2c32ec2f0c069703887b",
+      "preservedSha256": "453e3925ac5d2f7aba36d523bd6dbe041a53f92e6e6b2c32ec2f0c069703887b"
+    },
+    {
+      "path": "src/campaign3/hearsayRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "ddf83c4b348467a889fe35be5233d11fe24b8356bcb3d3aeb5c70240f9783485",
+      "preservedSha256": "ddf83c4b348467a889fe35be5233d11fe24b8356bcb3d3aeb5c70240f9783485",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/hearsay-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/identityBeliefRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "Already-qualified whole-wrapper barrier; prior native belief closure and exact failure/fix receipts preserved.",
+      "sourceSha256": "f0e4ad1da5f97d229de20156bc18100e162647803e6cacbb534de130e4cc85db",
+      "preservedSha256": "f0e4ad1da5f97d229de20156bc18100e162647803e6cacbb534de130e4cc85db"
+    },
+    {
+      "path": "src/campaign3/identityBiologyRuntime.ts",
+      "classification": "EXPOSED_REPAIRED",
+      "reason": "Raw continuation ledger published after scheduler commit; whole-wrapper barrier now rejects save and snapshot through cleanup.",
+      "sourceSha256": "a619e6891b3cdb5cced05ce90273fca445c07bd065340157b44faee099bbd5db",
+      "preservedSha256": "06af47efb3d5d3860cacf8230df906ca3ce937dacca37a75da9644450a28d8db",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/identityBiology-probe-rev2.json"
+    },
+    {
+      "path": "src/campaign3/identityTaskRuntime.ts",
+      "classification": "EXPOSED_REPAIRED",
+      "reason": "Raw continuation ledger published after scheduler commit; whole-wrapper barrier now rejects save and snapshot through cleanup.",
+      "sourceSha256": "5cf7d6bcaecb258da546a5d3a9997b18254fafeecc0bdc26b5430e1ba94c9b4f",
+      "preservedSha256": "d7c10c8c5d2b075eff9db5413a584691ea46424598a753a06586fda9391c36c2",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/identityTask-probe-rev2.json"
+    },
+    {
+      "path": "src/campaign3/interpretationRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "1122f5f779c667f75baf038cc1baac021587e5d63680b5dbc6eefcc596a5ee4b",
+      "preservedSha256": "1122f5f779c667f75baf038cc1baac021587e5d63680b5dbc6eefcc596a5ee4b",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/interpretation-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/learnRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "6cd4265d73082375adf00a3909ec0da40d9455a4e7a753a384451c2bec233151",
+      "preservedSha256": "6cd4265d73082375adf00a3909ec0da40d9455a4e7a753a384451c2bec233151"
+    },
+    {
+      "path": "src/campaign3/longitudinalRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "Continuation metadata is constant empty; addressed RNG is reconstructed by complete-prefix replay and is not read by public snapshots/save/view. Active settlement guard prevents reuse before cleanup.",
+      "sourceSha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75",
+      "preservedSha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/longitudinal-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/lyingRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "a1f9acf4cfcb12fbe076c79f7818eff5667ac78805ddaf03e06be0b93f06bc97",
+      "preservedSha256": "a1f9acf4cfcb12fbe076c79f7818eff5667ac78805ddaf03e06be0b93f06bc97",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/lying-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/multisourceRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "MultisourceRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "713fc318209e559dda95ba5846379d27cc3e63b345496b11a54884e928bd6af6",
+      "preservedSha256": "713fc318209e559dda95ba5846379d27cc3e63b345496b11a54884e928bd6af6",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/multisource-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/performanceRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "9e548e5866824f61ee00f95af41e2d67041db6a7ccc31993d38fb2b5b7220184",
+      "preservedSha256": "9e548e5866824f61ee00f95af41e2d67041db6a7ccc31993d38fb2b5b7220184",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/performance-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/personGoalRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "529c3c767b02d0221a9cad8ec59c16566efd0173502e58ce82214682f04b79d5",
+      "preservedSha256": "529c3c767b02d0221a9cad8ec59c16566efd0173502e58ce82214682f04b79d5",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/personGoal-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/personstateRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "83dd5183361e0f0d3564fac91157f6bbc4092126b0044581161e2c4cdeffd87f",
+      "preservedSha256": "83dd5183361e0f0d3564fac91157f6bbc4092126b0044581161e2c4cdeffd87f",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/personstate-probe-rev2.json"
+    },
+    {
+      "path": "src/campaign3/procrastinationRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "be226037a0fd57a8a3fb489d9e560a0b41c98d6868f70f90a5b8e4138b7a5ba4",
+      "preservedSha256": "be226037a0fd57a8a3fb489d9e560a0b41c98d6868f70f90a5b8e4138b7a5ba4"
+    },
+    {
+      "path": "src/campaign3/reappraisalRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "4e66377dd788a990a6a2507db7f063e9e49d3d1019745a413b242fd81f524b62",
+      "preservedSha256": "4e66377dd788a990a6a2507db7f063e9e49d3d1019745a413b242fd81f524b62",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/reappraisal-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/reasonRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "92d195c6bfa8b2bc048acc49c54d4ad0d0e4971f738652393913be40c233bfd8",
+      "preservedSha256": "92d195c6bfa8b2bc048acc49c54d4ad0d0e4971f738652393913be40c233bfd8",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/reason-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/receivingRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "f64bdcf81f3b6dcddceb396f18dca34c94072c6db8f8d78874e34086bf690ca4",
+      "preservedSha256": "f64bdcf81f3b6dcddceb396f18dca34c94072c6db8f8d78874e34086bf690ca4",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/receiving-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/recollectionRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "a054c0807dda02f9e8921ea33697f73c3dfc671fba86aba3cbf2d0d05400936f",
+      "preservedSha256": "a054c0807dda02f9e8921ea33697f73c3dfc671fba86aba3cbf2d0d05400936f",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/recollection-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/relAttributionRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "e610fe07708d7dc637d08f000fb5cb0ab05692ac57c8da85c14582c7502e39de",
+      "preservedSha256": "e610fe07708d7dc637d08f000fb5cb0ab05692ac57c8da85c14582c7502e39de",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/relAttribution-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/relDimensionsRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "CognitiveRandomSession.committedAddressKeys rejects while the oracle is live, including scheduler-to-wrapper window. Snapshots that omit the ledger expose only scheduler-committed values.",
+      "sourceSha256": "4c1390c5cae559967310b948c966f6e2504e5342aef12a86a7300e527add3872",
+      "preservedSha256": "4c1390c5cae559967310b948c966f6e2504e5342aef12a86a7300e527add3872",
+      "probe": "docs/planning/public-wrapper-quiescence-rev1/relDimensions-probe-rev1.json"
+    },
+    {
+      "path": "src/campaign3/relationshipRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "09b621ab50db7518588451d620a307a6ae9fbf02d924bc88b52b5603f6e77d94",
+      "preservedSha256": "09b621ab50db7518588451d620a307a6ae9fbf02d924bc88b52b5603f6e77d94"
+    },
+    {
+      "path": "src/campaign3/ruminationRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "b2de733502d739e94f76309beb0c2c1b92ad91e668f71c6a606b95284c1106de",
+      "preservedSha256": "b2de733502d739e94f76309beb0c2c1b92ad91e668f71c6a606b95284c1106de"
+    },
+    {
+      "path": "src/campaign3/skillRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "aba7c14136214f9d3bfc975e050b2f345d85653a43c3731d802cdb79365914fe",
+      "preservedSha256": "aba7c14136214f9d3bfc975e050b2f345d85653a43c3731d802cdb79365914fe"
+    },
+    {
+      "path": "src/campaign3/socialRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "329671a22fac47a3cdb299a0cf993d4d43ee0414e7f28a0a14c6bb88894a6e74",
+      "preservedSha256": "329671a22fac47a3cdb299a0cf993d4d43ee0414e7f28a0a14c6bb88894a6e74"
+    },
+    {
+      "path": "src/campaign3/workRuntime.ts",
+      "classification": "INAPPLICABLE_TO_SPLIT_PUBLICATION",
+      "reason": "All saved/view state is scheduler-owned; continuation metadata is constant empty. Active wrapper guard rejects overlapping settlement before scratch-state reset.",
+      "sourceSha256": "d7a5efd017c8891217d401d30061b0378d34a23218c98d0aa38dd6591ec621b6",
+      "preservedSha256": "d7a5efd017c8891217d401d30061b0378d34a23218c98d0aa38dd6591ec621b6"
+    },
+    {
+      "path": "src/campaign3/generalSourceRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "Manual Save132 producer used by generalFactory/generalCandidateRun: bookkeeping commits in scheduler adaptation.beforeCommit and cleanup in adaptation.close before the scheduler releases quiescence.",
+      "sourceSha256": "6cd8bb4bcf35bd85f42a352a94a94a7982d41bbb37b80d23299eb4b9b73507a9"
+    },
+    {
+      "path": "src/campaign2/adaptationRuntime.ts",
+      "classification": "INDEPENDENTLY_GUARDED",
+      "reason": "Shared Campaign2 factories: continuation/state bookkeeping is committed and closed inside scheduler adaptation hooks, not in an awaiting outer wrapper.",
+      "sourceSha256": "f3bee081d6465027d67e68f864c00dd5b7902eda699da53df7b9a6a2216ddbac"
+    }
+  ],
+  "counts": {
+    "INAPPLICABLE_TO_SPLIT_PUBLICATION": 15,
+    "INDEPENDENTLY_GUARDED": 30,
+    "EXPOSED_REPAIRED": 4
+  }
+}

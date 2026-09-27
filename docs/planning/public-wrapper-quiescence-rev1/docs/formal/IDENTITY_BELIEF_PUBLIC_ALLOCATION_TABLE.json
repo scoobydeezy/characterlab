@@ -1,0 +1,317 @@
+{
+  "version": "identity-belief-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-26",
+  "namespace": 1155,
+  "records": [
+    {
+      "typeId": 1443,
+      "name": "IdentityBeliefProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Source",
+          "type": "ref:1427",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1444,
+      "name": "IdentityBeliefOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Source",
+          "type": "ref:1428",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Channels",
+          "type": {
+            "list": {
+              "enum": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goals",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1445,
+      "name": "IdentityBeliefEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Target",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Ticket",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Polarity",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1446,
+      "name": "IdentityBeliefState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "History",
+          "type": {
+            "list": "ref:1445",
+            "min": 0,
+            "max": 4
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Estimate",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Count",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1447,
+      "name": "IdentityBeliefRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "ByHolder",
+          "type": {
+            "map": [
+              {
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "ref:1446"
+            ],
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1448,
+      "name": "IdentityBeliefObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Evidence",
+          "type": {
+            "list": "ref:1445",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1449,
+      "name": "IdentityBeliefUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Belief",
+          "type": "ref:1446",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1450,
+      "name": "IdentityBeliefAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Holder",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Estimate",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Adverse",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Affect",
+          "type": "data",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

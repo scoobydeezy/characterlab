@@ -1,0 +1,735 @@
+{
+  "version": "reason-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1160,
+  "records": [
+    {
+      "typeId": 913,
+      "name": "ReasonProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 914,
+      "name": "ReasonContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Contexts",
+          "type": {
+            "list": {
+              "list": "ref:916",
+              "min": 0,
+              "max": 6
+            },
+            "min": 0,
+            "max": 32
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "TrainingDice",
+          "type": "ref:437",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 915,
+      "name": "ReasonOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Values",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Hidden",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 916,
+      "name": "ReasonDescription",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Option",
+          "type": "ref:395",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Motive",
+          "type": "id:1040",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Referent",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Role",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Gain",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Channels",
+          "type": {
+            "set": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 917,
+      "name": "ReasonObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Channel",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Value",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 918,
+      "name": "ReasonFrozen",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1160",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Samples",
+          "type": {
+            "list": "ref:917",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 919,
+      "name": "ReasonSignal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Description",
+          "type": "ref:916",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Strength",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Basis",
+          "type": "ref:400",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Samples",
+          "type": {
+            "list": "ref:917",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "History",
+          "type": "ref:414",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 920,
+      "name": "ReasonRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1160",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Signals",
+          "type": {
+            "list": "ref:919",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Rejected",
+          "type": {
+            "list": "ref:927",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 921,
+      "name": "ReasonCoverage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Description",
+          "type": "ref:916",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Magnitude",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Overlap",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Effective",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Sign",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Role",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 922,
+      "name": "ReasonKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Option",
+          "type": "ref:395",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Motive",
+          "type": "id:1040",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Referent",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Direction",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Description",
+          "type": "id:1027",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 923,
+      "name": "ReasonNucleus",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "type": "ref:922",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Base",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Standing",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Situation",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Context",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Relevance",
+          "type": "nonnegativeQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Die",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "StandingModifier",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "SituationModifier",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "ContextModifier",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Distribution",
+          "type": "ref:424",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Coverage",
+          "type": {
+            "list": "ref:921",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 924,
+      "name": "ReasonCompilation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1160",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:920",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:923",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Rejected",
+          "type": {
+            "list": "ref:928",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 925,
+      "name": "ReasonIdentityState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Histories",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:414"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 926,
+      "name": "ReasonStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 927,
+      "name": "ReasonSourceRejection",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Description",
+          "type": "ref:916",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Reason",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 928,
+      "name": "ReasonGroupRejection",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "type": "ref:922",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Reason",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Relevance",
+          "type": "nonnegativeQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Base",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Coverage",
+          "type": {
+            "list": "ref:921",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 929,
+      "name": "ReasonIdentityApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1160",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:414",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:414",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Qualification",
+          "type": "ref:429",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

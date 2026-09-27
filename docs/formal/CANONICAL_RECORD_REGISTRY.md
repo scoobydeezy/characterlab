@@ -487,3 +487,5 @@ Counters1442/16. Task and biological producer kinds and source-specific channels
 ## Identity belief public successor — 2026-09-26
 
 Records1443..1450/schema1 allocated before implementation by IDENTITY_BELIEF_PUBLIC_ALLOCATION_TABLE.json under IDENTITY_BELIEF_PUBLIC_CONTRACT.md. Reuse1155; counters1450/8. Independent holder leaves; prior schemas unchanged.
+
+Records1451..1458/schema1 allocated before implementation by DISPOSITION_PUBLIC_ALLOCATION_TABLE.json under DISPOSITION_PUBLIC_CONTRACT.md. Reuse1155; counters1458/8. Immutable constitution has no writer; separate plastic authority; predecessor schemas unchanged.

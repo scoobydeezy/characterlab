@@ -1,0 +1,1480 @@
+{
+  "version": "multisource-public-allocation/0.1-candidate",
+  "status": "PERMANENT AND FROZEN",
+  "records": [
+    {
+      "typeId": 707,
+      "schemaVersion": 1,
+      "name": "MultisourceReserveParameters",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "ref:644"
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "required": true,
+          "type": "positiveQ"
+        },
+        {
+          "id": 3,
+          "name": "Rate",
+          "required": true,
+          "type": "nonnegativeQ"
+        }
+      ]
+    },
+    {
+      "typeId": 708,
+      "schemaVersion": 1,
+      "name": "MultisourceTaskBinding",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Task",
+          "required": true,
+          "type": "ref:371"
+        },
+        {
+          "id": 2,
+          "name": "Spec",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 3,
+          "name": "Instruction",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 4,
+          "name": "Motive",
+          "required": true,
+          "type": "ref:392"
+        },
+        {
+          "id": 5,
+          "name": "Workspace",
+          "required": true,
+          "type": "ref:378"
+        },
+        {
+          "id": 6,
+          "name": "Concern",
+          "required": true,
+          "type": "ref:385"
+        }
+      ]
+    },
+    {
+      "typeId": 709,
+      "schemaVersion": 1,
+      "name": "MultisourceDescriptionDefinition",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 2,
+          "name": "Ground",
+          "required": true,
+          "type": "ref:494"
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 4,
+          "name": "Instruction",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 5,
+          "name": "Signal",
+          "required": true,
+          "type": "id:1045"
+        },
+        {
+          "id": 6,
+          "name": "Channels",
+          "required": true,
+          "type": {
+            "list": "id:1005",
+            "min": 1,
+            "max": 2
+          }
+        },
+        {
+          "id": 7,
+          "name": "Threshold",
+          "required": true,
+          "type": "positiveQ"
+        },
+        {
+          "id": 8,
+          "name": "Direction",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 710,
+      "schemaVersion": 1,
+      "name": "MultisourceModelProfile",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "required": true,
+          "type": "id:1000"
+        },
+        {
+          "id": 2,
+          "name": "Holder",
+          "required": true,
+          "type": "id:1002"
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "required": true,
+          "type": {
+            "list": "ref:708",
+            "min": 1,
+            "max": 2
+          }
+        },
+        {
+          "id": 4,
+          "name": "Descriptions",
+          "required": true,
+          "type": {
+            "list": "ref:709",
+            "min": 0,
+            "max": 4
+          }
+        },
+        {
+          "id": 5,
+          "name": "Reserves",
+          "required": true,
+          "type": {
+            "list": "ref:707",
+            "min": 3,
+            "max": 3
+          }
+        },
+        {
+          "id": 6,
+          "name": "Channels",
+          "required": true,
+          "type": "ref:648"
+        },
+        {
+          "id": 7,
+          "name": "Capacity",
+          "required": true,
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "name": "Law",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        {
+          "id": 9,
+          "name": "Dice",
+          "required": true,
+          "type": "ref:437"
+        },
+        {
+          "id": 10,
+          "name": "Arbitration",
+          "required": true,
+          "type": "ref:440"
+        },
+        {
+          "id": 11,
+          "name": "Execution",
+          "required": true,
+          "type": "ref:434"
+        },
+        {
+          "id": 12,
+          "name": "Work",
+          "required": true,
+          "type": "ref:133"
+        },
+        {
+          "id": 13,
+          "name": "BodyCriterion",
+          "required": true,
+          "type": "id:1027"
+        }
+      ]
+    },
+    {
+      "typeId": 711,
+      "schemaVersion": 1,
+      "name": "MultisourceStageRegistration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Ordinal",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 2,
+          "name": "Event",
+          "required": true,
+          "type": "id:1001"
+        },
+        {
+          "id": 3,
+          "name": "Phase",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 4,
+          "name": "Inputs",
+          "required": true,
+          "type": {
+            "list": "u",
+            "min": 1,
+            "max": 2
+          }
+        },
+        {
+          "id": 5,
+          "name": "Output",
+          "required": true,
+          "type": "u"
+        },
+        {
+          "id": 6,
+          "name": "Reads",
+          "required": true,
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Writes",
+          "required": true,
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "id": 8,
+          "name": "Owner",
+          "required": false,
+          "type": "id:1025"
+        }
+      ]
+    },
+    {
+      "typeId": 712,
+      "schemaVersion": 1,
+      "name": "MultisourceOpportunity",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "required": true,
+          "type": "id:1000"
+        },
+        {
+          "id": 2,
+          "name": "Profile",
+          "required": true,
+          "type": "id:1027"
+        }
+      ]
+    },
+    {
+      "typeId": 713,
+      "schemaVersion": 1,
+      "name": "MultisourceObserved",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Original",
+          "required": true,
+          "type": "ref:712"
+        },
+        {
+          "id": 3,
+          "name": "Observer",
+          "required": true,
+          "type": "id:1000"
+        },
+        {
+          "id": 4,
+          "name": "Holder",
+          "required": true,
+          "type": "id:1002"
+        },
+        {
+          "id": 5,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 6,
+          "name": "Samples",
+          "required": true,
+          "type": {
+            "list": {
+              "oneOf": [
+                "ref:461",
+                "ref:463"
+              ]
+            },
+            "min": 3,
+            "max": 6
+          }
+        },
+        {
+          "id": 7,
+          "name": "Declarations",
+          "required": true,
+          "type": {
+            "list": "ref:598",
+            "min": 3,
+            "max": 6
+          }
+        },
+        {
+          "id": 8,
+          "name": "Experience",
+          "required": false,
+          "type": "id:1106"
+        }
+      ]
+    },
+    {
+      "typeId": 714,
+      "schemaVersion": 1,
+      "name": "MultisourceFrozen",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Observed",
+          "required": true,
+          "type": "ref:713"
+        },
+        {
+          "id": 3,
+          "name": "Experience",
+          "required": false,
+          "type": "ref:227"
+        }
+      ]
+    },
+    {
+      "typeId": 715,
+      "schemaVersion": 1,
+      "name": "MultisourceSelectedGroup",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Signal",
+          "required": true,
+          "type": "id:1045"
+        },
+        {
+          "id": 2,
+          "name": "Samples",
+          "required": true,
+          "type": {
+            "list": "ref:461",
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 716,
+      "schemaVersion": 1,
+      "name": "MultisourceSelected",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Selection",
+          "required": true,
+          "type": "id:1143"
+        },
+        {
+          "id": 2,
+          "name": "Frozen",
+          "required": true,
+          "type": "ref:714"
+        },
+        {
+          "id": 3,
+          "name": "Groups",
+          "required": true,
+          "type": {
+            "list": "ref:715",
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "id": 4,
+          "name": "Audit",
+          "required": true,
+          "type": {
+            "list": "ref:602",
+            "min": 3,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 717,
+      "schemaVersion": 1,
+      "name": "MultisourceTaskBatch",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Selected",
+          "required": true,
+          "type": "ref:716"
+        },
+        {
+          "id": 3,
+          "name": "Tasks",
+          "required": true,
+          "type": {
+            "list": "ref:403",
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 718,
+      "schemaVersion": 1,
+      "name": "MultisourceAssessment",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Description",
+          "required": true,
+          "type": "id:1027"
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "name": "Interval",
+          "required": false,
+          "type": "ref:462"
+        },
+        {
+          "id": 4,
+          "name": "Strength",
+          "required": false,
+          "type": "signedUnitQ"
+        },
+        {
+          "id": 5,
+          "name": "Basis",
+          "required": false,
+          "type": "ref:400"
+        },
+        {
+          "id": 6,
+          "name": "Samples",
+          "required": false,
+          "type": {
+            "list": "ref:461",
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 719,
+      "schemaVersion": 1,
+      "name": "MultisourceSourceOutput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Tasks",
+          "required": true,
+          "type": "ref:717"
+        },
+        {
+          "id": 3,
+          "name": "Assessments",
+          "required": true,
+          "type": {
+            "list": "ref:718",
+            "min": 0,
+            "max": 4
+          }
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "required": true,
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 720,
+      "schemaVersion": 1,
+      "name": "MultisourceRawKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Option",
+          "required": true,
+          "type": "ref:395"
+        },
+        {
+          "id": 2,
+          "name": "Ground",
+          "required": true,
+          "type": "ref:494"
+        },
+        {
+          "id": 3,
+          "name": "Role",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "name": "Kind",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "name": "Description",
+          "required": false,
+          "type": "id:1027"
+        }
+      ]
+    },
+    {
+      "typeId": 721,
+      "schemaVersion": 1,
+      "name": "MultisourceRawSignal",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "ref:720"
+        },
+        {
+          "id": 2,
+          "name": "Strength",
+          "required": true,
+          "type": "nonzeroSignedUnitQ"
+        },
+        {
+          "id": 3,
+          "name": "Basis",
+          "required": true,
+          "type": "ref:400"
+        }
+      ]
+    },
+    {
+      "typeId": 722,
+      "schemaVersion": 1,
+      "name": "MultisourceRawOutput",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "required": true,
+          "type": "ref:719"
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "required": true,
+          "type": {
+            "list": "ref:721",
+            "min": 0,
+            "max": 6
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 723,
+      "schemaVersion": 1,
+      "name": "MultisourceCoverageWitness",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "ref:720"
+        },
+        {
+          "id": 2,
+          "name": "Magnitude",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 3,
+          "name": "Normalization",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 4,
+          "name": "Overlap",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 5,
+          "name": "Effective",
+          "required": true,
+          "type": "unitQ"
+        }
+      ]
+    },
+    {
+      "typeId": 724,
+      "schemaVersion": 1,
+      "name": "MultisourceReasonKey",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Option",
+          "required": true,
+          "type": "ref:395"
+        },
+        {
+          "id": 2,
+          "name": "Ground",
+          "required": true,
+          "type": "ref:494"
+        },
+        {
+          "id": 3,
+          "name": "Direction",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "name": "Description",
+          "required": false,
+          "type": "id:1027"
+        }
+      ]
+    },
+    {
+      "typeId": 725,
+      "schemaVersion": 1,
+      "name": "MultisourceNucleus",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "ref:724"
+        },
+        {
+          "id": 2,
+          "name": "Base",
+          "required": true,
+          "type": "signedUnitQ"
+        },
+        {
+          "id": 3,
+          "name": "Situation",
+          "required": true,
+          "type": "signedUnitQ"
+        },
+        {
+          "id": 4,
+          "name": "Relevance",
+          "required": true,
+          "type": "nonnegativeQ"
+        },
+        {
+          "id": 5,
+          "name": "Die",
+          "required": true,
+          "type": {
+            "enum": [
+              4,
+              6,
+              8,
+              10,
+              12
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "name": "Modifier",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 7,
+          "name": "Distribution",
+          "required": true,
+          "type": {
+            "map": [
+              "i",
+              "positiveQ"
+            ],
+            "min": 1,
+            "max": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Coverage",
+          "required": true,
+          "type": {
+            "list": "ref:723",
+            "min": 0,
+            "max": 6
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 726,
+      "schemaVersion": 1,
+      "name": "MultisourceReasons",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "required": true,
+          "type": "ref:722"
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "required": true,
+          "type": {
+            "list": "ref:725",
+            "min": 0,
+            "max": 5
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 727,
+      "schemaVersion": 1,
+      "name": "MultisourceReasonDraw",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Key",
+          "required": true,
+          "type": "ref:724"
+        },
+        {
+          "id": 2,
+          "name": "Draw",
+          "required": true,
+          "type": "ref:411"
+        },
+        {
+          "id": 3,
+          "name": "Contribution",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "typeId": 728,
+      "schemaVersion": 1,
+      "name": "MultisourceDecision",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "required": true,
+          "type": "ref:726"
+        },
+        {
+          "id": 4,
+          "name": "Status",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chosen",
+          "required": false,
+          "type": "ref:395"
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "required": true,
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          }
+        },
+        {
+          "id": 7,
+          "name": "Margin",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 8,
+          "name": "Contest",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 9,
+          "name": "ConflictMass",
+          "required": true,
+          "type": "nonnegativeQ"
+        },
+        {
+          "id": 10,
+          "name": "Stake",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 11,
+          "name": "AuthorshipPotential",
+          "required": true,
+          "type": "unitQ"
+        },
+        {
+          "id": 12,
+          "name": "Mode",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": 13,
+          "name": "Draws",
+          "required": true,
+          "type": {
+            "list": "ref:727",
+            "min": 0,
+            "max": 5
+          }
+        },
+        {
+          "id": 14,
+          "name": "Tie",
+          "required": true,
+          "type": "ref:423"
+        }
+      ]
+    },
+    {
+      "typeId": 729,
+      "schemaVersion": 1,
+      "name": "MultisourceIntent",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "required": true,
+          "type": "ref:728"
+        }
+      ]
+    },
+    {
+      "typeId": 730,
+      "schemaVersion": 1,
+      "name": "MultisourceExpression",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "required": true,
+          "type": "ref:729"
+        },
+        {
+          "id": 3,
+          "name": "Alignments",
+          "required": true,
+          "type": {
+            "list": "ref:510",
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "typeId": 731,
+      "schemaVersion": 1,
+      "name": "MultisourceExecutionPlan",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "required": true,
+          "type": "ref:730"
+        },
+        {
+          "id": 3,
+          "name": "RequestedCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    },
+    {
+      "typeId": 732,
+      "schemaVersion": 1,
+      "name": "MultisourceAttempt",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "required": true,
+          "type": "ref:731"
+        }
+      ]
+    },
+    {
+      "typeId": 733,
+      "schemaVersion": 1,
+      "name": "MultisourceOutcome",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1149"
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "required": true,
+          "type": "ref:732"
+        },
+        {
+          "id": 3,
+          "name": "ActualCount",
+          "required": true,
+          "type": "u"
+        }
+      ]
+    }
+  ],
+  "namespaces": [
+    {
+      "namespace": 1149,
+      "name": "MultisourceOutputOccurrenceId",
+      "payload": "unsigned shared runtime ordinal",
+      "scope": "run; public multisource stage outputs, distinct record schema validates stage role"
+    }
+  ],
+  "members": [
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/observe"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/observe"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/observe"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/freeze"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/freeze"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/freeze"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/select"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/select"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/select"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/task"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/task"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/task"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/assess"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/assess"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/assess"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/raw"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/raw"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/raw"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/reasons"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/reasons"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/reasons"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/decision"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/decision"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/decision"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/intent"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/intent"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/intent"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/expression"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/expression"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/expression"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/plan"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/plan"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/plan"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/attempt"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/attempt"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/attempt"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/outcome"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/outcome"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/outcome"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/replenish"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/replenish"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/replenish"
+    },
+    {
+      "namespace": 1001,
+      "payload": "event/multisource/deadline"
+    },
+    {
+      "namespace": 1009,
+      "payload": "transition/multisource/deadline"
+    },
+    {
+      "namespace": 1036,
+      "payload": "seam/multisource/deadline"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/multisource/roster"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/multisource/reserve"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/multisource/task-status"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/multisource/task-plan"
+    },
+    {
+      "namespace": 1028,
+      "payload": "accessor/multisource/body-plan"
+    },
+    {
+      "namespace": 1042,
+      "payload": "purpose/multisource/reason-face"
+    },
+    {
+      "namespace": 1042,
+      "payload": "purpose/multisource/tie"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/multisource/actor"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/multisource/action"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/multisource/ground"
+    },
+    {
+      "namespace": 1043,
+      "payload": "subject/multisource/description"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/profile"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/body-criterion"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/body-a"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/body-b"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/body-c"
+    },
+    {
+      "namespace": 1027,
+      "payload": "definition/multisource/task-situation"
+    }
+  ],
+  "unions": [
+    {
+      "typeId": 718,
+      "tagField": 2,
+      "variants": [
+        {
+          "tag": 1,
+          "required": [
+            1,
+            2
+          ],
+          "forbidden": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "tag": 2,
+          "required": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "forbidden": []
+        }
+      ]
+    },
+    {
+      "typeId": 720,
+      "tagField": 4,
+      "variants": [
+        {
+          "tag": 1,
+          "required": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "forbidden": [
+            5
+          ]
+        },
+        {
+          "tag": 2,
+          "required": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "forbidden": []
+        }
+      ]
+    }
+  ],
+  "priorHighest": 706,
+  "newHighest": 733,
+  "allocatedSinceVerdictOrMember": 27,
+  "authority": "MULTISOURCE_PUBLIC_CONTRACT.md",
+  "scope": "No new state root; inherited 649 and 373 owners preserved. All additional public model rules in accepted contract.",
+  "corrections": [
+    {
+      "date": "2026-09-20",
+      "id": "MS-ALLOC-CORR-001",
+      "recordTypeId": 711,
+      "fields": [
+        6,
+        7
+      ],
+      "from": "list<141 TypedEntitySelector>",
+      "to": "list<149 StatePathPattern>",
+      "reason": "Stage declarations commit read/write patterns; initial table transcribed the selector type. No model was frozen or admitted under the erroneous shape. IDs and schema version remain unchanged before first model admission."
+    }
+  ]
+}

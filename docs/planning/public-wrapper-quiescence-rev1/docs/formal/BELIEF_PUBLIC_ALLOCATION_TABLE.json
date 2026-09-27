@@ -1,0 +1,444 @@
+{
+  "version": "belief-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-20",
+  "namespace": 1150,
+  "records": [
+    {
+      "typeId": 734,
+      "name": "BeliefProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 735,
+      "name": "BeliefTrialFrame",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "TruthOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "TruthOutcome",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "PerceivedOpportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "MonitoringComplete",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReportedOutcome",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 736,
+      "name": "BeliefOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Frames",
+          "type": {
+            "list": "ref:735",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 737,
+      "name": "BeliefSafeSample",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "SampleId",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "MonitoringComplete",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ReportedOutcome",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 738,
+      "name": "BeliefKey",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Proposition",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 739,
+      "name": "BeliefEstimate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mean",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Precision",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Support",
+          "type": {
+            "set": "id:1115",
+            "min": 1,
+            "max": 32
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 740,
+      "name": "BeliefState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Beliefs",
+          "type": {
+            "map": [
+              "ref:738",
+              "ref:739"
+            ],
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 741,
+      "name": "BeliefLearningEvidence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1150",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Sample",
+          "type": "ref:737",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Class",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 742,
+      "name": "BeliefApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1150",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Evidence",
+          "type": "ref:741",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": "ref:739",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Posterior",
+          "type": "ref:739",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 743,
+      "name": "BeliefAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1150",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Key",
+          "type": "ref:738",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goal",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Belief",
+          "type": "ref:739",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "ExpectedSignedOutcome",
+          "type": "signedUnitQ",
+          "required": false
+        },
+        {
+          "id": 6,
+          "name": "Confidence",
+          "type": "unitQ",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 744,
+      "name": "BeliefFrozenSamples",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1150",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Samples",
+          "type": {
+            "list": "ref:737",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 745,
+      "name": "BeliefStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "EventType",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 746,
+      "name": "BeliefContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Propositions",
+          "type": {
+            "list": "id:1027",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

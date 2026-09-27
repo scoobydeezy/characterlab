@@ -1,0 +1,829 @@
+{
+  "version": "longitudinal-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1157,
+  "records": [
+    {
+      "typeId": 863,
+      "name": "LongitudinalProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Representation",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Family",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Retention",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Rust",
+          "type": {
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Standing",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 864,
+      "name": "LongitudinalOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Physical",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Access",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Display",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Impairment",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Difficulty",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Interference",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 865,
+      "name": "LongitudinalEpisode",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 866,
+      "name": "LongitudinalJournal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:865",
+            "min": 0,
+            "max": 16
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 867,
+      "name": "LongitudinalEpisodeState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:866"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 868,
+      "name": "LongitudinalRelationshipState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:851"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 869,
+      "name": "LongitudinalPerson",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Claim",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 870,
+      "name": "LongitudinalPersonState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:869"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 871,
+      "name": "LongitudinalSkillState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:784"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 872,
+      "name": "LongitudinalIdentityState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:414"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 873,
+      "name": "LongitudinalDetailState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:866"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 874,
+      "name": "LongitudinalSharedSlot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Family",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Value",
+          "type": {
+            "list": {
+              "oneOf": [
+                "ref:414",
+                "ref:784",
+                "ref:851"
+              ]
+            },
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 875,
+      "name": "LongitudinalSharedState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:874"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 876,
+      "name": "LongitudinalProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Identity",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Skill",
+          "type": "ref:784",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Relationship",
+          "type": "ref:851",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Comfort",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Caution",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Person",
+          "type": "ref:869",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 877,
+      "name": "LongitudinalPractice",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Engaged",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Stage",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 878,
+      "name": "LongitudinalSource",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Practiced",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Success",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Physical",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Interference",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Gap",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 879,
+      "name": "LongitudinalObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Kind",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Admitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Participant",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Value",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 880,
+      "name": "LongitudinalUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1157",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Prior",
+          "type": {
+            "oneOf": [
+              "ref:414",
+              "ref:784",
+              "ref:851",
+              "ref:866",
+              "ref:869",
+              "ref:874"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Next",
+          "type": {
+            "oneOf": [
+              "ref:414",
+              "ref:784",
+              "ref:851",
+              "ref:866",
+              "ref:869",
+              "ref:874"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 881,
+      "name": "LongitudinalView",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Identity",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Skill",
+          "type": "ref:784",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Relationship",
+          "type": "ref:851",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Episodes",
+          "type": "ref:866",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Person",
+          "type": "ref:869",
+          "required": false
+        },
+        {
+          "id": 7,
+          "name": "RelationshipDetail",
+          "type": "ref:866",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 882,
+      "name": "LongitudinalStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 883,
+      "name": "LongitudinalContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Target",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Tasks",
+          "type": {
+            "list": "ref:371",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "IdentityK",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "EpisodeHorizon",
+          "type": "u",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

@@ -1,0 +1,160 @@
+import {describe,it,expect,vi} from 'vitest';
+import {canonicalEncode,signed,unsigned,text,list,set,map,record,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {decodeCampaign2} from '../campaign2/codecs';
+import {dataItems,dataRecord,dataField} from '../campaign2/canonicalData';
+import {INT64_MAX,timeSchemas} from '../substrate/time';
+import * as timeModule from '../substrate/time';
+import {contentRegistrySchemas} from '../substrate/contentManifest';
+import {governedContentDefinitionId} from '../substrate/contentDefinitionId';
+import {semanticReferentFromAuthoredContent} from '../substrate/referentOrigin';
+import {compileFirstCampaign2Content} from '../campaign2/contentProfile';
+import {compileValDeclarations} from '../campaign2/valDeclarations';
+import {compileRegulatoryReferences} from '../campaign2/regulatoryReference';
+import {campaign2Record as r} from '../campaign2/codecs';
+import {fixtureContentInputs,fixtureRoleConstraints,fixtureCharacterRole,recordConstraint} from './fixtures/campaign2Model';
+const contentId=governedContentDefinitionId('character/mina'),character=semanticReferentFromAuthoredContent(contentId);
+const id=(ns:number,name:string)=>typedIdentifier(ns,text(name));
+const variable=id(1029,'variable/control'),parameter=id(1030,'parameter/control');
+async function context(){const {content,entries}=fixtureContentInputs(contentId);
+  return compileFirstCampaign2Content(content,entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)])),entries);
+}
+type Options={variable?:CanonicalValue;parameter?:CanonicalValue;embedded?:CanonicalValue;governing?:CanonicalValue;character?:CanonicalValue;minimum?:bigint;maximum?:bigint;parameterMinimum?:bigint;scale?:bigint;rate?:bigint;timeScale?:bigint;value?:bigint;instant?:bigint;remainder?:bigint;noCharacters?:boolean;extraParameter?:boolean;version?:string};
+function entry(o:Options={}){
+  const p=o.parameter??parameter,lo=o.minimum??0n,hi=o.maximum??100n;
+  const parameters=record(timeSchemas.linearRateParameters,new Map([[1n,o.embedded??p],[2n,signed(o.rate??0n)],[3n,unsigned(o.timeScale??1n)],[4n,signed(o.parameterMinimum??lo)],[5n,signed(hi)]]));
+  const anchor=record(timeSchemas.analyticalAnchor,new Map([[1n,signed(o.value??80n)],[2n,unsigned(o.instant??0n)],[3n,o.governing??p],[4n,unsigned(o.remainder??0n)]]));
+  const wrapper=r('RegulatoryCharacterReferenceKey',{CharacterId:o.character??character});
+  const params: [CanonicalValue,CanonicalValue][]=[[p,parameters]];
+  if(o.extraParameter){const q=id(1030,'parameter/unused');params.push([q,record(timeSchemas.linearRateParameters,new Map([[1n,q],[2n,signed(0)],[3n,unsigned(1)],[4n,signed(lo)],[5n,signed(hi)]]))]);}
+  const definition=r('RegulatoryVariableRegistration',{
+    VariableDefinition:r('RegulatoryVariableDefinition',{Scale:unsigned(o.scale??10n),Minimum:signed(lo),Maximum:signed(hi)}),
+    ReferenceDefinition:r('RegulatoryReferenceDefinition',{CharacterReferences:map(o.noCharacters?[]:[[wrapper,anchor]]),Parameters:map(params)}),
+  });
+  return record(contentRegistrySchemas.semanticRegistryEntry,new Map([[1n,o.variable??variable],[2n,id(1023,'registry/regulatory-variable')],[3n,text(o.version??'regulatory-reference/0.5-candidate')],[4n,definition]]));
+}
+const bytes=(...entries:CanonicalValue[])=>canonicalEncode(set(entries));
+describe('regulatory-reference/0.5-candidate closed compiler',()=>{
+  it('REG-R: inert parameter bytes in governed content are not another REG owner; wrong key/value/anchor families reject',async()=>{
+    const registration=dataRecord(dataField(dataRecord(entry(),171n),4n),283n),reference=dataRecord(dataField(registration,2n),282n);
+    const parameters=dataField(reference,2n) as Extract<CanonicalValue,{kind:'map'}>,parameterCopy=parameters.entries[0][1];
+    const original=fixtureContentInputs(contentId),definition=dataRecord(dataItems(decodeCampaign2(original.content),'set')[0],170n);
+    const copiedContent=canonicalEncode(set([record(definition.schema,new Map([...definition.fields,[10n,list([parameterCopy])]]))]));
+    const inertContext=await compileFirstCampaign2Content(copiedContent,original.entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)])),original.entries);
+    const baseline=compileRegulatoryReferences(bytes(entry()),await context()),withCopy=compileRegulatoryReferences(bytes(entry()),inertContext);
+    for(const at of [0n,1n,INT64_MAX])expect(withCopy.referenceOperatingPoint(character,variable,at)).toEqual(baseline.referenceOperatingPoint(character,variable,at));
+    const otherFamily=id(1027,'parameter/control');
+    for(const options of [{parameter:otherFamily,embedded:parameter},{embedded:otherFamily},{governing:otherFamily},{parameter:otherFamily}]){
+      expect(()=>compileRegulatoryReferences(bytes(entry(options)),inertContext)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    }
+    // The copy is a canonical model datum; only the selected REG map owns parameters.
+    expect(dataField(dataRecord(dataItems(decodeCampaign2(inertContext.canonicalBytes),'set')[0],170n),10n)).toEqual(list([parameterCopy]));
+  });
+  it('REG-Q: one variable may share a parameter across characters, but two variable owners reject equal and unequal parameter bytes',async()=>{
+    const secondId=governedContentDefinitionId('character/second-control'),second=semanticReferentFromAuthoredContent(secondId);
+    const a=fixtureContentInputs(contentId),b=fixtureContentInputs(secondId);
+    const content=canonicalEncode(set([...dataItems(decodeCampaign2(a.content),'set'),...dataItems(decodeCampaign2(b.content),'set')]));
+    const c=await compileFirstCampaign2Content(content,a.entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)])),a.entries);
+    const e=dataRecord(entry(),171n),registration=dataRecord(dataField(e,4n),283n),reference=dataRecord(dataField(registration,2n),282n);
+    const references=dataField(reference,1n) as Extract<CanonicalValue,{kind:'map'}>,anchor=references.entries[0][1];
+    const shared=record(e.schema,new Map([...e.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[1n,map([...references.entries,[r('RegulatoryCharacterReferenceKey',{CharacterId:second}),anchor]])]]))]]))]]));
+    const reg=compileRegulatoryReferences(bytes(shared),c);
+    for(const who of [character,second])expect(reg.referenceOperatingPoint(who,variable,INT64_MAX)).toEqual({kind:'ReferenceValue',value:signed(80)});
+    // Separate single-character controls isolate ownership from total-character coverage.
+    const single=await context();
+    for(const maximum of [100n,101n])expect(()=>compileRegulatoryReferences(bytes(entry(),entry({variable:id(1029,'variable/other'),maximum})),single)).toThrow('REG parameter has multiple variable owners');
+  });
+  it('REG-M: malformed declarations fail at their exact closed construction check',async()=>{
+    const c=await context(),empty=entry({noCharacters:true}) as Extract<CanonicalValue,{kind:'record'}>;
+    const registration=empty.fields.get(4n) as typeof empty,reference=registration.fields.get(2n) as typeof empty;
+    const noCharactersOrParameters=record(empty.schema,new Map([...empty.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[2n,map([])]]))]]))]]));
+    const cases:[CanonicalValue[],string][]=[
+      [[entry({character:id(1000,'observer/not-a-character'),governing:id(1030,'parameter/missing')})],'identity does not satisfy required namespace'],
+      [[entry({embedded:id(1030,'parameter/other')})],'parameter key/identity mismatch'],
+      [[entry({governing:id(1030,'parameter/missing')})],'unresolved local parameter'],
+      [[entry({extraParameter:true})],'unused REG parameter'],
+      [[entry({parameterMinimum:-1n})],'parameter/variable bounds differ'],
+      [[noCharactersOrParameters],'REG character set is not exact committed content image'],
+      [[entry(),entry({variable:id(1029,'variable/other')})],'REG parameter has multiple variable owners'],
+      [[entry({timeScale:2n})],'noncanonical REG rate'],
+      [[entry({instant:1n})],'REG authored anchor must start at zero with zero remainder'],
+      [[entry({rate:1n})],'analytical value exceeded its declared bounded representation'],
+      [[entry({parameter:id(1027,'parameter/control')})],'wrong regulatory identity family'],
+    ];
+    for(const [entries,message] of cases){
+      expect(()=>compileRegulatoryReferences(bytes(...entries),c),message).toThrow(message);
+      expect(()=>compileRegulatoryReferences(bytes(...entries),c),message).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    }
+  });
+  it('FCT-L: generic REG/IDN retain complete authored identity across content families',async()=>{
+    const stable=id(23000,'character/mina'),{content,entries}=fixtureContentInputs(stable);
+    const generic=await compileValDeclarations(entries,canonicalEncode(set([...fixtureRoleConstraints,recordConstraint(281,1,fixtureCharacterRole)]))).compileContent(content,entries);
+    const otherCharacter=semanticReferentFromAuthoredContent(stable),reg=compileRegulatoryReferences(bytes(entry({character:otherCharacter})),generic);
+    expect(reg.referenceOperatingPoint(otherCharacter,variable,0n)).toEqual({kind:'ReferenceValue',value:signed(80)});
+    expect(()=>reg.referenceOperatingPoint(character,variable,0n)).toThrowError(expect.objectContaining({code:'CANONICAL_ROLE_VIOLATION'}));
+  });
+  it('uses immutable authored R0 and exact signed displacement bounds without state',async()=>{
+    const c=await context(),source=bytes(entry()),before=source.slice(),reg=compileRegulatoryReferences(source,c);
+    expect(reg.referenceOperatingPoint(character,variable,123n)).toEqual({kind:'ReferenceValue',value:signed(80)});
+    for(const d of [-80n,-30n,0n,20n])expect(reg.validateAdaptedReference(character,variable,123n,signed(d))).toEqual({kind:'Valid'});
+    for(const d of [-81n,21n,30n])expect(reg.validateAdaptedReference(character,variable,123n,signed(d))).toEqual({kind:'Failure',code:'REG_ADAPTED_REFERENCE_OUT_OF_RANGE'});
+    expect(source).toEqual(before);source.fill(0);
+    expect(reg.referenceOperatingPoint(character,variable,INT64_MAX)).toEqual({kind:'ReferenceValue',value:signed(80)});
+  });
+  it('retains negative-rate floor and separates variable Scale from TIME Scale',async()=>{
+    const c=await context();
+    const reg=compileRegulatoryReferences(bytes(entry({minimum:-INT64_MAX,maximum:INT64_MAX,rate:-1n,timeScale:3n,scale:1000n})),c);
+    expect(reg.referenceOperatingPoint(character,variable,1n)).toEqual({kind:'ReferenceValue',value:signed(79)});
+    expect(reg.referenceOperatingPoint(character,variable,3n)).toEqual({kind:'ReferenceValue',value:signed(79)});
+    expect(reg.referenceOperatingPoint(character,variable,4n)).toEqual({kind:'ReferenceValue',value:signed(78)});
+    expect(reg.referenceOperatingPoint(character,variable,0n)).toEqual({kind:'ReferenceValue',value:signed(80)});
+  });
+  it('rejects invalid domains, references, parameter ownership and non-total endpoints',async()=>{
+    const c=await context();
+    const raw=dataRecord(entry(),171n),registration=dataRecord(dataField(raw,4n),283n),definition=dataRecord(dataField(registration,1n),280n);
+    const withUnit=record({...definition.schema,fields:[...definition.schema.fields,{id:999n,name:'Unit',required:true}]},new Map([...definition.fields,[999n,text('meters')]]));
+    const malformed=record(raw.schema,new Map([...raw.fields,[4n,record(registration.schema,new Map([...registration.fields,[1n,withUnit]]))]]));
+    const arithmetic=vi.spyOn(timeModule,'materializeLinear');
+    try{
+      // Permissive local descriptor emits the extra field; production decode owns
+      // rejection. The unit is never compared and no endpoint arithmetic occurs.
+      expect(()=>compileRegulatoryReferences(bytes(malformed),c)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+      expect(arithmetic).not.toHaveBeenCalled();
+      const reference=dataRecord(dataField(registration,2n),282n),references=dataField(reference,1n) as Extract<CanonicalValue,{kind:'map'}>;
+      const duplicate=record(raw.schema,new Map([...raw.fields,[4n,record(registration.schema,new Map([...registration.fields,[2n,record(reference.schema,new Map([...reference.fields,[1n,map([...references.entries,...references.entries])]]))]]))]]));
+      expect(()=>bytes(duplicate)).toThrow(); // cenc forbids duplicate character keys before REG intake.
+      expect(arithmetic).not.toHaveBeenCalled();
+    }finally{arithmetic.mockRestore();}
+    const invalid:Options[]=[{scale:0n},{minimum:101n},{embedded:id(1030,'parameter/other')},{governing:id(1030,'parameter/missing')},
+      {extraParameter:true},{parameterMinimum:-1n},{noCharacters:true},{parameter:id(1027,'parameter/control')},
+      {timeScale:2n},{rate:2n,timeScale:4n},{instant:1n},{remainder:1n},{rate:1n},{rate:-1n},{version:'wrong'}];
+    for(const o of invalid)expect(()=>compileRegulatoryReferences(bytes(entry(o)),c)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    expect(()=>compileRegulatoryReferences(bytes(entry(),entry({variable:id(1029,'variable/other')})),c)).toThrow(/multiple variable owners/);
+    expect(()=>compileRegulatoryReferences(bytes(entry(),entry({value:81n})),c)).toThrow(/duplicate regulatory variable/);
+  });
+  it('requires exact character coverage and declared Character role',async()=>{
+    const c=await context();
+    expect(()=>compileRegulatoryReferences(bytes(entry({character:semanticReferentFromAuthoredContent(governedContentDefinitionId('character/missing'))})),c)).toThrowError(expect.objectContaining({code:'INVALID_CONFIGURATION'}));
+    const {content,entries}=fixtureContentInputs(contentId);
+    const noRole=await compileFirstCampaign2Content(content,entries,canonicalEncode(set(fixtureRoleConstraints)),entries);
+    expect(()=>compileRegulatoryReferences(bytes(entry()),noRole)).toThrow(/missing REG CharacterId role/);
+    // Real compiled CONTENT otherwise unchanged. The REG component must validate
+    // its incoming role declaration even when all current values would qualify.
+    const wrongRole={...c,recordRole:(type:bigint,field:bigint)=>type===281n&&field===1n
+      ?canonicalEncode(r('CanonicalIdentityRole',{RequiredNamespace:unsigned(1000),DomainValidatorId:id(1021,'validator/character-qualification')}))
+      :c.recordRole(type,field)};
+    expect(()=>compileRegulatoryReferences(bytes(entry()),wrongRole)).toThrow(/wrong REG CharacterId role/);
+  });
+  it('preserves variable → character → D → T failure precedence',async()=>{
+    const reg=compileRegulatoryReferences(bytes(entry()),await context());
+    expect(reg.validateAdaptedReference(unsigned(0),id(1029,'unknown'),-1n,text('bad'))).toEqual({kind:'Failure',code:'REG_UNKNOWN_VARIABLE'});
+    expect(()=>reg.validateAdaptedReference(semanticReferentFromAuthoredContent(governedContentDefinitionId('character/missing')),variable,-1n,text('bad'))).toThrowError(expect.objectContaining({code:'CANONICAL_ROLE_VIOLATION'}));
+    expect(()=>reg.validateAdaptedReference(character,variable,-1n,text('bad'))).toThrow(/canonical signed/);
+    expect(()=>reg.validateAdaptedReference(character,variable,-1n,signed(0))).toThrowError(expect.objectContaining({code:'INVALID_INSTANT'}));
+  });
+  it('time-only invalidity rejects unchanged D without clamping the reference',async()=>{
+    const reg=compileRegulatoryReferences(bytes(entry({rate:1n,timeScale:INT64_MAX,value:99n})),await context());
+    expect(reg.validateAdaptedReference(character,variable,0n,signed(1))).toEqual({kind:'Valid'});
+    expect(reg.validateAdaptedReference(character,variable,INT64_MAX,signed(1))).toEqual({kind:'Failure',code:'REG_ADAPTED_REFERENCE_OUT_OF_RANGE'});
+    expect(reg.referenceOperatingPoint(character,variable,INT64_MAX)).toEqual({kind:'ReferenceValue',value:signed(100)});
+  });
+});

@@ -834,3 +834,63 @@ ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra cove
 The prior identity Task wrapper also exposes the gap; its serial scope is preserved
 by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
 MEC004 controlled semantic source; MEC015..019/022 and EXP011/012 retain their inherited roles. No state root or source law retired.
+
+
+## SUB-008 public-wrapper follow-up — 2026-09-26
+
+Bounded public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.
+LOCAL DISPOSITION; no owner ruling. The49-producer inventory accounts for47 native
+Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation. Three raw
+RNG-ledger wrappers allowed torn saves (identity Task, identity Biological, Biology
+public); embodied allowed a second settlement to overlap ingress cleanup. Four narrow
+whole-wrapper barriers repair these failures.30 producers already have independent
+guards;15 have no split public continuation state. Preserve both failure mechanisms,
+the1,108-artifact pre-repair graph, probes and original serial qualification receipts.
+Same50 models/149 prior cases/747 selected complete-prefix restores reproduce all
+original ordinary save bytes; model/run identities, safe views and final outputs/
+trace/state remain unchanged.74 affected/328 reference tests and build pass. The first
+4-pass/2-fail regression cohort assumed a biological draw at1; corrected at9 while
+retaining the draw assertion. The PersonState naming error is a preserved harness
+failure. No new character law, state root, record allocation or psychological clause.
+Counters1450/0. RO22 CLOSED within the declared inventory; RO21 historical reconciliation
+still ACTIVE.1 active/19 conditional/2 closed/0 unowned;77 named verdicts. Corpus0.29.0
+still21 members; Brief104 bounded/21 partial/7 blocked across132 clauses/15 families.
+Campaign3 NOT EXIT-READY. Next IDENTITY_RECOVERY_READINESS.md.
+
+Disposition: retain the scheduler atomicity reference port and independent RNG guards;
+repair the four exposed wrapper publication/lifecycle boundaries. No reference
+mechanism is retired. The pre-repair implementations remain explicit negative controls.
+
+
+### Identity recovery experiment — 2026-09-27
+VER-C3-IDENTITY-RECOVERY-001; identity-recovery-experiment/0.1-candidate.
+MEC018/022 and EXP011/012 retain their inherited port/control/corpus dispositions.
+Native four-act standing and independently represented belief recovery preserve
+original expressions;5 reused models/13 runs/78 prefixes,8+328 tests/build.
+No new law or allocation;1450/0. BIO sustained standing reversal remains component;
+LONG skill recovery is separate. No disposition-adaptation claim or state reduction.
+See CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md. Next DISPOSITIONAL_ADAPTATION_READINESS.md.
+
+
+### Dispositional adaptation component — 2026-09-27
+VER-C3-DISPOSITION-001, disposition-adaptation/0.1-candidate:9 models/15 cases/285
+component prefixes;35 affected/328 reference tests/build;1450/0. P3-009/010 preserve
+constitution/history separation and constitutional/biographical contrasts. Historical
+seven-axis/quadratic projections remain CANDIDATE for richer scopes. MEC012..019/022
+and EXP011/012 retain PORT/CONTRACT/CORPUS roles through actual inherited kernels.
+ADAPT regulatory/procedural target admissions are unchanged; no reference imports.
+Stored/Refold equality and shared-history fusion competitors do not retire a conceptual
+distinction or select a universal law. Next DISPOSITION_PUBLIC_READINESS.md for native
+source/lineage/authority/phase admission. See CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md.
+
+
+### Native disposition admission — 2026-09-27
+VER-C3-DISPOSITION-PUBLIC-001:9 models/15 runs/285 native prefixes;44+328 tests/build;
+1458/0. P3-009/010, MEC012..019/022 and EXP011/012 retain their component dispositions
+through typed original lineage, independent authorities and actual causal phases.
+No constitution writer; no state-root retirement. Native admission extends neither
+old ADAPT target sets nor identity/biology profile domains. Refold/Plastic, Step/Leaky,
+StandingOnly/Neither and JointMax/JointAdd remain controls; general fusion and scaling
+remain open. Historical seven-axis/quadratic projections remain candidate. Wrapper
+inventory is50 producers/53 factories; original49 scope reverified. Next sleep/control
+readiness; no whole-family or Campaign3 exit claim.

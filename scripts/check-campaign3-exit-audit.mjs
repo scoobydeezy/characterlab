@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV58.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV62.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -218,6 +218,19 @@ supplemental.push('IDENTITY_BELIEF_FINDINGS.md','IDENTITY_BELIEF_PUBLIC_READINES
 for(const i of [3,5]){const clause=families[11].clauses[i];clause.evidence.push(p+'CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md',p+'IDENTITY_BELIEF_PUBLIC_FINDINGS.md');clause.rationale+=' VER-C3-IDENTITY-BELIEF-PUBLIC-001 now supplies bounded native task reports, independent holder authority and complete Save132 replay:5 models/37 runs/222 prefixes. Native50 consumes prior140; no retroactive appraisal, biological belief join or sampled downstream social action.';}
 families[11].rationale+=' Native represented identity-belief admission is now bounded-qualified without promoting another clause. Prior component-era public limits remain historical. Mean/Latest/NoLearning and explicit negative access controls survive native correspondence and whole-view comparisons. General recognition, trust, shared cross-domain identity, dispositional adaptation and wider horizons remain open.';
 supplemental.push('IDENTITY_BELIEF_PUBLIC_FINDINGS.md','IDENTITY_RECOVERY_READINESS.md','PUBLIC_WRAPPER_QUIESCENCE_READINESS.md','IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md');
+supplemental.push('CAMPAIGN3_PUBLIC_WRAPPER_QUIESCENCE_QUALIFICATION.md','PUBLIC_WRAPPER_QUIESCENCE_FINDINGS.md','PUBLIC_WRAPPER_QUIESCENCE_CLOSURE_REV1.json');
+// REV60: finite native biography recovery; adaptation remains a separate blocked clause.
+{const clause=families[11].clauses[7];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md',p+'IDENTITY_RECOVERY_CLOSURE_REV1.json');clause.rationale='VER-C3-IDENTITY-RECOVERY-001:5 reused models/13 runs/78 native prefixes. Actual qualified biography reverses/recover standing and represented self belief; withheld reports retain negative observer belief. Prior expressions survive. Mean/Latest/NoLearning and NoFeedback remain separate. Probe distributions change while sampled A remains equal. Four learning instants plus probe; not general mature-identity recovery or dispositional adaptation.';clause.obligations.push(ro(10),ro(14));}
+families[11].rationale+=' REV60 qualifies bounded native recovery separately from report correction and long-run dispositional adaptation; no whole-family qualification.';
+supplemental.push('CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md','IDENTITY_RECOVERY_FINDINGS.md','IDENTITY_RECOVERY_CLOSURE_REV1.json','DISPOSITIONAL_ADAPTATION_READINESS.md');
+// REV61: repeated-biography plastic adaptation, component scope only.
+{const clause=families[11].clauses[6];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md',p+'DISPOSITION_CLOSURE_REV1.json');clause.rationale='VER-C3-DISPOSITION-001:9 component models/15 runs/285 prefixes. Repeated actual qualified history changes a separate plastic contributor to future decisions; immutable constitution and original expressions remain. Step/Leaky compete; Refold equals stored Plastic. JointMax equals StandingOnly here; JointAdd amplifies shared history. Independent necessity unresolved. Finite event-count adaptation, not calendar-time ageing, native public admission or a universal developmental law.';}
+families[11].rationale+=' REV61 adds bounded plastic adaptation with separate baseline/standing and explicit fusion comparators; native admission and broader developmental scope remain open.';
+supplemental.push('CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md','DISPOSITION_ADAPTATION_FINDINGS.md','DISPOSITION_CLOSURE_REV1.json','DISPOSITION_PUBLIC_READINESS.md');
+// REV62: native disposition strengthens the existing bounded clause only.
+{const clause=families[11].clauses[6];clause.evidence.push(p+'CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md',p+'DISPOSITION_PUBLIC_CLOSURE_REV1.json');clause.rationale+=' VER-C3-DISPOSITION-PUBLIC-001 supplies9 native models/15 runs/285 complete prefixes, ten actual phases, separate authority and typed original lineage. No constitution writer, general fusion, calendar-time ageing or long-horizon scaling claim. Component-era native limits remain historical.';}
+families[11].rationale+=' REV62 closes bounded native disposition admission, without another clause promotion. All seven laws and constitutional controls retained.';
+supplemental.push('CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md','DISPOSITION_PUBLIC_FINDINGS.md','DISPOSITION_PUBLIC_CLOSURE_REV1.json','DISPOSITION_WRAPPER_EXTENSION_REV1.json','DISPOSITION_PUBLIC_SAVE_SIZE_REV1.json','SLEEP_CONTROL_READINESS.md');
 const inventory=[...new Set([...reportNames,...supplemental].map(n=>p+n).concat([briefPath,'reference/RESEARCH.md',report]))].sort().map(file=>({path:file,sha256:sha(file),inspection:file==='reference/RESEARCH.md'?'Selected Phase2.97 closure/attribution/calibration/reduction sections; not whole historical log':'Coverage/limits/findings audit; linked raw receipts retain their reported public/component scope, not freshly reexecuted.'}));
 const ledger=read(p+'VERDICT_LEDGER.md');
 const verdicts=[...ledger.matchAll(/^## `?(VER-[A-Z0-9-]+)/gm)].map(m=>m[1]);
@@ -229,11 +242,11 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=58;
-result.date='2026-09-26';
-result.counters.highestAllocatedRecordType=1450;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV57.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV57.json'),disposition:'Native identity-belief admission adds controlled source, independent holder authority and next-instant appraisal evidence:5 models/37 runs/222 prefixes,69 affected/328 reference/build. No clause promotion:104 bounded/21 partial/7 blocked;76 verdicts. Development failures/timeouts preserved; broader identity and historical gate remain open.'};
-result.publicWrapperGate={path:p+'PUBLIC_WRAPPER_QUIESCENCE_READINESS.md',obligation:'RO-C3-022',status:'ACTIVE',blocks:'Unrestricted public read/save quiescence claims and final Campaign3 exit until the inventory and confirmed exposures are resolved.'};
+result.snapshotRevision=62;
+result.date='2026-09-27';
+result.counters.highestAllocatedRecordType=1458;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV61.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV61.json'),disposition:'Native disposition strengthens existing12.12-7 only;9/15/285 and44+328 tests/build.80 verdicts; no additional clause or exit promotion.'};
+result.publicWrapperGate={path:p+'DISPOSITION_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared50-producer/53-factory inventory; original49 audit retained. Reopen on new wrapper ownership.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

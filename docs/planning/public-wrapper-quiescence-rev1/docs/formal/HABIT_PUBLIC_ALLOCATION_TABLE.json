@@ -1,0 +1,821 @@
+{
+  "version": "habit-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1155,
+  "records": [
+    {
+      "typeId": 817,
+      "name": "HabitProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Candidate",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 818,
+      "name": "HabitOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reward",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Report",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Cue",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 819,
+      "name": "HabitHistoryEntry",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Cue",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reward",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 820,
+      "name": "HabitJournal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Entries",
+          "type": {
+            "list": "ref:819",
+            "min": 0,
+            "max": 16
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 821,
+      "name": "HabitHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:820"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 822,
+      "name": "HabitExpectation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Source",
+          "type": "id:1155",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 823,
+      "name": "HabitBeliefState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:822"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 824,
+      "name": "HabitSummary",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "FalseCue",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "TrueCue",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Count",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 825,
+      "name": "HabitSummaryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:824"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 826,
+      "name": "HabitAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Cue",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Tendency",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Belief",
+          "type": "ref:822",
+          "required": false
+        },
+        {
+          "id": 7,
+          "name": "TruthControl",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 827,
+      "name": "HabitOptions",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:826",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Candidates",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 828,
+      "name": "HabitRaw",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Options",
+          "type": "ref:827",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Signals",
+          "type": {
+            "list": "ref:402",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 829,
+      "name": "HabitReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Raw",
+          "type": "ref:828",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Nuclei",
+          "type": {
+            "list": "ref:407",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 830,
+      "name": "HabitDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:829",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Draws",
+          "type": {
+            "list": "ref:411",
+            "min": 0,
+            "max": 3
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 831,
+      "name": "HabitIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:830",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 832,
+      "name": "HabitExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:831",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Alignment",
+          "type": {
+            "list": "signedUnitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 833,
+      "name": "HabitPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:832",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Action",
+          "type": "id:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 834,
+      "name": "HabitAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:833",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 835,
+      "name": "HabitOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:834",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Performed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Reward",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 836,
+      "name": "HabitObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Cue",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Performed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Reward",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 837,
+      "name": "HabitHistoryUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:836",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:820",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:820",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 838,
+      "name": "HabitBeliefUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:836",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Applied",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Prior",
+          "type": "ref:822",
+          "required": false
+        },
+        {
+          "id": 5,
+          "name": "Next",
+          "type": "ref:822",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 839,
+      "name": "HabitCacheUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:824",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:824",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 840,
+      "name": "HabitContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Character",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Task",
+          "type": "ref:371",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Options",
+          "type": {
+            "list": "ref:395",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Skill",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Identity",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "BodyAdaptation",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 841,
+      "name": "HabitStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

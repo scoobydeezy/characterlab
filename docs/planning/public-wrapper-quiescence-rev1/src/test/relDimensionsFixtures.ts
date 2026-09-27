@@ -1,0 +1,12 @@
+import {canonicalEncode as enc,list,set,signed,unsigned as u,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {relDimensionsRecord as r} from '../campaign3/relDimensionsCodecs';
+export const initialState=enc(set([])),seed=new Uint8Array(32).fill(13);
+export type Row={target:number;worldGift:number;worldTask:boolean;worldPromise:boolean;worldLoom:boolean;gift:number;taskOpportunity:boolean;task:boolean;promiseOpportunity:boolean;promise:boolean;loom:boolean;partA:boolean;partB:boolean;accessA:boolean;accessB:boolean;cueA:boolean;cueB:boolean};
+const row=(x:Partial<Row>={}):Row=>({target:1,worldGift:2,worldTask:false,worldPromise:true,worldLoom:true,gift:2,taskOpportunity:true,task:false,promiseOpportunity:true,promise:true,loom:true,partA:true,partB:false,accessA:true,accessB:true,cueA:true,cueB:true,...x});
+export function cases(){
+ const main=[row(),row(),row({gift:0,taskOpportunity:false,promiseOpportunity:false,accessA:false,accessB:false}),row({target:2,gift:0,task:true,loom:false,partB:true}),row({target:2,gift:0,taskOpportunity:false,promiseOpportunity:false,loom:false,accessA:false,accessB:false}),row()];
+ const change=(fn:(r:Row,i:number)=>Row)=>main.map((r,i)=>fn({...r},i));
+ return {main,giftGone:change(r=>({...r,gift:0})),taskGood:change(r=>({...r,task:true})),broken:change(r=>({...r,promise:false})),calm:change(r=>({...r,loom:false})),witnessA:change(r=>({...r,partA:false})),missingTask:change(r=>({...r,taskOpportunity:false})),missingPromise:change(r=>({...r,promiseOpportunity:false})),missingCue:change(r=>({...r,cueA:false})),noA:change(r=>({...r,accessA:false,cueA:false})),noB:change(r=>({...r,accessB:false,cueB:false})),otherTarget:change(r=>r.target===2?{...r,gift:2,task:false,promise:false}:r),hiddenWorld:change(r=>({...r,worldGift:0,worldTask:true,worldPromise:false,worldLoom:false})),denied:change((r,i)=>i===2?{...r,gift:2,taskOpportunity:true,task:true,promiseOpportunity:true,promise:false}:r),unknown:change(r=>({...r,accessA:false,accessB:false,cueA:false,cueB:false}))};
+}
+export const ordered=(rows:Row[])=>enc(list(rows.map((x,i)=>r(1208,[signed(i+1),u(x.target),u(x.worldGift),x.worldTask,x.worldPromise,x.worldLoom,u(x.gift),x.taskOpportunity,x.task,x.promiseOpportunity,x.promise,x.loom,x.partA,x.partB,x.accessA,x.accessB,x.cueA,x.cueB]))));
+export const records=(xs:readonly CanonicalValue[],type:bigint)=>xs.filter(x=>typeof x!=='boolean'&&x.kind==='record'&&x.schema.typeId===type);

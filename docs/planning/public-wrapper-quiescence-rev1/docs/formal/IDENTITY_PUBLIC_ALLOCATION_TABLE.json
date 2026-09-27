@@ -1,0 +1,512 @@
+{
+  "version": "identity-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-26",
+  "namespace": 1155,
+  "records": [
+    {
+      "typeId": 1427,
+      "name": "IdentityProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Family",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Biology",
+          "type": {
+            "list": "ref:1401",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "StandingUnitDenominator",
+          "type": {
+            "enum": [
+              1,
+              16
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1428,
+      "name": "IdentityOriginalInput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "ref:1429",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "World",
+          "type": {
+            "oneOf": [
+              "bool",
+              "ref:1403"
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1429,
+      "name": "IdentitySafeContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Setting",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Significance",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Pressure",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Instruction",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Movement",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Learning",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1430,
+      "name": "IdentityTaskReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "ref:1429",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Options",
+          "type": "ref:398",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Raw",
+          "type": "ref:403",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Reasons",
+          "type": "ref:408",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1431,
+      "name": "IdentityTaskDecision",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Reasons",
+          "type": "ref:1430",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Resolution",
+          "type": "ref:409",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1432,
+      "name": "IdentityTaskIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Decision",
+          "type": "ref:1431",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Intent",
+          "type": "ref:425",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1433,
+      "name": "IdentityExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:1429",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SourceKind",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Producer",
+          "type": {
+            "oneOf": [
+              "ref:1432",
+              "ref:1416"
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Alignment",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Authorship",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "At",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1434,
+      "name": "IdentityQualification",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1138",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:1433",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Disposition",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Contribution",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1435,
+      "name": "IdentityQualificationJournal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Qualifications",
+          "type": {
+            "list": "ref:1434",
+            "min": 0,
+            "max": 96
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1436,
+      "name": "IdentityJournalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Journals",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1435"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1437,
+      "name": "IdentityApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:1435",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:1435",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1438,
+      "name": "IdentityTaskAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": {
+            "list": "ref:1433",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Attempt",
+          "type": {
+            "list": "ref:432",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1439,
+      "name": "IdentityTaskExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Executed",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1440,
+      "name": "IdentityContactCount",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Count",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1441,
+      "name": "IdentityPhysicalState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Counts",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1440"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1442,
+      "name": "IdentityBiologicalFeedback",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1155",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1411",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "History",
+          "type": "ref:1435",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Grounds",
+          "type": "data",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

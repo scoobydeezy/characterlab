@@ -705,3 +705,56 @@ ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra cove
 The prior identity Task wrapper also exposes the gap; its serial scope is preserved
 by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
 No clause promotion or denominator change. Earlier native-admission limitations remain dated component scope, now supplemented by bounded native evidence. Historical gate remains unsatisfied.
+
+
+## REV59 — bounded public-wrapper protocol closure
+
+Bounded public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.
+LOCAL DISPOSITION; no owner ruling. The49-producer inventory accounts for47 native
+Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation. Three raw
+RNG-ledger wrappers allowed torn saves (identity Task, identity Biological, Biology
+public); embodied allowed a second settlement to overlap ingress cleanup. Four narrow
+whole-wrapper barriers repair these failures.30 producers already have independent
+guards;15 have no split public continuation state. Preserve both failure mechanisms,
+the1,108-artifact pre-repair graph, probes and original serial qualification receipts.
+Same50 models/149 prior cases/747 selected complete-prefix restores reproduce all
+original ordinary save bytes; model/run identities, safe views and final outputs/
+trace/state remain unchanged.74 affected/328 reference tests and build pass. The first
+4-pass/2-fail regression cohort assumed a biological draw at1; corrected at9 while
+retaining the draw assertion. The PersonState naming error is a preserved harness
+failure. No new character law, state root, record allocation or psychological clause.
+Counters1450/0. RO22 CLOSED within the declared inventory; RO21 historical reconciliation
+still ACTIVE.1 active/19 conditional/2 closed/0 unowned;77 named verdicts. Corpus0.29.0
+still21 members; Brief104 bounded/21 partial/7 blocked across132 clauses/15 families.
+Campaign3 NOT EXIT-READY. Next IDENTITY_RECOVERY_READINESS.md.
+No Brief or corpus-member disposition changes. RO22 is resolved; RO21 is not.
+
+
+## REV60 — bounded identity recovery, 2026-09-27
+VER-C3-IDENTITY-RECOVERY-001 promotes only Brief12.12-8 to QUALIFIED BOUNDED.
+5 reused models/13 runs/78 native prefixes;8 affected/328 reference tests/build.
+105 bounded/20 partial/7 blocked clauses,78 verdicts,1450/0. Whole identity family
+remains PARTIAL; disposition adaptation12.12-7 is still BLOCKED. Corpus unchanged.
+RO021 mandatory exit gate remains unsatisfied (canonical CONDITIONAL); RO019 ACTIVE.
+Original expressions, standing/self/observer differences, qualifier exclusion,
+Mean/Latest/NoLearning and NoFeedback are retained. No universal recovery claim.
+
+
+## REV61 — bounded dispositional adaptation, 2026-09-27
+VER-C3-DISPOSITION-001 adds a finite persistent-adaptation witness for Brief12.12-7:
+9 component models/15 runs/285 prefixes,35 affected/328 reference tests/build. This
+promotes that clause only to QUALIFIED BOUNDED, not native integration or calendar-time
+ageing.106 bounded/20 partial/6 blocked clauses;79 verdicts;1450/0. Identity family
+remains PARTIAL; corpus unchanged. Stored/derived and joint-feedback competitors remain
+explicit. General double-counting/fusion and independent necessity stay unresolved.
+RO021 historical exit gate remains unsatisfied; no owner ruling. Next native admission.
+
+
+## REV62 — bounded native disposition admission, 2026-09-27
+VER-C3-DISPOSITION-PUBLIC-001 strengthens Brief12.12-7 with native source/authority/
+phase/lineage and Save132 evidence:9 models/15 runs/285 prefixes,44+328 tests/build;
+1458/0. No extra clause promotion:106 bounded/20 partial/6 blocked;80 verdicts.
+Typed operands preserve original history without general fusion or ageing claims.
+Wrapper inventory50 producers/53 factories; old49 scope remains preserved. Roughly44MB
+primary final save is a scaling limitation, not a reason to erase causal distinctions.
+Next SLEEP_CONTROL_READINESS.md; historical reconciliation remains unsatisfied.

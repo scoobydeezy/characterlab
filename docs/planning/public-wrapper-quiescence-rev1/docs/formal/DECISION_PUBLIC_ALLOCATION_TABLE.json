@@ -1,0 +1,813 @@
+{
+  "version": "decision-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-21",
+  "namespace": 1161,
+  "records": [
+    {
+      "typeId": 930,
+      "name": "DecisionProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 931,
+      "name": "DecisionContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Dice",
+          "type": "ref:437",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Arbitration",
+          "type": "ref:440",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 932,
+      "name": "DecisionOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Regime",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Permitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "OutcomeVisible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Hidden",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "CurrentVisible",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 933,
+      "name": "DecisionObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Option",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Value",
+          "type": "nonnegativeQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 934,
+      "name": "DecisionFrozen",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Samples",
+          "type": {
+            "list": "ref:933",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 935,
+      "name": "DecisionResolution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:408",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Margin",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Contest",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "ConflictMass",
+          "type": "nonnegativeQ",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Stake",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Authorship",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "ReasonDraws",
+          "type": {
+            "list": "ref:422",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "Tie",
+          "type": "ref:423",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "OpaqueDraw",
+          "type": "ref:411",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 936,
+      "name": "DecisionIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Resolution",
+          "type": "ref:935",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 937,
+      "name": "DecisionExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:936",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Channels",
+          "type": {
+            "list": "ref:427",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 938,
+      "name": "DecisionPlan",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:936",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Count",
+          "type": {
+            "enum": [
+              1
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 939,
+      "name": "DecisionAttempt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Plan",
+          "type": "ref:938",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 940,
+      "name": "DecisionOutcome",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempt",
+          "type": "ref:939",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Completed",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 941,
+      "name": "DecisionConsequenceObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1115",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Completed",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 942,
+      "name": "DecisionStagedConsequence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:937",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observation",
+          "type": "ref:941",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 943,
+      "name": "DecisionSafeIntent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 944,
+      "name": "DecisionSafeExpression",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": "ref:943",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:408",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Probabilities",
+          "type": {
+            "list": "ref:421",
+            "min": 2,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Margin",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Contest",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "ConflictMass",
+          "type": "nonnegativeQ",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Stake",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Authorship",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Channels",
+          "type": {
+            "list": "ref:427",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 945,
+      "name": "DecisionEpisode",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Expression",
+          "type": "ref:944",
+          "required": false
+        },
+        {
+          "id": 3,
+          "name": "Observation",
+          "type": "ref:941",
+          "required": false
+        },
+        {
+          "id": 4,
+          "name": "Experience",
+          "type": "ref:227",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 946,
+      "name": "DecisionHistoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Histories",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:951"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 947,
+      "name": "DecisionStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 948,
+      "name": "DecisionHistoryApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1161",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Prior",
+          "type": "ref:951",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Next",
+          "type": "ref:951",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Episode",
+          "type": "ref:945",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 949,
+      "name": "DecisionPlayerDisplay",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Chosen",
+          "type": "ref:395",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Faces",
+          "type": {
+            "list": "ref:950",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "TieWinner",
+          "type": "ref:395",
+          "required": false
+        }
+      ]
+    },
+    {
+      "typeId": 950,
+      "name": "DecisionPlayerFace",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Reason",
+          "type": "ref:404",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Die",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Standing",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Situation",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Face",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Contribution",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 951,
+      "name": "DecisionHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Episodes",
+          "type": {
+            "list": "ref:945",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    }
+  ],
+  "unions": []
+}

@@ -1,48 +1,36 @@
 # Current research entry point
 
-**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Bounded native represented identity belief COMPLETE — VER-C3-IDENTITY-BELIEF-PUBLIC-001.**
-LOCAL DISPOSITION; no architectural blocker. Native task reports, independent
-holder belief and next-instant goal-relative appraisal preserve component behavior.
+**Native disposition admission COMPLETE — VER-C3-DISPOSITION-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md
+and DISPOSITION_PUBLIC_CLOSURE_REV1.json. Contract disposition-public/0.1-candidate.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **1450** |
+| Highest permanently allocated record type | **1458** |
 | Allocated since last verdict/corpus member | **0** |
-| Research obligations | **2 active / 19 conditional / 0 unowned** |
-| Closed obligations | **1: RO-C3-018** |
-| Corpus / named verdict entries | **0.29.0 - 21 members / 76 verdicts** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 80 verdicts** |
 | Brief clauses / families | **132 / 15** |
-| Brief clause dispositions | **104 bounded / 21 partial / 7 blocked** |
-| Native belief qualification | **5 models / 37 runs / 222 native prefixes** |
-| Validation | **69 affected (35 native) / 328 reference tests; build passed** |
+| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
+| Native qualification | **9 models / 15 runs / 285 prefixes** |
+| Validation | **44 affected / 328 reference tests; build passed** |
 
-Start CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md and
-IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json. IDENTITY_BELIEF_PUBLIC_FINDINGS.md preserves
-strict-input/phase131 development failures and timeouts. Final frozen cohort passes
-all cases and complete Save132 continuations; prior component/native identity checks
-remain unchanged. No root, source law or biological channel is retired.
+Ten actual phases preserve prior-learning causality and original component expression/
+journal bytes. Constitution has no writer; identity, plastic and physical state have
+separate owners. Typed operands expose original qualified lineage. Refold has no plastic
+leaf. Step/Leaky and joint feedback competitors remain distinct; no general fusion or
+independent dual-effect necessity is established. No calendar-time ageing claim.
 
-Receive130 causally follows qualification130; independent learning140 changes only
-later appraisal50. Source A/A/A/B gives self Mean+1/2 while Latest gives-1. Differing
-observer evidence can yield-1/2 at the same biography. All histories and earlier
-judgments remain. Private-self/hidden-biography noninterference, unknown/known0,
-false/later-correct reports and goal-only appraisal pass. No second identity bonus.
+All native prefixes restore/advance by whole-save replay. Whole character projections
+preserve failed-execution and stored/derived controls. Reached phase faults and wrapper
+microtask-window tests pass. Current wrapper inventory50 producers/53 factories; use
+scripts/check-disposition-wrapper-extension.mjs. Original49 scope and predecessor
+receipts remain unchanged. Primary final native save is about44MB; no scaling claim.
 
-Controlled semantic reports do not qualify natural recognition, learned trust,
-biological identity belief, cross-domain trait scales, dispositional adaptation or
-new sampled social action. Brief12.12-4/6 retain bounded scope with native evidence;
-no clause promotion this increment. AuditREV58; Campaign3 NOT EXIT-READY.
-
-The first serial cohort exposed a torn save between scheduler and wrapper RNG
-commit. The corrected successor rejects the exact window and reproduces all prior
-ordinary prefixes/views/rows. Both cohorts preserved:74 executions/444 checks;
-final coverage stays37 cases/222 prefixes. No extra behavioral cases are claimed.
-
-Next: PUBLIC_WRAPPER_QUIESCENCE_READINESS.md, RO-C3-022 ACTIVE. Prior identity Task
-also exposes the gap; its serial results stand with an explicit scope addendum.
-Audit/correct older wrappers before identity-recovery work. Then resume
-IDENTITY_RECOVERY_READINESS.md; longer sources require a successor contract.
-RO009/010/014/019/020 remain scoped; RO021 historical reconciliation stays mandatory
-and unsatisfied. No owner ruling is pending.
+Next SLEEP_CONTROL_READINESS.md: matched sleep-loss/control effects without rewriting
+constitution, values, goals or competence. Existing biological operands do not alone
+qualify that currently BLOCKED clause. No owner ruling. RO019 ACTIVE; RO021 CONDITIONAL
+and mandatory before final exit. AuditREV62; Campaign3 NOT EXIT-READY.

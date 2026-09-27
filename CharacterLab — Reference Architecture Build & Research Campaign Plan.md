@@ -827,3 +827,37 @@ ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra cove
 The prior identity Task wrapper also exposes the gap; its serial scope is preserved
 by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
 MEC004 controlled semantic source; MEC015..019/022 and EXP011/012 retain their inherited roles. No state root or source law retired.
+
+
+## Public-wrapper protocol checkpoint — 2026-09-26
+
+Bounded public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.
+LOCAL DISPOSITION; no owner ruling. The49-producer inventory accounts for47 native
+Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation. Three raw
+RNG-ledger wrappers allowed torn saves (identity Task, identity Biological, Biology
+public); embodied allowed a second settlement to overlap ingress cleanup. Four narrow
+whole-wrapper barriers repair these failures.30 producers already have independent
+guards;15 have no split public continuation state. Preserve both failure mechanisms,
+the1,108-artifact pre-repair graph, probes and original serial qualification receipts.
+Same50 models/149 prior cases/747 selected complete-prefix restores reproduce all
+original ordinary save bytes; model/run identities, safe views and final outputs/
+trace/state remain unchanged.74 affected/328 reference tests and build pass. The first
+4-pass/2-fail regression cohort assumed a biological draw at1; corrected at9 while
+retaining the draw assertion. The PersonState naming error is a preserved harness
+failure. No new character law, state root, record allocation or psychological clause.
+Counters1450/0. RO22 CLOSED within the declared inventory; RO21 historical reconciliation
+still ACTIVE.1 active/19 conditional/2 closed/0 unowned;77 named verdicts. Corpus0.29.0
+still21 members; Brief104 bounded/21 partial/7 blocked across132 clauses/15 families.
+Campaign3 NOT EXIT-READY. Next IDENTITY_RECOVERY_READINESS.md.
+
+
+### 2026-09-27 — bounded identity recovery
+VER-C3-IDENTITY-RECOVERY-001 qualifies Brief12.12-8 in the native Task five-instant scope:5 reused models/13 runs/78 prefixes,8+328 tests/build,1450/0. Standing, self/observer beliefs and later appraisal stay distinct. Next docs/planning/DISPOSITIONAL_ADAPTATION_READINESS.md; Campaign3 NOT EXIT-READY.
+
+
+### 2026-09-27 — bounded dispositional adaptation component
+VER-C3-DISPOSITION-001 qualifies the finite persistent-adaptation witness under Brief12.12-7:9 models/15 runs/285 component prefixes,35+328 tests/build,1450/0. Constitution and original biography stay immutable. Step/Leaky, Refold and joint feedback comparisons remain explicit. Next docs/planning/DISPOSITION_PUBLIC_READINESS.md; no native admission or Campaign3 exit claim.
+
+
+### 2026-09-27 — native disposition admission
+VER-C3-DISPOSITION-PUBLIC-001 closes the bounded public source/authority/phase/lineage/save seam:9 models/15 runs/285 native prefixes,44+328 tests/build,1458/0. Predecessor identities preserved; no additional Brief clause. Next docs/planning/SLEEP_CONTROL_READINESS.md; Campaign3 remains NOT EXIT-READY.

@@ -2732,3 +2732,70 @@ Final whole-wrapper gating rejects it; all37 successor runs/222 restores match p
 ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra coverage.
 The prior identity Task wrapper also exposes the gap; its serial scope is preserved
 by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
+
+
+## VER-C3-PUBLIC-QUIESCENCE-001
+
+Bounded public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.
+LOCAL DISPOSITION; no owner ruling. The49-producer inventory accounts for47 native
+Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation. Three raw
+RNG-ledger wrappers allowed torn saves (identity Task, identity Biological, Biology
+public); embodied allowed a second settlement to overlap ingress cleanup. Four narrow
+whole-wrapper barriers repair these failures.30 producers already have independent
+guards;15 have no split public continuation state. Preserve both failure mechanisms,
+the1,108-artifact pre-repair graph, probes and original serial qualification receipts.
+Same50 models/149 prior cases/747 selected complete-prefix restores reproduce all
+original ordinary save bytes; model/run identities, safe views and final outputs/
+trace/state remain unchanged.74 affected/328 reference tests and build pass. The first
+4-pass/2-fail regression cohort assumed a biological draw at1; corrected at9 while
+retaining the draw assertion. The PersonState naming error is a preserved harness
+failure. No new character law, state root, record allocation or psychological clause.
+Counters1450/0. RO22 CLOSED within the declared inventory; RO21 historical reconciliation
+still ACTIVE.1 active/19 conditional/2 closed/0 unowned;77 named verdicts. Corpus0.29.0
+still21 members; Brief104 bounded/21 partial/7 blocked across132 clauses/15 families.
+Campaign3 NOT EXIT-READY. Next IDENTITY_RECOVERY_READINESS.md.
+
+
+## `VER-C3-IDENTITY-RECOVERY-001` — bounded native identity recovery (2026-09-27)
+
+QUALIFIED / LOCAL DISPOSITION, identity-recovery-experiment/0.1-candidate.
+RETAIN original expressions, qualified standing, self/observer belief and later
+appraisal as separately traceable distinctions.5 reused models/13 runs/78 native
+prefixes;8 affected/328 reference tests and build. Meaningful recovery changes Mean
+from negative to positive; withheld reports leave an observer negative; NoFeedback
+changes probe probabilities while preserving the sampled A. No new law/allocation.
+Stage C: Mean/Latest/NoLearning and Threshold/NoFeedback retained, no reduction.
+Brief12.12-8 bounded, not whole identity/disposition or general recovery law.
+Report CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md; authoritative closure
+IDENTITY_RECOVERY_CLOSURE_REV1.json. RO009/010/014/019/020/021 referenced.
+Counters1450/0. Next DISPOSITIONAL_ADAPTATION_READINESS.md; no owner ruling.
+
+
+## `VER-C3-DISPOSITION-001` — bounded dispositional adaptation (2026-09-27)
+
+QUALIFIED / LOCAL DISPOSITION, disposition-adaptation/0.1-candidate, component only.
+RETAIN constitution/plastic adaptation/effective disposition/identity-standing
+separation; repeated actual qualified history changes future decisions without
+rewriting constitution or earlier expressions.9 models/15 runs/285 component prefixes;
+35 affected/328 reference tests/build.1450/0, no allocation or native-source claim.
+Stage C: Step/Leaky, Plastic/StandingOnly/Neither, JointMax/JointAdd and Refold retained.
+Refold equals Plastic; JointMax equals StandingOnly in the tested behavior. Independent
+necessity and general shared-history fusion remain UNRESOLVED. Brief12.12-7 bounded.
+Evidence CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md and DISPOSITION_CLOSURE_REV1.json.
+RO009/017/019/020/021; next DISPOSITION_PUBLIC_READINESS.md. No owner ruling.
+
+
+## `VER-C3-DISPOSITION-PUBLIC-001` — bounded native disposition admission (2026-09-27)
+
+QUALIFIED / LOCAL DISPOSITION, disposition-public/0.1-candidate.9 models/15 runs/
+285 native prefixes;44 affected/328 reference tests/build;1458/0. Typed constitution,
+plastic, standing, effective and selected feedback operands retain original qualification
+lineage. Ten actual phases, no constitution writer, separate identity/plastic/physical
+owners, native Failed rollback and quiescent public save/restore. Exact per-run component
+expression/journal/decision correspondence; failed execution preserves whole character
+projection. Seven laws and constitutional controls remain distinct; Refold retains no
+plastic leaf. No general fusion, independent dual-effect necessity or ageing claim.
+RO009/017/019/020/021/022; wrapper inventory now50 producers/53 factories. About44MB
+primary final save; no scaling or reduction qualification. Brief counts unchanged.
+Evidence CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md and DISPOSITION_PUBLIC_CLOSURE_REV1.json.
+Next SLEEP_CONTROL_READINESS.md; no owner ruling.

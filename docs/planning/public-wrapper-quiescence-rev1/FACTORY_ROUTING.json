@@ -1,0 +1,566 @@
+{
+  "status": "PASS",
+  "scope": "All save-bearing *Factory.ts/factory.ts modules in Campaign2 and Campaign3 have an import route to an explicitly audited native save producer. The routes do not by themselves prove quiescence; INVENTORY_DISPOSITIONS and probes do.",
+  "factories": [
+    {
+      "factory": "src/campaign2/cognitiveFactory.ts",
+      "sha256": "c225bb56d2857262a2c1b6c0c1c251128b6d0ce459f5d618755b1864b7969380",
+      "routes": [
+        [
+          "src/campaign2/cognitiveFactory.ts",
+          "src/campaign2/cognitiveModel.ts",
+          "src/campaign2/memoryModel.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign2/factory.ts",
+      "sha256": "28c2aff5250f508bf170133ee1c33ad5dcabc9a2fa6214e2885eb8ff87694948",
+      "routes": [
+        [
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign2/memoryFactory.ts",
+      "sha256": "a79ad99e1a456c1bc38c74e9731434a4cb49fa5a4f9063cd5177e09e56174be6",
+      "routes": [
+        [
+          "src/campaign2/memoryFactory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign2/predictionFactory.ts",
+      "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69",
+      "routes": [
+        [
+          "src/campaign2/predictionFactory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign2/taskFactory.ts",
+      "sha256": "d953fa5f7c52aa2188e65e160966543549f295481c75f1afb3220213b12d2716",
+      "routes": [
+        [
+          "src/campaign2/taskFactory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/affectFactory.ts",
+      "sha256": "f23cd221919c4ea25af4276f453566c6e26a315c54d1b216f35d82d58ebc7a58",
+      "routes": [
+        [
+          "src/campaign3/affectFactory.ts",
+          "src/campaign3/affectRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/agencyFactory.ts",
+      "sha256": "31feba6fb9777217d599b3b6ba72808c02255ac252d64fdeb119032aa976847d",
+      "routes": [
+        [
+          "src/campaign3/agencyFactory.ts",
+          "src/campaign3/agencyRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/attachmentFactory.ts",
+      "sha256": "ebf0a15f14b9d91512d6c458933fc51b15a5d2b7962f596f918b38ae48cb6bd0",
+      "routes": [
+        [
+          "src/campaign3/attachmentFactory.ts",
+          "src/campaign3/attachmentRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/attentionFactory.ts",
+      "sha256": "b8a4efbb5f1f09b8f410ce0142f979d60de238f169dba30dca768f4b85feed85",
+      "routes": [
+        [
+          "src/campaign3/attentionFactory.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ],
+        [
+          "src/campaign3/attentionFactory.ts",
+          "src/campaign3/attentionRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/attributedFactory.ts",
+      "sha256": "a2e50f8ceff6867e1529a7516cf27d44a08f6e5089bcda001cdd337f8abc5f37",
+      "routes": [
+        [
+          "src/campaign3/attributedFactory.ts",
+          "src/campaign3/attributedRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/beliefFactory.ts",
+      "sha256": "719289106ac195575ae69a1be91208f33cc4c2a3e499a45c2d0969632a2ebcd2",
+      "routes": [
+        [
+          "src/campaign3/beliefFactory.ts",
+          "src/campaign3/beliefRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/betrayalFactory.ts",
+      "sha256": "0bee68ad526885aa2c17ccfa68c8b3a787809befef3e7d4a1c926d1786a82454",
+      "routes": [
+        [
+          "src/campaign3/betrayalFactory.ts",
+          "src/campaign3/betrayalRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/biologyPublicFactory.ts",
+      "sha256": "b90388da2b2c3fac485032813044dd34c186052e824fc00baf639e8d2b2a916c",
+      "routes": [
+        [
+          "src/campaign3/biologyPublicFactory.ts",
+          "src/campaign3/biologyPublicRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/commitFactory.ts",
+      "sha256": "92b0976f86cbd379a7610b4348b02d7a476e24a1818436ad2712b329d7e512a4",
+      "routes": [
+        [
+          "src/campaign3/commitFactory.ts",
+          "src/campaign3/commitRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/communicationFactory.ts",
+      "sha256": "8ea6b6fb25d7a3852ac49025639c9f5d5993ed9e64285dc3e5e8790ec27d4f4a",
+      "routes": [
+        [
+          "src/campaign3/communicationFactory.ts",
+          "src/campaign3/communicationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/controlFactory.ts",
+      "sha256": "1cb8340c46654dd7d6baf029a020ce45fd8c96ac0a1992e15cd636492f53e769",
+      "routes": [
+        [
+          "src/campaign3/controlFactory.ts",
+          "src/campaign3/controlRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/decisionFactory.ts",
+      "sha256": "896f3dad6430d7e8e2bbb54673533b206968ed01aeab7530d733a93926627f42",
+      "routes": [
+        [
+          "src/campaign3/decisionFactory.ts",
+          "src/campaign3/decisionRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/delayedFactory.ts",
+      "sha256": "c1219010f78d48e84b1e1520ed175d5cf5d8d39c4c3d0211c79c012edcb5416f",
+      "routes": [
+        [
+          "src/campaign3/delayedFactory.ts",
+          "src/campaign3/delayedRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/embodiedFactory.ts",
+      "sha256": "94ebccdb6385bce2530a27938573ddc96be419c5050ba85eef9bf8e0a4c2cd55",
+      "routes": [
+        [
+          "src/campaign3/embodiedFactory.ts",
+          "src/campaign3/embodiedModel.ts",
+          "src/campaign2/memoryModel.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ],
+        [
+          "src/campaign3/embodiedFactory.ts",
+          "src/campaign3/embodiedRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/emotionalDisplayFactory.ts",
+      "sha256": "ecd67563595fe8b4e13e0ea1a6a963d7bd3f5ac665904ca1b641c11629efc175",
+      "routes": [
+        [
+          "src/campaign3/emotionalDisplayFactory.ts",
+          "src/campaign3/emotionalDisplayRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/epiFactory.ts",
+      "sha256": "7e66160b3a4f80ad513df714a2b9621a553414931b96125512a5fb9d2f0bc48d",
+      "routes": [
+        [
+          "src/campaign3/epiFactory.ts",
+          "src/campaign3/epiRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/familiarValenceFactory.ts",
+      "sha256": "216e7e087b5b66b8bb913b21ed623ff98500574ec2f3fcdb167037fb84142b4d",
+      "routes": [
+        [
+          "src/campaign3/familiarValenceFactory.ts",
+          "src/campaign3/familiarValenceRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/familiarityFactory.ts",
+      "sha256": "55a545f7e9a001a8a199710d405faf81fa07ce44ae6d386bb72e87b9377d4f35",
+      "routes": [
+        [
+          "src/campaign3/familiarityFactory.ts",
+          "src/campaign3/familiarityRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/fatigueFactory.ts",
+      "sha256": "2bd99b748c40fde2e9d680e1f6cbb88e64c6cf4595b33175024614972b8e0d59",
+      "routes": [
+        [
+          "src/campaign3/fatigueFactory.ts",
+          "src/campaign3/fatigueRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/fearGuiltFactory.ts",
+      "sha256": "a3d992a00ba24d38bb48bada9a1649abf390f7ae1715e90f71af8779a71b36a9",
+      "routes": [
+        [
+          "src/campaign3/fearGuiltFactory.ts",
+          "src/campaign3/fearGuiltRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/generalFactory.ts",
+      "sha256": "e32f09bc93719fb15ca46b1af29a7eef9c0b91df339992b4e8bd52ba263e15cf",
+      "routes": [
+        [
+          "src/campaign3/generalFactory.ts",
+          "src/campaign3/generalDeclarations.ts",
+          "src/campaign3/generalInheritedSource.ts",
+          "src/campaign2/memoryExecution.ts",
+          "src/campaign2/memoryModel.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ],
+        [
+          "src/campaign3/generalFactory.ts",
+          "src/campaign3/generalSourceRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/goalStrategyFactory.ts",
+      "sha256": "5b8fb6a5dbcb0891bf83104985643401ce085c8d3966a47e99bd7b3b575d7610",
+      "routes": [
+        [
+          "src/campaign3/goalStrategyFactory.ts",
+          "src/campaign3/goalStrategyRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/griefFactory.ts",
+      "sha256": "0917d0b6183afdcafa7cd8bf56d6aae7b2df3f619ffba461deda5216456e0049",
+      "routes": [
+        [
+          "src/campaign3/griefFactory.ts",
+          "src/campaign3/griefRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/habitFactory.ts",
+      "sha256": "da25bfcecd50017f0da53b3c7b82e3d799237ce5999c25e2be14e8074a2a0cf0",
+      "routes": [
+        [
+          "src/campaign3/habitFactory.ts",
+          "src/campaign3/habitRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/hearsayFactory.ts",
+      "sha256": "ef7ca981e23f19a4ac0b92251f240587b1cd246b40b431be3dcdcf1cc39181b5",
+      "routes": [
+        [
+          "src/campaign3/hearsayFactory.ts",
+          "src/campaign3/hearsayRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/identityBeliefPublicFactory.ts",
+      "sha256": "72e4c1fa2f3db43a8636570216a1aa9f7478f0f616447699f714490aadc9cdd2",
+      "routes": [
+        [
+          "src/campaign3/identityBeliefPublicFactory.ts",
+          "src/campaign3/identityBeliefRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/identityPublicFactory.ts",
+      "sha256": "99485d83429acafecba621c9fc993a448b0495eeafa191008b257fb7ebabc7bb",
+      "routes": [
+        [
+          "src/campaign3/identityPublicFactory.ts",
+          "src/campaign3/identityTaskRuntime.ts"
+        ],
+        [
+          "src/campaign3/identityPublicFactory.ts",
+          "src/campaign3/identityBiologyRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/interpretationFactory.ts",
+      "sha256": "e39bb0c5333c99d292d75ef4ab2684c77458d35a07ae533724bb9e627ba00515",
+      "routes": [
+        [
+          "src/campaign3/interpretationFactory.ts",
+          "src/campaign3/interpretationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/learnFactory.ts",
+      "sha256": "e1e34b2d02ef031fe1bad9cb932e02ffa60f8038c3ee1132b53653e3e21cb9b2",
+      "routes": [
+        [
+          "src/campaign3/learnFactory.ts",
+          "src/campaign3/learnRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/longitudinalFactory.ts",
+      "sha256": "7d1a2128b583ea0a6110f5abded1e489c34faed774a77f710d69ba10d26feb0f",
+      "routes": [
+        [
+          "src/campaign3/longitudinalFactory.ts",
+          "src/campaign3/longitudinalRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/lyingFactory.ts",
+      "sha256": "927e9caf7695067ffbfa7d2cb60bc20e41cfd99275a4850c10644c93885e3b37",
+      "routes": [
+        [
+          "src/campaign3/lyingFactory.ts",
+          "src/campaign3/lyingRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/multisourceFactory.ts",
+      "sha256": "f335908d4bf7c2bca035a1f97a24c3b6d8621e288d8ecfa7e4c6572015a9d74a",
+      "routes": [
+        [
+          "src/campaign3/multisourceFactory.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ],
+        [
+          "src/campaign3/multisourceFactory.ts",
+          "src/campaign3/multisourceRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/performanceFactory.ts",
+      "sha256": "fa523ac75a902576d10edd5e2f053a36a4b3ca07c137556577f8f5bba9b204d1",
+      "routes": [
+        [
+          "src/campaign3/performanceFactory.ts",
+          "src/campaign3/performanceRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/personGoalFactory.ts",
+      "sha256": "5666c0ab7663834964faf6264452587ce0f4bbfb77e2fb49fe27aa0ea5e8845c",
+      "routes": [
+        [
+          "src/campaign3/personGoalFactory.ts",
+          "src/campaign3/personGoalRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/personstateFactory.ts",
+      "sha256": "0618b589489b76a58663dc462f5d8ee9102b5d1eb10fd4834f75bb6d23136f87",
+      "routes": [
+        [
+          "src/campaign3/personstateFactory.ts",
+          "src/campaign3/personstateRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/procrastinationFactory.ts",
+      "sha256": "a910e843e87def60dd73f0671bcfe90f07f17cc14cbf121fce39d4df217f06ff",
+      "routes": [
+        [
+          "src/campaign3/procrastinationFactory.ts",
+          "src/campaign3/procrastinationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/reappraisalFactory.ts",
+      "sha256": "b55c7d482cf965836ae55c6180228c10858bcd869daaf4ad7d37c6408da55249",
+      "routes": [
+        [
+          "src/campaign3/reappraisalFactory.ts",
+          "src/campaign3/reappraisalRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/reasonFactory.ts",
+      "sha256": "8fce1d7c62024971866e3cae2d87d9439537506f79f4599b58828bbcdd8a5768",
+      "routes": [
+        [
+          "src/campaign3/reasonFactory.ts",
+          "src/campaign3/reasonRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/receivingFactory.ts",
+      "sha256": "31bb3dad33ca3cf3360a02f13f690fff83ab185810ad19c96cd7f1feb073b726",
+      "routes": [
+        [
+          "src/campaign3/receivingFactory.ts",
+          "src/campaign3/receivingModel.ts",
+          "src/campaign2/memoryModel.ts",
+          "src/campaign2/factory.ts",
+          "src/campaign2/adaptationRuntime.ts"
+        ],
+        [
+          "src/campaign3/receivingFactory.ts",
+          "src/campaign3/receivingRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/recollectionFactory.ts",
+      "sha256": "f02e7c2d0e5410cafb8f64b321c34815fd390ca91ae280f6f4c770dfc8225c5b",
+      "routes": [
+        [
+          "src/campaign3/recollectionFactory.ts",
+          "src/campaign3/recollectionRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/relAttributionFactory.ts",
+      "sha256": "7615082c808f2dd2f5d7a0dd3d8309b07e07d35ca62558281b31afc10044fd25",
+      "routes": [
+        [
+          "src/campaign3/relAttributionFactory.ts",
+          "src/campaign3/relAttributionRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/relDimensionsFactory.ts",
+      "sha256": "6f14742a1b45e1a7d31732621bb9928926d864082782b562bf1f39bae4070717",
+      "routes": [
+        [
+          "src/campaign3/relDimensionsFactory.ts",
+          "src/campaign3/relDimensionsRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/relationshipFactory.ts",
+      "sha256": "764a121b3d50a7d1ca9d2c0549371e3caf0f6451f0406521e1f25f7ee820a859",
+      "routes": [
+        [
+          "src/campaign3/relationshipFactory.ts",
+          "src/campaign3/relationshipRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/ruminationFactory.ts",
+      "sha256": "3b5e5fba2a5c71e3a37e29d96281f8de933dec1f13fcc65ccf3cd618743c3bbc",
+      "routes": [
+        [
+          "src/campaign3/ruminationFactory.ts",
+          "src/campaign3/ruminationRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/skillFactory.ts",
+      "sha256": "c28a5e01720d0e10bae55d69cedbbfbb72206bbe314e47912c247b5c5b1bac94",
+      "routes": [
+        [
+          "src/campaign3/skillFactory.ts",
+          "src/campaign3/skillRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/socialFactory.ts",
+      "sha256": "029b8be98f4d597aef0ca3723e4e46164b33ed9fbbcf4c57cc339f6c6345cbb2",
+      "routes": [
+        [
+          "src/campaign3/socialFactory.ts",
+          "src/campaign3/socialRuntime.ts"
+        ]
+      ]
+    },
+    {
+      "factory": "src/campaign3/workFactory.ts",
+      "sha256": "134399825228092fdc3ae454d8939193bd12ed6b830677a8b4718ac39ef6ba18",
+      "routes": [
+        [
+          "src/campaign3/workFactory.ts",
+          "src/campaign3/workRuntime.ts"
+        ]
+      ]
+    }
+  ]
+}

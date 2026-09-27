@@ -1,3 +1,4 @@
+import {guardScheduledPublicWrapper} from './scheduledWrapperQuiescence';
 /** Fixed execution of the frozen EMB profile. Public construction is in embodiedFactory. */
 import {canonicalEncode as enc,list,set,signed,unsigned,text,typedIdentifier,type CanonicalValue,type TypedIdentifierValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,ContractReadProjection,StateContractError,statePathValue,type ActualReadRecord,type StatePatch,type StructuralMutationDiff,type StatePathPattern} from '../substrate/state';
@@ -104,11 +105,11 @@ export function createEmbodiedRuntime(model:Model,inputs:EmbodiedInputCompilatio
  validateState(initial);
  const scheduler=new DeterministicScheduler({initialState:initial,stateAdapter:adapter,handlers,initialQueue:original.events,maxSettlementWorkPerSimulationInstant:model.work,initialAllocators:{nextRuntimeId:0n,nextEventId:BigInt(original.events.length),nextEventSequence:BigInt(original.events.length)},invariants:[()=>{validateSuccessfulExperienceSettlement(reservations,staged);ingress!.finish();}]});
  async function settle(instrumentation?:ConformanceInstrumentation){const next=scheduler.getPendingQueue()[0];if(!next)return undefined;instant=next.dueAt;reservations=[];staged=[];ingress=beginEmbodiedIngress(inputs,instant,enc(registrations[0]),enc(registrations[1]),enc(registrations[2]));try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{ingress.abort();ingress=undefined;}}
- return Object.freeze({
+ return Object.freeze(guardScheduledPublicWrapper({
   settleNextInstant:()=>settle(),
   settleNextInstantForConformance:(instrumentation:ConformanceInstrumentation)=>settle(instrumentation),
   snapshot(){return {clock:scheduler.getClock(),status:scheduler.status,state:scheduler.getState(),outputs:scheduler.getOutputs(),trace:scheduler.getCommittedTrace(),allocators:scheduler.getAllocatorState(),queue:scheduler.getPendingQueue()};},
   save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:original.runIdentity,continuingRunInputs:list([])}),
   diagnostic:()=>scheduler.failureDiagnostic,
- });
+ }));
 }

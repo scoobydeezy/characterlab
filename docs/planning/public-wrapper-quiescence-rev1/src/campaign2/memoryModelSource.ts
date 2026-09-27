@@ -1,0 +1,57 @@
+/** Frozen declaration constructor. Packet files are never construction inputs. */
+import allocation from '../../docs/formal/MEASUREMENT_MEMORY_ALLOCATION_TABLE.json';
+import {canonicalEncode as enc,list,set,map,text,unsigned as u,signed,typedIdentifier,record,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {statePathPatternValue} from '../substrate/state';
+import {measurementEvidenceModelSource} from './measurementModelSource';
+import {recordRole} from './firstModelCandidate';
+import {PROBE_SUCCESSOR_BUNDLE} from './probeSuccessorReview';
+import {decodeMemory,memoryRecord as r,memoryNamed as named,memoryAddedSchemas,cloneMemory} from './memoryCodecs';
+import {dataRecord as rec,dataField as f,dataItems as items,dataIdentity as ident,dataText as txt,dataKey as key,invalidModel,type RecordValue} from './canonicalData';
+export const MEMORY_RULES='rules/campaign2-measurement-memory/0.1-candidate';
+export const MEMORY_REGISTRY='campaign2-measurement-memory-registry/0.1-candidate';
+export const MEMORY_VERSION='measurement-episodic-memory/0.1-candidate';
+export const MEMORY_FORMATION='measurement-memory-formation-registration/0.1-candidate';
+export const MEMORY_RECALL='measurement-recall-registration/0.1-candidate';
+export const MEMORY_FORMATION_ABLATION='measurement-formation-write-ablation/0.1-candidate';
+export const MEMORY_RECALL_ABLATION='measurement-recall-read-ablation/0.1-candidate';
+export const MEMORY_PROFILES=Object.freeze({orderedInput:'campaign2-probe-ordered-input/0.1-candidate',trace:'campaign2-measurement-memory-trace-binding/0.1-candidate',persistence:'campaign2-measurement-memory-persistence/0.1-candidate'});
+export const MEMORY_BUNDLE=Object.freeze([...PROBE_SUCCESSOR_BUNDLE,'transition-admission-extension/0.7-candidate','measurement-evidence-carriage/0.1-candidate','campaign2-measurement-evidence-trace-binding/0.1-candidate',MEMORY_VERSION,MEMORY_FORMATION,MEMORY_RECALL,MEMORY_FORMATION_ABLATION,MEMORY_RECALL_ABLATION,'projection-input-field-path/0.1-candidate','measurement-episode-read/0.1-candidate','measurement-recall-opportunity/0.1-candidate',MEMORY_PROFILES.trace,MEMORY_PROFILES.persistence]);
+const id=(n:number,s:string)=>typedIdentifier(n,text(s)),empty=()=>set([]),ref=(n:number)=>r(254,[u(n),u(1)]);
+const role=(n:number,validator?:string|null)=>named(263,{RequiredNamespace:u(n),...(validator?{DomainValidatorId:id(1021,validator)}:{})});
+const replace=(v:RecordValue,n:number,x:CanonicalValue)=>record(v.schema,new Map([...v.fields].map(([i,a])=>[i,i===BigInt(n)?x:a])));
+const pairs=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='map')invalidModel('requires map');return v.entries;};
+const pattern=(root:number)=>statePathPatternValue({rootStateTypeId:BigInt(root),fieldId:1n,selectors:[{kind:'wildcard',selectorKind:'mapKey'}]});
+const roster=pattern(268),episode=pattern(346),subject=id(1028,'ResolvedCharacterSubject'),seam=id(1036,'seam/measurement-episodic-memory');
+const kinds=['MeasurementEpisodeEvidenceTransition','MemoryFormationTransition','MeasurementRecallTransition'] as const;
+const v04='transition-admission/0.4-candidate';
+const entry=(stable:CanonicalValue,version:string,def:CanonicalValue,kind='registry/transition-registration')=>r(171,[stable,id(1023,kind),text(version),def]);
+const find=(xs:readonly CanonicalValue[],name:string)=>{const vs=xs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n&&key(f(v,1n))===key(id(1027,name)));if(vs.length!==1)invalidModel('required singleton '+name);return rec(vs[0],171n);};
+const m2=r(343,[list([u(2),u(2),u(2)]),roster,u(1),role(1002,'validator/character-qualification'),subject]);
+const idn=r(266,[u(1),roster,u(1),role(1002,'validator/character-qualification'),subject]);
+const er=r(349,[subject,u(2),episode,id(1028,'accessor/measurement-episode-read')]);
+const admission=(n:number,producer:string)=>r(274,[ref(n),named(275,{VariantTag:u(2),ProducingTransitionKind:id(1009,producer)}),u(1)]);
+const ingress=(event:string,phase:number)=>r(276,[id(1001,event),u(1),u(phase),u(1),u(1)]);
+const noWrite=r(273,[u(1)]),formInput=admission(342,kinds[0]),formIngress=ingress('event/measurement-episode-formation',140);
+const m1=r(356,[r(272,[seam,text(MEMORY_VERSION),r(271,[admission(337,'MeasurementEvidenceIntakeTransition'),empty(),set([r(277,[ref(342),u(1)])]),noWrite]),ingress('event/measurement-episode-evidence',130)]),empty(),empty(),empty()]);
+const formationNormal=r(357,[r(347,[seam,text(MEMORY_VERSION),r(348,[formInput,set([roster]),empty(),named(322,{VariantTag:u(2),MutationAuthority:id(1025,'authority/measurement-episode-formation'),WritableFamilies:set([id(1031,'episodic-memory')])})]),formIngress]),set([m2])]);
+const formationAblated=r(356,[r(272,[seam,text(MEMORY_FORMATION_ABLATION),r(271,[formInput,set([roster]),empty(),noWrite]),formIngress]),empty(),set([m2]),empty()]);
+const recallInput=r(354,[ref(351),id(1027,'definition/measurement-recall-opportunity')]);
+const recallNormal=r(358,[r(353,[seam,text(MEMORY_VERSION),recallInput,set([roster,episode]),set([r(355,[ref(352)])]),noWrite]),set([idn]),set([er])]);
+const recallAblated=r(358,[r(353,[seam,text(MEMORY_RECALL_ABLATION),recallInput,set([roster]),empty(),noWrite]),set([idn]),empty()]);
+export function memoryWrapperDeclarations(){return {formation:cloneMemory(formationNormal),formationAblated:cloneMemory(formationAblated),recall:cloneMemory(recallNormal),recallAblated:cloneMemory(recallAblated)};}
+export function memoryModelSource(a=true,p=true,formationWrapper:CanonicalValue=formationNormal,recallWrapper:CanonicalValue=recallNormal){
+ const fw=rec(formationWrapper,typeof formationWrapper!=='boolean'&&formationWrapper.kind==='record'?formationWrapper.schema.typeId:0n),rw=rec(recallWrapper,358n);
+ if(fw.schema.typeId!==356n&&fw.schema.typeId!==357n)invalidModel('wrong formation wrapper');
+ const base=measurementEvidenceModelSource(a,p),slots=items(decodeMemory(base.registry),'list'),old=items(slots[0],'set');
+ const singleton=find(old,'definition/transition-admission'),ad=rec(f(singleton,4n),279n);
+ const updated=replace(singleton,4,r(279,[f(ad,1n),map([...pairs(f(ad,2n)),...kinds.slice(0,2).map(k=>[id(1009,k),id(1026,'route/character-learning')] as const)]),map([...pairs(f(ad,3n)),...allocation.occurrenceIdentities.map(x=>[ref(x.recordTypeId),r(278,[u(1),role(x.requiredNamespace)])] as const)])]));
+ const topology=find(old,'definition/campaign2-state-families');
+ const familyMap=pairs(f(rec(f(topology,4n),284n),1n)).map(([k,v])=>[k,(ident(k).payload as {value:string}).value==='episodic-memory'?replace(rec(v,285n),2,named(286,{VariantTag:u(2),RootStateTypeId:u(346),LeafFields:map([[id(1032,'leaf/measurement-episode'),u(1)]])})):v] as const);
+ const topo=replace(topology,4,r(284,[map(familyMap)]));
+ const descriptors=memoryAddedSchemas().map(s=>r(172,[u(s.typeId),u(1),text(s.name),list(s.fields.map(x=>r(173,[u(x.id),text(x.name),x.required])))]));
+ const roles=allocation.roles.map(x=>recordRole(x.recordTypeId,x.fieldId,role(x.requiredNamespace,x.domainValidatorId)));
+ const rosterRole=r(265,[named(264,{VariantTag:u(2),RootStateTypeId:u(268),FieldId:u(1)}),role(1000)]);
+ const rows=[entry(id(1009,kinds[0]),v04,m1),entry(id(1009,kinds[1]),fw.schema.typeId===357n?MEMORY_FORMATION:v04,fw),entry(id(1009,kinds[2]),MEMORY_RECALL,rw),entry(id(1027,'definition/measurement-recall-opportunity'),'measurement-recall-opportunity/0.1-candidate',r(350,[id(1009,'MeasurementEvidenceIntakeTransition'),id(1001,'event/measurement-exact-recall'),signed(1)]),'registry/measurement-recall-opportunity')];
+ const owner=r(154,[id(1025,'authority/measurement-episode-formation'),set([r(153,[episode,r(152,[u(3),u(345)]),false])])]);
+ return {...base,rulesVersion:MEMORY_RULES,registrySchemaVersion:MEMORY_REGISTRY,registry:enc(list([set([...old.filter(v=>v!==singleton&&v!==topology),updated,topo,...descriptors,...rows]),slots[1],replace(rec(slots[2],155n),2,set([...items(f(rec(slots[2],155n),2n),'set'),owner])),set([...items(slots[3],'set'),r(262,[roster,r(152,[u(3),u(267)])])]),set([...items(slots[4],'set'),r(261,[roster,r(260,[u(1)])]),r(261,[episode,r(260,[u(2),u(344)])])]),set([...items(slots[5],'set'),...roles,rosterRole])]))};
+}

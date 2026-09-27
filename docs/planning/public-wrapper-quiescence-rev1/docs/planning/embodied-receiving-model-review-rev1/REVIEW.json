@@ -1,0 +1,365 @@
+{
+  "status": "CANONICAL DECLARATIONS MATERIALIZED; NOT FROZEN OR ACTIVATED",
+  "versions": {
+    "rulesVersion": "rules/campaign3-embodied-receiving/0.1-candidate",
+    "registrySchemaVersion": "campaign3-embodied-receiving-registry/0.1-candidate",
+    "contentSchemaVersion": "content/0.2-candidate",
+    "parameterSchemaVersion": "campaign3-embodied-receiving-parameters/0.1-candidate",
+    "numericProfileVersion": "numeric/embodied-receiving-exact/0.1-candidate",
+    "randomAlgorithmVersion": "rng/sha256-addressed-128-v1-candidate"
+  },
+  "models": [
+    {
+      "name": "baseline",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042084b7ccf394001c365fc4b4732ff276b65041aed342b095680edcc60391bf3fa2",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/baseline/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/baseline/registry.cenc.hex",
+          "sha256": "38dc228d82273e23d42e37eb7f6ff44762e927afc30f264229e4ebfb6439e1c8"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/baseline/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/baseline/model-identity.cenc.hex",
+          "sha256": "11a6f5968059cec46345978c2151a580b4978ff748033b8ce8e5788f2a490d0f"
+        }
+      ]
+    },
+    {
+      "name": "slower",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420e602e802fc14f8f794867582d4ad8556eab53ed46ed1786bf6fc25df2a5ca6cb",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/slower/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/slower/registry.cenc.hex",
+          "sha256": "8b4a0678e11a14f8f299de71720444eccb257d10e14fe65931ecfc98cf88a136"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/slower/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/slower/model-identity.cenc.hex",
+          "sha256": "3a7b1c0e8131ea026765ac7ed488e6f1891ca8c6d7a91b141e130603db8d1f8a"
+        }
+      ]
+    },
+    {
+      "name": "coarser",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420b520c70643b3dc1ae75d447fa174176dd7ddc255eeeb68270c1e101cc3a57a5c",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/coarser/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/coarser/registry.cenc.hex",
+          "sha256": "b50bd235f64c480e3dace64c7924deff0b54ae9866d13416a3f336ce137d5098"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/coarser/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/coarser/model-identity.cenc.hex",
+          "sha256": "da8512b0bab769dd82604372e8444531b75ff9e937a59d1a06cea0f2b0826b0a"
+        }
+      ]
+    },
+    {
+      "name": "denied",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420bda718fdb5c495efb85e9ec4021c501d1959575a31b28049dfe75af9612852d7",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/denied/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/denied/registry.cenc.hex",
+          "sha256": "164a3393fb84cdfa0b33a7a726899f4e111c1ef7c416c7f47b9081a3209dbc61"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/denied/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/denied/model-identity.cenc.hex",
+          "sha256": "272fdaae2e9486dd21d68a52831b802ac7b13be2f8aa99798ff066cac6d01284"
+        }
+      ]
+    },
+    {
+      "name": "unavailable",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420698ad822c2ce7827ff314cadd60dd4bef8176cabcb632e64bb8fefce4c46fb8f",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/unavailable/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/unavailable/registry.cenc.hex",
+          "sha256": "4664f0c8ae24eca852fba4e17a52c183480a00321e92a5ef485f296c1a816b75"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/unavailable/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/unavailable/model-identity.cenc.hex",
+          "sha256": "3c3be0492133f63ec3274c30f60b543e410e34907778614f48a584c7e9112f24"
+        }
+      ]
+    },
+    {
+      "name": "task-base-off",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e646964617465020104206008efd81538f1bf8eaf335cce58ae9ef40b1cc514c42ef9cd32f26c6bb0e9ba",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-base-off/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-base-off/registry.cenc.hex",
+          "sha256": "bf09b58fcb500e2cf58c5b44ef6e66c707a039e88f23c5ceeca8894fcf23c7cc"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-base-off/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-base-off/model-identity.cenc.hex",
+          "sha256": "ef923f3800ab8daf2f8246cf099f94fb7c622f362d40595d74278b447f3ce114"
+        }
+      ]
+    },
+    {
+      "name": "task-plan-off",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042076556f87f9b5fd19b21b9d2ecf573e5d32ae2d57f6c13674c4f2ada92de5b3e1",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-plan-off/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-plan-off/registry.cenc.hex",
+          "sha256": "ff7c60d0b7c2172813de2ed7e0687d2d49a8411ab607363ebc70caf61d4c9d6d"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-plan-off/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/task-plan-off/model-identity.cenc.hex",
+          "sha256": "d60c54d3f022a8647e5baf53f478f4a7bd3377e716a9644303c38ffc4a26cd00"
+        }
+      ]
+    },
+    {
+      "name": "execution-blocked",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420bdca0bd5594e702a413ae18487ef6242d30fd83e28dba759f9d03de32fd471f9",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/execution-blocked/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/execution-blocked/registry.cenc.hex",
+          "sha256": "91b120c155b158412ee6ee7676a933dff72bbf99ae2027a52292d5e6d7eafc14"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/execution-blocked/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/execution-blocked/model-identity.cenc.hex",
+          "sha256": "6ac6784db029d0e499adaf20d85e89e97c4dfdd470ae82ceb81f0be4241e5ea7"
+        }
+      ]
+    },
+    {
+      "name": "quiet",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420d26a7f3e816d844323480a2458b3fc6d3c55e6c9f04b16c272e63f893332348f",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/quiet/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/quiet/registry.cenc.hex",
+          "sha256": "13fb155299f4f0af54f00322f56f3bfa0005d375d034889a4c699d32f74808ac"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/quiet/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/quiet/model-identity.cenc.hex",
+          "sha256": "1c7b8e87bfe9148c9fdac06e70f1f910719d1ca11e4c1e0912ab15c740ca78e4"
+        }
+      ]
+    },
+    {
+      "name": "auto",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e64696461746502010420cfe75de532611c2dcd2add7d91e19ef406f2ccf711ab0f2e8185c22961d561ae",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/auto/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/auto/registry.cenc.hex",
+          "sha256": "cbc61a0b8dc073000235da2b0b08969b53a40a6451eae8d434b8f29e070ee6fd"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/auto/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/auto/model-identity.cenc.hex",
+          "sha256": "db7eb11ae7bba9b17499d287f8f76b0d01076f3db3134f34bca2c1c9cb6ebacc"
+        }
+      ]
+    },
+    {
+      "name": "weak-task",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042017704b720027f9a4d866c19e55a173f0a34651f8e481d745a8e6b70c91c41713",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/weak-task/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/weak-task/registry.cenc.hex",
+          "sha256": "3c767b3fab7ed3bb364871d07cce75904e6be7fd1567f8d8193abd8e5c3b6f0b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/weak-task/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/weak-task/model-identity.cenc.hex",
+          "sha256": "1e5c2e1c7dfcb80507eb38f9f55aa3d33083e4ebb37175c517a618552b9d04bc"
+        }
+      ]
+    },
+    {
+      "name": "work25",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e64696461746502010420f860e9c658117868f6780fd357d704090d89e1992c42865e86f8299e256604930401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042084b7ccf394001c365fc4b4732ff276b65041aed342b095680edcc60391bf3fa2",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/work25/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/work25/registry.cenc.hex",
+          "sha256": "38dc228d82273e23d42e37eb7f6ff44762e927afc30f264229e4ebfb6439e1c8"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/work25/parameters.cenc.hex",
+          "sha256": "74e42ff71b681efd5c2bf8818a9ef1b6d86d2b8edcc6af3089c747807f8604a5"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/work25/model-identity.cenc.hex",
+          "sha256": "ac2422740eae700e0af2ffd7e46cf01218686314da92c19236bdf510094b006b"
+        }
+      ]
+    },
+    {
+      "name": "no-coverage-control",
+      "modelIdentity": "0a6701060101053072756c65732f63616d706169676e332d656d626f646965642d726563656976696e672f302e312d63616e64696461746502010a64010201010515636f6e74656e742f302e322d63616e64696461746502010420886d8e0e627208475f4482f302240d4489f41121564f3c3584e5be4606fcbdc203010a6501020101053563616d706169676e332d656d626f646965642d726563656976696e672d706172616d65746572732f302e312d63616e6469646174650201042026bae192fbf6cc907d295d8f7ab8603cf63d4f8f903c8e4f45d2144b1578a1eb0401052e6e756d657269632f656d626f646965642d726563656976696e672d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a6601020101053363616d706169676e332d656d626f646965642d726563656976696e672d72656769737472792f302e312d63616e6469646174650201042026cb9956835761655147bc1bbd6fb335ad4b5e88ecaf552a2cbd8ab8b236c1c4",
+      "descriptors": 360,
+      "semanticEntries": 138,
+      "stageRegistrations": 16,
+      "files": [
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/no-coverage-control/content.cenc.hex",
+          "sha256": "b09d5e4ac8ed74f41038015306e47acdc8e9cd86cdf99c784363860f5180987b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/no-coverage-control/registry.cenc.hex",
+          "sha256": "6f6360ea675dd13e2b010d671d759aa6038ad54c69554a24d3aa7e3da07c1a3b"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/no-coverage-control/parameters.cenc.hex",
+          "sha256": "b7cb5792d811437b032febff9937fd9216a589ab38f95b5617c590fd341ae598"
+        },
+        {
+          "path": "docs/planning/embodied-receiving-model-review-rev1/no-coverage-control/model-identity.cenc.hex",
+          "sha256": "e965a7869acf439f9d90d0d986071f34ca1110577cbead6a1d5bc98c2d5f3dd9"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/embodied-receiving-declaration-tools.mjs",
+      "sha256": "80a6c7492e069bca80ea39466d1c3c65cf7e0990a8445bbde220500c27a527d1"
+    },
+    {
+      "path": "scripts/materialize-embodied-receiving-models.mjs",
+      "sha256": "bd25abcc95e22f928e3636fdb079501691b74f8406475ce118662845f0463119"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_ALLOCATION_TABLE.json",
+      "sha256": "c77ea031a5753e43e826dd4f5c79ce571d7d01fec49d6827a1772a7cc511b9bb"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_SHAPE_MANIFEST.json",
+      "sha256": "c1cd1d39dfa4a228f858317a418b93129842943a798ec798fd42590cc97ef2d1"
+    },
+    {
+      "path": "docs/formal/EMBODIED_RECEIVING_DEADLINE_ROUTE_CLARIFICATION.md",
+      "sha256": "15a7395fae5a846d5f5d6c658503fecc26b23e4f29012a9eba6ecf747fb5cd02"
+    }
+  ],
+  "limits": [
+    "Round trips and unique identities do not prove model role/reference/transition admission.",
+    "Independent declaration/role/PRJ/state review is required before freeze.",
+    "No runtime handler or public run was created."
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "scope": "All Campaign3 native createCanonicalSave runtimes; Campaign2 adaptation and generic substrate separately reviewed.",
+  "inventory": [
+    {
+      "path": "src/campaign3/affectRuntime.ts",
+      "sha256": "787bad8826cd24c2cdd6323a76cfd6a194e9c7a2f1757fcc00e89a6ab3267fb0",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('affect concurrent settlement');committedCarry=scheduler.getOutputs().filter(v=>is(v,751n)||is(v,754n));active=true;expected=new Map();reservations=[];staged=[];try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();reservations=[];staged=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/agencyRuntime.ts",
+      "sha256": "8b0ce8140c91cb27292eb16c4a46cf6d09af38066a4ec34a17ed6945b77262ef",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('agency concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/attachmentRuntime.ts",
+      "sha256": "9a3db1e1efbfdcc765b092de9f1e3bd8d01883158ac920a9107c610f8fa1fdb6",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('attachment concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/attentionRuntime.ts",
+      "sha256": "ad3fb64fd7f25bad1176e4b4a0a024590d858119384c86cdf9bf9109a9c32d3c",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(!scheduler.getPendingQueue().length)return undefined;reset();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{if(view)closeSelectedView(view);view=undefined;live=false;expected.clear();truth=[];bindings=[];claims=[];experience=undefined;reservation=undefined;staged=undefined;observation=undefined;eventTransition=undefined;requests=[];selection=undefined;selectedCanonical=undefined;detections=[];eventDetection=0n;observationId=0n;}}",
+      "publication": [
+        "  }else if(n===10){sources=[id(f(rec(event.payload,534n),1n))];if(!selection||!selectedCanonical)fail('selection completion missing');const refs:CharacterEvidenceRef[]=view?[...selectedReferences(view)].sort((a,b)=>characterEvidenceRefKey(a).localeCompare(characterEvidenceRefKey(b))):[],values=view?consumeSelected(view,refs).map(decode):[];view=undefined;",
+        " return Object.freeze({settleNextInstant:()=>settle(),settleNextInstantForConformance:(x:ConformanceInstrumentation)=>settle(x),snapshot:()=>({clock:scheduler.getClock(),status:scheduler.status,state:scheduler.getState(),outputs:scheduler.getOutputs(),trace:scheduler.getCommittedTrace(),allocators:scheduler.getAllocatorState(),queue:scheduler.getPendingQueue()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic});"
+      ]
+    },
+    {
+      "path": "src/campaign3/attributedRuntime.ts",
+      "sha256": "34ac52d44cd4c4ead9d95215f6784087043f711042972eac5cef37a14ea273ef",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('attributed concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/beliefRuntime.ts",
+      "sha256": "89592b46d7b8ab983616f9bc5cd99c1a6066707be172f2b64efe866ce499a6cd",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('belief concurrent settlement');active=true;expected=new Map();reservations=[];staged=[];try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();reservations=[];staged=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/betrayalRuntime.ts",
+      "sha256": "1abf6a3aeb82e4cb4b7c36c3895d279029f2437c6bb67969fcbaa24133bf2380",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('betrayal concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/biologyPublicRuntime.ts",
+      "sha256": "7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('biology concurrent');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();pending=[];try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)committed.push(...pending);return result;}finally{active=false;expected.clear();pending=[];}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:committed.slice()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(committed.map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/commitRuntime.ts",
+      "sha256": "9fd09260cb09071ea63b51a198a46b47630413256c6db7c01d92019361b5ced9",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('commit concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/communicationRuntime.ts",
+      "sha256": "7ada22ba5ae07ccd4dd0f64c4101a199db23c4a91eab1b7bc56fc06c62349e9f",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('communication concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/controlRuntime.ts",
+      "sha256": "465cb907b24f2def46eb53d70e9e37a2405234ca6f39d07bb555c1c49d2877ec",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('habit concurrent settlement');active=true;expected=new Map();controls.clear();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();controls.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/decisionRuntime.ts",
+      "sha256": "fc5877e31a3371574d3c49a1d0017e17f590d73c56d1dba368e00342853100ad",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('decision concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();reservations=[];staged=[];random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();reservations=[];staged=[];random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/delayedRuntime.ts",
+      "sha256": "5f785fe40ec6b4e4af0f6d2883da5c92d5ca1c381dc61feb53562c3fc1d1ed53",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('delayed concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){const next=scheduler.getPendingQueue()[0];if(!next)return undefined;instant=next.dueAt;reservations=[];staged=[];ingress=beginEmbodiedIngress(inputs,instant,enc(registrations[0]),enc(registrations[1]),enc(registrations[2]));try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{ingress.abort();ingress=undefined;}}",
+      "publication": [
+        "  snapshot(){return {clock:scheduler.getClock(),status:scheduler.status,state:scheduler.getState(),outputs:scheduler.getOutputs(),trace:scheduler.getCommittedTrace(),allocators:scheduler.getAllocatorState(),queue:scheduler.getPendingQueue()};},",
+        "  save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:original.runIdentity,continuingRunInputs:list([])}),"
+      ]
+    },
+    {
+      "path": "src/campaign3/emotionalDisplayRuntime.ts",
+      "sha256": "413a99295c7b8afa67aa2e9a7665344ab1d6f1b9353bfa9912460a0b9086643d",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('emotionalDisplay concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/epiRuntime.ts",
+      "sha256": "9d1431ec974be7a338dbdca8fc9e20101d39f1b39fa4ade82154298a5d90e7c1",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('epi concurrent settlement');active=true;expected=new Map();reservations=[];staged=[];try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();reservations=[];staged=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/familiarValenceRuntime.ts",
+      "sha256": "2423186ff1f2d8fe8be5e32173259208817266d93708b11c0f0532753ec67f4b",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('familiarValence concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/familiarityRuntime.ts",
+      "sha256": "a215e802a1d9d9d47bb072e9f38fe17a103994e7db4ff301341ee4c907ba0d45",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('familiarity concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/fatigueRuntime.ts",
+      "sha256": "62b05310126a6eabda7ff6218af5780ff7de51e4a4f7db6c038b554347998267",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('habit concurrent settlement');active=true;expected=new Map();fatigues.clear();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();fatigues.clear();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/fearGuiltRuntime.ts",
+      "sha256": "ea3fc418ffc3b2618e067e26e6b0ae0368a336bade4ee62364ec3cda4c9b423a",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('fearGuilt concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/goalStrategyRuntime.ts",
+      "sha256": "aaadf7382c4e1586d15c0e29171eeb514c07d000c681dab28a930a8f139a169e",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('goalStrategy concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/griefRuntime.ts",
+      "sha256": "e1bd295b799192d906dc807c10053e7b383dd224065648239e60bff32f15deff",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('grief concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/habitRuntime.ts",
+      "sha256": "453e3925ac5d2f7aba36d523bd6dbe041a53f92e6e6b2c32ec2f0c069703887b",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('habit concurrent settlement');active=true;expected=new Map();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/hearsayRuntime.ts",
+      "sha256": "ddf83c4b348467a889fe35be5233d11fe24b8356bcb3d3aeb5c70240f9783485",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('hearsay concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/identityBeliefRuntime.ts",
+      "sha256": "f0e4ad1da5f97d229de20156bc18100e162647803e6cacbb534de130e4cc85db",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": true,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('identity concurrent');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();pending=[];try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)committed.push(...pending);return result;}finally{active=false;expected.clear();pending=[];}}\r",
+      "publication": [
+        " return guardIdentityBeliefSettlement({settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:committed.slice()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(committed.map(text))}),diagnostic:()=>scheduler.failureDiagnostic});\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/identityBiologyRuntime.ts",
+      "sha256": "06af47efb3d5d3860cacf8230df906ca3ce937dacca37a75da9644450a28d8db",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('biology concurrent');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();pending=[];try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)committed.push(...pending);return result;}finally{active=false;expected.clear();pending=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:committed.slice()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(committed.map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/identityTaskRuntime.ts",
+      "sha256": "d7c10c8c5d2b075eff9db5413a584691ea46424598a753a06586fda9391c36c2",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('identity concurrent');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();pending=[];try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)committed.push(...pending);return result;}finally{active=false;expected.clear();pending=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:committed.slice()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(committed.map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/interpretationRuntime.ts",
+      "sha256": "1122f5f779c667f75baf038cc1baac021587e5d63680b5dbc6eefcc596a5ee4b",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('interpretation concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/learnRuntime.ts",
+      "sha256": "6cd4265d73082375adf00a3909ec0da40d9455a4e7a753a384451c2bec233151",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('learn concurrent settlement');active=true;expected=new Map();reservations=[];staged=[];try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();reservations=[];staged=[];}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/longitudinalRuntime.ts",
+      "sha256": "498ccb755fe8491b6c6525063701b972e558eef56b9e559c3bda1883acd7db75",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('concurrent longitudinal settlement');if(!scheduler.getPendingQueue().length)return undefined;priorClock=scheduler.getClock();active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),view,snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/lyingRuntime.ts",
+      "sha256": "a1f9acf4cfcb12fbe076c79f7818eff5667ac78805ddaf03e06be0b93f06bc97",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('lying concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/multisourceRuntime.ts",
+      "sha256": "713fc318209e559dda95ba5846379d27cc3e63b345496b11a54884e928bd6af6",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)throw new SchedulerContractError('RUN_NOT_ACTIVE','already settling');const next=scheduler.getPendingQueue()[0];if(!next)return undefined;instant=next.dueAt;active=true;expected=new Map();reservations=[];staged=[];random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();random.commit();return result;}finally{random.close();active=false;expected.clear();reservations=[];staged=[];}}",
+      "publication": [
+        " return Object.freeze({settleNextInstant:()=>settle(),settleNextInstantForConformance:(instrumentation:ConformanceInstrumentation)=>settle(instrumentation),snapshot:()=>({clock:scheduler.getClock(),status:scheduler.status,state:scheduler.getState(),outputs:scheduler.getOutputs(),trace:scheduler.getCommittedTrace(),allocators:scheduler.getAllocatorState(),queue:scheduler.getPendingQueue()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:original.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),committedRandomAddressKeys:()=>random.committedAddressKeys(),diagnostic:()=>scheduler.failureDiagnostic});"
+      ]
+    },
+    {
+      "path": "src/campaign3/performanceRuntime.ts",
+      "sha256": "9e548e5866824f61ee00f95af41e2d67041db6a7ccc31993d38fb2b5b7220184",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('performance concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/personGoalRuntime.ts",
+      "sha256": "529c3c767b02d0221a9cad8ec59c16566efd0173502e58ce82214682f04b79d5",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('personGoal concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/personstateRuntime.ts",
+      "sha256": "83dd5183361e0f0d3564fac91157f6bbc4092126b0044581161e2c4cdeffd87f",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('personstate concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/procrastinationRuntime.ts",
+      "sha256": "be226037a0fd57a8a3fb489d9e560a0b41c98d6868f70f90a5b8e4138b7a5ba4",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('habit concurrent settlement');active=true;expected=new Map();procrastinations.clear();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();procrastinations.clear();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/reappraisalRuntime.ts",
+      "sha256": "4e66377dd788a990a6a2507db7f063e9e49d3d1019745a413b242fd81f524b62",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('reappraisal concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/reasonRuntime.ts",
+      "sha256": "92d195c6bfa8b2bc048acc49c54d4ad0d0e4971f738652393913be40c233bfd8",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('reason concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();reservations=[];staged=[];random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();reservations=[];staged=[];random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/receivingRuntime.ts",
+      "sha256": "f64bdcf81f3b6dcddceb396f18dca34c94072c6db8f8d78874e34086bf690ca4",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(ingress||receiving)throw new SchedulerContractError('RUN_NOT_ACTIVE','receiving run is already settling');const next=scheduler.getPendingQueue()[0];if(!next)return undefined;instant=next.dueAt;reservations=[];staged=[];ingress=beginReceivingBodyIngress(inputs,instant,enc(registrations[0]),enc(registrations[1]),enc(registrations[2]));receiving=beginReceivingIngress(inputs,instant,model.stageBytes());random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();random.commit();return result;}finally{random.close();receiving.abort();receiving=undefined;ingress.abort();ingress=undefined;bodyAccessAllowed=false;}}",
+      "publication": [
+        "  snapshot(){return {clock:scheduler.getClock(),status:scheduler.status,state:scheduler.getState(),outputs:scheduler.getOutputs(),trace:scheduler.getCommittedTrace(),allocators:scheduler.getAllocatorState(),queue:scheduler.getPendingQueue()};},",
+        "  save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:original.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),",
+        "  committedRandomAddressKeys:()=>random.committedAddressKeys(),"
+      ]
+    },
+    {
+      "path": "src/campaign3/recollectionRuntime.ts",
+      "sha256": "a054c0807dda02f9e8921ea33697f73c3dfc671fba86aba3cbf2d0d05400936f",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('recollection concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/relAttributionRuntime.ts",
+      "sha256": "e610fe07708d7dc637d08f000fb5cb0ab05692ac57c8da85c14582c7502e39de",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('relAttribution concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/relDimensionsRuntime.ts",
+      "sha256": "4c1390c5cae559967310b948c966f6e2504e5342aef12a86a7300e527add3872",
+      "ledgerAfterScheduler": true,
+      "serializedLedger": true,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('relDimensions concurrent settlement');if(!scheduler.getPendingQueue().length)return undefined;active=true;expected=new Map();random.begin();try{const result=instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();if(result)random.commit();return result;}finally{active=false;expected.clear();random.close();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs(),randomAddresses:random.committedAddressKeys()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list(random.committedAddressKeys().map(text))}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/relationshipRuntime.ts",
+      "sha256": "09b621ab50db7518588451d620a307a6ae9fbf02d924bc88b52b5603f6e77d94",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('relationship concurrent settlement');active=true;expected=new Map();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),view,snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/ruminationRuntime.ts",
+      "sha256": "b2de733502d739e94f76309beb0c2c1b92ad91e668f71c6a606b95284c1106de",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('habit concurrent settlement');active=true;expected=new Map();ruminations.clear();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();ruminations.clear();}}\r",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};\r"
+      ]
+    },
+    {
+      "path": "src/campaign3/skillRuntime.ts",
+      "sha256": "aba7c14136214f9d3bfc975e050b2f345d85653a43c3731d802cdb79365914fe",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('skill concurrent settlement');active=true;expected=new Map();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/socialRuntime.ts",
+      "sha256": "329671a22fac47a3cdb299a0cf993d4d43ee0414e7f28a0a14c6bb88894a6e74",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('social concurrent settlement');active=true;expected=new Map();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),view,snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    },
+    {
+      "path": "src/campaign3/workRuntime.ts",
+      "sha256": "d7a5efd017c8891217d401d30061b0378d34a23218c98d0aa38dd6591ec621b6",
+      "ledgerAfterScheduler": false,
+      "serializedLedger": false,
+      "alreadyGuarded": false,
+      "settlement": "async function settle(instrumentation?:ConformanceInstrumentation){if(active)fail('workspace concurrent settlement');active=true;expected=new Map();try{return instrumentation?await scheduler.settleNextInstantForConformance(instrumentation):await scheduler.settleNextInstant();}finally{active=false;expected.clear();}}",
+      "publication": [
+        " return {settle:()=>settle(),settleForConformance:(i:ConformanceInstrumentation)=>settle(i),snapshot:()=>({state:scheduler.getState(),clock:scheduler.getClock(),status:scheduler.status,queue:scheduler.getPendingQueue(),allocators:scheduler.getAllocatorState(),trace:scheduler.getCommittedTrace(),outputs:scheduler.getOutputs()}),save:()=>createCanonicalSave({scheduler,stateAdapter:adapter,modelIdentity:model.modelIdentity,runIdentity:input.runIdentity,continuingRunInputs:list([])}),diagnostic:()=>scheduler.failureDiagnostic};"
+      ]
+    }
+  ]
+}

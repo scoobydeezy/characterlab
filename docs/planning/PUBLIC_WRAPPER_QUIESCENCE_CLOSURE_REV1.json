@@ -1,0 +1,869 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-PUBLIC-QUIESCENCE-001",
+  "contract": "public-wrapper-quiescence/0.1-candidate",
+  "scope": "49 native save producers; three torn-ledger publications and one overlapping embodied cleanup repaired. Same149 prior cases/747 selected whole-prefix continuations. No changed character law, state, schema, model/run identity, ordinary save/view/trace byte, or psychological clause promotion.",
+  "producers": 49,
+  "repaired": 4,
+  "independentlyGuarded": 30,
+  "inapplicable": 15,
+  "runs": 149,
+  "models": 50,
+  "prefixes": 747,
+  "tests": 74,
+  "referenceTests": 328,
+  "counters": {
+    "highestAllocatedRecordType": 1450,
+    "allocatedSinceVerdict": 0
+  },
+  "files": [
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_0.json",
+      "sha256": "44611095df9ddd196f19a5e34ad2f82b5847c5ee6e1542536914788f8ba9af12"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_1.json",
+      "sha256": "2b982c469cd4e4c237a959f8fba31fb597e5430ae7f9e6bee825c7cbede309ba"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_2.json",
+      "sha256": "d513f0690ada8f52cadde8743c30cb6609fce247128abe30480cdb9fc1fdf205"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_3.json",
+      "sha256": "6a6c096beb99b52dbeda68cce843f53e1d0966369a1870f1665c6cca41e60321"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_4.json",
+      "sha256": "5c9c1e56fbd7bc0646f94e893dc304aede826c22109629279fd794b4dc602f07"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_5.json",
+      "sha256": "e2cb27381a43d6d4f417ca0068cb010f5324160899da758e187fd45e0ef35787"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_6.json",
+      "sha256": "9242042133c0278d78add282e8ecf344816ce8833cb51f97f8385f1eae0f9f53"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_7.json",
+      "sha256": "6636952a8199b8b5965a083c2348239ea790205e8f17d86a44f99f45b65c5902"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_8.json",
+      "sha256": "a63b6171d554b3dd84a5fce760a43d5693aae56f0cdf88e4458cd64fba1ae039"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_9.json",
+      "sha256": "5e1bcf03cc13ccd6d53476058ea84171025eb5945d3ced75717e180ccec55bc7"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_10.json",
+      "sha256": "4319dbe369553010683e74a9ad0edf091309fe818285bf48ebb808684e7917a2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_11.json",
+      "sha256": "5e82599b441f1647417e8ede96794db3fc774b0ef1f4ce052f37cfc3de87aa85"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_12.json",
+      "sha256": "79d6fed3df51df5670ccdd52270ebe593bec57ac07ed9f2a9601866b451f0e62"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_13.json",
+      "sha256": "8c48031cd5c369bd93b837eae6a360ef203fe1d9376ebd748a09f08167bd33d8"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_14.json",
+      "sha256": "313da3a59ccb8f869fcd505ec0a96925bc40c7a4b8436b6e2dd5c0d1d392333e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_15.json",
+      "sha256": "309b8804b4b9f4331ee481422967fa0e509c835447e94bbd0cc076039ccec9f2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_16.json",
+      "sha256": "78561f6a97cd5c621a2a03d2ca60ef20dc6250b4cb673522bf4541f087d4c97a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_17.json",
+      "sha256": "d3faf6ade4423fd40209bf91646246895e70161add29b93f869bf8280a6c738d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_18.json",
+      "sha256": "23afbd2267b68ecb40078be2ae6b8e35ba2188034231e8bd121b29da8a0f27dd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_19.json",
+      "sha256": "0a3f25c691db3031f7bc5ec275d32f7a2f59a3890f6cdd40c713726765d55c4e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_20.json",
+      "sha256": "e17afc01578a4d9212c797b4888a8cea8a693902d7bea06cb0f20112a23382ae"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_21.json",
+      "sha256": "fbc63d8160ada96f76c3ffee9a96bef5f9bfb5bdc8d090182ef83d72fd0c78d1"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_22.json",
+      "sha256": "1f4db7735aaf5a1ef99f2b2068f0517cf3e5ea9cb20c5127809ff5be49712492"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_23.json",
+      "sha256": "5ad479932dca062d856be0973311dd2cf7a7117ec17f7ad6d3fbe0f9ebd7f2d9"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_24.json",
+      "sha256": "da2215c00a6fd8d3dc068781f09305f4734c06fd77ad8b56ebecec0bd19a455d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_25.json",
+      "sha256": "aeb74920814185bab521d87077760da2c8cfb5bbbb2513470195715b040fe49e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_26.json",
+      "sha256": "31d6151ac16a6f6dc8093229fb04de169d65a7fa7d06202d82a757dcfd0ebc8b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_27.json",
+      "sha256": "09a7957ccd8a8308a2665e5ee8179a59252f16bc4a67e6b1d80fcc2ea6c76624"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_28.json",
+      "sha256": "b336fc64134ef390ed6333cb53341bfcefa950e9b259b44b77c740e44193580a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_29.json",
+      "sha256": "38629f245248bbbd2fbbedfea8857d5a123380bf909b6f76ec54318ac82e9936"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_30.json",
+      "sha256": "ca504d4f997e091f710d0902ebca6b9027ec4e37c7c4a7ee596668f1fe2ab037"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_31.json",
+      "sha256": "9e31fe8a69b54b52fa332e3e6398db92f9d27f065a9626c2fb928160aa17f6a8"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_32.json",
+      "sha256": "54f72136fdbd048ea548431a70095e2de371040dcddcd1bbb3342278d6aa6780"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_33.json",
+      "sha256": "9c380360a2de8b9f9aea9fee7dcc80b5b339abd783bd97e2c22d817e437e14ff"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_34.json",
+      "sha256": "c12f0cbe0c42a2bfd2af479f49bb630e072d6ceb257d569fa11efbdc0aef001a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_35.json",
+      "sha256": "f7a042210ae14fb5f05d4a279de94ac73028a396d3cc7354aa1512afa1b2c9ec"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_36.json",
+      "sha256": "2635963fa9c98a7f252ce381dcc2ef26f5b07bc00b0b5288f3e0a3d366e098c3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_37.json",
+      "sha256": "5568f0acffdd383647104a7f590f5c9cfb1033f00011bb2eef8d2dbdee541a79"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_38.json",
+      "sha256": "fe1305a1781cff26de21d9438a827e4ea85688d973efbc6211736edb14d785ce"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_39.json",
+      "sha256": "773fbbedcc723355700fd0454bf17f0f45fd1ac1bc829147c6ca83156af595df"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_40.json",
+      "sha256": "a9f3f89b7d5d9a092045c9d732d27e5f166fca9595678cdb6dee0c53015f9c0e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_41.json",
+      "sha256": "f286278cff436fdf2340013190c96eeca5cee851a463df883fa9e4ff1980a57e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_42.json",
+      "sha256": "4808f060f3c7f0c503d971e92ff13a997dcff5257e90b1e50e240778364f99dc"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_43.json",
+      "sha256": "e0c4e2f49e85cb89c5dd12589d52a6e21af93db5dc90007c9252f2cb4f54c7fa"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_44.json",
+      "sha256": "d27c3f46754b2c4d47c6db9da93f3057892f0514e433c1e01b68f38e42cbc8ca"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_45.json",
+      "sha256": "9e0a16fdebfb3b9bcba6b4773f7536485f43fc65440492dc0ffb942f84493ead"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_46.json",
+      "sha256": "17f5f720c5ed9c096014d93283c7826de0c5bc5aa9cfe7727c1da2af19b03a69"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_47.json",
+      "sha256": "8343c69a4faa5ea8e1e8da0c97c9cc11b1b834031793a067702bb9fef096f197"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_48.json",
+      "sha256": "6f21e7bc360d3dd2789fee8a398e96453f29d31cf73f99c062b3c1e3b0a2fec6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_49.json",
+      "sha256": "3ef368f96f6f923810000a0428be8b26f6dd687b1ffb949fd07c90361072408e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_50.json",
+      "sha256": "56b5c7e93ccea6e030d4d37657a81dfc5ec2b30285c1c0503e64fab9b71c3c24"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_51.json",
+      "sha256": "4cb0fbce0ccc393a2e369cd2df93078b9e2aad4ff339d9e96994ca68db6be60d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_52.json",
+      "sha256": "119719f1b3614c7b1390f6d192f92aa30eeee4ba2ea6c1f6a98d100328560e4d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_53.json",
+      "sha256": "8ef1dd120bdeaffe72f22cd27ce1e369f7c78107fac3a9e640b2058c50522146"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_54.json",
+      "sha256": "642fe67653106d155974d77a4b881cf6c2deab654627f1e5bc694e0a699940b8"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_55.json",
+      "sha256": "9e28f1445743470b54932d49b108fda77ee307dd2870d94a25653311d3aab7b6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_56.json",
+      "sha256": "dd04411fa790471a62fc75d5d1adc4c3a14793d41054f7e7afa6edc45de35a21"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_57.json",
+      "sha256": "48aedbf75718df801072b1f3bc215be034a5741dd2ab046203e98c9725572176"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_58.json",
+      "sha256": "ed28f07206a1d9111b6701a3a56cc7a62f3b608d77d95adaf771531d120bd7e7"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_59.json",
+      "sha256": "3acd05f02ad4b2a83f528f0635b225c3ae03fccd81a1f39001af45011058c3ee"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_60.json",
+      "sha256": "39e80fe2ff1bb61f7a3bc0b4f36610b0d1bb664ef5a6b6e469bfaa155a127907"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_61.json",
+      "sha256": "a47ed8fa83c54b4773f037be6870af149b9bd1d51173000d06a54294e62423ae"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_62.json",
+      "sha256": "a223bd5ec7bb3e46a6d3ad1b25323e1826a707cde3c5a9e6e2d959472038f7eb"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_63.json",
+      "sha256": "8e8cfed3d94effd30af94fe5b5005f40e7cbe8824c5d480d8d86c60035e750c9"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_64.json",
+      "sha256": "e7f6507963eb281b825b3b5e60e9066de430ed5a371447db297ec91a3619863e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_65.json",
+      "sha256": "5865b38790b6b5317e34b6c66741304f14d4331b0ff62d4ba0545640be874738"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_66.json",
+      "sha256": "46883f5102003a0793259acc9cb14b45e26723c7d36c9eb9ca3c59cae30cfc77"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_67.json",
+      "sha256": "53dbe18028db85e611fef69d50befe4445f8af003cf062d8f6f4688f684ea311"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_68.json",
+      "sha256": "e356185008578de775fc8c6ba20e4e0bfcc2c4ff4c0a62fe1a0f9f39c78c73c7"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_69.json",
+      "sha256": "347a7603feaf3fe60fc623663164703e77e6915fa361af45ac64520625399126"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_70.json",
+      "sha256": "f0641e261b1820f27724413415bb9ab90572ac05e917f9fbd68d800fce3442d2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_71.json",
+      "sha256": "3bb10aec17b1d9cd2fdd42480df35992f56d6bcb1a63b85e07a7f4e58d90d8dc"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_72.json",
+      "sha256": "21122a7b0d8ec4746ebf104e8af13debf972e8bacf0d6faa3dcf15533df1f496"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_73.json",
+      "sha256": "01ead67a001ab48c0fbe90de033ad08caaacef6f10aec6238bd30b018f2b2edd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_74.json",
+      "sha256": "284035f3ed495d4bcc6f7275f32b6383f886f77baaafc868bb8d746cdaaa78ca"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_75.json",
+      "sha256": "cb00c5840c42131b4ba451b920ea57ba575270496f7ce66b2b345207df766bda"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_76.json",
+      "sha256": "2922237bd73e56529339c6e466fb5d95071066ce2b307c23ab4332f6aa4f7dce"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_77.json",
+      "sha256": "f8aad34a4e18a2708ed8dea7af0b5c7a2753a5ff70688b4fb56f68c0e0bf78ad"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_78.json",
+      "sha256": "074b3806cdcdf7d493a37a41f9248c5057975eeb2d21e8e74d6a65a1b3fe7fc6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_79.json",
+      "sha256": "b4b303b12ce1632edb27e0febc981a035f7b74a613a75c7c2fd18c4d6ac7c91e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_80.json",
+      "sha256": "76fed0d26956cfad20030c26f2d20ca85d2e51dd3478f69dcc2270044e26cb2e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_81.json",
+      "sha256": "d209e959b339848c66126de7d997d3732ce49e42d82198d58739108a2230ff9c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_82.json",
+      "sha256": "43b75ba7c268f84ae489f4a757939b71e99df88834826961f5ecc0d734887ba3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_83.json",
+      "sha256": "973a54398d7582a30b85168c1ecfbe5988c5131b91349221ccaf61de7a1c5ae1"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_84.json",
+      "sha256": "22c06f7d1e7940530cb666ad034dc892a497cfb00486481699887e3d29cec65d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_85.json",
+      "sha256": "c098923d17f0e1b7c07dced50e7b61f011361295a311a8691991077d05e1c91a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_86.json",
+      "sha256": "ee243165ddfb35639e98bf8907510d1534c72157b3e0512d7ee06d90417d8517"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_87.json",
+      "sha256": "947c43b27da479d3d79da2af6f0c5398d29640ed0fbb92ca1d1e7bd75d098bbe"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_88.json",
+      "sha256": "1b1a19082a2ba0e04fc0236bdbfe65038f7941064794e09b1bfbf0cf8469131b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_89.json",
+      "sha256": "7dd87864f78f3e58614599ec87bc7957cdfe11282c69c0bbacff315cebf4a28e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_90.json",
+      "sha256": "05253076d2a688859ae2714e02d1b2c847a52a13ca48e4fdeb02c56a28a02734"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_91.json",
+      "sha256": "8baa69b636ce89bef7264f3bdf863809fe8cda722ff8fb52d417b46613f0364d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_92.json",
+      "sha256": "c5608b0a6a7d7ba62155f2ccb2c523f063d0398426cd8eb80f7717499d2cff0c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_93.json",
+      "sha256": "33feeac01e5b74f3f03076004a7c36ff01f2ce344dc55b698da7efb7a0ac3972"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_94.json",
+      "sha256": "a62249b7c6ffb57487047e531dfcb87a2bafded208b29dc48b9f6326ad74c400"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_95.json",
+      "sha256": "b7c5361f238c951bb0c6a468dc9b4e6f524ec7a1d8b9318463ce04365e6086f2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_96.json",
+      "sha256": "15938461e02c7a8ff564ab4534381fa36d1ca696d5940d74c072312dd8cbebf4"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_97.json",
+      "sha256": "1c31075d5e533f6d5d557ac72c3937a946ba8213e3f805119d3fa1104f5a918e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_98.json",
+      "sha256": "866d050e5341ff2b788e9ca8291445b8f5ec212e40a33bb7dfd471473b29a80b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_99.json",
+      "sha256": "6f0903e2c74ae773c9799c3cf7ff9cb2d16738bbe1f6420f6e0369321c034211"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_100.json",
+      "sha256": "1d547f5e9057d731f56b492dee382bf052380e0ca9c5ebfc5ebfe0e387d22105"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_101.json",
+      "sha256": "09a26da818d74071a3ad2c4b188e043d9a07f3e6fdf9cb5cf1b8d10e949c04e5"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_102.json",
+      "sha256": "0cd82ad41296dc9b74883c431aa184d74c31cf48884a8f918ba5fb60878583a1"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_103.json",
+      "sha256": "501089a54140fa7781f3d7edb99002e360fa0a5d090be55221e5f747fe4f17ee"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_104.json",
+      "sha256": "b5cb9a002a5fa1edd1506ec8b4410036d4e19a6caccd1a513d4f32a4d380dca3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_105.json",
+      "sha256": "fe485b02e7fc454b1c40660daba9d4785a9804f7826e70ac761d43aadb730b18"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_106.json",
+      "sha256": "8c26a670fbe8ca753abc150c563dbc5bf992469f35701951392b6ebb1e37ad03"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_107.json",
+      "sha256": "b3a3fb12811b6a7f143b787d3d90616369ad8d619c5fd981be464b7688f69313"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_108.json",
+      "sha256": "e560a57e98f4ad1dddd8336fef1c9ee03f7313ca5a3569ed0744d8634e7a4b3c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_109.json",
+      "sha256": "745b21efc6377e95279d50384825c6176c1ae5aee06582e34127c88e6e775d6a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_110.json",
+      "sha256": "8acbf7b3872ba90b48e625e4238c1a9404393273e3454a7aa4fd73164574c371"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_111.json",
+      "sha256": "e6e400bf8759e8a12576cb89e766cdd49984b48c450f865e43479dace47c4bc3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_112.json",
+      "sha256": "9eb7704ce008e1be2eb4b7856062f7df3ee0cf538c70787891193628f231af15"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_113.json",
+      "sha256": "ead2ec06915c5f316c58448c738f36c848cfd578528e30d23c907a6d67b37134"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_114.json",
+      "sha256": "ade03e0fce4556c1893c423102eea0f0b506780d470480866994a7c0dddb9898"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_115.json",
+      "sha256": "9bb5b6609bd1062469e29762fceb90631bcc4df08e7fa41c7f419ecfe2cebbd1"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_116.json",
+      "sha256": "2b6444668a02e2f7142ac1e3571733c3de6d5417bacb404f643ce3591e1ab4d6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_117.json",
+      "sha256": "7e685d45e2e5f6f9651b88cbd173868fa0f945c1a7b1d9141d4ad6b2ca10947e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_118.json",
+      "sha256": "0b380d3a605be53ec5391935c741c915b98742d94ca96826fa4e14fc764871ea"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_119.json",
+      "sha256": "37c58120ff92003024af001b9406bdb8cbf470b8adf39789f6183d59fd4d8e9a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_120.json",
+      "sha256": "0f59d9ddcf5f9e05b816db27ce210e093accf5e793db4bdd54288b2225482c77"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_121.json",
+      "sha256": "b6ae13b257fb6db636634accd91f26bc0d715921c62c1318a3e91168afad3e20"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_122.json",
+      "sha256": "487c23005261d0145d1b3b6698cfeb90dc2bf2a2fbe0b4c2f5aff7e24d8a7843"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_123.json",
+      "sha256": "147a6855382b714bb4216a57623612fa3389541804143cbaedbfe0533ce9d7f4"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_124.json",
+      "sha256": "489374c8afdf21267bc0f806d46e6a720058c5c32861b9baddc31bd7a06f5136"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_125.json",
+      "sha256": "2864a6de0218967e49806c2bc12c2d676089d59c9ff0dfca3d2394df1c32c55e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_126.json",
+      "sha256": "d67dedb26de8a4489617b8e571d758dc4eb22cd3f2db13a4efebb5243b7a50e0"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_127.json",
+      "sha256": "010612a13f8210925366b77de0d3f6416c7a90af9f52a21ed0dcbdb05834c22c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_128.json",
+      "sha256": "c53b638d432c9a9024ee0c668cd490eaa1ddce925b3501459d8afb7f255400f4"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_129.json",
+      "sha256": "2f6dfbf7bd420788cdd0119237376ed7ff36741f6347e8159018f4a58d514ef0"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_130.json",
+      "sha256": "801bd6810341cd8224264254ef8a1d58d76fd5130198f8dde5b34e80f8c4666a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_131.json",
+      "sha256": "ae6c01768da96bffaf0dcdefca266fc322c49ead8409f31fadb18169096b3b4a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_132.json",
+      "sha256": "eab8eb75375e437f618ebbbd3d9539bb402fb9bdb093143e0877b63f10e72e4f"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_133.json",
+      "sha256": "4cc2620cd6e5f3d7b45a1090fcd89807f088317fbb4dc7694b667b0a5ca1b160"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_134.json",
+      "sha256": "b9469d4a2e771de5e886b20958e416f288ee01c27d8ae6132ae4189bbd7cbbdf"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_135.json",
+      "sha256": "e58b8c22b5f55297be377917e88e78967e61e4fd96dff3990b0c8973c2d2cd1b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_136.json",
+      "sha256": "b873f5bae00987a951028582218814d368afa81a56da707b17e9e97be10a0aa2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_137.json",
+      "sha256": "aeeb521b91f0134ed8c74b2867506e482fa264f38adae8bc75119dd1b5246b79"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_138.json",
+      "sha256": "32838b94cda80a92c5d7ca58bf0bfdd4d2171c48cc8ad3809dd70058010d1d2b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_139.json",
+      "sha256": "791e5239e95c743136c59739a2e54097f2f7bac33030ae6b3030b82470a5d2c2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_140.json",
+      "sha256": "1a6c7bb13fac38223da88785ac7557e3bbf584d0978315cf10c3a215b6882db6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_RUN_141.json",
+      "sha256": "ba50f7885272d6d3912babb9bfc8465e59864f7126651902abc774c8cc9da759"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_PART_0.json",
+      "sha256": "39b6947b9fdaee6479a8b04a15eb84c3e143a96021a26bcf851e8dcf29f55333"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_PART_1.json",
+      "sha256": "9d83c2e4f6808ec06bc82bfd48486c266e151b69e49ac3d5c720b39f30dbff2f"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_PART_2.json",
+      "sha256": "efd5e0f8fa5847cc34fe6c6ce23c8aa73e345d2f8b1b1180c1ebd79adc7ccef5"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_PART_3.json",
+      "sha256": "0c07c697db24a68fe3c0eb631325b90ab1a6080843e6be24e8165ea6ba35a880"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REPAIR_PLAN.json",
+      "sha256": "5e4aefe3bed99ee0c6f52541bd7cb9fdaa78ec6fd51ecb734a9024668cc6431c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/EMBODIED_REPAIR_PLAN.json",
+      "sha256": "df71a370c5d527503610eff06cbddc0c4699200c43baa2e0bc9ff65e8c8ec11e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/EMBODIED_REPAIR_RESULT.json",
+      "sha256": "e284367e839514e15f58e926ce5138a01ff57624c212b35aed3cf3b4a9c996f2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/PRESERVATION.json",
+      "sha256": "d327125ef03a5f2281b43e3a725dc6072b5c00aa205d4a0b79718c0109ff9e2b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/INVENTORY.json",
+      "sha256": "f0e08078e97c793ce9effef9d2bd7f142abd44703a4146133f10e76a5362fd80"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/INVENTORY_DISPOSITIONS.json",
+      "sha256": "1d6cbd0e767e0857096d7227604fb9f5b7aa119a6cc6b05185c730cd8cc0a546"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/TESTS_REV1.json",
+      "sha256": "6887aaecf4b238e557d43c58235f7d1fbce811a81933d60edd00f217fcb8143b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/TESTS_REV2.json",
+      "sha256": "d2c47a4cf66ba174e62b0d26527b648a362266748e49446fe56d5f3307210356"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/TESTS_REV3.json",
+      "sha256": "4c0ce9f7cca1196e32cf2897e25e1b05dbd3a183812d33260761b16abfe337dc"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/REFERENCE_TESTS_REV1.json",
+      "sha256": "072f45a19d809e7d87e6aa16028d64dc74e3225a4feaef148f83f80a43ebfeee"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/BUILD_REV2.json",
+      "sha256": "0f3b887f38f09756a19f671b3f98f66492b3a728f9fcc5cab9c5d7870711633e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/BUILD_REV2.log",
+      "sha256": "b67b5491f495ec0444d0ee17859faca08ce712dae8bfed5241b8042185035ca6"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/publicWrapperQuiescence-test-development-rev1.ts",
+      "sha256": "a46137c751dbea7670b0ee05dd4c2731a9daec4e5cc800514c757c1353bfdc91"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/agency-probe-rev1.json",
+      "sha256": "ad1e898d3916def5ff7c32d3175e1685738d5aae32dbfa5af8886a8da7c68b27"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/attachment-probe-rev1.json",
+      "sha256": "dc4b9e3847323f194333934ea8386f8851965d19bc711ea255e7c86c2aab61da"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/attributed-probe-rev1.json",
+      "sha256": "dafbdfa32d98230078a81304e78bab1f7fe549f92749265810de6140d056fe98"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/betrayal-probe-rev1.json",
+      "sha256": "c4c9da6a3a39ed04a96337bc1991d200fa417fe9ef3b2361fc34b4c15200ad38"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/biologyPublic-probe-rev1.json",
+      "sha256": "b1f889a66c87155ea58790f01a68f6e04d39af241f08a642425f74a727008c1a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/biologyPublic-probe-rev2.json",
+      "sha256": "2f265c37a3b9bb1713c5eb049b75eb86bdbe750c50fdf46159f6780d11f4f7b3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/commit-probe-rev1.json",
+      "sha256": "267b764162d9f1d562593b6c1af98029f55463df7d2d98597796816dc23db29e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/communication-probe-rev1.json",
+      "sha256": "c88e2afbf2ec3cd4182e26b50d232deecf29cd357a91e32ad216cb3d313ec15b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/decision-probe-rev1.json",
+      "sha256": "f969f330cdab9c6f4f9547176b7353e25b9da7290283b10a34b514996e466a1d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/delayed-probe-rev1.json",
+      "sha256": "ccbd239ec05b09132c8e5ea34c165654ff9e84caf1ddb1d28df46e6782019a6a"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/embodied-concurrent-rev1.json",
+      "sha256": "00619ae660f12b5e64cee4ac39573929b883c1db930296d0c6f3d7b625f58ebd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/embodied-concurrent-rev2.json",
+      "sha256": "54383b57a930b129f865bd8160cb0546d5433308c9fe43908b7e8a35b1b54b18"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/embodied-probe-rev1.json",
+      "sha256": "1f484b86add55c63f5b9b2b4d0aa1cdd967c5c6a29134977991e312fc66067a8"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/emotionalDisplay-probe-rev1.json",
+      "sha256": "e47bf52ba7c89ac4cf539cbd70187970ae6def38d705b6cd960fe75f4941f5e9"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/familiarity-probe-rev1.json",
+      "sha256": "b407545e5021dae92ddfb5c33c9b8804b73156025ac9ede528204fc2152dd2f2"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/familiarValence-probe-rev1.json",
+      "sha256": "d17c790cf7859698add2a83afc374b9fa34018f7b3f0b0f6d65b0a9de8514c1d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/fearGuilt-probe-rev1.json",
+      "sha256": "6fcf19c0e17a46a9e335d2e3e55d7f8c3b86da950ec6d7edc75602a92366d238"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/goalStrategy-probe-rev1.json",
+      "sha256": "07698ce8a6fc61ae36fb93163dfbd8db784efde1a69d738c96d778f15c437c7b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/grief-probe-rev1.json",
+      "sha256": "f6a65ae25277417ed0979d853cb9a9b276b74ba6aa79df76a8f6595514c4f2bc"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/hearsay-probe-rev1.json",
+      "sha256": "ceb1500467cc8daaf6d4de50d2a1d02cca22c129bce49afc3235032098135b00"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/identityBiology-probe-rev1.json",
+      "sha256": "5faac633bff3f2a9f2431278c62daebd4b3e7f9f8bbfc5f1167460f22054a304"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/identityBiology-probe-rev2.json",
+      "sha256": "1758e437409f2cd71d2db1b9e8b8646434f36f5b2e789d45211e5c67df90957b"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/identityTask-probe-rev1.json",
+      "sha256": "cc816f15863cbc9828cbe78a7e34a7a82537e02466a4404955e5685df287a4c0"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/identityTask-probe-rev2.json",
+      "sha256": "9e59758e4a8f3b343ebeb2822ea6d2b0248bddc5fe2863cab99443215d3ea980"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/interpretation-probe-rev1.json",
+      "sha256": "a3ea46ece8b3d242a0963fd4fc55dec07d68a5a4f0eb061aca021ff874cbfdfb"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/longitudinal-probe-rev1.json",
+      "sha256": "90963976876184128daf7e0601bbb6657cad15e625273cf21b3ebc4bbbcf792c"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/lying-probe-rev1.json",
+      "sha256": "83e8d2dfde0916ed774b294e2b9e3161ad27d708886775cc2e3b6c2287d8b89e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/multisource-probe-rev1.json",
+      "sha256": "f025eb1a0b0bc91c8fb9783138f726a9f8f98fff872fb7bde8f140599ee6edfd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/performance-probe-rev1.json",
+      "sha256": "ed00831518aed08f2550aad0d3a8acb8ffc211f7bb3f4b25cd0d5f6bb947de40"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/personGoal-probe-rev1.json",
+      "sha256": "7a2916d5dfcc86cca4439fa2ebdf3c359e11903c1368e87434a2abd846fd897f"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/personstate-probe-rev1.json",
+      "sha256": "0a291971fdb49fb594a96daf9d05c75660307a591e901d73900738d910d64abd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/personstate-probe-rev2.json",
+      "sha256": "0fe8c266d1471cf9c6fe970fb71e2b49611dd4c1cb624afb37930d0fdb8467d9"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/reappraisal-probe-rev1.json",
+      "sha256": "bc9fe4fd73a0d631b4edb34011ea2566385da394dab1e66585a5cf92712d7efd"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/reason-probe-rev1.json",
+      "sha256": "5bac1e30f0334047095c1ee94b21e8f3c485ac708ced8a954a8e1b842fbfc60f"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/receiving-probe-rev1.json",
+      "sha256": "a31fa2f9a01b48a8ef6afa699dcaf2c79c6a842bc20f1571d93ff7b43fe3c410"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/recollection-probe-rev1.json",
+      "sha256": "ea5b8780c7180f8305bf207ccb750ee8c408a09be4061b29ab63cdf46b630ed3"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/relAttribution-probe-rev1.json",
+      "sha256": "9e52571cf748a2a01e1e3394f1ea1d3eaf78221709402041cb26eabe6d91e34e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/relDimensions-probe-rev1.json",
+      "sha256": "5d77951990b8abef750531a1d04a63dc934e44bae18ed75f330428cf250ed59b"
+    },
+    {
+      "path": "docs/formal/PUBLIC_WRAPPER_QUIESCENCE_CONTRACT.md",
+      "sha256": "7bf8ff32cbbb21eeef8a24f957c394a5a07e1b80fb76d6512b5f8a36182bec7c"
+    },
+    {
+      "path": "docs/planning/PUBLIC_WRAPPER_QUIESCENCE_FINDINGS.md",
+      "sha256": "001999184779f6654777fd17f0247a6dde9ed65f8ad7f00acdf53d90fad30148"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_PUBLIC_WRAPPER_QUIESCENCE_QUALIFICATION.md",
+      "sha256": "03e4e78c175f0c9064dcbe2fcecedf39514b89f82e85f988c41051000611bfb3"
+    },
+    {
+      "path": "scripts/audit-public-wrapper-quiescence.mjs",
+      "sha256": "667e26198b2347b3c1ff798e33168fe0d6c3c2a581f2875cd3c8bfd91e8383f1"
+    },
+    {
+      "path": "scripts/audit-public-wrapper-legacy.mjs",
+      "sha256": "d812e505d47817c1905675a6616bea054b234c4d4923e1b34bc491dda813eb23"
+    },
+    {
+      "path": "scripts/check-public-wrapper-inventory.mjs",
+      "sha256": "460ce5130dd81b627b7722249b92d3b843c19c04597dca946c0265ef7c871dc1"
+    },
+    {
+      "path": "scripts/check-preserved-public-wrapper-evidence.mjs",
+      "sha256": "9d2c2b92c670d18df66606aac4ec76c2e35c6a9e67640388daf85bfadc44e698"
+    },
+    {
+      "path": "scripts/public-wrapper-preserved-source-loader.mjs",
+      "sha256": "c97aad6ede4abbcb4dd30447b3a67a1053c25f7c58e2cb6435b986bca48ddbb7"
+    },
+    {
+      "path": "scripts/check-public-wrapper-repair.mjs",
+      "sha256": "0019869e165401cd3000c9957a7b8bd5c823d1c2a28f9a6c30e206f993d7fbab"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/FACTORY_ROUTING.json",
+      "sha256": "83c022761206187d2d9a9b50151cb101c1ff864c537c4232daeb8f9e7cc59547"
+    },
+    {
+      "path": "scripts/check-public-wrapper-routing.mjs",
+      "sha256": "05fecc08fcfe109b77dfcab6e1d8122807115f21bef3e8392db6a6d3d21ea54e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/ROLLBACK_TESTS_REV1.json",
+      "sha256": "f75e467ae02a681cbd5811e88c77f969e333206ffc3c5426d52b7a9be216bd15"
+    },
+    {
+      "path": "src/test/biologicalWrapperRollback.test.ts",
+      "sha256": "5de8d2a3c35500364df8ac0410bf7a3a58a155c1b70c2c4337521a7fd89c218d"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/BUILD_REV3.json",
+      "sha256": "0f3b887f38f09756a19f671b3f98f66492b3a728f9fcc5cab9c5d7870711633e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/BUILD_REV3.log",
+      "sha256": "d4dc3158ae03e66cd3a449c19e0892e13cbefbf65b1a8ea8e482a111fa647ba9"
+    }
+  ]
+}

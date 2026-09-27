@@ -4803,3 +4803,270 @@ unimplemented IDENTITY_RECOVERY_READINESS.md intake. Prior identity Task exposur
 is recorded in IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md.
 RO009/010/014/019/020 preserve wider scope; RO021 historical gate remains mandatory.
 No root retired. Prior auditREV57 remains dated evidence; Campaign3 NOT EXIT-READY.
+
+
+## Preserved index before public-wrapper audit — 2026-09-26
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded native represented identity belief COMPLETE — VER-C3-IDENTITY-BELIEF-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Native task reports, independent
+holder belief and next-instant goal-relative appraisal preserve component behavior.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1450** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **2 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1: RO-C3-018** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 76 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **104 bounded / 21 partial / 7 blocked** |
+| Native belief qualification | **5 models / 37 runs / 222 native prefixes** |
+| Validation | **69 affected (35 native) / 328 reference tests; build passed** |
+
+Start CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md and
+IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json. IDENTITY_BELIEF_PUBLIC_FINDINGS.md preserves
+strict-input/phase131 development failures and timeouts. Final frozen cohort passes
+all cases and complete Save132 continuations; prior component/native identity checks
+remain unchanged. No root, source law or biological channel is retired.
+
+Receive130 causally follows qualification130; independent learning140 changes only
+later appraisal50. Source A/A/A/B gives self Mean+1/2 while Latest gives-1. Differing
+observer evidence can yield-1/2 at the same biography. All histories and earlier
+judgments remain. Private-self/hidden-biography noninterference, unknown/known0,
+false/later-correct reports and goal-only appraisal pass. No second identity bonus.
+
+Controlled semantic reports do not qualify natural recognition, learned trust,
+biological identity belief, cross-domain trait scales, dispositional adaptation or
+new sampled social action. Brief12.12-4/6 retain bounded scope with native evidence;
+no clause promotion this increment. AuditREV58; Campaign3 NOT EXIT-READY.
+
+The first serial cohort exposed a torn save between scheduler and wrapper RNG
+commit. The corrected successor rejects the exact window and reproduces all prior
+ordinary prefixes/views/rows. Both cohorts preserved:74 executions/444 checks;
+final coverage stays37 cases/222 prefixes. No extra behavioral cases are claimed.
+
+Next: PUBLIC_WRAPPER_QUIESCENCE_READINESS.md, RO-C3-022 ACTIVE. Prior identity Task
+also exposes the gap; its serial results stand with an explicit scope addendum.
+Audit/correct older wrappers before identity-recovery work. Then resume
+IDENTITY_RECOVERY_READINESS.md; longer sources require a successor contract.
+RO009/010/014/019/020 remain scoped; RO021 historical reconciliation stays mandatory
+and unsatisfied. No owner ruling is pending.
+
+
+## Preserved public-wrapper in-progress index
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Public-wrapper quiescence audit IN PROGRESS — RO-C3-022 ACTIVE.**
+LOCAL DISPOSITION; no architectural blocker. Start PUBLIC_WRAPPER_QUIESCENCE_FINDINGS.md
+and public-wrapper-quiescence-rev1/INVENTORY.json. Native identity-belief closure stands;
+this protocol audit precedes IDENTITY_RECOVERY_READINESS.md.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1450** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **2 active / 19 conditional / 0 unowned** |
+| Closed obligations | **1** |
+Corpus0.29.0:21 members;76 named verdicts. Brief:132 clauses/15 families,
+104 bounded/21 partial/7 blocked. No psychological promotion; Campaign3 NOT EXIT-READY.
+
+Preserved1,108 source/dependency artifacts before repairs. Inventory47 native
+Campaign3 Save132 wrappers, plus General Attention and Campaign2 shared adaptation.
+Confirmed torn saves in identity Task, identity Biological and Biology public; repairs
+apply the already-qualified whole-wrapper barrier without changing canonical bytes.
+Most older RNG ledgers independently deny reads while live. A separate embodied
+concurrency probe exposed overlapping ingress cleanup; that wrapper is also guarded.
+
+Identity/biology requalification is running the same142 cases/698 selected prefix
+continuations in four shell workers. Receipts are written per completed run and the
+harness can resume without overwriting them. Embodied already matches all7 prior
+cases/49 complete-prefix restores and original final output/trace/save bytes.
+All74 affected tests (72-test cohort plus2 contested-draw rollback tests),328 reference
+tests and build pass. The49-producer inventory and52 public factory routes are accounted.
+Historical closure checks pass through check-preserved-public-wrapper-evidence.mjs,
+which explicitly reads the preserved pre-repair graph, not current-source behavior.
+
+No closure is claimed yet. Finish all repair receipts, final inventory dispositions,
+affected/reference tests and build; then publish the bounded protocol verdict and
+close RO22 if evidence supports it. RO21 historical reconciliation remains mandatory.
+Do not resume psychological work or count these enforcement repairs as new phenomena.
+
+
+## Preserved checkpoint before identity recovery — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-26. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.**
+LOCAL DISPOSITION; no architectural blocker. RO-C3-022 CLOSED within the declared
+49-producer inventory. Start CAMPAIGN3_PUBLIC_WRAPPER_QUIESCENCE_QUALIFICATION.md and
+PUBLIC_WRAPPER_QUIESCENCE_CLOSURE_REV1.json.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1450** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 77 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **104 bounded / 21 partial / 7 blocked** |
+| Protocol requalification | **50 unchanged models / 149 prior cases / 747 prefixes** |
+| Validation | **74 affected / 328 reference tests; build passed** |
+
+Three raw-ledger wrappers (identity Task, identity Biological, Biology public) allowed
+torn saves after scheduler commit; embodied allowed overlapping ingress cleanup.
+Four whole-wrapper barriers repair those exact defects.30 producers already have
+independent guards;15 publish only scheduler-owned values/constant continuation data.
+All ordinary model/run identities, saves, views and final trace/state/output bytes
+remain equal. No character law, state root, schema or psychological clause changes.
+
+Preserve public-wrapper-quiescence-rev1:1,108 source/dependency artifacts, original
+probes, the4/2 test-assumption failure and corrected74-test cohort. Historical closure
+receipts are verified against that explicit preserved graph by
+scripts/check-preserved-public-wrapper-evidence.mjs. Current repair receipts separately
+qualify the live code. These are repeated cases, not additional behavioral coverage.
+
+Next: IDENTITY_RECOVERY_READINESS.md, identity reversal/recovery after changed
+biography, separate from represented-belief correction and dispositional adaptation.
+Native identity-belief closure remains bounded and unchanged. No owner ruling pending.
+RO-C3-021 final historical reconciliation remains ACTIVE and unsatisfied. AuditREV59;
+Campaign3 NOT EXIT-READY. No mandatory gate is waived by this protocol closure.
+
+
+## Preserved checkpoint before disposition qualification — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded identity recovery COMPLETE — VER-C3-IDENTITY-RECOVERY-001.**
+LOCAL DISPOSITION; no architectural blocker. Start
+CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md and IDENTITY_RECOVERY_CLOSURE_REV1.json.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1450** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 78 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **105 bounded / 20 partial / 7 blocked** |
+| Recovery qualification | **5 reused models / 13 runs / 78 native prefixes** |
+| Validation | **8 affected / 328 reference tests; build passed** |
+
+Actual meaningful biography can reverse/recover standing and separately represented
+self belief while an observer denied reports remains negative. Original expressions
+survive; NoLearning stays unknown; Mean/Latest remain competitors. Standing feedback
+changes probe probabilities from1/2 to7/9 for A; both sampled acts remain A.
+No longer horizon, new runtime law, shared trait scale or dispositional adaptation.
+Two prior cases reproduce old identities/saves exactly; eleven inputs are new.
+
+Prior public-wrapper publication remains COMPLETE, RO022 CLOSED, with its unchanged
+49-producer/149-case/747-prefix evidence. Recovery altered no production module.
+The previous index's RO021 ACTIVE wording was inaccurate: canonical RO019 is ACTIVE,
+RO021 CONDITIONAL with a mandatory final-exit trigger. The historical gate is still
+unsatisfied; no status changed. AuditREV60; Campaign3 NOT EXIT-READY.
+
+Next: DISPOSITIONAL_ADAPTATION_READINESS.md for Brief12.12-7 under the standing
+escalation policy. No owner ruling pending. Review accepted ADAPT substrate and
+preserve constitution, learned adaptation, standing and belief separately.
+
+
+## Preserved checkpoint before native disposition admission — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded dispositional adaptation component COMPLETE — VER-C3-DISPOSITION-001.**
+LOCAL DISPOSITION; no architectural blocker. Start
+CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md and DISPOSITION_CLOSURE_REV1.json.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1450** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 79 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
+| Qualification | **9 models / 15 runs / 285 component prefixes** |
+| Validation | **35 affected / 328 reference tests; build passed** |
+
+Actual qualified history changes a separately represented plastic contributor while
+constitution and original expressions remain unchanged. Step/Leaky compete; Refold
+matches stored Plastic. JointMax equals StandingOnly in this profile; JointAdd can
+amplify the same history. Independent necessity and general fusion remain unresolved.
+Probe18 changes actual choice under Plastic versus Neither; no universal law follows.
+
+Preserve exploration, original source, unexecuted planREV1 and its rejected cross-model
+trace-equality assumption. Final planREV2 qualifies equal learning semantics where
+full provenance differs. Every original expression stays immutable within its own run.
+No native Save132, scheduler phase, public provenance or calendar-time ageing claim.
+Prior identity recovery and public-wrapper closures remain unchanged and verified.
+
+Next: DISPOSITION_PUBLIC_READINESS.md. Admit typed constitution/adaptation/standing
+operands, lineage, separate mutation authority and prospective native execution under
+a successor profile; preserve all old identities. The component's empty-basis numerical
+adapter is not general source fusion. No owner ruling pending. RO019 ACTIVE; RO021
+CONDITIONAL and mandatory before final exit. AuditREV61; Campaign3 NOT EXIT-READY.
+
+
+## Preserved native disposition work-in-progress — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native disposition admission IN PROGRESS. Prior component COMPLETE — VER-C3-DISPOSITION-001.**
+LOCAL DISPOSITION; no architectural blocker. Start
+CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md and DISPOSITION_CLOSURE_REV1.json.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **8** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 79 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
+| Qualification | **9 models / 15 runs / 285 component prefixes** |
+| Validation | **35 affected / 328 reference tests; build passed** |
+
+Actual qualified history changes a separately represented plastic contributor while
+constitution and original expressions remain unchanged. Step/Leaky compete; Refold
+matches stored Plastic. JointMax equals StandingOnly in this profile; JointAdd can
+amplify the same history. Independent necessity and general fusion remain unresolved.
+Probe18 changes actual choice under Plastic versus Neither; no universal law follows.
+
+Preserve exploration, original source, unexecuted planREV1 and its rejected cross-model
+trace-equality assumption. Final planREV2 qualifies equal learning semantics where
+full provenance differs. Every original expression stays immutable within its own run.
+No native Save132, scheduler phase, public provenance or calendar-time ageing claim.
+Prior identity recovery and public-wrapper closures remain unchanged and verified.
+
+Next: DISPOSITION_PUBLIC_READINESS.md. Admit typed constitution/adaptation/standing
+operands, lineage, separate mutation authority and prospective native execution under
+a successor profile; preserve all old identities. The component's empty-basis numerical
+adapter is not general source fusion. No owner ruling pending. RO019 ACTIVE; RO021
+CONDITIONAL and mandatory before final exit. AuditREV61; Campaign3 NOT EXIT-READY.
+
+Native successor disposition-public/0.1-candidate is implemented under
+DISPOSITION_PUBLIC_CONTRACT.md. DISPOSITION_PUBLIC_PLAN_REV1.json freezes9 models/15
+runs and285 native prefixes before qualification. Initial16 development tests pass;
+final matrix, wrapper-inventory extension and closure checks remain in progress.
+No native qualification verdict is issued yet. If interrupted, first establish that the original workers have stopped, then use
+scripts/resume-disposition-public.mjs --part=0 (and1/2) to verify and skip completed
+receipts while repeating unfinished cases. Never overwrite preserved plans or receipts.

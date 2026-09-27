@@ -45,7 +45,42 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-09-26):** bounded native represented identity belief COMPLETE:
+**Current routing (2026-09-27):** native disposition admission COMPLETE:
+VER-C3-DISPOSITION-PUBLIC-001. Start CURRENT.md and
+CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md.9 models/15 runs/285 native prefixes;
+44 affected/328 reference tests/build;1458/0. Separate immutable constitution/plastic/
+standing operands and original lineage; ten actual phases, no constitution writer.
+Refold has no plastic leaf; no general fusion/ageing/scaling claim. Wrapper inventory
+now50 producers/53 factories; check-disposition-wrapper-extension.mjs checks current
+inventory and original49 scope without changing predecessor sources. AuditREV62:
+106 bounded/20 partial/6 blocked. Next SLEEP_CONTROL_READINESS.md; no owner ruling.
+
+**Prior routing (2026-09-27):** bounded dispositional adaptation component COMPLETE:
+VER-C3-DISPOSITION-001. Start CURRENT.md and
+CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md.9 models/15 runs/285 component prefixes;
+35 affected/328 reference tests/build;1450/0. Constitution/plastic/standing remain
+separate; Step/Leaky and Refold retained. JointMax equals StandingOnly here; JointAdd
+can amplify shared history. Independent necessity unresolved. No native admission.
+AuditREV61:106 bounded/20 partial/6 blocked. Next DISPOSITION_PUBLIC_READINESS.md.
+Preserve first unexecuted manifest and trace-equality correction; no owner ruling.
+
+**Prior routing (2026-09-27):** bounded identity recovery COMPLETE:
+VER-C3-IDENTITY-RECOVERY-001. Start CURRENT.md and
+CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md.5 reused models/13 runs/78 native prefixes;
+8 affected/328 reference tests/build,1450/0. Standing, self/observer belief and later
+appraisal stay separate; no production law changed. Brief12.12-8 bounded; auditREV60,
+105 bounded/20 partial/7 blocked. Next DISPOSITIONAL_ADAPTATION_READINESS.md.
+RO019 ACTIVE; RO021 CONDITIONAL and mandatory before exit; older ACTIVE prose for
+RO021 was inaccurate. RO022 remains CLOSED. No owner ruling pending.
+
+**Prior routing (2026-09-26):** bounded public-wrapper publication COMPLETE:
+VER-C3-PUBLIC-QUIESCENCE-001. Start CURRENT.md and
+CAMPAIGN3_PUBLIC_WRAPPER_QUIESCENCE_QUALIFICATION.md.49 producers accounted,4 repaired;
+same149 cases/747 prefix restores,74 affected/328 reference tests and build pass.
+RO22 CLOSED; RO21 historical gate remains ACTIVE. Counters1450/0; no clause promotion.
+Next IDENTITY_RECOVERY_READINESS.md under the same escalation policy.
+
+**Prior routing (2026-09-26):** bounded native represented identity belief COMPLETE:
 VER-C3-IDENTITY-BELIEF-PUBLIC-001, identity-belief-public/0.1-candidate. Start CURRENT.md
 and CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md.5 models/37 runs/222 native
 prefixes;69 affected/328 reference tests/build. Independent holder authority and

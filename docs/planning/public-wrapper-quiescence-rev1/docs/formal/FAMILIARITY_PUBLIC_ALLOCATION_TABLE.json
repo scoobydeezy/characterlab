@@ -1,0 +1,553 @@
+{
+  "version": "familiarity-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "namespace": 1167,
+  "records": [
+    {
+      "typeId": 1055,
+      "name": "FamiliarityProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1056,
+      "name": "FamiliarityOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Present",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "TruthIdentity",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "A",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "B",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Detail",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Visible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "AccessA",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "AccessB",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "AccessDetail",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1057,
+      "name": "FamiliarityObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Category",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "A",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "B",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1058,
+      "name": "FamiliarityImprint",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Source",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "A",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "B",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1059,
+      "name": "FamiliarityMemory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Imprints",
+          "type": {
+            "list": "ref:1058",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1060,
+      "name": "FamiliarityMemoryState",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1059"
+            ],
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1061,
+      "name": "FamiliarityComparison",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Source",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Equal",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Unequal",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Compared",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Similarity",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Detail",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1062,
+      "name": "FamiliarityResult",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Observation",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Status",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Maximum",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BestSources",
+          "type": {
+            "list": "id:1167",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Comparisons",
+          "type": {
+            "list": "ref:1061",
+            "min": 0,
+            "max": 8
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1063,
+      "name": "FamiliarityMemoryUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1059",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1059",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1064,
+      "name": "FamiliarityTruth",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "i",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Category",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Identity",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1065,
+      "name": "FamiliarityStage",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Event",
+          "type": "id:1001",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reads",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Writes",
+          "type": {
+            "list": "ref:149",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Authority",
+          "type": "id:1025",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1066,
+      "name": "FamiliarityContent",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actor",
+          "type": "id:1002",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "type": "id:1000",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "DetailLifetime",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1067,
+      "name": "FamiliarityFrozenInput",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Id",
+          "type": "id:1167",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:1057",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Memory",
+          "type": "ref:1059",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

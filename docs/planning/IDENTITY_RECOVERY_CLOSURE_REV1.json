@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-IDENTITY-RECOVERY-001",
+  "version": "identity-recovery-experiment/0.1-candidate",
+  "scope": "Bounded native task biography, standing and separately represented identity recovery. No production changes or longer timeline; no general adaptation.",
+  "models": 5,
+  "runs": 13,
+  "newInputRuns": 11,
+  "repeatedPriorRuns": 2,
+  "nativePrefixes": 78,
+  "tests": [
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_TESTS_REV1.json",
+      "sha256": "01294930a0ece097c6139cfbb0006d9de1c15079cb42fc84dbbc7d9433665e3b",
+      "passed": 8
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_REFERENCE_TESTS_REV1.json",
+      "sha256": "2a54eb1086853c04f6ca9ca2329290d52da861b1f0ba6fe5b45f6e0ba090d4bc",
+      "passed": 328
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_PLAN_REV1.json",
+      "sha256": "942fe65833374cd2bea9d544b2500913b66fc1f320b0e1f8ab14a37a1df689d1"
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_RESULT_REV1.json",
+      "sha256": "669e499cbcef335ad56481c891913150197cbd2f0034dcdc7cc7bb5f55c5ab1c"
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_FINDINGS.md",
+      "sha256": "a5b6a3a132b5555352ad8b4160e5d9519eded6ccbc548464913f936f3bc9d6ce"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md",
+      "sha256": "0f3d2905fd9f35711f35a380dd4793c57207dbcb2efdee5efdf470a44cca6237"
+    },
+    {
+      "path": "docs/planning/DISPOSITIONAL_ADAPTATION_READINESS.md",
+      "sha256": "e6c84bc17af15c64a30a2de4f033413668b12b0b8cc9f1ce97dc68d55d1cb7a7"
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_BUILD_REV1.json",
+      "sha256": "0f3b887f38f09756a19f671b3f98f66492b3a728f9fcc5cab9c5d7870711633e"
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_BUILD_REV1.log",
+      "sha256": "832530297342d9b0340b0160910b1a3287742a2bb8e2f713499460ec09abb134"
+    },
+    {
+      "path": "docs/planning/IDENTITY_RECOVERY_EXPLORATION_REV1.json",
+      "sha256": "68677779677a9aa66cf44aecd0f2baff1afce0f8713b7627be8a9696ffddc11e"
+    },
+    {
+      "path": "scripts/check-identity-recovery-closure.mjs",
+      "sha256": "503b21d2593fd51b51e7f4d015bcab8f24e9d52b9122fe2b33bf4dbcb01924ed"
+    },
+    {
+      "path": "scripts/explore-identity-recovery.mjs",
+      "sha256": "da031111ecf8b102bc75dbaf488072fadeed710afa9ff9a22a980ca9702b2c1c"
+    }
+  ],
+  "counters": {
+    "highestAllocatedRecordType": 1450,
+    "allocatedSinceVerdict": 0
+  }
+}

@@ -1,0 +1,7588 @@
+{
+  "version": "general-attention-carrier/0.1-candidate",
+  "status": "SHAPE ACCEPTED; NO NUMERIC ASSIGNMENT",
+  "records": [
+    {
+      "name": "TrialPanelPresentObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Before",
+              "Motion",
+              "After"
+            ]
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PerceivedTrialContextEvidence",
+      "fields": [
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualEventReferentId"
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "TrialPanelPresentObservation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveEventChildEvidence",
+      "fields": [
+        {
+          "name": "Encoding",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedEncodingUnit"
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedBodyView",
+      "fields": [
+        {
+          "name": "Sample",
+          "type": {
+            "kind": "ref",
+            "name": "EmbodiedLevelObservation"
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveBodySignalGroup",
+      "fields": [
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "Views",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedBodyView"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveEventAcquisitionContent",
+      "fields": [
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveEventChildEvidence"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveBodyAcquisitionContent",
+      "fields": [
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveBodySignalGroup"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "AcquisitionFormationEvidence",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "SourceSelection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Content",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "PositiveEventAcquisitionContent"
+              },
+              {
+                "kind": "ref",
+                "name": "PositiveBodyAcquisitionContent"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SurvivingEventChild",
+      "fields": [
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveEventChildEvidence"
+          }
+        },
+        {
+          "name": "UseProtection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "OutcomeSignificanceDirections",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "enum",
+              "values": [
+                "MovingCloser",
+                "MovingFarther"
+              ]
+            },
+            "min": 0,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "SurvivingBodyChild",
+      "fields": [
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveBodySignalGroup"
+          }
+        },
+        {
+          "name": "UseProtection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "OutcomeSignificanceDirections",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "enum",
+              "values": [
+                "MovingCloser",
+                "MovingFarther"
+              ]
+            },
+            "min": 0,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "SurvivingEventContent",
+      "fields": [
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SurvivingEventChild"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "SurvivingBodyContent",
+      "fields": [
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SurvivingBodyChild"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedAcquisition",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "SourceSelection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Content",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "SurvivingEventContent"
+              },
+              {
+                "kind": "ref",
+                "name": "SurvivingBodyContent"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "SurvivingEpisodeLedger",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedAcquisition"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalClosedInterval",
+      "fields": [
+        {
+          "name": "Lower",
+          "type": {
+            "kind": "ref",
+            "name": "Rational"
+          }
+        },
+        {
+          "name": "Upper",
+          "type": {
+            "kind": "ref",
+            "name": "Rational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalKey",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "GoalReferent",
+          "type": {
+            "kind": "ref",
+            "name": "SemanticReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalSpec",
+      "fields": [
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "Desired",
+          "type": {
+            "kind": "ref",
+            "name": "GoalClosedInterval"
+          }
+        },
+        {
+          "name": "ActiveFrom",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "ExpiresAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AdoptedMaintenanceGoal",
+      "fields": [
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AdoptedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Open",
+              "Withdrawn",
+              "Expired"
+            ]
+          }
+        },
+        {
+          "name": "ChangedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalLedger",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "AdoptedMaintenanceGoal"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalCommand",
+      "fields": [
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Action",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Adopt",
+              "Withdraw"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalAssessmentUnavailable",
+      "fields": [
+        {
+          "name": "Cause",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Absent",
+              "Pending",
+              "Withdrawn",
+              "Expired",
+              "MissingEvidence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDistanceAssessment",
+      "fields": [
+        {
+          "name": "BeforeDistance",
+          "type": {
+            "kind": "ref",
+            "name": "GoalClosedInterval"
+          }
+        },
+        {
+          "name": "AfterDistance",
+          "type": {
+            "kind": "ref",
+            "name": "GoalClosedInterval"
+          }
+        },
+        {
+          "name": "BeforePosition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BelowGoal",
+              "WithinGoal",
+              "AboveGoal",
+              "AmbiguousPosition"
+            ]
+          }
+        },
+        {
+          "name": "AfterPosition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BelowGoal",
+              "WithinGoal",
+              "AboveGoal",
+              "AmbiguousPosition"
+            ]
+          }
+        },
+        {
+          "name": "Relation",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "MovingCloser",
+              "MovingFarther",
+              "SameDistance",
+              "IndeterminateRelation"
+            ]
+          }
+        },
+        {
+          "name": "Boundary",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Attainment",
+              "Violation",
+              "NoBoundaryChange",
+              "IndeterminateBoundary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualifies",
+      "fields": [
+        {
+          "name": "Direction",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "MovingCloser",
+              "MovingFarther"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDoesNotQualify",
+      "fields": [
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "SameDistance",
+              "ComparatorExcludesProgress"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationIndeterminate",
+      "fields": [
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "IndeterminateRelation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationUnavailable",
+      "fields": [
+        {
+          "name": "Cause",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Absent",
+              "Pending",
+              "Withdrawn",
+              "Expired",
+              "MissingEvidence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalOutcomeAssessment",
+      "fields": [
+        {
+          "name": "Assessment",
+          "type": {
+            "kind": "ref",
+            "name": "GoalOutcomeAssessmentId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Goal",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "AssessmentValue",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalAssessmentUnavailable"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDistanceAssessment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalQualifies"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDoesNotQualify"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationIndeterminate"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationUnavailable"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationCarry",
+      "fields": [
+        {
+          "name": "Assessment",
+          "type": {
+            "kind": "ref",
+            "name": "GoalOutcomeAssessmentId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Goal",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalKey"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "AssessedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "GoalQualifies"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalDoesNotQualify"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationIndeterminate"
+              },
+              {
+                "kind": "ref",
+                "name": "GoalQualificationUnavailable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationDelivery",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Carry",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "GoalQualificationCarry"
+            }
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventChildKey",
+      "fields": [
+        {
+          "name": "Continuant",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyChildKey",
+      "fields": [
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedChildAddress",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Child",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "EventChildKey"
+              },
+              {
+                "kind": "ref",
+                "name": "BodyChildKey"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedViewAddress",
+      "fields": [
+        {
+          "name": "Child",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedChildAddress"
+          }
+        },
+        {
+          "name": "View",
+          "type": {
+            "kind": "ref",
+            "name": "ViewOrdinal"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedAttributionResult",
+      "fields": [
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResultId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "ref",
+            "name": "ExperienceId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Supported",
+              "Unavailable"
+            ]
+          }
+        },
+        {
+          "name": "Consumed",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedChildAddress"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "name": "Targets",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "RetainedChildAddress"
+            },
+            "min": 0,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "QualifiedSignificanceJoin",
+      "fields": [
+        {
+          "name": "Qualification",
+          "type": {
+            "kind": "ref",
+            "name": "GoalQualificationCarry"
+          }
+        },
+        {
+          "name": "Attribution",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResult"
+          }
+        }
+      ]
+    },
+    {
+      "name": "QualifiedFormationSource",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationAdmission",
+      "fields": [
+        {
+          "name": "AcquisitionKind",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EventContinuant",
+              "Interoceptive"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationSuccess",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "FormedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "CompleteLoss",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceValue",
+      "fields": [
+        {
+          "name": "AdmittedSources",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationAdmission"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "SuccessfulFormations",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationSuccess"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "ref",
+            "name": "FormationGovernanceValue"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationSourceBinding",
+      "fields": [
+        {
+          "name": "Producer",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionKindId"
+          }
+        },
+        {
+          "name": "AuditSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "SelectionField",
+          "type": {
+            "kind": "ref",
+            "name": "FieldOrdinal"
+          }
+        },
+        {
+          "name": "ViewSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Projection",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AcquisitionKind",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EventContinuant",
+              "Interoceptive"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RuntimeProtocolStateDeclaration",
+      "fields": [
+        {
+          "name": "Path",
+          "type": {
+            "kind": "ref",
+            "name": "StatePathPattern"
+          }
+        },
+        {
+          "name": "ValueSchema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Authority",
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "name": "Classification",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "RuntimeProtocol"
+            ]
+          }
+        },
+        {
+          "name": "RemovalAllowed",
+          "type": {
+            "kind": "ref",
+            "name": "False"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationOwnerBinding",
+      "fields": [
+        {
+          "name": "Owner",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionKindId"
+          }
+        },
+        {
+          "name": "Authority",
+          "type": {
+            "kind": "ref",
+            "name": "MutationAuthorityId"
+          }
+        },
+        {
+          "name": "Path",
+          "type": {
+            "kind": "ref",
+            "name": "StatePathPattern"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationGovernanceProfile",
+      "fields": [
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "MaximumQualifiedSources",
+          "type": {
+            "kind": "ref",
+            "name": "SourceBound"
+          }
+        },
+        {
+          "name": "State",
+          "type": {
+            "kind": "ref",
+            "name": "RuntimeProtocolStateDeclaration"
+          }
+        },
+        {
+          "name": "Sources",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "FormationSourceBinding"
+            },
+            "min": 1,
+            "max": 8
+          }
+        },
+        {
+          "name": "Owner",
+          "type": {
+            "kind": "ref",
+            "name": "FormationOwnerBinding"
+          }
+        },
+        {
+          "name": "Hooks",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AdmitAndReconcile"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FormationOwnerDisposition",
+      "fields": [
+        {
+          "name": "Formed",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "QualifiedFormationSource"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "FormationSuccess"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "NewCompleteLoss",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "AcquisitionOccurrenceId"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "RecalledAcquisitionEvidence",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "SourceSelection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Content",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "PositiveEventAcquisitionContent"
+              },
+              {
+                "kind": "ref",
+                "name": "PositiveBodyAcquisitionContent"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventRecallWinner",
+      "fields": [
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "RecalledAcquisitionEvidence"
+          }
+        },
+        {
+          "name": "Score",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyRecallWinner",
+      "fields": [
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "RecalledAcquisitionEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recollection",
+      "fields": [
+        {
+          "name": "Occurrence",
+          "type": {
+            "kind": "ref",
+            "name": "ProposedRecollectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Content",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "EventRecallWinner"
+              },
+              {
+                "kind": "ref",
+                "name": "BodyRecallWinner"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventRecallScore",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Base",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Pull",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Score",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventRecallResult",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "UnavailableCue",
+              "Evaluated"
+            ]
+          }
+        },
+        {
+          "name": "Scores",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EventRecallScore"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "Winners",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EventRecallWinner"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyRecallResult",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "UnavailableCue",
+              "Evaluated"
+            ]
+          }
+        },
+        {
+          "name": "Eligible",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "AcquisitionOccurrenceId"
+            },
+            "min": 0,
+            "max": 32
+          }
+        },
+        {
+          "name": "Winners",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "BodyRecallWinner"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "PresentationEntry",
+      "fields": [
+        {
+          "name": "Acquisition",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionOccurrenceId"
+          }
+        },
+        {
+          "name": "Times",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Instant"
+            },
+            "min": 1,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "PresentationLedger",
+      "fields": [
+        {
+          "name": "Entries",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PresentationEntry"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "RecollectionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "EventRecallResult"
+              },
+              {
+                "kind": "ref",
+                "name": "BodyRecallResult"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PresentationInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Recollections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Recollection"
+            },
+            "min": 1,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "SafeSignalDeclaration",
+      "fields": [
+        {
+          "name": "Channel",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationChannelId"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyOpportunityEvidence",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EmbodiedSample"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PreRecognitionSemanticExperience"
+            }
+          }
+        },
+        {
+          "name": "Declarations",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "SafeSignalDeclaration"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyCueInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionAuditRow",
+      "fields": [
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "ViewCount",
+          "type": {
+            "kind": "ref",
+            "name": "ViewCount"
+          }
+        },
+        {
+          "name": "Disposition",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Selected",
+              "Capacity",
+              "Unavailable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectionAudit",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "BodySelectionAuditRow"
+            },
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySelectedView",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Groups",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveBodySignalGroup"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyAcquisitionEvidenceInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "BodySelectedView"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodySignalCue",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Opportunity",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Present",
+              "Absent"
+            ]
+          }
+        },
+        {
+          "name": "Signals",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "InteroceptiveSignalId"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "SupportingObservationIds",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "ObservationId"
+            },
+            "min": 0,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "BodySignalCue"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GridPosition",
+      "fields": [
+        {
+          "name": "X",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "Y",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservedFeatureDetection",
+      "fields": [
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "ref",
+            "name": "CurrentDetectionId"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "EventRoleEvidence"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "Glyph"
+            }
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "GridPosition"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ExtendedObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "EventDetection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentEventDetectionId"
+            }
+          }
+        },
+        {
+          "name": "Detections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "ObservedFeatureDetection"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualOpportunityEvidence",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ExtendedObservation"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PreRecognitionSemanticExperience"
+            }
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SelectedSpatialWitness",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "ref",
+            "name": "CurrentDetectionId"
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "GridPosition"
+            }
+          }
+        },
+        {
+          "name": "Class",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "SpatialFocal",
+              "SpatialPeripheral",
+              "SpatialUnknown"
+            ]
+          }
+        },
+        {
+          "name": "PeripheralCount",
+          "type": {
+            "kind": "ref",
+            "name": "ViewCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SpatialPreparation",
+      "fields": [
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "ref",
+            "name": "PreRecognitionSemanticExperience"
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Witnesses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            },
+            "min": 1,
+            "max": 3
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualSelectionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "VisualOpportunityEvidence"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "ExtendedSelected",
+      "fields": [
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "SelectedEvidenceView"
+          }
+        },
+        {
+          "name": "SpatialWitnesses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceivedTrialContextEvidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingJoinInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "ExtendedSelected"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingFactors",
+      "fields": [
+        {
+          "name": "Base",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Attention",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Raw",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingEvaluationRow",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Positive",
+              "KnownZero",
+              "UnavailableAllocation"
+            ]
+          }
+        },
+        {
+          "name": "Factors",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "EncodingFactors"
+            }
+          }
+        },
+        {
+          "name": "Strength",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "UnitRational"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EncodingEvaluation",
+      "fields": [
+        {
+          "name": "Input",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingJoinInput"
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EncodingEvaluationRow"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedEncodingUnit",
+      "fields": [
+        {
+          "name": "Unit",
+          "type": {
+            "kind": "ref",
+            "name": "AttentionUnitKey"
+          }
+        },
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceivedBindingEvidence"
+            },
+            "min": 1,
+            "max": 6
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "name": "Factors",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingFactors"
+          }
+        },
+        {
+          "name": "Strength",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveUnitRational"
+          }
+        },
+        {
+          "name": "SpatialWitness",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "SelectedSpatialWitness"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositiveVisualCandidate",
+      "fields": [
+        {
+          "name": "Selection",
+          "type": {
+            "kind": "ref",
+            "name": "SelectionOccurrenceId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Calibration",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Children",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositiveEventChildEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualCueInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "VisualOpportunityEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CueEvidence",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Experience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "Status",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AvailableFile",
+              "UnavailableCue"
+            ]
+          }
+        },
+        {
+          "name": "Detection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentDetectionId"
+            }
+          }
+        },
+        {
+          "name": "File",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualReferentId"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AssociationMassRow",
+      "fields": [
+        {
+          "name": "Masses",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "LatticeMass"
+            },
+            "min": 0,
+            "max": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "AssociationGraph",
+      "fields": [
+        {
+          "name": "Nodes",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualReferentId"
+            },
+            "min": 0,
+            "max": 30
+          }
+        },
+        {
+          "name": "Rows",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "AssociationMassRow"
+            },
+            "min": 0,
+            "max": 30
+          }
+        },
+        {
+          "name": "LastUpdatedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrackingWindowItem",
+      "fields": [
+        {
+          "name": "File",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualReferentId"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "Glyph"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrackingWindow",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ObservationId"
+            }
+          }
+        },
+        {
+          "name": "Items",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "TrackingWindowItem"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "ActivePanelContext",
+      "fields": [
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Context",
+          "type": {
+            "kind": "ref",
+            "name": "PerceptualEventReferentId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelWindow",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Active",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ActivePanelContext"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEpisodeState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "SurvivingEpisodeLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralAssociationState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "AssociationGraph"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralPresentationState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "PresentationLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "MaintenanceGoalState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "CharacterId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "MaintenanceGoalLedger"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralTrackingState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "ObserverId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "TrackingWindow"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelContextState",
+      "fields": [
+        {
+          "name": "Value",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "ObserverId"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "TrialPanelWindow"
+            },
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "ActualConcernCarry",
+      "fields": [
+        {
+          "name": "Concern",
+          "type": {
+            "kind": "ref",
+            "name": "ConcernOccurrenceId"
+          }
+        },
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Response",
+          "type": {
+            "kind": "ref",
+            "name": "TaskConcernResponse"
+          }
+        }
+      ]
+    },
+    {
+      "name": "NoConcernAvailable",
+      "fields": [
+        {
+          "name": "Subject",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Reason",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "NoSelectedTask"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "FeedbackDelivery",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "TargetAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Value",
+          "type": {
+            "kind": "union",
+            "alternatives": [
+              {
+                "kind": "ref",
+                "name": "ActualConcernCarry"
+              },
+              {
+                "kind": "ref",
+                "name": "NoConcernAvailable"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernModulation",
+      "fields": [
+        {
+          "name": "SourceStatus",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "KnownIntensity",
+              "Unavailable",
+              "NoSelectedTask"
+            ]
+          }
+        },
+        {
+          "name": "Branch",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "EnabledKnown",
+              "DisabledFeedback",
+              "BaselineWithoutAvailableFeedback"
+            ]
+          }
+        },
+        {
+          "name": "ResidualMultiplier",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "AssociativeWeight",
+          "type": {
+            "kind": "ref",
+            "name": "OneToTwoRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernEncodingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Selected",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingJoinInput"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernEncodingEvaluation",
+      "fields": [
+        {
+          "name": "Evaluation",
+          "type": {
+            "kind": "ref",
+            "name": "EncodingEvaluation"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        },
+        {
+          "name": "Modulation",
+          "type": {
+            "kind": "ref",
+            "name": "PriorConcernModulation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "CueEvidence"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernRecallEvaluation",
+      "fields": [
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "EventRecallResult"
+          }
+        },
+        {
+          "name": "Feedback",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        },
+        {
+          "name": "Modulation",
+          "type": {
+            "kind": "ref",
+            "name": "PriorConcernModulation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveKey",
+      "fields": [
+        {
+          "name": "Character",
+          "type": {
+            "kind": "ref",
+            "name": "CharacterId"
+          }
+        },
+        {
+          "name": "Reserve",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveBodyBinding",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Parameters",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveBodyRegistry",
+      "fields": [
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "LocalReserveBodyBinding"
+            },
+            "min": 3,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveChannel",
+      "fields": [
+        {
+          "name": "Channel",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationChannelId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Reserve",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Signal",
+          "type": {
+            "kind": "ref",
+            "name": "InteroceptiveSignalId"
+          }
+        },
+        {
+          "name": "Width",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveRational"
+          }
+        },
+        {
+          "name": "Available",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveChannelRegistry",
+      "fields": [
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "LocalReserveChannel"
+            },
+            "min": 3,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveState",
+      "fields": [
+        {
+          "name": "Anchors",
+          "type": {
+            "kind": "map",
+            "key": {
+              "kind": "ref",
+              "name": "LocalReserveKey"
+            },
+            "value": {
+              "kind": "ref",
+              "name": "ReserveAnchor"
+            },
+            "min": 3,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveSamplingRequest",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "ObservationChannelId"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveReplenishment",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LocalReserveReplenishmentResult",
+      "fields": [
+        {
+          "name": "Key",
+          "type": {
+            "kind": "ref",
+            "name": "LocalReserveKey"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Prior",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveAnchor"
+          }
+        },
+        {
+          "name": "Next",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveAnchor"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "ReserveReplenishmentResult"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelUnavailableObservation",
+      "fields": [
+        {
+          "name": "Observation",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationId"
+          }
+        },
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TransformationVersion",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RequestedBodySamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "EmbodiedSample"
+            },
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "name": "Declarations",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "SafeSignalDeclaration"
+            },
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSourceSamplingRequest",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "LocalReserveSamplingRequest"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CompletedRequestedSamples",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Request",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralSourceSamplingRequest"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "RequestedBodySamples"
+            }
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "union",
+              "alternatives": [
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelPresentObservation"
+                },
+                {
+                  "kind": "ref",
+                  "name": "TrialPanelUnavailableObservation"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExtendedObservation"
+            }
+          }
+        },
+        {
+          "name": "EventDetection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "CurrentEventDetectionId"
+            }
+          }
+        },
+        {
+          "name": "ReservedExperience",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SourcePerceptionInput",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositionSceneItem",
+      "fields": [
+        {
+          "name": "Marker",
+          "type": {
+            "kind": "ref",
+            "name": "SceneObjectReferent"
+          }
+        },
+        {
+          "name": "Role",
+          "type": {
+            "kind": "ref",
+            "name": "EventRoleId"
+          }
+        },
+        {
+          "name": "Position",
+          "type": {
+            "kind": "ref",
+            "name": "GridPosition"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Visible",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "RoleMode",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Preserve",
+              "Unresolved"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositionSceneFrame",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Items",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositionSceneItem"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "PositionSceneDefinition",
+      "fields": [
+        {
+          "name": "BindingSchema",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Frames",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PositionSceneFrame"
+            },
+            "min": 0,
+            "max": 10
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelFrame",
+      "fields": [
+        {
+          "name": "At",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Glyph",
+          "type": {
+            "kind": "ref",
+            "name": "Glyph"
+          }
+        },
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Before",
+              "Motion",
+              "After"
+            ]
+          }
+        },
+        {
+          "name": "Visible",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "Permitted",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrialPanelDefinition",
+      "fields": [
+        {
+          "name": "Frames",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "TrialPanelFrame"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSourceProfile",
+      "fields": [
+        {
+          "name": "Observer",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Channels",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Panel",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservationUsePlan",
+      "fields": [
+        {
+          "name": "BodySelection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "VisualSelection",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "BodyCue",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "VisualCue",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "GoalAssessment",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "ExecutionPolicy",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralObservationOriginal",
+      "fields": [
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Profile",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Request",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralSourceSamplingRequest"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Lane",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Current",
+              "Consequence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSamplingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Original",
+          "type": {
+            "kind": "ref",
+            "name": "GeneralObservationOriginal"
+          }
+        },
+        {
+          "name": "World",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "WorldEventTruth"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralTrackingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBindingInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFreezeInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Samples",
+          "type": {
+            "kind": "ref",
+            "name": "CompletedRequestedSamples"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Tracks",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceptualTrackTransition"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "PerceptualEventTransition"
+            }
+          }
+        },
+        {
+          "name": "Bindings",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "PerceivedBindingEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralUseInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Use",
+          "type": {
+            "kind": "ref",
+            "name": "ObservationUsePlan"
+          }
+        },
+        {
+          "name": "Body",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "BodyOpportunityEvidence"
+            }
+          }
+        },
+        {
+          "name": "Visual",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "VisualOpportunityEvidence"
+            }
+          }
+        },
+        {
+          "name": "Claims",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "CausalRoleEvidence"
+            },
+            "min": 0,
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "VisualAcquisitionEvidenceInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Candidate",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveVisualCandidate"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EventRecallInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Cue",
+          "type": {
+            "kind": "ref",
+            "name": "CueEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFormationOwnerInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Evidence",
+          "type": {
+            "kind": "ref",
+            "name": "AcquisitionFormationEvidence"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernAppraisalInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Workspace",
+          "type": {
+            "kind": "ref",
+            "name": "TaskWorkspace"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernProducerInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Appraisal",
+          "type": {
+            "kind": "ref",
+            "name": "TaskAppraisal"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PriorConcernDeliveryInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "FeedbackDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalCommandInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Command",
+          "type": {
+            "kind": "ref",
+            "name": "MaintenanceGoalCommand"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalDeadlineInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "AdoptedAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalAssessmentInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Spec",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Source",
+          "type": {
+            "kind": "ref",
+            "name": "BodyOpportunityEvidence"
+          }
+        },
+        {
+          "name": "Recollections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Recollection"
+            },
+            "min": 0,
+            "max": 32
+          }
+        }
+      ]
+    },
+    {
+      "name": "FocalConsequenceDelivery",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Consequence",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "ExperienceId"
+            }
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GoalQualificationDeliveryInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Delivery",
+          "type": {
+            "kind": "ref",
+            "name": "GoalQualificationDelivery"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RetainedAttributionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Focus",
+          "type": {
+            "kind": "ref",
+            "name": "FocalConsequenceDelivery"
+          }
+        },
+        {
+          "name": "Recollections",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "Recollection"
+            },
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "AttributionResultDelivery",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        },
+        {
+          "name": "DueAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "RetainedAttributionResult"
+            }
+          }
+        },
+        {
+          "name": "SourceAt",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AttributionUseInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Result",
+          "type": {
+            "kind": "ref",
+            "name": "RetainedAttributionResult"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SignificanceJoinInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Join",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "QualifiedSignificanceJoin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SignificanceOpportunity",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralSpatialCalibration",
+      "fields": [
+        {
+          "name": "MinX",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MaxX",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MinY",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "MaxY",
+          "type": {
+            "kind": "ref",
+            "name": "Cell"
+          }
+        },
+        {
+          "name": "FocalWeight",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "ResidualPool",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEncodingCalibration",
+      "fields": [
+        {
+          "name": "Law",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "Independent",
+              "HistoricalShared",
+              "HistoricalHybrid",
+              "RetiredFlat"
+            ]
+          }
+        },
+        {
+          "name": "BudgetFloor",
+          "type": {
+            "kind": "ref",
+            "name": "PositiveUnitRational"
+          }
+        },
+        {
+          "name": "ImportantThreshold",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralAssociationCalibration",
+      "fields": [
+        {
+          "name": "Scale",
+          "type": {
+            "kind": "ref",
+            "name": "GraphScale"
+          }
+        },
+        {
+          "name": "LearningRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "AssociationDecayRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEventAccessCalibration",
+      "fields": [
+        {
+          "name": "Beta",
+          "type": {
+            "kind": "ref",
+            "name": "UnitRational"
+          }
+        },
+        {
+          "name": "Scale",
+          "type": {
+            "kind": "ref",
+            "name": "GraphScale"
+          }
+        },
+        {
+          "name": "PresentationDecayRate",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Exponent",
+          "type": {
+            "kind": "ref",
+            "name": "DecayExponent"
+          }
+        },
+        {
+          "name": "BaseWeight",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "AssociationWeight",
+          "type": {
+            "kind": "ref",
+            "name": "NonnegativeRational"
+          }
+        },
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "RecallCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBodyRecallCalibration",
+      "fields": [
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "RecallCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRetentionCalibration",
+      "fields": [
+        {
+          "name": "EventSlots",
+          "type": {
+            "kind": "ref",
+            "name": "MemorySlotCount"
+          }
+        },
+        {
+          "name": "BodySlots",
+          "type": {
+            "kind": "ref",
+            "name": "MemorySlotCount"
+          }
+        },
+        {
+          "name": "Priority",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "AgeOnly",
+              "UseOnly",
+              "SharedProtection",
+              "SignificanceFirst"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralGraphRetentionCalibration",
+      "fields": [
+        {
+          "name": "Nodes",
+          "type": {
+            "kind": "ref",
+            "name": "GraphNodeCount"
+          }
+        },
+        {
+          "name": "Edges",
+          "type": {
+            "kind": "ref",
+            "name": "GraphEdgeCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralFeedbackCalibration",
+      "fields": [
+        {
+          "name": "EncodingEnabled",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        },
+        {
+          "name": "RetrievalEnabled",
+          "type": {
+            "kind": "ref",
+            "name": "Boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRunBounds",
+      "fields": [
+        {
+          "name": "CompletedSelectionLimit",
+          "type": {
+            "kind": "ref",
+            "name": "SourceBound"
+          }
+        },
+        {
+          "name": "Horizon",
+          "type": {
+            "kind": "ref",
+            "name": "Instant"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralBodySelectionCalibration",
+      "fields": [
+        {
+          "name": "MaxSignals",
+          "type": {
+            "kind": "ref",
+            "name": "SignalLimit"
+          }
+        },
+        {
+          "name": "MaxViewsPerSignal",
+          "type": {
+            "kind": "ref",
+            "name": "SignalViewLimit"
+          }
+        },
+        {
+          "name": "MaxBytesPerSignal",
+          "type": {
+            "kind": "ref",
+            "name": "SignalByteLimit"
+          }
+        },
+        {
+          "name": "Capacity",
+          "type": {
+            "kind": "ref",
+            "name": "SignalCount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralGoalQualificationCalibration",
+      "fields": [
+        {
+          "name": "Law",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BothDirections",
+              "DeteriorationOnly"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObservationExecutionPolicy",
+      "fields": [
+        {
+          "name": "BodySelection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "VisualSelection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "Spatial",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "Encoding",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "BodyRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "GoalBaselineRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "EventRecall",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        },
+        {
+          "name": "GoalQualification",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "DefinitionId"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRetentionControl",
+      "fields": [
+        {
+          "name": "Memory",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Graph",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        },
+        {
+          "name": "Association",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralRetentionInput",
+      "fields": [
+        {
+          "name": "ObserverId",
+          "type": {
+            "kind": "ref",
+            "name": "ObserverId"
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralEventPresentationPlan",
+      "fields": [
+        {
+          "name": "TargetOriginal",
+          "type": {
+            "kind": "ref",
+            "name": "OriginalAddress"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralDefinitionBinding",
+      "fields": [
+        {
+          "name": "Purpose",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "BodySelection",
+              "VisualSelection",
+              "Spatial",
+              "Encoding",
+              "BodyRecall",
+              "GoalBaselineRecall",
+              "EventRecall",
+              "GoalQualification",
+              "Retention",
+              "Association",
+              "GraphRetention",
+              "Feedback",
+              "Workspace",
+              "Concern"
+            ]
+          }
+        },
+        {
+          "name": "Definition",
+          "type": {
+            "kind": "ref",
+            "name": "DefinitionId"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralOutputDeclaration",
+      "fields": [
+        {
+          "name": "Schema",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Minimum",
+          "type": {
+            "kind": "ref",
+            "name": "OutputCount"
+          }
+        },
+        {
+          "name": "Maximum",
+          "type": {
+            "kind": "ref",
+            "name": "OutputCount"
+          }
+        },
+        {
+          "name": "IdentityMode",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "FreshOwned",
+              "NestedOwnedAndReserved",
+              "BorrowedOnly",
+              "ObserverFileCounter",
+              "ReservedOwned"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GeneralStageRegistration",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": {
+            "kind": "enum",
+            "values": [
+              "world",
+              "current-sample",
+              "current-track",
+              "current-bind",
+              "current-classify",
+              "current-freeze",
+              "current-roles",
+              "current-dispatch",
+              "consequence-sample",
+              "consequence-track",
+              "consequence-bind",
+              "consequence-classify",
+              "consequence-freeze",
+              "consequence-roles",
+              "consequence-dispatch",
+              "current-visual-selection",
+              "current-visual-encoding",
+              "current-body-selection",
+              "current-visual-cue",
+              "current-body-cue",
+              "current-event-rank",
+              "current-body-rank",
+              "current-recollection",
+              "consequence-visual-selection",
+              "consequence-visual-encoding",
+              "consequence-body-selection",
+              "consequence-visual-cue",
+              "consequence-body-cue",
+              "consequence-event-rank",
+              "consequence-body-rank",
+              "consequence-recollection",
+              "visual-acquisition-evidence",
+              "body-acquisition-evidence",
+              "ordinary-memory-formation",
+              "event-association-formation",
+              "event-presentation-formation",
+              "prior-concern-workspace",
+              "prior-concern-appraisal",
+              "prior-concern-producer",
+              "encoding-concern-delivery",
+              "recall-concern-delivery",
+              "prior-concern-visual-encoding",
+              "prior-concern-event-rank",
+              "goal-command-proposal",
+              "goal-command-owner",
+              "goal-deadline-owner",
+              "goal-outcome-assessment",
+              "focal-consequence-delivery",
+              "goal-qualification-delivery",
+              "retained-attribution",
+              "attribution-use-dispatch",
+              "ordinary-memory-use",
+              "attribution-result-delivery",
+              "significance-opportunity",
+              "significance-join",
+              "ordinary-memory-significance",
+              "retention-original",
+              "retention-dispatch",
+              "ordinary-memory-retention",
+              "event-association-retention",
+              "event-presentation-cleanup",
+              "event-presentation-dispatch",
+              "event-presentation-owner",
+              "goal-baseline-cue",
+              "goal-baseline-rank",
+              "goal-baseline-recollection",
+              "local-reserve-replenishment"
+            ]
+          }
+        },
+        {
+          "name": "Seam",
+          "type": {
+            "kind": "ref",
+            "name": "SeamId"
+          }
+        },
+        {
+          "name": "Version",
+          "type": {
+            "kind": "ref",
+            "name": "VersionText"
+          }
+        },
+        {
+          "name": "Event",
+          "type": {
+            "kind": "ref",
+            "name": "EventTypeId"
+          }
+        },
+        {
+          "name": "Phase",
+          "type": {
+            "kind": "ref",
+            "name": "PhaseOrdinal"
+          }
+        },
+        {
+          "name": "Input",
+          "type": {
+            "kind": "ref",
+            "name": "CanonicalRecordSchemaRef"
+          }
+        },
+        {
+          "name": "Outputs",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralOutputDeclaration"
+            },
+            "min": 0,
+            "max": 3
+          }
+        },
+        {
+          "name": "ReadDomain",
+          "type": {
+            "kind": "set",
+            "element": {
+              "kind": "ref",
+              "name": "StatePathPattern"
+            },
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "name": "WriteAuthorization",
+          "type": {
+            "kind": "ref",
+            "name": "TransitionWriteAuthorization"
+          }
+        },
+        {
+          "name": "SubjectProjection",
+          "type": {
+            "kind": "optional",
+            "value": {
+              "kind": "ref",
+              "name": "SubjectProjectionRequirement"
+            }
+          }
+        },
+        {
+          "name": "Definitions",
+          "type": {
+            "kind": "list",
+            "element": {
+              "kind": "ref",
+              "name": "GeneralDefinitionBinding"
+            },
+            "min": 0,
+            "max": 8
+          }
+        }
+      ]
+    }
+  ],
+  "newIdentityFamilies": [
+    {
+      "name": "LocalReserveId",
+      "payload": "nonempty canonical UTF-8 NFC text",
+      "scope": "model physical vocabulary"
+    },
+    {
+      "name": "InteroceptiveSignalId",
+      "payload": "nonempty canonical UTF-8 NFC text",
+      "scope": "observer-safe model signal vocabulary"
+    },
+    {
+      "name": "AcquisitionOccurrenceId",
+      "payload": "unsigned shared runtime ordinal",
+      "scope": "run occurrence"
+    },
+    {
+      "name": "GoalOutcomeAssessmentId",
+      "payload": "unsigned shared runtime ordinal",
+      "scope": "run occurrence"
+    },
+    {
+      "name": "RetainedAttributionResultId",
+      "payload": "unsigned shared runtime ordinal",
+      "scope": "run occurrence"
+    },
+    {
+      "name": "ProposedRecollectionOccurrenceId",
+      "payload": "unsigned shared runtime ordinal",
+      "scope": "run occurrence"
+    }
+  ],
+  "roles": [
+    {
+      "path": "TrialPanelPresentObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "TrialPanelPresentObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PerceivedTrialContextEvidence.Experience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "PositiveBodySignalGroup.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "PositiveEventAcquisitionContent.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AcquisitionFormationEvidence.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "SurvivingEventContent.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "RetainedAcquisition.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RetainedAcquisition.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAcquisition.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "MaintenanceGoalKey.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "MaintenanceGoalKey.GoalReferent",
+      "identity": "SemanticReferentId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/maintenance-goal-qualification"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "MaintenanceGoalSpec.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "AdoptedMaintenanceGoal.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "MaintenanceGoalCommand.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GoalOutcomeAssessment.Assessment",
+      "identity": "GoalOutcomeAssessmentId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "GoalOutcomeAssessmentId"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalOutcomeAssessment.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "GoalQualificationCarry.Assessment",
+      "identity": "GoalOutcomeAssessmentId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "GoalOutcomeAssessmentId"
+    },
+    {
+      "path": "GoalQualificationCarry.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalQualificationCarry.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodyChildKey.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "RetainedChildAddress.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RetainedAttributionResult.Result",
+      "identity": "RetainedAttributionResultId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "RetainedAttributionResultId"
+    },
+    {
+      "path": "RetainedAttributionResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAttributionResult.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "RetainedAttributionResult.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "QualifiedFormationSource.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "QualifiedFormationSource.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "FormationSuccess.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "FormationSourceBinding.Producer",
+      "identity": "TransitionKindId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1009
+    },
+    {
+      "path": "FormationSourceBinding.Projection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.Authority",
+      "identity": "MutationAuthorityId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1025
+    },
+    {
+      "path": "FormationOwnerBinding.Owner",
+      "identity": "TransitionKindId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1009
+    },
+    {
+      "path": "FormationOwnerBinding.Authority",
+      "identity": "MutationAuthorityId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1025
+    },
+    {
+      "path": "FormationGovernanceProfile.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "FormationOwnerDisposition.NewCompleteLoss[*]",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.SourceSelection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "Recollection.Occurrence",
+      "identity": "ProposedRecollectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "ProposedRecollectionOccurrenceId"
+    },
+    {
+      "path": "Recollection.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "EventRecallScore.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "EventRecallResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EventRecallResult.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "BodyRecallResult.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodyRecallResult.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "BodyRecallResult.Eligible[*]",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "PresentationEntry.Acquisition",
+      "identity": "AcquisitionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "AcquisitionOccurrenceId"
+    },
+    {
+      "path": "RecollectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PresentationInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SafeSignalDeclaration.Channel",
+      "identity": "ObservationChannelId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1005
+    },
+    {
+      "path": "SafeSignalDeclaration.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodyCueInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionAuditRow.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodySelectionAudit.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "BodySelectionAudit.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectionAudit.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodySelectedView.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "BodySelectedView.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySelectedView.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodyAcquisitionEvidenceInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySignalCue.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "BodySignalCue.Opportunity",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "BodySignalCue.Signals[*]",
+      "identity": "InteroceptiveSignalId",
+      "mode": "FixedCompilerCollectionElement",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "BodySignalCue.SupportingObservationIds[*]",
+      "identity": "ObservationId",
+      "mode": "FixedCompilerCollectionElement",
+      "namespace": 1115
+    },
+    {
+      "path": "BodyRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "ExtendedObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "ExtendedObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SpatialPreparation.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "VisualSelectionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "VisualSelectionInput.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "EncodingJoinInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EncodingJoinInput.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "PositiveVisualCandidate.Selection",
+      "identity": "SelectionOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1143
+    },
+    {
+      "path": "PositiveVisualCandidate.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PositiveVisualCandidate.Calibration",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "VisualCueInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CueEvidence.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CueEvidence.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "CueEvidence.Experience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "TrackingWindow.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "GeneralEpisodeState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralAssociationState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralPresentationState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "MaintenanceGoalState.Value{key}",
+      "identity": "CharacterId",
+      "mode": "StateMapKey",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "GeneralTrackingState.Value{key}",
+      "identity": "ObserverId",
+      "mode": "StateMapKey",
+      "namespace": 1000
+    },
+    {
+      "path": "TrialPanelContextState.Value{key}",
+      "identity": "ObserverId",
+      "mode": "StateMapKey",
+      "namespace": 1000
+    },
+    {
+      "path": "ActualConcernCarry.Concern",
+      "identity": "ConcernOccurrenceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1130
+    },
+    {
+      "path": "ActualConcernCarry.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "NoConcernAvailable.Subject",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "PriorConcernEncodingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveKey.Character",
+      "identity": "CharacterId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002,
+      "validator": "validator/character-qualification"
+    },
+    {
+      "path": "LocalReserveKey.Reserve",
+      "identity": "LocalReserveId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "LocalReserveId"
+    },
+    {
+      "path": "LocalReserveBodyBinding.Parameters",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "LocalReserveChannel.Channel",
+      "identity": "ObservationChannelId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1005
+    },
+    {
+      "path": "LocalReserveChannel.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveChannel.Signal",
+      "identity": "InteroceptiveSignalId",
+      "mode": "CanonicalRecordField",
+      "symbolicFamily": "InteroceptiveSignalId"
+    },
+    {
+      "path": "LocalReserveSamplingRequest.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "LocalReserveSamplingRequest.Channels[*]",
+      "identity": "ObservationChannelId",
+      "mode": "FixedCompilerCollectionElement",
+      "namespace": 1005
+    },
+    {
+      "path": "TrialPanelUnavailableObservation.Observation",
+      "identity": "ObservationId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1115
+    },
+    {
+      "path": "TrialPanelUnavailableObservation.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RequestedBodySamples.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralSourceSamplingRequest.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CompletedRequestedSamples.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "CompletedRequestedSamples.ReservedExperience",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "SourcePerceptionInput.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PositionSceneItem.Marker",
+      "identity": "SceneObjectReferent",
+      "mode": "CanonicalRecordField",
+      "namespace": 1002
+    },
+    {
+      "path": "PositionSceneItem.Role",
+      "identity": "EventRoleId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1003
+    },
+    {
+      "path": "PositionSceneDefinition.BindingSchema",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Observer",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralSourceProfile.Body",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Channels",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Panel",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSourceProfile.Visual",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationUsePlan.GoalAssessment",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationUsePlan.ExecutionPolicy",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralObservationOriginal.Profile",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralSamplingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralTrackingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralBindingInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralFreezeInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralUseInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "VisualAcquisitionEvidenceInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "EventRecallInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralFormationOwnerInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernAppraisalInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernProducerInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "PriorConcernDeliveryInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalCommandInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalDeadlineInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalDeadlineInput.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GoalAssessmentInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GoalAssessmentInput.Spec",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "FocalConsequenceDelivery.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "FocalConsequenceDelivery.Consequence",
+      "identity": "ExperienceId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1106
+    },
+    {
+      "path": "GoalQualificationDeliveryInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "RetainedAttributionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AttributionResultDelivery.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "AttributionUseInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceJoinInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceOpportunity.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "SignificanceOpportunity.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.BodySelection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.VisualSelection",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.Spatial",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.Encoding",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.BodyRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.GoalBaselineRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.EventRecall",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "ObservationExecutionPolicy.GoalQualification",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Memory",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Graph",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionControl.Association",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralRetentionInput.ObserverId",
+      "identity": "ObserverId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1000
+    },
+    {
+      "path": "GeneralRetentionInput.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralDefinitionBinding.Definition",
+      "identity": "DefinitionId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1027
+    },
+    {
+      "path": "GeneralStageRegistration.Seam",
+      "identity": "SeamId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1036
+    },
+    {
+      "path": "GeneralStageRegistration.Event",
+      "identity": "EventTypeId",
+      "mode": "CanonicalRecordField",
+      "namespace": 1001
+    }
+  ],
+  "recordBoundaries": [
+    {
+      "path": "PerceivedTrialContextEvidence.Context",
+      "record": "PerceptualEventReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing213"
+    },
+    {
+      "path": "PerceivedTrialContextEvidence.Panel",
+      "record": "TrialPanelPresentObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventChildEvidence.Encoding",
+      "record": "RetainedEncodingUnit",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventChildEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedBodyView.Sample",
+      "record": "EmbodiedLevelObservation",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461"
+    },
+    {
+      "path": "RetainedBodyView.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveBodySignalGroup.Views[*]",
+      "record": "RetainedBodyView",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveEventAcquisitionContent.Children[*]",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveBodyAcquisitionContent.Children[*]",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Content<0>",
+      "record": "PositiveEventAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AcquisitionFormationEvidence.Content<1>",
+      "record": "PositiveBodyAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEventChild.Evidence",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingBodyChild.Evidence",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEventContent.Children[*]",
+      "record": "SurvivingEventChild",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingBodyContent.Children[*]",
+      "record": "SurvivingBodyChild",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAcquisition.Content<0>",
+      "record": "SurvivingEventContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAcquisition.Content<1>",
+      "record": "SurvivingBodyContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SurvivingEpisodeLedger.Entries[*]",
+      "record": "RetainedAcquisition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Key",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalSpec.Desired",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalLedger.Entries[*]",
+      "record": "AdoptedMaintenanceGoal",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalDistanceAssessment.BeforeDistance",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalDistanceAssessment.AfterDistance",
+      "record": "GoalClosedInterval",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Goal",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.AssessmentValue<0>",
+      "record": "GoalAssessmentUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.AssessmentValue<1>",
+      "record": "GoalDistanceAssessment",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<0>",
+      "record": "GoalQualifies",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<1>",
+      "record": "GoalDoesNotQualify",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<2>",
+      "record": "GoalQualificationIndeterminate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalOutcomeAssessment.Qualification<3>",
+      "record": "GoalQualificationUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Goal",
+      "record": "MaintenanceGoalKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<0>",
+      "record": "GoalQualifies",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<1>",
+      "record": "GoalDoesNotQualify",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<2>",
+      "record": "GoalQualificationIndeterminate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationCarry.Qualification<3>",
+      "record": "GoalQualificationUnavailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationDelivery.Carry",
+      "record": "GoalQualificationCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventChildKey.Continuant",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "RetainedChildAddress.Child<0>",
+      "record": "EventChildKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedChildAddress.Child<1>",
+      "record": "BodyChildKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedViewAddress.Child",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionResult.Consumed[*]",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionResult.Targets[*]",
+      "record": "RetainedChildAddress",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "QualifiedSignificanceJoin.Qualification",
+      "record": "GoalQualificationCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "QualifiedSignificanceJoin.Attribution",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.AdmittedSources{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.AdmittedSources{value}",
+      "record": "FormationAdmission",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.SuccessfulFormations{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceValue.SuccessfulFormations{value}",
+      "record": "FormationSuccess",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceState.Value",
+      "record": "FormationGovernanceValue",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationSourceBinding.AuditSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "FormationSourceBinding.ViewSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.Path",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "RuntimeProtocolStateDeclaration.ValueSchema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "FormationOwnerBinding.Path",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "FormationGovernanceProfile.State",
+      "record": "RuntimeProtocolStateDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceProfile.Sources[*]",
+      "record": "FormationSourceBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationGovernanceProfile.Owner",
+      "record": "FormationOwnerBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationOwnerDisposition.Formed{key}",
+      "record": "QualifiedFormationSource",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FormationOwnerDisposition.Formed{value}",
+      "record": "FormationSuccess",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Content<0>",
+      "record": "PositiveEventAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecalledAcquisitionEvidence.Content<1>",
+      "record": "PositiveBodyAcquisitionContent",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallWinner.Evidence",
+      "record": "RecalledAcquisitionEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallWinner.Evidence",
+      "record": "RecalledAcquisitionEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "Recollection.Content<0>",
+      "record": "EventRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "Recollection.Content<1>",
+      "record": "BodyRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallResult.Scores[*]",
+      "record": "EventRecallScore",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallResult.Winners[*]",
+      "record": "EventRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallResult.Winners[*]",
+      "record": "BodyRecallWinner",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PresentationLedger.Entries[*]",
+      "record": "PresentationEntry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecollectionInput.Result<0>",
+      "record": "EventRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RecollectionInput.Result<1>",
+      "record": "BodyRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PresentationInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Samples[*]",
+      "record": "EmbodiedSample",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461/463"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Declarations[*]",
+      "record": "SafeSignalDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyOpportunityEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectionInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyCueInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectionAudit.Rows[*]",
+      "record": "BodySelectionAuditRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodySelectedView.Groups[*]",
+      "record": "PositiveBodySignalGroup",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyAcquisitionEvidenceInput.Selected",
+      "record": "BodySelectedView",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "BodyRecallInput.Cue",
+      "record": "BodySignalCue",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ObservedFeatureDetection.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "ObservedFeatureDetection.Role",
+      "record": "EventRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing223"
+    },
+    {
+      "path": "ObservedFeatureDetection.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ExtendedObservation.EventDetection",
+      "record": "CurrentEventDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing215"
+    },
+    {
+      "path": "ExtendedObservation.Detections[*]",
+      "record": "ObservedFeatureDetection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Observation",
+      "record": "ExtendedObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "VisualOpportunityEvidence.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SelectedSpatialWitness.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "SelectedSpatialWitness.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "SelectedSpatialWitness.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SpatialPreparation.Experience",
+      "record": "PreRecognitionSemanticExperience",
+      "mode": "InheritedRecordRoles",
+      "source": "existing227"
+    },
+    {
+      "path": "SpatialPreparation.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "SpatialPreparation.Witnesses[*]",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualSelectionInput.Source",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualSelectionInput.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "ExtendedSelected.Selected",
+      "record": "SelectedEvidenceView",
+      "mode": "InheritedRecordRoles",
+      "source": "existing534"
+    },
+    {
+      "path": "ExtendedSelected.SpatialWitnesses[*]",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ExtendedSelected.Context",
+      "record": "PerceivedTrialContextEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingJoinInput.Selected",
+      "record": "ExtendedSelected",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluationRow.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "EncodingEvaluationRow.Factors",
+      "record": "EncodingFactors",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluation.Input",
+      "record": "EncodingJoinInput",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EncodingEvaluation.Rows[*]",
+      "record": "EncodingEvaluationRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedEncodingUnit.Unit",
+      "record": "AttentionUnitKey",
+      "mode": "InheritedRecordRoles",
+      "source": "existing530"
+    },
+    {
+      "path": "RetainedEncodingUnit.Bindings[*]",
+      "record": "PerceivedBindingEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing224"
+    },
+    {
+      "path": "RetainedEncodingUnit.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "RetainedEncodingUnit.Factors",
+      "record": "EncodingFactors",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedEncodingUnit.SpatialWitness",
+      "record": "SelectedSpatialWitness",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositiveVisualCandidate.Children[*]",
+      "record": "PositiveEventChildEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "VisualCueInput.Source",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CueEvidence.Detection",
+      "record": "CurrentDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing214"
+    },
+    {
+      "path": "CueEvidence.File",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "AssociationGraph.Nodes[*]",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "AssociationGraph.Rows[*]",
+      "record": "AssociationMassRow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrackingWindowItem.File",
+      "record": "PerceptualReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing212"
+    },
+    {
+      "path": "TrackingWindow.Items[*]",
+      "record": "TrackingWindowItem",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ActivePanelContext.Context",
+      "record": "PerceptualEventReferentId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing213"
+    },
+    {
+      "path": "TrialPanelWindow.Active",
+      "record": "ActivePanelContext",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralEpisodeState.Value{value}",
+      "record": "SurvivingEpisodeLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralAssociationState.Value{value}",
+      "record": "AssociationGraph",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralPresentationState.Value{value}",
+      "record": "PresentationLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "MaintenanceGoalState.Value{value}",
+      "record": "MaintenanceGoalLedger",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralTrackingState.Value{value}",
+      "record": "TrackingWindow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrialPanelContextState.Value{value}",
+      "record": "TrialPanelWindow",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "ActualConcernCarry.Response",
+      "record": "TaskConcernResponse",
+      "mode": "InheritedRecordRoles",
+      "source": "existing386"
+    },
+    {
+      "path": "FeedbackDelivery.Value<0>",
+      "record": "ActualConcernCarry",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "FeedbackDelivery.Value<1>",
+      "record": "NoConcernAvailable",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingInput.Selected",
+      "record": "EncodingJoinInput",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingInput.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Evaluation",
+      "record": "EncodingEvaluation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernEncodingEvaluation.Modulation",
+      "record": "PriorConcernModulation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallInput.Cue",
+      "record": "CueEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallInput.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Result",
+      "record": "EventRecallResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Feedback",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernRecallEvaluation.Modulation",
+      "record": "PriorConcernModulation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveBodyBinding.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveBodyRegistry.Bindings[*]",
+      "record": "LocalReserveBodyBinding",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveChannel.Reserve",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveChannelRegistry.Channels[*]",
+      "record": "LocalReserveChannel",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveState.Anchors{key}",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveState.Anchors{value}",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishment.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Key",
+      "record": "LocalReserveKey",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Prior",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Next",
+      "record": "ReserveAnchor",
+      "mode": "InheritedRecordRoles",
+      "source": "existing454"
+    },
+    {
+      "path": "LocalReserveReplenishmentResult.Result",
+      "record": "ReserveReplenishmentResult",
+      "mode": "InheritedRecordRoles",
+      "source": "existing479"
+    },
+    {
+      "path": "RequestedBodySamples.Samples[*]",
+      "record": "EmbodiedSample",
+      "mode": "InheritedRecordRoles",
+      "source": "existing461/463"
+    },
+    {
+      "path": "RequestedBodySamples.Declarations[*]",
+      "record": "SafeSignalDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSourceSamplingRequest.Body",
+      "record": "LocalReserveSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Request",
+      "record": "GeneralSourceSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Body",
+      "record": "RequestedBodySamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Panel<0>",
+      "record": "TrialPanelPresentObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Panel<1>",
+      "record": "TrialPanelUnavailableObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.Visual",
+      "record": "ExtendedObservation",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "CompletedRequestedSamples.EventDetection",
+      "record": "CurrentEventDetectionId",
+      "mode": "InheritedRecordRoles",
+      "source": "existing215"
+    },
+    {
+      "path": "SourcePerceptionInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneItem.Position",
+      "record": "GridPosition",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneFrame.Items[*]",
+      "record": "PositionSceneItem",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PositionSceneDefinition.Frames[*]",
+      "record": "PositionSceneFrame",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "TrialPanelDefinition.Frames[*]",
+      "record": "TrialPanelFrame",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralObservationOriginal.Request",
+      "record": "GeneralSourceSamplingRequest",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralObservationOriginal.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSamplingInput.Original",
+      "record": "GeneralObservationOriginal",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralSamplingInput.World",
+      "record": "WorldEventTruth",
+      "mode": "InheritedRecordRoles",
+      "source": "existing210"
+    },
+    {
+      "path": "GeneralTrackingInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralTrackingInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralBindingInput.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "GeneralBindingInput.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "GeneralFreezeInput.Samples",
+      "record": "CompletedRequestedSamples",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFreezeInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFreezeInput.Tracks[*]",
+      "record": "PerceptualTrackTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing217"
+    },
+    {
+      "path": "GeneralFreezeInput.Event",
+      "record": "PerceptualEventTransition",
+      "mode": "InheritedRecordRoles",
+      "source": "existing219"
+    },
+    {
+      "path": "GeneralFreezeInput.Bindings[*]",
+      "record": "PerceivedBindingEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing224"
+    },
+    {
+      "path": "GeneralUseInput.Use",
+      "record": "ObservationUsePlan",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Body",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Visual",
+      "record": "VisualOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralUseInput.Claims[*]",
+      "record": "CausalRoleEvidence",
+      "mode": "InheritedRecordRoles",
+      "source": "existing240"
+    },
+    {
+      "path": "VisualAcquisitionEvidenceInput.Candidate",
+      "record": "PositiveVisualCandidate",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "EventRecallInput.Cue",
+      "record": "CueEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralFormationOwnerInput.Evidence",
+      "record": "AcquisitionFormationEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "PriorConcernAppraisalInput.Workspace",
+      "record": "TaskWorkspace",
+      "mode": "InheritedRecordRoles",
+      "source": "existing381"
+    },
+    {
+      "path": "PriorConcernProducerInput.Appraisal",
+      "record": "TaskAppraisal",
+      "mode": "InheritedRecordRoles",
+      "source": "existing384"
+    },
+    {
+      "path": "PriorConcernDeliveryInput.Delivery",
+      "record": "FeedbackDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalCommandInput.Command",
+      "record": "MaintenanceGoalCommand",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalAssessmentInput.Source",
+      "record": "BodyOpportunityEvidence",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalAssessmentInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GoalQualificationDeliveryInput.Delivery",
+      "record": "GoalQualificationDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionInput.Focus",
+      "record": "FocalConsequenceDelivery",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "RetainedAttributionInput.Recollections[*]",
+      "record": "Recollection",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AttributionResultDelivery.Result",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "AttributionUseInput.Result",
+      "record": "RetainedAttributionResult",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "SignificanceJoinInput.Join",
+      "record": "QualifiedSignificanceJoin",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralOutputDeclaration.Schema",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistration.Input",
+      "record": "CanonicalRecordSchemaRef",
+      "mode": "InheritedRecordRoles",
+      "source": "existing254"
+    },
+    {
+      "path": "GeneralStageRegistration.Outputs[*]",
+      "record": "GeneralOutputDeclaration",
+      "mode": "RecurseDeclaredRecord"
+    },
+    {
+      "path": "GeneralStageRegistration.ReadDomain[*]",
+      "record": "StatePathPattern",
+      "mode": "InheritedRecordRoles",
+      "source": "existing149"
+    },
+    {
+      "path": "GeneralStageRegistration.WriteAuthorization",
+      "record": "TransitionWriteAuthorization",
+      "mode": "InheritedRecordRoles",
+      "source": "existing322"
+    },
+    {
+      "path": "GeneralStageRegistration.SubjectProjection",
+      "record": "SubjectProjectionRequirement",
+      "mode": "InheritedRecordRoles",
+      "source": "existing266"
+    },
+    {
+      "path": "GeneralStageRegistration.Definitions[*]",
+      "record": "GeneralDefinitionBinding",
+      "mode": "RecurseDeclaredRecord"
+    }
+  ],
+  "stateMapKeyRoles": [
+    {
+      "root": "GeneralEpisodeState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralAssociationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralPresentationState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "MaintenanceGoalState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1002,
+      "domainValidator": "validator/character-qualification"
+    },
+    {
+      "root": "GeneralTrackingState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    },
+    {
+      "root": "TrialPanelContextState",
+      "field": "Value",
+      "role": "StateMapKey",
+      "requiredNamespace": 1000
+    }
+  ],
+  "numericAllocations": [],
+  "sources": [
+    {
+      "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+      "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REV3.json",
+      "sha256": "fd7c9cef23a33416e54b934510de814edb50e45c3dae0b054ccfef578a8e31bd"
+    },
+    {
+      "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REV2.json",
+      "sha256": "f1749ec448eed234cf5bfd72a6b55f96c019592266f6fa238ba70bc5d4d775b8"
+    },
+    {
+      "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+      "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+    },
+    {
+      "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV3.json",
+      "sha256": "96812d46d96ac96be4381f3cd9644985da5e44d7c12561095bb863bf65e80b48"
+    },
+    {
+      "path": "docs/planning/GA_VISUAL_PIPELINE_CARRIER_REV2.json",
+      "sha256": "4fce49820a7d631fcdd104f981928914896b5daabcc91d1317120de2edac8f9d"
+    },
+    {
+      "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV2.json",
+      "sha256": "f27ab088683cea8c44c0ba108ba7123f68f1e5f8467e73ea137640c630757ddf"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_FEEDBACK_CARRIER_REV1.json",
+      "sha256": "bf14cf475c37285c825b69d5c70de5d0008fe80a120669d009d3319358933b4b"
+    },
+    {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+      "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+    },
+    {
+      "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV2.json",
+      "sha256": "ec2cf2f0cf10ff5978a6a1e89fa7702a80426c8eb65478329a55de5f92b810b5"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV2.json",
+      "sha256": "c979835f8841d3b283814ec87c3085b1f2ccdd517a8ff016cd65af05f8903649"
+    },
+    {
+      "path": "docs/planning/GA_SOURCE_STAGE_CLOSURE_REV1.json",
+      "sha256": "fb000854da57773986ceb588d41c5188704a5fa33bb731c9eb6127cd7d45d597"
+    },
+    {
+      "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.json",
+      "sha256": "7e11885d9d87b326e4b6a2c87c5fa3b5cc31faf30f7613322a2b0f557b2e6bed"
+    },
+    {
+      "path": "docs/planning/GA_PRIOR_CONCERN_STAGE_CLOSURE_REV1.json",
+      "sha256": "1c6cd16d96212a749642e465f8771759f4b92968e23691875a3c38fc28204188"
+    },
+    {
+      "path": "docs/planning/GA_GOAL_ATTRIBUTION_STAGE_CLOSURE_REV2.json",
+      "sha256": "9ad689694dced61c5904f34d128d9e9f08b9942324b208421fdffcde85c50671"
+    },
+    {
+      "path": "docs/planning/GA_CALIBRATION_DEFINITIONS_REV1.json",
+      "sha256": "a38e3e82a8b576bce9185b09c49c6d86a92d4acc4ec65b391709013ffcc6f34f"
+    },
+    {
+      "path": "docs/planning/GA_RETENTION_STAGE_CLOSURE_REV1.json",
+      "sha256": "6258037052ebeaa236cd49b6b6b7f543f1f2fbbadd765225bde0a664857d21cf"
+    },
+    {
+      "path": "docs/planning/GA_EVENT_PRESENTATION_STAGE_CLOSURE_REV1.json",
+      "sha256": "bbb2ae69827b55fb4ed5e7a353b1b699fa89291255c818807807418d0390cc81"
+    },
+    {
+      "path": "docs/planning/GA_REGISTRATION_CARRIER_REV2.json",
+      "sha256": "9b4b0518f2aa268090284220698813195538154f865d96ee19a1c1b94942f395"
+    }
+  ]
+}
