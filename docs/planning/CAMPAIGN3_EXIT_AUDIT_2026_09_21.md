@@ -758,3 +758,84 @@ Typed operands preserve original history without general fusion or ageing claims
 Wrapper inventory50 producers/53 factories; old49 scope remains preserved. Roughly44MB
 primary final save is a scaling limitation, not a reason to erase causal distinctions.
 Next SLEEP_CONTROL_READINESS.md; historical reconciliation remains unsatisfied.
+
+
+## REV63 — bounded sleep/control, 2026-09-27
+VER-C3-SLEEP-CONTROL-001 promotes Brief12.1-6 only:2 native models/20 runs/52 selected
+prefixes;13 new/328 reference tests/build;1458/0. Actual wake/recovery, admitted
+control, independent execution and preserved acquired identity are discriminated.
+All four seeds retained; no global cognitive/personality or clinical sleep claim.
+107 bounded/20 partial/5 blocked;81 verdicts. Existing50/53 wrapper scope unchanged.
+Next intoxication/control across characters; historical exit gate still unsatisfied.
+
+
+## REV64 — differential intoxication/control, 2026-09-27
+VER-C3-INTOXICATION-CONTROL-001 promotes Brief12.1-7 only:5 native models/20 runs/
+55 selected prefixes;12 new/328 reference tests/build;1458/0. Same exposure across
+clearance-only constitutions, distinct control/execution recovery and preserved
+acquired history. No clinical model, general impairment law or Task personality join.
+108 bounded/20 partial/4 blocked;82 verdicts. Wrapper scope50/53 unchanged.
+Next chosen reappraisal; prior instructed framing remains separately bounded.
+
+
+## REV65 — chosen reappraisal component, 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-001 promotes Brief12.5-7 with a bounded COMPONENT witness:
+4 models/43 runs/387 prefixes;13 new/328 reference tests/build;1458/0. Actual goal-relative
+choice and independent completion change later conditional frame/affect without belief
+credit. Native source/authority/scheduler admission is OPEN and is the next gate.
+109 bounded/20 partial/3 blocked;83 verdicts. No whole Campaign3 exit or native claim.
+
+
+## REV66 — native chosen reappraisal, 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001 adds native evidence to Brief12.5-7 without another clause promotion:4/43/387,21+328 tests/build,1467/0;51/54 wrappers.109 bounded/20 partial/3 blocked;84 verdicts. Next embarrassment intake; no Campaign3 exit.
+
+
+## REV67 — embarrassment component, 2026-09-27
+VER-C3-EMBARRASSMENT-001 promotes Brief12.5-4 with a bounded COMPONENT witness:6/69/483,15+328 tests/build,1467/0. Positive social affect with actual participation and positive avoidance base; matched goal-only withdrawal and independent execution/cue controls.110 bounded/20 partial/2 blocked;85 verdicts. Native admission OPEN; no Campaign3 exit.
+
+
+## REV68 — native embarrassment, 2026-09-27
+VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 tests/build;1484/0. Exact component rows/RNG and physical presence, typed sources, three owners, twelve actual stages and Save132/publication qualified.52/55 wrapper inventory; earlier sources unchanged.
+Brief12.5-4 gains native evidence without a new clause promotion:110 bounded/20 partial/2 blocked;86 verdicts. Next old-defining-memory intake. No Campaign3 exit.
+
+
+## REV69 — defining-memory bridge, 2026-09-27
+4 retained-law models/288 component cases/864 deterministic stage comparisons;13 focused/328 reference tests/build;1484/0. Acquired significance changes old-episode survival and actual recollection under capacity pressure; retained-but-not-recalled remains distinct. Full defining-memory frontier OPEN.
+Brief12.3-2 remains BLOCKED pending the explicit integration/readiness gate.110 bounded/20 partial/2 blocked,87 verdicts. No full-frontier closure.
+
+
+## REV70 — defining meaning/use component integration, 2026-09-27
+4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
+Brief12.3-2 remains BLOCKED for native continuation.110 bounded/20 partial/2 blocked;88 verdicts. Preserve interval-uncertainty finding.
+
+
+## REV71 — native defining-memory implementation progress
+Native acquisition from empty S0 through37 now reproduces the actual prior state/outputs and20 complete prefixes.6 development/328 reference tests/build pass; public wrapper52/55 unchanged. No new verdict, allocation, native continuation closure or clause promotion.110 bounded/20 partial/2 blocked;88 verdicts;1484/0. Continue DEFINING_NATIVE_IMPLEMENTATION_CHECKPOINT.md.
+
+
+## REV72 — continuation input/owner implementation progress
+Typed source plan and pure interpretation owner retain68 component qualification projections.8 new/36 affected/328 reference tests/build pass. Explicit adoption37/140 active38, inherited deadline100 and final presentation settlement requirements. Native registration and public gate OPEN. No new verdict/allocation/clause promotion;1484/0,88 verdicts,110 bounded/20 partial/2 blocked.
+
+
+## REV73 — native defining lifecycle implementation progress
+One successor scheduler adds distinct interpretation/report owners and retains inherited100 deadlines.1 native profile/22 instants/23 freshly repeated prefixes;8 new/44 affected/328 reference tests/build. Both development cohorts preserved. Records1485..1487;1487/3. No new verdict, full native closure, public save or Brief promotion;110 bounded/20 partial/2 blocked and88 verdicts remain.
+
+
+## REV74 — native meaning/memory-owner implementation progress
+Actual attribution37 joins meaning/credit38 and retention42.2 native profiles/25 primary prefixes freshly repeated;48 owner cases;13 new/49 affected/328 reference tests/build. Original memory/history/protocol authorities; post-retention rollback. Five development cohorts preserved.1489/5; no new verdict, full native closure or clause promotion.110 bounded/20 partial/2 blocked and88 verdicts remain.
+
+
+## REV75 — native current-assessment implementation progress
+Actual meaning38 delivery and report43 join current assessment43/130.2 native profiles/24 repeated primary prefixes;68 owner current projections;9 new/50 affected/328 reference tests/build. Read-only current judgment preserves historical credit and complete event loss; in-flight baseline is not recall. Test-only StatePatch144/145 failure preserved.1490/6; no verdict or clause promotion. Full native/public gate OPEN;110 bounded/20 partial/2 blocked,88 verdicts.
+
+
+## REV76 — native rehearsal and final-recall implementation progress
+Actual carried query37 supplies three rehearsal batches and final recall/presentation.3 native profiles/27 repeated primary prefixes;68 owner continuations;10 new/54 affected/328 reference tests/build. Original ownership; post39 rollback; retained-but-unselected, absent-cue and complete-loss controls. Empty graph/carried-query scope and test-only ScheduledEvent171/130 failure preserved.1492/8; no verdict or clause promotion. Full native/public gate OPEN;110 bounded/20 partial/2 blocked,88 verdicts.
+
+
+## REV77 - complete selected native defining-memory cohort
+All68 native programs pass from empty S0:68 committed model/run identities across four retention laws;1612 instants/376 selected stage hashes. Exact component correspondence plus explicit final presentation settlement. No production change; prior27 repeated prefixes/54 affected/328 reference tests/build receipts reverified, not freshly rerun. Public typed admission/Save132/restore/fault/wrapper gate remains OPEN.1492/8; no verdict or clause promotion;110 bounded/20 partial/2 blocked,88 verdicts. Next DEFINING_PUBLIC_SAVE_GATE.md.
+
+
+## REV78 - defining public implementation progress
+Closed public recipe, exact original-input replay and actual Save132; runtime and factory publication barriers.1 profile/27 instants/8 native stage comparisons/9 saves; successful restores0/39/4000; reached rollback38/39/42/43/4000.17 focused/328 reference tests, typecheck and build pass. First test-only Node typing rejection preserved; production handler body unchanged. Wrapper53/56 with predecessor scopes frozen; RO022 closes that publication debt. Full68 public programs/1680 prefix restores remain OPEN.1492/8; no verdict or clause promotion;110 bounded/20 partial/2 blocked,88 verdicts.

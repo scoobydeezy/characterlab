@@ -1,0 +1,33 @@
+import {beforeAll,it,expect} from 'vitest';
+import receipt from '../../docs/planning/DEFINING_MEMORY_TRAINING_REV1.json';
+import {canonicalEncode as enc,list,unsigned as u,signed} from '../substrate/canonicalEncoding';
+import {definingMemoryTrace} from '../campaign3/definingMemoryTrace';
+import {createDefiningMemoryModel} from '../campaign3/definingMemoryModel';
+import {generalId} from '../campaign3/generalBindingProfile';
+import {simInstant} from '../substrate/time';
+import {AuthoritativeState} from '../substrate/state';
+import {dataRecord as rec,dataField as f,dataItems as items} from '../campaign2/canonicalData';
+import {generalRecord as gr,generalSubject} from '../campaign3/generalBindingProfile';
+import {decodeDefiningMemoryOwner as decode} from '../campaign3/definingMemoryOwnerCodecs';
+import {compileGeneralModelCandidate} from '../campaign3/generalModelCandidate';
+import {buildGeneralDeclarationPacket} from '../campaign3/generalDeclarations';
+import {compileDefiningLifecycleState} from '../campaign3/definingLifecycleState';
+import {admitDefiningContinuationProgram as admit} from '../campaign3/definingContinuationProgram';
+import {definingMeaningCases,meaningTraining,runDefiningMeaning} from '../campaign3/definingMeaning';
+import {definingTraining,definingLaws} from '../campaign3/definingMemoryExperiment';
+import {prepareDefiningHistoricalMeaning as assess,prepareDefiningMemorySettlement as settle} from '../campaign3/definingMemoryOwner';
+import {projectGoalQualification as project} from '../campaign3/goalOutcomeQualification';
+const unhex=(s:string)=>Uint8Array.from(s.match(/../g)!.map(x=>parseInt(x,16))),training=meaningTraining(unhex(receipt.snapshots[0].state),unhex(receipt.snapshots[0].outputs));
+const attribution=items(decode(unhex(receipt.snapshots[0].outputs)),'list').find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===575n)!,delivery=gr(683,[generalSubject().observer,u(999),signed(38),attribution,signed(37)]);
+let base:Awaited<ReturnType<typeof compileGeneralModelCandidate>>['model'];
+beforeAll(async()=>{base=(await compileGeneralModelCandidate(buildGeneralDeclarationPacket('credit-significance-first'))).model;},120000);
+function setup(goal:'High'|'Low'|'Wide'|'Absent'){const b=compileDefiningLifecycleState(base,admit({...definingMeaningCases()[0],goal})),initial=b.model.initial.build(),adopt=b.model.state.applyStagePatch('defining-adopt',initial,b.transition('defining-adopt',b.source('defining-adopt'),initial,37n).patch).state,state=new AuthoritativeState([...base.state.restoreState(unhex(receipt.snapshots[0].state)).entries(),...adopt.entries().filter(e=>e.path.rootStateTypeId>=1485n)]);return {b,state};}
+function apply(b:ReturnType<typeof compileDefiningLifecycleState>,s:AuthoritativeState,r:ReturnType<typeof settle>){let next=b.model.state.applyStagePatch('ordinary-memory-retention',s,r.memoryPatch).state;next=b.model.state.applyStagePatch('event-presentation-cleanup',next,r.historyPatch).state;return b.model.state.applyProtocolPatch(next,r.protocolPatch).state;}
+it('matches meaning and retained memory/history across48 goal/law/capacity owner cases',()=>{
+ for(const goal of ['High','Low','Wide','Absent'] as const)for(const law of definingLaws)for(const capacity of [0,1,8] as const){const {b,state}=setup(goal),meaning=assess(state,delivery,38n,999n),credited=apply(b,state,settle(state,38n,law,capacity,meaning.output)),final=apply(b,credited,settle(credited,42n,law,capacity));b.model.validateQuiescent(final,42n);const actual=definingTraining(enc(b.legacy(final).canonicalValue())),expected=runDefiningMeaning(training,{...definingMeaningCases()[0],goal,law,capacity});expect(project(meaning.result)).toEqual(project(expected.view.historical));expect(actual.memory).toEqual(expected.view.memory);expect(actual.presentations).toEqual(expected.view.history);}
+},120000);
+it('capacity-zero loss reconciles every event protocol success and removes presentation history',()=>{const {b,state}=setup('High'),meaning=assess(state,delivery,38n,999n),credited=apply(b,state,settle(state,38n,'SignificanceFirst',1,meaning.output)),result=settle(credited,42n,'SignificanceFirst',0),final=apply(b,credited,result);expect(definingTraining(enc(b.legacy(final).canonicalValue())).presentations.size).toBe(0);expect(result.protocolPatch.operations).toHaveLength(1);const op=result.protocolPatch.operations[0];if(op.kind!=='set')throw Error('set expected');const successes=f(rec(op.newValue,580n),2n);if(typeof successes==='boolean'||successes.kind!=='map')throw Error('map');expect(successes.entries.filter(([,v])=>f(rec(v,579n),3n)===true)).toHaveLength(8);b.model.validateQuiescent(final,42n);});
+it('keeps goal/report state and survivor evidence unchanged and exposes protocol separately from cognitive reads',()=>{const {b,state}=setup('High'),meaning=assess(state,delivery,38n,999n),r=settle(state,38n,'SignificanceFirst',1,meaning.output),final=apply(b,state,r);expect(r.memoryReads.map(x=>x.path.rootStateTypeId)).toEqual([630n]);expect(r.historyReads.map(x=>x.path.rootStateTypeId)).toEqual([632n]);expect(r.protocolRead.path.rootStateTypeId).toBe(581n);expect(final.entries().filter(e=>e.path.rootStateTypeId>=1485n)).toEqual(state.entries().filter(e=>e.path.rootStateTypeId>=1485n));expect(definingTraining(enc(b.legacy(final).canonicalValue())).memory.map(a=>a.units[0].views)).toEqual(training.memory.map(a=>a.units[0].views));});
+it('rejects premature meaning, invalid prior delivery and off-calendar settlement without modifying B0',()=>{const {state}=setup('High'),before=enc(state.canonicalValue());expect(()=>assess(state,delivery,37n,999n)).toThrow();expect(()=>assess(state,gr(683,[generalSubject().observer,u(999),signed(38),attribution,signed(36)]),38n,999n)).toThrow();expect(()=>settle(state,41n,'SignificanceFirst',0)).toThrow();expect(enc(state.canonicalValue())).toEqual(before);});
+
+it('encodes runtime protocol read evidence inside the accepted trace invariant grammar',async()=>{const {b,state}=setup('High'),meaning=assess(state,delivery,38n,999n),result=settle(state,38n,'SignificanceFirst',1,meaning.output),model=await createDefiningMemoryModel(admit(definingMeaningCases()[0]));const trace=definingMemoryTrace(b.model,{model:model.modelIdentity.value,run:model.runIdentity.value},{eventId:999n,eventSequence:999n,dueAt:simInstant(38n),phase:140n,eventTypeId:generalId(1001,'event/defining-credit'),payload:meaning.output,dependencies:list([]),causalParentEventIds:[]},state,[],[],[...result.memoryReads,...result.historyReads],meaning.output,result);expect(rec(decode(enc(trace)),160n).schema.typeId).toBe(160n);expect(items(f(rec(trace,160n),11n),'list')).toHaveLength(2);},120000);

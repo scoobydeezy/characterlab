@@ -1,0 +1,660 @@
+{
+  "version": "embarrassment-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-27",
+  "namespace": 1165,
+  "contractSha256": "cdd67ad4d14871fd38dfc427b98e21512f2813602104e8efce06e2bff4e0ce66",
+  "records": [
+    {
+      "typeId": 1468,
+      "name": "EmbarrassmentProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Projection",
+          "type": {
+            "enum": [
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1469,
+      "name": "EmbarrassmentOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "WorldMismatch",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "WorldSeen",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "WorldJudgment",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Mismatch",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "MismatchAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Seen",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "SeenAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Judgment",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "JudgmentAccess",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Reputation",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 12,
+          "name": "Avoid",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 13,
+          "name": "Participate",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 14,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 15,
+          "name": "Complete",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 16,
+          "name": "Display",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1470,
+      "name": "EmbarrassmentGoals",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Reputation",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Avoid",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Participate",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1471,
+      "name": "EmbarrassmentGoalsRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1470"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1472,
+      "name": "EmbarrassmentSample",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1473,
+      "name": "EmbarrassmentKnowledge",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Mismatch",
+          "type": {
+            "list": "ref:1472",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Seen",
+          "type": {
+            "list": "ref:1472",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Judgment",
+          "type": {
+            "list": "ref:1472",
+            "min": 0,
+            "max": 6
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1474,
+      "name": "EmbarrassmentKnowledgeRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1473"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1475,
+      "name": "EmbarrassmentPresence",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Present",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1476,
+      "name": "EmbarrassmentPresenceRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1475"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1477,
+      "name": "EmbarrassmentContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goals",
+          "type": "ref:1470",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1478,
+      "name": "EmbarrassmentAppraisal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Context",
+          "type": "ref:1477",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Knowledge",
+          "type": "ref:1473",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Mismatch",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Seen",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Judgment",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Likelihood",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Severity",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Coordinates",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 2
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1479,
+      "name": "EmbarrassmentReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1478",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:408",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1480,
+      "name": "EmbarrassmentCompletion",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": {
+            "list": "ref:425",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Attempt",
+          "type": {
+            "list": "ref:432",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Execution",
+          "type": {
+            "list": "ref:433",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Completed",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1481,
+      "name": "EmbarrassmentCue",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1478",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1482,
+      "name": "EmbarrassmentObservation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reports",
+          "type": {
+            "list": {
+              "list": "bool",
+              "min": 0,
+              "max": 1
+            },
+            "min": 3,
+            "max": 3
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1483,
+      "name": "EmbarrassmentLearning",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Observation",
+          "type": "ref:1482",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Before",
+          "type": "ref:1473",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "After",
+          "type": "ref:1473",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1484,
+      "name": "EmbarrassmentPhysicalTransition",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1475",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1475",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Completion",
+          "type": "ref:1480",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

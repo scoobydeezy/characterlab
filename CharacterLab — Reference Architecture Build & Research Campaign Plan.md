@@ -861,3 +861,35 @@ VER-C3-DISPOSITION-001 qualifies the finite persistent-adaptation witness under 
 
 ### 2026-09-27 — native disposition admission
 VER-C3-DISPOSITION-PUBLIC-001 closes the bounded public source/authority/phase/lineage/save seam:9 models/15 runs/285 native prefixes,44+328 tests/build,1458/0. Predecessor identities preserved; no additional Brief clause. Next docs/planning/SLEEP_CONTROL_READINESS.md; Campaign3 remains NOT EXIT-READY.
+
+
+### 2026-09-27 — bounded sleep/control
+VER-C3-SLEEP-CONTROL-001 qualifies Brief12.1-6 under existing native Biological identity contracts:2 models/20 runs/52 selected prefixes;13+328 tests/build;1458/0. No new law or allocation. Next docs/planning/INTOXICATION_CONTROL_READINESS.md; no owner decision and no Campaign3 exit.
+
+
+### 2026-09-27 — differential intoxication/control
+VER-C3-INTOXICATION-CONTROL-001 qualifies Brief12.1-7 with existing native biology/identity:5 models/20 runs/55 selected prefixes;12+328 tests/build;1458/0. No new production law or allocation. Next docs/planning/CHOSEN_REAPPRAISAL_READINESS.md. No owner ruling; Campaign3 remains NOT EXIT-READY.
+
+
+### 2026-09-27 — chosen reappraisal component
+VER-C3-CHOSEN-REAPPRAISAL-001 adds bounded actual strategy choice and later frame/affect:4 models/43 runs/387 component prefixes,13+328 tests/build,1458/0. Native public source/authority/scheduler admission remains OPEN under docs/planning/CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md; next integration gate. No owner ruling or Campaign3 exit.
+
+
+### 2026-09-27 — native chosen reappraisal
+VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001 closes typed source/authority/twelve-stage/Save132 admission:4 models/43 runs/387 native prefixes,21+328 tests/build,1467/0. Exact component correspondence and51/54 wrapper audit. Next docs/planning/EMBARRASSMENT_READINESS.md; no owner ruling or Campaign3 exit.
+
+
+### 2026-09-27 — embarrassment without avoidance component
+VER-C3-EMBARRASSMENT-001:6 models/69 runs/483 prefixes,15+328 tests/build,1467/0. Actual participation despite positive social affect and avoidance base, with matched withdrawal and independent execution/cue controls. Native admission remains OPEN: next docs/planning/EMBARRASSMENT_PUBLIC_READINESS.md. No owner ruling or Campaign3 exit.
+
+
+### 2026-09-27 — native embarrassment integration
+VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 tests/build;1484/0. Exact component rows/RNG and physical presence, typed sources, three owners, twelve actual stages and Save132/publication qualified.52/55 wrapper inventory; earlier sources unchanged. Next docs/planning/DEFINING_MEMORY_READINESS.md; no owner ruling or Campaign3 exit.
+
+
+### 2026-09-27 — defining-memory bridge
+4 retained-law models/288 component cases/864 deterministic stage comparisons;13 focused/328 reference tests/build;1484/0. Acquired significance changes old-episode survival and actual recollection under capacity pressure; retained-but-not-recalled remains distinct. Full defining-memory frontier OPEN. Continue docs/planning/DEFINING_MEMORY_INTEGRATION_READINESS.md; no owner ruling or Campaign3 exit.
+
+
+### 2026-09-27 — defining meaning/use
+4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN. Next docs/planning/DEFINING_MEMORY_PUBLIC_READINESS.md under the escalation policy; no owner ruling.

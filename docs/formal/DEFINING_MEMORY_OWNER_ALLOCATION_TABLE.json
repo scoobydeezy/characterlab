@@ -1,0 +1,89 @@
+{
+  "contract": "defining-native-memory-owner/0.1-candidate",
+  "records": [
+    {
+      "typeId": 1488,
+      "name": "DefiningMemoryOpportunity",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Kind",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        }
+      ]
+    },
+    {
+      "typeId": 1489,
+      "name": "DefiningHistoricalMeaning",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "required": true,
+          "type": "id:1146"
+        },
+        {
+          "id": 2,
+          "name": "Observer",
+          "required": true,
+          "type": "id:1000"
+        },
+        {
+          "id": 3,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 4,
+          "name": "Goal",
+          "required": true,
+          "type": "ref:1485"
+        },
+        {
+          "id": 5,
+          "name": "Before",
+          "required": true,
+          "type": "ref:556"
+        },
+        {
+          "id": 6,
+          "name": "After",
+          "required": true,
+          "type": "ref:556"
+        },
+        {
+          "id": 7,
+          "name": "Qualification",
+          "required": true,
+          "type": {
+            "oneOf": [
+              "ref:564",
+              "ref:565",
+              "ref:566",
+              "ref:567"
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "name": "Attribution",
+          "required": true,
+          "type": "ref:575"
+        }
+      ]
+    }
+  ]
+}

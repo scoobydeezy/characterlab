@@ -1,0 +1,96 @@
+{
+  "contract": "defining-native-rehearsal/0.1-candidate",
+  "records": [
+    {
+      "typeId": 1491,
+      "name": "DefiningRecallRequest",
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 2,
+          "name": "Mode",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "name": "CueKind",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "name": "PriorCue",
+          "required": false,
+          "type": "ref:623"
+        },
+        {
+          "id": 5,
+          "name": "PriorFocal",
+          "required": false,
+          "type": "ref:680"
+        }
+      ]
+    },
+    {
+      "typeId": 1492,
+      "name": "DefiningRecallBatch",
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 2,
+          "name": "Mode",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "name": "Publications",
+          "required": true,
+          "type": {
+            "list": "ref:590",
+            "min": 0,
+            "max": 16
+          }
+        },
+        {
+          "id": 4,
+          "name": "PriorFocal",
+          "required": false,
+          "type": "ref:680"
+        },
+        {
+          "id": 5,
+          "name": "Attribution",
+          "required": false,
+          "type": "ref:575"
+        }
+      ]
+    }
+  ]
+}

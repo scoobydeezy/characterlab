@@ -894,3 +894,72 @@ StandingOnly/Neither and JointMax/JointAdd remain controls; general fusion and s
 remain open. Historical seven-axis/quadratic projections remain candidate. Wrapper
 inventory is50 producers/53 factories; original49 scope reverified. Next sleep/control
 readiness; no whole-family or Campaign3 exit claim.
+
+
+### Sleep/control bounded witness — 2026-09-27
+VER-C3-SLEEP-CONTROL-001:2 native models/20 runs/52 selected Save132 prefixes;
+13 new/328 reference tests/build;1458/0. Existing contracts/laws only. P3-009/010
+retain constitution/history separation; MEC001/003 preserve admitted estimates and
+safe sensing; MEC011 distinguishes availability/access; MEC012..019/022 inherit
+actual reasons/dice/expression/identity/independent execution and frozen provenance.
+No reference mechanism retired. NoControl and false/blind sensory controls retained.
+Initial empty identity and sleep-relief-confounded training remain archived. Gains,
+threshold and exogenous recovery are candidate controls, not general sleep physiology.
+Brief12.1-6 bounded; next intoxication/control across characters. No state-root change.
+
+
+### Differential intoxication/control — 2026-09-27
+VER-C3-INTOXICATION-CONTROL-001:5 native models/20 runs/55 selected prefixes;
+12 new/328 reference tests/build;1458/0. P3-009/010 constitution/history; MEC001/003
+admitted estimates/sensing; MEC011 availability/access; MEC012..019/022 inherited
+reasons/dice/expression/identity/execution and exact provenance remain retained.
+Identical exposure with clearance-only differences discriminates control/execution.
+NoControl, separate competence, masked/biased sensing and interference retained.
+Biological strict execution boundary does not replace SKILL's alternative profiles.
+No new law, factory, root or clinical claim. Brief12.1-7 bounded; next chosen reappraisal.
+
+
+### Chosen reappraisal component — 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-001:4 models/43 runs/387 component prefixes;13+328 tests/
+build;1458/0. MEC001/002/003 evidence, MEC011 access, MEC012..017/019/022 inherited
+reason/dice/choice/expression/attempt and calibration remain explicit. MEC018 identity
+controls retained separately. P3-001/004/005/011 preserve belief/frame/affect, projection
+alternatives, relief-not-evidence and later order; P3-008 social affect remains outside.
+No historical mechanism retired. KnowledgeOnly can choose harmful/ineffective frames;
+BenefitRelative and NoReappraisal retained. Native source/authority/scheduler admission
+is OPEN, next CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md. No new record allocation.
+
+
+### Native chosen reappraisal — 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001 closes native admission:4/43/387,21+328 tests/build,
+1467/0. MEC001/002/003/011..019/022 and P3-001/004/005/008/011 retain component dispositions;
+no mechanism retired. Typed originals, actual twelve stages, exact component rows/RNG,
+separate goal/learning/frame owners and whole Save132 replay now qualify public use.
+RO022 current wrapper scope51/54; previous50 and49 remain preserved. No physical
+protection, general planning or Task/Biological join. Next EMBARRASSMENT_READINESS.md.
+
+
+### Embarrassment without avoidance component — 2026-09-27
+VER-C3-EMBARRASSMENT-001:6/69/483;15+328 tests/build;1467/0, no allocation.
+MEC001/002/003 admitted evidence,004 fixed identity,011 access,012..017/019/022 actual
+reasons/dice/expression/execution remain;018 identity stays separate,020 goals controlled.
+P3-001/004/005/008/011 preserve social appraisal, independent cue and action, later
+learning and calibration alternatives. No old mechanism retired. CoarseUnit equals
+NoAffectReasons on primary probabilities; accepted AFFECT unit1/4 cap3 changes them.
+Prior32 development trajectories preserved. Native admission OPEN; next
+EMBARRASSMENT_PUBLIC_READINESS.md. No general norm or physiological emotion law.
+
+
+### Native embarrassment — 2026-09-27
+VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 tests/build;1484/0. Exact component rows/RNG and physical presence, typed sources, three owners, twelve actual stages and Save132/publication qualified.52/55 wrapper inventory; earlier sources unchanged.
+MEC001/002/003/004/011..020/022 and P3-001/004/005/008/011 retain component dispositions; no mechanism retired. Actual decision/expression, cue and physical participation remain distinct. Version0.2 complete110/display110 repairs unregistered115 locally, preserving the rejected cohort. No general social/physiological or Task/Biological claim. Next DEFINING_MEMORY_READINESS.md.
+
+
+### Defining-memory bridge — 2026-09-27
+VER-C3-DEFINING-MEMORY-BRIDGE-001: 4 retained-law models/288 component cases/864 deterministic stage comparisons;13 focused/328 reference tests/build;1484/0. Acquired significance changes old-episode survival and actual recollection under capacity pressure; retained-but-not-recalled remains distinct. Full defining-memory frontier OPEN.
+GA use/significance tier equality now discriminates under tighter capacity. SharedProtection/UseOnly/AgeOnly still coincide in this matrix; no law retired. Component continuation only; wrapper52/55 unchanged. See DEFINING_MEMORY_BRIDGE_FINDINGS.md and DEFINING_MEMORY_INTEGRATION_READINESS.md.
+
+
+### Defining memory: meaning/use integration — 2026-09-27
+VER-C3-DEFINING-MEANING-001: 4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
+Retain goal-distance qualification, actual attribution, historical credit, presentation history, later current assessment and retained event content. Do not collapse identical uncertain ranges to known equality. Wrapper52/55 unchanged; no native continuation or law retirement. See DEFINING_MEANING_FINDINGS.md.

@@ -5070,3 +5070,848 @@ final matrix, wrapper-inventory extension and closure checks remain in progress.
 No native qualification verdict is issued yet. If interrupted, first establish that the original workers have stopped, then use
 scripts/resume-disposition-public.mjs --part=0 (and1/2) to verify and skip completed
 receipts while repeating unfinished cases. Never overwrite preserved plans or receipts.
+
+
+## Preserved native disposition closure index — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native disposition admission COMPLETE — VER-C3-DISPOSITION-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md
+and DISPOSITION_PUBLIC_CLOSURE_REV1.json. Contract disposition-public/0.1-candidate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 80 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
+| Native qualification | **9 models / 15 runs / 285 prefixes** |
+| Validation | **44 affected / 328 reference tests; build passed** |
+
+Ten actual phases preserve prior-learning causality and original component expression/
+journal bytes. Constitution has no writer; identity, plastic and physical state have
+separate owners. Typed operands expose original qualified lineage. Refold has no plastic
+leaf. Step/Leaky and joint feedback competitors remain distinct; no general fusion or
+independent dual-effect necessity is established. No calendar-time ageing claim.
+
+All native prefixes restore/advance by whole-save replay. Whole character projections
+preserve failed-execution and stored/derived controls. Reached phase faults and wrapper
+microtask-window tests pass. Current wrapper inventory50 producers/53 factories; use
+scripts/check-disposition-wrapper-extension.mjs. Original49 scope and predecessor
+receipts remain unchanged. Primary final native save is about44MB; no scaling claim.
+
+Next SLEEP_CONTROL_READINESS.md: matched sleep-loss/control effects without rewriting
+constitution, values, goals or competence. Existing biological operands do not alone
+qualify that currently BLOCKED clause. No owner ruling. RO019 ACTIVE; RO021 CONDITIONAL
+and mandatory before final exit. AuditREV62; Campaign3 NOT EXIT-READY.
+
+
+## Preserved sleep/control qualification in progress — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Sleep/control experiment IN PROGRESS — native qualification frozen.**
+LOCAL DISPOSITION. Start SLEEP_CONTROL_READINESS.md, SLEEP_CONTROL_FINDINGS.md and
+SLEEP_CONTROL_PLAN_REV1.json. No production source change or owner blocker.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 80 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
+
+Thirteen focused tests and328 reference tests pass; build passed. Qualification is
+not yet declared:2 native models/20 runs/52 selected whole-save prefixes are frozen.
+Run scripts/qualify-sleep-control.mjs --part=0 and --part=1 only after checking no
+worker is already active. Each verifies completed receipts before skipping them.
+Do not refreeze. Then check-sleep-control.mjs --write records aggregate assertions.
+
+First exploratory fixture lacked nonzero identity and confounded reward training
+with sleep relief; source/receipt preserved in sleep-control-development-rev1.
+Corrected common prelude earns identity before sleep intervention. Sleep recovery
+at8 affects9; blind histories preserve whole safe views; sampled choice is distinct
+from changed probability. No new allocation, factory, general sleep law or Task join.
+
+Prior native disposition closure and50-producer/53-factory wrapper inventory stand.
+AuditREV62 is unchanged pending qualification; Campaign3 NOT EXIT-READY. RO019
+ACTIVE; RO021 final historical reconciliation remains mandatory and unsatisfied.
+
+
+## Preserved sleep/control closure index — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded sleep/control COMPLETE — VER-C3-SLEEP-CONTROL-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_SLEEP_CONTROL_QUALIFICATION.md
+and SLEEP_CONTROL_CLOSURE_REV1.json. sleep-control-experiment/0.1-candidate uses
+the existing native Biological identity profile, with no production law change.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 81 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **107 bounded / 20 partial / 5 blocked** |
+| Native experiment | **2 models / 20 runs / 52 selected prefixes** |
+| Validation | **13 new / 328 reference tests; build passed** |
+
+Genuine prior wake accumulation changes sensed control950->700 and permits a reward
+option. Recovery consequence8 restores control at9, preserving original acquired
+identity, learned outcomes, adopted goals and fixed constitution/competence. Full/
+NoControl, blind/biased sensing, execution and goal-maintenance controls discriminate
+the path. All seeds0..3 retained: changed distributions do not force changed actions.
+
+First exploratory fixture had empty identity and confounded sleep-relief learning;
+preserve SLEEP_CONTROL_FINDINGS.md and sleep-control-development-rev1. No general sleep
+law, global cognitive/personality join, chosen sleep policy or later-learning immunity.
+Prior native disposition closure and50-producer/53-factory wrapper inventory stand.
+
+Next INTOXICATION_CONTROL_READINESS.md: differential control/execution perturbation
+across characters, using existing admitted source contracts first. RO019 ACTIVE;
+RO021 final historical reconciliation remains unsatisfied. AuditREV63; Campaign3
+NOT EXIT-READY. No owner ruling is pending. Counters1458/0; no allocation this pass.
+
+
+## Preserved intoxication/control in progress — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Intoxication/control IN PROGRESS — native qualification frozen.**
+LOCAL DISPOSITION; no architectural blocker. Start INTOXICATION_CONTROL_FINDINGS.md
+and INTOXICATION_CONTROL_PLAN_REV1.json. Existing native Biological identity laws only.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 81 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **107 bounded / 20 partial / 5 blocked** |
+
+Twelve focused tests and328 reference tests pass; build passed. Qualification remains
+in progress:5 models/20 runs/55 selected complete native prefixes frozen. Two workers
+run scripts/qualify-intoxication-control.mjs --part=0 / --part=1; check process state
+before resuming. Completed receipts are verified and skipped. Never refreeze.
+Then check-intoxication-control.mjs --write checks cross-case semantics.
+
+Identical exposure with clearance100/400 separates sensed control from physical
+execution. Slow execution recovers at10; inhibition returns11, with residual burden.
+Blind controls mask downstream reward sensations as well as intoxication. Prior
+nonzero acquired identity and goal history remain fixed. No new allocation or law.
+
+AuditREV63 still governs until closure; Campaign3 NOT EXIT-READY. RO019 ACTIVE;
+RO021 final historical reconciliation unsatisfied. Existing50/53 wrapper scope stands.
+
+
+## Preserved intoxication/control closure index — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded intoxication/control COMPLETE — VER-C3-INTOXICATION-CONTROL-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md
+and INTOXICATION_CONTROL_CLOSURE_REV1.json. Existing native Biological identity;
+intoxication-control-experiment/0.1-candidate. No new production law or allocation.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 82 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **108 bounded / 20 partial / 4 blocked** |
+| Native experiment | **5 models / 20 runs / 55 selected prefixes** |
+| Validation | **12 new / 328 reference tests; build passed** |
+
+Identical exposure with clearance100/400 separates control and execution across
+constitutions. Slow execution recovers10, inhibition11; residual burden remains.
+Nonzero acquired identity, learned outcomes and adopted goals remain unchanged.
+NoControl, independent competence, masked/biased sensing and interference controls
+retain actual distributions/intent/outcomes. Unknown and false sober are distinct.
+
+INTOXICATION_CONTROL_FINDINGS.md records strict execution versus inclusive inhibition
+boundaries and the need to mask downstream reward sensation for whole-safe equality.
+No clinical kinetics, learned clearance, global cognition/personality or Task join.
+Prior closure receipts and50-producer/53-factory wrapper scope stand unchanged.
+
+Next CHOSEN_REAPPRAISAL_READINESS.md: deliberate strategy choice -> attempted frame
+application -> later affect. Preserve the narrower instructed-framing qualification.
+RO019 ACTIVE; RO021 historical reconciliation remains unsatisfied. AuditREV64;
+Campaign3 NOT EXIT-READY. No owner ruling pending. Counters1458/0.
+
+
+## Preserved chosen reappraisal qualification in progress — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Chosen reappraisal component IN PROGRESS — qualification frozen.**
+LOCAL DISPOSITION. Start CHOSEN_REAPPRAISAL_FINDINGS.md and
+CHOSEN_REAPPRAISAL_PLAN_REV1.json. Actual goal-relative strategy choice composes
+existing reason/dice and conditional-framing kernels; no native admission claim.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 82 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **108 bounded / 20 partial / 4 blocked** |
+
+Thirteen focused tests and328 reference tests/build pass. Frozen roster4 models/
+43 runs/387 complete component prefixes is executing via qualify-chosen-reappraisal.mjs.
+Verify no active worker before resuming; existing valid receipts are skipped.
+Do not refreeze. Then check-chosen-reappraisal.mjs --write checks cross-case claims.
+
+BenefitRelative/KnowledgeOnly/NoReappraisal and both affect projections remain.
+Chosen intent, expression, attempt, completion and later frame/affect are separate.
+Evidence is not rewritten by relief. Native admission is the next integration gate
+under CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md; old instructed profile stays unchanged.
+
+AuditREV64 remains authoritative pending closure; Campaign3 NOT EXIT-READY.
+RO019 ACTIVE; RO021 final historical gate unsatisfied. No owner ruling pending.
+
+
+## Preserved before chosen reappraisal native implementation (2026-09-27)
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Chosen reappraisal COMPONENT QUALIFIED — VER-C3-CHOSEN-REAPPRAISAL-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md
+and CHOSEN_REAPPRAISAL_CLOSURE_REV1.json. chosen-reappraisal-component/0.1-candidate.
+Native public admission is OPEN and is the next integration gate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1458** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 83 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **109 bounded / 20 partial / 3 blocked** |
+| Component experiment | **4 models / 43 runs / 387 prefixes** |
+| Validation | **13 new / 328 reference tests; build passed** |
+
+Actual goal-relative choice consumes prior conditional knowledge and inherited dice.
+Intent/expression/attempt/completion remain separate; frame application4 changes5,
+never earlier affect or learned evidence. All eight balanced seeds retained: four
+choose reappraisal, four work. BenefitRelative/KnowledgeOnly/NoReappraisal and two
+affect projections remain; known harmful frame can increase later affect.
+
+CHOSEN_REAPPRAISAL_FINDINGS.md preserves exact limits: constant threat concern versus
+optional regulation goal, hypothetical frame versus physical protection, component
+transaction versus native phases/authority. No new allocation or native producer.
+
+Next CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md: successor native source/authority/schema/
+phase/lineage/save contract and integration. Extend existing50/53 wrapper inventory
+when adding a producer. RO019 ACTIVE; RO020 native debt explicit; RO021 final history
+gate remains unsatisfied. AuditREV65; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Preserved native chosen reappraisal work in progress — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Chosen reappraisal native integration IN PROGRESS.**
+Accepted chosen-reappraisal-public/0.1-candidate; records1459..1467 allocated.
+Native implementation and qualification remain pending. No new verdict.
+
+**Chosen reappraisal COMPONENT QUALIFIED — VER-C3-CHOSEN-REAPPRAISAL-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md
+and CHOSEN_REAPPRAISAL_CLOSURE_REV1.json. chosen-reappraisal-component/0.1-candidate.
+Native public admission is OPEN and is the next integration gate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1467** |
+| Allocated since last verdict/corpus member | **9** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 - 21 members / 83 verdicts** |
+| Brief clauses / families | **132 / 15** |
+| Brief clause dispositions | **109 bounded / 20 partial / 3 blocked** |
+| Component experiment | **4 models / 43 runs / 387 prefixes** |
+| Validation | **13 new / 328 reference tests; build passed** |
+
+Actual goal-relative choice consumes prior conditional knowledge and inherited dice.
+Intent/expression/attempt/completion remain separate; frame application4 changes5,
+never earlier affect or learned evidence. All eight balanced seeds retained: four
+choose reappraisal, four work. BenefitRelative/KnowledgeOnly/NoReappraisal and two
+affect projections remain; known harmful frame can increase later affect.
+
+CHOSEN_REAPPRAISAL_FINDINGS.md preserves exact limits: constant threat concern versus
+optional regulation goal, hypothetical frame versus physical protection, component
+transaction versus native phases/authority. No new allocation or native producer.
+
+Next CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md: successor native source/authority/schema/
+phase/lineage/save contract and integration. Extend existing50/53 wrapper inventory
+when adding a producer. RO019 ACTIVE; RO020 native debt explicit; RO021 final history
+gate remains unsatisfied. AuditREV65; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Before embarrassment intake — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs to CAMPAIGN3_LOG.md.**
+
+**Native chosen reappraisal COMPLETE — VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md
+and CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json; chosen-reappraisal-public/0.1-candidate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1467** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /84 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **109 bounded /20 partial /3 blocked** |
+| Native experiment | **4 models /43 runs /387 prefixes** |
+| Validation | **21 new /328 reference tests; build passed** |
+| Native wrapper inventory | **51 producers /54 factories** |
+
+All component rows and RNG match through twelve actual native stages. Typed originals,
+separate goal/learning/frame owners, Failed rollback, whole safe views and Save132
+replay close the immediate integration debt. Earlier component/instructed profiles and
+wrapper audit source bytes remain unchanged. Preserve the first test-helper failure.
+No new psychological law, physical protection, general planning or Task/Biological join.
+
+Next EMBARRASSMENT_READINESS.md: audit bounded socially exposed self-evaluation and
+competing participation motives before implementing embarrassment without avoidance.
+No new clause promotion here. RO019 ACTIVE; RO021 final history gate unsatisfied;
+RO022 reopens on future wrappers. AuditREV66; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Preserved embarrassment implementation index — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs to CAMPAIGN3_LOG.md.**
+
+**Embarrassment component implementation IN PROGRESS.**
+Accepted EMBARRASSMENT_CONTRACT.md; no allocation or new verdict.
+
+**Native chosen reappraisal COMPLETE — VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md
+and CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json; chosen-reappraisal-public/0.1-candidate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1467** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /84 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **109 bounded /20 partial /3 blocked** |
+| Native experiment | **4 models /43 runs /387 prefixes** |
+| Validation | **21 new /328 reference tests; build passed** |
+| Native wrapper inventory | **51 producers /54 factories** |
+
+All component rows and RNG match through twelve actual native stages. Typed originals,
+separate goal/learning/frame owners, Failed rollback, whole safe views and Save132
+replay close the immediate integration debt. Earlier component/instructed profiles and
+wrapper audit source bytes remain unchanged. Preserve the first test-helper failure.
+No new psychological law, physical protection, general planning or Task/Biological join.
+
+Next EMBARRASSMENT_READINESS.md: audit bounded socially exposed self-evaluation and
+competing participation motives before implementing embarrassment without avoidance.
+No new clause promotion here. RO019 ACTIVE; RO021 final history gate unsatisfied;
+RO022 reopens on future wrappers. AuditREV66; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Before native embarrassment — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Embarrassment without avoidance COMPONENT QUALIFIED — VER-C3-EMBARRASSMENT-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md
+and EMBARRASSMENT_CLOSURE_REV1.json; embarrassment-component/0.1-candidate.
+Native public admission remains OPEN and is the next integration gate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1467** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /85 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Component experiment | **6 models /69 runs /483 prefixes** |
+| Validation | **15 new /328 reference tests; build passed** |
+
+Self-mismatch, evaluator awareness/judgment, personal relevance, affect, display and
+actual action remain distinct. Five of eight fine-calibration seeds participate with
+positive embarrassment and avoidance base. Matched goal removal yields withdrawal;
+failed withdrawal preserves intent but leaves presence unchanged. Preserve initial
+coarse-unit equality and decoder-test failure; no universal emotion calibration.
+Contextual/Latest/JudgmentOnly/NoAffectReasons/CoarseUnit and scalar projection retained.
+
+Next EMBARRASSMENT_PUBLIC_READINESS.md: typed originals, disjoint owners, actual native
+phases, lineage, RNG, Save132 and wrapper publication. Existing51/54 inventory unchanged.
+RO019 ACTIVE; RO021 final history gate unsatisfied. AuditREV67; Campaign3 NOT EXIT-READY.
+No general norm learning, physiological cue, Task/Biological join or owner ruling.
+
+
+## Preserved native embarrassment implementation — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native embarrassment implementation IN PROGRESS.**
+Accepted embarrassment-public/0.2-candidate, records1468..1484. No new verdict.
+
+**Embarrassment without avoidance COMPONENT QUALIFIED — VER-C3-EMBARRASSMENT-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md
+and EMBARRASSMENT_CLOSURE_REV1.json; embarrassment-component/0.1-candidate.
+Native public admission remains OPEN and is the next integration gate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **17** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /85 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Component experiment | **6 models /69 runs /483 prefixes** |
+| Validation | **15 new /328 reference tests; build passed** |
+
+Self-mismatch, evaluator awareness/judgment, personal relevance, affect, display and
+actual action remain distinct. Five of eight fine-calibration seeds participate with
+positive embarrassment and avoidance base. Matched goal removal yields withdrawal;
+failed withdrawal preserves intent but leaves presence unchanged. Preserve initial
+coarse-unit equality and decoder-test failure; no universal emotion calibration.
+Contextual/Latest/JudgmentOnly/NoAffectReasons/CoarseUnit and scalar projection retained.
+
+Next EMBARRASSMENT_PUBLIC_READINESS.md: typed originals, disjoint owners, actual native
+phases, lineage, RNG, Save132 and wrapper publication. Existing51/54 inventory unchanged.
+RO019 ACTIVE; RO021 final history gate unsatisfied. AuditREV67; Campaign3 NOT EXIT-READY.
+No general norm learning, physiological cue, Task/Biological join or owner ruling.
+
+
+## Preserved native embarrassment checkpoint — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native embarrassment COMPLETE — VER-C3-EMBARRASSMENT-PUBLIC-001.**
+LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_EMBARRASSMENT_PUBLIC_QUALIFICATION.md
+and EMBARRASSMENT_PUBLIC_CLOSURE_REV1.json; embarrassment-public/0.2-candidate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /86 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native experiment | **6 models /69 runs /483 prefixes** |
+| Validation | **22 native /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories** |
+
+All component rows, RNG and physical presence match. Typed originals, independent
+report/goal/presence owners, twelve scheduled stages, Failed rollback and Save132
+replay close the native gate. Complete110 precedes separate display110 by authenticated
+parentage. Preserve rejected phase115 cohort and frozen summary-string erratum; no
+frame state exists here. Earlier component models/calibrations and sources unchanged.
+
+Next DEFINING_MEMORY_READINESS.md: audit old defining episode retention/access/significance
+against existing GA, recollection and biography evidence before adding machinery.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 reopens on future wrappers.
+AuditREV68; Campaign3 NOT EXIT-READY. No new clause promotion or owner ruling.
+
+
+## Preserved defining-memory bridge checkpoint — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Defining-memory bridge QUALIFIED — VER-C3-DEFINING-MEMORY-BRIDGE-001.**
+**Full old-but-defining-memory frontier remains OPEN.** LOCAL DISPOSITION.
+Start CAMPAIGN3_DEFINING_MEMORY_BRIDGE_QUALIFICATION.md and
+DEFINING_MEMORY_BRIDGE_CLOSURE_REV1.json; defining-memory-experiment/0.1-candidate.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /87 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Component comparison | **4 models /288 cases /864 repeated stages** |
+| Validation | **13 focused /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Actual GA37/38 acquisition supplies earned significance and equally used history.
+Capacity1 separates SignificanceFirst from AgeOnly/UseOnly/SharedProtection; actual
+published recall carries original time5 evidence. Capacity8 preserves the episode
+without selecting it. Absent cue does not read; unrelated cue may still recall under
+the existing ranking law. Preserve rejected Set/List adapter cohort.
+
+Next DEFINING_MEMORY_INTEGRATION_READINESS.md: different admitted meaning at equal
+age/use, fallible later evidence, standing distinction and native continuation.
+Idle probes/component replay do not qualify long-horizon activity or Save132.
+No clause promotion. RO019 ACTIVE; RO021 final history unsatisfied; RO022 future-wrapper
+trigger remains. AuditREV69; Campaign3 NOT EXIT-READY. No owner ruling pending.
+
+
+## Preserved meaning/use checkpoint before native implementation — 2026-09-27
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Defining meaning/use COMPONENT COMPLETE — VER-C3-DEFINING-MEANING-001.**
+**Full defining-memory closure waits for native continuation.** LOCAL DISPOSITION.
+Start CAMPAIGN3_DEFINING_MEANING_QUALIFICATION.md and DEFINING_MEANING_CLOSURE_REV1.json;
+defining-meaning/0.1-candidate. No owner ruling pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Component integration | **4 models /68 cases /308 repeated stages** |
+| Validation | **15 new /28 affected /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Same acquired GA37 history plus High/Low/Wide/Absent goals yields progress,
+deterioration, neutral and unavailable meaning through actual qualification/attribution.
+Three rehearsals publish/use real children and settle counted presentations. Current
+later report does not rewrite historical credit or restore lost event content.
+Preserve the12-pass/3-fail development cohort: repeated uncertain intervals are
+IndeterminateRelation, not SameDistance. Existing laws and bridge remain unchanged.
+
+Next DEFINING_MEMORY_PUBLIC_READINESS.md: typed original/source, actual owned scheduler
+continuation, empty-S0 acquired lineage and whole-prefix Save132. No further component
+matrix substitutes for this gate. No standing/self-concept or long-horizon claim.
+No clause promotion. RO019 ACTIVE; RO021 final history unsatisfied; RO022 future-wrapper
+trigger remains. AuditREV70; Campaign3 NOT EXIT-READY.
+
+
+## Preserved acquisition checkpoint before continuation inputs — 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_NATIVE_IMPLEMENTATION_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+The meaning/use component remains qualified by VER-C3-DEFINING-MEANING-001.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native acquisition development | **19 instants /20 freshly repeated complete prefixes** |
+| Validation | **6 development /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged and rechecked** |
+
+Implemented a successor native acquisition scheduler, empty-S0 through37, with distinct
+model/run identity and a source cutoff applied before scheduler creation. Exact acquired
+state and outputs match GA37 and feed the meaning adapter. No research JSON in execution,
+no live queue/state splice and no learned-state injection. Preserve the test-only
+instant/dueAt failure; corrected cutoff, replay and reached rollback checks pass.
+
+Next extend the SAME scheduler with typed interpretation goal/report, actual continuation
+handlers, owned writes/terminal batches and trace declarations. Handle inherited deadlines
+past100 explicitly. Then opaque public admission, original-input Save132, prefix/fault
+checks and wrapper extension. Do not claim full native closure from the prelude.
+No new allocation or clause promotion. RO019 ACTIVE; RO021 final history unsatisfied;
+RO022 reopens on a new wrapper. AuditREV71; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Preserved continuation input checkpoint before native lifecycle — 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_CONTINUATION_INPUTS_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1484** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Continuation development | **68 matching qualification projections;8 new/36 affected tests** |
+| Validation | **328 reference tests; build passed** |
+| Native acquisition, preserved | **19 instants /20 repeated complete prefixes** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Typed continuation source plan and pure interpretation goal/report owner now implemented.
+Strict parameter domains, immutable inputs, separate safe report projection and explicit
+missing evidence pass. LOCAL DISPOSITION: adopt at37/140, active38; preserve inherited
+training-goal/task expiry100 for long horizons. Final recall requires actual presentation
+settlement. Record these native differences; do not rewrite component evidence.
+
+Next wire the plan and owners into the SAME successor scheduler from S0: typed state
+roots, trace/handler registration, actual acquired-evidence access, memory/history/protocol
+terminal ownership. Then public admission, original-input Save132, reached fault/prefix
+checks and wrapper extension. Neither source plans nor pure owners qualify native closure.
+No new allocation/clause promotion. RO019 ACTIVE; RO021 final history unsatisfied;
+RO022 reopens on a new wrapper. AuditREV72; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Preserved native lifecycle checkpoint before memory-owner integration — 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_NATIVE_LIFECYCLE_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1487** |
+| Allocated since last verdict/corpus member | **3** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native lifecycle development | **1 profile /22 instants /23 freshly repeated prefixes** |
+| Validation | **8 new /44 affected /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+One successor scheduler now acquires GA37 history, adopts the distinct interpretation
+goal37/140, receives report43/120 and settles inherited training-goal/task expiry100.
+Roots1485/1486 have distinct authorities;1487 is the closed lifecycle source. Actual
+trace reads/diffs and post-terminal rollback pass. Final model commits registrations,
+ownership, actual S0/calendar and budget+1. Preserve both development cohorts.
+
+Next extend via an explicit full successor: actual38 meaning/attribution/significance;
+39..41 rehearsal/use/presentation;42 retention and memory/history/protocol reconciliation;
+43 current assessment and final recall/presentation. Then public admission, original-input
+Save132, native prefix/fault qualification and wrapper extension. Lifecycle-only evidence
+cannot qualify the missing memory behavior; no full native closure or Brief promotion.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 reopens on a new wrapper.
+AuditREV73; Campaign3 NOT EXIT-READY. No owner ruling needed.
+
+
+## Preserved native memory-owner checkpoint before current assessment — 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_NATIVE_MEMORY_OWNER_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1489** |
+| Allocated since last verdict/corpus member | **5** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native memory-owner development | **2 profiles;25 primary prefixes freshly repeated** |
+| Owner comparison coverage | **48 goal/law/capacity cases** |
+| Validation | **13 new /49 affected /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Actual37 attribution delivery now joins adopted-goal meaning38 and terminal credit,
+followed by retention42 through the original memory/history/protocol owners. High retains
+old endpoint35; absent interpretation goal retains139 despite the still-live training
+goal. Atomic post-retention rollback passes. Protocol read bytes stay in runtime invariant
+evidence. Preserve all five development cohorts and successor inherited trace decoder.
+Records1488/1489 added; no namespace or verdict reset.
+
+Next actual39..41 rehearsal/attribution/use/presentation, current assessment43, final
+recall/presentation and all68 case coverage. This profile explicitly rejects rehearsal3
+and absent cue; its final horizon is a clock witness. Then public typed admission,
+original-input Save132, native prefix/fault qualification and wrapper extension.
+Prior37 attribution reuse assumes unchanged intervening memory; worldAfter is diagnostic.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 reopens on a new wrapper.
+AuditREV74; Campaign3 NOT EXIT-READY. No owner ruling.
+
+
+## Preserved native current-assessment checkpoint before rehearsal/final recall — 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_NATIVE_CURRENT_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1490** |
+| Allocated since last verdict/corpus member | **6** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native current-assessment development | **2 profiles;24 primary prefixes freshly repeated** |
+| Owner comparison coverage | **68 current-assessment projections** |
+| Validation | **9 new /50 affected /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Actual meaning38 emits delivery43/125; owned report43/120 and that delivery parent
+current assessment43/130. Current judgment reads only goal/report; historical
+qualification and acquired credit survive contrary or missing evidence unchanged.
+Missing evidence after complete event loss does not recreate an acquisition.
+The scheduled historical baseline is an in-flight operand, not recall after loss.
+Preserve the test-only StatePatch144/operation145 development assertion failure.
+Record1490 added; no namespace, authority, verdict reset or clause promotion.
+
+Next actual39..41 rehearsal/attribution/use/presentation, final recall/presentation
+and all68 complete native cases; then public typed admission, original-input Save132,
+native restore/fault gate and wrapper extension. Rehearsal3 and absent final cue
+remain explicitly unsupported; the horizon is a clock witness. worldAfter is
+diagnostic; immutable goal binding is bounded. RO019 ACTIVE; RO021 final history
+unsatisfied; RO022 reopens on a new wrapper. AuditREV75; Campaign3 NOT EXIT-READY.
+No architectural owner ruling.
+
+
+## Preserved index before complete native cohort, 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native defining-memory integration IN PROGRESS. No new verdict.**
+Start DEFINING_NATIVE_REHEARSAL_CHECKPOINT.md and DEFINING_MEMORY_PUBLIC_READINESS.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **8** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
+| Corpus / named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses / families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Native rehearsal/final recall | **3 profiles;27 primary prefixes freshly repeated** |
+| Owner comparison coverage | **68 continuations: memory/history/scores/winner** |
+| Validation | **10 new /54 affected /328 reference tests; build passed** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Actual cue/focal37 generates carried recall requests. Three actual16-publication
+rehearsals at39..41 feed supported attribution, use and presentation owners. Final
+k1 recall settles only the selected presentation. Important35 stays retained but
+unselected at capacity8; absent cue and complete event loss produce no publication.
+Post39 rollback includes all owners, outputs, trace, queue and allocators.
+The carried query is not fresh perception or learned rehearsal intent. Empty graph
+is an explicit component comparator; actual graph631 remains unchanged. Preserve
+ScheduledEvent171/130 test-only failure and the unreached initial zero-cap control.
+Records1491..1492 added; no namespace, authority, verdict reset or clause promotion.
+
+Next all68 complete native cases and public typed admission/original-input Save132,
+then native restore/fault qualification and wrapper extension. Internal handlers
+now support rehearsal0/3 and matching/absent final cue; owner coverage is not68 native
+runs. Final native presentation settlement deliberately extends the frozen component.
+worldAfter remains diagnostic; current baseline remains a scheduled operand.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 reopens on a new wrapper.
+AuditREV76; Campaign3 NOT EXIT-READY. No architectural owner ruling.
+
+
+## Preserved index before defining public implementation, 2026-09-28
+
+# Current research entry point
+
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**All68 selected defining-memory native cases PASS. Public gate OPEN.**
+Start DEFINING_NATIVE_COHORT_CHECKPOINT.md and DEFINING_PUBLIC_SAVE_GATE.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **8** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| New native cohort | **68 programs/runs/identities; four retention laws** |
+| Native execution evidence | **1612 settled instants;376 selected stage hashes** |
+| Preserved validation | **27 repeated primary prefixes;54 affected/328 reference tests/build** |
+| Native wrapper inventory | **52 producers /55 factories; unchanged** |
+
+Every program reacquires history from empty S0. Historical/current meaning,
+retention, real rehearsal, exact recall scores and published child content match
+component evidence; final native presentation appends exactly once. Both significance
+directions, neutral/absent goals, missing/contrary reports, horizons50/400/4000,
+absent cue and capacities0/1/8 pass. Retained35 can remain unselected. Eight diagnostic
+worldAfter pairs preserve checked cognition; no physical-world intervention claim.
+All four workers exit0; no production change or failed case. Earlier failures remain
+preserved. Prior test/build receipts reverified, not freshly rerun. No new verdict.
+
+Next successor public typed admission and actual Save132, original-input replay,
+all-prefix restore/fault/publication tests and wrapper extension. Selected hashes
+are not public save/restore qualification. Carried query is not fresh perception
+or learned rehearsal intent; empty graph/current baseline remain bounded controls.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 reopens on a new wrapper.
+AuditREV77; Campaign3 NOT EXIT-READY. No architectural owner ruling.

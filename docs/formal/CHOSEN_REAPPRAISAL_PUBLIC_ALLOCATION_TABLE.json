@@ -1,0 +1,398 @@
+{
+  "version": "chosen-reappraisal-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-09-27",
+  "namespace": 1165,
+  "contractSha256": "2344f9c85cc00c5a396ebe0a98bdd98e8cc25a313e01e936e222e47db9d22c01",
+  "records": [
+    {
+      "typeId": 1459,
+      "name": "ChosenReappraisalProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Projection",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1460,
+      "name": "ChosenReappraisalOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Condition",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Physical",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Display",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Observed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Catalogue",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "CatalogueObserved",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Complete",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Safety",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 11,
+          "name": "Work",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1461,
+      "name": "ChosenReappraisalGoals",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Safety",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Work",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1462,
+      "name": "ChosenReappraisalGoalsRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1461"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1463,
+      "name": "ChosenReappraisalReasons",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Appraisal",
+          "type": "ref:1032",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Context",
+          "type": "ref:1467",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Knowledge",
+          "type": "ref:1028",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Eligible",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Reasons",
+          "type": "ref:408",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1464,
+      "name": "ChosenReappraisalFrameApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": {
+            "list": "ref:1030",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": {
+            "list": "ref:1030",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Intent",
+          "type": {
+            "list": "ref:425",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Completed",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1465,
+      "name": "ChosenReappraisalLearningApplication",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Before",
+          "type": "ref:1028",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "After",
+          "type": "ref:1028",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Observation",
+          "type": "ref:1027",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1466,
+      "name": "ChosenReappraisalCompletion",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Intent",
+          "type": {
+            "list": "ref:425",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Attempt",
+          "type": {
+            "list": "ref:432",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Execution",
+          "type": {
+            "list": "ref:433",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Completed",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1467,
+      "name": "ChosenReappraisalContext",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Occurrence",
+          "type": "id:1165",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Goals",
+          "type": "ref:1461",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Opportunity",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

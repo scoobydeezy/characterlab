@@ -1,0 +1,122 @@
+{
+  "contract": "defining-native-lifecycle/0.1-candidate",
+  "status": "PERMANENT ALLOCATION; implementation development, not qualification",
+  "records": [
+    {
+      "typeId": 1485,
+      "name": "DefiningInterpretationGoalState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Variant",
+          "required": true,
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "name": "Adopted",
+          "required": true,
+          "type": "bool"
+        },
+        {
+          "id": 3,
+          "name": "AdoptedAt",
+          "required": false,
+          "type": "i"
+        },
+        {
+          "id": 4,
+          "name": "ActiveFrom",
+          "required": false,
+          "type": "i"
+        },
+        {
+          "id": 5,
+          "name": "ExpiresAt",
+          "required": false,
+          "type": "i"
+        },
+        {
+          "id": 6,
+          "name": "Desired",
+          "required": false,
+          "type": "ref:556"
+        }
+      ]
+    },
+    {
+      "typeId": 1486,
+      "name": "DefiningAdmittedReportState",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Status",
+          "required": true,
+          "type": {
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "required": false,
+          "type": "i"
+        },
+        {
+          "id": 3,
+          "name": "Interval",
+          "required": false,
+          "type": "ref:556"
+        }
+      ]
+    },
+    {
+      "typeId": 1487,
+      "name": "DefiningLifecycleSource",
+      "fields": [
+        {
+          "id": 1,
+          "name": "Stage",
+          "required": true,
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "name": "At",
+          "required": true,
+          "type": "i"
+        },
+        {
+          "id": 3,
+          "name": "Value",
+          "required": true,
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

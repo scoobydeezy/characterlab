@@ -489,3 +489,27 @@ Counters1442/16. Task and biological producer kinds and source-specific channels
 Records1443..1450/schema1 allocated before implementation by IDENTITY_BELIEF_PUBLIC_ALLOCATION_TABLE.json under IDENTITY_BELIEF_PUBLIC_CONTRACT.md. Reuse1155; counters1450/8. Independent holder leaves; prior schemas unchanged.
 
 Records1451..1458/schema1 allocated before implementation by DISPOSITION_PUBLIC_ALLOCATION_TABLE.json under DISPOSITION_PUBLIC_CONTRACT.md. Reuse1155; counters1458/8. Immutable constitution has no writer; separate plastic authority; predecessor schemas unchanged.
+
+
+### Chosen reappraisal public — 2026-09-27
+Records1459..1467/schema1 allocated before implementation under CHOSEN_REAPPRAISAL_PUBLIC_CONTRACT.md and CHOSEN_REAPPRAISAL_PUBLIC_ALLOCATION_TABLE.json. Reuse1165; counters1467/9. Model-scoped knowledge/frame roots retained, separate goals1462; no predecessor schema changed.
+
+
+### Embarrassment public — 2026-09-27
+Records1468..1484/schema1 allocated before implementation under EMBARRASSMENT_PUBLIC_CONTRACT.md and EMBARRASSMENT_PUBLIC_ALLOCATION_TABLE.json. Reuse1165; counters1484/17. Separate goals1471, knowledge1474 and physical presence1476; prior schemas unchanged.
+
+
+## Defining native lifecycle — 2026-09-28
+LOCAL DISPOSITION: records1485..1487/schema1 permanently allocated before implementation by DEFINING_LIFECYCLE_ALLOCATION_TABLE.json under defining-native-lifecycle/0.1-candidate. Separate interpretation goal/report roots and closed lifecycle source. No new namespace; prior schemas unchanged. Counters1487/3 before the next verdict. Native defining-memory gate remains OPEN.
+
+
+## Defining native memory owner — 2026-09-28
+LOCAL DISPOSITION: records1488..1489/schema1 permanently allocated before implementation by DEFINING_MEMORY_OWNER_ALLOCATION_TABLE.json. Reuse occurrence namespace1146. Explicit successor opportunity/meaning receipt; old memory/history/protocol owners remain. Counters1489/5; no new verdict.
+
+
+## Defining native current assessment — 2026-09-28
+LOCAL DISPOSITION: record1490/schema1 permanently allocated by DEFINING_CURRENT_ASSESSMENT_ALLOCATION_TABLE.json under defining-native-current-assessment/0.1-candidate. Reuse occurrence namespace1146; no new owner or namespace. Read-only current assessment output remains distinct from historical meaning1489. Counters1490/6; no new verdict.
+
+
+## Defining native rehearsal and final recall — 2026-09-28
+LOCAL DISPOSITION: records1491..1492/schema1 permanently allocated before implementation by DEFINING_REHEARSAL_ALLOCATION_TABLE.json under defining-native-rehearsal/0.1-candidate. Actual carried cue/focal request and actual publication/attribution batch; no new namespace or owner. Existing1147/1148 occurrence namespaces reused. Counters1492/8; no new verdict.

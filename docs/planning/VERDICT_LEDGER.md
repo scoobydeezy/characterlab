@@ -2799,3 +2799,91 @@ RO009/017/019/020/021/022; wrapper inventory now50 producers/53 factories. About
 primary final save; no scaling or reduction qualification. Brief counts unchanged.
 Evidence CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md and DISPOSITION_PUBLIC_CLOSURE_REV1.json.
 Next SLEEP_CONTROL_READINESS.md; no owner ruling.
+
+
+## `VER-C3-SLEEP-CONTROL-001` — bounded sleep-loss/control recovery (2026-09-27)
+
+QUALIFIED / LOCAL DISPOSITION, sleep-control-experiment/0.1-candidate. Existing
+native Biological identity profile,2 models/20 runs/52 selected prefixes;13 new/
+328 reference tests/build;1458/0. Actual prior wake history changes sensed control,
+inhibition and choice distributions; recovery consequence8 affects choice9. Exact
+nonzero identity journal, reward learning, goals and fixed competence/constitution
+remain separate. NoControl, blind/biased sensing, execution and maintenance controls.
+All seeds0..3 retained, including unchanged sampled actions. First empty-identity/
+sleep-relief-confounded source preserved. Brief12.1-6 bounded; no general sleep law,
+Task join, clinical physiology or later-learning immunity. RO008/009/012/013/019/020/021.
+Evidence CAMPAIGN3_SLEEP_CONTROL_QUALIFICATION.md and SLEEP_CONTROL_CLOSURE_REV1.json.
+
+
+## `VER-C3-INTOXICATION-CONTROL-001` — bounded differential intoxication/control (2026-09-27)
+
+QUALIFIED / LOCAL DISPOSITION, intoxication-control-experiment/0.1-candidate.
+Existing native Biological identity,5 models/20 runs/55 selected prefixes;12 new/
+328 reference tests/build;1458/0. Identical exposure and clearance-only constitutions
+separate sensed control and physical execution, with execution recovery preceding
+inhibition in slow clearance. NoControl, competence, masked/biased sensing and
+interference controls; original acquired identity/goals preserved. All seeds retained.
+Brief12.1-7 bounded. No clinical kinetics, learned clearance, Task join, or general
+impairment-law choice. RO008/009/012/013/019/020/021; historical gate unsatisfied.
+Evidence CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md and
+INTOXICATION_CONTROL_CLOSURE_REV1.json. Next chosen reappraisal/later affect intake.
+
+
+## `VER-C3-CHOSEN-REAPPRAISAL-001` — bounded chosen reappraisal component (2026-09-27)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, chosen-reappraisal-component/0.1-candidate.
+4 models/43 runs/387 component prefixes;13 new/328 reference tests/build;1458/0.
+Actual inherited reason/dice strategy choice, intent/expression/attempt/completion,
+later frame and affect remain distinct. Goal-only choice and failed completion preserve
+knowledge; harmful known frames can increase affect. BenefitRelative/KnowledgeOnly/
+NoReappraisal and two projections retained; all eight seeds. No physical protection
+or native public admission. Brief12.5-7 bounded component witness; native gate next.
+RO010/011/012/019/020/021. Evidence CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md and
+CHOSEN_REAPPRAISAL_CLOSURE_REV1.json; next CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md.
+
+
+## `VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001` — bounded native chosen reappraisal (2026-09-27)
+
+QUALIFIED NATIVE / LOCAL DISPOSITION, chosen-reappraisal-public/0.1-candidate.
+4 models/43 runs/387 native prefixes;21 new/328 reference tests/build;1467/0.
+Twelve actual stages reproduce component rows/RNG exactly. Typed originals, separate
+goal/learning/frame owners, whole safe views, Failed rollback, Save132 replay and
+whole-wrapper publication are qualified.51 producers/54 factories; earlier source
+and audit scopes unchanged. No new psychological law or clause promotion.
+RO010/011/012/019/020/021/022; CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md and
+CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json. Next EMBARRASSMENT_READINESS.md.
+
+
+## `VER-C3-EMBARRASSMENT-001` — bounded embarrassment without avoidance (2026-09-27)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, embarrassment-component/0.1-candidate.
+6 models/69 distinct runs/483 prefixes;15 new/328 reference tests/build;1467/0.
+Five of eight Contextual seeds participate with positive social affect and a positive
+avoidance base. Same-seed participation-goal removal preserves appraisal and yields
+withdrawal. Physical execution, display and earlier evidence stay distinct. Fine/CoarseUnit/
+NoAffectReasons, Mean/Latest, JudgmentOnly and scalar projection retained. Preserve first
+coarse-calibration cohort and decoder-test failure. Brief12.5-4 bounded component only;
+native gate remains OPEN. RO010/011/012/019/020/021. Evidence
+CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md and EMBARRASSMENT_CLOSURE_REV1.json.
+Next EMBARRASSMENT_PUBLIC_READINESS.md; no owner ruling or Campaign3 exit.
+
+
+## `VER-C3-EMBARRASSMENT-PUBLIC-001` — bounded native embarrassment (2026-09-27)
+
+QUALIFIED NATIVE / LOCAL DISPOSITION, embarrassment-public/0.2-candidate.
+VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 tests/build;1484/0. Exact component rows/RNG and physical presence, typed sources, three owners, twelve actual stages and Save132/publication qualified.52/55 wrapper inventory; earlier sources unchanged.
+Preserve rejected display115 cohort and summary-string erratum. No general norm/physiology or new clause promotion. RO010/011/012/019/020/021/022. Evidence CAMPAIGN3_EMBARRASSMENT_PUBLIC_QUALIFICATION.md and EMBARRASSMENT_PUBLIC_CLOSURE_REV1.json. Next DEFINING_MEMORY_READINESS.md; no owner ruling.
+
+
+## `VER-C3-DEFINING-MEMORY-BRIDGE-001` — defining-memory retention/recollection bridge (2026-09-27)
+
+BOUNDED COMPARISON QUALIFIED / LOCAL DISPOSITION. defining-memory-experiment/0.1-candidate.
+4 retained-law models/288 component cases/864 deterministic stage comparisons;13 focused/328 reference tests/build;1484/0. Acquired significance changes old-episode survival and actual recollection under capacity pressure; retained-but-not-recalled remains distinct. Full defining-memory frontier OPEN.
+Actual GA37/38 source, unchanged retention/recollection kernels; no new native admission or clause promotion. Preserve Set/List adapter failure and mismatched-cue ranking limit. RO005/006/007/009/019/020/021. Evidence CAMPAIGN3_DEFINING_MEMORY_BRIDGE_QUALIFICATION.md and DEFINING_MEMORY_BRIDGE_CLOSURE_REV1.json. Continue DEFINING_MEMORY_INTEGRATION_READINESS.md; no owner ruling.
+
+
+## `VER-C3-DEFINING-MEANING-001` — defining memory: admitted meaning and use (2026-09-27)
+
+BOUNDED COMPONENT INTEGRATION QUALIFIED / LOCAL DISPOSITION, defining-meaning/0.1-candidate.
+4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
+Preserve IndeterminateRelation versus SameDistance failure; no inherited law changed. RO005/006/007/009/010/019/020/021. Evidence CAMPAIGN3_DEFINING_MEANING_QUALIFICATION.md and DEFINING_MEANING_CLOSURE_REV1.json. Next DEFINING_MEMORY_PUBLIC_READINESS.md; no owner ruling or full defining-memory closure.

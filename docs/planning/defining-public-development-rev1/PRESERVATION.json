@@ -1,0 +1,9 @@
+{
+  "status": "TYPECHECK REJECTED BEFORE TEST EXECUTION",
+  "finding": "The new test used node:crypto and Buffer, but this project typechecks browser-oriented test sources without Node declarations. Runtime production typechecked before the test addition. No native/public test outcome is claimed for this source cohort.",
+  "diagnostics": [
+    "TS2307 Cannot find module node:crypto",
+    "TS2580 Cannot find name Buffer"
+  ],
+  "manifest": "docs/planning/defining-public-development-rev1/MANIFEST.json"
+}

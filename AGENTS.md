@@ -45,7 +45,166 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-09-27):** native disposition admission COMPLETE:
+**Current routing (2026-09-28):** defining public implementation VERIFIED, full matrix OPEN.
+Start CURRENT.md and DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Closed recipe,
+empty-S0 originals, successor identity, actual Save132 and original-prefix replay;
+both runtime/factory publication guards.1 profile/27 instants/8 native stage matches/
+9 saves; successful restore0/39/4000; rollback38/39/42/43/4000.17 new/328 reference
+tests/typecheck/build pass. Native handler body unchanged; first test-only Node
+hashing typecheck rejection preserved.1492/8; no verdict or Brief promotion.
+Wrapper53/56; predecessor52/51/50/49 frozen; RO022 closed for current publication scope.
+Next all68 public programs/1680 prefix restores and controls. Earlier68 internal
+runs do not satisfy that public matrix. AuditREV78:110/20/2;88 verdicts; no owner ruling.
+
+**Prior routing (2026-09-28):** all68 selected native defining-memory cases PASS.
+Start CURRENT.md and DEFINING_NATIVE_COHORT_CHECKPOINT.md.68 committed native model/run
+identities across four retention laws;1612 instants/376 selected stage hashes.
+Empty-S0 acquisition, historical/current meaning, retained memory, rehearsal, exact
+rank scores and child content match the component; final presentation settles once.
+No production change. Prior27 repeated prefixes/54 affected/328 reference tests/build
+receipts reverified, not freshly rerun.1492/8; no verdict or Brief promotion.
+Next DEFINING_PUBLIC_SAVE_GATE.md: typed public admission/Save132/original replay,
+restore/fault/publication and wrapper extension. Carried cue, empty graph, scheduled
+baseline and diagnostic worldAfter limits remain. No full closure or owner ruling.
+AuditREV77:110/20/2;88 verdicts; wrapper52/55 unchanged.
+
+**Prior routing (2026-09-28):** native defining-memory implementation IN PROGRESS.
+Start CURRENT.md and DEFINING_NATIVE_REHEARSAL_CHECKPOINT.md. Actual carried query37
+feeds three16-publication rehearsals, supported attribution/use/presentation and
+final k1 recall with actual presentation settlement.3 native profiles/27 repeated
+primary prefixes;68 owner continuations;10 new/54 affected/328 reference tests/build.
+Retained35 can remain unselected; absent cue/lost events yield no publication.1492/8.
+Preserve test-only ScheduledEvent171/130 failure. Carried query is not fresh perception
+or learned rehearsal intent; empty graph is a retained comparator. Next68 complete
+native cases/public Save132/restore/fault/wrapper gate. No full closure or owner ruling.
+AuditREV76:110/20/2;88 verdicts; wrapper52/55 unchanged.
+
+**Prior routing (2026-09-28):** native defining-memory implementation IN PROGRESS.
+Start CURRENT.md and DEFINING_NATIVE_CURRENT_CHECKPOINT.md. Actual meaning38 delivery
+joins owned report43 in read-only current assessment43/130.2 native profiles;24 primary
+prefixes freshly repeated;68 current owner comparisons;9 new/50 affected/328 reference
+tests/build. Contrary/missing evidence preserves historical credit; lost events stay
+lost. In-flight baseline is not recall. Preserve StatePatch144/145 test-only finding.
+1490/6; wrapper52/55 unchanged. Next rehearsal, final recall/presentation,68 complete
+native cases and public Save132 gate. No full closure or owner ruling.
+AuditREV75:110/20/2;88 verdicts. Rehearsal3/absent final cue remain unsupported.
+
+**Prior routing (2026-09-28):** native defining-memory implementation IN PROGRESS.
+Start CURRENT.md and DEFINING_NATIVE_MEMORY_OWNER_CHECKPOINT.md. Actual attribution37
+feeds goal-relative meaning/credit38 and retention42 through original memory/history/
+protocol owners.2 native profiles;25 primary prefixes freshly repeated;48 owner cases;
+13 new/49 affected/328 reference tests/build. High retains35; absent interpretation goal
+retains139 despite live training goal. Atomic retention rollback.1489/5; wrapper52/55.
+Preserve all five development cohorts and successor trace codec. Next actual rehearsal,
+current assessment, final recall/presentation,68-case coverage and public Save132 gate.
+No full closure; prior attribution reuse bounded to unchanged intervening memory.
+AuditREV74:110/20/2;88 verdicts. No owner ruling.
+
+**Prior routing (2026-09-28):** native defining-memory implementation IN PROGRESS.
+Start CURRENT.md and DEFINING_NATIVE_LIFECYCLE_CHECKPOINT.md. One scheduler now acquires
+GA37, adopts distinct interpretation goal37/140, receives report43/120 and settles inherited
+goal/task deadlines100.1 profile/22 instants/23 repeated prefixes;8 new/44 affected/328
+reference tests/build. Actual owner traces and post-terminal rollback. Records1485..1487;
+1487/3. Preserve both development cohorts and corrected registry/budget commitment.
+Next full successor meaning/attribution/credit, rehearsal/use, retention/protocol/history,
+current/final recall, public admission/Save132 gate. Lifecycle profile does not qualify
+missing memory behavior. Wrapper52/55 unchanged. AuditREV73:110/20/2;88 verdicts.
+No owner ruling.
+
+**Prior routing (2026-09-28):** native defining-memory implementation IN PROGRESS.
+Start CURRENT.md and DEFINING_CONTINUATION_INPUTS_CHECKPOINT.md. Typed source plan and
+pure interpretation owner:68 matching qualification projections,8 new/36 affected/328
+reference tests/build. LOCAL DISPOSITION adoption37/140 active38; inherited100 deadlines
+preserved within horizon. Final native recall must settle presentation history. No new
+verdict/allocation/native qualification;1484/0; wrapper52/55. Acquisition evidence unchanged.
+Next same-scheduler registered handlers/roots, actual evidence and terminal memory owners,
+trace, public admission/Save132 and native prefix/fault gate. AuditREV72:110/20/2;88 verdicts.
+No owner ruling. Pure transitions are not registered native ownership.
+
+**Prior routing (2026-09-27):** native defining-memory implementation IN PROGRESS.
+No new verdict. Start CURRENT.md and DEFINING_NATIVE_IMPLEMENTATION_CHECKPOINT.md.
+Actual native empty-S0 acquisition through37 implemented:19 instants/20 freshly repeated
+complete prefixes; exact GA37 state/outputs;6 development/328 reference tests/build.
+Preserve test-only instant/dueAt failure.1484/0; wrapper52/55 unchanged and rechecked.
+Next same-scheduler continuation handlers, typed goal/report/owners, inherited lifecycle,
+Save132 and public wrapper gate in DEFINING_MEMORY_PUBLIC_READINESS.md. Do not declare
+native closure from the prelude. AuditREV71:110 bounded/20 partial/2 blocked;88 verdicts.
+No owner ruling.
+
+**Prior routing (2026-09-27):** defining meaning/use COMPONENT COMPLETE:
+VER-C3-DEFINING-MEANING-001. Start CURRENT.md and CAMPAIGN3_DEFINING_MEANING_QUALIFICATION.md.
+4 models/68 cases/308 repeated component stages;15 new/28 affected/328 reference tests/
+build;1484/0. Same acquired evidence, different goals; actual counted rehearsal; later
+report preserves old event/credit. Preserve uncertain-interval equality test failure.
+Native continuation OPEN; full defining-memory closure waits for that gate. Wrapper52/55
+unchanged; no Brief promotion. AuditREV70:110 bounded/20 partial/2 blocked. Next
+DEFINING_MEMORY_PUBLIC_READINESS.md; no owner ruling.
+
+**Prior routing (2026-09-27):** defining-memory bridge QUALIFIED:
+VER-C3-DEFINING-MEMORY-BRIDGE-001. Full old-defining-memory frontier OPEN. Start
+CURRENT.md and CAMPAIGN3_DEFINING_MEMORY_BRIDGE_QUALIFICATION.md.4 models/288 component
+cases/864 repeated stages;13 focused/328 reference tests/build;1484/0. Actual GA37/38
+history; significance-first protects and recalls old event under pressure, capacity8
+retains it without selecting. Preserve Set/List adapter failure and unrelated-cue
+ranking limit. No new native admission or clause promotion; wrapper52/55 unchanged.
+AuditREV69:110 bounded/20 partial/2 blocked. Next DEFINING_MEMORY_INTEGRATION_READINESS.md;
+no owner ruling.
+
+**Prior routing (2026-09-27):** native embarrassment COMPLETE:
+VER-C3-EMBARRASSMENT-PUBLIC-001. Start CURRENT.md and
+CAMPAIGN3_EMBARRASSMENT_PUBLIC_QUALIFICATION.md.6 models/69 runs/483 native prefixes;
+22 native/328 reference tests/build;1484/0. Three owners, twelve scheduled stages,
+exact component rows/RNG/physical presence. Native0.2 uses parent-ordered complete110/
+display110; preserve rejected115 cohort and summary-string erratum (no frame state).
+Wrapper inventory52/55; prior sources unchanged. AuditREV68:110 bounded/20 partial/
+2 blocked. Next DEFINING_MEMORY_READINESS.md; no owner ruling.
+
+**Prior routing (2026-09-27):** embarrassment without avoidance COMPONENT QUALIFIED:
+VER-C3-EMBARRASSMENT-001. Start CURRENT.md and CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md.
+6 models/69 distinct runs/483 component prefixes;15 new/328 reference tests/build;1467/0.
+Five of eight fine-calibration seeds participate despite positive social affect and an
+avoidance base. Goal-only, failed execution, cue and evidence controls remain separate.
+Preserve initial coarse-unit equality and decoder-test failure. AuditREV67:110 bounded/
+20 partial/2 blocked. Native admission OPEN: next EMBARRASSMENT_PUBLIC_READINESS.md.
+No owner ruling; native wrapper inventory51/54 unchanged.
+
+**Prior routing (2026-09-27):** native chosen reappraisal COMPLETE:
+VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001. Start CURRENT.md and
+CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md.4 models/43 runs/387 native prefixes;
+21 new/328 reference tests/build;1467/0. Twelve actual stages reproduce all component
+rows/RNG with separate goal/learning/frame owners. Wrapper inventory51/54; predecessor
+sources unchanged. Preserve first test-helper failure. No physical protection, general
+planning or Task join. AuditREV66:109 bounded/20 partial/3 blocked. Next
+EMBARRASSMENT_READINESS.md; no owner ruling.
+
+**Prior routing (2026-09-27):** chosen reappraisal COMPONENT QUALIFIED:
+VER-C3-CHOSEN-REAPPRAISAL-001. Start CURRENT.md and
+CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md.4 models/43 runs/387 component prefixes;
+13 new/328 reference tests/build;1458/0. Actual strategy choice, independent attempted
+completion and later conditional affect preserve evidence. BenefitRelative/KnowledgeOnly/
+NoReappraisal and two projections retained. Native admission remains OPEN: next
+CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md. AuditREV65:109 bounded/20 partial/3 blocked.
+No owner ruling; existing50/53 native wrapper scope unchanged. No physical protection.
+
+**Prior routing (2026-09-27):** bounded intoxication/control COMPLETE:
+VER-C3-INTOXICATION-CONTROL-001. Start CURRENT.md and
+CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md.5 models/20 runs/55 selected prefixes;
+12 new/328 reference tests/build;1458/0. Identical exposure, different constitutional
+clearance; control and execution recover separately without rewriting identity/goals.
+Preserve masked-sensation and exact-boundary limits. No clinical law or Task join.
+AuditREV64:108 bounded/20 partial/4 blocked. Next CHOSEN_REAPPRAISAL_READINESS.md;
+no owner ruling. Existing wrapper inventory50/53 unchanged.
+
+**Prior routing (2026-09-27):** bounded sleep/control COMPLETE:
+VER-C3-SLEEP-CONTROL-001. Start CURRENT.md and CAMPAIGN3_SLEEP_CONTROL_QUALIFICATION.md.
+2 native models/20 runs/52 selected prefixes;13 new/328 reference tests/build;1458/0.
+Prior wake history changes control/access; later recovery preserves original acquired
+identity, learned outcomes, goals and fixed competence/constitution. Preserve first
+empty-identity/sleep-relief-confounded fixture. No new production law, general sleep
+model or Task join. AuditREV63:107 bounded/20 partial/5 blocked. Next
+INTOXICATION_CONTROL_READINESS.md; no owner ruling. Wrapper inventory50/53 unchanged.
+
+**Prior routing (2026-09-27):** native disposition admission COMPLETE:
 VER-C3-DISPOSITION-PUBLIC-001. Start CURRENT.md and
 CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md.9 models/15 runs/285 native prefixes;
 44 affected/328 reference tests/build;1458/0. Separate immutable constitution/plastic/

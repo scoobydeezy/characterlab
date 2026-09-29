@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV62.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV78.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -231,6 +231,44 @@ supplemental.push('CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md','DISPOSITI
 {const clause=families[11].clauses[6];clause.evidence.push(p+'CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md',p+'DISPOSITION_PUBLIC_CLOSURE_REV1.json');clause.rationale+=' VER-C3-DISPOSITION-PUBLIC-001 supplies9 native models/15 runs/285 complete prefixes, ten actual phases, separate authority and typed original lineage. No constitution writer, general fusion, calendar-time ageing or long-horizon scaling claim. Component-era native limits remain historical.';}
 families[11].rationale+=' REV62 closes bounded native disposition admission, without another clause promotion. All seven laws and constitutional controls retained.';
 supplemental.push('CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md','DISPOSITION_PUBLIC_FINDINGS.md','DISPOSITION_PUBLIC_CLOSURE_REV1.json','DISPOSITION_WRAPPER_EXTENSION_REV1.json','DISPOSITION_PUBLIC_SAVE_SIZE_REV1.json','SLEEP_CONTROL_READINESS.md');
+// REV63: sleep loss with preserved acquired identity, existing native biology profile.
+{const clause=families[0].clauses[5];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_SLEEP_CONTROL_QUALIFICATION.md',p+'SLEEP_CONTROL_CLOSURE_REV1.json');clause.rationale='VER-C3-SLEEP-CONTROL-001: actual wake/recovery changes sensed control and inhibition under existing native Biological identity; original nonzero acquired journal, reward learning, goals and fixed constitution/competence remain separate. Full/NoControl and blind/biased/execution/maintenance controls,2 models/20 runs/52 selected prefixes. Learning-disabled probes, external sleep and finite gains only; no global cognitive/personality or clinical claim.';clause.obligations=[...new Set([...clause.obligations,ro(8),ro(9),ro(12),ro(13),ro(19),ro(20),ro(21)])];}
+families[0].rationale+=' REV63 adds bounded sleep-loss/control with recovery and preserved prior identity. Intoxication across characters remains unqualified.';
+supplemental.push('CAMPAIGN3_SLEEP_CONTROL_QUALIFICATION.md','SLEEP_CONTROL_FINDINGS.md','SLEEP_CONTROL_CLOSURE_REV1.json','INTOXICATION_CONTROL_READINESS.md');
+// REV64: differential intoxication under existing native biological laws.
+{const clause=families[0].clauses[6];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md',p+'INTOXICATION_CONTROL_CLOSURE_REV1.json');clause.rationale='VER-C3-INTOXICATION-CONTROL-001: identical exposure with clearance-only constitutions changes sensed control and physical execution separately; competence, NoControl, masked/biased sensing and interference controls.5 models/20 runs/55 selected native prefixes, prior acquired history preserved. Finite units only; functional recovery is not complete clearance. No clinical, learned clearance or Task join claim.';clause.obligations=[...new Set([...clause.obligations,ro(8),ro(9),ro(12),ro(13),ro(19),ro(20),ro(21)])];}
+families[0].rationale+=' REV64 adds bounded intoxication/control differences across constitutional clearance, preserving independent execution and prior acquired history. No clinical model or global integration.';
+supplemental.push('CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md','INTOXICATION_CONTROL_FINDINGS.md','INTOXICATION_CONTROL_CLOSURE_REV1.json','CHOSEN_REAPPRAISAL_READINESS.md');
+// REV65: chosen reappraisal component, native admission remains open.
+{const clause=families[4].clauses[6];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md',p+'CHOSEN_REAPPRAISAL_CLOSURE_REV1.json');clause.rationale='VER-C3-CHOSEN-REAPPRAISAL-001:4 models/43 runs/387 complete COMPONENT prefixes; actual goal-relative strategy choice, independent completion and later conditional frame/affect preserve learned evidence. BenefitRelative/KnowledgeOnly/NoReappraisal and both projections retained. No physical protection or native public admission; source/authority/scheduler/Save132 gate explicitly OPEN.';clause.obligations=[...new Set([...clause.obligations,ro(10),ro(11),ro(12),ro(19),ro(20),ro(21)])];}
+families[4].rationale+=' REV65 adds chosen conditional reappraisal in component scope only; native public source/authority/scheduler integration remains OPEN. Prior instructed-framing profile unchanged.';
+supplemental.push('CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md','CHOSEN_REAPPRAISAL_FINDINGS.md','CHOSEN_REAPPRAISAL_CLOSURE_REV1.json','CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md');
+// REV66: native chosen reappraisal closes its component admission gate.
+{const clause=families[4].clauses[6];clause.evidence.push(p+'CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md',p+'CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json');clause.rationale+=' VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001 now closes the previously open native gate:4 models/43 runs/387 native prefixes; twelve actual stages, exact component rows/RNG, disjoint owners, safe views and Save132/publication. No broader psychological claim.';clause.obligations=[...new Set([...clause.obligations,ro(22)])];}
+families[4].rationale+=' REV66 closes native chosen-reappraisal admission; earlier component-open statements are historical. Social embarrassment remains unqualified.';
+supplemental.push('CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md','CHOSEN_REAPPRAISAL_PUBLIC_FINDINGS.md','CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json','CHOSEN_REAPPRAISAL_WRAPPER_EXTENSION_REV1.json','EMBARRASSMENT_READINESS.md');
+// REV67: embarrassment without avoidance, component scope.
+{const clause=families[4].clauses[3];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md',p+'EMBARRASSMENT_CLOSURE_REV1.json');clause.rationale='VER-C3-EMBARRASSMENT-001:6 models/69 runs/483 component prefixes; independent self-mismatch/evaluator-awareness/negative-evaluation evidence and personal relevance derive social affect. Five of eight fine-calibration seeds participate with positive affect and avoidance base; same-seed participation-goal removal yields withdrawal. Execution and cue remain separate. Fine/CoarseUnit/NoAffectReasons, Mean/Latest, JudgmentOnly and scalar projection retained; initial calibration equality preserved. Native admission OPEN; no general norm, physiological or clinical law.';clause.obligations=[...new Set([...clause.obligations,ro(10),ro(11),ro(12),ro(19),ro(20),ro(21)])];}
+families[4].rationale+=' REV67 adds component embarrassment without avoidance; earlier social-embarrassment-unqualified prose is historical for this bounded witness only. Native integration remains OPEN.';
+supplemental.push('CAMPAIGN3_EMBARRASSMENT_QUALIFICATION.md','EMBARRASSMENT_FINDINGS.md','EMBARRASSMENT_CLOSURE_REV1.json','EMBARRASSMENT_PUBLIC_READINESS.md','embarrassment-development-rev1/PRESERVATION.json');
+// REV68: native embarrassment closes its immediate admission gate.
+{const clause=families[4].clauses[3];clause.evidence.push(p+'CAMPAIGN3_EMBARRASSMENT_PUBLIC_QUALIFICATION.md',p+'EMBARRASSMENT_PUBLIC_CLOSURE_REV1.json');clause.rationale+=' VER-C3-EMBARRASSMENT-PUBLIC-001 closes native admission:6/69/483, exact component rows/RNG/presence, three writers, actual scheduled phases, Save132 and wrapper publication. Corrected0.2 uses complete110/display110; rejected115 cohort preserved. No broader psychological claim.';clause.obligations=[...new Set([...clause.obligations,ro(22)])];}
+families[4].rationale+=' REV68 closes native embarrassment admission; earlier component-native-open prose is historical for that bounded profile.';
+supplemental.push('CAMPAIGN3_EMBARRASSMENT_PUBLIC_QUALIFICATION.md','EMBARRASSMENT_PUBLIC_FINDINGS.md','EMBARRASSMENT_PUBLIC_CLOSURE_REV1.json','EMBARRASSMENT_WRAPPER_EXTENSION_REV1.json','embarrassment-public-development-rev1/PRESERVATION.json','DEFINING_MEMORY_READINESS.md');
+// REV69: discriminating bridge, not full old-defining-memory closure.
+families[2].rationale+=' VER-C3-DEFINING-MEMORY-BRIDGE-001 supplies4 retention models/288 component cases with actual acquired GA significance and published recollection. Capacity pressure distinguishes significance-first while retaining access/retention separation. Different-meaning source interventions and native continuation remain open; clause2 stays BLOCKED.';
+supplemental.push('CAMPAIGN3_DEFINING_MEMORY_BRIDGE_QUALIFICATION.md','DEFINING_MEMORY_BRIDGE_FINDINGS.md','DEFINING_MEMORY_BRIDGE_CLOSURE_REV1.json','DEFINING_MEMORY_INTEGRATION_READINESS.md','defining-memory-development-rev1/PRESERVATION.json');
+// REV70: meaning/use gap closed; native continuation remains.
+families[2].rationale+=' VER-C3-DEFINING-MEANING-001 supplies4 models/68 cases/308 repeated component stages: same acquired evidence under different goals earns meaning; actual presentation/use is counted; later reports preserve historical content. Equal uncertain distance ranges remain indeterminate. Native continuation remains open, so clause2 stays BLOCKED.';
+supplemental.push('CAMPAIGN3_DEFINING_MEANING_QUALIFICATION.md','DEFINING_MEANING_FINDINGS.md','DEFINING_MEANING_CLOSURE_REV1.json','DEFINING_MEMORY_PUBLIC_READINESS.md','defining-meaning-development-rev1/PRESERVATION.json');
+supplemental.push('DEFINING_NATIVE_IMPLEMENTATION_CHECKPOINT.md','DEFINING_ACQUISITION_CHECK_REV1.json','defining-acquisition-development-rev1/PRESERVATION.json');
+supplemental.push('DEFINING_CONTINUATION_INPUTS_CHECKPOINT.md','DEFINING_CONTINUATION_INPUTS_CHECK_REV1.json');
+supplemental.push('DEFINING_NATIVE_LIFECYCLE_CHECKPOINT.md','DEFINING_NATIVE_LIFECYCLE_CHECK_REV1.json','defining-lifecycle-development-rev1/PRESERVATION.json','defining-lifecycle-development-rev2/PRESERVATION.json');
+supplemental.push('DEFINING_NATIVE_MEMORY_OWNER_CHECKPOINT.md','DEFINING_NATIVE_MEMORY_OWNER_CHECK_REV1.json',...[1,2,3,4,5].map(n=>'defining-memory-owner-development-rev'+n+'/PRESERVATION.json'));
+supplemental.push('DEFINING_NATIVE_CURRENT_CHECKPOINT.md','DEFINING_NATIVE_CURRENT_CHECK_REV1.json','defining-current-development-rev1/PRESERVATION.json');
+supplemental.push('DEFINING_NATIVE_REHEARSAL_CHECKPOINT.md','DEFINING_NATIVE_REHEARSAL_CHECK_REV1.json','defining-rehearsal-development-rev1/PRESERVATION.json');
+supplemental.push('DEFINING_NATIVE_COHORT_CHECKPOINT.md','DEFINING_NATIVE_COHORT_CHECK_REV1.json','DEFINING_PUBLIC_SAVE_GATE.md','defining-native-cohort-rev1/MANIFEST.json');
+supplemental.push('DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md','DEFINING_PUBLIC_IMPLEMENTATION_CHECK_REV1.json','defining-public-development-rev1/PRESERVATION.json','defining-public-development-rev1/MANIFEST.json','defining-public-development-rev2/MANIFEST.json','DEFINING_WRAPPER_EXTENSION_REV1.json');
 const inventory=[...new Set([...reportNames,...supplemental].map(n=>p+n).concat([briefPath,'reference/RESEARCH.md',report]))].sort().map(file=>({path:file,sha256:sha(file),inspection:file==='reference/RESEARCH.md'?'Selected Phase2.97 closure/attribution/calibration/reduction sections; not whole historical log':'Coverage/limits/findings audit; linked raw receipts retain their reported public/component scope, not freshly reexecuted.'}));
 const ledger=read(p+'VERDICT_LEDGER.md');
 const verdicts=[...ledger.matchAll(/^## `?(VER-[A-Z0-9-]+)/gm)].map(m=>m[1]);
@@ -242,11 +280,12 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=62;
-result.date='2026-09-27';
-result.counters.highestAllocatedRecordType=1458;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV61.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV61.json'),disposition:'Native disposition strengthens existing12.12-7 only;9/15/285 and44+328 tests/build.80 verdicts; no additional clause or exit promotion.'};
-result.publicWrapperGate={path:p+'DISPOSITION_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared50-producer/53-factory inventory; original49 audit retained. Reopen on new wrapper ownership.'};
+result.snapshotRevision=78;
+result.date='2026-09-28';
+result.counters.highestAllocatedRecordType=1492;
+result.counters.allocatedSinceVerdict=8;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV77.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV77.json'),disposition:'Focused defining public implementation:1 profile/3 restored prefixes/5 fault points;17+328 tests/typecheck/build. Full68 public matrix OPEN;1492/8.'};
+result.publicWrapperGate={path:p+'DEFINING_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared53-producer/56-factory inventory; predecessor52/51/50/49 scopes preserved. Full defining public prefix matrix remains OPEN; reopen on new wrapper ownership.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

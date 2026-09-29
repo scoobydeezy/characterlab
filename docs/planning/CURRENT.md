@@ -1,36 +1,37 @@
 # Current research entry point
 
-**Updated 2026-09-27. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Native disposition admission COMPLETE — VER-C3-DISPOSITION-PUBLIC-001.**
-LOCAL DISPOSITION; no architectural blocker. Start CAMPAIGN3_DISPOSITION_PUBLIC_QUALIFICATION.md
-and DISPOSITION_PUBLIC_CLOSURE_REV1.json. Contract disposition-public/0.1-candidate.
+**Defining-memory public implementation VERIFIED; full public matrix OPEN.**
+Start DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md and DEFINING_PUBLIC_SAVE_GATE.md.
+VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
 
 | Counter | Value |
 |---|---|
-| Highest permanently allocated record type | **1458** |
-| Allocated since last verdict/corpus member | **0** |
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **8** |
 | Research obligations | **1 active / 19 conditional / 0 unowned** |
-| Closed obligations | **2: RO-C3-018 / RO-C3-022** |
-| Corpus / named verdict entries | **0.29.0 - 21 members / 80 verdicts** |
-| Brief clauses / families | **132 / 15** |
-| Brief clause dispositions | **106 bounded / 20 partial / 6 blocked** |
-| Native qualification | **9 models / 15 runs / 285 prefixes** |
-| Validation | **44 affected / 328 reference tests; build passed** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
+| Public focused evidence | **1 profile;27 instants;8 native stage comparisons;9 saves** |
+| Successful public restore clocks | **0,39,4000; pending rehearsal continues identically** |
+| Reached rollback instants | **38,39,42,43,4000** |
+| Fresh validation | **17 focused/328 reference tests; typecheck/build pass** |
+| Native wrapper inventory | **53 producers /56 factories; prior scopes preserved** |
 
-Ten actual phases preserve prior-learning causality and original component expression/
-journal bytes. Constitution has no writer; identity, plastic and physical state have
-separate owners. Typed operands expose original qualified lineage. Refold has no plastic
-leaf. Step/Leaky and joint feedback competitors remain distinct; no general fusion or
-independent dual-effect necessity is established. No calendar-time ageing claim.
+Closed recipe, opaque model, exact empty-S0 originals, successor identities and
+fixed zero32 seed. Actual scheduler Save132 and full original-prefix replay;
+no saved state injection. Both runtime and factory projection guard publication.
+Observer view exposes only actual recollections and projected judgments. Native
+handler/scheduler body unchanged. Preserve first test-only Node typing rejection;
+first executed cohort passes17/17 with unchanged production. No new verdict.
 
-All native prefixes restore/advance by whole-save replay. Whole character projections
-preserve failed-execution and stored/derived controls. Reached phase faults and wrapper
-microtask-window tests pass. Current wrapper inventory50 producers/53 factories; use
-scripts/check-disposition-wrapper-extension.mjs. Original49 scope and predecessor
-receipts remain unchanged. Primary final native save is about44MB; no scaling claim.
-
-Next SLEEP_CONTROL_READINESS.md: matched sleep-loss/control effects without rewriting
-constitution, values, goals or competence. Existing biological operands do not alone
-qualify that currently BLOCKED clause. No owner ruling. RO019 ACTIVE; RO021 CONDITIONAL
-and mandatory before final exit. AuditREV62; Campaign3 NOT EXIT-READY.
+Next all68 public programs and1680 S0-through-settlement prefix restores, exact
+component/native results and observer controls. Focused3 restored prefixes do not
+replace this gate; the earlier68 internal native cases remain separate evidence.
+Carried query, empty graph, scheduled baseline and diagnostic worldAfter limits stay.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 CLOSED for current inventory,
+reopens on another wrapper change. AuditREV78; Campaign3 NOT EXIT-READY.
+No architectural owner ruling. Full defining-memory closure remains OPEN.

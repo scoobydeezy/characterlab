@@ -1,0 +1,21 @@
+import {describe,it,expect} from 'vitest';
+import receipt from '../../docs/planning/DEFINING_MEMORY_TRAINING_REV1.json';
+import {definingTraining,continueDefiningMemory,definingMemoryBytes,definingCases,type DefiningCase} from '../campaign3/definingMemoryExperiment';
+const bytes=(s:string)=>Uint8Array.from(s.match(/../g)!.map(x=>parseInt(x,16))),training=(admit=true)=>definingTraining(bytes(receipt.snapshots[admit?1:0].state));
+const base:DefiningCase={law:'SignificanceFirst',admit:true,capacity:1,now:4000,cue:'matching'};
+const run=(over:Partial<DefiningCase>={})=>{const spec={...base,...over};return continueDefiningMemory(training(spec.admit),spec);};
+const ids=(r:ReturnType<typeof run>)=>r.result.publication.recollections.map(r=>r.content.winner.id);
+const focal=()=>training().memory.find(a=>a.units.some(u=>u.outcomeSignificanceDirections.length))!;
+describe('defining memory composed bridge',()=>{
+ it('actual admission differs only in significance, with equal acquired content and use',()=>{expect(definingMemoryBytes(training(false),true)).toEqual(definingMemoryBytes(training(true),true));expect(definingMemoryBytes(training(false))).not.toEqual(definingMemoryBytes(training(true)));expect(training().memory).toHaveLength(16);expect(training().memory.every(a=>a.units.every(u=>u.useProtection))).toBe(true);});
+ it('old focal content is actually published after competitor loss',()=>{const r=run(),f=focal();expect(f.acquiredAt).toBe(5n);expect(ids(r)).toEqual([f.id]);expect(r.result.publication.recollections[0].content.winner.units[0].views).toEqual(f.units[0].views);expect(r.result.retained.filter(a=>a.kind==='EventContinuant')).toHaveLength(1);});
+ it.each(['AgeOnly','UseOnly','SharedProtection'] as const)('%s retains a newer episode at equal capacity/use',law=>{expect(ids(run({law}))).not.toContain(focal().id);expect(run({law}).result.retained.filter(a=>a.kind==='EventContinuant')[0].at).toBe(35n);});
+ it('withholding actual significance joins removes the focal survival advantage',()=>{expect(ids(run({admit:false}))).not.toContain(focal().id);});
+ it('age changes exact accessibility while preserving capacity-selected content',()=>{const a=run({now:40}),b=run({now:4000});expect(ids(a)).toEqual(ids(b));expect(a.result.scores[0].base.compare(b.result.scores[0].base)).toBeGreaterThan(0);});
+ it('absent cue causes no read and no publication despite retention',()=>{const r=run({cue:'absent'});expect(r.result.reads).toBe(0);expect(ids(r)).toEqual([]);expect(r.result.retained.some(a=>a.id===focal().id)).toBe(true);});
+ it('zero capacity loses the episode without an archive fallback',()=>{expect(ids(run({capacity:0}))).toEqual([]);expect(run({capacity:0}).result.scores).toEqual([]);});
+ it('unrelated cue removes associative pull but does not invent a zero-score filter',()=>{const a=run(),b=run({cue:'unrelated'});expect(a.result.scores[0].pull.compare(b.result.scores[0].pull)).toBeGreaterThan(0);expect(ids(b)).toEqual(ids(a));});
+ it('capacity eight preserves the focal trace but a newer memory wins recall',()=>{const r=run({capacity:8});expect(r.result.retained.some(a=>a.id===focal().id)).toBe(true);expect(ids(r)).not.toContain(focal().id);});
+ it('all288 continuations reproduce every stage and leave training untouched',()=>{expect(definingCases()).toHaveLength(288);for(const spec of definingCases()){const t=training(spec.admit),before=definingMemoryBytes(t),a=continueDefiningMemory(t,spec),b=continueDefiningMemory(t,spec);expect(a.stages).toEqual(b.stages);expect(definingMemoryBytes(t)).toEqual(before);}});
+ it('malformed case rejects before continuation',()=>{expect(()=>run({capacity:2})).toThrow('DEFINING_CASE');});
+});
