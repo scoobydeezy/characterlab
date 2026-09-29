@@ -893,3 +893,7 @@ VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 test
 
 ### 2026-09-27 — defining meaning/use
 4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN. Next docs/planning/DEFINING_MEMORY_PUBLIC_READINESS.md under the escalation policy; no owner ruling.
+
+
+### 2026-09-29 — defining memory native public qualification
+68 public programs/68 models/1680 restored prefixes (1612 advancing/68 terminal);376 exact native stages;8 diagnostic observer pairs;17 focused/328 reference tests/build;1492/0. Empty-S0 acquired history, goal-relative meaning, rehearsal, retention and final recall survive typed public admission, actual Save132 and original-input restore under four retention laws. Brief12.3-2 bounded. Next docs/planning/DEVELOPMENT_COVERAGE_READINESS.md under the escalation policy; no owner ruling or Campaign3 exit.

@@ -2887,3 +2887,10 @@ Actual GA37/38 source, unchanged retention/recollection kernels; no new native a
 BOUNDED COMPONENT INTEGRATION QUALIFIED / LOCAL DISPOSITION, defining-meaning/0.1-candidate.
 4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
 Preserve IndeterminateRelation versus SameDistance failure; no inherited law changed. RO005/006/007/009/010/019/020/021. Evidence CAMPAIGN3_DEFINING_MEANING_QUALIFICATION.md and DEFINING_MEANING_CLOSURE_REV1.json. Next DEFINING_MEMORY_PUBLIC_READINESS.md; no owner ruling or full defining-memory closure.
+
+
+## `VER-C3-DEFINING-PUBLIC-001` — defining memory: native public qualification (2026-09-29)
+
+BOUNDED NATIVE PUBLIC QUALIFIED / LOCAL DISPOSITION, defining-public/0.1-candidate.
+68 public programs/68 models/1680 restored prefixes (1612 advancing/68 terminal);376 exact native stages;8 diagnostic observer pairs;17 focused/328 reference tests/build;1492/0. Empty-S0 acquired history, goal-relative meaning, rehearsal, retention and final recall survive typed public admission, actual Save132 and original-input restore under four retention laws. Brief12.3-2 bounded.
+Restore checks one actual successor per prefix, not every full tail. Carried cue, empty graph, scheduled current baseline, diagnostic worldAfter, fixed zero32 seed and sparse idle horizons remain bounded controls. No law selection, comparator retirement, autobiographical identity, source trust or general consolidation. Preserve test-only Node typing rejection. RO005/006/007/009/010/019/020/021/022. Evidence CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md and DEFINING_PUBLIC_CLOSURE_REV1.json. Next DEVELOPMENT_COVERAGE_READINESS.md; no owner ruling.

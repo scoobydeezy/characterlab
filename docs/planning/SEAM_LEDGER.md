@@ -2935,3 +2935,8 @@ GA use/significance tier equality now discriminates under tighter capacity. Shar
 ### Defining memory: meaning/use integration — 2026-09-27
 VER-C3-DEFINING-MEANING-001: 4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
 Retain goal-distance qualification, actual attribution, historical credit, presentation history, later current assessment and retained event content. Do not collapse identical uncertain ranges to known equality. Wrapper52/55 unchanged; no native continuation or law retirement. See DEFINING_MEANING_FINDINGS.md.
+
+
+### Defining memory: native public qualification — 2026-09-29
+VER-C3-DEFINING-PUBLIC-001: 68 public programs/68 models/1680 restored prefixes (1612 advancing/68 terminal);376 exact native stages;8 diagnostic observer pairs;17 focused/328 reference tests/build;1492/0. Empty-S0 acquired history, goal-relative meaning, rehearsal, retention and final recall survive typed public admission, actual Save132 and original-input restore under four retention laws. Brief12.3-2 bounded.
+Retain SignificanceFirst/SharedProtection/UseOnly/AgeOnly, historical content/credit, current judgment, retention, access and publication as separate owners. Wrapper53/56; no law retirement. See CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md and DEFINING_PUBLIC_FINDINGS.md.

@@ -1,37 +1,35 @@
 # Current research entry point
 
-**Updated 2026-09-28. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+**Updated 2026-09-29. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
 
-**Defining-memory public implementation VERIFIED; full public matrix OPEN.**
-Start DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md and DEFINING_PUBLIC_SAVE_GATE.md.
-VER-C3-DEFINING-MEANING-001 remains the latest accepted psychological qualification.
+**Defining memory NATIVE PUBLIC QUALIFIED — VER-C3-DEFINING-PUBLIC-001.**
+LOCAL DISPOSITION. Start CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md and
+DEFINING_PUBLIC_CLOSURE_REV1.json; defining-public/0.1-candidate. No owner ruling pending.
 
 | Counter | Value |
 |---|---|
 | Highest permanently allocated record type | **1492** |
-| Allocated since last verdict/corpus member | **8** |
+| Allocated since last verdict/corpus member | **0** |
 | Research obligations | **1 active / 19 conditional / 0 unowned** |
 | Closed obligations | **2: RO-C3-018 /RO-C3-022** |
-| Corpus /named verdict entries | **0.29.0 -21 members /88 verdicts** |
+| Corpus /named verdict entries | **0.29.0 -21 members /89 verdicts** |
 | Brief clauses /families | **132 /15** |
-| Brief clause dispositions | **110 bounded /20 partial /2 blocked** |
-| Public focused evidence | **1 profile;27 instants;8 native stage comparisons;9 saves** |
-| Successful public restore clocks | **0,39,4000; pending rehearsal continues identically** |
-| Reached rollback instants | **38,39,42,43,4000** |
-| Fresh validation | **17 focused/328 reference tests; typecheck/build pass** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Public matrix | **68 programs /68 models /1680 restored prefixes** |
+| Successor checks | **1612 advancing /68 terminal; 376 exact native stages** |
+| Validation | **17 focused/328 reference tests; typecheck/build (receipts reverified)** |
 | Native wrapper inventory | **53 producers /56 factories; prior scopes preserved** |
 
-Closed recipe, opaque model, exact empty-S0 originals, successor identities and
-fixed zero32 seed. Actual scheduler Save132 and full original-prefix replay;
-no saved state injection. Both runtime and factory projection guard publication.
-Observer view exposes only actual recollections and projected judgments. Native
-handler/scheduler body unchanged. Preserve first test-only Node typing rejection;
-first executed cohort passes17/17 with unchanged production. No new verdict.
+Every S0/settled prefix of all68 selected programs restores from original inputs
+with exact Save132 and observer bytes, then one actual successor or terminal
+exhaustion. No FAILURE record; zero production change. Eight diagnostic worldAfter
+pairs keep whole observer projections equal. Brief12.3-2 (old but defining memory)
+advances from BLOCKED to bounded. The workers finished after the executing session
+lost context; the closing check and identity receipts were run afterwards on the
+untouched write-once receipts.
 
-Next all68 public programs and1680 S0-through-settlement prefix restores, exact
-component/native results and observer controls. Focused3 restored prefixes do not
-replace this gate; the earlier68 internal native cases remain separate evidence.
-Carried query, empty graph, scheduled baseline and diagnostic worldAfter limits stay.
+Next DEVELOPMENT_COVERAGE_READINESS.md: audit existing evidence for a bounded
+developmental witness before any allocation. Carried cue, empty graph, scheduled
+baseline, diagnostic worldAfter and one-successor-per-prefix limits remain.
 RO019 ACTIVE; RO021 final history unsatisfied; RO022 CLOSED for current inventory,
-reopens on another wrapper change. AuditREV78; Campaign3 NOT EXIT-READY.
-No architectural owner ruling. Full defining-memory closure remains OPEN.
+reopens on another wrapper change. AuditREV79; Campaign3 NOT EXIT-READY.

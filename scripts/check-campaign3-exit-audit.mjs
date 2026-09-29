@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV78.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV79.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -269,6 +269,10 @@ supplemental.push('DEFINING_NATIVE_CURRENT_CHECKPOINT.md','DEFINING_NATIVE_CURRE
 supplemental.push('DEFINING_NATIVE_REHEARSAL_CHECKPOINT.md','DEFINING_NATIVE_REHEARSAL_CHECK_REV1.json','defining-rehearsal-development-rev1/PRESERVATION.json');
 supplemental.push('DEFINING_NATIVE_COHORT_CHECKPOINT.md','DEFINING_NATIVE_COHORT_CHECK_REV1.json','DEFINING_PUBLIC_SAVE_GATE.md','defining-native-cohort-rev1/MANIFEST.json');
 supplemental.push('DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md','DEFINING_PUBLIC_IMPLEMENTATION_CHECK_REV1.json','defining-public-development-rev1/PRESERVATION.json','defining-public-development-rev1/MANIFEST.json','defining-public-development-rev2/MANIFEST.json','DEFINING_WRAPPER_EXTENSION_REV1.json');
+// REV79: full defining public matrix closes Brief12.3-2 in bounded scope.
+{const clause=families[2].clauses[1];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md',p+'DEFINING_PUBLIC_CLOSURE_REV1.json');clause.rationale='VER-C3-DEFINING-PUBLIC-001: an old event acquired from empty S0 stays defining through goal-relative significance and actual use, while original content, historical credit, later judgment, retention and publication stay separate.68 public programs/1680 restored prefixes, exact Save132/observer bytes and one actual successor each;376 exact native stages. SignificanceFirst/SharedProtection/UseOnly/AgeOnly all retained. Carried cue, empty graph, scheduled baseline, diagnostic worldAfter and sparse idle horizons are bounded controls; no autobiographical identity, general consolidation or ageing law.';clause.obligations=[...new Set([...clause.obligations,ro(10),ro(21),ro(22)])];}
+families[2].rationale+=' REV79: VER-C3-DEFINING-PUBLIC-001 closes native public defining memory and promotes clause2 to bounded. Identity recognition, affect bias and broader consumers keep their earlier dispositions.';
+supplemental.push('CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md','DEFINING_PUBLIC_FINDINGS.md','DEFINING_PUBLIC_MATRIX_CHECK_REV1.json','DEFINING_PUBLIC_IDENTITIES_REV1.json','DEFINING_PUBLIC_CLOSURE_REV1.json','defining-public-matrix-rev1/MANIFEST.json','DEVELOPMENT_COVERAGE_READINESS.md');
 const inventory=[...new Set([...reportNames,...supplemental].map(n=>p+n).concat([briefPath,'reference/RESEARCH.md',report]))].sort().map(file=>({path:file,sha256:sha(file),inspection:file==='reference/RESEARCH.md'?'Selected Phase2.97 closure/attribution/calibration/reduction sections; not whole historical log':'Coverage/limits/findings audit; linked raw receipts retain their reported public/component scope, not freshly reexecuted.'}));
 const ledger=read(p+'VERDICT_LEDGER.md');
 const verdicts=[...ledger.matchAll(/^## `?(VER-[A-Z0-9-]+)/gm)].map(m=>m[1]);
@@ -280,12 +284,12 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=78;
-result.date='2026-09-28';
+result.snapshotRevision=79;
+result.date='2026-09-29';
 result.counters.highestAllocatedRecordType=1492;
-result.counters.allocatedSinceVerdict=8;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV77.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV77.json'),disposition:'Focused defining public implementation:1 profile/3 restored prefixes/5 fault points;17+328 tests/typecheck/build. Full68 public matrix OPEN;1492/8.'};
-result.publicWrapperGate={path:p+'DEFINING_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared53-producer/56-factory inventory; predecessor52/51/50/49 scopes preserved. Full defining public prefix matrix remains OPEN; reopen on new wrapper ownership.'};
+result.counters.allocatedSinceVerdict=0;
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV78.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV78.json'),disposition:'VER-C3-DEFINING-PUBLIC-001:68 public programs/1680 restored prefixes/376 native stages;17+328 tests/build;1492/0. Brief12.3-2 BLOCKED to bounded;111 bounded/20 partial/1 blocked;89 verdicts.'};
+result.publicWrapperGate={path:p+'DEFINING_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared53-producer/56-factory inventory; predecessor52/51/50/49 scopes preserved. Full defining public matrix passes under VER-C3-DEFINING-PUBLIC-001; reopen on new wrapper ownership.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

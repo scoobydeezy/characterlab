@@ -45,7 +45,16 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-09-28):** defining public implementation VERIFIED, full matrix OPEN.
+**Current routing (2026-09-29):** defining memory NATIVE PUBLIC QUALIFIED:
+VER-C3-DEFINING-PUBLIC-001. Start CURRENT.md and CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md.
+68 public programs/68 models/1680 restored prefixes;1612 advancing/68 terminal
+successors;376 exact native stages;17 focused/328 reference tests/build.1492/0.
+Brief12.3-2 bounded. One successor per prefix, not full tails; carried cue, empty
+graph, scheduled baseline and diagnostic worldAfter remain controls. No law selected
+or comparator retired. Wrapper53/56. AuditREV79:111/20/1;89 verdicts. Next
+DEVELOPMENT_COVERAGE_READINESS.md; no owner ruling. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-09-28):** defining public implementation VERIFIED, full matrix OPEN.
 Start CURRENT.md and DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Closed recipe,
 empty-S0 originals, successor identity, actual Save132 and original-prefix replay;
 both runtime/factory publication guards.1 profile/27 instants/8 native stage matches/
