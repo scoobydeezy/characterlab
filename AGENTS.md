@@ -45,7 +45,65 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-09-29):** defining memory NATIVE PUBLIC QUALIFIED:
+**Current routing (2026-10-01):** VER-C3-DEVELOPMENT-PUBLIC-001 qualifies development-public/0.1-candidate:
+7 models/36 public programs/668 actual Save132 prefixes,632 advancing/36 terminal;
+8216 committed native stages;21 focused/328 reference tests/typecheck/build;1508/0.
+Independent learning and event-time personality weighting retain exact component
+trajectories, original eligibility and immutable constitution under13 native stages.
+Step/Ramp/gain controls, all seeds, both test cohorts and all harness revisions preserved;113 earlier
+restore receipts retained without double counting. Wrapper54/57; prior scopes intact.
+Brief12.15-1 bounded; AuditREV84:112 bounded/20 partial/0 blocked;91 verdicts.
+No universal gain/calendar-age claim. RO008/009/010/013/017/019/020/021/022.
+Evidence CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md and DEVELOPMENT_PUBLIC_CLOSURE_REV1.json.
+Next CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+Earlier harness routing below is historical; the native matrix is complete.
+
+
+**Harness routing update:** continue DEVELOPMENT_PUBLIC_PLAN_REV3.json with
+qualify-development-public-rev3.mjs,12 partitions and Vite watch:null. Preserve
+113 distinct prior restores and the watcher-backlog REV3 finding. Preserve original4 complete
+programs/94 native prefixes and DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json.
+Only final trusted-trace audit parsing changed; all identities/production frozen.
+Native qualification remains OPEN; counters1508/16. CURRENT.md lists live sessions.
+
+
+**Prior routing (2026-10-01):** Native development implementation VERIFIED; full matrix RUNNING.13 actual stages,
+primary18 exact component rows/bundles and234 traces;21 focused/328 reference tests/
+typecheck/build.1508/16. Typed originals, disjoint owners, Save132/original replay,
+all reached stage faults and both publication barriers pass. Wrapper54/57 checked;
+prior53/52/51/50/49 scopes intact. Preserve first test-only read-only mutation error.
+Next finish36 public programs/668 native prefixes; earlier component restores do not
+satisfy this gate. No new verdict/Brief promotion;111/20/1;90 verdicts; AuditREV83.
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md; no owner ruling.
+
+
+**Prior routing (2026-10-01):** development COMPONENT QUALIFIED, VER-C3-DEVELOPMENT-001.
+Start CURRENT.md and CAMPAIGN3_DEVELOPMENT_QUALIFICATION.md.7 models/36 runs/668
+component prefixes;13 focused/328 reference tests/build;1492/0. Younger learning
+and greater event-time personality weight are independently qualified; eligibility
+and old event weights preserved. All8 early sampled pairs equal; all8 full probe
+sequences differ. Step/Ramp/gain controls and timeout cohort retained. Native gate
+OPEN: next DEVELOPMENT_PUBLIC_READINESS.md; no owner ruling. AuditREV82 stays
+111/20/1;90 verdicts. Wrapper53/56 unchanged. Campaign3 NOT EXIT-READY.
+
+**Owner amendment (2026-10-01):** DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md
+supersedes the prior developmental intake scope. Younger learning plasticity AND
+greater early personality-forming event weight are required, independently. Preserve
+eligibility, original constitution and event-time provenance; no retroactive reweighting.
+Exact laws remain candidates; no owner ruling.1492/0; AuditREV81 keeps111/20/1.
+
+**Current routing (2026-10-01):** development-history coverage audit COMPLETE;
+independent developmental-state implementation remains OPEN. Start CURRENT.md and
+DEVELOPMENT_HISTORY_CHECKPOINT.md.2 reused models/3 runs/51 public restores, all
+original hashes/views/executions preserved. Early practice changes later execution;
+identity/relationship/person projections remain equal. No production change/new
+verdict/allocation/Brief promotion.1492/0; wrapper53/56. AuditREV80:111/20/1,89 verdicts.
+Development is distinct from acquired skill/adaptation; next DEVELOPMENT_STATE_READINESS.md.
+Preserve import-query preflight failure. No owner ruling; Campaign3 NOT EXIT-READY.
+
+
+**Prior routing (2026-09-29):** defining memory NATIVE PUBLIC QUALIFIED:
 VER-C3-DEFINING-PUBLIC-001. Start CURRENT.md and CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md.
 68 public programs/68 models/1680 restored prefixes;1612 advancing/68 terminal
 successors;376 exact native stages;17 focused/328 reference tests/build.1492/0.

@@ -513,3 +513,7 @@ LOCAL DISPOSITION: record1490/schema1 permanently allocated by DEFINING_CURRENT_
 
 ## Defining native rehearsal and final recall — 2026-09-28
 LOCAL DISPOSITION: records1491..1492/schema1 permanently allocated before implementation by DEFINING_REHEARSAL_ALLOCATION_TABLE.json under defining-native-rehearsal/0.1-candidate. Actual carried cue/focal request and actual publication/attribution batch; no new namespace or owner. Existing1147/1148 occurrence namespaces reused. Counters1492/8; no new verdict.
+
+
+## Development public — 2026-10-01
+Records1493..1508/schema1 allocated before implementation by DEVELOPMENT_PUBLIC_ALLOCATION_TABLE.json under DEVELOPMENT_PUBLIC_CONTRACT.md. Reuse1155 for inherited task lineage. Separate phase, skill, belief and personality/history roots; old journal/constitution reused unchanged. Counters1508/16; native qualification OPEN.

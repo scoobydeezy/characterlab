@@ -724,6 +724,16 @@ DEVELOPMENTAL / AGE STATE
 PLASTIC ACQUIRED STATE
 ```
 
+**Owner-required developmental effects (2026-10-01):** younger developmental
+states must support higher learning plasticity and substantially greater enduring
+personality-forming influence of eligible experiences. These effects must be
+independently manipulable. Developmental weighting does not confer voluntariness,
+meaningfulness or knowledge; preserve original constitution and historical event
+qualification. Later age changes must not retroactively recompute the developmental
+weight of old contributions. Older characters can still learn and change. Exact
+age curves, gains and domain coverage remain experimental candidates. See
+`docs/planning/DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md`.
+
 Possible later phenomena include:
 
 - maturation;

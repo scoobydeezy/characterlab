@@ -5999,3 +5999,466 @@ reopens on another wrapper change. AuditREV78; Campaign3 NOT EXIT-READY.
 Live durable receipts: defining-public-matrix-rev1/CASE_*/PREFIX_*.json.
 Resume with scripts/qualify-defining-public-matrix.mjs workers0..3; completed receipts
 are hash-checked and preserved. No architecture blocker; closure remains OPEN.
+
+
+## Preserved index before development-history audit — 2026-10-01
+# Current research entry point
+
+**Updated 2026-09-29. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Defining memory NATIVE PUBLIC QUALIFIED — VER-C3-DEFINING-PUBLIC-001.**
+LOCAL DISPOSITION. Start CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md and
+DEFINING_PUBLIC_CLOSURE_REV1.json; defining-public/0.1-candidate. No owner ruling pending.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /89 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Public matrix | **68 programs /68 models /1680 restored prefixes** |
+| Successor checks | **1612 advancing /68 terminal; 376 exact native stages** |
+| Validation | **17 focused/328 reference tests; typecheck/build (receipts reverified)** |
+| Native wrapper inventory | **53 producers /56 factories; prior scopes preserved** |
+
+Every S0/settled prefix of all68 selected programs restores from original inputs
+with exact Save132 and observer bytes, then one actual successor or terminal
+exhaustion. No FAILURE record; zero production change. Eight diagnostic worldAfter
+pairs keep whole observer projections equal. Brief12.3-2 (old but defining memory)
+advances from BLOCKED to bounded. The workers finished after the executing session
+lost context; the closing check and identity receipts were run afterwards on the
+untouched write-once receipts.
+
+Next DEVELOPMENT_COVERAGE_READINESS.md: audit existing evidence for a bounded
+developmental witness before any allocation. Carried cue, empty graph, scheduled
+baseline, diagnostic worldAfter and one-successor-per-prefix limits remain.
+RO019 ACTIVE; RO021 final history unsatisfied; RO022 CLOSED for current inventory,
+reopens on another wrapper change. AuditREV79; Campaign3 NOT EXIT-READY.
+
+
+## Prior index before owner developmental requirements
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Development-history audit COMPLETE; developmental-state implementation OPEN.**
+Start DEVELOPMENT_HISTORY_CHECKPOINT.md and DEVELOPMENT_STATE_READINESS.md.
+LOCAL DISPOSITION; no owner ruling pending. Latest verdict remains
+VER-C3-DEFINING-PUBLIC-001.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /89 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Fresh evidence replay | **2 reused models /3 runs /51 public restores** |
+| Successors | **48 advancing /3 terminal; all original hashes preserved** |
+| Native wrapper inventory | **53 producers /56 factories; unchanged** |
+
+Same starting model, differing early practice and identical later inputs produce
+actual success/failure after episode loss. Identity/relationship/person projections
+remain equal. Separate rust comparator preserved. DISPOSITION public receipt check
+passes; historical tests/build are preserved, not freshly executed. No production
+change, new model, allocation, verdict or coverage promotion.
+
+Development is listed separately from skill/adaptation and needs an independent
+Developmental/Age State contributor. Reusing practice alone would erase that
+untested distinction; Brief12.15-1 stays BLOCKED. The permitted Dev -> Effective
+Disposition edge supplies next bounded implementation direction. Preserve failed
+preflight resource-query resolution; no experiment executed in that failed preflight.
+
+AuditREV80. RO019 ACTIVE; RO021 final history unsatisfied; RO022 CLOSED for current
+inventory.20 PARTIAL clauses remain separately owed. Campaign3 NOT EXIT-READY.
+
+
+## Index before developmental component execution
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Development-history audit COMPLETE; developmental-state implementation OPEN.**
+Start DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md, then
+DEVELOPMENT_HISTORY_CHECKPOINT.md. The owner directive supersedes the earlier intake
+scope: younger learning plasticity AND greater early personality-forming weight
+are required, independently. A direct disposition modifier alone is insufficient.
+LOCAL DISPOSITION; no owner ruling pending. Latest verdict remains
+VER-C3-DEFINING-PUBLIC-001.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /89 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Fresh evidence replay | **2 reused models /3 runs /51 public restores** |
+| Successors | **48 advancing /3 terminal; all original hashes preserved** |
+| Native wrapper inventory | **53 producers /56 factories; unchanged** |
+
+Same starting model, differing early practice and identical later inputs produce
+actual success/failure after episode loss. Identity/relationship/person projections
+remain equal. Separate rust comparator preserved. DISPOSITION public receipt check
+passes; historical tests/build are preserved, not freshly executed. No production
+change, new model, allocation, verdict or coverage promotion.
+
+Development is listed separately from skill/adaptation and needs an independent
+Developmental/Age State contributor. Reusing practice alone would erase that
+untested distinction; Brief12.15-1 stays BLOCKED. The permitted Dev -> Effective
+Disposition edge remains; owner-authorized developmental learning and personality
+formation routes now govern the next implementation. Preserve eligibility and
+event-time developmental provenance; age never grants voluntary authorship. Preserve failed
+preflight resource-query resolution; no experiment executed in that failed preflight.
+
+AuditREV81. RO019 ACTIVE; RO021 final history unsatisfied; RO022 CLOSED for current
+inventory.20 PARTIAL clauses remain separately owed. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Development component implemented; qualification matrix RUNNING.**
+Start DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md, then
+DEVELOPMENT_HISTORY_CHECKPOINT.md. The owner directive supersedes the earlier intake
+scope: younger learning plasticity AND greater early personality-forming weight
+are required, independently. A direct disposition modifier alone is insufficient.
+LOCAL DISPOSITION; no owner ruling pending. Latest verdict remains
+VER-C3-DEFINING-PUBLIC-001.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /89 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Fresh evidence replay | **2 reused models /3 runs /51 public restores** |
+| Successors | **48 advancing /3 terminal; all original hashes preserved** |
+| Native wrapper inventory | **53 producers /56 factories; unchanged** |
+
+development-component/0.1-candidate implements independent age-dependent learning
+and personality-forming gains.13 focused tests/328 reference tests/typecheck/build
+pass. First cohort6 passed/7 default-timeout failures preserved; unchanged production
+passes with realistic test timeout. No native admission or new verdict yet.
+
+Frozen matrix: DEVELOPMENT_COMPONENT_PLAN_REV1.json,36 cases/668 component prefixes.
+Four workers run scripts/qualify-development-component.mjs --part=0 through --part=3.
+Per-run DEVELOPMENT_COMPONENT_RUN_*_REV1.json receipts are write-once; existing PASS
+receipts are preserved on resume. Current process sessions61498/88787/99572/98251.
+Final checker: scripts/check-development-component.mjs --write only after all36 pass.
+Start DEVELOPMENT_COMPONENT_FINDINGS.md and DEVELOPMENT_PUBLIC_READINESS.md.
+
+Counters1492/0; wrapper53/56 unchanged. AuditREV81 remains111 bounded/20 partial/
+1 blocked until qualified updates. No whole-development/native or Campaign3 PASS.
+RO019 ACTIVE; RO021 unsatisfied; RO022 CLOSED for the unchanged wrapper inventory.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Development COMPONENT QUALIFIED — VER-C3-DEVELOPMENT-001.**
+Start CAMPAIGN3_DEVELOPMENT_QUALIFICATION.md. Both owner-required developmental
+effects execute independently: younger learning plasticity and greater early
+personality-forming weight. Original eligibility/authorship remain unchanged;
+later ageing does not reweight old contributions. Native integration remains OPEN.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1492** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Component qualification | **7 models /36 runs /668 restored prefixes** |
+| Successors | **632 advancing /36 terminal; one successor per prefix** |
+| Tests | **13 focused /328 reference; typecheck/build pass** |
+| Native wrapper inventory | **53 producers /56 factories; unchanged** |
+
+All8 declared seeds have early probability differences with equal early sampled
+choices; all8 full probe sequences differ. Step/Ramp and separate gain-disable
+controls remain. Preserve initial default-timeout test cohort and both source
+manifests. No universal gain, calendar-age or whole-development claim.
+
+**Next: DEVELOPMENT_PUBLIC_READINESS.md.** Typed native sources, sole writers,
+actual scheduler phases, RNG correspondence, Save132, original replay, reached
+faults and publication must close before the owner work order is fully integrated.
+DEVELOPMENT_COMPONENT_CHECK_REV1.json and DEVELOPMENT_COMPONENT_CLOSURE_REV1.json
+seal this component checkpoint. AuditREV82 retains Brief12.15-1 BLOCKED.
+
+LOCAL DISPOSITION; no owner ruling pending. Counters1492/0. RO019 ACTIVE;
+RO021 historical gate unsatisfied; RO022 CLOSED for current wrappers, reopen on
+native addition. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native development implementation VERIFIED; full matrix RUNNING.**
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Component remains qualified
+as VER-C3-DEVELOPMENT-001. Native development-public/0.1-candidate has13 actual stages,
+separate owners, closed originals, Save132 and original-input replay. Primary18 rows
+and all inherited decision bundles match the component;234 native traces.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Native wrapper inventory | **54 producers /57 factories; publication checked** |
+
+Frozen native matrix: DEVELOPMENT_PUBLIC_PLAN_REV1.json,7 models/36 public programs/
+668 expected actual Save132 restores (632 advancing/36 terminal). Four workers run
+scripts/qualify-development-public.mjs --part=0 through --part=3; process sessions
+46085/79337/70908/62945. Each completed prefix is preserved in
+development-public-prefixes-rev1; finished programs are DEVELOPMENT_PUBLIC_RUN_*_REV1.json.
+Resume preserves prior PASS receipts. Do not edit frozen sources while workers run.
+After all36 complete, run node scripts/check-development-public.mjs --write, then
+verify without --write and issue the bounded native verdict/coverage update.
+
+Preserve development-public-dev1 and dev2; initial typecheck rejected test-only direct
+read-only payload assignment. Both21-test cohorts pass; production unchanged. Step/
+Ramp, independent gains, all seeds, source/eligibility controls retained. No complete
+native qualification, Brief promotion or calendar-age/general learning law claim.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
+component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native development implementation VERIFIED; full matrix RUNNING.**
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Component remains qualified
+as VER-C3-DEVELOPMENT-001. Native development-public/0.1-candidate has13 actual stages,
+separate owners, closed originals, Save132 and original-input replay. Primary18 rows
+and all inherited decision bundles match the component;234 native traces.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Native wrapper inventory | **54 producers /57 factories; publication checked** |
+
+Frozen native matrix: DEVELOPMENT_PUBLIC_PLAN_REV2.json,7 models/36 public programs/
+668 expected actual Save132 restores (632 advancing/36 terminal). Twelve workers run
+scripts/qualify-development-public-rev2.mjs --part=0 through --part=11; sessions
+71520/19351/50653/55320/46010/36308/75753/43594/2674/81336/60588/35669. Each completed prefix is preserved in
+development-public-prefixes-rev2; finished programs are DEVELOPMENT_PUBLIC_RUN_*_REV2.json.
+Resume preserves prior PASS receipts. Do not edit frozen sources while workers run.
+After all36 complete, run node scripts/check-development-public-rev2.mjs --write, then
+verify without --write and issue the bounded native verdict/coverage update.
+
+Preserve DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json:4 original programs and94
+actual restore receipts passed before intentional worker stops. REV2 reexecutes all
+original prefixes and requires identical hashes; only the final trusted-trace RNG
+reader switches to structural decoding. Model/run/source identities unchanged.
+The completed original trace audits must match again.
+
+Preserve development-public-dev1 and dev2; initial typecheck rejected test-only direct
+read-only payload assignment. Both21-test cohorts pass; production unchanged. Step/
+Ramp, independent gains, all seeds, source/eligibility controls retained. No complete
+native qualification, Brief promotion or calendar-age/general learning law claim.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
+component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native development implementation VERIFIED; full matrix RUNNING.**
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Component remains qualified
+as VER-C3-DEVELOPMENT-001. Native development-public/0.1-candidate has13 actual stages,
+separate owners, closed originals, Save132 and original-input replay. Primary18 rows
+and all inherited decision bundles match the component;234 native traces.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Native wrapper inventory | **54 producers /57 factories; publication checked** |
+
+Frozen native matrix: DEVELOPMENT_PUBLIC_PLAN_REV3.json,7 models/36 public programs/
+668 expected actual Save132 restores (632 advancing/36 terminal). Twelve workers run
+scripts/qualify-development-public-rev3.mjs --part=0 through --part=11; sessions
+61022/50594/27907/74715/16937/83196/69350/58081/23487/45290/90909/85488. Each completed prefix is preserved in
+development-public-prefixes-rev3; finished programs are DEVELOPMENT_PUBLIC_RUN_*_REV3.json.
+Resume preserves prior PASS receipts. Do not edit frozen sources while workers run.
+After all36 complete, run node scripts/check-development-public-rev3.mjs --write, then
+verify without --write and issue the bounded native verdict/coverage update.
+
+REV3 disables Vite filesystem watching for batch execution. The startup profiler
+found an idle worker with a filesystem request/watcher backlog; watch-null probe
+loaded modules and ran the first frame in3.209 seconds. Preserve
+DEVELOPMENT_PUBLIC_HARNESS_REV3_FINDING.json and all113 distinct prior actual
+restore receipts (94 REV1 plus19 new REV2); no behavioral failure or source change.
+
+Preserve DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json:4 original programs and94
+actual restore receipts passed before intentional worker stops. REV2 reexecutes all
+original prefixes and requires identical hashes; only the final trusted-trace RNG
+reader switches to structural decoding. Model/run/source identities unchanged.
+The completed original trace audits must match again.
+
+Preserve development-public-dev1 and dev2; initial typecheck rejected test-only direct
+read-only payload assignment. Both21-test cohorts pass; production unchanged. Step/
+Ramp, independent gains, all seeds, source/eligibility controls retained. No complete
+native qualification, Brief promotion or calendar-age/general learning law claim.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
+component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native development implementation VERIFIED; full matrix RUNNING.**
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Component remains qualified
+as VER-C3-DEVELOPMENT-001. Native development-public/0.1-candidate has13 actual stages,
+separate owners, closed originals, Save132 and original-input replay. Primary18 rows
+and all inherited decision bundles match the component;234 native traces.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Native wrapper inventory | **54 producers /57 factories; publication checked** |
+
+Frozen native matrix: DEVELOPMENT_PUBLIC_PLAN_REV3.json,7 models/36 public programs/
+668 expected actual Save132 restores (632 advancing/36 terminal). Twelve workers run
+node --max-old-space-size=1536 scripts/qualify-development-public-rev3.mjs
+--part=0 through --part=11; sessions
+63132/58158/31427/26877/3866/55124/32086/22966/81933/37384/56631/91867. Each completed prefix is preserved in
+development-public-prefixes-rev3; finished programs are DEVELOPMENT_PUBLIC_RUN_*_REV3.json.
+Resume preserves prior PASS receipts. Do not edit frozen sources while workers run.
+After all36 complete, run node scripts/check-development-public-rev3.mjs --write, then
+verify without --write and issue the bounded native verdict/coverage update.
+
+REV3 disables Vite filesystem watching for batch execution. The startup profiler
+found an idle worker with a filesystem request/watcher backlog; watch-null probe
+loaded modules and ran the first frame in3.209 seconds. Preserve
+DEVELOPMENT_PUBLIC_HARNESS_REV3_FINDING.json and all113 distinct prior actual
+restore receipts (94 REV1 plus19 new REV2); no behavioral failure or source change.
+
+DEVELOPMENT_PUBLIC_WORKER_MEMORY_REV1.json records an operational resume at173
+REV3 prefixes/4 programs with1536MB V8 old-space cap per worker. Same frozen script;
+all completed receipts remain and are compared again on resume.
+
+Preserve DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json:4 original programs and94
+actual restore receipts passed before intentional worker stops. REV2 reexecutes all
+original prefixes and requires identical hashes; only the final trusted-trace RNG
+reader switches to structural decoding. Model/run/source identities unchanged.
+The completed original trace audits must match again.
+
+Preserve development-public-dev1 and dev2; initial typecheck rejected test-only direct
+read-only payload assignment. Both21-test cohorts pass; production unchanged. Step/
+Ramp, independent gains, all seeds, source/eligibility controls retained. No complete
+native qualification, Brief promotion or calendar-age/general learning law claim.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
+component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Native development implementation VERIFIED; full matrix RUNNING.**
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Component remains qualified
+as VER-C3-DEVELOPMENT-001. Native development-public/0.1-candidate has13 actual stages,
+separate owners, closed originals, Save132 and original-input replay. Primary18 rows
+and all inherited decision bundles match the component;234 native traces.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **16** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /90 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **111 bounded /20 partial /1 blocked** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Native wrapper inventory | **54 producers /57 factories; publication checked** |
+
+Frozen native matrix: DEVELOPMENT_PUBLIC_PLAN_REV3.json,7 models/36 public programs/
+668 expected actual Save132 restores (632 advancing/36 terminal). The operational driver
+node scripts/run-development-public-batch.mjs runs12 fixed partitions in a queue
+of four concurrent workers, each with4096MB old-space cap. Driver session18503;
+progress/logs in development-public-batch-rev1/STATUS.json and part*.log.
+Each completed prefix is preserved in
+development-public-prefixes-rev3; finished programs are DEVELOPMENT_PUBLIC_RUN_*_REV3.json.
+Resume preserves prior PASS receipts. Do not edit frozen sources while workers run.
+After all36 complete, run node scripts/check-development-public-rev3.mjs --write, then
+verify without --write and issue the bounded native verdict/coverage update.
+
+REV3 disables Vite filesystem watching for batch execution. The startup profiler
+found an idle worker with a filesystem request/watcher backlog; watch-null probe
+loaded modules and ran the first frame in3.209 seconds. Preserve
+DEVELOPMENT_PUBLIC_HARNESS_REV3_FINDING.json and all113 distinct prior actual
+restore receipts (94 REV1 plus19 new REV2); no behavioral failure or source change.
+
+Preserve DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json:1536MB cap caused
+eight V8 allocation failures after prefix16.280 REV3 prefix receipts and4 completed
+programs survived; four remaining workers were intentionally stopped. Resume uses
+four concurrent workers/4096MB without source changes. No behavioral assertion
+failed; this is a retained memory/scaling limit, not a native qualification.
+
+Preserve DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json:4 original programs and94
+actual restore receipts passed before intentional worker stops. REV2 reexecutes all
+original prefixes and requires identical hashes; only the final trusted-trace RNG
+reader switches to structural decoding. Model/run/source identities unchanged.
+The completed original trace audits must match again.
+
+Preserve development-public-dev1 and dev2; initial typecheck rejected test-only direct
+read-only payload assignment. Both21-test cohorts pass; production unchanged. Step/
+Ramp, independent gains, all seeds, source/eligibility controls retained. No complete
+native qualification, Brief promotion or calendar-age/general learning law claim.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
+component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.

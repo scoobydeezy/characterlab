@@ -9,7 +9,7 @@ const p='docs/planning/';
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
 const report=p+'CAMPAIGN3_EXIT_AUDIT_2026_09_21.md';
-const output=p+'CAMPAIGN3_EXIT_AUDIT_REV79.json';
+const output=p+'CAMPAIGN3_EXIT_AUDIT_REV84.json';
 const corpusPath=p+'PHENOMENON_CORPUS.md';
 const briefPath='CharacterLab — Ideal Character Research Program Brief.md';
 const Q='QUALIFIED BOUNDED', P='PARTIAL', B='BLOCKED', A='ACCEPTED PRIOR SCOPE';
@@ -273,6 +273,22 @@ supplemental.push('DEFINING_PUBLIC_IMPLEMENTATION_CHECKPOINT.md','DEFINING_PUBLI
 {const clause=families[2].clauses[1];clause.status=Q;clause.evidence.push(p+'CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md',p+'DEFINING_PUBLIC_CLOSURE_REV1.json');clause.rationale='VER-C3-DEFINING-PUBLIC-001: an old event acquired from empty S0 stays defining through goal-relative significance and actual use, while original content, historical credit, later judgment, retention and publication stay separate.68 public programs/1680 restored prefixes, exact Save132/observer bytes and one actual successor each;376 exact native stages. SignificanceFirst/SharedProtection/UseOnly/AgeOnly all retained. Carried cue, empty graph, scheduled baseline, diagnostic worldAfter and sparse idle horizons are bounded controls; no autobiographical identity, general consolidation or ageing law.';clause.obligations=[...new Set([...clause.obligations,ro(10),ro(21),ro(22)])];}
 families[2].rationale+=' REV79: VER-C3-DEFINING-PUBLIC-001 closes native public defining memory and promotes clause2 to bounded. Identity recognition, affect bias and broader consumers keep their earlier dispositions.';
 supplemental.push('CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md','DEFINING_PUBLIC_FINDINGS.md','DEFINING_PUBLIC_MATRIX_CHECK_REV1.json','DEFINING_PUBLIC_IDENTITIES_REV1.json','DEFINING_PUBLIC_CLOSURE_REV1.json','defining-public-matrix-rev1/MANIFEST.json','DEVELOPMENT_COVERAGE_READINESS.md');
+// REV80: experiential acquisition is not a replacement for developmental state.
+{const c=families[14].clauses[0];c.status=B;c.rationale='Development-history audit:2 existing LONG models/3 runs/51 exact public prefix replays isolate early practice from identical later conditions and preserve actual execution differences after episodic loss. This verifies experiential history but not the separately required developmental/age-state contributor. No maturation or general development qualification; next DEVELOPMENT_STATE_READINESS.md.';c.evidence.push(p+'DEVELOPMENT_HISTORY_CHECKPOINT.md',p+'DEVELOPMENT_HISTORY_CLOSURE_REV1.json');c.obligations=[...new Set([...c.obligations,...[8,9,10,13,17,19,20,21].map(ro)])];}
+families[14].rationale+=' REV80 preserves development as BLOCKED: existing acquired skill/adaptation evidence cannot erase the distinct developmental-state requirement.';
+supplemental.push('DEVELOPMENT_HISTORY_AUDIT.md','DEVELOPMENT_HISTORY_CHECKPOINT.md','DEVELOPMENT_HISTORY_PLAN_REV1.json','DEVELOPMENT_HISTORY_RESULT_REV1.json','DEVELOPMENT_HISTORY_CLOSURE_REV1.json','DEVELOPMENT_STATE_READINESS.md','CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md','development-history-preflight-rev1/PRESERVATION.json');
+families[14].clauses[0].evidence.push(p+'DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md');
+families[14].clauses[0].rationale+=' Owner2026-10-01 requires younger learning plasticity and greater early personality-forming event weight independently; both remain unimplemented. Preserve eligibility and event-time provenance.';
+supplemental.push('DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md');
+// REV82: two developmental routes qualified in component scope; native gate remains open.
+{const c=families[14].clauses[0];c.evidence.push(p+'CAMPAIGN3_DEVELOPMENT_QUALIFICATION.md',p+'DEVELOPMENT_COMPONENT_CLOSURE_REV1.json');c.rationale+=' REV82 supersedes the unimplemented status: VER-C3-DEVELOPMENT-001 qualifies7 models/36 runs/668 component prefixes with independent younger learning plasticity and greater event-time personality formation. Original eligibility/authorship remain fixed; mature learning and correction continue. All8 early sampled pairs equal despite probability differences; all8 full probe sequences differ. Step/Ramp and gain-disable controls retained. Native source/ownership/scheduler/Save132/publication remains OPEN, so clause stays BLOCKED.';}
+families[14].rationale+=' REV82 qualifies both owner developmental effects as components; no native qualification or Brief promotion.';
+supplemental.push('CAMPAIGN3_DEVELOPMENT_QUALIFICATION.md','DEVELOPMENT_COMPONENT_FINDINGS.md','DEVELOPMENT_COMPONENT_CHECK_REV1.json','DEVELOPMENT_COMPONENT_CLOSURE_REV1.json','DEVELOPMENT_PUBLIC_READINESS.md','development-component-dev1/MANIFEST.json','development-component-dev1/FINDING.json','development-component-dev2/MANIFEST.json');
+families[14].clauses[0].rationale+=' REV83 native development implementation passes21 focused/328 reference tests/build with13 registered stages and primary component correspondence. Full36-program/668-prefix native matrix remains OPEN; no promotion.';
+supplemental.push('DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md','DEVELOPMENT_PUBLIC_PLAN_REV1.json','DEVELOPMENT_PUBLIC_TESTS_DEV2.json','DEVELOPMENT_WRAPPER_EXTENSION_REV1.json','development-public-dev1/MANIFEST.json','development-public-dev1/PREFLIGHT.json','development-public-dev2/MANIFEST.json');
+{const c=families[14].clauses[0];c.status=Q;c.evidence.push(p+'CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md',p+'DEVELOPMENT_PUBLIC_CLOSURE_REV1.json');c.rationale='VER-C3-DEVELOPMENT-PUBLIC-001 qualifies independent developmental learning and event-time personality formation under typed public native ownership:7 models/36 programs/668 actual Save132 prefixes and8216 committed stages,21 focused/328 reference tests/build. Original eligibility, authorship, immutable constitution and mature correction remain separate. All component rows, declared seeds, Step/Ramp/gain controls and113 earlier restore receipts preserved. One successor per prefix, not full tails. Controlled phase0..4 and adopted sources do not qualify calendar ageing, universal rates, critical periods, non-authored personality pathways or whole lifelong composition.';c.obligations=[...new Set([...c.obligations,ro(22)])];}
+families[14].rationale+=' REV84 closes the bounded native development clause; other partial longitudinal clauses and final history still prevent exit.';
+supplemental.push('CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md','DEVELOPMENT_PUBLIC_CHECK_REV3.json','DEVELOPMENT_PUBLIC_CLOSURE_REV1.json','DEVELOPMENT_PUBLIC_HARNESS_REV2_FINDING.json','DEVELOPMENT_PUBLIC_HARNESS_REV3_FINDING.json','CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md');
 const inventory=[...new Set([...reportNames,...supplemental].map(n=>p+n).concat([briefPath,'reference/RESEARCH.md',report]))].sort().map(file=>({path:file,sha256:sha(file),inspection:file==='reference/RESEARCH.md'?'Selected Phase2.97 closure/attribution/calibration/reduction sections; not whole historical log':'Coverage/limits/findings audit; linked raw receipts retain their reported public/component scope, not freshly reexecuted.'}));
 const ledger=read(p+'VERDICT_LEDGER.md');
 const verdicts=[...ledger.matchAll(/^## `?(VER-[A-Z0-9-]+)/gm)].map(m=>m[1]);
@@ -284,12 +300,12 @@ for(const c of [...corpusMembers.flatMap(m=>m.clauses),...families.flatMap(f=>f.
  c.obligations.forEach(id=>assert(registry.obligations.some(o=>o.id===id),id));
 }
 assert.equal(result.counts.bounded,18);assert.equal(result.counts.prior,3);assert.equal(result.counts.partial,0);assert.equal(result.counts.blocked,0);
-result.snapshotRevision=79;
-result.date='2026-09-29';
-result.counters.highestAllocatedRecordType=1492;
+result.snapshotRevision=84;
+result.date='2026-10-01';
+result.counters.highestAllocatedRecordType=1508;
 result.counters.allocatedSinceVerdict=0;
-result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV78.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV78.json'),disposition:'VER-C3-DEFINING-PUBLIC-001:68 public programs/1680 restored prefixes/376 native stages;17+328 tests/build;1492/0. Brief12.3-2 BLOCKED to bounded;111 bounded/20 partial/1 blocked;89 verdicts.'};
-result.publicWrapperGate={path:p+'DEFINING_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared53-producer/56-factory inventory; predecessor52/51/50/49 scopes preserved. Full defining public matrix passes under VER-C3-DEFINING-PUBLIC-001; reopen on new wrapper ownership.'};
+result.predecessor={path:p+'CAMPAIGN3_EXIT_AUDIT_REV83.json',sha256:sha(p+'CAMPAIGN3_EXIT_AUDIT_REV83.json'),disposition:'Native development implementation verified; full matrix open.1508/16;111 bounded/20 partial/1 blocked;90 verdicts.'};
+result.publicWrapperGate={path:p+'DEVELOPMENT_WRAPPER_EXTENSION_REV1.json',obligation:'RO-C3-022',status:'CLOSED',scope:'Declared54-producer/57-factory inventory; predecessor53/52/51/50/49 scopes preserved. Native development publication and full36-program/668-prefix matrix qualified under VER-C3-DEVELOPMENT-PUBLIC-001.'};
 result.finalHistoricalGate={path:p+'CAMPAIGN3_FINAL_HISTORY_GATE.md',obligation:'RO-C3-021',status:'NOT SATISFIED',blocks:'Final Campaign3 exit; not admitted bounded implementation.'};
 assert(registry.obligations.some(o=>o.id===result.finalHistoricalGate.obligation));
 if(process.argv.includes('--write'))fs.writeFileSync(path.join(root,output),JSON.stringify(result,null,2)+'\n',{flag:'wx'});

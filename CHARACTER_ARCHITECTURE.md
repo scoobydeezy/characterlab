@@ -741,6 +741,28 @@ Constitution answers:
 
 The ideal architecture deliberately does not freeze the final dimensions.
 
+### Owner-directed developmental learning and personality formation (2026-10-01)
+
+Developmental state has two separately testable routes, in addition to its existing
+physiological/effective-disposition routes:
+
+```text
+Developmental state -> learning plasticity -> existing learning/adaptation owner
+Developmental state at event -> personality-forming weight -> existing consolidation/adaptation owner
+```
+
+Younger states support greater plasticity and greater personality-forming event
+weight. These are distinct operands, not a new shared state writer. Learning still
+requires admitted evidence or accepted procedural practice. Authored personality
+contributions still require the existing eligibility judgment; developmental weight
+cannot manufacture voluntariness or significance. Experienced events that were not
+chosen must use their appropriate learned/adaptation route, not fabricated authored
+expressions. Keep original event qualification and developmental provenance frozen;
+later ageing does not retroactively recompute old event weights. Constitution remains
+unchanged and older characters retain capacity to learn and change. Exact gains,
+curves, consolidation mathematics and native admission require successor contracts.
+See `docs/planning/DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md`.
+
 ### 6.1 Biological constitution
 
 Candidate parameter families may include:

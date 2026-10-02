@@ -1,0 +1,561 @@
+{
+  "version": "development-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-10-01",
+  "namespace": 1155,
+  "contractSha256": "e184291bc23592e6d117a7d7ac172ef7a938e2444014ee6c7b257ff08a7e1bcd",
+  "records": [
+    {
+      "typeId": 1493,
+      "name": "DevelopmentProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Curve",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Learning",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Formation",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Constitution",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1494,
+      "name": "DevelopmentOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Exercise",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Practice",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Permitted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Difficulty",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Report",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 8,
+          "name": "Choice",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 9,
+          "name": "Context",
+          "type": "ref:1429",
+          "required": true
+        },
+        {
+          "id": 10,
+          "name": "Seed",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1495,
+      "name": "DevelopmentPhase",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Phase",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1496,
+      "name": "DevelopmentSkill",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Skill",
+          "type": "unitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1497,
+      "name": "DevelopmentBelief",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Estimate",
+          "type": {
+            "list": "unitQ",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Support",
+          "type": "u",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1498,
+      "name": "DevelopmentFormationEntry",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Contribution",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Gain",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Delta",
+          "type": "signedUnitQ",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1499,
+      "name": "DevelopmentPersonality",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Personality",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Entries",
+          "type": {
+            "list": "ref:1498",
+            "min": 0,
+            "max": 24
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1500,
+      "name": "DevelopmentPhaseRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1495"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1501,
+      "name": "DevelopmentSkillRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1496"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1502,
+      "name": "DevelopmentBeliefRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1497"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1503,
+      "name": "DevelopmentPersonalityRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Actors",
+          "type": {
+            "map": [
+              "id:1002",
+              "ref:1499"
+            ],
+            "min": 1,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1504,
+      "name": "DevelopmentExecution",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Attempted",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Engaged",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Executed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Practiced",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "PriorSkill",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Forced",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1505,
+      "name": "DevelopmentReport",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Report",
+          "type": {
+            "list": "bool",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Practiced",
+          "type": "bool",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1506,
+      "name": "DevelopmentLearning",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Gain",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "SkillBefore",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "SkillAfter",
+          "type": "unitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "BeliefBefore",
+          "type": "ref:1497",
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "BeliefAfter",
+          "type": "ref:1497",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1507,
+      "name": "DevelopmentFormation",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Phase",
+          "type": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Gain",
+          "type": "positiveQ",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Before",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "After",
+          "type": "signedUnitQ",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Entry",
+          "type": {
+            "list": "ref:1498",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 7,
+          "name": "Qualification",
+          "type": {
+            "list": "ref:1434",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1508,
+      "name": "DevelopmentDiagnosticRow",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "At",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Row",
+          "type": "data",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
