@@ -2925,3 +2925,378 @@ Brief12.15-1 bounded; AuditREV84:112 bounded/20 partial/0 blocked;91 verdicts.
 No universal gain/calendar-age claim. RO008/009/010/013/017/019/020/021/022.
 Evidence CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md and DEVELOPMENT_PUBLIC_CLOSURE_REV1.json.
 Next CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## Partial coverage reconciliation / REV85 (no new verdict)
+
+Partial coverage audit —2026-10-02: Brief12.1-8 tolerance branch is QUALIFIED BOUNDED
+from VER-C3-TOLERANCE-001, VER-C3-BIOLOGY-001 and VER-C3-BIOLOGY-PUBLIC-001, with
+current publication-repair evidence preserved. Brief12.1-4 interoceptive uncertainty
+remains PARTIAL: scalar fallibility/missingness does not yet discriminate an
+uncertainty-sensitive consumer. See CAMPAIGN3_BODY_PARTIAL_COVERAGE_AUDIT.md and
+BODY_PARTIAL_COVERAGE_CHECK_REV1.json. Only these two of the initial20 clauses were
+audited; PARTIAL_COVERAGE_INTAKE_REV1.json queues the other18. No new verdict,
+model/run, production change or allocation. Existing receipts reverified, no fresh
+simulation/tests/build. Preserve historical-checker rejection and proper source mapping.
+AuditREV85:113 bounded/19 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next Brief12.2-2 importance/urgency and12.2-6 multiple actions per motive. RO019 ACTIVE;
+RO021 unsatisfied; RO022 CLOSED. LOCAL DISPOSITION; Campaign3 NOT EXIT-READY.
+
+
+## Motive coverage reconciliation / REV86 (no new verdict)
+
+Motive partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.2-6 multiple actions per motive is QUALIFIED BOUNDED using the existing
+SUBSTITUTION component and separate native GOAL/strategy corroboration. Brief12.2-2
+importance/urgency remains PARTIAL pending independent same-motive interventions.
+Start CAMPAIGN3_MOTIVE_PARTIAL_COVERAGE_AUDIT.md and MOTIVE_PARTIAL_COVERAGE_CHECK_REV1.json.
+Four of20 starting partial clauses audited; sixteen await audit in intakeREV2.
+No new verdict, run, simulation/tests/build, production change or allocation.
+AuditREV86:114 bounded/18 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next memory: vivid recollection, affect-biased retrieval, consolidation/double-counting.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## Memory coverage reconciliation / REV87 (no new verdict)
+
+Memory partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.3-10 consolidation without episode/summary double-counting is QUALIFIED
+BOUNDED using VER-C3-RECOLLECT-001. Recent vivid recollection12.3-1 and affect-biased
+retrieval12.3-9 remain PARTIAL with explicit comparison/integration gaps. TaskConcern
+is not general Affect. Start CAMPAIGN3_MEMORY_PARTIAL_COVERAGE_AUDIT.md and
+MEMORY_PARTIAL_COVERAGE_CHECK_REV1.json. Seven of20 starting clauses audited;
+thirteen await audit in intakeREV3. Prior receipts reverified, no new simulation,
+tests/build, verdict, production change or allocation.115 bounded/17 partial/0 blocked;
+91 verdicts;1508/0; wrapper54/57 unchanged. Next belief: uncertain correct estimate,
+hidden cause, repeated prediction error. RO019 ACTIVE; RO021 unsatisfied; no owner
+ruling. Campaign3 NOT EXIT-READY.
+
+
+## Belief coverage reconciliation / REV88 (no new verdict)
+
+Belief partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.4-6 repeated prediction error is QUALIFIED BOUNDED using existing reinforcement
+component evidence: prior expectations differ from admitted outcomes, repeated updates
+change later choice, withholding breaks the route. Residuals are audit readouts, not
+new surprise state. Uncertain-but-correct belief12.4-1 and hidden cause12.4-4 remain
+PARTIAL. Start CAMPAIGN3_BELIEF_PARTIAL_COVERAGE_AUDIT.md and
+BELIEF_PARTIAL_COVERAGE_CHECK_REV1.json. IntakeREV4: ten of20 clauses audited, ten
+await audit. No new verdict, simulation/tests/build, production change or allocation.
+AuditREV88:116 bounded/16 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next affect: fear without flight, salience/retrieval feedback, regulatory dimensionality.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## Affect coverage reconciliation / REV89 (no new verdict)
+
+Affect partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.5-3 fear without flight closes in bounded AFFECT threat/continuation scope:
+positive threat, same affect, competing commitment changes actual response (seeds4/7).
+No literal locomotor flight or general fear syndrome claimed. Salience/retrieval
+feedback12.5-6 and non-scalar regulatory affect12.5-8 remain PARTIAL. Start
+CAMPAIGN3_AFFECT_PARTIAL_COVERAGE_AUDIT.md and AFFECT_PARTIAL_COVERAGE_CHECK_REV1.json.
+Thirteen of20 starting clauses audited; seven await audit in intakeREV5. Prior
+receipts/source hashes reverified; no new simulation/tests/build, verdict or allocation.
+AuditREV89:117 bounded/15 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next identity/agency: cross-context expression, coercion exclusion, repeated interference.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## Identity and agency coverage reconciliation / REV90 (no new verdict)
+
+2026-10-02. LOCAL DISPOSITION; counters1508/0. See
+CAMPAIGN3_IDENTITY_AGENCY_PARTIAL_COVERAGE_AUDIT.md and
+IDENTITY_AGENCY_PARTIAL_COVERAGE_CHECK_REV1.json. Clauses12.12-1/3 and12.14-5 remain
+PARTIAL: separate channels do not prove shared cross-context meaning, admitted
+pressure is not enacted coercion, and episode-local correction is not recurring
+interference expectation. Historical receipts reverified; no fresh simulations,
+tests/build, production change, allocation or comparator retirement. REV90 retains
+117 bounded/15 partial/0 blocked;91 verdicts; corpus0.29.0/21; wrapper54/57.
+IntakeREV6:16 of20 audited,4 awaiting audit,11 audited gaps remain partial.
+RO009/010/013/014/016/017/018/019/020/021 preserve material obligations.
+Next longitudinal routines/goals/habits/loss coverage audit. No owner ruling;
+RO019 ACTIVE, RO021 unsatisfied, RO022 CLOSED. Campaign3 NOT EXIT-READY.
+
+
+## Longitudinal coverage reconciliation / REV91 (no new verdict)
+
+2026-10-02. LOCAL DISPOSITION; counters1508/0. See
+CAMPAIGN3_LONGITUDINAL_PARTIAL_COVERAGE_AUDIT.md and
+LONGITUDINAL_PARTIAL_COVERAGE_CHECK_REV1.json. Routines/goals/habits/loss remain
+PARTIAL for longitudinal biography/retention integration. Later biological, goal,
+control, grief and defining-memory witnesses retain their narrower qualifications.
+IntakeREV7 completes all20 original audits: five bounded closures, fifteen remaining
+gaps. No fresh simulation/tests/build, new verdict, allocation or comparator retirement.
+REV91:117 bounded/15 partial/0 blocked;91 verdicts; corpus0.29.0/21; wrapper54/57.
+Next CAMPAIGN3_REMAINING_COVERAGE_WORK_ORDER.md, beginning same-motive independent
+importance/urgency readiness. RO009/012/013/014/015/016/017/019/020/021 preserve scope.
+RO019 ACTIVE; RO021 unsatisfied; RO022 CLOSED. No owner ruling; NOT EXIT-READY.
+
+
+## `VER-C3-IMPORTANCE-URGENCY-001` — retained importance and current urgency (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, importance-urgency-component/0.1-candidate.
+5 models/195 identity-bound runs/1365 complete prefixes (1170 advancing/195 terminal),
+14 focused/328 reference tests and build. Counters1508/0; no allocation or public wrapper.
+Same motive, independent importance/urgency, fixed competitor and equal-product collision:
+retained importance differentiates later urgency response,7/8 choice sequences differ;
+seed0 equality retained. Factored/Refold safe rows equal; separate cache not required
+with complete admitted history. ImportanceOnly/UrgencyOnly/FrozenProduct retained.
+No universal combination law, native admission, physical execution or Need reduction.
+Brief12.2-2 bounded; AuditREV92:118/14/0;92 verdicts; corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_IMPORTANCE_URGENCY_QUALIFICATION.md and IMPORTANCE_URGENCY_CLOSURE_REV1.json.
+Preserve development startup, TS2353 and pre-freeze collector failures. RO001/008/014/
+019/020/021. Next uncertainty readiness per remaining coverage work order; no owner ruling.
+
+
+## `VER-C3-UNCERTAINTY-001` — interoceptive interval belief and approximate accuracy (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, interoceptive-uncertainty-component/0.1-candidate.
+5 models/155 identity-bound runs/775 complete prefixes (620 advancing/155 terminal),
+15 focused/328 reference tests/build. Counters1508/0; no allocation/public wrapper.
+Same reserve/midpoint with different admitted ranges changes later exact probabilities
+2/5 to7/12;6/8 choice sequences differ,2 equal. Both interval estimates have error50
+within declared100 tolerance and contain truth; bias yields error350 and excludes truth.
+Accuracy is scored only outside cognition. Missing/duplicate/hidden evidence controls
+preserve ignorance, width and observer boundaries. All five comparators retained.
+Brief12.1-4/12.4-1 bounded; AuditREV93:120/12/0;93 verdicts; corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md and UNCERTAINTY_CLOSURE_REV1.json.
+No native admission, physical execution, probability calibration or general confidence
+law. RO008/010/011/019/020/021. Next recent vivid recollection readiness; no owner ruling.
+
+
+## `VER-C3-VIVID-001` — recent sensory recollection fidelity (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, vivid-recollection-component/0.1-candidate.
+4 canonical models/44 runs/308 prefixes (264 advancing/44 terminal),17 focused/328
+reference tests/build;1508/0. Actual inherited rank/publication/presentation settlement.
+Same values, cue and rank distinguish clear versus weak3-facet recollection. Clear
+false recollection remains possible; fragmentation actually deletes sensory features.
+KeepRich/DetailCount/AccessOnly retained. No subjective, general imagery, native
+Save132, physical action or universal vividness law. First15-pass/2-failure cohort
+preserved: required nonempty observed identity basis and unrelated-cue baseline recall.
+Brief12.3-1 bounded;AuditREV94:121/11/0;94 verdicts;corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_VIVID_RECOLLECTION_QUALIFICATION.md and VIVID_CLOSURE_REV1.json.
+RO005/006/007/017/019/020/021. Next affect-to-salience/retrieval integration; no owner ruling.
+
+
+## `VER-C3-AFFECT-RETRIEVAL-001` — completed affect to later retrieval (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, affect-retrieval-component/0.1-candidate.
+4 canonical models/56 runs/280 prefixes (224 advancing/56 terminal),24 focused/328
+reference tests/build;1508/0. Same prior memory/history/encoding/cue, different actual
+SplitExposure output changes published winner; NoFeedback removes this effect.
+UncontrolledGain/ExposureGain/HalfGain/NoFeedback retained. Unknown/zero, hidden/denied,
+empty-graph/absent-cue and prior-only feedback controls pass. Harness path/overlap
+failure preserved. No native, encoding/salience, general law or scalar-necessity claim.
+Brief12.3-9/12.5-6 bounded;AuditREV95:123/9/0;95 verdicts;corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_AFFECT_RETRIEVAL_QUALIFICATION.md and AFFECT_RETRIEVAL_CLOSURE_REV1.json.
+RO002/003/004/005/006/007/010/011/019/020/021. Next named scalar-affect reduction;
+no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## `VER-C3-AFFECT-REDUCTION-001` — scalar receiving equality (2026-10-02)
+
+COMPARISON COMPLETE / LOCAL DISPOSITION, affect-reduction-audit/0.1-candidate.
+Four receiving models/56 substitutions/112 repeated receiver executions;14 original
+runs/70 exact prefix restores (56 advancing/14 terminal). ScalarUncontrolled equals
+FullPair in every case: gain, rank, actual published content and settled history.
+ScalarExposure/HistoricalAverage fail the full-control response. All retained; no
+vector necessity, global reduction or new runtime qualification. No production change;
+prior24+328/build receipts preserved, not rerun. Counters1508/0; no allocation.
+Brief12.5-8 stays PARTIAL;AuditREV96 remains123/9/0;96 verdicts;corpus0.29.0/21.
+Evidence CAMPAIGN3_AFFECT_REDUCTION_COMPARISON.md and AFFECT_REDUCTION_CHECK_REV1.json.
+RO002/003/006/007/010/011/019/020/021. Next LATENT_CAUSE_READINESS.md under explicit
+local reordering; scalar necessity stays open. No owner ruling; NOT EXIT-READY.
+
+
+## `VER-C3-LATENT-CAUSE-001` — alternative hidden-cause inference (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, latent-cause-component/0.1-candidate.
+4 canonical models/56 runs/392 prefixes (336 advancing/56 terminal),16 focused/328
+reference tests/build;1508/0. Fallible motion/resistance reports distinguish limitation
+from obstruction after a failed attempt; outcome alone ambiguous. Actual appraisal
+consumes inference and independent goal. Hidden-cause swaps preserve safe history and
+can make inference wrong. Duplicate/foreign/absent/success/timing controls pass.
+JointDiagnostics/MotionOnly/OutcomeOnly/NoLearning retained. Equal-prior closed pair,
+authored likelihoods/latest reports/fixed intent bound scope. No native admission,
+natural diagnosis, general causal identification or cross-episode expectation claim.
+Brief12.4-4 bounded;AuditREV97:124/8/0;97 verdicts;corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_LATENT_CAUSE_QUALIFICATION.md and LATENT_CAUSE_CLOSURE_REV1.json.
+RO010/011/014/019/020/021. Next INTERFERENCE_EXPECTATION_READINESS.md; no owner ruling.
+Campaign3 NOT EXIT-READY; affect dimensionality remains partial.
+
+
+## `VER-C3-INTERFERENCE-EXPECTATION-001` — scoped cross-episode expectation (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, interference-expectation-component/0.1-candidate.
+12 unchanged public agency source runs/108 native prefix restores;4 component models/
+60 source-bound comparisons/540 component prefixes;18 focused/328 reference tests/build.
+Separate replay surfaces, not a new combined native runtime. Counters1508/0.
+Actual distinct attempts and admitted causal reports yield prospective mean2/3;
+LatestEpisode0, EpisodeOnly/NoLearning unknown. Actual appraisal respects independent
+current goal. Known absence differs from missing evidence/opportunity/context. Hidden/
+denied and later correction controls preserve earlier intent/expression and judgments.
+Post-report successor retains2/3 after extra same-episode report; source-pooled diagnostic
+would be1/2. Preserve initial missing denied-content pair and terminal-report timing gap.
+All candidates remain; no general source trust, grouping, confidence or actor-choice claim.
+Brief12.14-5 bounded;AuditREV98:125/7/0;98 verdicts;corpus0.29.0/21 unchanged.
+Evidence CAMPAIGN3_INTERFERENCE_EXPECTATION_QUALIFICATION.md and
+INTERFERENCE_EXPECTATION_CLOSURE_REV1.json. RO010/011/014/019/020/021.
+Next CROSS_CONTEXT_IDENTITY_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## `VER-C3-CROSS-CONTEXT-COMPONENT-001` — controlled common-meaning transfer (2026-10-02)
+
+QUALIFIED COMPONENT / LOCAL DISPOSITION, cross-context-identity-component/0.1-candidate.
+6 models/127 distinct runs/762 component prefixes (635 advancing/127 terminal);
+12 focused/328 reference tests/build;1508/0. Same actor, explicit accepted-undertaking
+meaning and immutable actual expression/qualification precede held-out standing use.
+SharedMeaning changes probabilities6/8 and action4/8 versus SeparateContext/NoFeedback;
+1/7 cancel,4/6 retain action despite changed distributions. Refold exact equality;
+Graded/Frequency and all controls retained. Hidden execution preserves whole safe views.
+Preserve adapter grammar/typing failure, test timeout/cancellation findings, and frozen
+four-worker execution partition of the unchanged prospective matrix.
+No full cross-context or native qualification: generic protocol execution and entered
+meaning require actual-domain source follow-up. Seed7 receiving equalities require
+all-seed successors before stronger claims. Brief12.12-1 remains PARTIAL; no promotion.
+Evidence CAMPAIGN3_CROSS_CONTEXT_IDENTITY_QUALIFICATION.md and CROSS_CONTEXT_IDENTITY_CLOSURE_REV1.json.
+RO009/013/014/017/019/020/021. AuditREV99:125/7/0;99 verdicts;corpus0.29.0/21;
+wrapper54/57 unchanged. Next CROSS_CONTEXT_IDENTITY_SOURCE_SUFFICIENCY.md.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+
+## `VER-C3-CROSS-CONTEXT-001` — enacted bounded cross-context expression (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION, cross-context-domains-component/0.1-candidate
+plus unchanged cross-context-identity-component/0.1-candidate receiving successor.
+6 new composition models/55 runs/330 whole prefixes preserve330 original save hashes.
+All-seed receiving:6 unchanged models/144 executions/864 prefixes;126 new runs/756
+new prefixes and18 exact repeats.14 new focused/328 reference tests/build;1508/0.
+Actual attempt-driven custody, private-knowledge disclosure and attendance now enact
+separate domains under one actor. Hidden truth, failed delivery, denied execution,
+false/missing private evidence and recipient access preserve original identity.
+Context-local standing changes matched receiving behavior4/8; seed1 global cancellation
+retains nonzero local evidence. Missing/reversed current meaning respects old expressions;
+all original candidates and equal trajectories remain. Preserve wrapper publication gap,
+initial9 passing development tests and TS2322 failure. Current guards/faults pass.
+Brief12.12-1 bounded; natural interpretation/acceptance, universal transfer and native
+public integration remain unqualified. No general law selected or public inventory added.
+Evidence CAMPAIGN3_CROSS_CONTEXT_QUALIFICATION.md and CROSS_CONTEXT_SUCCESSOR_CLOSURE_REV1.json.
+RO009/013/014/017/019/020/021/022. AuditREV100:126/6/0;100 verdicts;corpus0.29.0/21;
+wrapper54/57 unchanged. Next ENACTED_COERCION_READINESS.md. No owner ruling; NOT EXIT-READY.
+
+## `VER-C3-ENACTED-COERCION-001` — bounded enacted refusal-cost pressure (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION. enacted-coercion-component/0.1-candidate.
+VER-C3-ENACTED-COERCION-001:6 models/576 runs/2880 complete prefixes;2304 advancing/
+576 terminal successors.12 focused/328 reference tests/build;1508/0. Actual refusal
+penalties supply admitted, source-specific knowledge before later choice/qualification.
+All8 seeds change probabilities;5 change actions,3 remain equal. Mean/Latest differ2/8;
+20 high-pressure expressions excluded by Threshold. Original expression survives failed
+execution; same displays/different power preserve target views. All six candidates remain.
+Controlled demander, penalty policy, significance and meaning; no native admission or
+universal coercion law. Brief12.12-3 bounded;AuditREV101:127 bounded/5 partial/0 blocked;
+101 verdicts. Corpus0.29.0/21, wrappers54/57 unchanged. No owner ruling; NOT EXIT-READY.
+See CAMPAIGN3_ENACTED_COERCION_QUALIFICATION.md and ENACTED_COERCION_CLOSURE_REV1.json.
+Next LONGITUDINAL_INTEGRATION_READINESS.md;RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+RO-C3-009/010/013/014/017/019/020/021 preserve source, inference, qualification and longitudinal limits.
+
+## `VER-C3-LONGITUDINAL-GOAL-001` — bounded longitudinal goals (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION. longitudinal-goal-component/0.1-candidate.
+VER-C3-LONGITUDINAL-GOAL-001: bounded goal/biography integration COMPONENT QUALIFIED.
+5 models/120 runs/2040 original-prefix restores;1920 advancing/120 terminal successors.
+Fine/NoFeedback probabilities differ18/24, actions14/24; coarse equals NoFeedback24/24.
+All24 retention pairs preserve later choices. Goal withdrawal/replacement changes8/8
+sequences each without rewriting native source saves. Zero-standing and stochastic
+equalities remain. Existing8 focused/328 reference receipts reverified; fresh build passes.
+No new joined native scheduler or Save132 admission. All execution jobs have finished.
+Start CAMPAIGN3_LONGITUDINAL_GOAL_QUALIFICATION.md; next LONGITUDINAL_ROUTINE_READINESS.md.
+AuditREV105:128 bounded/4 partial/0 blocked,102 verdicts.1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling;
+Campaign3 NOT EXIT-READY. No general calibration selected or comparator retired.
+Evidence: LONGITUDINAL_GOAL_MATRIX_REV1.json and LONGITUDINAL_GOAL_CLOSURE_REV1.json.
+Preserve the original coarse-inequality failure and calibration comparator. RO-C3-009/012/013/014/017/019/020/021.
+
+
+## `VER-C3-LONGITUDINAL-ROUTINE-001` — bounded longitudinal routines (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION. longitudinal-routine-component/0.1-candidate.
+VER-C3-LONGITUDINAL-ROUTINE-001: bounded routine integration COMPONENT QUALIFIED.
+6 models/504 receiver trajectories/8568 receiver prefix reconstructions,8064 advancing/
+504 terminal.16 native sources/272 native prefixes reused under frozen authentication;
+separately4 fresh joined horizons/68 prefix comparisons/8 joined restores (4 advancing,
+4 terminal).12 fresh receiver faults; prior10 focused/328 reference receipts reverified;
+fresh build passes. All8 maintained and withdrawn cases resume; opposed cases inhibit.
+Maintained/withdrawn probabilities differ8/8, actions5/8. Stored/Derived96 pairs and
+retention24 pairs match. Preserve seed0 delayed resumption at15 and negative-outcome
+extinction; both development failures remain. No all504-run native admission claim.
+Source episode expiry is not forgetting the new practice itself. No law retired.
+Start CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md. Next
+LONGITUDINAL_HABIT_RELEARNING_READINESS.md. All matrix processes finished.
+AuditREV107:129 bounded/3 partial/0 blocked;103 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+No owner ruling; Campaign3 NOT EXIT-READY.
+Evidence: LONGITUDINAL_ROUTINE_MATRIX_REV1.json and LONGITUDINAL_ROUTINE_CLOSURE_REV1.json.
+RO-C3-009/012/013/014/015/017/019/020/021. Brief12.15-2 only is promoted.
+
+
+## `VER-C3-LONGITUDINAL-HABIT-001` — bounded longitudinal habit and relearning (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION. longitudinal-habit-component/0.1-candidate.
+VER-C3-LONGITUDINAL-HABIT-001: bounded habit/relearning COMPONENT QUALIFIED.
+10 models/960 fresh receiver runs/16320 receiver-prefix restores (15360 advancing/960
+terminal), over8 authenticated reused native sources/136 prior native prefixes.
+Separately4 fresh REV2 joined horizons/68 prefix comparisons/8 joined restores pass.
+Practice-specific episode loss preserves habit; rest inhibits; actual observed renewed
+practice restores corrected-belief availability8/8. Hidden/unavailable controls do not.
+Final free action4/8; four non-actions preserved. Stored/Derived192 pairs and retention480
+behavioral pairs match.2 fresh joined tests/build; prior10+16+328 receipts reverified.
+Preserve ?raw scanner and wrong fault-oracle findings, original plan and one old joined
+receipt; REV2 is authoritative, no production semantics changed. No native admission or
+global history erasure/compression. All execution jobs finished; no duplicate workers.
+Start CAMPAIGN3_LONGITUDINAL_HABIT_QUALIFICATION.md. Next LONGITUDINAL_PERSONAL_LOSS_READINESS.md.
+AuditREV109:130 bounded/2 partial/0 blocked;104 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling;
+Campaign3 NOT EXIT-READY.
+Evidence: LONGITUDINAL_HABIT_MATRIX_REV2.json and LONGITUDINAL_HABIT_CLOSURE_REV1.json.
+RO-C3-009/012/013/014/015/017/019/020/021. Only Brief12.15-8 is promoted.
+
+
+## `VER-C3-LONGITUDINAL-LOSS-001` — acquired valued-contact loss and later action (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION.
+VER-C3-LONGITUDINAL-LOSS-001: bounded valued-contact loss COMPONENT QUALIFIED.
+5 models/480 fresh runs/6240 original-prefix restores;5760 advancing/480 terminal;
+8 faults;10 focused/328 reference tests/fresh build.160 observer/execution boundary pairs.
+Actual acquired relationship, fallible contact belief, maintained goal, affect and later
+sampled action/execution remain separate. Loss changes actions5/8;NoAffect5/8;
+strong competing motive7/8. Preserve equalities, controlled adoption/reports,
+masked action outcomes and prior GRIEF model. No clinical grief/native admission or
+affect-dimensionality claim. AuditREV110:131 bounded/1 partial/0 blocked;105 verdicts.
+Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. No owner ruling.
+Start CAMPAIGN3_LONGITUDINAL_PERSONAL_LOSS_QUALIFICATION.md;next
+AFFECT_REGULATORY_REDUCTION_READINESS.md. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+Evidence: LONGITUDINAL_PERSONAL_LOSS_MATRIX_REV1.json and CLOSURE_REV1.
+RO-C3-009/010/011/012/013/014/016/017/019/020/021. Only Brief12.15-11 promoted.
+
+
+## `VER-C3-AFFECT-REGULATORY-001` — bounded body-only regulatory reduction (2026-10-03)
+
+QUALIFIED BOUNDED / LOCAL DISPOSITION.
+VER-C3-AFFECT-REGULATORY-001: bounded body-only regulatory reduction QUALIFIED.
+64 fresh component runs/832 original-prefix restores;320 substitutions/640 executions;
+4 native public sentinels/48 matching instants/16 Save132 restores;5+328 tests/build.
+Identical whole body history/current sensations, different admitted harm belief produce
+threat0/270 and later stress0/135. FullAffect/ScalarThreat preserve64/64;Stress56/64,
+Pain48/64,RewardDeviation56/64. Preserve scalar successes and unchanged actions.
+No new production mechanism or psychological vector-necessity claim. AuditREV111:
+132 bounded/0 partial/0 blocked;106 verdicts. Bounded clause coverage complete;Campaign3
+NOT EXIT-READY. Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. RO019 ACTIVE;
+RO021 historical reconciliation unsatisfied;RO022 CLOSED. No owner ruling.
+Start CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md;next
+CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md.
+Evidence: AFFECT_REGULATORY_RESULT_REV1.json and AFFECT_REGULATORY_CLOSURE_REV1.json.
+RO-C3-002/003/006/007/008/010/011/019/020/021. Only Brief12.5-8 promoted.

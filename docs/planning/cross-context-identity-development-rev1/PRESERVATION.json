@@ -1,0 +1,9 @@
+{
+  "status": "PRESERVED REJECTED DEVELOPMENT COHORT",
+  "date": "2026-10-02",
+  "scope": "Before any qualification plan or run freeze",
+  "testReceipt": "CROSS_CONTEXT_IDENTITY_DEVELOPMENT_TESTS_REV1.json",
+  "finding": "Standing provenance used positional record399 variant2, which retained the default variant1 nested field grammar and failed decoder validation. Use the established named QualificationOccurrenceId variant. Build also rejected dataField(raw) without an explicit record narrowing.",
+  "build": "npm run build session21710 exit1: crossContextIdentity.ts(60,70) TS2345",
+  "disposition": "Preserve original component, fixtures, tests and contract here; correct only the new adapter. No inherited codec, source or qualified artifact changed."
+}

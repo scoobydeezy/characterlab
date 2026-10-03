@@ -1,0 +1,7 @@
+{
+  "status": "PRESERVED HISTORICAL WHITESPACE CHECK LIMIT",
+  "command": "git diff --check",
+  "exitCode": 1,
+  "finding": "CAMPAIGN3_LOG.md retains verbatim historical CURRENT bytes including CRCRLF line endings. Global diff check flags historical carriage returns as trailing whitespace after exact-byte archival. Output was truncated; no full diagnostic capture claimed.",
+  "disposition": "Historical bytes left intact per append-only preservation rule. Scoped diff check excluding CAMPAIGN3_LOG.md passes. Evidence hashes, research self-tests and coverage checks pass. No production change or behavioral failure."
+}

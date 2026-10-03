@@ -1,0 +1,52 @@
+{
+  "status": "EXPLAINED; PRESERVED-SOURCE CHECK PASS",
+  "failedCommand": "node scripts/check-biology-public-closure.mjs",
+  "failure": "src/campaign3/biologyPublicRuntime.ts hash mismatch against historical closure",
+  "actual": "811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4",
+  "historicalExpected": "7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751",
+  "cause": "The historical biological qualification predates the accepted public-wrapper quiescence repair; its old source is retained in the dedicated preservation manifest. No production source changed in this affect experiment.",
+  "verifiedCommand": "node scripts/check-preserved-public-wrapper-evidence.mjs",
+  "verifiedExitCode": 0,
+  "scope": "Historical receipt/source verification only. Current native behavior is freshly verified by four AFFECT_REGULATORY native sentinels and16 restores, against source hashes frozen before execution. Do not rewrite the old checksum or count preserved receipts as new execution.",
+  "files": [
+    {
+      "path": "src/campaign3/biologyPublicRuntime.ts",
+      "sha256": "811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/biologyPublicRuntime.ts",
+      "sha256": "7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/PRESERVATION.json",
+      "sha256": "d327125ef03a5f2281b43e3a725dc6072b5c00aa205d4a0b79718c0109ff9e2b"
+    },
+    {
+      "path": "scripts/check-biology-public-closure.mjs",
+      "sha256": "e6957359cada1814e973e05c910d928ac7ae5257093d71bad3f5ccab66180d31"
+    },
+    {
+      "path": "scripts/check-preserved-public-wrapper-evidence.mjs",
+      "sha256": "9d2c2b92c670d18df66606aac4ec76c2e35c6a9e67640388daf85bfadc44e698"
+    },
+    {
+      "path": "scripts/public-wrapper-preserved-source-loader.mjs",
+      "sha256": "c97aad6ede4abbcb4dd30447b3a67a1053c25f7c58e2cb6435b986bca48ddbb7"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_PLAN_REV1.json",
+      "sha256": "5eac6708f4104f41a99841f27f135ccb8bee660cbc0fb69acebba0e62dc9ba1e"
+    }
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-021",
+    "RO-C3-022"
+  ],
+  "bookkeepingFailure": {
+    "error": "SyntaxError before execution: malformed path dictionary key in first finding writer",
+    "archive": "docs/planning/affect-regulatory-bookkeeping-rev1/record-affect-regulatory-historical-check.py",
+    "sha256": "aa237a509d0f91d518d470b5aed6a83e981a44b53c4e16966e9fb925f16fe342",
+    "disposition": "Corrected quote; first writer made no changes. No scientific source or result changed."
+  }
+}

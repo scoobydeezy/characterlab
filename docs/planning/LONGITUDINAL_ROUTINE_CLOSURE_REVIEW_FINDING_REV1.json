@@ -1,0 +1,44 @@
+{
+  "status": "PRESERVED CLOSURE REVIEW FAILURE",
+  "failure": "assert(later(s).every(x=>x.performed)) failed in the new closure checker; no closure receipt was written.",
+  "cause": "ScheduledOnly bypasses learned availability but does not force enactment. The review incorrectly inferred every opportunity produced practice.",
+  "observed": {
+    "seed0LaterPerformed": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "seeds1to7LaterPerformed": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "disposition": "Correct checker and report; all frozen production, plan, matrix, trajectory and replay artifacts unchanged. No experiment rerun required.",
+  "files": [
+    {
+      "original": "scripts/check-longitudinal-routine-closure.mjs",
+      "preserved": "docs/planning/longitudinal-routine-closure-review-rev1/check-longitudinal-routine-closure.mjs",
+      "sha256": "666cff831e16c49507b2718295eb24ac44e2916402e926089d318271c333b237"
+    },
+    {
+      "original": "scripts/record-longitudinal-routine-closure.py",
+      "preserved": "docs/planning/longitudinal-routine-closure-review-rev1/record-longitudinal-routine-closure.py",
+      "sha256": "a0457b5d8510ae0cc63893d54c0adf6af96b25027f3c704e4e5717dc757982c7"
+    },
+    {
+      "original": "docs/planning/CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md",
+      "preserved": "docs/planning/longitudinal-routine-closure-review-rev1/CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md",
+      "sha256": "2f150bd2a06cb6e5d35188bb40865d965593cb49fb6f25b5c09eca7b6d4e1f37"
+    }
+  ]
+}

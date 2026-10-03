@@ -1,0 +1,40 @@
+{
+  "status": "PRESERVED FIRST TEST COHORT",
+  "tests": {
+    "passed": 15,
+    "failed": 2
+  },
+  "artifacts": [
+    {
+      "original": "docs/formal/VIVID_RECOLLECTION_COMPONENT_CONTRACT.md",
+      "path": "docs/planning/vivid-development-rev1/VIVID_RECOLLECTION_COMPONENT_CONTRACT.md",
+      "sha256": "9cf539804204ed6b08033dc9caa7fb9f9b8a9dccb51b72cda589be661f3340c3"
+    },
+    {
+      "original": "src/campaign3/vividRecollection.ts",
+      "path": "docs/planning/vivid-development-rev1/vividRecollection.ts",
+      "sha256": "04f90fa7872836f2f5e2b89c96929d2f48f9ea5baa1bded92a8386d7cc0bfb9b"
+    },
+    {
+      "original": "src/test/vividRecollectionFixtures.ts",
+      "path": "docs/planning/vivid-development-rev1/vividRecollectionFixtures.ts",
+      "sha256": "34ea83dd0d23032896fcfd31bae466548c9b4c52da3cb37e6747a8acf36179d9"
+    },
+    {
+      "original": "src/test/vividRecollection.test.ts",
+      "path": "docs/planning/vivid-development-rev1/vividRecollection.test.ts",
+      "sha256": "4f2099b3e2b46ade42b82faa2bf03db614eb0bd12b25ac113b43bf61c89e82c5"
+    },
+    {
+      "original": "docs/planning/VIVID_TESTS_REV1.json",
+      "path": "docs/planning/vivid-development-rev1/VIVID_TESTS_REV1.json",
+      "sha256": "c113c01651f97a33314310a708c16936bd437c1d2081efb6e05f467e2701a079"
+    }
+  ],
+  "findings": [
+    "Empty sensory views violate inherited nonempty evidence-basis grammar. An observed episode identity fragment is needed even when sensory detail is absent.",
+    "Unrelated cue can select the only episode under inherited baseline rank despite zero direct association; assumed no-selection was false."
+  ],
+  "correction": "Encode controlled observed identity as a non-sensory view; filter it from sensory readout. Retain unrelated-cue selection as baseline-ranking control; only absent cue guarantees no read/publication. No old kernel changed.",
+  "build": "First cohort npm run build session88234 passed; behavior tests failed, so this was not qualification."
+}

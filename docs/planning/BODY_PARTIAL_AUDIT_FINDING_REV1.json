@@ -1,0 +1,15 @@
+{
+  "status": "PRESERVED HISTORICAL CHECKER REJECTION",
+  "command": "node scripts/check-biology-public-closure.mjs",
+  "exitCode": 1,
+  "path": "src/campaign3/biologyPublicRuntime.ts",
+  "expectedHistoricalSha256": "7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751",
+  "observedRepairedSha256": "811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4",
+  "finding": "Direct historical checker targets original pre-quiescence-repair source. No biological simulation ran or failed in this invocation.",
+  "resolution": "Documented explicit preserved-source mapping plus separate current wrapper-repair evidence. check-development-wrapper-extension.mjs exited0 across historical and current gates. No hash or predecessor source changed.",
+  "authority": "docs/planning/CAMPAIGN3_PUBLIC_WRAPPER_QUIESCENCE_QUALIFICATION.md",
+  "counters": [
+    1508,
+    0
+  ]
+}

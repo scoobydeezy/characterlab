@@ -1,0 +1,4 @@
+import {it,expect} from 'vitest';
+import {createInterferenceExpectationRun as create} from '../campaign3/interferenceExpectation';
+import {successorFrames} from './interferenceExpectationSuccessorFixtures';
+it('post-report probes retain episode weighting after duplicate and new same-polarity sources',async()=>{for(const repeated of [false,true]){const frames=await successorFrames(repeated),run=create('AcrossEpisodeMean',frames);while(await run.step()){}const s=run.snapshot();expect(s.rows[7].expectation).toBe('2/3');expect(s.rows[7].affect).toEqual(['2/3','2/3']);expect(s.rows[7].eligible).toBe(3);expect(s.episodes[2].support).toHaveLength(repeated?2:1);if(repeated){const sources=s.episodes.flatMap(e=>e.support);expect(sources.filter(e=>e.positive).length/sources.length).toBe(1/2);}}},60000);

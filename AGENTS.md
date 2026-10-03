@@ -45,6 +45,322 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**Current routing (2026-10-03):** VER-C3-AFFECT-REGULATORY-001: bounded body-only regulatory reduction QUALIFIED.
+64 fresh component runs/832 original-prefix restores;320 substitutions/640 executions;
+4 native public sentinels/48 matching instants/16 Save132 restores;5+328 tests/build.
+Identical whole body history/current sensations, different admitted harm belief produce
+threat0/270 and later stress0/135. FullAffect/ScalarThreat preserve64/64;Stress56/64,
+Pain48/64,RewardDeviation56/64. Preserve scalar successes and unchanged actions.
+No new production mechanism or psychological vector-necessity claim. AuditREV111:
+132 bounded/0 partial/0 blocked;106 verdicts. Bounded clause coverage complete;Campaign3
+NOT EXIT-READY. Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. RO019 ACTIVE;
+RO021 historical reconciliation unsatisfied;RO022 CLOSED. No owner ruling.
+Start CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md;next
+CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md.
+
+**Prior routing (2026-10-03):** VER-C3-LONGITUDINAL-LOSS-001: bounded valued-contact loss COMPONENT QUALIFIED.
+5 models/480 fresh runs/6240 original-prefix restores;5760 advancing/480 terminal;
+8 faults;10 focused/328 reference tests/fresh build.160 observer/execution boundary pairs.
+Actual acquired relationship, fallible contact belief, maintained goal, affect and later
+sampled action/execution remain separate. Loss changes actions5/8;NoAffect5/8;
+strong competing motive7/8. Preserve equalities, controlled adoption/reports,
+masked action outcomes and prior GRIEF model. No clinical grief/native admission or
+affect-dimensionality claim. AuditREV110:131 bounded/1 partial/0 blocked;105 verdicts.
+Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. No owner ruling.
+Start CAMPAIGN3_LONGITUDINAL_PERSONAL_LOSS_QUALIFICATION.md;next
+AFFECT_REGULATORY_REDUCTION_READINESS.md. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** VER-C3-LONGITUDINAL-HABIT-001: bounded habit/relearning COMPONENT QUALIFIED.
+10 models/960 fresh receiver runs/16320 receiver-prefix restores (15360 advancing/960
+terminal), over8 authenticated reused native sources/136 prior native prefixes.
+Separately4 fresh REV2 joined horizons/68 prefix comparisons/8 joined restores pass.
+Practice-specific episode loss preserves habit; rest inhibits; actual observed renewed
+practice restores corrected-belief availability8/8. Hidden/unavailable controls do not.
+Final free action4/8; four non-actions preserved. Stored/Derived192 pairs and retention480
+behavioral pairs match.2 fresh joined tests/build; prior10+16+328 receipts reverified.
+Preserve ?raw scanner and wrong fault-oracle findings, original plan and one old joined
+receipt; REV2 is authoritative, no production semantics changed. No native admission or
+global history erasure/compression. All execution jobs finished; no duplicate workers.
+Start CAMPAIGN3_LONGITUDINAL_HABIT_QUALIFICATION.md. Next LONGITUDINAL_PERSONAL_LOSS_READINESS.md.
+AuditREV109:130 bounded/2 partial/0 blocked;104 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling;
+Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** Habit/relearning successor IMPLEMENTED; qualification OPEN.
+Actual observed practice forms separate episode children; recency pressure removes
+those children while HABIT history persists. KeepAll and EraseHistory distinguish
+retained episode content from learned availability. Rest inhibition/release, actual
+positive renewed practice and corrected-belief free probes are implemented. Hidden
+and unavailable renewed practice do not relearn from a positive report alone.
+10 new/16 reused memory-owner/328 reference tests and fresh build pass;17 complete
+receiver prefixes reproduce immediate successors; atomic owner rollback/publication
+checks pass. Zero-standing development controls only: no native biography execution
+or new native admission. Original routine/source bytes and comparators remain frozen.
+Start LONGITUDINAL_HABIT_IMPLEMENTATION_CHECKPOINT.md. Next prospective native-source
+binding, identity freeze and all-seed composition matrix. No owner ruling or verdict.
+AuditREV108 remains129 bounded/3 partial/0 blocked,103 verdicts;1508/0;corpus0.29.0/21;
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** VER-C3-LONGITUDINAL-ROUTINE-001: bounded routine integration COMPONENT QUALIFIED.
+6 models/504 receiver trajectories/8568 receiver prefix reconstructions,8064 advancing/
+504 terminal.16 native sources/272 native prefixes reused under frozen authentication;
+separately4 fresh joined horizons/68 prefix comparisons/8 joined restores (4 advancing,
+4 terminal).12 fresh receiver faults; prior10 focused/328 reference receipts reverified;
+fresh build passes. All8 maintained and withdrawn cases resume; opposed cases inhibit.
+Maintained/withdrawn probabilities differ8/8, actions5/8. Stored/Derived96 pairs and
+retention24 pairs match. Preserve seed0 delayed resumption at15 and negative-outcome
+extinction; both development failures remain. No all504-run native admission claim.
+Source episode expiry is not forgetting the new practice itself. No law retired.
+Start CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md. Next
+LONGITUDINAL_HABIT_RELEARNING_READINESS.md. All matrix processes finished.
+AuditREV107:129 bounded/3 partial/0 blocked;103 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** Routine integration IMPLEMENTED; prospective qualification OPEN.
+Native LONG biography joins actual pre-gap practice, cue history, corrected reward
+belief and maintained/withdrawn/opposed goals.10 focused/328 reference tests/build pass.
+Native seeds0/1 reach14 after actual episode expiry; seed0 retains availability but
+chooses idle under contrary biography, seed1 resumes. Pure receiver covers16 instants
+and8-seed Stored/Derived equality. Original-prefix1/8 successors and3 fault sites pass.
+Preserve typed-occurrence rejection and failed must-resume assertion in both development
+cohorts. No calibration changed to force resumption. No verdict, Brief promotion or
+native Save132 admission. Start LONGITUDINAL_ROUTINE_IMPLEMENTATION_CHECKPOINT.md.
+Next prospective source-reuse/identity freeze, full native horizon and routine matrix.
+AuditREV106 remains128 bounded/4 partial/0 blocked,102 verdicts;1508/0;corpus0.29.0/21;
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling.
+Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** VER-C3-LONGITUDINAL-GOAL-001: bounded goal/biography integration COMPONENT QUALIFIED.
+5 models/120 runs/2040 original-prefix restores;1920 advancing/120 terminal successors.
+Fine/NoFeedback probabilities differ18/24, actions14/24; coarse equals NoFeedback24/24.
+All24 retention pairs preserve later choices. Goal withdrawal/replacement changes8/8
+sequences each without rewriting native source saves. Zero-standing and stochastic
+equalities remain. Existing8 focused/328 reference receipts reverified; fresh build passes.
+No new joined native scheduler or Save132 admission. All execution jobs have finished.
+Start CAMPAIGN3_LONGITUDINAL_GOAL_QUALIFICATION.md; next LONGITUDINAL_ROUTINE_READINESS.md.
+AuditREV105:128 bounded/4 partial/0 blocked,102 verdicts.1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling;
+Campaign3 NOT EXIT-READY. No general calibration selected or comparator retired.
+
+**Prior routing (2026-10-03):** Longitudinal matrix continues in active sessions86267/36191; no duplicate workers.
+Interim review binds72 complete trajectories: fine/coarse probabilities differ18/24,
+actions14/24; zero-standing seeds4/5 and four stochastic action equalities retained.
+All24 KeepAll/expired pairs preserve later choices. Current goal withdrawal/replacement
+changes actions8/8 each with identical native biography saves. No verdict/promotion;
+all120 runs and2040 restores still required. See LONGITUDINAL_GOAL_INTERIM_REVIEW.md.
+Prior8 focused/328 reference/build receipts unchanged; no production edit.1508/0.
+AuditREV104 remains127 bounded/5 partial/0 blocked,101 verdicts. No owner ruling.
+
+**Prior routing (2026-10-03):** Longitudinal goal matrix FROZEN and EXECUTING:5 models/120 runs/2040 required restored
+prefixes. Immutable capture:20 complete trajectories/340 captured hashes/12 native goal
+pairs,0 new restores. Counts are historical, not final completion. Two active tool
+sessions86267/36191; inspect LONGITUDINAL_GOAL_EXECUTION_PROGRESS.log before launching
+anything. Sequential continuation already queues replay and final matrix checks.
+Start LONGITUDINAL_GOAL_EXECUTION_CHECKPOINT.md. No verdict/promotion/native admission.
+Prior8 focused/328 reference/build receipts reverified, not rerun.1508/0;AuditREV103:
+127 bounded/5 partial/0 blocked,101 verdicts;RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** Longitudinal goal integration IN PROGRESS, no new verdict or clause promotion.
+Start LONGITUDINAL_GOAL_IMPLEMENTATION_CHECKPOINT.md. Unchanged native LONG source
+joins existing goal adoption/withdrawal and actual later reason-dice choice.16 instants;
+8 focused/328 reference tests/build; seed0 and selected restores only. Preserve failed
+coarse NoFeedback inequality: acquired -100733/600733 standing had zero effective
+coarse modifier. FineStanding is a separate candidate; coarse equality remains.
+Next prospective all-seed/all-prefix composition matrix. No native joined admission.
+Counters1508/0;AuditREV102 remains127 bounded/5 partial/0 blocked,101 verdicts.
+RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** bounded enacted coercion COMPONENT QUALIFIED.
+VER-C3-ENACTED-COERCION-001:6 models/576 runs/2880 complete prefixes;2304 advancing/
+576 terminal successors.12 focused/328 reference tests/build;1508/0. Actual refusal
+penalties supply admitted, source-specific knowledge before later choice/qualification.
+All8 seeds change probabilities;5 change actions,3 remain equal. Mean/Latest differ2/8;
+20 high-pressure expressions excluded by Threshold. Original expression survives failed
+execution; same displays/different power preserve target views. All six candidates remain.
+Controlled demander, penalty policy, significance and meaning; no native admission or
+universal coercion law. Brief12.12-3 bounded;AuditREV101:127 bounded/5 partial/0 blocked;
+101 verdicts. Corpus0.29.0/21, wrappers54/57 unchanged. No owner ruling; NOT EXIT-READY.
+See CAMPAIGN3_ENACTED_COERCION_QUALIFICATION.md and ENACTED_COERCION_CLOSURE_REV1.json.
+Next LONGITUDINAL_INTEGRATION_READINESS.md;RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+
+**Prior routing (2026-10-03):** bounded cross-context expression COMPLETE:
+VER-C3-CROSS-CONTEXT-001. Start CURRENT.md and CAMPAIGN3_CROSS_CONTEXT_QUALIFICATION.md.
+6 enacted-domain models/55 runs/330 prefixes;330 original save hashes preserved.
+144 receiving executions/864 prefixes (126 new runs/756 new;18 repeats),6 unchanged
+models.14 focused/328 reference tests/build;1508/0. Actual custody/disclosure/attendance
+and all-seed receiving close Brief12.12-1 bounded. Preserve local/global cancellation,
+publication gap and typing cohort. No natural meaning/acceptance or native admission.
+AuditREV100:126/6/0;100 verdicts;wrapper54/57/corpus0.29.0/21 unchanged. Next
+ENACTED_COERCION_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+
+**Current routing (2026-10-02):** controlled common-meaning identity component COMPLETE:
+VER-C3-CROSS-CONTEXT-COMPONENT-001. Start CURRENT.md and
+CAMPAIGN3_CROSS_CONTEXT_IDENTITY_QUALIFICATION.md.6 models/127 runs/762 prefixes;
+12 focused/328 reference tests/build;1508/0. Held-out probabilities differ6/8,
+actions4/8;1/7 cancellation retained. No broad context or native closure: generic
+execution and authored meanings leave Brief12.12-1 PARTIAL. Seed7 receiving
+controls need all-seed successors. Preserve both development cohorts/execution plan.
+Next CROSS_CONTEXT_IDENTITY_SOURCE_SUFFICIENCY.md. AuditREV99:125/7/0;99 verdicts;
+wrapper54/57/corpus0.29.0/21 unchanged. No owner ruling; NOT EXIT-READY.
+
+
+**Current routing (2026-10-02):** repeated interference expectation COMPONENT QUALIFIED:
+VER-C3-INTERFERENCE-EXPECTATION-001. Start CURRENT.md and
+CAMPAIGN3_INTERFERENCE_EXPECTATION_QUALIFICATION.md.12 native sources/108 native prefixes;
+4 component models/60 comparisons/540 component prefixes;18 focused/328 reference tests/
+build;1508/0. Separate replay surfaces, no new native wrapper. Exact prior intent remains;
+prospective expectation feeds appraisal. Preserve missing denied pair and terminal-report
+timing successor. Brief12.14-5 bounded;AuditREV98:125/7/0;98 verdicts;wrapper54/57.
+Next CROSS_CONTEXT_IDENTITY_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Current routing (2026-10-02):** hidden-cause inference COMPONENT QUALIFIED:
+VER-C3-LATENT-CAUSE-001. Start CURRENT.md and CAMPAIGN3_LATENT_CAUSE_QUALIFICATION.md.
+4 models/56 runs/392 prefixes;16 focused/328 reference tests/build;1508/0. Actual
+competing explanations and goal-relative appraisal; hidden/denied/timing and mistaken
+controls. No native/general causal-identification claim. Brief12.4-4 bounded;AuditREV97:
+124/8/0;97 verdicts;wrapper54/57 unchanged. Next INTERFERENCE_EXPECTATION_READINESS.md.
+Affect dimensionality stays partial; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Current routing (2026-10-02):** affect reduction comparison COMPLETE, no clause promotion.
+VER-C3-AFFECT-REDUCTION-001; start CURRENT.md and CAMPAIGN3_AFFECT_REDUCTION_COMPARISON.md.
+ScalarUncontrolled matches all14 FullPair receiving cases; Exposure/HistoricalAverage
+fail full-control preservation.4 models/56 substitutions/112 receiver executions;
+14 original runs/70 restores. No production change; prior24/328/build preserved.
+AuditREV96:123/9/0;96 verdicts;1508/0;wrapper54/57. Brief12.5-8 remains PARTIAL.
+Next LATENT_CAUSE_READINESS.md under local reordering; no owner ruling; NOT EXIT-READY.
+
+**Current routing (2026-10-02):** affect retrieval COMPONENT QUALIFIED:
+VER-C3-AFFECT-RETRIEVAL-001. Start CURRENT.md and CAMPAIGN3_AFFECT_RETRIEVAL_QUALIFICATION.md.
+4 models/56 runs/280 prefixes;24 focused/328 reference tests/build. Same prior memory/
+history/cue, actual affect changes published recall; NoFeedback removes it. Four laws
+retained; no native/encoding/salience/scalar-necessity claim. Preserve harness failure.
+AuditREV95:123/9/0;95 verdicts;1508/0;wrapper54/57 unchanged. Next scalar-affect reduction
+comparison (work-order item5); no owner ruling. Campaign3 NOT EXIT-READY.
+
+**Current routing (2026-10-02):** recent vivid recollection component QUALIFIED:
+VER-C3-VIVID-001. Start CURRENT.md and CAMPAIGN3_VIVID_RECOLLECTION_QUALIFICATION.md.
+4 models/44 runs/308 prefixes;17 focused/328 reference tests/build;1508/0.
+Same values/rank, different sensory fidelity; false vivid recall and real fragmentation.
+Preserve nonempty-basis/unrelated-cue findings. No subjective/native qualification.
+AuditREV94:121/11/0;94 verdicts. Next affect-to-salience/retrieval under work-order item4.
+No owner ruling; NOT EXIT-READY. Earlier routing is historical.
+
+
+**Current routing (2026-10-02):** interoceptive uncertainty component QUALIFIED:
+VER-C3-UNCERTAINTY-001. Start CURRENT.md and CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md.
+5 models/155 runs/775 prefixes;15 focused/328 reference tests/build;1508/0.
+Explicit interval quality versus external accuracy;6/8 sequence differences,2 equal.
+No native admission, physical execution or calibrated confidence. Five laws retained.
+AuditREV93:120/12/0;93 verdicts. Next recent vivid recollection readiness per remaining
+work order. No owner ruling; NOT EXIT-READY. Earlier routing is historical.
+
+
+**Current routing (2026-10-02):** importance/urgency component QUALIFIED:
+VER-C3-IMPORTANCE-URGENCY-001. Start CURRENT.md and
+CAMPAIGN3_IMPORTANCE_URGENCY_QUALIFICATION.md.5 models/195 runs/1365 prefixes;
+14 focused/328 reference tests/build;1508/0. Equal initial products diverge later;
+Refold equals cached importance. No native admission or physical execution claim.
+AuditREV92:118/14/0;92 verdicts. Next uncertainty readiness under remaining work order.
+Preserve development failures/all comparators. No owner ruling; NOT EXIT-READY.
+Earlier routing is historical.
+
+
+**Current routing (2026-10-02):** partial-coverage audit pass COMPLETE. Start CURRENT.md,
+CAMPAIGN3_LONGITUDINAL_PARTIAL_COVERAGE_AUDIT.md and
+CAMPAIGN3_REMAINING_COVERAGE_WORK_ORDER.md. All20 original clauses audited; five
+bounded closures,15 remaining gaps. AuditREV91:117/15/0;91 verdicts;1508/0.
+No new behavioral execution. Next same-motive importance/urgency readiness and
+comparison; no owner ruling. Campaign3 NOT EXIT-READY. Earlier routing is historical.
+
+
+**Current routing (2026-10-02):** identity/agency partial audit COMPLETE. Start
+CURRENT.md and CAMPAIGN3_IDENTITY_AGENCY_PARTIAL_COVERAGE_AUDIT.md. All three audited
+clauses remain partial; no new qualification. AuditREV90:117/15/0;91 verdicts;1508/0.
+IntakeREV6:16/20 audited,4 awaiting audit. Historical receipts only, no new simulation.
+Next longitudinal routines/goals/habits/loss coverage. No owner ruling; not exit-ready.
+Earlier routing below is historical.
+
+
+**Current routing (2026-10-02):** Affect partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.5-3 fear without flight closes in bounded AFFECT threat/continuation scope:
+positive threat, same affect, competing commitment changes actual response (seeds4/7).
+No literal locomotor flight or general fear syndrome claimed. Salience/retrieval
+feedback12.5-6 and non-scalar regulatory affect12.5-8 remain PARTIAL. Start
+CAMPAIGN3_AFFECT_PARTIAL_COVERAGE_AUDIT.md and AFFECT_PARTIAL_COVERAGE_CHECK_REV1.json.
+Thirteen of20 starting clauses audited; seven await audit in intakeREV5. Prior
+receipts/source hashes reverified; no new simulation/tests/build, verdict or allocation.
+AuditREV89:117 bounded/15 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next identity/agency: cross-context expression, coercion exclusion, repeated interference.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+Earlier routing below is historical.
+
+
+**Current routing (2026-10-02):** Belief partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.4-6 repeated prediction error is QUALIFIED BOUNDED using existing reinforcement
+component evidence: prior expectations differ from admitted outcomes, repeated updates
+change later choice, withholding breaks the route. Residuals are audit readouts, not
+new surprise state. Uncertain-but-correct belief12.4-1 and hidden cause12.4-4 remain
+PARTIAL. Start CAMPAIGN3_BELIEF_PARTIAL_COVERAGE_AUDIT.md and
+BELIEF_PARTIAL_COVERAGE_CHECK_REV1.json. IntakeREV4: ten of20 clauses audited, ten
+await audit. No new verdict, simulation/tests/build, production change or allocation.
+AuditREV88:116 bounded/16 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next affect: fear without flight, salience/retrieval feedback, regulatory dimensionality.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+Earlier routing below is historical.
+
+
+**Current routing (2026-10-02):** Memory partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.3-10 consolidation without episode/summary double-counting is QUALIFIED
+BOUNDED using VER-C3-RECOLLECT-001. Recent vivid recollection12.3-1 and affect-biased
+retrieval12.3-9 remain PARTIAL with explicit comparison/integration gaps. TaskConcern
+is not general Affect. Start CAMPAIGN3_MEMORY_PARTIAL_COVERAGE_AUDIT.md and
+MEMORY_PARTIAL_COVERAGE_CHECK_REV1.json. Seven of20 starting clauses audited;
+thirteen await audit in intakeREV3. Prior receipts reverified, no new simulation,
+tests/build, verdict, production change or allocation.115 bounded/17 partial/0 blocked;
+91 verdicts;1508/0; wrapper54/57 unchanged. Next belief: uncertain correct estimate,
+hidden cause, repeated prediction error. RO019 ACTIVE; RO021 unsatisfied; no owner
+ruling. Campaign3 NOT EXIT-READY.
+
+Earlier routing below is historical.
+
+
+**Current routing (2026-10-02):** Motive partial-coverage audit COMPLETE (2026-10-02), LOCAL DISPOSITION.
+Brief12.2-6 multiple actions per motive is QUALIFIED BOUNDED using the existing
+SUBSTITUTION component and separate native GOAL/strategy corroboration. Brief12.2-2
+importance/urgency remains PARTIAL pending independent same-motive interventions.
+Start CAMPAIGN3_MOTIVE_PARTIAL_COVERAGE_AUDIT.md and MOTIVE_PARTIAL_COVERAGE_CHECK_REV1.json.
+Four of20 starting partial clauses audited; sixteen await audit in intakeREV2.
+No new verdict, run, simulation/tests/build, production change or allocation.
+AuditREV86:114 bounded/18 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next memory: vivid recollection, affect-biased retrieval, consolidation/double-counting.
+RO019 ACTIVE; RO021 unsatisfied; no owner ruling; Campaign3 NOT EXIT-READY.
+
+Earlier routing below is historical.
+
+
+**Current routing (2026-10-02):** Partial coverage audit —2026-10-02: Brief12.1-8 tolerance branch is QUALIFIED BOUNDED
+from VER-C3-TOLERANCE-001, VER-C3-BIOLOGY-001 and VER-C3-BIOLOGY-PUBLIC-001, with
+current publication-repair evidence preserved. Brief12.1-4 interoceptive uncertainty
+remains PARTIAL: scalar fallibility/missingness does not yet discriminate an
+uncertainty-sensitive consumer. See CAMPAIGN3_BODY_PARTIAL_COVERAGE_AUDIT.md and
+BODY_PARTIAL_COVERAGE_CHECK_REV1.json. Only these two of the initial20 clauses were
+audited; PARTIAL_COVERAGE_INTAKE_REV1.json queues the other18. No new verdict,
+model/run, production change or allocation. Existing receipts reverified, no fresh
+simulation/tests/build. Preserve historical-checker rejection and proper source mapping.
+AuditREV85:113 bounded/19 partial/0 blocked;91 verdicts;1508/0; wrapper54/57 unchanged.
+Next Brief12.2-2 importance/urgency and12.2-6 multiple actions per motive. RO019 ACTIVE;
+RO021 unsatisfied; RO022 CLOSED. LOCAL DISPOSITION; Campaign3 NOT EXIT-READY.
+
+Earlier routing below is historical.
+
+
 **Current routing (2026-10-01):** VER-C3-DEVELOPMENT-PUBLIC-001 qualifies development-public/0.1-candidate:
 7 models/36 public programs/668 actual Save132 prefixes,632 advancing/36 terminal;
 8216 committed native stages;21 focused/328 reference tests/typecheck/build;1508/0.

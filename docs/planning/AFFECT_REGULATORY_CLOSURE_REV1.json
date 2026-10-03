@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-AFFECT-REGULATORY-001",
+  "componentRuns": 64,
+  "componentPrefixes": 832,
+  "receivingTrials": 320,
+  "repeatedReceivers": 640,
+  "nativeRuns": 4,
+  "nativePrefixes": 16,
+  "nativeInstants": 48,
+  "bodyHistoryCollisions": 8,
+  "comparison": [
+    {
+      "law": "FullAffect",
+      "matches": 64,
+      "total": 64
+    },
+    {
+      "law": "ScalarThreat",
+      "matches": 64,
+      "total": 64
+    },
+    {
+      "law": "ScalarStress",
+      "matches": 56,
+      "total": 64
+    },
+    {
+      "law": "ScalarPain",
+      "matches": 48,
+      "total": 64
+    },
+    {
+      "law": "ScalarRewardDeviation",
+      "matches": 56,
+      "total": 64
+    }
+  ],
+  "tests": 5,
+  "referenceTests": 328,
+  "build": "PASS",
+  "counters": [
+    1508,
+    0
+  ],
+  "disposition": "Bounded body-only regulatory reduction fails existing delayed stress receiving. ScalarThreat remains sufficient. No general psychological scalar impossibility claim.",
+  "artifacts": [
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_PLAN_REV1.json",
+      "sha256": "5eac6708f4104f41a99841f27f135ccb8bee660cbc0fb69acebba0e62dc9ba1e"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_RESULT_REV1.json",
+      "sha256": "6f87f696882ed9dee8fa358375ad1697c3379c4f3e06d39f258dd8165b686554"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_TESTS_REV1.json",
+      "sha256": "713856da24af1c259c88fa445e824ebe15e6c81e9007461a9426019b94478f51"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_REFERENCE_TESTS_REV1.json",
+      "sha256": "ef25873e30231c38ace08c27180539ee246047f7e02afa7ae4414b2bd1b6d078"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_BUILD_REV1.json",
+      "sha256": "784bfdfdafa5a561a17ea9ba63e7c5a9b952023e6021e9cddf8b522f58b2d623"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md",
+      "sha256": "63861bba013a30514a171c5f71b6b1a7482469f5276b85145afd1952fb0944da"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md",
+      "sha256": "37650eedb58ab68acde74a6f93eeea1130b1197abd36354fe0689a422c84da8a"
+    },
+    {
+      "path": "scripts/check-affect-regulatory.mjs",
+      "sha256": "17e87504109a52346f8157fe26d156d6c4d68458fd9ec970e22456796cc5bda7"
+    }
+  ]
+}

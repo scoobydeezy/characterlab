@@ -1,0 +1,31 @@
+// Evidence reconciliation only. No simulation or historical receipt rewriting.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const p='docs/planning/',read=n=>JSON.parse(fs.readFileSync(p+n)),sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+for(const script of ['check-tolerance-closure.mjs','check-biological-system-closure.mjs','check-development-wrapper-extension.mjs'])execFileSync(process.execPath,['scripts/'+script],{stdio:'inherit'});
+const plan=read('BIOLOGICAL_CONSTITUTION_PLAN_REV1.json'),r=read('BIOLOGICAL_CONSTITUTION_RESULT_REV1.json');
+assert.equal(r.planSha256,sha(p+'BIOLOGICAL_CONSTITUTION_PLAN_REV1.json'));
+const [a,b]=plan.rows,[x,y]=r.results;
+assert.deepEqual(a.frames,b.frames);const ca=structuredClone(a.config),cb=structuredClone(b.config);
+assert.equal(ca.constitution.channels.reward.toleranceGain,250);assert.equal(cb.constitution.channels.reward.toleranceGain,125);
+cb.constitution.channels.reward.toleranceGain=250;assert.deepEqual(ca,cb);
+assert.deepEqual(x.snapshot.rows[0],y.snapshot.rows[0]);
+assert.deepEqual(x.snapshot.rows.slice(0,8).map(z=>z.intent),y.snapshot.rows.slice(0,8).map(z=>z.intent));
+const effects=z=>z.snapshot.world.slice(0,2).map(w=>w.terms.consequence.reward.effects[0]);
+const ex=effects(x),ey=effects(y);
+assert.deepEqual(ex[0],ey[0]);assert.equal(ex[0].potential,600);
+for(const e of [ex[1],ey[1]]){assert.equal(e.dose,600);assert.equal(e.satiation,0);assert.equal(e.sensitization,0);assert.equal(e.effective,e.potential);}
+assert.deepEqual([ex[1].tolerance,ey[1].tolerance],[150,75]);assert.deepEqual([ex[1].potential,ey[1].potential],[522,558]);
+assert.deepEqual([x.snapshot.rows[1].after.reward,y.snapshot.rows[1].after.reward],[910,940]);
+const native=[0,1,2,3].flatMap(i=>read(`BIOLOGY_PUBLIC_RESULT_PART${i}_REV3.json`).results);
+const main=native.find(z=>z.name==='main'&&z.law==='Full'&&z.seed===7),other=native.find(z=>z.name==='constitution125');
+assert(main.componentMatched&&other.componentMatched);assert.equal(main.prefixes.length,49);assert.equal(other.prefixes.length,3);
+const t=read('TOLERANCE_RESULT_REV1.json');
+for(const [law,last] of [['Reciprocal','1/5'],['Linear','3/5'],['Unattenuated','1/1']])assert.equal(t.results.find(z=>z.name==='repeated'&&z.law===law).views.at(-1).potential,last);
+const intake=read('PARTIAL_COVERAGE_INTAKE_REV1.json');assert.equal(intake.clauses.length,20);assert.equal(intake.clauses.filter(c=>c.disposition==='QUALIFIED BOUNDED').length,1);
+const files=['CAMPAIGN3_BODY_PARTIAL_COVERAGE_AUDIT.md','PARTIAL_COVERAGE_INTAKE_REV1.json','BODY_PARTIAL_AUDIT_FINDING_REV1.json','CAMPAIGN3_EXIT_AUDIT_REV84.json','TOLERANCE_CLOSURE_REV1.json','BIOLOGICAL_SYSTEM_CLOSURE_REV1.json','BIOLOGICAL_CONSTITUTION_PLAN_REV1.json','BIOLOGICAL_CONSTITUTION_RESULT_REV1.json','BIOLOGY_PUBLIC_CLOSURE_REV2.json','PUBLIC_WRAPPER_QUIESCENCE_CLOSURE_REV1.json','DEVELOPMENT_WRAPPER_EXTENSION_REV1.json'];
+const result={status:'PASS',scope:'Existing evidence reconciliation, no new simulation/test/build execution or verdict.',audited:['BRIEF-12.1-4','BRIEF-12.1-8'],promoted:['BRIEF-12.1-8'],remainingPartial:19,counters:[1508,0],pair:{gain:[250,125],firstPotential:[600,600],secondPriorTolerance:[150,75],secondPotential:[522,558],secondSafeReward:[910,940],nativeSelectedPrefixes:[49,3]},files:[...files.map(n=>({path:p+n,sha256:sha(p+n)})),{path:'scripts/check-body-partial-coverage.mjs',sha256:sha('scripts/check-body-partial-coverage.mjs')}]};
+const out=p+'BODY_PARTIAL_COVERAGE_CHECK_REV1.json';if(process.argv.includes('--write'))fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n',{flag:'wx'});else assert.deepEqual(JSON.parse(fs.readFileSync(out)),result);
+console.log('PASS body coverage: tolerance bounded; interoceptive uncertainty partial; no new run or allocation.');

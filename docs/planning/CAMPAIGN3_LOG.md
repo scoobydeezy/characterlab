@@ -6462,3 +6462,1129 @@ native qualification, Brief promotion or calendar-age/general learning law claim
 LOCAL DISPOSITION; no owner ruling. AuditREV83; counters1508/16. RO019 ACTIVE;
 RO021 final history unsatisfied; RO022 CLOSED for current publication scope. Earlier
 component668 restores do not satisfy the native668 gate. Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-01. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Development NATIVE PUBLIC QUALIFIED — VER-C3-DEVELOPMENT-PUBLIC-001.**
+Start CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md. Both owner-required effects now
+execute under typed native sources, separate writers, actual scheduler phases,
+Save132/original-input restore, reached faults and guarded publication. Component
+trajectories and event-time eligibility/provenance remain unchanged.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **112 bounded /20 partial /0 blocked** |
+| Native qualification | **7 models /36 programs /668 prefix restores** |
+| Successors / committed native stages | **632 advancing /36 terminal /8216 stages** |
+| Focused / reference tests | **21 /328; typecheck/build pass** |
+| Public wrapper inventory | **54 producers /57 factories; prior scopes preserved** |
+
+DEVELOPMENT_PUBLIC_PLAN_REV3.json and DEVELOPMENT_PUBLIC_CHECK_REV3.json govern the
+full matrix; DEVELOPMENT_PUBLIC_CLOSURE_REV1.json seals the qualification. Preserve
+both test cohorts and all harness revisions.113 earlier actual restore receipts were
+retained and reexecuted byte-identically; one successor per prefix, not full tails.
+No seed discarded, comparator retired or psychological law selected.
+
+**Next: CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md.** Audit20 remaining PARTIAL clauses
+against later existing evidence before new mechanisms. Begin interoceptive uncertainty
+and tolerance/sensitization coverage. No automatic whole-campaign exit from zero BLOCKED
+labels: partial clauses and final history still matter.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV84; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current54/57 publication scope.
+No calendar-age, clinical, universal-plasticity or full lifespan claim.
+Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Partial coverage audit started: embodiment pair COMPLETE.**
+Start CAMPAIGN3_BODY_PARTIAL_COVERAGE_AUDIT.md. Brief12.1-8 tolerance branch closes
+from existing effect and native biology evidence. Brief12.1-4 uncertainty remains
+PARTIAL with an explicit evidence-quality/consumer gap. No new verdict or simulation.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active /19 conditional /0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **113 bounded /19 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; predecessor scopes preserved** |
+
+BODY_PARTIAL_COVERAGE_CHECK_REV1.json seals exact tolerance arithmetic, constitutional
+parameter isolation and native cohort membership. Prior qualification, test/build and
+publication-repair receipts reverified; no fresh simulation/tests/build. Preserve
+BODY_PARTIAL_AUDIT_FINDING_REV1.json: direct historical checker rejected repaired source;
+explicit preserved-source check and separate current repair evidence pass. No old hash
+or source changed. All developmental qualification evidence remains intact.
+
+**Next: audit Brief12.2-2 general importance/current urgency and12.2-6 multiple actions
+per motive.** Use existing MULTISOURCE, biological substitution and goal/strategy
+witnesses before allocating a mechanism. PARTIAL_COVERAGE_INTAKE_REV1.json retains
+all20 starting clauses; only the first two have been audited in this pass. Keep the
+interoceptive uncertainty experiment open; no calibrated uncertainty law selected.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV85; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Partial coverage audit started: embodiment pair COMPLETE.**
+Start CAMPAIGN3_BODY_PARTIAL_COVERAGE_AUDIT.md. Brief12.1-8 tolerance branch closes
+from existing effect and native biology evidence. Brief12.1-4 uncertainty remains
+PARTIAL with an explicit evidence-quality/consumer gap. No new verdict or simulation.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **113 bounded /19 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; predecessor scopes preserved** |
+
+BODY_PARTIAL_COVERAGE_CHECK_REV1.json seals exact tolerance arithmetic, constitutional
+parameter isolation and native cohort membership. Prior qualification, test/build and
+publication-repair receipts reverified; no fresh simulation/tests/build. Preserve
+BODY_PARTIAL_AUDIT_FINDING_REV1.json: direct historical checker rejected repaired source;
+explicit preserved-source check and separate current repair evidence pass. No old hash
+or source changed. All developmental qualification evidence remains intact.
+
+**Next: audit Brief12.2-2 general importance/current urgency and12.2-6 multiple actions
+per motive.** Use existing MULTISOURCE, biological substitution and goal/strategy
+witnesses before allocating a mechanism. PARTIAL_COVERAGE_INTAKE_REV1.json retains
+all20 starting clauses; only the first two have been audited in this pass. Keep the
+interoceptive uncertainty experiment open; no calibrated uncertainty law selected.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV85; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY.
+
+Preserve BODY_PARTIAL_BOOKKEEPING_FINDING_REV1.json: first research check rejected
+CURRENT table spacing despite correct counts; formatting corrected, checker unchanged.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Motive partial-coverage pair COMPLETE.** Start CAMPAIGN3_MOTIVE_PARTIAL_COVERAGE_AUDIT.md.
+Brief12.2-6 closes in bounded substitution component scope with separate native
+GOAL/strategy corroboration. Brief12.2-2 importance/urgency remains PARTIAL with an
+explicit same-motive intervention gap. Earlier interoceptive uncertainty gap remains.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **114 bounded /18 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+MOTIVE_PARTIAL_COVERAGE_CHECK_REV1.json verifies existing closure graphs and selected
+exact rows. No fresh simulation/tests/build, production change, allocation or verdict.
+PARTIAL_COVERAGE_INTAKE_REV2.json preserves REV1: four of20 starting clauses audited;
+sixteen still await audit. Both retained partial gaps remain explicit. No general
+option-discovery or native substitution admission claim; all competitors retained.
+
+**Next: memory coverage**—recent vivid recollection, affect-biased retrieval and
+consolidation without double-counting episode/summary. Reconcile existing GA,
+recollection, defining-memory and concern-feedback evidence before new mechanisms.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV86; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Preserve earlier body-audit historical-checker and
+bookkeeping-format findings; prior developmental closure remains intact.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Memory partial-coverage audit COMPLETE.** Start CAMPAIGN3_MEMORY_PARTIAL_COVERAGE_AUDIT.md.
+Brief12.3-10 closes for controlled episode/category consolidation under existing
+RECOLLECT evidence. Recent vivid recollection and affect-biased retrieval remain
+PARTIAL; exact retained detail is supporting evidence, and TaskConcern is not general Affect.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **115 bounded /17 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+MEMORY_PARTIAL_COVERAGE_CHECK_REV1.json seals existing receipts and passed test titles.
+No fresh simulation/tests/build, production change, allocation or verdict.
+PARTIAL_COVERAGE_INTAKE_REV3.json preserves REV2: seven of20 starting clauses audited;
+thirteen await audit. Four audited partial gaps remain explicit; no comparator retired.
+
+**Next: belief coverage**—uncertain but approximately correct belief, hidden cause,
+and repeated prediction error. Reconcile BELIEF, LEARN, inference correction and
+biological learning; evidence weight must not become calibrated confidence by renaming.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV87; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Earlier historical-checker and formatting findings remain
+preserved, including MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json (verbatim log whitespace).
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Belief partial-coverage audit COMPLETE.** Start CAMPAIGN3_BELIEF_PARTIAL_COVERAGE_AUDIT.md.
+Repeated prediction error12.4-6 closes in existing reinforcement component scope.
+Uncertain-but-correct belief and hidden cause remain PARTIAL with explicit comparison
+gaps. Evidence weight is not calibrated correctness; report correction is not diagnosis.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **116 bounded /16 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+BELIEF_PARTIAL_COVERAGE_CHECK_REV1.json seals prior LEARN, INFER and reinforcement
+checks and exact residual/full/withheld/failure rows. No fresh simulation/tests/build,
+production change, allocation or verdict. Residuals are audit readouts, not a new
+character variable or learning law. PARTIAL_COVERAGE_INTAKE_REV4.json preserves REV3:
+ten of20 starting clauses audited, ten await audit; six audited gaps remain partial.
+
+**Next: affect coverage**—fear without flight, affect altering salience or retrieval,
+and affect not reducible to one regulatory axis. Reconcile actual affect/action and
+feedback evidence without treating TaskConcern or bodily pressure as general Affect.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV88; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Prior closure hashes and historical findings remain intact;
+verbatim-log whitespace limitation is preserved in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Affect partial-coverage audit COMPLETE.** Start CAMPAIGN3_AFFECT_PARTIAL_COVERAGE_AUDIT.md.
+Fear without flight12.5-3 closes in bounded threat/continuation scope using the
+existing matched AFFECT cases. No literal flight model or general fear syndrome.
+Affect-to-salience/retrieval and non-scalar necessity remain PARTIAL.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **117 bounded /15 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+AFFECT_PARTIAL_COVERAGE_CHECK_REV1.json seals existing AFFECT source/model/test hashes
+and exact choice/oracle contrasts. No fresh simulation/tests/build, allocation or verdict.
+PARTIAL_COVERAGE_INTAKE_REV5.json preserves REV4: thirteen of20 starting clauses audited;
+seven await audit; eight audited gaps remain partial. No comparator retired.
+
+**Next: identity and agency coverage**—meaningful cross-context expression, coerced
+action excluded from voluntary identity evidence, and repeated interference changing
+belief without rewriting intent. Reconcile native identity and agency/inference evidence.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV89; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Prior closures and historical findings remain intact;
+verbatim-log whitespace limitation is preserved in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Identity and agency partial-coverage audit COMPLETE.** Start
+CAMPAIGN3_IDENTITY_AGENCY_PARTIAL_COVERAGE_AUDIT.md. All three clauses remain PARTIAL:
+shared cross-context identity, enacted coercion exclusion, and cross-episode
+interference expectations. Existing local controls remain qualified.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **117 bounded /15 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+IDENTITY_AGENCY_PARTIAL_COVERAGE_CHECK_REV1.json verifies historical identity files
+and agency/inference closure receipts. No fresh simulation/tests/build, verdict or
+allocation. PARTIAL_COVERAGE_INTAKE_REV6.json preserves REV5: sixteen of20 original
+clauses audited; four await audit; eleven audited gaps remain partial.
+
+**Next: longitudinal coverage**—routines, goals, habits and loss. Check actual combined
+life-history evidence before treating separate qualified seams as integration.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV90; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Prior closures and historical findings remain intact;
+verbatim-log whitespace limitation is preserved in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Partial-coverage audit pass COMPLETE.** Start
+CAMPAIGN3_LONGITUDINAL_PARTIAL_COVERAGE_AUDIT.md and
+CAMPAIGN3_REMAINING_COVERAGE_WORK_ORDER.md. All20 starting partial clauses audited:
+five bounded closures; fifteen gaps remain. Routines/goals/habits/loss retain their
+longitudinal integration debt; existing component and public witnesses stand.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /91 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **117 bounded /15 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+LONGITUDINAL_PARTIAL_COVERAGE_CHECK_REV1.json verifies historical LONG frozen
+models/plans/results plus GOAL/CONTROL/GRIEF and wrapper preservation evidence.
+No new simulation/test/build, verdict or allocation. IntakeREV7:20/20 audited.
+
+**Next: importance/urgency readiness and bounded comparison** under the remaining
+coverage work order. Independently vary them for one motive, using existing contracts
+where possible. Freeze controls before implementation; no universal exchange rate.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV91; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Importance/urgency component COMPLETE.** Start
+CAMPAIGN3_IMPORTANCE_URGENCY_QUALIFICATION.md. VER-C3-IMPORTANCE-URGENCY-001:
+5 models/195 runs/1365 prefixes;14 focused/328 reference tests/build. No native
+admission or physical execution. All laws and eight declared seeds retained.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /92 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **118 bounded /14 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Equal current products diverge after urgency recedes;7/8 sampled sequences differ,
+seed0 equal. RefoldImportance exactly preserves safe behavior without a cached I.
+Candidate A calibration is not a universal law. Initial sandbox startup, test-only
+TS2353 and pre-freeze raw-import collector failures are preserved. No allocation.
+
+**Next: uncertainty readiness** (interoceptive uncertainty and approximately correct
+uncertain belief), following CAMPAIGN3_REMAINING_COVERAGE_WORK_ORDER.md item2.
+Define explicit interpretation, accuracy and consumer controls before implementation.
+The original20-clause audit is complete; its frozen intake is historical.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV92; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Interoceptive uncertainty component COMPLETE.** Start
+CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md. VER-C3-UNCERTAINTY-001:
+5 models/155 runs/775 prefixes;15 focused/328 reference tests/build. No native
+admission, physical execution or calibrated confidence. All five models retained.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /93 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **120 bounded /12 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Same actual reserve550 and midpoint500, admitted radii100/300: both approximately
+correct (error50), but upper-deficit probability2/5 versus7/12. Six of eight sequences
+differ; seeds3/7 equal. Biased interval excludes truth, and cognition never repairs
+from world data. Missing/duplicate/hidden evidence controls remain distinct.
+
+**Next: recent vivid recollection readiness**, following remaining coverage work-order
+item3. Define its readout without equating access, detail, confidence and significance.
+The original20-clause audit is complete; frozen intakeREV7 is historical.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV93; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Recent vivid recollection component COMPLETE.** Start
+CAMPAIGN3_VIVID_RECOLLECTION_QUALIFICATION.md. VER-C3-VIVID-001:
+4 models/44 runs/308 prefixes;17 focused/328 reference tests/build. Bounded sensory
+presentation, not subjective phenomenology or native admission. Four models retained.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /94 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **121 bounded /11 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Same recent values, cue and rank can yield clear or weak sensory presentation.
+False displays remain capable of clear recall; later fragmentation deletes features.
+Actual inherited publication settles history. Preserve first15-pass/2-failure cohort:
+nonempty evidence basis and unrelated-cue baseline selection. No old kernel changed.
+
+**Next: affect-to-salience/retrieval integration**, work-order item4. Hold prior
+encoding, retained memory and cue fixed; compare actual derived Affect and NoFeedback.
+Keep encoding suppression and retrieval amplification distinct; TaskConcern is narrower.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV94; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Derived affect to later retrieval component COMPLETE.** Start
+CAMPAIGN3_AFFECT_RETRIEVAL_QUALIFICATION.md. VER-C3-AFFECT-RETRIEVAL-001:
+4 models/56 runs/280 prefixes;24 focused/328 reference tests/build. Same prior
+memory/history/cue, actual completed affect changes published recall; NoFeedback
+removes the effect. Four candidate laws remain; TaskConcern is not general Affect.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /95 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **123 bounded /9 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Hidden/denied evidence, unknown/zero, absent cue/empty graph and prior-only controls
+pass. Actual publication settles history; memory is unchanged. Preserve harness
+path/overlap failure. Controlled factors/reports and authored graph bound this result.
+No native Save132, encoding/salience, general gain law or scalar-necessity claim.
+
+**Next: named scalar-affect reduction**, work-order item5 (Brief12.5-8). Require an
+independently justified downstream distinction; differing candidate outputs alone
+are insufficient. Retain a serious scalar competitor and avoid universal claims.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV95; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Scalar affect receiving comparison COMPLETE; dimensional necessity remains OPEN.**
+Start CAMPAIGN3_AFFECT_REDUCTION_COMPARISON.md. VER-C3-AFFECT-REDUCTION-001:
+4 receiving models/56 substitutions/112 receiver executions;14 original runs/70 exact
+prefix restores. ScalarUncontrolled equals FullPair in every case, including actual
+published content and settlement. Exposure/HistoricalAverage fail full-control
+preservation. All retained; no production change or clause promotion.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /96 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **123 bounded /9 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Fresh matrix assertions pass; previous24 focused/328 reference/build receipts remain
+unchanged, not rerun. This is final-receiver substitution, not a new native runtime.
+Scalar equality does not authorize global removal of exposure or appraisal factors.
+
+**Next: LATENT_CAUSE_READINESS.md**, independent work-order item6. Infer competing
+hidden causes from admitted diagnostics, with ambiguity/mistake/hidden-truth controls.
+Item5/Brief12.5-8 stays PARTIAL: reopen with an independently justified discriminating
+consumer or a separately declared regulatory reduction. Do not manufacture a consumer
+solely to force vector necessity. Local reordering is not closure of this debt.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV96; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Alternative hidden-cause inference component COMPLETE.** Start
+CAMPAIGN3_LATENT_CAUSE_QUALIFICATION.md. VER-C3-LATENT-CAUSE-001:
+4 models/56 runs/392 prefixes;16 focused/328 reference tests/build. Admitted motion/
+resistance reports support limitation versus obstruction; failure alone is ambiguous.
+Actual appraisal consumes inference with a separate goal. Whole safe hidden/denied,
+unknown/success, mistaken, duplicate/foreign and strictly later correction controls pass.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /97 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **124 bounded /8 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Closed two-hypothesis set, equal prior, authored diagnostic weights, latest reports,
+fixed intent and one episode bound this result. No general causal identification,
+source trust, physical remediation, autonomous diagnosis or native Save132 admission.
+
+**Next: INTERFERENCE_EXPECTATION_READINESS.md**, the separate work-order item6
+comparison of repeated attempts, admitted interference evidence and a later scoped
+expectation. Revising one episode does not earn cross-episode learning.
+Affect dimensionality12.5-8 stays PARTIAL; ScalarUncontrolled receiving equality remains.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV97; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Repeated interference expectation component COMPLETE.** Start
+CAMPAIGN3_INTERFERENCE_EXPECTATION_QUALIFICATION.md. VER-C3-INTERFERENCE-EXPECTATION-001:
+12 native source runs/108 native prefixes;4 component models/60 source-bound comparisons/
+540 component prefixes;18 focused/328 reference tests/build. Distinct actual attempts
+feed a route-scoped future expectation and appraisal without rewriting earlier intent.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /98 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **125 bounded /7 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Mean2/3, LatestEpisode0, EpisodeOnly/NoLearning unknown; all retained. Hidden/denied,
+missing/zero, context/goal, duplicate and later correction controls pass. Preserve
+initial missing denied-content pair and terminal-report timing gap; frozen successor
+adds a real post-report probe. Native source and component replay remain separate.
+No new native wrapper, natural grouping, calibrated confidence or later actor choice.
+
+**Next: CROSS_CONTEXT_IDENTITY_READINESS.md**, work-order item7. Test shared identity
+meaning acquired in distinct contexts and used in a held-out context. Enacted coercion
+is separate. Affect dimensionality12.5-8 stays PARTIAL with scalar receiving equality.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV98; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied; RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-02. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Controlled common-meaning identity component COMPLETE.** Start
+CAMPAIGN3_CROSS_CONTEXT_IDENTITY_QUALIFICATION.md. VER-C3-CROSS-CONTEXT-COMPONENT-001:
+6 models/127 distinct runs/762 component prefixes;12 focused/328 reference tests/build.
+Actual expressions feed held-out standing use; probabilities differ6/8, actions4/8.
+All seeds and six candidates retained, including cancellation in1/7.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /99 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **125 bounded /7 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Preserve typed-provenance/typing and timeout/cancellation development cohorts.
+Frozen execution-only partition reruns the unchanged127-case matrix through4 workers;
+all original post-run assertions pass. Component replay is not native Save132.
+
+**Next: CROSS_CONTEXT_IDENTITY_SOURCE_SUFFICIENCY.md.** Brief12.12-1 remains PARTIAL:
+controlled expected meanings and generic protocol counts do not enact the distinct
+world domains. Add actual-domain sources and all-seed same-context/missing/reversed
+probe controls; seed7 alone cancels and cannot demonstrate nonzero receiving use.
+Enacted coercion12.12-3 stays separate. Affect dimensionality12.5-8 stays PARTIAL.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV99; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded cross-context expression COMPLETE.** Start CAMPAIGN3_CROSS_CONTEXT_QUALIFICATION.md.
+VER-C3-CROSS-CONTEXT-001:6 enacted-domain models/55 runs/330 complete prefixes;
+all330 embedded original saves preserved. Actual custody, disclosure and attendance
+remain separate from identity meaning and qualification.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /100 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **126 bounded /6 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Six unchanged identity models also pass144 all-seed receiving executions/864 prefixes:
+126 new runs/756 new prefixes plus18 exact repeats. Local standing changes matched
+same-context choice4/8; seed1 global cancellation retains nonzero local evidence.
+Missing/reversed current meaning preserves historical expressions. All candidates retained.
+14 new focused/328 reference tests/build pass; prior12-test receipt unchanged.
+Preserve original domain9-test cohort, publication-gap finding and TS2322 rejection.
+Full component publication and rollback now pass. No native Save132 admission.
+
+**Next: ENACTED_COERCION_READINESS.md**, Brief12.12-3. A real refusal consequence and
+admitted target evidence must support later pressured choice and qualification.
+Authored pressure is not that chain. Cross-context meanings and acceptance remain
+controlled; natural recognition and universal transfer remain unqualified. Affect
+12.5-8 and longitudinal12.15-2/6/8/11 also remain PARTIAL.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV100; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded enacted coercion COMPONENT QUALIFIED.** Start
+CAMPAIGN3_ENACTED_COERCION_QUALIFICATION.md, VER-C3-ENACTED-COERCION-001.
+Actual refusal penalties produce admitted target evidence, learned anticipated cost,
+later genuine choice and separately frozen pressure-sensitive identity credit.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /101 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **127 bounded /5 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+6 models/576 runs/2880 complete restored prefixes;2304 advancing/576 terminal.
+12 focused/328 reference tests/build pass. All8 seeds change probabilities,5 actions;
+three equal sequences retained. Mean/Latest differ2/8; Threshold excludes20 later
+high-pressure expressions without rewriting original choice or historical credit.
+Hidden power with identical displays preserves target views. Execution failure,
+withheld/false evidence, unknown/zero, instruction, no-demand and source controls pass.
+
+**Next: LONGITUDINAL_INTEGRATION_READINESS.md.** Start acquired biography plus
+adopted-goal lifecycle across retention/gap and later actual use, then routine/habit/loss
+comparisons. Five partials remain: affect12.5-8 and longitudinal12.15-2/6/8/11.
+Current coercion is component-only: controlled recognition, external penalty policy,
+meaning and significance; no native Save132, universal coercion or clinical claim.
+No law selected or comparator retired; no permanent allocation.
+
+LOCAL DISPOSITION; no owner ruling. AuditREV101; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current native publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Longitudinal goal integration IN PROGRESS.** Start
+LONGITUDINAL_GOAL_IMPLEMENTATION_CHECKPOINT.md and the component contract.
+Existing native LONG biography source now joins existing goal lifecycle functions
+and actual later choices through16 instants. No new verdict or Brief promotion.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /101 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **127 bounded /5 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+8 focused/328 reference tests/build pass; seed0, selected restore/fault checks only.
+Recent episode expiry preserves standing and goal; withdrawal/replacement preserves
+all native source bytes. Complete16-instant horizon and terminal replay pass.
+Preserve the failed coarse NoFeedback inequality in longitudinal-goal-development-rev1:
+nonzero standing produced zero effective modifier. FineStanding uses separate1/16
+calibration; coarse equality remains. No law selected or comparator retired.
+
+**Next: freeze prospective composition identities and run the all-seed/all-prefix
+qualification matrix** described in the implementation checkpoint. Keep source saves,
+actual choices and goal history separate; do not claim one native scheduler or Save132
+admission. No qualification from seed0 development tests. Routine/habit/loss still OPEN.
+Five partials: affect12.5-8 and longitudinal12.15-2/6/8/11.
+
+Latest qualification remains VER-C3-ENACTED-COERCION-001:6 models/576 runs/2880 prefixes.
+LOCAL DISPOSITION; no owner ruling. AuditREV102; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current native publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Longitudinal goal matrix FROZEN and EXECUTING.** Start
+LONGITUDINAL_GOAL_EXECUTION_CHECKPOINT.md. No new verdict or Brief promotion.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /101 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **127 bounded /5 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+5 models/120 prospective runs;2040 required restored prefixes (1920 advancing/120
+terminal). Immutable capture:20 complete trajectories/340 captured hashes/12 matched
+native goal pairs;0 new restores then. Captured hashes are not prefix replay checks.
+The live computation may be ahead of this count. Prior8 focused/328 reference/build
+receipts reverified, not freshly rerun. Preserve coarse equality and zero-standing seeds.
+
+**Next: inspect running sessions86267/36191 or LONGITUDINAL_GOAL_EXECUTION_PROGRESS.log.**
+Sequential continuation already waits for trajectories, then runs all-prefix replay and
+matrix validation. Do not launch duplicate workers. After completion, review all seeds,
+equalities and limitations before qualification. See the execution checkpoint for safe
+resumption commands and immutable per-run/prefix receipts.
+
+No native joined scheduler/Save132 claim, no allocation or law selection. Five partials:
+affect12.5-8 and longitudinal12.15-2/6/8/11. Latest verdict remains enacted coercion.
+LOCAL DISPOSITION; no owner ruling. AuditREV103; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current native publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Longitudinal goal matrix FROZEN and EXECUTING.** Start
+LONGITUDINAL_GOAL_INTERIM_REVIEW.md and LONGITUDINAL_GOAL_EXECUTION_CHECKPOINT.md.
+No new verdict or Brief promotion.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /101 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **127 bounded /5 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+5 models/120 prospective runs;2040 required restored prefixes (1920 advancing/120
+terminal). Interim review binds72 complete trajectories. Fine/coarse probabilities
+differ18/24 and actual sequences14/24; six zero-standing equalities and four nonzero
+stochastic equalities retained. All24 KeepAll/expired pairs preserve later choices.
+Goal withdrawal/replacement changes actual sequences8/8 each while original native
+source saves remain equal. This is trajectory evidence, not restored-prefix evidence.
+Prior8 focused/328 reference/build receipts unchanged/reverified, not freshly rerun.
+
+**Next: inspect running sessions86267/36191 or LONGITUDINAL_GOAL_EXECUTION_PROGRESS.log.**
+Sequential continuation already waits for trajectories, then runs all-prefix replay and
+matrix validation. Do not launch duplicate workers. After completion, review all seeds,
+equalities and limitations before qualification. See the execution checkpoint for safe
+resumption commands and immutable per-run/prefix receipts.
+
+No native joined scheduler/Save132 claim, no allocation or law selection. Five partials:
+affect12.5-8 and longitudinal12.15-2/6/8/11. Latest verdict remains enacted coercion.
+LOCAL DISPOSITION; no owner ruling. AuditREV104; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current native publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded longitudinal goal integration COMPONENT QUALIFIED.** Start
+CAMPAIGN3_LONGITUDINAL_GOAL_QUALIFICATION.md, VER-C3-LONGITUDINAL-GOAL-001.
+Adopted goals and acquired biography survive actual recent-episode expiry and jointly
+influence later choices; current goal changes preserve original native source saves.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /102 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **128 bounded /4 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+5 models/120 runs/2040 original-prefix restores;1920 advancing/120 terminal successors.
+Fine/NoFeedback probabilities differ18/24, action sequences14/24. Coarse equals
+NoFeedback24/24. All24 retention pairs preserve later choices. Goal withdrawal and
+replacement each change8/8 action sequences without rewriting biography. Preserve
+zero-standing seeds4/5, four nonzero stochastic equalities and original coarse failure.
+Prior8 focused/328 reference receipts reverified; fresh complete build and closure checks
+pass. All trajectory/replay jobs are finished; do not restart their workers.
+
+**Next: LONGITUDINAL_ROUTINE_READINESS.md.** Actual practice before interruption,
+learned cue/goal support and later resumption across retained biography. Current goal
+profile has no receiving opportunities before14 and does not establish a routine.
+Four partials remain: affect12.5-8 and longitudinal12.15-2/8/11.
+
+The native source is unchanged; new goal/receiving owners remain a component composition,
+not one native scheduler or new Save132 admission. No general law selected or comparator
+retired. LOCAL DISPOSITION; no owner ruling. AuditREV105; counters1508/0. RO019 ACTIVE;
+RO021 final history unsatisfied;RO022 CLOSED for current native publication scope.
+Campaign3 NOT EXIT-READY. Verbatim-log whitespace limitation remains preserved
+in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Longitudinal routine integration IMPLEMENTED; qualification OPEN.** Start
+LONGITUDINAL_ROUTINE_IMPLEMENTATION_CHECKPOINT.md and its implementation receipt.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /102 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **128 bounded /4 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Routine integration IMPLEMENTED; prospective qualification OPEN.
+Native LONG biography joins actual pre-gap practice, cue history, corrected reward
+belief and maintained/withdrawn/opposed goals.10 focused/328 reference tests/build pass.
+Native seeds0/1 reach14 after actual episode expiry; seed0 retains availability but
+chooses idle under contrary biography, seed1 resumes. Pure receiver covers16 instants
+and8-seed Stored/Derived equality. Original-prefix1/8 successors and3 fault sites pass.
+Preserve typed-occurrence rejection and failed must-resume assertion in both development
+cohorts. No calibration changed to force resumption. No verdict, Brief promotion or
+native Save132 admission. Start LONGITUDINAL_ROUTINE_IMPLEMENTATION_CHECKPOINT.md.
+Next prospective source-reuse/identity freeze, full native horizon and routine matrix.
+AuditREV106 remains128 bounded/4 partial/0 blocked,102 verdicts;1508/0;corpus0.29.0/21;
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling.
+Campaign3 NOT EXIT-READY.
+
+Prior VER-C3-LONGITUDINAL-GOAL-001 remains qualified:120 runs/2040 restored prefixes.
+Those jobs are finished and must not be restarted or counted as routine validation.
+Full native routine horizon/terminal, retention pairs and all-prefix matrix remain OPEN.
+No routine/habit/loss or affect-dimensionality clause is promoted. Verbatim-log whitespace
+limitation remains preserved in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded longitudinal routine integration COMPONENT QUALIFIED.** Start
+CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md and its closure receipt.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /103 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **129 bounded /3 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+VER-C3-LONGITUDINAL-ROUTINE-001: bounded routine integration COMPONENT QUALIFIED.
+6 models/504 receiver trajectories/8568 receiver prefix reconstructions,8064 advancing/
+504 terminal.16 native sources/272 native prefixes reused under frozen authentication;
+separately4 fresh joined horizons/68 prefix comparisons/8 joined restores (4 advancing,
+4 terminal).12 fresh receiver faults; prior10 focused/328 reference receipts reverified;
+fresh build passes. All8 maintained and withdrawn cases resume; opposed cases inhibit.
+Maintained/withdrawn probabilities differ8/8, actions5/8. Stored/Derived96 pairs and
+retention24 pairs match. Preserve seed0 delayed resumption at15 and negative-outcome
+extinction; both development failures remain. No all504-run native admission claim.
+Source episode expiry is not forgetting the new practice itself. No law retired.
+Start CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md. Next
+LONGITUDINAL_HABIT_RELEARNING_READINESS.md. All matrix processes finished.
+AuditREV107:129 bounded/3 partial/0 blocked;103 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+No owner ruling; Campaign3 NOT EXIT-READY.
+
+Three partials remain: affect12.5-8 and longitudinal12.15-8/11. Reused source prefixes
+are not new native restore executions. Both this matrix and the earlier goal matrix
+are finished; do not relaunch their workers. Verbatim-log whitespace limitation remains
+preserved in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Longitudinal habit/relearning implementation verified; qualification OPEN.** Start
+LONGITUDINAL_HABIT_IMPLEMENTATION_CHECKPOINT.md and its dependency/receipt manifest.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /103 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **129 bounded /3 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+Habit/relearning successor IMPLEMENTED; qualification OPEN.
+Actual observed practice forms separate episode children; recency pressure removes
+those children while HABIT history persists. KeepAll and EraseHistory distinguish
+retained episode content from learned availability. Rest inhibition/release, actual
+positive renewed practice and corrected-belief free probes are implemented. Hidden
+and unavailable renewed practice do not relearn from a positive report alone.
+10 new/16 reused memory-owner/328 reference tests and fresh build pass;17 complete
+receiver prefixes reproduce immediate successors; atomic owner rollback/publication
+checks pass. Zero-standing development controls only: no native biography execution
+or new native admission. Original routine/source bytes and comparators remain frozen.
+Start LONGITUDINAL_HABIT_IMPLEMENTATION_CHECKPOINT.md. Next prospective native-source
+binding, identity freeze and all-seed composition matrix. No owner ruling or verdict.
+AuditREV108 remains129 bounded/3 partial/0 blocked,103 verdicts;1508/0;corpus0.29.0/21;
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+
+No habit12.15-8, loss12.15-11 or affect12.5-8 promotion yet. The component episodic
+adapter is not native GA formation; its online restore binds prefix operands, not
+future source admission. Full audit/fold history remains, not global erasure or compression.
+The routine and goal matrices are finished; do not relaunch their workers. Verbatim-log
+whitespace limitation remains in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded longitudinal habit/relearning COMPONENT QUALIFIED.** Start
+CAMPAIGN3_LONGITUDINAL_HABIT_QUALIFICATION.md and its closure receipt.
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /104 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **130 bounded /2 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+VER-C3-LONGITUDINAL-HABIT-001: bounded habit/relearning COMPONENT QUALIFIED.
+10 models/960 fresh receiver runs/16320 receiver-prefix restores (15360 advancing/960
+terminal), over8 authenticated reused native sources/136 prior native prefixes.
+Separately4 fresh REV2 joined horizons/68 prefix comparisons/8 joined restores pass.
+Practice-specific episode loss preserves habit; rest inhibits; actual observed renewed
+practice restores corrected-belief availability8/8. Hidden/unavailable controls do not.
+Final free action4/8; four non-actions preserved. Stored/Derived192 pairs and retention480
+behavioral pairs match.2 fresh joined tests/build; prior10+16+328 receipts reverified.
+Preserve ?raw scanner and wrong fault-oracle findings, original plan and one old joined
+receipt; REV2 is authoritative, no production semantics changed. No native admission or
+global history erasure/compression. All execution jobs finished; no duplicate workers.
+Start CAMPAIGN3_LONGITUDINAL_HABIT_QUALIFICATION.md. Next LONGITUDINAL_PERSONAL_LOSS_READINESS.md.
+AuditREV109:130 bounded/2 partial/0 blocked;104 verdicts;1508/0;corpus0.29.0/21 and
+wrappers54/57 unchanged. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED. No owner ruling;
+Campaign3 NOT EXIT-READY.
+
+Remaining partials: personal-loss12.15-11 and affect dimensionality12.5-8. Reused source
+prefixes are not fresh native restores. Habit/routine/goal matrix jobs are all finished;
+do not relaunch them. Verbatim-log whitespace limitation remains preserved in
+MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded longitudinal personal loss COMPONENT QUALIFIED.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active /19 conditional /0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /105 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **131 bounded /1 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+VER-C3-LONGITUDINAL-LOSS-001: bounded valued-contact loss COMPONENT QUALIFIED.
+5 models/480 fresh runs/6240 original-prefix restores;5760 advancing/480 terminal;
+8 faults;10 focused/328 reference tests/fresh build.160 observer/execution boundary pairs.
+Actual acquired relationship, fallible contact belief, maintained goal, affect and later
+sampled action/execution remain separate. Loss changes actions5/8;NoAffect5/8;
+strong competing motive7/8. Preserve equalities, controlled adoption/reports,
+masked action outcomes and prior GRIEF model. No clinical grief/native admission or
+affect-dimensionality claim. AuditREV110:131 bounded/1 partial/0 blocked;105 verdicts.
+Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. No owner ruling.
+Start CAMPAIGN3_LONGITUDINAL_PERSONAL_LOSS_QUALIFICATION.md;next
+AFFECT_REGULATORY_REDUCTION_READINESS.md. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+
+All execution jobs finished. Do not relaunch prior matrices. Affect dimensionality
+12.5-8 remains partial; prior ScalarUncontrolled receiving equality must be preserved.
+Verbatim-log whitespace limitation remains in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded longitudinal personal loss COMPONENT QUALIFIED.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /105 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **131 bounded /1 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+VER-C3-LONGITUDINAL-LOSS-001: bounded valued-contact loss COMPONENT QUALIFIED.
+5 models/480 fresh runs/6240 original-prefix restores;5760 advancing/480 terminal;
+8 faults;10 focused/328 reference tests/fresh build.160 observer/execution boundary pairs.
+Actual acquired relationship, fallible contact belief, maintained goal, affect and later
+sampled action/execution remain separate. Loss changes actions5/8;NoAffect5/8;
+strong competing motive7/8. Preserve equalities, controlled adoption/reports,
+masked action outcomes and prior GRIEF model. No clinical grief/native admission or
+affect-dimensionality claim. AuditREV110:131 bounded/1 partial/0 blocked;105 verdicts.
+Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. No owner ruling.
+Start CAMPAIGN3_LONGITUDINAL_PERSONAL_LOSS_QUALIFICATION.md;next
+AFFECT_REGULATORY_REDUCTION_READINESS.md. RO019 ACTIVE/RO021 unsatisfied/RO022 CLOSED.
+Campaign3 NOT EXIT-READY.
+
+All execution jobs finished. Do not relaunch prior matrices. Affect dimensionality
+12.5-8 remains partial; prior ScalarUncontrolled receiving equality must be preserved.
+Verbatim-log whitespace limitation remains in MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json.
+
+Post-qualification index-format failure preserved and corrected in
+LONGITUDINAL_PERSONAL_LOSS_BOOKKEEPING_FINDING_REV1.json; scientific receipts unchanged.
+
+
+# Current research entry point
+
+**Updated2026-10-03. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1508** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /106 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **54 producers /57 factories; unchanged** |
+
+VER-C3-AFFECT-REGULATORY-001: bounded body-only regulatory reduction QUALIFIED.
+64 fresh component runs/832 original-prefix restores;320 substitutions/640 executions;
+4 native public sentinels/48 matching instants/16 Save132 restores;5+328 tests/build.
+Identical whole body history/current sensations, different admitted harm belief produce
+threat0/270 and later stress0/135. FullAffect/ScalarThreat preserve64/64;Stress56/64,
+Pain48/64,RewardDeviation56/64. Preserve scalar successes and unchanged actions.
+No new production mechanism or psychological vector-necessity claim. AuditREV111:
+132 bounded/0 partial/0 blocked;106 verdicts. Bounded clause coverage complete;Campaign3
+NOT EXIT-READY. Counters1508/0;corpus0.29.0/21;wrappers54/57 unchanged. RO019 ACTIVE;
+RO021 historical reconciliation unsatisfied;RO022 CLOSED. No owner ruling.
+Start CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md;next
+CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md.
+
+All execution jobs finished; do not relaunch prior matrices. Psychological scalar
+necessity remains conditional despite body-only failure. Do not begin Campaign4
+ranking or declare whole-campaign PASS before final history/corpus/family review.
+Prior index-format and verbatim-log whitespace findings remain preserved unchanged.

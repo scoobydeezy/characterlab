@@ -1,0 +1,9 @@
+{
+  "scope": "Documentation tooling failure; no behavioral evidence affected.",
+  "failures": [
+    "Python default cp1252 decoding rejected existing UTF-8 VERDICT_LEDGER before append; registry/CURRENT update had already completed.",
+    "Subsequent --write against unchanged REV89 output rejected EEXIST. No old snapshot overwritten."
+  ],
+  "correction": "Explicit UTF-8 for remaining document reads/writes; repaired newly written CURRENT em dash byte. Resumed only unfinished edits; no duplicated LOG append or registry entries.",
+  "preserved": "REV89 and all historical receipts remain immutable; final successor verified separately."
+}

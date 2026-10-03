@@ -1,0 +1,36 @@
+{
+  "status": "PRESERVED DEVELOPMENT FAILURES",
+  "artifacts": [
+    {
+      "original": "src/campaign3/importanceUrgency.ts",
+      "path": "docs/planning/importance-urgency-development-rev1/importanceUrgency.ts",
+      "sha256": "d5113e8254b42d45a6e4f30806b458bef86d1ea2d55c03be95f80d61d9fa54b9"
+    },
+    {
+      "original": "src/test/importanceUrgency.test.ts",
+      "path": "docs/planning/importance-urgency-development-rev1/importanceUrgency.test.ts",
+      "sha256": "e87f114275a877851328be02e0419d275ce2e3290565e9eab7b2e576cd66d286"
+    },
+    {
+      "original": "src/test/importanceUrgencyFixtures.ts",
+      "path": "docs/planning/importance-urgency-development-rev1/importanceUrgencyFixtures.ts",
+      "sha256": "a86c7077ce4e69c71365e1d580fe79c569f2c65dded0340741de3a6e4b24527e"
+    },
+    {
+      "original": "scripts/qualify-importance-urgency.mjs",
+      "path": "docs/planning/importance-urgency-development-rev1/qualify-importance-urgency.mjs",
+      "sha256": "94a709dc30c3f7555af3079527d595df986f052ed218a4f04d21963f33c1022a"
+    },
+    {
+      "original": "docs/planning/IMPORTANCE_URGENCY_TESTS_DEV1.json",
+      "path": "docs/planning/importance-urgency-development-rev1/IMPORTANCE_URGENCY_TESTS_DEV1.json",
+      "sha256": "4754463875dee99badb2b2dc73f7fb4538f16bd7af901d49875e20a0b47b8d22"
+    }
+  ],
+  "findings": [
+    "Sandbox Vite config read denied before tests; elevated same command passed14 tests.",
+    "Build rejected extra field in malformed-input test literal (TS2353); production component produced no compiler error.",
+    "Prospective freeze collector rejected ?raw canonical data import; no plan/result written."
+  ],
+  "correction": "Use a typed variable for malformed input; strip loader query before reading/hash dependency bytes. No law, seed or behavioral assertion changes."
+}

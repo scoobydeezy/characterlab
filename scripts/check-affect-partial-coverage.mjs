@@ -1,0 +1,15 @@
+// Read-only historical evidence verification, no replay or write-once predecessor invocation.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const p='docs/planning/',read=n=>JSON.parse(fs.readFileSync(p+n)),sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const closure=read('AFFECT_VALIDATION_CLOSURE_REV1.json'),e=read('AFFECT_PUBLIC_EXPERIMENT_REV1.json'),freeze=read('campaign3-affect-model-rev1/FREEZE.json');
+for(const f of [...closure.receipts,...closure.finalCode,...closure.predecessorDependencies])assert.equal(sha(f.path),f.sha256,f.path);
+assert.equal(freeze.models.length,18);let count=0;for(const m of freeze.models)for(const f of m.files){assert.equal(sha(f.path),f.sha256);count++;}assert.equal(count,90);
+assert.equal(freeze.contractSha256,sha('docs/formal/AFFECT_PUBLIC_CONTRACT.md'));assert.equal(freeze.allocationSha256,sha('docs/formal/AFFECT_PUBLIC_ALLOCATION_TABLE.json'));
+assert.equal(e.planSha256,sha(p+'AFFECT_PUBLIC_EXPERIMENT_PLAN_REV1.json'));assert.equal(e.runs,91);assert.equal(e.prefixRestores,1236);assert.equal(e.nextStepEqualities,1236);
+assert.deepEqual(e.choicePairs.map(r=>r.seed),[0,1,2,3,4,5,6,7]);assert.deepEqual(e.choicePairs.filter(r=>r.changed).map(r=>r.seed),[4,7]);
+const suffix=s=>Buffer.from(s).toString('hex');for(const r of e.choicePairs){assert(r.weak.chosen.endsWith(suffix('action/affect/mitigate')));if(r.changed)assert(r.strong.chosen.endsWith(suffix('action/affect/continue')));for(const [side,q] of [['weak','1/24'],['strong','25/72']])assert.equal(r[side].probabilities.find(x=>x.option.endsWith(suffix('action/affect/continue'))).probability,q);}
+assert.deepEqual([...e.negativeControls.FearAsCommand.violations].sort(),['choice-4-10','choice-7-10']);
+const intake=read('PARTIAL_COVERAGE_INTAKE_REV5.json');assert.equal(intake.clauses.filter(c=>c.disposition==='NOT YET AUDITED').length,7);
+const files=['CAMPAIGN3_AFFECT_PARTIAL_COVERAGE_AUDIT.md','PARTIAL_COVERAGE_INTAKE_REV5.json','CAMPAIGN3_EXIT_AUDIT_REV88.json','CAMPAIGN3_AFFECT_QUALIFICATION.md','AFFECT_VALIDATION_CLOSURE_REV1.json','AFFECT_PUBLIC_EXPERIMENT_REV1.json','AFFECT_PREFIX_CONTRASTS_REV1.json','AFFECT_INTERIOR_FEEDBACK_REV1.json','CAMPAIGN3_MEMORY_PARTIAL_COVERAGE_AUDIT.md','../formal/AFFECT_PUBLIC_CONTRACT.md'];
+const result={status:'PASS',scope:'Existing bounded threat-response evidence; no literal flight model or new execution.',audited:['BRIEF-12.5-3','BRIEF-12.5-6','BRIEF-12.5-8'],promoted:['BRIEF-12.5-3'],counts:{bounded:117,partial:15,blocked:0},counters:[1508,0],files:[...files.map(n=>({path:p+n,sha256:sha(p+n)})),{path:'scripts/check-affect-partial-coverage.mjs',sha256:sha('scripts/check-affect-partial-coverage.mjs')}]};
+const out=p+'AFFECT_PARTIAL_COVERAGE_CHECK_REV1.json';if(process.argv.includes('--write'))fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n',{flag:'wx'});else assert.deepEqual(JSON.parse(fs.readFileSync(out)),result);console.log('PASS affect coverage: threat/action dissociation bounded; salience/retrieval and scalar reduction partial.');

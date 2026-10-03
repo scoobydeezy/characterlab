@@ -1,0 +1,25 @@
+{
+  "status": "PRESERVED AND CORRECTED",
+  "failure": "CURRENT obligation counts are stale",
+  "commands": [
+    "npm run check:research",
+    "node scripts/check-research-obligations.mjs --self-test"
+  ],
+  "cause": "Exact table matcher requires spaces after slash delimiters; values1 active/19 conditional/0 unowned were correct.",
+  "correction": "Fix CURRENT formatting only; preserve original index and one-time writer. Append original index bytes to chronology before replacement.",
+  "scope": "Post-qualification bookkeeping failure, not a development or scientific execution failure. Frozen plan,480 runs,6240 restores,matrix,closure report and AuditREV110 unchanged.",
+  "files": [
+    {
+      "path": "docs/planning/longitudinal-personal-loss-bookkeeping-rev1/CURRENT.md",
+      "sha256": "f11d429247d7274db2d39cb59168b306dc7be240f8635737206ff7bf7e17dae8"
+    },
+    {
+      "path": "docs/planning/longitudinal-personal-loss-bookkeeping-rev1/record-longitudinal-personal-loss-closure.py",
+      "sha256": "a87536b49cfdd3043015c4517a9101e017a10e146580d7baa6a942f3884dbb21"
+    }
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-021"
+  ]
+}

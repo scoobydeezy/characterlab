@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-LONGITUDINAL-HABIT-001",
+  "models": 10,
+  "runs": 960,
+  "receiverPrefixes": 16320,
+  "receiverAdvancing": 15360,
+  "receiverTerminal": 960,
+  "reusedNativeSources": 8,
+  "reusedNativePrefixes": 136,
+  "freshJoinedRuns": 4,
+  "freshJoinedPrefixComparisons": 68,
+  "freshJoinedRestores": 8,
+  "freshReceiverFaultChecks": 12,
+  "comparisons": {
+    "storedPairs": 192,
+    "retentionPairs": 480,
+    "releaseActions": 4,
+    "relearnedAvailable": 8,
+    "relearnedActions": 4,
+    "hiddenAvailable": 0,
+    "unavailableAvailable": 0
+  },
+  "freshJoinedTests": 2,
+  "priorComponentTests": 10,
+  "priorMemoryOwnerTests": 16,
+  "priorReferenceTests": 328,
+  "freshBuild": true,
+  "counters": [
+    1508,
+    0
+  ],
+  "scope": "Bounded same-actor biography, practice-specific episode loss, habit inhibition/release/relearning. Component memory admission; raw habit audit persists; no new native scheduler or global erasure.",
+  "artifacts": [
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_PLAN_REV2.json",
+      "sha256": "1ca416f5311229fdf4dc7148e7645ff407af076652625bf1cc70ac9b60bde13d"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_MATRIX_REV2.json",
+      "sha256": "95500dffa9287129ba686cc0265ba59abfd14c1bdc7cdbd24b62f148e63d2d45"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_IMPLEMENTATION_CHECK_REV1.json",
+      "sha256": "73721e54faf0ef492652b1b874a55e2d8d2ebf3bcfde25b2ba68a5088e115b50"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_JOIN_TESTS_REV1.json",
+      "sha256": "8db7219936dc1e73aee9d41491d1b55afb9e3e4e3fd0a5527939f13a69dafef5"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_QUALIFICATION_BUILD_REV1.json",
+      "sha256": "6b4697e021e711bd4a1c405f31b231817ba5ec105ecb19a94e5187b31f75b1ac"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_FREEZE_FINDING_REV1.json",
+      "sha256": "f52657442cc441c00cdd6bc87a072ebf574b6808c07284f129995b0a0eed4c63"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_ORACLE_FINDING_REV1.json",
+      "sha256": "26d3d50d64bd2bce82e19f1a7f97524dfa1feefa124cc7468c1b5f2b44ff8542"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LONGITUDINAL_HABIT_QUALIFICATION.md",
+      "sha256": "4814eb84a59d9d141603e2e4029987c7d7fa584f852f825a316a63cc9dca4c7f"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_READINESS.md",
+      "sha256": "96adde79c22abb726bc045b5095458e12f8aa8a2e9c5bf63670e8bb8f170fda2"
+    },
+    {
+      "path": "scripts/check-longitudinal-habit-closure.mjs",
+      "sha256": "9178ee0eb6718008b866d9cbbe8580307b8216dac1e16d1b459da030f9703422"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-LONGITUDINAL-LOSS-001",
+  "models": 5,
+  "runs": 480,
+  "prefixes": 6240,
+  "advancing": 5760,
+  "terminal": 480,
+  "faultChecks": 8,
+  "nativeRuns": 0,
+  "comparisons": {
+    "hiddenPairs": 40,
+    "falsePairs": 40,
+    "recoveryPairs": 40,
+    "executionPairs": 40,
+    "contrasts": [
+      {
+        "seed": 0,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": false,
+        "affectAblationActions": false,
+        "competingMotiveActions": false,
+        "lossSupportActions": 2,
+        "noLossSupportActions": 2
+      },
+      {
+        "seed": 1,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": true,
+        "affectAblationActions": true,
+        "competingMotiveActions": true,
+        "lossSupportActions": 3,
+        "noLossSupportActions": 1
+      },
+      {
+        "seed": 2,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": true,
+        "affectAblationActions": true,
+        "competingMotiveActions": true,
+        "lossSupportActions": 3,
+        "noLossSupportActions": 2
+      },
+      {
+        "seed": 3,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": false,
+        "affectAblationActions": false,
+        "competingMotiveActions": true,
+        "lossSupportActions": 2,
+        "noLossSupportActions": 2
+      },
+      {
+        "seed": 4,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": false,
+        "affectAblationActions": false,
+        "competingMotiveActions": true,
+        "lossSupportActions": 2,
+        "noLossSupportActions": 2
+      },
+      {
+        "seed": 5,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": true,
+        "affectAblationActions": true,
+        "competingMotiveActions": true,
+        "lossSupportActions": 2,
+        "noLossSupportActions": 1
+      },
+      {
+        "seed": 6,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": true,
+        "affectAblationActions": true,
+        "competingMotiveActions": true,
+        "lossSupportActions": 3,
+        "noLossSupportActions": 1
+      },
+      {
+        "seed": 7,
+        "lossVersusNoLossProbability": true,
+        "lossVersusNoLossActions": true,
+        "affectAblationActions": true,
+        "competingMotiveActions": true,
+        "lossSupportActions": 1,
+        "noLossSupportActions": 0
+      }
+    ]
+  },
+  "tests": 10,
+  "referenceTests": 328,
+  "build": "PASS",
+  "counters": [
+    1508,
+    0
+  ],
+  "scope": "Bounded acquired valued-contact loss with actual later actions and independent execution. Controlled reports/goal adoption, component only; no native admission, clinical grief or affect dimensionality claim.",
+  "artifacts": [
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_PLAN_REV1.json",
+      "sha256": "0a1b03d631bbad648491c4d72d16b8793c9d8f55f3a3c4417fd901fd4d0046b4"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_MATRIX_REV1.json",
+      "sha256": "be9b49d05ae5680925a5c7d747e07a84271d35cd16b74bb2a707fd29ab097acd"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_TESTS_REV1.json",
+      "sha256": "d435d175934e423b26ee7231291f82944fa37e5f4707f4026159a18cfe7ea6e9"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_REFERENCE_TESTS_REV1.json",
+      "sha256": "19a79c8da9342beabaf79461d82796790ea7f84fdedd992526dad5551c9d8dd8"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_PERSONAL_LOSS_BUILD_REV1.json",
+      "sha256": "0faa7d7df3d9d78241db2b08323553d420918ce4c86d49be9a58b5325b17f737"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LONGITUDINAL_PERSONAL_LOSS_QUALIFICATION.md",
+      "sha256": "45025601a712f1c6f2a7b63cf2bfffa7791f2ebf5eaa5573910d2850f5975fb3"
+    },
+    {
+      "path": "docs/planning/AFFECT_REGULATORY_REDUCTION_READINESS.md",
+      "sha256": "0190cbbe3cf439011cf035cd42609d6499bace89589f5dab4a4ef114793ac735"
+    },
+    {
+      "path": "scripts/check-longitudinal-personal-loss-closure.mjs",
+      "sha256": "f3c8bf951d9e20ae396531d71debb768b22fc9e37b64d6061fd98e996c9eac3b"
+    }
+  ]
+}

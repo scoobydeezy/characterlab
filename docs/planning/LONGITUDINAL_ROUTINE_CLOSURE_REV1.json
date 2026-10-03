@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "verdict": "VER-C3-LONGITUDINAL-ROUTINE-001",
+  "scope": "Bounded routine acquisition/interruption/resumption composition. Authenticated reused native source; fresh receiver replay plus selected fresh joined conformance. No all504-run native restore claim.",
+  "models": 6,
+  "runs": 504,
+  "receiverPrefixes": 8568,
+  "receiverAdvancing": 8064,
+  "receiverTerminal": 504,
+  "reusedNativeSources": 16,
+  "reusedNativePrefixes": 272,
+  "freshJoinedRuns": 4,
+  "freshJoinedPrefixComparisons": 68,
+  "freshJoinedRestores": 8,
+  "freshReceiverFaultChecks": 12,
+  "comparisons": {
+    "storedPairs": 96,
+    "retentionPairs": 24,
+    "maintainedResumed": 8,
+    "withdrawnResumed": 8,
+    "opposedResumed": 0,
+    "firstMaintained": 7,
+    "firstWithdrawn": 2,
+    "goalActionContrasts": 5,
+    "goalProbabilityContrasts": 8,
+    "scheduledActionContrasts": 8
+  },
+  "priorFocusedTests": 10,
+  "priorReferenceTests": 328,
+  "freshBuild": true,
+  "counters": [
+    1508,
+    0
+  ],
+  "artifacts": [
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_PLAN_REV1.json",
+      "sha256": "75d2629cd6ba92bcad7b789574857c6a5f84bfc3991ed127e7884268ce663a64"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_MATRIX_REV1.json",
+      "sha256": "817bf132eaeec2fe17f5c16b0978bc0987874e1f969e87debfc370b4c4a777b2"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_IMPLEMENTATION_CHECK_REV1.json",
+      "sha256": "481e9813df159167bb55fc4eb10373b7932c557efc5ab20fb86ab5c304fce7be"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_DEVELOPMENT_TESTS_REV1.json",
+      "sha256": "99f0a35f32bf11582df457565896b799c712b8123697b9a0a950e52d8eeab67b"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_DEVELOPMENT_TESTS_REV2.json",
+      "sha256": "b28e1bf67ee76c876b1d1592dcbf6516aae688c7defbb3ee88fc456f1de8be2c"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_DEVELOPMENT_TESTS_REV3.json",
+      "sha256": "e30595071d22d5ada45487886d6182689ebabde36105230ea9e636aaffb3163c"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_REFERENCE_TESTS_REV1.json",
+      "sha256": "51dec1ac6e5fc3fa9fda9ea67c9536b0e70e0c94915e0515f08723829f49a926"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_CLOSURE_BUILD_REV1.json",
+      "sha256": "e5b57236bb197056e131b13f8fdb9a2eeb3eac8ecf8451c6652c2f2a6df173b3"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LONGITUDINAL_ROUTINE_QUALIFICATION.md",
+      "sha256": "86614763f5be34e20a55e916d934eeaa23912d94ab1b074080359f05eee61184"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_HABIT_RELEARNING_READINESS.md",
+      "sha256": "6de5ef675c821090d73f011f4908942bdd3a32b163d43cd290b1b2cedf8d78d7"
+    },
+    {
+      "path": "docs/planning/LONGITUDINAL_ROUTINE_CLOSURE_REVIEW_FINDING_REV1.json",
+      "sha256": "457d9ee3bceaa59676fda49b1ed9b61273d3231b0f088613683a3450b3eb5205"
+    },
+    {
+      "path": "scripts/check-longitudinal-routine-closure.mjs",
+      "sha256": "65281bf86655b8ebd6102d823c253f9b44cd43269aca17fa8d754f91d0eec037"
+    }
+  ]
+}
