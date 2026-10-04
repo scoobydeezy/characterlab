@@ -1,0 +1,7 @@
+{
+  "status": "PRE-RECEIPT REVIEW HARNESS FAILURE",
+  "error": "AssertionError at fragment raw-text equality, line44",
+  "cause": "Earlier fragment reviewers used read_text newline normalization. Raw frozen CRLF excerpt and prior LF fragment have identical normalized text but different bytes.",
+  "repair": "Compare normalized text only for those declared legacy fragments; retain source-byte hashes and original occurrence IDs unchanged. This does not relax raw frozen extraction equality.",
+  "sha256": "e17007e0d146d94677826b61883d96455a645a1bda9803bc61ec87a108ced478"
+}

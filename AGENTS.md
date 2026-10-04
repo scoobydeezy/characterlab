@@ -52,6 +52,139 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
+**Current routing (2026-10-04):** HQ-011 Campaign2 ledger block accounted.
+Start CURRENT.md and CAMPAIGN3_HISTORY_LEDGER_CAMPAIGN2_CHECKPOINT.md.119 occurrences,
+103 explicit correspondences/16 separate reviews;660 indexed links;no fresh tests.
+Preserve withdrawn task role PASS and scoped completion;old pause superseded.
+Next ledger800: PRE-IDENTITY, concern001/002 and GA. Wider adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded;no owner ruling;NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 verdict spine foundations/delta reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_VERDICT_SPINE_CHECKPOINT.md.20 original units/
+8 groups;2 post-cutoff Values verdicts;541 indexed links. Exact106-verdict prefix retained.
+519 artifact references and55/58 wrapper rechecked;no fresh behavioral tests.
+Next ledger108: unnamed qualifications then early Campaign3. Wider adequacy OPEN.
+1519/0;108 verdicts;132 bounded;no owner ruling;NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 original PERSIST-I bounded gap closed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_PERSIST_I_CHECKPOINT.md.6 isolated executions,
+3 real RNG consumers,2 detected substitutions;exact old model/save/restore invariant.
+Old profile excludes successor;preserve stale-anchor failure.No production change.
+Next qualification/verdict claim spine;521 indexed links;wider adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded;no owner ruling;NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 cognitive/register tail reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_COGNITIVE_CHECKPOINT.md.36 original occurrences/
+13 groups;25 focused tests/1376 bindings;521 indexed whole-occurrence links.
+Successor RNG restore PASS retained; exact original cross-build evidence mapping open.
+Next qualification/verdict spine and PERSIST-I absent-consumer mapping. Adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded; no owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 bounded factory batch reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_FACTORY_CHECKPOINT.md.47 original occurrences/
+23 groups;21 focused tests/1376 bindings;485 indexed whole-occurrence links.
+Preserve read-evidence/alias/lifetime defects and dated RNG-persistence trigger.
+Next formal register1802: prediction/RNG, task and cognitive integration. Adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded; no owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 memory/parent batch reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_MEMORY_PARENT_CHECKPOINT.md.69 original
+occurrences/24 groups;34 focused tests/1376 bindings;438 indexed whole-occurrence links.
+Preserve rejected16 packets, same-S0 causal requirement and explicit fixture amendment.
+Next formal register1499: persistence/VAL/ADAPT/factory. Scientific adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded; no owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 probe/carriage batch reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_PROBE_CARRIAGE_CHECKPOINT.md.60 original
+occurrences/21 groups;34 focused tests/1376 bindings;369 indexed whole-occurrence links.
+Preserve output-closure defect, restore omission and component/public scope boundaries.
+Next formal register1135: episodic memory and joined ADAPT. Scientific adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded; no owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 Campaign2 admission batch reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_CAMPAIGN2_ADMISSION_CHECKPOINT.md.58 original
+occurrences/20 groups;6 focused tests/1376 bindings;309 indexed whole-occurrence links.
+Preserve rejected packets, direct-state capability failure and split roster proof.
+Next formal register819: regulatory probe/memory/qualification. Scientific adequacy OPEN.
+1519/0;108 verdicts;55/58 wrappers;132 bounded; no owner ruling; NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 foundation decision batch reviewed.
+Start CURRENT.md and CAMPAIGN3_HISTORY_FOUNDATION_DECISIONS_CHECKPOINT.md.52 original
+occurrences/24 groups;33 fresh focused tests/1376 bindings;251 indexed occurrence links.
+Next formal register461 onward: EVID/Campaign2 acceptance chain. Scientific adequacy OPEN.
+UI owner-deferred except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 owner/formal-table batch scoped complete.
+Start CURRENT.md and CAMPAIGN3_HISTORY_AUTHORITY_DECISIONS_CHECKPOINT.md.71 owner
+occurrences/20 formal fragments;199 indexed whole-occurrence links, not closed findings.
+Next formal resolution chronology Campaign0/SEM then Campaign2; scientific adequacy OPEN.
+UI owner-deferred except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-011 IN PROGRESS; mechanical census reconstruction
+PASS, scientific adequacy OPEN. Start CURRENT.md/CAMPAIGN3_HISTORY_HQ011_CHECKPOINT.md
+and HISTORY_AUTHORITY_RECONCILIATION_READINESS.md.11373 files/413894 units;128 explicit
+occurrence links,105 fragments; no semantic all-clear. CRLF adapter failure preserved.
+Next owner/formal decisions then verdict/qualification claims; not HQ-012 yet.
+UI owner-deferred except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-010 dated amendment review complete in scope.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md.94 units/12 prior/82 new;
+48 headings/46 substantive paragraphs;48 groups/51 evidence documents. No experiments.
+Formula final-line addendum preserved; next HQ-011 canonical universe/occurrence adequacy.
+UI owner-deferred except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-009 provenance accounting complete in scope.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md. Five occurrences/14 probes;
+3 unversioned inventory links located,1 unsupported snapshot pin,1 unlocated legacy log.
+Historical debt stays OPEN; no source substitution. Next HQ-010 ledger amendments.
+UI owner-deferred except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-008 bundled P3 claim accounting complete.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ008_CHECKPOINT.md;30 claims/26 source bindings.
+19 bounded/8 partial/3 unmapped; generalization/direction/jealousy debt retained.
+No behavioral rerun or new verdict. Next HQ-009 external provenance. UI owner-deferred
+except validation needs.1519/0;108 verdicts;55/58 wrappers;132 bounded;corpus0.29.0/21.
+AuditREV111 pending reconciliation; no owner ruling; Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** HQ-007 attribution audit complete in scope.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md.16 excerpts;49 active/35
+reference tests pass. Participant weighting/shared provenance, separate historical
+credit/current explanation preserved; causal nonparticipant debt remains.
+Next HQ-008 bundled P3 phenomena. UI remains owner-deferred except validation needs.
+1519/0;108 verdicts;55/58 wrappers; Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+**Current routing (2026-10-04):** HQ-006 linear-algebra audit complete in scope.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md.12 excerpts;52 active/18
+reference tests pass. General pivoting oracle and active restricted recall solve
+remain distinct; no port needed. Preserve shape-validation and rational-cost limits.
+Next HQ-007 attribution regression chain. UI remains owner-deferred until between
+Campaigns3 and4 except validation needs.1519/0;108 verdicts; no owner ruling.
+Campaign3 NOT EXIT-READY.
+
+
+**Owner direction (2026-10-04):** Build dedicated inspection UI between Campaigns3
+and4. Skip UI implementation now unless necessary for a concrete test/validation
+blocker. Preserve trace/privacy and all mandatory evidence checks; no global TRC003
+closure. HQ-005 deferred per CAMPAIGN3_HISTORY_HQ005_DISPOSITION.md. Next HQ-006
+linear-algebra tooling/consumer audit.1519/0;108 verdicts; no owner ruling.
+
+
+**Current routing (2026-10-04):** HQ-004 scoped option-construction/scoring audit complete.
+Start CURRENT.md and CAMPAIGN3_HISTORY_HQ004_CHECKPOINT.md.18 excerpts;34 active/12
+reference tests freshly pass; existing HABIT/DECISION receipts preserved. Reference
+filters candidates; proposed five-term score is not the implemented Need-only model.
+Opaque marginal equality and reason-face presentation failure remain distinct.
+General CTL009 comparison conditional; no new verdict/reduction.1519/0;108 verdicts;
+55/58 wrappers; AuditREV111 unchanged. Next HQ-005 inspection UI scope.
+Campaign3 NOT EXIT-READY; no owner ruling.
+
+
 **Current routing (2026-10-04):** Values NATIVE PUBLIC QUALIFIED, VER-C3-VALUES-PUBLIC-001.
 Start CURRENT.md and CAMPAIGN3_VALUES_PUBLIC_QUALIFICATION.md.4 models/256 programs/
 3040 Save132 prefixes;2784 advancing/256 terminal;11136 scheduled native stages;

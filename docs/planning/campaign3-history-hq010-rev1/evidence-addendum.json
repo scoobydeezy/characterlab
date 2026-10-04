@@ -1,0 +1,23 @@
+{
+  "status": "CORRECT-FORWARD EXCERPT COMPLETION",
+  "priorReviewSha256": "80e53a7a6a7ebd95d1d380824becd0c217e52002a3ff4ccd1e63cbfcb2f54b90",
+  "priorCheckSha256": "3dd3004bb86b15c3439178e2195c68667d083eb6e815df0516b13f885a559fab",
+  "source": {
+    "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+    "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+    "startLine": 94,
+    "endLine": 94,
+    "text": "An upstream Vivarium change never mutates an already accepted CharacterLab contract automatically. Until explicit re-intake completes, the pinned snapshot and current CharacterLab contract remain the reproducible comparison basis.\n"
+  },
+  "finding": "The first HQ010 formula excerpt74..93 omitted final line94. Its claim was discussed but not fully source-bound. Preserve that receipt and bind the missing line here.",
+  "disposition": "Upstream changes do not automatically mutate accepted contracts. The claim that the cited pinned snapshot supplies a reproducible basis is unsupported under HQ009; preserve provenance debt and require correct-forward source reconciliation.",
+  "evidence": {
+    "path": "docs/planning/CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+    "sha256": "4391fcc8f218a4e92a2a68e3daa6f6cfe5ffdbaf5eeb6809a6d0c1b43a8d4462"
+  },
+  "obligations": [
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "checkerSha256": "5aa59f6fd2219f06a9b9594189b40a13a77008d702d158225931b0b37006a23e"
+}

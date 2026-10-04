@@ -15,14 +15,14 @@
 | Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
 | Public wrapper inventory | **55 producers /58 factories; extension checked** |
 
-Values NATIVE PUBLIC QUALIFIED:VER-C3-VALUES-PUBLIC-001, values-public/0.1-candidate.
-Start CAMPAIGN3_VALUES_PUBLIC_QUALIFICATION.md and values-public-matrix-rev1/check.json.
-4 models/256 runs/3040 restored prefixes;2784 advancing/256 terminal successors;
-11136 scheduled stages;1536 final contexts;31 focused/328 reference tests/build pass.
-Exact component reasons/resolutions/RNG; sole writer140; Refold no stored projection.
-55/58 wrapper extension and predecessor scopes pass. Preserve development failures
-and distinct-instant final-context limit. No law selected; no physical/appraisal/age claim.
-Counters1519/0;108 verdicts; no clause promotion. AuditREV111 remains prior106-verdict
-frozen snapshot; corpus0.29.0/21 unchanged. Next historicalHQ-004 option-list/additive
-scoring review; reconcile new Values verdicts/canonical additions in the final audit.
+HQ-011 IN PROGRESS: Campaign2 ledger qualification block accounted.
+Start CAMPAIGN3_HISTORY_LEDGER_CAMPAIGN2_CHECKPOINT.md.
+119 original occurrences:103 explicit correspondences/16 separate reviews;660 indexed links.
+Preserve withdrawn task role PASS, rejected cohorts and historical pause supersession.
+No new behavioral tests;old1063/328 suite remains a dated receipt.
+Next ledger800: PRE-IDENTITY, concern001/002 scope annotation, then GA.
+Wider authority adequacy OPEN;AuditREV111 not promoted;not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
 RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.

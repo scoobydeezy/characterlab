@@ -8165,3 +8165,539 @@ Counters1519/11;107 verdicts; no clause promotion. ComponentVER-C3-VALUES-001 re
 No native verdict until full matrix/check; no physical feedback/appraisal/age claim.
 AuditREV111 remains frozen prior106-verdict snapshot. Corpus0.29.0/21 unchanged.
 RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+Values NATIVE PUBLIC QUALIFIED:VER-C3-VALUES-PUBLIC-001, values-public/0.1-candidate.
+Start CAMPAIGN3_VALUES_PUBLIC_QUALIFICATION.md and values-public-matrix-rev1/check.json.
+4 models/256 runs/3040 restored prefixes;2784 advancing/256 terminal successors;
+11136 scheduled stages;1536 final contexts;31 focused/328 reference tests/build pass.
+Exact component reasons/resolutions/RNG; sole writer140; Refold no stored projection.
+55/58 wrapper extension and predecessor scopes pass. Preserve development failures
+and distinct-instant final-context limit. No law selected; no physical/appraisal/age claim.
+Counters1519/0;108 verdicts; no clause promotion. AuditREV111 remains prior106-verdict
+frozen snapshot; corpus0.29.0/21 unchanged. Next historicalHQ-004 option-list/additive
+scoring review; reconcile new Values verdicts/canonical additions in the final audit.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-004 option construction/scoring audit COMPLETE IN SCOPE; broader CTL009 debt conditional.
+Start CAMPAIGN3_HISTORY_HQ004_CHECKPOINT.md and campaign3-history-hq004-rev1/check.json.
+18 exact excerpts/1192 bound source files;34 active/12 reference tests freshly pass.
+Reference already filters candidates; five-term score is a proposal, implemented Need
+term is narrower. Substitution uses two filtered calls, not a Phase1/2 head-to-head.
+HABIT availability and DECISION explanation remain distinct; opaque marginal equality
+is retained. No universal additive-model rejection or new scientific verdict.
+Next HQ-005 inspection UI scope: SUB013/TRC003 versus actual inspection affordances.
+Values public qualification retained;1519/0;108 verdicts;55/58 wrappers unchanged.
+AuditREV111 remains prior106-verdict snapshot;corpus0.29.0/21 unchanged.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-005 inspection UI OWNER-DEFERRED to between Campaigns3 and4, except necessary
+testing/validation tooling. Start CAMPAIGN3_HISTORY_HQ005_DISPOSITION.md.
+No current UI validation blocker identified; trace/privacy, exact comparison,
+save/replay and mandatory exit evidence remain required. No global TRC003 closure.
+HQ-004 scoped audit retained:34 active/12 reference tests passed; broader CTL009
+comparison conditional. Next HQ-006 linear-algebra tooling and active consumers.
+No new runtime test or scientific verdict for this scheduling-only disposition.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-006 linear-algebra tool/consumer audit COMPLETE IN SCOPE; no new port needed.
+Start CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md and campaign3-history-hq006-rev1/check.json.
+12 exact excerpts/1192 source bindings;52 active/18 reference tests freshly pass.
+General reference pivot/singularity oracle differs from active restricted EAM solve;
+actual recall consumers located. Preserve empty-shape validation and rational-cost
+limits; no arbitrary matrix, scaling or universal spreading necessity claim.
+Next HQ-007 attribution regression chain and historical/current credit distinctions.
+HQ-005 UI stays owner-deferred until between Campaigns3 and4, except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-007 attribution regression/owner audit COMPLETE IN SCOPE.
+Start CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md and campaign3-history-hq007-rev1/check.json.
+16 exact excerpts/1192 source bindings;49 active/35 reference tests freshly pass.
+Participant weighting/shared provenance preserved; single-positive equivalence is
+source algebra, legacy fallback tested. Causal nonparticipant limitation retained.
+Acquisition targets, historical memory credit and current explanation stay separate.
+Next HQ-008 bundled P3 phenomena: map every subclaim to scoped evidence/owned debt.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-008 bundled P3 claim accounting COMPLETE IN SCOPE.
+Start CAMPAIGN3_HISTORY_HQ008_CHECKPOINT.md and CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md.
+30 claims:19 bounded/8 partial/3 unmapped;26 exact source bindings.
+Generalization/direction and jealousy remain unmapped, not proven unimplemented.
+Partial affect/social/ordering/obsession questions retain explicit obligation triggers.
+No new behavioral qualification, simulations, model, allocation or law selection.
+Next HQ-009 external provenance; original historical queue remains frozen.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-009 external provenance accounting COMPLETE IN SCOPE; historical debt OPEN.
+Start CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md and campaign3-history-hq009-rev1/check.json.
+Five original occurrences/14 local probes:3 unversioned inventory links located,
+1 unsupported explicit snapshot pin,1 unlocated legacy log. No historical equality.
+Current Vivarium formula bytes match preserved comparison; no replacement source.
+Next HQ-010 remaining ledger amendments; final RO021 gate remains UNSATISFIED.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-010 dated ledger amendment accounting COMPLETE IN SCOPE.
+Start CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md and campaign3-history-hq010-rev1/check.json.
+94 original units:48 headings/46 paragraphs;12 prior/82 additional units.
+48 review groups/51 evidence documents; formula final-line citation addendum preserved.
+Dated routing superseded only within later bounded evidence; scientific limits remain.
+Next HQ-011 canonical universe and occurrence adequacy; no whole-history closure.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: mechanical reconstruction PASS; scientific adequacy OPEN.
+Start CAMPAIGN3_HISTORY_HQ011_CHECKPOINT.md and HISTORY_AUTHORITY_RECONCILIATION_READINESS.md.
+11373 files/413894 units reconstructed; exact119284 marked subset;128 explicit
+whole-occurrence review links and105 fragments/8 parents, not closure counts.
+Preserve first CRLF fragment-adapter failure. Source authority/semantic review remains.
+Next owner/formal decision dispositions, then verdict/qualification claim spine.
+Do not advance to HQ-012 or infer413766 unlinked units are all material findings.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: owner rulings/formal table scoped review complete.
+Start CAMPAIGN3_HISTORY_AUTHORITY_DECISIONS_CHECKPOINT.md.
+71 owner occurrences/20 formal row fragments;199 indexed whole-occurrence links
+across batches, not199 closed findings. Preserve concern arms/ceiling/three branches.
+Next detailed formal resolution chronology: Campaign0/SEM, then Campaign2 acceptance
+chains; verdict/qualification spine follows. Not HQ-012; scientific adequacy OPEN.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: Campaign0/SEM foundation decision batch reviewed.
+Start CAMPAIGN3_HISTORY_FOUNDATION_DECISIONS_CHECKPOINT.md.
+52 original occurrences/24 groups;33 fresh focused tests/1376 source bindings.
+251 indexed whole-occurrence links across batches, not251 resolved findings.
+Preserve shape/allocation/runtime distinctions and scoped epistemic/numeric limits.
+Next formal register461 onward: EVID and Campaign2 shape/allocation/factory chain.
+Verdict/qualification spine follows; scientific adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: Campaign2 admission decision batch reviewed.
+Start CAMPAIGN3_HISTORY_CAMPAIGN2_ADMISSION_CHECKPOINT.md.
+58 original occurrences/20 groups;6 fresh focused tests/1376 source bindings.
+309 indexed whole-occurrence links across batches, not309 resolved findings.
+Preserve rejected packets, direct-state capability failure and split roster proof.
+Next formal register819 onward: diagnostic regulatory probe and memory/qualification.
+Verdict/qualification spine follows; scientific adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: probe/carriage authority batch reviewed.
+Start CAMPAIGN3_HISTORY_PROBE_CARRIAGE_CHECKPOINT.md.
+60 original occurrences/21 groups;34 fresh focused tests/1376 source bindings.
+369 indexed whole-occurrence links across batches, not369 resolved findings.
+Preserve output-closure defect, restore omission and generic/public scope boundaries.
+Next formal register1135: episodic formation/recall and joined ADAPT qualification.
+Verdict/qualification spine follows; scientific adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: episodic memory/joined ADAPT authority batch reviewed.
+Start CAMPAIGN3_HISTORY_MEMORY_PARENT_CHECKPOINT.md.
+69 original occurrences/24 groups;34 fresh focused tests/1376 source bindings.
+438 indexed whole-occurrence links across batches, not438 resolved findings.
+Preserve rejected16 packets, same-S0 causal requirement and explicit fixture amendment.
+Next formal register1499: persistence scope, VAL and ADAPT/factory qualification.
+Verdict/qualification spine follows; scientific adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: persistence/VAL/bounded factory authority batch reviewed.
+Start CAMPAIGN3_HISTORY_FACTORY_CHECKPOINT.md.
+47 original occurrences/23 groups;21 fresh focused tests/1376 source bindings.
+485 indexed whole-occurrence links across batches, not485 resolved findings.
+Preserve read-evidence/alias/lifetime failures and dated RNG-persistence trigger.
+Next formal register1802: prediction/RNG, task lifecycle and cognitive integration.
+Verdict/qualification spine follows; scientific adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: prediction/task/cognitive register tail reviewed.
+Start CAMPAIGN3_HISTORY_COGNITIVE_CHECKPOINT.md.
+36 original occurrences/13 groups;25 fresh focused tests/1376 source bindings.
+521 indexed whole-occurrence links across batches, not521 resolved findings.
+Successor RNG restore PASS retained; exact original cross-build mapping remains open.
+Next qualification/verdict claim spine and PERSIST-I absent-consumer evidence mapping.
+Register tail complete, wider authority adequacy OPEN; not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: original PERSIST-I evidence gap closed in bounded module-graph scope.
+Start CAMPAIGN3_HISTORY_PERSIST_I_CHECKPOINT.md.
+6 isolated executions;3 actual production RNG consumers;2 detected substitutions.
+Exact unchanged no-RNG model/save/restore;old profile excludes cognitive declarations.
+Preserve failed stale-anchor runner;no production change or new verdict.
+521 indexed occurrence links unchanged;new evidence is post-cutoff.
+Next qualification/verdict claim spine;wider authority adequacy OPEN;not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+# Current research entry point
+
+**Updated2026-10-04. Replace this index; chronology belongs in CAMPAIGN3_LOG.md.**
+
+**Bounded Brief clause coverage complete; Campaign3 NOT EXIT-READY.**
+
+| Counter | Value |
+|---|---|
+| Highest permanently allocated record type | **1519** |
+| Allocated since last verdict/corpus member | **0** |
+| Research obligations | **1 active / 19 conditional / 0 unowned** |
+| Closed obligations | **2: RO-C3-018 /RO-C3-022** |
+| Corpus /named verdict entries | **0.29.0 -21 members /108 verdicts** |
+| Brief clauses /families | **132 /15** |
+| Brief clause dispositions | **132 bounded /0 partial /0 blocked** |
+| Public wrapper inventory | **55 producers /58 factories; extension checked** |
+
+HQ-011 IN PROGRESS: ledger foundations and exact106-to108 delta reviewed.
+Start CAMPAIGN3_HISTORY_VERDICT_SPINE_CHECKPOINT.md.
+20 original occurrences/8 groups plus2 post-cutoff Values verdicts;541 indexed links.
+Frozen238565-byte prefix unchanged;519 artifact references and55/58 wrapper rechecked.
+No new behavioral tests;preserve Values equalities/native timing and bounded claims.
+Next ledger108 onward: unnamed Campaign2 qualifications, then early Campaign3 verdicts.
+Wider authority adequacy OPEN;AuditREV111 not promoted;not HQ-012 yet.
+UI stays owner-deferred until between Campaigns3 and4 except validation needs.
+1519/0;108 verdicts;55/58 wrappers;132 bounded clauses;corpus0.29.0/21 unchanged.
+AuditREV111 remains prior106-verdict snapshot pending reconciliation.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.

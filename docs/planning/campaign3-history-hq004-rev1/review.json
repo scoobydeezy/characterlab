@@ -1,0 +1,252 @@
+{
+  "status": "HQ-004 SCOPED AUDIT DISPOSITION RECORDED; GENERAL COMPARISON CONDITIONAL",
+  "sources": [
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+      "firstLine": 191,
+      "lastLine": 191,
+      "text": "| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\r\n"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+      "firstLine": 500,
+      "lastLine": 508,
+      "text": "availability and P3-012 acquisition/reversal. Historical flat-tag strengths remain\r\nretired; Residual/Linear learning are explicit candidates. MEC-001/002/006 and CTL-002\r\npreserve separate evidence-dependent expectation. MEC-008/009/010 association,\r\nepisodic accessibility and retrieval reinforcement remain distinct alternatives,\r\nnot silently identified with this profile's safe journal. MEC-012..019 reasons/dice,\r\nintent/expression and identity controls are preserved; identity is fixed in this fixture.\r\nCTL-009 universal options is not canonical: candidate availability is explicitly tested.\r\nCTL-001 embodied Need, CTL-008 addiction and CTL-010 general experienced Reward remain\r\nbroader comparisons under RO-C3-015. No reference import or universal habit reduction.\r\n"
+    },
+    {
+      "path": "reference/CharacterLab — Deterministic Cognitive Reference Model Brief.md",
+      "sha256": "7e8dd02eb3e7ca6a7ac268074f06c5be52dd335dd62dc1ccebed84136de8b7a6",
+      "firstLine": 1238,
+      "lastLine": 1261,
+      "text": "# 22. Candidate Action Generation\n\nAssociative activation determines what occurs to the character.\n\nAn Action becomes a candidate only if:\n\n1. its world preconditions are true;\n2. its accessibility exceeds authored threshold \\(\\theta_A\\);\n3. it survives canonical top-\\(K_A\\) selection.\n\nThere is no emergency-action escape hatch.\n\nIf extreme Need urgency fails to make a necessary response accessible, that is an experimental result.\n\nThe model may later introduce an explicit relationship such as:\n\n\\[\nb_{\\text{Drink}}=\nf(U_{\\text{Thirst}})\n\\]\n\nonly after the need for it is demonstrated.\n\n---\n"
+    },
+    {
+      "path": "reference/CharacterLab — Deterministic Cognitive Reference Model Brief.md",
+      "sha256": "7e8dd02eb3e7ca6a7ac268074f06c5be52dd335dd62dc1ccebed84136de8b7a6",
+      "firstLine": 1263,
+      "lastLine": 1339,
+      "text": "# 23. Action Evaluation\n\nAccessibility determines:\n\n> What occurs to me?\n\nEvaluation determines:\n\n> How desirable does it seem?\n\nThey are separate.\n\n## Need term\n\n\\[\nN_a=\n\\sum_n\nU_nC_{an}\\mu_{an}\n\\]\n\n## Value term\n\nWith authored:\n\n\\[\nAlign(a,v)\\in[-1,1]\n\\]\n\nthen:\n\n\\[\nV_a=\n\\lambda_V\n\\sum_v\nV_vAlign(a,v)\n\\]\n\n## Personality term\n\n\\[\nP_a=\ng(\nb_a+w_a^TP+P^TQ_aP\n)\n\\]\n\n## Social term\n\n\\[\nS_a=\n\\sum_l\n\\lambda_lAppraisal_l(Target)\n\\]\n\nfor social Actions.\n\n## Context term\n\n\\[\nC_a=\ng(\nb_c+w_c^TContext+\nContext^TQ_cContext\n)\n\\]\n\n## Total\n\n\\[\nScore(a)=\nN_a+V_a+P_a+S_a+C_a\n\\]\n\nAssociation and memory scores are **not added again** here.\n\nThis prevents mental accessibility from being double-counted as Action desirability.\n\n"
+    },
+    {
+      "path": "reference/src/model/actions.ts",
+      "sha256": "c751c87a3cd0cc5dc6f263bfafe50cb6bc4209110de305a49224630cf28e5b6c",
+      "firstLine": 1,
+      "lastLine": 23,
+      "text": "/**\n * Actions and Action evaluation — Brief §22–23, Phase 1 + Phase 2.\n *\n * Candidate generation is now the real §22 pipeline: an Action is a\n * candidate iff (1) its world precondition holds AND (2) its own concept's\n * spreading-activation accessibility (§16, model/activation.ts) exceeds\n * authored threshold θ_A, and (3) it survives canonical top-K_A selection.\n * `candidateActions` (precondition-only) is kept for tests/back-compat and\n * as the honest Phase-1 baseline to compare against.\n *\n * Action evaluation (§23) is still genuinely partial: the Value,\n * Personality, Social, and Context terms each require a mechanism (derived\n * Values §21, latent personality §9, belief/appraisal §18–19, Context\n * representation) that this build has not built yet. Score(a) below is\n * ONLY the Need term — Brief §23 is explicit that \"Association and memory\n * scores are not added again\" in evaluation, so Phase 2's accessibility\n * affects *which* Actions are considered, never how desirable a considered\n * Action seems. This is a scoping fact worth stating loudly because it\n * changes what results mean: this build can only show that Need-\n * satisfaction learning plus associative accessibility reproduce certain\n * phenomena. Whether Value/Personality/Social/Context terms are\n * *necessary* for others is exactly what later phases test (§36).\n */\n"
+    },
+    {
+      "path": "reference/src/model/actions.ts",
+      "sha256": "c751c87a3cd0cc5dc6f263bfafe50cb6bc4209110de305a49224630cf28e5b6c",
+      "firstLine": 73,
+      "lastLine": 140,
+      "text": "/** §22.1–3 simplified for Phase 1: precondition true ⇒ candidate. Kept as\n * the \"Need-satisfaction learning alone\" baseline — see\n * experiments/substitution.ts, which runs the SAME scenario through both\n * this and candidateActionsWithAccessibility to isolate what accessibility\n * filtering actually changes. */\nexport function candidateActions(\n  actions: readonly ActionDef[],\n  worldFlags: ReadonlySet<string>,\n): ActionDef[] {\n  return actions.filter((a) => a.preconditionHolds(worldFlags));\n}\n\nexport interface AccessibilityFilterResult {\n  readonly candidates: ActionDef[];\n  /** Every Action whose precondition held, with its accessibility and\n   * whether it passed the threshold/top-K cut — kept for the UI and trace\n   * so \"why wasn't X a candidate\" is always answerable (§30). */\n  readonly evaluated: readonly {\n    readonly actionKey: CanonicalActionKey;\n    readonly accessibility: Rational;\n    readonly passedThreshold: boolean;\n    readonly selected: boolean;\n  }[];\n}\n\n/**\n * Full §22 pipeline: precondition AND accessibility(action's own concept)\n * ≥ θ_A, then canonical top-K_A selection among those that pass. Ties at\n * the K_A boundary break by CanonicalActionKey ascending (§6).\n */\nexport function candidateActionsWithAccessibility(\n  actions: readonly ActionDef[],\n  worldFlags: ReadonlySet<string>,\n  activation: ActivationVector,\n  thetaA: Rational,\n  kA: number,\n): AccessibilityFilterResult {\n  const feasible = actions.filter((a) => a.preconditionHolds(worldFlags));\n  const withAccessibility = feasible.map((a) => ({\n    action: a,\n    accessibility: activation.get(asConceptKey(a.actionKey)) ?? Rational.ZERO,\n  }));\n  const passing = withAccessibility.filter((e) => e.accessibility.gte(thetaA));\n  const ranked = [...passing].sort((x, y) => {\n    const cmp = y.accessibility.compare(x.accessibility); // descending\n    if (cmp !== 0) return cmp;\n    return compareCanonical(x.action.actionKey, y.action.actionKey);\n  });\n  const selected = ranked.slice(0, Math.max(0, kA));\n  const selectedKeys = new Set(selected.map((e) => e.action.actionKey));\n\n  const evaluated = withAccessibility.map((e) => ({\n    actionKey: e.action.actionKey,\n    accessibility: e.accessibility,\n    passedThreshold: e.accessibility.gte(thetaA),\n    selected: selectedKeys.has(e.action.actionKey),\n  }));\n\n  return { candidates: selected.map((e) => e.action), evaluated };\n}\n\nexport interface NeedContext {\n  readonly def: NeedDef;\n  readonly urgency: Rational;\n}\n\n/**\n * N_a = Σ_n U_n · C_{subject,n} · μ_{subject,n}   (§23 Need term)\n"
+    },
+    {
+      "path": "reference/src/model/actions.ts",
+      "sha256": "c751c87a3cd0cc5dc6f263bfafe50cb6bc4209110de305a49224630cf28e5b6c",
+      "firstLine": 146,
+      "lastLine": 171,
+      "text": " */\nexport function evaluateAction(\n  action: ActionDef,\n  needContexts: readonly NeedContext[],\n  expectationsForSubject: (needId: NeedId) => NeedExpectation,\n  kC: Rational,\n): ScoredAction {\n  const perNeedContributions = needContexts.map(({ def, urgency }) => {\n    const exp = expectationsForSubject(def.needId);\n    const c = confidence(exp.tau, kC);\n    const contribution = urgency.mul(c).mul(exp.mu);\n    return { needId: def.needId, urgency, confidence: c, mu: exp.mu, contribution };\n  });\n\n  const needTerm = perNeedContributions.reduce((acc, c) => acc.add(c.contribution), Rational.ZERO);\n  const score = needTerm; // Phase 1: Score(a) = N_a only.\n  const boundedScore = Rational.boundedResponse(score);\n\n  return {\n    actionKey: action.actionKey,\n    needTerm,\n    score,\n    boundedScore,\n    perNeedContributions,\n  };\n}\n"
+    },
+    {
+      "path": "reference/src/model/choice.ts",
+      "sha256": "f3bcc86787b0dd2c1aebec0e8e8aa60fe0af90c7f9aa2b76e833551145b0e5de",
+      "firstLine": 1,
+      "lastLine": 12,
+      "text": "/**\n * Choice, per Brief §24.\n *\n *   W_a  = (ε + 1 + S̄_a)^γ\n *   Pr(a) = W_a / Σ_j W_j\n *\n * Actions are ordered by CanonicalActionKey; a deterministic uniform\n * sample selects the first Action whose cumulative probability exceeds the\n * draw. γ = γ_0 (a fixed authored constant) in Phase 1 — Γ(P), a\n * personality-dependent γ, is explicitly deferred until Phase 3+ earns it\n * (§24).\n */\n"
+    },
+    {
+      "path": "reference/src/test/phase2Experiments.test.ts",
+      "sha256": "d4fcf252480a45e877f8a48a71b07fdb7662a929d1c2aa1d0e4237cdcd4942ff",
+      "firstLine": 121,
+      "lastLine": 157,
+      "text": "describe('Brief §28–29 Phase-2 experiment: Substitution (negative result)', () => {\n  it(\"Priya's accessibility is bit-for-bit identical whether or not Glen is available — accessibility never sees world flags\", () => {\n    const { scenario, initial, actions, glenAction, priyaAction, glenOutcome } = setup();\n    const ctx = defaultExperienceContext(true);\n    const worldFlagsAvailable = new Set([WORLD_FLAG_GLEN_AVAILABLE, WORLD_FLAG_PRIYA_AVAILABLE]);\n    const worldFlagsUnavailable = new Set([WORLD_FLAG_PRIYA_AVAILABLE]);\n\n    const result = runSubstitutionExperiment(\n      PERSON_MINA,\n      initial,\n      actions,\n      glenAction,\n      priyaAction,\n      glenOutcome,\n      scenario.cycleParams,\n      'sub-seed',\n      8,\n      ctx,\n      worldFlagsAvailable,\n      worldFlagsUnavailable,\n    );\n\n    expect(result.comparison.accessibilityIdenticalRegardlessOfGlen).toBe(true);\n    expect(result.comparison.priyaAccessibilityGlenAvailable.equals(result.comparison.priyaAccessibilityGlenUnavailable)).toBe(true);\n\n    // What DOES change is precondition-based feasibility, not accessibility.\n    const availableKeys = result.comparison.glenAvailableCandidates.candidates.map((c) => c.actionKey);\n    const unavailableKeys = result.comparison.glenUnavailableCandidates.candidates.map((c) => c.actionKey);\n    expect(availableKeys).toContain(ACTION_VISIT_GLEN);\n    expect(unavailableKeys).not.toContain(ACTION_VISIT_GLEN);\n    expect(unavailableKeys).toContain(priyaAction.actionKey);\n\n    // Priya was never independently visited in this experiment, so any\n    // apparent \"preference\" for her isn't coming from NeedExpectation either\n    // — sharpening the negative result.\n    expect(result.comparison.priyaHasNeverBeenVisited).toBe(true);\n  });\n"
+    },
+    {
+      "path": "reference/src/experiments/substitution.ts",
+      "sha256": "5f822d979a48b545b07f044cb3a48dcd0abbd829628c9795ef864a251b72acb3",
+      "firstLine": 1,
+      "lastLine": 38,
+      "text": "/**\n * Brief §28–29 Phase-2 experiment: \"Substitution — when a habitual target\n * becomes unavailable, does spreading-activation accessibility itself\n * redirect behavior toward a substitute, or does that redirection come\n * entirely from mechanisms Phase 1 already had?\"\n *\n * Methodology: run N repeated (scripted) evening visits to Glen from the\n * same starting state used by the Habit experiment, so both\n * NeedExpectation(Glen, Connection) and the Context→Glen association accrue\n * exactly as they do there. Then evaluate the SAME learned state's\n * accessibility-filtered candidate set twice through the real §22 pipeline\n * (`candidateActionsWithAccessibility`) — once with Glen's world flag\n * present, once with it removed — using one shared activation vector\n * computed for both calls.\n *\n * That last point is the whole experiment: `solveActivation`\n * (model/activation.ts) has no world-flags parameter at all — it is a pure\n * function of the character's Needs, active Context concepts, and the\n * learned association graph. World-flag availability only enters the\n * pipeline through `ActionDef.preconditionHolds`, a Phase-1-vintage\n * mechanism candidateActionsWithAccessibility still calls first, unchanged.\n * So the falsifiable prediction is: Priya's own accessibility VALUE must\n * come out bit-for-bit identical whether or not Glen is available, even\n * though Priya's presence in the final *candidate list* is unaffected by\n * Glen's availability either way (her own precondition doesn't reference\n * Glen). What actually changes between the two runs is only whether Glen\n * himself is filtered out before accessibility is even consulted.\n *\n * Expected finding, reported per Brief §36 as DERIVED rather than REQUIRES\n * MECHANISM: any redirection toward a substitute when a habitual target\n * becomes unavailable is fully explained by (a) the precondition filter\n * Phase 1 already had, plus (b) whatever NeedExpectation(Priya, *) Phase 1's\n * independent mechanism has separately learned from Priya's own outcome\n * history (possibly nothing, if Priya has never been visited — see\n * `priyaHasNeverBeenVisited` on the result, which flags exactly that case).\n * Spreading activation and associative accessibility do not implement, and\n * were never asked to implement, \"reach for what's still available\" —\n * that is a precondition question, not an accessibility question.\n"
+    },
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e",
+      "firstLine": 496,
+      "lastLine": 496,
+      "text": "`Candidate Option Construction` is a seam, not a commitment to one universal generator. Whether habitual/procedural activation, deliberative planning, remembered alternatives, and perceived affordances share one construction mechanism is an explicit reduction question. The canonical requirement is that Options do not appear unexplained and that feasibility/availability remains distinct from preference.\r\n"
+    },
+    {
+      "path": "CharacterLab — Ideal Character Research Program Brief.md",
+      "sha256": "90ab1756022132f6fed1d457eadd4636c0931d6f508b8f4b56af0eafdf518265",
+      "firstLine": 2061,
+      "lastLine": 2085,
+      "text": "# 26. What the reset specifically retracts as governing assumptions\n\nThe following old assumptions must not silently re-enter CharacterLab merely because previous code or briefs used them.\n\nCharacterLab does **not** assume that:\n\n- seven inherited latent personality dimensions are the final constitutional primitives;\n- personality is fully immutable;\n- Need is necessarily persistent stored state;\n- Values are necessarily derived from Need satisfaction;\n- a global associative graph is the cognitive backbone;\n- Action accessibility and desirability share one mechanism;\n- episodic memory is merely an immutable event record plus retrieval score;\n- observer social belief concerns only stable latent personality;\n- Affect is reducible to regulatory state;\n- inhibition is merely net opposing Action score;\n- addiction is adequately represented by instantiating a withdrawal Need;\n- every meaningful Action is chosen from one universal scored candidate list;\n- one choice equation must govern every form of decision;\n- belief about capability and actual skill are interchangeable;\n- intent implies successful execution;\n- internal state is directly visible in communication;\n- historical experience and current recollection are the same information;\n- the old additive Phase 0→6 sequence remains the active roadmap.\n\n"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HABIT_QUALIFICATION.md",
+      "sha256": "03bc77843aa243a5ff53db71cc617051114a102c22e0b091c4670c49aada3ce6",
+      "firstLine": 14,
+      "lastLine": 53,
+      "text": "action/result history to cue-dependent candidate construction, existing reason nuclei\nand exact arbitration, then separate intent/expression/plan/attempt/execution and later\nlearning. Explicit expectation has a different owner and update route from action\nhistory. Corrective information can update expectation without reinforcing an action.\n\nThe acquired tendency is **availability-mediated**: a learned action remains a\ncandidate after explicit expected reward becomes neutral. A neutral idle alternative\nthen produces an unresolved choice. This does not demonstrate compulsive preference\nagainst a stronger deliberate reason. Identity contribution0, body-adaptation\ncontribution0 and execution skill1 are explicit immutable content controls; there is\nno hidden change in these contributors and no claim of dynamic integration with them.\n\n## Evidence and exact comparisons\n\n[The frozen matrix](HABIT_PUBLIC_EXPERIMENT_REV1.json) contains **12 models /60 files /\n23 public runs**. Every complete prefix restores and continues with whole-save equality,\nincluding addressed random draws: **291 restores and291 continuation equalities**,\ncomprising268 advancing and23 terminal checks. Exact input-field interventions and\nfrozen hashes are checked by [the closure audit](HABIT_VALIDATION_CLOSURE_REV1.json).\n\n- Three positive performed/observed exercises acquire residual tendency7/8. A later\n  admitted negative informational result corrects expectation without changing history.\n  The next free target-action probability is1/2. The matched unrewarded training case\n  has the same complete explicit expectation record but target probability0.\n- Later performed actions with admitted negative results reduce the tendency and\n  eventually remove the target candidate. The fixed-seed run reaches this change;\n  the analytical probabilities, chosen actions and updates are all preserved.\n- Changing only hidden reward while holding reports fixed preserves all safe output\n  bytes. The labelled CurrentRewardOnly comparator fails this boundary.\n- Withheld corrective evidence leaves expectation unchanged. Unobserved training\n  produces actual actions without admitted history; false positive reports can train\n  tendency despite unrewarded physical outcomes. Unknown differs from known negative.\n- The same learned history does not activate the target under the untrained cue once\n  expectation is neutral. Cue folds are independent in this finite domain.\n- ExplicitBeliefOnly and NoHistory lose the corrected target candidate immediately;\n  they cannot explain the acquired-history contrast under equal current belief.\n- Residual and Linear are serious alternatives. After three positive observations\n  their tendencies are7/8 and3/4; after one negative action result,7/16 and1/2. With the\n  candidate threshold1/2, they predict different later availability and probabilities.\n\n"
+    },
+    {
+      "path": "src/test/habitPublic.test.ts",
+      "sha256": "04e4b2526189e9c8452418acdb19b423690497aa595fc32c73199017a277dff4",
+      "firstLine": 14,
+      "lastLine": 20,
+      "text": "it('preserves separate expectation and acquired availability through correction and reversal',async()=>{\n const a=await run(),b=await run({},habitScenario().map(x=>x.at<=3?{...x,reward:false}:x)),apps=rows(a.outputs,826n),other=rows(b.outputs,826n);expect(f(apps[4],6n)).toEqual(f(other[4],6n));expect(f(apps[4],5n)).not.toEqual(f(other[4],5n));const probabilities=rows(a.outputs,830n).map(d=>items(f(d,4n),'list').find(p=>key(f(rec(p,421n),1n))===key(OPTIONS[0])));expect(probabilities[4]).toBeDefined();expect(probabilities.at(-1)).toBeUndefined();\n const h=rows(a.outputs,837n);expect(f(h[3],3n)).toBe(false);expect(f(h[3],4n)).toEqual(f(h[3],5n));\n},180000);\nit('replays stored summaries as exactly the same cognitive outputs as derived history',async()=>{\n for(const law of [1,2,3]){const a=await run({law}),b=await run({law,candidate:2});expect(a.outputs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId!==839n)).toEqual(b.outputs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId!==839n));}\n},300000);\n"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
+      "sha256": "403d3244ab871a5e19d2a4748c1d984ddc5e7dc06863654fb4b75e21910274a4",
+      "firstLine": 30,
+      "lastLine": 57,
+      "text": "| Regime | Exact probabilities | Contest / stake / authorship | Baseline |\n|---|---|---|---|\n| d4+3 versus d4 |31/32,1/32|1/16;5/7;5/112|Auto, no draw|\n| d4 versus d4 |1/2,1/2|1;5/7;5/7|QuietRoll|\n| d4+3 versus d4+3 |1/2,1/2|1;11/13;11/13|PlayerFacingRoll|\n\nLow/high significance has identical authoritative draw transcripts and selected\noptions at each registered seed. Player presentation projects actual reason faces\nand contributions from that same decision; it draws nothing again. Baseline intent\nand frozen expression are byte-identical across allowed/prevented execution.\nActual outcomes and admitted consequence observations differ. Historical expression\nsurvives either outcome, and later decisions do not recompute old entries.\n\nAlwaysRoll draws in the settled regime. NeverRoll suppresses the unresolved roll.\nDecorativeDice consumes exactly the baseline reason/tie transcript but chooses the\nanalytical leader, yielding witnessed disagreements. OpaqueWeightedChoice samples\nthe correct1/2 marginal with one addressed draw but has no independent reason-face\npresentation. IntentEqualsOutcome is the historical-collapse control: it omits the\nhistorical expression after admitted failure while retaining the observed outcome.\nProspective intent still drives its attempt; diagnostic records remain preserved.\nThis isolates the historical intent/outcome distinction without giving the control\naccess to hidden execution truth.\n\nNo model can use a raw RNG word as character evidence. A closed character projection\nretains sources, reasons, analytical quantities, selected intent and safe history;\nit excludes original hidden inputs, raw draw records, world outcomes and player\npresentation. The raw research trace/save is explicitly not that character view.\nHidden scalar changes preserve all psychological outputs/state. With consequence\n"
+    },
+    {
+      "path": "docs/planning/DECISION_COMPARATOR_PREFLIGHT.md",
+      "sha256": "6d1b1f11c96141b77ad45d50d3ed9e4898739b8d4462ec513e263bc6588bad70",
+      "firstLine": 20,
+      "lastLine": 28,
+      "text": "\nBaseline uses the accepted arbitration function. AlwaysRoll samples reasons even\nin Auto. NeverRoll chooses the analytical leader. DecorativeDice samples real\nreason dice but chooses the analytical leader independently. OpaqueWeightedChoice\nsamples the exact fair marginal for the two equiprobable unresolved fixtures,\nwithout reason-face attribution; it chooses the analytical leader in settled\ncases. IntentEqualsOutcome uses baseline arbitration but erases its purported\nintent after prevented execution. These are research controls, not canonical\n409 decision records with falsified contents.\n"
+    },
+    {
+      "path": "src/campaign3/decisionComparators.ts",
+      "sha256": "38dff4a5787b84b80501979d73564e1fce7263968f398639cfd17016af9a9388",
+      "firstLine": 14,
+      "lastLine": 32,
+      "text": "export async function decisionComparison(context:CanonicalValue,seed:Uint8Array,law:DecisionLaw,permitted:boolean){\n const nuclei=items(f(rec(context,408n),3n),'list'),raw=rec(f(rec(context,408n),2n),403n),options=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));\n const analytical=analyzeOptions(options.map(candidate=>{let distribution=new Map([[0n,ONE]]),reasonMass=ZERO;for(const value of nuclei){const n=rec(value,407n);if(key(f(rec(f(n,1n),404n),1n))!==key(candidate))continue;const d=readDistribution(f(n,7n));distribution=convolve(distribution,d);reasonMass=reasonMass.add(absolute(expectation(d)));}return {key:candidate,distribution,reasonMass};}),Q.of(1n,2n),Q.of(3n,4n));\n const session=createCognitiveRandomSession(seed);session.begin();const draws=session.forResolution(occ(1135),context);\n let chosen=analytical.ranked[0].key,mode=analytical.mode,transcript:CanonicalValue[]=[],resolution:CanonicalValue|undefined;\n try{\n  if(law==='Baseline'||law==='IntentEqualsOutcome'){\n   resolution=await arbitrationOutput(occ(1135),1n,context,r(440,[q(1,2),q(3,4)]),draws);const data=chosenData(resolution);chosen=f(data,1n);transcript=items(f(data,9n),'list').map(v=>f(rec(v,422n),5n));\n   const tie=rec(f(data,10n),423n);if(uint(f(tie,1n))===2n)transcript.push(f(tie,3n));\n  }else if(law==='NeverRoll'){mode='Auto';}\n  else if(law==='OpaqueWeightedChoice'){\n   if(mode!=='Auto'){\n    if(!analytical.probabilities.every(p=>p.probability.equals(Q.of(1n,2n))))throw Error('opaque control admits only exactly balanced unresolved fixtures');\n    const leaders=[...options].sort((a,b)=>key(a)<key(b)?-1:1),draw=await draws.tie(leaders);transcript.push(draw);chosen=leaders[Number(uint(f(rec(draw,411n),3n)))];\n   }\n  }else if(mode!=='Auto'||law==='AlwaysRoll'){\n   if(mode==='Auto')mode='QuietRoll';\n   const scores=new Map(options.map(o=>[key(o),0n]));\n   for(const value of nuclei){const n=rec(value,407n),nk=rec(f(n,1n),404n),draw=await draws.reason(value);transcript.push(draw);const score=(uint(f(nk,4n))===1n?1n:-1n)*(uint(f(rec(draw,411n),3n))+1n+sint(f(n,5n))+sint(f(n,6n)));const k=key(f(nk,1n));scores.set(k,scores.get(k)!+score);}\n"
+    },
+    {
+      "path": "src/campaign3/decisionMath.ts",
+      "sha256": "a1f76b5b6b14103e41dbb2ec327326a13f4aa075aeaf626164862193b8f82948",
+      "firstLine": 26,
+      "lastLine": 45,
+      "text": "export async function resolveDecision(occ:CanonicalValue,at:bigint,context:CanonicalValue,definition:CanonicalValue,law:number,draws:ArbitrationDraws){\n if(law===1||law===6){const reference=await arbitrationOutput(typedIdentifier(1135,u(at)),at,context,definition,draws),data=chosenData(reference);return r(935,[occ,signed(at),context,u(law),...[1n,2n,3n,4n,5n,6n,7n,8n,9n,10n].map(n=>f(data,n))]);}\n const nuclei=items(f(rec(context,408n),3n),'list'),raw=rec(f(rec(context,408n),2n),403n),options=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n));\n const analysis=analyzeOptions(options.map(candidate=>{let distribution=new Map([[0n,ONE]]),reasonMass=ZERO;for(const value of nuclei){const n=rec(value,407n);if(key(f(rec(f(n,1n),404n),1n))!==key(candidate))continue;const d=readDistribution(f(n,7n));distribution=convolve(distribution,d);reasonMass=reasonMass.add(absolute(expectation(d)));}return {key:candidate,distribution,reasonMass};}),readQ(f(rec(definition,440n),1n)),readQ(f(rec(definition,440n),2n)));\n let mode=analysis.mode,chosen=analysis.ranked[0].key,tie=old(423,[u(1)]),opaque:CanonicalValue|undefined;const reasonDraws:CanonicalValue[]=[];\n if(law===3)mode='Auto';\n else if(law===5){if(mode!=='Auto'){if(!analysis.probabilities.every(p=>p.probability.equals(readQ(q(1,2)))))throw Error('DECISION_OPAQUE_DOMAIN');const leaders=[...options].sort((a,b)=>key(a)<key(b)?-1:1);opaque=await draws.tie(leaders);chosen=leaders[Number(uint(f(rec(opaque,411n),3n)))];}}\n else if(mode!=='Auto'||law===2){\n  if(mode==='Auto')mode='QuietRoll';const scores=new Map(options.map(o=>[key(o),0n]));\n  for(const value of nuclei){const n=rec(value,407n),nk=rec(f(n,1n),404n),draw=await draws.reason(value),face=uint(f(rec(draw,411n),3n))+1n,h=integer(f(n,5n)),x=integer(f(n,6n)),score=(uint(f(nk,4n))===1n?1n:-1n)*(face+h+x),k=key(f(nk,1n));scores.set(k,scores.get(k)!+score);reasonDraws.push(old(422,[nk,f(n,4n),f(n,5n),f(n,6n),draw,u(face),signed(score)]));}\n  const max=[...scores.values()].reduce((a,b)=>a>b?a:b),leaders=options.filter(o=>scores.get(key(o))===max).sort((a,b)=>key(a)<key(b)?-1:1);let rolled=leaders[0];\n  if(leaders.length===2){const draw=await draws.tie(leaders);rolled=leaders[Number(uint(f(rec(draw,411n),3n)))];tie=old(423,[u(2),list(leaders),draw,rolled]);}if(law!==4)chosen=rolled;\n }\n const fields=new Map<bigint,CanonicalValue>([occ,signed(at),context,u(law),chosen,list(analysis.probabilities.map(p=>old(421,[p.key,qValue(p.probability)]))),qValue(analysis.margin),qValue(analysis.contest),qValue(analysis.conflictMass),qValue(analysis.stake),qValue(analysis.authorshipPotential),u(mode==='Auto'?1:mode==='QuietRoll'?2:3),list(reasonDraws),tie].map((v,i)=>[BigInt(i+1),v]));if(opaque)fields.set(15n,opaque);return r(935,fields);\n}\nexport function decisionDraws(value:CanonicalValue){const d=rec(value,935n),out=items(f(d,13n),'list').map(v=>f(rec(v,422n),5n)),tie=rec(f(d,14n),423n);if(uint(f(tie,1n))===2n)out.push(f(tie,3n));if(d.fields.has(15n))out.push(f(d,15n));return out;}\nexport function decisionExpression(occ:CanonicalValue,intent:CanonicalValue){const d=rec(f(rec(intent,936n),2n),935n),raw=rec(f(rec(f(d,3n),408n),2n),403n),meaning=f(raw,4n);if(typeof meaning==='boolean'||meaning.kind!=='map')throw Error('DECISION_MEANING');const semantic=new Map(meaning.entries.map(([k,v])=>[key(k),readQ(v)]));return r(937,[occ,intent,list([old(427,[sid(1041,'CommitmentFidelity'),qValue(choiceAlignment(f(d,5n),semantic))])])]);}\nexport function safeIntent(value:CanonicalValue){const i=rec(value,936n);return r(943,[f(i,1n),f(rec(f(i,2n),935n),5n)]);}\nexport function safeExpression(value:CanonicalValue){const e=rec(value,937n),i=rec(f(e,2n),936n),d=rec(f(i,2n),935n);return r(944,[f(e,1n),safeIntent(i),f(d,3n),...[6n,7n,8n,9n,10n,11n,12n].map(n=>f(d,n)),f(e,3n)]);}\nexport function playerDisplay(value:CanonicalValue){const d=rec(value,935n);if(uint(f(d,12n))!==3n)return undefined;const fields=new Map<bigint,CanonicalValue>([[1n,f(d,5n)],[2n,list(items(f(d,13n),'list').map(v=>{const face=rec(v,422n);return r(950,[1n,2n,3n,4n,6n,7n].map(n=>f(face,n)));}))]]),tie=rec(f(d,14n),423n);if(uint(f(tie,1n))===2n)fields.set(3n,f(tie,4n));return r(949,fields);}\n"
+    }
+  ],
+  "tests": [
+    {
+      "path": "docs/planning/campaign3-history-hq004-rev1/active-tests.json",
+      "sha256": "c5ae0a9d61e1a8874ff4ff76c8d55fed1758d110772a4d01622be53de81beb90",
+      "files": 4,
+      "passed": 34,
+      "titles": [
+        "DECISION named comparator component matrix normalizes exactly and separates the three registered regimes",
+        "DECISION named comparator component matrix uses identical authoritative faces/addresses in low and high significance",
+        "DECISION named comparator component matrix replays every seed/regime/law and preserves choice across post-intent interference",
+        "DECISION named comparator component matrix exhibits a required failure for every named alternative",
+        "executes the three exact mode regimes and normalized independent reason distributions",
+        "significance changes player presentation while retaining authoritative draws and selected intent",
+        "freezes pre-attempt intent and expression through prevention then records only the admitted consequence",
+        "discriminates all five mandatory alternatives without changing their admitted raw evidence",
+        "keeps hidden truth and invisible outcomes out of character history and rejects unknown view outputs",
+        "distinguishes absent situation evidence from an observed zero and preserves historical snapshots",
+        "rolls back actual source work including state, outputs, allocations and random addresses",
+        "rolls back actual freeze work including state, outputs, allocations and random addresses",
+        "rolls back actual raw work including state, outputs, allocations and random addresses",
+        "rolls back actual reasons work including state, outputs, allocations and random addresses",
+        "rolls back actual decision work including state, outputs, allocations and random addresses",
+        "rolls back actual intent work including state, outputs, allocations and random addresses",
+        "rolls back actual expression work including state, outputs, allocations and random addresses",
+        "rolls back actual plan work including state, outputs, allocations and random addresses",
+        "rolls back actual attempt work including state, outputs, allocations and random addresses",
+        "rolls back actual execution work including state, outputs, allocations and random addresses",
+        "rolls back actual observation work including state, outputs, allocations and random addresses",
+        "rolls back actual consequence work including state, outputs, allocations and random addresses",
+        "rolls back actual history work including state, outputs, allocations and random addresses",
+        "rolls back actual commit work including state, outputs, allocations and random addresses",
+        "rejects altered model, invalid input, foreign codec and unrelated history writer",
+        "restores exact continuing RNG/history and rejects tampered saved ledger or originals",
+        "retains unknown versus known negative and excludes unobserved action from learning",
+        "keeps cue folds independent and exhibits different bounded extinction laws",
+        "does not widen inherited typed fields or summary unit domains",
+        "preserves separate expectation and acquired availability through correction and reversal",
+        "replays stored summaries as exactly the same cognitive outputs as derived history",
+        "audits full state reads, fixed contributors and observation-only mutation routes",
+        "rejects invalid ingress, duplicate history and forged complete saves",
+        "rolls back all fourteen stages and commit, including random draws and cached history"
+      ]
+    },
+    {
+      "path": "docs/planning/campaign3-history-hq004-rev1/reference-tests.json",
+      "sha256": "ba8b38e736ae75b397e5267e39458a8ea2634ac0fdc0c2268e815c57a70bda41",
+      "files": 2,
+      "passed": 12,
+      "titles": [
+        "choice distribution and selection — Brief §24 probabilities are exactly non-negative and sum to exactly 1",
+        "choice distribution and selection — Brief §24 orders the distribution by CanonicalActionKey regardless of input order",
+        "choice distribution and selection — Brief §24 a higher score yields a strictly higher probability",
+        "choice distribution and selection — Brief §24 selectAction is deterministic and reproducible for a fixed address",
+        "choice distribution and selection — Brief §24 selectAction always returns a candidate actually in the distribution",
+        "Brief §28 Phase-2 experiment: Habit [RETIRED-architecture control] under legacyCycleParams() (flat co-activation weight 1.0), a repeatedly co-activated Context->Action edge grows toward, and converges to exactly, an even share of the row budget",
+        "Brief §28 Phase-2 experiment: Habit [Phase 2.5e canonical re-baseline] under the current default (derived salience), the same repeated Context->Action co-Experience still makes the Action increasingly, and durably, accessible from Context alone — the 1/2 figure above was an artifact of flat tagging, not the finding itself",
+        "Brief §28–29 Phase-2 experiment: Substitution (negative result) Priya's accessibility is bit-for-bit identical whether or not Glen is available — accessibility never sees world flags",
+        "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) Pr(a repeatedly punishing action) declines monotonically while the Need it punishes stays off the floor",
+        "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) [RETIRED-architecture control] under legacyCycleParams() (naive learning), extending well past the clean regime reproduces the ceiling-saturation finding at the opposite (floor) boundary",
+        "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) [Phase 2.5e canonical re-baseline] under the current default (censored learning), the same floor-saturated extension no longer corrupts mu — it stays pinned at the true effect, exactly the protection Phase 2.5a's correction was built to provide",
+        "Brief §17 Phase-2 experiment: Memory accessibility demonstrates recency, frequency/reinforcement, and decay against the exact formulas"
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "baseline-scope",
+      "finding": "CTL009 is a preserved control label, not an accurate description of every historical implementation. Brief22 and current reference/actions already impose preconditions, accessibility threshold and top-K; candidateActions is the explicitly retained precondition-only baseline.",
+      "decision": "Preserve the historical baseline and later filter separately. Do not claim all historical options were universally available."
+    },
+    {
+      "id": "additive-scope",
+      "finding": "Brief23 proposes Need+Value+Personality+Social+Context. Actual evaluateAction implements only the additive Need term; other channels are explicitly deferred. Reason arbitration can also sum signed reason contributions without becoming this old universal scalar architecture.",
+      "decision": "Do not equate an authored five-term formula, executed Need-only scoring and independent reason-distribution arbitration, or claim all addition was falsified."
+    },
+    {
+      "id": "reference-substitution",
+      "finding": "The rerun preserves identical Priya accessibility under changed Glen availability while the feasible candidate set changes. The substitution experiment invokes the accessibility-filtered path twice; it is not a matched Phase1-versus-Phase2 candidate-generator experiment despite a broader actions.ts comment.",
+      "decision": "Preserve feasibility/accessibility separation and the negative substitution finding. Do not promote it to a head-to-head generator result or autonomous sampled substitution."
+    },
+    {
+      "id": "modern-availability",
+      "finding": "Qualified HABIT and fresh tests retain learned availability after informational expectation correction; matched unrewarded history removes the candidate. Stored/Derived outputs match. This is a bounded availability-mediated effect with neutral alternatives.",
+      "decision": "Retain availability versus preference and the explicit-belief/no-history competitors; not every generator is distinguished or a universal planner qualified."
+    },
+    {
+      "id": "modern-arbitration",
+      "finding": "DECISION retains true reason-face resolution and intent/outcome separation. OpaqueWeightedChoice matches exactly balanced unresolved marginals with one draw but lacks reason-face presentation; it is not a calibrated implementation of the historical Need-only score over matched inputs.",
+      "decision": "Retain the marginal equality and presentation failure together. No matched universal additive-versus-heterogeneous behavioral superiority claim is earned."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/campaign3-history-queue-rev1/review.json",
+      "sha256": "b7ebbac1a87a83cefaec86b12f97e5721b7f2d46821f379b4dc9e09db4f05f24"
+    },
+    {
+      "path": "docs/planning/campaign3-history-hq004-rev1/source-manifest.json",
+      "sha256": "65e759aa98a7225fef6a5deb3ed03ed7e312e4695e0f3a30cf9c39577bc42146"
+    },
+    {
+      "path": "docs/planning/HABIT_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "d0a1e092f0fca2625eccb4104bd99be96ab2ccee21f185698295cb4d5e0cc559"
+    },
+    {
+      "path": "docs/planning/DECISION_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "52e755acad66a9e533753f025434d67d7bdac201d8dc214638e77244c7ce7682"
+    }
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "nextGate": "Continue HQ-005 inspection UI scope. Before any CTL009 retirement or stronger sufficiency claim, compare declared generators/scorers on matched permitted inputs, candidate sets, future queries and observable explanation obligations, retaining probability equalities.",
+  "limits": [
+    "46 scoped tests freshly rerun; prior full matrices/source receipts rechecked, not fully re-executed.",
+    "No new model, allocation, verdict, law or architecture reduction.",
+    "No claim a generally expressive scalar/weighted comparator is behaviorally impossible.",
+    "Original queue remains frozen; this overlay is its current disposition, not a rewritten historical receipt."
+  ]
+}
