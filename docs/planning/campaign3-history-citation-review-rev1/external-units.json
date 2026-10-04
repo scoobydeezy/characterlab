@@ -1,0 +1,2746 @@
+[
+  {
+    "startLine": 1,
+    "endLine": 1,
+    "text": "# Vivarium Mathematical Reference for CharacterLab\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e469c18d316e36fc212b7037ab8825d889aa7d0c8735a8ea94824624079ded5b"
+  },
+  {
+    "startLine": 3,
+    "endLine": 6,
+    "text": "**Status:** Implementation-derived reference  \n**Last verified:** 2026-08-31  \n**Scope:** Deterministic formulas currently capable of affecting authoritative simulation state or a\nplayer-visible derived result\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "537dd0b7a896c7f46d8cca0cb2794a0589b0d6c3253af94736e225e095c5dbe6"
+  },
+  {
+    "startLine": 8,
+    "endLine": 8,
+    "text": "## 1. Purpose and scope\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8ed3beff0779fb10f0039b6579ae077a3858d376488cf950bc01132d1dd7e026"
+  },
+  {
+    "startLine": 10,
+    "endLine": 11,
+    "text": "This document gives CharacterLab a single mathematical description of Vivarium's implemented\ndeterministic model. It records:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e1ea2569ed5a196609b0dc797b43db28c8d37d2ddff5ce0b8d01ced9fb0d649d"
+  },
+  {
+    "startLine": 13,
+    "endLine": 17,
+    "text": "- the formula actually executed;\n- the behavioral or technical goal of that formula;\n- the meaning and units of every factor and variable;\n- fixed-point, rounding, clamping, and tie-breaking rules that are part of the result;\n- the current production tuning used by the Minimum Playable Scenario (MPS).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9c79ee78d1a1473e17a37c5c3edf0e7585adb6b992399f77248e505a13119f70"
+  },
+  {
+    "startLine": 19,
+    "endLine": 22,
+    "text": "The implementation is the evidence for what exists. Design documents explain intent, but proposed\nmathematics not reached by production code is not presented here as current behavior. The authoritative\nsimulation is integral and Unity-independent. Unity may interpolate or format a result, but it does not\nown any formula in this reference.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5685d41a10e8585212feece16205dc733eb9f3afc20f538f4a7b202fd179c079"
+  },
+  {
+    "startLine": 24,
+    "endLine": 27,
+    "text": "Included are arithmetic transformations that affect state, scheduling, selection, probability,\nreasoning, or player-visible projections. Excluded are serialization copies, collection sizes, loop\ncounters, enum casts, and ordinary object hash codes used only by in-memory dictionaries. Stable hashes\nthat seed deterministic randomness are included because they can change outcomes.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "65b1762f62dd272017265c030ff9bc6a7c999c24e48008e4872f03c7f104924f"
+  },
+  {
+    "startLine": 29,
+    "endLine": 29,
+    "text": "Primary implementation sources:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ceda0ef438a2d2c50170c8e014b71294a9b61e849eb8d41b57e3a37706f10302"
+  },
+  {
+    "startLine": 31,
+    "endLine": 39,
+    "text": "- [`Common/IntegerMath.cs`](../Core/Runtime/Domain/Common/IntegerMath.cs)\n- [`Common/StableHash.cs`](../Core/Runtime/Domain/Common/StableHash.cs)\n- [`Randomness/DeterministicRandomOracle.cs`](../Core/Runtime/Domain/Randomness/DeterministicRandomOracle.cs)\n- [`Time/AnalyticalProgression.cs`](../Core/Runtime/Domain/Time/AnalyticalProgression.cs)\n- [`Evaluation/SignalField.cs`](../Core/Runtime/Domain/Evaluation/SignalField.cs)\n- [`Social/SocialEvidence.cs`](../Core/Runtime/Domain/Social/SocialEvidence.cs)\n- [`Decisions/DecisionReasoningProgram.cs`](../Core/Runtime/Domain/Decisions/DecisionReasoningProgram.cs)\n- [`Decisions/DecisionResolutionService.cs`](../Core/Runtime/Domain/Decisions/DecisionResolutionService.cs)\n- [`SampleContent.cs`](../DotNet/Vivarium.SimRunner/SampleContent.cs)\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5d17357a48e1b8645caa14d873592f912bae3b24ca4a24c754063f28d1db2b3f"
+  },
+  {
+    "startLine": 41,
+    "endLine": 41,
+    "text": "## 2. Global numeric conventions\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a37195e10227c4cf79b067153ae9e79e818daa9ccaf9063cd52c9bd653dbb5de"
+  },
+  {
+    "startLine": 43,
+    "endLine": 43,
+    "text": "### 2.1 Integral simulation units\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4df58e1a6b56feeb37335c4176624872e63604a20fa0a8aa2fd925ab2f9359d9"
+  },
+  {
+    "startLine": 45,
+    "endLine": 45,
+    "text": "Authoritative branching uses integers. The principal units are:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e74edc58c81164d676b1f1f8adc2a407fe828a0eda130a9ae2c7b5aa46b89421"
+  },
+  {
+    "startLine": 47,
+    "endLine": 54,
+    "text": "| Quantity | Stored unit | Normal range |\n| --- | ---: | ---: |\n| SimTime and SimDuration | whole simulation minutes | signed 64-bit integer |\n| Normalized signal or score | fixed-point units | `-10,000..10,000` |\n| Probability | basis points | `0..10,000` |\n| Activity/travel progress | basis points | `0..10,000` |\n| Signal variance/covariance | fixed-point units squared | normally `-100,000,000..100,000,000`; diagonal variance is nonnegative |\n| Need, affect, relationship channel, familiarity | authored integral units | currently usually `0..10,000` or `-10,000..10,000` |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0067691d6e7bacf8e08f213ff0347472cecc5cef9358ebddab24f58364b8dbee"
+  },
+  {
+    "startLine": 56,
+    "endLine": 56,
+    "text": "Let the shared fixed-point scale be\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8a72eb1ba94825fea93339c68daf016b0e28cd83315bddfa6274947a859c026d"
+  },
+  {
+    "startLine": 58,
+    "endLine": 60,
+    "text": "\\[\nS=10{,}000.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d11b625833d9a8677ba93206db2501ed53d92cdfaf95ae2d5124c01a17c91211"
+  },
+  {
+    "startLine": 62,
+    "endLine": 63,
+    "text": "A stored coordinate `x` represents the real value \\(x/S\\). A stored covariance \\(\\Sigma\\) represents\nreal covariance \\(\\Sigma/S^2\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5ca8127770e524cc04b57111e64b4cf1f44b392c79131b0f2831d3079ddbee47"
+  },
+  {
+    "startLine": 65,
+    "endLine": 65,
+    "text": "### 2.2 Clamp\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "725678d67f12bf321f90aca23c29587574c825ca5cad026c8183f93c5b3b7ebe"
+  },
+  {
+    "startLine": 67,
+    "endLine": 69,
+    "text": "\\[\n\\operatorname{clamp}(x,a,b)=\\min(\\max(x,a),b).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6f28e82c32f0967772171f6f43470fb6c15a78aaef243f54d747845907aa969f"
+  },
+  {
+    "startLine": 71,
+    "endLine": 72,
+    "text": "Clamping is semantic, not cosmetic: once a Need, coordinate, score, balance, or progress value reaches\nits declared bound, further movement beyond that bound does not change the exposed value.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "20b4837959d816cdddc73a00a82f596f79e8ce596fa1acffe8c9a98710500712"
+  },
+  {
+    "startLine": 74,
+    "endLine": 74,
+    "text": "### 2.3 Sign-correct integer division\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a0d0cf78d49fd705f6b817a4d4d39abbc24ccd6ca0f7e8174e7e0dccd4166c5b"
+  },
+  {
+    "startLine": 76,
+    "endLine": 76,
+    "text": "For integer dividend \\(a\\) and nonzero divisor \\(b\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "1520d1d818ea076d6081dfa9e7eae84b66f7709f7c4ca519d643ebc521d53838"
+  },
+  {
+    "startLine": 78,
+    "endLine": 82,
+    "text": "\\[\n\\operatorname{floorDiv}(a,b)=\\left\\lfloor\\frac{a}{b}\\right\\rfloor,\n\\qquad\n\\operatorname{ceilDiv}(a,b)=\\left\\lceil\\frac{a}{b}\\right\\rceil.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "206d88920cf666f46fb22bb6ce6116f21bd7f7ed3f080d5b56b42e131a691c6e"
+  },
+  {
+    "startLine": 84,
+    "endLine": 85,
+    "text": "The helpers correct C#'s truncation toward zero when the mathematical result is negative. This keeps\nanalytical progress monotonic in both directions.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d56a907448f29dfa39c358203c0569e19891f163496b887aaba916dc29d480ea"
+  },
+  {
+    "startLine": 87,
+    "endLine": 87,
+    "text": "### 2.4 Fixed-point multiplication and rounding\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e8775522286602f56f33083d1b275e5a512b08800d7bb81d356cb6335aab6967"
+  },
+  {
+    "startLine": 89,
+    "endLine": 89,
+    "text": "Vivarium rounds fixed-point division to the nearest integer, with half values away from zero:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7fd052b31837477319357eb1b2bc7d9e9e3bc7b062cc753f72315ce0376f7221"
+  },
+  {
+    "startLine": 91,
+    "endLine": 97,
+    "text": "\\[\n\\operatorname{roundDiv}(a,d)=\n\\begin{cases}\n\\left\\lfloor\\dfrac{a+d/2}{d}\\right\\rfloor,&a\\ge0,\\\\\n-\\left\\lfloor\\dfrac{-a+d/2}{d}\\right\\rfloor,&a<0.\n\\end{cases}\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "77eee7bd1f23a70a0e57939881161b0bffa1160f6acdf7a53a239c9f1021a799"
+  },
+  {
+    "startLine": 99,
+    "endLine": 99,
+    "text": "The common products are:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5e250b13938df16d13974d18c2eee9ff8ddf723eab59c429be2ffd476ad83296"
+  },
+  {
+    "startLine": 101,
+    "endLine": 103,
+    "text": "\\[\n\\operatorname{mul}(a,b)=\\operatorname{roundDiv}(ab,S),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "334ffc2d139543d01ea60ed13e5b99e8d9e32ed92b4b9a7c53674b31ad5ee107"
+  },
+  {
+    "startLine": 105,
+    "endLine": 107,
+    "text": "\\[\n\\operatorname{mulCov}(c,\\sigma)=\\operatorname{roundDiv}(c\\sigma,S^2).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ff400eddc6896dbb2b8af627d2d03a8bdf63c633c74035acf4ab6ba0f9d1ce43"
+  },
+  {
+    "startLine": 109,
+    "endLine": 110,
+    "text": "`BigInteger` intermediates are used where a matrix expression could overflow 64-bit multiplication;\nthe final value is clamped to the 64-bit range.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "da41fb1ee78f344657b8a4ca53084cfb57670e27b107680d11efeaa70b11c04d"
+  },
+  {
+    "startLine": 112,
+    "endLine": 112,
+    "text": "## 3. Simulation time and analytical progression\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3c5003ef5a6d8143fb83eb4849d64d076a80e160e6e463b418c5c81b279aee11"
+  },
+  {
+    "startLine": 114,
+    "endLine": 114,
+    "text": "### 3.1 Calendar conversion\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "57aea76e2edfdd68b8c95f82422ad2da65c808e182a5cf17430c9c39ecdb68be"
+  },
+  {
+    "startLine": 116,
+    "endLine": 118,
+    "text": "\\[\nM_h=60,\\qquad H_d=24,\\qquad M_d=M_hH_d=1440.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c64acfc1255017396bb06b2934a360b144a383955002a9c5c948b655e31e05e2"
+  },
+  {
+    "startLine": 120,
+    "endLine": 120,
+    "text": "For day \\(d\\), hour \\(h\\), and minute \\(m\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "28ff2ada5fdbaef90a7573cff9da7c2947d64d0c648ea9bb339684ef3d0e51e9"
+  },
+  {
+    "startLine": 122,
+    "endLine": 124,
+    "text": "\\[\nt=dM_d+hM_h+m.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "68ae0768cd164e52782d3a4636c848b5caf10e7e44938ec185434f13fd736410"
+  },
+  {
+    "startLine": 126,
+    "endLine": 127,
+    "text": "Conversely, day, hour, and minute are derived by integer quotient and remainder from total minutes.\nThe goal is one authoritative clock independent of frame rate.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "049c96c5d163c0d47d8041a193dff48499b98b7a823b16e307657fd8dbcdb536"
+  },
+  {
+    "startLine": 129,
+    "endLine": 129,
+    "text": "### 3.2 Linear analytical value\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "26bd475417401146143b0587a447c6edeb836846bf43cb21d2213aee084152f6"
+  },
+  {
+    "startLine": 131,
+    "endLine": 133,
+    "text": "Every continuously changing authoritative quantity uses an anchor triple: anchor value \\(v_0\\), anchor\ntime \\(t_0\\), and rational rate \\(n/d\\) units per simulation minute. With lower and upper bounds\n\\(v_{\\min},v_{\\max}\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b8d74136948bebc35a559f6d24e20402c57ac91594f2144a15c1440d19d294d9"
+  },
+  {
+    "startLine": 135,
+    "endLine": 140,
+    "text": "\\[\nv(t)=\\operatorname{clamp}\\left(\nv_0+\\left\\lfloor\\frac{(t-t_0)n}{d}\\right\\rfloor,\nv_{\\min},v_{\\max}\n\\right),\\qquad d>0.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "493ee4127e7844da234f07171f3ef0dc2bbd78cbe962007c768bc7db6a941caf"
+  },
+  {
+    "startLine": 142,
+    "endLine": 148,
+    "text": "| Variable | Meaning |\n| --- | --- |\n| \\(v(t)\\) | materialized value at SimTime \\(t\\) |\n| \\(v_0\\) | value when last anchored |\n| \\(t_0\\) | anchor time in minutes |\n| \\(n/d\\) | exact rational rate per minute |\n| \\(v_{\\min},v_{\\max}\\) | authored bounds |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3f00c3568eb6c96dbfa3d15142b60f3691af6182f1921b53793dcafb8c790d23"
+  },
+  {
+    "startLine": 150,
+    "endLine": 151,
+    "text": "Goal: replace per-character/per-frame ticking with exact on-demand evaluation. Needs, affect,\nrelationship channels, familiarity, Activity progress, and Activity performance all reuse this formula.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "1771b7cd9544d37f36e96a2817c6a3b5a269ad642c14fa0f59b51346de35eca7"
+  },
+  {
+    "startLine": 153,
+    "endLine": 153,
+    "text": "An instantaneous effect \\(\\Delta\\), such as eating or relationship evidence, is applied as\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "1ce41b9f7376ba7e253cdd6338f5e9c96159cb4e2b6f187aa4131e064156a8f7"
+  },
+  {
+    "startLine": 155,
+    "endLine": 157,
+    "text": "\\[\nv'_0=\\operatorname{clamp}(v(t)+\\Delta,v_{\\min},v_{\\max}),\\qquad t'_0=t.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2c1c339c7712ff5b7b643d273255ec8f87fe9449f0c6a225602baf4ec10db031"
+  },
+  {
+    "startLine": 159,
+    "endLine": 160,
+    "text": "A rate change first materializes \\(v(t)\\), then creates a new anchor at \\(t\\). This makes a context\nmodifier count for exactly the interval in which it was active.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ce56081410199060c20cd08f0375114fd0f5d8e9949be6ad9b794c23139c6eb9"
+  },
+  {
+    "startLine": 162,
+    "endLine": 162,
+    "text": "### 3.3 Progress over a fixed duration\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7a84945a61a518a434f3f2f70e74dcce22bf91c7528c2b9d37539a1db9e1eb84"
+  },
+  {
+    "startLine": 164,
+    "endLine": 164,
+    "text": "To progress from \\(a\\) to \\(b\\) over duration \\(D>0\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ae9607cf567eb047a4fca540a6305890f788ffc17f60ce565d404db5d5b52c2c"
+  },
+  {
+    "startLine": 166,
+    "endLine": 168,
+    "text": "\\[\nn=b-a,\\qquad d=D.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ace0bb791115497c7429364bce482e547a2acd0867619a74c632575a09e10e17"
+  },
+  {
+    "startLine": 170,
+    "endLine": 171,
+    "text": "Activity progress currently uses \\(a=0\\), \\(b=10{,}000\\). A nonpositive duration becomes immediately\ncomplete at \\(b\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4d700cc8211ec58888107a882806ebdbfa26cf5b756080b6369fe010d0cbbb83"
+  },
+  {
+    "startLine": 173,
+    "endLine": 173,
+    "text": "### 3.4 Exact threshold-crossing time\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8c1bee03c938601b39db5efec741774f98c5d7ba857bf01eea4695c5579013a2"
+  },
+  {
+    "startLine": 175,
+    "endLine": 176,
+    "text": "Let \\(\\Delta=q-v_0\\), where \\(q\\) is the watched threshold. For an increasing progression, the first\nelapsed minute \\(e\\) that reaches the threshold is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "684c226c3fb2ed73ad09cfb09bd6b713cb593a956d6771052fbb73c00827b307"
+  },
+  {
+    "startLine": 178,
+    "endLine": 180,
+    "text": "\\[\ne=\\left\\lceil\\frac{\\Delta d}{n}\\right\\rceil,\\qquad n>0.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "77f553f1dba92d31ba72613aae24f7bcc2dc557d64700da0a54c4cfaa84521ce"
+  },
+  {
+    "startLine": 182,
+    "endLine": 182,
+    "text": "For a decreasing progression:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b96e4b4a20cc0b5ea163d158106fb0f27be55d8165300feb78c6201777c1e962"
+  },
+  {
+    "startLine": 184,
+    "endLine": 186,
+    "text": "\\[\ne=\\left\\lfloor\\frac{(\\Delta+1)d}{n}\\right\\rfloor+1,\\qquad n<0.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "17d5d9c3ef7b9705aa7d067a2c2e32c06b209e5cdc4edc0dcd6adfa66ac139d5"
+  },
+  {
+    "startLine": 188,
+    "endLine": 188,
+    "text": "The crossing time is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "59c70175695fd5ab92d3570f5d8b11886e1797cb09f3757a91f64ccfca1a9c51"
+  },
+  {
+    "startLine": 190,
+    "endLine": 192,
+    "text": "\\[\nt_q=t_0+\\max(0,e).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9f7cc6d888e9d573f90dfbef04b0aff343bdd690dfaf945c308c101ef24ea51b"
+  },
+  {
+    "startLine": 194,
+    "endLine": 196,
+    "text": "If the rate is zero, points in the wrong direction, or the threshold lies beyond the clamp, the\nthreshold is unreachable and no event is scheduled. Goal: schedule only behaviorally meaningful\ncrossings while remaining exact for negative rates.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c3477c271d63a11997435f31a07f4a9c19faff80909852a8ea41f9ef8ae099c6"
+  },
+  {
+    "startLine": 198,
+    "endLine": 198,
+    "text": "### 3.5 Current MPS Need equations\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "719642fca332a8912d5b6098911f2a2deda120299c755f7f1986036cfa5e671c"
+  },
+  {
+    "startLine": 200,
+    "endLine": 200,
+    "text": "All four production Needs are bounded to \\([0,10{,}000]\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c14adacebc4b68027e5ead5aeb890f0aa6898c34c2a876ff11bec95853590d4f"
+  },
+  {
+    "startLine": 202,
+    "endLine": 207,
+    "text": "| Need | Formula before clamping | Watched behavior |\n| --- | --- | --- |\n| Hunger | \\(H(t)=H_0+12(t-t_0)\\) | thresholds 6,000, 8,000, 9,500; Eating applies \\(-5,000\\) |\n| Social | \\(So(t)=So_0+4(t-t_0)\\) | activates at 7,000; Socializing applies \\(-5,000\\) |\n| Recreation | \\(R(t)=R_0+2(t-t_0)\\) | activates at 6,000; recreation applies \\(-5,000\\) |\n| Energy | \\(E(t)=E_0-10(t-t_0)\\) | Rest at 2,000; continue thresholds step 2,000 → 1,000 → 0 |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "740692c5152aa70b3189437bb16e06b8f3fdb1cf20dbdf61fc0fd12a810bcdf2"
+  },
+  {
+    "startLine": 209,
+    "endLine": 210,
+    "text": "During Sleep, Energy recovery uses \\(+20\\) per minute until the recovered threshold 8,000. These are\ncontent parameters passed through the common analytical formula rather than separate Need algorithms.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3abfcee54c3e91db1d0baed6582bc1fa5fd13fe08506fb19ded0fee717eaa04d"
+  },
+  {
+    "startLine": 212,
+    "endLine": 212,
+    "text": "## 4. Travel, Activity, and schedule mathematics\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ac20417c8eea995b7808d8e5d3f0c4a9f0e20d6b3989443218e7a4c10b709831"
+  },
+  {
+    "startLine": 214,
+    "endLine": 214,
+    "text": "### 4.1 Route cost\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e767674de70120b4e8a9ea8912c5b3d32c664e9894e6d5c4e7080dcaee9a0ce2"
+  },
+  {
+    "startLine": 216,
+    "endLine": 216,
+    "text": "For route \\(P\\) containing ordered legs \\(e_1,\\ldots,e_k\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c5c0b270ae82452f7a9904dec920eacdcc454a7ba9979968111f40043df59f18"
+  },
+  {
+    "startLine": 218,
+    "endLine": 220,
+    "text": "\\[\nC(P)=\\sum_{i=1}^{k}c(e_i).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "fcf024f38a15860e21ba8fac421e6c36715c36a3c8e71830dcc583626b3fc37d"
+  },
+  {
+    "startLine": 222,
+    "endLine": 222,
+    "text": "Dijkstra relaxation is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f94811cbb1936af1c3fa0ee4ea9650cb8a72333af97e4d7f345f477cbef0ddf6"
+  },
+  {
+    "startLine": 224,
+    "endLine": 226,
+    "text": "\\[\nC_{candidate}(v)=C(u)+c(u,v).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d5db8379fd6af296c9167766f81fe1d3fb54483b61a895b33cee71eaef6ccf37"
+  },
+  {
+    "startLine": 228,
+    "endLine": 229,
+    "text": "The lower total cost wins; equal-cost frontier entries break by LocationId, and adjacency ties break by\ndestination then travel-mode id. Goal: shortest integral travel time with stable replay behavior.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3d77e6292de89118e9cf88dc5e19a4e34a65704b328169f2ebc6ada94f6d0307"
+  },
+  {
+    "startLine": 231,
+    "endLine": 232,
+    "text": "Current MPS bidirectional costs are Home↔Bakery 12 minutes, Home↔Commons 5 minutes, and\nCommons↔Bakery 9 minutes.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5c32f842123e5e484034d3f60e9c0ec1d10abb022da2956cf101b1fa98368352"
+  },
+  {
+    "startLine": 234,
+    "endLine": 234,
+    "text": "### 4.2 Travel progress\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a81417914d34350c4c5f8a3d9af6e83d11dbba79ed5d27b5d630b8699a9cb6d3"
+  },
+  {
+    "startLine": 236,
+    "endLine": 236,
+    "text": "For departure \\(t_d\\), arrival \\(t_a\\), and query time \\(t\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "cdf7be4e31e4e83315582ab9de0f847a26369ceb2d0c04cf48850224a9ca1b1b"
+  },
+  {
+    "startLine": 238,
+    "endLine": 243,
+    "text": "\\[\np(t)=\\operatorname{clamp}\\left(\n\\left\\lfloor\\frac{(t-t_d)10{,}000}{t_a-t_d}\\right\\rfloor,\n0,10{,}000\n\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "48bc8493c9ae76e001808bb967801e1d1fe7183c7fb2653ff318316716adfad6"
+  },
+  {
+    "startLine": 245,
+    "endLine": 246,
+    "text": "If \\(t_a-t_d\\le0\\), progress is 10,000. This is a player-visible derived value; it never moves the\ncharacter or branches the simulation.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b4299d6f0133069f4d4731b971c7bf385d59ab70ace203542dd1ed6e22b2949a"
+  },
+  {
+    "startLine": 248,
+    "endLine": 248,
+    "text": "### 4.3 Activity performance under context changes\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8df9c837c4e337009c838f802c47b56d9484c534c8a23764c59f3cd3b786eb30"
+  },
+  {
+    "startLine": 250,
+    "endLine": 251,
+    "text": "Performance is another analytical progression. For consecutive intervals \\(j\\), each with duration\n\\(\\Delta t_j\\) and rational rate \\(n_j/d_j\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "678d3ca640e5b19880e660f078a2ef3c82e5386592c3d00207a030da45f1baff"
+  },
+  {
+    "startLine": 253,
+    "endLine": 255,
+    "text": "\\[\nP(t)=P_0+\\sum_j\\left\\lfloor\\frac{\\Delta t_j n_j}{d_j}\\right\\rfloor.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7577b30bec05c32bd37fff270c49c0aea310761cbbee3d6b95155810ade5f6fe"
+  },
+  {
+    "startLine": 257,
+    "endLine": 260,
+    "text": "At every context boundary the old interval is materialized and the new rate is anchored. In the MPS,\na disliked colleague is relevant when directional Affection is at most \\(-1{,}000\\); while relevant,\nWorking performance changes at \\(-2\\) units/minute. Removing the modifier restores the rate snapshotted\nwhen the Activity began.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f48b21a76440cd80009f5ae3b6df78c87f0bca193a9bd5da647365be0d96d37a"
+  },
+  {
+    "startLine": 262,
+    "endLine": 262,
+    "text": "### 4.4 Recurring commitment day\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "71c30239dad75b89d8aa01e33b3228344d6c3f076c16c4dd6db9c7f84c0ee7c2"
+  },
+  {
+    "startLine": 264,
+    "endLine": 264,
+    "text": "For absolute day \\(d\\) and cycle length \\(L\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "300c16f8531f5369d6f12bfe107e3787770739aacd23091d98ef57fc3c4e214a"
+  },
+  {
+    "startLine": 266,
+    "endLine": 268,
+    "text": "\\[\nd_c=((d\\bmod L)+L)\\bmod L.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2c38d0bfe771f384f3358c8f9f848fe382073512046091b5f5a6e48b7677b6ad"
+  },
+  {
+    "startLine": 270,
+    "endLine": 270,
+    "text": "The occurrence is active exactly when bit \\(d_c\\) of the authored day mask is 1:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "350d095751296cb8e6fa42f03b7dd90ba7465b8c8a9be180dc41f073028272c1"
+  },
+  {
+    "startLine": 272,
+    "endLine": 274,
+    "text": "\\[\n(mask\\;\\&\\;(1\\ll d_c))\\ne0.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "beb780357a649a99016681bc5466510f32269954359bf898d0a8b0fd0f8bec14"
+  },
+  {
+    "startLine": 276,
+    "endLine": 276,
+    "text": "The double modulo handles negative days. The first occurrence scan is bounded to one complete cycle.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0a2df341c556add9451714ac142875375621419c0d9e7a67ee2c7d4cec135fb7"
+  },
+  {
+    "startLine": 278,
+    "endLine": 278,
+    "text": "### 4.5 Commitment windows and overlap\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3c67cc4f0d63385a4e9f4cd3f35e665abff8dca2d5302d41ad677c4d63e661dd"
+  },
+  {
+    "startLine": 280,
+    "endLine": 280,
+    "text": "For commitment \\(i\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "418a566baaf7b1a1cbdada89a98b0a22285116e8182912a7bd35a09177c72bd9"
+  },
+  {
+    "startLine": 282,
+    "endLine": 284,
+    "text": "\\[\nend_i=earliestStart_i+duration_i.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "1bac0578078e39b9573f619408f044964065d40565ff88c33ee642a4d5c49309"
+  },
+  {
+    "startLine": 286,
+    "endLine": 286,
+    "text": "Two commitments overlap when their half-open execution intervals overlap:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a4dfaea2683379c2847487f33ca370040964476436f8eff8170df744291e7fd4"
+  },
+  {
+    "startLine": 288,
+    "endLine": 290,
+    "text": "\\[\nearliestStart_a<end_b\\quad\\land\\quad earliestStart_b<end_a.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7a3ae24dcce4554c3eea1b5d8ff24139592eb2c2a72f59b33c842033ebe2a816"
+  },
+  {
+    "startLine": 292,
+    "endLine": 292,
+    "text": "A planned departure is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "de21d12214f4db4023a0b0cfa721064f4bac004ce3422141c289e19d7e630236"
+  },
+  {
+    "startLine": 294,
+    "endLine": 296,
+    "text": "\\[\ndepartAt=\\max(now,earliestStart-travelDuration).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "dddc357701893d25d29ee6b857c8f3e1abc58d52ee62d64e8c238f1b501b086b"
+  },
+  {
+    "startLine": 298,
+    "endLine": 299,
+    "text": "Window expiration is scheduled one minute after `LatestStart`, preserving an inclusive latest-start\nboundary.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "64405412af813977b1abe79ab3a5f2778ba01f63a8433acf7636c0fd6ec4e2f7"
+  },
+  {
+    "startLine": 301,
+    "endLine": 301,
+    "text": "### 4.6 Joint commitment feasibility\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "62889d9ad86312599ad0aff17578e2cf2e440a80aa76e64b58c5f5d1f38b684d"
+  },
+  {
+    "startLine": 303,
+    "endLine": 303,
+    "text": "For a candidate ordering of commitments, with current availability \\(a\\) and location \\(\\ell\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d66bbb72143f3a2a911a6600e9f7eae9d28618ac6b0df64b03d2d9d28d17fa74"
+  },
+  {
+    "startLine": 305,
+    "endLine": 307,
+    "text": "\\[\narrival_i=a+travel(\\ell,location_i),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "06cf03503edf1b510140179bbdcb2de00f56b458816bbcaa9e520ff6bf80571f"
+  },
+  {
+    "startLine": 309,
+    "endLine": 311,
+    "text": "\\[\nstart_i=\\max(arrival_i,earliestStart_i).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b14d5773100c9143d7fedec6f5c7bfd29be9ef1fc80e1c304c027ee33b6005e3"
+  },
+  {
+    "startLine": 313,
+    "endLine": 313,
+    "text": "The step is feasible if \\(start_i\\le latestStart_i\\), after which\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f78ad17cb4ef625b29f4f58f6cef7ee99bf8fbed831c165f68ce82ff1ef480c4"
+  },
+  {
+    "startLine": 315,
+    "endLine": 317,
+    "text": "\\[\na'=start_i+duration_i,\\qquad \\ell'=location_i.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f90b0d4890f15027e1c5f05b3a5dcc0a4c8c37cabfd04af6bacbcc939cca592c"
+  },
+  {
+    "startLine": 319,
+    "endLine": 320,
+    "text": "The bounded search evaluates complete deterministic orderings. The set is jointly feasible if any\nordering reaches every commitment. The latest safe time to resolve the conflict from origin \\(o\\) is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "882099aa54e0f17841115b408089046a1fc29b81765fa162e41298605f0ea503"
+  },
+  {
+    "startLine": 322,
+    "endLine": 324,
+    "text": "\\[\ndeadline=\\max\\left(now,\\min_i(latestStart_i-travel(o,location_i))\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "95abd70e6e626c0f98e7ea4cad5a333bfafc816b288a40e584563535f721172a"
+  },
+  {
+    "startLine": 326,
+    "endLine": 326,
+    "text": "Goal: detect travel-induced infeasibility that pairwise time-overlap checks cannot see.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4f8583aa90dd9de3826aca2ca39465a9820225ff0203bd8cbd9a0cb900344828"
+  },
+  {
+    "startLine": 328,
+    "endLine": 328,
+    "text": "## 5. Stable hashing and deterministic randomness\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "06f6e2862bc5ca3144c7b0173dbfb6f0ef90002e57adffabc62f50a5de0a8f68"
+  },
+  {
+    "startLine": 330,
+    "endLine": 330,
+    "text": "### 5.1 FNV-1a authored-string hash\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "31d5e2a078f6740d897d15bd65af299308748c4e261434194853e281428fb193"
+  },
+  {
+    "startLine": 332,
+    "endLine": 333,
+    "text": "Starting with offset basis \\(h_0=14695981039346656037\\), each UTF-16 code unit is processed as its low\nbyte then high byte. For each byte \\(b\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "408071a582e64469020221f2508195cd2a069bf6ac1b607212f05cfa2f59a0c8"
+  },
+  {
+    "startLine": 335,
+    "endLine": 337,
+    "text": "\\[\nh'=(h\\oplus b)\\times1099511628211\\pmod{2^{64}}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6ceb96855773c252c41feb17b5bdfa56149d6baab5554d1a0dfd946fba7d5537"
+  },
+  {
+    "startLine": 339,
+    "endLine": 339,
+    "text": "Goal: a culture-, framework-, and process-independent authored-id hash.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9ca0dfc9827c35bff6134506d816e714aeb70db7f08ad6c898d0292a23c73e41"
+  },
+  {
+    "startLine": 341,
+    "endLine": 341,
+    "text": "### 5.2 Hash combination and SplitMix64 avalanche\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c2557b5cc14fef26eedbb4d1b09eb334a70a9acb2ab854d3ee66ea4cbb73803f"
+  },
+  {
+    "startLine": 343,
+    "endLine": 343,
+    "text": "With golden increment \\(\\gamma=\\mathtt{0x9E3779B97F4A7C15}\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "dd82eba6e6cc7cdab7ec0dc91fc1b9e05cc3790d9659d786cd0bc85559a63122"
+  },
+  {
+    "startLine": 345,
+    "endLine": 347,
+    "text": "\\[\nc=a\\oplus(v+\\gamma+(a\\ll6)+(a\\gg2)),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a5cd55c9fea81e7d7c2fb13d54873b90dee9a4e30d1b545edc7901af37bf9310"
+  },
+  {
+    "startLine": 349,
+    "endLine": 349,
+    "text": "followed by:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3ea4539ab19bf87f6696507e964a9379fcb21b8dbd9029198888dd35c38f78f0"
+  },
+  {
+    "startLine": 351,
+    "endLine": 359,
+    "text": "\\[\nx_1=(c\\oplus(c\\gg30))\\times\\mathtt{BF58476D1CE4E5B9},\n\\]\n\\[\nx_2=(x_1\\oplus(x_1\\gg27))\\times\\mathtt{94D049BB133111EB},\n\\]\n\\[\nh=x_2\\oplus(x_2\\gg31),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9e9d0548d8ce7fcaa44d1ee0bec53fbb30e7650e9ce19e9a347d18b537d13145"
+  },
+  {
+    "startLine": 361,
+    "endLine": 361,
+    "text": "all modulo \\(2^{64}\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "41115b5ffd8d2f9a560859834426ea0c3700095ec3becb7df8b6c49f48a9b61a"
+  },
+  {
+    "startLine": 363,
+    "endLine": 363,
+    "text": "The raw oracle value is the ordered combination\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "1327b903458cb5fd6f6cbe486310ec03a8fd41f3cab34f81eabcd0b6ed8b18bb"
+  },
+  {
+    "startLine": 365,
+    "endLine": 367,
+    "text": "\\[\nR=H(worldSeed,scopeType,scopeId,purpose,rollIndex).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5addbcabaf2d646e3a7b19b2b3d8b380453826f5dae2af8503043ea08306fab0"
+  },
+  {
+    "startLine": 369,
+    "endLine": 370,
+    "text": "Each component gives randomness semantic identity. Unrelated draws therefore do not shift one another's\nstreams.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8a0a122308c35bd6978512265f48f940da931af871a4213e39042a0332cbd6ed"
+  },
+  {
+    "startLine": 372,
+    "endLine": 372,
+    "text": "### 5.3 Unbiased bounded integer\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "33d4ccff6592ef7bed76e836852694723113d98fb71be30d19a46894f09a9666"
+  },
+  {
+    "startLine": 374,
+    "endLine": 374,
+    "text": "For span \\(m>1\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "fc238b254dc5930da7ae3a089fa3479322b54aa2f31572afe5966f4dfc7c61b8"
+  },
+  {
+    "startLine": 376,
+    "endLine": 378,
+    "text": "\\[\nL=(2^{64}-1)-((2^{64}-1)\\bmod m).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f60b5ca8732d230b76026c2d21dfadfad7e27977e8d0e6bef8303dc7fa1f9506"
+  },
+  {
+    "startLine": 380,
+    "endLine": 380,
+    "text": "While \\(R\\ge L\\), remap \\(R\\leftarrow avalanche(R+\\gamma)\\). Then\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "571d614c815e5bd3d31d5421da550d5569ed45fabb9548bb068ebdb4c918f304"
+  },
+  {
+    "startLine": 382,
+    "endLine": 384,
+    "text": "\\[\nU=R\\bmod m.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "cf923de68207e330e635b4a559f86df05fb84eff146e34e1dfbb0b2d9c1672a4"
+  },
+  {
+    "startLine": 386,
+    "endLine": 386,
+    "text": "This rejection removes modulo bias. Consequently:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6ca7e37c2833079ff95f351b2e47f85397cd2b54bcafe047e8c3bb92fa3e7fdb"
+  },
+  {
+    "startLine": 388,
+    "endLine": 390,
+    "text": "\\[\nrange(min,max)=min+U,\\quad m=max-min,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6ce2e2a0817bad32c3ad470ddec5a1c7e33a291e61144b3a40a282be7824045e"
+  },
+  {
+    "startLine": 392,
+    "endLine": 394,
+    "text": "\\[\ndie(d)=1+U,\\quad m=d.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c703f2234045efa73a71d15f91eca098a1775f32d2e39158d758ab6e185ae860"
+  },
+  {
+    "startLine": 396,
+    "endLine": 396,
+    "text": "A basis-point chance succeeds when\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "422882b5371028f1359ef32e093deefee41d57257bfa692f307524bfede23a34"
+  },
+  {
+    "startLine": 398,
+    "endLine": 400,
+    "text": "\\[\nU_{10{,}000}<p.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a016e2d63767909f6b61ecb58c55aa065295a2542496b8d7091b56a23ec04580"
+  },
+  {
+    "startLine": 402,
+    "endLine": 402,
+    "text": "Values \\(p\\le0\\) always fail and \\(p\\ge10{,}000\\) always succeed.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "66ac1c98214d10d1bcbe3edbfccb3747e027ae1de693921ff7bf689642dbba6a"
+  },
+  {
+    "startLine": 404,
+    "endLine": 404,
+    "text": "### 5.4 Knowledge discovery probability\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f7d4bc8286993ce03c11fb36aec96bf6b0f0d19789685e38c2849418ddece22d"
+  },
+  {
+    "startLine": 406,
+    "endLine": 406,
+    "text": "For channel difficulty \\(D\\) in basis points:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7c383f7a9999ff4a718b8329d9d21072b090c68a25ae2a071b9ad824cde4cf02"
+  },
+  {
+    "startLine": 408,
+    "endLine": 410,
+    "text": "\\[\np_{learn}=\\operatorname{clamp}(10{,}000-D,0,10{,}000).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f844c51d60a2e86da09210842e99a54329908d4ca8909c99591d8a0e8886f6d0"
+  },
+  {
+    "startLine": 412,
+    "endLine": 414,
+    "text": "Difficulty at or below zero learns automatically; otherwise the deterministic chance test above is\nused. Goal: observations create reproducible opportunities to learn without making truth equal\nKnowledge.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6d79aa98fcf6d8d2577f25f92856bf5672713bb20a98b082464a438839c7cc5a"
+  },
+  {
+    "startLine": 416,
+    "endLine": 416,
+    "text": "### 5.5 Generated social profiles\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "35321e72bdb1e5b43913d32d2a019a015bf4eaff0e145eb65b93608d6672bab9"
+  },
+  {
+    "startLine": 418,
+    "endLine": 419,
+    "text": "Each provisional personality coordinate is sampled uniformly from the integers\n\\([-10{,}000,10{,}000]\\). Each appraisal linear coefficient is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2bd7386cfe82f02fe00c4efb7c01cf9d0ab5ce1d9f46d7ea7b4da52250e764a5"
+  },
+  {
+    "startLine": 421,
+    "endLine": 423,
+    "text": "\\[\nw_i=\\operatorname{clamp}(prior_{lens,i}+U_i,-10{,}000,10{,}000),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "bf6d41a14da3488fc0f7a1281bb1785ee594cb430c24ccf48d1d2ef58f09dd2d"
+  },
+  {
+    "startLine": 425,
+    "endLine": 425,
+    "text": "where \\(U_i\\) is uniform on integers \\([-2{,}500,2{,}500]\\). Current nonzero priors are:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c9d977438aef3c41591edab3c8867e6769e2f5f64e0c23694fd3672e17b700bd"
+  },
+  {
+    "startLine": 427,
+    "endLine": 432,
+    "text": "| Lens | Dimension priors |\n| --- | --- |\n| Affiliation | Warmth 5,000; Sociability 2,500; Attunement 3,500 |\n| Respect | Discipline 5,000; Stability 4,000; Agency 3,000 |\n| Comfort | Warmth 4,000; Attunement 5,500; Stability 2,500 |\n| Reliance | Discipline 6,000; Stability 4,000 |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b41b057febfa61c91ca2d78cbd756ed6c83716a10fe7f82b73eef19935cb969e"
+  },
+  {
+    "startLine": 434,
+    "endLine": 436,
+    "text": "Every generated field also has an Agency×Attunement coefficient of 3,500 for Comfort and 1,000 for\nother lenses, plus a one-dimensional ideal factor coefficient 2,000 around the observer's own\npersonality coordinate selected for that lens.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f3f05c573a425b5fdc2969c441e2161d7e83e587a8160155b456142ea3875a85"
+  },
+  {
+    "startLine": 438,
+    "endLine": 438,
+    "text": "### 5.6 Bounded interaction-candidate sampling\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0282e10004978fe1cfe86f194595394a538cda9de7841044506f5a01ca75d56a"
+  },
+  {
+    "startLine": 440,
+    "endLine": 442,
+    "text": "Already-known characters are ranked first by descending social relevance and then CharacterId.\nRemaining stranger slots are selected as distinct ordinals from the sorted stranger pool. For \\(k\\)\nremaining slots, the bounded rejection budget is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7ccf21e0581391c3595a6724de2a80a817eca1e8ac554ddb3ff0ed6540e14aa5"
+  },
+  {
+    "startLine": 444,
+    "endLine": 446,
+    "text": "\\[\nA=8k+16.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4e2a34adcca7f55dca2d86aba7144dc75e87643e796c27a8113aff4a40826cff"
+  },
+  {
+    "startLine": 448,
+    "endLine": 448,
+    "text": "Attempt \\(a\\) uses the random roll index\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6a9465515d61ac5b7f036f2134e42ab50d9b57af0e94eaa1ec876fce5ed10bd3"
+  },
+  {
+    "startLine": 450,
+    "endLine": 452,
+    "text": "\\[\nj'=jA+a,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8adfce90e471bc87550665b371ba65ce045d51444267bc7647579f73b55fef2f"
+  },
+  {
+    "startLine": 454,
+    "endLine": 454,
+    "text": "where \\(j\\) is the opportunity roll index. For an arrival opportunity,\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5e1043a88f05d1a3778099ea1a8af54f95d030b09f4873b3873e511fee3b6149"
+  },
+  {
+    "startLine": 456,
+    "endLine": 458,
+    "text": "\\[\nj=(397\\times characterId)\\oplus totalSimMinutes.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "dd74294128fe4b2170683c8fa480b4cdbc8ed3db3b79a82eb994f2d465af2e2b"
+  },
+  {
+    "startLine": 460,
+    "endLine": 460,
+    "text": "For a travel-segment scope,\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a6f4f095e9e58d8d842f125b4908678081189053f000a806f512ee71d5b2c028"
+  },
+  {
+    "startLine": 462,
+    "endLine": 464,
+    "text": "\\[\nscopeId=(397\\times fromLocationId)\\oplus toLocationId.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "fb64a7b1476f1174a58b6ed3fc933c625cd92c1355c3208617b4ba9e5ebb6907"
+  },
+  {
+    "startLine": 466,
+    "endLine": 468,
+    "text": "Selected ordinals are sorted before they are mapped back to CharacterIds. Goal: sample a hard-bounded\nnumber of strangers without shuffling or scanning an unbounded population, while keeping the sample\nstable for the same actor, context, and SimTime.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "09d76322767097d72a28b8e968dd2f525407f3beacc79be7bd2a62ad8599ff87"
+  },
+  {
+    "startLine": 470,
+    "endLine": 470,
+    "text": "## 6. Deterministic uncertain signal fields\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f1d798d57f93df1f1ad3125ef2a66406d99f1a055779dce8641522ea2285c1e8"
+  },
+  {
+    "startLine": 472,
+    "endLine": 473,
+    "text": "This is the principal CharacterLab research primitive. The same evaluator powers compiled Decision\nConsiderations and Social Appraisal.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6bd8b24801c3eef8ff983397fb136e47751472e81928e349a42967579455cc75"
+  },
+  {
+    "startLine": 475,
+    "endLine": 475,
+    "text": "### 6.1 Inputs\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3d728669b6652d6dc1ac8dec15e4bd1240fc9f74f7e701d0f748567d95b3b15b"
+  },
+  {
+    "startLine": 477,
+    "endLine": 477,
+    "text": "Let the uncertain signal vector be\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6e6951dc10e35e0471ac66d13fb384cb47d54e64091dc9bffad90b0a3333bc60"
+  },
+  {
+    "startLine": 479,
+    "endLine": 481,
+    "text": "\\[\nz\\sim(\\mu,\\Sigma),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5c34915e70cedac49adf7f2a556fd70523f560089a61d0c2c83f1b553f4d25f0"
+  },
+  {
+    "startLine": 483,
+    "endLine": 484,
+    "text": "where \\(\\mu\\) is the vector of fixed-point means and \\(\\Sigma\\) is the covariance matrix. The evaluator\ndoes not sample this distribution; it propagates moments analytically.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a62de7766ea1d21a7d9cabd7ac995ac20401d6daf0135fdc193f04b9121e3ca7"
+  },
+  {
+    "startLine": 486,
+    "endLine": 486,
+    "text": "The authored field contains:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "25cfd6692c9bdb4c9f85b85561305001736106db00ae7a1e3c69c1ce90b1518b"
+  },
+  {
+    "startLine": 488,
+    "endLine": 495,
+    "text": "| Symbol | Meaning |\n| --- | --- |\n| \\(b\\) | bias/baseline |\n| \\(w\\) | sparse linear coefficient vector |\n| \\(Q\\) | sparse symmetric pairwise interaction matrix |\n| \\(i\\) | optional ideal point |\n| \\(L\\) | sparse ideal/tolerance factors |\n| \\(P=LL^T\\) | positive-semidefinite ideal penalty matrix |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9df8b6d8a8be19de09da1b79626086dbb3c55f7c741d163998efed7acd1a64ac"
+  },
+  {
+    "startLine": 497,
+    "endLine": 498,
+    "text": "Off-diagonal authored pair terms represent the complete \\(z_i z_j\\) contribution once; authors do not\nmirror them.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a0da616daa4a0c24975dcb37dfdba9f4f7a69a00a75a237a219dfc38c46370f8"
+  },
+  {
+    "startLine": 500,
+    "endLine": 500,
+    "text": "### 6.2 Point latent score\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a5c7c056ffe2ce343d8957783c59053432c06728a2396a705c44d875c61ad9c3"
+  },
+  {
+    "startLine": 502,
+    "endLine": 502,
+    "text": "In conceptual real-valued notation:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "708639a3e30163630afb5a37bf3cfc56a451608e58367916cf07ff6af2898542"
+  },
+  {
+    "startLine": 504,
+    "endLine": 506,
+    "text": "\\[\ns(z)=b+w^Tz+z^TQz-\\frac12(z-i)^TP(z-i).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d0fcb65e0a85a30aab68a80365342e747a1cad4b88af154202ebe07a84cdb9d0"
+  },
+  {
+    "startLine": 508,
+    "endLine": 508,
+    "text": "The fixed-point implementation evaluates the equivalent sparse terms using `mul` and `mulCov`.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d5e4e8849f34620d1a8069a76946bec284d6ac19dd9d08434e5386c087ed16bb"
+  },
+  {
+    "startLine": 510,
+    "endLine": 510,
+    "text": "For each ideal factor row \\(l_f\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3237fbd541991a3bed846e9e9d59d78a3f9e46b044f2a6288d608a5a21b57eb3"
+  },
+  {
+    "startLine": 512,
+    "endLine": 514,
+    "text": "\\[\nm_f=l_f^T(\\mu-i),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c48330ab21d6aa2cf70f3ce69869274705fd40d16c67edccb06072c0268a25ec"
+  },
+  {
+    "startLine": 516,
+    "endLine": 518,
+    "text": "\\[\npenalty_{point,f}=-\\frac12m_f^2.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b866b0bff256495abfdecbc69ac6cf6b269884023505de7ec5759cf3e88038ab"
+  },
+  {
+    "startLine": 520,
+    "endLine": 520,
+    "text": "The point latent score substitutes \\(z=\\mu\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "15c703bd3a965734d74278380a4c2750a3e903b81c40471d0a415afdb3902b59"
+  },
+  {
+    "startLine": 522,
+    "endLine": 522,
+    "text": "### 6.3 Expected latent score under uncertainty\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e3452faa95ec1b958dc29b9c1734d64d91f013a8ad674df9145f31468e654cd3"
+  },
+  {
+    "startLine": 524,
+    "endLine": 524,
+    "text": "For pairwise term \\(q_{ij}\\), uncertainty adds\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "46f03a2caacfe121694d91fb894dafef7f4694e582f73ec71aa5169d58ae839a"
+  },
+  {
+    "startLine": 526,
+    "endLine": 528,
+    "text": "\\[\nq_{ij}\\Sigma_{ij}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9d58664d76da0ac12d245eea56403f96a39aac4a101707330d1a49e2778dc288"
+  },
+  {
+    "startLine": 530,
+    "endLine": 530,
+    "text": "For ideal factor \\(l_f\\), projected variance is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "89924b7bbc2c7e8938f9878458763f5f1bdb75bd69548872d21cad505bed1eac"
+  },
+  {
+    "startLine": 532,
+    "endLine": 534,
+    "text": "\\[\nv_f=l_f^T\\Sigma l_f,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "bc27591504f76d94627b1eda30e0ce963d281bcd9445265b0f4088028dc67f11"
+  },
+  {
+    "startLine": 536,
+    "endLine": 536,
+    "text": "so its expected penalty is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a9f0bcfeb6fa52dc135e2239e120ceb491a2670b338bbb116fe5f48737e33975"
+  },
+  {
+    "startLine": 538,
+    "endLine": 540,
+    "text": "\\[\npenalty_{expected,f}=-\\frac12(m_f^2+v_f).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b35a4ce780f4b5092934e6e253d96027debb56eadd3f38988d653ded987864c9"
+  },
+  {
+    "startLine": 542,
+    "endLine": 542,
+    "text": "The complete expected pre-bounded score is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a5f48df033edab94d3496d40f0e3d01c54a4c45e7ecaf47aebec1965662551e4"
+  },
+  {
+    "startLine": 544,
+    "endLine": 547,
+    "text": "\\[\nE[s]=b+w^T\\mu+\\mu^TQ\\mu+\\operatorname{tr}(Q\\Sigma)\n-\\frac12\\left((\\mu-i)^TP(\\mu-i)+\\operatorname{tr}(P\\Sigma)\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b97f8dad0d3882bbdf9f52408f98c9a080460ce9b6a80853043f0f171314e2b5"
+  },
+  {
+    "startLine": 549,
+    "endLine": 549,
+    "text": "Goal: uncertainty and covariance may change an appraisal or reason without stochastic sampling.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ec0aac40ed00e6682c631bf687aa6f7abc1d8ce0c0ee4c4368454c6cbae8c377"
+  },
+  {
+    "startLine": 551,
+    "endLine": 551,
+    "text": "### 6.4 Latent-score variance\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5f46010f9c88ce839125572f0e132be3ba098768e688291ae2df5c7eb4521115"
+  },
+  {
+    "startLine": 553,
+    "endLine": 553,
+    "text": "Define\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5f4586d02a2081f3ae4eab590376114c229410ffa2d2259fac8e4e53b6f97562"
+  },
+  {
+    "startLine": 555,
+    "endLine": 557,
+    "text": "\\[\nA=Q-\\frac12P,\\qquad r=w+Pi.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ce7267ca1de995b09bd3973055571d3071fc8f2fd0c645f22965cf1bc85bb2e9"
+  },
+  {
+    "startLine": 559,
+    "endLine": 559,
+    "text": "Then the implemented Gaussian quadratic-form variance is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5697487c778b25d6392df9a8e31630f1932f7153add653d62455fa4c4cca8fac"
+  },
+  {
+    "startLine": 561,
+    "endLine": 564,
+    "text": "\\[\nVar[s]=2\\operatorname{tr}(A\\Sigma A\\Sigma)\n+(r+2A\\mu)^T\\Sigma(r+2A\\mu).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7cb01e602f13c837b73f4d675f5282b789c2a18988cd2865520cceaa1180b675"
+  },
+  {
+    "startLine": 566,
+    "endLine": 567,
+    "text": "The code uses \\(B=2A=2Q-P\\) to avoid representing halves during fixed-point matrix arithmetic. Any\nnegative result caused by rounding is clamped to zero.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "606926703629df1595d2884d8de7825e677bfcdc17ad96ba3f6a8c4edb106ce8"
+  },
+  {
+    "startLine": 569,
+    "endLine": 569,
+    "text": "### 6.5 Bounded response\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4bd5f7bdae3368ed46dce7784d50bfe783b6e43a1ff1e099c77faf723237874b"
+  },
+  {
+    "startLine": 571,
+    "endLine": 571,
+    "text": "The deterministic response function is the rational softsign:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "dc778e5dbd564d6b5b14e5c763d01a4646e718c85c87fe310493b0a593c18600"
+  },
+  {
+    "startLine": 573,
+    "endLine": 575,
+    "text": "\\[\ng(x)=\\frac{x}{1+|x|}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4cb6fd04e1292665f2c35a627f71fadcf91a382454ba6697ec9a24b2f4c9a922"
+  },
+  {
+    "startLine": 577,
+    "endLine": 577,
+    "text": "In stored fixed-point units:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3376bba098ca8d04871f98ef3cc97ec27f9e63dcd0633a5619766f6c51701f0c"
+  },
+  {
+    "startLine": 579,
+    "endLine": 583,
+    "text": "\\[\ng_S(x)=\\operatorname{clamp}\\left(\n\\operatorname{round}\\left(\\frac{xS}{S+|x|}\\right),-S,S\n\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "447d57945d9bd388c35ff1b1f739cde09422f76d5b4fe3962eaad6101d67b8d7"
+  },
+  {
+    "startLine": 585,
+    "endLine": 585,
+    "text": "The evaluator reports\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f8cc4368311fb83ba00bc04a7375d27baa9d103988350a4d6f0e8dc966145256"
+  },
+  {
+    "startLine": 587,
+    "endLine": 589,
+    "text": "\\[\n\\widehat{E[U]}=g(E[s]).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a44603f5c8da41f26db885c56353e8ea382dd51ac455d57da2288533e0854f37"
+  },
+  {
+    "startLine": 591,
+    "endLine": 591,
+    "text": "This is explicitly a plug-in approximation, not a claim that \\(E[g(s)]=g(E[s])\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "37a94a2378f5b8f571fdd1133daed1258c36f98f7d036d6f3256b287c6ea311c"
+  },
+  {
+    "startLine": 593,
+    "endLine": 593,
+    "text": "The derivative is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c65cf9e58f1ee9c3d564b638d5aa7e60b27db13782c25f1a5d674ad39881938b"
+  },
+  {
+    "startLine": 595,
+    "endLine": 597,
+    "text": "\\[\ng'(x)=\\frac{1}{(1+|x|)^2},\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8b3ac5a3ef29804d0c9c134117635cfec17ac7e98fce7257e16a923d1a8fa0ee"
+  },
+  {
+    "startLine": 599,
+    "endLine": 599,
+    "text": "represented in stored units as\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5a91b47bc942260639500313fe0674f8cf51cc3900b51147eba070bed1c6bde0"
+  },
+  {
+    "startLine": 601,
+    "endLine": 603,
+    "text": "\\[\ng'_S(x)=\\operatorname{round}\\left(\\frac{S^3}{(S+|x|)^2}\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "45c751d913fa189545940171edc1345a3d8bafaf3858c32caa28193fc8ed8bad"
+  },
+  {
+    "startLine": 605,
+    "endLine": 605,
+    "text": "The first-order output variance approximation is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ffb4e6439bba14dbc77d4f8f19b6ab2613224061d0472bcd99417e836108fca5"
+  },
+  {
+    "startLine": 607,
+    "endLine": 609,
+    "text": "\\[\nVar[U]\\approx g'(E[s])^2Var[s].\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9cb0141956f34dcde921d69236fc93ef56511251025d0586943c632e5e6012ca"
+  },
+  {
+    "startLine": 611,
+    "endLine": 612,
+    "text": "Goal: compress unbounded latent pressure into a comparable \\([-1,1]\\) result while retaining a useful\nuncertainty estimate and avoiding platform-sensitive floating-point transcendental functions.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9535e07f17e7c22370ebd51d7cb54d3f5d01f77b2385eb91c5367a294afd8dd2"
+  },
+  {
+    "startLine": 614,
+    "endLine": 614,
+    "text": "## 7. Trait projection and Social Appraisal\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b7b7001bf62c83c652b0e3e4a8090205009e072cc7b877e2971bbf94646385ec"
+  },
+  {
+    "startLine": 616,
+    "endLine": 616,
+    "text": "### 7.1 Named trait projection\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6e20d9be35cb97e83e9a60f6950b6fe47d8c6661b46f9e28f6618da8d5dc6529"
+  },
+  {
+    "startLine": 618,
+    "endLine": 618,
+    "text": "For personality point \\(x\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e46818cf0133e0553b7daa600ddf62b1a90e2d3c14e166ee3f59a6fe0cfc64a6"
+  },
+  {
+    "startLine": 620,
+    "endLine": 622,
+    "text": "\\[\ntrait(x)=g\\left(b+\\sum_iw_ix_i+\\sum_{i\\le j}q_{ij}x_ix_j\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "04769ee8b0c39667b76b9bc9f5da76d33cfc977092ea8165830058810ba352a6"
+  },
+  {
+    "startLine": 624,
+    "endLine": 624,
+    "text": "For a belief distribution, every pairwise product uses\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "220c7b99c83cda6e4052a5d87650a66e6f50c11c9b76ec691e03976ae7dffede"
+  },
+  {
+    "startLine": 626,
+    "endLine": 628,
+    "text": "\\[\nE[x_ix_j]=\\mu_i\\mu_j+\\Sigma_{ij}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b7ec87dbc8b1da6c9bd0ded402541382bb048518d4849a819e4787cb0804a5bb"
+  },
+  {
+    "startLine": 630,
+    "endLine": 630,
+    "text": "Goal: named traits are explainable projections of the latent space, not independent duplicate state.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "420654c67ce7e5877da2943cfec0004e937618b9998b8f9e314235c9534f8e57"
+  },
+  {
+    "startLine": 632,
+    "endLine": 632,
+    "text": "### 7.2 Context-conditioned Social Appraisal\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6826898dce6bdb50b9b5f4223502f9532844d493363c48cce1268f5493a1053c"
+  },
+  {
+    "startLine": 634,
+    "endLine": 634,
+    "text": "Active context modifiers add sparse deltas:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "70e0bec5df9d1a1edc73a2f88bdb8d7c35ef61d08557b27eab97fbf1633999fc"
+  },
+  {
+    "startLine": 636,
+    "endLine": 642,
+    "text": "\\[\nb'=b+\\sum_c\\Delta b_c,\\quad\nw'=w+\\sum_c\\Delta w_c,\\quad\nQ'=Q+\\sum_c\\Delta Q_c,\\quad\ni'=i+\\sum_c\\Delta i_c,\\quad\nL'=L+\\sum_c\\Delta L_c.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a81b6923c08faf8cec4749d29f955a2e3dbc1532f51f98fafe2ec5da287ef9b4"
+  },
+  {
+    "startLine": 644,
+    "endLine": 645,
+    "text": "The merged field is then evaluated by Section 6. Context changes the present evaluation; it does not\nrewrite personality or belief.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "cedbe3efc2884d0b2ca7d33a213f6a6e40df5e457075281490e17783dec3638f"
+  },
+  {
+    "startLine": 647,
+    "endLine": 647,
+    "text": "### 7.3 Additional social pressures\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b6f60b10a26de40dc6eba8d4be003dde96e7938fc9c3594449fd91e643c0d94b"
+  },
+  {
+    "startLine": 649,
+    "endLine": 650,
+    "text": "Personality appraisal can be combined with directional history, familiarity, shared tags, affect, and\nindependent context pressure:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6a5fedb506c6ca33307a14fc7db796ffdbee87819b49a5557c54c83156a12c7b"
+  },
+  {
+    "startLine": 652,
+    "endLine": 654,
+    "text": "\\[\ns_{combined}=E[s_{personality}]+\\sum_k c_kx_k,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8fb6099fa114e30d935f1a119fca4900c5d268fdd7952820828d22d655f24445"
+  },
+  {
+    "startLine": 656,
+    "endLine": 658,
+    "text": "\\[\nappraisal=g(s_{combined}).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "95555f568d4ce61929e5096acae54ed6b948ebb2efa660fa89cae46e618000f5"
+  },
+  {
+    "startLine": 660,
+    "endLine": 663,
+    "text": "The current composite result carries forward the personality field's latent and output variance; it\ndoes not recompute variance or the response derivative after adding these deterministic pressure terms.\nThat is an implementation detail CharacterLab should preserve when reproducing current behavior, and a\ncandidate research seam if the composite uncertainty model is later revised.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2c19fafaa95b1cd789370fc31b692ba169d4cb0bb99b62b4421a66d1e330ea78"
+  },
+  {
+    "startLine": 665,
+    "endLine": 665,
+    "text": "For a shared Interest or Value with signed intensities \\(a\\) and \\(b\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2e7828970e8911006c91f3e60944872d66729dd62c200127a4e4a704a97d5c0d"
+  },
+  {
+    "startLine": 667,
+    "endLine": 673,
+    "text": "\\[\nshared(a,b)=\n\\begin{cases}\n-\\min(|a|,|b|),&\\operatorname{sign}(a)\\ne\\operatorname{sign}(b),\\\\\n\\min(|a|,|b|),&\\text{otherwise}.\n\\end{cases}\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a87ec4a6e910de43f35b704de965970431935433cd106009053ba8f3c458964a"
+  },
+  {
+    "startLine": 675,
+    "endLine": 675,
+    "text": "Goal: agreement is limited by the weaker participant, while opposed signs become negative pressure.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c1d03992d8795714df1abf02b66d5f872049cccf6a075bfa54a5d8d22bd6d8f0"
+  },
+  {
+    "startLine": 677,
+    "endLine": 677,
+    "text": "### 7.4 Calibration bands\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b826ad82398ea6277a3e67bb95229c854961842ed34554c57938530174bbac24"
+  },
+  {
+    "startLine": 679,
+    "endLine": 680,
+    "text": "Calibration uses the absolute normalized appraisal. The highest threshold not exceeding the magnitude\nwins. Current MPS bands are:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ee1f00f2bc16d52347cdacff308a052fd5eeaa2f1fdc68fdd0c9bd5e080bfe24"
+  },
+  {
+    "startLine": 682,
+    "endLine": 687,
+    "text": "| \\(|appraisal|\\) minimum | Strength |\n| ---: | --- |\n| 1,000 | Minor |\n| 2,500 | Moderate |\n| 5,000 | Strong |\n| 7,500 | Extreme |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7b92fd5163f0b3f6e4d79c6c0cc5538ac5809fedd6bb6d22bf20267c2bd7f166"
+  },
+  {
+    "startLine": 689,
+    "endLine": 689,
+    "text": "Below 1,000 is Negligible. Sign remains separate from magnitude.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ea2847a7fefa2d620209ffd9d889cc7c270f7fdd1dd328e7e27ecb474354d613"
+  },
+  {
+    "startLine": 691,
+    "endLine": 691,
+    "text": "### 7.5 Directional relationship updates\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "57a70ba58af09b095e2022d7e800f6977f69f6125148a7dfc3259a076d5af864"
+  },
+  {
+    "startLine": 693,
+    "endLine": 693,
+    "text": "For relationship channel \\(c\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3db7325f248fcb73ef733e8c1adf0ec620f9c90201a1cc628205195d7ca9a7d5"
+  },
+  {
+    "startLine": 695,
+    "endLine": 697,
+    "text": "\\[\nc'=\\operatorname{clamp}(c(t)+\\Delta c,-10{,}000,10{,}000).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4eeac3b88cb70cbba5227fce9c9e05af776d33b0b8f73b14797781cd564a7e94"
+  },
+  {
+    "startLine": 699,
+    "endLine": 699,
+    "text": "Familiarity uses the same analytical progression with bounds \\([0,10{,}000]\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2880430fd9026e0bc285d5a673cd4d8e9096fd234c95ab0162f09b6b85b32108"
+  },
+  {
+    "startLine": 701,
+    "endLine": 703,
+    "text": "\\[\nf'=\\operatorname{clamp}(f(t)+\\Delta f,0,10{,}000).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3a47e7ae6b22e2e2183dd78733bcee030b72b3e80be028c4862dce4e0087dd9a"
+  },
+  {
+    "startLine": 705,
+    "endLine": 705,
+    "text": "Accumulated exposure minutes are\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7893bb26f70288a057a679378faea27816957a322bbcb5004548b3770e950692"
+  },
+  {
+    "startLine": 707,
+    "endLine": 709,
+    "text": "\\[\nX'=\\max(0,X+\\Delta X).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f00060f81c9e3e14f104ffcbc7cc754bbe7849d4b199149f263a09010bc2ce7c"
+  },
+  {
+    "startLine": 711,
+    "endLine": 713,
+    "text": "An ordinary interaction currently applies \\(+100\\) Affection and \\(+250\\) Familiarity to both\ndirections and adds one exposure minute. Commitment accountability applies its authored directional\ndeltas independently; the current breach set is TrustJudgment \\(-1{,}200\\), Resentment \\(+900\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5a8ff71ae11073f3e58d8c2e869c80562950036c7da31c6b2a6db9912f2a26b0"
+  },
+  {
+    "startLine": 715,
+    "endLine": 715,
+    "text": "## 8. Social evidence and belief revision\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a627310892c74b0db3e64d7b1bd04f6d63a95f004172173a599548fb71e0b908"
+  },
+  {
+    "startLine": 717,
+    "endLine": 717,
+    "text": "Vivarium uses deterministic scalar Kalman updates over a joint latent vector.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e67013ff14b634a2718fd45ea8134ca7afc546dd7f6db6912ff68772db493536"
+  },
+  {
+    "startLine": 719,
+    "endLine": 719,
+    "text": "### 8.1 Measurement model\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "72b0933206d6ff76fa14af210e9dd1114a13ea7040567f57d330315dce500688"
+  },
+  {
+    "startLine": 721,
+    "endLine": 721,
+    "text": "For one measurement:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "49b89081e8f20e961180fb45ff745f356a5fda970718f2fde8c3c98c9742fabc"
+  },
+  {
+    "startLine": 723,
+    "endLine": 725,
+    "text": "\\[\ny=h^Tx+\\epsilon,\\qquad Var(\\epsilon)=R.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f8aaa0eace562e8e0c06ee085d76e8cedf801fd88772a0629bcc60a668adf8fa"
+  },
+  {
+    "startLine": 727,
+    "endLine": 733,
+    "text": "| Variable | Meaning |\n| --- | --- |\n| \\(x\\) | target's latent social vector |\n| \\(\\mu,P\\) | observer's current belief mean and covariance |\n| \\(h\\) | authored linear measurement projection |\n| \\(y\\) | authored observed value |\n| \\(R\\) | authored observation-noise variance |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4831d6557a8668e6e1cc5b4c39a88bca50b33161d25df2ab82bb9292e227c7c3"
+  },
+  {
+    "startLine": 735,
+    "endLine": 735,
+    "text": "The broad prior is \\(\\mu=0\\), with diagonal \\(P_{ii}=S^2=100{,}000{,}000\\) and off-diagonal zero.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "17f6416b434ad47327f042abd3ee9d96aafea44adadf49f397473fdfa078beaa"
+  },
+  {
+    "startLine": 737,
+    "endLine": 737,
+    "text": "### 8.2 Innovation and gain\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4633efe137e0f3e9043b0966595414770e155cb72fbf8dac76ebdc94769f7191"
+  },
+  {
+    "startLine": 739,
+    "endLine": 741,
+    "text": "\\[\n\\hat y=h^T\\mu,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "297434e0a334341fb2443c199660f177d779a3cf642722beeef19ecfd6704697"
+  },
+  {
+    "startLine": 743,
+    "endLine": 745,
+    "text": "\\[\nc=Ph,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8c86f6b75d63f71f079b13841bbf23e6bf4eba3b761c30be23820517d0fca96f"
+  },
+  {
+    "startLine": 747,
+    "endLine": 749,
+    "text": "\\[\nV=R+h^TPh=R+h^Tc,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "75dea70f39df41b908d904a5091f8e758ecafb948978b1611b0f70bce3d3c868"
+  },
+  {
+    "startLine": 751,
+    "endLine": 753,
+    "text": "\\[\ne=y-\\hat y,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "95ade906067557c55eb23faf05105b72a10de2c6d84e987b1d35b4d2ca4a7749"
+  },
+  {
+    "startLine": 755,
+    "endLine": 757,
+    "text": "\\[\nK=\\frac{c}{V}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2b037c508124b9f5ecc4d80869082369fe4e9b5712abefebc204c790b8ad669a"
+  },
+  {
+    "startLine": 759,
+    "endLine": 759,
+    "text": "### 8.3 Posterior update\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "563e2a7eff436e622fd4a62671660eef0cac5c28fab9a93e44971603d57065e3"
+  },
+  {
+    "startLine": 761,
+    "endLine": 763,
+    "text": "\\[\n\\mu'=\\mu+Ke,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "560c267fac212c09674fcd45e36c31e01f9033289ee38d801b2c811bfa2db2cc"
+  },
+  {
+    "startLine": 765,
+    "endLine": 767,
+    "text": "\\[\nP'=P-K(h^TP)=P-Kc^T.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "cd83821b65234295aafad65cf9777d34b6a1ac734ae10f5a3dc008277f4ee9c3"
+  },
+  {
+    "startLine": 769,
+    "endLine": 771,
+    "text": "All steps use the fixed-point rules in Section 2 and captured pre-update covariance. Coordinate means\nare clamped to \\([-S,S]\\); diagonal variance to \\([0,S^2]\\); off-diagonal covariance to\n\\([-S^2,S^2]\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "290887f11b4a504221040dcb80d1af18884b96c541ec1f6ef8ca54ccecdb2387"
+  },
+  {
+    "startLine": 773,
+    "endLine": 774,
+    "text": "Goal: witnessed action changes what an observer believes about a target, with uncertainty reduction and\ncross-dimension effects, without changing the target's true personality.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2c1ba137a30f8610f98806addb50929beff8c69eacb683decd7ef915ca1e0351"
+  },
+  {
+    "startLine": 776,
+    "endLine": 776,
+    "text": "### 8.4 Contradiction inflation\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4b5c59ec95c969be48ac025ae6b801c0376fded7f3a880d0b8229d1c72b71dce"
+  },
+  {
+    "startLine": 778,
+    "endLine": 778,
+    "text": "A measurement is surprising when its squared innovation exceeds four innovation variances:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9182cb4de8f525a40e70cd28432fd4d5f5e8c35e206dee998af01be11db9d469"
+  },
+  {
+    "startLine": 780,
+    "endLine": 782,
+    "text": "\\[\ne^2>4V.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c7835f680b4917c41d24775d04465f20c5fdb5b4cb737351a4f5664643fc3a36"
+  },
+  {
+    "startLine": 784,
+    "endLine": 784,
+    "text": "This corresponds to a residual beyond two innovation standard deviations. Then\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c8180160c3490b5b80c8f0d3bd2bc4c2dbc86274fdc795ab39d5461a0aefc47e"
+  },
+  {
+    "startLine": 786,
+    "endLine": 788,
+    "text": "\\[\nI_{base}=\\min\\left(\\frac{S^2}{4},\\frac{e^2-4V}{8}\\right),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e55203d023bca93e4c70bfec5ce23df86989aceaf4a7a7d857d121f8d7948664"
+  },
+  {
+    "startLine": 790,
+    "endLine": 790,
+    "text": "and each measured diagonal receives\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f46ebcdab9476b2816b639c686c58287da61d795b468a3a0ee0e29deef05dde0"
+  },
+  {
+    "startLine": 792,
+    "endLine": 794,
+    "text": "\\[\nP'_{ii}\\leftarrow P'_{ii}+I_{base}|h_i|.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ba32d094d1dd82a6cc20be8100051a80082150615122006b50a904a97c2a9b1d"
+  },
+  {
+    "startLine": 796,
+    "endLine": 797,
+    "text": "The product is fixed-point scaled and the diagonal is clamped. Goal: a major contradiction is evidence\nthat an overconfident belief model was wrong, so uncertainty may increase rather than always collapse.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "55b8c649a969b20d5e6945c39c21365ebb9a867c5515bbebbbc1f594cfde6415"
+  },
+  {
+    "startLine": 799,
+    "endLine": 799,
+    "text": "### 8.5 Current MPS evidence measurements\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2ea308378ea3793aff81238bad706f4bc09c6300e8ea1b0f4cf40b3eb7a70d35"
+  },
+  {
+    "startLine": 801,
+    "endLine": 805,
+    "text": "| Evidence | Projection \\(h\\) | \\(y\\) | \\(R\\) |\n| --- | --- | ---: | ---: |\n| Friendly interaction | 0.7 Warmth + 0.3 Sociability | 4,000 | 30,000,000 |\n| Commitment fulfilled | 0.7 Discipline + 0.3 Stability | 4,500 | 30,000,000 |\n| Commitment breached | 0.7 Discipline + 0.3 Stability | -6,000 | 30,000,000 |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7974a9c5d8c20a122eb39065180474ea31cd8db2befe5dfb894a0e29f18721fc"
+  },
+  {
+    "startLine": 807,
+    "endLine": 807,
+    "text": "Coefficients are shown as real proportions for readability; stored values are 7,000 and 3,000.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ae0d9e58f4e61115990a4672cc5b69631819982377f9e3143eb8f0e7204e739e"
+  },
+  {
+    "startLine": 809,
+    "endLine": 809,
+    "text": "## 9. Decision reasoning\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "549a3ca036575e6e4cb53c8a36cd6e3f26bc519dddbc38b25a57b9dac59e1995"
+  },
+  {
+    "startLine": 811,
+    "endLine": 811,
+    "text": "### 9.1 Signal normalization\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4f506374126be69efd44f18bc744b00e74f3e8a68e9625666be2e34e8ac64ab9"
+  },
+  {
+    "startLine": 813,
+    "endLine": 813,
+    "text": "An increasing Need with definition range \\([m,M]\\) becomes a normalized Decision signal:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a0f71fb3ec8d804ff433afa9ea2ab3d4d4f6521cbe95b4df9b153e220d01c6cb"
+  },
+  {
+    "startLine": 815,
+    "endLine": 819,
+    "text": "\\[\nn=\\operatorname{clamp}\\left(\n\\operatorname{round}\\left(\\frac{(value-m)S}{M-m}\\right),0,S\n\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b7d3766de46d77f84269fc019ae1fa9b0bb9b6b15b5ee19e4b8d621cb12bd834"
+  },
+  {
+    "startLine": 821,
+    "endLine": 821,
+    "text": "Other implemented signal conversions include:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0f93c009c3919fd9e9c5a8c39568001ec941b9f5b85d674fd618b278b1d6561e"
+  },
+  {
+    "startLine": 823,
+    "endLine": 825,
+    "text": "\\[\nprioritySignal=\\operatorname{clamp}(100\\times priority,0,S),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "86e9fbdca7b861f4ed444bda1908ff43e85da0d7552ffcbb3ddb9aa166c5955c"
+  },
+  {
+    "startLine": 827,
+    "endLine": 829,
+    "text": "\\[\nurgencySignal=\\operatorname{clamp}(S-100\\times\\max(0,earliestStart-now),0,S),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e3db10bc5cbcf378430f3ab12f0e9722a667d4e7b1f3511be0ae47911b5baa65"
+  },
+  {
+    "startLine": 831,
+    "endLine": 833,
+    "text": "\\[\ntravelBurden=\\operatorname{clamp}(500\\times travelMinutes,0,S).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "916ef6e9a1d40825b1e991bfcaa6a848ef61ce3c759d5102acb05aadf3938a0f"
+  },
+  {
+    "startLine": 835,
+    "endLine": 838,
+    "text": "An unreachable route has maximal burden \\(S\\). Boolean or identity predicates generally use \\(+S\\)\nfor true and \\(-S\\) for false; availability uses \\(+S\\) when present and 0 when absent in its current\nprovider. Values, Interests, relationship channels, social appraisal, and Activity modifiers enter in\ntheir existing normalized units.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "72e962ba7cdea422b50d1589b772b6380d563d29f4ae3ee84efbf229d5d6d536"
+  },
+  {
+    "startLine": 840,
+    "endLine": 840,
+    "text": "### 9.2 Consideration field and option score\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b006d7d42939040e71114b9fcc2729af2668fc51a398a3299bad071f0785eebd"
+  },
+  {
+    "startLine": 842,
+    "endLine": 843,
+    "text": "Each compiled Consideration evaluates a field using Section 6. Its signed bounded result \\(r\\) is an\noption-relative reason:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5c4e57f4ad68cb57941997aad6a4e0cf8288de7f2df310752de17d69ab6c6b9a"
+  },
+  {
+    "startLine": 845,
+    "endLine": 847,
+    "text": "\\[\noptionScore_o=\\operatorname{clamp}\\left(\\sum_{j\\in o}r_j,-S,S\\right).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6bdc227f803a0160b33ddef67e5cbec18ac4ca71e01c5a285d7783e48cc83f35"
+  },
+  {
+    "startLine": 849,
+    "endLine": 849,
+    "text": "Positive \\(r\\) supports the option; negative \\(r\\) opposes it.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4f423a2e3c6cf58261e4195722f69d65b34769d75cedac3f9b98a180113ce437"
+  },
+  {
+    "startLine": 851,
+    "endLine": 851,
+    "text": "### 9.3 Reason consolidation\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2ff0a602b213f480e1b0d7f46b529a24dd09c6f718b8bee19d81819ceb4f96e7"
+  },
+  {
+    "startLine": 853,
+    "endLine": 854,
+    "text": "By default, candidates sharing Option, semantic ReasonChannel, and subject do not stack. The retained\ncandidate is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a9cd5ea9b519a81ea2d48a3e48ff0a540e3af2b062b1f6d8ec1652f18a04c1db"
+  },
+  {
+    "startLine": 856,
+    "endLine": 858,
+    "text": "\\[\n\\arg\\max_c |r_c|.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5cc13800bd4310fac89fe458b0ee5e1fbc638c3831f53f45172c128c1355cd99"
+  },
+  {
+    "startLine": 860,
+    "endLine": 862,
+    "text": "An exact magnitude tie breaks by stable ConsiderationId. Channels explicitly marked `AllowStacking`\nalso include ConsiderationId in their identity. Goal: correlated readings do not silently become\nmultiple dice.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "350f6039a9370f1af596d7c198d2275050ee7273cce11915216983dc7c6c19fb"
+  },
+  {
+    "startLine": 864,
+    "endLine": 864,
+    "text": "### 9.4 Score-to-die scales\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "296c604f5ece49a797b1a31bfb5098d37d5ac05eb127e9e56819ac61676a4688"
+  },
+  {
+    "startLine": 866,
+    "endLine": 866,
+    "text": "The standard scale uses absolute bounded score:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d4ab4cb48d40d56ff022dd027b1791d21d26c372c2b665ad12f52f308b78c6e2"
+  },
+  {
+    "startLine": 868,
+    "endLine": 874,
+    "text": "| Minimum \\(|r|\\) | Die |\n| ---: | ---: |\n| 1,000 | d4 |\n| 2,500 | d6 |\n| 4,500 | d8 |\n| 6,500 | d10 |\n| 8,500 | d12 |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "909af9d173d9a2dbb6153afd751c12a82b4d50f8f3d0aa38fadf7b5597631a2c"
+  },
+  {
+    "startLine": 876,
+    "endLine": 876,
+    "text": "Special current scales are:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f34bba75e8342c90e401f3cb18730a68ab2c2d6ae6ecbf6156000f14284447b1"
+  },
+  {
+    "startLine": 878,
+    "endLine": 881,
+    "text": "- commitment honorability: d4 at 0, d6 at 2,000, d8 at 4,000, d10 at 6,000;\n- leave-work Hunger: d20 at 0;\n- leave-work Work Context: d6 at 0 and d10 at 4,000;\n- leave-work Reliability: d6 at 0.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "b37128f2ccfff1cdfc79a21b62af5d209b6fbebd575c4971ca9bb305d1341501"
+  },
+  {
+    "startLine": 883,
+    "endLine": 883,
+    "text": "The legacy Social Appraisal path maps Minor→d4, Moderate→d6, Strong→d8, Extreme→d10.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "11484a357b88668f32b14353b94d6f96d6d694c3161bb7c70da80155994d7459"
+  },
+  {
+    "startLine": 885,
+    "endLine": 885,
+    "text": "### 9.5 Derived Decision Importance\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a0bdf995e023680bff6e3b37025450af726d379cc86a734e6b03be6ac8135040"
+  },
+  {
+    "startLine": 887,
+    "endLine": 889,
+    "text": "\\[\nImportance=\\min\\left(S,\\max_j|r_j|\\right)\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "124f3451f69bcf28f25f0f07dd0ef7f3536b3e961ec374d178a9691fff3d7153"
+  },
+  {
+    "startLine": 891,
+    "endLine": 893,
+    "text": "over all active consolidated reasons. Goal: one strong reason can make a Decision important; many\ntrivial reasons cannot inflate it by accumulation. Current MPS admission and prioritized-feed floor is\n6,500; normal-feed and auto-hold floor is 7,000.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "173c80802d4c05470648073bf70e32b2a07d80a205ea05a5807570b747b8a9b1"
+  },
+  {
+    "startLine": 895,
+    "endLine": 895,
+    "text": "### 9.6 Current MPS Consideration fields\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a2fa582f536b2ec19f504b51af7e5782999c1cf97be39c408ba64e80d1e77b3c"
+  },
+  {
+    "startLine": 897,
+    "endLine": 897,
+    "text": "Every result below is subsequently passed through softsign \\(g\\). Signals are in fixed-point units.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2a6dee7400efe6e9b8b35c4f9d225dc3bf4e87740bf02487860db63f29954282"
+  },
+  {
+    "startLine": 899,
+    "endLine": 911,
+    "text": "| Decision field | Pre-bounded latent formula |\n| --- | --- |\n| Commitment honorability | \\(s=p(0.6Priority+0.4Urgency-0.4TravelBurden)\\), with \\(p=+1\\) for preserved and \\(-1\\) for relinquished |\n| Leave work: Hunger | \\(s=Urgency\\) |\n| Leave work: bad context | \\(s=2.4\\,WorkPressure\\) |\n| Leave work: Reliability | \\(s=0.1\\) |\n| Recreation interest | \\(s=3.0\\,Interest\\) |\n| Rest: fatigue | \\(s=0.8-0.8\\,Energy\\) |\n| Continue: interest | \\(s=2.4\\,Interest\\) |\n| Continue: current Activity | \\(s=0.2\\,StillActive\\) |\n| Social invitation: comfort | \\(s=1.0\\,AffiliationAppraisal\\) |\n| Social invitation: shared context | \\(s=0.8\\,SharedContext\\) |\n| Social invitation: existing plan | \\(s=1.2\\,PlanInterest\\) |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0f0411a54be294b8cc574298c1f9a88add6e6632e9a496951d9e4d70c268af25"
+  },
+  {
+    "startLine": 913,
+    "endLine": 915,
+    "text": "Decimal coefficients are the real-value reading of stored coefficients divided by \\(S\\). The actual\nevaluation remains integer fixed-point. Commitment Priority and Urgency in the table are already\nnormalized by Section 9.1.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a7726227ef438686f8d194eb9134e251c3281d0005d507e967abcd5765288e57"
+  },
+  {
+    "startLine": 917,
+    "endLine": 917,
+    "text": "### 9.7 Finite continuation threshold\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "612a467a869166e50926936e022bc386fff1fc2cf53fd77516cfe826eaf55549"
+  },
+  {
+    "startLine": 919,
+    "endLine": 919,
+    "text": "After choosing Continue, the next watched Energy threshold is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9ca04ab4b849564bdbabbab93413b6e43dd9ac0b0b8e0e03fc848f46a7f42a73"
+  },
+  {
+    "startLine": 921,
+    "endLine": 923,
+    "text": "\\[\nq'=q-step.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "7aac49df5cbb226c2f5c31d97fd883a90fac4ad73f8fa74f7d51f4ade4133d28"
+  },
+  {
+    "startLine": 925,
+    "endLine": 926,
+    "text": "Current step is 1,000, yielding 2,000→1,000→0. A value below the Need minimum is not rearmed; the finite\nsequence therefore terminates in Rest rather than creating an endless loop.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "933fd92d9f0980f5faa1c4f62afa10a31a1b041a7095c8cceef1f9e1d8cda296"
+  },
+  {
+    "startLine": 928,
+    "endLine": 928,
+    "text": "## 10. Decision dice and interventions\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "73445757f4ae70c81f0acb6094c9c3844bb0b446a96a502a4fc45c9a4901e8b3"
+  },
+  {
+    "startLine": 930,
+    "endLine": 930,
+    "text": "### 10.1 Influence roll\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "49c37425b9efcf2749053757e42bf029bd471bb9b27220d459f60bff399e3ea0"
+  },
+  {
+    "startLine": 932,
+    "endLine": 933,
+    "text": "Each live influence rolls independently in the deterministic stream identified by DecisionId,\nOptionId, label, InfluenceId, and RollIndex:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f5aa529bfb5f42ad2db78f961823712d0ab520003b3260e2c1b6a86e58e94c68"
+  },
+  {
+    "startLine": 935,
+    "endLine": 937,
+    "text": "\\[\nr_i\\sim UniformInteger(1,d_i).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a58e07f6cc2ea5260cec9ed3ff2925640dffde715db8257e10e6b79fb2867e5a"
+  },
+  {
+    "startLine": 939,
+    "endLine": 940,
+    "text": "An authored fixed die instead returns its fixed face. The current replacement die is a loaded d20 with\n\\(r=20\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "26fce0402a98c8a4a7af89f553ad630c3587f6917b547d89539e4500668f94e2"
+  },
+  {
+    "startLine": 942,
+    "endLine": 943,
+    "text": "Re-roll increments only the selected influence's RollIndex and evaluates the same semantic stream at\nthe next index.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d0de3af560f5afe9b8fef1bd1032ad502b49482d50df49f023910a6609392e1a"
+  },
+  {
+    "startLine": 945,
+    "endLine": 945,
+    "text": "### 10.2 Option totals and winner\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "3802f4bcb7d519c2aee63d4c116ecd008987629150ce651c371868eeba88820a"
+  },
+  {
+    "startLine": 947,
+    "endLine": 947,
+    "text": "For option \\(o\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c579900694cfe1947c1902e13cf4189164b826c73c189994953421b35dfa3645"
+  },
+  {
+    "startLine": 949,
+    "endLine": 951,
+    "text": "\\[\nT_o=\\sum_{i\\in supporting(o)}r_i-\\sum_{i\\in opposing(o)}r_i.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "067f22f0eca7a0ba0dcc0038590928c8fb801a35ad1a310c1c7212858469aaa7"
+  },
+  {
+    "startLine": 953,
+    "endLine": 953,
+    "text": "The highest total wins. Exact ties break by authored option order.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c21f1e7f1849e4ca9b6f85578aef90c1879705cc296785915f23f6ca2b324392"
+  },
+  {
+    "startLine": 955,
+    "endLine": 955,
+    "text": "Let \\(T_1\\) and \\(T_2\\) be the winning and runner-up totals:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e27306dd48bce3cc236fec0ea7ca29ebd20e7a2bc61a5711bc56efcb19b2b52d"
+  },
+  {
+    "startLine": 957,
+    "endLine": 959,
+    "text": "\\[\nmargin=T_1-T_2.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e65008b641e8e40123949f40f34eda8143440c32f29878afe14b89635b9800a2"
+  },
+  {
+    "startLine": 961,
+    "endLine": 961,
+    "text": "With only one option, `margin` is its own total. Degree of success is:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c6b8679920ad1f904b783147759f1f9355bc46c12e0d8c31e21a3b8dd6ac3bd5"
+  },
+  {
+    "startLine": 963,
+    "endLine": 968,
+    "text": "| Margin | Degree |\n| ---: | --- |\n| \\(\\ge8\\) | Decisive |\n| \\(\\ge4\\) | Clear |\n| \\(\\ge2\\) | Marginal |\n| otherwise | Reluctant |\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "21cd44998a90e5474e4540617901b87303a3df77cf81bbde2aa8c07601910485"
+  },
+  {
+    "startLine": 970,
+    "endLine": 970,
+    "text": "Goal: Influences alter odds but neither the player nor iteration order directly chooses the winner.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "051c95ad7644ed3a5fc475ceb35aa160d69f5ac0981f29885100997a3208a8cd"
+  },
+  {
+    "startLine": 972,
+    "endLine": 972,
+    "text": "### 10.3 Die stepping\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2b20576001a00919ee5b9926efba24e9e965f96f0ac2f2c69610544309b5d5b4"
+  },
+  {
+    "startLine": 974,
+    "endLine": 974,
+    "text": "The sanctioned ladder is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "937ac7a320e903df97eada4769e41e16167e8e4afa159e3d3e11f5375efbd376"
+  },
+  {
+    "startLine": 976,
+    "endLine": 978,
+    "text": "\\[\n[d2,d4,d6,d8,d10,d12,d20].\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4825dfc6a46cd806b3280e29bf0cfaf8ea9de30d04f2b65abad73c0991427aa1"
+  },
+  {
+    "startLine": 980,
+    "endLine": 981,
+    "text": "Step Up selects the first larger die; Step Down selects the first smaller die when scanning downward.\nAt either end, the die remains unchanged.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a51fc0f2547cce9d54e6ca08841c157caa589911160659117a6c115c888dd9f9"
+  },
+  {
+    "startLine": 983,
+    "endLine": 983,
+    "text": "## 11. Resource and boundary formulas\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e30466e176de8f83756855e7d25ce899a12ff0956dce95ef7df7fee49e841a20"
+  },
+  {
+    "startLine": 985,
+    "endLine": 985,
+    "text": "### 11.1 Capped balance\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "bb20eb18fec146d18eb7fde1c52734f532651eb2ff1484e4919937837be127b4"
+  },
+  {
+    "startLine": 987,
+    "endLine": 987,
+    "text": "For balance \\(B\\), cap \\(C\\), spend \\(s\\), and refund/refresh \\(a\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "77099af6f59e096252896ecca69c48e51fccd7ded9608f3dcaa17bb4adf4d988"
+  },
+  {
+    "startLine": 989,
+    "endLine": 991,
+    "text": "\\[\nB_{spend}=B-s\\quad\\text{only if }0\\le s\\le B,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "ac88f641e8888226265fad4d2699580af17697b770bdd0b999a3c713e3e70da8"
+  },
+  {
+    "startLine": 993,
+    "endLine": 995,
+    "text": "\\[\nB_{increase}=\\min(C,B+a),\\qquad a\\ge0.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4aa0320c8c0382e90598dcd7cf0fce77a0744c799b67c7c11477057790fc8f90"
+  },
+  {
+    "startLine": 997,
+    "endLine": 998,
+    "text": "The MPS Nudge account starts at and is capped at 3. Successful Nudge-backed interventions cost their\nsnapshotted authored amount; current MPS Nudge interventions cost 1.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "59caa5244ae2c7cf31567d085f51514a55d4f6870e1534a876e496605f08d185"
+  },
+  {
+    "startLine": 1000,
+    "endLine": 1000,
+    "text": "### 11.2 Aligned Nudge regeneration\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "48b3ce4777fc1f942d78b91d390e573fe56579cd6af60ad9b1211e536f4a1479"
+  },
+  {
+    "startLine": 1002,
+    "endLine": 1002,
+    "text": "With period \\(P=8\\times60=480\\) minutes, the next strictly later boundary is\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9c1046c25dcd7e119510eb2afc3d8d05111174c6bec28203b6b4643803cf8e8c"
+  },
+  {
+    "startLine": 1004,
+    "endLine": 1006,
+    "text": "\\[\nt_{next}=\\left(\\left\\lfloor\\frac{t}{P}\\right\\rfloor+1\\right)P.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4b0da932de4f34835fe182dfb19ac6e7698288a0ec149a9d850dc8d06ac49950"
+  },
+  {
+    "startLine": 1008,
+    "endLine": 1008,
+    "text": "One Nudge regenerates at each boundary, capped at 3.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "39ddcd4f13cb2d1d7c85b0503cf7a638c0393de175fc7c6a70fa0a47d84d3e08"
+  },
+  {
+    "startLine": 1010,
+    "endLine": 1010,
+    "text": "### 11.3 Other intervention-resource refresh\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "59d392405a54b44147ecfbc3ea05dd43759cf1d2d921aa137ae8d17386786e98"
+  },
+  {
+    "startLine": 1012,
+    "endLine": 1013,
+    "text": "For authored refresh period \\(P\\), the next refresh advances by whole periods until strictly after the\ncurrent time:\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "2c910089a90214cd6a6a4b4d2c3401fab85a070e6ced8d7feb4c143af55f7009"
+  },
+  {
+    "startLine": 1015,
+    "endLine": 1017,
+    "text": "\\[\nt'_{next}=t_{next}+kP,\\qquad k=\\min\\{n\\ge1:t_{next}+nP>now\\}.\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "881f8731a7e79d4381a78f01bcaa0da29dbe0fa418071fdf82ed670deb4643a6"
+  },
+  {
+    "startLine": 1019,
+    "endLine": 1021,
+    "text": "Balance increases once by the authored refresh amount for the handled event and remains capped. The\ncurrent Re-roll resource is 1/1 and refreshes by 1 every day; the loaded-d20 holding is 1/1 and does not\nrefresh.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f90c93a2b549fe82152c99c269c34e1001cb28dc4192a2ae6a81d0bdd8da7cb2"
+  },
+  {
+    "startLine": 1023,
+    "endLine": 1023,
+    "text": "### 11.4 Offline conversion\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "e29878f9d342bc4ffaf3f2108578086fd02437ef71cd3ff30a9be1a5fc8b39c0"
+  },
+  {
+    "startLine": 1025,
+    "endLine": 1026,
+    "text": "Let wall-clock ticks be 100 ns and \\(T_m=600{,}000{,}000\\) ticks/minute. For current ticks \\(w\\), saved\nanchor \\(w_0\\), simulation ratio \\(r\\), and maximum catch-up \\(C\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c1d3652f4ce55f8492c596f7a62896427158d2b3a7985927d7b8ab3143b27ac2"
+  },
+  {
+    "startLine": 1028,
+    "endLine": 1030,
+    "text": "\\[\nrealMinutes=\\left\\lfloor\\frac{w-w_0}{T_m}\\right\\rfloor,\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8f085fc9ac72ffb637570d44f98516784c44c1a5fa5761b3e76a20c5eb01e65f"
+  },
+  {
+    "startLine": 1032,
+    "endLine": 1034,
+    "text": "\\[\nsimMinutes=\\min(C,realMinutes\\times r).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "5d31a9addf87a3e25a3d1a6470fc8d6ffba3de4eda019c45bd955fea53039186"
+  },
+  {
+    "startLine": 1036,
+    "endLine": 1037,
+    "text": "If \\(w-w_0\\le0\\), the result is zero. Defaults are \\(r=1\\) and \\(C=7\\times24\\times60=10{,}080\\)\nminutes. Goal: turn nondeterministic wall time into one explicit, bounded simulation input.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "d62195719d3f538624db8fdc22a2d6bcc57d4c491dde450d48ab8fda05791584"
+  },
+  {
+    "startLine": 1039,
+    "endLine": 1039,
+    "text": "## 12. Player-visible derived formulas\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "608b60f75e20be2a4db41f5f241dd80c5287c11435107f7a332e5d5cde973c15"
+  },
+  {
+    "startLine": 1041,
+    "endLine": 1041,
+    "text": "These do not create world truth but are deterministic projections of it.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "78c42c55978ff10037e3ac2112ed2b6a01f3a9bcc256a194bc4e42ccceb6b4df"
+  },
+  {
+    "startLine": 1043,
+    "endLine": 1043,
+    "text": "### 12.1 Activity timeline progress\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a71215231320f809e0a9440c2dfa41c5889ec78ba6805c78c710543c52b8f5ea"
+  },
+  {
+    "startLine": 1045,
+    "endLine": 1045,
+    "text": "For elapsed minutes \\(e\\) and total minutes \\(D\\):\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "c3bca865635aa860c80145ea3b381cfea89c50bd68d93037088b8c8deeb3c7e4"
+  },
+  {
+    "startLine": 1047,
+    "endLine": 1049,
+    "text": "\\[\np=\\operatorname{clamp}\\left(\\left\\lfloor\\frac{10{,}000e}{D}\\right\\rfloor,0,10{,}000\\right),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "adb2561650ac538bcfb3ac334a4da0e9e8198b9a5d99d7ff69fcedb51ed8aa10"
+  },
+  {
+    "startLine": 1051,
+    "endLine": 1051,
+    "text": "or 10,000 when \\(D\\le0\\). The profile renders travel percent as \\(\\lfloor p/100\\rfloor\\).\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "62b25fb59dd9014c64bbae1d6d274e6179eadb8ae05846a69045b0dd2707afcf"
+  },
+  {
+    "startLine": 1053,
+    "endLine": 1053,
+    "text": "### 12.2 Held-capacity availability\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6c9ef591cacc0fb93c706bb0a4a2bd5f11aa14fec067f4b513d30e589735c00d"
+  },
+  {
+    "startLine": 1055,
+    "endLine": 1057,
+    "text": "\\[\nglobalAvailable=\\max(0,globalCap-globalHeld),\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "4dee24e8b4d42509316033b61a26eecd39ae14974e336708d052aa6016b2009e"
+  },
+  {
+    "startLine": 1059,
+    "endLine": 1061,
+    "text": "\\[\ncharacterAvailable=\\max(0,perCharacterCap-heldForCharacter).\n\\]\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "9ffe1eb7cc99788d20c88b53c937619fccb513cc18835dd90b9151c9ec22b267"
+  },
+  {
+    "startLine": 1063,
+    "endLine": 1063,
+    "text": "### 12.3 Clock and duration labels\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a6e22339a539f22288edf87917728131df90f5322844e386fbbf848551aeb30c"
+  },
+  {
+    "startLine": 1065,
+    "endLine": 1066,
+    "text": "Displayed day/hour/minute are integer quotient/remainder decompositions of total simulation minutes.\nSimulation speed shown as `x` is `speedPercent / 100`; this is formatting only.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "82cdb730da3b02c7083c80db2ae6604fb7c553de8e845f001f4227403274745d"
+  },
+  {
+    "startLine": 1068,
+    "endLine": 1068,
+    "text": "## 13. Formula dependency map\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "fa9702660e9d2d16396e02ac2068b35f8ccb7bf7fe2133fce5224893fb83b0ef"
+  },
+  {
+    "startLine": 1070,
+    "endLine": 1073,
+    "text": "```text\nStable hash + semantic scope\n        ↓\ndeterministic bounded draws ──→ knowledge discovery, profile generation, dice, candidate sampling\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "a58065b73c163276cf8a1ad7c9cdd19bd232329fe14b31b7e34382e3e5bc1a03"
+  },
+  {
+    "startLine": 1075,
+    "endLine": 1079,
+    "text": "integer/fixed-point arithmetic\n        ├──→ analytical progression ──→ Needs, Activities, relationships, scheduling\n        ├──→ uncertain signal field ──→ Social Appraisal ──→ social pressure\n        │                           └──→ Decision Considerations\n        └──→ scalar Kalman update ──→ observer belief ──→ Social Appraisal\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "6ee42a08db4439e21b1b6e570fc26423c96a0f0af2779e89f93897667d73a977"
+  },
+  {
+    "startLine": 1081,
+    "endLine": 1082,
+    "text": "Decision Considerations ──→ consolidated reasons ──→ dice ──→ option totals and margin\n```\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "267276ffe84a046258653ba567592a562345d70927d14110f4b40e33e960b3a3"
+  },
+  {
+    "startLine": 1084,
+    "endLine": 1084,
+    "text": "## 14. Interpretation cautions for CharacterLab\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "f4fb802ffdcbabbe74134f84715332e8268f93adbc22d47899653ab517bb1a17"
+  },
+  {
+    "startLine": 1086,
+    "endLine": 1099,
+    "text": "1. **Stored units are not floating-point values.** A coefficient shown as 0.7 is stored as 7,000 and\n   evaluated with deterministic rounding.\n2. **The bounded estimate is an approximation.** Vivarium computes \\(g(E[s])\\), not the generally\n   unequal \\(E[g(s)]\\).\n3. **Uncertainty is causal.** Covariance changes expected pairwise and ideal-point contributions; it is\n   not merely presentation metadata.\n4. **Belief is directional and observer-relative.** An appraisal evaluates an observer's belief about a\n   target, not the target's true latent vector.\n5. **Sign and strength are separate.** Calibration and die mapping use absolute magnitude; option\n   polarity carries direction.\n6. **Authored constants are research hypotheses, not universal psychological claims.** The evaluator is\n   generic; MPS coefficients are current gameplay tuning suitable for experiments and falsification.\n7. **Rounding, clamps, and tie-breaks are part of each formula.** Omitting them can produce a model that\n   looks equivalent on paper but diverges during replay or near thresholds.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "8e925e3ee79d0b6d4a2786324fc1aad8b2fe19fa3bdda3593640a8090654d002"
+  },
+  {
+    "startLine": 1101,
+    "endLine": 1101,
+    "text": "## 15. Verification boundary\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "0529e2539e6265853655c57dfcae511a8f29dd39ca541971a307d68ba5b30b84"
+  },
+  {
+    "startLine": 1103,
+    "endLine": 1107,
+    "text": "This reference was derived from production source in `Core/Runtime`, the shared MPS world builder, the\nheadless `SampleContent` catalog, and their tests. It intentionally does not elevate formulas found only\ninside test fixtures into production behavior. When implementation changes, update this document in the\nsame change if a formula, coefficient, rounding rule, bound, threshold, or tie-break described here is\naffected.\n",
+    "review": "UNREVIEWED",
+    "sourceSha256": "7604c45e24e5b4cc84552d742a6106844c3a33236da5b94cd69c63c428ddb902",
+    "id": "dd8b421c80f3733fac1976ca0c1fc2ac101b5da7de62bfed4c0e3c6c16ef3ae0"
+  }
+]

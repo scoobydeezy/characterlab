@@ -32,6 +32,16 @@ The conceptual architecture has been reconciled around one canonical topology. C
 
 ## Commands
 
+After cloning, run `npm run evidence:restore` before research checks or tests.
+Large evidence files are stored losslessly in `evidence-archives/`; this command
+restores their original paths and verifies their SHA-256 hashes. Existing files
+with different contents are rejected rather than overwritten.
+
+Run `npm run evidence:verify` to check the archives without creating missing files.
+Before committing, stage your changes and run `npm run check:git-size`; all tracked
+files must be smaller than50,000,000 bytes. The uncompressed evidence and local
+build/settings files are deliberately ignored. Do not broadly ignore research JSON.
+
 ```text
 npm test             active src/ tests only
 npm run test:reference

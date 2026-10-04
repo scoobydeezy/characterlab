@@ -2,6 +2,13 @@
 
 Read this file before planning or implementing work in this repository.
 
+## Repository artifact storage
+
+Keep tracked files below50,000,000 bytes. Stage changes, then run `npm run check:git-size`
+before committing. Large preserved evidence is tracked losslessly in `evidence-archives/`;
+run `npm run evidence:restore` after cloning and before research checks. Keep the exact
+original hashes and paths; do not broadly ignore JSON or discard frozen research evidence.
+
 ## Campaign 3 local decisions and escalation
 
 Follow `docs/planning/CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md` (user directive,
@@ -45,7 +52,230 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-10-03):** VER-C3-AFFECT-REGULATORY-001: bounded body-only regulatory reduction QUALIFIED.
+**Current routing (2026-10-04):** Values NATIVE PUBLIC QUALIFIED, VER-C3-VALUES-PUBLIC-001.
+Start CURRENT.md and CAMPAIGN3_VALUES_PUBLIC_QUALIFICATION.md.4 models/256 programs/
+3040 Save132 prefixes;2784 advancing/256 terminal;11136 scheduled native stages;
+31 focused/328 reference tests/build;55 producers/58 factories with prior scopes preserved.
+Same component reasons/resolutions/RNG; writer140; Refold no projection.1519/0;108 verdicts.
+Preserve failures and distinct-instant context limit; no law/appraisal/physical/age claim.
+Next historicalHQ-004 option-list/additive-scoring review and final reconciliation.
+AuditREV111 frozen prior106 verdicts; Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+**Prior routing (2026-10-04):** Values native implementation VERIFIED; matrix RUNNING.
+Start CURRENT.md and VALUES_PUBLIC_IMPLEMENTATION_CHECKPOINT.md. Four native laws,
+source40/reasons52/choice60/sole writer140;31 focused/328 reference tests/build pass.
+55 producers/58 factories checked with predecessors preserved. Frozen256 public runs/
+3040 prefixes require all receipts and independent check before a native verdict.
+1519/11;107 verdicts; AuditREV111 unchanged; no clause promotion or owner ruling.
+Campaign3 NOT EXIT-READY.
+
+
+**Current routing (2026-10-04):** Values component qualification.
+Values COMPONENT QUALIFIED:VER-C3-VALUES-001, values-component/0.2-candidate.
+4 models/256 runs/1248 restored prefixes;992 input/256 terminal successors;
+1536 final receiving contexts;19 focused/328 reference tests/build pass.
+3/8 actual-choice divergences at zero Need;5/8 equal. Stored/Refold match;
+NeedOnly demand1/Joint equal. Preserve rejected REV1 and deadline65/NoReasons findings.
+Start CAMPAIGN3_VALUES_QUALIFICATION.md; next VALUES_PUBLIC_READINESS.md.
+Native source/writer/Save132/publication OPEN; no physical feedback/appraisal/age claim.
+107 verdicts; no clause promotion. AuditREV111 remains prior106-verdict frozen snapshot,
+awaiting reconciliation. Counters1508/0;54/57 wrappers;corpus0.29.0/21 unchanged.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. Campaign3 NOT EXIT-READY; no owner ruling.
+
+**Prior routing (2026-10-04):** Values component implementation.
+Values component owner and controlled inherited-arbitration receiver IMPLEMENTED;
+full qualification matrix/native admission OPEN. values-component/0.1-candidate.
+17 focused/328 reference tests pass; build passed before final cache-only correction,
+final scoped rerun passed. Preserve sandbox startup finding and bounded source limits.
+Start VALUES_COMPONENT_IMPLEMENTATION_CHECKPOINT.md and formal VALUES_COMPONENT_CONTRACT.md.
+Next frozen model/run/input matrix, external original replay, complete results and
+receiving continuations; then verdict/public integration gate. No unit-test closure.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict/owner ruling. Campaign3 NOT EXIT-READY; historical queue remains open.
+
+**Prior routing (2026-10-04):** Values ownership/readiness.
+Values ownership review: Campaign2 values registration explicitly UNMATERIALIZED,
+not a working owner. Bounded readiness prepared; no accepted contract or qualification.
+Start VALUES_READINESS.md and values-readiness-rev1/review.json. Preserve historical
+Need-derived candidate, separate expectation/Value/goal/identity roles and meaningful
+stored/refold/NoConsolidation/latest/NeedOnly controls. Ten prospective case families.
+Next exact component contract and resolved fixtures, then implementation/qualification;
+public native admission remains separate. HQ-004/rest of historical audit stays open.
+Source accounting/three mutation checks pass; no runtime test or production change.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict/owner ruling. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** Values provenance HQ-003.
+HQ-003 Values provenance REVIEWED; qualification remains UNLOCATED in scoped review.
+Original formation/revision entries are proposed tests, not execution receipts.
+Values remain a canonical distinction; Need derivation remains a candidate.
+No relabeling goals, reward expectations or identity as Values qualification.
+16 excerpts/1182 TypeScript files; four accounting faults pass; no runtime rerun.
+Start CAMPAIGN3_HISTORY_HQ003_CHECKPOINT.md and campaign3-history-hq003-rev1/review.json.
+Next current Values contract/owner/evidence trace and readiness disposition if missing,
+then HQ-004/remaining queue. RO019 carries this final topology/family evidence gap.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict/production edit/owner ruling. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** Historical source dispositions HQ-001/002.
+HQ-001/002 source audit actions DISPOSITIONED; scientific proof gaps retained.
+Preference code linkage exists; monotonic integrated preference is not thereby
+proved. Fresh-prior sweep is not recovered efficacy; A/B noise-address limit stands.
+RET012 is derived-state/prohibition; authenticated bonus mutant remains UNLOCATED.
+16 source excerpts/117 scanned files; prior29/55 test receipts reverified, not rerun.
+Four accounting mutation checks pass; excerpt-bound failures preserved.
+Start CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md and
+campaign3-history-hq001-002-rev1/review.json. Next HQ-003 value formation/revision
+provenance, then remaining queue. No obligation closed or corpus gate waived.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict/production edit/owner ruling. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** Historical fixture audit HQ-001.
+HQ-001 historical fixture audit PARTIAL:29 fresh tests/5 files pass;103 source/config
+files unchanged. Single-shot capacity sweep remains controlled; multi-step A/B seed
+addresses differ, so identical realized effect noise is not established. Learning
+and confidence are tested; integrated learned preference remains open. Avoidance
+probes establish probabilities, not sampled autonomous action. Findings preserved.
+Start CAMPAIGN3_HISTORY_HQ001_CHECKPOINT.md and campaign3-history-hq001-rev1/review.json.
+Next integrated preference linkage and explicit capacity-claim disposition, then
+HQ-002 and remaining audit queue. RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED.
+AuditREV111/counters1508/0 unchanged. No verdict/owner ruling; final gates OPEN.
+
+**Prior routing (2026-10-04):** Historical audit queue.
+Historical audit queue:HQ-001..012 have owners/actions/completion evidence.
+First12 amendment paragraphs reviewed (four headings/eight substantive); source
+newline-reader failure preserved and corrected before review write.86 stable IDs
+remain accounted; no whole-history/scientific-completeness claim.
+Start CAMPAIGN3_HISTORY_QUEUE_CHECKPOINT.md and
+campaign3-history-queue-rev1/review.json. Next HQ-001 original satisfier/capacity/
+upper-bound-avoidance fixture chain, then remaining queue and ledger amendments.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict/experiment/owner ruling. Five provenance issues and final gates OPEN.
+
+**Prior routing (2026-10-04):** Historical ledger table crosswalk.
+Historical ledger table crosswalk COMPLETE:13 SUB/22 MEC reviewed; all86 stable
+SUB/MEC/EXP/P3/CTL/RET IDs accounted exactly once. This is not86 closed findings.
+Start CAMPAIGN3_HISTORY_MECHANISMS_CHECKPOINT.md and
+campaign3-history-mechanisms-rev1/stable-id-index.json. Next consolidate proof gaps,
+exact fixture review and non-table ledger amendments. Remaining source-universe/
+semantic adequacy/freshness and final corpus/family/native gates remain OPEN.
+Five provenance issues, trait-bonus and prior comparison/UI/attribution gaps retained.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict, experiment or owner ruling. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-04):** Historical proposal review.
+Historical proposals:P3-001..012 crosswalked to bounded successors; bundled gaps
+remain explicit. Old never-implemented roadmap does not mean current absent capability;
+new qualifications do not adopt old formulas. No new verdict or experiment.
+Start CAMPAIGN3_HISTORY_PROPOSALS_CHECKPOINT.md and
+campaign3-history-proposals-rev1/review.json. Next13 SUB and22 MEC entries, then
+identified proof-chain gaps and combined historical adequacy/freshness review.
+Five provenance issues and prior fixture gaps remain OPEN. RO019 ACTIVE;
+RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+Final21-member corpus/15-family/native-scope gates OPEN; no owner ruling.
+
+**Prior routing (2026-10-04):** Historical corpus-preservation review.
+Historical corpus preservation:EXP-001..015 crosswalked; partial chains explicit.
+Historical EXP IDs are not the21 PHEN members; final corpus gate remains OPEN.
+Start CAMPAIGN3_HISTORY_CORPUS_CHECKPOINT.md and
+campaign3-history-corpus-rev1/review.json. Next12 P3 proposal rows, then SUB/MEC.
+Exact satisfier/capacity/upper-bound-avoidance chains, trait-bonus/value/option gaps
+and five provenance issues remain open. Initial row-locator failure preserved.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict or experiment. Final freshness/adequacy/corpus/native-scope gates OPEN.
+
+**Prior routing (2026-10-04):** Historical controls review.
+Historical controls:CTL-001..010 reviewed with exact scoped evidence.
+CTL010 trace-only routing superseded by bounded sensed hedonic biology; no universal
+Reward claim. CTL007 value-test and CTL009 option-comparison chains remain OPEN.
+Start CAMPAIGN3_HISTORY_CONTROLS_CHECKPOINT.md and
+campaign3-history-controls-rev1/review.json. Next15 EXP corpus rows,12 P3 proposals,
+then remaining SUB/MEC entries. No new verdict, control retirement or experiment.
+Trait-bonus mutant/five provenance issues and scientific completeness remain OPEN.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+Final freshness/corpus/family/native-scope gates OPEN; no owner ruling.
+
+**Prior routing (2026-10-03):** Historical counterexample tracing.
+Historical counterexample tracing:six chains linked;55 fresh tests/six files PASS.
+103 source/config hashes unchanged. Historical commitment retirement is input removal;
+old-mutant reconstruction not claimed; extra-trait-bonus mutant remains UNLOCATED.
+Start CAMPAIGN3_HISTORY_COUNTEREXAMPLES_CHECKPOINT.md and
+campaign3-history-counterexamples-rev1/review.json. Next remaining stable-ID mechanism/
+control/corpus ledger review. Five citation issues and scientific completeness OPEN.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict or owner ruling. Final freshness/corpus/family/native-scope gates OPEN.
+
+**Prior routing (2026-10-03):** Retirement-scope review.
+Retirement-scope review:RET-001..014 source/evidence/scope reviewed; no new retirement.
+Six exact historical proof chains remain to trace; bounded successor evidence is
+not relabeled as historical mutant execution. All controls and prior records preserved.
+Start CAMPAIGN3_HISTORY_RETIREMENTS_CHECKPOINT.md and
+campaign3-history-retirements-rev1/review.json. Next six counterexample chains in
+reference/RESEARCH.md and preserved tests: roles, surprise, naive point learning,
+separate identity bounding, commitment-as-Need and independent trait bonuses.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+Five citation issues and final history/freshness/corpus/native-scope gates remain OPEN.
+No owner ruling, new verdict or fresh experiment. Campaign3 NOT EXIT-READY.
+
+**Prior routing (2026-10-03):** Historical limitations review.
+Historical limitations:all eight ledger bullets have scoped dispositions.
+Five conditional limits retained; bounded time resolution, prohibited truth-copy
+pattern and historical-proposal/current-successor distinction preserved.
+Start CAMPAIGN3_HISTORY_LIMITATIONS_CHECKPOINT.md and
+campaign3-history-limitations-rev1/review.json with evidence-addendum.json.
+Next retired/prohibited mechanism review against scoped contracts/negative controls.
+No whole-history completeness, new verdict or experiment. Five citation issues OPEN.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+Final freshness, scientific adequacy and corpus/family/native-scope gates remain open.
+
+**Prior routing (2026-10-03):** Historical intake crosswalk.
+Historical intake:11 formula rows crosswalked; eight reference-source authority
+roles reviewed. Bounded ports, historical controls and unadopted candidates remain
+separate. No whole-document scientific acceptance; five citation issues remain open.
+Start CAMPAIGN3_HISTORY_INTAKE_CHECKPOINT.md and
+campaign3-history-intake-crosswalk-rev1/review.json with evidence-addendum.json.
+Next reference-ledger historical limitations: censored precision, modifier calibration,
+nonparticipant attribution, reason-direction identity and graph scaling.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No new verdict, experiment or owner ruling. Final history/corpus/native-scope gates open.
+
+**Prior routing (2026-10-03):** Formula-source review.
+Formula-source semantic review:34 original paragraphs inspected; disposition overlay
+links three bounded historical resolutions and preserves three conditional hazards.
+Source-pin claims and11-row intake table crosswalk remain OPEN. Five unresolved
+citations unchanged; missing legacy log not found in local sister-repo/path history.
+Start CAMPAIGN3_HISTORY_FORMULA_CHECKPOINT.md and
+campaign3-history-formula-review-rev1/review.json. Next11-row intake crosswalk and
+reference-mechanism source acceptance. Remaining413860 original units and343
+supplemental paragraphs unreviewed by this batch; no scientific-completeness claim.
+RO019 ACTIVE;RO021 UNSATISFIED;RO022 CLOSED. AuditREV111/counters1508/0 unchanged.
+No owner ruling or new verdict. Do not rerun completed matrices for this audit.
+
+**Prior routing (2026-10-03):** Historical citation checkpoint.
+Historical citation review:39/44 lexical issues dispositioned; five remain open.
+Four cite a Vivarium formula file absent from its pinned commit; current untracked
+bytes are preserved only as a comparison copy. One legacy log remains unlocated.
+All413894 original semantic units plus343 supplemental paragraphs remain UNREVIEWED.
+Start CAMPAIGN3_HISTORY_CITATION_CHECKPOINT.md and
+campaign3-history-citation-review-rev1/review.json. Source acceptance and scientific
+reconciliation remain OPEN; AuditREV111 unchanged. RO019 ACTIVE;RO021 UNSATISFIED;
+RO022 CLOSED. Counters1508/0. No owner ruling, new verdict or production change.
+Next source acceptance/supersession, missing-source provenance and semantic review.
+Do not relaunch completed matrices or declare Campaign3 PASS from clause counts.
+
+**Prior routing (2026-10-03):** Historical inventory checkpoint; no new verdict.
+Historical candidate inventory frozen; independent source-text checks PASS.
+11,373 files/413,894 review units; all semantic dispositions OPEN. Six of44 lexical
+citation issues resolved;38 pending. No new verdict; AuditREV111 unchanged.
+Start CAMPAIGN3_HISTORY_INVENTORY_CHECKPOINT.md and
+CAMPAIGN3_HISTORY_ROOT_REVIEW_REV1.json. Next source acceptance/citation resolution,
+semantic reconciliation, live-delta review and final corpus/family/native-scope gates.
+RO019 ACTIVE;RO021 mandatory historical gate UNSATISFIED;RO022 CLOSED. No owner ruling.
+All prior runtime jobs finished; do not relaunch matrices for this documentation audit.
+Do not begin Campaign4 ranking or declare Campaign3 PASS from bounded clause coverage.
+
+**Prior routing (2026-10-03):** VER-C3-AFFECT-REGULATORY-001: bounded body-only regulatory reduction QUALIFIED.
 64 fresh component runs/832 original-prefix restores;320 substitutions/640 executions;
 4 native public sentinels/48 matching instants/16 Save132 restores;5+328 tests/build.
 Identical whole body history/current sensations, different admitted harm belief produce

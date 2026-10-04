@@ -1,0 +1,10 @@
+{
+  "status": "DEVELOPMENT FINDINGS; NO QUALIFICATION",
+  "findings": [
+    "First allocation-writing Python cell had a non-ASCII bytes literal syntax error before execution: no allocation or file write occurred. Corrected ASCII registry append and accepted contract/allocation preceded implementation.",
+    "First typecheck rejected a nonexistent substrate/diagnostic import in the factory. Correct import is substrate/trace. Rejected factory preserved before correction.",
+    "Inspection found the initial forged-save test passed an extra runSeed field, so rejection did not isolate save forgery. Corrected to the exact restore shape before final verification.",
+    "Added publication test initially omitted closing instrumentation braces; TypeScript and Vitest rejected its syntax before native assertions ran. Nineteen unchanged component tests passed. Rejected source and failed receipt preserved.",
+    "Concurrent Vite workers emitted port-in-use startup diagnostics. Workers continued to execute; completed run receipts, not those notices, determine matrix status."
+  ]
+}

@@ -2,3 +2,12 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# Local build cache and personal agent settings
+*.tsbuildinfo
+/.claude/settings.local.json
+
+# Exact research evidence is tracked compressed; restore with npm run evidence:restore.
+/docs/planning/campaign3-history-universe-rev1/units.jsonl
+/docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+/docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json

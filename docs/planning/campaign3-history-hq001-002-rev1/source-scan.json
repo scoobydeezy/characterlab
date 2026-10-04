@@ -1,0 +1,672 @@
+{
+  "pattern": "projectTrait|isConsolidated|trait.?bonus|independent.?bonus|separate.?bonus",
+  "files": [
+    {
+      "path": "reference/src/App.tsx",
+      "sha256": "5333d1a181e288ece23b424871c7ea61234794f31d594e9f459d9ba357587733",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/avoidance.ts",
+      "sha256": "3a97351461ebd84eb63b17d6df9c37c4c1398c1d0dcc57007b1e9fb34ebdc54f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/calibrationSweeps.ts",
+      "sha256": "167444e568f7a259eb9952add445bdfc83b9760cfa754d3cc834651458220117",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/correlatedEvidence.ts",
+      "sha256": "5c7b2b2821b3a7276a2bcc9a6a36b04fdb83a78d4d49710fea34de396b7254b8",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/counterfactual.ts",
+      "sha256": "62fa49011890eedf92357bc37d15b4b1fc7c6033a2a16dc1a9353ab53cb2cf63",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/decisionResolution.ts",
+      "sha256": "7c1118a950e5e9d6bb1ba7cdb942934a7f95d74b7c7f806fb5ad347e30fc915d",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/diceGrammarRichness.ts",
+      "sha256": "517c0728ac5c0164d019ed0f4113ad3c0a7781b9ff9f7b375bd6b9b729af56ef",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/habit.ts",
+      "sha256": "47fbfafb4bf7f28cdb340a6a9ce6b116c7f895a24eb09cffa71f90949abedf6b",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/identityAsModifier.ts",
+      "sha256": "142db6a8cedc58589ac01be5b0601684eb20e241144a23ec6551cb52581bff77",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/identityFormation.ts",
+      "sha256": "a39c16c1de3fb7a2733c99f466332b800b2a8609e1f5de43ad13e75666b621dd",
+      "matches": [
+        {
+          "line": 41,
+          "text": "import { identityStrength, identityConfidence, isConsolidated, IdentityTrait, CHANNEL_ORDER, projectTrait } from '../model/identity';"
+        },
+        {
+          "line": 257,
+          "text": "    ? isConsolidated("
+        },
+        {
+          "line": 672,
+          "text": "    isConsolidated("
+        },
+        {
+          "line": 719,
+          "text": "export { projectTrait, ACTION_STAY_AT_WORK };"
+        }
+      ]
+    },
+    {
+      "path": "reference/src/experiments/learnedSatisfaction.ts",
+      "sha256": "813524df377204ebab3a9e907bf2cfb67f7059778d75a24f0d5f804024bd0013",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/memoryAccessibility.ts",
+      "sha256": "95dade3c9580ecc16662acfbf645866730bd40e097d97cbbeeae9e67b46e2005",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/oldVsNewCompilation.ts",
+      "sha256": "d252e938537825eedb76940fd49b19ffd5699500d42fb50f24623512ef24dd95",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/reasonConsolidation.ts",
+      "sha256": "238e140883aeab6fcd03281b6333a13424cd6702515f3ab242acfa551e47f7e3",
+      "matches": [
+        {
+          "line": 58,
+          "text": "import { identityStrength, isConsolidated, CHANNEL_ORDER } from '../model/identity';"
+        },
+        {
+          "line": 429,
+          "text": "    isConsolidated("
+        },
+        {
+          "line": 517,
+          "text": "  const traitConsolidated = isConsolidated(DEPENDABLE_TRAIT, I, run.finalState.identityEvidence, params.kC, params.thetaTrait, params.thetaConfidence);"
+        }
+      ]
+    },
+    {
+      "path": "reference/src/experiments/reasonNucleusFormation.ts",
+      "sha256": "59620bd8a722ecdb693c04881e2ee6a4b9777b31692b74d50f9bafe67dfa8893",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/saturatedSatisfaction.ts",
+      "sha256": "8342ba8606ff74007f4666bff5a7b1af07c5a5c725069db7fc0124324c4dbfef",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/saturationCounterfactual.ts",
+      "sha256": "94e42726214a6cd79c53483bcfce5988a9be243068b4cdb9f2101b74f37945fc",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/saturationSalienceInteraction.ts",
+      "sha256": "84cf831fbd80b9d45256314e0fb62e449d36fcc90deaaeb6fced00105ebadace",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/seedDivergence.ts",
+      "sha256": "52f079a0cbe0fb09bed86eba003e0b4f51b941507ec487bcbdba8a420409817c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/seedDivergenceReasonNuclei.ts",
+      "sha256": "aa8c1a95673ed06d76d2da32d03971dc5eff4b2b438ba9db395f6dec066c60bd",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/semanticSalience.ts",
+      "sha256": "401e8307df30b0cef91f145c8ebcccd15540043d05b1fd3666a98876813c5793",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/situationalModifiers.ts",
+      "sha256": "c8eedc1a305ce9f25cf7a66796868814f167b526bfc6adba875b2cd69a2937af",
+      "matches": []
+    },
+    {
+      "path": "reference/src/experiments/substitution.ts",
+      "sha256": "5f822d979a48b545b07f044cb3a48dcd0abbd829628c9795ef864a251b72acb3",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/canonical.ts",
+      "sha256": "1d0f73f2cdec9a7149884166f563ba70ec995ea63644f7b0700abf3f5366a9e2",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/discreteDistribution.ts",
+      "sha256": "478dbe82f17beddf6d7648b4f113ea29c721840d1381b3bc5fc66a921a4ed1ca",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/event.ts",
+      "sha256": "5432e169e58097e368945dfe563d8fd87616bc1edd83234670d643a38fca70f8",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/evidenceOverlap.ts",
+      "sha256": "3e2be4b25c5c4ea57821fde9377755a6fc3c7bc704dd6b4015c8e6b8154516db",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/hash.ts",
+      "sha256": "2630aea8b973b839a6b60d7d5be8eaff3175741dce5c45b190316c5ee3b712d1",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/lattice.ts",
+      "sha256": "fd3ec3571cb5136c4fde0b83ab68bc88a1b8234a11da10ebbc0d49cf9cfa54e2",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/linalg.ts",
+      "sha256": "eb91328b7ce876091de448b2a61a23d8c102c5fadd2cd5ac2298ad0a24cdff96",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/random.ts",
+      "sha256": "46ea9e5af7e3a368ab88a8b6ebc1c913e085186035f9cb2fb1a46c7e7fa50c75",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/rational.ts",
+      "sha256": "c56ada046ef92829ab322e8377eac01f494a6d64a5912634e6bde49322a25205",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/stateHash.ts",
+      "sha256": "82dff79c51b86ae60dd0bec4e93304e172c74a701d9dae443e064c87752af502",
+      "matches": []
+    },
+    {
+      "path": "reference/src/kernel/trace.ts",
+      "sha256": "b904dd5dc3a56eb9fb92a4d1fc9664ecaab4de488ef1d8c0dcbd2b88395372b6",
+      "matches": []
+    },
+    {
+      "path": "reference/src/main.tsx",
+      "sha256": "57237ec820b581c91c753486c8857e0572046fc8dadc8557659fd4d9e673438e",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/actions.ts",
+      "sha256": "c751c87a3cd0cc5dc6f263bfafe50cb6bc4209110de305a49224630cf28e5b6c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/activation.ts",
+      "sha256": "1a7216bdc09e6e1906d2e0abcd5ab3be2f0a32f99988d743a0da4d60043acd2f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/associations.ts",
+      "sha256": "d2b573a854cb71a9bbbba2f46f8a0708ff38f7a200e69c86e5e10c4d27fcb82e",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/character.ts",
+      "sha256": "4683333596676dfb7262540395a916cf8c0b9d2c2df836f77a847c43c03ae776",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/choice.ts",
+      "sha256": "f3bcc86787b0dd2c1aebec0e8e8aa60fe0af90c7f9aa2b76e833551145b0e5de",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/cognitiveSignals.ts",
+      "sha256": "e4cc3eec6f29c7cb4fad3f8fd7c93d756ccf7b025be5e1de61ee281b844e1492",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/commitment.ts",
+      "sha256": "6fd99d3141db5bc656cebe4cfcf178f86620cd9190f463c4b9176adda01c384f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/cycle.ts",
+      "sha256": "304ced2c5f90fc502a54001cb4006d6c5c4f0c424a927bf311deefb6cc39c7a3",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/decision.ts",
+      "sha256": "3f3ba47f915e8484599bd4e57d6cf4056559cbbbfad224b27a619cc828ea96d9",
+      "matches": [
+        {
+          "line": 34,
+          "text": " * accessibility, identity consistency) — never as a second, separate bonus"
+        },
+        {
+          "line": 143,
+          "text": "   * (identity.ts::isConsolidated). */"
+        }
+      ]
+    },
+    {
+      "path": "reference/src/model/diceCompiler.ts",
+      "sha256": "9029aef84a3915ae82b0195f527f4e6419cfbb8e84b7e1f36c0806d746ff94c0",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/estimate.ts",
+      "sha256": "fcf6dda928020d8dce29b879f9d19219976a04f6cd178bfe6421a3efebddd2b8",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/expectation.ts",
+      "sha256": "61df96c0fd91af94b803ef8a9201b0c5537bd9cb85e1748806361bfdf55e5d4d",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/experience.ts",
+      "sha256": "a23b88ff0366cf9b876d55899faf0ba4ddfdd65d56df50262822ca3abc301920",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/identity.ts",
+      "sha256": "e395a4f8b191481be9dc838f9bfdf55a996af1b8c4d27f571722606b56796d68",
+      "matches": [
+        {
+          "line": 252,
+          "text": "export function projectTrait(trait: IdentityTrait, I: Vec): Rational {"
+        },
+        {
+          "line": 262,
+          "text": "export function isConsolidated("
+        },
+        {
+          "line": 270,
+          "text": "  const value = projectTrait(trait, I);"
+        }
+      ]
+    },
+    {
+      "path": "reference/src/model/invariants.ts",
+      "sha256": "9a115d8890cbc25eee99426af22b9bbe3572eaa8654061d94474fc1546f1025c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/memory.ts",
+      "sha256": "86e6439120d28ce83dee6259d13098e46b7250851d558df3a1f21374dcf48cd2",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/needs.ts",
+      "sha256": "e0503eacaa7192f32a061aa46d42622f5967b1478e838fc7c2cd8ac092bd8a8f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/outcome.ts",
+      "sha256": "56efb0072e1f42d8eb7b076dfd988cd59395d460012a9fa6de15b9db45f5894a",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/reasonNucleus.ts",
+      "sha256": "5d1d5d33f8aa7470556800488cf8e5e803026b067728c5039e058bff9f4c8ddf",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/salience.ts",
+      "sha256": "6fa88b5e493363631c88a9111f7722672408ed8accb8ba3fcf50f99f68140562",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/scenario.ts",
+      "sha256": "ea4332eb8d229322c06f57bd371816978d4229fe05a8fa86ec60f204a4382a9c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/semanticExperience.ts",
+      "sha256": "3eef3a9e4ecc74fb6aeb7996da2fb88e9e6b6a01518cca50219437ae88e1220a",
+      "matches": []
+    },
+    {
+      "path": "reference/src/model/types.ts",
+      "sha256": "d355ebb8d3a718ead7633adac316301f45d96901ddce8a3487c0874629a47cdf",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/activation.test.ts",
+      "sha256": "d0e80e5cf82f2f3660e1760a24b121da7658e723160efd43a81473030661402c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/associations.test.ts",
+      "sha256": "16db4e99703c3cff6083f1cae4ee6c4d4d72176603793090add2d9ce8ce6d95c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/canonical.test.ts",
+      "sha256": "826f98ac1b151520b31165b64d015ae5ffae84c21a488be57b0da18b5de4c72d",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/choice.test.ts",
+      "sha256": "ffd88169727c865da4147c751a97932d971a14c4faefccdd2f0ed138a2d432b4",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/determinism.test.ts",
+      "sha256": "53777250d9299bcfa1469c01b3fae6b306664c568b8bf791c9c6e8681dec0edd",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/discreteDistribution.test.ts",
+      "sha256": "109765b98d6ca933e0f423406a8f7e73d4033dfa4c08e7988482e25828eb753f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/evidenceOverlap.test.ts",
+      "sha256": "57a6444f8a06555469fc84ca88618203c1dcc532718c9f74cef9a169306820d1",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/expectation.test.ts",
+      "sha256": "9c6553d08c5a3ddd5d959f687f1b67a4eee49a30c69f961b09d6fabe783c4fba",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/linalg.test.ts",
+      "sha256": "f1c690e8d3a3fcdfcd796272662ebe4b5fe39655d88e8b5dc6f1301b901b4065",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/memory.test.ts",
+      "sha256": "ada2c2b1b29b9e1307ec0404a1810af3253100356b50f78e7c847dc75675ef82",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/needs.test.ts",
+      "sha256": "ac5eeca4568eda6d67daa243e8a815aab13d41c8ade82bbe953ac5f8924b22c2",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_5aRepresentation.test.ts",
+      "sha256": "69e8d96b5e81439dcff5f9eca04515e062bd42234db52edfcbae50ea7ae53a6f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_5cExperienceInterpretation.test.ts",
+      "sha256": "e99b7cac96377dcef76a928bc5e7fb77ffd29a474c65ee71f54aac18ab8e8f29",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_5dSaturationSalienceInteraction.test.ts",
+      "sha256": "1c9b0c4987655c3c59640ee9900f2f38061fe117f0bd2f70fe8454a5ff01de2f",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_5Salience.test.ts",
+      "sha256": "092e5bb4ce98ae25f215d111557cea9a64c81419e86a034fb69b2a7da22ccf0e",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_5Saturation.test.ts",
+      "sha256": "2407b20053e62ccfc8d79bd96d211fd5038e7eafc335a01285e4a1812e28b05b",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_95ReasonConsolidation.test.ts",
+      "sha256": "cd61512ad3e1cdfb357450925b3bcf1e93aa65ac4a3c529617c3dcda45f7b48e",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97CalibrationSweeps.test.ts",
+      "sha256": "a8ff5acf014be06214c68b915dad6db2deb9db23c4898119c3c06b155ab53b44",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97CognitiveSignals.test.ts",
+      "sha256": "3482a3d42308d965a61e78db51c7b38a7443c32328c5ea977b87ab146a605071",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97CommitmentLifecycle.test.ts",
+      "sha256": "0078f45ce13dc46f875f8ed5d4810e91a12f90bd40bb74b55d1f5143ebe1c012",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97CorrelatedEvidence.test.ts",
+      "sha256": "9e40ecf8b6dd531ee03cd44ed06d7912372f4f166503d5dc5de2a400e7738a24",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97CycleIntegration.test.ts",
+      "sha256": "548355a8214b46c187081aad8b0e1ae042cacba7280f90867c53b263c8cafd18",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97Decision.test.ts",
+      "sha256": "1b98df71523f5c1a74e8ab45b03168c7ec9ef521739ce9ba26d057311f299ca1",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97DiceCompiler.test.ts",
+      "sha256": "c5cbb14ce1550324a3ed6770c31eeb76e3d29646515fb4d47b1de6d0e4b08342",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97DiceGrammarRichness.test.ts",
+      "sha256": "f39ab38c5c7625920a8d39b1288999aa58dc42033f4a1d5ed58d71f14cbe34cd",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97IdentityAsModifier.test.ts",
+      "sha256": "4759b8fbb54bc6186ce0d909ad1b1bd0a49df1f58001f996e20020051e4ed412",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97OldVsNewCompilation.test.ts",
+      "sha256": "f86c66dbcba7a742b680d86fced54d6403569438861cd5eead3aa4c3bd477508",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97ReasonNucleusFormation.test.ts",
+      "sha256": "7f1abc40cbb507a75591fc70e621e7b1c9e2d725c2c3c228806875feac655a6e",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97SeedDivergenceReasonNuclei.test.ts",
+      "sha256": "957f23bb74a451782e7de2015a3ee56e03b931433efc0d8f8112fe6d5c6ed8f0",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_97SituationalModifiers.test.ts",
+      "sha256": "3b0a18aaac7d9772325bb2907bac1a56276f78ad18541c8c3738549c1bcc4302",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_9CycleIntegration.test.ts",
+      "sha256": "e84f5e57a19eefe2c93207bac85dc28ff36b396d53033bc23a878a407456eb2b",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_9Decision.test.ts",
+      "sha256": "4efe9c3728a41522cd04ece0f3f927009bf000e3ffb61b856c61e950ae1e3a71",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_9DecisionResolution.test.ts",
+      "sha256": "d1d8cda6c2f50ebe46df8bf305727e182c66b675533f015a937e4ede40234942",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_9Identity.test.ts",
+      "sha256": "c6805f7ece14a82972fed8186d9c8fede5dceb856d29b18ee60bac8c1fa36ed0",
+      "matches": [
+        {
+          "line": 14,
+          "text": "  projectTrait,"
+        },
+        {
+          "line": 15,
+          "text": "  isConsolidated,"
+        },
+        {
+          "line": 164,
+          "text": "  it('projectTrait reduces to boundedResponse(IdentityStrength_CommitmentFidelity) for a pure single-channel trait', () => {"
+        },
+        {
+          "line": 166,
+          "text": "    const projected = projectTrait(dependableTrait, I);"
+        },
+        {
+          "line": 173,
+          "text": "    expect(isConsolidated(dependableTrait, I, evidence, KC, ratOf(3, 10), ratOf(5, 10))).toBe(false);"
+        },
+        {
+          "line": 179,
+          "text": "    expect(isConsolidated(dependableTrait, I, evidence, KC, ratOf(3, 10), ratOf(5, 10))).toBe(true);"
+        },
+        {
+          "line": 186,
+          "text": "    expect(isConsolidated(dependableTrait, I, evidence, KC, ratOf(3, 10), ratOf(5, 10))).toBe(true);"
+        }
+      ]
+    },
+    {
+      "path": "reference/src/test/phase2_9IdentityFormation.test.ts",
+      "sha256": "7f2109fdec4a275a06959083be9cea4962b46d37f6e40403193ab28874ddb711",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2_9SeedDivergence.test.ts",
+      "sha256": "8341a53907eb42793a154e2e8e594e0532f7f95f02962deb2bde2f3eed6eb8dc",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/phase2Experiments.test.ts",
+      "sha256": "d4fcf252480a45e877f8a48a71b07fdb7662a929d1c2aa1d0e4237cdcd4942ff",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/quantize.test.ts",
+      "sha256": "20f628e9e7539151d7483a1e5510efcc12310acfbe40d240bc4a26d96f139696",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/random.test.ts",
+      "sha256": "4899a91ea74f779e1c598cc998f7669c72fa49539c80d32229654458e8bedfa5",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/rational.test.ts",
+      "sha256": "17c9e8434926bb13c0df2f2f51b6a39345a8ab69eb43a74679052256ddff32c6",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/reasonNucleus.test.ts",
+      "sha256": "9dfa7f92f77bd11ffb5c831950a11ce5021d9dc9f9cc0f15e1c5808025c494fe",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/salience.test.ts",
+      "sha256": "cd7309b1b561cc13429e4b7c837fab87d616a8151b59a1b0c72672bef04b7590",
+      "matches": []
+    },
+    {
+      "path": "reference/src/test/semanticExperience.test.ts",
+      "sha256": "f97bb194c591be124b2ec017493235cc1bd2be746449efaf26864d1b44e96ea8",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/ActionPanel.tsx",
+      "sha256": "d503acedf99824eba2fafe8d4b1356917b76ebac9f24ffd31112261e37b2e0dc",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/AssociationPanel.tsx",
+      "sha256": "48a0048ee18ca12014ca5756bcb640f26fb355c8f3bc9428a7868e4eacadfc65",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/Bar.tsx",
+      "sha256": "b30c05a99ff7165c86e17921e82f01cc01c72f6783692be7dddecee1ee48091a",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/CounterfactualPanel.tsx",
+      "sha256": "ad9372757a88455a0b4ecac6ed7ed33b4598e27a2b689f6717c2d63e56adea2b",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/DecisionPanel.tsx",
+      "sha256": "1864326e711fcd1d7751a3ab1374e35aaffa8c4f8bfe55251547714841c9b17d",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/DeterminismPanel.tsx",
+      "sha256": "63d07b2a7cc071135898730485e71e27cad567fc5d2a955011aab7572a761bbd",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/ExpectationPanel.tsx",
+      "sha256": "8426c27b91416c05198facdd9c630e2c7afb5e938c449b65cc248f73e394150a",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/MemoryPanel.tsx",
+      "sha256": "184d718ec56dceb02c78aa76109320ee0ee713a20d378b1d23514d61138003d9",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/ModelParamsPanel.tsx",
+      "sha256": "7648d5a63bdb7a88b3dbf91954e9439dd6c917f7205e69545cc16e771c72891c",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/NeedPanel.tsx",
+      "sha256": "0e129c2f25b1639f7db9f994d03206e148c78c57bf0beca9ff28032762a892bf",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/Phase2ExperimentsPanel.tsx",
+      "sha256": "a3a141ffa17bf7a952d297b038007f1ba1e422edc8cb2dcf31c121b9517b5f74",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/SaliencePanel.tsx",
+      "sha256": "0c68ae5e97b8ffe05d7a7cabcee5b5615a68be4dab43c2c744f9d0acd566df84",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/SaturationPanel.tsx",
+      "sha256": "155e64779a116ce254c5d129b571446a61bc66ac8450329acad9e0103a586af8",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/Slider.tsx",
+      "sha256": "e6ac76985375f2500e60977b7432cea7853ed74f45ef031322fb4ac882de975a",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/components/TraceViewer.tsx",
+      "sha256": "f953e575686d4c038dde3002127da3c7ef5ca34cbe117c1a6f3d5f6b4fb40bef",
+      "matches": []
+    },
+    {
+      "path": "reference/src/ui/state/useEngine.ts",
+      "sha256": "23194de2df2ba1c2d15639998076098a0fdf29410ae0529290ce40c07340c9eb",
+      "matches": []
+    }
+  ],
+  "limit": "Current reference/src TypeScript only; search supports inspection, not proof a mutant never existed."
+}

@@ -1,0 +1,180 @@
+{
+  "status": "SIX CHAINS TRACED WITH SCOPE LIMITS; EXTRA TRAIT-BONUS MUTANT GAP RETAINED",
+  "sourceManifestSha256": "741e09aead6c81b007e636a5a00c0202fb5345d6cd7746d81ade05909ac14442",
+  "testReceiptSha256": "6eb80a44147d71830170075105df61f60818651ded098ac8012e36bafb5c6922",
+  "freshTestFiles": 6,
+  "freshTests": 55,
+  "items": [
+    {
+      "retirement": "RET-002",
+      "testPath": "reference/src/test/phase2_5cExperienceInterpretation.test.ts",
+      "testSha256": "e99b7cac96377dcef76a928bc5e7fb77ffd29a474c65ee71f54aac18ab8e8f29",
+      "assertions": [
+        {
+          "title": "deriveWorldEventDescriptor assigns every role mechanically from which EffectProvenance slot named the concept",
+          "fullName": "2.5c finding 1 — causal roles derive from Action/outcome provenance, not manually supplied scenario descriptors deriveWorldEventDescriptor assigns every role mechanically from which EffectProvenance slot named the concept",
+          "status": "passed"
+        },
+        {
+          "title": "an Incidental concept splits a fixed residual pool — its derived attention (and therefore z) strictly decreases as more Incidental concepts share the scene",
+          "fullName": "2.5c finding 2 — attention derives from character/world context (a bounded initial model), not an authored per-concept flag an Incidental concept splits a fixed residual pool — its derived attention (and therefore z) strictly decreases as more Incidental concepts share the scene",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 887,
+        "endLine": 925,
+        "text": "The findings below were written immediately after implementation and are kept as originally\nrecorded. A review of this entry before starting Phase 2.5c found that the pipeline's *weights*\n(BASE_SALIENCE, ROLE_WEIGHT, DEFAULT_ATTENTION_BY_ROLE) were genuinely derived — a real, validated\nresult — but three of the pipeline's own *inputs to those weights* were still hand-authored per\nscenario, which is the same class of mistake Brief §5.1 rules out, just one level upstream of where\n2.5b actually looked:\n\n1. **Causal role was authored directly, not derived from what causally happened.** 2.5b's\n   `WorldEventDescriptor` required whoever wrote a scenario to set `role: 'Cause'` on the Lamp by\n   hand once it started the injury. That is a real fact about the event, but nothing in the code\n   *derived* it from anything — a scenario author could just as easily have typed `'Incidental'` for\n   the same falling lamp and nothing would have caught it. **Fixed in 2.5c**: a new `EffectProvenance`\n   type describes only what physically/causally happened (who acted, on whom, with what, what\n   actually caused the observed effect); `deriveWorldEventDescriptor` is now the *only* place in the\n   codebase permitted to assign a `CausalRole`, and it does so mechanically from which provenance\n   slot named a concept. Separately, `ActionDef.subjectRole` now declares an Action's own semantic\n   argument structure (Conversation-like Actions bind their subject as `'Participant'`; an\n   Attack-like or Betrayal-like Action binds it as `'Cause'`) as a fact about the verb, not a\n   psychological weight on whichever specific Person fills that slot this time.\n2. **Attention was authored per concept via `unattended: true`, not derived.** This correctly\n   demonstrated that perception ≠ attention (a real finding, kept), but it moved the hand-authoring\n   problem rather than eliminating it — \"Lamp salience = 0.02\" became \"Lamp unattended = true,\"\n   still a per-scenario toggle. **Fixed in 2.5c**: non-Incidental roles keep a fixed default\n   attention value; Incidental-role concepts now derive their attention by splitting a fixed residual\n   pool among however many Incidental concepts the Experience actually has — attention competition is\n   now a computation over how many things are in the scene, not a flag any caller sets.\n3. **Surprise used the raw prediction error even for boundary-clipped observations, disagreeing with\n   Phase 2.5a's own semantics.** A saturated/censored observation being far from μ does not mean\n   something surprising happened — it means the observation couldn't measure the full effect — and\n   Phase 2.5a's censored-learning correction (this file, above) already established that distinction\n   for *learning*; 2.5b's salience computation used `|r-μ|` regardless, silently disagreeing with it\n   for *encoding*. **Fixed in 2.5c**: surprise now branches on the same `EvidenceKind` vocabulary\n   (`point`/`lower_bound`/`upper_bound`) Phase 2.5a's `expectation.ts` already defines — `point` keeps\n   `|r-μ|`; `lower_bound` (a ceiling-saturated positive effect) uses `max(0, L-μ)`, i.e. \"did the\n   evidence prove something incompatible with my belief\"; `upper_bound` is the mirror. Need relevance\n   is deliberately left unchanged — it is a genuinely different question (\"how much did this matter to\n   the Need I was experiencing,\" using the realized regulatory effect) from efficacy/surprise, and the\n   review confirmed that boundary does not need correcting.\n\n"
+      },
+      "scope": "Historical replacement fixtures located and rerun; role slots and residual attention are controlled reference mechanisms, not natural recognition or permission to import truth-side provenance.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "retirement": "RET-003",
+      "testPath": "reference/src/test/phase2_5cExperienceInterpretation.test.ts",
+      "testSha256": "e99b7cac96377dcef76a928bc5e7fb77ffd29a474c65ee71f54aac18ab8e8f29",
+      "assertions": [
+        {
+          "title": "reproduces the review's own worked example: believed +0.40, a ceiling-saturated observation of only +0.05 Applied proves nothing incompatible with that belief — zero surprise, not |0.05-0.40|=0.35",
+          "fullName": "2.5c finding 3 — surprise consumes evidence semantics (point/lower-bound/upper-bound), not raw clipped Need delta reproduces the review's own worked example: believed +0.40, a ceiling-saturated observation of only +0.05 Applied proves nothing incompatible with that belief — zero surprise, not |0.05-0.40|=0.35",
+          "status": "passed"
+        },
+        {
+          "title": "a 'point' (unsaturated) observation of the same numbers uses the original |r-μ| formula unchanged",
+          "fullName": "2.5c finding 3 — surprise consumes evidence semantics (point/lower-bound/upper-bound), not raw clipped Need delta a 'point' (unsaturated) observation of the same numbers uses the original |r-μ| formula unchanged",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 1175,
+        "endLine": 1188,
+        "text": "**Evidence-kind-aware surprise reproduces the review's own worked example exactly: a saturated\nobservation far from μ can be *zero* surprise, not the large surprise a naive `|r-μ|` would report.**\nBelieving an effect of +0.40 and then observing a ceiling-saturated Applied=+0.05 (a `lower_bound`\nobservation — the true effect is *at least* +0.05) yields `surpriseMagnitude = max(0, 0.05-0.40) = 0`\nexactly — the observation proves nothing incompatible with the existing belief, so nothing about it\nshould read as surprising. Treating the identical numbers as unsaturated `point` evidence (the 2.5b\nbehavior) would have reported `|0.05-0.40| = 0.35`, a large and entirely spurious \"this was\nunexpected\" signal driven purely by where the boundary happened to clip the observation. The mirror\ndirection confirms the formula discriminates correctly rather than just always returning zero: a\n`lower_bound` observation of +0.15 against a *low* prior belief of +0.02 yields `max(0, 0.15-0.02) =\n0.13` — genuinely positive surprise, because this observation *does* prove something incompatible\nwith the prior belief. `cycle.ts` now classifies this \"objective evidence kind\" unconditionally, from\nthe same Capacity/Applied/Overflow decomposition Phase 2.5a already computes, regardless of whether\n`SaturationParams.learningMode` is `'naive'` or `'censored'` — salience's surprise measure is always\n"
+      },
+      "scope": "Exact0.40/0.05 lower-bound surprise=0 and point surprise=0.35 assertions. This discriminates formulas on controlled inputs; no old raw-error runtime was reconstructed.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "retirement": "RET-004",
+      "testPath": "reference/src/test/phase2_5Saturation.test.ts",
+      "testSha256": "2407b20053e62ccfc8d79bd96d211fd5038e7eafc335a01285e4a1812e28b05b",
+      "assertions": [
+        {
+          "title": "naive mu diverges between a low-exposure and a mostly-near-saturation timeline; censored mu diverges less",
+          "fullName": "Brief §22 Phase 2.5a experiment: Saturated Satisfaction counterfactual naive mu diverges between a low-exposure and a mostly-near-saturation timeline; censored mu diverges less",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 587,
+        "endLine": 608,
+        "text": "**Once a real prior exists, censoring measurably narrows — but does not eliminate — a naive\nlearning rule's exposure-timing artifact (Brief §22).** The required counterfactual\n(`experiments/saturationCounterfactual.ts`) runs the identical satisfier through two timelines that\nshare the exact same true effect: Timeline A always visits while Connection is comfortably\nunsaturated; Timeline B is MOSTLY near the ceiling (5 of 6 repetitions clip) with one deliberate\nunsaturated dip, so genuine information about the true effect exists in both timelines but is rare\nin B. Naive converges to μ≈0.3999 in Timeline A (correctly tracking the true ~0.42 effect) but only\nμ≈0.1855 in Timeline B — a **naiveDivergence of 0.2145** purely attributable to when the satisfier\nhappened to be tried, exactly the failure mode Brief §27 names. Censored narrows this to\n**0.1780** (`censoredDivergence`, about 17% smaller) by refusing to let the five clipped\nobservations pull μ down from the level the one genuine observation established. This is a real,\nreproducible improvement, but it is **partial, not a fix**: censored Timeline B still converges to\nμ≈0.2219, well below the true ~0.42 — the rule can only *protect* an already-good belief from\nerosion by systematically-clipped evidence, it cannot *recover* the true effect's magnitude from\nOverflow alone, since the update rule only ever compares the naive candidate's *direction* against\nthe current prior, never uses the clipped observation's *size* as a lower-bound magnitude in its own\nright. Reported honestly rather than rounded up: this is a meaningful but incomplete answer to\nBrief §22's question.\n\n### Mathematical findings\n\n**The Capacity/Applied/Overflow decomposition is an exact algebraic identity, not an approximation,\n"
+      },
+      "scope": "Actual naive/censored timeline comparison located and rerun; not LEARN PointOnly. Historical source formulas and finite saturation horizons retained; censoring narrows rather than eliminates divergence.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "retirement": "RET-007",
+      "testPath": "reference/src/test/phase2_95ReasonConsolidation.test.ts",
+      "testSha256": "cd61512ad3e1cdfb357450925b3bcf1e93aa65ac4a3c529617c3dcda45f7b48e",
+      "assertions": [
+        {
+          "title": "neither weak Need pressure nor weak identity evidence alone clears the influence floor, but consolidated on the same semantic channel they do",
+          "fullName": "Target B — Weak-signal combination neither weak Need pressure nor weak identity evidence alone clears the influence floor, but consolidated on the same semantic channel they do",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 2104,
+        "endLine": 2142,
+        "text": "\nAn external review of Phase 2.9's RESOLVED write-up read the entry above and identified a single root\nstructural cause behind two of its own findings that Phase 2.9 had reported as fundamental limits of a\ndice-quantized reference model rather than as implementation gaps: Experiment E only demonstrated smooth\nevidence accumulation with `identityFeedbackEnabled: false`, never under the ordinary feedback-on loop\n(the \"self-stabilization would freeze it early\" argument), and Experiment I never produced a genuine\n\"opposing identity re-contests an otherwise near-automatic decision\" outcome — only near-total\ncancellation, or a discrete whole-extra-die flip that handed the decision outright to whichever side\nidentity favored. The review traced both to the same cause, and Phase 2.9's own §26 write-up had\nalready, unknowingly, proven it mathematically: under that architecture, `identityConsistency` was\nassembled into its OWN separate `DecisionInfluence`, subject to its OWN independent\n`thetaInfluenceFloor` check. `Alignment(o,k) = boundedResponse(TaggedPressure(o,k) - Sum_others)` can\nnever exceed an option's own raw tagged pressure, so identity's contribution was structurally\n\"all-or-nothing\" per option — it could never COMBINE with an already-present but individually sub-floor\nNeed signal on the same topic to jointly clear the floor. This section records the architectural fix\nand the five target behaviors (A-E) the review specified to verify it actually closes the gap.\n\n### The fix: one shared consolidation pool, not two\n\nThree modules changed. `model/decision.ts` gained `sumRawBySemanticChannel` (sums raw, pre-`boundedResponse`\npressures by semantic channel — the first half of consolidation, exposed on its own so a caller can fold\nMORE raw pressure into the same pool before anyone bounds or floors it), `boundAndFloorChannels` (bounds\nthen floor-filters — the dice-eligible result), and `boundAllChannels` (dense, bounded, but NOT\nfloor-filtered — used only where a channel's \"meaning\" must not be gated by dice-eligibility).\n`model/identity.ts` gained `identityFeedbackRawInfluences`, which decomposes identity's per-channel pull\ninto separate `RawReasonInfluence`s tagged `identity:<channel>` — raw, unbounded contributions that feed\ninto the SAME per-option raw pool as Need/accessibility, rather than becoming their own independently-\nfloored `DecisionInfluence`. `model/cycle.ts::runDecisionCycle` was rewritten around this: it builds a\nNeed/accessibility-only bounded (not floored) map per option first — used EXCLUSIVELY for identity's own\nexpression/evidence generation (`touchedChannels`/`Alignment`), preserving Brief §23's \"no\ndouble-counting\" rule that identity's own feedback must never feed back into producing MORE identity\nevidence for the same channel — and separately, per option, merges that option's raw Need/accessibility\npool with identity's raw per-channel pull (when `identityFeedbackEnabled`) into ONE pool, bound-and-\nfloored exactly once, which is what actually becomes the `DecisionInfluence[]` driving dice and\nresolution. This two-map separation is the key design insight: it makes \"identity's own evidence\ngeneration never double-counts itself\" and \"identity can combine with weak Need to clear the floor\"\nsimultaneously true, where Phase 2.9's single-map architecture could only have one or the other.\n\nOne structural property survives the fix unchanged, and is worth stating plainly rather than glossing\n"
+      },
+      "scope": "Actual weak-signal combination fixture: each alone below floor, combined admits PlayerFacingRoll instead of Auto. Old separate-bound mutant is described in log, not freshly reconstructed.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "retirement": "RET-010",
+      "testPath": "reference/src/test/phase2_97CommitmentLifecycle.test.ts",
+      "testSha256": "0078f45ce13dc46f875f8ed5d4810e91a12f90bd40bb74b55d1f5143ebe1c012",
+      "assertions": [
+        {
+          "title": "T1: once DinnerWithGlen is active on a character genuinely invested in keeping it, a Commitment x DinnerWithGlen nucleus appears",
+          "fullName": "Phase 2.97 closure audit — Commitment lifecycle: pressure is conditional on an active, applicable commitment T1: once DinnerWithGlen is active on a character genuinely invested in keeping it, a Commitment x DinnerWithGlen nucleus appears",
+          "status": "passed"
+        },
+        {
+          "title": "T3: once that commitment is retired, its nucleus is absent again — even though the SAME strong identity that once modified it is still present",
+          "fullName": "Phase 2.97 closure audit — Commitment lifecycle: pressure is conditional on an active, applicable commitment T3: once that commitment is retired, its nucleus is absent again — even though the SAME strong identity that once modified it is still present",
+          "status": "passed"
+        },
+        {
+          "title": "T4: a new DinnerWithGlen-shaped commitment instance gets its own referent, independent of the retired one",
+          "fullName": "Phase 2.97 closure audit — Commitment lifecycle: pressure is conditional on an active, applicable commitment T4: a new DinnerWithGlen-shaped commitment instance gets its own referent, independent of the retired one",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 2620,
+        "endLine": 2650,
+        "text": "\n**Check 1, second correction — `NEED_COMMITMENT` was the wrong semantic layer.** A further architectural\nreview, after living with the Check 1 fix above, correctly identified it as solving the right problem\n(CommitmentFidelity needed a real motive to modify) through the wrong mechanism: modeling a one-time\nobligation as a Core Need conflates \"an obligation exists\" with \"an appetite requiring periodic\nsatisfaction,\" and forces the nucleus's referent onto the stakeholder (Glen) rather than the obligation\nitself — a design that cannot distinguish two independent commitments about the same person. Fix:\n`NEED_COMMITMENT` removed; replaced by a real, static, non-Need `MotiveGenerating` source\n(`model/commitment.ts::CommitmentDef`) referented to the commitment concept itself\n(`COMMITMENT_DINNER_WITH_GLEN`), plus a referent-matching fix so CommitmentFidelity's own Standing signal\nactually reaches that nucleus instead of landing in a dead group at referent=Glen. Full writeup, real\nnumbers, and the Auto-lock discovery that shaped Experiment N's final form are under Experiment H and\nExperiment N above and are not repeated here. This also settles the review's own architectural point in\nthe affirmative: `MotiveGenerating` is now demonstrably an open family (Need pressure, Commitment\npressure) rather than a family of one, with a real non-Need member proven out end-to-end.\n\n**Check 1, third pass — the second correction's own lifecycle obligation.** A further review of the second\ncorrection judged the Auto-lock finding \"test-scenario incompatibility, expected behavior\" (excluding\ncommitments from Experiment N's repeated-generic-dilemma harness is restoring that experiment's actual\ncontrolled question, not a workaround) and the Reason Nuclei/dice architecture itself cleared — but flagged\none real, small remaining obligation: a `CommitmentDef` may legitimately be static authored content, but\nthe `MotiveGenerating` PRESSURE it generates cannot be semantically permanent. An active, applicable\ncommitment should generate pressure; once it reaches a terminal state (Fulfilled, Relinquished, Missed,\nCancelled), that pressure must disappear, and a recurring obligation (\"dinner Monday,\" \"dinner Tuesday\") is\na sequence of independent concrete instances, never one immortal pressure. This build deliberately adds no\n`CommitmentState`/lifecycle-transition machinery (no experiment needs a commitment that transitions\nmid-run — adding it now would be unforced generalization), but the review's point stands as an empirical\nclaim about the mechanism that already exists: `runDecisionCycle`'s `commitments` parameter, supplied fresh\nper call rather than carried on `CharacterState`, already IS the lifecycle boundary — \"currently live\"\nis simply \"present in this call's list with nonzero pressure.\" New tests\n(`test/phase2_97CommitmentLifecycle.test.ts`) prove this on real pipeline output rather than asserting it\n"
+      },
+      "scope": "Architectural correction linked to independent commitment referent and absent/active/recurrent fixtures. Historical retirement is modeled by removing supplied commitment; no runtime lifecycle transition or old CoreNeed-versus-new paired run claimed.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    },
+    {
+      "retirement": "RET-012",
+      "testPath": "reference/src/test/phase2_9IdentityFormation.test.ts",
+      "testSha256": "7f2109fdec4a275a06959083be9cea4962b46d37f6e40403193ab28874ddb711",
+      "assertions": [
+        {
+          "title": "repeated meaningful choices accumulate CommitmentFidelity evidence, raise its strength, and eventually consolidate Dependable with no trait ever authored",
+          "fullName": "Experiment E — Trait acquisition repeated meaningful choices accumulate CommitmentFidelity evidence, raise its strength, and eventually consolidate Dependable with no trait ever authored",
+          "status": "passed"
+        }
+      ],
+      "historicalLog": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 1915,
+        "endLine": 1932,
+        "text": "running WITH feedback enabled would let Experiment H's self-stabilization dynamic (below) freeze\nevidence growth before consolidation is reached, confounding \"does repeated behavior alone build\nevidence\" with \"does established identity limit its own future growth.\" CommitmentFidelity's\nIdentityStrength rises from **0.0537** (round 0) to **0.4807** (round 23); final accumulated evidence\nis `support=2.4993, opposition=0.2272` — real, if imperfect, discrimination (a 4:1 split still loses\noccasionally, and every loss adds real opposition evidence via `Alignment`'s subtraction term). The\nsingle-channel `Dependable` trait (Brief §21's own worked example: all-zero `Q`, `w`=1 at\nCommitmentFidelity) is **consolidated by the end of the run**\n(`traitConsolidatedByEnd=true`) — with no trait ever explicitly authored onto the character; consolidation\nis checked purely by projecting `DEPENDABLE_TRAIT` over the accumulated `IdentityEvidenceState`.\n\n**G — Identity feedback.** Starting from Experiment E's consolidated state, one more matching Decision\nrun twice, same seed, feedback on vs. off. WITH feedback: `resolutionMode=Auto`, Margin=**0.9906**,\nP(Keep Dinner)=**0.9953** — CommitmentFidelity's own `identity_consistency` Influence (Alignment=0.3976)\nadds enough pressure to auto-resolve what would otherwise still be a real roll. WITHOUT feedback (same\nseed, same underlying Need state): `resolutionMode=QuietRoll`, Margin=**0.6000**, P(Keep Dinner)=\n**0.8000**, real d10-vs-d4 dice thrown. The compatible Option's probability is measurably higher with\nfeedback (0.9953 > 0.8000, `compatibleOptionProbabilityRises=true`) — IdentityConsistency is a real,\n"
+      },
+      "scope": "Acquisition without authored trait and separate projectTrait tests support derived labels. Exact injected extra-trait-bonus mutant remains UNLOCATED; no absence-of-code proof or universal reduction inferred.",
+      "obligations": [
+        "RO-C3-020",
+        "RO-C3-021"
+      ]
+    }
+  ],
+  "startupFailure": "Initial sandbox run failed loading vite.reference.config.ts: esbuild could not read parent directory. No scientific tests ran. Same command outside sandbox passed55/55; no source changes.",
+  "limits": [
+    "Current rerun of preserved historical tests, not reconstruction of original execution dates or current public runtime qualification.",
+    "No broad proof-chain closure: old raw-error/separate-bound/CoreNeed mutants not freshly rebuilt; trait-bonus negative fixture remains unlocated.",
+    "Original source graph verified unchanged before/after. Hash commitments diagnose identity, not psychological equivalence.",
+    "No new verdict or obligation closure; five citation issues and final history/corpus gates remain open."
+  ]
+}

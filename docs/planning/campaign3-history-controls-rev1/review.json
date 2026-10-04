@@ -1,0 +1,294 @@
+{
+  "status": "10 HISTORICAL CONTROLS REVIEWED; CANDIDATES AND PROOF GAPS RETAINED",
+  "manifestSha256": "e947295eb33194087559f70d42d34023c9f9fa3edfc878807e8992ab605c4303",
+  "items": [
+    {
+      "id": "CTL-001",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 183,
+        "endLine": 183,
+        "text": "| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n"
+      },
+      "disposition": "BOUNDED COMPARISON; CONTROL RETAINED",
+      "assessment": "BODY compares MeterBehindSensor, IndependentNeed, AuthoredReference and CachedEvidence against mediated pressure. Sampled equality of meter/cache does not establish universal necessity or redundancy.",
+      "blockedOrReopen": "Retain sensed versus hidden urgency, declared probe schedule and kinetics. Widened queries, between-probe behavior or source history need new comparisons.",
+      "obligations": [
+        "RO-C3-008"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md",
+          "sha256": "250c83c2070b6239186cd99adb32730eff5d2905a56943401c8a03f9ee8aeb13",
+          "startLine": 26,
+          "endLine": 32,
+          "text": "| Candidate | Result | Bounded interpretation |\n|---|---|---|\n| Mediated |Passes admitted witnesses|Existing public source baseline|\n| MeterBehindSensor |Matches every sampled pressure|Normalized stored body level preserves the required dynamics and boundary|\n| IndependentNeed |Fails alias and availability contrasts|Direct urgency from a hidden meter is not experienced pressure|\n| AuthoredReference |Misses kinetic/exposure response|Operating point cannot replace current reserve in this fixture; REG itself is not rejected|\n| CachedEvidence |Matches every sampled pressure|A cell wholly replaced from current evidence adds no behavior at these probes|\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-002",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 184,
+        "endLine": 184,
+        "text": "| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n"
+      },
+      "disposition": "CONTROL RETAINED; GENERAL REPRESENTATION OPEN",
+      "assessment": "Scalar mean/precision remains a comparison representation. LEARN preserves full-point precision for accepted bounds as an approximation; bounded belief is not a covariance or calibrated uncertainty result.",
+      "blockedOrReopen": "Preserve repeated bounds, contradiction, unknown/known0 and numeric family. Correlated reports/posteriors/confidence need qualified alternatives.",
+      "obligations": [
+        "RO-C3-010"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 47,
+          "endLine": 52,
+          "text": "Repeated-bound rejection is demonstrated for the exact fresh-prior CaseD. With an\nestablished mean below the same bound, the Gated candidate can repeatedly accept it:\nthe supplementary six-bound run ends at precision62. This is not universal source\ndeduplication or calibrated censored-likelihood inference. Accepted bounds still\nreceive full point-like precision, the historical approximation. Unknown state and\nknown zero remain different; no confidence-in-correctness interpretation is earned.\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-003",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 185,
+        "endLine": 185,
+        "text": "| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n"
+      },
+      "disposition": "CONTROL RETAINED; SCALING/REDUCTION OPEN",
+      "assessment": "Global row-substochastic graph remains a control, not the universal cognitive backbone. Finite GA graph differences do not prove production scalability or superiority over all local/indexed mechanisms.",
+      "blockedOrReopen": "Before graph reduction retain admitted cue/encoding history, exact receiving scores, query set, memory capacity and horizon; separately measure resources.",
+      "obligations": [
+        "RO-C3-007",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 44,
+          "endLine": 49,
+          "text": "| Encoding law | Focal strength sparse → dense | Dense graph edge mass, scale 100 | First cue score of newest episode sparse → dense |\n|---|---|---|---|\n| Independent | 3/13 → 3/13 | 0 (pruned) | 3/2 → 1 |\n| Historical shared | 1 → 50/53 | 20 | 3/2 → 211/200 |\n| Historical hybrid | 3/13 → 3/13 | 92 | 3/2 → 57/40 |\n| Retired flat | 1 → 1 | 100 | 3/2 → 3/2 |\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-004",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 186,
+        "endLine": 186,
+        "text": "| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n"
+      },
+      "disposition": "CONTROL EXECUTED; NO UNIVERSAL LAW",
+      "assessment": "GA compares Independent, shared, hybrid and retired-flat encoding; winner equality can hide strength/edge/score differences.",
+      "blockedOrReopen": "Keep semantic-footprint intervention and later recall scores. No universal independent-budget law or graph-retention equivalence.",
+      "obligations": [
+        "RO-C3-004",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 51,
+          "endLine": 56,
+          "text": "Sparse graphs are empty. The two newest episodes win in every footprint pair.\nThus exact strengths, associations and scores discriminate models where winner\nmembership does not. Independent focal strength is footprint-invariant here, but\nthe later average over retained episode contents is not. Flat remains the already\nretired negative control; a finite score equality does not rehabilitate it. Neither\nthe independent nor hybrid result establishes universal footprint immunity.\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-005",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 187,
+        "endLine": 187,
+        "text": "| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n"
+      },
+      "disposition": "CONTROL RETAINED; BOUNDED GROUPING COMPARISON",
+      "assessment": "REASON PooledChannel collapses distinct motives/referents in its exact comparison. This is bounded evidence, not identity proof that every PooledChannel specimen is the original historical compiler.",
+      "blockedOrReopen": "Keep original pooled compiler and model identities; exact old-vs-new source provenance and full corpus remain separate from a shared label.",
+      "obligations": [
+        "RO-C3-001",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-006",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 188,
+        "endLine": 188,
+        "text": "| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n"
+      },
+      "disposition": "HISTORICAL CANDIDATE RETAINED",
+      "assessment": "Disposition qualifies separate immutable constitution, plastic adaptation and acquired standing. Historical seven-axis/quadratic personality remains a candidate; no general personality dimension selection follows.",
+      "blockedOrReopen": "Keep identical-evidence/different-constitution and identical-constitution/different-biography interventions; universal fusion and dimensionality remain conditional.",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md",
+          "sha256": "fa7a2524626b034ad7d6d4d60cad332361efd6a20c912c79dfdccc4f7850209b",
+          "startLine": 121,
+          "endLine": 128,
+          "text": "Brief12.12-7 is bounded-qualified for possible persistent adaptation after repeated\nqualified history; calendar-time and mature developmental behavior remain outside the\nprofile. AuditREV61:106 bounded/20 partial/6 blocked clauses;79 verdicts. Whole identity\nand Campaign3 remain incomplete. Corpus0.29.0 still has21 members. Counters1450/0.\nP3-009/010, MEC012..019/022 and EXP011/012 retain their explicit contract/control roles.\nHistorical seven-axis/quadratic personality remains a candidate, not silently retired.\nRO009/017/019/020 preserve wider scope and RO021 still gates final historical exit.\nNo architectural owner decision is pending.\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-007",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 189,
+        "endLine": 189,
+        "text": "| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n"
+      },
+      "disposition": "CANDIDATE; EXACT FORMATION/REVISION CHAIN OPEN",
+      "assessment": "Ledger asks to preserve tests of values derived from repeated Need satisfaction. No exact earned value-derivation fixture is established by this review; later maintained goals or hedonic expectations cannot silently stand in for values.",
+      "blockedOrReopen": "Trace proposed and executed value-formation/revision evidence before adoption, retirement or claiming this historical obligation discharged.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 181,
+          "endLine": 192,
+          "text": "| ID | Historical model | Disposition | Proper use |\n|---|---|---|---|\n| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\n| `CTL-010` | Experienced Reward | `CANDIDATE` | Remains trace-only until a phenomenon requires a character-accessible hedonic signal with its own derivation. |\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-008",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 190,
+        "endLine": 190,
+        "text": "| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n"
+      },
+      "disposition": "BROADER CONTROL RETAINED",
+      "assessment": "Biology makes its18 specified behaviors expressible while explicitly retaining CTL001/008 as broader controls. This does not select acquired Need as the accepted addiction explanation or prove all comparisons against it complete.",
+      "blockedOrReopen": "Keep adaptation, deficit, cue, goals, control and actual consequences distinct; whole-system old-control replacement needs its own matched comparison.",
+      "obligations": [
+        "RO-C3-008",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+          "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01",
+          "startLine": 105,
+          "endLine": 111,
+          "text": "MEC001/003/004/011..020, EXP001..005/008..013 and P3-009..012 retain the explicit\ndispositions in the work order. CTL001 and CTL008 remain broader controls; CTL010 is\nnow instantiated as a bounded sensed hedonic candidate, not universal Reward.\nRO008/009/010/011/012/015/019/020 retain wider scope; none closes. RO021 historical\nreconciliation remains mandatory. No Brief clause is promoted by aggregation alone:\nauditREV51 preserves101 bounded/22 partial/9 blocked,132 clauses/15 families and\ncorpus0.29.0's21 members/18 bounded/3 prior.71 named verdicts. Campaign3 NOT EXIT-READY.\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-009",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 191,
+        "endLine": 191,
+        "text": "| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\n"
+      },
+      "disposition": "CONTROL RETAINED; NOT CANONICAL",
+      "assessment": "Universal candidates/additive scoring remains historical control scope. REASON demonstrates key/role separation, but is not by itself a complete universal-list-versus-constructed-options assay.",
+      "blockedOrReopen": "Need explicit option-generation/availability and receiver comparisons before reducing construction or claiming additive scoring equivalent. Preserve original list/control.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 181,
+          "endLine": 192,
+          "text": "| ID | Historical model | Disposition | Proper use |\n|---|---|---|---|\n| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\n| `CTL-010` | Experienced Reward | `CANDIDATE` | Remains trace-only until a phenomenon requires a character-accessible hedonic signal with its own derivation. |\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        }
+      ]
+    },
+    {
+      "id": "CTL-010",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 192,
+        "endLine": 192,
+        "text": "| `CTL-010` | Experienced Reward | `CANDIDATE` | Remains trace-only until a phenomenon requires a character-accessible hedonic signal with its own derivation. |\n"
+      },
+      "disposition": "TRACE-ONLY ROUTING SUPERSEDED IN BOUNDED BIOLOGY",
+      "assessment": "The later biology report explicitly instantiates CTL010 as a bounded sensed hedonic candidate. Current/consequence experience teaches pleasure, relief and harm; this supersedes a blanket current trace-only reading, not the original historical record.",
+      "blockedOrReopen": "Keep physical activation, experienced pleasure/distress and learned valuation distinct; no universal Reward scalar, biological fidelity or law necessity implied.",
+      "obligations": [
+        "RO-C3-008",
+        "RO-C3-010",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+          "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01",
+          "startLine": 105,
+          "endLine": 111,
+          "text": "MEC001/003/004/011..020, EXP001..005/008..013 and P3-009..012 retain the explicit\ndispositions in the work order. CTL001 and CTL008 remain broader controls; CTL010 is\nnow instantiated as a bounded sensed hedonic candidate, not universal Reward.\nRO008/009/010/011/012/015/019/020 retain wider scope; none closes. RO021 historical\nreconciliation remains mandatory. No Brief clause is promoted by aggregation alone:\nauditREV51 preserves101 bounded/22 partial/9 blocked,132 clauses/15 families and\ncorpus0.29.0's21 members/18 bounded/3 prior.71 named verdicts. Campaign3 NOT EXIT-READY.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+          "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01",
+          "startLine": 11,
+          "endLine": 19,
+          "text": "One continuously evolving subject has physical resources, sleep/circadian state,\ndamage, intoxicant burden, reward/stress/arousal regulators, exposure-keyed tolerance/\nsensitization, transient satiation and acquired regulatory targets. Chosen execution\nchanges this body. Current and consequence interoception feed separate experienced\npleasure, withdrawal relief, restorative benefit and harm learning. Learned expectation\nand cue history interact with maintained goals and physiology-sensitive inhibition;\nindependent reasons use the retained dice grammar to choose the next actual action.\nAppraised threat can produce a named delayed stress impulse, which affects later\ninteroception/control. Body truth never becomes a character belief by inspection.\n"
+        }
+      ]
+    }
+  ],
+  "freshExecutions": 0,
+  "newVerdict": false,
+  "limits": [
+    "No control retired or obligation closed. One existing table subdivided, not10 independently extracted paragraphs.",
+    "CTL010 has a scoped later instantiation, not a new verdict or universal hedonic ontology.",
+    "Exact CTL007 value-formation/revision chain and CTL009 full option-list comparison remain open.",
+    "No whole-universe/source acceptance, independent scientific completeness or Campaign3 exit claim."
+  ]
+}

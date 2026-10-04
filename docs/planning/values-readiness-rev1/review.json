@@ -1,0 +1,59 @@
+{
+  "status": "VALUES OWNER READINESS; NO QUALIFICATION",
+  "evidence": [
+    {
+      "path": "src/campaign2/firstModelCandidate.ts",
+      "sha256": "beedc840995c8d4ae3332aa55416aa83c39df1227bc10234e759fd0bac7378f3",
+      "firstLine": 31,
+      "lastLine": 35,
+      "text": "    entry(id(1021,'validator/character-qualification'),'registry/domain-validator',r('SemanticKindRoleValidatorDefinition',{RequiredSemanticKind:kind}),'governed-domain-validator/0.1-candidate')];\n  const names=['leaf/tolerance','leaf/sensitization','leaf/regulatory-displacement','leaf/accumulated-load','leaf/procedural-competence'];\n  const families=['belief-expectation','episodic-memory','associations','values','habits','person-model','relationships','identity-disposition'].map(name=>[id(1031,name),r('Campaign2StateFamilyDefinition',{Route:id(1026,'route/character-learning'),Storage:r('Campaign2Storage',{VariantTag:unsigned(1)})})] as [CanonicalValue,CanonicalValue]);\n  for(const [name,root,indexes] of [['regulatory-adaptation',302,[0,1,2,3]],['procedural-skill',303,[4]]] as const)families.push([id(1031,name),r('Campaign2StateFamilyDefinition',{Route:id(1026,'route/automatic-adaptation'),Storage:r('Campaign2Storage',{VariantTag:unsigned(2),RootStateTypeId:unsigned(root),LeafFields:map(indexes.map(i=>[id(1032,names[i]),unsigned(i===4?1:i+1)]))})})]);\n  entries.push(entry(id(1027,'definition/campaign2-state-families'),'registry/campaign2-state-family',r('Campaign2StateFamilyRegistry',{Families:map(families)})));\n"
+    },
+    {
+      "path": "docs/formal/CAMPAIGN2_PERMANENT_ALLOCATION.md",
+      "sha256": "02d59271c7bbf0c4b12079a450dcc268ff49be4ac144c08f283b9331c747a060",
+      "firstLine": 241,
+      "lastLine": 244,
+      "text": "| 275 | 1 | FrozenSemanticExperienceProducer | 1, 2, 3, 4 | 5 |\n| 275 | 2 | RegisteredTransitionProducer | 1, 5 | 2, 3, 4 |\n| 286 | 1 | Unmaterialized | 1 | 2, 3 |\n| 286 | 2 | Materialized | 1, 2, 3 | none |\n"
+    },
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e",
+      "firstLine": 198,
+      "lastLine": 205,
+      "text": "\r\n        subgraph Learned[PLASTIC LEARNED STATE]\r\n            Disp[Learned Dispositional Adaptation]\r\n            Values[Values / Durable Preferences]\r\n            Self[Self-concept / Consolidated Identity]\r\n            Habits[Habits / Learned Action Tendencies]\r\n            Skill[Skill / Procedural Competence]\r\n        end\r\n"
+    },
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e",
+      "firstLine": 389,
+      "lastLine": 407,
+      "text": "    OutcomeEval --> LearningEvidence\r\n    SemExp --> LearningEvidence\r\n    Reg -. exposure / recovery history .-> AdaptInput\r\n\r\n    LearningEvidence --> Beliefs\r\n    LearningEvidence --> Expect\r\n    LearningEvidence --> Episodic\r\n    LearningEvidence --> Person\r\n    LearningEvidence --> Consolidation\r\n    IdentityEvidence --> Consolidation\r\n    AdaptInput --> AdaptTransition\r\n\r\n    Consolidation --> Assoc\r\n    Consolidation --> Values\r\n    Consolidation --> Relationships\r\n    Consolidation --> Habits\r\n    Consolidation --> Self\r\n    Consolidation --> Disp\r\n    AdaptTransition --> RegAdapt\r\n"
+    },
+    {
+      "path": "docs/formal/DISPOSITIONAL_ADAPTATION_CONTRACT.md",
+      "sha256": "3db3edb630a2c01a99a7cee575912078750bfa8d17a1be924d20e8ae725eaaca",
+      "firstLine": 8,
+      "lastLine": 14,
+      "text": "## Inspection and inherited controls\r\nADAPT adaptation-input/0.31-candidate admits only regulatory/procedural targets and\r\nmust not be broadened in place. Its immutable-baseline/separate-update/atomic staging\r\nprinciples remain CONTRACT controls; its rule interpreter is not used for unsupported\r\npsychological targets. P3-009/010 remain CONTRACT/CORPUS. The historical seven-axis\r\nconstitution and quadratic projection are CANDIDATE controls for richer projections,\r\nnot required for this one declared task-direction scalar. No reference import.\r\n"
+    },
+    {
+      "path": "CharacterLab — Reference Architecture Build & Research Campaign Plan.md",
+      "sha256": "8d933901c9d5747e080833d5b256c4211ee4e6f4be2887c22e60b33e0ec48edb",
+      "firstLine": 136,
+      "lastLine": 138,
+      "text": "### 2A — Specify the entire thin topology\n\nBefore implementation, create a versioned seam contract for every canonical edge needed by one traversable event. Thin or identity-like transformations are allowed; unexplained transformations are not. Register sole mutation authority for every persistent target, including Values and regulatory adaptation.\n"
+    }
+  ],
+  "finding": "Original Campaign2 values family is explicitly Unmaterialized; no root or leaves. This registration is not a Values owner. No accepted Values-specific contract or executable formation/revision receipt located in the current scoped search.",
+  "limits": [
+    "No global absence claim across every revision/name.",
+    "Generic ownership substrate is available but does not implement psychological consolidation.",
+    "Existing ADAPT regulatory/procedural interpreter must not silently acquire Values authority."
+  ],
+  "obligations": [
+    "RO-C3-010",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "status": "EIGHT HISTORICAL LIMITATIONS REVIEWED; CONDITIONAL DEBT PRESERVED",
+  "manifestSha256": "e947295eb33194087559f70d42d34023c9f9fa3edfc878807e8992ab605c4303",
+  "items": [
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 215,
+        "endLine": 215,
+        "text": "- Analytical progression based on separately floored intervals is partition-sensitive unless remainder is retained.\n"
+      },
+      "disposition": "SCOPED RESOLUTION",
+      "assessment": "Exact linear anchors and retained remainder resolve incidental partition sensitivity in substrate/0.2-candidate.",
+      "blockedClaim": "No universal nonlinear/time-representation claim.",
+      "reopenCondition": "Changed range, rounding, anchors or nonlinear dynamics requires renewed contract/vector evidence.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 429,
+          "endLine": 435,
+          "text": "### `TIME-001` and `MATH-001`\n\n- **Decision:** accept checked integer `SimInstant`, exact linear analytical anchors, retained bounded remainder, non-mutating reads, and materialize→mutate→re-anchor semantic transitions.\n- **Alternatives considered:** incidental re-anchoring with truncation and hidden microticks; both are rejected because they create partition-sensitive state.\n- **Domain/failure:** declared signed rates/scales and bounded values only; negative duration and representation overflow fail without mutation.\n- **Proof:** `CV-TIME-001..006`, positive/negative partition equivalence, truncation negative control, rational oracle, save/load, and transaction rollback.\n- **Reopen:** time unit/range, rounding/remainder, re-anchor order, parameter identity, or nonlinear algorithm changes.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 216,
+        "endLine": 216,
+        "text": "- Accepted censored bounds receive full point-like precision in the historical rule; no experiment yet required a richer posterior, but the approximation is real.\n"
+      },
+      "disposition": "CONDITIONAL LIMIT RETAINED",
+      "assessment": "LEARN rejects compatible/zero-information bounds in tested cases; an established below-bound prior still reaches precision62 after six repeated bounds. Full point-like precision for accepted bounds remains an approximation.",
+      "blockedClaim": "No calibrated censored likelihood, universal deduplication or posterior confidence claim.",
+      "reopenCondition": "Before richer censored inference or confidence claims, compare precision laws with repetition, conflicting priors and declared evidence dependence.",
+      "obligations": [
+        "RO-C3-010"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 45,
+          "endLine": 63,
+          "text": "## Limits and durable finding\n\nRepeated-bound rejection is demonstrated for the exact fresh-prior CaseD. With an\nestablished mean below the same bound, the Gated candidate can repeatedly accept it:\nthe supplementary six-bound run ends at precision62. This is not universal source\ndeduplication or calibrated censored-likelihood inference. Accepted bounds still\nreceive full point-like precision, the historical approximation. Unknown state and\nknown zero remain different; no confidence-in-correctness interpretation is earned.\n\nUpper bounds, decay, richer posterior distributions, correlated sources, calibrated\nuncertainty, surprise consumers, ordinary interoception and broader causal learning\nremain RO-C3-010. This experiment qualifies the lower-bound phenomenon, not all\nBrief12.4 or the exact broader EPI composed saturation experiment.\n\nRETAINED: permitted classification/measurement, informativeness and precision credit\nmust remain separately accountable; compatible or zero-information bounds cannot\nmanufacture precision in this tested domain. PointOnly is a safe but insufficient\nalternative; UnconditionalPrecision remains a retired negative control. UNRESOLVED:\ngeneral censored update/precision and numeric laws. No architecture reduction.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 217,
+        "endLine": 217,
+        "text": "- Historical modifier calibration made one `+1` step slightly stronger than an entire base-die bracket transition.\n"
+      },
+      "disposition": "CONDITIONAL LIMIT RETAINED",
+      "assessment": "REASON retains modifier/bracket calibration as unresolved; exact arithmetic and observed candidate behavior do not select a psychological exchange rate.",
+      "blockedClaim": "No universal modifier-versus-base-die calibration or calibrated identity growth law.",
+      "reopenCondition": "Any general calibration or reduction claim needs matched distribution/behavior comparisons across brackets and retained controls.",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 51,
+          "endLine": 58,
+          "text": "remain unchanged. Pairwise is a cheaper serious hypothesis that fails this exact\ncollective-redundancy requirement. Pooled/per-fact/identity-die alternatives remain\nexplicit failing controls, not discarded provenance.\n\n## Evidence and preservation\n\nModel-rev3 contains5 models/20 image files. REASON_PUBLIC_EXPERIMENT_PLAN_REV3.json\nwas frozen before execution. REASON_PUBLIC_EXPERIMENT_REV3.json records115 public\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 103,
+          "endLine": 108,
+          "text": "Aggregate weighted Jaccard remains a candidate: larger-union subset residuals,\narbitrary renaming/ties, general cross-role normalization and new source families\nremain open. Ordinary input-array permutation is stable; no arbitrary identifier\nrenaming invariance is claimed. Direction is resolved after signed consolidation\nin this profile; direction-as-identity alternatives and broad modifier/bracket\ncalibration remain unresolved. No reduction or universal reason law is selected.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 218,
+        "endLine": 218,
+        "text": "- Memory-based referent attribution was tested over participants; a salient causal object that is not a participant remains unsupported.\n"
+      },
+      "disposition": "CONDITIONAL LIMIT RETAINED",
+      "assessment": "REASON explicitly excludes a solution to nonparticipant referents. Relationship attribution revises an admitted dyadic causal proposition; it does not establish salience-weighted memory credit to an uninvolved causal object.",
+      "blockedClaim": "No general nonparticipant memory attribution claim from dyadic explanation or authored referent mappings.",
+      "reopenCondition": "Require a perceived salient causal nonparticipant, permitted identity/role evidence, actual attribution/retention and participant controls before claiming extension.",
+      "obligations": [
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 96,
+          "endLine": 101,
+          "text": "The symbolic task/panel mapping is an explicitly controlled identity-establishing\nsource. It is not learned motive recognition, general causal attribution, ordinary\nlanguage understanding or a solution to nonparticipant referents. Context modulation\nis a separately traced bounded modifier here, not a universal contextual mechanism.\nThis qualifies one compilation plus the necessary acquired standing history, not\nthe full future behavior of arbitrary agents or all-domain cognition.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md",
+          "sha256": "f8700dccb45e7c89943e11e9673e509d0ac4ab3bdabfdbf3241ea5694b2ac7ac",
+          "startLine": 13,
+          "endLine": 25,
+          "text": "\nA later observer-admitted explanation can revise current appraisal of an earlier\nharmful dyadic event without rewriting that event or its earlier judgment. Current\nperson willingness is separately represented and independently manipulable.\nThis is a bounded report-supported causal proposition: whether a target deliberately\nwithheld assistance during a named perceived incident. It does not discover an\nalternative cause, establish innocence or implement general forgiveness.\n\nSeparate observer/target owners retain own-participant harm history and person\nevidence. The latter journal preserves linked incident-cause claims separately from\ncurrent willingness claims. A controlled perceived incident token supplies the link.\nAt40, the current appraisal derives latest own harm, attributed deliberate withholding,\ncurrent willingness and caution=harm*cause. Unknown remains distinct from known zero.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 219,
+        "endLine": 219,
+        "text": "- Historical `SemanticExperience` correctly excluded `Overflow` but still embedded full `EffectProvenance`, authoritative `Applied`, and truth-side concept identities; copying that type unchanged would violate the stricter North-Star truth/evidence, recognition, and interoception boundaries.\n"
+      },
+      "disposition": "PROHIBITED PORT PATTERN RETAINED",
+      "assessment": "Observation resolves a bounded safe projection with separate missingness. It does not authorize copying old full truth-side provenance into character state.",
+      "blockedClaim": "No wholesale historical SemanticExperience port, hidden Overflow or full truth identity admission.",
+      "reopenCondition": "Any projection/channel/recognition expansion must requalify permitted reads and forbidden-truth noninterference.",
+      "obligations": [
+        "RO-C3-007",
+        "RO-C3-010",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 409,
+          "endLine": 415,
+          "text": "### `MATH-006`\n\n- **Decision:** accept registered bounded state-change channels that compile exact permitted observation intervals from `Before`, `After`, known bounds, and polarity; missingness is a distinct sum type, and only visible provenance slots cross into thin `SemanticExperience`.\n- **Alternatives considered:** `OverflowLeak`, truth-side saturation classification, full provenance copy, missing-as-zero, and always-point measurement. Each is rejected by an exact structural divergence or closure violation.\n- **Domain/failure:** exact bounded scalar changes, deterministic registered missingness, known channel bounds, and point/lower/upper interval evidence. Invalid truth/channel/closure data aborts the whole instant; noisy sensors, uncertain bounds, and learning updates remain outside this contract.\n- **Proof:** `CV-OBS-001..006`, `CV-EPI-001..002`, the paired hidden-Overflow timeline through thin `SemanticExperience` and an immediate consumer, forbidden-field closure, named first divergence, and transactional rollback.\n- **Reopen:** measurement mode, interval vocabulary, channel knowledge, polarity, missingness, visibility/role projection, precision/unit, timing, safe-reference, or hidden-truth influence changes.\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 207,
+          "endLine": 209,
+          "text": "| `RET-010` | Commitment represented as a Core Need | `RETIRED` | Confuses an obligation with a recurring appetite and loses independent commitment identity. |\n| `RET-011` | Permanent/immortal commitment pressure | `RETIRED` | Active pressure must follow lifecycle; permanent pressure can lock arbitration into Auto. |\n| `RET-012` | Named acquired trait as an independent simulation bonus | `RETIRED` / prohibited | Traits are derived descriptions of identity evidence; matching underlying identity may modify reasons once. |\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 220,
+        "endLine": 220,
+        "text": "- `ReasonNucleusKey` includes direction even though the implementation groups the option/motive/referent triple and resolves one net direction afterward; the cleaner type boundary remains unresolved.\n"
+      },
+      "disposition": "CONDITIONAL LIMIT RETAINED",
+      "assessment": "Joined REASON resolves signed direction after consolidation; it explicitly leaves direction-as-identity alternatives unresolved. A lawful bounded choice is not a comparative necessity verdict.",
+      "blockedClaim": "No universal direction-key reduction or identity equivalence.",
+      "reopenCondition": "Compare identity/grouping alternatives under opposite contributions, cancellation, changing signs and retained historical meaning before retirement.",
+      "obligations": [
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 103,
+          "endLine": 108,
+          "text": "Aggregate weighted Jaccard remains a candidate: larger-union subset residuals,\narbitrary renaming/ties, general cross-role normalization and new source families\nremain open. Ordinary input-array permutation is stable; no arbitrary identifier\nrenaming invariance is claimed. Direction is resolved after signed consolidation\nin this profile; direction-as-identity alternatives and broad modifier/bracket\ncalibration remain unresolved. No reduction or universal reason law is selected.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 221,
+        "endLine": 221,
+        "text": "- The historical association and activation mechanisms were validated on small research cases, not Vivarium-scale storage and retrieval.\n"
+      },
+      "disposition": "CONDITIONAL LIMIT RETAINED",
+      "assessment": "Small-case graph/activation evidence is preserved. The reviewed GA qualification closes its declared finite profile, not Vivarium-scale throughput/storage or unrestricted long-horizon equivalence.",
+      "blockedClaim": "No production-scale complexity, resource ceiling or arbitrary graph/horizon claim.",
+      "reopenCondition": "Before scale deployment or graph reduction, declare workload/query/horizon/memory bounds and compare exact receiving outputs plus resources.",
+      "obligations": [
+        "RO-C3-007",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 221,
+          "endLine": 221,
+          "text": "- The historical association and activation mechanisms were validated on small research cases, not Vivarium-scale storage and retrieval.\n"
+        },
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 111,
+          "endLine": 122,
+          "text": "`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.\nPHEN-ATTN-001 advances to 1.1.0 with its requirements preserved; the other twenty\nmembers are byte-preserved in identity/version/requirement section. The actual runs\nretain their declared corpus/0.28.0 ExperimentIdentity. The promotion receipt names\nthe successor identity and unchanged evidence provenance rather than inventing a rerun.\n\nThe canonical encoder's large-value fix removes JavaScript argument-count overflow\nwithout changing wire bytes. Extracted inherited arithmetic helpers preserve old\nproducer semantics. Frozen Campaign 2/ATTN/EMB fixtures and `reference/` remain in\ntheir original scope. No reference module is imported into active source.\n\n## North Star transfer and limits\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 222,
+        "endLine": 222,
+        "text": "- Phase 3 formulas, seven-dimensional personality, values, acquired Needs, and addiction mechanisms were planned or drafted, not empirically earned.\n"
+      },
+      "disposition": "HISTORICAL PROPOSAL STATUS; SCOPED SUCCESSORS",
+      "assessment": "The statement describes pre-refoundation proposals. Later biology/disposition qualify their named bounded contracts, not all old Phase3 formulas or a seven-dimensional ontology. Preserve old hypotheses and current evidence separately.",
+      "blockedClaim": "Neither blanket never-implemented claim today nor wholesale acceptance of old proposed mechanisms.",
+      "reopenCondition": "Each claim must cite its current contract/qualification and scope; remaining formula/control comparisons stay conditional.",
+      "obligations": [
+        "RO-C3-008",
+        "RO-C3-009",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+          "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01",
+          "startLine": 1,
+          "endLine": 16,
+          "text": "# Continuous functional biological system — 2026-09-26\n\n**QUALIFIED / LOCAL DISPOSITION. Stage E: VER-C3-BIOLOGY-001.**\nThe18 behaviors in BIOLOGICAL_SYSTEM_WORK_ORDER.md are expressible under\n`biological-integration/0.1-candidate`, with `biological-dynamics/0.1-candidate` and\n`biological-choice/0.1-candidate`. Counters **1400 / 0**. No permanent allocation,\nstate retirement, reference import or architecture-owner ruling.\n\n## What is now connected\n\nOne continuously evolving subject has physical resources, sleep/circadian state,\ndamage, intoxicant burden, reward/stress/arousal regulators, exposure-keyed tolerance/\nsensitization, transient satiation and acquired regulatory targets. Chosen execution\nchanges this body. Current and consequence interoception feed separate experienced\npleasure, withdrawal relief, restorative benefit and harm learning. Learned expectation\nand cue history interact with maintained goals and physiology-sensitive inhibition;\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md",
+          "sha256": "fa7a2524626b034ad7d6d4d60cad332361efd6a20c912c79dfdccc4f7850209b",
+          "startLine": 1,
+          "endLine": 20,
+          "text": "# Bounded dispositional adaptation qualification — 2026-09-27\n\n**COMPLETE / QUALIFIED — VER-C3-DISPOSITION-001. LOCAL DISPOSITION.**\nStages A–E; disposition-adaptation/0.1-candidate. This is composed component\nqualification, not native runtime admission or a replacement for existing ADAPT.\n\n| Counter | Value |\n|---|---|\n| Highest allocated record type |1450|\n| Allocated since last verdict/corpus member |0; no new allocation|\n| Canonical candidate models / runs |9 /15|\n| Complete component prefixes |285:270 advancing /15 terminal|\n| Affected / reference tests |35 (8 new,27 inherited) /328; build passed|\n\n## What now works\nRepeated authenticated biography can change a separate plastic contributor to\nfuture effective disposition while the original constitutional baseline remains\nunchanged. This implements North Star8 and Architecture15.3–15.5 in one declared\ntask-direction channel. It does not relabel identity standing or represented belief\nas adaptation. Neither one isolated choice nor a trait label writes constitution.\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 188,
+          "endLine": 190,
+          "text": "| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n"
+        }
+      ]
+    }
+  ],
+  "newVerdict": false,
+  "freshExecutions": 0,
+  "limits": [
+    "Source-located list subdivision, not eight additional independently extracted paragraphs.",
+    "Later evidence is scoped and linked, not a fresh experiment or full independent proof-chain audit.",
+    "No claim that every newer document was searched or that absence of a found closure proves global absence.",
+    "No original source, candidate or failed cohort rewritten; no obligation closed.",
+    "Canonical-universe adequacy, remaining occurrences, five citation issues, freshness and final corpus/family/native-scope gates remain OPEN."
+  ]
+}

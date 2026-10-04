@@ -1,0 +1,151 @@
+{
+  "status": "HQ-001 PARTIALLY DISCHARGED; MATERIAL SCOPE GAPS RETAINED",
+  "queueSource": {
+    "path": "docs/planning/campaign3-history-queue-rev1/review.json",
+    "sha256": "b7ebbac1a87a83cefaec86b12f97e5721b7f2d46821f379b4dc9e09db4f05f24"
+  },
+  "sourceManifestSha256": "1255c6701ebbfa0be033e60d78c919152e3e714fd47838e8a54111cdf755e295",
+  "testsSha256": "cbf59803cf5d5bae3f4af7721a3ca2ef516fc9b51e9b6d518c8e055df029700a",
+  "freshFiles": 5,
+  "freshTests": 29,
+  "claims": [
+    {
+      "claim": "Reliable satisfier / EXP001",
+      "status": "LEARNING AND CONTRADICTION CHAIN VERIFIED; PREFERENCE LINK PARTIAL",
+      "evidence": [
+        {
+          "file": "reference/src/test/determinism.test.ts",
+          "sha256": "53777250d9299bcfa1469c01b3fae6b306664c568b8bf791c9c6e8681dec0edd",
+          "passedAssertions": [
+            "Determinism contract — Brief §3.1 repeated autonomous cycles from identical (M, S0, I, R) produce identical traces",
+            "Determinism contract — Brief §3.1 a different seed can (and, over enough draws, generally does) change the outcome",
+            "Brief §28 primary experiment: learned satisfaction repeated Connection-satisfying Experiences with Glen increase mu toward the effect magnitude and raise confidence",
+            "Brief §29 paired counterfactual: Glen vs. Priya identical setup, different subject, produces traceable divergence in learned expectation"
+          ]
+        },
+        {
+          "file": "reference/src/test/expectation.test.ts",
+          "sha256": "9c6553d08c5a3ddd5d959f687f1b67a4eee49a30c69f961b09d6fabe783c4fba",
+          "passedAssertions": [
+            "NeedExpectation update — Brief §12 / §32 proof obligations prediction-error equivalence: mu' = mu + alpha*(r - mu)",
+            "NeedExpectation update — Brief §12 / §32 proof obligations confidence stays in [0, 1) for any finite non-negative precision",
+            "NeedExpectation update — Brief §12 / §32 proof obligations confidence increases monotonically with accumulated precision",
+            "NeedExpectation update — Brief §12 / §32 proof obligations a highly reinforced expectation resists a single contradictory observation more than a fresh one",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'point' evidenceKind (the default) is byte-for-byte identical to the pre-2.5 update",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'lower_bound' evidence below current mu is REJECTED: mu never decreases, and (Correction 2) tau does NOT grow either",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'lower_bound' evidence above current mu is ACCEPTED exactly like a point observation",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'upper_bound' evidence above current mu is REJECTED (symmetric case): mu never increases",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'upper_bound' evidence below current mu is ACCEPTED exactly like a point observation",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations (Correction 2) a censored observation exactly equal to the current mu IS classified as a rejection — uninformative, not merely a no-op"
+          ]
+        },
+        {
+          "file": "reference/src/test/choice.test.ts",
+          "sha256": "ffd88169727c865da4147c751a97932d971a14c4faefccdd2f0ed138a2d432b4",
+          "passedAssertions": [
+            "choice distribution and selection — Brief §24 probabilities are exactly non-negative and sum to exactly 1",
+            "choice distribution and selection — Brief §24 orders the distribution by CanonicalActionKey regardless of input order",
+            "choice distribution and selection — Brief §24 a higher score yields a strictly higher probability",
+            "choice distribution and selection — Brief §24 selectAction is deterministic and reproducible for a fixed address",
+            "choice distribution and selection — Brief §24 selectAction always returns a candidate actually in the distribution"
+          ]
+        }
+      ],
+      "source": {
+        "path": "reference/src/experiments/learnedSatisfaction.ts",
+        "sha256": "813524df377204ebab3a9e907bf2cfb67f7059778d75a24f0d5f804024bd0013",
+        "startLine": 1,
+        "endLine": 45,
+        "text": "/**\n * Brief §28 primary Phase-1 experiment: \"Mina repeatedly experiences Glen\n * satisfying Connection.\" Runs N forced (scripted) Experiences of one\n * Action and returns the full per-step trace so the UI can chart μ, τ,\n * confidence, and Need level over time.\n */\n\nimport { CanonicalActionKey, ConceptKey } from '../kernel/canonical';\nimport { CharacterState } from '../model/character';\nimport { ActionDef } from '../model/actions';\nimport { WorldOutcomeTable } from '../model/outcome';\nimport { CycleParams, CycleResult, runScriptedExperience } from '../model/cycle';\nimport { EventClock } from '../kernel/event';\n\nexport interface ExperimentStep {\n  readonly index: number;\n  readonly result: CycleResult;\n}\n\nexport function runLearnedSatisfactionExperiment(\n  actor: ConceptKey,\n  initialState: CharacterState,\n  action: ActionDef,\n  outcomeTable: WorldOutcomeTable,\n  params: CycleParams,\n  seed: string,\n  steps: number,\n  clock: EventClock = new EventClock(),\n): { finalState: CharacterState; steps: ExperimentStep[] } {\n  let state = initialState;\n  const history: ExperimentStep[] = [];\n  for (let i = 0; i < steps; i++) {\n    clock.advance(1);\n    const result = runScriptedExperience(actor, state, action, outcomeTable, params, clock, seed);\n    state = result.nextState;\n    history.push({ index: i, result });\n  }\n  return { finalState: state, steps: history };\n}\n"
+      },
+      "finding": "Forced repeated experiences increase learned expectation/confidence; reinforced expectation resists one contrary observation. Generic higher-score probability test is separate. The learned-satisfaction test does not itself assert an integrated preference shift or autonomous action.",
+      "remaining": "Locate exact integrated preference evidence or explicitly narrow the historical claim; do not infer it from generic score monotonicity."
+    },
+    {
+      "claim": "Capacity / EXP002",
+      "status": "SWEEP CHAIN VERIFIED; TIMELINE COUPLING LIMIT FOUND",
+      "evidence": [
+        {
+          "file": "reference/src/test/phase2_5Saturation.test.ts",
+          "sha256": "2407b20053e62ccfc8d79bd96d211fd5038e7eafc335a01285e4a1812e28b05b",
+          "passedAssertions": [
+            "Brief §21 Phase 2.5a experiment: Saturated Satisfaction sweep naive mu shrinks toward 0 as the starting Need Level approaches the ceiling",
+            "Brief §21 Phase 2.5a experiment: Saturated Satisfaction sweep a single fresh-prior observation makes censoring a mu-no-op at every starting Level, but (Correction 2) NOT a confidence-no-op at total saturation",
+            "Brief §22 Phase 2.5a experiment: Saturated Satisfaction counterfactual naive mu diverges between a low-exposure and a mostly-near-saturation timeline; censored mu diverges less"
+          ]
+        }
+      ],
+      "source": {
+        "path": "reference/src/experiments/saturatedSatisfaction.ts",
+        "sha256": "8342ba8606ff74007f4666bff5a7b1af07c5a5c725069db7fc0124324c4dbfef",
+        "startLine": 90,
+        "endLine": 113,
+        "text": "  const modes: readonly LearningMode[] = ['naive', 'censored'];\n\n  for (const needLevelBefore of needLevelsBefore) {\n    for (const learningMode of modes) {\n      // Each (level, mode) combination is an independent single-shot probe\n      // starting fresh from initialState — deliberately NOT a running\n      // sequence, so the sweep measures \"what is learned from one\n      // Experience at this starting Level,\" isolated from any earlier\n      // repetition's own learning (that cross-repetition question is what\n      // saturationCounterfactual.ts answers instead).\n      const startState = withNeedLevel(initialState, focusNeed, needLevelBefore);\n      // deltaT=0 for this probe: `needLevelBefore` is deliberately the exact\n      // Level the outcome effect is applied against. A nonzero deltaT would\n      // let the Need's own passive decay (needs.ts::advanceNeedLevel, step 1\n      // of the cycle) shift the Level before the effect ever lands, which\n      // would confound \"how saturated is this starting point\" with \"how\n      // much passive decay happened first\" — a second variable this sweep\n      // is not designed to study (see saturationCounterfactual.ts's own\n      // isolation of exactly one variable, for the same reason).\n      const modeParams: CycleParams = { ...params, deltaT: Rational.ZERO, saturation: { ...params.saturation, learningMode } };\n      const clock = new EventClock();\n      clock.advance(1);\n      const result = runScriptedExperience(actor, startState, satisfierAction, satisfierOutcome, modeParams, clock, seed);\n\n"
+      },
+      "additionalSource": {
+        "path": "reference/src/experiments/saturationCounterfactual.ts",
+        "sha256": "94e42726214a6cd79c53483bcfce5988a9be243068b4cdb9f2101b74f37945fc",
+        "startLine": 99,
+        "endLine": 110,
+        "text": "\n  for (let i = 0; i < needLevelsBefore.length; i++) {\n    const needLevelBefore = needLevelsBefore[i];\n    clock.advance(1);\n    state = withNeedLevel(state, focusNeed, needLevelBefore);\n    // Seed is addressed by (timeline, repetition index) only, NOT by\n    // learningMode: naive and censored must replay the exact same random\n    // outcome-noise draws at each repetition, per Brief §29's paired-\n    // counterfactual methodology (Phase 0-2 already establishes this\n    // pattern) — otherwise a divergence in learned mu could be an artifact\n    // of different noise draws rather than of the learning rule itself.\n    const result = runScriptedExperience(actor, state, satisfierAction, satisfierOutcome, modeParams, clock, `${seed}:${timeline}:${i}`);\n"
+      },
+      "finding": "Single-shot sweep resets state/clock and uses same seed with deltaT0 across levels and learning modes. Multi-step run uses seed:timeline:index: modes are paired within each timeline, but A/B use different addressed noise. Same authored magnitude/distribution is not a proved identical realized-effect sequence. Censoring narrows but does not eliminate divergence.",
+      "remaining": "Do not claim the multi-step A/B comparison holds every realized effect fixed. A stronger claim needs an explicitly coupled successor, preserving original results. Existing sweep remains its own controlled case."
+    },
+    {
+      "claim": "Upper-bound avoidance / EXP005",
+      "status": "BOUNDED HISTORICAL PROBABILITY AND MEAN FIXTURE VERIFIED",
+      "evidence": [
+        {
+          "file": "reference/src/test/phase2Experiments.test.ts",
+          "sha256": "d4fcf252480a45e877f8a48a71b07fdb7662a929d1c2aa1d0e4237cdcd4942ff",
+          "passedAssertions": [
+            "Brief §28 Phase-2 experiment: Habit [RETIRED-architecture control] under legacyCycleParams() (flat co-activation weight 1.0), a repeatedly co-activated Context->Action edge grows toward, and converges to exactly, an even share of the row budget",
+            "Brief §28 Phase-2 experiment: Habit [Phase 2.5e canonical re-baseline] under the current default (derived salience), the same repeated Context->Action co-Experience still makes the Action increasingly, and durably, accessible from Context alone — the 1/2 figure above was an artifact of flat tagging, not the finding itself",
+            "Brief §28–29 Phase-2 experiment: Substitution (negative result) Priya's accessibility is bit-for-bit identical whether or not Glen is available — accessibility never sees world flags",
+            "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) Pr(a repeatedly punishing action) declines monotonically while the Need it punishes stays off the floor",
+            "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) [RETIRED-architecture control] under legacyCycleParams() (naive learning), extending well past the clean regime reproduces the ceiling-saturation finding at the opposite (floor) boundary",
+            "Brief §27/§28 Phase-2 experiment: Avoidance (derived from Phase 1 alone) [Phase 2.5e canonical re-baseline] under the current default (censored learning), the same floor-saturated extension no longer corrupts mu — it stays pinned at the true effect, exactly the protection Phase 2.5a's correction was built to provide",
+            "Brief §17 Phase-2 experiment: Memory accessibility demonstrates recency, frequency/reinforcement, and decay against the exact formulas"
+          ]
+        },
+        {
+          "file": "reference/src/test/expectation.test.ts",
+          "sha256": "9c6553d08c5a3ddd5d959f687f1b67a4eee49a30c69f961b09d6fabe783c4fba",
+          "passedAssertions": [
+            "NeedExpectation update — Brief §12 / §32 proof obligations prediction-error equivalence: mu' = mu + alpha*(r - mu)",
+            "NeedExpectation update — Brief §12 / §32 proof obligations confidence stays in [0, 1) for any finite non-negative precision",
+            "NeedExpectation update — Brief §12 / §32 proof obligations confidence increases monotonically with accumulated precision",
+            "NeedExpectation update — Brief §12 / §32 proof obligations a highly reinforced expectation resists a single contradictory observation more than a fresh one",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'point' evidenceKind (the default) is byte-for-byte identical to the pre-2.5 update",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'lower_bound' evidence below current mu is REJECTED: mu never decreases, and (Correction 2) tau does NOT grow either",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'lower_bound' evidence above current mu is ACCEPTED exactly like a point observation",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'upper_bound' evidence above current mu is REJECTED (symmetric case): mu never increases",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations 'upper_bound' evidence below current mu is ACCEPTED exactly like a point observation",
+            "Phase 2.5a — censored-evidence update, Brief §19/§27 proof obligations (Correction 2) a censored observation exactly equal to the current mu IS classified as a rejection — uninformative, not merely a no-op"
+          ]
+        }
+      ],
+      "source": {
+        "path": "reference/src/experiments/avoidance.ts",
+        "sha256": "3a97351461ebd84eb63b17d6df9c37c4c1398c1d0dcc57007b1e9fb34ebdc54f",
+        "startLine": 86,
+        "endLine": 120,
+        "text": "  for (let i = 0; i < repetitions; i++) {\n    clock.advance(1);\n    const result = runScriptedExperience(actor, state, aversiveAction, aversiveOutcome, params, clock, seed);\n    state = result.nextState;\n\n    // Read-only probe: evaluate both candidates against the post-repetition\n    // state to see how Score/choice would come out RIGHT NOW. Neither\n    // evaluateAction nor buildChoiceDistribution mutates state, so this has\n    // no effect on the next repetition's starting point.\n    const needCtxs = currentNeedContexts(state);\n    const scoredAversive = evaluateAction(\n      aversiveAction,\n      needCtxs,\n      (needId) => getExpectation(state, aversiveAction.subject, needId),\n      params.expectation.kC,\n    );\n    const scoredBaseline = evaluateAction(\n      baselineAction,\n      needCtxs,\n      (needId) => getExpectation(state, baselineAction.subject, needId),\n      params.expectation.kC,\n    );\n    const distribution = buildChoiceDistribution([scoredAversive, scoredBaseline], params.choice);\n    const probabilityOfAversiveAction = distribution.ordered.find((o) => o.actionKey === aversiveAction.actionKey)!.probability;\n\n    const exp = getExpectation(state, aversiveAction.subject, focusNeed);\n    steps.push({\n      index: i,\n      mu: exp.mu,\n      confidence: confidence(exp.tau, params.expectation.kC),\n      boundedScore: scoredAversive.boundedScore,\n      probabilityOfAversiveAction,\n    });\n  }\n\n"
+      },
+      "finding": "Five clean repetitions reduce aversive-action probability while mean stays-0.08; seven-step legacy naive floor control moves mean toward0, corrected default retains-0.08. These are read-only choice-distribution probes after forced experiences, not sampled autonomous avoidance trajectories.",
+      "remaining": "No general inhibition reduction, long-horizon efficacy inference or enacted-action qualification; retain exact finite profile and legacy calibration."
+    }
+  ],
+  "obligations": [
+    "RO-C3-010",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "No change to historical source or model;103 inventoried files unchanged.",
+    "Scoped current rerun, not rewritten original execution receipt or new public qualification.",
+    "HQ001 stays PARTIAL; no research obligation closed and no whole-corpus pass."
+  ]
+}

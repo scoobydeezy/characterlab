@@ -1,0 +1,147 @@
+{
+  "status": "HQ-003 PROVENANCE REVIEWED; VALUES QUALIFICATION NOT LOCATED",
+  "sources": [
+    {
+      "path": "reference/CharacterLab — Deterministic Cognitive Reference Model Brief.md",
+      "sha256": "7e8dd02eb3e7ca6a7ac268074f06c5be52dd335dd62dc1ccebed84136de8b7a6",
+      "firstLine": 1198,
+      "lastLine": 1234,
+      "text": "\n# 21. Values\n\nValues are initially derived.\n\nFor ValueConcept \\(v\\):\n\n\\[\nV_v=\ng\n\\left(\n\\sum_n\nK_n\nC_{vn}\n\\mu_{vn}\n\\right)\n\\]\n\nwhere:\n\n- \\(K_n\\) = Need importance;\n- \\(\\mu_{vn}\\) = learned expectation that enactment of \\(v\\) affects Need \\(n\\);\n- \\(C_{vn}\\) = confidence.\n\nTherefore:\n\n\\[\nBeliefChange\n\\Rightarrow\nValueChange\n\\]\n\nwithout independent Value mutation.\n\nValue inertia emerges from high-confidence beliefs updating slowly.\n\nWhether this is sufficient is an explicit CharacterLab experiment, not an assumption of correctness.\n"
+    },
+    {
+      "path": "reference/CharacterLab — Deterministic Cognitive Reference Model Brief.md",
+      "sha256": "7e8dd02eb3e7ca6a7ac268074f06c5be52dd335dd62dc1ccebed84136de8b7a6",
+      "firstLine": 1630,
+      "lastLine": 1634,
+      "text": "### Value formation\nRepeated experience consistent with a ValueConcept increases its derived strength.\n\n### Value revision\nSustained contradictory experience moves the underlying beliefs and therefore the Value.\n"
+    },
+    {
+      "path": "reference/RESEARCH.md",
+      "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+      "firstLine": 77,
+      "lastLine": 82,
+      "text": "**What did not appear, because it was not built.** Substitution, habit, avoidance, obsession,\ngrief, and rumination (§28's remaining experiment list) are Phase 2+ phenomena requiring the\nassociative graph and episodic memory; Value formation/revision needs Phase 4; craving/addiction\nneeds Phase 5's acquired Needs. None of these were tested and none should be read as \"derived\" or\n\"requires mechanism\" yet — Phase 0+1's classification contribution to §35's stopping condition is\nlimited to Need-satisfaction learning itself (see Architectural findings below).\n"
+    },
+    {
+      "path": "reference/IMPLEMENTATION_README.md",
+      "sha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "firstLine": 87,
+      "lastLine": 94,
+      "text": "retiring `'legacy'` to explicitly-named `legacyDecisionParams()`/`legacyDecisionCycleParams()` control\nconditions (mirroring `legacySaturationParams()`/`legacyCycleParams()`), with every Phase 2.9/2.95\nexperiment whose published numbers are frozen-pipeline facts re-pointed at that explicit name rather than\nleft to ride a default that no longer means what it used to. The former Phases 3–6\n(personality/belief/social appraisal, derived Values, acquired Needs/addiction, and distillation) are\nintentionally not built yet. Their additive sequence is now paused: the governing next deliverable is\nthe thin, end-to-end **North-Star Reference Scaffold**, followed by controlled subtractive refinement.\nSee [the Ideal Character Architecture North Star](../CharacterLab%20%E2%80%94%20Ideal%20Character%20Architecture%20North%20Star.md),\n"
+    },
+    {
+      "path": "reference/src/model/cycle.ts",
+      "sha256": "304ced2c5f90fc502a54001cb4006d6c5c4f0c424a927bf311deefb6cc39c7a3",
+      "firstLine": 1,
+      "lastLine": 27,
+      "text": "/**\n * The cognitive cycle orchestrator — Brief §25's 20-step authoritative\n * transition cycle, Phase 1 + Phase 2 subset. Steps not yet mechanized are\n * listed and explicitly skipped in comments below, rather than silently\n * omitted, so the gap between \"full model\" and \"what this build actually\n * runs\" stays visible in the code itself.\n *\n *  1. Advance analytical Need state                     — needs.ts\n *  2. Apply deterministic world input                    — (no exogenous world events beyond the acting character's own chosen Action)\n *  3. Construct base cognitive activation                — buildBaseActivation() below (§16)\n *  4. Solve associative activation                        — activation.ts (§16)\n *  5. Retrieve memories                                    — memory.ts (§17)\n *  6. Generate feasible accessible Actions                — actions.ts: candidateActionsWithAccessibility (precondition AND accessibility ≥ θ_A, top-K_A)\n *  7. Evaluate Actions                                     — actions.ts (Need term only — see actions.ts for why)\n *  8. Produce Action probability distribution              — choice.ts\n *  9. Select Action using deterministic randomness         — choice.ts\n * 10. Apply deterministic/stochastic world outcome         — outcome.ts\n * 11. Measure Need outcomes                                 — experience.ts\n * 12. Create Experience                                      — experience.ts\n * 13. Update Need-satisfaction expectations                  — expectation.ts\n * 14. Update beliefs from observations                       — SKIPPED (Phase 3: needs belief distributions)\n * 15. Create episodic Memory                                  — memory.ts (§17)\n * 16. Update associative structure                            — associations.ts: updateAssociations (§14–15)\n * 17. Recompute derived Values                                — SKIPPED (Phase 4: needs derived Values)\n * 18. Validate invariants                                       — invariants.ts\n * 19. Commit next state                                          — (return value)\n * 20. Emit full causal trace                                      — kernel/trace.ts\n"
+    },
+    {
+      "path": "reference/src/model/types.ts",
+      "sha256": "d355ebb8d3a718ead7633adac316301f45d96901ddce8a3487c0874629a47cdf",
+      "firstLine": 1,
+      "lastLine": 27,
+      "text": "/**\n * Shared semantic vocabulary, per Brief §13 (\"CharacterLab operates over\n * typed concepts... Anonymous untyped graph nodes are prohibited\") and §2's\n * shared-concept list (Character, Need, Person, Action, Experience, ...).\n *\n * Phase 1 only needs a handful of these concept categories (Need, Person,\n * Action). The rest (Location, Object, Context, ValueConcept, TraitConcept,\n * OutcomeConcept, MemoryEpisode) are named here as a `ConceptCategory` union\n * so Phase 2+ code has a fixed place to plug in without renegotiating the\n * vocabulary, but Phase 1 does not instantiate them.\n */\n\nimport { ConceptKey, NeedId } from '../kernel/canonical';\nimport { Rational } from '../kernel/rational';\n\nexport type ConceptCategory =\n  | 'Need'\n  | 'Person'\n  | 'Activity'\n  | 'Action'\n  | 'Location'\n  | 'Object'\n  | 'Context'\n  | 'ValueConcept'\n  | 'TraitConcept'\n  | 'OutcomeConcept'\n  | 'MemoryEpisode';\n"
+    },
+    {
+      "path": "reference/src/model/actions.ts",
+      "sha256": "c751c87a3cd0cc5dc6f263bfafe50cb6bc4209110de305a49224630cf28e5b6c",
+      "firstLine": 10,
+      "lastLine": 24,
+      "text": " *\n * Action evaluation (§23) is still genuinely partial: the Value,\n * Personality, Social, and Context terms each require a mechanism (derived\n * Values §21, latent personality §9, belief/appraisal §18–19, Context\n * representation) that this build has not built yet. Score(a) below is\n * ONLY the Need term — Brief §23 is explicit that \"Association and memory\n * scores are not added again\" in evaluation, so Phase 2's accessibility\n * affects *which* Actions are considered, never how desirable a considered\n * Action seems. This is a scoping fact worth stating loudly because it\n * changes what results mean: this build can only show that Need-\n * satisfaction learning plus associative accessibility reproduce certain\n * phenomena. Whether Value/Personality/Social/Context terms are\n * *necessary* for others is exactly what later phases test (§36).\n */\n\n"
+    },
+    {
+      "path": "reference/src/model/salience.ts",
+      "sha256": "6fa88b5e493363631c88a9111f7722672408ed8accb8ba3fcf50f99f68140562",
+      "firstLine": 194,
+      "lastLine": 207,
+      "text": " * starting hypothesis, re-runnable from the UI, not a claimed final answer.\n */\nexport const BASE_SALIENCE: Readonly<Record<ConceptCategory, Rational>> = {\n  Action: ratOf(9, 10),\n  Activity: ratOf(9, 10),\n  Person: ratOf(4, 5),\n  OutcomeConcept: ratOf(1, 2),\n  Need: ratOf(1, 2),\n  Location: ratOf(2, 5),\n  Object: ratOf(3, 10),\n  ValueConcept: ratOf(3, 10),\n  TraitConcept: ratOf(3, 10),\n  MemoryEpisode: ratOf(1, 5),\n  Context: ratOf(1, 10),\n"
+    },
+    {
+      "path": "reference/src/model/salience.ts",
+      "sha256": "6fa88b5e493363631c88a9111f7722672408ed8accb8ba3fcf50f99f68140562",
+      "firstLine": 229,
+      "lastLine": 240,
+      "text": "    case 'action':\n      return 'Action';\n    case 'location':\n      return 'Location';\n    case 'context':\n      return 'Context';\n    case 'object':\n      return 'Object';\n    case 'value':\n      return 'ValueConcept';\n    case 'trait':\n      return 'TraitConcept';\n"
+    },
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e",
+      "firstLine": 198,
+      "lastLine": 205,
+      "text": "\r\n        subgraph Learned[PLASTIC LEARNED STATE]\r\n            Disp[Learned Dispositional Adaptation]\r\n            Values[Values / Durable Preferences]\r\n            Self[Self-concept / Consolidated Identity]\r\n            Habits[Habits / Learned Action Tendencies]\r\n            Skill[Skill / Procedural Competence]\r\n        end\r\n"
+    },
+    {
+      "path": "CharacterLab — Ideal Character Research Program Brief.md",
+      "sha256": "90ab1756022132f6fed1d457eadd4636c0931d6f508b8f4b56af0eafdf518265",
+      "firstLine": 2061,
+      "lastLine": 2074,
+      "text": "# 26. What the reset specifically retracts as governing assumptions\n\nThe following old assumptions must not silently re-enter CharacterLab merely because previous code or briefs used them.\n\nCharacterLab does **not** assume that:\n\n- seven inherited latent personality dimensions are the final constitutional primitives;\n- personality is fully immutable;\n- Need is necessarily persistent stored state;\n- Values are necessarily derived from Need satisfaction;\n- a global associative graph is the cognitive backbone;\n- Action accessibility and desirability share one mechanism;\n- episodic memory is merely an immutable event record plus retrieval score;\n- observer social belief concerns only stable latent personality;\n"
+    },
+    {
+      "path": "CharacterLab — Reference Architecture Build & Research Campaign Plan.md",
+      "sha256": "8d933901c9d5747e080833d5b256c4211ee4e6f4be2887c22e60b33e0ec48edb",
+      "firstLine": 136,
+      "lastLine": 138,
+      "text": "### 2A — Specify the entire thin topology\n\nBefore implementation, create a versioned seam contract for every canonical edge needed by one traversable event. Thin or identity-like transformations are allowed; unexplained transformations are not. Register sole mutation authority for every persistent target, including Values and regulatory adaptation.\n"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+      "firstLine": 177,
+      "lastLine": 177,
+      "text": "| `P3-012` | Unfinished original phenomenon backlog | `CORPUS` | Reconcile betrayal, grief/loss, rumination, obsession, healthy motivational multiplicity, value formation/revision, and addiction against the North-Star corpus. Their old proposed mechanisms are not implied by preserving the phenomena. |\r\n"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+      "firstLine": 189,
+      "lastLine": 189,
+      "text": "| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\r\n"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md",
+      "sha256": "d2bb3be81871d0c42c542412852c5f11e65c47d9124785aedaa6709a72b2d278",
+      "firstLine": 9,
+      "lastLine": 27,
+      "text": "## Qualified feedback loop\r\nActual choice controls which performed outcome becomes evidence; that evidence changes\r\nlearned expectation, later reason distributions and subsequent actual choice. The\r\nsubsequent choice controls further evidence. This is bounded reinforcement of a response\r\nthrough experienced outcomes, not merely an increasing displayed habit summary.\r\n\r\nBoth options first receive controlled negative informational evidence, followed by one\r\nobserved successful practice each. MeanHistory then has expected relief1/2 for A/B and\r\nmatched acquired histories. Five free opportunities keep availability, current demand\r\nand actual unit relief fixed. The full-feedback run admits each chosen outcome; the\r\nmatched control still executes and receives physical relief but withholds those receipts.\r\nOnly that visibility intervention breaks the feedback route after common acquisition.\r\n\r\nFor seed2, the first free resolution and frozen expression are byte-identical and both\r\nchoose A. Its positive receipt raises A expectation to2/3 at the next opportunity and\r\nincreases its exact choice probability relative to the withheld-feedback control.\r\nThe full run's five free choices are A,A,A,A,A; the control's are A,B,A,A,A. Further\r\nchosen successes raise A expectation through3/4,4/5,5/6 before later opportunities.\r\nFinal physical totals are A6/B1 versus A5/B2 including the two training actions.\r\n"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_TEMPORAL_QUALIFICATION.md",
+      "sha256": "56d16fb43cad93dc4088cdf8059933a2bcf84abaff97e1de7a8077b45b03f605",
+      "firstLine": 9,
+      "lastLine": 25,
+      "text": "## Qualified result\r\nTwo separately adopted goals contribute independent task grounds to an actual\r\ncontested choice. Each retains its own deadline, progress, accessibility and terminal\r\nstatus. Choosing one does not cancel the other. The primary run chooses the short\r\ngoal at2, receives its one unit, then pursues the still-Open long goal at3/4/5 until\r\nits three observed units fulfill it. Actual physical totals are1 and3 respectively.\r\n\r\nThe short goal is eligible before5, the long goal before8. They are separate desired\r\nstates, not two strategies for one goal or two timings for a single benefit. Controlled\r\nstrengths and forecast-relative weighting do not imply a general cross-domain currency,\r\nuniversal temporal discount or optimal scheduling law.\r\n\r\nFour frozen models/27 distinct runs pass243 exact canonical component save/restore\r\nchecks:216 advancing continuations and27 terminal restores. TEMPORAL_PLAN_REV1.json\r\ncommits resolved goals/actions/deadlines/progress/calibration/dice/arbitration, artifact\r\nhashes, ModelIdentity/RunIdentity/ExperimentIdentity/ComparisonCase before execution.\r\nTEMPORAL_RESULT_REV1.json and TEMPORAL_VIEWS_REV1.json retain all results and complete\r\n"
+    }
+  ],
+  "sourceScanSha256": "55ae1e79fcec973605b5fb77290dbd15956182664d175f95ee489e22b0bf162d",
+  "queueSourceSha256": "b7ebbac1a87a83cefaec86b12f97e5721b7f2d46821f379b4dc9e09db4f05f24",
+  "dispositions": [
+    {
+      "id": "CTL-007",
+      "finding": "Original section21 supplies a Need-importance/confidence/expectation projection candidate. Section28 formation/revision entries are proposed experiment specifications. The reference log/readme and skipped cycle step do not provide execution receipts for them.",
+      "decision": "Preserve proposed tests and candidate; do not interpret ledger wording as proof original tests executed."
+    },
+    {
+      "id": "P3-012/value",
+      "finding": "ValueConcept exists as a semantic category/salience prior, not evidence of a durable Values owner or formation/revision experiment. Temporal goal lifecycle and reinforcement expectations qualify their own phenomena, not Values by relabeling.",
+      "decision": "Values formation/revision remains an explicit evidence gap; other P3-012 subclaims are outside this batch."
+    },
+    {
+      "id": "authority",
+      "finding": "Canonical architecture retains Values/Durable Preferences separately. Research Brief26 rejects necessary derivation from Need satisfaction. Build Plan2A requires versioned seams and mutation authority for persistent targets including Values.",
+      "decision": "Do not select original derivation as law, remove Values, or waive ownership/exit review because all132 Brief clauses are bounded."
+    }
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "nextGate": "RO019 final topology/family review must locate a contract, owner and formation/revision/consumer evidence, or explicitly establish admissible scope before exit. If genuinely missing, prepare bounded readiness and comparators under existing architecture. No architectural ruling needed merely to investigate.",
+  "limits": [
+    "Source audit only; no new runtime execution, verdict, allocation or law selection.",
+    "Search absence is bounded; no universal claim that Values is absent from every implementation.",
+    "HQ003 provenance action disposition is not Values completion, scientific obligation closure or corpus waiver."
+  ]
+}

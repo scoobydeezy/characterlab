@@ -517,3 +517,10 @@ LOCAL DISPOSITION: records1491..1492/schema1 permanently allocated before implem
 
 ## Development public — 2026-10-01
 Records1493..1508/schema1 allocated before implementation by DEVELOPMENT_PUBLIC_ALLOCATION_TABLE.json under DEVELOPMENT_PUBLIC_CONTRACT.md. Reuse1155 for inherited task lineage. Separate phase, skill, belief and personality/history roots; old journal/constitution reused unchanged. Counters1508/16; native qualification OPEN.
+
+
+## Values native admission - 2026-10-04
+Records1509..1519/schema1 allocated before implementation by VALUES_PUBLIC_ALLOCATION_TABLE.json under values-public/0.1-candidate. Reuse1155; separate journal/projection owner and typed source/reason/choice records. Counters1519/11; native qualification OPEN.
+
+
+Values native closure (2026-10-04): VER-C3-VALUES-PUBLIC-001 qualifies the bounded admission; records1509..1519 unchanged. Counters1519/0.

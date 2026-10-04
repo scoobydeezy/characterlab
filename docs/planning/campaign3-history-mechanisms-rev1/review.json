@@ -1,0 +1,1033 @@
+{
+  "status": "13 SUBSTRATE AND22 MECHANISM ROWS REVIEWED",
+  "manifestSha256": "e947295eb33194087559f70d42d34023c9f9fa3edfc878807e8992ab605c4303",
+  "items": [
+    {
+      "id": "SUB-001",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 93,
+        "endLine": 93,
+        "text": "| `SUB-001` | Reduced exact rational arithmetic | `PORT` | Use as the reference oracle; preserve canonical reduction, sign rules, exact equality, and algebraic tests. |\n"
+      },
+      "assessment": "Bounded exact-rational port; canonical reduction, signed division and ties-to-even preserved.",
+      "remaining": "Changed domain/range/rounding requires exact contract and vectors; no generic psychological numeric scale.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 109,
+          "endLine": 109,
+          "text": "`SUB-001` has an accepted Campaign 0 reference port with bigint-only construction, canonical reduction, sign-correct floor/ceiling division, and ties-to-even rounding. The 0C analytical-time implementation resolves the known separately floored interval defect by retaining exact remainder and prohibiting incidental re-anchoring. All `CV-TIME-*`, integrated continuation fixtures, and the preserved historical `rational.test.ts` control pass.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-002",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 94,
+        "endLine": 94,
+        "text": "| `SUB-002` | Integer lattice quantization with ties-to-even and largest-remainder allocation | `PORT` + `CONTROL` | Port shared primitives after the numeric profile is formalized. Preserve exact-budget and quantization-bound tests; do not assume the historical scale is optimal. |\n"
+      },
+      "assessment": "Bounded lattice/quantization port with exact comparisons.",
+      "remaining": "Preserve total budgets and tie order; historical scale is not optimality proof.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-003",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 95,
+        "endLine": 95,
+        "text": "| `SUB-003` | Stable typed semantic identifiers and canonical ordering | `PORT` | Port the identity/order discipline, then replace historical registries with current versioned registries. |\n"
+      },
+      "assessment": "Typed/canonical identity port replaces old registries under committed versions.",
+      "remaining": "Semantic identity is structural; fixture IDs cannot be promoted by aliasing hashes.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 107,
+          "endLine": 107,
+          "text": "**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-004",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 96,
+        "endLine": 96,
+        "text": "| `SUB-004` | Counter-addressed deterministic randomness | `PORT` | Preserve draw independence, stable causal addressing, replay, and purpose separation. The hash/range-mapping algorithm still requires the new formal random contract. |\n"
+      },
+      "assessment": "SHA256 addressed draws replace historical delimiter/FNV mapping in accepted substrate.",
+      "remaining": "Pure addressing, role coupling and finite bias bounds remain exact; future hash/range changes reopen.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 107,
+          "endLine": 107,
+          "text": "**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-005",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 97,
+        "endLine": 97,
+        "text": "| `SUB-005` | Exact finite discrete distributions, convolution, and fair tie-share win probabilities | `PORT` | Required by the retained dice grammar. Preserve normalization and brute-force-enumeration proofs. |\n"
+      },
+      "assessment": "Exact finite distributions/convolution/tie sharing ported in bounded task profile.",
+      "remaining": "No arbitrary distribution or psychological grammar necessity from arithmetic correctness.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-006",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 98,
+        "endLine": 98,
+        "text": "| `SUB-006` | Exact linear algebra with fixed pivot order and typed singularity | `PORT` + `CONTROL` | Reuse as an oracle/tool for mechanisms that actually require matrix solving; do not make it a character primitive by default. |\n"
+      },
+      "assessment": "Historical linear-algebra oracle/control retained; no broad character primitive inferred.",
+      "remaining": "Independent active-port/consumer proof chain remains unreviewed; singularity and pivot order must be preserved when used.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [],
+      "disposition": "PRESERVATION OBLIGATION; PROOF CHAIN OPEN"
+    },
+    {
+      "id": "SUB-007",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 99,
+        "endLine": 99,
+        "text": "| `SUB-007` | Aggregate-coverage correlated-evidence consolidation | `PORT` | Preserve `EvidenceBasis` provenance, canonical ordering, and the `{1}`, `{2}`, `{1,2}` collective-redundancy regression. The earlier pairwise-max algorithm is retired. |\n"
+      },
+      "assessment": "Collective evidence coverage has bounded port and explicit REASON discriminator.",
+      "remaining": "Subset residuals and general correlation remain open; no universal weighted-Jaccard law.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 103,
+          "endLine": 108,
+          "text": "Aggregate weighted Jaccard remains a candidate: larger-union subset residuals,\narbitrary renaming/ties, general cross-role normalization and new source families\nremain open. Ordinary input-array permutation is stable; no arbitrary identifier\nrenaming invariance is claimed. Direction is resolved after signed consolidation\nin this profile; direction-as-identity alternatives and broad modifier/bracket\ncalibration remain unresolved. No reduction or universal reason law is selected.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-008",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 100,
+        "endLine": 100,
+        "text": "| `SUB-008` | Structured causal trace, state snapshots/hashes, and first-divergence replay | `PORT` | Port the tested discipline into the new trace schema. Hashes remain diagnostics rather than proof of structural equality. |\n"
+      },
+      "assessment": "Ordered atomic instants, canonical saves and bounded trace/replay ported.",
+      "remaining": "Keep full state/queue/allocator identity; hash equality is not structural proof; new trace consumers reopen.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 111,
+          "endLine": 111,
+          "text": "The ordering and persistence portion of `SUB-008` has an accepted Campaign 0 reference port: global monotonic event/sequence allocation replaces the historical per-tick string ID, pending work is ordered by `(DueAt, Phase, EventSequence)`, a complete instant commits atomically, and canonical saves restore IDs and allocator continuation without serializing handlers. Canonical values are deep-copied at scheduler authority boundaries. Accepted `SEM-001H` extends the phase manifest to `ordering-phases/2-candidate` with current/consequence perception lanes and a non-schedulable settlement sentinel without changing scheduler ordering or transaction semantics. `CV-ORD-*`, `CV-SAVE-*`, all generic and concrete `CV-TXN-001` boundaries, `CV-SEM-081..090`, first-divergence proof, integrated continuation, and the preserved deterministic-replay control pass.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-009",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 101,
+        "endLine": 101,
+        "text": "| `SUB-009` | Paired counterfactual harness with coupled random addresses | `PORT` | Reuse for every seam comparison so the intervention is the only intended difference. |\n"
+      },
+      "assessment": "Explicit coupling port and later BIO pair exist; Campaign2 task excludes external maps.",
+      "remaining": "Equal seeds alone do not couple differing addresses; preserve each profile and nondecision controls.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 107,
+          "endLine": 107,
+          "text": "**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-010",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 102,
+        "endLine": 102,
+        "text": "| `SUB-010` | Named legacy/default parameter bundles and phase-end re-baselining | `PORT` as research method | Preserve the ability to run old and candidate models side by side. Once a candidate earns canonical status, rename the displaced model as a control rather than leaving two ambiguous defaults. |\n"
+      },
+      "assessment": "Separate committed old/new bundles and frozen recipes preserve comparison identity.",
+      "remaining": "No silent recalibration or overwriting legacy defaults; full bundle history review remains open.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-011",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 103,
+        "endLine": 103,
+        "text": "| `SUB-011` | “Correct forward; do not rewrite findings” research-log discipline | `CONTRACT` | Corrections must retain the failed hypothesis, diagnosis, replacement, and validating cases. |\n"
+      },
+      "assessment": "Correct-forward discipline remains a governing preservation obligation.",
+      "remaining": "Every amendment must retain failed hypothesis, original evidence and correction; this review does not certify every past correction.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [],
+      "disposition": "PRESERVATION OBLIGATION; PROOF CHAIN OPEN"
+    },
+    {
+      "id": "SUB-012",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 104,
+        "endLine": 104,
+        "text": "| `SUB-012` | Exact monotonic bounded-response transform | `PORT` + `CONTROL` | Preserve as a shared candidate utility with its bounds/monotonicity proofs; do not assume every psychological saturation uses the same curve. |\n"
+      },
+      "assessment": "Bounded-response utility ported as candidate arithmetic.",
+      "remaining": "Preserve monotonicity/bounds and exact receiving queries; not a universal psychological saturation law.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "SUB-013",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 105,
+        "endLine": 105,
+        "text": "| `SUB-013` | Inspectable experiment UI, trace viewer, counterfactual panels, and calibration sweeps | `CONTROL` as research tooling | Preserve the ability to expose real authoritative inputs, intermediate values, exact probabilities, and paired outputs. Rebuild views around new contracts rather than porting old UI component boundaries. |\n"
+      },
+      "assessment": "Historical inspection UI and trace tooling remain controls; current UI parity not established here.",
+      "remaining": "Exact UI/viewer/calibration workflow inspection remains owed; emitted traces alone are insufficient.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [],
+      "disposition": "PRESERVATION OBLIGATION; PROOF CHAIN OPEN"
+    },
+    {
+      "id": "MEC-001",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 117,
+        "endLine": 117,
+        "text": "| `MEC-001` | Generic `EvidentialEstimate(mean, precision)` and its `NeedExpectation(subject, need)` specialization | `CONTROL` + `CANDIDATE` | Preserve the exact precision-weighted/prediction-error equivalence and resistance-to-isolated-contradiction tests. Re-evaluate which belief/expectation domains legitimately share this representation. |\n"
+      },
+      "assessment": "Mean/precision remains a candidate/control with contradiction resistance and bound approximation.",
+      "remaining": "No general confidence/covariance law; domain sharing and exact original equivalence proof remain scoped.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 27,
+          "endLine": 32,
+          "text": "| Required contrast | Exact-rational Gated result | Comparison |\n|---|---|---|\n| Prior2/5,50 then bound1/10 | Entire retained leaf unchanged | UnconditionalPrecision keeps mean but grows precision52 |\n| Prior1/20,50 then bound1/10 | Mean27/520, precision52 | PointOnly retains1/20,50 and fails informative-bound learning |\n| Fresh nonnegative reference with bound0 | Unknown stays absent; no precision | UnconditionalPrecision manufactures a known0,precision2 leaf |\n| Six bounds1/10 then point21/50 | First bound gives1/10,2; next five preserve exact leaf; point gives13/50,4 | UnconditionalPrecision reaches precision12 before point, then51/350,14; final point moves less |\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 47,
+          "endLine": 52,
+          "text": "Repeated-bound rejection is demonstrated for the exact fresh-prior CaseD. With an\nestablished mean below the same bound, the Gated candidate can repeatedly accept it:\nthe supplementary six-bound run ends at precision62. This is not universal source\ndeduplication or calibrated censored-likelihood inference. Accepted bounds still\nreceive full point-like precision, the historical approximation. Unknown state and\nknown zero remain different; no confidence-in-correctness interpretation is earned.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-002",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 118,
+        "endLine": 118,
+        "text": "| `MEC-002` | Informative-bound gating for censored evidence | `CONTROL` + `CORPUS` | Preserve the four named cases: weak compatible bound, inconsistent bound, zero-information saturation, and genuine point evidence after repeated censoring. Accepted-bound precision over-crediting remains a known approximation. |\n"
+      },
+      "assessment": "LEARN exercises four bounded informativeness cases and retains point-like accepted-bound precision.",
+      "remaining": "Broader censoring, correlated sources and calibrated posteriors remain open.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 27,
+          "endLine": 32,
+          "text": "| Required contrast | Exact-rational Gated result | Comparison |\n|---|---|---|\n| Prior2/5,50 then bound1/10 | Entire retained leaf unchanged | UnconditionalPrecision keeps mean but grows precision52 |\n| Prior1/20,50 then bound1/10 | Mean27/520, precision52 | PointOnly retains1/20,50 and fails informative-bound learning |\n| Fresh nonnegative reference with bound0 | Unknown stays absent; no precision | UnconditionalPrecision manufactures a known0,precision2 leaf |\n| Six bounds1/10 then point21/50 | First bound gives1/10,2; next five preserve exact leaf; point gives13/50,4 | UnconditionalPrecision reaches precision12 before point, then51/350,14; final point moves less |\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+          "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63",
+          "startLine": 47,
+          "endLine": 52,
+          "text": "Repeated-bound rejection is demonstrated for the exact fresh-prior CaseD. With an\nestablished mean below the same bound, the Gated candidate can repeatedly accept it:\nthe supplementary six-bound run ends at precision62. This is not universal source\ndeduplication or calibrated censored-likelihood inference. Accepted bounds still\nreceive full point-like precision, the historical approximation. Unknown state and\nknown zero remain different; no confidence-in-correctness interpretation is earned.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-003",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 119,
+        "endLine": 119,
+        "text": "| `MEC-003` | Bounded-effect decomposition: `Capacity`, `Applied`, `Overflow`, and `EvidenceKind` | `CONTROL` + `CONTRACT` | Preserve the exact identity wherever a bounded effect exists. The historical use of authoritative `Applied` as the character's observation is a perfect-interoception control; the new evidence kind must be computed from the permitted perceived measurement. It does not prove that every Need is a stored bounded meter. `Overflow` remains omniscient trace information. |\n"
+      },
+      "assessment": "EPI separates physical decomposition from permitted sensed evidence.",
+      "remaining": "Do not infer universal stored Needs or admit authoritative Applied/Overflow directly.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md",
+          "sha256": "7807990b30f6f2c6110232b5e0403c5a24e7c462ee81259bfc94589eb100473d",
+          "startLine": 21,
+          "endLine": 27,
+          "text": "The finite consumer roster is sample900, SEM envelope907, evidence904, encoding910,\nlearning application905 and later probe906. Belief903 and latest encoding911 have\nseparate owners. At130, encoding freezes its sample and prior; independent140\nwriters cannot make same-event encoding consume newly updated belief. The later50\nprobe reads both owners independently. The raw public research output deliberately\nincludes truth912; only the explicit checked character projection excludes it.\nNo trace/source lookup is offered to a character consumer.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-004",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 120,
+        "endLine": 120,
+        "text": "| `MEC-004` | truth-side `EffectProvenance → perceptual projection → derived causal roles → SemanticExperience` | `PORT` with boundary correction; restricted token, event-pattern, continuant-recognition, and safe causal-role/provenance controls now present; integrated port blocked by parent `SEM-001` | This is the strongest earned world-truth-to-character-evidence control. Preserve separately identified actor/target/instrument/cause participation, but distinguish semantic `EventRole` from analytical `CausalRole`; keep full provenance, truth referent/action identity, and unobserved world facets on the trace side. `SemanticExperience` receives event-grouped perceptual referents, typed observed classification, and only observer-safe evidence admitted by each consumer's exact `ReadDomain`. Classification, tracking, recognition, retained state, appraisal, and evidence quality remain separate. Accepted `SEM-001G` replaces hidden provenance joins and winner-takes-all causal roles with a closed same-observer reference grammar plus zero-or-more nonrecursive character-relative causal-role claims. The current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` path is permanently `CONTROL-SEM-LEGACY-CONCEPT-TOKEN`, valid only where the channel establishes identity, one role suffices, and no hidden link leaks. Historical direct action-key projection remains a control; accepted `SEM-001E` replaces its default character-evidence role with event-file pattern classification. Accepted `SEM-001F` permits continuant candidate identity only through observer-owned catalog/templates or a mapped identity claim. Learned action identity remains downstream. |\n"
+      },
+      "assessment": "Old integrated-blocker wording is historical; later EPI/GA execute bounded safe source integrations.",
+      "remaining": "Controlled identity and finite projection do not close general recognition/roles; no blanket SEM completion inferred.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md",
+          "sha256": "7807990b30f6f2c6110232b5e0403c5a24e7c462ee81259bfc94589eb100473d",
+          "startLine": 21,
+          "endLine": 27,
+          "text": "The finite consumer roster is sample900, SEM envelope907, evidence904, encoding910,\nlearning application905 and later probe906. Belief903 and latest encoding911 have\nseparate owners. At130, encoding freezes its sample and prior; independent140\nwriters cannot make same-event encoding consume newly updated belief. The later50\nprobe reads both owners independently. The raw public research output deliberately\nincludes truth912; only the explicit checked character projection excludes it.\nNo trace/source lookup is offered to a character consumer.\n"
+        },
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 28,
+          "endLine": 36,
+          "text": "| Closure-plan obligation | Tested disposition |\n|---|---|\n| 1. Preserve finite AT2 source/selection | Existing AT2-A..N public/component evidence remains intact; regression suite preserves it. GA adds actual denied-port, unresolved-role and K0/K1/K2 controls. Missing glyph/position remain explicit public exclusions with component controls. |\n| 2. Separate permission, selection, allocation and strength | Independent/shared/hybrid/retired-flat, role/disabled/spatial and capacity models execute on actual safe source evidence. Earlier arithmetic verdict stands. Unlimited is an explicit negative capacity control, not a capacity-respecting model. |\n| 3. Real owned formation, association and recall | Actual selected capabilities form episodes through sole owners. Actual cues read retained evidence; recollection publication and later presentation reinforcement are distinct transitions. No seeded learned episodes/graph or protocol provenance enters cognition. |\n| 4. Footprint and later retrieval | Four sparse/dense pairs execute four formations and four subsequent cues; exact strength, graph and score results below. K0/K1/K2, local access, association decay and presentation decay remain explicit controls. |\n| 5. Real earlier character-state feedback | Actual probe → M1 → prediction → workspace → concern producer → strictly later deliveries. Encoding-only and retrieval-only differ; known-zero, unavailable, no-task and disabled remain trace-distinct. This qualifies the ratified transient edge, not general Affect or Candidate A as final law. |\n| 6. Identity, ownership, rollback and replay | 129 missing declaration controls; accessor/source/subject/owner negatives; 77 active event types each have whole-instant rollback witnesses, plus six final-commit faults. Two current baseline templates are replacement-only and retain compiler/component coverage. Public consequence and credit saves replay their complete prefixes and five subsequent instants each exactly. |\n| 7. Fixture, identities, corpus and verdict | `GA_CORPUS_FIXTURE_1_0_0.md`, frozen manifests, public results, replay, successful `GA_PUBLIC_QUALIFICATION_REV1.json`, corpus/0.29.0 promotion and VER-C3-GA-001 discharge this gate. |\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-005",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 121,
+        "endLine": 121,
+        "text": "| `MEC-005` | Character-relative attention separated from perception | `CONTROL` + `CONTRACT` | Preserve the distinction and residual-pool control. Fixed role weights and pool size remain candidate calibration, not invariants. |\n"
+      },
+      "assessment": "GA preserves permission/perception versus selected attention; role/capacity controls execute.",
+      "remaining": "Residual-pool calibration is candidate-specific, not a universal attention law.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 28,
+          "endLine": 36,
+          "text": "| Closure-plan obligation | Tested disposition |\n|---|---|\n| 1. Preserve finite AT2 source/selection | Existing AT2-A..N public/component evidence remains intact; regression suite preserves it. GA adds actual denied-port, unresolved-role and K0/K1/K2 controls. Missing glyph/position remain explicit public exclusions with component controls. |\n| 2. Separate permission, selection, allocation and strength | Independent/shared/hybrid/retired-flat, role/disabled/spatial and capacity models execute on actual safe source evidence. Earlier arithmetic verdict stands. Unlimited is an explicit negative capacity control, not a capacity-respecting model. |\n| 3. Real owned formation, association and recall | Actual selected capabilities form episodes through sole owners. Actual cues read retained evidence; recollection publication and later presentation reinforcement are distinct transitions. No seeded learned episodes/graph or protocol provenance enters cognition. |\n| 4. Footprint and later retrieval | Four sparse/dense pairs execute four formations and four subsequent cues; exact strength, graph and score results below. K0/K1/K2, local access, association decay and presentation decay remain explicit controls. |\n| 5. Real earlier character-state feedback | Actual probe → M1 → prediction → workspace → concern producer → strictly later deliveries. Encoding-only and retrieval-only differ; known-zero, unavailable, no-task and disabled remain trace-distinct. This qualifies the ratified transient edge, not general Affect or Candidate A as final law. |\n| 6. Identity, ownership, rollback and replay | 129 missing declaration controls; accessor/source/subject/owner negatives; 77 active event types each have whole-instant rollback witnesses, plus six final-commit faults. Two current baseline templates are replacement-only and retain compiler/component coverage. Public consequence and credit saves replay their complete prefixes and five subsequent instants each exactly. |\n| 7. Fixture, identities, corpus and verdict | `GA_CORPUS_FIXTURE_1_0_0.md`, frozen manifests, public results, replay, successful `GA_PUBLIC_QUALIFICATION_REV1.json`, corpus/0.29.0 promotion and VER-C3-GA-001 discharge this gate. |\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-006",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 122,
+        "endLine": 122,
+        "text": "| `MEC-006` | Evidence-aware surprise for point/lower-bound/upper-bound observations | `PORT` as a shared classification/control | Preserve the rule that censored distance is surprising only when it contradicts the prior. All consumers must share the same evidence semantics. |\n"
+      },
+      "assessment": "EPI uses evidence-aware surprise with old-prior encoding and distinct later learning.",
+      "remaining": "Lower-bound/public scope does not discharge every upper-bound or new-consumer contract.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md",
+          "sha256": "7807990b30f6f2c6110232b5e0403c5a24e7c462ee81259bfc94589eb100473d",
+          "startLine": 43,
+          "endLine": 48,
+          "text": "With prior1/100 and safe bound1/20, surprise is1/25, raw strength26/25 and bounded\nstrength26/51. Learning reaches3/100 at precision4, while encoding retains the\nold1/100 prior. With compatible prior2/5 the lower-bound surprise is0 and the\nbelief leaf stays unchanged. A zero-information bound can leave belief unknown\nwhile producing a retained encoding at strength1/2; retained experience does not\nimply a known belief. Denied observation produces neither.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-007",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 123,
+        "endLine": 123,
+        "text": "| `MEC-007` | Multiplicative semantic-salience reference model | `CONTROL` | Preserve base category, event-specific causal role, attention, realized Need relevance, surprise, bounded response, and complete trace factors. The independent budget is the historical canonical control; shared/hybrid budgets remain alternatives. |\n"
+      },
+      "assessment": "Independent/shared/hybrid multiplicative laws remain explicit alternatives.",
+      "remaining": "Keep each factor and exact full scores; no universal winner selected.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 51,
+          "endLine": 56,
+          "text": "Sparse graphs are empty. The two newest episodes win in every footprint pair.\nThus exact strengths, associations and scores discriminate models where winner\nmembership does not. Independent focal strength is footprint-invariant here, but\nthe later average over retained episode contents is not. Flat remains the already\nretired negative control; a finite score equality does not rehabilitate it. Neither\nthe independent nor hybrid result establishes universal footprint immunity.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-008",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 124,
+        "endLine": 124,
+        "text": "| `MEC-008` | Weighted association learning with one mutation authority, row budget, and largest-remainder normalization | `CONTROL` | Preserve as the first association-learning control plus its exact invariants. The global association graph is not automatically the new cognitive backbone. |\n"
+      },
+      "assessment": "GA formation/association/recall owners execute finite graph alternatives.",
+      "remaining": "Row-budget/normalization invariants and historical controls persist; no graph-backbone or scaling claim.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 28,
+          "endLine": 36,
+          "text": "| Closure-plan obligation | Tested disposition |\n|---|---|\n| 1. Preserve finite AT2 source/selection | Existing AT2-A..N public/component evidence remains intact; regression suite preserves it. GA adds actual denied-port, unresolved-role and K0/K1/K2 controls. Missing glyph/position remain explicit public exclusions with component controls. |\n| 2. Separate permission, selection, allocation and strength | Independent/shared/hybrid/retired-flat, role/disabled/spatial and capacity models execute on actual safe source evidence. Earlier arithmetic verdict stands. Unlimited is an explicit negative capacity control, not a capacity-respecting model. |\n| 3. Real owned formation, association and recall | Actual selected capabilities form episodes through sole owners. Actual cues read retained evidence; recollection publication and later presentation reinforcement are distinct transitions. No seeded learned episodes/graph or protocol provenance enters cognition. |\n| 4. Footprint and later retrieval | Four sparse/dense pairs execute four formations and four subsequent cues; exact strength, graph and score results below. K0/K1/K2, local access, association decay and presentation decay remain explicit controls. |\n| 5. Real earlier character-state feedback | Actual probe → M1 → prediction → workspace → concern producer → strictly later deliveries. Encoding-only and retrieval-only differ; known-zero, unavailable, no-task and disabled remain trace-distinct. This qualifies the ratified transient edge, not general Affect or Candidate A as final law. |\n| 6. Identity, ownership, rollback and replay | 129 missing declaration controls; accessor/source/subject/owner negatives; 77 active event types each have whole-instant rollback witnesses, plus six final-commit faults. Two current baseline templates are replacement-only and retain compiler/component coverage. Public consequence and credit saves replay their complete prefixes and five subsequent instants each exactly. |\n| 7. Fixture, identities, corpus and verdict | `GA_CORPUS_FIXTURE_1_0_0.md`, frozen manifests, public results, replay, successful `GA_PUBLIC_QUALIFICATION_REV1.json`, corpus/0.29.0 promotion and VER-C3-GA-001 discharge this gate. |\n"
+        },
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 51,
+          "endLine": 56,
+          "text": "Sparse graphs are empty. The two newest episodes win in every footprint pair.\nThus exact strengths, associations and scores discriminate models where winner\nmembership does not. Independent focal strength is footprint-invariant here, but\nthe later average over retained episode contents is not. Flat remains the already\nretired negative control; a finite score equality does not rehabilitate it. Neither\nthe independent nor hybrid result establishes universal footprint immunity.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-009",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 125,
+        "endLine": 125,
+        "text": "| `MEC-009` | Exact spreading activation and accessibility-filtered retrieval | `CONTROL` | Preserve stability/uniqueness, quantize-at-commit, bounded candidate retrieval, and canonical tie behavior. Compare against cheaper/local alternatives. |\n"
+      },
+      "assessment": "Finite spreading/accessibility and canonical tie/decay comparisons preserved.",
+      "remaining": "Local alternatives, stability domain, quantization and future-query horizon must survive reduction.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 58,
+          "endLine": 62,
+          "text": "The baseline and K0 control have identical first-cue scores. At the next cue, the\nepisode formed at 6 has base accessibility **5/6** after retrieval versus **1/3**\nwithout retrieval, down from **1/2** initially. The unselected episode receives no\nreinforcement. With decay disabled, episodes formed at 5 and 6 tie at **83/60**;\ncanonical ordering selects the former. Graph access and recency remain separable.\n"
+        },
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 51,
+          "endLine": 56,
+          "text": "Sparse graphs are empty. The two newest episodes win in every footprint pair.\nThus exact strengths, associations and scores discriminate models where winner\nmembership does not. Independent focal strength is footprint-invariant here, but\nthe later average over retained episode contents is not. Flat remains the already\nretired negative control; a finite score equality does not rehabilitate it. Neither\nthe independent nor hybrid result establishes universal footprint immunity.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-010",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 126,
+        "endLine": 126,
+        "text": "| `MEC-010` | Episodic accessibility from recency, retrieval frequency, decay, and retrieval reinforcement | `CONTROL` + `CORPUS` | Preserve hand-computed regression cases. The new memory lifecycle must add reconstruction/consolidation without losing these discriminating behaviors. |\n"
+      },
+      "assessment": "Actual retrieval reinforcement and unselected-history/decay controls remain separate.",
+      "remaining": "No full reconstructive-memory equivalence or universal forgetting law.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+          "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d",
+          "startLine": 58,
+          "endLine": 62,
+          "text": "The baseline and K0 control have identical first-cue scores. At the next cue, the\nepisode formed at 6 has base accessibility **5/6** after retrieval versus **1/3**\nwithout retrieval, down from **1/2** initially. The unselected episode receives no\nreinforcement. With decay disabled, episodes formed at 5 and 6 tie at **83/60**;\ncanonical ordering selects the former. Graph access and recency remain separable.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-011",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 127,
+        "endLine": 127,
+        "text": "| `MEC-011` | Availability/preconditions separated from accessibility/relevance | `CONTRACT` | World feasibility and “currently on my mind” must remain independently intervenable. Historical substitution tests are the negative control. |\n"
+      },
+      "assessment": "Bounded task port separates availability/relevance; later HABIT and substitution remain separate evidence.",
+      "remaining": "World infeasibility cannot manufacture cue access; full original negative-control chain remains distinct.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-012",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 128,
+        "endLine": 128,
+        "text": "| `MEC-012` | Reason Nuclei keyed by option, motive, referent, and resolved direction | `PORT` | Preserve exact semantic grouping, independent motives/referents, one active nucleus per resolved grouping, stable IDs, and no runtime interpretation. Re-test whether direction belongs in identity or resolved state. |\n"
+      },
+      "assessment": "Joined REASON separates motive/referent and resolves signed direction after consolidation.",
+      "remaining": "Direction-as-identity alternatives remain unresolved; no universal key normalization.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 103,
+          "endLine": 108,
+          "text": "Aggregate weighted Jaccard remains a candidate: larger-union subset residuals,\narbitrary renaming/ties, general cross-role normalization and new source families\nremain open. Ordinary input-array permutation is stable; no arbitrary identifier\nrenaming invariance is claimed. Direction is resolved after signed consolidation\nin this profile; direction-as-identity alternatives and broad modifier/bracket\ncalibration remain unresolved. No reduction or universal reason law is selected.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-013",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 129,
+        "endLine": 129,
+        "text": "| `MEC-013` | Cognitive-signal source roles | `PORT` | Preserve `MotiveGenerating`, `StandingDisposition`, `SituationalEvidence`, and `ContextModulating` as separately traceable roles. New source families must emit into this contract rather than invent private dice. |\n"
+      },
+      "assessment": "REASON includes context modulation as separately traced bounded modifier; older future-only routing is superseded in this scope.",
+      "remaining": "New source families need admitted ownership/role contracts; no universal context mechanism.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-014",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 130,
+        "endLine": 130,
+        "text": "| `MEC-014` | Two-stage reason consolidation | `PORT` | Preserve “sum compatible raw causes, then bound/floor once,” plus a separate unfiltered evidence basis where required. This prevents path-dependent threshold artifacts and identity self-contamination. |\n"
+      },
+      "assessment": "Bounded raw-cause consolidation and separate evidence basis ported.",
+      "remaining": "Keep identity feedback out of its own evidence; calibration/threshold variants require exact comparisons.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-015",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 131,
+        "endLine": 131,
+        "text": "| `MEC-015` | Dice/modifier grammar and exact arbitration | `PORT` | Mandatory initial arbitration implementation: base die, standing modifier, situational modifier, exact option distributions, `Margin`, `Contest`, `Stake`, `AuthorshipPotential`, resolution mode, and counter-addressed roll. |\n"
+      },
+      "assessment": "Dice/modifier/arbitration grammar executes in bounded task and DECISION profiles.",
+      "remaining": "Preserve exact distributions/modes/addressing; neither universal calibration nor uniqueness selected.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 263,
+          "endLine": 296,
+          "text": "- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
+          "sha256": "403d3244ab871a5e19d2a4748c1d984ddc5e7dc06863654fb4b75e21910274a4",
+          "startLine": 36,
+          "endLine": 41,
+          "text": "Low/high significance has identical authoritative draw transcripts and selected\noptions at each registered seed. Player presentation projects actual reason faces\nand contributions from that same decision; it draws nothing again. Baseline intent\nand frozen expression are byte-identical across allowed/prevented execution.\nActual outcomes and admitted consequence observations differ. Historical expression\nsurvives either outcome, and later decisions do not recompute old entries.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-016",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 132,
+        "endLine": 132,
+        "text": "| `MEC-016` | Modifier activation rule | `PORT` | A modifier may alter a genuine active motive but cannot create semantic motivation from zero. Preserve weak-motive rescue and zero-motive exclusion tests. |\n"
+      },
+      "assessment": "REASON tests zero-base exclusion and weak-motive rescue by modifiers.",
+      "remaining": "Standing/context cannot manufacture base motivation; new compiler laws require same controls.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 36,
+          "endLine": 45,
+          "text": "| Contrast | Aggregate result | Discriminating comparison |\n|---|---|---|\n| Same motive/referent, two independent samples | One nucleus; base17/29, d6 | PerFactDie creates two nuclei |\n| Change only motive or referent | Two distinct active keys | PooledChannel collapses them to one |\n| Bases3/4 on{1},2/3 on{2}, then1/4 on{1,2} | Last effective contribution0; base remains17/29 | PairwiseOnly adds1/8; base37/61, crossing to d8 |\n| Zero base plus acquired standing | No nucleus | IdentityIndependentDie produces one from standing alone |\n| Weak raw1/10 plus matching standing | Base stays1/11; one d4+1 activates | Without standing or with a different referent, no active nucleus |\n| Weak base plus situation or context | Both can rescue; role totals remain distinct | Neither can manufacture a zero-base reason |\n| Opposite base contributions | Resolve signed net before threshold; exact cancellation gives no die | No independent positive/negative dice in the lawful grouping |\n| Avoid with standing modifier | Sign applies to the entire die-plus-modifier distribution | Exact negative of the matched Approach distribution |\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-017",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 133,
+        "endLine": 133,
+        "text": "| `MEC-017` | `DecisionExpression` as frozen contextual choice meaning | `PORT` | Preserve alternatives, reasons, opposition, uncertainty, stakes, intervention, chosen intent, and frozen dice expression independently of execution success. |\n"
+      },
+      "assessment": "Frozen choice meaning survives allowed versus prevented execution in DECISION.",
+      "remaining": "Preserve alternatives/reasons/intent before world outcome; current reinterpretation cannot rewrite expression.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
+          "sha256": "403d3244ab871a5e19d2a4748c1d984ddc5e7dc06863654fb4b75e21910274a4",
+          "startLine": 36,
+          "endLine": 41,
+          "text": "Low/high significance has identical authoritative draw transcripts and selected\noptions at each registered seed. Player presentation projects actual reason faces\nand contributions from that same decision; it draws nothing again. Baseline intent\nand frozen expression are byte-identical across allowed/prevented execution.\nActual outcomes and admitted consequence observations differ. Historical expression\nsurvives either outcome, and later decisions do not recompute old entries.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-018",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 134,
+        "endLine": 134,
+        "text": "| `MEC-018` | Acquired identity evidence and reinforcing standing-modifier loop | `PORT` | Preserve authorship-weighted evidence, consolidation, self-stabilization, fault lines, contradiction, transformation, and no authored trait bonus. Prevent feedback from becoming evidence for itself. |\n"
+      },
+      "assessment": "BIO demonstrates acquired standing, contradiction and finite transformation.",
+      "remaining": "Refold retains whole history; no compression or general identity law; extra trait-bonus mutant gap remains.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BIO_QUALIFICATION.md",
+          "sha256": "68b59bfddb61d4554b585b598887ea18df4ef89ad302be2e8afe26af69e9b347",
+          "startLine": 38,
+          "endLine": 41,
+          "text": "After four positive contributions, strength is111111/361111. One contrary choice\nreduces it to333333/1555555, still positive. Twelve contrary choices produce\n-111111/347222 and reverse the later standing to(-3,+3), with settled intent B.\nThese are finite witnesses under explicit calibration, not a universal learning rate.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_BIO_QUALIFICATION.md",
+          "sha256": "68b59bfddb61d4554b585b598887ea18df4ef89ad302be2e8afe26af69e9b347",
+          "startLine": 52,
+          "endLine": 56,
+          "text": "DisplayOnly and HistoryOnly are behaviorally equivalent here; their display differs.\nNo artificial action distinction is invented between them. Refold's equality retains\nall historical evidence and does not justify compression or loss of contextual meaning.\nThe baseline's earlier expressions remain byte-identical after later learning and\nafter the reversed-context probe. Old meaning is not recomputed from current identity.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-019",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 135,
+        "endLine": 135,
+        "text": "| `MEC-019` | Intent/attempt/outcome separation | `CONTRACT` + `CORPUS` | Preserve the failed-execution case: a choice can express commitment or courage even when world interference prevents success. |\n"
+      },
+      "assessment": "DECISION actual intent/expression precedes attempt/outcome with execution controls.",
+      "remaining": "Do not derive commitment/courage from world success alone; later learning remains admitted evidence.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
+          "sha256": "403d3244ab871a5e19d2a4748c1d984ddc5e7dc06863654fb4b75e21910274a4",
+          "startLine": 36,
+          "endLine": 41,
+          "text": "Low/high significance has identical authoritative draw transcripts and selected\noptions at each registered seed. Player presentation projects actual reason faces\nand contributions from that same decision; it draws nothing again. Baseline intent\nand frozen expression are byte-identical across allowed/prevented execution.\nActual outcomes and admitted consequence observations differ. Historical expression\nsurvives either outcome, and later decisions do not recompute old entries.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-020",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 136,
+        "endLine": 136,
+        "text": "| `MEC-020` | Commitments as non-Need motive-generating sources with lifecycle identity | `PORT` as a control seam | Preserve active-only pressure, disappearance on retirement, and independent IDs for recurring instances. Do not model an obligation as an immortal appetite. |\n"
+      },
+      "assessment": "COMMIT demonstrates concrete active-only lifecycle pressure and distinct recurrence.",
+      "remaining": "No immortal appetite relabeling or automatic observer synchronization.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_COMMIT_QUALIFICATION.md",
+          "sha256": "90791c380d2938f85e2fdd6ba8e5db4e2f847ab042e4f3f7faf2677e584c80b2",
+          "startLine": 30,
+          "endLine": 36,
+          "text": "| Lifecycle state | Lifecycle baseline | Preserved distinction |\n|---|---|---|\n| No instance |0 reasons|Strong identity alone creates no commitment motive|\n| A active |1 reason,referent A,standing+3|Pressure belongs to this concrete instance|\n| A cancelled |0 reasons; identity unchanged|Retirement removes pressure without erasing identity|\n| New B active |1 reason,referent B,standing+3|B differs from A; terminal A remains stored|\n| B still active |1 reason,referent B|Stable continuation, no A resurrection|\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-021",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 137,
+        "endLine": 137,
+        "text": "| `MEC-021` | Salience-weighted referent attribution for multi-participant memory | `CONTROL` + `CORPUS` | Preserve proportional multi-participant attribution and single-participant backward equivalence. Causal non-participant referents remain an explicit unsupported case. |\n"
+      },
+      "assessment": "Historical participant-attribution control remains; broader nonparticipant extension not established.",
+      "remaining": "Need exact proportional participant and single-participant regression chain; dyadic explanations do not establish nonparticipant credit.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_REASON_QUALIFICATION.md",
+          "sha256": "a99eb857c7ec502b28887607f5d3f42319d6a82f80f2c165058229c8f7de3487",
+          "startLine": 96,
+          "endLine": 101,
+          "text": "The symbolic task/panel mapping is an explicitly controlled identity-establishing\nsource. It is not learned motive recognition, general causal attribution, ordinary\nlanguage understanding or a solution to nonparticipant referents. Context modulation\nis a separately traced bounded modifier here, not a universal contextual mechanism.\nThis qualifies one compilation plus the necessary acquired standing history, not\nthe full future behavior of arbitrary agents or all-domain cognition.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    },
+    {
+      "id": "MEC-022",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 138,
+        "endLine": 138,
+        "text": "| `MEC-022` | Frozen historical calibration/provenance | `CONTRACT` | A later change to thresholds, dice bands, salience, or identity must not recompute what an old choice or memory meant at the time. |\n"
+      },
+      "assessment": "Original historical expression/qualification retained under later context and identity changes.",
+      "remaining": "Allowed future queries and full contextual evidence matter; complete-history refold is not lossy compression.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_DECISION_QUALIFICATION.md",
+          "sha256": "403d3244ab871a5e19d2a4748c1d984ddc5e7dc06863654fb4b75e21910274a4",
+          "startLine": 36,
+          "endLine": 41,
+          "text": "Low/high significance has identical authoritative draw transcripts and selected\noptions at each registered seed. Player presentation projects actual reason faces\nand contributions from that same decision; it draws nothing again. Baseline intent\nand frozen expression are byte-identical across allowed/prevented execution.\nActual outcomes and admitted consequence observations differ. Historical expression\nsurvives either outcome, and later decisions do not recompute old entries.\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_BIO_QUALIFICATION.md",
+          "sha256": "68b59bfddb61d4554b585b598887ea18df4ef89ad302be2e8afe26af69e9b347",
+          "startLine": 52,
+          "endLine": 56,
+          "text": "DisplayOnly and HistoryOnly are behaviorally equivalent here; their display differs.\nNo artificial action distinction is invented between them. Refold's equality retains\nall historical evidence and does not justify compression or loss of contextual meaning.\nThe baseline's earlier expressions remain byte-identical after later learning and\nafter the reversed-context probe. Old meaning is not recomputed from current identity.\n"
+        }
+      ],
+      "disposition": "SCOPED REVIEW; LIMITS RETAINED"
+    }
+  ],
+  "fullHistoryReconciled": false,
+  "freshExecutions": 0,
+  "limits": [
+    "Source-accounting crosswalk, not new35 qualifications or original extracted-unit completion.",
+    "SUB006/013 active-port/tooling chains and MEC021 attribution proof remain open; no missing evidence inferred as impossibility.",
+    "Historical routing corrected by scoped later records; old sources unchanged.",
+    "Scientific adequacy, entire canonical-universe reconciliation, freshness and exit corpus/native gates remain open."
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "version": "values-public-allocation/0.1-candidate",
+  "status": "ACCEPTED before implementation",
+  "date": "2026-10-04",
+  "namespace": 1155,
+  "contractSha256": "e1ba45d2f8f185170bda372df0bccc32fb4e6d3f05f34572d6af1b04e490e6ed",
+  "records": [
+    {
+      "typeId": 1509,
+      "name": "ValuesPublicProfile",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Version",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Law",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1510,
+      "name": "ValuesReceipt",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Instant",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "ReceiptId",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Linked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Target",
+          "type": {
+            "enum": [
+              1,
+              2
+            ]
+          },
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Observed",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Outcome",
+          "type": "i",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1511,
+      "name": "ValuesProbe",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Instant",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Seed",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Need",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 4,
+          "name": "Goal",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 5,
+          "name": "Linked",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "id": 6,
+          "name": "Mode",
+          "type": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1512,
+      "name": "ValuesOriginal",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Instant",
+          "type": "u",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Receipt",
+          "type": {
+            "list": "ref:1510",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Probe",
+          "type": {
+            "list": "ref:1511",
+            "min": 0,
+            "max": 1
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1513,
+      "name": "ValuesHistory",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Receipts",
+          "type": {
+            "list": "ref:1510",
+            "min": 0,
+            "max": 64
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1514,
+      "name": "ValuesProjection",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Data",
+          "type": "data",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1515,
+      "name": "ValuesChoice",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Operands",
+          "type": "ref:1519",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Resolution",
+          "type": "ref:409",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1516,
+      "name": "ValuesHistoryRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "History",
+          "type": "ref:1513",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1517,
+      "name": "ValuesProjectionRoot",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Projection",
+          "type": "ref:1514",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1518,
+      "name": "ValuesUpdate",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Before",
+          "type": "ref:1514",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "After",
+          "type": "ref:1514",
+          "required": true
+        }
+      ]
+    },
+    {
+      "typeId": 1519,
+      "name": "ValuesReasonOperands",
+      "schemaVersion": 1,
+      "fields": [
+        {
+          "id": 1,
+          "name": "Probe",
+          "type": "ref:1511",
+          "required": true
+        },
+        {
+          "id": 2,
+          "name": "Projection",
+          "type": "ref:1514",
+          "required": true
+        },
+        {
+          "id": 3,
+          "name": "Reasons",
+          "type": "ref:408",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

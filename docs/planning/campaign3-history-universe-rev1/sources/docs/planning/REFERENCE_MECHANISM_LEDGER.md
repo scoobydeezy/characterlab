@@ -1,0 +1,1027 @@
+# Reference Mechanism Preservation Ledger
+
+**2026-09-20 current GA disposition:** [bounded public qualification](GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md)
+and VER-C3-GA-001 complete the planned General Attention work item. MEC-005 remains
+CONTROL+CONTRACT; MEC-007/CTL-004 CONTROL; MEC-008/009 CONTROL; MEC-010 CONTROL+CORPUS.
+Their exact public competitors now execute under 43 frozen models, including four
+matched footprint pairs and later probes. RET-001 remains retired. No numerical law,
+general Affect representation or significance-first necessity is declared settled.
+The dated component/source checkpoints below retain their historical scope.
+
+2026-09-13: [Production boundary checkpoint](GENERAL_ATTENTION_PRODUCTION_BOUNDARIES_CHECKPOINT.md)
+executes MEC-007's small-floor footprint comparison through actual canonical Unlimited
+selection and preserves retired-flat1 and historical hybrid's nonconserved total.
+MEC-008/009/010 public model/owner qualification remains OPEN; no reference mechanism
+is retired by these component controls.
+
+2026-09-13 [observed association and bounded owners](GENERAL_ATTENTION_BOUNDED_PERCEPTION_CHECKPOINT.md):
+MEC-007/008/009/010 now compose actual sparse/dense observed acquisitions with
+independent learned-graph recall. Direct episodic cue matching survives graph loss.
+Perception reconstruction uses last windows and existing SEM owners, not a hidden
+source archive. The history-bearing tracker remains a differential control; no
+psychological reduction or public/corpus qualification is inferred.
+
+
+2026-09-13 [requested multimodal checkpoint](GENERAL_ATTENTION_REQUESTED_MULTIMODAL_CHECKPOINT.md):
+MEC-007/010 source, encoding and recall distinctions remain separate. Shared sensing
+does not couple cue admission to acquisition. Literal earlier physical preparation
+preserves accepted phase ordering and introduces no adaptive truth controller. The
+three-item source keeps sparse/dense and independent/shared/hybrid controls expressible;
+no reduction or public qualification is inferred.
+
+2026-09-13 [selected/prior-feedback checkpoint](GENERAL_ATTENTION_SELECTED_FEEDBACK_CHECKPOINT.md):
+MEC-007/010 keep exact encoding/access laws and their explicit earlier-concern
+comparison. Immediate encoding excludes its own later outcome, not lawful prior
+feedback. Known zero, unavailable feedback and disabled modulation remain distinct.
+No psychological reduction or public qualification follows from component passage.
+
+2026-09-13 [selected spatial composition](GENERAL_ATTENTION_SPATIAL_BINDING_CHECKPOINT.md):
+MEC-005's Incidental control remains distinct from the positive spatial candidate.
+MEC-007 semantic role and continuous spatial allocation remain separate operands;
+all four existing encoding-budget laws, including retired-flat, remain explicit
+controls. No mechanism is retired or promoted to public qualification by this join.
+
+2026-09-13 [source integration revision2](GENERAL_ATTENTION_SOURCE_INTEGRATION_REV2.md):
+MEC-007 outcome-relevance and MEC-010 retention remain controls/corpus obligations.
+The explicit panel source, separate retained positional operands and independent
+hidden-delivery comparator preserve observer-side false attribution. The new formation
+component preserves use and significance; the earlier recency-only owner is retained
+as a control. No historical realized-effect law, Need semantics or public qualification
+is inferred. General event segmentation remains a separate future comparator.
+
+**Status:** active preservation gate
+
+**Purpose:** prevent valuable pre-refoundation mechanisms, findings, and fixtures from disappearing without a deliberate decision
+
+This ledger does not restore the previous architecture wholesale. It records what the historical CharacterLab actually earned, what remains a useful control, what was only proposed, and what was explicitly corrected or retired.
+
+## 1. Source index
+
+- [Original deterministic-model brief](../../reference/CharacterLab%20%E2%80%94%20Deterministic%20Cognitive%20Reference%20Model%20Brief.md)
+- [Phase 2.5 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.5%20Research%20Brief.md)
+- [Phase 2.9 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.9%20Research%20Brief.md)
+- [Phase 2.97 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.97%20Research%20Brief.md)
+- [Phase 3 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%203%20Research%20Brief.md)
+- [Phase 3 implementation plan](../../reference/CharacterLab%20%E2%80%94%20Phase%203%20Implementation%20Plan.md)
+- [Historical research log](../../reference/RESEARCH.md)
+- [Historical implementation map](../../reference/IMPLEMENTATION_README.md)
+- `reference/src/` and `reference/src/test/` — executable controls and regression evidence
+
+## 2. Dispositions
+
+| Disposition | Meaning |
+|---|---|
+| `PORT` | Earned substrate or mechanism that must populate the first fresh reference implementation after a new seam contract exists. |
+| `CONTROL` | Keep runnable under an explicit historical/control identity for comparison; it is not the default architecture. |
+| `CONTRACT` | Preserve the semantic boundary, invariant, or causal distinction even if its old representation changes. |
+| `CORPUS` | Preserve as a named phenomenon, counterfactual, proof, or regression fixture. |
+| `CANDIDATE` | Valuable unproven hypothesis. It may enter a campaign but has not earned implementation authority. |
+| `RETIRED` | Known-bad or superseded mechanism. Preserve only as history or a negative control; never silently reactivate. |
+
+Every listed item must eventually receive a recorded outcome: accepted port and contract version, named control, corpus-only preservation, explicit supersession, or a justified retirement. Absence from the new source tree is not a verdict.
+
+### `PORT` is not `RETAINED`
+
+`PORT` is a construction and comparison obligation, not a reduction verdict. It means the earned historical mechanism must be re-expressed through the new truth/evidence, ordering, mutation, numeric, and trace contracts so the refounded architecture has a strong initial implementation and an executable control. Every ported mechanism begins `UNRESOLVED` in the active Verdict Ledger until the new corpus and counterfactual methodology support another verdict.
+
+The cluster `MEC-012` through `MEC-020` is a deliberate research bet: Phase 2.9–2.97 supplied unusually deep tests and closure audits, so omitting that pipeline would destroy more evidence than starting with it costs. Porting it does not exempt it from ablation, substitution, calibration review, or later retraction. It exempts it only from being silently discarded before those comparisons can run.
+
+## 3. Earned deterministic and research substrate
+
+| ID | Mechanism or asset | Disposition | Preservation obligation |
+|---|---|---|---|
+| `SUB-001` | Reduced exact rational arithmetic | `PORT` | Use as the reference oracle; preserve canonical reduction, sign rules, exact equality, and algebraic tests. |
+| `SUB-002` | Integer lattice quantization with ties-to-even and largest-remainder allocation | `PORT` + `CONTROL` | Port shared primitives after the numeric profile is formalized. Preserve exact-budget and quantization-bound tests; do not assume the historical scale is optimal. |
+| `SUB-003` | Stable typed semantic identifiers and canonical ordering | `PORT` | Port the identity/order discipline, then replace historical registries with current versioned registries. |
+| `SUB-004` | Counter-addressed deterministic randomness | `PORT` | Preserve draw independence, stable causal addressing, replay, and purpose separation. The hash/range-mapping algorithm still requires the new formal random contract. |
+| `SUB-005` | Exact finite discrete distributions, convolution, and fair tie-share win probabilities | `PORT` | Required by the retained dice grammar. Preserve normalization and brute-force-enumeration proofs. |
+| `SUB-006` | Exact linear algebra with fixed pivot order and typed singularity | `PORT` + `CONTROL` | Reuse as an oracle/tool for mechanisms that actually require matrix solving; do not make it a character primitive by default. |
+| `SUB-007` | Aggregate-coverage correlated-evidence consolidation | `PORT` | Preserve `EvidenceBasis` provenance, canonical ordering, and the `{1}`, `{2}`, `{1,2}` collective-redundancy regression. The earlier pairwise-max algorithm is retired. |
+| `SUB-008` | Structured causal trace, state snapshots/hashes, and first-divergence replay | `PORT` | Port the tested discipline into the new trace schema. Hashes remain diagnostics rather than proof of structural equality. |
+| `SUB-009` | Paired counterfactual harness with coupled random addresses | `PORT` | Reuse for every seam comparison so the intervention is the only intended difference. |
+| `SUB-010` | Named legacy/default parameter bundles and phase-end re-baselining | `PORT` as research method | Preserve the ability to run old and candidate models side by side. Once a candidate earns canonical status, rename the displaced model as a control rather than leaving two ambiguous defaults. |
+| `SUB-011` | “Correct forward; do not rewrite findings” research-log discipline | `CONTRACT` | Corrections must retain the failed hypothesis, diagnosis, replacement, and validating cases. |
+| `SUB-012` | Exact monotonic bounded-response transform | `PORT` + `CONTROL` | Preserve as a shared candidate utility with its bounds/monotonicity proofs; do not assume every psychological saturation uses the same curve. |
+| `SUB-013` | Inspectable experiment UI, trace viewer, counterfactual panels, and calibration sweeps | `CONTROL` as research tooling | Preserve the ability to expose real authoritative inputs, intermediate values, exact probabilities, and paired outputs. Rebuild views around new contracts rather than porting old UI component boundaries. |
+
+**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.
+
+`SUB-001` has an accepted Campaign 0 reference port with bigint-only construction, canonical reduction, sign-correct floor/ceiling division, and ties-to-even rounding. The 0C analytical-time implementation resolves the known separately floored interval defect by retaining exact remainder and prohibiting incidental re-anchoring. All `CV-TIME-*`, integrated continuation fixtures, and the preserved historical `rational.test.ts` control pass.
+
+The ordering and persistence portion of `SUB-008` has an accepted Campaign 0 reference port: global monotonic event/sequence allocation replaces the historical per-tick string ID, pending work is ordered by `(DueAt, Phase, EventSequence)`, a complete instant commits atomically, and canonical saves restore IDs and allocator continuation without serializing handlers. Canonical values are deep-copied at scheduler authority boundaries. Accepted `SEM-001H` extends the phase manifest to `ordering-phases/2-candidate` with current/consequence perception lanes and a non-schedulable settlement sentinel without changing scheduler ordering or transaction semantics. `CV-ORD-*`, `CV-SAVE-*`, all generic and concrete `CV-TXN-001` boundaries, `CV-SEM-081..090`, first-divergence proof, integrated continuation, and the preserved deterministic-replay control pass.
+
+## 4. Earned causal and cognitive mechanisms
+
+| ID | Mechanism or finding | Disposition | Preservation obligation |
+|---|---|---|---|
+| `MEC-001` | Generic `EvidentialEstimate(mean, precision)` and its `NeedExpectation(subject, need)` specialization | `CONTROL` + `CANDIDATE` | Preserve the exact precision-weighted/prediction-error equivalence and resistance-to-isolated-contradiction tests. Re-evaluate which belief/expectation domains legitimately share this representation. |
+| `MEC-002` | Informative-bound gating for censored evidence | `CONTROL` + `CORPUS` | Preserve the four named cases: weak compatible bound, inconsistent bound, zero-information saturation, and genuine point evidence after repeated censoring. Accepted-bound precision over-crediting remains a known approximation. |
+| `MEC-003` | Bounded-effect decomposition: `Capacity`, `Applied`, `Overflow`, and `EvidenceKind` | `CONTROL` + `CONTRACT` | Preserve the exact identity wherever a bounded effect exists. The historical use of authoritative `Applied` as the character's observation is a perfect-interoception control; the new evidence kind must be computed from the permitted perceived measurement. It does not prove that every Need is a stored bounded meter. `Overflow` remains omniscient trace information. |
+| `MEC-004` | truth-side `EffectProvenance → perceptual projection → derived causal roles → SemanticExperience` | `PORT` with boundary correction; restricted token, event-pattern, continuant-recognition, and safe causal-role/provenance controls now present; integrated port blocked by parent `SEM-001` | This is the strongest earned world-truth-to-character-evidence control. Preserve separately identified actor/target/instrument/cause participation, but distinguish semantic `EventRole` from analytical `CausalRole`; keep full provenance, truth referent/action identity, and unobserved world facets on the trace side. `SemanticExperience` receives event-grouped perceptual referents, typed observed classification, and only observer-safe evidence admitted by each consumer's exact `ReadDomain`. Classification, tracking, recognition, retained state, appraisal, and evidence quality remain separate. Accepted `SEM-001G` replaces hidden provenance joins and winner-takes-all causal roles with a closed same-observer reference grammar plus zero-or-more nonrecursive character-relative causal-role claims. The current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` path is permanently `CONTROL-SEM-LEGACY-CONCEPT-TOKEN`, valid only where the channel establishes identity, one role suffices, and no hidden link leaks. Historical direct action-key projection remains a control; accepted `SEM-001E` replaces its default character-evidence role with event-file pattern classification. Accepted `SEM-001F` permits continuant candidate identity only through observer-owned catalog/templates or a mapped identity claim. Learned action identity remains downstream. |
+| `MEC-005` | Character-relative attention separated from perception | `CONTROL` + `CONTRACT` | Preserve the distinction and residual-pool control. Fixed role weights and pool size remain candidate calibration, not invariants. |
+| `MEC-006` | Evidence-aware surprise for point/lower-bound/upper-bound observations | `PORT` as a shared classification/control | Preserve the rule that censored distance is surprising only when it contradicts the prior. All consumers must share the same evidence semantics. |
+| `MEC-007` | Multiplicative semantic-salience reference model | `CONTROL` | Preserve base category, event-specific causal role, attention, realized Need relevance, surprise, bounded response, and complete trace factors. The independent budget is the historical canonical control; shared/hybrid budgets remain alternatives. |
+| `MEC-008` | Weighted association learning with one mutation authority, row budget, and largest-remainder normalization | `CONTROL` | Preserve as the first association-learning control plus its exact invariants. The global association graph is not automatically the new cognitive backbone. |
+| `MEC-009` | Exact spreading activation and accessibility-filtered retrieval | `CONTROL` | Preserve stability/uniqueness, quantize-at-commit, bounded candidate retrieval, and canonical tie behavior. Compare against cheaper/local alternatives. |
+| `MEC-010` | Episodic accessibility from recency, retrieval frequency, decay, and retrieval reinforcement | `CONTROL` + `CORPUS` | Preserve hand-computed regression cases. The new memory lifecycle must add reconstruction/consolidation without losing these discriminating behaviors. |
+| `MEC-011` | Availability/preconditions separated from accessibility/relevance | `CONTRACT` | World feasibility and “currently on my mind” must remain independently intervenable. Historical substitution tests are the negative control. |
+| `MEC-012` | Reason Nuclei keyed by option, motive, referent, and resolved direction | `PORT` | Preserve exact semantic grouping, independent motives/referents, one active nucleus per resolved grouping, stable IDs, and no runtime interpretation. Re-test whether direction belongs in identity or resolved state. |
+| `MEC-013` | Cognitive-signal source roles | `PORT` | Preserve `MotiveGenerating`, `StandingDisposition`, `SituationalEvidence`, and `ContextModulating` as separately traceable roles. New source families must emit into this contract rather than invent private dice. |
+| `MEC-014` | Two-stage reason consolidation | `PORT` | Preserve “sum compatible raw causes, then bound/floor once,” plus a separate unfiltered evidence basis where required. This prevents path-dependent threshold artifacts and identity self-contamination. |
+| `MEC-015` | Dice/modifier grammar and exact arbitration | `PORT` | Mandatory initial arbitration implementation: base die, standing modifier, situational modifier, exact option distributions, `Margin`, `Contest`, `Stake`, `AuthorshipPotential`, resolution mode, and counter-addressed roll. |
+| `MEC-016` | Modifier activation rule | `PORT` | A modifier may alter a genuine active motive but cannot create semantic motivation from zero. Preserve weak-motive rescue and zero-motive exclusion tests. |
+| `MEC-017` | `DecisionExpression` as frozen contextual choice meaning | `PORT` | Preserve alternatives, reasons, opposition, uncertainty, stakes, intervention, chosen intent, and frozen dice expression independently of execution success. |
+| `MEC-018` | Acquired identity evidence and reinforcing standing-modifier loop | `PORT` | Preserve authorship-weighted evidence, consolidation, self-stabilization, fault lines, contradiction, transformation, and no authored trait bonus. Prevent feedback from becoming evidence for itself. |
+| `MEC-019` | Intent/attempt/outcome separation | `CONTRACT` + `CORPUS` | Preserve the failed-execution case: a choice can express commitment or courage even when world interference prevents success. |
+| `MEC-020` | Commitments as non-Need motive-generating sources with lifecycle identity | `PORT` as a control seam | Preserve active-only pressure, disappearance on retirement, and independent IDs for recurring instances. Do not model an obligation as an immortal appetite. |
+| `MEC-021` | Salience-weighted referent attribution for multi-participant memory | `CONTROL` + `CORPUS` | Preserve proportional multi-participant attribution and single-participant backward equivalence. Causal non-participant referents remain an explicit unsupported case. |
+| `MEC-022` | Frozen historical calibration/provenance | `CONTRACT` | A later change to thresholds, dice bands, salience, or identity must not recompute what an old choice or memory meant at the time. |
+
+## 5. Earned findings that must become corpus obligations
+
+| ID | Finding or fixture family | Disposition | What must survive |
+|---|---|---|---|
+| `EXP-001` | Reliable satisfier preference | `CORPUS` | Repeated evidence changes expectation and confidence; established evidence resists one contradiction without a hand-authored attachment stat. |
+| `EXP-002` | Saturation and censoring | `CORPUS` | Equal true effects under different capacity produce different raw deltas but not false efficacy conclusions; hidden Overflow never becomes character evidence. |
+| `EXP-003` | Habit/accessibility | `CORPUS` | Repeated context/action co-experience makes an action retrievable from context alone; exact historical `1/2` edge strength is retired as a flat-tag artifact. |
+| `EXP-004` | Associative substitution negative result | `CORPUS` | Mere target unavailability does not change accessibility; precondition filtering and learned preference remain separately attributable. |
+| `EXP-005` | Avoidance without a generic inhibition stat | `CORPUS` | Repeated aversive evidence reduces preference; boundary-clipped observations do not erase an established negative expectation. |
+| `EXP-006` | Memory accessibility | `CORPUS` | Recency, repetition, retrieval reinforcement, decay, top-K bounds, and tie ordering remain separately testable. |
+| `EXP-007` | Semantic salience cases | `CORPUS` | Same object changing causal role, attention gating, Need relevance, evidence-aware surprise, perception exclusion, and trace completeness. |
+| `EXP-008` | Saturation/salience non-leakage | `CORPUS` | Observationally equivalent Applied/evidence states remain salience-equivalent regardless of hidden Overflow. |
+| `EXP-009` | Reason separation and correlation suite | `CORPUS` | Same referent/different motives stay separate; same motive/different referents stay separate; correlated derivations do not stack; independent evidence does. |
+| `EXP-010` | Dice grammar calibration and richness | `CORPUS` | Several independent reasons produce several dice, exact convolved probabilities, deterministic replay, and modifier/base-die sweeps. Preserve the finding that the historical `+1` modifier was slightly louder than a die-bracket step. |
+| `EXP-011` | Biography authorship / seed divergence | `CORPUS` | Identically authored characters differing only in early addressed rolls can acquire different identity and later resolve the same decision differently. |
+| `EXP-012` | Identity formation and change | `CORPUS` | Acquisition from zero, gradual influence, weak-signal combination, fault line, self-stabilization, contradiction resistance, and eventual transformation under sustained evidence. |
+| `EXP-013` | Commitment lifecycle | `CORPUS` | Pressure exists only while the concrete commitment is live; a new recurrence is a new referent; a permanent commitment pressure can incorrectly lock decisions into Auto. |
+| `EXP-014` | Aggregate evidence redundancy | `CORPUS` | `{1}` and `{2}` together make later `{1,2}` fully redundant; pairwise-only overlap must fail this control. |
+| `EXP-015` | Semantic-footprint/association-budget interaction | `CORPUS` | Changing how many concepts an event encodes changes achievable pairwise association strength. Tagging policy must be an explicit intervention, not invisible authoring trivia. |
+
+## 6. Valuable Phase 3 material that was never validated
+
+The Phase 3 brief and implementation plan contain substantial design work, but no Phase 3 implementation or experiment was completed. These items are preserved as `CANDIDATE` or `CORPUS`, never as earned mechanisms.
+
+| ID | Proposed distinction or test family | Disposition | Preservation obligation |
+|---|---|---|---|
+| `P3-001` | World truth → perception → belief → appraisal | `CONTRACT` + `CORPUS` | Preserve the four-way separation and tests for false belief, missing evidence, and differing appraisal from equal belief. |
+| `P3-002` | Typed conditional predictions and prediction opportunities | `CANDIDATE` + `CORPUS` | Preserve `ConditionKey`, `OutcomeKey`, opportunity identity, and explicit `OutcomeOccurred` / `SafeOpportunity` / `CensoredOpportunity` / `NoOpportunity` cases. |
+| `P3-003` | Non-event evidence | `CONTRACT` + `CORPUS` | A safe non-event teaches only when a relevant opportunity occurred; never accumulate “nothing happened” once per tick. |
+| `P3-004` | Threat appraisal factorization | `CANDIDATE` + `CORPUS` | Preserve likelihood, severity, vulnerability, and perceived control as independent interventions. The historical product formula remains only one candidate. |
+| `P3-005` | Fear, relief, avoidance, extinction, and generalization | `CORPUS` | Threat generates motives rather than commands; no generic Fear die; relief is not belief evidence; generalization is directional; false fear and cue conditioning remain required cases. |
+| `P3-006` | Observer-relative social evidence and belief | `CONTRACT` + `CORPUS` | No privileged access to another mind, subject/domain-specific beliefs, misleading evidence, correction, correlated evidence, private identity separation, and multiple beliefs per person. |
+| `P3-007` | Trust and suspicion as derived behavior | `CANDIDATE` + `CORPUS` | Preserve tests before deciding whether either needs independent state. |
+| `P3-008` | Social-evaluation threat, embarrassment timing, and jealousy | `CORPUS` | Preserve anticipatory versus observed/retrospective timing and competing-belief explanations; do not implement labels as state. |
+| `P3-009` | Constitution, identity, belief, and appraisal separation | `CONTRACT` + `CORPUS` | Constitution may bias appraisal or standing reasons but cannot manufacture evidence, duplicate identity, mutate from a single roll, or eliminate agency. |
+| `P3-010` | Same evidence/different people and same constitution/different biographies | `CORPUS` | Preserve as the minimum discrimination suite for constitutional projections. The historical seven-dimensional vector and quadratic projection are candidate controls only. |
+| `P3-011` | Same-time evidence ordering and explicit decay | `CANDIDATE` + `CORPUS` | Preserve ordering and partition tests when the current event contract is specified. |
+| `P3-012` | Unfinished original phenomenon backlog | `CORPUS` | Reconcile betrayal, grief/loss, rumination, obsession, healthy motivational multiplicity, value formation/revision, and addiction against the North-Star corpus. Their old proposed mechanisms are not implied by preserving the phenomena. |
+
+## 7. Historical controls that remain useful but are not current premises
+
+| ID | Historical model | Disposition | Proper use |
+|---|---|---|---|
+| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |
+| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |
+| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |
+| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |
+| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |
+| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |
+| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |
+| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |
+| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |
+| `CTL-010` | Experienced Reward | `CANDIDATE` | Remains trace-only until a phenomenon requires a character-accessible hedonic signal with its own derivation. |
+
+## 8. Explicitly corrected, superseded, or prohibited mechanisms
+
+| ID | Retired mechanism | Disposition | Reason |
+|---|---|---|---|
+| `RET-001` | Flat `z=1` concept tagging | `RETIRED` + `CONTROL` | Makes tag count and row competition silently determine learning strength. Keep only as named legacy salience. |
+| `RET-002` | Hand-authored causal role or per-concept attention flags | `RETIRED` | Replaced by structured provenance and deterministic derivation. |
+| `RET-003` | Raw `abs(Applied - mean)` surprise for censored evidence | `RETIRED` | Confuses measurement clipping with contradictory evidence. |
+| `RET-004` | Naive clipped delta treated as an exact point observation | `RETIRED` + `CONTROL` | Produces boundary-dependent mislearning. |
+| `RET-005` | Precision growth from every censored observation | `RETIRED` | Compatible or zero-information bounds do not justify confidence growth. |
+| `RET-006` | `Overflow → NeedExpectation` or `Overflow → Salience` | `RETIRED` / prohibited | Leaks simulator truth unavailable to the character; twice-tested non-necessity. |
+| `RET-007` | Identity contribution bounded/floored separately from matching ordinary pressure | `RETIRED` | Created all-or-nothing behavior from pipeline placement. Consolidate compatible raw causes once. |
+| `RET-008` | Identity as its own independent die | `RETIRED` as default + `CONTROL` | Standing modifier preserved all tested behavior without manufacturing a separate motive. |
+| `RET-009` | Pairwise-maximum correlation discount | `RETIRED` | Misses collective redundancy; aggregate prior evidence coverage replaced it. |
+| `RET-010` | Commitment represented as a Core Need | `RETIRED` | Confuses an obligation with a recurring appetite and loses independent commitment identity. |
+| `RET-011` | Permanent/immortal commitment pressure | `RETIRED` | Active pressure must follow lifecycle; permanent pressure can lock arbitration into Auto. |
+| `RET-012` | Named acquired trait as an independent simulation bonus | `RETIRED` / prohibited | Traits are derived descriptions of identity evidence; matching underlying identity may modify reasons once. |
+| `RET-013` | Recomputing old DecisionExpressions or memories under current calibration/state | `RETIRED` / prohibited | Rewrites biography and destroys replay/provenance. |
+| `RET-014` | Copying full `EffectProvenance` or authoritative `Applied` directly into character-accessible `SemanticExperience` | `RETIRED` as a new-port pattern | The historical type contains truth-side provenance and assumes perfect observation of the bounded state change. The new architecture requires perception/interoception to project what the character can know; full truth remains trace-only. |
+
+## 9. Known historical limitations that must remain visible
+
+- Analytical progression based on separately floored intervals is partition-sensitive unless remainder is retained.
+- Accepted censored bounds receive full point-like precision in the historical rule; no experiment yet required a richer posterior, but the approximation is real.
+- Historical modifier calibration made one `+1` step slightly stronger than an entire base-die bracket transition.
+- Memory-based referent attribution was tested over participants; a salient causal object that is not a participant remains unsupported.
+- Historical `SemanticExperience` correctly excluded `Overflow` but still embedded full `EffectProvenance`, authoritative `Applied`, and truth-side concept identities; copying that type unchanged would violate the stricter North-Star truth/evidence, recognition, and interoception boundaries.
+- `ReasonNucleusKey` includes direction even though the implementation groups the option/motive/referent triple and resolves one net direction afterward; the cleaner type boundary remains unresolved.
+- The historical association and activation mechanisms were validated on small research cases, not Vivarium-scale storage and retrieval.
+- Phase 3 formulas, seven-dimensional personality, values, acquired Needs, and addiction mechanisms were planned or drafted, not empirically earned.
+
+## 10. Historical executable evidence map
+
+| Area | Primary preserved tests/fixtures |
+|---|---|
+| exact arithmetic, lattice, ordering, randomness, linear algebra | `reference/src/test/rational.test.ts`, `quantize.test.ts`, `canonical.test.ts`, `random.test.ts`, `linalg.test.ts` |
+| distributions and arbitration probability | `reference/src/test/discreteDistribution.test.ts`, `phase2_9Decision.test.ts`, `phase2_9DecisionResolution.test.ts` |
+| expectation and bounded effects | `reference/src/test/expectation.test.ts`, `needs.test.ts`, `phase2_5aRepresentation.test.ts`, `phase2_5Saturation.test.ts` |
+| associations, activation, memory | `reference/src/test/associations.test.ts`, `activation.test.ts`, `memory.test.ts`, `phase2Experiments.test.ts` |
+| semantic experience and salience | `reference/src/test/salience.test.ts`, `semanticExperience.test.ts`, `phase2_5Salience.test.ts`, `phase2_5cExperienceInterpretation.test.ts`, `phase2_5dSaturationSalienceInteraction.test.ts` |
+| identity and DecisionExpression | `reference/src/test/phase2_9Identity.test.ts`, `phase2_9IdentityFormation.test.ts`, `phase2_95ReasonConsolidation.test.ts` |
+| Reason Nuclei and correlation | `reference/src/test/reasonNucleus.test.ts`, `evidenceOverlap.test.ts`, `phase2_97ReasonNucleusFormation.test.ts`, `phase2_97CorrelatedEvidence.test.ts` |
+| dice/modifier grammar and calibration | `reference/src/test/phase2_97DiceCompiler.test.ts`, `phase2_97DiceGrammarRichness.test.ts`, `phase2_97CalibrationSweeps.test.ts`, `phase2_97OldVsNewCompilation.test.ts` |
+| reinforcing identity and seed divergence | `reference/src/test/phase2_97IdentityAsModifier.test.ts`, `phase2_97SeedDivergenceReasonNuclei.test.ts`, `phase2_9SeedDivergence.test.ts` |
+| commitments and referent attribution | `reference/src/test/phase2_97CommitmentLifecycle.test.ts`, `phase2_97CognitiveSignals.test.ts`, `phase2_97SituationalModifiers.test.ts` |
+| end-to-end replay/cycle integration | `reference/src/test/determinism.test.ts`, `phase2_9CycleIntegration.test.ts`, `phase2_97CycleIntegration.test.ts` |
+
+This table identifies evidence to inspect and port; it does not claim every assertion remains valid under the new model identity.
+
+## 11. Porting gate
+
+Before a campaign or implementation touches a seam, it must:
+
+1. list every ledger item applicable to that seam;
+2. state whether each becomes a port, control, corpus obligation, candidate, or retirement;
+3. cite the new seam-contract version that preserves its semantics;
+4. identify the historical regression tests being ported or deliberately replaced;
+5. record any changed representation or calibration;
+6. run the relevant historical control and new model on the same declared corpus where comparison is possible;
+7. update this ledger and the verdict ledger with the result.
+
+This is the mechanism-level counterpart to the repository's `reference/` boundary: history cannot contaminate the new architecture automatically, and it cannot vanish automatically either.
+
+## Campaign 2 bounded port qualification — 2026-09-09
+
+The current result is recorded in CAMPAIGN2_COGNITIVE_QUALIFICATION.md and
+CAMPAIGN2_COMPLETION_REVIEW.md, under task-cognitive-path/0.1-candidate. This update
+completes the porting gate for that bounded task profile; PORT is not automatically
+converted into a general RETAINED or reduction verdict.
+
+- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,
+  addressed draws, finite distributions, aggregate coverage, structural trace/prefix
+  replay and bounded transform execute. Actual historical differential controls pass
+  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference
+  suite43/328 passes. No reference import enters active source.
+- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe
+  commitments and historical receipts remain preserved. No fixture namespace promotion.
+- SUB-009: natural-address deterministic replay and rollback are qualified; externally
+  supplied comparison maps remain excluded from this profile. Existing substrate
+  coupling stays a separately tested PORT/control; equal seeds alone do not pair
+  differing addresses.
+- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause
+  consolidation, all five die bands, three modes and zero-base/active-floor controls
+  execute. Component Avoid and richer coverage are explicitly not public source claims.
+- MEC-013: three historical source roles execute. ContextModulating remains a future
+  separately traceable PORT obligation; it is neither admitted nor silently retired.
+- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered
+  evidence, immutable historical expressions and intent/attempt/outcome separation
+  execute. Positive/opposing/quantized histories are component controls; public
+  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad
+  biography, coercion/cost and seed-space sufficiency remain corpus obligations.
+- MEC-020: immutable adopted task instructions and active-only lifecycle pressure
+  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.
+- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and
+  interval semantics are preserved. Protocol2 remains censored; execution identity
+  stays outside character evidence. Eighteen predecessor assays were refreshed.
+- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior
+  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled
+  compiler control; no new old-vs-new reduction verdict is claimed.
+- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact
+  source substitutions detect local-I scaling, extra tickets, standing in meaning,
+  lost aggregate history and protocol truth leakage. The collective redundancy
+  fixture detects the retired pairwise-max alternative without claiming that the
+  last-basis substitution is literally that algorithm.
+
+The known weighted-Jaccard subset residual and historical calibration limitations
+remain visible. No North-Star mechanism was eliminated by this port qualification.
+
+## Campaign 3 pre-entry obligations — 2026-09-10
+
+ATTN-001 now explicitly owns unimplemented perceptual attention/encoding salience.
+MEC-005 remains CONTROL+CONTRACT, MEC-007 and CTL-004 remain CONTROL, and RET-001
+remains retired; no new reduction verdict alters those dispositions. The residual
+pool and independent/shared-budget alternatives must be compared through permitted
+observer evidence. EXP-007/015 are preserved in the proposed ATTENTION intake,
+which is not counted as a frozen corpus member before an intentional successor.
+
+EMB-001 owns body-kinetics/interoception/embodied-motive expressibility. CTL-001 remains
+a control; REG is implemented authored-reference mathematics, not an unimplemented
+physiology model. The proposed BODY and MULTISOURCE entries preserve that difference.
+
+The new VER-C3-PRE-IDENTITY-001 executes a public baseline/history-without-feedback
+comparison and retains earned standing's activation effect in its four-seed matched
+probe domain. General biography remains unqualified. Historical numeric reservation
+is not a mandate to keep a mechanism active; future ablations use distinct model
+commitments and may omit a retired mechanism while its old decoder remains replayable.
+
+SUB-013 and TRC-003 remain explicit inspection/UI obligations. No observer-view
+semantics or omitted feedback loop is retired by the current thin-path qualification.
+
+Planning response, 2026-09-10: BODY + MULTISOURCE is the first new contract frontier;
+CTL-001 remains a stored-meter control against the architecture's preferred
+interoceptively mediated embodied pressure. Do not select a cross-family consolidation
+law from provenance overlap alone. ATTN-001 separates permission, active selection,
+encoding strength and later access; residual-pool and multiplicative salience are
+comparison mechanisms. HABIT, RELATIONSHIP and LONGITUDINAL intake preserves P3-012
+and EXP-011/012/013 without declaring their mechanisms ported or qualified. UI debt
+does not block Campaign3 entry. See CAMPAIGN3_BODY_RESEARCH_FRONTIER.md.
+
+2026-09-11 ATTN intake: [inspection and explicit mechanism dispositions](CAMPAIGN3_ATTENTION_INSPECTION.md)
+preserve MEC-005 residual allocation, MEC-007/CTL-004 salience and MEC-008/009/010
+learning/access controls. Proposed hard capacity is a new selection candidate, not a
+claim that the historical continuous allocation already implemented top-K. RET-001/002
+remain retired; no copied truth-provenance/category-name shortcut.
+
+2026-09-11 bounded public ATTN: [qualification and deferred obligations](CAMPAIGN3_ATTENTION_PUBLIC_QUALIFICATION.md)
+establish the finite hard-capacity candidate through actual observer-safe SEM and a
+selected-only consumer. MEC-005 remains CONTROL+CONTRACT for residual allocation;
+MEC-007/CTL-004 remain CONTROL for multiplicative salience. The existing controls,
+dice grammar and identity loop pass all328 historical tests unchanged. No encoding,
+association or later-access mechanism is ported or retired by this qualification.
+The next inventory must give those mechanisms an explicit disposition before any
+strength/readout seam is implemented.
+
+2026-09-11 [general attention component advance](GENERAL_ATTENTION_COMPONENT_CHECKPOINT.md):
+MEC-007/CTL-004 now have selected-evidence multiplicative controls with explicit
+homogeneous prior and disabled need/surprise; these restricted factors do not satisfy
+the missing source clauses. MEC-008/009/010 exact arithmetic is implemented at pure
+component scope, with association/access composition comparisons and no public
+state-writing or cue authority. MEC-005's residual arithmetic has a separately named
+positive spatial candidate; it does not derive or replace historical Incidental.
+RET-001 is still only a named negative comparison; RET-002/006 remain prohibited.
+EXP-007/015 public encoding/probe coverage stays open. Current evidence:72 targeted
+tests,28 detected source faults, and preserved earlier bounded public qualification.
+No reduction verdict, corpus member, reference edit or import follows from this work.
+
+2026-09-12 [accepted encoding lifecycle B](GENERAL_ATTENTION_ENCODING_LIFECYCLE_RESOLUTION.md):
+MEC-007/CTL-004 outcome-dependent Need relevance is investigated as a candidate
+consolidation law over an already encoded episode, not retroactive initial encoding.
+The historical mechanism remains a control; no formula is promoted or retired.
+MEC-008/009/010 association/access/reinforcement distinctions and RET-003/006/010
+remain binding. Perceptual surprise and consequence surprise require separate
+time-local evidence. General public and corpus obligations remain open.
+
+2026-09-12 [causal-credit ruling](GENERAL_ATTENTION_CONSOLIDATION_CREDIT_RESOLUTION.md):
+MEC-007/CTL-004 outcome relevance requires separately traceable observer-side
+attribution in the first consolidation path. Historical EffectProvenance remains
+read-only control evidence, not a permitted source. Temporal experiential association
+is preserved as a distinct future candidate, not rejected or promoted as causal credit.
+
+2026-09-12 [contrastive attribution component](ATTENTION_CONTRASTIVE_ATTRIBUTION_CHECKPOINT.md):
+a replicated observer-side motion/stationary comparison is now a CANDIDATE prerequisite
+to MEC-007 outcome-relevance controls. Its nine tests/six source faults do not port
+the historical realized-effect law, decide final Need ontology or qualify a public
+false-attribution source. MEC-005/007 and EXP-007/015 remain open at integration scope.
+The interoceptive encoding gate has an [accepted separate bounded topology](GENERAL_ATTENTION_INTEROCEPTIVE_ENCODING_RESOLUTION.md);
+raw body samples cannot become an unselected hidden memory sidecar. Shared acquisition
+and shared control remain future comparators. The equal-priority sample gate is a
+qualified component CONTROL, not body salience or public retention. [Signal-per-opportunity
+granularity is accepted](GENERAL_ATTENTION_INTEROCEPTIVE_UNIT_RESOLUTION.md); the grouped
+gate is component-qualified, with the sample-level comparator unchanged. The [synthetic
+three-local-reserve source is authorized](GENERAL_ATTENTION_MULTISIGNAL_BODY_SOURCE_RESOLUTION.md)
+and component-qualified using existing reserve mathematics. The single-source/multiple-
+sensation alternative remains a future BODY comparator. No Need, urgency ranking,
+pressure aggregation or biological reduction follows. Sensor duplication cannot be
+silently counted as distinct bodily phenomena to satisfy a capacity witness.
+
+2026-09-20 [bounded public multisource qualification](CAMPAIGN3_MULTISOURCE_PUBLIC_QUALIFICATION.md)
+and VER-C3-MULTI-002 retain MEC-012 independent motive grounds, MEC-013 separate
+Base/Situation roles and MEC-014 consolidation before one bounded transform. The
+new description identity does not become a motive ID. GroundPairwise, GroundUncovered,
+role-blind FamilyNormalized and Base-only DescriptionDice remain explicit controls;
+matched public raw bytes distinguish the dice-unit control. The inherited dice
+calibration/arbitration is preserved by overlap-domain parity and full reference tests.
+EXP-009/014 receive bounded public source/control evidence, not a general reduction.
+Standing/identity learning, general ContextModulating sources, Need ownership and
+broader receiving laws are not ported or retired by this increment. RO-C3-001 preserves
+the general-law, wider-source and ordering/renaming obligations conditionally.
+
+## Bounded BELIEF disposition — 2026-09-20
+
+VER-C3-BELIEF-001 and CAMPAIGN3_BELIEF_QUALIFICATION.md qualify the controlled
+P3-001/002/003 truth/evidence/belief/appraisal and opportunity distinctions.
+MEC-001/EXP-001 contribute the explicitly selected weighted-mean candidate and
+contradiction-resistance/prediction-error controls; LastObservation remains a public
+competitor. This exact-rational binary profile is not a silent port of historical
+quantization, decay or Need-dependent observation precision. MEC-002/EXP-002/005
+scalar-bound controls remain preserved by reference validation, including their
+accepted-bound overcredit limitation. Binary censored trials are inert here.
+P3-011 consequence ordering is qualified; current30 remains ORD-001 work.
+MEC-006 surprise, broader P3-004/005/006, source trust, correlations and causal
+learning remain unimplemented in this profile and conditional under RO-C3-010.
+SUB-001/008/009/011 provide exact arithmetic, actual stage trace, matched public
+comparisons,381 complete-prefix/continuation equalities and preserved receipts.
+Counters746/0; no owner ruling.
+
+## AFFECT pre-allocation intake — 2026-09-20
+
+CAMPAIGN3_AFFECT_READINESS.md records explicit P3-004/005/008/011 and
+MEC-012..019 dispositions before allocation. Historical threat product remains
+a candidate alongside SplitExposure and ScalarUncontrolled. The81-cell arithmetic
+receipt demonstrates a scalar collision, not a psychological reduction verdict.
+RO-C3-011 owns source/public obligations; learned mitigation cannot be fabricated
+from BELIEF channel B, raw availability, dispatch ancestry or relief.
+
+
+## Bounded AFFECT disposition — 2026-09-21
+
+VER-C3-AFFECT-001 and CAMPAIGN3_AFFECT_QUALIFICATION.md qualify the controlled
+P3-004/005/011 factor, no-command/no-extra-die/relief-not-evidence and later-feedback
+clauses. HistoricalProduct is ported as a candidate, alongside SplitExposure and
+ScalarUncontrolled; no universal factorization or scalar reduction is earned.
+MEC-001/002 and P3-001/002/003 retain separate observer evidence and learned state:
+three observed-trial conditions now supply fallible likelihood and mitigation
+contrasts. Action availability alone remains insufficient for efficacy. Newkey765
+preserves inherited semantic character identity without widening frozen BELIEF738.
+MEC-012/013/014/015/016/017/019 retain actual commitment grounds, role partitions,
+inherited dice/arbitration and separate intent/expression/attempt/execution. No Fear
+ground is manufactured. P3-008 social/retrospective affect, P3-005 extinction and
+generalization, physiology, uncertain/partial-factor affect and broader planning
+remain conditional under RO-C3-011, not silently retired. ORD-005 is not exercised.
+SUB-001/008/009/011 support exact arithmetic,15 actual stages,18 frozen models,
+91 main runs and1236 whole-prefix/continuation equalities.82 affected and328 reference
+tests pass. Counters765/0; no owner ruling.
+
+Durable North-Star transfer: admitted evidence changes explicit fallible belief;
+appraisal consumes belief with goals/context; affect can bias later readiness without
+becoming evidence or an action command. Missing evidence, observed negative evidence,
+unknown belief and known neutral belief stay distinct. The selected arithmetic does
+not thereby become Vivarium's permanent affect law.
+
+
+## 2026-09-21 — bounded WORKSPACE/CONTROL disposition
+
+VER-C3-WORK-001 and WORKSPACE_CONTROL_READINESS.md record the intake. MEC-011/
+EXP-004 availability versus access and MEC-020/EXP-013 lifecycle distinctions are
+RETAINED by public overload/distraction/cue/expiry contrasts. MEC-012..016 inherited
+grounds/dice/arbitration execute downstream; C has no motive authority. P3-011 strict
+later delivery and full-prefix replay are preserved. MEC-005/007/009/010 remain
+separate attention/memory mechanisms, not silently replaced by the controlled board.
+StoredSet versus IndexedReplay earns DERIVED for a separate active-set cache only
+under the fixed-deadline, fully retained safe-history domain. RO-C3-012 carries broader
+control, lifecycle, history and integration obligations. WORK-DESIGN-001 preserves
+the confounded priority fixture and its exact one-field counterfactual correction.
+Transfer: retained information, maintained selection and permission to supply a reason
+remain separate even when active-set representation can be reconstructed.
+
+
+## 2026-09-21 — bounded SKILL disposition
+
+SKILL_READINESS.md and VER-C3-SKILL-001 preserve MEC-019 intent/attempt/outcome;
+P3-009 competence/belief/identity separation; MEC-001/002/006 and P3-001/002/003
+observed opportunity and update controls; MEC-012..017 genuine reason/frozen-expression
+boundaries; P3-011 strictly later updates. MEC-018 identity controls and existing
+Campaign2 ADAPT ownership remain preserved and tested. No historical import or
+skill-to-habit/memory reduction. Linear/residual practice and multiplicative/additive
+impairment remain candidates. RO-C3-013 owns wider skill and capability-inference debt.
+SKILL-IMPL-001 preserves the initial arbitration API failure and correction. Transfer:
+practice may change what the character can do without changing what they believe;
+observations may change that belief without changing actual competence.
+
+
+## 2026-09-21 — bounded SOCIAL disposition
+
+SOCIAL_READINESS.md and VER-C3-SOCIAL-001 port P3-006's observer-specific person models,
+wrong inference, correction and correlation; EXP-008 hidden-state noninterference;
+MEC-001/002/006 evidence controls; MEC-019/020 public outcome/private commitment.
+MEC-004 is an explicit identity-establishing control only. P3-007 trust/suspicion and
+P3-008 social affect remain future candidates under RO-C3-014, not silently omitted.
+MEC-012..018 reason/dice/expression/identity controls remain preserved. No reference
+imports or reduction to relationship history. Communication is evidence for each
+recipient's own model; it neither copies private truth nor synchronizes observers.
+
+
+## 2026-09-21 — bounded HABIT disposition
+
+HABIT_READINESS.md and VER-C3-HABIT-001 port EXP-003 context-conditioned action
+availability and P3-012 acquisition/reversal. Historical flat-tag strengths remain
+retired; Residual/Linear learning are explicit candidates. MEC-001/002/006 and CTL-002
+preserve separate evidence-dependent expectation. MEC-008/009/010 association,
+episodic accessibility and retrieval reinforcement remain distinct alternatives,
+not silently identified with this profile's safe journal. MEC-012..019 reasons/dice,
+intent/expression and identity controls are preserved; identity is fixed in this fixture.
+CTL-009 universal options is not canonical: candidate availability is explicitly tested.
+CTL-001 embodied Need, CTL-008 addiction and CTL-010 general experienced Reward remain
+broader comparisons under RO-C3-015. No reference import or universal habit reduction.
+DerivedHistory/StoredSummary equivalence earns a bounded NOT REQUIRED verdict for
+the separate cached summary, not for historical influence itself.
+
+
+## 2026-09-21 — bounded RELATIONSHIP disposition
+
+RELATIONSHIP_READINESS.md and VER-C3-REL-001 port P3-006 observer-local evidence,
+P3-007 derived relational appraisal candidates and P3-012 bounded rupture. P3-008
+embarrassment/jealousy and P3-012 grief/loss remain future phenomena. MEC-004 is a
+controlled identity channel; MEC-008/009/010 general memory/association alternatives
+remain distinct from this finite journal. MEC-011/EXP-004 preserve contact feasibility
+versus historical appraisal. MEC-012..018 reason/modifier/dice/identity controls remain
+preserved; modifiers never generate motivation from zero. MEC-019 marks response
+selection as prospective, not executed interaction. EXP-008 hidden-truth equivalence
+passes. RO-C3-016 preserves broader integration and attribution/repair claims.
+SharedHistory's nonrecipient leak and simultaneous-participant ordering failure are
+durable diagnostic findings. Derived/cache equality does not delete relationship
+history or reduce it to the tested current person estimate.
+
+
+## 2026-09-21 — bounded LONGITUDINAL disposition
+
+LONGITUDINAL_READINESS.md and VER-C3-LONG-001 port EXP-011/012 and MEC-012..018 through
+actual reasons/dice/frozen expression/qualification/ordered identity and matching
+standing feedback. P3-009/MEC-019 preserve instructed attempt/execution and independent
+procedural learning; P3-006/007/012 preserve fallible directional history and rupture.
+MEC-008/009/010 remain separate recall/association/reinforcement controls: the bounded
+age cutoff and incremental relational fold do not replace them. EXP-013/P3-010 wider
+lifecycle/development and RET-013 historical immutability remain preserved. No reference
+import or architecture deletion. RO-C3-009/013/016/017 retain broader obligations.
+The0.1 symmetric-standing failure, capacity adapter error, execution-threshold finding
+and research-diagnostic boundary are preserved. Transfer: acquired structure may
+outlast individual episodes, but compression must earn the future queries it preserves.
+
+
+## Bounded LEARN port/control disposition — 2026-09-21
+
+VER-C3-LEARN-001 and CAMPAIGN3_LEARN_QUALIFICATION.md re-enter MEC-001/002 under
+learn-public/0.1-candidate, not a universal estimate law. MEC-003 supplies bounded
+measurement/classification; MEC-006 surprise remains a preserved control with no
+new consumer. EXP-002/005 censoring controls and RET-003..006 remain binding.
+UnconditionalPrecision is a named retired negative control; PointOnly is a safe
+but insufficient comparator. Historical millionth commit arithmetic is separately
+frozen beside exact rationals. No reference source was imported or modified.
+Fresh-prior repeated bounds stop credit after the first; established below-bound
+priors can keep accepting identical bounds. Full-point accepted-bound precision
+and general scalar inference remain RO-C3-010. PHEN-LEARN's exact lower-bound
+public debt is discharged; other RO-C3-018 clauses remain active.896/0.
+
+
+## Bounded EPI port/control disposition —2026-09-21
+
+VER-C3-EPI-001 ports MEC-003 measurement, MEC-006 evidence-aware surprise and
+MEC-007 independent-budget encoding into the exact saturation receiving fixture.
+MEC-002 Gated learning is retained under the accepted LEARN approximation;
+MEC-004/005 fixed admitted classification/attention are explicit controlled inputs.
+EXP-002/007/008 and RET-003/004/006/014 preserve censoring/hidden-truth constraints.
+SUB-008/009/011 preserve source, ordering and deterministic transaction boundaries.
+PotentialLeak/OverflowLeak are diagnostic controls, not legitimate alternatives;
+previous serious EAM/GA and LEARN candidates remain available. No source imports,
+new generic Need formula, general surprise-law selection or memory reduction.
+RO-C3-007/010 preserve broader limits; RO-C3-018 EPI debt discharged.912/0.
+
+
+## Joined REASON port/control disposition —2026-09-21
+
+VER-C3-REASON-001 and CAMPAIGN3_REASON_QUALIFICATION.md join MEC-012 exact semantic
+keys, MEC-013 separate source roles, MEC-014 role/sign coverage then bounding,
+MEC-015/016 actual dice/modifiers and weak-base rescue. EXP-009/014 now execute
+together through permitted source observations and actual acquired standing.
+MEC-017/018 supply genuine choice/expression/qualification/identity history;
+MEC-022 preserves the two failed model/plan/test cohorts and their calibrations.
+PooledChannel, PairwiseOnly, PerFactDie and IdentityIndependentDie remain explicit
+comparators. No generic coverage law, direction identity or numeric calibration
+is settled. Larger-union subset residual and arbitrary renaming limits survive
+under RO-C3-001/020; whole BIO remains RO-C3-009. No reference imports or edits.929/0.
+
+
+## Public DECISION port/control disposition —2026-09-21
+
+VER-C3-DECISION-001 retains MEC-015 authoritative dice/arbitration, MEC-017 frozen
+contextual expression, MEC-019 intent/attempt/outcome separation and MEC-022 exact
+historical calibration. SUB-004/005/008/009 preserve addressed draws, exact finite
+probabilities, rollback and whole-prefix replay. EXP-010 retains multiple independent
+reasons and presentation of the actual authoritative draw. RET-013 stays prohibited:
+later history does not rewrite earlier expressions. All five required alternatives
+are public controls, including exact balanced opaque marginal sampling and historical
+intent-equals-outcome. The broader identity loop remains the existing control, not
+new DECISION learning. RO-C3-020 retains general significance/grammar/multi-option
+limits; RO-C3-018 retains COMMIT. No reference edits or imports. Counters951/0.
+
+
+## Joined COMMIT lifecycle/identity/witness disposition —2026-09-21
+VER-C3-COMMIT-001 and CAMPAIGN3_COMMIT_QUALIFICATION.md retain MEC-020/EXP-013
+active-only concrete instance pressure and distinct recurrence under fixed earned
+identity. MEC-012..018 execute actual source/dice/choice/identity prelude and standing
+feedback; no authored trait bonus replaces it. RET-010/011 remain explicit failing
+CoreNeed/Immortal controls; ReusedId fails recurrence identity. SOCIAL's controlled
+identified LastObservation extends to per-observer/per-instance statuses. Unobserved
+retirement can leave stale knowledge. SUB-004/008/009 preserve addressed draws,
+rollback and exact prefixes. RO-C3-018 is resolved; RO-C3-014/020 retain wider
+lifecycle/source/calibration limits. No reference edits/imports; counters970/0.
+
+
+## BODY ownership comparison disposition —2026-09-21
+VER-C3-BODY-001 / CAMPAIGN3_BODY_OWNERSHIP_QUALIFICATION.md retains CTL-001 as
+an explicit comparison: normalized stored level/passive rate/bounded effects and
+K=1,p=1 deficit urgency. The selected values lie on the historical lattice. Storage
+behind interoception matches the public reserve; direct urgency violates aliasing
+and availability. Current-evidence cache equality is sampled component scope only.
+Existing REG0.5 executes as authored reference, not a changing reserve. MEC-003/006
+and P3-009/010 remain preserved; general dynamics, adaptation and efficacy remain
+RO-C3-008, representation/public-query limits RO-C3-020. No retirement, reference
+import/edit, allocation or new psychological authority. Counters970/0.
+
+
+## BIO coupled comparison disposition —2026-09-21
+VER-C3-BIO-001 / CAMPAIGN3_BIO_QUALIFICATION.md executes MEC-015..018/022 and
+EXP-011/012 through actual cognitive kernels, declared early-only seed variation,
+common later probe and sustained contrary authorship. Earned standing changes;
+prior contextual expressions remain frozen. AuthoredTrait, DisplayOnly, HistoryOnly
+and RecomputedHistory are explicit controls; Refold matches with full history retained.
+First failed calibration and identity-packaging correction survive. RO-C3-009/020
+retain broader source/direction/coercion/calibration/compression/public-admission limits.
+No state-root retirement, reference import/edit or new allocation; counters970/0.
+
+## 2026-09-26 - tolerance component disposition
+
+VER-C3-TOLERANCE-001 reuses accepted ADAPT truth state and MEC003/EXP002 embodied
+bounded-effect decomposition as CONTROL/CONTRACT. Reciprocal and Linear are new
+explicit CANDIDATE laws, not historical physiological formula ports. Unattenuated
+is an effect-link ablation. EXP001/MEC019 and identity feedback remain separate
+controls without new cognition or action claims. No reference imports or edits.
+Prior displacement probe does not qualify tolerance effect; preserve
+TOLERANCE_FINDINGS.md. No reduction; wider integration stays RO008/010/015/019/020.
+
+## 2026-09-26 - absence-deficit disposition
+
+VER-C3-ABSENCE-001 retains BODY target/reference versus current-state separation and
+accepted ADAPT as CONTROL/CONTRACT. LinearGap and ThresholdGap are explicit CANDIDATE
+world discrepancy laws, FixedReference an effect-link ablation. MEC003/EXP002 preserve
+physical decomposition; no saturation/sensor formula port or character evidence claim.
+EXP001/MEC019 and acquired identity remain separate controls. No reference imports,
+state retirement or historical formula substitution. ABSENCE_FINDINGS.md preserves
+borrowed-reference and build-typing corrections. Wider scope RO008/010/011/015/019/020.
+
+## 2026-09-26 - craving disposition
+
+VER-C3-CRAVING-001 reuses public BODY sensing under MEC003/EXP002 and preserves
+MEC001/EXP001 mean/latest comparisons through admitted informational reports.
+MEC011/EXP004 mental access versus physical availability remains CONTROL/CONTRACT.
+Product and bottleneck conjunctions are explicit CANDIDATE laws. Fixed recognized
+cue and instructed recall are controls, not acquired association/habit. MEC012..019
+reason/dice/action/identity remain prior controls; no private dice, enacted control
+or identity feedback port here. No reference imports or retirement. Preserve
+CRAVING_FINDINGS.md identity-alias accounting finding; wider scope RO008/010/011/
+012/015/019/020. Tolerance/absence diagnostics never become character pressure.
+
+## 2026-09-26 - relapse experiment disposition
+
+VER-C3-RELAPSE-001 retains MEC011/EXP003/004 acquired cue access versus temporary
+inhibition; MEC012..017/019 actual reasons/dice/intent/expression/execution and
+MEC020 goal lifecycle. Seven original CONTROL models remain CONTROL/CANDIDATE,
+including distinct Linear/Residual acquisition. New source histories extend actual
+withholding before load without changing production law. Identity and physiological
+adaptation remain separate controls, not relabeled recovery. No imports/retirement.
+RELAPSE_FINDINGS.md preserves typed-byte harness rejection. RO008/010/011/012/015/
+019/020 retain integrated addiction, natural recovery and broader behavior limits.
+
+## 2026-09-26 - bounded costly reward integration
+
+VER-C3-COSTLY-REWARD-001 / costly-reward-component/0.1-candidate:6 models/50 runs/
+650 component prefixes;17+328 tests/build. Existing reason/dice/choice kernels and
+active-source habit/control precedent compose with separate learned benefit/harm.
+MEC001/EXP001 evidence/mean/latest, MEC011/EXP003/004 cue access/filtering,
+MEC012..017/019 reasons through actual execution, MEC020 active goal pressure retained.
+CONTROL single reward bit is not repurposed; no new public source, third option,
+identity feedback merger, permanent allocation or reference import. All seed results
+and serious BeliefAccess/LatestHistory alternatives preserved. See qualification and
+COSTLY_REWARD_FINDINGS.md; broader RO008/010/011/012/015/019/020 remain;021 mandatory.
+1400/0. Next IDENTITY_EVIDENCE_READINESS.md.
+
+## 2026-09-26 - continuous functional biological system
+
+VER-C3-BIOLOGY-001:25 models/53 distinct runs/2389 unique prefixes (2438 checks),
+33+328 tests/build. biological-dynamics/0.1-candidate and biological-choice/0.1-candidate
+compose through biological-integration/0.1-candidate. Eight options/32 reason nuclei
+retain exact dice and frozen two-option kernels. MEC001/003/004/011..020 and
+EXP001..005/008..013/P3-009..012 retain the work-order dispositions. CTL010 now has
+an explicit bounded sensed pleasure candidate; CTL001/008 remain broader competitors.
+No implicit physiology-to-belief shortcut, root retirement or reference import.
+BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md preserves timing/attribution corrections and
+unearned necessity; no public scheduler or organ-level/clinical qualification.
+1400/0. The18 declared functional behaviors are expressible; broader obligations and
+Campaign3 exit gates remain. No automatic return to the prior identity intake.
+
+## 2026-09-26 — biological public integration
+
+VER-C3-BIOLOGY-PUBLIC-001 / biology-public/0.1-candidate is bounded-qualified:
+28 models/58 distinct runs/270 unique public prefixes;59 executions/273 checks include
+one excluded redundant writer. All53 component trajectories match.56 scoped (23 native
++33 prior biology)/328 reference tests and build pass. Typed sources and separate
+physical/adaptation/learning/goal/affect authorities, native intent/expression and
+whole Save132 are admitted. Matched learning/goals separate dependence from cue access.
+MEC001/003/004/011..020, EXP001..005/008..013/P3-009..012 retain port/control/candidate
+roles; CTL001/008 stay broader controls. No reference import, state retirement or
+identity/forecasting claim. Preserve both development cohorts, large-save admission
+failure and duplicate-writer receipt. RO008/009/010/011/012/015/019/020 persist;021
+mandatory.1426/0, no owner ruling. Next IDENTITY_EVIDENCE_READINESS.md.
+
+## 2026-09-26 — bounded identity eligibility
+
+VER-C3-IDENTITY-ELIGIBILITY-001 / identity-eligibility/0.1-candidate is bounded
+component-qualified:6 models/52 runs/312 exact prefixes (260 advancing/52 terminal),
+60 affected (12 new)/328 reference tests and build. No allocation;1426/0.
+Separate frozen choice, admitted safe context, eligibility and acquired standing.
+Trivial repetition and admitted full constraint do not automatically create identity;
+ordinary instruction, forced movement and failed execution remain distinct. Four of
+eight probes differ; balanced and nonzero subthreshold equalities are retained.
+Threshold/Graded remain candidates, Frequency/IgnorePressure countermodels;
+NoFeedback and Refold preserve receiving/representation comparisons.
+MEC015..018/022 and EXP011/012 are extended as components, not replaced or retired.
+Preserve IDENTITY_ELIGIBILITY_FINDINGS.md and identity-eligibility-development-rev1.
+The original wrapper carried fixed task context and world permission; corrected
+research expressions omit both. No public admission, biological source join,
+represented self-belief or enacted coercion claim. Clause12.12-2 bounded;1 partial;
+3 now partial.102 bounded/22 partial/8 blocked, all132 clauses/15 families retained.
+RO009/014/019/020/021 preserve limits. No owner ruling or reference import.
+Next IDENTITY_PUBLIC_ADMISSION_READINESS.md.
+
+### 2026-09-26 — identity eligibility restricted-capability correction
+
+Final review superseded passing REV1: output exclusion did not establish restricted
+helper inputs. REV2 passes fresh safe context to decision/qualification and isolates
+world execution.52 reruns/312 prefixes match every prior row/snapshot exactly;
+60 affected tests/build rerun pass,328 reference tests unchanged. Both cohorts remain:
+104 executions/624 checks; final coverage6 models/52 cases/312 component prefixes.
+IDENTITY_ELIGIBILITY_CLOSURE_REV2.json binds final sources and preserved REV1 evidence.
+identity-eligibility-development-rev2/PRESERVATION.json owns the discovered flaw.
+Clause dispositions and1426/0 unchanged. AuditREV55; next public admission.
+
+
+## 2026-09-26 — native identity admission
+
+VER-C3-IDENTITY-PUBLIC-001 / identity-public/0.1-candidate is bounded-qualified:
+16 models/84 runs/428 selected native prefixes (344 advancing/84 terminal),
+119 affected (36 new)/328 reference tests and production build. Records1427..1442;
+no new namespace. Counters1442/0. No architectural blocker or state retirement.
+Task fidelity and biological protective expression have separate actors, source
+admission and histories. Actual choice/intent/expression/qualification/identity keep
+native phases and authority. Task52 semantic trajectories match the component;
+biological NoFeedback matches prior choice/sensing/belief in9 runs. Native body-state
+and whole-observer tests preserve hidden-world boundaries. Pleasure, withdrawal or
+success alone does not confer identity eligibility; Frequency also rejects no channel.
+Inherited standing unit1 was structurally inert. Explicit unit1/16 changes later
+biological probabilities for seeds0/2/7; all8 sampled sequences remain equal over12
+instants. Coarse1, Threshold/Graded, Frequency/IgnorePressure, NoFeedback and Refold
+remain. No universal law, represented self-concept, enacted coercion, shared
+cross-domain direction, lossy-history or throughput claim. Task5/Biological12 only;
+selected prefixes are not a64-instant qualification.
+CAMPAIGN3_IDENTITY_PUBLIC_QUALIFICATION.md / IDENTITY_PUBLIC_CLOSURE_REV1.json bind
+closure. IDENTITY_PUBLIC_FINDINGS.md preserves developmental failures, two archived
+source cohorts and both exploratory rosters. MEC015..018/022 and EXP011/012 gain
+explicit native source admission; prior biological port/control/candidate roles
+stand. No reference import or prior model/schema change. RO008/009/014/019/020/021
+persist. No Brief promotion:102 bounded/22 partial/8 blocked,132 clauses/15 families,
+21 corpus members,74 named verdicts. AuditREV56; Campaign3 remains NOT EXIT-READY.
+Next IDENTITY_BELIEF_READINESS.md: represented self-concept and observer-specific
+identity belief, without relabeling the standing fold.
+
+
+## 2026-09-26 — represented identity belief
+
+VER-C3-IDENTITY-BELIEF-001 / identity-belief/0.1-candidate is bounded component-
+qualified:5 final models/37 runs/222 exact prefixes (185 advancing/37 terminal),
+34 affected (16 new)/328 reference tests and build. No allocation;1442/0.
+Acquired standing, self evidence/estimate, observer evidence/estimate and prospective
+appraisal remain separate. The known seed1 A/A/A/B witness leaves Mean positive+1/2
+while Latest becomes-1; the contrary act remains in both histories.7/8 primary
+Mean/Latest estimates differ, seed6 equality retained. Withheld self evidence leaves
+standing unchanged but self belief unknown. Lawful observer views exclude private
+self changes and hidden biography; PrivateOracle fails. StandingAlias fails the
+withheld-self-evidence distinction. Goal-only changes preserve belief and change
+appraisal. Unknown, known neutral, false evidence, later correction, failed execution,
+triviality and force remain distinct. No new source-choice bonus or social action.
+MEC004/015..019/022 and EXP011/012 retain source/control roles; no reference import,
+old source-law change, state retirement or native public admission claim.
+CAMPAIGN3_IDENTITY_BELIEF_QUALIFICATION.md / IDENTITY_BELIEF_CLOSURE_REV1.json bind
+closure. IDENTITY_BELIEF_FINDINGS.md and identity-belief-validation-rev1 preserve
+29 passes/5 validation timeouts alongside the first passing37-run cohort. Explicit
+time limits affect only tests; successor manifest reruns every case with identical
+rows, saves and observer views.74 executions/444 checks across both cohorts are not
+extra behavioral coverage. Final cohort remains37 cases/222 component prefixes.
+Brief12.12 clauses4/6 become bounded:104 bounded/21 partial/7 blocked,132 clauses/
+15 families,75 named verdicts; corpus0.29.0 remains21 members. AuditREV57.
+RO009/010/014/019/020/021 preserve source trust/correlation, richer identity,
+recognition, coercion, adaptation and public admission; historical gate remains.
+No architectural escalation; Campaign3 NOT EXIT-READY.
+Next IDENTITY_BELIEF_PUBLIC_READINESS.md: native sources, holder authority, phase
+placement and exact observer-safe replay without double-counting identity feedback.
+
+## 2026-09-26 — native represented identity-belief closure
+
+VER-C3-IDENTITY-BELIEF-PUBLIC-001 qualifies native represented self/observer belief:
+5 models/37 runs/222 exact whole native prefixes;69 affected (35 native)/328 reference
+tests and build pass. Existing authentic Task Threshold source choices and standing
+remain unchanged. Separate holder-owned evidence/history/estimate feeds next50
+appraisal after prior140; no retroactive learning or second identity bonus. All
+component observations/estimates/source choices correspond. Whole-view private-self,
+hidden-biography and failed-execution comparisons pass; unknown/known0, false/later
+correct evidence and goal-only appraisal remain distinct. Mean/Latest differ7/8,
+seed6 equality retained. StandingAlias/PrivateOracle remain failed negative controls;
+NoLearning remains distinct. Source is explicitly controlled semantic reporting,
+not natural recognition or private-authorship access. Preserve13/15 development
+receipt,23/5 timeout receipt and development-rev1 source/contract; final corrected69 tests
+pass with exact-byte validation memo and changed-invalid-source rejection.
+Records1443..1450/schema1, namespace1155 reused; counters1450/0. No owner escalation. RO-C3-022 remains ACTIVE for older public-wrapper quiescence.
+Brief coverage remains104 bounded/21 partial/7 blocked,132 clauses/15 families;
+76 named verdicts and21 corpus members. RO009/010/014/019/020/021 retain broader scope;
+2 active/19 conditional/1 closed/0 unowned. AuditREV58; Campaign3 NOT EXIT-READY.
+Closure: CAMPAIGN3_IDENTITY_BELIEF_PUBLIC_QUALIFICATION.md and
+IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json. Next PUBLIC_WRAPPER_QUIESCENCE_READINESS.md; identity recovery is deferred.
+The first serial cohort exposed a torn save at the scheduler/wrapper commit gap.
+Final whole-wrapper gating rejects it; all37 successor runs/222 restores match prior
+ordinary bytes/views/rows exactly.74 executions/444 checks total, not extra coverage.
+The prior identity Task wrapper also exposes the gap; its serial scope is preserved
+by IDENTITY_PUBLIC_QUIESCENCE_ADDENDUM.md and RO-C3-022 owns the immediate wider audit.
+MEC004 controlled semantic source; MEC015..019/022 and EXP011/012 retain their inherited roles. No state root or source law retired.
+
+
+## SUB-008 public-wrapper follow-up — 2026-09-26
+
+Bounded public-wrapper publication COMPLETE — VER-C3-PUBLIC-QUIESCENCE-001.
+LOCAL DISPOSITION; no owner ruling. The49-producer inventory accounts for47 native
+Campaign3 wrappers plus GA manual Save132 and Campaign2 shared adaptation. Three raw
+RNG-ledger wrappers allowed torn saves (identity Task, identity Biological, Biology
+public); embodied allowed a second settlement to overlap ingress cleanup. Four narrow
+whole-wrapper barriers repair these failures.30 producers already have independent
+guards;15 have no split public continuation state. Preserve both failure mechanisms,
+the1,108-artifact pre-repair graph, probes and original serial qualification receipts.
+Same50 models/149 prior cases/747 selected complete-prefix restores reproduce all
+original ordinary save bytes; model/run identities, safe views and final outputs/
+trace/state remain unchanged.74 affected/328 reference tests and build pass. The first
+4-pass/2-fail regression cohort assumed a biological draw at1; corrected at9 while
+retaining the draw assertion. The PersonState naming error is a preserved harness
+failure. No new character law, state root, record allocation or psychological clause.
+Counters1450/0. RO22 CLOSED within the declared inventory; RO21 historical reconciliation
+still ACTIVE.1 active/19 conditional/2 closed/0 unowned;77 named verdicts. Corpus0.29.0
+still21 members; Brief104 bounded/21 partial/7 blocked across132 clauses/15 families.
+Campaign3 NOT EXIT-READY. Next IDENTITY_RECOVERY_READINESS.md.
+
+Disposition: retain the scheduler atomicity reference port and independent RNG guards;
+repair the four exposed wrapper publication/lifecycle boundaries. No reference
+mechanism is retired. The pre-repair implementations remain explicit negative controls.
+
+
+### Identity recovery experiment — 2026-09-27
+VER-C3-IDENTITY-RECOVERY-001; identity-recovery-experiment/0.1-candidate.
+MEC018/022 and EXP011/012 retain their inherited port/control/corpus dispositions.
+Native four-act standing and independently represented belief recovery preserve
+original expressions;5 reused models/13 runs/78 prefixes,8+328 tests/build.
+No new law or allocation;1450/0. BIO sustained standing reversal remains component;
+LONG skill recovery is separate. No disposition-adaptation claim or state reduction.
+See CAMPAIGN3_IDENTITY_RECOVERY_QUALIFICATION.md. Next DISPOSITIONAL_ADAPTATION_READINESS.md.
+
+
+### Dispositional adaptation component — 2026-09-27
+VER-C3-DISPOSITION-001, disposition-adaptation/0.1-candidate:9 models/15 cases/285
+component prefixes;35 affected/328 reference tests/build;1450/0. P3-009/010 preserve
+constitution/history separation and constitutional/biographical contrasts. Historical
+seven-axis/quadratic projections remain CANDIDATE for richer scopes. MEC012..019/022
+and EXP011/012 retain PORT/CONTRACT/CORPUS roles through actual inherited kernels.
+ADAPT regulatory/procedural target admissions are unchanged; no reference imports.
+Stored/Refold equality and shared-history fusion competitors do not retire a conceptual
+distinction or select a universal law. Next DISPOSITION_PUBLIC_READINESS.md for native
+source/lineage/authority/phase admission. See CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md.
+
+
+### Native disposition admission — 2026-09-27
+VER-C3-DISPOSITION-PUBLIC-001:9 models/15 runs/285 native prefixes;44+328 tests/build;
+1458/0. P3-009/010, MEC012..019/022 and EXP011/012 retain their component dispositions
+through typed original lineage, independent authorities and actual causal phases.
+No constitution writer; no state-root retirement. Native admission extends neither
+old ADAPT target sets nor identity/biology profile domains. Refold/Plastic, Step/Leaky,
+StandingOnly/Neither and JointMax/JointAdd remain controls; general fusion and scaling
+remain open. Historical seven-axis/quadratic projections remain candidate. Wrapper
+inventory is50 producers/53 factories; original49 scope reverified. Next sleep/control
+readiness; no whole-family or Campaign3 exit claim.
+
+
+### Sleep/control bounded witness — 2026-09-27
+VER-C3-SLEEP-CONTROL-001:2 native models/20 runs/52 selected Save132 prefixes;
+13 new/328 reference tests/build;1458/0. Existing contracts/laws only. P3-009/010
+retain constitution/history separation; MEC001/003 preserve admitted estimates and
+safe sensing; MEC011 distinguishes availability/access; MEC012..019/022 inherit
+actual reasons/dice/expression/identity/independent execution and frozen provenance.
+No reference mechanism retired. NoControl and false/blind sensory controls retained.
+Initial empty identity and sleep-relief-confounded training remain archived. Gains,
+threshold and exogenous recovery are candidate controls, not general sleep physiology.
+Brief12.1-6 bounded; next intoxication/control across characters. No state-root change.
+
+
+### Differential intoxication/control — 2026-09-27
+VER-C3-INTOXICATION-CONTROL-001:5 native models/20 runs/55 selected prefixes;
+12 new/328 reference tests/build;1458/0. P3-009/010 constitution/history; MEC001/003
+admitted estimates/sensing; MEC011 availability/access; MEC012..019/022 inherited
+reasons/dice/expression/identity/execution and exact provenance remain retained.
+Identical exposure with clearance-only differences discriminates control/execution.
+NoControl, separate competence, masked/biased sensing and interference retained.
+Biological strict execution boundary does not replace SKILL's alternative profiles.
+No new law, factory, root or clinical claim. Brief12.1-7 bounded; next chosen reappraisal.
+
+
+### Chosen reappraisal component — 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-001:4 models/43 runs/387 component prefixes;13+328 tests/
+build;1458/0. MEC001/002/003 evidence, MEC011 access, MEC012..017/019/022 inherited
+reason/dice/choice/expression/attempt and calibration remain explicit. MEC018 identity
+controls retained separately. P3-001/004/005/011 preserve belief/frame/affect, projection
+alternatives, relief-not-evidence and later order; P3-008 social affect remains outside.
+No historical mechanism retired. KnowledgeOnly can choose harmful/ineffective frames;
+BenefitRelative and NoReappraisal retained. Native source/authority/scheduler admission
+is OPEN, next CHOSEN_REAPPRAISAL_PUBLIC_READINESS.md. No new record allocation.
+
+
+### Native chosen reappraisal — 2026-09-27
+VER-C3-CHOSEN-REAPPRAISAL-PUBLIC-001 closes native admission:4/43/387,21+328 tests/build,
+1467/0. MEC001/002/003/011..019/022 and P3-001/004/005/008/011 retain component dispositions;
+no mechanism retired. Typed originals, actual twelve stages, exact component rows/RNG,
+separate goal/learning/frame owners and whole Save132 replay now qualify public use.
+RO022 current wrapper scope51/54; previous50 and49 remain preserved. No physical
+protection, general planning or Task/Biological join. Next EMBARRASSMENT_READINESS.md.
+
+
+### Embarrassment without avoidance component — 2026-09-27
+VER-C3-EMBARRASSMENT-001:6/69/483;15+328 tests/build;1467/0, no allocation.
+MEC001/002/003 admitted evidence,004 fixed identity,011 access,012..017/019/022 actual
+reasons/dice/expression/execution remain;018 identity stays separate,020 goals controlled.
+P3-001/004/005/008/011 preserve social appraisal, independent cue and action, later
+learning and calibration alternatives. No old mechanism retired. CoarseUnit equals
+NoAffectReasons on primary probabilities; accepted AFFECT unit1/4 cap3 changes them.
+Prior32 development trajectories preserved. Native admission OPEN; next
+EMBARRASSMENT_PUBLIC_READINESS.md. No general norm or physiological emotion law.
+
+
+### Native embarrassment — 2026-09-27
+VER-C3-EMBARRASSMENT-PUBLIC-001:6 models/69 runs/483 native prefixes;22+328 tests/build;1484/0. Exact component rows/RNG and physical presence, typed sources, three owners, twelve actual stages and Save132/publication qualified.52/55 wrapper inventory; earlier sources unchanged.
+MEC001/002/003/004/011..020/022 and P3-001/004/005/008/011 retain component dispositions; no mechanism retired. Actual decision/expression, cue and physical participation remain distinct. Version0.2 complete110/display110 repairs unregistered115 locally, preserving the rejected cohort. No general social/physiological or Task/Biological claim. Next DEFINING_MEMORY_READINESS.md.
+
+
+### Defining-memory bridge — 2026-09-27
+VER-C3-DEFINING-MEMORY-BRIDGE-001: 4 retained-law models/288 component cases/864 deterministic stage comparisons;13 focused/328 reference tests/build;1484/0. Acquired significance changes old-episode survival and actual recollection under capacity pressure; retained-but-not-recalled remains distinct. Full defining-memory frontier OPEN.
+GA use/significance tier equality now discriminates under tighter capacity. SharedProtection/UseOnly/AgeOnly still coincide in this matrix; no law retired. Component continuation only; wrapper52/55 unchanged. See DEFINING_MEMORY_BRIDGE_FINDINGS.md and DEFINING_MEMORY_INTEGRATION_READINESS.md.
+
+
+### Defining memory: meaning/use integration — 2026-09-27
+VER-C3-DEFINING-MEANING-001: 4 models/68 component cases/308 repeated stages;15 new/28 affected/328 reference tests/build;1484/0. Same acquired history yields different goal-relative meaning; actual counted rehearsal changes access; later evidence preserves historical event content/credit. Native continuation OPEN.
+Retain goal-distance qualification, actual attribution, historical credit, presentation history, later current assessment and retained event content. Do not collapse identical uncertain ranges to known equality. Wrapper52/55 unchanged; no native continuation or law retirement. See DEFINING_MEANING_FINDINGS.md.
+
+
+### Defining memory: native public qualification — 2026-09-29
+VER-C3-DEFINING-PUBLIC-001: 68 public programs/68 models/1680 restored prefixes (1612 advancing/68 terminal);376 exact native stages;8 diagnostic observer pairs;17 focused/328 reference tests/build;1492/0. Empty-S0 acquired history, goal-relative meaning, rehearsal, retention and final recall survive typed public admission, actual Save132 and original-input restore under four retention laws. Brief12.3-2 bounded.
+Retain SignificanceFirst/SharedProtection/UseOnly/AgeOnly, historical content/credit, current judgment, retention, access and publication as separate owners. Wrapper53/56; no law retirement. See CAMPAIGN3_DEFINING_PUBLIC_QUALIFICATION.md and DEFINING_PUBLIC_FINDINGS.md.
+
+
+### Development-history coverage audit — 2026-10-01
+No new verdict.2 reused LONG models/3 runs/51 public restores reproduce all old
+save hashes/views/executions; early opportunity isolation and non-skill projection
+equality pass. Acquired practice is not developmental/age state. Brief12.15-1 stays
+BLOCKED; no comparator retired or law changed.1492/0, wrapper53/56 unchanged.
+See DEVELOPMENT_HISTORY_CHECKPOINT.md; next DEVELOPMENT_STATE_READINESS.md.
+
+
+### Owner developmental requirements — 2026-10-01
+Younger learning plasticity and greater early personality-forming event weight are
+required independently. DEVELOPMENT_OWNER_REQUIREMENTS_2026_10_01.md supersedes
+the prior intake scope, including its learning-rate exclusion. Authorship eligibility
+and developmental influence remain distinct; historical weights use event-time state.
+No new verdict or allocation;1492/0. Native/component qualification remains open.
+
+
+## Development component checkpoint — 2026-10-01
+
+VER-C3-DEVELOPMENT-001 qualifies development-component/0.1-candidate:
+7 models/36 runs/668 component prefixes (632 advancing/36 terminal);13 focused/328
+reference tests/typecheck/build;1492/0. Independent younger learning and greater
+event-time personality weight preserve original eligibility, authorship and history.
+All eight seeds have early probability differences/equal early actions and different
+full probe sequences. Step/Ramp and independent gain-disable controls remain;
+preserve first timeout cohort. Native gate OPEN; no Brief promotion or law selection.
+RO008/009/010/013/017/019/020/021. Evidence CAMPAIGN3_DEVELOPMENT_QUALIFICATION.md and
+DEVELOPMENT_COMPONENT_CLOSURE_REV1.json. Next DEVELOPMENT_PUBLIC_READINESS.md.
+No owner ruling; wrapper53/56 unchanged; Campaign3 NOT EXIT-READY.
+
+
+## Native development implementation / REV83 — 2026-10-01
+
+Native development implementation VERIFIED; full matrix RUNNING.13 actual stages,
+primary18 exact component rows/bundles and234 traces;21 focused/328 reference tests/
+typecheck/build.1508/16. Typed originals, disjoint owners, Save132/original replay,
+all reached stage faults and both publication barriers pass. Wrapper54/57 checked;
+prior53/52/51/50/49 scopes intact. Preserve first test-only read-only mutation error.
+Next finish36 public programs/668 native prefixes; earlier component restores do not
+satisfy this gate. No new verdict/Brief promotion;111/20/1;90 verdicts; AuditREV83.
+Start DEVELOPMENT_PUBLIC_IMPLEMENTATION_CHECKPOINT.md; no owner ruling.
+
+
+## Native development qualification / REV84 — 2026-10-01
+
+VER-C3-DEVELOPMENT-PUBLIC-001 qualifies development-public/0.1-candidate:
+7 models/36 public programs/668 actual Save132 prefixes,632 advancing/36 terminal;
+8216 committed native stages;21 focused/328 reference tests/typecheck/build;1508/0.
+Independent learning and event-time personality weighting retain exact component
+trajectories, original eligibility and immutable constitution under13 native stages.
+Step/Ramp/gain controls, all seeds, both test cohorts and all harness revisions preserved;113 earlier
+restore receipts retained without double counting. Wrapper54/57; prior scopes intact.
+Brief12.15-1 bounded; AuditREV84:112 bounded/20 partial/0 blocked;91 verdicts.
+No universal gain/calendar-age claim. RO008/009/010/013/017/019/020/021/022.
+Evidence CAMPAIGN3_DEVELOPMENT_PUBLIC_QUALIFICATION.md and DEVELOPMENT_PUBLIC_CLOSURE_REV1.json.
+Next CAMPAIGN3_PARTIAL_COVERAGE_READINESS.md; no owner ruling; Campaign3 NOT EXIT-READY.

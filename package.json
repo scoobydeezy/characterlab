@@ -12,7 +12,10 @@
     "test:watch": "vitest",
     "test:reference": "vitest run --config vite.reference.config.ts",
     "check:boundaries": "node scripts/check-reference-boundary.mjs",
-    "check:research": "node scripts/check-research-obligations.mjs"
+    "check:research": "node scripts/check-research-obligations.mjs",
+    "evidence:restore": "node scripts/restore-evidence.mjs",
+    "evidence:verify": "node scripts/restore-evidence.mjs --verify",
+    "check:git-size": "node scripts/check-git-file-sizes.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -3300,3 +3300,38 @@ Start CAMPAIGN3_AFFECT_REGULATORY_QUALIFICATION.md;next
 CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md.
 Evidence: AFFECT_REGULATORY_RESULT_REV1.json and AFFECT_REGULATORY_CLOSURE_REV1.json.
 RO-C3-002/003/006/007/008/010/011/019/020/021. Only Brief12.5-8 promoted.
+
+
+## `VER-C3-VALUES-001` — bounded Values consolidation and receiving (2026-10-04)
+
+QUALIFIED BOUNDED COMPONENT / LOCAL DISPOSITION; values-component/0.2-candidate.
+4 models/256 runs/1248 original-prefix restores;992 input successors (960 commits,
+32 duplicate no-ops),256 terminal successors;1536 final receiving contexts.
+19 focused/328 reference tests/build pass. Evidence accumulation and later revision
+remain distinct from current Need/goal;3/8 sampled choices differ at zero demand,
+5/8 equal. Stored/Refold match; NeedOnly equals ValuesOnly at demand1; Joint overlap
+adds nothing. No law selected or comparator retired. Preserve rejected REV1 deadline65
+failure and pre-freeze source-discovery failure. Gap64/expiry65 remain separate.
+Actual arbitration only; no physical feedback, native source/writer/Save132, appraisal
+consumer or age claim. See CAMPAIGN3_VALUES_QUALIFICATION.md and values-matrix-rev2/
+plan.json/check.json. RO-C3-010/019/020/021. Counters1508/0;107 verdicts; no clause
+promotion. AuditREV111 remains prior frozen snapshot; final gates remain open.
+Next VALUES_PUBLIC_READINESS.md. Campaign3 NOT EXIT-READY; no owner ruling.
+
+
+## `VER-C3-VALUES-PUBLIC-001` — bounded native Values admission (2026-10-04)
+
+QUALIFIED BOUNDED NATIVE / LOCAL DISPOSITION; values-public/0.1-candidate.
+4 models/256 public runs/3040 Save132 restores;2784 advancing/256 terminal successors;
+11136 scheduled native stages;1536 final receiving contexts;31 focused/328 reference
+tests/build. Typed source40, prior-state reasons52/choice60, sole consolidation140;
+Refold has no stored projection. Exact component rows/reasons/resolutions/RNG;
+all four reached stage faults, commit rollback and both publication barriers pass.
+55 producers/58 factories checked; predecessor scopes unchanged. Preserve development
+failures and native-context timing limit. No physical feedback, general provenance,
+appraisal or age claim; no law selected or comparator retired. Evidence:
+CAMPAIGN3_VALUES_PUBLIC_QUALIFICATION.md, values-public-matrix-rev1/plan.json/check.json,
+VALUES_WRAPPER_EXTENSION_REV1.json. RO-C3-010/019/020/021;RO022 publication remains closed.
+Counters1519/0;108 verdicts; no clause promotion. AuditREV111 remains prior106-verdict
+snapshot;corpus0.29.0/21 unchanged. Campaign3 NOT EXIT-READY. Next historicalHQ-004
+option-list/additive-scoring review and final reconciliation. No owner ruling.

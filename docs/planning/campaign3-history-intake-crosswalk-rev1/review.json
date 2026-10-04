@@ -1,0 +1,477 @@
+{
+  "status": "11 ROWS CROSSWALKED; EIGHT HISTORICAL SOURCE ROLES REVIEWED; EXIT OPEN",
+  "manifestSha256": "e947295eb33194087559f70d42d34023c9f9fa3edfc878807e8992ab605c4303",
+  "rows": [
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 13,
+        "endLine": 13,
+        "text": "| integer/rational/fixed-point primitives | substrate candidate | oracle and candidate representations | specify signed rounding, overflow, exact domains |\n"
+      },
+      "disposition": "BOUNDED SUBSTRATE PORT",
+      "contractOrScope": "substrate/0.2-candidate; bounded numeric contracts remain authoritative",
+      "scope": "SUB-001/002; bigint rational construction and signed rounding ported; no universal psychological scale inferred.",
+      "reopenOrRemaining": "Any changed range, rounding or fixed-point representation requires its exact numeric contract and vectors.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 106,
+          "endLine": 110,
+          "text": "\n**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.\n\n`SUB-001` has an accepted Campaign 0 reference port with bigint-only construction, canonical reduction, sign-correct floor/ceiling division, and ties-to-even rounding. The 0C analytical-time implementation resolves the known separately floored interval defect by retaining exact remainder and prohibiting incidental re-anchoring. All `CV-TIME-*`, integrated continuation fixtures, and the preserved historical `rational.test.ts` control pass.\n\n"
+        },
+        {
+          "path": "docs/formal/DETERMINISTIC_SUBSTRATE.md",
+          "sha256": "a87d3c0fbbfbfbd1e58e8fadd838888839948a953f9ef936b4080d8b6ac4b52c",
+          "startLine": 1,
+          "endLine": 13,
+          "text": "# Deterministic Substrate\n\n**Status:** accepted Campaign 0 contract, version identifier `substrate/0.2-candidate` (accepted 2026-09-01)\n\nThe immutable candidate-era identifier is retained because it participates in structural identities and golden random inputs; acceptance changes status, not canonical bytes.\n\n**Scope:** rules shared by every executable seam\n\n**Non-goal:** choosing psychological mechanisms\n\n## 1. Structural identities\n\nAn identity is the canonical structural manifest, not its hash. A digest is a compact identifier and comparison accelerator; digest equality never replaces structural equality when both manifests are available.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 14,
+        "endLine": 14,
+        "text": "| canonical ordering, event queue, state hashing | substrate candidate | replay controls | restate encoding/order; structural equality remains proof |\n"
+      },
+      "disposition": "BOUNDED SUBSTRATE PORT",
+      "contractOrScope": "substrate/0.2-candidate; ordering phase extensions separately versioned",
+      "scope": "Typed canonical identity, atomic ordered instants and continuation are accepted; hashes remain diagnostics.",
+      "reopenOrRemaining": "New phase/order/encoding or hash-only equality requires explicit contract/proof review.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 106,
+          "endLine": 112,
+          "text": "\n**Campaign 0 port status (2026-09-01):** `SUB-003`, the addressed-draw portion of `SUB-004`, and the explicit coupling-map portion of `SUB-009` are accepted substrate ports under the immutable identifier `substrate/0.2-candidate`. The implementation replaces the historical delimiter/FNV-derived 64-bit word with registered `cenc/1` records and domain-separated SHA-256-derived 128-bit candidates while preserving pure addressing, unrelated-draw independence, purpose separation, and paired coupling. Historical controls, all Campaign 0 vectors, save/load trace continuation, first divergence, and `PHEN-DET-001` pass. This acceptance does not yet port the psychological dice/modifier/identity loop; that remains a mandatory Campaign 2 reference.\n\n`SUB-001` has an accepted Campaign 0 reference port with bigint-only construction, canonical reduction, sign-correct floor/ceiling division, and ties-to-even rounding. The 0C analytical-time implementation resolves the known separately floored interval defect by retaining exact remainder and prohibiting incidental re-anchoring. All `CV-TIME-*`, integrated continuation fixtures, and the preserved historical `rational.test.ts` control pass.\n\nThe ordering and persistence portion of `SUB-008` has an accepted Campaign 0 reference port: global monotonic event/sequence allocation replaces the historical per-tick string ID, pending work is ordered by `(DueAt, Phase, EventSequence)`, a complete instant commits atomically, and canonical saves restore IDs and allocator continuation without serializing handlers. Canonical values are deep-copied at scheduler authority boundaries. Accepted `SEM-001H` extends the phase manifest to `ordering-phases/2-candidate` with current/consequence perception lanes and a non-schedulable settlement sentinel without changing scheduler ordering or transaction semantics. `CV-ORD-*`, `CV-SAVE-*`, all generic and concrete `CV-TXN-001` boundaries, `CV-SEM-081..090`, first-divergence proof, integrated continuation, and the preserved deterministic-replay control pass.\n\n"
+        },
+        {
+          "path": "docs/formal/DETERMINISTIC_SUBSTRATE.md",
+          "sha256": "a87d3c0fbbfbfbd1e58e8fadd838888839948a953f9ef936b4080d8b6ac4b52c",
+          "startLine": 1,
+          "endLine": 13,
+          "text": "# Deterministic Substrate\n\n**Status:** accepted Campaign 0 contract, version identifier `substrate/0.2-candidate` (accepted 2026-09-01)\n\nThe immutable candidate-era identifier is retained because it participates in structural identities and golden random inputs; acceptance changes status, not canonical bytes.\n\n**Scope:** rules shared by every executable seam\n\n**Non-goal:** choosing psychological mechanisms\n\n## 1. Structural identities\n\nAn identity is the canonical structural manifest, not its hash. A digest is a compact identifier and comparison accelerator; digest equality never replaces structural equality when both manifests are available.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 15,
+        "endLine": 15,
+        "text": "| analytical progression | substrate candidate with defect | time advancement | resolve partition invariance and remainder |\n"
+      },
+      "disposition": "BOUNDED HAZARD RESOLVED",
+      "contractOrScope": "substrate/0.2-candidate",
+      "scope": "MATH-001/TIME-001 resolves incidental re-anchoring with exact linear anchors and remainder.",
+      "reopenOrRemaining": "Nonlinear progression or changed time/rounding/re-anchor semantics reopens; no generic integration law.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 429,
+          "endLine": 435,
+          "text": "### `TIME-001` and `MATH-001`\n\n- **Decision:** accept checked integer `SimInstant`, exact linear analytical anchors, retained bounded remainder, non-mutating reads, and materialize→mutate→re-anchor semantic transitions.\n- **Alternatives considered:** incidental re-anchoring with truncation and hidden microticks; both are rejected because they create partition-sensitive state.\n- **Domain/failure:** declared signed rates/scales and bounded values only; negative duration and representation overflow fail without mutation.\n- **Proof:** `CV-TIME-001..006`, positive/negative partition equivalence, truncation negative control, rational oracle, save/load, and transaction rollback.\n- **Reopen:** time unit/range, rounding/remainder, re-anchor order, parameter identity, or nonlinear algorithm changes.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 16,
+        "endLine": 16,
+        "text": "| addressed randomness | substrate candidate with caveat | deterministic sampling | specify bounded rejection/fallback and quantify bias |\n"
+      },
+      "disposition": "BOUNDED SAMPLER ACCEPTED",
+      "contractOrScope": "substrate/0.2-candidate",
+      "scope": "MATH-005/RND-001 accepts bounded rejection with declared residual bias, not unbiasedness.",
+      "reopenOrRemaining": "Changing address/hash/width/span/attempts/fallback/coupling reopens the bound.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 421,
+          "endLine": 427,
+          "text": "### `RND-001` and `MATH-005`\n\n- **Decision:** accept registered canonical random addresses, domain-separated SHA-256 128-bit candidates, two bounded-rejection attempts, and a fresh-candidate modulo fallback for spans through `2^32`; explicit role-compatible `ComparisonDrawMap` is the only coupling override.\n- **Alternatives considered:** historical delimiter/FNV 64-bit addressing and unbounded rejection. The accepted form retains pure addressing while removing delimiter ambiguity and bounding work.\n- **Domain/failure:** invalid spans, weights, purposes, coupling roles, duplicate maps, or late maps fail structurally; the published ideal-candidate total-variation bound is below `2^-290`.\n- **Proof:** `CV-RNG-001..008`, independent SHA-256 oracle, exhaustive reduced-width enumeration, exact inequalities, mutable sequential-RNG negative control, and `PHEN-DET-001`.\n- **Reopen:** address/schema, hash/candidate width, range mapper, attempt count/fallback, coupling, or bias evidence changes.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 17,
+        "endLine": 17,
+        "text": "| Needs / MPS / fulfillment | competing mechanism or historical control | embodiment and motivation campaigns | do not treat MPS equations as North-Star facts |\n"
+      },
+      "disposition": "HISTORICAL CONTROL; DISTINCT BOUNDED SUCCESSOR",
+      "contractOrScope": "biological-integration/0.1-candidate",
+      "scope": "Functional biology qualifies18 behaviors; this is not adoption of all legacy Needs/MPS/fulfillment equations or proof every Need is a meter.",
+      "reopenOrRemaining": "Preserve CTL-001/008 and exact body/evidence distinctions; any retirement requires a named comparison, not broad biology closure.",
+      "obligations": [
+        "RO-C3-008",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+          "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01",
+          "startLine": 1,
+          "endLine": 30,
+          "text": "# Continuous functional biological system — 2026-09-26\n\n**QUALIFIED / LOCAL DISPOSITION. Stage E: VER-C3-BIOLOGY-001.**\nThe18 behaviors in BIOLOGICAL_SYSTEM_WORK_ORDER.md are expressible under\n`biological-integration/0.1-candidate`, with `biological-dynamics/0.1-candidate` and\n`biological-choice/0.1-candidate`. Counters **1400 / 0**. No permanent allocation,\nstate retirement, reference import or architecture-owner ruling.\n\n## What is now connected\n\nOne continuously evolving subject has physical resources, sleep/circadian state,\ndamage, intoxicant burden, reward/stress/arousal regulators, exposure-keyed tolerance/\nsensitization, transient satiation and acquired regulatory targets. Chosen execution\nchanges this body. Current and consequence interoception feed separate experienced\npleasure, withdrawal relief, restorative benefit and harm learning. Learned expectation\nand cue history interact with maintained goals and physiology-sensitive inhibition;\nindependent reasons use the retained dice grammar to choose the next actual action.\nAppraised threat can produce a named delayed stress impulse, which affects later\ninteroception/control. Body truth never becomes a character belief by inspection.\n\nThis closes the earlier gap between separate tolerance, withdrawal, craving and\ncostly-pursuit demonstrations for the declared functional behavior set. It does not\nclaim all human biology, calibrated chemicals, clinical addiction or a minimal set\nof biological state variables. Dopamine and Cortisol-like are analog names for defined\ncandidate dynamics; activation, experienced pleasure/distress and learned valuation\nremain distinct. Biological architecture remains open to richer domains/networks.\n\nThe implementation is a continuous composed research runtime, not a new public\nscheduler/factory admission. Its18-row behavior table does not replace the132-clause\nCampaign3 denominator or qualify every prior cognitive profile jointly. Public\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 175,
+          "endLine": 191,
+          "text": "| `P3-010` | Same evidence/different people and same constitution/different biographies | `CORPUS` | Preserve as the minimum discrimination suite for constitutional projections. The historical seven-dimensional vector and quadratic projection are candidate controls only. |\n| `P3-011` | Same-time evidence ordering and explicit decay | `CANDIDATE` + `CORPUS` | Preserve ordering and partition tests when the current event contract is specified. |\n| `P3-012` | Unfinished original phenomenon backlog | `CORPUS` | Reconcile betrayal, grief/loss, rumination, obsession, healthy motivational multiplicity, value formation/revision, and addiction against the North-Star corpus. Their old proposed mechanisms are not implied by preserving the phenomena. |\n\n## 7. Historical controls that remain useful but are not current premises\n\n| ID | Historical model | Disposition | Proper use |\n|---|---|---|---|\n| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 18,
+        "endLine": 18,
+        "text": "| signal field and quadratic statistics | competing mechanism | appraisal/reason experiments | correct coefficient convention and distribution assumptions |\n"
+      },
+      "disposition": "CONDITIONAL CANDIDATE; NO ADOPTION",
+      "contractOrScope": "No signal-field adoption established by this crosswalk",
+      "scope": "MATH-002 coefficient convention and MATH-003 distribution assumptions remain conditional.",
+      "reopenOrRemaining": "Choose convention and equivalence vectors; declare fourth moments/distribution before comparison or adoption.",
+      "obligations": [
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 222,
+          "endLine": 223,
+          "text": "| `MATH-002` quadratic coefficient convention | `P2` | signal-field candidate seam | signal-field comparison only | choose polynomial/matrix convention in candidate seam and add equivalence vectors |\n| `MATH-003` quadratic variance distribution assumptions | `P2` | signal-field candidate seam | uncertainty-bearing signal fields | declare distribution/fourth moments or reject closed-form candidate |\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 19,
+        "endLine": 19,
+        "text": "| belief update / Kalman forms | competing mechanism | belief and expectation campaigns | define evidence semantics and preserve covariance validity |\n"
+      },
+      "disposition": "BOUNDED BELIEF; KALMAN CANDIDATE OPEN",
+      "contractOrScope": "belief-public/0.1-candidate",
+      "scope": "Evidence-owned scalar belief qualification does not adopt covariance/Kalman laws or calibrated probability confidence.",
+      "reopenOrRemaining": "Covariance candidate requires PSD validity; richer confidence, correlations and general belief remain conditional.",
+      "obligations": [
+        "RO-C3-010",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_BELIEF_QUALIFICATION.md",
+          "sha256": "e1ecd00c566fb021ef78e1db5777d25115fa8a8f45395dffd17fd56eba83cb4a",
+          "startLine": 1,
+          "endLine": 20,
+          "text": "# Bounded BELIEF checkpoint — 2026-09-20\n\n**COMPLETE / QUALIFIED. Stage E. LOCAL DISPOSITION — no owner ruling required.**\nHighest allocated record **746**; allocated since this verdict **0** (13 in this\nincrement). The completed GA and BODY/MULTISOURCE checkpoints remain preserved.\n\n## What is qualified\n\n[belief-public/0.1-candidate](../formal/BELIEF_PUBLIC_CONTRACT.md) executes actual\nregistered trial display → safe sample → frozen experience → learning evidence →\nsole-authority belief mutation → later goal-relative appraisal. It exercises the\nrequired contrasts of PHEN-BELIEF-0011.0.0-draft against corpus0.29.0, digest\n`5dc8a6f23afe0c75b4b7d9fd0bf93c65f67bd4892ec7ec0e9e4d85d3a05a172d`.\nThe controlled realization is qualified; this is not all Research Brief §12.4,\nall possible belief representations, or whole Campaign3 completion. No corpus\nmanifest, predecessor model or historical source was rewritten.\n\nThe source has one observer explicitly mapped to one character, two governed\ncondition/outcome display channels, at most32 instants and one frame per channel\nper instant. A visible channel establishes its named condition identity in this\n"
+        },
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66",
+          "startLine": 224,
+          "endLine": 224,
+          "text": "| `MATH-004` covariance validity under quantization | `P1` | belief representation campaign | fixed-point covariance/Kalman candidate | PSD-preserving representation/projection proof before candidate use |\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 118,
+          "endLine": 121,
+          "text": "| `MEC-002` | Informative-bound gating for censored evidence | `CONTROL` + `CORPUS` | Preserve the four named cases: weak compatible bound, inconsistent bound, zero-information saturation, and genuine point evidence after repeated censoring. Accepted-bound precision over-crediting remains a known approximation. |\n| `MEC-003` | Bounded-effect decomposition: `Capacity`, `Applied`, `Overflow`, and `EvidenceKind` | `CONTROL` + `CONTRACT` | Preserve the exact identity wherever a bounded effect exists. The historical use of authoritative `Applied` as the character's observation is a perfect-interoception control; the new evidence kind must be computed from the permitted perceived measurement. It does not prove that every Need is a stored bounded meter. `Overflow` remains omniscient trace information. |\n| `MEC-004` | truth-side `EffectProvenance → perceptual projection → derived causal roles → SemanticExperience` | `PORT` with boundary correction; restricted token, event-pattern, continuant-recognition, and safe causal-role/provenance controls now present; integrated port blocked by parent `SEM-001` | This is the strongest earned world-truth-to-character-evidence control. Preserve separately identified actor/target/instrument/cause participation, but distinguish semantic `EventRole` from analytical `CausalRole`; keep full provenance, truth referent/action identity, and unobserved world facets on the trace side. `SemanticExperience` receives event-grouped perceptual referents, typed observed classification, and only observer-safe evidence admitted by each consumer's exact `ReadDomain`. Classification, tracking, recognition, retained state, appraisal, and evidence quality remain separate. Accepted `SEM-001G` replaces hidden provenance joins and winner-takes-all causal roles with a closed same-observer reference grammar plus zero-or-more nonrecursive character-relative causal-role claims. The current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` path is permanently `CONTROL-SEM-LEGACY-CONCEPT-TOKEN`, valid only where the channel establishes identity, one role suffices, and no hidden link leaks. Historical direct action-key projection remains a control; accepted `SEM-001E` replaces its default character-evidence role with event-file pattern classification. Accepted `SEM-001F` permits continuant candidate identity only through observer-owned catalog/templates or a mapped identity claim. Learned action identity remains downstream. |\n| `MEC-005` | Character-relative attention separated from perception | `CONTROL` + `CONTRACT` | Preserve the distinction and residual-pool control. Fixed role weights and pool size remain candidate calibration, not invariants. |\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 20,
+        "endLine": 20,
+        "text": "| decision contests, dice/modifier grammar, and identity feedback | retained reference substrate and mandatory initial control | arbitration and identity-feedback campaigns | formalize and port Phase 2.9–2.97 first; reduce or replace only after an explicit comparison verdict |\n"
+      },
+      "disposition": "MANDATORY CONTROL PORT QUALIFIED IN BOUNDED TASK",
+      "contractOrScope": "task-cognitive-path/0.1-candidate",
+      "scope": "Campaign2 port executes reason/dice/standing loop and historical differential controls. PORT is not a general retained/reduction verdict.",
+      "reopenOrRemaining": "Maintain pooled compiler and candidate grammar comparisons; broad biography/coercion and later source-role joins require their own evidence.",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 257,
+          "endLine": 297,
+          "text": "\nThe current result is recorded in CAMPAIGN2_COGNITIVE_QUALIFICATION.md and\nCAMPAIGN2_COMPLETION_REVIEW.md, under task-cognitive-path/0.1-candidate. This update\ncompletes the porting gate for that bounded task profile; PORT is not automatically\nconverted into a general RETAINED or reduction verdict.\n\n- SUB-001/002/004/005/007/008/012: actual exact arithmetic, quantized ordered identity,\n  addressed draws, finite distributions, aggregate coverage, structural trace/prefix\n  replay and bounded transform execute. Actual historical differential controls pass\n  for270 dice cases,11 identity histories and12 coverage comparisons. Whole reference\n  suite43/328 passes. No reference import enters active source.\n- SUB-003/010: frozen typed allocations, distinct old/new registries, model recipe\n  commitments and historical receipts remain preserved. No fixture namespace promotion.\n- SUB-009: natural-address deterministic replay and rollback are qualified; externally\n  supplied comparison maps remain excluded from this profile. Existing substrate\n  coupling stays a separately tested PORT/control; equal seeds alone do not pair\n  differing addresses.\n- MEC-011/012/014/015/016: bounded availability/relevance, task nuclei, raw-cause\n  consolidation, all five die bands, three modes and zero-base/active-floor controls\n  execute. Component Avoid and richer coverage are explicitly not public source claims.\n- MEC-013: three historical source roles execute. ContextModulating remains a future\n  separately traceable PORT obligation; it is neither admitted nor silently retired.\n- MEC-017/018/019/022: frozen meaning, direct acquired-I standing, qualified ordered\n  evidence, immutable historical expressions and intent/attempt/outcome separation\n  execute. Positive/opposing/quantized histories are component controls; public\n  empty-history feedback and64/65 boundary are genuine generated witnesses. Broad\n  biography, coercion/cost and seed-space sufficiency remain corpus obligations.\n- MEC-020: immutable adopted task instructions and active-only lifecycle pressure\n  execute in the bounded non-Need control seam. No immortal pressure or Need relabeling.\n- MEC-004/006 and predecessor observation/evidence/memory: accepted projection and\n  interval semantics are preserved. Protocol2 remains censored; execution identity\n  stays outside character evidence. Eighteen predecessor assays were refreshed.\n- MEC-021, broader Need/social/efficacy and Phase3 candidates retain their prior\n  CONTROL/CORPUS/CANDIDATE dispositions. CTL-005 remains a runnable historical pooled\n  compiler control; no new old-vs-new reduction verdict is claimed.\n- RET-007/008/009/012/013/014 remain retired/prohibited as already specified. Exact\n  source substitutions detect local-I scaling, extra tickets, standing in meaning,\n  lost aggregate history and protocol truth leakage. The collective redundancy\n  fixture detects the retired pairwise-max alternative without claiming that the\n  last-basis substitution is literally that algorithm.\n\n"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN2_COGNITIVE_QUALIFICATION.md",
+          "sha256": "8e68f5ea6771acdaabbb312a89ef75d5e47259d5017bce0615a5d7865b7e2c2a",
+          "startLine": 1,
+          "endLine": 22,
+          "text": "# Campaign 2 cognitive qualification\n\nDisposition, 2026-09-09: **task-cognitive-path/0.1-candidate QUALIFIED in its frozen\nbounded profile**, by internal adversarial review under the user's authorization to\nfinish Campaign 2 independently. This is not a planning-agent or external verdict.\nHistorical shape/allocation/model receipts remain unchanged. Their NOT PASSED labels\ndescribe those checkpoints; this later record supplies runtime disposition.\n\n## Executing commitment and comparison\n\nThe executing versions are exactly those in formal TASK_COGNITIVE_PATH.md and\ncampaign2-task-cognitive-model/FREEZE.json. Baseline ModelIdentity digest:\n`abe15a4f6bb6ec13a3ccc825dc5e9d755c4444998fa178dbb8683969a1a2a498`.\nThe separate 21 recipes retain their own frozen commitments. No implementation fix\nchanges a model, numeric allocation, calibration or accepted mathematical contract.\n\nPublic evidence means execution through cognitiveFactory's data-only model/run\nboundary from admitted S0 and original inputs. Component evidence means the actual\nproduction transformer or compiler executes with explicitly supplied mathematical\nor retained-state operands; it does not establish public reachability. Static\nexclusion and capability arguments are identified separately. Exact canonical bytes,\nnot chosen action or a digest alone, are the continuation comparison relation.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 21,
+        "endLine": 21,
+        "text": "| personality/identity equations | obsolete or competing | disposition/person-model campaigns | separate self, observer belief, constitution, adaptation |\n"
+      },
+      "disposition": "HISTORICAL HYPOTHESES; DISTINCT BOUNDED SUCCESSOR",
+      "contractOrScope": "disposition-adaptation/0.1-candidate",
+      "scope": "Constitution, plastic contributor and standing remain distinct; CTL-006 seven-dimensional ontology is not adopted by bounded adaptation.",
+      "reopenOrRemaining": "No universal personality dimensionality or general fusion law; preserve competing historical projection/identity models.",
+      "obligations": [
+        "RO-C3-009",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_DISPOSITION_ADAPTATION_QUALIFICATION.md",
+          "sha256": "fa7a2524626b034ad7d6d4d60cad332361efd6a20c912c79dfdccc4f7850209b",
+          "startLine": 1,
+          "endLine": 24,
+          "text": "# Bounded dispositional adaptation qualification — 2026-09-27\n\n**COMPLETE / QUALIFIED — VER-C3-DISPOSITION-001. LOCAL DISPOSITION.**\nStages A–E; disposition-adaptation/0.1-candidate. This is composed component\nqualification, not native runtime admission or a replacement for existing ADAPT.\n\n| Counter | Value |\n|---|---|\n| Highest allocated record type |1450|\n| Allocated since last verdict/corpus member |0; no new allocation|\n| Canonical candidate models / runs |9 /15|\n| Complete component prefixes |285:270 advancing /15 terminal|\n| Affected / reference tests |35 (8 new,27 inherited) /328; build passed|\n\n## What now works\nRepeated authenticated biography can change a separate plastic contributor to\nfuture effective disposition while the original constitutional baseline remains\nunchanged. This implements North Star8 and Architecture15.3–15.5 in one declared\ntask-direction channel. It does not relabel identity standing or represented belief\nas adaptation. Neither one isolated choice nor a trait label writes constitution.\n\nThe eighteen-instant source runs actual inherited reason/dice/arbitration, intent,\nexpression, world execution and Threshold qualification kernels. Original expressions\nretain their original contextual meaning. Four accepted qualifications form a batch;\n"
+        },
+        {
+          "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+          "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+          "startLine": 179,
+          "endLine": 187,
+          "text": "## 7. Historical controls that remain useful but are not current premises\n\n| ID | Historical model | Disposition | Proper use |\n|---|---|---|---|\n| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 22,
+        "endLine": 22,
+        "text": "| relationship formulas | competing or Vivarium-only | social consolidation campaign | preserve directionality and epistemic boundaries |\n"
+      },
+      "disposition": "HISTORICAL CANDIDATES; DISTINCT BOUNDED SUCCESSOR",
+      "contractOrScope": "relationship-public/0.2-candidate",
+      "scope": "Own-participant history and person estimate are separate inputs; symbolic cooperation/rupture profile is not universal trust or legacy-formula adoption.",
+      "reopenOrRemaining": "General attachment/trust law and natural recognition require new qualification, preserving direction and observer boundary.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-020"
+      ],
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_RELATIONSHIP_QUALIFICATION.md",
+          "sha256": "d77732d834c37a421e944b527643b5815db7cd1939195b5174d500c8916f9aa9",
+          "startLine": 1,
+          "endLine": 26,
+          "text": "# RELATIONSHIP checkpoint — 2026-09-21\n\n**Disposition: COMPLETE / QUALIFIED in bounded PHEN-REL-001. Stage E.**\n**LOCAL DISPOSITION — no architectural owner ruling required.**\n\n| Counter | Value |\n|---|---|\n| Highest permanently allocated record type | **862** |\n| Allocated since this verdict | **0** (21 this increment) |\n\n## What changed\n\n[relationship-public/0.2-candidate](../formal/RELATIONSHIP_PUBLIC_CONTRACT_REV2.md) makes\nadmitted own-participant interaction history a separate input to social appraisal\nalongside a current person estimate. Two observers retain independent journals and\nlatest claims about one target's stated willingness to cooperate. Shared cooperation\nand unresolved rupture affect a contact motive through existing standing modifiers;\nthe current estimate supplies a separately traceable situational modifier. A genuine\ncompeting activity motive remains present. Existing reason nuclei and addressed dice\nresolve contact-response probes; no relationship-specific weighted sampler is added.\n\nThe profile is symbolic cooperation count plus rupture flag, with separate comfort,\ncaution and missing-contact appraisal coordinates. It is not a universal trust or\nattachment scalar. Recognition and perceived interaction classification are controlled\napparatus: admitted breach labels do not qualify general blame or betrayal attribution.\nResponse probes end at proposed option selection; they do not execute social actions.\n"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+        "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+        "startLine": 23,
+        "endLine": 23,
+        "text": "| population, economy, spatial/world formulas | Vivarium-only | scale constraints at most | exclude from character causal state unless a seam needs them |\n"
+      },
+      "disposition": "VIVARIUM-ONLY INTAKE SCOPE",
+      "contractOrScope": "No character-side formula admission",
+      "scope": "Population/economy/spatial formulas are surrounding-world candidates under this row; world quantities do not thereby become character knowledge.",
+      "reopenOrRemaining": "A seam proposing character-side consumption must explicitly justify/admit safe evidence; no source-file exclusion from history inferred.",
+      "obligations": [
+        "RO-C3-019",
+        "RO-C3-021"
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal/FORMULA_INTAKE_LEDGER.md",
+          "sha256": "1ee4f1779893c0a637d45bd86a92ffb5f18cc58dd75c64a5d0e28225b1da334a",
+          "startLine": 23,
+          "endLine": 23,
+          "text": "| population, economy, spatial/world formulas | Vivarium-only | scale constraints at most | exclude from character causal state unless a seam needs them |\n"
+        }
+      ]
+    }
+  ],
+  "referenceSources": [
+    {
+      "header": {
+        "path": "reference/CharacterLab — Deterministic Cognitive Reference Model Brief.md",
+        "sha256": "7e8dd02eb3e7ca6a7ac268074f06c5be52dd335dd62dc1ccebed84136de8b7a6",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Deterministic Cognitive Reference Model Brief\n\n**Status:** Greenlit research project  \n**Relationship to Vivarium:** Independent, parallel research track  \n**Primary subject:** One high-fidelity simulated character  \n**Primary purpose:** Test whether a small set of mathematically explicit psychological primitives can generate the higher-order phenomena Vivarium needs, then use those findings to inform future production architecture.\n\n---\n\n# 1. Mission\n\nCharacterLab exists to test a specific unification hypothesis:\n\n> **Needs, learned beliefs and expectations, associative accessibility, memory, personality, and experience may be sufficient to generate many psychological phenomena that would otherwise be modeled as separate systems.**\n\nCandidate derived phenomena include:\n\n- Values\n- attachment\n- relationship importance\n- habit\n- avoidance\n- dependence\n- obsession\n- substitution\n"
+      },
+      "role": "HISTORICAL HYPOTHESIS AND CONTROL SOURCE",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/CharacterLab — Phase 2.5 Research Brief.md",
+        "sha256": "bfb59f189064f034d584a36ab41dd060b210fce81415ec1afcecb7ea4d7895e7",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Phase 2.5 Research Brief  \n## Experience Encoding, Semantic Salience, and Saturated Satisfaction\n\n**Status:** Proposed intermediate research phase  \n**Position:** Between Phase 2 — Associative Accessibility & Episodic Memory and Phase 3 — Personality, Belief & Social Appraisal  \n**Primary purpose:** Resolve two open problems discovered empirically during Phase 0–2 before introducing higher-order appraisal and belief machinery.\n\n---\n\n# 1. Why Phase 2.5 Exists\n\nPhase 1 and Phase 2 produced two important findings that expose incompleteness in the current definition of `Experience`.\n\n### Finding A — Experience tagging is currently structurally meaningful\n\nAssociative learning does not merely care that two concepts occurred together.\n\nThe strength of a learned pairwise association depends on:\n\n- which concepts are included in the Experience;\n- how many concepts are included;\n- how strongly each concept is activated.\n\nUnder the current row-substochastic association model, every additional co-active concept competes for finite association capacity.\n\n"
+      },
+      "role": "HISTORICAL HYPOTHESIS AND CONTROL SOURCE",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/CharacterLab — Phase 2.9 Research Brief.md",
+        "sha256": "dfa67cd2268adc35802d809f3533fede8adf8809be5e288c14cdb12d21fc5f12",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Phase 2.9 Research Brief\n## Decision Authorship, Acquired Identity, and the Role of Dice\n\n**Status:** Proposed pre-Phase-3 research phase  \n**Position:** After Phase 2.5 consolidation/re-baselining; before Phase 3 — Personality Belief & Social Appraisal  \n**Primary purpose:** Determine whether unresolved Decisions and deterministic dice resolution can serve as the mechanism by which a character accumulates a biographical identity, acquires durable traits, and becomes increasingly self-consistent without ever becoming behaviorally deterministic.\n\n---\n\n# 1. Why This Phase Exists\n\nCharacterLab has so far established mechanisms for:\n\n```text\nNeeds\nExperience\nlearned Need-satisfaction expectations\nconfidence\nassociative accessibility\nepisodic memory\nworld availability\ncausal provenance\ncharacter-relative perception\nattention\nsemantic salience\n"
+      },
+      "role": "HISTORICAL HYPOTHESIS AND CONTROL SOURCE",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/CharacterLab — Phase 2.97 Research Brief.md",
+        "sha256": "8c77bb4687c6979a4cb5ee9524e200443265ec8c9c8b8d204b0111e2dce88391",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Phase 2.97 Research Brief\n## Reason Nuclei, Deterministic Cognitive Compilation, and Dice Grammar\n\n**Status:** Proposed pre-Phase-3 research phase  \n**Position:** After Phase 2.95 — Reason Consolidation & Identity Fault Lines; before Phase 3  \n**Primary purpose:** Determine whether CharacterLab can deterministically compile a large set of cognitive signals into a small number of psychologically independent **Reason Dice**, with correlated evidence, acquired identity, and circumstances represented as modifiers rather than proliferating additional dice.\n\n---\n\n# 1. Why This Phase Exists\n\nPhase 2.9 established the core loop:\n\n```text\nDecision\n→ dice resolution\n→ chosen intent\n→ identity evidence\n→ acquired identity\n→ changed future Decisions\n```\n\nPhase 2.95 then corrected a structural mistake in the first implementation.\n\nSignals representing the same psychological topic had been thresholded independently:\n"
+      },
+      "role": "HISTORICAL HYPOTHESIS AND CONTROL SOURCE",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/CharacterLab — Phase 3 Research Brief.md",
+        "sha256": "51fdb49c8f021868bc59cc27b613de8785666cedd0a87240b7d2ed8dedaa81a8",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Phase 3 Research Brief\n## Predictive Belief, Threat Appraisal, Social Inference, and Constitutional Personality\n\n**Status:** Retained hypothesis source; paused as an active roadmap  \n**Position:** Superseded by the North-Star Reference Scaffold and reduction program  \n**Structure:**\n\n- **Phase 3A — Predictive Belief & Threat Appraisal**\n- **Phase 3B — Social Belief & Appraisal**\n- **Phase 3C — Constitutional Personality Modulation**\n\n**Primary purpose:** Establish a deterministic model of uncertain belief, prediction, appraisal, and personality that can explain fear, trust, suspicion, social anxiety, individual differences, and related behavior without introducing bespoke state flags such as `AfraidOfDogs`, `TrustsGlen`, or `Brave`.\n\n> **Roadmap authority note:** This brief was written under the earlier additive Phase 3 sequence. Its questions, candidate mechanisms, and proposed experiments remain useful, but its A→B→C ordering and fixed seven-dimensional personality delivery are not current architectural authority. See `CharacterLab — Ideal Character Architecture North Star.md` and `CHARACTER_ARCHITECTURE.md` §11. Phase 3 candidates should enter the intentionally overcomplete reference scaffold and then be retained, derived, merged, compressed, retracted, or left unresolved through controlled comparison.\n\n---\n\n# 1. Why Phase 3 Exists\n\nCharacterLab currently models:\n\n```text\nNeeds\nNeedExpectation\nassociative accessibility\n"
+      },
+      "role": "SUPERSEDED ACTIVE ROADMAP; RETAINED HYPOTHESES",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/CharacterLab — Phase 3 Implementation Plan.md",
+        "sha256": "1c2521458ea41ecf1d4f062c7ff12ce4d4839d757bd3dfc10d143f625d9938fd",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab — Phase 3 Implementation Plan\n\n**Companion to:** `CharacterLab — Phase 3 Research Brief.md`, `CharacterLab — Deterministic Cognitive\nReference Model Brief.md` (master brief), and `claude/characterlab-research-log.md`.\n**Status:** Superseded as the active build sequence; retained as an unexecuted hypothesis and design\nsource. Its prior approval records the state of planning under the additive Phase 3 roadmap, not current\nauthorization to execute 3A→3B→3C. The governing next deliverable is the North-Star Reference Scaffold\ndefined in `CharacterLab — Ideal Character Architecture North Star.md` and `CHARACTER_ARCHITECTURE.md`\n§11.\n**Scope:** Phase 3A (Predictive Belief & Threat Appraisal), 3B (Social Belief & Appraisal), 3C\n(Constitutional Personality Modulation).\n\nThe mechanisms below may be reused as thin reference implementations or competing models. They must\nnot silently collapse North-Star seams, and the fixed seven-dimensional personality proposal must be\ntreated as a falsifiable candidate rather than a required final ontology.\n\n---\n\n## 0. Where Phase 3 lands architecturally\n\nPhase 2.5e and Phase 2.97 jointly did Phase 3 a large favor without meaning to. Two boundary objects\nalready exist that Phase 3's own brief asks for by name:\n\n- **`SemanticExperience`** (`model/semanticExperience.ts`) — the character-relative record of \"what\n  happened,\" already excluding Overflow and every other piece of simulator-omniscient world-truth.\n"
+      },
+      "role": "SUPERSEDED ACTIVE ROADMAP; RETAINED HYPOTHESES",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/RESEARCH.md",
+        "sha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab Research Log\n\nFormat follows Brief §34 (Phase-End Research Gate) and §36 (Research Output Format). One entry per\ncompleted phase. Update this file at the end of each phase rather than starting a new document —\nthe brief's own stopping condition (§35) is a classification exercise across phases, and that only\nworks if findings accumulate in one place.\n\n**Standing methodological correction (added after Phase 2.5a review):** earlier entries in this log\noccasionally ask \"is this common enough in Vivarium's actual play patterns to be worth resolving\" —\nthat framing is backwards and is retired as of this correction. CharacterLab's job is to discover\nthe epistemically/architecturally correct model on its own terms; whether Vivarium's current tuning\nhappens to exercise a given regime is a separate, later, production-cost question that never gates\nwhether CharacterLab resolves the underlying question. A Vivarium-comparison question should ask\n\"what does Vivarium's architecture actually do here, and what would it need to preserve this\nfinding\" — never \"is this worth fixing given how Vivarium happens to be tuned today.\" See Phase\n2.5a's Correction section for the concrete case that surfaced this.\n\n**Standing research-posture correction (added after the Ideal Character Architecture North Star):**\nphase numbering no longer governs what CharacterLab builds next. The repeated 2.5/2.9/2.95/2.97\nbacktracking showed that constructive minimalism can hide upstream seams until downstream work depends\non them. CharacterLab now starts with an intentionally overcomplete but mechanically thin end-to-end\nNorth-Star reference scaffold, then attempts to remove, derive, merge, compress, or substitute its\ncandidate distinctions. Existing phase results remain evidence and control implementations. A\ncandidate reaches Vivarium only after comparison against the retained phenomenon corpus classifies it\nas RETAINED, DERIVED, MERGED, COMPRESSED, RETRACTED, or UNRESOLVED. See\n"
+      },
+      "role": "CANONICAL HISTORICAL FINDINGS SOURCE; STANDING METHOD CORRECTIONS RETAINED",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    },
+    {
+      "header": {
+        "path": "reference/IMPLEMENTATION_README.md",
+        "sha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+        "startLine": 1,
+        "endLine": 25,
+        "text": "# CharacterLab\n\n> **Active direction:** CharacterLab has begun a ground-zero architectural refoundation around the Ideal Character North Star. The active source tree is `src/`. The complete pre-refoundation implementation has moved to `reference/src/` and is historical evidence only; it must not be imported into new work. Read `AGENTS.md` before implementing. The detailed account below documents the preserved reference implementation and its findings.\n\n## Preserved reference implementation\n\nA standalone, deterministic reference implementation of the cognitive model described in\n*CharacterLab — Deterministic Cognitive Reference Model Brief*. This is a **research tool**, not a\ngame and not a Vivarium prototype: its job is to make the brief's mathematics runnable,\ninspectable, and falsifiable, so findings from it can inform (but not dictate) Vivarium's\nproduction architecture.\n\nThis build covers **Phase 0 (Mathematical Kernel)**, **Phase 1 (Need-Satisfaction Learning)**,\n**Phase 2 (Associative Accessibility & Episodic Memory)**, **Phase 2.5 (Experience Encoding,\nSemantic Salience, and Saturated Satisfaction) — CLOSED**, in six sub-phases: **2.5a (Saturated\nSatisfaction & Censored Learning — RESOLVED)**, **2.5b (Semantic Salience — PARTIAL, corrected by\n2.5c)**, **2.5c (Experience Interpretation)**, **2.5d (Saturation/Salience Interaction — RESOLVED,\nDERIVED)**, **2.5e (Architecture Consolidation & Behavioral Re-baseline — RESOLVED)**, and now\n**Phase 2.9 (Decision Authorship, Acquired Identity, and the Role of Dice — RESOLVED)** — plus an\ninteractive SPA for running experiments against them. Phase 2.5c is a small integration phase: it\nmakes causal role (`EffectProvenance`/`deriveWorldEventDescriptor`), attention (residual-pool\nderivation), and surprise (evidence-kind-aware `SurpriseEvidence`) fully mechanical, closing the three\nhand-authored-input gaps 2.5b's own review found in an otherwise-validated multiplicative core, and\nthen resolves Phase 2.5a's own long-open question (\"Correction 2\" in RESEARCH.md): `(μ, τ)` is\nsufficient for the censored-evidence behaviors tested so far — the bug was in `updateExpectation`'s\n"
+      },
+      "role": "HISTORICAL IMPLEMENTATION MAP; NO ACTIVE SOURCE IMPORT",
+      "basis": "Explicit preservation-ledger source index; AGENTS authority7. Local document headers subordinate to current North Star/architecture/research method.",
+      "scientificAcceptance": "INDIVIDUAL FINDINGS NOT REVIEWED HERE",
+      "obligation": "RO-C3-021"
+    }
+  ],
+  "referenceAuthority": [
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+      "startLine": 53,
+      "endLine": 84,
+      "text": "\n**Purpose:** prevent valuable pre-refoundation mechanisms, findings, and fixtures from disappearing without a deliberate decision\n\nThis ledger does not restore the previous architecture wholesale. It records what the historical CharacterLab actually earned, what remains a useful control, what was only proposed, and what was explicitly corrected or retired.\n\n## 1. Source index\n\n- [Original deterministic-model brief](../../reference/CharacterLab%20%E2%80%94%20Deterministic%20Cognitive%20Reference%20Model%20Brief.md)\n- [Phase 2.5 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.5%20Research%20Brief.md)\n- [Phase 2.9 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.9%20Research%20Brief.md)\n- [Phase 2.97 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%202.97%20Research%20Brief.md)\n- [Phase 3 research brief](../../reference/CharacterLab%20%E2%80%94%20Phase%203%20Research%20Brief.md)\n- [Phase 3 implementation plan](../../reference/CharacterLab%20%E2%80%94%20Phase%203%20Implementation%20Plan.md)\n- [Historical research log](../../reference/RESEARCH.md)\n- [Historical implementation map](../../reference/IMPLEMENTATION_README.md)\n- `reference/src/` and `reference/src/test/` — executable controls and regression evidence\n\n## 2. Dispositions\n\n| Disposition | Meaning |\n|---|---|\n| `PORT` | Earned substrate or mechanism that must populate the first fresh reference implementation after a new seam contract exists. |\n| `CONTROL` | Keep runnable under an explicit historical/control identity for comparison; it is not the default architecture. |\n| `CONTRACT` | Preserve the semantic boundary, invariant, or causal distinction even if its old representation changes. |\n| `CORPUS` | Preserve as a named phenomenon, counterfactual, proof, or regression fixture. |\n| `CANDIDATE` | Valuable unproven hypothesis. It may enter a campaign but has not earned implementation authority. |\n| `RETIRED` | Known-bad or superseded mechanism. Preserve only as history or a negative control; never silently reactivate. |\n\nEvery listed item must eventually receive a recorded outcome: accepted port and contract version, named control, corpus-only preservation, explicit supersession, or a justified retirement. Absence from the new source tree is not a verdict.\n\n### `PORT` is not `RETAINED`\n\n"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "e342d80b469af2f71c7b0f5667e38118f28009328589ca0d255004a8f55c51f4",
+      "startLine": 32,
+      "endLine": 44,
+      "text": "## Architectural authority\n\n1. `CharacterLab — Ideal Character Architecture North Star.md` defines the required character capabilities, invariants, and research posture.\n2. `CHARACTER_ARCHITECTURE.md` is the sole canonical topology: boxes, edges, state ownership, and causal ordering.\n3. `CharacterLab — Ideal Character Research Program Brief.md` defines the research method, proof burden, and campaign rules.\n4. `docs/formal/` defines versioned executable semantics beneath those conceptual authorities. An implementation must name the seam-contract version it implements.\n5. `CharacterLab — Reference Architecture Build & Research Campaign Plan.md` owns active sequence without overriding accepted formal readiness gates.\n6. `docs/planning/` records active seam status, phenomena, preservation obligations, and verdict evidence.\n7. Phase briefs, historical findings, and implementation plans under `reference/` are hypothesis and control sources only.\n\nWhen documents conflict, resolve the conflict upward through this hierarchy. Do not silently choose whichever formula or diagram is easiest to implement.\n\nAuthority is also scoped by subject. The Research Program Brief outranks formal documents on research method, proof burden, and campaign admissibility; it does **not** override an accepted seam contract's exact mathematics, domains, quantization, ordering, or trace schema. Conversely, a formal seam contract may instantiate the North Star and Architecture Map but may not redefine their required phenomena, causal boxes, or epistemic boundaries. A genuine cross-scope conflict must be resolved by amending the higher conceptual document or the lower formal contract explicitly, never by local implementation choice.\n"
+    }
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "Crosswalk dispositions are bounded scopes, not11 adopted formulas or closed obligations.",
+    "Original upstream formula provenance remains unresolved; current copy is not the historical snapshot.",
+    "Eight source-level relevance/authority roles reviewed, not every finding in those sources.",
+    "Historical claims are linked, not freshly executed. Independent scientific adequacy/proof-chain and corpus/native-scope gates remain open.",
+    "Prior34-paragraph review remains immutable; this overlay supplies the pending table row crosswalk. No mass-disposition of remaining inventory."
+  ]
+}

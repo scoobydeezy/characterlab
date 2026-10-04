@@ -1,0 +1,8 @@
+{
+  "status": "PRESERVED PRE-FREEZE FAILURE",
+  "command": "python scripts/campaign3-history-inventory.py freeze",
+  "failure": "SyntaxError: unterminated string literal in the marker label dictionary key",
+  "scope": "Python parse failed before any census or output directory creation. No evidence universe was frozen and no findings were reconciled.",
+  "preservedSource": "docs/planning/campaign3-history-inventory-development-rev1/campaign3-history-inventory.py",
+  "correction": "Close the label key quote, then freeze the corrected method before extraction."
+}

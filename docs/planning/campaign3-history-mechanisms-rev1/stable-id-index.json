@@ -1,0 +1,1038 @@
+{
+  "status": "86 STABLE IDS ACCOUNTED; NOT86 CLOSED FINDINGS",
+  "entries": [
+    {
+      "id": "RET-001",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 198,
+        "endLine": 198,
+        "text": "| `RET-001` | Flat `z=1` concept tagging | `RETIRED` + `CONTROL` | Makes tag count and row competition silently determine learning strength. Keep only as named legacy salience. |\n"
+      }
+    },
+    {
+      "id": "RET-002",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 199,
+        "endLine": 199,
+        "text": "| `RET-002` | Hand-authored causal role or per-concept attention flags | `RETIRED` | Replaced by structured provenance and deterministic derivation. |\n"
+      }
+    },
+    {
+      "id": "RET-003",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 200,
+        "endLine": 200,
+        "text": "| `RET-003` | Raw `abs(Applied - mean)` surprise for censored evidence | `RETIRED` | Confuses measurement clipping with contradictory evidence. |\n"
+      }
+    },
+    {
+      "id": "RET-004",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 201,
+        "endLine": 201,
+        "text": "| `RET-004` | Naive clipped delta treated as an exact point observation | `RETIRED` + `CONTROL` | Produces boundary-dependent mislearning. |\n"
+      }
+    },
+    {
+      "id": "RET-005",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 202,
+        "endLine": 202,
+        "text": "| `RET-005` | Precision growth from every censored observation | `RETIRED` | Compatible or zero-information bounds do not justify confidence growth. |\n"
+      }
+    },
+    {
+      "id": "RET-006",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 203,
+        "endLine": 203,
+        "text": "| `RET-006` | `Overflow → NeedExpectation` or `Overflow → Salience` | `RETIRED` / prohibited | Leaks simulator truth unavailable to the character; twice-tested non-necessity. |\n"
+      }
+    },
+    {
+      "id": "RET-007",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 204,
+        "endLine": 204,
+        "text": "| `RET-007` | Identity contribution bounded/floored separately from matching ordinary pressure | `RETIRED` | Created all-or-nothing behavior from pipeline placement. Consolidate compatible raw causes once. |\n"
+      }
+    },
+    {
+      "id": "RET-008",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 205,
+        "endLine": 205,
+        "text": "| `RET-008` | Identity as its own independent die | `RETIRED` as default + `CONTROL` | Standing modifier preserved all tested behavior without manufacturing a separate motive. |\n"
+      }
+    },
+    {
+      "id": "RET-009",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 206,
+        "endLine": 206,
+        "text": "| `RET-009` | Pairwise-maximum correlation discount | `RETIRED` | Misses collective redundancy; aggregate prior evidence coverage replaced it. |\n"
+      }
+    },
+    {
+      "id": "RET-010",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 207,
+        "endLine": 207,
+        "text": "| `RET-010` | Commitment represented as a Core Need | `RETIRED` | Confuses an obligation with a recurring appetite and loses independent commitment identity. |\n"
+      }
+    },
+    {
+      "id": "RET-011",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 208,
+        "endLine": 208,
+        "text": "| `RET-011` | Permanent/immortal commitment pressure | `RETIRED` | Active pressure must follow lifecycle; permanent pressure can lock arbitration into Auto. |\n"
+      }
+    },
+    {
+      "id": "RET-012",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 209,
+        "endLine": 209,
+        "text": "| `RET-012` | Named acquired trait as an independent simulation bonus | `RETIRED` / prohibited | Traits are derived descriptions of identity evidence; matching underlying identity may modify reasons once. |\n"
+      }
+    },
+    {
+      "id": "RET-013",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 210,
+        "endLine": 210,
+        "text": "| `RET-013` | Recomputing old DecisionExpressions or memories under current calibration/state | `RETIRED` / prohibited | Rewrites biography and destroys replay/provenance. |\n"
+      }
+    },
+    {
+      "id": "RET-014",
+      "review": "docs/planning/campaign3-history-retirements-rev1/review.json",
+      "reviewSha256": "0e3af42b40a7ebfc5dc32b71771c0a850e9b3b46a6ff4f55b4f579ce60692a45",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 211,
+        "endLine": 211,
+        "text": "| `RET-014` | Copying full `EffectProvenance` or authoritative `Applied` directly into character-accessible `SemanticExperience` | `RETIRED` as a new-port pattern | The historical type contains truth-side provenance and assumes perfect observation of the bounded state change. The new architecture requires perception/interoception to project what the character can know; full truth remains trace-only. |\n"
+      }
+    },
+    {
+      "id": "CTL-001",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 183,
+        "endLine": 183,
+        "text": "| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |\n"
+      }
+    },
+    {
+      "id": "CTL-002",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 184,
+        "endLine": 184,
+        "text": "| `CTL-002` | `(mean, precision)` expectation per subject/Need | `CONTROL` | Compare against richer belief/contingency representations. |\n"
+      }
+    },
+    {
+      "id": "CTL-003",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 185,
+        "endLine": 185,
+        "text": "| `CTL-003` | Global row-substochastic association graph | `CONTROL` | Compare against local/indexed or domain-specific association mechanisms. |\n"
+      }
+    },
+    {
+      "id": "CTL-004",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 186,
+        "endLine": 186,
+        "text": "| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |\n"
+      }
+    },
+    {
+      "id": "CTL-005",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 187,
+        "endLine": 187,
+        "text": "| `CTL-005` | Legacy pooled semantic-channel Decision compiler | `CONTROL` | Required old-vs-Reason-Nuclei comparison; never restore as the default. |\n"
+      }
+    },
+    {
+      "id": "CTL-006",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 188,
+        "endLine": 188,
+        "text": "| `CTL-006` | Seven-dimensional immutable latent personality and quadratic projections | `CONTROL` + `CANDIDATE` | Useful constitutional comparison and Phase 3 fixture source; not an accepted ontology. |\n"
+      }
+    },
+    {
+      "id": "CTL-007",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 189,
+        "endLine": 189,
+        "text": "| `CTL-007` | Values derived from repeated Need satisfaction | `CANDIDATE` | Preserve the original formation/revision tests; the North Star does not assume this derivation. |\n"
+      }
+    },
+    {
+      "id": "CTL-008",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 190,
+        "endLine": 190,
+        "text": "| `CTL-008` | Acquired/withdrawal Need model of addiction | `CONTROL` | Whole-system addiction comparison only. It is explicitly not the accepted explanation. |\n"
+      }
+    },
+    {
+      "id": "CTL-009",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 191,
+        "endLine": 191,
+        "text": "| `CTL-009` | Universal action candidate list with additive scoring | `CONTROL` | Compare against option construction and heterogeneous arbitration; never treat it as the canonical action architecture. |\n"
+      }
+    },
+    {
+      "id": "CTL-010",
+      "review": "docs/planning/campaign3-history-controls-rev1/review.json",
+      "reviewSha256": "9bde87e5242ee4d7680d2ac2b78e0dc1c8c9785ce349c71932125a08f122b41f",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 192,
+        "endLine": 192,
+        "text": "| `CTL-010` | Experienced Reward | `CANDIDATE` | Remains trace-only until a phenomenon requires a character-accessible hedonic signal with its own derivation. |\n"
+      }
+    },
+    {
+      "id": "EXP-001",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 144,
+        "endLine": 144,
+        "text": "| `EXP-001` | Reliable satisfier preference | `CORPUS` | Repeated evidence changes expectation and confidence; established evidence resists one contradiction without a hand-authored attachment stat. |\n"
+      }
+    },
+    {
+      "id": "EXP-002",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 145,
+        "endLine": 145,
+        "text": "| `EXP-002` | Saturation and censoring | `CORPUS` | Equal true effects under different capacity produce different raw deltas but not false efficacy conclusions; hidden Overflow never becomes character evidence. |\n"
+      }
+    },
+    {
+      "id": "EXP-003",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 146,
+        "endLine": 146,
+        "text": "| `EXP-003` | Habit/accessibility | `CORPUS` | Repeated context/action co-experience makes an action retrievable from context alone; exact historical `1/2` edge strength is retired as a flat-tag artifact. |\n"
+      }
+    },
+    {
+      "id": "EXP-004",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 147,
+        "endLine": 147,
+        "text": "| `EXP-004` | Associative substitution negative result | `CORPUS` | Mere target unavailability does not change accessibility; precondition filtering and learned preference remain separately attributable. |\n"
+      }
+    },
+    {
+      "id": "EXP-005",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 148,
+        "endLine": 148,
+        "text": "| `EXP-005` | Avoidance without a generic inhibition stat | `CORPUS` | Repeated aversive evidence reduces preference; boundary-clipped observations do not erase an established negative expectation. |\n"
+      }
+    },
+    {
+      "id": "EXP-006",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 149,
+        "endLine": 149,
+        "text": "| `EXP-006` | Memory accessibility | `CORPUS` | Recency, repetition, retrieval reinforcement, decay, top-K bounds, and tie ordering remain separately testable. |\n"
+      }
+    },
+    {
+      "id": "EXP-007",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 150,
+        "endLine": 150,
+        "text": "| `EXP-007` | Semantic salience cases | `CORPUS` | Same object changing causal role, attention gating, Need relevance, evidence-aware surprise, perception exclusion, and trace completeness. |\n"
+      }
+    },
+    {
+      "id": "EXP-008",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 151,
+        "endLine": 151,
+        "text": "| `EXP-008` | Saturation/salience non-leakage | `CORPUS` | Observationally equivalent Applied/evidence states remain salience-equivalent regardless of hidden Overflow. |\n"
+      }
+    },
+    {
+      "id": "EXP-009",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 152,
+        "endLine": 152,
+        "text": "| `EXP-009` | Reason separation and correlation suite | `CORPUS` | Same referent/different motives stay separate; same motive/different referents stay separate; correlated derivations do not stack; independent evidence does. |\n"
+      }
+    },
+    {
+      "id": "EXP-010",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 153,
+        "endLine": 153,
+        "text": "| `EXP-010` | Dice grammar calibration and richness | `CORPUS` | Several independent reasons produce several dice, exact convolved probabilities, deterministic replay, and modifier/base-die sweeps. Preserve the finding that the historical `+1` modifier was slightly louder than a die-bracket step. |\n"
+      }
+    },
+    {
+      "id": "EXP-011",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 154,
+        "endLine": 154,
+        "text": "| `EXP-011` | Biography authorship / seed divergence | `CORPUS` | Identically authored characters differing only in early addressed rolls can acquire different identity and later resolve the same decision differently. |\n"
+      }
+    },
+    {
+      "id": "EXP-012",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 155,
+        "endLine": 155,
+        "text": "| `EXP-012` | Identity formation and change | `CORPUS` | Acquisition from zero, gradual influence, weak-signal combination, fault line, self-stabilization, contradiction resistance, and eventual transformation under sustained evidence. |\n"
+      }
+    },
+    {
+      "id": "EXP-013",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 156,
+        "endLine": 156,
+        "text": "| `EXP-013` | Commitment lifecycle | `CORPUS` | Pressure exists only while the concrete commitment is live; a new recurrence is a new referent; a permanent commitment pressure can incorrectly lock decisions into Auto. |\n"
+      }
+    },
+    {
+      "id": "EXP-014",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 157,
+        "endLine": 157,
+        "text": "| `EXP-014` | Aggregate evidence redundancy | `CORPUS` | `{1}` and `{2}` together make later `{1,2}` fully redundant; pairwise-only overlap must fail this control. |\n"
+      }
+    },
+    {
+      "id": "EXP-015",
+      "review": "docs/planning/campaign3-history-corpus-rev1/review.json",
+      "reviewSha256": "a7690ceba9ff10468d353d4a3208ae7255c94f54b31ad4c914374717c694c0b2",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 158,
+        "endLine": 158,
+        "text": "| `EXP-015` | Semantic-footprint/association-budget interaction | `CORPUS` | Changing how many concepts an event encodes changes achievable pairwise association strength. Tagging policy must be an explicit intervention, not invisible authoring trivia. |\n"
+      }
+    },
+    {
+      "id": "P3-001",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 166,
+        "endLine": 166,
+        "text": "| `P3-001` | World truth → perception → belief → appraisal | `CONTRACT` + `CORPUS` | Preserve the four-way separation and tests for false belief, missing evidence, and differing appraisal from equal belief. |\n"
+      }
+    },
+    {
+      "id": "P3-002",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 167,
+        "endLine": 167,
+        "text": "| `P3-002` | Typed conditional predictions and prediction opportunities | `CANDIDATE` + `CORPUS` | Preserve `ConditionKey`, `OutcomeKey`, opportunity identity, and explicit `OutcomeOccurred` / `SafeOpportunity` / `CensoredOpportunity` / `NoOpportunity` cases. |\n"
+      }
+    },
+    {
+      "id": "P3-003",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 168,
+        "endLine": 168,
+        "text": "| `P3-003` | Non-event evidence | `CONTRACT` + `CORPUS` | A safe non-event teaches only when a relevant opportunity occurred; never accumulate “nothing happened” once per tick. |\n"
+      }
+    },
+    {
+      "id": "P3-004",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 169,
+        "endLine": 169,
+        "text": "| `P3-004` | Threat appraisal factorization | `CANDIDATE` + `CORPUS` | Preserve likelihood, severity, vulnerability, and perceived control as independent interventions. The historical product formula remains only one candidate. |\n"
+      }
+    },
+    {
+      "id": "P3-005",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 170,
+        "endLine": 170,
+        "text": "| `P3-005` | Fear, relief, avoidance, extinction, and generalization | `CORPUS` | Threat generates motives rather than commands; no generic Fear die; relief is not belief evidence; generalization is directional; false fear and cue conditioning remain required cases. |\n"
+      }
+    },
+    {
+      "id": "P3-006",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 171,
+        "endLine": 171,
+        "text": "| `P3-006` | Observer-relative social evidence and belief | `CONTRACT` + `CORPUS` | No privileged access to another mind, subject/domain-specific beliefs, misleading evidence, correction, correlated evidence, private identity separation, and multiple beliefs per person. |\n"
+      }
+    },
+    {
+      "id": "P3-007",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 172,
+        "endLine": 172,
+        "text": "| `P3-007` | Trust and suspicion as derived behavior | `CANDIDATE` + `CORPUS` | Preserve tests before deciding whether either needs independent state. |\n"
+      }
+    },
+    {
+      "id": "P3-008",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 173,
+        "endLine": 173,
+        "text": "| `P3-008` | Social-evaluation threat, embarrassment timing, and jealousy | `CORPUS` | Preserve anticipatory versus observed/retrospective timing and competing-belief explanations; do not implement labels as state. |\n"
+      }
+    },
+    {
+      "id": "P3-009",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 174,
+        "endLine": 174,
+        "text": "| `P3-009` | Constitution, identity, belief, and appraisal separation | `CONTRACT` + `CORPUS` | Constitution may bias appraisal or standing reasons but cannot manufacture evidence, duplicate identity, mutate from a single roll, or eliminate agency. |\n"
+      }
+    },
+    {
+      "id": "P3-010",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 175,
+        "endLine": 175,
+        "text": "| `P3-010` | Same evidence/different people and same constitution/different biographies | `CORPUS` | Preserve as the minimum discrimination suite for constitutional projections. The historical seven-dimensional vector and quadratic projection are candidate controls only. |\n"
+      }
+    },
+    {
+      "id": "P3-011",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 176,
+        "endLine": 176,
+        "text": "| `P3-011` | Same-time evidence ordering and explicit decay | `CANDIDATE` + `CORPUS` | Preserve ordering and partition tests when the current event contract is specified. |\n"
+      }
+    },
+    {
+      "id": "P3-012",
+      "review": "docs/planning/campaign3-history-proposals-rev1/review.json",
+      "reviewSha256": "58213629ebafe2f7fe1a3ce618943e3c4d3f7cf882113c9af2284f4e0a85b082",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 177,
+        "endLine": 177,
+        "text": "| `P3-012` | Unfinished original phenomenon backlog | `CORPUS` | Reconcile betrayal, grief/loss, rumination, obsession, healthy motivational multiplicity, value formation/revision, and addiction against the North-Star corpus. Their old proposed mechanisms are not implied by preserving the phenomena. |\n"
+      }
+    },
+    {
+      "id": "SUB-001",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 93,
+        "endLine": 93,
+        "text": "| `SUB-001` | Reduced exact rational arithmetic | `PORT` | Use as the reference oracle; preserve canonical reduction, sign rules, exact equality, and algebraic tests. |\n"
+      }
+    },
+    {
+      "id": "SUB-002",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 94,
+        "endLine": 94,
+        "text": "| `SUB-002` | Integer lattice quantization with ties-to-even and largest-remainder allocation | `PORT` + `CONTROL` | Port shared primitives after the numeric profile is formalized. Preserve exact-budget and quantization-bound tests; do not assume the historical scale is optimal. |\n"
+      }
+    },
+    {
+      "id": "SUB-003",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 95,
+        "endLine": 95,
+        "text": "| `SUB-003` | Stable typed semantic identifiers and canonical ordering | `PORT` | Port the identity/order discipline, then replace historical registries with current versioned registries. |\n"
+      }
+    },
+    {
+      "id": "SUB-004",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 96,
+        "endLine": 96,
+        "text": "| `SUB-004` | Counter-addressed deterministic randomness | `PORT` | Preserve draw independence, stable causal addressing, replay, and purpose separation. The hash/range-mapping algorithm still requires the new formal random contract. |\n"
+      }
+    },
+    {
+      "id": "SUB-005",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 97,
+        "endLine": 97,
+        "text": "| `SUB-005` | Exact finite discrete distributions, convolution, and fair tie-share win probabilities | `PORT` | Required by the retained dice grammar. Preserve normalization and brute-force-enumeration proofs. |\n"
+      }
+    },
+    {
+      "id": "SUB-006",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 98,
+        "endLine": 98,
+        "text": "| `SUB-006` | Exact linear algebra with fixed pivot order and typed singularity | `PORT` + `CONTROL` | Reuse as an oracle/tool for mechanisms that actually require matrix solving; do not make it a character primitive by default. |\n"
+      }
+    },
+    {
+      "id": "SUB-007",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 99,
+        "endLine": 99,
+        "text": "| `SUB-007` | Aggregate-coverage correlated-evidence consolidation | `PORT` | Preserve `EvidenceBasis` provenance, canonical ordering, and the `{1}`, `{2}`, `{1,2}` collective-redundancy regression. The earlier pairwise-max algorithm is retired. |\n"
+      }
+    },
+    {
+      "id": "SUB-008",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 100,
+        "endLine": 100,
+        "text": "| `SUB-008` | Structured causal trace, state snapshots/hashes, and first-divergence replay | `PORT` | Port the tested discipline into the new trace schema. Hashes remain diagnostics rather than proof of structural equality. |\n"
+      }
+    },
+    {
+      "id": "SUB-009",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 101,
+        "endLine": 101,
+        "text": "| `SUB-009` | Paired counterfactual harness with coupled random addresses | `PORT` | Reuse for every seam comparison so the intervention is the only intended difference. |\n"
+      }
+    },
+    {
+      "id": "SUB-010",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 102,
+        "endLine": 102,
+        "text": "| `SUB-010` | Named legacy/default parameter bundles and phase-end re-baselining | `PORT` as research method | Preserve the ability to run old and candidate models side by side. Once a candidate earns canonical status, rename the displaced model as a control rather than leaving two ambiguous defaults. |\n"
+      }
+    },
+    {
+      "id": "SUB-011",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 103,
+        "endLine": 103,
+        "text": "| `SUB-011` | “Correct forward; do not rewrite findings” research-log discipline | `CONTRACT` | Corrections must retain the failed hypothesis, diagnosis, replacement, and validating cases. |\n"
+      }
+    },
+    {
+      "id": "SUB-012",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 104,
+        "endLine": 104,
+        "text": "| `SUB-012` | Exact monotonic bounded-response transform | `PORT` + `CONTROL` | Preserve as a shared candidate utility with its bounds/monotonicity proofs; do not assume every psychological saturation uses the same curve. |\n"
+      }
+    },
+    {
+      "id": "SUB-013",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 105,
+        "endLine": 105,
+        "text": "| `SUB-013` | Inspectable experiment UI, trace viewer, counterfactual panels, and calibration sweeps | `CONTROL` as research tooling | Preserve the ability to expose real authoritative inputs, intermediate values, exact probabilities, and paired outputs. Rebuild views around new contracts rather than porting old UI component boundaries. |\n"
+      }
+    },
+    {
+      "id": "MEC-001",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 117,
+        "endLine": 117,
+        "text": "| `MEC-001` | Generic `EvidentialEstimate(mean, precision)` and its `NeedExpectation(subject, need)` specialization | `CONTROL` + `CANDIDATE` | Preserve the exact precision-weighted/prediction-error equivalence and resistance-to-isolated-contradiction tests. Re-evaluate which belief/expectation domains legitimately share this representation. |\n"
+      }
+    },
+    {
+      "id": "MEC-002",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 118,
+        "endLine": 118,
+        "text": "| `MEC-002` | Informative-bound gating for censored evidence | `CONTROL` + `CORPUS` | Preserve the four named cases: weak compatible bound, inconsistent bound, zero-information saturation, and genuine point evidence after repeated censoring. Accepted-bound precision over-crediting remains a known approximation. |\n"
+      }
+    },
+    {
+      "id": "MEC-003",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 119,
+        "endLine": 119,
+        "text": "| `MEC-003` | Bounded-effect decomposition: `Capacity`, `Applied`, `Overflow`, and `EvidenceKind` | `CONTROL` + `CONTRACT` | Preserve the exact identity wherever a bounded effect exists. The historical use of authoritative `Applied` as the character's observation is a perfect-interoception control; the new evidence kind must be computed from the permitted perceived measurement. It does not prove that every Need is a stored bounded meter. `Overflow` remains omniscient trace information. |\n"
+      }
+    },
+    {
+      "id": "MEC-004",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 120,
+        "endLine": 120,
+        "text": "| `MEC-004` | truth-side `EffectProvenance → perceptual projection → derived causal roles → SemanticExperience` | `PORT` with boundary correction; restricted token, event-pattern, continuant-recognition, and safe causal-role/provenance controls now present; integrated port blocked by parent `SEM-001` | This is the strongest earned world-truth-to-character-evidence control. Preserve separately identified actor/target/instrument/cause participation, but distinguish semantic `EventRole` from analytical `CausalRole`; keep full provenance, truth referent/action identity, and unobserved world facets on the trace side. `SemanticExperience` receives event-grouped perceptual referents, typed observed classification, and only observer-safe evidence admitted by each consumer's exact `ReadDomain`. Classification, tracking, recognition, retained state, appraisal, and evidence quality remain separate. Accepted `SEM-001G` replaces hidden provenance joins and winner-takes-all causal roles with a closed same-observer reference grammar plus zero-or-more nonrecursive character-relative causal-role claims. The current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` path is permanently `CONTROL-SEM-LEGACY-CONCEPT-TOKEN`, valid only where the channel establishes identity, one role suffices, and no hidden link leaks. Historical direct action-key projection remains a control; accepted `SEM-001E` replaces its default character-evidence role with event-file pattern classification. Accepted `SEM-001F` permits continuant candidate identity only through observer-owned catalog/templates or a mapped identity claim. Learned action identity remains downstream. |\n"
+      }
+    },
+    {
+      "id": "MEC-005",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 121,
+        "endLine": 121,
+        "text": "| `MEC-005` | Character-relative attention separated from perception | `CONTROL` + `CONTRACT` | Preserve the distinction and residual-pool control. Fixed role weights and pool size remain candidate calibration, not invariants. |\n"
+      }
+    },
+    {
+      "id": "MEC-006",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 122,
+        "endLine": 122,
+        "text": "| `MEC-006` | Evidence-aware surprise for point/lower-bound/upper-bound observations | `PORT` as a shared classification/control | Preserve the rule that censored distance is surprising only when it contradicts the prior. All consumers must share the same evidence semantics. |\n"
+      }
+    },
+    {
+      "id": "MEC-007",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 123,
+        "endLine": 123,
+        "text": "| `MEC-007` | Multiplicative semantic-salience reference model | `CONTROL` | Preserve base category, event-specific causal role, attention, realized Need relevance, surprise, bounded response, and complete trace factors. The independent budget is the historical canonical control; shared/hybrid budgets remain alternatives. |\n"
+      }
+    },
+    {
+      "id": "MEC-008",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 124,
+        "endLine": 124,
+        "text": "| `MEC-008` | Weighted association learning with one mutation authority, row budget, and largest-remainder normalization | `CONTROL` | Preserve as the first association-learning control plus its exact invariants. The global association graph is not automatically the new cognitive backbone. |\n"
+      }
+    },
+    {
+      "id": "MEC-009",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 125,
+        "endLine": 125,
+        "text": "| `MEC-009` | Exact spreading activation and accessibility-filtered retrieval | `CONTROL` | Preserve stability/uniqueness, quantize-at-commit, bounded candidate retrieval, and canonical tie behavior. Compare against cheaper/local alternatives. |\n"
+      }
+    },
+    {
+      "id": "MEC-010",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 126,
+        "endLine": 126,
+        "text": "| `MEC-010` | Episodic accessibility from recency, retrieval frequency, decay, and retrieval reinforcement | `CONTROL` + `CORPUS` | Preserve hand-computed regression cases. The new memory lifecycle must add reconstruction/consolidation without losing these discriminating behaviors. |\n"
+      }
+    },
+    {
+      "id": "MEC-011",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 127,
+        "endLine": 127,
+        "text": "| `MEC-011` | Availability/preconditions separated from accessibility/relevance | `CONTRACT` | World feasibility and “currently on my mind” must remain independently intervenable. Historical substitution tests are the negative control. |\n"
+      }
+    },
+    {
+      "id": "MEC-012",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 128,
+        "endLine": 128,
+        "text": "| `MEC-012` | Reason Nuclei keyed by option, motive, referent, and resolved direction | `PORT` | Preserve exact semantic grouping, independent motives/referents, one active nucleus per resolved grouping, stable IDs, and no runtime interpretation. Re-test whether direction belongs in identity or resolved state. |\n"
+      }
+    },
+    {
+      "id": "MEC-013",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 129,
+        "endLine": 129,
+        "text": "| `MEC-013` | Cognitive-signal source roles | `PORT` | Preserve `MotiveGenerating`, `StandingDisposition`, `SituationalEvidence`, and `ContextModulating` as separately traceable roles. New source families must emit into this contract rather than invent private dice. |\n"
+      }
+    },
+    {
+      "id": "MEC-014",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 130,
+        "endLine": 130,
+        "text": "| `MEC-014` | Two-stage reason consolidation | `PORT` | Preserve “sum compatible raw causes, then bound/floor once,” plus a separate unfiltered evidence basis where required. This prevents path-dependent threshold artifacts and identity self-contamination. |\n"
+      }
+    },
+    {
+      "id": "MEC-015",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 131,
+        "endLine": 131,
+        "text": "| `MEC-015` | Dice/modifier grammar and exact arbitration | `PORT` | Mandatory initial arbitration implementation: base die, standing modifier, situational modifier, exact option distributions, `Margin`, `Contest`, `Stake`, `AuthorshipPotential`, resolution mode, and counter-addressed roll. |\n"
+      }
+    },
+    {
+      "id": "MEC-016",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 132,
+        "endLine": 132,
+        "text": "| `MEC-016` | Modifier activation rule | `PORT` | A modifier may alter a genuine active motive but cannot create semantic motivation from zero. Preserve weak-motive rescue and zero-motive exclusion tests. |\n"
+      }
+    },
+    {
+      "id": "MEC-017",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 133,
+        "endLine": 133,
+        "text": "| `MEC-017` | `DecisionExpression` as frozen contextual choice meaning | `PORT` | Preserve alternatives, reasons, opposition, uncertainty, stakes, intervention, chosen intent, and frozen dice expression independently of execution success. |\n"
+      }
+    },
+    {
+      "id": "MEC-018",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 134,
+        "endLine": 134,
+        "text": "| `MEC-018` | Acquired identity evidence and reinforcing standing-modifier loop | `PORT` | Preserve authorship-weighted evidence, consolidation, self-stabilization, fault lines, contradiction, transformation, and no authored trait bonus. Prevent feedback from becoming evidence for itself. |\n"
+      }
+    },
+    {
+      "id": "MEC-019",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 135,
+        "endLine": 135,
+        "text": "| `MEC-019` | Intent/attempt/outcome separation | `CONTRACT` + `CORPUS` | Preserve the failed-execution case: a choice can express commitment or courage even when world interference prevents success. |\n"
+      }
+    },
+    {
+      "id": "MEC-020",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 136,
+        "endLine": 136,
+        "text": "| `MEC-020` | Commitments as non-Need motive-generating sources with lifecycle identity | `PORT` as a control seam | Preserve active-only pressure, disappearance on retirement, and independent IDs for recurring instances. Do not model an obligation as an immortal appetite. |\n"
+      }
+    },
+    {
+      "id": "MEC-021",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 137,
+        "endLine": 137,
+        "text": "| `MEC-021` | Salience-weighted referent attribution for multi-participant memory | `CONTROL` + `CORPUS` | Preserve proportional multi-participant attribution and single-participant backward equivalence. Causal non-participant referents remain an explicit unsupported case. |\n"
+      }
+    },
+    {
+      "id": "MEC-022",
+      "review": "docs/planning/campaign3-history-mechanisms-rev1/review.json",
+      "reviewSha256": "af820e53057968533f4fc649bb2b3e2851c87cbc9a91833ac756f111ae165eb0",
+      "source": {
+        "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+        "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064",
+        "startLine": 138,
+        "endLine": 138,
+        "text": "| `MEC-022` | Frozen historical calibration/provenance | `CONTRACT` | A later change to thresholds, dice bands, salience, or identity must not recompute what an old choice or memory meant at the time. |\n"
+      }
+    }
+  ],
+  "limits": "All remaining fields and proof gaps still bind. Non-table ledger prose and wider source universe are not disposed by this index."
+}
