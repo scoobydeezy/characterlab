@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: named-run participation aggregation preserves per-model identity,
+Latest continuation: the EPI adapter passes all72 retained public programs/240 prefixes;
+see OBSERVABILITY_WORKBENCH_EPI_PROGRESS.md. EPI UI and language qualification remain due.
+
+Prior continuation: named-run participation aggregation preserves per-model identity,
 missing observations and one prefix per run; see OBSERVABILITY_WORKBENCH_COHORT_PROGRESS.md.
 
 Prior continuation: searchable recorded state participation and exact event links are

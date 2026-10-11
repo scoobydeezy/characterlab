@@ -36,7 +36,9 @@ Prior: OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md; common registry and
 authenticated graph export/import with browser/native continuation PASS in bounded scope.
 Prior: OBSERVABILITY_WORKBENCH_PARTICIPATION_PROGRESS.md; linked exact state-path
 read/mutation/change census:12 prefixes/153 events/21 paths PASS; causal audit still due.
-Latest: OBSERVABILITY_WORKBENCH_COHORT_PROGRESS.md; two named audit runs/model groups,
+Prior: OBSERVABILITY_WORKBENCH_COHORT_PROGRESS.md; two named audit runs/model groups,
 complete browser/native report equality PASS. Full corpus and entry qualification open.
+Latest: OBSERVABILITY_WORKBENCH_EPI_PROGRESS.md; EPI72 programs/240 prefixes PASS,
+safe character projection and violating controls retained; EPI browser integration next.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
