@@ -1,0 +1,2458 @@
+{
+  "status": "PASS",
+  "scope": "Independent decoded admitted inputs, encoding/delivery, interpretation, learning and probe arithmetic; reason-dice choices verified by original replay rather than independently derived",
+  "updates": 261,
+  "interpretations": 174,
+  "probes": 174,
+  "intents": 87,
+  "executions": 87,
+  "sources": [
+    {
+      "path": "docs/planning/interpretation-public-workers-rev1/0.json",
+      "sha256": "e535e4eea5830ac9b6416f3dfcb47cfff5c2e715ed63bcb653eb4973b5a5b456"
+    },
+    {
+      "path": "docs/planning/interpretation-public-workers-rev1/1.json",
+      "sha256": "7a27b6d8b072b0e664b78d4763f3438eeaeb4c64a0aa5bc99d1dfb9b7f96c2e8"
+    },
+    {
+      "path": "docs/planning/interpretation-public-workers-rev1/2.json",
+      "sha256": "dd3bb3be47d9b16e9fab6403b0f705144669049be7bcbc4bdce3d67c3ddaaa5e"
+    },
+    {
+      "path": "docs/planning/interpretation-public-workers-rev1/3.json",
+      "sha256": "725d00a7b4f52f365c0b0860cef20e267814e9eff1fc4666d077e112246f6585"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "src/campaign3/interpretationCodecs.ts",
+      "sha256": "2e2330fed6f18d0be82e9d6c1b4ccb73a9cf90d7a0932ed22f7c58de5f23a00e"
+    },
+    {
+      "path": "src/campaign3/interpretationModel.ts",
+      "sha256": "819cb7b1cd4f63c44b7355568e37a21bb87c1f079889084baa3b8dd1ffbe5bde"
+    },
+    {
+      "path": "src/campaign2/canonicalData.ts",
+      "sha256": "427b0a0b50003a8ead4cde2f2965ff3c57fde99e4ec9a5366627868e40f0903b"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-interpretation-learning.mjs",
+    "sha256": "6045b75138463a01d33f3cd3a0b74f563f37380060e497b29ae4cde28c28f7b5"
+  },
+  "runs": [
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420dfd6d37e91667c1400685ad8ebcf78830cce8dc373c6b50a0e203636eba98faa04010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 3,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104208ad13d078e2d3ed207e7661ac98f5166ce57b6bad0322628a5d5459ad95076f9040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "hiddenTruth",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc0301042020354a998c4a05ae012c5519ae0eedcb952ee160f7fdfaff96bf25e8d31f428e040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "noA",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104203ac27ce8c6ba4787eec98ae1a557fbae9356a3517ad8b1f6a5270e33eabdd544040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "unknownBelief",
+      "final": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420dfd6d37e91667c1400685ad8ebcf78830cce8dc373c6b50a0e203636eba98faa04010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207eaa4617884ccad06df18e1124047b2cc01a339ff1dee6ea5173cee077265529040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 3,
+      "pressure": 1,
+      "name": "hiddenIntent",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              true
+            ],
+            "context": 1
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207eaa4617884ccad06df18e1124047b2cc01a339ff1dee6ea5173cee077265529040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "hiddenIntent",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              true
+            ],
+            "context": 1
+          }
+        ],
+        [
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104202398dd4a0491f06321962fdbdd7375c3b9eb352cb030be446280c74f3494a63d040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "deniedPrivateChange",
+      "final": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420ecebecbed1114a50292067b0caf41e776b9cb37869e7a16e8567efc376b8721b04010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 2,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420c1b56c5c281429ef4de091f1374248b462899876f0ab102660e77b7b084d7b0104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 4,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207eaa4617884ccad06df18e1124047b2cc01a339ff1dee6ea5173cee077265529040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "hiddenIntent",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              true
+            ],
+            "context": 1
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207395ad7e2db6c7b8a935ebef80f1efd0ae4063f3b86d629b01424f2e8060259c040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "noB",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc0301042076a098d69d67a235541111c9ed14b13cbec105af3469ca7537606ce9a75ba520040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "negative",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              false
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              false
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 1
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                2
+              ],
+              "context": 1
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200a07b391a4b4f8fca3286d0de7a958f308e4af0a10cc753144c0457a7a4c38c504010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104204aa645605c0ed5a885da4606168e8d2ce9fc7b2ca8e5cdedcdc11c9447689d43040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 2,
+      "pressure": 1,
+      "name": "unknownContext",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc0301042020354a998c4a05ae012c5519ae0eedcb952ee160f7fdfaff96bf25e8d31f428e040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "noA",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [],
+        [
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420d9d2fce2ab10618c2496492a24a8765108fd504b2b99be5a8eb4556e2514281404010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 5,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc0301042036dc841179cfa8c8c990d12f75f87688f23ad05cbe66ddfb967d05a7d03cb6ec040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "correct",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104204aa645605c0ed5a885da4606168e8d2ce9fc7b2ca8e5cdedcdc11c9447689d43040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "unknownContext",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": []
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104202398dd4a0491f06321962fdbdd7375c3b9eb352cb030be446280c74f3494a63d040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "deniedPrivateChange",
+      "final": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420dfd6d37e91667c1400685ad8ebcf78830cce8dc373c6b50a0e203636eba98faa04010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104204aa645605c0ed5a885da4606168e8d2ce9fc7b2ca8e5cdedcdc11c9447689d43040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 3,
+      "pressure": 1,
+      "name": "unknownContext",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 0
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207395ad7e2db6c7b8a935ebef80f1efd0ae4063f3b86d629b01424f2e8060259c040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "noB",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200a07b391a4b4f8fca3286d0de7a958f308e4af0a10cc753144c0457a7a4c38c504010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 2,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": [
+              true
+            ]
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              true
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042014b702b60deddf8562f9eb7097ecc7df7356f37fd6a722520f68b36eae0bcab504010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c4aae34260010aaf55d099ecf99a7a8e1ba85c96d570f92a24b100c0b80f2980040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 6,
+      "pressure": 1,
+      "name": "main",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b93090217",
+            "observation": {
+              "id": "0b93090215",
+              "holder": 1,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b93090232",
+            "observation": {
+              "id": "0b93090230",
+              "holder": 1,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": []
+          }
+        ],
+        [
+          {
+            "id": "0b93090218",
+            "observation": {
+              "id": "0b93090216",
+              "holder": 2,
+              "at": 1,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b93090233",
+            "observation": {
+              "id": "0b93090231",
+              "holder": 2,
+              "at": 2,
+              "value": [
+                1
+              ],
+              "context": 1
+            },
+            "meaning": []
+          },
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": []
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc0301042018c30ef9f4191e68e924af9eaeb594d76b53f5fb782de0ab886bcc1a86b6b825040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "failed",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420e5169e73cbb9fbc8465349b20e3b099e8207c842087a5a866d1b6e045cb8d33004010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc03010420c3c8d44547dafc982156be65096c41b8dcd3e5de161e49adc853e87f4fb6dd13040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 1,
+      "name": "unknownSpeaker",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 0
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 0
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 0
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010420ecebecbed1114a50292067b0caf41e776b9cb37869e7a16e8567efc376b8721b04010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104207eaa4617884ccad06df18e1124047b2cc01a339ff1dee6ea5173cee077265529040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 2,
+      "name": "hiddenIntent",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              false
+            ],
+            "context": 2
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              true
+            ],
+            "context": 1
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104208ad13d078e2d3ed207e7661ac98f5166ce57b6bad0322628a5d5459ad95076f9040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "hiddenTruth",
+      "final": [
+        [
+          {
+            "id": "0b93090201",
+            "holder": 0,
+            "at": 1,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b9309021c",
+            "holder": 0,
+            "at": 2,
+            "value": [
+              true
+            ],
+            "context": 1
+          },
+          {
+            "id": "0b93090237",
+            "holder": 0,
+            "at": 3,
+            "value": [
+              false
+            ],
+            "context": 2
+          }
+        ],
+        [
+          {
+            "id": "0b9309024d",
+            "observation": {
+              "id": "0b9309024b",
+              "holder": 1,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ],
+        [
+          {
+            "id": "0b9309024e",
+            "observation": {
+              "id": "0b9309024c",
+              "holder": 2,
+              "at": 3,
+              "value": [
+                1
+              ],
+              "context": 2
+            },
+            "meaning": [
+              false
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "runIdentity": "0a68010401010a67010601010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e64696461746502010a64010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042085490d9a379b7e4d5f619ffdc2148e4d5bd061a1de9f13861d13f4c76156edeb03010a65010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e646964617465020104200c201dff3a8c9728d97d4010186d7d76ce83b1fb3cfdde8b331c3349238e6c4104010522696e746572707265746174696f6e2d65786163742f302e312d63616e64696461746505010525726e672f7368613235362d6164647265737365642d3132382d76312d63616e64696461746506010a66010201010523696e746572707265746174696f6e2d7075626c69632f302e312d63616e6469646174650201042002f7ee132f9e24d0be095c27a5b9b78a684dc603f68f4d32d71993ead7800e4e02010420a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc030104203ac27ce8c6ba4787eec98ae1a557fbae9356a3517ad8b1f6a5270e33eabdd544040104200d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+      "law": 1,
+      "pressure": 3,
+      "name": "unknownBelief",
+      "final": [
+        [],
+        [],
+        []
+      ]
+    }
+  ]
+}

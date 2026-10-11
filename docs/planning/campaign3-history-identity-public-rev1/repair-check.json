@@ -1,0 +1,19 @@
+{
+  "status": "PASS HISTORICAL REPAIR MATRIX",
+  "command": "node scripts/check-history-wrapper-repair-matrix.mjs",
+  "exitCode": 0,
+  "scope": "Fresh read-only repair matrix/source receipt checks, not fresh execution or current55-producer inventory audit. Prior149cases747prefixes remain historical repeated coverage.",
+  "stdout": "PASS public wrapper closure:49 producers,4 repairs,149 cases/747 prefixes,74 affected/328 reference tests/build;1450/0.\nHistorical matrix/closure only; current directory inventory/routing not requalified. Preserved-source loader checked separately.",
+  "checker": {
+    "path": "scripts/check-history-wrapper-repair-matrix.mjs",
+    "sha256": "33c019dfebe9ea1c90458c27bfbc19c300cc85176f39d051001c5bcda5576577"
+  },
+  "closure": {
+    "path": "docs/planning/PUBLIC_WRAPPER_QUIESCENCE_CLOSURE_REV1.json",
+    "sha256": "f6bf32aee910ecc0ed373de243c7b68f0e2c06ee5d8d77bcc7b9d39ec1a52cc7"
+  },
+  "priorReview": {
+    "path": "docs/planning/campaign3-history-wrapper-repair-rev1/review.json",
+    "sha256": "c306599faf9a4fedf0ae9b19c57c7379c98cda10bed1fda965749099c735a8be"
+  }
+}

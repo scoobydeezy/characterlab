@@ -1,0 +1,47 @@
+{
+  "status": "PASS; HQ011 OPEN",
+  "scope": "Original closure rechecked without writes; stored39run plan joins,580 prefix counts,6 hidden-state/output hash equalities and supplementary evidence checked. No fresh runtime,prefix replay,rollback or test execution. Stored hashes do not replace the original execution-time byte assertions.",
+  "runs": 39,
+  "prefixes": 580,
+  "hiddenPairs": 6,
+  "failedHistoricalTests": 1,
+  "repeatedEstablished": {
+    "mean": "37/620",
+    "precision": "62/1"
+  },
+  "rounding": {
+    "raw": "27/520",
+    "millionths": 51923,
+    "incorrectHistoricalAssertion": 51922
+  },
+  "sources": [
+    {
+      "path": "scripts/check-learn-closure.mjs",
+      "sha256": "0f045e78b4dbaa92978bb9a4e88bbef5d1f5f9578a1275de8c7e7f0588f17ad2"
+    },
+    {
+      "path": "scripts/qualify-learn-public.mjs",
+      "sha256": "12ca1a0c6e033a4035e83d00d19494dd434df48f565bc60def61f0f1f69f1201"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "6a2244bc23b83a9c53ae9e65baaab250545bdbb3506cf410159eee0565f6cf5d"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "d125e2d112078606bf3420df6810b621a20e264ffc7ebbf93e6a7adb52db2527"
+    },
+    {
+      "path": "docs/planning/LEARN_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "747f0796307d6a4134983d40f268a0cbd6138bb89c7021585f2e5fe3dabee093"
+    },
+    {
+      "path": "docs/planning/LEARN_PUBLIC_TESTS_REV1.json",
+      "sha256": "c038b821c1ffae314c35ddfac654bd09d024826f42d27dee8bb3adaaf65c6868"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-learn-authority.mjs",
+    "sha256": "c4dc85657edc3e82bfe60b8384315cf2a07b03e29a4714b656da072d1a621013"
+  }
+}

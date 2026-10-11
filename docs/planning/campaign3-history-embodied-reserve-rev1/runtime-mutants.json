@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "original": "docs/planning/EMBODIED_RUNTIME_MUTANTS_REV3.json",
+  "originalSha256": "1c8071eebfb26f52bb915a494f5bc06183507250bd1f54547879643744cc6e0c",
+  "comparison": "Whole behavioral receipt equal; current source hashes retained separately from historical sources.",
+  "historicalSources": [
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign3/embodiedTrace.ts",
+      "sha256": "df8619bf31762fe1e141411cc17146cae3d89d034baa85b28d2d8186def33b95"
+    },
+    {
+      "path": "src/campaign3/embodiedAdmission.ts",
+      "sha256": "26fd76d6a98967eb7dd2756d0cc7d613ab162d40a7f1ccab8700f0f8a88269d0"
+    },
+    {
+      "path": "src/campaign3/embodiedBodyTarget.ts",
+      "sha256": "b39e11fe1a58be59198c30c4f076f6278a18620e01781773a542748001f8db40"
+    },
+    {
+      "path": "src/campaign3/embodiedReplenishment.ts",
+      "sha256": "f76a9432a5866d831c9e1764894389c8b5caed9f900811dce08790a20c84d746"
+    },
+    {
+      "path": "scripts/review-embodied-runtime-mutants-rev3.mjs",
+      "sha256": "71f9712e4eca2bb35b8c21ffe644b15cd4e19323ed6649880b529d41e372f784"
+    }
+  ],
+  "currentSources": [
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+    },
+    {
+      "path": "src/campaign3/embodiedMath.ts",
+      "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+    },
+    {
+      "path": "src/campaign3/embodiedTrace.ts",
+      "sha256": "5f167576260c6fe0bb84a60a75b6bd83cf1f753c327fb6309a396becd1e28476"
+    },
+    {
+      "path": "src/campaign3/embodiedAdmission.ts",
+      "sha256": "915cec276a03f6d92ae22ad84322374b0e081891d842e9ef39ccdf7b8757ac61"
+    },
+    {
+      "path": "src/campaign3/embodiedBodyTarget.ts",
+      "sha256": "b39e11fe1a58be59198c30c4f076f6278a18620e01781773a542748001f8db40"
+    },
+    {
+      "path": "src/campaign3/embodiedReplenishment.ts",
+      "sha256": "f76a9432a5866d831c9e1764894389c8b5caed9f900811dce08790a20c84d746"
+    },
+    {
+      "path": "scripts/review-embodied-runtime-mutants-rev3.mjs",
+      "sha256": "71f9712e4eca2bb35b8c21ffe644b15cd4e19323ed6649880b529d41e372f784"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-embodied-reserve-runtime-mutants.mjs",
+    "sha256": "32007bc6dd6f04ed39a8345bdd73ccc3633001955d0b5e34ec848a30b70db3dd"
+  }
+}

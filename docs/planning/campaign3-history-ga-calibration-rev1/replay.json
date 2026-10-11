@@ -1,0 +1,91 @@
+{
+  "status": "PASS; ORIGINAL TWELVE SYMBOLIC FAULTS AND SIX CURRENT POLICY TESTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-calibration.mjs",
+    "sha256": "31deea9925cbeaf45cb1672b7de63caba38ee5aa43b34dadd933885e62678974"
+  },
+  "row": {
+    "script": {
+      "path": "scripts/review-ga-calibration-definitions.mjs",
+      "sha256": "e5b8a98b887bbf7dc19775d3d2ce257b7e2e3bd3647e8f47a3319318821eacbf"
+    },
+    "output": {
+      "path": "docs/planning/GA_CALIBRATION_REVIEW_REV1.json",
+      "sha256": "8e9f57a2d9d7d0f542db0b57da0235eb61ff2b21093ee229385ca3754afa7a06"
+    },
+    "faults": [
+      {
+        "name": "graph-exceeds-carrier",
+        "rejected": true
+      },
+      {
+        "name": "graph-opens-self-edges",
+        "rejected": true
+      },
+      {
+        "name": "recall-requires-storage",
+        "rejected": true
+      },
+      {
+        "name": "body-gate-unbounded",
+        "rejected": true
+      },
+      {
+        "name": "merge-recall-policy-slots",
+        "rejected": true
+      },
+      {
+        "name": "new-policy-identity",
+        "rejected": true
+      },
+      {
+        "name": "early-allocation",
+        "rejected": true
+      },
+      {
+        "name": "body-recall-graph-coupling",
+        "rejected": true
+      },
+      {
+        "name": "erase-retired-control",
+        "rejected": true
+      },
+      {
+        "name": "current-credit-ranks",
+        "rejected": true
+      },
+      {
+        "name": "baseline-as-occurrence",
+        "rejected": true
+      },
+      {
+        "name": "truth-parameter",
+        "rejected": true
+      }
+    ]
+  },
+  "archive": {
+    "path": "docs/planning/campaign3-history-ga-calibration-rev1/6f54c4523faed79f-selectedSpatialEncoding.ts",
+    "sha256": "6f54c4523faed79ffe00c29a242b1ee226a3880553921f4a9f124d73dcb02096",
+    "originalPath": "src/campaign3/selectedSpatialEncoding.ts",
+    "method": "Exact Git bytes at 6d54d35f3c612154658c6f9316f6f7e04071865b match original calibration dependency SHA"
+  },
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-calibration-rev1/current-tests.json",
+    "sha256": "9992535ec595e1e5e12a9385fc297210ff4be1dbf46ac9d84d45cadeaa8f9fbe"
+  },
+  "inputs": [
+    {
+      "path": "src/test/observationExecutionPolicy.test.ts",
+      "sha256": "e95bd33d5e4ba0e8238371c362fef3c30ac6c45d8178663b1eb538154797c548"
+    },
+    {
+      "path": "src/campaign3/observationExecutionPolicy.ts",
+      "sha256": "452434da6efeae418ff7c2069a6f3577da91e17e7613ff94f2518df9f809cb95"
+    }
+  ],
+  "limits": [
+    "Original reviewer hashing reads exact archived encoder; it does not execute that encoder.",
+    "Six current policy tests execute binding only; no numeric encoder,full registry compiler or public runtime rerun."
+  ]
+}

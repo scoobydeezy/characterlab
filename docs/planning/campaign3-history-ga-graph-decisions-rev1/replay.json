@@ -1,0 +1,203 @@
+{
+  "status": "PASS;24 CURRENT TESTS/FIVE ORIGINAL ZERO-STATE MUTATIONS",
+  "checker": {
+    "path": "scripts/replay-history-ga-graph-decisions.mjs",
+    "sha256": "80df405f9b3729a6d962896d5971897e25e7e75d14d25da20b226f766084c248"
+  },
+  "originalReviewer": {
+    "path": "scripts/review-graph-zero-state.mjs",
+    "sha256": "23b7ec35d8667cf084a0d77781a22a7a3c4d30c3e6238366664b28bcfba8b3e2"
+  },
+  "originalReport": {
+    "path": "docs/planning/GRAPH_ZERO_STATE_REVIEW_REV1.json",
+    "sha256": "846159b1991f1ed0cc1b671e36afe69d9df84a623d7ce1dab4b1a2eabbaa0e27"
+  },
+  "bindings": [
+    {
+      "path": "src/campaign3/graphZeroState.ts",
+      "sha256": "d04c5614329bee486549ac01c9c85c7207a51f99ec7ebb60a470924f94ae17a4"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/graphZeroState.test.ts",
+      "sha256": "1c1bf40f14aa423b77c09333eb30a8a4d9cab03aaddcc6a3fe597b9bc5f6c3e4"
+    },
+    {
+      "path": "docs/formal/GRAPH_ZERO_STATE_COMPONENT.md",
+      "sha256": "195ddb01eb25371672d4d400a02d04383255467da7ba5926433044f44f0286a0"
+    },
+    {
+      "path": "scripts/review-graph-zero-state.mjs",
+      "sha256": "23b7ec35d8667cf084a0d77781a22a7a3c4d30c3e6238366664b28bcfba8b3e2"
+    }
+  ],
+  "rows": [
+    {
+      "name": "ignore-incoming-edges",
+      "removed": "||validated.some(row=>row[i].numerator!==0n)",
+      "inserted": "",
+      "witness": "GZ-A",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/fault-ignore-incoming-edges.json",
+        "sha256": "9459fb6a26e86602e8330b43784614effa17f26c216ed10fb297609ca88e4ad1"
+      },
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "require-both-directions",
+      "removed": "||validated.some(row=>row[i].numerator!==0n)",
+      "inserted": "&&validated.some(row=>row[i].numerator!==0n)",
+      "witness": "GZ-A",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/fault-require-both-directions.json",
+        "sha256": "218165df0069d669eae4831fb0b478aced90e2d2823c178f272efc8e2f593b6c"
+      },
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "epsilon-removal",
+      "removed": ".filter(i=>validated[i].some(v=>v.numerator!==0n)||validated.some(row=>row[i].numerator!==0n))",
+      "inserted": ".filter(i=>validated[i].some(v=>v.numerator*1000n>v.denominator)||validated.some(row=>row[i].numerator*1000n>row[i].denominator))",
+      "witness": "GZ-B",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/fault-epsilon-removal.json",
+        "sha256": "2ec3953424f6450b7e48b129ab8cb722745e5e9a7013b40855d5364bc518f480"
+      },
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution"
+      ]
+    },
+    {
+      "name": "retain-empty-membership",
+      "removed": ".filter(i=>validated[i].some(v=>v.numerator!==0n)||validated.some(row=>row[i].numerator!==0n))",
+      "inserted": "",
+      "witness": "GZ-C",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/fault-retain-empty-membership.json",
+        "sha256": "8d821a1e2d3e8cb2bd92573e427e8da4703a4fd4d270a120839a3b8c4430a286"
+      },
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution",
+        "zero-state graph normalization component GZ-C: empty and all-zero graphs normalize to empty without a new identity/history surface",
+        "zero-state graph normalization component GZ-F: a later same-batch edge must be resolved before normalization"
+      ]
+    },
+    {
+      "name": "reweight-surviving-edge",
+      "removed": "Q.of(validated[i][j].numerator,validated[i][j].denominator)",
+      "inserted": "Q.of(validated[i][j].numerator===0n?0n:1n)",
+      "witness": "GZ-B",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/fault-reweight-surviving-edge.json",
+        "sha256": "cce8babcbf97b47a9558534260dfed85cbb874b27004eabdef4792afff8b1b85"
+      },
+      "detected": true,
+      "failed": [
+        "zero-state graph normalization component GZ-A: either edge direction preserves membership; isolated node alone is removed",
+        "zero-state graph normalization component GZ-B: smallest representable positive edge survives without epsilon or mass redistribution"
+      ]
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/current-tests.json",
+    "sha256": "943de54a05d8fab68dafe17d3f121900aa01def1431ee185dec0ede655550d25"
+  },
+  "inputs": [
+    {
+      "path": "src/test/graphZeroState.test.ts",
+      "sha256": "1c1bf40f14aa423b77c09333eb30a8a4d9cab03aaddcc6a3fe597b9bc5f6c3e4"
+    },
+    {
+      "path": "src/test/graphScarcityBoundary.test.ts",
+      "sha256": "86dfc84a09c6f8a383f80eab8590e9229959ced924e9017a64db5745320f98b0"
+    },
+    {
+      "path": "src/test/associationOrphanLifecycle.test.ts",
+      "sha256": "39888da5bbc3d8e8537c1d7aa2f4fdb1b8129e0b0ffb0d73f09542fe924ac0bc"
+    },
+    {
+      "path": "src/test/associationOrphanCue.test.ts",
+      "sha256": "7c93e614464eb2156d5d1a72e54985d6d62cbc75983af6971e214ec1ed05672f"
+    },
+    {
+      "path": "src/test/directAssociativeAccess.test.ts",
+      "sha256": "0fc90e76ab3db06e9ca75bf94c9e2b217f759f8feae738b90e720016fa5d6e61"
+    },
+    {
+      "path": "src/campaign3/graphZeroState.ts",
+      "sha256": "d04c5614329bee486549ac01c9c85c7207a51f99ec7ebb60a470924f94ae17a4"
+    },
+    {
+      "path": "src/campaign3/directAssociativeAccess.ts",
+      "sha256": "dad4f528969758fd8d0926ca49c477e3d6922ddf85768c088b088fa55be03478"
+    },
+    {
+      "path": "src/campaign3/independentAssociationAccess.ts",
+      "sha256": "e0c6eb54bd0d3b88be6741b3cc5ed1b5867c5e5eea5dc94051b253632e700a66"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    }
+  ],
+  "sourcePaths": [
+    "docs/formal/GRAPH_ZERO_STATE_COMPONENT.md",
+    "docs/planning/ASSOCIATION_ORPHAN_CUE_TESTS_REV1.json",
+    "docs/planning/ASSOCIATION_ORPHAN_LIFECYCLE_TESTS_REV1.json",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_LOSS_UNIT_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_LOSS_UNIT_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_ORPHAN_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_ORPHAN_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_PRIORITY_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_PRIORITY_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_RETENTION_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_STORAGE_DECISION.md",
+    "docs/planning/GRAPH_SCARCITY_BOUNDARY_TESTS_REV1.json",
+    "docs/planning/GRAPH_ZERO_STATE_COMPONENT_CHECKPOINT.md",
+    "docs/planning/GRAPH_ZERO_STATE_REVIEW_REV1.json",
+    "docs/planning/GRAPH_ZERO_STATE_TESTS_REV1.json"
+  ],
+  "reused": [
+    {
+      "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/replay.json",
+      "sha256": "4a4b8a4cff261a1e710777b3e7f6fb07e318ad7487b226f39e303b43388f335e"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/replay.json",
+      "sha256": "7e3a7a95eee51dff4a436a86686fb671de3ce5bde6e6d0e0f365ce266968f783"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_GRAPH_WEAKENING_SCOPE_RESOLUTION.md",
+      "sha256": "4f2c796c3d4e88217c2d12d11f2e87c8385f791381d2997bd53ce8816960c622"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_STORAGE_RESOLUTION.md",
+      "sha256": "b65f7e4aab597880c380fd82137464681a0104cbe27a3203db49be1acfeaaad7"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_RETENTION_RESOLUTION.md",
+      "sha256": "89ad772827a4cd188c430b2a11444a9e066f3f2cf32570bcc5d14e4cd32905ea"
+    }
+  ],
+  "limits": [
+    "Old zero-state source,math,test,formal and reviewer commitments match;other dependencies run current versions.",
+    "Older graph-gated cue fixture remains a counterexample to that composition,not a requirement to retain isolated nodes in the later separated direct/spread composition.",
+    "No public owner timing,Save132,reacquisition or general graph reduction verdict follows. Prior policy/owner tests reused without rerun."
+  ]
+}

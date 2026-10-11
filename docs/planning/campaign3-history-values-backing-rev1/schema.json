@@ -1,0 +1,560 @@
+{
+  "fields": [
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/changedOriginalRejected",
+      "types": {
+        "bool": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/chosen",
+      "types": {
+        "null": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/contribution",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/reason",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/resolution",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/status",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/view/count",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/view/mean",
+      "types": {
+        "str": 192,
+        "null": 64
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/view/preference",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/expired/view/weight",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/context/currentNeed",
+      "types": {
+        "int": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/context/goal",
+      "types": {
+        "int": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/context/linked",
+      "types": {
+        "bool": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/context/mode",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/addresses/*",
+      "types": {
+        "str": 738
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/chosen",
+      "types": {
+        "str": 1400,
+        "null": 136
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/contribution",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/probabilities/*",
+      "types": {
+        "str": 2800
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/reason",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/resolution",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/status",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/view/count",
+      "types": {
+        "int": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/view/mean",
+      "types": {
+        "str": 1152,
+        "null": 384
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/view/preference",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/final/*/result/view/weight",
+      "types": {
+        "str": 1536
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/index",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/law",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/name",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/prefix",
+      "types": {
+        "int": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/addresses/*",
+      "types": {
+        "str": 983
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/chosen",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/contribution",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/probabilities/*",
+      "types": {
+        "str": 2496
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/reason",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/resolution",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/status",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/view/count",
+      "types": {
+        "int": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/view/mean",
+      "types": {
+        "null": 448,
+        "str": 800
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/view/preference",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/probe/view/weight",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/save",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/addresses/*",
+      "types": {
+        "str": 1181
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/chosen",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/contribution",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/probabilities/*",
+      "types": {
+        "str": 2496
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/reason",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/resolution",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/status",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/view/count",
+      "types": {
+        "int": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/view/mean",
+      "types": {
+        "str": 992,
+        "null": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/view/preference",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/prefixes/*/successor/view/weight",
+      "types": {
+        "str": 1248
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/runIdentity",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/seed",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-matrix-rev2",
+      "pointer": "/status",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/index",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/law",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/name",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/nativeStages",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/prefixes/*/prefix",
+      "types": {
+        "int": 3040
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/prefixes/*/saveBytes",
+      "types": {
+        "int": 3040
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/prefixes/*/saveSha256",
+      "types": {
+        "str": 3040
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/prefixes/*/successorSha256",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/prefixes/*/terminal",
+      "types": {
+        "bool": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/chosen",
+      "types": {
+        "str": 2392,
+        "null": 392
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/instant",
+      "types": {
+        "int": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/probabilities/*",
+      "types": {
+        "str": 4784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/reasonSha256",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/resolutionSha256",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/status",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/view/count",
+      "types": {
+        "int": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/view/mean",
+      "types": {
+        "null": 832,
+        "str": 1952
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/view/preference",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/rows/*/view/weight",
+      "types": {
+        "str": 2784
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/runIdentity",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/seed",
+      "types": {
+        "int": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/status",
+      "types": {
+        "str": 256
+      }
+    },
+    {
+      "sourceFamily": "values-public-matrix-rev1",
+      "pointer": "/traceSha256",
+      "types": {
+        "str": 256
+      }
+    }
+  ],
+  "shortStringsIncluded": true,
+  "nullAndNumericLeavesCounted": true,
+  "role": "Exhaustive actual leaf shapes; unknown string field/value rejects. Null mean and null chosen remain typed absence, not strings or zero."
+}

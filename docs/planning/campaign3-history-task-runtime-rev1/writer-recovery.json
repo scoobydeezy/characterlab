@@ -1,0 +1,26 @@
+{
+  "status": "EXACT ORIGINAL TASK MUTATION WRITER RECOVERED",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/recover-history-task-writer.py",
+    "sha256": "0888b45d3baaac9ab05aaac52da97b1a05e94117c6ce4448a83a7487ef30cc61"
+  },
+  "input": {
+    "path": "scripts/prove-task-lifecycle.mjs",
+    "sha256": "35552e6969075a750ba1ab95b003d5d910b6669d202aa070a1ac361632e4ca9c"
+  },
+  "output": {
+    "path": "docs/planning/campaign3-history-task-runtime-rev1/historical-f846295e2fa7-prove-task-lifecycle.mjs",
+    "sha256": "f846295e2fa733de18c09818e5a1309864ac638f0ec703ca45ed9cb3404f1457"
+  },
+  "predecessorReview": {
+    "path": "docs/planning/campaign3-history-task-runtime-rev1/review.json",
+    "sha256": "12817b8f8ba0051acd2a250d00f742e8dd543219dada6dcc09b6065deb17dfce"
+  },
+  "transformation": [
+    "Normalize current writer CRLF to LF.",
+    "Replace exact output filename REV2 with REV1.",
+    "Remove process.exitCode=0; and retain one final LF."
+  ],
+  "evidence": "Complete resulting bytes match original REV1 writer fingerprint exactly; no execution or historical timestamp proof.",
+  "finding": "REV2 changes report destination and clears expected failing-mutation process exit status only. Result rows and mutation assertions remain identical. Prior search-only unresolved result preserved, now superseded for this one source."
+}

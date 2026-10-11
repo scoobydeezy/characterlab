@@ -1,0 +1,11 @@
+{
+  "status": "AUDIT SCHEMA ASSUMPTIONS CORRECTED; ORIGINAL SOURCES UNCHANGED",
+  "findings": [
+    "First invocation assumed snapshot on every census entry and raised KeyError before outputs. All1063 Markdown entries use mirrors;10310 StructuredJSON entries commit named paths. Corrected checker follows actual manifest schema.",
+    "Second invocation verified all11373 source hashes, then rejected BIOLOGY_PUBLIC_COMPARISON_REV1.json because it expected scope on every role. Ten reviewed role records use judgment instead; eight also carry schemaEvidence and two canonicalEvidence. Corrected checker requires a nonempty rationale in either documented field and verifies every nested role evidence binding."
+  ],
+  "obligations": [
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

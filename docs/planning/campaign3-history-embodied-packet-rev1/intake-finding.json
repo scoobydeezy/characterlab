@@ -1,0 +1,13 @@
+{
+  "status": "CORRECTED BEFORE SOURCE ASSIGNMENT",
+  "finding": "Initial reviewer attempted to assign the already reconciled PROFILE_EXPECTATIONS receipt a second time. The existing-role guard rejected before any review or source index write.",
+  "failedCheckerSha256": "e84b4a67b9e89ae5297d1a4e3bfcd8c26532d426d5f5fcab5c2084fdb069a675",
+  "guard": "assert not set(specs)&known",
+  "disposition": "Retain existing REV134 role unchanged. Reuse the receipt as supporting evidence and freshly replay its arithmetic without counting its source/occurrences again.",
+  "priorIndex": "docs/planning/campaign3-history-source-roles-rev137/index.json",
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

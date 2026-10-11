@@ -1,0 +1,131 @@
+{
+  "status": "PASS; NINE ORIGINAL VALIDATOR FAULTS AND 31 CURRENT COMPONENT TESTS; HISTORICAL IMPLEMENTATION UNAVAILABLE",
+  "checker": {
+    "path": "scripts/replay-history-ga-source-branch.mjs",
+    "sha256": "4cbdb787399bcdbdc9137d0ddc42e906b21d3dcec475d6b2930cf7379239d750"
+  },
+  "validator": {
+    "script": {
+      "path": "scripts/review-ga-local-reserve-public-carrier.mjs",
+      "sha256": "b0029a6af4d70895e030111f8d11b7dceea0814258407a1b76430c7648c2fa7e"
+    },
+    "historicalReceipt": {
+      "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REVIEW_REV1.json",
+      "sha256": "ddff0c48f24848584cb320e5cc996d22114e77bec20b320c09abdad7b7537684"
+    },
+    "prefixSha256": "9f9608a6252c559801dbb68e4ece92a23e9d9c157351978e87129536b1a22958",
+    "faults": [
+      {
+        "name": "physical-is-safe-signal",
+        "detected": true
+      },
+      {
+        "name": "runtime-physical-allocator",
+        "detected": true
+      },
+      {
+        "name": "premature-namespace",
+        "detected": true
+      },
+      {
+        "name": "merge-three-anchors",
+        "detected": true
+      },
+      {
+        "name": "scalar-composite-key",
+        "detected": true
+      },
+      {
+        "name": "physical-as-memory",
+        "detected": true
+      },
+      {
+        "name": "cognitive-physical-read",
+        "detected": true
+      },
+      {
+        "name": "parallel-numeric-result",
+        "detected": true
+      },
+      {
+        "name": "widen-old-owner",
+        "detected": true
+      }
+    ],
+    "scope": "Original executable validator prefix, with output-existence guard reversed; all nine validation/fault assertions unchanged. Stops before source-hash loop. This is not a replay of the complete historical reviewer or builder."
+  },
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-source-branch-rev1/current-tests.json",
+    "sha256": "b7b1225f4ffddd573f2dd4bb6b6ea6fb4832d2b5b5ea51fbc37bee7b768dd86e"
+  },
+  "inputs": [
+    {
+      "path": "src/test/localReserveSource.test.ts",
+      "sha256": "5a612a286c0739b52c2f6a544053f3f5d1412bdc8ea99eaff9ba4394cd127319"
+    },
+    {
+      "path": "src/test/localReserveObservation.test.ts",
+      "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+    },
+    {
+      "path": "src/test/bodyRecall.test.ts",
+      "sha256": "a3a28d20d5cdb793dbdcb2524a74c65dccd26e422a15265400e0c9d437ee659b"
+    },
+    {
+      "path": "src/test/trialPanelPerception.test.ts",
+      "sha256": "d84435bc0fe11f3f036e5027500da6c97ac8522198402b6b516c84e4ce090419"
+    },
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+    },
+    {
+      "path": "src/campaign3/localReserveObservation.ts",
+      "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+    },
+    {
+      "path": "src/campaign3/bodyRecall.ts",
+      "sha256": "8d1fd604f417a030574fa7f1d0057a559fc48c7bad03b24b985fb75493d0eee6"
+    },
+    {
+      "path": "src/campaign3/trialPanelPerception.ts",
+      "sha256": "f797171928ddcf5e25f0ce29d1822dafcf0b190349c188e61676eb74c71183be"
+    }
+  ],
+  "reused": {
+    "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/current-tests.json",
+    "sha256": "8ef666a2f158b1aa83ec5264eaa8d1c9b3bc0ffbc3e90bd4e4e18c6db2f4219e"
+  },
+  "historicalTestReceipt": {
+    "path": "docs/planning/CONSEQUENCE_BASELINE_RECALL_COMPOSITION_TESTS_REV1.json",
+    "sha256": "09ef5ed29870546a639cb528e04757c16b75a6f322fb1cc173b6aecd13a842e8"
+  },
+  "matchedHistoricalNames": [
+    "direct signal / acquisition-recency body recall BR-A: older matching acquisition remains retained but unrecalled under contention",
+    "direct signal / acquisition-recency body recall BR-B: matching is binary; additional groups/views do not outweigh a newer acquisition",
+    "direct signal / acquisition-recency body recall BR-C: acquisition-level recall exposes surviving co-acquired groups, not just cue matches",
+    "direct signal / acquisition-recency body recall BR-D: no current cue cannot be manufactured from retained content; zero-valued retained bytes remain evidence",
+    "direct signal / acquisition-recency body recall BR-E: fragmentation neither rejuvenates acquisition nor returns removed groups",
+    "direct signal / acquisition-recency body recall BR-F: exact acquisition-time ties use canonical IDs independent of input order",
+    "direct signal / acquisition-recency body recall BR-G: zero slots is modeled exclusion; future times and malformed cues reject",
+    "direct signal / acquisition-recency body recall BR-H: repeated reads do not refresh time; returned bytes cannot mutate memory",
+    "controlled source-component significance composition SC-A: actual safe samples and goal relation feed focal credit, then distinguish retention models",
+    "controlled source-component significance composition SC-B: concern-only change or removing credit restores newer survivor with same attribution and use",
+    "controlled source-component significance composition SC-C: lost perceived context prevents assembly although hidden fixture schedule stays unchanged",
+    "controlled source-component significance composition SC-D: insufficient body recall capacity does not bypass the read gate with stored source values",
+    "controlled source-component significance composition SC-E: reordering retained access does not change context-bound attribution or the focal survivor",
+    "controlled source-component significance composition SC-F: one hidden neutral stage prevents grouping despite unchanged body and motion schedule",
+    "controlled source-component significance composition SC-G: independent hidden delivery can produce the same supported attribution and retention",
+    "controlled source-component significance composition SC-H: absent consequence-time baseline recall cannot fall back to an earlier source sample",
+    "observed panel event-file perception TC-A: real SEM start, continuation and end share one observer event-file",
+    "observed panel event-file perception TC-B: absence breaks continuity; a reappearing glyph cannot recover the old file",
+    "observed panel event-file perception TC-C: changed glyph and repeated Before produce explicit splits",
+    "observed panel event-file perception TC-D: foreign, replayed or malformed observations leave state and allocation unchanged",
+    "observed panel event-file perception TC-E: missing stage cannot be rebuilt from the intended trial schedule"
+  ],
+  "limits": [
+    "One carrier source commitment cannot be recovered; full historical builder/reviewer reproduction is excluded.",
+    "31 current component tests are independent evidence, not execution of historical source bytes. Original 21 test names match 13 fresh and eight previously executed composition cases; remaining composition tests were not rerun.",
+    "No public scheduler, physical-state persistence or combined-source reservation qualification."
+  ]
+}

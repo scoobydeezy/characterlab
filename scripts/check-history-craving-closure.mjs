@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const p='docs/planning/',read=f=>JSON.parse(fs.readFileSync(f,'utf8')),sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex'),ref=path=>({path,sha256:sha(path)}),O=p+'campaign3-history-craving-rev1/';fs.mkdirSync(O,{recursive:true});
+const plan=read(p+'CRAVING_PLAN_REV1.json'),drift=plan.artifacts.filter(a=>sha(a.path)!==a.sha256);
+assert.equal(drift.length,1);assert.equal(drift[0].path,'src/campaign3/embodiedRuntime.ts');
+const archive=p+'public-wrapper-quiescence-rev1/src/campaign3/embodiedRuntime.ts';assert.equal(sha(archive),drift[0].sha256);
+const manifest=read(p+'public-wrapper-quiescence-rev1/PRESERVATION.json');assert(manifest.artifacts.some(a=>a.original===drift[0].path&&a.archive===archive&&a.sha256===drift[0].sha256));
+const save=(name,value)=>{if(fs.existsSync(O+name))assert.deepEqual(read(O+name),value);else fs.writeFileSync(O+name,JSON.stringify(value,null,2)+'\n',{flag:'wx'});};
+let source=fs.readFileSync('scripts/check-craving-closure.mjs','utf8');const needle="sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex')";assert.equal(source.split(needle).length,2);
+source=source.replace(needle,"sha=f=>createHash('sha256').update(fs.readFileSync(f==='src/campaign3/embodiedRuntime.ts'?"+JSON.stringify(archive)+":f)).digest('hex')");
+await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+save('closure-check.json',{status:'PASS HISTORICAL SOURCE SCOPE; HQ011 OPEN',scope:'Original complete craving closure with only runtime hash resolved to exact preserved bytes; no fresh runtime/tests in this closure check.',historicalRuntime:ref(archive),currentRuntime:ref(drift[0].path),checker:ref('scripts/check-history-craving-closure.mjs')});

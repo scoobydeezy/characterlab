@@ -1,0 +1,7 @@
+{
+  "command": "node scripts/audit-campaign2-allocation.mjs",
+  "exitCode": 0,
+  "stdout": "{\n  \"version\": \"campaign2-allocation/0.2-candidate\",\n  \"gates\": {\n    \"A\": \"PASS: exact complete Markdown/JSON parity\",\n    \"B\": \"PASS: direct accepted observation declaration\"\n  },\n  \"checks\": 60,\n  \"observationAnchor\": {\n    \"source\": \"docs/formal/OBSERVATION_AND_EVIDENCE.md\",\n    \"acceptanceLine\": 3,\n    \"acceptance\": \"**Status:** accepted bounded-measurement seam with restricted semantic-token control, version `observation/0.1-candidate` (accepted 2026-09-01; immutable candidate-era identifier retained)\",\n    \"seamIdLine\": 5,\n    \"declaration\": \"**SeamId:** `seam/truth-to-permitted-evidence`\",\n    \"sourceSha256\": \"76621450d9e65f844414f35795e2ed1036be945e096b195b9eb4dfe96f70feb9\"\n  }\n}\n",
+  "stderr": "",
+  "scope": "Read-only specification audit; no --write, runtime or qualification rerun."
+}

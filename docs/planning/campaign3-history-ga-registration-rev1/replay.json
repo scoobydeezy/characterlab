@@ -1,0 +1,146 @@
+{
+  "status": "PASS; EXACT SYMBOLIC BUILDER/REVIEWERS AND CURRENT FOCUSED COMPILER CONTROLS",
+  "checker": {
+    "path": "scripts/replay-history-ga-registration.mjs",
+    "sha256": "d666eb0544897d01ac98f05694e30489c24a277794b485ccebf5294d0dff3bdf"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/build-ga-registration-carrier.mjs",
+        "sha256": "393586bb8b7dd64479b92fc50bfc1c2ed6f28de96461324fa8219b901151052a"
+      },
+      "output": {
+        "path": "docs/planning/GA_REGISTRATION_CARRIER_REV1.json",
+        "sha256": "6d92f3ce5111810ab6b4b9f3cbde8132847387615dc8968883fbe6a48c5e4b4e"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-registration-carrier.mjs",
+        "sha256": "9d7237fd699557936f44f7bba7628e0c001c5669b041d0ac544eff3ff136e60c"
+      },
+      "output": {
+        "path": "docs/planning/GA_REGISTRATION_CARRIER_REVIEW_REV1.json",
+        "sha256": "659a559390f227787c420b41b85532c49a76aace3c0fe8cdfeb9d9c2e8cfdbb0"
+      },
+      "faults": [
+        {
+          "name": "missing-stage",
+          "rejected": true
+        },
+        {
+          "name": "input-callback",
+          "rejected": true
+        },
+        {
+          "name": "replace-idn",
+          "rejected": true
+        },
+        {
+          "name": "replace-write-authority",
+          "rejected": true
+        },
+        {
+          "name": "unbounded-output",
+          "rejected": true
+        },
+        {
+          "name": "phase150",
+          "rejected": true
+        },
+        {
+          "name": "no-physical-stage-phase",
+          "rejected": true
+        },
+        {
+          "name": "reservation-becomes-fresh",
+          "rejected": true
+        },
+        {
+          "name": "definition-is-occurrence",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-write-scope-correction.mjs",
+        "sha256": "fafbbe35ab1814698507332bf24d47bbd53ef6a2ea0ac236ecefb4a80abe3744"
+      },
+      "output": {
+        "path": "docs/planning/GA_REGISTRATION_WRITE_SCOPE_REVIEW_REV1.json",
+        "sha256": "2a036eca56498faca4ddd0c0f40a9c3a84b1923f441ab94b584ac9c48cd8d5d8"
+      },
+      "faults": [
+        {
+          "name": "rewrite-frozen-name",
+          "rejected": true
+        },
+        {
+          "name": "silent-read-domain-change",
+          "rejected": true
+        },
+        {
+          "name": "empty-path-permission",
+          "rejected": true
+        },
+        {
+          "name": "scalar-family-paths",
+          "rejected": true
+        },
+        {
+          "name": "capability-union-alias",
+          "rejected": true
+        },
+        {
+          "name": "physical-learning-route",
+          "rejected": true
+        },
+        {
+          "name": "perception-readonly-lie",
+          "rejected": true
+        },
+        {
+          "name": "protocol-writer",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-registration-rev1/current-tests.json",
+    "sha256": "1f57126688296d43673ee010756d4abccc207852f2f401244e4672c4cd5bd6b9"
+  },
+  "inputs": [
+    {
+      "path": "src/test/generalRegistration.test.ts",
+      "sha256": "d1449a0c9ed77faad75c832f37c9baa92fc319155d847c5fcaf0e46e75e8b509"
+    },
+    {
+      "path": "src/test/generalAccessors.test.ts",
+      "sha256": "c44811b860096add7b4774acf72005b87b69d63a42247173afe6c6eed2af168c"
+    },
+    {
+      "path": "src/test/recallPartitionProjection.test.ts",
+      "sha256": "25a7525d321867554f08fac78ae5dcd9e9e4800d6fea2e049001367fae44ab08"
+    },
+    {
+      "path": "src/campaign3/generalRegistration.ts",
+      "sha256": "9d8a3399e6e1231dc01ea63252a06ad9524c2111afbe739f45912d38178a2ad7"
+    },
+    {
+      "path": "src/campaign3/generalAccessors.ts",
+      "sha256": "1f19cf225e143b75f1d64f2248ccaf98f97153df3547fab42e73103658ae2a38"
+    },
+    {
+      "path": "src/campaign3/recallPartitionProjection.ts",
+      "sha256": "960d401598933cb3ec01fc6d7cfd9f07d75144cd53ec04abdefa5737d811c462"
+    }
+  ],
+  "limits": [
+    "17 original symbolic faults;19 current focused tests. Neither executes public source authentication or complete model/persistence admission.",
+    "Registration tests use synthetic compiler-owned implementation bindings; equality to them does not independently establish their semantic validity."
+  ]
+}

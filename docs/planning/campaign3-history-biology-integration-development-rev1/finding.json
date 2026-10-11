@@ -1,0 +1,12 @@
+{
+  "status": "REJECTED AUDIT CHECKER; NO REVIEW PUBLISHED",
+  "failure": "AssertionError at raw-byte prefix comparison of preserved/current contract",
+  "cause": "Preserved contracts use LF; current contracts have CRLF or mixed line endings. Text comparison shows only appended clarification, but raw bytes are not a prefix.",
+  "correction": "Compare decoded text with newline normalization for editorial append claim only. Bind every original/current file by separate raw SHA256; never equate byte identities.",
+  "dependentAttempt": "Extender invoked after failed reviewer and failed FileNotFoundError for absent review.json. No index was published.",
+  "rejectedChecker": {
+    "path": "docs/planning/campaign3-history-biology-integration-development-rev1/rejected-checker.py",
+    "sha256": "7a15eec88bf7453ae5fc212638005432b3226842a254bf6f0b72b9933b5ac037"
+  },
+  "scratchAttempt": "Earlier read-only inline diff command had unmatched-parenthesis SyntaxError before execution; corrected inspection made no file changes."
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "node",
+    "scripts/check-affect-regulatory.mjs"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"status\":\"PASS\",\"bodyHistoryCollisions\":8,\"comparison\":[{\"law\":\"FullAffect\",\"matches\":64,\"total\":64},{\"law\":\"ScalarThreat\",\"matches\":64,\"total\":64},{\"law\":\"ScalarStress\",\"matches\":56,\"total\":64},{\"law\":\"ScalarPain\",\"matches\":48,\"total\":64},{\"law\":\"ScalarRewardDeviation\",\"matches\":56,\"total\":64}],\"componentPrefixes\":832,\"nativePrefixes\":16}\n",
+  "stderr": "",
+  "checker": {
+    "path": "scripts/check-affect-regulatory.mjs",
+    "sha256": "17e87504109a52346f8157fe26d156d6c4d68458fd9ec970e22456796cc5bda7"
+  },
+  "scope": "READ-ONLY AUTHENTICATION AND STORED DISCRIMINANTS; NO FRESH RUNTIME REPLAY"
+}

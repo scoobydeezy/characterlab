@@ -1,0 +1,67 @@
+{
+  "status": "PASS; SYMBOLIC ONLY",
+  "original": {
+    "path": "docs/planning/GA_GOAL_RESULT_CARRIER_REVIEW_REV1.json",
+    "sha256": "62ebf97ca43df5ca56853b65e39ea9a8d991dc04768d9a2a69d289fb5e4d9701"
+  },
+  "checker": {
+    "path": "scripts/replay-history-ga-goal-carrier.mjs",
+    "sha256": "c9546886d7bb4951342d888c78c165bc5a8715c9b7e846d903eea801c660523e"
+  },
+  "recovery": {
+    "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/source-recovery.json",
+    "sha256": "681db8f752512346d06e76a7594b12b12b57887c2aea5cd875537e9ab05e41a0"
+  },
+  "faults": [
+    {
+      "name": "carry-full-appraisal",
+      "rejected": true
+    },
+    {
+      "name": "indirect-numeric-qualification",
+      "rejected": true
+    },
+    {
+      "name": "join-view-archive",
+      "rejected": true
+    },
+    {
+      "name": "reuse-task-appraisal-identity",
+      "rejected": true
+    },
+    {
+      "name": "parallel-qualification-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "missing-target-original",
+      "rejected": true
+    },
+    {
+      "name": "absence-is-zero",
+      "rejected": true
+    },
+    {
+      "name": "erase-farther",
+      "rejected": true
+    },
+    {
+      "name": "credit-unrelated-siblings",
+      "rejected": true
+    },
+    {
+      "name": "force-use-for-unavailable",
+      "rejected": true
+    },
+    {
+      "name": "mutable-goal-baseline",
+      "rejected": true
+    },
+    {
+      "name": "new-numeric-record",
+      "rejected": true
+    }
+  ],
+  "records": 20,
+  "fields": 61
+}

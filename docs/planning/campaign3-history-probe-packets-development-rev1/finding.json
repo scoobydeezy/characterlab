@@ -1,0 +1,10 @@
+{
+  "status": "REJECTED AUDIT CHECKER; NO PACKET RECEIPT",
+  "checker": {
+    "path": "docs/planning/campaign3-history-probe-packets-development-rev1/rejected-checker.mjs",
+    "sha256": "869b853a5ad7d1334a1ab572b708c92ae0e5dca97926a587d769a9c6fcbd4dc9"
+  },
+  "failure": "AssertionError [] !== undefined at check-history-probe-packets.mjs:60",
+  "cause": "Checker assumed registryDelta.added/removed arrays exist for byte-identical slots; historical manifest omits those fields.",
+  "disposition": "Correct checker to validate permitted omitted metadata only when actual slot bytes are identical. No model/receipt rewritten and no production defect inferred."
+}

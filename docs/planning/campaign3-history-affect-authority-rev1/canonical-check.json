@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "script": "scripts/compare-affect-factors.mjs",
+      "sha256": "f8d1b5750b68f4ff722dfd0fbbd3e10f455d55bc085535fa38c422552bbc33ec",
+      "status": "EXACT HISTORICAL RECEIPT REPRODUCED"
+    },
+    {
+      "script": "scripts/audit-affect-closure.mjs",
+      "sha256": "c980b7af9648ddcdb33c035331a4772416c3b07be5d83844fc1e73fe2c38a4cf",
+      "status": "EXACT HISTORICAL RECEIPT REPRODUCED"
+    }
+  ],
+  "scope": "Read-only reexecution of arithmetic and closure assertions. Stored runtime/test results are checked,not freshly replayed by closure audit.",
+  "checkerSha256": "b4705c44549d490b7c115bad5894b05a32efd9059f17b0b224e43ac3d0c2bb47"
+}

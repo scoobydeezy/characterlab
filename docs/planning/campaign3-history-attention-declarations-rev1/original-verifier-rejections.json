@@ -1,0 +1,18 @@
+{
+  "status": "PRESERVED ORIGINAL VERIFIER SOURCE-DRIFT REJECTIONS",
+  "results": [
+    {
+      "command": "node scripts/verify-attention-allocation.mjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: src/campaign3/embodiedRuntime.ts\n+ actual - expected\n\n+ '617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313'\n- 'd8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe'\n\n    at file:///C:/Users/scoob/Documents/GitHub/characterlab/scripts/verify-attention-allocation.mjs:7:162\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: '617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313',\n  expected: 'd8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.20.0\n"
+    },
+    {
+      "command": "node scripts/verify-attention-public-shape.mjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: src/campaign2/occurrenceIdentity.ts\n+ actual - expected\n\n+ 'cfe01d8314b5932ea81a92c2f0a3c4334eb7b2898a2aae64d93967b4f8eb6dd4'\n- 'fbd7b6390a6da94c785efdee77a468628481c54b184f3c9df0e4bb93e0641b7b'\n\n    at file:///C:/Users/scoob/Documents/GitHub/characterlab/scripts/verify-attention-public-shape.mjs:5:125\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 'cfe01d8314b5932ea81a92c2f0a3c4334eb7b2898a2aae64d93967b4f8eb6dd4',\n  expected: 'fbd7b6390a6da94c785efdee77a468628481c54b184f3c9df0e4bb93e0641b7b',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.20.0\n"
+    }
+  ],
+  "intakeFinding": "First intake helper incorrectly expected both to stop at embodiedRuntime. Shape verifier stops earlier at occurrenceIdentity drift. No qualification assertion changed."
+}

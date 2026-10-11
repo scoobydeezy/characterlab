@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "scope": "Fresh original fault probes with SHA-exact historical attention/tracking code pinned; not public runtime execution.",
+  "baseline": {
+    "boundary": "SpatialFocal",
+    "residual": "1/5",
+    "unknown": false,
+    "dense": "1/10",
+    "detached": true,
+    "substitutions": 0
+  },
+  "faults": [
+    {
+      "name": "exclusive-boundary",
+      "removed": "x >= calibration.minX",
+      "inserted": "x > calibration.minX",
+      "baseline": "SpatialFocal",
+      "actual": "SpatialPeripheral",
+      "detected": true
+    },
+    {
+      "name": "unknown-consumes-pool",
+      "removed": "rows.filter(r => r.spatialClass === 'SpatialPeripheral').length",
+      "inserted": "rows.filter(r => r.spatialClass !== 'SpatialFocal').length",
+      "baseline": "1/5",
+      "actual": "1/10",
+      "detected": true
+    },
+    {
+      "name": "no-footprint-division",
+      "removed": "pool.divide(Q.of(BigInt(peripheralCount)))",
+      "inserted": "pool",
+      "baseline": "1/10",
+      "actual": "1/5",
+      "detected": true
+    },
+    {
+      "name": "unknown-as-zero",
+      "removed": "r.spatialClass === 'SpatialUnknown' ? r :",
+      "inserted": "r.spatialClass === 'SpatialUnknown' ? {...r,allocation:Q.of(0n)} :",
+      "baseline": false,
+      "actual": true,
+      "detected": true
+    },
+    {
+      "name": "coordinate-alias",
+      "removed": "position:{x,y},spatialClass:inside",
+      "inserted": "position:d.position!,spatialClass:inside",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    }
+  ],
+  "original": {
+    "path": "docs/planning/SPATIAL_CONTEXT_ALLOCATION_REVIEW_REV1.json",
+    "sha256": "184abe1d42f6d9b5869b4c615f94bc51ad56a50e5f4cf348388228b5570d83bb"
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/spatialContextAllocation.ts",
+      "sha256": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7"
+    },
+    {
+      "path": "src/test/spatialContextAllocation.test.ts",
+      "sha256": "75a32c618abcd5d5152ac8921901f85e456061cca11439a2943c199101bc9034"
+    },
+    {
+      "path": "docs/formal/SPATIAL_CONTEXT_ALLOCATION_COMPONENT.md",
+      "sha256": "6b201ff6449c7dd4c6ea4fb7391ac0e57e46484d777563d9408456da0ee3b939"
+    },
+    {
+      "path": "scripts/review-spatial-context-allocation.mjs",
+      "sha256": "6286794f5a4221667d96ac45358138fb0fd5cdc18238165e82d382c261400903"
+    }
+  ],
+  "pinnedSources": [
+    {
+      "path": "docs/planning/campaign3-history-ga-components-rev1/observedMarkerTracking.pre-successors.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2"
+    },
+    {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-ga-component-spatial.mjs",
+    "sha256": "fda482ff5f4b12ce3a71767254f83af347173c77df0d3beca58c2ecef0e53990"
+  }
+}

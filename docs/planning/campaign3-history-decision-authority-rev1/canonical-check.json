@@ -1,0 +1,131 @@
+{
+  "status": "PASS; HQ011 OPEN",
+  "scope": "Original public closure and original component stored-row assertions rechecked.576 component cases and174 public runs remain distinct historical evidence;no fresh runtime,replays,rollback or tests.",
+  "componentCases": 576,
+  "publicRuns": 174,
+  "publicPrefixes": 360,
+  "componentDivergenceSeeds": [
+    0,
+    3,
+    8,
+    9,
+    12,
+    14
+  ],
+  "failed": [
+    {
+      "source": {
+        "path": "docs/planning/DECISION_COMPONENT_TESTS_REV1.json",
+        "sha256": "ddbca6b9f6a35a960e1a2c2dfde08b10d09312bfd1c9898800b973cccd69e2ed"
+      },
+      "passed": 3,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "DECISION named comparator component matrix exhibits a required failure for every named alternative",
+          "firstLine": "AssertionError: expected { kind: 'list', …(1) } to deeply equal { kind: 'list', …(1) }"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/DECISION_PUBLIC_TESTS_REV1.json",
+        "sha256": "77da565ee1d2efe62bbb31956852c65671801a37bb2ed116ba88166f66d70d58"
+      },
+      "passed": 8,
+      "failed": 14,
+      "failures": [
+        {
+          "name": "rolls back actual source work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual freeze work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual raw work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual reasons work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual decision work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual intent work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual expression work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual plan work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual attempt work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual execution work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual observation work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual consequence work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual history work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        },
+        {
+          "name": "rolls back actual commit work including state, outputs, allocations and random addresses",
+          "firstLine": "SaveContractError: only an active quiescent run can produce a continuation save"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/check-decision-closure.mjs",
+      "sha256": "7d12794d54670854d720dd344ea12e1109880f296f8012634e7ac286a97d2a53"
+    },
+    {
+      "path": "scripts/qualify-decision-components.mjs",
+      "sha256": "e9c5f6189f15e9eb07ca3eb82ab5c5b9df1028f0c210ea211fcf479be788258c"
+    },
+    {
+      "path": "docs/planning/DECISION_COMPONENT_PLAN_REV1.json",
+      "sha256": "5a029df10fbc36444828360b28672075526861ce253a047b8db6fb5dadc71553"
+    },
+    {
+      "path": "docs/planning/DECISION_COMPONENT_EXPERIMENT_REV1.json",
+      "sha256": "b25c661751bcac2442aaee0ed793075315eb5577846265b1c2520bda0fbf0f2a"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "b2c080ac429dcaba6a0504b27a0b07b60b3c8fd4bf5c97c4b7596e9173e186cd"
+    },
+    {
+      "path": "docs/planning/DECISION_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "84490e901443444a76bbe04a4e71e4a64ec180f2a95f63881eec85314da90f27"
+    },
+    {
+      "path": "docs/planning/DECISION_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "52e755acad66a9e533753f025434d67d7bdac201d8dc214638e77244c7ce7682"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-decision-authority.mjs",
+    "sha256": "52c2539de487a5fbf7b5cb767dd4771eddf02cd44356758c97b96edcf6580e41"
+  }
+}

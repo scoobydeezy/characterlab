@@ -1,0 +1,2063 @@
+{
+  "shortStringsIncluded": true,
+  "leaves": [
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/status",
+      "text": "EXECUTED — Candidate A versus Candidate B modulation shapes, component scope",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/obligation",
+      "text": "OD-C3-001 obligation 1 (ruling 2026-09-14): a shape-different comparator",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/selectedLocally",
+      "text": "Candidate B chosen under CAMPAIGN3_DECISION_AND_ESCALATION_POLICY.md; it changes modulation shape only and introduces no new psychological state or causal mechanism, so it does not return for a ruling.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/candidates/candidate-a-linear",
+      "text": "residualPool = residual × (1 − q); ω_A = 1 + q. Accepted first named candidate; implemented in src/campaign3/priorConcernFeedback.ts. Unchanged by this comparison.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/candidates/candidate-b-saturating",
+      "text": "f(q) = q/(1+q) is the architecture's own accepted bounded response (EAM-1). residualPool = residual × (1 − f(q)) = residual/(1+q); ω_A = 1 + f(q). No new mathematics, no free parameter, no new state.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/shapeDifferenceArgument",
+      "text": "B is A with q replaced by the project's existing bounded response, so the difference is functional form and not calibration: A is linear in q and reaches its endpoints exactly, B saturates and never does. A recalibrated 1+q/2 would have been rejected as a calibration change.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/residual",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/0",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/1",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/2",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/3",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/4",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/q/5",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/neutralPoint",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/allocationConsumer",
+      "text": "allocateSpatialContext with focalWeight 1, one focal and two peripheral detections in an 8×8 cell grid",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/declaredDomain/retrievalConsumer",
+      "text": "rankAccessibleEpisodes, lambda 1, exponent 1, omegaB 1, K 1, now 10; x-recent base 1/2 pull 1/10; y-associated base 1/4 pull 1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/q",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/residualPool",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/omegaA",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/peripheralAllocation/0",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/peripheralAllocation/1",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/retrieval/scores/x-recent",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/retrieval/scores/y-associated",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/q",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/residualPool",
+      "text": "3/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/omegaA",
+      "text": "5/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/peripheralAllocation/0",
+      "text": "3/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/peripheralAllocation/1",
+      "text": "3/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/retrieval/scores/x-recent",
+      "text": "5/8",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/retrieval/scores/y-associated",
+      "text": "9/16",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/q",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/residualPool",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/omegaA",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/peripheralAllocation/0",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/peripheralAllocation/1",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/retrieval/scores/x-recent",
+      "text": "13/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/retrieval/scores/y-associated",
+      "text": "5/8",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/q",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/residualPool",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/omegaA",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/peripheralAllocation/0",
+      "text": "1/30",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/peripheralAllocation/1",
+      "text": "1/30",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/retrieval/scores/x-recent",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/retrieval/scores/y-associated",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/residualPool",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/omegaA",
+      "text": "7/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/peripheralAllocation/0",
+      "text": "1/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/peripheralAllocation/1",
+      "text": "1/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/retrieval/top",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/retrieval/scores/x-recent",
+      "text": "27/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/retrieval/scores/y-associated",
+      "text": "11/16",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/q",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/residualPool",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/omegaA",
+      "text": "2/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/peripheralAllocation/0",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/peripheralAllocation/1",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/retrieval/top",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/retrieval/scores/x-recent",
+      "text": "7/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/retrieval/scores/y-associated",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/q",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/residualPool",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/omegaA",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/peripheralAllocation/0",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/peripheralAllocation/1",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/retrieval/scores/x-recent",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/retrieval/scores/y-associated",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/q",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/residualPool",
+      "text": "4/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/omegaA",
+      "text": "6/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/peripheralAllocation/0",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/peripheralAllocation/1",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/retrieval/scores/x-recent",
+      "text": "31/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/retrieval/scores/y-associated",
+      "text": "11/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/q",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/residualPool",
+      "text": "2/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/omegaA",
+      "text": "4/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/peripheralAllocation/0",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/peripheralAllocation/1",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/retrieval/scores/x-recent",
+      "text": "19/30",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/retrieval/scores/y-associated",
+      "text": "7/12",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/q",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/residualPool",
+      "text": "3/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/omegaA",
+      "text": "7/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/peripheralAllocation/0",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/peripheralAllocation/1",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/retrieval/scores/x-recent",
+      "text": "16/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/retrieval/scores/y-associated",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/residualPool",
+      "text": "4/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/omegaA",
+      "text": "10/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/peripheralAllocation/0",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/peripheralAllocation/1",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/retrieval/scores/x-recent",
+      "text": "9/14",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/retrieval/scores/y-associated",
+      "text": "17/28",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/q",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/residualPool",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/omegaA",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/peripheralAllocation/0",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/peripheralAllocation/1",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/retrieval/top",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/retrieval/scores/x-recent",
+      "text": "13/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/retrieval/scores/y-associated",
+      "text": "5/8",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/retrievalCrossover/exactOmegaAStar",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/retrievalCrossover/candidate-a-linear/crossoverAtQ",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/retrievalCrossover/candidate-a-linear/tieResolvedBy",
+      "text": "canonical key order, preserving the recency winner",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/retrievalCrossover/candidate-a-linear/firstSampledFlipAtQ",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/retrievalCrossover/candidate-b-saturating/maximumOmegaA",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/endpointBehaviour/candidate-a-linear",
+      "text": "q=1 extinguishes the peripheral pool entirely (0/1) and doubles associative pull weight (2/1)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/analysis/endpointBehaviour/candidate-b-saturating",
+      "text": "q=1 halves the peripheral pool (1/10 of a 1/5 residual) and reaches ω_A 3/2; neither endpoint is attained",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/findings/0",
+      "text": "The two shapes are identical at the declared neutral point q=0 and diverge throughout (0,1], as the ruling requires of a comparator.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/findings/1",
+      "text": "The divergence is behaviourally visible, not merely numeric: Candidate A reverses the retrieval ranking inside (0,1], promoting an older associated episode over a more recent unassociated one, while Candidate B never reverses it at any q. Same input, same source, same eligibility and K.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/findings/2",
+      "text": "The exact crossover is omega_A* = 5/3. Candidate A attains it precisely at q = 2/3, where the two episode scores are exactly equal and the canonical key tie-break preserves the recency winner; the flip is therefore observed from the next sampled q. Candidate B tops out at omega_A = 3/2 and cannot reach the crossover at any q. That B fails to reach it is a property of the shape, not of the sampling.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/findings/3",
+      "text": "The candidates encode different psychological claims at the extreme. A says maximal concern abolishes peripheral encoding and doubles associative pull. B says peripheral attention is suppressed but never extinguished and associative pull saturates. Neither is currently earned.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/findings/4",
+      "text": "The retrieval consumer is where the modulation law bites hardest: ω_A is the associative-pull weight in RetrievalScore = ω_B·Base + ω_A·pull, so the shape of the concern coupling directly determines whether mood-congruent retrieval can overtake recency.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/limits/0",
+      "text": "Pure arithmetic at component scope. No identity, canonical record, allocation, record type, public ingress, state writer or corpus promotion. src/campaign3/priorConcernFeedback.ts is unmodified.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/limits/1",
+      "text": "This establishes that the modulation SHAPE is load-bearing and that Candidate A is not the only admissible law. It does NOT establish which shape is psychologically correct — that needs an accepted downstream observable, which remains BLOCKED on the encoding-strength and retrieval-probe seams.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/limits/2",
+      "text": "One residual value, one detection geometry, one two-episode retrieval fixture. The flip point 2/3 is specific to this fixture and is not a general threshold.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/limits/3",
+      "text": "Candidate B is a comparator, not a proposal to replace Candidate A. Promoting either to a registered component with an allocation is separate work.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/limits/4",
+      "text": "PHEN-ATTN-001 receives no PASS from this comparison; per VER-C3-ATTN-001 its encoding-footprint clause and later retrieval probe remain BLOCKED.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/0/path",
+      "text": "src/campaign3/encodingAccessMath.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/0/sha256",
+      "text": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/1/path",
+      "text": "src/campaign3/spatialContextAllocation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/1/sha256",
+      "text": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/2/path",
+      "text": "scripts/compare-concern-modulation-laws.mjs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_COMPARISON_REV1.json",
+      "pointer": "/sources/2/sha256",
+      "text": "8932f3155f6217726a1b07d8edd5e9b79dd65ad01e9d951c2e27c645af299c36",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/status",
+      "text": "EXECUTED — decoupled Candidate C developed and compared against A and B",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/obligation",
+      "text": "OD-C3-002 (owner design ruling 2026-09-14): develop the next serious candidate locally under the stated qualitative constraints and compare it against A/B",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/verdictEntry",
+      "text": "VER-C3-CONCERN-002",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/architecturalFinding",
+      "text": "Encoding suppression and retrieval amplification are separate consequences of the same concern state and need not share one transfer function. A and B both conflated them by construction; C separates them. B is exactly C at gain 1, and A is the linear limit, so the three form one family rather than three unrelated proposals.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/candidates/candidate-a-linear",
+      "text": "E(q) = 1 − q; R(q) = q. Fails C3: E(1) = 0 annihilates peripheral encoding.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/candidates/candidate-b-saturating",
+      "text": "E(q) = 1 − f(q); R(q) = f(q), one shared curve. Fails C6: ω_A tops out at 3/2, below the demonstrated crossover 5/3, so it can never reorder retrieval.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/candidates/candidate-c-decoupled",
+      "text": "E(q) = 1 − f(q); R(q) = f(3·q). Separate transfer functions. Satisfies all seven constraints.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/boundedResponse",
+      "text": "f(x) = x/(1+x), the accepted EAM-1 response; no new mathematics",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/retrievalGain",
+      "text": "3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/residual",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/0",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/1",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/2",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/3",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/4",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/q/5",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/demonstratedCrossover",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/crossoverProvenance",
+      "text": "ω_A* = 5/3 established by VER-C3-CONCERN-001 on this same fixture; it is a property of the fixture, not a general threshold",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/declaredDomain/consumers",
+      "text": "identical to VER-C3-CONCERN-001 — allocateSpatialContext for the encoding arm, rankAccessibleEpisodes for the retrieval arm",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/q",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/E",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/R",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/omegaA",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/residualPool",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/peripheralAllocation/0",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/peripheralAllocation/1",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/0/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/q",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/E",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/R",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/omegaA",
+      "text": "5/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/residualPool",
+      "text": "3/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/peripheralAllocation/0",
+      "text": "3/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/peripheralAllocation/1",
+      "text": "3/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/1/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/q",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/E",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/R",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/omegaA",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/residualPool",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/peripheralAllocation/0",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/peripheralAllocation/1",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/2/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/q",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/E",
+      "text": "1/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/R",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/omegaA",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/residualPool",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/peripheralAllocation/0",
+      "text": "1/30",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/peripheralAllocation/1",
+      "text": "1/30",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/3/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/E",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/R",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/omegaA",
+      "text": "7/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/residualPool",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/peripheralAllocation/0",
+      "text": "1/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/peripheralAllocation/1",
+      "text": "1/40",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/4/retrievalTop",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/q",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/E",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/R",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/omegaA",
+      "text": "2/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/residualPool",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/peripheralAllocation/0",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/peripheralAllocation/1",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-a-linear/5/retrievalTop",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/q",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/E",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/R",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/omegaA",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/residualPool",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/peripheralAllocation/0",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/peripheralAllocation/1",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/0/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/q",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/E",
+      "text": "4/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/R",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/omegaA",
+      "text": "6/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/residualPool",
+      "text": "4/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/peripheralAllocation/0",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/peripheralAllocation/1",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/1/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/q",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/E",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/R",
+      "text": "1/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/omegaA",
+      "text": "4/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/residualPool",
+      "text": "2/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/peripheralAllocation/0",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/peripheralAllocation/1",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/2/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/q",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/E",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/R",
+      "text": "2/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/omegaA",
+      "text": "7/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/residualPool",
+      "text": "3/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/peripheralAllocation/0",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/peripheralAllocation/1",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/3/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/E",
+      "text": "4/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/R",
+      "text": "3/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/omegaA",
+      "text": "10/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/residualPool",
+      "text": "4/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/peripheralAllocation/0",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/peripheralAllocation/1",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/4/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/q",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/E",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/R",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/omegaA",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/residualPool",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/peripheralAllocation/0",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/peripheralAllocation/1",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-b-saturating/5/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/q",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/E",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/R",
+      "text": "0/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/omegaA",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/residualPool",
+      "text": "1/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/peripheralAllocation/0",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/peripheralAllocation/1",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/0/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/q",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/E",
+      "text": "4/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/R",
+      "text": "3/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/omegaA",
+      "text": "10/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/residualPool",
+      "text": "4/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/peripheralAllocation/0",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/peripheralAllocation/1",
+      "text": "2/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/1/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/q",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/E",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/R",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/omegaA",
+      "text": "8/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/residualPool",
+      "text": "2/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/peripheralAllocation/0",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/peripheralAllocation/1",
+      "text": "1/15",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/2/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/q",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/E",
+      "text": "3/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/R",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/omegaA",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/residualPool",
+      "text": "3/25",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/peripheralAllocation/0",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/peripheralAllocation/1",
+      "text": "3/50",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/3/retrievalTop",
+      "text": "x-recent",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/E",
+      "text": "4/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/R",
+      "text": "9/13",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/omegaA",
+      "text": "22/13",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/residualPool",
+      "text": "4/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/peripheralAllocation/0",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/peripheralAllocation/1",
+      "text": "2/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/4/retrievalTop",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/q",
+      "text": "1/1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/E",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/R",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/omegaA",
+      "text": "7/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/residualPool",
+      "text": "1/10",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/peripheralAllocation/0",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/peripheralAllocation/1",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/results/candidate-c-decoupled/5/retrievalTop",
+      "text": "y-associated",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-a-linear/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-a-linear/omegaA",
+      "text": "7/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-a-linear/peripheralPoolRetained",
+      "text": "1/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-a-linear/residualPool",
+      "text": "1/20",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-c-decoupled/q",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-c-decoupled/omegaA",
+      "text": "22/13",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-c-decoupled/peripheralPoolRetained",
+      "text": "4/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/peripheralRetainedAtReordering/candidate-c-decoupled/residualPool",
+      "text": "4/35",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/0/gain",
+      "text": "1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/0/omegaAAtQ1",
+      "text": "3/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/0/EAtQ1",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/0/equivalentTo",
+      "text": "candidate-b-saturating",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/1/gain",
+      "text": "2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/1/omegaAAtQ1",
+      "text": "5/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/1/EAtQ1",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/2/gain",
+      "text": "3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/2/omegaAAtQ1",
+      "text": "7/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/2/firstReorderingAtQ",
+      "text": "3/4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/2/EAtQ1",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/3/gain",
+      "text": "4",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/3/omegaAAtQ1",
+      "text": "9/5",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/3/firstReorderingAtQ",
+      "text": "2/3",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/3/EAtQ1",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/4/gain",
+      "text": "6",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/4/omegaAAtQ1",
+      "text": "13/7",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/4/firstReorderingAtQ",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/retrievalGainSensitivity/4/EAtQ1",
+      "text": "1/2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/findings/0",
+      "text": "Candidate A fails the owner constraint that generic maximum concern must not force the incidental pool to exact zero. Candidate B fails the constraint that strong concern must be capable of reordering retrieval against recency. Each fails a different constraint, which is why neither is the law.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/findings/1",
+      "text": "Candidate C satisfies all seven constraints, and does so by decoupling rather than by finding a better compromise curve. It takes B's encoding arm unchanged and gives the retrieval arm an independent gain.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/findings/2",
+      "text": "The decisive comparative: A and C reorder retrieval at the SAME q = 3/4, but A has only 1/4 of the peripheral pool left at that point while C retains 4/7 — roughly 2.3× as much. The behaviour the North Star wants is obtainable without A's extreme encoding claim.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/findings/3",
+      "text": "The retrieval gain moves the reordering threshold while leaving the encoding arm bit-identical across every gain tested: gain 1 (= Candidate B) never reorders, gain 3 reorders at q = 3/4, gain 6 at q = 1/2, and E(1) = 1/2 throughout. That is the decoupling doing exactly the work it was introduced for, and it makes the gain an interpretable quantity — the concern level at which concern-congruent recall can overtake recency.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/findings/4",
+      "text": "The constraints are therefore jointly satisfiable, which was not obvious in advance: it was possible that requiring both non-annihilating encoding and crossover-capable retrieval would need a new mechanism. It does not.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/0",
+      "text": "Pure arithmetic at component scope. No identity, canonical record, allocation, record type, public ingress, state writer or corpus promotion. src/campaign3/priorConcernFeedback.ts is unmodified.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/1",
+      "text": "C satisfies the owner's qualitative constraints; it is NOT thereby the accepted law. The gain 3 is a first declared constant, not a calibration result, and neither arm's curve family is earned.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/2",
+      "text": "Which curve family is psychologically correct still needs an accepted downstream observable, BLOCKED on the encoding-strength and retrieval-probe seams.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/3",
+      "text": "The crossover 5/3 is a property of this two-episode fixture. A richer retrieval fixture moves it and could change which gains satisfy C6.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/4",
+      "text": "A and B are preserved as comparators per the ruling, not retired.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/5",
+      "text": "TaskConcern remains un-qualified as the general Affect representation; a later affect model may modulate these two arms differently, which is an argument for keeping them separate rather than for freezing this family.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/limits/6",
+      "text": "PHEN-ATTN-001 receives no PASS from this comparison.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/0/path",
+      "text": "src/campaign3/encodingAccessMath.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/0/sha256",
+      "text": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/1/path",
+      "text": "src/campaign3/spatialContextAllocation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/1/sha256",
+      "text": "f673037c06d23c39eb895dbe6ed30d752fec3d243d073cb56c2222342ac58ce7",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/2/path",
+      "text": "scripts/compare-concern-modulation-candidate-c.mjs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CONCERN_MODULATION_CANDIDATE_C_REV1.json",
+      "pointer": "/sources/2/sha256",
+      "text": "ed8fbeecabc441404a2ee476d81d50515ff761b8a672fe64b90c5f8f65b4bbe7",
+      "role": "BACKING"
+    }
+  ]
+}

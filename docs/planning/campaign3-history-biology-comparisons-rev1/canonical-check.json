@@ -1,0 +1,57 @@
+{
+  "status": "BOTH HISTORICAL COMPARISON IDENTITIES RECONSTRUCTED",
+  "sources": [
+    {
+      "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "sha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2",
+      "plan": {
+        "path": "docs/planning/BIOLOGY_PUBLIC_PLAN_REV2.json",
+        "sha256": "b7a5a0b329dcf99e673c8c09d1eb878d534c8509e10be06a8be55a8341153a25"
+      },
+      "harness": {
+        "path": "docs/planning/biology-public-development-rev2/scripts/identify-biology-public-comparison.mjs",
+        "sha256": "0cfa6fd41d220c46dae4e8af866ad7eaa36df18b239526c18b91121f752d8d12"
+      },
+      "models": 28,
+      "runs": 58,
+      "comparisonBytes": 36308,
+      "negativeControls": 2
+    },
+    {
+      "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "sha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f",
+      "plan": {
+        "path": "docs/planning/BIOLOGY_PUBLIC_PLAN_REV3.json",
+        "sha256": "6bad71a385c28d1d2c39ce568c3940ebcc69e230699934e78dbd5333a9ed0e04"
+      },
+      "harness": {
+        "path": "scripts/identify-biology-public-comparison.mjs",
+        "sha256": "1518b7580dee193e6bdd317eef371fdab89d102ebfd2bf427369964fb80ccf58"
+      },
+      "models": 28,
+      "runs": 58,
+      "comparisonBytes": 36308,
+      "negativeControls": 2
+    }
+  ],
+  "scope": "Canonical ordered identity and coupling equality only. No biology execution, original qualification timing authentication, source adoption or current-runtime parity.",
+  "dependencies": [
+    {
+      "path": "src/substrate/identity.ts",
+      "sha256": "8e7c27aa4c95b35b8f100ffc7553991b0e893d1f82c0c4d0c9e7fe276430216a"
+    },
+    {
+      "path": "src/substrate/canonicalEncoding.ts",
+      "sha256": "38be0e954e9bc658f7bc199775b98326f4afdf1a77f7d05771d6728fd5368aa6"
+    },
+    {
+      "path": "src/substrate/crypto.ts",
+      "sha256": "a1ab34b3f5a76e000ff2770dce03902001a5677fb2b609bd8049df4632515016"
+    },
+    {
+      "path": "src/campaign3/biologyPublicCodecs.ts",
+      "sha256": "f3b956164833b420bb2610143e5f49b3787b09a72037c464165ba24913030f0a"
+    }
+  ],
+  "checkerSha256": "e1a637d22f3bd58e75066a067d6e17970201672d308345b10fafa110d7b2f476"
+}

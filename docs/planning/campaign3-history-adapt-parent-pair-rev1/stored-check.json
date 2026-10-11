@@ -1,0 +1,32 @@
+{
+  "status": "PASS STORED PARENT-PAIR AND THREE MANIFEST COMMITMENTS",
+  "timelines": 2,
+  "recordedChecks": 52,
+  "storedTopologyEvents": 21,
+  "manifests": 3,
+  "membersPerManifest": 10,
+  "scope": "Stored data joins only. No runtime execution,original-S0 replay,full trace/random-draw inspection or independent verification of all52 historical checks. No current corpus promotion.",
+  "checker": {
+    "path": "scripts/check-history-adapt-parent-pair.mjs",
+    "sha256": "eef9ce0c0f230cd53672bb83554017c94f55093c6c48ba2eb309baffc1b26da2"
+  },
+  "readerSources": [
+    {
+      "path": "src/campaign2/memoryCodecs.ts",
+      "sha256": "ddf510d7e6625d7a8cc3803349b7ea23dae3efe8802b1c3fe0f671c91e7aee27"
+    },
+    {
+      "path": "src/substrate/canonicalEncoding.ts",
+      "sha256": "38be0e954e9bc658f7bc199775b98326f4afdf1a77f7d05771d6728fd5368aa6"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    },
+    {
+      "path": "src/substrate/contentManifest.ts",
+      "sha256": "078a8e031e985439c970e9ca7d95904753a79eff3c471bba0f746d59cd0467bb"
+    }
+  ],
+  "scopeNote": "Current decoder/compiler read-only check; these are not historical runtime source bindings or full transitive dependency manifests."
+}

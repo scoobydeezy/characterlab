@@ -1,0 +1,76 @@
+{
+  "status": "PASS; SYMBOLIC DECLARATION REPLAY ONLY",
+  "original": {
+    "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_REVIEW_REV2.json",
+    "sha256": "83aa1d92bef2c5709b8a2dd3f06f7e4dc376309e67ed2a0dbd4dc3f63052c4fe"
+  },
+  "checker": {
+    "path": "scripts/replay-history-ga-acquisition-recall-stage-closure-rev2.mjs",
+    "sha256": "647837bc1a9df8863ea5f79ae194f8e03b4f6397295f3ff4418669ce07ebcc02"
+  },
+  "helper": {
+    "path": "scripts/replay-history-ga-stage-helpers.mjs",
+    "sha256": "28ab46c25311d972cc51d644d37615de13f711bc6b2e42a840609ed7b1d10251"
+  },
+  "bindingInventory": {
+    "path": "docs/planning/campaign3-history-ga-stages-rev1/bindings.json",
+    "sha256": "ad9c416dea546cbf0693def9ea73575d415385f4091a09410c8ab62beaddf3ec"
+  },
+  "faults": [
+    {
+      "name": "encoder-physical-read",
+      "rejected": true
+    },
+    {
+      "name": "early-evidence",
+      "rejected": true
+    },
+    {
+      "name": "allocate-empty-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "owner-reallocates-acquisition",
+      "rejected": true
+    },
+    {
+      "name": "terminal-emits",
+      "rejected": true
+    },
+    {
+      "name": "body-graph-write",
+      "rejected": true
+    },
+    {
+      "name": "unavailable-cue-read",
+      "rejected": true
+    },
+    {
+      "name": "cue-requires-selection",
+      "rejected": true
+    },
+    {
+      "name": "recall-presents-automatically",
+      "rejected": true
+    },
+    {
+      "name": "unprojected-owner",
+      "rejected": true
+    },
+    {
+      "name": "cognitive-protocol-read",
+      "rejected": true
+    },
+    {
+      "name": "understated-work",
+      "rejected": true
+    },
+    {
+      "name": "second-evidence-identity",
+      "rejected": true
+    }
+  ],
+  "limits": [
+    "No scheduler, public admission or runtime component execution. Unavailable old component bytes remain excluded, not replaced by current implementations."
+  ]
+}

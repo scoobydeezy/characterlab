@@ -1,0 +1,152 @@
+{
+  "status": "PASS WITH EXPLICIT HISTORICAL SOURCE EXCLUSION",
+  "vectors": 79,
+  "implementationVectors": 76,
+  "deferredVectors": 3,
+  "quantizationExamples": 30,
+  "endpointExamples": 3,
+  "ledgerCorroboration": {
+    "source": {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "f2f355e0c1d7b637e5054c0791325ffe0a0bebc491018f199983b48ac8975064"
+    },
+    "rows": [
+      {
+        "id": "CTL-001",
+        "line": 183,
+        "text": "| `CTL-001` | Stored bounded Need meters and MPS-driven urgency | `CONTROL` | Embodiment/Need ownership comparison. Do not assume Need is necessarily stored state. |"
+      },
+      {
+        "id": "CTL-004",
+        "line": 186,
+        "text": "| `CTL-004` | Independent multiplicative salience budget | `CONTROL` | First salience model, not a universal attention law. |"
+      },
+      {
+        "id": "MEC-001",
+        "line": 117,
+        "text": "| `MEC-001` | Generic `EvidentialEstimate(mean, precision)` and its `NeedExpectation(subject, need)` specialization | `CONTROL` + `CANDIDATE` | Preserve the exact precision-weighted/prediction-error equivalence and resistance-to-isolated-contradiction tests. Re-evaluate which belief/expectation domains legitimately share this representation. |"
+      },
+      {
+        "id": "MEC-002",
+        "line": 118,
+        "text": "| `MEC-002` | Informative-bound gating for censored evidence | `CONTROL` + `CORPUS` | Preserve the four named cases: weak compatible bound, inconsistent bound, zero-information saturation, and genuine point evidence after repeated censoring. Accepted-bound precision over-crediting remains a known approximation. |"
+      },
+      {
+        "id": "MEC-003",
+        "line": 119,
+        "text": "| `MEC-003` | Bounded-effect decomposition: `Capacity`, `Applied`, `Overflow`, and `EvidenceKind` | `CONTROL` + `CONTRACT` | Preserve the exact identity wherever a bounded effect exists. The historical use of authoritative `Applied` as the character's observation is a perfect-interoception control; the new evidence kind must be computed from the permitted perceived measurement. It does not prove that every Need is a stored bounded meter. `Overflow` remains omniscient trace information. |"
+      },
+      {
+        "id": "MEC-004",
+        "line": 120,
+        "text": "| `MEC-004` | truth-side `EffectProvenance → perceptual projection → derived causal roles → SemanticExperience` | `PORT` with boundary correction; restricted token, event-pattern, continuant-recognition, and safe causal-role/provenance controls now present; integrated port blocked by parent `SEM-001` | This is the strongest earned world-truth-to-character-evidence control. Preserve separately identified actor/target/instrument/cause participation, but distinguish semantic `EventRole` from analytical `CausalRole`; keep full provenance, truth referent/action identity, and unobserved world facets on the trace side. `SemanticExperience` receives event-grouped perceptual referents, typed observed classification, and only observer-safe evidence admitted by each consumer's exact `ReadDomain`. Classification, tracking, recognition, retained state, appraisal, and evidence quality remain separate. Accepted `SEM-001G` replaces hidden provenance joins and winner-takes-all causal roles with a closed same-observer reference grammar plus zero-or-more nonrecursive character-relative causal-role claims. The current `(ConceptId, CausalRoleId, VisibleProvenanceSlotId)` path is permanently `CONTROL-SEM-LEGACY-CONCEPT-TOKEN`, valid only where the channel establishes identity, one role suffices, and no hidden link leaks. Historical direct action-key projection remains a control; accepted `SEM-001E` replaces its default character-evidence role with event-file pattern classification. Accepted `SEM-001F` permits continuant candidate identity only through observer-owned catalog/templates or a mapped identity claim. Learned action identity remains downstream. |"
+      },
+      {
+        "id": "MEC-005",
+        "line": 121,
+        "text": "| `MEC-005` | Character-relative attention separated from perception | `CONTROL` + `CONTRACT` | Preserve the distinction and residual-pool control. Fixed role weights and pool size remain candidate calibration, not invariants. |"
+      },
+      {
+        "id": "MEC-006",
+        "line": 122,
+        "text": "| `MEC-006` | Evidence-aware surprise for point/lower-bound/upper-bound observations | `PORT` as a shared classification/control | Preserve the rule that censored distance is surprising only when it contradicts the prior. All consumers must share the same evidence semantics. |"
+      },
+      {
+        "id": "MEC-007",
+        "line": 123,
+        "text": "| `MEC-007` | Multiplicative semantic-salience reference model | `CONTROL` | Preserve base category, event-specific causal role, attention, realized Need relevance, surprise, bounded response, and complete trace factors. The independent budget is the historical canonical control; shared/hybrid budgets remain alternatives. |"
+      },
+      {
+        "id": "MEC-012",
+        "line": 128,
+        "text": "| `MEC-012` | Reason Nuclei keyed by option, motive, referent, and resolved direction | `PORT` | Preserve exact semantic grouping, independent motives/referents, one active nucleus per resolved grouping, stable IDs, and no runtime interpretation. Re-test whether direction belongs in identity or resolved state. |"
+      },
+      {
+        "id": "MEC-013",
+        "line": 129,
+        "text": "| `MEC-013` | Cognitive-signal source roles | `PORT` | Preserve `MotiveGenerating`, `StandingDisposition`, `SituationalEvidence`, and `ContextModulating` as separately traceable roles. New source families must emit into this contract rather than invent private dice. |"
+      },
+      {
+        "id": "MEC-014",
+        "line": 130,
+        "text": "| `MEC-014` | Two-stage reason consolidation | `PORT` | Preserve “sum compatible raw causes, then bound/floor once,” plus a separate unfiltered evidence basis where required. This prevents path-dependent threshold artifacts and identity self-contamination. |"
+      },
+      {
+        "id": "MEC-015",
+        "line": 131,
+        "text": "| `MEC-015` | Dice/modifier grammar and exact arbitration | `PORT` | Mandatory initial arbitration implementation: base die, standing modifier, situational modifier, exact option distributions, `Margin`, `Contest`, `Stake`, `AuthorshipPotential`, resolution mode, and counter-addressed roll. |"
+      },
+      {
+        "id": "MEC-016",
+        "line": 132,
+        "text": "| `MEC-016` | Modifier activation rule | `PORT` | A modifier may alter a genuine active motive but cannot create semantic motivation from zero. Preserve weak-motive rescue and zero-motive exclusion tests. |"
+      },
+      {
+        "id": "MEC-017",
+        "line": 133,
+        "text": "| `MEC-017` | `DecisionExpression` as frozen contextual choice meaning | `PORT` | Preserve alternatives, reasons, opposition, uncertainty, stakes, intervention, chosen intent, and frozen dice expression independently of execution success. |"
+      },
+      {
+        "id": "MEC-018",
+        "line": 134,
+        "text": "| `MEC-018` | Acquired identity evidence and reinforcing standing-modifier loop | `PORT` | Preserve authorship-weighted evidence, consolidation, self-stabilization, fault lines, contradiction, transformation, and no authored trait bonus. Prevent feedback from becoming evidence for itself. |"
+      },
+      {
+        "id": "MEC-019",
+        "line": 135,
+        "text": "| `MEC-019` | Intent/attempt/outcome separation | `CONTRACT` + `CORPUS` | Preserve the failed-execution case: a choice can express commitment or courage even when world interference prevents success. |"
+      },
+      {
+        "id": "MEC-020",
+        "line": 136,
+        "text": "| `MEC-020` | Commitments as non-Need motive-generating sources with lifecycle identity | `PORT` as a control seam | Preserve active-only pressure, disappearance on retirement, and independent IDs for recurring instances. Do not model an obligation as an immortal appetite. |"
+      },
+      {
+        "id": "EXP-009",
+        "line": 152,
+        "text": "| `EXP-009` | Reason separation and correlation suite | `CORPUS` | Same referent/different motives stay separate; same motive/different referents stay separate; correlated derivations do not stack; independent evidence does. |"
+      },
+      {
+        "id": "EXP-014",
+        "line": 157,
+        "text": "| `EXP-014` | Aggregate evidence redundancy | `CORPUS` | `{1}` and `{2}` together make later `{1,2}` fully redundant; pairwise-only overlap must fail this control. |"
+      },
+      {
+        "id": "P3-009",
+        "line": 174,
+        "text": "| `P3-009` | Constitution, identity, belief, and appraisal separation | `CONTRACT` + `CORPUS` | Constitution may bias appraisal or standing reasons but cannot manufacture evidence, duplicate identity, mutate from a single roll, or eliminate agency. |"
+      },
+      {
+        "id": "P3-010",
+        "line": 175,
+        "text": "| `P3-010` | Same evidence/different people and same constitution/different biographies | `CORPUS` | Preserve as the minimum discrimination suite for constitutional projections. The historical seven-dimensional vector and quadratic projection are candidate controls only. |"
+      },
+      {
+        "id": "P3-011",
+        "line": 176,
+        "text": "| `P3-011` | Same-time evidence ordering and explicit decay | `CANDIDATE` + `CORPUS` | Preserve ordering and partition tests when the current event contract is specified. |"
+      }
+    ],
+    "scope": "Named23intake obligations only; not recovery/alias of historical ledger or a new whole-ledger audit."
+  },
+  "unavailableSourceDisposition": {
+    "source": "docs/planning/CAMPAIGN3_EMBODIED_SHAPE_REVIEW_REV1.json",
+    "originalPath": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+    "sha256": "050435eca7053f06eb925f63894a9dcdb0c700965856c57f48f0b8167de0ed88",
+    "disposition": "UNAVAILABLE HISTORICAL AUTHORITY HASH; NOT USED AS AUTHENTICATED CONTENT",
+    "reason": "Original script fingerprints authorities only; exact vectors derive from committed packet. Explicit23mechanism obligations in preserved motivation draft are reconciled against independently reviewed current ledger rows and separate accepted boundaries. Current ledger is not an alias for missing bytes.",
+    "blockedClaim": "Whole historical ledger reconstruction and any assertion about its unseen unique prose remain unverified.",
+    "reopen": "Authenticated original bytes become available or a substantive distinction depends on missing unique content.",
+    "owner": "RO-C3-021"
+  },
+  "sources": [
+    {
+      "path": "scripts/review-campaign3-embodied-shape.mjs",
+      "sha256": "66907c4f510394cf33ce802140fd379632ff47f7cec62a9211c5be04cc49cab8"
+    },
+    {
+      "path": "docs/planning/campaign3-history-embodied-contracts-rev1/authority-history-search.json",
+      "sha256": "8c0501cf5da4bac30f9450a6729a0bc5cd9d25c4955fc37db6a354a833ebce6a"
+    }
+  ]
+}

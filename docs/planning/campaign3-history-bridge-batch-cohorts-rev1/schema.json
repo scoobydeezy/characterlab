@@ -1,0 +1,2376 @@
+{
+  "shortStringsIncluded": true,
+  "leaves": [
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/contract",
+      "text": "adaptation-input/0.31-candidate",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/test/campaign2FrozenGateOrder.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "964ed7fcc07001df351b0f41ca82cd013722f68eade54f4c0f03c37f3cd72633",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/baseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/name",
+      "text": "ignore-referent-match",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/from",
+      "text": "if(key(f(match,u(f(match,1n))===1n?2n:3n))!==key(f(basis,2n)))return undefined;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/to",
+      "text": "",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/0/tests/1/errors/0",
+      "text": "expected [ …(2) ] to have a length of +0 but got 2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/name",
+      "text": "omit-empty-dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/from",
+      "text": "outputs:[dispatch,...evaluations]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/to",
+      "text": "outputs:[...(execution.rules.length?[dispatch]:[]),...evaluations]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/1/tests/1/errors/0",
+      "text": "expected [] to have a length of 1 but got +0",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/name",
+      "text": "state-dependent-applicability",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/from",
+      "text": "const evaluations=execution.rules.map(({ruleId,rule,path,gatePath})=>{",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/to",
+      "text": "const evaluations=execution.rules.filter(({gatePath})=>!gatePath||snapshot.read(gatePath)===undefined).map(({ruleId,rule,path,gatePath})=>{",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/0/errors/0",
+      "text": "expected [ { path: { …(3) }, value: { …(3) } } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/mutants/2/tests/1/errors/0",
+      "text": "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/limitations/0",
+      "text": "Isolated two-rule declaration specimen; frozen production artifacts unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/limitations/1",
+      "text": "Wrong-referent exposure uses an existing runtime-origin identity family, not a second character or CONTENT kind.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+      "pointer": "/limitations/2",
+      "text": "Three fixed-declaration in-memory substitutions; no exhaustive applicability or whole FCT verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/contract",
+      "text": "adaptation-input/0.31-candidate",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "50765b076384f7b38eb5d75f1435ea316a8b5715027a7fdbf9cb10045029707e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/test/campaign2FrozenGateOrder.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "964ed7fcc07001df351b0f41ca82cd013722f68eade54f4c0f03c37f3cd72633",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/baseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/name",
+      "text": "ignore-referent-match",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/from",
+      "text": "if(key(f(match,u(f(match,1n))===1n?2n:3n))!==key(f(basis,2n)))return undefined;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/to",
+      "text": "",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/0/tests/1/errors/0",
+      "text": "expected [ …(2) ] to have a length of +0 but got 2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/name",
+      "text": "omit-empty-dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/from",
+      "text": "outputs:[dispatch,...evaluations]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/to",
+      "text": "outputs:[...(execution.rules.length?[dispatch]:[]),...evaluations]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/1/tests/1/errors/0",
+      "text": "expected [] to have a length of 1 but got +0",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/name",
+      "text": "state-dependent-applicability",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/source",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/from",
+      "text": "const evaluations=execution.rules.map(({ruleId,rule,path,gatePath})=>{",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/to",
+      "text": "const evaluations=execution.rules.filter(({gatePath})=>!gatePath||snapshot.read(gatePath)===undefined).map(({ruleId,rule,path,gatePath})=>{",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "AD-E5: exact tolerance 1 / frozen-gated load 2 survives reversed committed rule-identity order",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/0/errors/0",
+      "text": "expected [ { path: { …(3) }, value: { …(3) } } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/1/name",
+      "text": "AD-E2: false gate retains its evaluation; empty and nonmatching resolvers still emit one dispatch",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/mutants/2/tests/1/errors/0",
+      "text": "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/limitations/0",
+      "text": "Isolated two-rule declaration specimen; frozen production artifacts unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/limitations/1",
+      "text": "Wrong-referent exposure uses an existing runtime-origin identity family, not a second character or CONTENT kind.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_APPLICABILITY_WRITE_BOUNDARY_REFRESH.json",
+      "pointer": "/limitations/2",
+      "text": "Three fixed-declaration in-memory substitutions; no exhaustive applicability or whole FCT verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationEvaluation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "5bbac6273200d04c2dcc55f26b46bb9f17ae51384671afb0095b7177b0b389ba",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/test/campaign2BatchWitnesses.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "9e067345670059aabc7ab3ef1ba9f9ce0bf51f1fc7b361bffd58e80484e3aa58",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/1/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/2/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/3/name",
+      "text": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/4/name",
+      "text": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/name",
+      "text": "omit-batch-collision-check",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/1/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/1/errors/0",
+      "text": "promise resolved \"true\" instead of rejecting",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/2/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/2/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/2/errors/0",
+      "text": "promise resolved \"true\" instead of rejecting",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/3/name",
+      "text": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/4/name",
+      "text": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/name",
+      "text": "filter-zero-count-rule",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/errors/0",
+      "text": "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/1/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/1/errors/0",
+      "text": "promise resolved \"true\" instead of rejecting",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/2/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/3/name",
+      "text": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/3/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/3/errors/0",
+      "text": "expected [] to have a length of 2 but got +0",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/4/name",
+      "text": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/name",
+      "text": "reverse-target-gate-read-evidence",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/1/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/2/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/name",
+      "text": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/errors/0",
+      "text": "expected [ …(2) ] to deeply equal [ …(2) ]",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/4/name",
+      "text": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/name",
+      "text": "omit-gate-read-evidence",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/name",
+      "text": "AD-E1: n=0 and n=3 retain single-rule topology and allocation positions with Step=2",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/1/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=false)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/2/name",
+      "text": "AD-E6: collision precedes all target/gate projection reads (false gate=true)",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/3/name",
+      "text": "AD-E7: same-path target/gate retains two ordered distinct-accessor reads for absent, zero-count and false-gate cases",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/3/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/3/errors/0",
+      "text": "expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/4/name",
+      "text": "AD-E6: noncolliding regulatory/procedural event permutation preserves settled state",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Five tests cover AD-E1, AD-E6 and selected AD-E7 witnesses, not all ADAPT controls.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "No global factory, VAL, ADAPT or Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "6268fc0b1d2af2bf210c1d862b6d2278464a642bf89f7ae8db6b3470ddcf5abe",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/bridgeObservation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/rulesVersion",
+      "text": "rules/campaign2-bounded-bridge/0.2-candidate",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/declarationHashes/registry",
+      "text": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/declarationHashes/content",
+      "text": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/declarationHashes/parameters",
+      "text": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/0/hashes/outputs",
+      "text": "0f7c90b6c51e858526c876094ef3f29f85b6372bf268f9bf6d050fc737050320",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/0/hashes/trace",
+      "text": "4f2f4645e1e57a6ed9cc4677c1acee5dc5430c6037e5a987b79becb6e5d9cd7c",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/1/hashes/state",
+      "text": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/1/hashes/outputs",
+      "text": "92b83e15e9c08a7e6cced302b9021666a57bd12acc6e371a6874b1a7335f9062",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/baseline/1/hashes/trace",
+      "text": "225d1892154d7fd10ff59a4fcfe728ce282b2d707bd1d58296a60898233f6f18",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/name",
+      "text": "retain-truth-provenance",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/source",
+      "text": "src/campaign2/bridgeObservation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/from",
+      "text": "fields.set(10n,list([]));",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/to",
+      "text": "/* retain raw truth provenance */",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/0/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/name",
+      "text": "omit-authoritative-observation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/from",
+      "text": "outputs.push(observation); // Sole published observation, never its raw candidate.",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/to",
+      "text": "void observation;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/differences/1/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/differences/1/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/0/hashes/outputs",
+      "text": "67232684b63aac09915b86332d4cf8360b3ce232c3ca708f0d13ca3ca65cdb01",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/0/hashes/trace",
+      "text": "9ddc6b88628027a0c2b80ba6fddcf9d899c9dbdf47c546f47111e6d1bbcfb622",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/1/hashes/state",
+      "text": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/1/hashes/outputs",
+      "text": "a7e33651348aa2efe47650f7bd14e2ae2e1f9c6ffc51471e14e7ef0fd83827e0",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/1/cases/1/hashes/trace",
+      "text": "f33b02aa5ec2fc836f7c7f60f0f3a44760419728830366c59d8afe52146b7ab9",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/name",
+      "text": "omit-sem-support",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/from",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/to",
+      "text": "supportingObservationIds:[]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/2/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/name",
+      "text": "duplicate-sem-support",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/from",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/to",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value},{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/3/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/name",
+      "text": "shift-sem-time",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/from",
+      "text": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/to",
+      "text": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt+1n",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/mutations/4/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/comparison",
+      "text": "Exact bytes compared in memory; hashes in report are diagnostics only.",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Differential interpreter substitution controls, not an independent OBS/SEM semantics implementation.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Two first-profile regulatory inputs with the same fixed safe pulse; no complete FCT-F or inherited SEM vector claim.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "PRJ execution and roster variants are not admitted by this frozen first model and are separate controls.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "6268fc0b1d2af2bf210c1d862b6d2278464a642bf89f7ae8db6b3470ddcf5abe",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/bridgeObservation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/rulesVersion",
+      "text": "rules/campaign2-bounded-bridge/0.2-candidate",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/declarationHashes/registry",
+      "text": "1104a2a43c33f62c15ebf7ceb9b5e2ef050b67a8a3d658b14199c04158f8b764",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/declarationHashes/content",
+      "text": "5d950405ca403c527029c16ffaadc1f12ed0b0785ac79f44f4bc20142ae2b1dd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/declarationHashes/parameters",
+      "text": "689e8db5bcd83878d3fed0b65f1bb733ee8e50d34969c7d2cb3e02d2c445a8c4",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/0/hashes/outputs",
+      "text": "0f7c90b6c51e858526c876094ef3f29f85b6372bf268f9bf6d050fc737050320",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/0/hashes/trace",
+      "text": "4f2f4645e1e57a6ed9cc4677c1acee5dc5430c6037e5a987b79becb6e5d9cd7c",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/1/hashes/state",
+      "text": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/1/hashes/outputs",
+      "text": "92b83e15e9c08a7e6cced302b9021666a57bd12acc6e371a6874b1a7335f9062",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/baseline/1/hashes/trace",
+      "text": "225d1892154d7fd10ff59a4fcfe728ce282b2d707bd1d58296a60898233f6f18",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/name",
+      "text": "retain-truth-provenance",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/source",
+      "text": "src/campaign2/bridgeObservation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/from",
+      "text": "fields.set(10n,list([]));",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/to",
+      "text": "/* retain raw truth provenance */",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/0/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/name",
+      "text": "omit-authoritative-observation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/from",
+      "text": "outputs.push(observation); // Sole published observation, never its raw candidate.",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/to",
+      "text": "void observation;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/differences/1/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/differences/1/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/0/hashes/outputs",
+      "text": "67232684b63aac09915b86332d4cf8360b3ce232c3ca708f0d13ca3ca65cdb01",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/0/hashes/trace",
+      "text": "9ddc6b88628027a0c2b80ba6fddcf9d899c9dbdf47c546f47111e6d1bbcfb622",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/1/hashes/state",
+      "text": "7b686f15c254cb861b479f3801a49dc89ae3d0c258f6e155bf2aa72e7803ee7f",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/1/hashes/outputs",
+      "text": "a7e33651348aa2efe47650f7bd14e2ae2e1f9c6ffc51471e14e7ef0fd83827e0",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/1/cases/1/hashes/trace",
+      "text": "f33b02aa5ec2fc836f7c7f60f0f3a44760419728830366c59d8afe52146b7ab9",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/name",
+      "text": "omit-sem-support",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/from",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/to",
+      "text": "supportingObservationIds:[]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/2/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/name",
+      "text": "duplicate-sem-support",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/from",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/to",
+      "text": "supportingObservationIds:[{observerId:observer,observationId:observation.payload.value},{observerId:observer,observationId:observation.payload.value}]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/3/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/name",
+      "text": "shift-sem-time",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/source",
+      "text": "src/campaign2/consequenceBridge.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/from",
+      "text": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/to",
+      "text": "experienceId:relation.reservation!.experienceId,observerId:observer,occurredAt:event.dueAt+1n",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/0/changed/0",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/0/changed/1",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/1/changed/0",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/1/changed/1",
+      "text": "outputs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/differences/1/changed/2",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/0/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/0/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/0/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/0/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/1/error",
+      "text": "TRANSITION_FAILURE",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/1/hashes/state",
+      "text": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/1/hashes/outputs",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/mutations/4/cases/1/hashes/trace",
+      "text": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/comparison",
+      "text": "Exact bytes compared in memory; hashes in report are diagnostics only.",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/limitations/0",
+      "text": "Differential interpreter substitution controls, not an independent OBS/SEM semantics implementation.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/limitations/1",
+      "text": "Two first-profile regulatory inputs with the same fixed safe pulse; no complete FCT-F or inherited SEM vector claim.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV2.json",
+      "pointer": "/limitations/2",
+      "text": "PRJ execution and roster variants are not admitted by this frozen first model and are separate controls.",
+      "role": "NARRATIVE"
+    }
+  ],
+  "scope": "All five JSON exports including short statuses, diagnostic hashes and available mutation strings. No new execution or source fingerprint inferred from labels."
+}

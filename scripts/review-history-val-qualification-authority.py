@@ -1,0 +1,33 @@
+"""Reconcile VAL acceptance, rejected deferral and corrected validation order."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');B=P/'campaign3-history-universe-rev1';O=P/'campaign3-history-val-qualification-authority-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+ p=O/n
+ if p.exists():assert load(p)==v,p
+ else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+notes={
+'docs/planning/CAMPAIGN2_VAL_CLOSURE_RECONCILIATION.md':'Accepted additions establish E generic canonical-content permutation, M reference closure and W current character-only CONTENT, not whole VAL at this intermediate checkpoint. Twelve paired missing-registry/content/self-cycle public calls compare ordinary and hostile invariant text; committed text remains data, exact content carrier/cause and no runtime observed. Generic empty content with no kind and two-character permutation do not admit those models under frozen one-character profile.700 descriptor calls do not substitute for role positions or error precedence. Scope requires admitted branches and actual interventions, not inference from finite independent reports to arbitrary host/compiler equivalence. T second-kind positive remains conditional on separately accepted kind and validator; no fabricated witness. Intermediate remaining A..W statuses are superseded only by final accepted crosswalk and memory-role revision2. Bounded no-RNG persistence and later RNG evidence stay separate.',
+'docs/planning/CAMPAIGN2_VAL_A_W_QUALIFICATION_CROSSWALK.md':'Final appended acceptance qualifies current A..W in named finite scopes; historical proposal table and rejected V deferral are not current verdicts. Evidence keys identify particular tests/mutants, not all assertions or every interpreter input. Five historical refreshed assays retain originals after source-fingerprint changes;46 detected mutants are not runtime self-detection against arbitrary implementation changes. D finite language, E generic permutations, G/U explicit ambient stand-ins, L/W character-only, N generic inherited PRJ, O named interpreters, P original restore, Q finite specialization with shared codec/setup. Public265/278 and generic266 initially left V insufficient; first-profile counts58/0/6 are correct only for that specimen, not absence across already admitted memory successor. Memory358 contains266 and removes proposed future deferral. T unsupported-kind commitment changes do not admit a second kind; positive remains conditional. Preserve test-only narrowing/extra-field typing failures and earlier insufficient missing-field R assay. Callback rejection, altered-build qualification and canonical identity are distinct evidence. No universal compiler, host access, error precedence or whole factory inference.',
+'docs/planning/CAMPAIGN2_VAL_V_MEMORY_ROLE_REVIEW.md':'Accepted revision2 closes current bounded VAL, retaining exact memory-model narrowing and separate factory qualification. First-profile-only public266 deferral was explicitly rejected because accepted memory358.FieldRequirements already contains266 in both recall configurations; R=true additionally349. Initial wrong-namespace assay rejected at frozen matcher before VAL: correct admission but insufficient role-traversal proof. First production adjustment moved role traversal before matcher but wrongly before CONTENT; same INVALID_CONFIGURATION class did not excuse wrong stage. Revision2 first validates actual CONTENT/reference closure with kind entries and empty role operand/no active DomainValidator, then full declaration visitor, then exact source matching, then role-enabled CONTENT and state/model/runtime. Same interpreter/detached source, not parallel validator or expanded model language. Dual-defect self-cycle plus266.OutputRole namespace mutation yields CONTENT-owned error; only kind-stage observed, no full role traversal, ModelIdentity/runtime or original save change. Role-only and role-valid-selector controls separately prove stage4 and retained exact matcher. Empty S0/input does not execute recall. Diagnostic string observes stage, not standardized message.35-test earlier/36-test corrected cohorts remain distinct, including33 memory and joined parent pair;150prior+17packet hashes are not new models. Generic shared/optional/omitted266 controls and public265/266/278 compose V. T-positive remains conditional; PERSIST-I historical deferral is resolved only by separate successor/cross-build evidence, not this receipt.'}
+ip=P/'campaign3-history-source-roles-rev242/index.json';ix=load(ip);entries={e['path']:e for e in load(B/'manifest.json')['entries']}
+chain=[ref(p) for p in [P/'CAMPAIGN2_VAL_V_MEMORY_ROLE_REVIEW.md',P/'CAMPAIGN2_BOUNDED_FACTORY_QUALIFICATION.md',P/'campaign3-history-declaration-dependencies-rev1/review.json',P/'campaign3-history-persistence-authority-rev1/review.json']]
+assert len(chain)==4
+sources=[]
+for p,n in notes.items():
+ assert p in ix['unassignedCandidatePaths'] and ref(p)['sha256']==entries[p]['sha256']
+ sources.append(dict(**ref(p),role='SCOPED VAL QUALIFICATION WITH REJECTED DEFERRAL AND CORRECTED PRECEDENCE',judgment=n,acceptanceChain=chain))
+rows=[]
+with (B/'units.jsonl').open(encoding='utf-8') as f:
+ for line in f:
+  u=json.loads(line)
+  if u['source'] not in notes:continue
+  assert u['sourceSha256']==entries[u['source']]['sha256']
+  rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],category='NARRATIVE'))
+assert len({r['occurrenceId'] for r in rows})==len(rows)
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='THREE VAL QUALIFICATION AUTHORITIES RECONCILED',checker=ref(__file__),sourceIndex=ref(ip),sourceRoles=sources,rows=rows,preservedArtifacts=[],limits=['Final acceptance retains finite scopes; generic and public witnesses, old and refreshed source receipts remain distinct.','Rejected266 deferral, matcher-first insufficient assay and first wrong CONTENT/role ordering preserved; same error class did not establish correct precedence.','T-positive second kind remains conditional; no obligation status change, runtime/test/build rerun, new archive/source gap or full historical adequacy claim.'],obligations=['RO-C3-008','RO-C3-019','RO-C3-020','RO-C3-021']))
+save('check.json',dict(status='PASS VAL QUALIFICATION AUTHORITY HISTORY',sources=len(sources),originalNarrativeOccurrences=len(rows),originalBackingOccurrences=0,review=ref(O/'review.json')))
+print(json.dumps(load(O/'check.json')))

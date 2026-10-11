@@ -1,0 +1,81 @@
+"""Reconcile the original model brief without treating its hypotheses as current law."""
+from pathlib import Path
+from fractions import Fraction as F
+import json, hashlib, collections
+
+P = Path('docs/planning')
+B = P / 'campaign3-history-universe-rev1'
+O = P / 'campaign3-history-original-brief-rev1'
+source = next(Path('reference').glob('*Deterministic*Brief.md')).as_posix()
+
+def load(p): return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p): return dict(path=Path(p).as_posix(), sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(p, v):
+    if p.exists(): assert load(p) == v, p
+    else: p.write_text(json.dumps(v, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
+
+groups = [
+ (1,102,'HISTORICAL RESEARCH MANDATE','Unification is explicitly a hypothesis, not proof that needs/access alone derive all listed phenomena. Derived/requires/deferred are research dispositions; deferral is not an achieved capability. Behavior informs Vivarium, not automatic code or topology transfer.'),
+ (103,268,'RETAINED METHOD / HISTORICAL VOCABULARY','Deterministic M/S0/I/R transitions and mathematical-versus-psychological proof separation remain valid method. Seven named dimensions and trait projection are historical candidates, not binding current ontology. No LLM or wall-clock authority; experiments and counterfactuals are required.'),
+ (269,394,'BOUNDED MATHEMATICAL CONTRACT','Exact temporary arithmetic and explicit fixed-lattice commitment are distinct. RoundEven error is a one-quantization bound, not a global trajectory error bound. Addressed randomness prevents unrelated draws shifting results only with stable semantic addresses; this abstract H is not a specification of current cryptographic encoding. Atomic pre-state transitions and canonical traversal retain their scope.'),
+ (395,515,'SUPERSEDED TOPOLOGY / RETAINED CANDIDATE','The six-part S_t tuple and initially derived phenomena are a historical minimum hypothesis, not the current complete state inventory. Initial immutable personality is not a prohibition on current plastic disposition/development. The seven-dimensional quadratic fields are candidates; finite g is strictly bounded, without proving psychological accuracy.'),
+ (516,592,'PRESERVED NEED CONTROL','Clamped linear Need drift, normalized deficit (S>0) and importance-times-deficit urgency are explicit historical controls. Core/acquired labels do not prove instantiation or addiction. Modern body, regulation, interoception and Need ownership remain separate; this compact Need state cannot substitute for them.'),
+ (593,624,'SUPERSEDED EPISTEMIC ASSUMPTION','Shared authoritative Experience and true before/after Need delta are historical perfect-observation assumptions. No-private-interpretation wording cannot override current observer-relative perception, evidence admission, appraisal or reinterpretation. Preserve immutable source evidence and lawful distinct consumers, not omniscient shared meaning. MEC004/RET014 record the boundary correction.'),
+ (625,723,'PRESERVED LEARNING CONTROL WITH LIMITS','Precision-weighted mean equals prediction-error form for a defined positive denominator before specified quantization. Decay and authored Need-dependent precision are candidate choices. Evidence accumulation can resist isolated contradiction but is not calibrated confidence. Confidence bound requires K_C>0 as well as finite tau>=0; the displayed section does not state that condition locally. Naive point learning is superseded for censored observations; informative-bound controls and accepted-bound full-point-credit approximation remain. Unknown and known zero must not collapse.'),
+ (724,795,'RETAINED IDENTITY / GRAPH INVARIANT','Typed stable semantic keys and sole association mutation authority are load-bearing within this graph control. Truth concept keys are not automatically observer recognition. Nonnegative row-substochastic weights are a model invariant, not proof that one graph captures all cognition.'),
+ (796,920,'EXACT NORMALIZATION CONTROL','Round temporary weights to integer lattice mass, then allocate overflow proportionally by largest remainder with canonical ties. This is not independent rounding of already normalized fractions. It preserves nonnegativity and row budget, equality only on overflow. Eligible pairs and salience producers need their own semantics; the formula alone does not prove learned recognition or unlimited capacity.'),
+ (921,990,'BOUNDED ACTIVATION PROOF','For finite nonnegative row-substochastic W and 0<=beta<1, infinity norm gives spectral radius<1 and unique inverse solution. Exact temporary solve avoids convergence-tolerance authority; quantization occurs only at specified commits. This proof does not establish necessity of multi-hop activation, production scaling or candidate completeness.'),
+ (991,1054,'PRESERVED MEMORY CONTROL / LATER OWNER DISTINCTIONS','Immutable historical episode records and recency/frequency decay are controls. Retrieval timestamps change future accessibility in the old model; current acquisition, retention, selection, use, rehearsal and presentation settlement have distinct owners and do not inherit an automatic generic recall-write edge. Reconsolidation association effects and literal content rewrite are separate; the latter was deferred. Unbounded timestamp history is not compression.'),
+ (1055,1168,'UNVALIDATED SOCIAL CANDIDATE','Mean/covariance person belief and Kalman-like update are historical planned candidates, not scalar BELIEF qualification or an earned general posterior. Invertibility, covariance validity and quantization require explicit contracts. Quadratic expected score uses first/second moments; g(E[s]) is not generally E[g(s)]. P=LL^T is the appraisal penalty matrix, distinct from personality vector P. Separate social lenses reject a universal relationship score without proving this particular field law.'),
+ (1169,1198,'CONDITIONAL DISTILLATION OBLIGATION','Identical true target, admitted evidence and initial uncertainty comparison is a proposed CharacterLab/Vivarium experiment, not an executed result. Semantic similarity is not mathematical equivalence. Current research brief retains multi-metric comparison when competing implementations exist; no production superiority is claimed here.'),
+ (1199,1237,'CANDIDATE VALUES / CORRECT-FORWARD IMPLICATION','Need-weighted confidence/expectation Value is a candidate, not unique Values ontology. BeliefChange implies ValueChange is too strong: weighted contributions can cancel or irrelevant beliefs can change. Exact cancellation witness is preserved in arithmetic-check.json. Correct direction: a derived Value change must trace to its defining operands; changing an operand need not change Value. Persistence through evidence weight is bounded, not universal value inertia.'),
+ (1238,1262,'HISTORICAL CANDIDATE CONTROL','Threshold/top-K accessibility and world-precondition filtering are old controls. Current candidate construction must preserve perceived feasibility versus actual execution; omniscient world preconditions are not automatic character evidence. No emergency escape hatch is an experimental discipline, not permission to erase a required response or infer graph necessity from failure.'),
+ (1263,1390,'SUPERSEDED DEFAULT / RETAINED CHOICE CONTROL','Summed Need/Value/personality/social/context score and positive polynomial choice weights are historical alternatives to later reason/dice arbitration. Association and memory accessibility are not added as utility again in this control; this is not a ban on separately justified contextual/history signals. Epsilon>0 and integer gamma give positive weights for a nonempty candidate set; empty-set behavior needs a contract. Personality-dependent gamma remains unearned here.'),
+ (1391,1421,'HISTORICAL CAUSAL ORDER','Twenty-step cycle and direct world-outcome learning are historical ordering, not the current scheduler. Keep intent/attempt/outcome, safe sensing, learning timing, source ownership and trace boundaries from accepted current contracts. A complete trace does not grant character access to its truth-side fields.'),
+ (1422,1514,'PRESERVED ADDICTION HYPOTHESIS','Exposure adaptation, threshold-instantiated withdrawal Need and relief loop are proposed controls, not proven sufficient addiction or necessary separate craving. Functions f_K/f_U are not executable definitions. Later biological component/public qualification supplies separately typed body, sensing, learned reward/harm, goals/control and actual feedback, without proving this historical acquired-Need law or clinical validity.'),
+ (1515,1601,'DIAGNOSTICS NOT PRIMITIVE STATE','Dependence concentration, relationship importance, obsession and inhibition ratios are researcher diagnostics under explicit denominators/windows, not independent learned state or causes. A_x here denotes accessibility, not the exposure adaptation variable in section26. Importance requires nonzero total K; obsession window remains unspecified. Distinct affection/trust/comfort/fear/respect must survive reduction. Modern control cannot be dismissed as a diagnostic merely because old inhibition was.'),
+ (1602,1673,'PHENOMENON / COUNTERFACTUAL OBLIGATION','Fourteen named experiments are required historical phenomena, not fourteen successes. Preserve P3-012 backlog and current bounded clause/corpus evidence; mere checklist coverage cannot qualify whole addiction/grief/social comparison. Paired interventions must retain exact input/seed/time scope and trace intermediates.'),
+ (1674,1798,'TRACE / COMPARISON METHOD','Complete derivations and shared experimental uniform are research requirements. Same uniform alone is insufficient if semantic addresses, candidate mapping or model timing differ. Candidate/rank/distribution/counterfactual agreement remain separate from sampled equality. This diagram is historical routing, not current topology or evidence authority.'),
+ (1799,1904,'PROOF OBLIGATIONS WITH DOMAINS','Retain determinism, per-commit quantization, row budget/mutation authority, beta<1 uniqueness, finite response and conditional prediction-error identities. Confidence requires positive K_C; bounds alone do not calibrate correctness. Value transitivity is the defensible dependency direction, unlike section21 converse. Mathematical proofs do not select psychological laws.'),
+ (1905,2068,'HISTORICAL SEQUENCE / ILLUSTRATIVE RESULTS','Phases0..6 are historical sequencing, not current Campaign3 completion gates. Later personality/social/Values/addiction sections are research plans. Distillation percentages82/96/97 and grief examples are explicitly possible findings, not measured evidence. A failed first fixture does not prove a new primitive necessary.'),
+ (2069,2199,'RESEARCH GATES / EXAMPLES NOT RESULTS','Preserve psychological/computational/architectural review and counterfactual justification. Historical stopping categories do not waive current mandatory history/corpus/native gates. The less-than2-percent graph result and attachment-only-when-separate statement are illustrative output, not observed findings or mechanism necessity. Required phenomena survive while candidate implementations may change.')
+]
+entries={e['path']:e for e in load(B/'manifest.json')['entries']}
+assert ref(source)['sha256']==entries[source]['sha256']
+assert len(Path(source).read_text(encoding='utf-8').splitlines())==2199
+chainpaths=['CHARACTER_ARCHITECTURE.md','CharacterLab — Ideal Character Research Program Brief.md',str(P/'REFERENCE_MECHANISM_LEDGER.md'),str(P/'CAMPAIGN3_HISTORY_MECHANISMS_CHECKPOINT.md'),str(P/'CAMPAIGN3_HISTORY_VALUES_ADDITION_CHECKPOINT.md'),str(P/'CAMPAIGN3_BELIEF_QUALIFICATION.md'),str(P/'CAMPAIGN3_HISTORY_REFERENCE_README_CHECKPOINT.md'),str(P/'CAMPAIGN3_HISTORY_BIOLOGY_SOURCES_CHECKPOINT.md'),str(P/'CAMPAIGN3_HISTORY_DEFINING_PUBLIC_CHECKPOINT.md')]
+chain=[ref(p) for p in chainpaths]
+rows=[]
+with (B/'units.jsonl').open(encoding='utf-8') as f:
+    for line in f:
+        u=json.loads(line)
+        if u['source']!=source: continue
+        a,b=u['location']['startLine'],u['location']['endLine']
+        selected=[g for g in groups if g[0]<=a<=b<=g[1]]
+        assert len(selected)==1,(a,b)
+        g=selected[0]
+        rows.append(dict(occurrenceId=u['id'],source=source,sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],role=g[2],judgment=g[3]))
+assert len(rows)==len({r['occurrenceId'] for r in rows})
+O.mkdir(exist_ok=True)
+before=[F(1,4),F(-1,4)];after=[F(1,2),F(-1,2)];weights=[F(1,2)]*2
+def value(m):
+    s=sum(w*x for w,x in zip(weights,m));return s/(1+abs(s))
+assert before!=after and value(before)==value(after)==0
+arithmetic=dict(status='PASS: EXACT COUNTEREXAMPLE TO SECTION21 CONVERSE',source=ref(source),sourceLines=[1199,1234],importance=['1','1'],confidence=['1/2','1/2'],beforeMean=list(map(str,before)),afterMean=list(map(str,after)),beforeValue=str(value(before)),afterValue=str(value(after)),finding='Belief operands changed but their weighted sum and derived Value did not. Dependency is not injectivity.',scope='Exact historical formula only; no native Values runtime or general psychological experiment.',checker=ref(__file__))
+save(O/'arithmetic-check.json',arithmetic)
+obs=['RO-C3-004','RO-C3-009','RO-C3-010','RO-C3-014','RO-C3-019','RO-C3-020','RO-C3-021']
+role=dict(**ref(source),role='HISTORICAL MODEL BRIEF: METHOD / CONTROLS / HYPOTHESES',judgment='All2199 lines reviewed; exact original units carry section-specific dispositions. Current authority supersedes historical topology/defaults. Illustrative results are not data; Value implication corrected forward; candidate social/addiction laws remain unearned by this source.',acceptanceChain=chain+[ref(O/'arithmetic-check.json')])
+review=dict(status='WHOLE ORIGINAL MODEL BRIEF RECONCILED; HQ011 OPEN',sourceRoles=[role],reviewedLineRanges=[[1,2199]],rows=rows,scopeFindings=[dict(startLine=a,endLine=b,role=r,judgment=j) for a,b,r,j in groups],obligations=obs,limits=['No fresh simulation or whole-suite rerun.','Remaining five historical briefs require their own reviews.','Missing formula pin, legacy log and GA source provenance remain open.','Review acceptance is not qualification of every historical proposed phenomenon or law.'])
+save(O/'review.json',review)
+save(O/'check.json',dict(status='PASS; HQ011 OPEN',sources=1,originalNarrativeOccurrences=len(rows),originalBackingOccurrences=0,sectionGroups=len(groups),checker=ref(__file__)))
+v=load(P/'campaign3-history-source-roles-rev63/index.json');roles={r['path']:r for r in v['roleAssignments']}
+assert source not in roles
+roles[source]=dict(path=source,sha256=role['sha256'],category='WHOLE_ORIGINAL_MODEL_BRIEF_REVIEWED',role=role['role'],scope=role['judgment'],evidence=[ref(O/'review.json')],acceptanceChain=role['acceptanceChain'])
+v['version']='campaign3-history-source-roles/0.64';v['predecessor']=ref(P/'campaign3-history-source-roles-rev63/index.json')
+v['roleAssignments']=[roles[p] for p in sorted(roles)];v['unassignedCandidatePaths']=sorted(set(entries)-set(roles));v['reviewedInputs'].append(ref(O/'review.json'))
+v['originalNarrativeOrFindingOccurrences']+=len(rows);v['backingBreakdown']['originalModelBrief']=0
+v['rules'].append('REV64 adds the whole original model brief with section-specific historical/control/hypothesis dispositions. Exact cancellation refutes its unconditional BeliefChange=>ValueChange converse; illustrative percentages are not results. Current observer boundaries supersede shared-truth experience. Five other briefs remain separate.')
+I=P/'campaign3-history-source-roles-rev64';I.mkdir(exist_ok=True);save(I/'index.json',v)
+check=dict(status=v['status'],candidateFiles=len(entries),assignedSources=len(roles),unassignedWithinThisIndex=len(v['unassignedCandidatePaths']),byCategory=dict(collections.Counter(r['category'] for r in roles.values())),originalNarrativeOrFindingOccurrences=v['originalNarrativeOrFindingOccurrences'],originalBackingOccurrences=v['originalBackingFieldOccurrences'],explicitArchivesOutsideCensus=len(v['explicitBackingOutsideProseManifest']),indexSha256=ref(I/'index.json')['sha256'],checkerSha256=ref(__file__)['sha256'])
+save(I/'check.json',check)
+print(json.dumps({k:x for k,x in check.items() if k!='byCategory'}))

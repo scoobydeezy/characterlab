@@ -1,0 +1,478 @@
+{
+  "status": "PASS; TEN ORIGINAL MUTATIONS ON CURRENT SOURCES AND13 FRESH COMPONENT TESTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-reserve-bridge.mjs",
+    "sha256": "65ca1e52d7643ac616f111aaacfc29ab263bff72ab00aea0c034d7013a118779"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveSource.ts",
+        "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+      },
+      "fault": "observe-unrequested-channels",
+      "removed": "f.channels.filter(c=>requested.includes(c.channel))",
+      "inserted": "f.channels.slice()",
+      "witness": "LRO-E",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/observation-observe-unrequested-channels.json",
+        "sha256": "fdd8ff9f48cc20c0af6d94c45336ea15a4c60bdf2c4956716b2fa583755568af"
+      },
+      "failed": [
+        "actual local reserve canonical sample projection LRO-A: requested actual zero sample owns one observation, with distinct producer version",
+        "actual local reserve canonical sample projection LRO-C: hidden key renaming preserves bytes; requests are canonical and allocate only requested channels",
+        "actual local reserve canonical sample projection LRO-E: unavailable is explicit and unrequested future channel is not queried",
+        "actual local reserve canonical sample projection LRO-F: observations do not mutate physical state and detach caller observer data",
+        "body-only SEM opportunity reservation LRO-H: all-unavailable observation has no fake experience, but can complete empty selection"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "claim-old-producer",
+      "removed": "='local-reserve-level-observation/0.1-candidate'",
+      "inserted": "='embodied-level-observation/0.1-candidate'",
+      "witness": "LRO-B",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/observation-claim-old-producer.json",
+        "sha256": "16392f56ccdec12877c1f19a817b4b73e5d6bd46ea0c1f771cce8b5a70355517"
+      },
+      "failed": [
+        "actual local reserve canonical sample projection LRO-B: old consumers reject new source, and exact new consumers reject old version substitution"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "reuse-observation",
+      "removed": "||used.has(ordinal)",
+      "inserted": "",
+      "witness": "LRO-D",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/observation-reuse-observation.json",
+        "sha256": "af7f85648b7c1892ae2b138dc7983fe3f71b394c5adf43e45363b8270516a6d9"
+      },
+      "failed": [
+        "actual local reserve canonical sample projection LRO-D: bad observer/channel requests reject before allocation; duplicate allocated observations reject"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "observer-input-alias",
+      "removed": "observer=typedIdentifier(1000,text(observer.payload.value));",
+      "inserted": "",
+      "witness": "LRO-F",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/observation-observer-input-alias.json",
+        "sha256": "6f918fd806822654fe7648ccf01db19abedf60e9cce3bb706b59229463360c76"
+      },
+      "failed": [
+        "actual local reserve canonical sample projection LRO-F: observations do not mutate physical state and detach caller observer data"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "file": {
+        "path": "src/campaign3/bodySignalCue.ts",
+        "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+      },
+      "fault": "cue-accepts-foreign-producer",
+      "removed": "||version.value!==producerVersion",
+      "inserted": "",
+      "witness": "LRO-B",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/observation-cue-accepts-foreign-producer.json",
+        "sha256": "0a385b04a34c3b965b4ecd8551fa4b99e19cc7e85aa27d60e885ddd9a4e3e2ef"
+      },
+      "failed": [
+        "actual local reserve canonical sample projection LRO-B: old consumers reject new source, and exact new consumers reject old version substitution"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "reserve-for-absence",
+      "removed": "emitsCharacterAccessibleEvidence:present.length>0",
+      "inserted": "emitsCharacterAccessibleEvidence:true",
+      "witness": "LRO-H",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/opportunity-reserve-for-absence.json",
+        "sha256": "2b05059e4401ada493ae1fc31aadb886324bf71181e78e0f1af7f07dff6c8b85"
+      },
+      "failed": [
+        "body-only SEM opportunity reservation LRO-H: all-unavailable observation has no fake experience, but can complete empty selection"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "erase-experience-support",
+      "removed": "perceptualEventClassifications:[],supportingObservationIds,",
+      "inserted": "perceptualEventClassifications:[],supportingObservationIds:[],",
+      "witness": "LRO-G",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/opportunity-erase-experience-support.json",
+        "sha256": "bbec7d6e8fad79e7fb0a8c707f89ce80a99d0e786cbe693adf0900812a442d92"
+      },
+      "failed": [
+        "body-only SEM opportunity reservation LRO-G: all present views share one actual reservation in either lane"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "file": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+      },
+      "fault": "force-current-lane",
+      "removed": "{observerId,lane,dueAt:at",
+      "inserted": "{observerId,lane:'Current',dueAt:at",
+      "witness": "LRO-G",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/opportunity-force-current-lane.json",
+        "sha256": "17ae2096f203cceeba9a5c28a0b476cc144c7f4540dd39873314ae7c063b83db"
+      },
+      "failed": [
+        "body-only SEM opportunity reservation LRO-G: all present views share one actual reservation in either lane"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "file": {
+        "path": "src/campaign3/interoceptiveSignalSelection.ts",
+        "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+      },
+      "fault": "select-without-experience",
+      "removed": "if(input.opportunityId===null)throw Error('present sample requires experience');",
+      "inserted": "",
+      "witness": "LRO-I",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/opportunity-select-without-experience.json",
+        "sha256": "f08458b2e979213401eaddaf02e625e3a602e7c36ebe7fcf7a9042b7a4710b58"
+      },
+      "failed": [
+        "body-only SEM opportunity reservation LRO-I: present samples cannot enter either gate with a null experience"
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "file": {
+        "path": "src/campaign3/bodySignalCue.ts",
+        "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+      },
+      "fault": "cue-without-experience",
+      "removed": "if(r.schema.typeId===461n&&input.opportunityId===null)fail();",
+      "inserted": "",
+      "witness": "LRO-I",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/opportunity-cue-without-experience.json",
+        "sha256": "d65234e8ad4818e596cb7bfbf6e4edf3f0e7134370e1a210957dc4b95c379320"
+      },
+      "failed": [
+        "body-only SEM opportunity reservation LRO-I: present samples cannot enter either gate with a null experience"
+      ]
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-reserve-bridge-rev1/current-tests.json",
+    "sha256": "799b1a86483eac06f16552c153eec6948cb5b74033463b03b60d57bc96d2fa1f"
+  },
+  "inputs": [
+    {
+      "path": "src/test/bodySignalCue.test.ts",
+      "sha256": "1c51149d881aef4a7724017e0fd745b26341e21890d55c22ca0bfcda60721aed"
+    },
+    {
+      "path": "src/test/interoceptiveSignalSelection.test.ts",
+      "sha256": "b8b81538fcdf202858918a7d24fbc27d9f39037f373dd7eb70f865bd568cf194"
+    },
+    {
+      "path": "src/test/localReserveObservation.test.ts",
+      "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+    },
+    {
+      "path": "src/campaign3/bodySignalCue.ts",
+      "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+    },
+    {
+      "path": "src/campaign3/interoceptiveSignalSelection.ts",
+      "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+    },
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+    },
+    {
+      "path": "src/campaign3/localReserveObservation.ts",
+      "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+    }
+  ],
+  "reused": [
+    {
+      "path": "docs/planning/campaign3-history-ga-source-branch-rev1/current-tests.json",
+      "sha256": "b7b1225f4ffddd573f2dd4bb6b6ea6fb4832d2b5b5ea51fbc37bee7b768dd86e"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/current-tests.json",
+      "sha256": "8ef666a2f158b1aa83ec5264eaa8d1c9b3bc0ffbc3e90bd4e4e18c6db2f4219e"
+    }
+  ],
+  "historicalMatches": [
+    {
+      "path": "docs/planning/GA_PHYSICAL_SOURCE_SCHEDULE_TESTS_REV1.json",
+      "sha256": "285e0afaa5e1d1487c0834d3444a8e6dc2367a42d5e619db8cdf3a86ad7ea3a7",
+      "count": 22,
+      "names": [
+        "controlled source-component significance composition SC-A: actual safe samples and goal relation feed focal credit, then distinguish retention models",
+        "controlled source-component significance composition SC-B: concern-only change or removing credit restores newer survivor with same attribution and use",
+        "controlled source-component significance composition SC-C: lost perceived context prevents assembly although hidden fixture schedule stays unchanged",
+        "controlled source-component significance composition SC-D: insufficient body recall capacity does not bypass the read gate with stored source values",
+        "controlled source-component significance composition SC-E: reordering retained access does not change context-bound attribution or the focal survivor",
+        "controlled source-component significance composition SC-F: one hidden neutral stage prevents grouping despite unchanged body and motion schedule",
+        "controlled source-component significance composition SC-G: independent hidden delivery can produce the same supported attribution and retention",
+        "controlled source-component significance composition SC-H: absent consequence-time baseline recall cannot fall back to an earlier source sample",
+        "controlled source-component significance composition SC-I: independent cue survives an empty completed selection which still consumes a source slot",
+        "controlled source-component significance composition SC-J: source budget includes empty cue selection, so a17-slot profile rejects the18th source",
+        "controlled source-component significance composition SC-K: actual focal consequence can name the earlier stroke; target is not the last source row",
+        "controlled source-component significance composition SC-L: designating a control trial does not borrow support from the two stroke trials",
+        "controlled source-component significance composition SC-M: hidden start or end completes empty selection but leaves too few recalled acquisitions",
+        "controlled source-component significance composition SC-N: seven event recall slots cannot be bypassed by reading all eight retained acquisitions",
+        "controlled source-component significance composition SC-O: hidden ninth visual cue cannot be reconstructed from the surviving marker file",
+        "controlled source-component significance composition SC-P: hidden role cannot be recovered from unchanged position/panel truth",
+        "controlled source-component significance composition SC-Q: changing the hidden world marker identity cannot change observer files or downstream memory",
+        "controlled source-component significance composition SC-R: unavailable visual and panel can complete empty selection without fabricating an experience",
+        "controlled source-component significance composition SC-S: unavailable competing observation or role cannot be replaced by literal retained bytes",
+        "controlled source-component significance composition SC-T: the newer competitor contains actual tenth-source evidence and an allocated acquisition",
+        "controlled source-component significance composition SC-U: each visual formation source references its actual audit occurrence and cue-only sensing adds none",
+        "controlled source-component significance composition SC-V: preparation uses explicit earlier external inputs, not same-instant hidden-state repair"
+      ]
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+      "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd",
+      "count": 41,
+      "names": [
+        "independent current body cue BC-A: actual zero-valued observation recalls old memory while acquisition selects nothing",
+        "independent current body cue BC-B: acquisition-gated comparator fails at zero capacity and converges when selection is enabled",
+        "independent current body cue BC-C: permission without actual present evidence cannot cue; denied actual evidence cannot cue",
+        "independent current body cue BC-D: stale, foreign observer, duplicate and undeclared observations reject",
+        "independent current body cue BC-E: value magnitude does not change signal eligibility; provenance contains no sample payload",
+        "controlled source-component significance composition SC-A: actual safe samples and goal relation feed focal credit, then distinguish retention models",
+        "controlled source-component significance composition SC-B: concern-only change or removing credit restores newer survivor with same attribution and use",
+        "controlled source-component significance composition SC-C: lost perceived context prevents assembly although hidden fixture schedule stays unchanged",
+        "controlled source-component significance composition SC-D: insufficient body recall capacity does not bypass the read gate with stored source values",
+        "controlled source-component significance composition SC-E: reordering retained access does not change context-bound attribution or the focal survivor",
+        "controlled source-component significance composition SC-F: one hidden neutral stage prevents grouping despite unchanged body and motion schedule",
+        "controlled source-component significance composition SC-G: independent hidden delivery can produce the same supported attribution and retention",
+        "controlled source-component significance composition SC-H: absent consequence-time baseline recall cannot fall back to an earlier source sample",
+        "controlled source-component significance composition SC-I: independent cue survives an empty completed selection which still consumes a source slot",
+        "controlled source-component significance composition SC-J: source budget includes empty cue selection, so a17-slot profile rejects the18th source",
+        "interoceptive-signal-selection-component/0.1-candidate SG-A: extra views of the same signal add evidence but no competing slot",
+        "interoceptive-signal-selection-component/0.1-candidate SG-B: declared distinct signals contend even with identical readout values",
+        "interoceptive-signal-selection-component/0.1-candidate SG-C: conflicting and differently resolved readings survive without fusion",
+        "interoceptive-signal-selection-component/0.1-candidate SG-D: identical time and signal never replace the explicit opportunity identity",
+        "interoceptive-signal-selection-component/0.1-candidate SG-E: separate candidate, view, byte and selected-count bounds apply",
+        "interoceptive-signal-selection-component/0.1-candidate SG-F: malformed grouping, identities, time and repeated source observations reject",
+        "interoceptive-signal-selection-component/0.1-candidate SG-G: input enumeration, caller mutation and forged/reused/closed views cannot expose extra data",
+        "interoceptive-signal-selection-component/0.1-candidate SG-H: absent views add no operand, while a present high range remains selectable",
+        "actual local reserve canonical sample projection LRO-A: requested actual zero sample owns one observation, with distinct producer version",
+        "actual local reserve canonical sample projection LRO-B: old consumers reject new source, and exact new consumers reject old version substitution",
+        "actual local reserve canonical sample projection LRO-C: hidden key renaming preserves bytes; requests are canonical and allocate only requested channels",
+        "actual local reserve canonical sample projection LRO-D: bad observer/channel requests reject before allocation; duplicate allocated observations reject",
+        "actual local reserve canonical sample projection LRO-E: unavailable is explicit and unrequested future channel is not queried",
+        "actual local reserve canonical sample projection LRO-F: observations do not mutate physical state and detach caller observer data",
+        "body-only SEM opportunity reservation LRO-G: all present views share one actual reservation in either lane",
+        "body-only SEM opportunity reservation LRO-H: all-unavailable observation has no fake experience, but can complete empty selection",
+        "body-only SEM opportunity reservation LRO-I: present samples cannot enter either gate with a null experience",
+        "body-only SEM opportunity reservation LRO-J: invalid lane rejects before any observation allocation",
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte",
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical",
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload",
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants",
+        "local-reserve-source-component/0.1-candidate LR-F: aliased mapping, duplicate state, unknown target and invalid time fail",
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target",
+        "local-reserve-source-component/0.1-candidate LR-H: inventory order has no physical or safe identity meaning; invalid source domains reject"
+      ]
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_TESTS_REV1.json",
+      "sha256": "007af515ab86882804ed979cf8105786a2d26f4bff1591d01cd5f5da4880d2c2",
+      "count": 37,
+      "names": [
+        "independent current body cue BC-A: actual zero-valued observation recalls old memory while acquisition selects nothing",
+        "independent current body cue BC-B: acquisition-gated comparator fails at zero capacity and converges when selection is enabled",
+        "independent current body cue BC-C: permission without actual present evidence cannot cue; denied actual evidence cannot cue",
+        "independent current body cue BC-D: stale, foreign observer, duplicate and undeclared observations reject",
+        "independent current body cue BC-E: value magnitude does not change signal eligibility; provenance contains no sample payload",
+        "controlled source-component significance composition SC-A: actual safe samples and goal relation feed focal credit, then distinguish retention models",
+        "controlled source-component significance composition SC-B: concern-only change or removing credit restores newer survivor with same attribution and use",
+        "controlled source-component significance composition SC-C: lost perceived context prevents assembly although hidden fixture schedule stays unchanged",
+        "controlled source-component significance composition SC-D: insufficient body recall capacity does not bypass the read gate with stored source values",
+        "controlled source-component significance composition SC-E: reordering retained access does not change context-bound attribution or the focal survivor",
+        "controlled source-component significance composition SC-F: one hidden neutral stage prevents grouping despite unchanged body and motion schedule",
+        "controlled source-component significance composition SC-G: independent hidden delivery can produce the same supported attribution and retention",
+        "controlled source-component significance composition SC-H: absent consequence-time baseline recall cannot fall back to an earlier source sample",
+        "controlled source-component significance composition SC-I: independent cue survives an empty completed selection which still consumes a source slot",
+        "controlled source-component significance composition SC-J: source budget includes empty cue selection, so a17-slot profile rejects the18th source",
+        "interoceptive-signal-selection-component/0.1-candidate SG-A: extra views of the same signal add evidence but no competing slot",
+        "interoceptive-signal-selection-component/0.1-candidate SG-B: declared distinct signals contend even with identical readout values",
+        "interoceptive-signal-selection-component/0.1-candidate SG-C: conflicting and differently resolved readings survive without fusion",
+        "interoceptive-signal-selection-component/0.1-candidate SG-D: identical time and signal never replace the explicit opportunity identity",
+        "interoceptive-signal-selection-component/0.1-candidate SG-E: separate candidate, view, byte and selected-count bounds apply",
+        "interoceptive-signal-selection-component/0.1-candidate SG-F: malformed grouping, identities, time and repeated source observations reject",
+        "interoceptive-signal-selection-component/0.1-candidate SG-G: input enumeration, caller mutation and forged/reused/closed views cannot expose extra data",
+        "interoceptive-signal-selection-component/0.1-candidate SG-H: absent views add no operand, while a present high range remains selectable",
+        "actual local reserve canonical sample projection LRO-A: requested actual zero sample owns one observation, with distinct producer version",
+        "actual local reserve canonical sample projection LRO-B: old consumers reject new source, and exact new consumers reject old version substitution",
+        "actual local reserve canonical sample projection LRO-C: hidden key renaming preserves bytes; requests are canonical and allocate only requested channels",
+        "actual local reserve canonical sample projection LRO-D: bad observer/channel requests reject before allocation; duplicate allocated observations reject",
+        "actual local reserve canonical sample projection LRO-E: unavailable is explicit and unrequested future channel is not queried",
+        "actual local reserve canonical sample projection LRO-F: observations do not mutate physical state and detach caller observer data",
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte",
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical",
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload",
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants",
+        "local-reserve-source-component/0.1-candidate LR-F: aliased mapping, duplicate state, unknown target and invalid time fail",
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target",
+        "local-reserve-source-component/0.1-candidate LR-H: inventory order has no physical or safe identity meaning; invalid source domains reject"
+      ]
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_TESTS_REV2.json",
+      "sha256": "4d92665b19abfbad361a61bf275d67b28b117000bc14ee12949a9db71bcf844e",
+      "count": 37,
+      "names": [
+        "independent current body cue BC-A: actual zero-valued observation recalls old memory while acquisition selects nothing",
+        "independent current body cue BC-B: acquisition-gated comparator fails at zero capacity and converges when selection is enabled",
+        "independent current body cue BC-C: permission without actual present evidence cannot cue; denied actual evidence cannot cue",
+        "independent current body cue BC-D: stale, foreign observer, duplicate and undeclared observations reject",
+        "independent current body cue BC-E: value magnitude does not change signal eligibility; provenance contains no sample payload",
+        "controlled source-component significance composition SC-A: actual safe samples and goal relation feed focal credit, then distinguish retention models",
+        "controlled source-component significance composition SC-B: concern-only change or removing credit restores newer survivor with same attribution and use",
+        "controlled source-component significance composition SC-C: lost perceived context prevents assembly although hidden fixture schedule stays unchanged",
+        "controlled source-component significance composition SC-D: insufficient body recall capacity does not bypass the read gate with stored source values",
+        "controlled source-component significance composition SC-E: reordering retained access does not change context-bound attribution or the focal survivor",
+        "controlled source-component significance composition SC-F: one hidden neutral stage prevents grouping despite unchanged body and motion schedule",
+        "controlled source-component significance composition SC-G: independent hidden delivery can produce the same supported attribution and retention",
+        "controlled source-component significance composition SC-H: absent consequence-time baseline recall cannot fall back to an earlier source sample",
+        "controlled source-component significance composition SC-I: independent cue survives an empty completed selection which still consumes a source slot",
+        "controlled source-component significance composition SC-J: source budget includes empty cue selection, so a17-slot profile rejects the18th source",
+        "interoceptive-signal-selection-component/0.1-candidate SG-A: extra views of the same signal add evidence but no competing slot",
+        "interoceptive-signal-selection-component/0.1-candidate SG-B: declared distinct signals contend even with identical readout values",
+        "interoceptive-signal-selection-component/0.1-candidate SG-C: conflicting and differently resolved readings survive without fusion",
+        "interoceptive-signal-selection-component/0.1-candidate SG-D: identical time and signal never replace the explicit opportunity identity",
+        "interoceptive-signal-selection-component/0.1-candidate SG-E: separate candidate, view, byte and selected-count bounds apply",
+        "interoceptive-signal-selection-component/0.1-candidate SG-F: malformed grouping, identities, time and repeated source observations reject",
+        "interoceptive-signal-selection-component/0.1-candidate SG-G: input enumeration, caller mutation and forged/reused/closed views cannot expose extra data",
+        "interoceptive-signal-selection-component/0.1-candidate SG-H: absent views add no operand, while a present high range remains selectable",
+        "actual local reserve canonical sample projection LRO-A: requested actual zero sample owns one observation, with distinct producer version",
+        "actual local reserve canonical sample projection LRO-B: old consumers reject new source, and exact new consumers reject old version substitution",
+        "actual local reserve canonical sample projection LRO-C: hidden key renaming preserves bytes; requests are canonical and allocate only requested channels",
+        "actual local reserve canonical sample projection LRO-D: bad observer/channel requests reject before allocation; duplicate allocated observations reject",
+        "actual local reserve canonical sample projection LRO-E: unavailable is explicit and unrequested future channel is not queried",
+        "actual local reserve canonical sample projection LRO-F: observations do not mutate physical state and detach caller observer data",
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte",
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical",
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload",
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants",
+        "local-reserve-source-component/0.1-candidate LR-F: aliased mapping, duplicate state, unknown target and invalid time fail",
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target",
+        "local-reserve-source-component/0.1-candidate LR-H: inventory order has no physical or safe identity meaning; invalid source domains reject"
+      ]
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_SOURCE_TESTS_REV1.json",
+      "sha256": "929471fe2ac67ac7ff613398c78cdce0993b510de2a70d1acc50a1b7f5e4a3b3",
+      "count": 7,
+      "names": [
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte",
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical",
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload",
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants",
+        "local-reserve-source-component/0.1-candidate LR-F: aliased mapping, duplicate state, unknown target and invalid time fail",
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target"
+      ]
+    },
+    {
+      "path": "docs/planning/LOCAL_RESERVE_SOURCE_TESTS_REV2.json",
+      "sha256": "94fb59c7159bb21212e28a432da25697239514c48cfb406c7213ba47f15b0260",
+      "count": 8,
+      "names": [
+        "local-reserve-source-component/0.1-candidate LR-A: B-only replenishment preserves A/C and the original source byte-for-byte",
+        "local-reserve-source-component/0.1-candidate LR-B: only C kinetics change in the comparison model",
+        "local-reserve-source-component/0.1-candidate LR-C: hidden-within-bin changes and physical-key renaming leave safe outputs identical",
+        "local-reserve-source-component/0.1-candidate LR-D: extra view is one declared signal; unavailability and denial reveal the same payload",
+        "local-reserve-source-component/0.1-candidate LR-E: model inputs and returned zero-containing values cannot mutate source or borrowed constants",
+        "local-reserve-source-component/0.1-candidate LR-F: aliased mapping, duplicate state, unknown target and invalid time fail",
+        "local-reserve-source-component/0.1-candidate LR-G: observation never reanchors; zero delivery does reanchor only its target",
+        "local-reserve-source-component/0.1-candidate LR-H: inventory order has no physical or safe identity meaning; invalid source domains reject"
+      ]
+    }
+  ],
+  "limits": [
+    "Ten original mutation definitions/witness assertions execute against explicitly hashed current sources. Missing intermediate source versions mean this is not a reproduction of original historical implementation bytes.",
+    "Six older physical-source mutations retained as historical report-only;no new execution claim.",
+    "13 current core tests added to previous31 source/recall/panel and42 goal/composition tests;prior suites not rerun. No public scheduler or native persistence qualification."
+  ]
+}

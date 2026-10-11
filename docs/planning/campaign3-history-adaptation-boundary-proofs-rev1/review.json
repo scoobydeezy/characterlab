@@ -1,0 +1,3347 @@
+{
+  "status": "SEVEN ADAPT BOUNDARY PROOFS RECONCILED; THREE ADDITIONAL SOURCE GAPS",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/review-history-adaptation-boundary-proofs.py",
+    "sha256": "562ff2f6ff787c55cb3d7d4c05e9c979546cbcb5f6084257c29c05f17c7ab1bd"
+  },
+  "sourceIndex": {
+    "path": "docs/planning/campaign3-history-source-roles-rev206/index.json",
+    "sha256": "8eabd9fe146cc3db9dbb487414f8e7e3902c35b37572bd7eb5d299a5e3e49476"
+  },
+  "sourceRoles": [
+    {
+      "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. 13 baseline tests/three detected mutants. Bounded clamp also incorrectly clamps unbounded load because it keys on field alone; its third failed witness is preserved,not described as an isolated bounded-only mutation. Unbounded ceiling and negative clamp remain separate. REV1/2 payloads match apart from evaluator fingerprint; old REV1 evaluator remains unrecovered. Partial public snapshot is not full queue/allocator rollback.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. 13 baseline tests/three detected mutants. Bounded clamp also incorrectly clamps unbounded load because it keys on field alone; its third failed witness is preserved,not described as an isolated bounded-only mutation. Unbounded ceiling and negative clamp remain separate. REV1/2 payloads match apart from evaluator fingerprint; old REV1 evaluator remains unrecovered. Partial public snapshot is not full queue/allocator rollback.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. Three baseline tests/two alias mutants:whole-binding alias changes direct4 to7 and derive4 to999;nested path alias changes direct4 to7. Exact source/test bodies resolve. No closure-captured-state purity,public injection API or universal reflection claim.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. Seven-test original/two guard removals. Missing instrumentation has two failed witnesses;staged association has four. This predates the ten-test active-interleaving cohort already reviewed separately. Original evaluator and test hashes remain unrecovered; later bodies do not retrospectively repair that identity gap.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. Eight tests/two detected mutants. Removing early validation still reaches ingress at INT64_MAX,detected by REG-O and AC-H;collapsing unknown-variable mapping fails actual component witness. All three reports share identical payloads except source fingerprints;domain changes REV1-to2 and runtime changes REV2-to3 remain real identity distinctions. REV3 runtime unrecovered. Not exhaustive fault-stage or whole B/FCT qualification.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. Eight tests/two detected mutants. Removing early validation still reaches ingress at INT64_MAX,detected by REG-O and AC-H;collapsing unknown-variable mapping fails actual component witness. All three reports share identical payloads except source fingerprints;domain changes REV1-to2 and runtime changes REV2-to3 remain real identity distinctions. REV3 runtime unrecovered. Not exhaustive fault-stage or whole B/FCT qualification.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Historical in-memory mutation receipt; original statuses,test names,errors and replacement strings preserved. Recorded detections are not fresh execution or universal equivalence. Source manifest is partial,not a full dependency closure; exact bytes do not prove execution time. Eight tests/two detected mutants. Removing early validation still reaches ingress at INT64_MAX,detected by REG-O and AC-H;collapsing unknown-variable mapping fails actual component witness. All three reports share identical payloads except source fingerprints;domain changes REV1-to2 and runtime changes REV2-to3 remain real identity distinctions. REV3 runtime unrecovered. Not exhaustive fault-stage or whole B/FCT qualification.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "5e303f293c1a915958397d8e4c6c4cd7d0067370a42c6c44f72fc9b94bb7a891",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2908ae3120ba73d4b6c670c7b8f2feb8a72ea177bfec38ca137a0a534d6b960a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8317dd08404b74a97c012cd608767faf024ad4d611743135325578c67addb4e0",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2704d3be0d9e5fefbb663e5bd4c5db7e6b577a6a29ded024fba8221e01c8a81c",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "642ed0489dd7c482b8fa4b6020a5942dbb966ab9f3383bdbaa8ed917fb746af7",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9f5c05722ae8f474610148df85867bac7a1a93e6b8b85775274b9b629e927049",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cac9bce4a4c7021911e7738d11ba71eed7d3e97a48b87f77e719a13df0db7abf",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "81f75fccfaf039fdfb19e2d8f5f50db7e58b7899ac487201f20848571194dd0e",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8fb18c94bc526394c5e47925d178ddeeeb7ca089c2e261d3024c6ab0a3fce22b",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f35ad2eec1dd84291a55ce0f1fbad0687e48000e2cc71edfde1d313a8c917e34",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c569b89ea54172c576d1ff76756cb26c8947c45384af1c1437a0e2cae9b0d943",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9ea1893d3a5a78b128f785669fd4114386806d71e690cfdefafc5d6705398bf7",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c5dda2bc49501e671cefc66644a0fc50ed0e6905b869df0c5bfbd3de81017f68",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/baseline/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ca8de661bd5119941766aa955571be5d9c81c39a22dd73eccbcacbbdb5301d3a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/required"
+      },
+      "text": "AD-E9 unsigned leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d5a2d0d3668be09436264025aa93c38f59b8e1eb4b97e18222d46ed0da88b6c6",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "17fdf452611fe400acb702c92fe35ee1409148c4a42ee9595b511d5027cc5cd8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7d5fcfd77c454a12cd3430983056655ea8802c54c35ca4930444bd5ce93211e4",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e41fa7a1bd2270ed3b1f5247bdd22cebbd0ba5bd08268f8d2f7844f96daed035",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/1/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "922f2e26c16369ea5f484f8ea87e44e20d8c817a362f32e4b86ec2259c37ab1d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "24806e5c45838a2cf79681d87616ceeac761e1e29f44f389d5bbadf3eb843019",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/2/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a9d9a3f759dcf69cfea5682794e10e4fdc818531d24bc758c72809c748b9034c",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9a97c1228af264f3d2f19559ffa0bbd56d95c77ff3adde382b235ca9f6c0a4d1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/3/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d914ffece2f6f5e7390f675177f9b3320313fe292aeb8262c4ad2ece203f8cb9",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0000ad5c60a5aa29c0de1640b865cc19b8b091b96f0161c9777d9296bedf484c",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "788f6b7a1c4a3ad376774b9eaeefd7dd84ff805e825ee801a085a2f8fd7f2f39",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c46f519d8c16217b0995c2a8c0133326f23622fb6493594cbfbcfe87db1b6ac4",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b7857aae279b394bbd920ba19b444e4f82ebb846d59df88b2af02b56d90519bc",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "38b43f3ae40b5c3674c18a3c88b12c3ae554c335789cce6d1ee2c6a2115dea28",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e8f3ba63ae461ddead5b520353bb21b54cf7c06ca1f735f631efa698c28e95ec",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "08cf23c4525df32c4474a29fa4f39f946c0d8a44177b58342a64755dc84ce2d5",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "be0eb87d96dc83a58a6ae54bfb8ab749c65a21049b623d57ce6a53338ecda0cc",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/0/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f65967e7ec2c01b8e66756b3ae6a9a95ec8752229b58ab6f3d52bd71a51b6393",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E9 bounded leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4a0fed025f68e75ebd02add05dd42868c1daba102a3751c2fe5afbeed954a6cb",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2e4e8c3f4267c715f77906f8e5db0e6fa1b8115d8d44f301e0dab3f6cf06f9c9",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1c040b91feb2d1acaa0dad79b1395c167e5eeb74144b6fbf2b27f1c5a4bbc087",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "87e49e9ea56009649722d1bc40fb96afec8a325dbcdc82ef4f8f78bd6a5b8a19",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9a652a6372d22b715820760eedd1f2985ea25414234f9dd05e4ed4e7341ff6ce",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "aef01a80bdddabdb027df333f6970ab4399740138ed10318cca4868d687fe15f",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/4/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3b256d9bb1137430cc7db81972663d66c26551fbea0ea36471645bb815d734f1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9d70af8d2baf2977b91809e33762c0d375a156a78985ef085ea6c353afc6c2ee",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/5/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "472dda65bb06eb28a1fdf30433d8fc62fed00a8779e8049f54a89d939f3bdfdf",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f4956e5a06b0521d81bff52efe25a52361d34f713e6f543952ea41c509cd6e96",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d3b74ab2e357e56795af1e196a6c9aa6d6939fbc4c02453867ba66c1d0a147ba",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "40c9b45a89d07b2530947931d862a5a720991f1808ef6e475f7f7728eb39e497",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "de896e9cdfc42b71fa9f31280935aab99515ec13828b0a707ad175f18a8b4fd3",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "915c963dddba824eb8ad0b50d80b0485108bdfe09b7e00384568af375f677bc8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3117722a0fb16ff3af67b2274883b34d398d39a933b64dc15893011d0f3b8706",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/11/errors/0"
+      },
+      "text": "expected [ { path: { …(3) }, value: { …(3) } } ] to deeply equal [ { path: { …(3) }, value: { …(3) } } ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "78e78c2bcaa42d279c16b1882b8454f81c2d616bc4e7a2fad74687c86c8fdc88",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/1/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7d343e3959add05e047ccced2b3c0897b229e73a6b10e2c8c9582c7e3a7f28ec",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/required"
+      },
+      "text": "AD-E9 unbounded leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8e0bb1478fbed37e6928bd78749624acd8f89b7ac951849db2486fd9f3c83b89",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "47ef0eef81e0670fc9af14abb009d72db1100ba4e9f025c58a77d04d45eee8e9",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ff9acddace397bac572a39699f73fd1dce5d01c94b71000eb3052a0bf1aa75d1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "12bb6653f7c89535f4ba6819d011b7e16adb77a6320094ee1ab78e017cf2a33f",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9eb96a25fd9da6414bc04f7e9f5c3c834c73ad7b0ba53d3e0b60b573e9460d08",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36d8fc8bce0a0ec8c3de06fedb850fee86b9208a197b44f66d7d688eb2b51f3d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0c4475e0833a0dca9d7ed7c774ee78195fbc4bf86cf929e55a137fb35fa4304c",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bf2be2249f15b6d0fe550dc78f822a518d8f15c7303d625c16200eeb712c75f3",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3824d1886d08938a25c874584d173625d5b9f779f348df46a0ab8cc95215509d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1e2a3d2c73139404699f1c7db328fbb489c9029cffadb72afef888f296efb27b",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8225234cff9a52662598661d34027324093e70c87bc342bd6cf686df29932bff",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "073b8950296f21ef3e0aa56ce3a923b9f8184802366f6b10b8ce3a8f830a14a4",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/10/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4a387f10d5c2c280d3ec75d20fa4265fa605ab7b6cc739c5d44c4cf03d083962",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c813acc6b40d78645992c28bed2b459171ef43cf37003b3faffc0eeee1a2529b",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/11/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2b63ea1938b51ff94141eb249db76d693ef4dad7f62e5185f06f7d522c8c6ad8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "485a2cc8dccb6060ce1fde938eb04aa95f7daf902b3f7a576e1fa7ce0993b182",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/mutants/2/tests/12/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a7f6b7fa6ebf7ccdac2108fdf1b408f39e158f34104478d84791e6bfd67d9df7",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Finite public-model matrix; no universal arbitrary-integer proof.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a92dd31e02f486a8f0a2a73d422e3aef2f0721da78d3125bcb65e267138200ec",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No whole B/FCT or AD-E9 acceptance assigned by this assay.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "95967cbc8b32843d41ddeb81c6f815290e93a59f885f9e3b9abd615703bb5950",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Public snapshot rollback here; complete queue/allocator fault matrix belongs to AD-E12.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4edfa8348dd963341ebdf4bc281232b3c04e864a381fc8a6fbaae2c5887c7575",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "location": {
+        "pointer": "/limitations/3"
+      },
+      "text": "Second-leaf confinement also relies on separately accepted AD-E4/E8 exact target/diff enforcement.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5c2ac6166d0b20e6b69961d34d8d165146ec8eeebf3d52f462732794c1f7136d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "66f1456e0a68519aa1b742e1b7148acc60a47988407e468514440d795c7fe63f",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f8dc5bf9ed7ec2bd77104946ab0e91db9f684ad7927f41eceb0eadda7e442caa",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "51405ac17254e014cefaf29950b82b0ddc7730a3091fb0b376d2068d133ea4e4",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bfb0d1010c0d6dabd5d56e719847801b9df3dd2612ce768deb934ecb9f614244",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a1e74436b4fefc84247dbfe26a8fe219dbd497a19e0f0c2b25c194127508dffa",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d19c5f6e2d4a03f6d3d882beec982b1151f3092430ad698292e6b52dda4c6c31",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a30ba4b6a1a7463935d82ffc216a7efe250d913eefe37b10663d280b68d40861",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9d8bedb9374db9eb2aae3110c3095e450f1e25c7972f28b74ff29cd85d2c23a9",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9121bb32e68a739ba8d0b60c8ac33e64dde196cd8f2f9a7594b37fd0a23d0117",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7dfd133ad410986ba5fd10a44bfb309fe68ba557e32c15ece73659a4fff9494d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ed0038b6e42449daff860c0493457e9bc25f83657878f1b55425c2fa1c458ebc",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "de459a22442fbe82ea99fdd865737e6f57434606fe759473fd593524e231cfa8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/baseline/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ef9fcd824ca36cf351bd7b8b3955f37a3c75c34752378e28890c4a53d527464e",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/required"
+      },
+      "text": "AD-E9 unsigned leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1402ad36c8051da2e52354230f7165cedae9110827be2c3c367403bf5d342417",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "620274d8965fd70168ea53b791afc8f3289070c1cc380a5b1760bf5ae2c58a93",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "00d37ba5d0f46a32b98c0402fab9da34d5b8d0f09d2e9980147d1b7682ff2c0d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0e88972451dd73c6bdcd9aacdd91df527f90f895cf81e250d4bcdb3006202b36",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/1/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dedb53faa5b731cb87f730753116620c0ac6fecb578ec0066274024a051acaf1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3517ddb92bf437eb89f66aecd1a65400f1466b70d2177850cf701de52c80c99b",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/2/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "716ef28dcf6e8760395d3dd6e96ddf7de361b04a7fd7cb50296d849326ed3f82",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "475e137d8c4fe4ecc20956e4e44de41e1f01f37231b5da1de254efa21c0b565a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/3/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6cfe7be830a7ff453c727720bdd2c8f74372450a95d246f71bbc0b1cb2e7d1ab",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "60065b565444da9df9661f21a108138b692d2cbb61cdd79c3d861b16898a0d39",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "516b1fdae0dc5ae9d73624c290ad85969c4e731fd0dba587a21e375d3d0c55d2",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1128f2ec4bce7205ebd0f2c1aa8407e037817a8698b88ec8eaf8b4d884a4dbd0",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "511f8ec1eaeb8eb8565670fe48e9153e1e4d853cdc018cf8c269546e52c306ad",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a51913b84e939f77ae0af434c4a2a939e76d95419e7a92dc3465b7b5828d417",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a89c4f4a8a84eef8e6566173b24686bc63366234173c7653bb61a4edd21e47ee",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e0636b3722314600b76b000a6fc43b27356afcdfa6a8f2b0ea2c308d6a9fa8d6",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "44568fdcc5dc9e639ec6318da930c8665e6f48fa893f69be56427a64d54f5844",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/0/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5400f1b8373c38923e2ee073ff574a0968c2474b6847ac48c11f5cd254efbc3b",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E9 bounded leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c3bc38d4179efb38801243492f1c9a5ad8ba26db831db36568be987dd2d5ff4a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1a3e48ea62efc593dfc4dcf901bb364073c4045a3d0f666a59e2c265dc96c1cd",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8c5dcafd4e9315bd1cd1960acb4fb8de84ee5f19a16bfcd0bf4fb4423106cd91",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ba23fa215e446ed44b6de208a9afc8a0df7e145393d95a4cab84c06b2443fde8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8a151e25e06b549bf126e0e002d7dfbf8c06d69d697de0a19ad5b84bb1f0d305",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0b05f3610afe0b5a35178e1efc17035ee59f41b88790fe843be17ff8e00b4786",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/4/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ebfdf73698c2f89c202f4da5cba27b3aea94c195a07ce986fbdf04b282e21b7f",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c499f208f2e7245493634c859aba60608e1c586b112eba41f40d6c446648dc32",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/5/errors/0"
+      },
+      "text": "promise resolved \"true\" instead of rejecting",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a477981c83bf01c48a5bfa67e81aace614e6fea5aa0d4e2231a4d05e2e8003a5",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d882a315571507a22bf783cac8939b6582bad13d3bec7ab634d384818fbf32d1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e291e364852de36325a7dd058dcd24031c4cc51bf727f08dca5fb574ca0c30c8",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "257241ffd8970082704357a40d302d249a51ff628dd4d72250b1201fc8abfbf5",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8d3d5bb2aca5259412a714c74e0343d9aee6c0762860c13bd8d19b7c72fb14dd",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a85b7c8bc8b33a35494efaaf2af6f1c751327c4e9015a4ad075e2f8d4d63586a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "24c0a4a002445dced372fb074350b53bb300daebc4495293baec02e29b8bf631",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/11/errors/0"
+      },
+      "text": "expected [ { path: { …(3) }, value: { …(3) } } ] to deeply equal [ { path: { …(3) }, value: { …(3) } } ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4ea9ab93eeec05a45b3b94b3e32911f25b14f94ebf29b11fccaa13204840ca89",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/1/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "824b13d825b384e77d1b65d92a543dffd6d65a628bfe03120a4893ebf6934a96",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/required"
+      },
+      "text": "AD-E9 unbounded leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5ed82118506f678f2d7b259e111883b13231075bc6ad3ed76ff7b0c5aaea45c1",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AD-E9 unsigned leaf 0 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2b0920aa8b9ea721a837e68b86c4f0c003fe4e6535ce2653d2febf78ca7a643e",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AD-E9 unsigned leaf 1 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1f8a7afce69fc8c7c2a9dc67fa1cdd47521709d3141a2424e6e1a0430dea67f9",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AD-E9 unsigned leaf 3 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "49403ef761040fe2c20f76e1f8724c47e58ac9b50a85bca1250d4bef9001140a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AD-E9 unsigned leaf 4 rejects exact q=-1 without a clamp or partial commit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2553021e17702a02e8d2616c208c9c7429ee4385d537da0a7b4c453c5eeeac20",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AD-E9 bounded leaf 0 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "460b2eca21f98707bbab1d7ad71ba0b6a5c4c321c1fde0f5044ed4d972d318fa",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AD-E9 bounded leaf 3 admits exact maximum and rejects maximum+1",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fc285ce534d66a89f6e788fc5c87d86fbd490a74e071d75ae459c3b48285a697",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/6/name"
+      },
+      "text": "AD-E9 leaf 0 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3bfefd4eef6c7f68cebc2c9db6adc17855af5f06d72c35108ad6abe67aed4c93",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/7/name"
+      },
+      "text": "AD-E9 leaf 1 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "88f6481a8ba794a75291fbce8a3e4af0f6c8898df9d0424aa4c2a65d8347b92d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/8/name"
+      },
+      "text": "AD-E9 leaf 3 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ebe0f007cf4c0974f40e75977fa74d25e773841368007dc8958c9da7772249e6",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/9/name"
+      },
+      "text": "AD-E9 leaf 4 normalizes exact zero to one Remove and absent zero to no operation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f3efb369249d6028ca346e3b09f7c11e8431676d4845efc3fb808bd5fc142c5a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/10/name"
+      },
+      "text": "AD-E9 unbounded leaf 1 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3ae53742046f9cfa9224e1a9455bb62dda73a5ed2a5a3d3998419e826d65b034",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/10/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2f741cc414cec59cfd022da832f0ffc5fa839c12961d7d14d57520ccba373ffe",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/11/name"
+      },
+      "text": "AD-E9 unbounded leaf 3 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "59b2a91e80dc537eabe93abc8943c8fafb7849427474842d798fcdf85dae6024",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/11/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2ed2aa049e64b905553067ab909adc5bdbadf1034340a4b33e985d7205d8d65d",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/12/name"
+      },
+      "text": "AD-E9 unbounded leaf 4 preserves exact large q beyond scale without a second leaf",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "638e6393d0c82dbf5f3234166964b6b646815005f628998188bf00aa5a1b9c84",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/mutants/2/tests/12/errors/0"
+      },
+      "text": "magnitude lies outside its declared lattice domain",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "45ec6e79a2dacbbed30e12194ad233249ec34ef68e92caf96bbe24177c13717a",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Finite public-model matrix; no universal arbitrary-integer proof.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a4bdfb6567306bcf02ad0353ac58fa3787fdea99c35aebaee9cc1bb2d1c22b6",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No whole B/FCT or AD-E9 acceptance assigned by this assay.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4cf3d98c3bf745fc94a3e6600d1ffc2964b42c351f6fa85665113dce04f2db40",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Public snapshot rollback here; complete queue/allocator fault matrix belongs to AD-E12.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ff741d13a95400babb6862efcd751b970c514c6305407699b7798ede1fea0885",
+      "source": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "location": {
+        "pointer": "/limitations/3"
+      },
+      "text": "Second-leaf confinement also relies on separately accepted AD-E4/E8 exact target/diff enforcement.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7f4cc16da10f77f842209ab35faa3b73743605e9b7256c81056e41a0a78b4e08",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "CORRECTION EVIDENCE SUBMITTED",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "64f5225fdc1ae6ef231edd1523834aaa4d590a70bd98755ca467e96e795ebbf6",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "afaff821ef3a5c0ae18c9575b3d27c2e66feb429e6f4d94b517659d4730ae701",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "PRJ binding isolation: derived paths and function selection are captured at construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "91338ca48b8500b04969ae2d382ff5ee23eeb22036d4b6fb60785c7ce692d8a9",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f70be10f20f25a44d48b18659cf228b792c32020ae81534ba3714a67e438f614",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/from"
+      },
+      "text": "this.#bindings = Object.fromEntries(Object.entries(bindings).map(([name,binding])=>[name,\n      binding.kind==='direct'\n        ? {kind:'direct',accessorId:cloneCanonicalValue(binding.accessorId),path:cloneStatePath(binding.path)}\n        : {kind:'derived',accessorId:cloneCanonicalValue(binding.accessorId),projectionPath:cloneStatePath(binding.projectionPath),sourcePaths:binding.sourcePaths.map(cloneStatePath),transformationId:cloneCanonicalValue(binding.transformationId),derive:binding.derive},\n    ])) as Bindings;",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "9de087bdd1c51007892df0a6f66b838b756e0e5f7c1782f32f760ee555a87d75",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/to"
+      },
+      "text": "this.#bindings = bindings;",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "56fa6d6ac3e865359799f11307e72ada8aa49d69a39acd0aae0ef6aa8e2fe451",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6d54e639684dc9ffa733bab0250e3b653c490794cb67fae516d7db0d10c58215",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "expected { kind: 'signed', value: 7n } to deeply equal { kind: 'signed', value: 4n }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1f58c449642f676b59b2b1bc6fd059a2975c94da1bd966e43e24de637cc37515",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "PRJ binding isolation: derived paths and function selection are captured at construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "194bd3c60e3856ebde13fef9b45e7c4b752ea083c2816ebd18b5cdc6e382c050",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/tests/1/errors/0"
+      },
+      "text": "expected { kind: 'signed', value: 999n } to deeply equal { kind: 'signed', value: 4n }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4c0bdb067048d48153fa0cd569ab71ca27a09ad7f726dcbc71ce3ab89a2bb910",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "379ce50b2f66b51737b6b21808541c205f66598851a8378af796651ab3f8343f",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "84d5b49345b909ea893c6e3960329a4633f7ed4105a085cf6d1719714b212014",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected { kind: 'signed', value: 7n } to deeply equal { kind: 'signed', value: 4n }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a81169f771bda7be034d80e5c0c7b53f1916adec016cce0bddfaae055204ddb",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "PRJ binding isolation: derived paths and function selection are captured at construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bfb781637b85897273e5bda962d367e76f4c25335c6efc8d1cbc12dc1471b4b9",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "85d1f15cb56916803c13b592762df46e128f1be62e5741652a435b421bdf8ba3",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Generic construction alias isolation; not a public Campaign2 executor-binding API.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "be75de5db79eb9b23f6f01f2e0cca75d7f25c0411737a92daaea8fb3b24b1c94",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No purity guarantee for trusted derive closures, no universal hostile-code confinement.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e4c1181de52ba2ca48e9fe410bba33be118e7bfef9b78d284a2c9e91a1a87c86",
+      "source": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sourceSha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Whole AD-E7/B/FCT remain open.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c6f2720cb78c4706ebe8dc90e08e10dcbe5bb1f82df947b381ff8fc9a729c968",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "CORRECTION EVIDENCE SUBMITTED",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a9955942491bafe0ff8b7ed4d5151eaaba74bd3a1b6c2d15929976c05bf4169",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E7 staged read evidence rejects omit substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "782b5d439f43dfc2a9f79cb7bf1c4db3aeb19b3a6af25f519651f491c1192363",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E7 staged read evidence rejects reverse substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "66deab42224a9123fadae119600be1a1c213459e824c0c0e6664186f5ffe2c1c",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AD-E7 staged read evidence rejects share substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8dd16346b81e75122518a022259a12c73f3dc5dbf38d47932377efdc6bd1be7d",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AD-E7 staged read evidence rejects encoded substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4cf81c07e04139ba78b7eee0cf8ee7cbaf63b2aaba96b257d19d2759d1f912c4",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AD-E7 distinct rule projections publish five isolated read segments",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "88b8f310ac1ff9a3e0dd40973586e2d0cd3abcb63bd1261e32996608776ce320",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AD-E7 rejects omit instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e7007c14ec485091653e129393edd7f71a2ce43d30cdeb18ca9579ac1e32ef5a",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "AD-E7 rejects accessor instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b21f07cafda13409c7d70690d59c1a04863c072d88985ac6dc9d3b983e59d03b",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E7 staged read evidence rejects omit substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e6c1ebedc4bcb57f575be4b6bb8aaf9c7676f975887c5e2f4e286e7da2519937",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E7 staged read evidence rejects reverse substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "aa8aecf84e64f7c18d469f1b839035a1991fc42162ca60c781faeff879c133be",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AD-E7 staged read evidence rejects share substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "805f69f38ce3f6fd046f913d63edc7e84621bc5131ab780fce82d18f07a25d0f",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AD-E7 staged read evidence rejects encoded substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d2802a01a6f13552bdb7b091bdc3b9347a993f97768de8682252424ef940336a",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AD-E7 distinct rule projections publish five isolated read segments",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "69150bfe06fa0f3c5ee84760ed9284b5122ce61db3a298135e8dcf72e4414280",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AD-E7 rejects omit instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a42cfb663fca173f6e885753639d2a5795321b99606eebcb8d66f9896ee68ea5",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/5/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e852f84bab66bec4e897b14818fe713e99ae188be36ec183eebf83ead0f785d7",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "AD-E7 rejects accessor instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4fcbc1ef83e758a5ad97501f650e7a0fcb8d2805753d8c40afdda88f3d8d1c68",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/0/tests/6/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e59ca98f59575dc80b6c307db1d0e00fe328067c4c60cc5e67323801815cc705",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E7 staged read evidence",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "791d82a6acfa46ac25c799e6099fd9d9209c85cbf49e9447c16fed0503ce5f85",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E7 staged read evidence rejects omit substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d442b48891980414b9de66c407ea036d4c408345cbbf750b4226d13d7ee883af",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c10df0d71a38403a9b16c6e9258eabe9333e603f925e829f394172159c6e3f0c",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E7 staged read evidence rejects reverse substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ae99e19b16ad5d542741a7c3b2c8156582f1c39a91e490c6ed21d28401832011",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "69a12369c9a873b1e3af01e130381b52e5350def8ed7393012b7811e808d6acf",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AD-E7 staged read evidence rejects share substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "69636f54fbba22f1c22a54d6aad996ccaae56d5dea013f6112a54b75211ec75f",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/2/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dc07f3c41e564b10918dddb2d4599b9da5ab88ae43ffb2f2706e68d26040922f",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AD-E7 staged read evidence rejects encoded substitution",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "71536eb38244f1bc18b9bb13f50e44c1a1c686c54185caf527bb7e09a13c90d1",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/3/errors/0"
+      },
+      "text": "expected function to throw an error, but it didn't",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fadd23ed8a00719ab61090200c0faaeabf937dcf7e9bb5ffc0742c73c60e7a91",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AD-E7 distinct rule projections publish five isolated read segments",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a683269cac746b8a2d68c92fb4390990f3a40f7e2546c81dcc41606ade51964d",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AD-E7 rejects omit instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0e513f7c42de2b9241c34d0d9ef3d7791a724d1485bff0d34b38266e04c6b074",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "AD-E7 rejects accessor instrumentation before staging",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8aec8df1203f575cd17b47ec6cb8ac00f4c1ef27b0a80f3f26e8b0fde9ed6a5e",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Internal admitted batch boundary, not a public executor injection API.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "233980f918c6af439220c91c40e11695066d3547aa8d1b24fb913e2a208410b3",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Partial AD-E7 evidence only; no whole-vector or B/FCT acceptance.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e283d5fac36407527220cf6f4f4d7b38f81b9cacde642449163660a684593eb8",
+      "source": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sourceSha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Historical evaluator-sensitive reports require explicit refresh before whole B/FCT.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ea8409a77892e47bea61d17959a12c3281ad1e4dcb781ec375783e1de5c96987",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6ff259e8680db15ceccf6c53bff1b6b48b75ea357a67d94a974cd7b357580dc9",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1d12d46565a6c6770ad4fa1d4704c321f2d3550369484849fe015c5754e33c42",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8c892b83346f83cfb5b626107e2ee3383974915ce2863eb8b87742179488cc98",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ba64aaf4d16b1b39a2540d06093a75de7c7cc27f3318d9db9eeb4828ac872e63",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "47e692f8ec3d57b5f1eea83c96e090565403773710942d3fe6e634a2c3948361",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5b893d1cd6607eb0e2318a3940cc9384f8f6d6fee3a42bd57104c3fb7de3e3d6",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d3d9191b9292918def8c4794dfeae91d6cba8bdb707e1070b586cbd73c2192c3",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/baseline/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c4a2528c21fe0a0971395bc8f589f61bfe38f81567efd10a6ee5a2a31e8fdbf4",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/required"
+      },
+      "text": "AC-H: a committed repairing rule",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6633e4ceaa153da1898d49087e7ea11802e3f2dc0ab37cad6d5ea0c64c3e147e",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "034cd5b62b9856bd68dc915540b130b97a3a5a73e892e54e3328dbbdb5480e4b",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1fd579b5653db25da5a707265fc1d56fa4de6d6422669904a6b2d07c1ed06d40",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4cf168bb145d724109a8ce8c894b4b9025f759429bad818d810e87780db2a3c2",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e4f9631a23b26afe43131373f27005a8de2cb1edd05b692a043df0fc188de5ca",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f832d6602d782c3a39c3e8a4b0f4cabec4542e3e7af637a6b1ed81146183ed82",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "61fd88d1916cf481a914d90616ff09923086791f6956f24e4ddfde39ef8d2b4e",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fae46a79cc55f7c02f8015172acc2824acd8d5dc64ab520ba21e411bf661e7f4",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/6/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bdcc55ccc57ac378272769922e1a3915adb8f471a8fb8d6407741326c91f73ff",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4dcdc91c3d986878b1d71018881f1cfad353e4f779c3bdc4088bb5e6ecdb17cc",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/0/tests/7/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fa6b194abf61c423617c2e144091cacbcec189e48d13c5e2530ac76354fc0096",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E10: real domain component",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "39b54bfa6470128fbea33021a04adb65a79090c1e7a1313a433bf1b43520bb89",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "59db8c4ed5166a95a05ec87130b9353f863aae5dbdb0f705020f971173097d94",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "57494ab161760b7454f9184e10e3f8e43f6bf4018b12a79ce58e88d5db1a58fb",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8eed6fb7868b7e003b8aa9701bfa11416d513e4c72fd9cd8ee9953ac9d5b7e51",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "79b272f4119d105582e9a9c71a0a16c583ee44b2ccba2fdc8c8a7759fc0a7dac",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8ab4cf461403a8dd6be3bc451c2fe79ae4ec1fbbc807a136de3ab675c702d17e",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c8892737dbce7c9669c87c1f3a756e727c53831235fbeef78ab4883808963e01",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36f1d7e3d68429b6358cc2ce8fe37b1e66df6e7dbf68f423192c8ae58bd16dac",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6091951ac800de8d26c8cda86be4e16b44dce407e3515664b53e3889c4d8da22",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/mutants/1/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "530c9826b21eb5fe731158ae9ea482eab0faef45196d150a2874290268362c0a",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Finite AD-E10 and existing REG/AC-H witnesses; no whole B/FCT acceptance.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "29f7b3828f370cf5ba524a254362b1c7e577451bc29693e0b2109b14da68ed34",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Unknown-variable translation is actual domain-component evidence with separate public earlier exclusion.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a55e48f72274ff11d8af0d51ae27b67efb12f3d876ad839338c4c3433cd73758",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sourceSha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No production profile widening or exhaustive fault matrix.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bd9b625f53913d515d74f3b18ca520c9c1ebc9635ea243053e7d80ca289fc4de",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b99c00fa95fbec7d150d58efe2eed0f44077155dfc4259230061fbf5ddb1c0af",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "07a92cd5aeee30039b7fc50972ca24a13c4f5d83a8337c7cdf6ca0f281ae748f",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5e0f05e4b5383e6ccf90e1e890b848511e5a0971643712c6bcd8acd9d3007049",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "642dc7190201e03a86173f6a1ff4809f3f36b90dd898085e73c6b6918c110d1a",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bccd1b2371a92097496d7c43130e03039632b9ca4dca9677676ca3bceb355b29",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36a63d88043043accce502af40b2a0d2d647cb9e9472c11e71283a7c89cdebf4",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ed4c0cc88ccb7ffdf76a822598d62675960f57ceb05c7c42e52da70a51c06ae2",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/baseline/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3a283bd9f558c9708b25b454d923ee1e9560a07251155594d74a332f93810dbe",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/required"
+      },
+      "text": "AC-H: a committed repairing rule",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a19d9f4da8408159c956909d2e7a7d925766899e547093865cc0a4a37659080",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b4f51af94bbfde336feaa99f7374420500ef3c8d9d705f3871635dad0bbe1608",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2f7bf803db33a72fe948034f7f5aa57fbe9f542341112737d4013c9e5b45ee83",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ee0e9227b9af61ed55e105761ce31616d53552051c2643daa37bb976ea648bba",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7cd65cef0daa812671bddeb6a5a152f51bbe318cd597767ff41abddc5a4d44d5",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7e91f8203e1f41c27e99fb4df9ef5271c9f8ce38c9abf7431160b1acdbc4a02b",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "15db37859107a637d5dbb58862eb1e18c377b77e64d4cdda4dcd8ab241affb9f",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c9f426b0b8c346e5f208141ba185b66d56957e25d4c08c1daaace3122a871742",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/6/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7f34f71be54c22c047e586cc60ddc2e371330ff28c6232c7ef65ac8cc2f8fc53",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a161cee612bd60f35025c9cd5d6facc678e1edac4f0b57f3e15946f488cff665",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/0/tests/7/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "00cba8746e94e9f585cb165cd9e9f330c01942481a7a2cfba1fb9860001d475a",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E10: real domain component",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "67fdca25253c5559eadeda19c26933a5a92770b7f50add2f81e0ef2d3ee74a8f",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "870dec4ebdef7ae07f5a4be7fbd9842b367e48d3a754397378d8093bbfe119a4",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4b55bdb99fcfc7ec6b0ac01140231c3735acebbce17c76f2b4c047e491ace056",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0e9f1ea35bc80074789406c07e636ddec471ba66324be870d267ca97d7e0dc7f",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7bc7670143c8a239a75dfa9e888253d5fc1ec685ce9e1eb8b147a78fac6ea89c",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3740db5806f240730d44f29d6efffe43ff0b39db5ec4139d641589bfa6f4e5ca",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a367f200dadc21978eb265e8ad051de32a36395b62fb007f277ccf76f7ac0609",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c0b95d843cd0fe63e5c9f42d57dcb93f159e421b4bff28d583c10e613ce823cc",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b6a9b716f6e51445e0418ca7ac19814bb854f7683d9a813b100f0df9e694c759",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/mutants/1/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "904dbe78fe8e7fcd9aa093fa28989838eded6eda345baf678041446f653cc210",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Finite AD-E10 and existing REG/AC-H witnesses; no whole B/FCT acceptance.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "06f379ec11966c213f80e9ef933c3c5fc60368cc2ba0bd7bb71d441696ccb871",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Unknown-variable translation is actual domain-component evidence with separate public earlier exclusion.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e7c4a547866877966bcca4b25d0bbde6ff0f5e887e2fcd1761a141a7c7900308",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sourceSha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No production profile widening or exhaustive fault matrix.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0e71dae227f78ab3718f97816919633473ff8afb374c4e2077ad6d7df83833e2",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fd63bfa0c61ee37d28ba6a4669d6f1c6dfda666927a72d16b97eb1ca90c6c820",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "06e6e0d27fa8447973d7ba6da2073aea8a5529fcb9e3c98bc76414057addd476",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b91aab920b575982876e152f9f84ba79768d715ed44ee740dceb2df71052b023",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "74b0418485c82cbf4d6a11daa4d718d0042ca3cd693a8607b579cf4bd8ac7e87",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d74fa7c5d9ad4357314e15f9cab8eaeebaf533ee05f5cb870c5900b3e37026df",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "af45a15e7d9e7ab5abc385961b59a3f9aed6153804aa899a22232f76820a2699",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b6aa0e256869bfc6a52a43ae8e3571a007d620daac563fbb409beaa0765e2311",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/baseline/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f9d19758bec787bcc2893df8afda4d0607d1faf5e7efcb72166e2e971d4c32ec",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/required"
+      },
+      "text": "AC-H: a committed repairing rule",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2c76d9d40d56093f9e2ec77746fa006e26b4c63cb8e430db738b6cbc4a576013",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "29ae73e3359a21cdd8fe984c27a3438535d9ca670821fb50fa1ea66ef71852fb",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ac569ae67944b628761873c32c3e913a082224ea8df18a1bb79350e8498903c4",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "20602afb86c6f8c10bb59a216137c692a07991821f0ff537bff39de984fc267d",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "555e58a4885d286862af76c4fac2918a21f4ef6f8ad1e3654237462889372ce3",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7e00cbc05c837db73f3b4375c6aa0f75d188c5e644e290e8f9ac2f75381e78b6",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b85de3f4589b88530a66cf1c51367b3f61e07b01f0813babab3a2cddc53c2b18",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2e0a0659f1c2ee26c13a240fad23e51933add757d4964c442541eef6725dd794",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/6/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "42e48323cc2ea3152d4c56e6b85e8a51c1e6b27ffc972b86a53cbd63334118de",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7019689e29b9598858509df3bea2447a674fa821953b3b45534ce1aa85032437",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/0/tests/7/errors/0"
+      },
+      "text": "expected \"beginTransitionIngressV04\" to not be called at all, but actually been called 1 times\n\nReceived: \n\n  1st beginTransitionIngressV04 call:\n\n    Array [\n      Object {\n        \"decode\": [Function decodeCampaign2],\n        \"occurrenceIdentity\": [Function occurrenceIdentity],\n        \"outputClosure\": [Function outputClosure],\n        \"registrationForEvent\": [Function registrationForEvent],\n        \"registrations\": [Function registrations],\n        \"routeKeyForTransition\": [Function routeKeyForTransition],\n        \"validateOutputs\": [Function validateOutputs],\n      },\n      9223372036854775807n,\n    ]\n\n\nNumber of calls: 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e70991cc28992bdc659265fd2805c432fd0fe2d83a353770f5ea37730599b64f",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/required"
+      },
+      "text": "AD-E10: real domain component",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d114174a62278a29f549ce45c5650161d3fc8e42adf6cb71de46ce27fa963629",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E10: public additive displacement reaches both reference endpoints and rejects one step beyond",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8124ad8e8beb5ca958b653475aa82ecd19b814160a63ae1382f648739132bcb2",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E10: real domain component preserves C error mappings; public unknown-domain state is excluded earlier",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5f284a3e1c82e16f8f487ccb3ae359ae58fb77d65bdf19f98154a5da6bded028",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8035b5f58dea1f68f65c5c86fe09f4544b232d278d827553d05d0f300aba516a",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "REG-P: repeated same-T reference queries preserve the run commitment across an actual phase-140 write",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cff121313a38debc7b51e5e54190fda57297c8d3c1db5990769ac2e7ab4e7a39",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "REG-J: signed-rate A-B-C, repeated C and A-C retain exact values, remainders and authored anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d997393b873f7f93cd2366374296132c64f1c57b28278ae5432587177766dbe2",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "REG-I/L: paired D histories share the provider; dynamic same-clock restore retains state, reference validation and anchors",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f945a1f3644f0febdad545fa66c8a189252b68bb730b8d782cd90c0ec1586be1",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "REG-F/G/H/K: exact Scale=1 endpoints, independent displacement and 80-to-81 time witness",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "62e60d35d610a8ae85b4931b8214c56c3ee4c5d5d94ac42726dce45beea9bb59",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "REG-O: retained D=20 fails at the first instant hook with complete rollback and at saved-time restore before construction",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b899449bcfabf1a96b49f237febaa44de42e448d85a151fdc1552010f4016d4c",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/mutants/1/tests/7/name"
+      },
+      "text": "AC-H: a committed repairing rule cannot bypass time-only invalidity before handlers",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "99f2d100b08cf844f9abef700c5ce5ccb41f9902ad255458b8feeb371edbafb1",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Finite AD-E10 and existing REG/AC-H witnesses; no whole B/FCT acceptance.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "49b2e81058193fb8111c1817491fe4997331c698ee000e9e62f253098cd4dd39",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Unknown-variable translation is actual domain-component evidence with separate public earlier exclusion.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "586d30438b1017479f1d6a64f3102ec7bdf64726d4ed5759892c2b5f471d66d6",
+      "source": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sourceSha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No production profile widening or exhaustive fault matrix.",
+      "category": "NARRATIVE"
+    }
+  ],
+  "recordedReceipts": [
+    {
+      "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+      "sha256": "6caa4fd61c79bbe78a98595242f78c467e8904dae77980c8a78dcd1df9602285",
+      "baselineTests": 13,
+      "mutants": [
+        {
+          "name": "clamp-negative-q-to-zero",
+          "status": "DETECTED",
+          "failedTests": 4
+        },
+        {
+          "name": "clamp-bounded-q-to-maximum",
+          "status": "DETECTED",
+          "failedTests": 3
+        },
+        {
+          "name": "invent-ceiling-for-unbounded-leaves",
+          "status": "DETECTED",
+          "failedTests": 3
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+      "sha256": "3bad08f249cc1bf4b2c68e512bbb6b49576908a645160641f1e04080efbc56b9",
+      "baselineTests": 13,
+      "mutants": [
+        {
+          "name": "clamp-negative-q-to-zero",
+          "status": "DETECTED",
+          "failedTests": 4
+        },
+        {
+          "name": "clamp-bounded-q-to-maximum",
+          "status": "DETECTED",
+          "failedTests": 3
+        },
+        {
+          "name": "invent-ceiling-for-unbounded-leaves",
+          "status": "DETECTED",
+          "failedTests": 3
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+      "sha256": "e1653d0d81ef48844599cf0fd8b39614ec83ba1019f4ed6225a095eb1ba69e65",
+      "baselineTests": 3,
+      "mutants": [
+        {
+          "name": "retain-caller-binding-alias",
+          "status": "DETECTED",
+          "failedTests": 2
+        },
+        {
+          "name": "retain-nested-direct-path-alias",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF.json",
+      "sha256": "5d4a6f728e6c981a6b8011bcf8f0bd21d278233f2a7e318220680b537b422bc7",
+      "baselineTests": 7,
+      "mutants": [
+        {
+          "name": "omit-per-rule-instrumentation-check",
+          "status": "DETECTED",
+          "failedTests": 2
+        },
+        {
+          "name": "omit-staged-read-comparison",
+          "status": "DETECTED",
+          "failedTests": 4
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+      "sha256": "7193adfe6f64aabb53f8866122517b12d187edff4895ec685185f8a0f913b3f0",
+      "baselineTests": 8,
+      "mutants": [
+        {
+          "name": "omit-pre-instant-reference-validation",
+          "status": "DETECTED",
+          "failedTests": 2
+        },
+        {
+          "name": "collapse-unknown-variable-to-out-of-range",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+      "sha256": "b4ae8c73e7f93f5eb9581608c1554bb9a7a388b6d72338b292811d33d66cd481",
+      "baselineTests": 8,
+      "mutants": [
+        {
+          "name": "omit-pre-instant-reference-validation",
+          "status": "DETECTED",
+          "failedTests": 2
+        },
+        {
+          "name": "collapse-unknown-variable-to-out-of-range",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+      "sha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b",
+      "baselineTests": 8,
+      "mutants": [
+        {
+          "name": "omit-pre-instant-reference-validation",
+          "status": "DETECTED",
+          "failedTests": 2
+        },
+        {
+          "name": "collapse-unknown-variable-to-out-of-range",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    }
+  ],
+  "exactBindings": [
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/recovered-eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF.json",
+        "path": "src/test/campaign2MagnitudeBoundary.test.ts",
+        "sha256": "764980d6414b8dc3d6e2096fd6f0c085c8b61a9c9e6a2424471243a2c7499086"
+      },
+      "actual": {
+        "path": "src/test/campaign2MagnitudeBoundary.test.ts",
+        "sha256": "764980d6414b8dc3d6e2096fd6f0c085c8b61a9c9e6a2424471243a2c7499086"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/recovered-eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV2.json",
+        "path": "src/test/campaign2MagnitudeBoundary.test.ts",
+        "sha256": "764980d6414b8dc3d6e2096fd6f0c085c8b61a9c9e6a2424471243a2c7499086"
+      },
+      "actual": {
+        "path": "src/test/campaign2MagnitudeBoundary.test.ts",
+        "sha256": "764980d6414b8dc3d6e2096fd6f0c085c8b61a9c9e6a2424471243a2c7499086"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+        "path": "src/substrate/state.ts",
+        "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+      },
+      "actual": {
+        "path": "src/substrate/state.ts",
+        "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_PROJECTION_BINDING_ISOLATION_PROOF.json",
+        "path": "src/test/projectionBindingIsolation.test.ts",
+        "sha256": "24f19296f226cfdbeb3c98dd3b3e56ba325a6f69473d8ec9f217ff3a30758b8f"
+      },
+      "actual": {
+        "path": "src/test/projectionBindingIsolation.test.ts",
+        "sha256": "24f19296f226cfdbeb3c98dd3b3e56ba325a6f69473d8ec9f217ff3a30758b8f"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/recovered-eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42.ts",
+        "sha256": "eb17641d4dc3d0fa56c30e41f5d636fc002c52847b8e0d5b937b277d26b31b42"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+        "path": "src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF.json",
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      },
+      "actual": {
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+      },
+      "actual": {
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+        "path": "src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      },
+      "actual": {
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+      },
+      "actual": {
+        "path": "src/campaign2/adaptationDomains.ts",
+        "sha256": "e23e1ddb1c62aaea6f48c4b384821c516c0fd0932df16168db24b0c19c68281e"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+        "path": "src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/regulatoryReference.ts",
+        "sha256": "47106ab2d067faffa857b4b582ed2983959e0a2f60eea155358a8fb06b36333f"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      },
+      "actual": {
+        "path": "src/test/campaign2RegExactWitnesses.test.ts",
+        "sha256": "ba6589956f7351f8ea63172d1320947c095e5f587e89f6b57eb7d48b84cbceb1"
+      }
+    }
+  ],
+  "preservedArtifacts": [],
+  "schema": {
+    "path": "docs/planning/campaign3-history-adaptation-boundary-proofs-rev1/schema.json",
+    "sha256": "86dd58919a9f6855d88ae64be03c312f4a2762ca371f7407dafceb2e0465108c"
+  },
+  "unresolved": {
+    "path": "docs/planning/campaign3-history-adaptation-boundary-proofs-rev1/unresolved.json",
+    "sha256": "09bbe4fb54aa504154524c0457d8ff21f78af4d49dbf0f20cd8c1f1e63ee73a9"
+  },
+  "limits": [
+    "16 historical detected mutant instances across seven reports; revisions are not independent mechanisms.",
+    "No runtime,mutant,test,build or writer rerun; original receipts unchanged.",
+    "Four unresolved source groups include one previously recorded ADAPT evaluator and three additional identities; total ADAPT gaps now eight.",
+    "No model,law,allocation,verdict,corpus or obligation status change; independent adequacy remains open."
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

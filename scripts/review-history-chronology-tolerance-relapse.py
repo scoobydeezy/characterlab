@@ -1,0 +1,42 @@
+"""Bind six dated coverage entries to scoped qualification and successor evidence."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-chronology-tolerance-relapse-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+    p=O/n
+    if p.exists():assert load(p)==v,p
+    else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+roles={x['path']:x for x in load(P/'campaign3-history-source-roles-rev313/index.json')['roleAssignments']}
+def evidence(*names):
+    result=[]
+    for name in names:
+        p=P/name;r=roles[p.as_posix()]
+        assert ref(p)['sha256']==r['sha256']
+        for x in r.get('evidence',[]):assert ref(x['path'])['sha256']==x['sha256']
+        result.append(dict(**ref(p),sourceRole=r))
+    return result
+sections=[
+ (4003,4035,'PHYSICAL TOLERANCE',evidence('CAMPAIGN3_TOLERANCE_QUALIFICATION.md','CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md'),'Three component models18 composed runs90 prefix comparisons reuse four public input/state conditions,not18 new public models or90 unique public saves. Old R0+D probe did not consume tolerance; valid state updates alone did not prove effect attenuation. Equal later stimulus gives Reciprocal1/5,Linear3/5,Unattenuated1 after four exposures,with reserve fixed. Unattenuated accumulates tolerance but ablates effect link. Full reserve gives applied0 across laws while potential/overflow differ: clipping is not efficacy. Other leaves and unexposed key isolate tolerance. Component challenge does not feed back into public run or admit world diagnostics to cognition. No perceived tolerance,compensation,recovery or new receiving horizon; later continuous biology supplies separate integration.'),
+ (4036,4068,'ABSENCE DEFICIT',evidence('CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md','ABSENCE_FINDINGS.md','CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md'),'Three laws27 composed runs135 prefix checks reuse four public conditions. Immutable reference50,acquired displacement4,current level50,support and response remain separate; support4 removes gap without erasing adaptation. Ordinary level48 shortfall is not withdrawal. ThresholdGap dead band differs from LinearGap; FixedReference retains D but ablates its use. Initial borrowed R0=80 from another model was caught before tests/freeze. First scientific tests passed but states-array typing failed build; original unexecuted plan/source retained,REV2 typing-only successor froze before qualification. Current world-only discrepancy is not experienced distress,Need,chosen dose or relief belief. Spaced zero exposure persistence is not recovery; no new public sensor/consumer.'),
+ (4069,4103,'REPRESENTED CRAVING',evidence('CAMPAIGN3_CRAVING_QUALIFICATION.md','CRAVING_FINDINGS.md','CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md'),'Four laws56 distinct component runs60 comparison rows300 checks cover280 distinct prefixes; five actual public BODY sources15 prefixes remain separate. Hidden6/9 safe aliases legitimately share identity; failed60-unique assertion occurred twice before any plan/result and is preserved without salts or discarded witnesses. Actual admitted pressure and same-subject learned relief create urge,not hidden tolerance/absence diagnostics. Owner label is subject464 field2,not general namespace1000 ObserverId conversion. Fixed recognized cue/deliberate recall and restraint are controls,not learned recognition or earned inhibition. Urge persists when unavailable/restrained but no action is chosen. MeanProduct declines with partial relief; MeanBottleneck stays1/2,so declining urge is not universal. Full relief/ineffective belief known0 differ from unknown/denied input. Report3 affects4 only. Later integrated biology does not retroactively make this component native or general craving.'),
+ (4104,4139,'BOUNDED RELAPSE',evidence('CAMPAIGN3_RELAPSE_QUALIFICATION.md','CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md'),'Seven exactly reused CONTROL models31 new public runs279 prefixes use three acquired practices,adopted goal and three actual withholding opportunities before neutral load7. Seeds1/7 execute target7,six retain idle; all withhold8 and all noLoad4..8. Retained/maintained goal and pre-inhibition appraisal remain equal; load adds no motive/history bonus. Actual execution differs from restored eligibility;2/8 is finite seed evidence,not relapse rate. Prior adaptation means instructed goal-supported adjustment,not physiological recovery or acquired control. Goal retirement at6 permits7/8 and is distinct from loss of maintenance or temporary load. Negative belief retains history; hidden truth whole views remain safe. Initial Buffer rejection occurs before settlement; exact Uint8Array conversion preserves all original Model/Run/input identities and boundary strictness. Original unexecuted plan/failure retained. Separate witnesses did not yet establish joint addiction; later continuous biology addresses declared integrated behaviors only.'),
+]
+common=evidence('MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json','CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md')
+ss=[dict(startLine=a,endLine=b,role=k,disposition=n,acceptanceChain=e+common,obligations=['RO-C3-019','RO-C3-020','RO-C3-021']) for a,b,k,e,n in sections]
+cpath=P/'campaign3-history-chronology-candidates-rev1/occurrences.json';candidate=load(cpath);rows=[]
+for item in candidate['rows']:
+    u=item['original'];s=[x for x in ss if x['startLine']<=u['location']['startLine']<=x['endLine']]
+    if not s:continue
+    assert len(s)==1 and u['location']['endLine']<=s[0]['endLine']
+    rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],sectionStartLine=s[0]['startLine'],disposition='DATED CLAIM/ROUTING; bound section specifies scoped acceptance and supersession'))
+priorPaths=[P/f'campaign3-history-chronology-{n}-rev1/review.json' for n in ['tail','integration','cognition','coverage','development-audits','development-workers','development-scope','defining-public','defining-owners','embarrassment-bridge','intoxication-reappraisal','disposition-sleep','belief-wrapper-recovery','identity-admission-belief','eligibility-capability','biology-public','biology-work-order']]
+prior=[r for p in priorPaths for r in load(p)['rows']]
+ids=[r['occurrenceId'] for r in prior+rows];assert len(ids)==len(set(ids))
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='FOUR TOLERANCE/RELAPSE ENTRIES RECONCILED; WHOLE LOG OPEN',checker=ref('scripts/review-history-chronology-tolerance-relapse.py'),candidates=ref(cpath),resolvedSource=candidate['resolvedSource'],sections=ss,rows=rows,priorReviews=[ref(p) for p in priorPaths],limits=['No runtime tests or original writer rerun. Historical counts are not fresh execution.','No whole-log assignment or HQ011 closure. Original bytes and occurrence identities preserved.']))
+save('findings.json',{'status': 'OWNED LIMITS PRESERVED', 'findings': [{'owner': 'RO-C3-020', 'distinction': 'Adaptation state,effect attenuation,absence gap and admitted experience differ.', 'blockedClaim': 'State accumulation alone proves tolerance,ordinary deficit proves withdrawal,or world diagnostics are craving evidence.', 'reopen': 'New consumers require actual causal effect and safe sensing witnesses.'}, {'owner': 'RO-C3-021', 'distinction': 'Safe-input identity aliases and repeated composed prefixes are legitimate accounting distinctions.', 'blockedClaim': 'Case labels justify identity salts or300 checks imply300 distinct prefixes.', 'reopen': 'Any source/harness revision must retain original identities and count unique runs/prefixes separately.'}, {'owner': 'RO-C3-020', 'distinction': 'Represented urge,eligibility,actual restraint and executed return differ.', 'blockedClaim': 'Craving component proves action/control,or brief goal-supported lapse proves sustained clinical relapse.', 'reopen': 'Broader behavior claims require actual acquired control,physical recovery or sustained trajectories as applicable.'}]})
+save('check.json',dict(status='PASS SCOPED CHRONOLOGY ACCOUNTING; HQ011 OPEN',sections=len(ss),newOccurrences=len(rows),priorOccurrences=len(prior),cumulativeReviewed=len(ids),remainingOriginalOccurrences=len(candidate['rows'])-len(ids),review=ref(O/'review.json')))
+assert all(p.stat().st_size<50_000_000 for p in O.iterdir())
+print(json.dumps(load(O/'check.json')))

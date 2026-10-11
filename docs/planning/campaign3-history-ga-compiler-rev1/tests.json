@@ -1,0 +1,54 @@
+{
+  "status": "PASS; CURRENT CONCRETE DECLARATION/SOURCE CONTROLS",
+  "total": 87,
+  "report": {
+    "path": "docs/planning/campaign3-history-ga-compiler-rev1/current-tests.json",
+    "sha256": "880fcc32f88ccc3054715c363b30c4d4a5d3575f42a16b4fdab572ea0113dc48"
+  },
+  "checker": {
+    "path": "scripts/test-history-ga-compiler.mjs",
+    "sha256": "ad079b519e018d8647c321e3e1dd4a18d5f16fb4d4265d8a6509865c844760ef"
+  },
+  "sources": [
+    {
+      "path": "src/test/generalDeclarationProfile.test.ts",
+      "sha256": "c7dc05350d50ec1172c7c916310a1af988c8f8aa0f9eb3ec600c50f94da907ad"
+    },
+    {
+      "path": "src/test/generalSourceDeclarations.test.ts",
+      "sha256": "d6effd16034ca2f6dc8bfc58f0e89583b65252160c08bc1f1e2e8ffb7e71cd74"
+    },
+    {
+      "path": "src/campaign3/generalAttentionCodecs.ts",
+      "sha256": "c68f80b846c37eb3910f885c1c806621805a8c601e6b9a9a5433c88ba926e36e"
+    },
+    {
+      "path": "src/campaign3/generalAccessors.ts",
+      "sha256": "1f19cf225e143b75f1d64f2248ccaf98f97153df3547fab42e73103658ae2a38"
+    },
+    {
+      "path": "src/campaign3/generalBindingProfile.ts",
+      "sha256": "d2261591d8139c6bc9d95af4deec009c416920243460a6041590d2fd9711646c"
+    },
+    {
+      "path": "src/campaign3/generalDefinitionProfile.ts",
+      "sha256": "7eac30b013594244c01e9d63539616e0a4bb9f83238b4d132e01bc221b4a1c04"
+    },
+    {
+      "path": "src/campaign3/generalDeclarations.ts",
+      "sha256": "0d1b45f3a259d4fecc25c99b4bb0d4c57a5c2ebd3cb8fdb29b77c2eb676741f5"
+    },
+    {
+      "path": "src/campaign3/generalSourceDeclarations.ts",
+      "sha256": "de1893320501613785f78e8016d2ba4f354131f9c8653625fc1ab7129eb34105"
+    },
+    {
+      "path": "src/campaign3/generalProtocolDeclarations.ts",
+      "sha256": "53e332be421213393263c24732e0fa1a8386c8774924ee51a4fb5644ec4b5425"
+    }
+  ],
+  "limits": [
+    "Current implementation and recipe set; historical 30 recipe/52-test compiler environment not reconstructed.",
+    "No full-suite,reference-suite,build or native public runtime rerun."
+  ]
+}

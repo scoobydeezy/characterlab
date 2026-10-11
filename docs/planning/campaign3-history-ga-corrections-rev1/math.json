@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "scope": "Fresh original pre-correction fault probes with SHA-exact historical source overrides; no production file change.",
+  "baseline": {
+    "independent": "1/2",
+    "shared": "1/2",
+    "round": "4",
+    "mass": "0,1,2,2",
+    "beta": true,
+    "future": true,
+    "pull": "1/1",
+    "substitutions": 0
+  },
+  "faults": [
+    {
+      "name": "independent-footprint",
+      "removed": "return values.map(boundedEncodingResponse)",
+      "inserted": "return values.map(x=>x.divide(one.add(sum(values))))",
+      "baseline": "1/2",
+      "actual": "1/3",
+      "detected": true
+    },
+    {
+      "name": "shared-reinterpreted",
+      "removed": "return values.map(x=>denom.numerator?x.divide(denom):zero);",
+      "inserted": "return values.map(x=>denom.numerator?x.multiply(budget).divide(denom):zero);",
+      "baseline": "1/2",
+      "actual": "1/10",
+      "detected": true
+    },
+    {
+      "name": "truncation",
+      "removed": "roundEven(x.numerator*p.scale,x.denominator)",
+      "inserted": "x.numerator*p.scale/x.denominator",
+      "baseline": "4",
+      "actual": "3",
+      "detected": true
+    },
+    {
+      "name": "remainder-tie",
+      "removed": "compareKeys(labels[a.j],labels[b.j])",
+      "inserted": "compareKeys(labels[b.j],labels[a.j])",
+      "baseline": "0,1,2,2",
+      "actual": "0,2,2,1",
+      "detected": true
+    },
+    {
+      "name": "beta-endpoint",
+      "removed": "if(beta.compare(one)>=0)fail('beta must be below one');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "future-history",
+      "removed": "at>now||",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "summed-pull",
+      "removed": ".divide(Q.of(BigInt(e.retainedKeys.length)))",
+      "inserted": "",
+      "baseline": "1/1",
+      "actual": "2/1",
+      "detected": true
+    }
+  ],
+  "original": {
+    "path": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV1.json",
+    "sha256": "e76d7f319b368722456072820814032ebbb399f8f013f5954f6246cb27af0427"
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/encodingAccessMath.test.ts",
+      "sha256": "ff6053709ebb4da8729ac08cdd9d08b24913dd12f3fbc6216e4026028e58d5f2"
+    },
+    {
+      "path": "docs/formal/ENCODING_ACCESS_MATH.md",
+      "sha256": "85df022afbe9031aa46c0242e713b4c35f5bd1838b1c91f52fab395752e28239"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_CLOSURE_PLAN.md",
+      "sha256": "73ed5558148cbdc4a3b0f118a62e52777e65bb6065e5f5acececfac0b46fd67d"
+    },
+    {
+      "path": "scripts/review-encoding-access-math.mjs",
+      "sha256": "fcd313ab3408c733c30406fe375ddca19104ea2fb948ca645156915e209beece"
+    }
+  ],
+  "pinnedSources": [
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/c3c5c098006e37e6-encodingAccessMath.ts",
+      "sha256": "c3c5c098006e37e689c5dccae69aac5d5c9e1ab9c76cc4bfbcc0c0ba509118ee"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/aa40340b1832eb82-selectedEncoding.ts",
+      "sha256": "aa40340b1832eb82539d1a52f6fea88c930aa85de884aa91d4b612948ad78150"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/a16b421cfd570e1f-observedMarkerTracking.ts",
+      "sha256": "a16b421cfd570e1f7997aa32d6e0a2fd2d4c665c323c505793db37828f51fc5c"
+    },
+    {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-ga-initial-math.mjs",
+    "sha256": "f4fe603553bc8f7862fe3279d87f6758f175fded5d5747ff0951f5f36685eaa3"
+  }
+}

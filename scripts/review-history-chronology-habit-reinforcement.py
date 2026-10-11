@@ -1,0 +1,42 @@
+"""Bind six dated coverage entries to scoped qualification and successor evidence."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-chronology-habit-reinforcement-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+    p=O/n
+    if p.exists():assert load(p)==v,p
+    else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+roles={x['path']:x for x in load(P/'campaign3-history-source-roles-rev313/index.json')['roleAssignments']}
+def evidence(*names):
+    result=[]
+    for name in names:
+        p=P/name;r=roles[p.as_posix()]
+        assert ref(p)['sha256']==r['sha256']
+        for x in r.get('evidence',[]):assert ref(x['path'])['sha256']==x['sha256']
+        result.append(dict(**ref(p),sourceRole=r))
+    return result
+sections=[
+ (3867,3900,'HABIT RESISTANCE AUDIT',evidence('CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md'),'Seven existing CONTROL models17 frozen runs142 exact prefix replays match prior identities/full hashes. Coverage omission corrected,not new mechanism or joint inference from separate profiles: CONTROL itself has acquisition,maintained goal,inhibition,actual loaded return and later goal-retirement return. SpareSlot suppresses without deleting history; neutral load5 changes access while goal/appraisal remain; retirement7 affects8. Retained goal differs from maintained goal and motor failure. FATIGUE20/180 and HABIT23/291 are frozen corroborating receipts verified by hashes,not freshly rerun or added to17. Prior tests/build reused,not new validation cohort. No universal control-resource or addiction claim.'),
+ (3901,3935,'HABIT ACQUISITION AUDIT',evidence('CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md'),'Twelve original models23 runs291 exact whole-prefix replays recover identical rows/draws/choices/safe hashes. Empty history grows1/2,3/4,7/8 after observed practices; information4 changes explicit expectation to false without rewriting performed history. At5 cue retrieves target,probability1/2 and actual execution; later unrewarded act reduces history7/16 below threshold. Unseen/unrewarded/other-cue and false-report controls separate actual success from admitted learning. History adds availability,not motive die. Neutral choice is scoped HABIT policy,not reward preference against strong opposition. First wrapper expected absent legacy row.runIdentity; corrected checks originals/model/source/prefix hashes and records actual runtime identities without backfilling frozen plan. No new models/runs/tests/build; full-history stored/derived equality does not authorize lossful reduction.'),
+ (3936,3970,'DEPENDENCE SUBSTITUTION',evidence('CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md','SUBSTITUTION_IMPLEMENTATION_FINDINGS.md'),'Five models29 runs261 component prefixes compare four prior successes A/A/A/A versus A/B/A/B under same demand. Removing A gives actual learned B delivery only diversified; physical totals4 versus7 arise after equal training. One shared externally instructed relief task is not two motives or physiological deficit. ExpectationOnly explains primary substitution; HistoryOnly misses informational B. Zero corrected estimates leave different candidate histories but NoActiveReasons in both,not action divergence. HABIT neutral choice remains different scoped policy. Preserve15 initial no-choice adapter failures and11/4 three-option-domain failure;0.2 narrows to A/B or no choice before freeze rather than inventing idle motive or widening codecs. Independent abstention remains unqualified. Known failure,unknown,no opportunity,missing receipt and failed execution differ; world delivery diagnostics are not cognitive inputs.'),
+ (3971,4002,'REINFORCEMENT FEEDBACK',evidence('CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md','REINFORCEMENT_FINDINGS.md'),'Five exactly reused SUBSTITUTION models31 new runs279 component prefixes qualify choice->admitted outcome->expectation->later reasons/choice. Negative information plus one success each yields1/2 estimates before free contest; actual physical reward stays unit constant. Withheld feedback preserves delivery but removes expectation/history update. Seed2 first expression identical; later full A/A/A/A/A versus withheld A/B/A/A/A. All8 pairs retained:6 sequences differ,2 equal; some counts equal and die brackets plateau. No monotonic frequency,objective reward escalation or population rate. Latest reaches1 after practice and predicts no strengthening under constant success,serious alternative. Withheld intervention changes both performed history and expectation; primary result is expectation-mediated,not isolated habit-strength necessity. False success/denied truth pairs keep whole safe views; no truth-to-learning shortcut. No new production law/public admission or failed scientific cohort; earlier failures retained.'),
+]
+common=evidence('MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json','CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md')
+ss=[dict(startLine=a,endLine=b,role=k,disposition=n,acceptanceChain=e+common,obligations=['RO-C3-019','RO-C3-020','RO-C3-021']) for a,b,k,e,n in sections]
+cpath=P/'campaign3-history-chronology-candidates-rev1/occurrences.json';candidate=load(cpath);rows=[]
+for item in candidate['rows']:
+    u=item['original'];s=[x for x in ss if x['startLine']<=u['location']['startLine']<=x['endLine']]
+    if not s:continue
+    assert len(s)==1 and u['location']['endLine']<=s[0]['endLine']
+    rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],sectionStartLine=s[0]['startLine'],disposition='DATED CLAIM/ROUTING; bound section specifies scoped acceptance and supersession'))
+priorPaths=[P/f'campaign3-history-chronology-{n}-rev1/review.json' for n in ['tail','integration','cognition','coverage','development-audits','development-workers','development-scope','defining-public','defining-owners','embarrassment-bridge','intoxication-reappraisal','disposition-sleep','belief-wrapper-recovery','identity-admission-belief','eligibility-capability','biology-public','biology-work-order','tolerance-relapse']]
+prior=[r for p in priorPaths for r in load(p)['rows']]
+ids=[r['occurrenceId'] for r in prior+rows];assert len(ids)==len(set(ids))
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='FOUR HABIT/REINFORCEMENT ENTRIES RECONCILED; WHOLE LOG OPEN',checker=ref('scripts/review-history-chronology-habit-reinforcement.py'),candidates=ref(cpath),resolvedSource=candidate['resolvedSource'],sections=ss,rows=rows,priorReviews=[ref(p) for p in priorPaths],limits=['No runtime tests or original writer rerun. Historical counts are not fresh execution.','No whole-log assignment or HQ011 closure. Original bytes and occurrence identities preserved.']))
+save('findings.json',{'status': 'OWNED LIMITS PRESERVED', 'findings': [{'owner': 'RO-C3-021', 'distinction': 'Fresh legacy replay and original validation/identity commitments retain different scope.', 'blockedClaim': 'Old plan had explicit missing RunIdentity fields or replay constitutes new test/build/cohort coverage.', 'reopen': 'Future historical verification must preserve actual fields and separately label derived runtime identities.'}, {'owner': 'RO-C3-020', 'distinction': 'Candidate access,active reasons and actual choice differ across scoped neutral policies.', 'blockedClaim': 'NoActiveReasons is chosen idle or candidate-history contrast alone proves action influence.', 'reopen': 'New option-set or neutral policy requires admitted contract and actual-choice comparison.'}, {'owner': 'RO-C3-020', 'distinction': 'Expectation-mediated reinforcement is not isolated habit effect or objective reward escalation.', 'blockedClaim': 'Withheld receipts isolate history only or rising means guarantee monotonic action frequency.', 'reopen': 'General reinforcement claims need independent interventions and all-seed distribution/action evidence.'}]})
+save('check.json',dict(status='PASS SCOPED CHRONOLOGY ACCOUNTING; HQ011 OPEN',sections=len(ss),newOccurrences=len(rows),priorOccurrences=len(prior),cumulativeReviewed=len(ids),remainingOriginalOccurrences=len(candidate['rows'])-len(ids),review=ref(O/'review.json')))
+assert all(p.stat().st_size<50_000_000 for p in O.iterdir())
+print(json.dumps(load(O/'check.json')))

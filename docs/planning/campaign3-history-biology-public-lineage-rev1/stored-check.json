@@ -1,0 +1,51 @@
+{
+  "status": "PASS PUBLIC BIOLOGY HISTORICAL SOURCE LINEAGE",
+  "sourceDeltas": [
+    {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "scripts/qualify-biology-public.mjs",
+        "src/campaign3/biologyPublicFactory.ts"
+      ]
+    },
+    {
+      "added": [
+        "src/campaign3/biologyPublicBytes.ts"
+      ],
+      "removed": [],
+      "changed": [
+        "docs/formal/BIOLOGY_PUBLIC_CONTRACT.md",
+        "scripts/qualify-biology-public.mjs",
+        "src/campaign3/biologyPublicFactory.ts",
+        "src/campaign3/biologyPublicModel.ts",
+        "src/test/biologyPublic.test.ts"
+      ]
+    }
+  ],
+  "models": 28,
+  "runs": 58,
+  "selectedPrefixes": 270,
+  "advancing": 212,
+  "terminal": 58,
+  "matchingOldRows": 29,
+  "command": [
+    "node",
+    "--import=./scripts/public-wrapper-preserved-source-loader.mjs",
+    "scripts/check-biology-public-closure.mjs"
+  ],
+  "requiredEnvironment": {
+    "CHARACTERLAB_HISTORICAL_WRAPPER_CHECK": "1"
+  },
+  "exitCode": 0,
+  "stdout": "PASS biological public integration:28 models/58 runs/270 complete prefixes;56+328 tests/build;1426/0.\n",
+  "loader": {
+    "path": "scripts/public-wrapper-preserved-source-loader.mjs",
+    "sha256": "c97aad6ede4abbcb4dd30447b3a67a1053c25f7c58e2cb6435b986bca48ddbb7"
+  },
+  "checker": {
+    "path": "scripts/check-biology-public-closure.mjs",
+    "sha256": "e6957359cada1814e973e05c910d928ac7ae5257093d71bad3f5ccab66180d31"
+  },
+  "scope": "Historical artifact checks against preserved source mapping; no current-runtime replay or fresh test execution."
+}

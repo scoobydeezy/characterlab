@@ -1,0 +1,129 @@
+{
+  "status": "SCALAR GATE RECEIPT RECONCILED",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/review-history-scalar-gate.py",
+    "sha256": "f194d09c5bd415c5b43be1e3a992cde2432163fbf1bdab6fc9eeee7cd12104cc"
+  },
+  "sourceIndex": {
+    "path": "docs/planning/campaign3-history-source-roles-rev295/index.json",
+    "sha256": "686e4ecbd9f2147a643edb05bb8edd3b21c6852a8ce75b7d4973bcd1c439f625"
+  },
+  "sourceRoles": [
+    {
+      "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "sha256": "89a9ad0645d0bc7f6f501649bc84a204f3ff00335f282d878ea5e18edc34766d",
+      "role": "INDEPENDENT SCALAR EXPECTATION WITH SHARED EXECUTION HARNESS",
+      "judgment": "Independent integer scalar expectations rederived for72 complete factorial baseline cases and155 reported mutant differences. Gate uses frozen pre-event sensitization; signed count*step changes tolerance only atgate0, bounds0..10; other leaves gate+count/count/count, sparse zero removes rather than sets. Baseline exact magnitudes/ops/diffs/five reads/removal counts agree, rejected magnitudes report rollback. Six mutants differ in32/48/20/8/1/46 cases; differences are not a new sample size. Independent arithmetic shares canonical transport and production factory, not a general REG interpreter. LaterREV2 preserves baseline/harness and five mutant results, but use-target-as-gate changes under a new evaluator fingerprint; earlier behavior remains distinct. No full REG/persistence/FCT6/PHEN-ADAPT closure from this assay.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF_REV2.json",
+          "sha256": "175ddcdd9d6f94790bdb2b736f90c550c2a8cec83c0ddbd4ef0b23303f5372df"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN2_AUTONOMOUS_ADVERSARIAL_REVIEW.md",
+          "sha256": "fd920e828c9043fc3418cbb99b85196854625b855ecf3d60aa735d4d948c3b3e"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN2_INHERITED_CURRENT_REVIEW.md",
+          "sha256": "6a02d4e08d767679bee55e9ffc8165dda19c0e7e755b665b50eeddc152e0f659"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "553acf271778e5732abe40780b3c9a04153a402fcfe6116ce1cce88b8accea31",
+      "source": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "sourceSha256": "89a9ad0645d0bc7f6f501649bc84a204f3ff00335f282d878ea5e18edc34766d",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Uses isolated committed FrozenBaseline / signed-Step variants of the frozen first model, without editing its artifacts.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2a02a6ebfc660d8c8da5ac883c2b29a28cfdf61eb10294a8dad1eb7b7f6f11df",
+      "source": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "sourceSha256": "89a9ad0645d0bc7f6f501649bc84a204f3ff00335f282d878ea5e18edc34766d",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Independent scalar expected results; canonical transport and production factory setup are shared.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "084fe009e2125ef5bebb3b07a1d7971daf7025f258edf9f0e312144a12bdb5a6",
+      "source": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "sourceSha256": "89a9ad0645d0bc7f6f501649bc84a204f3ff00335f282d878ea5e18edc34766d",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No full REG, persistence, FCT-6 or PHEN-ADAPT closure.",
+      "category": "NARRATIVE"
+    }
+  ],
+  "exactBindings": [
+    {
+      "receipt": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "original": {
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "5bbac6273200d04c2dcc55f26b46bb9f17ae51384671afb0095b7177b0b389ba"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/5bbac6273200d04c2dcc55f26b46bb9f17ae51384671afb0095b7177b0b389ba.ts",
+        "sha256": "5bbac6273200d04c2dcc55f26b46bb9f17ae51384671afb0095b7177b0b389ba"
+      }
+    },
+    {
+      "receipt": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF.json",
+      "original": {
+        "path": "src/test/fixtures/campaign2GateComparison.ts",
+        "sha256": "422398f5bdd43e2a7184fc4c5df92510bbcb1c4fd4dbf0dbcc54e8a2c9b2409c"
+      },
+      "actual": {
+        "path": "src/test/fixtures/campaign2GateComparison.ts",
+        "sha256": "422398f5bdd43e2a7184fc4c5df92510bbcb1c4fd4dbf0dbcc54e8a2c9b2409c"
+      }
+    }
+  ],
+  "preservedArtifacts": [
+    {
+      "path": "src/test/fixtures/campaign2GateComparison.ts",
+      "sha256": "422398f5bdd43e2a7184fc4c5df92510bbcb1c4fd4dbf0dbcc54e8a2c9b2409c",
+      "method": "EXISTING EXACT SCALAR GATE SOURCE OR CANONICAL BACKING; NO COPY"
+    }
+  ],
+  "schema": {
+    "path": "docs/planning/campaign3-history-scalar-gate-rev1/schema.json",
+    "sha256": "d608d3721fb82bedcf856591e35c5e1ae9ad412117a3c34cfd6b89f5032bfac2"
+  },
+  "unresolved": {
+    "path": "docs/planning/campaign3-history-scalar-gate-rev1/unresolved.json",
+    "sha256": "718c6d5895b1202c90018d4db6799fe29ea13d8a337d6311be6f967af83c9706"
+  },
+  "arithmetic": {
+    "path": "docs/planning/campaign3-history-scalar-gate-rev1/arithmetic.json",
+    "sha256": "f94310422295053bd528c0ae45c9cb04280a558bdcd2f31a2ffdab31b7ae4db6"
+  },
+  "currentInspectionSources": [
+    {
+      "path": "scripts/prove-campaign2-independent-gates.mjs",
+      "sha256": "a3d3e13776cb773725d8663df299a2d4da058e51ab4e3cf7be2df0c83db252cd"
+    },
+    {
+      "path": "src/test/fixtures/campaign2GateComparison.ts",
+      "sha256": "422398f5bdd43e2a7184fc4c5df92510bbcb1c4fd4dbf0dbcc54e8a2c9b2409c"
+    }
+  ],
+  "limits": [
+    "Independent scalar arithmetic rederived; canonical transport and production setup remain shared.",
+    "Stored rejection rollback checks cover state/outputs/trace/clock; stronger full queue/allocator rollback has separate evidence.",
+    "Exact historical sources checked where available; no historical writer or runtime rerun. Independent adequacy open."
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

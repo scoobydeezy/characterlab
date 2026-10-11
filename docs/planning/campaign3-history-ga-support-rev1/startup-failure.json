@@ -1,0 +1,9 @@
+{
+  "status": "TERMINAL STARTUP FAILURE; NO TESTS EXECUTED",
+  "command": "node node_modules/vitest/vitest.mjs run src/test/generalFactory.test.ts src/test/generalSourceStateIntegration.test.ts src/test/contentGovernance.test.ts --reporter=json --outputFile=docs/planning/campaign3-history-ga-support-rev1/current-tests.json",
+  "failure": [
+    "Cannot read directory ../../..: Access is denied.",
+    "Could not resolve vite.config.ts"
+  ],
+  "disposition": "Use established config:false programmatic harness with exact current-source include list; this bypasses unrelated React config bundling, not test assertions. Original startup failure is not a test result."
+}

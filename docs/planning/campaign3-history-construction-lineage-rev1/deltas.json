@@ -1,0 +1,175 @@
+{
+  "revisions": [
+    {
+      "baselines": {
+        "added": [],
+        "changed": [
+          [
+            "evid",
+            "baseline"
+          ],
+          [
+            "gate",
+            "baseline"
+          ]
+        ]
+      },
+      "mutations": {
+        "added": [],
+        "changed": [
+          [
+            "evid",
+            "allow-patch-before-output-validation"
+          ],
+          [
+            "evid",
+            "allow-state-replacement-before-output-validation"
+          ],
+          [
+            "evid",
+            "erase-nonempty-event-classifications"
+          ],
+          [
+            "evid",
+            "extract-wrong-occurrence-field"
+          ],
+          [
+            "evid",
+            "generate-two-ingress-children"
+          ],
+          [
+            "evid",
+            "generate-zero-ingress-children"
+          ],
+          [
+            "evid",
+            "omit-output-cardinality"
+          ],
+          [
+            "evid",
+            "omit-payload-admission-equality"
+          ],
+          [
+            "gate",
+            "gate-reads-earlier-staged-write"
+          ]
+        ]
+      },
+      "changedSourcePaths": [
+        "src/campaign2/adaptationEvaluation.ts",
+        "src/campaign2/occurrenceIdentity.ts",
+        "src/campaign2/transitionAdmissionV04.ts",
+        "src/campaign2/transitionIngressV04.ts",
+        "src/test/campaign2FrozenGateOrder.test.ts",
+        "src/test/campaign2RegulatoryReference.test.ts",
+        "src/test/campaign2TransitionAdmission.test.ts"
+      ]
+    },
+    {
+      "baselines": {
+        "added": [
+          [
+            "regfull",
+            "baseline"
+          ]
+        ],
+        "changed": []
+      },
+      "mutations": {
+        "added": [
+          [
+            "reg",
+            "omit-reg-character-role-before-local-resolution"
+          ],
+          [
+            "regfull",
+            "mistake-inert-content-copy-for-reg-owner"
+          ],
+          [
+            "regfull",
+            "omit-reg-character-role-definition"
+          ],
+          [
+            "regfull",
+            "omit-reg-domain-check"
+          ],
+          [
+            "regfull",
+            "omit-reg-identity-family"
+          ]
+        ],
+        "changed": []
+      },
+      "changedSourcePaths": [
+        "src/test/campaign2RegulatoryReference.test.ts",
+        "src/test/campaign2TransitionAdmission.test.ts"
+      ]
+    },
+    {
+      "baselines": {
+        "added": [],
+        "changed": [
+          [
+            "evid",
+            "baseline"
+          ]
+        ]
+      },
+      "mutations": {
+        "added": [],
+        "changed": [
+          [
+            "evid",
+            "allow-patch-before-output-validation"
+          ],
+          [
+            "evid",
+            "allow-state-replacement-before-output-validation"
+          ],
+          [
+            "evid",
+            "erase-nonempty-event-classifications"
+          ],
+          [
+            "evid",
+            "extract-wrong-occurrence-field"
+          ],
+          [
+            "evid",
+            "generate-two-ingress-children"
+          ],
+          [
+            "evid",
+            "generate-zero-ingress-children"
+          ],
+          [
+            "evid",
+            "omit-output-cardinality"
+          ],
+          [
+            "evid",
+            "omit-payload-admission-equality"
+          ]
+        ]
+      },
+      "changedSourcePaths": [
+        "src/test/campaign2RegulatoryReference.test.ts",
+        "src/test/campaign2TransitionAdmission.test.ts"
+      ]
+    },
+    {
+      "baselines": {
+        "added": [],
+        "changed": []
+      },
+      "mutations": {
+        "added": [],
+        "changed": []
+      },
+      "changedSourcePaths": [
+        "src/test/campaign2TransitionAdmission.test.ts"
+      ]
+    }
+  ],
+  "scope": "Exact baseline/mutation/source lineage using composite group/name keys; stored test results, no rerun."
+}

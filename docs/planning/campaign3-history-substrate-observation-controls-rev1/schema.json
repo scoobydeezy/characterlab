@@ -1,0 +1,341 @@
+{
+  "shortStringsIncluded": true,
+  "leaves": [
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/status",
+      "text": "EXISTING PROJECTION ISOLATION CONTROLS PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/0/name",
+      "text": "PRJ binding isolation: direct binding and nested path cannot be rebound after validation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/0/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/1/name",
+      "text": "PRJ binding isolation: derived paths and function selection are captured at construction",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/1/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/2/name",
+      "text": "PRJ exact-domain cross-character read, undeclared accessor and enumeration remain excluded",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/tests/2/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/scope",
+      "text": "Existing direct/derived binding capture, exact-domain exclusion and inaccessible internals. Does not test proposed subject-selected body dispatch, source admission, permission branches or any EREG public vector.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/test/projectionBindingIsolation.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "24f19296f226cfdbeb3c98dd3b3e56ba325a6f69473d8ec9f217ff3a30758b8f",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/substrate/state.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/campaign2/requiredProjection.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/3/path",
+      "text": "scripts/review-campaign3-body-projection-substrate.mjs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/3/sha256",
+      "text": "a4b0ba3e1e1f61e2f4ea8b70f86de51cb6fa7d1134e88f779880589770e1d34d",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/draft/path",
+      "text": "docs/planning/CAMPAIGN3_EMBODIED_REGISTRATION_ACCESSOR_DRAFT.md",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_BODY_PROJECTION_SUBSTRATE_REV1.json",
+      "pointer": "/draft/sha256",
+      "text": "7ab77c6271ad50a94da46d30f9200ba044576fc5b18cf917571e5e785b176eda",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/status",
+      "text": "EXISTING STATE OWNERSHIP AND PATCH CONTROLS PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/0/name",
+      "text": "CV-OWN-001 rejects ownership overlap and uncovered writable families",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/0/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/1/name",
+      "text": "CV-READ-001 rejects bindings and forged accessors outside the declared interface",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/1/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/2/name",
+      "text": "CV-READ-002 records only actual reads and preserves derived-source provenance",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/2/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/3/name",
+      "text": "CV-PATCH-001 canonicalizes construction order and emits exact structural diffs",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/3/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/4/name",
+      "text": "CV-PATCH-002 rejects authority, precondition, overlap, domain, and mutable-alias failures",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/4/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/5/name",
+      "text": "CV-PATCH-003 isolates deep counterfactual copies and encodings",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/tests/5/state",
+      "text": "pass",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/scope",
+      "text": "Existing state ownership, read, patch, stale-precondition, alias and diff controls. Does not execute proposed replenishment admission, same-instant composition or any EREP public vector.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/test/state.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "a8f58e0dd0578dc851ae64881fd378a3d92e570da1a00ca83823d1c9cf66c6b2",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/substrate/state.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/campaign2/requiredProjection.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/3/path",
+      "text": "scripts/review-campaign3-replenishment-state-substrate.mjs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/sourceFingerprints/3/sha256",
+      "text": "8dcf7f5ca6649722233b1537ce87e03147bd4be3225c73c13bc64803eae700b3",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/draft/path",
+      "text": "docs/planning/CAMPAIGN3_EMBODIED_REPLENISHMENT_PROFILE_DRAFT.md",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN3_REPLENISHMENT_STATE_SUBSTRATE_REV1.json",
+      "pointer": "/draft/sha256",
+      "text": "3a1678b59a82be3d9ebbf54a006dee57fcb9cda8ed386bf21d16dedbe8585c1e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/status",
+      "text": "EXECUTED OBSERVER COMPONENT INSPECTION; NOT NEW PROJECTION QUALIFICATION",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/observation/observation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "37542c15dc8f55f9aa2708594cf9107b938dbb9c0e2e3ccc53a0e7a7825d748d",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/bridgeObservation.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "scripts/explore-protocol-observation-cut.mjs",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "6ffa4823a7a612f024389051720a06bae8839d7313c0cabf44917b21c464307e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/cases/0/evidenceKind",
+      "text": "Point",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/cases/1/evidenceKind",
+      "text": "Point",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/cases/2/evidenceKind",
+      "text": "LowerBound",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/limitations/0",
+      "text": "The new version/projection and actual ExecutionOutcome source do not exist in canonical runtime yet.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/limitations/1",
+      "text": "Research observer/source IDs are test namespaces; no production namespace is allocated.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/limitations/2",
+      "text": "The existing fixed-pulse bridge remains unchanged and rejects0/2 as required.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/PROTOCOL_OBSERVATION_CUT_EXPLORATION_REV1.json",
+      "pointer": "/limitations/3",
+      "text": "Raw source references demonstrate why a separate safe projection is required; raw results must never be published to the character route.",
+      "role": "NARRATIVE"
+    }
+  ]
+}

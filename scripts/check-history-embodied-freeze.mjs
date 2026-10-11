@@ -1,0 +1,15 @@
+// Original freeze assertions; writes become equality checks and old fingerprints resolve explicitly.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p)),out='docs/planning/campaign3-history-embodied-freeze-rev1/';
+const recovery=read(out+'predecessor-source-recovery.json'),projection=read(out+'projection-reconstruction.json');assert.equal(projection.status,'EXACT DIGEST RECOVERY');
+const replacements=Object.fromEntries(recovery.rows.map(r=>{assert(r.recovered);assert.equal(sha(r.recovered.path),r.expectedSha256);return[r.path,r.recovered.path];}));
+replacements['src/campaign2/requiredProjection.ts']=projection.matches[0].path;assert.equal(sha(replacements['src/campaign2/requiredProjection.ts']),projection.expectedSha256);
+let source=fs.readFileSync('scripts/freeze-embodied-model-review-rev2.mjs','utf8');function once(from,to){assert.equal(source.split(from).length,2,from);source=source.replace(from,to);}
+once("from 'vite'","from "+JSON.stringify(import.meta.resolve('vite')));once('assert(!fs.existsSync(folder));','assert(fs.existsSync(folder));');
+once("const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});","const historical="+JSON.stringify(replacements)+";const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(historical[path]??path)).digest('hex')});");
+once("fs.mkdirSync(dest.slice(0,dest.lastIndexOf('/')),{recursive:true});fs.copyFileSync(f.path,dest);","assert.deepEqual(fs.readFileSync(f.path),fs.readFileSync(dest));");
+once("fs.writeFileSync(folder+'/FREEZE.json',JSON.stringify(result,null,2)+'\\n');","assert.deepEqual(result,JSON.parse(fs.readFileSync(folder+'/FREEZE.json')),'complete frozen receipt equality');");
+assert(!source.includes('writeFileSync')&&!source.includes('copyFileSync')&&!source.includes('mkdirSync'));
+try{await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+ const file='docs/planning/campaign3-embodied-model-rev2/FREEZE.json',v=read(file),result={status:'COMPLETE EMB FREEZE RECEIPT REPRODUCED WITH EXACT HISTORICAL FINGERPRINTS',models:v.models.length,runs:v.runs.length,preservedChecks:v.preservedChecks,consoleLiteralErratum:446,historicalSources:Object.entries(replacements).map(([originalPath,path])=>({originalPath,path,sha256:sha(path)})),freeze:{path:file,sha256:sha(file)},scope:'Original image/variant/run assertions execute under current compatible modules;historical fingerprint reads resolve exact recovered bytes. Does not claim running a historical runtime or qualifying all76 EMB obligations. Console446 remains a literal erratum;receipt439 controls.',checkerSha256:sha('scripts/check-history-embodied-freeze.mjs')};const dest=out+'full-freeze-check.json';if(fs.existsSync(dest))assert.deepEqual(read(dest),result);else fs.writeFileSync(dest,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(result.status);
+}catch(e){console.error(e.message);process.exitCode=1;}

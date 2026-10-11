@@ -1,0 +1,1062 @@
+{
+  "status": "PASS;60 CURRENT TESTS;ORIGINAL MUTATIONS SEPARATELY DISPOSITIONED",
+  "checker": {
+    "path": "scripts/replay-history-ga-retention-policies.mjs",
+    "sha256": "d19d9e5e7460c4d628a623ce9d1057eeb9e52f56a5848c994f0973bd64773a78"
+  },
+  "rows": [
+    {
+      "name": "retention-fragmentation-retain-removed-content",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "!removed.get(a.id)?.has(u.key)",
+      "inserted": "true",
+      "witness": "RF-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-retain-removed-content.json",
+        "sha256": "24163cb8ed76cd45ffd594a9bcd64d7dbf558fff5880da8a059e08af263432e5"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-B: final-unit loss removes the current target and creates no replacement acquisition",
+        "retention fragmentation mechanics only RF-H: loss order is irrelevant and event acquisitions can partially survive too"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-keep-empty-acquisition",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "if(units.length)acquisitions.push",
+      "inserted": "if(true)acquisitions.push",
+      "witness": "RF-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-keep-empty-acquisition.json",
+        "sha256": "da61284aa240be849f084f3d91b01edc04b810cd403c15ccf547c01da4b1180b"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-B: final-unit loss removes the current target and creates no replacement acquisition"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-count-views-as-slots",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "usage[a.kind]+=units.length",
+      "inserted": "usage[a.kind]+=units.reduce((n,u)=>n+u.views.length,0)",
+      "witness": "RF-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-count-views-as-slots.json",
+        "sha256": "bd5b6e0a0033ae61c5e2021210931f88e32ca7bc0d7f201770216dca79e36d73"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-C: view multiplicity does not change cost; same signal in another acquisition does",
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state",
+        "retention fragmentation mechanics only RF-H: loss order is irrelevant and event acquisitions can partially survive too"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-discard-survivor-view",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "views:u.views.map(b=>b.slice())",
+      "inserted": "views:u.views.slice(0,1).map(b=>b.slice())",
+      "witness": "RF-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-discard-survivor-view.json",
+        "sha256": "9c0255735e3f017e6f7c2fb0a928fa08c76406eef5325bfab44610a337d7cc1a"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-A: partial loss preserves identity and complete survivor views without a removed-content result",
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-borrow-kind-capacity",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "usage[k]>capacity[k]",
+      "inserted": "usage.EventContinuant+usage.Interoceptive>capacity.EventContinuant+capacity.Interoceptive",
+      "witness": "RF-D",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-borrow-kind-capacity.json",
+        "sha256": "76a97734c14184483ed57aaf0cb8bc91b54f33f7fcf452c053f19d5618f94356"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-D: body loss preserves event bytes and unused event capacity cannot rescue body overflow"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-alias-source-bytes",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "b=>b.slice()",
+      "inserted": "b=>b",
+      "witness": "RF-E",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-alias-source-bytes.json",
+        "sha256": "c974302cde7a9e94e650f2b38aac67b37e060b2ffbc45badb15b54e9da06854a"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-E: output bytes and containers are detached from source state"
+      ]
+    },
+    {
+      "name": "retention-fragmentation-ignore-duplicate-loss",
+      "reviewer": {
+        "path": "scripts/review-retention-fragmentation.mjs",
+        "sha256": "ec88f395ba0d49c7a36662339f3da530c8db7c3e117b0b1c6a01c45abf7b2449"
+      },
+      "source": {
+        "path": "src/campaign3/retentionFragmentation.ts",
+        "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+      },
+      "test": {
+        "path": "src/test/retentionFragmentation.test.ts",
+        "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+      },
+      "removed": "if(set.has(loss.unit))fail('duplicate loss');",
+      "inserted": "",
+      "witness": "RF-F",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-retention-fragmentation-ignore-duplicate-loss.json",
+        "sha256": "2ad0f3d9e2b26258f2099891303b6829348c7ef220bde35cb0ca10b1aa028539"
+      },
+      "failed": [
+        "retention fragmentation mechanics only RF-F: unknown and duplicate loss addresses reject, including a view pretending to be a unit"
+      ]
+    },
+    {
+      "name": "recency-retention-oldest-first",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "a.at>b.at?-1:1",
+      "inserted": "a.at<b.at?-1:1",
+      "witness": "RR-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-oldest-first.json",
+        "sha256": "1285aaf0213972fcc6dbf149a35effa0ed5cd027364a3ec66b160d755af3d688"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers"
+      ]
+    },
+    {
+      "name": "recency-retention-reverse-address-tie",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "compare(a.address,b.address)",
+      "inserted": "compare(b.address,a.address)",
+      "witness": "RR-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-reverse-address-tie.json",
+        "sha256": "fc27335d27e8e2ef2d4ffae7012a5c9f0631e1bb817891ca19921a6651515ac9"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically"
+      ]
+    },
+    {
+      "name": "recency-retention-rejuvenate-survivors",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "acquiredAt:times.get(a.id)!",
+      "inserted": "acquiredAt:now",
+      "witness": "RR-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-rejuvenate-survivors.json",
+        "sha256": "10689687bcb04d00a729bccafd55191a5ac3a68265b28ae6f30475f37870123e"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers",
+        "Recency Retention Baseline component RR-D: zero capacity is loss, with no borrowed slots or effect on the other kind",
+        "Recency Retention Baseline component RR-H: changing evaluation time alone does not change survival or retained original timestamps"
+      ]
+    },
+    {
+      "name": "recency-retention-zero-capacity-keeps-one",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "units.slice(capacity[kind])",
+      "inserted": "units.slice(Math.max(1,capacity[kind]))",
+      "witness": "RR-D",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-zero-capacity-keeps-one.json",
+        "sha256": "d7a0ecd1c96fd17eac1685e715be0a6103a5150133fb678107975bfb9e5209bb"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-D: zero capacity is loss, with no borrowed slots or effect on the other kind"
+      ]
+    },
+    {
+      "name": "recency-retention-input-order-winners",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "units.sort((a,b)=>a.at!==b.at?(a.at>b.at?-1:1):compare(a.address,b.address));",
+      "inserted": "",
+      "witness": "RR-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-input-order-winners.json",
+        "sha256": "d6781de20893f117b018554f935176c201ad15ee79e8a93e3d0aceb7d0fd8d9d"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-A: original acquisition time wins, not ordinal magnitude or input order",
+        "Recency Retention Baseline component RR-B: same-time canonical address ties preserve one whole group deterministically",
+        "Recency Retention Baseline component RR-C: partial survival never refreshes original age at later barriers",
+        "Recency Retention Baseline component RR-E: complete barrier permutations produce identical survivors and loss addresses"
+      ]
+    },
+    {
+      "name": "recency-retention-permit-future-acquisition",
+      "reviewer": {
+        "path": "scripts/review-recency-retention.mjs",
+        "sha256": "e04ecf23f51571cf345167e1257f7670d95a37c742e818315591071f8e1d4880"
+      },
+      "source": {
+        "path": "src/campaign3/recencyRetention.ts",
+        "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+      },
+      "test": {
+        "path": "src/test/recencyRetention.test.ts",
+        "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+      },
+      "removed": "||a.acquiredAt>now",
+      "inserted": "",
+      "witness": "RR-F",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-recency-retention-permit-future-acquisition.json",
+        "sha256": "a99dddfbb6db0eb2781781537b81950150a897326f7fd96987b3e4f10e62a0c0"
+      },
+      "failed": [
+        "Recency Retention Baseline component RR-F: future, missing, negative time and invalid capacity reject"
+      ]
+    },
+    {
+      "name": "use-protection-ignore-protection",
+      "reviewer": {
+        "path": "scripts/review-use-protection.mjs",
+        "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+      },
+      "source": {
+        "path": "src/campaign3/useProtectedRetention.ts",
+        "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+      },
+      "test": {
+        "path": "src/test/useProtectedRetention.test.ts",
+        "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+      },
+      "removed": "a.protected!==b.protected",
+      "inserted": "false",
+      "witness": "UP-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-use-protection-ignore-protection.json",
+        "sha256": "3aa09cf4bb3262f306919aff1a9b026dee2f9a82b075f2a705e0f926c46232c2"
+      },
+      "failed": [
+        "binary child-local use protection baseline UP-A: old used unit beats new unused while recency-only makes the opposite prediction"
+      ]
+    },
+    {
+      "name": "use-protection-reverse-protected-recency",
+      "reviewer": {
+        "path": "scripts/review-use-protection.mjs",
+        "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+      },
+      "source": {
+        "path": "src/campaign3/useProtectedRetention.ts",
+        "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+      },
+      "test": {
+        "path": "src/test/useProtectedRetention.test.ts",
+        "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+      },
+      "removed": "a.at>b.at?-1:1",
+      "inserted": "a.at>b.at?1:-1",
+      "witness": "UP-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-use-protection-reverse-protected-recency.json",
+        "sha256": "e451cc3f1cf6178739c1628d60c66bd4b3bca1b6d9b76ddb221d29483ce72ca3"
+      },
+      "failed": [
+        "binary child-local use protection baseline UP-C: protected demand exceeds capacity and zero capacity still loses everything"
+      ]
+    },
+    {
+      "name": "use-protection-credit-siblings",
+      "reviewer": {
+        "path": "scripts/review-use-protection.mjs",
+        "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+      },
+      "source": {
+        "path": "src/campaign3/useProtectedRetention.ts",
+        "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+      },
+      "test": {
+        "path": "src/test/useProtectedRetention.test.ts",
+        "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+      },
+      "removed": "copy.find(a=>a.id===use.acquisition)!.units.find(u=>u.key===use.unit)!.useProtection=true",
+      "inserted": "copy.find(a=>a.id===use.acquisition)!.units.forEach(u=>u.useProtection=true)",
+      "witness": "UP-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-use-protection-credit-siblings.json",
+        "sha256": "481cd4a0dc9710b643f8352b00031bc4d82b5d21e33ec7a08930f70c96b6d1e0"
+      },
+      "failed": [
+        "binary child-local use protection baseline UP-B: credit is child-local, repeats do not stack and original time/bytes do not change"
+      ]
+    },
+    {
+      "name": "use-protection-reverse-tie",
+      "reviewer": {
+        "path": "scripts/review-use-protection.mjs",
+        "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+      },
+      "source": {
+        "path": "src/campaign3/useProtectedRetention.ts",
+        "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+      },
+      "test": {
+        "path": "src/test/useProtectedRetention.test.ts",
+        "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+      },
+      "removed": "compare(a.address,b.address)",
+      "inserted": "compare(b.address,a.address)",
+      "witness": "UP-G",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-use-protection-reverse-tie.json",
+        "sha256": "f40b6fdbdb9f0aa84d79ee6bc0334b6485ef47bcf82c25df4264abecf08c4c9d"
+      },
+      "failed": [
+        "binary child-local use protection baseline UP-G: exact ties preserve canonical child ordering and input order invariance"
+      ]
+    },
+    {
+      "name": "use-protection-reject-no-use-bit",
+      "reviewer": {
+        "path": "scripts/review-use-protection.mjs",
+        "sha256": "0b8aa7c443d9f10c0820a6c469bc8784c127b379caaf3520355d37c90ac81d64"
+      },
+      "source": {
+        "path": "src/campaign3/useProtectedRetention.ts",
+        "sha256": "dfc6e6965a79b8ad73d2b2a0c48434fdcf9938074099500a6dffd5ba48a9854b"
+      },
+      "test": {
+        "path": "src/test/useProtectedRetention.test.ts",
+        "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+      },
+      "removed": "typeof u.useProtection!=='boolean'",
+      "inserted": "false",
+      "witness": "UP-H",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-use-protection-reject-no-use-bit.json",
+        "sha256": "cdf871e4a6cac4630324b81e312848de67b7f16ab80564467916f5a840d92dc3"
+      },
+      "failed": [
+        "binary child-local use protection baseline UP-H: forged addresses and invalid state bits/times reject"
+      ]
+    },
+    {
+      "name": "directional-significance-state-overwrite-earlier-direction",
+      "reviewer": {
+        "path": "scripts/review-directional-significance-state.mjs",
+        "sha256": "c8c531fe1ec5dafc4c97588702ca2ea95916b74ea44f7a5cc0c6f711c92f9752"
+      },
+      "source": {
+        "path": "src/campaign3/directionalSignificanceState.ts",
+        "sha256": "99e9cb7c9da91b37052dc0e06b3fb8f1004e959580d26c9f0cf6ce6205d71377"
+      },
+      "test": {
+        "path": "src/test/directionalSignificanceState.test.ts",
+        "sha256": "d6c0bf65e0c562f8872173b7e8f56eb69d877c05e93967860ee4f137be1f153b"
+      },
+      "removed": "d===credit.direction||u.outcomeSignificanceDirections.includes(d)",
+      "inserted": "d===credit.direction",
+      "witness": "DS-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-directional-significance-state-overwrite-earlier-direction.json",
+        "sha256": "d16442a320cee7f9228341f8d6941cc44e11313a0c0d5be7713e40ea377bd4db"
+      },
+      "failed": [
+        "directional significance supplied-credit algebra DS-A: exact four states and the shared-bit reduction",
+        "directional significance supplied-credit algebra DS-B: repetition, duplicate targets and credit order are idempotent"
+      ]
+    },
+    {
+      "name": "directional-significance-state-leak-credit-into-use",
+      "reviewer": {
+        "path": "scripts/review-directional-significance-state.mjs",
+        "sha256": "c8c531fe1ec5dafc4c97588702ca2ea95916b74ea44f7a5cc0c6f711c92f9752"
+      },
+      "source": {
+        "path": "src/campaign3/directionalSignificanceState.ts",
+        "sha256": "99e9cb7c9da91b37052dc0e06b3fb8f1004e959580d26c9f0cf6ce6205d71377"
+      },
+      "test": {
+        "path": "src/test/directionalSignificanceState.test.ts",
+        "sha256": "d6c0bf65e0c562f8872173b7e8f56eb69d877c05e93967860ee4f137be1f153b"
+      },
+      "removed": "u.outcomeSignificanceDirections=Object.freeze",
+      "inserted": "u.useProtection=true;u.outcomeSignificanceDirections=Object.freeze",
+      "witness": "DS-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-directional-significance-state-leak-credit-into-use.json",
+        "sha256": "23dcecba5d6884d72d017d4d9b20bcb13917d2f74bdf54c1daa5ce2bc0fc035d"
+      },
+      "failed": [
+        "directional significance supplied-credit algebra DS-C: credit is child-local and independent of use, time and content"
+      ]
+    },
+    {
+      "name": "directional-significance-state-erase-survivor-significance",
+      "reviewer": {
+        "path": "scripts/review-directional-significance-state.mjs",
+        "sha256": "c8c531fe1ec5dafc4c97588702ca2ea95916b74ea44f7a5cc0c6f711c92f9752"
+      },
+      "source": {
+        "path": "src/campaign3/directionalSignificanceState.ts",
+        "sha256": "99e9cb7c9da91b37052dc0e06b3fb8f1004e959580d26c9f0cf6ce6205d71377"
+      },
+      "test": {
+        "path": "src/test/directionalSignificanceState.test.ts",
+        "sha256": "d6c0bf65e0c562f8872173b7e8f56eb69d877c05e93967860ee4f137be1f153b"
+      },
+      "removed": "outcomeSignificanceDirections:tags(m.outcomeSignificanceDirections)",
+      "inserted": "outcomeSignificanceDirections:[]",
+      "witness": "DS-E",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-directional-significance-state-erase-survivor-significance.json",
+        "sha256": "746d12a32164c21e293fa81dae4a098573150dc97feba68f9eb3e36fa581e8af"
+      },
+      "failed": [
+        "directional significance supplied-credit algebra DS-E: partial survivors preserve both significance and independently earned use"
+      ]
+    },
+    {
+      "name": "significance-first-retention-collapse-tiers",
+      "reviewer": {
+        "path": "scripts/review-significance-first-retention.mjs",
+        "sha256": "85bd11adc8306d5766552560684efc40c3cb1441fd12b7ad5085517743a1e96f"
+      },
+      "source": {
+        "path": "src/campaign3/significanceFirstRetention.ts",
+        "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+      },
+      "test": {
+        "path": "src/test/significanceFirstRetention.test.ts",
+        "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+      },
+      "removed": "retain(input,now,capacity,false)",
+      "inserted": "retain(input,now,capacity,true)",
+      "witness": "SF-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-significance-first-retention-collapse-tiers.json",
+        "sha256": "27c8d40b5a144fdf10e9bc03e667e1685085bea2849408e882bf914568873ba1"
+      },
+      "failed": [
+        "significance-first supplied-state retention policy SF-A: significance outranks equal use, unlike the actual shared-tier comparator"
+      ]
+    },
+    {
+      "name": "significance-first-retention-direction-count-bonus",
+      "reviewer": {
+        "path": "scripts/review-significance-first-retention.mjs",
+        "sha256": "85bd11adc8306d5766552560684efc40c3cb1441fd12b7ad5085517743a1e96f"
+      },
+      "source": {
+        "path": "src/campaign3/significanceFirstRetention.ts",
+        "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+      },
+      "test": {
+        "path": "src/test/significanceFirstRetention.test.ts",
+        "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+      },
+      "removed": "u.outcomeSignificanceDirections.length>0?0:u.useProtection?1:2",
+      "inserted": "u.outcomeSignificanceDirections.length>0?-u.outcomeSignificanceDirections.length:u.useProtection?1:2",
+      "witness": "SF-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-significance-first-retention-direction-count-bonus.json",
+        "sha256": "8f95b3da29564eaa60311a683fd4f6caf1062e40a2ac5bce9dfec5e34633c02b"
+      },
+      "failed": [
+        "significance-first supplied-state retention policy SF-C: significance direction, cardinality and added use confer no bonus within tier"
+      ]
+    },
+    {
+      "name": "significance-first-retention-reverse-recency",
+      "reviewer": {
+        "path": "scripts/review-significance-first-retention.mjs",
+        "sha256": "85bd11adc8306d5766552560684efc40c3cb1441fd12b7ad5085517743a1e96f"
+      },
+      "source": {
+        "path": "src/campaign3/significanceFirstRetention.ts",
+        "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+      },
+      "test": {
+        "path": "src/test/significanceFirstRetention.test.ts",
+        "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+      },
+      "removed": "a.at>b.at?-1:1",
+      "inserted": "a.at>b.at?1:-1",
+      "witness": "SF-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-significance-first-retention-reverse-recency.json",
+        "sha256": "5f772d54adf57f7b66235927528392bc74cdd95b72d0bb17471920c7c9402d89"
+      },
+      "failed": [
+        "significance-first supplied-state retention policy SF-A: significance outranks equal use, unlike the actual shared-tier comparator",
+        "significance-first supplied-state retention policy SF-B: significance protects independently; use still protects absent significance",
+        "significance-first supplied-state retention policy SF-C: significance direction, cardinality and added use confer no bonus within tier"
+      ]
+    },
+    {
+      "name": "significance-first-retention-allow-fresh-credit",
+      "reviewer": {
+        "path": "scripts/review-significance-first-retention.mjs",
+        "sha256": "85bd11adc8306d5766552560684efc40c3cb1441fd12b7ad5085517743a1e96f"
+      },
+      "source": {
+        "path": "src/campaign3/significanceFirstRetention.ts",
+        "sha256": "66e12fdbfe77e4363304fa10080df0fcbdd8f97e73042e5871c78ff2d18ffe4e"
+      },
+      "test": {
+        "path": "src/test/significanceFirstRetention.test.ts",
+        "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+      },
+      "removed": "a.acquiredAt===now&&",
+      "inserted": "false&&",
+      "witness": "SF-G",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-significance-first-retention-allow-fresh-credit.json",
+        "sha256": "4b34f1d2b19028068c1d7a3bf0f80bf99877f086a7cac79dd29de97f2be26974"
+      },
+      "failed": [
+        "significance-first supplied-state retention policy SF-G: fresh protected formation rejects; fresh unprotected formation is admitted"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-ignore-node-bound",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "result.keys.length>capacity.nodes||",
+      "inserted": "",
+      "witness": "EL-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-ignore-node-bound.json",
+        "sha256": "929caf963887d92538dd345db5483ffec2a4f38f8d6cbc202571f01d61d15168"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-ignore-edge-bound",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "||edges>capacity.edges",
+      "inserted": "",
+      "witness": "EL-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-ignore-edge-bound.json",
+        "sha256": "c7bc35d88f3ec06c9a216282b2a6a8cb549d8903f442cf9891678e2ea0a1f8c4"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-C: satisfying nodes alone does not satisfy edge capacity",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-delete-reverse-too",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "matrix[i][j]=Q.of(0n);",
+      "inserted": "matrix[i][j]=Q.of(0n);matrix[j][i]=Q.of(0n);",
+      "witness": "EL-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-delete-reverse-too.json",
+        "sha256": "58c611c668d1ba32ccff1ed95cde0db899511b7cedfd93ec44dda7f255a74229"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-B: reverse and unrelated weights survive without redistribution",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-leave-selected-edge",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "matrix[i][j]=Q.of(0n);",
+      "inserted": "",
+      "witness": "EL-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-leave-selected-edge.json",
+        "sha256": "7b9933f4c8cf977a669cfbff79c2becd31d643dd7bfa2746b65dc2d71560ccad"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-A: node pressure requires coordinated edge loss even with ample edge capacity",
+        "explicit directed graph loss component EL-B: reverse and unrelated weights survive without redistribution",
+        "explicit directed graph loss component EL-D: either zero resource bound requires actual complete loss",
+        "explicit directed graph loss component EL-F: plan order is immaterial and output is detached; failed plans do not mutate input"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-allow-duplicate",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "if(seen.has(address))throw new Error('GRAPH_LOSS_DUPLICATE');",
+      "inserted": "",
+      "witness": "EL-E",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-allow-duplicate.json",
+        "sha256": "412d38b8653500f82e0fd071bf446a41339998da1bae658c12f812d9449d32d8"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-E: duplicate, absent, zero and self edge addresses reject"
+      ]
+    },
+    {
+      "name": "graph-edge-loss-count-weight-as-cost",
+      "reviewer": {
+        "path": "scripts/review-graph-edge-loss.mjs",
+        "sha256": "1d5c706ce8831515a667f8f90f559466fe4fe72d76979df78bf6ad0a398189ec"
+      },
+      "source": {
+        "path": "src/campaign3/graphEdgeLoss.ts",
+        "sha256": "4ccb21262181becca5de02285e01711ed406054a0bf5b8912213ea12d8700a28"
+      },
+      "test": {
+        "path": "src/test/graphEdgeLoss.test.ts",
+        "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+      },
+      "removed": "row.filter(v=>v.numerator!==0n).length",
+      "inserted": "row.filter(v=>v.compare(Q.of(1n,2n))>=0).length",
+      "witness": "EL-G",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-graph-edge-loss-count-weight-as-cost.json",
+        "sha256": "b73245dcb3faa46fbe9de040201d1c7fbd6b48afbd844f186f0dae6735c0be08"
+      },
+      "failed": [
+        "explicit directed graph loss component EL-G: weights consume equal slots and capacities are bounded exact integers"
+      ]
+    },
+    {
+      "name": "strength-graph-retention-strongest-first",
+      "reviewer": {
+        "path": "scripts/review-strength-graph-retention.mjs",
+        "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+      },
+      "source": {
+        "path": "src/campaign3/strengthGraphRetention.ts",
+        "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+      },
+      "test": {
+        "path": "src/test/strengthGraphRetention.test.ts",
+        "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+      },
+      "removed": "a.weight.compare(b.weight)",
+      "inserted": "b.weight.compare(a.weight)",
+      "witness": "SR-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-strength-graph-retention-strongest-first.json",
+        "sha256": "cc0e27ec5ba82682c517679e924325f78878952a4588ac930c83874017e3cb40"
+      },
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace",
+        "strength-priority graph retention baseline SR-G: weakest representable bridge gets no topology protection and survivors stay exact"
+      ]
+    },
+    {
+      "name": "strength-graph-retention-reverse-tie",
+      "reviewer": {
+        "path": "scripts/review-strength-graph-retention.mjs",
+        "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+      },
+      "source": {
+        "path": "src/campaign3/strengthGraphRetention.ts",
+        "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+      },
+      "test": {
+        "path": "src/test/strengthGraphRetention.test.ts",
+        "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+      },
+      "removed": "compare(a.address,b.address)",
+      "inserted": "compare(b.address,a.address)",
+      "witness": "SR-C",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-strength-graph-retention-reverse-tie.json",
+        "sha256": "9982aba77466715a2cf0cc0c7eca3aae18b8d2a5b3796b8ce2014f9e8188ed3d"
+      },
+      "failed": [
+        "strength-priority graph retention baseline SR-C: canonical address ties are independent of input matrix order",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace"
+      ]
+    },
+    {
+      "name": "strength-graph-retention-ignore-node-pressure",
+      "reviewer": {
+        "path": "scripts/review-strength-graph-retention.mjs",
+        "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+      },
+      "source": {
+        "path": "src/campaign3/strengthGraphRetention.ts",
+        "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+      },
+      "test": {
+        "path": "src/test/strengthGraphRetention.test.ts",
+        "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+      },
+      "removed": "nodes<=capacity.nodes&&",
+      "inserted": "",
+      "witness": "SR-B",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-strength-graph-retention-ignore-node-pressure.json",
+        "sha256": "48e986d7a3b689be6d80ae2d90dd0d71d76a2fca889312b2c10937702abe6f91"
+      },
+      "failed": [
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-D: zero bounds cause real complete loss; sufficient bounds cause none"
+      ]
+    },
+    {
+      "name": "strength-graph-retention-ignore-edge-pressure",
+      "reviewer": {
+        "path": "scripts/review-strength-graph-retention.mjs",
+        "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+      },
+      "source": {
+        "path": "src/campaign3/strengthGraphRetention.ts",
+        "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+      },
+      "test": {
+        "path": "src/test/strengthGraphRetention.test.ts",
+        "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+      },
+      "removed": "&&edges<=capacity.edges",
+      "inserted": "",
+      "witness": "SR-A",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-strength-graph-retention-ignore-edge-pressure.json",
+        "sha256": "5c18ec0a8feeea71dfb9b3d0353ec210e3654d711ff9af5b7f9d209f8b713810"
+      },
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-C: canonical address ties are independent of input matrix order",
+        "strength-priority graph retention baseline SR-D: zero bounds cause real complete loss; sufficient bounds cause none",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace",
+        "strength-priority graph retention baseline SR-G: weakest representable bridge gets no topology protection and survivors stay exact"
+      ]
+    },
+    {
+      "name": "strength-graph-retention-address-only",
+      "reviewer": {
+        "path": "scripts/review-strength-graph-retention.mjs",
+        "sha256": "07352259423b3ecaf0fbc4edf9b5e4c836f3877a09305a9759cad79db80c9dfc"
+      },
+      "source": {
+        "path": "src/campaign3/strengthGraphRetention.ts",
+        "sha256": "04318740eac0af90272ab04a996247556ae5c4fc68891ce890a9347be23d05eb"
+      },
+      "test": {
+        "path": "src/test/strengthGraphRetention.test.ts",
+        "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+      },
+      "removed": "a.weight.compare(b.weight)||",
+      "inserted": "",
+      "witness": "SR-E",
+      "status": "DETECTED ON CURRENT INPUTS",
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/fault-strength-graph-retention-address-only.json",
+        "sha256": "4037511daf9023fb4aadd53ee2f7d62f1a4f255c2fc8d0d96a1f380abc47c9c1"
+      },
+      "failed": [
+        "strength-priority graph retention baseline SR-A: exact weaker directed edge loses, cost remains one each",
+        "strength-priority graph retention baseline SR-B: node pressure removes a full ordered prefix, not the easiest node",
+        "strength-priority graph retention baseline SR-E: supplied resolved weakening reverses the victim without history input",
+        "strength-priority graph retention baseline SR-F: actual EAM learning can create an edge that immediately loses without grace"
+      ]
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/current-tests.json",
+    "sha256": "638de0f3aa216314937fd4448f71583d8052cdb2836b81c65d8a63e1424de1cb"
+  },
+  "inputs": [
+    {
+      "path": "src/test/retentionFragmentation.test.ts",
+      "sha256": "3915ced90fe9ebc7a0e81262ac113e52d48e9afb0635e7c28ac5aa36f09c457e"
+    },
+    {
+      "path": "src/test/recencyRetention.test.ts",
+      "sha256": "93b5554ac1546a5e38b9cc7c528c0cf984eacd364b066b3abf589b74bc2c8624"
+    },
+    {
+      "path": "src/test/useProtectedRetention.test.ts",
+      "sha256": "ddba007b1303cc60eb69d90cdb3f58432c427755d4cb52f88683e57abcf511d1"
+    },
+    {
+      "path": "src/test/directionalSignificanceState.test.ts",
+      "sha256": "d6c0bf65e0c562f8872173b7e8f56eb69d877c05e93967860ee4f137be1f153b"
+    },
+    {
+      "path": "src/test/significanceFirstRetention.test.ts",
+      "sha256": "8056b7d0ced6c916acb27ce2c75ac40cb1509d1723d46ac7205a78f5bbe7673e"
+    },
+    {
+      "path": "src/test/graphEdgeLoss.test.ts",
+      "sha256": "b1b535c1cda7d162edb3e2b5f5a89e12a1e504e3ab38a3627d555dbda08caa86"
+    },
+    {
+      "path": "src/test/strengthGraphRetention.test.ts",
+      "sha256": "3cf175d6b309cc641b3e795342fa9c1ab83977ca38459cd67f83da3c2f103e30"
+    },
+    {
+      "path": "src/test/strengthGraphSettlement.test.ts",
+      "sha256": "64b8fc5e8585f70d6e57f9fd4feb15291394f5941d9489106da211c460e4fe93"
+    }
+  ],
+  "sourcePaths": [
+    "docs/formal/DIRECTIONAL_SIGNIFICANCE_STATE_COMPONENT.md",
+    "docs/formal/GRAPH_EDGE_LOSS_COMPONENT.md",
+    "docs/formal/RECENCY_RETENTION_COMPONENT.md",
+    "docs/formal/RETENTION_FRAGMENTATION_COMPONENT.md",
+    "docs/formal/SIGNIFICANCE_FIRST_RETENTION_COMPONENT.md",
+    "docs/formal/STRENGTH_GRAPH_RETENTION_COMPONENT.md",
+    "docs/formal/USE_PROTECTED_RETENTION_COMPONENT.md",
+    "docs/planning/DIRECTIONAL_SIGNIFICANCE_STATE_REVIEW_REV1.json",
+    "docs/planning/DIRECTIONAL_SIGNIFICANCE_STATE_TESTS_REV1.json",
+    "docs/planning/GENERAL_ATTENTION_GRAPH_WEAKENING_SCOPE_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_RETENTION_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_STORAGE_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_USE_PROTECTION_RESOLUTION.md",
+    "docs/planning/GRAPH_EDGE_LOSS_COMPONENT_CHECKPOINT.md",
+    "docs/planning/GRAPH_EDGE_LOSS_REVIEW_REV1.json",
+    "docs/planning/GRAPH_EDGE_LOSS_TESTS_REV1.json",
+    "docs/planning/RECENCY_RETENTION_COMPONENT_CHECKPOINT.md",
+    "docs/planning/RECENCY_RETENTION_REVIEW_REV1.json",
+    "docs/planning/RECENCY_RETENTION_TESTS_REV1.json",
+    "docs/planning/RETENTION_FRAGMENTATION_COMPONENT_CHECKPOINT.md",
+    "docs/planning/RETENTION_FRAGMENTATION_REVIEW_REV1.json",
+    "docs/planning/RETENTION_FRAGMENTATION_TESTS_REV1.json",
+    "docs/planning/SIGNIFICANCE_FIRST_RETENTION_REVIEW_REV1.json",
+    "docs/planning/SIGNIFICANCE_FIRST_RETENTION_TESTS_REV1.json",
+    "docs/planning/SIGNIFICANCE_FIRST_RETENTION_TESTS_REV2.json",
+    "docs/planning/STRENGTH_GRAPH_RETENTION_CHECKPOINT.md",
+    "docs/planning/STRENGTH_GRAPH_RETENTION_REVIEW_REV1.json",
+    "docs/planning/STRENGTH_GRAPH_RETENTION_TESTS_REV1.json",
+    "docs/planning/STRENGTH_GRAPH_SETTLEMENT_CHECKPOINT.md",
+    "docs/planning/STRENGTH_GRAPH_SETTLEMENT_TESTS_REV1.json",
+    "docs/planning/STRENGTH_GRAPH_SETTLEMENT_TESTS_REV2.json",
+    "docs/planning/USE_PROTECTION_COMPONENT_CHECKPOINT.md",
+    "docs/planning/USE_PROTECTION_REVIEW_REV1.json",
+    "docs/planning/USE_PROTECTION_TESTS_REV1.json"
+  ],
+  "limits": [
+    "Mutations execute current source/test/dependencies;historical source commitments are checked separately. Inapplicable substitutions are not reconstructed or counted as detected.",
+    "Component and internal scheduler fixtures do not constitute public Save132/full-prefix qualification. Supplied edge-weight reversal is not actual uniform EAM weakening."
+  ]
+}

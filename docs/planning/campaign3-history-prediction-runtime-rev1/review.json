@@ -1,0 +1,1476 @@
+{
+  "status": "FOUR PREDICTION RUNTIME RECEIPTS RECONCILED; SOURCE ADEQUACY OPEN",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/review-history-prediction-runtime.py",
+    "sha256": "07efac18c6f2f6e30a21188f7a406d2b9849d17585a3d3a9c077ae0faa1cb873"
+  },
+  "sourceIndex": {
+    "path": "docs/planning/campaign3-history-source-roles-rev228/index.json",
+    "sha256": "830aa10d315e738c136fd479529997200a08cfe6d93b6d39503eca9cb69a9534"
+  },
+  "sourceRoles": [
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "role": "HISTORICAL EXPLORATION / DERIVED STAGE ACCOUNTING",
+      "judgment": "Five passing component baseline tests and five named source substitutions with failed-test counts1/2/1/1/1. Repeat-observation freshness, mean-vs-last,65thlimit, phasebackedge and extraoutput detected in named scopes only. Public and component test paths distinct. Proof revisions identical except source fingerprints; no independent-target freeze witness or whole qualification. Current writer performs one exact transform and rejects unhandled errors, but its old source hash is unresolved; inspection is not historical-source verification.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-prediction-qualification-rev1/review.json",
+          "sha256": "fb8b3daf5a36e2677d051c16824e29ac193f54b389d6d1d0c1b2f71b88a9d6a1"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "role": "HISTORICAL EXPLORATION / DERIVED STAGE ACCOUNTING",
+      "judgment": "Five passing component baseline tests and five named source substitutions with failed-test counts1/2/1/1/1. Repeat-observation freshness, mean-vs-last,65thlimit, phasebackedge and extraoutput detected in named scopes only. Public and component test paths distinct. Proof revisions identical except source fingerprints; no independent-target freeze witness or whole qualification. Current writer performs one exact transform and rejects unhandled errors, but its old source hash is unresolved; inspection is not historical-source verification.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-prediction-qualification-rev1/review.json",
+          "sha256": "fb8b3daf5a36e2677d051c16824e29ac193f54b389d6d1d0c1b2f71b88a9d6a1"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "role": "HISTORICAL EXPLORATION / DERIVED STAGE ACCOUNTING",
+      "judgment": "Byte/fingerprint audit with190preserved count and18inherited receipt references, not raw full test output or timestamp. Model digest same across revisions. REV1 records1124combined=796fresh+328reference plus separate8stage/1forgery; REV2 records974pre-final-task-hardening,328reference and24post-correction-task tests separately. Five inherited report identities advance; neither revisions nor counts are additive unique qualification. Source gaps explicitly limit adequacy; exact inherited report matches do not recover those missing source bytes.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-prediction-qualification-rev1/review.json",
+          "sha256": "fb8b3daf5a36e2677d051c16824e29ac193f54b389d6d1d0c1b2f71b88a9d6a1"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "role": "HISTORICAL EXPLORATION / DERIVED STAGE ACCOUNTING",
+      "judgment": "Byte/fingerprint audit with190preserved count and18inherited receipt references, not raw full test output or timestamp. Model digest same across revisions. REV1 records1124combined=796fresh+328reference plus separate8stage/1forgery; REV2 records974pre-final-task-hardening,328reference and24post-correction-task tests separately. Five inherited report identities advance; neither revisions nor counts are additive unique qualification. Source gaps explicitly limit adequacy; exact inherited report matches do not recover those missing source bytes.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-prediction-qualification-rev1/review.json",
+          "sha256": "fb8b3daf5a36e2677d051c16824e29ac193f54b389d6d1d0c1b2f71b88a9d6a1"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "91657f39da935b165e19daa521cc349f3f5488654aeadf73640a7da637239599",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "MODEL/SOURCE/PRESERVATION AUDIT PASS",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a11bc46f23802f03c187fc8d303d37a7756f78b4c988331b7011f6b767216d92",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/checks/0"
+      },
+      "text": "production compiler identity equals frozen canonical model bytes",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a73e506ba7071ec7d7c9dfd172f07b9f1bcae82b084ca6c0a219dcabe077505",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/checks/1"
+      },
+      "text": "content/registry/parameters exact frozen bytes",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7029af75956044e856f5504faf911706c2ad54acc54f196b163161649e51f6e4",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/checks/2"
+      },
+      "text": "prior frozen and prediction authority/source/model fingerprints preserved",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "73f504e6db07a352edd509036cf9be775002a76ae94b849a983a8ca7686a5871",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/checks/3"
+      },
+      "text": "five current-source prediction substitutions detected",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36113707097bed9344b6593e45a59da210fd8d293379a697871b47af88854f34",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/checks/4"
+      },
+      "text": "eighteen inherited current-source report fingerprints match",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d0ed3d2d6315f0b160558ba1347dc30ad2210a208347967fda6a815e194de3e2",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/reportedExecutedRuns/0/scope"
+      },
+      "text": "combined fresh and reference suites",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "434acf2273b1f040f4fa48a39235a25cbac57765a46bd9029a4625da6809dad4",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/reportedExecutedRuns/1/scope"
+      },
+      "text": "added prediction stage lifecycle",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4dc9e8f13fc50ebf9b3965ce1d428907183f94b0a39145876fadc79acd26d43e",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/reportedExecutedRuns/2/scope"
+      },
+      "text": "added prediction support/owner/private-prefix restore",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8f28e836ef66345b4d0f7b4550f07f30fde1130e50ee5de7bdcfda8009330c29",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "This audit validates bytes and fingerprints; the listed test runs were executed separately and recorded from their tool results.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dc1a1ddc77bc34bb44bf04a7a5c1783c9d6a2919ec391ce8986f01389c7f68c2",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "sourceSha256": "acc97d7b1f4bca4e8563fb908a89fb8f86b28a5463a7dca9d0107a7327ecb2da",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No whole Campaign2 completion, immediate phase30 learning, PERSIST-I RNG or general psychological retention is implied.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f161911c345acdd9d7d4474eafbfce882bc2b2de09e43b3db08dcf22e8b69497",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "MODEL/SOURCE/PRESERVATION AUDIT PASS",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6879dc542befa8e9b2375a45f66767c1191356731ccf87c89b0ac43c61b58728",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/checks/0"
+      },
+      "text": "production compiler identity equals frozen canonical model bytes",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6c0f9955061f82fae73829e9af3493c2200a41e0a6b33318cffab548b85dad6b",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/checks/1"
+      },
+      "text": "content/registry/parameters exact frozen bytes",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "def40da19bbe707c57b7f753a46a85f9f14a8840cc2075a59a1773ad37e6ae8d",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/checks/2"
+      },
+      "text": "prior frozen and prediction authority/source/model fingerprints preserved",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "60006a965b4f7c562e2f938e1589ea12f79ba35d7cd378dd965cb6ad2e9fd9af",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/checks/3"
+      },
+      "text": "five current-source prediction substitutions detected",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9c2978c23447dd8aa08994fb653ac2ca965b125da206fd747c6dd33144de2286",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/checks/4"
+      },
+      "text": "eighteen inherited current-source report fingerprints match",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6e2c539d469f966e23c373f000acf4e295403be5172b6d9d1c8bcc3cf1ec9ae9",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/reportedExecutedRuns/0/scope"
+      },
+      "text": "active-source regression before final task-only hardening",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ac3385158e0ff6b71fb96592fa7fef4a5848679e218cbbd27105abdccd497525",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/reportedExecutedRuns/1/scope"
+      },
+      "text": "preserved reference suite",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3d7bd3999ac3a392e26ae598dd61989a1378d6bab8d0c662394d23846e45b8f1",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/reportedExecutedRuns/2/scope"
+      },
+      "text": "post-correction task runtime and boundary",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a36247b6c3dce25abb2c371fa3040b6bec356e54fda3124ee8d5e5ee4fd13026",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "This audit validates bytes and fingerprints; the listed test runs were executed separately and recorded from their tool results.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7539c18faa27ef092cd34fafb23c802313f6f8477a4694d75b4adc6e939e04a6",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "sourceSha256": "cde63c6db01a9efdd77a7d8e9c822c276fb2a9e9b5fa5a9ab1f879f3a86f61f6",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No whole Campaign2 completion, immediate phase30 learning, PERSIST-I RNG or general psychological retention is implied.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8b30cff5a51df37c8f7e9ab5518c30bf900b5f70b1f4455f847ed33fc16243bb",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE; NOT WHOLE QUALIFICATION",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7b4ba3b364ee98b2a080741bf43790564f3ef1606d40f4ceae01c289e0cbc076",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "PRED-C/F: held-safe-input hidden D cannot change operands; owner comes from IDN, absent roster blocks prior access",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "286171cc63b57750d8348725707a21f33e9567b33f293e05280aa19669d7f5f2",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "37e3c50570ae99674ea60e8605140b8820d44bcdfa565914147ac9683a4d9f20",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e90eca8b542966e64b5f9595b663f07538c0866381b9f52c360816b01d3ce983",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "PRED-G: source-domain alternatives fail before any prediction state access",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0726feeae0a59819262c066214e471e1f7a372dbac4e520b5e9cd8f0fc2fffab",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "PRED-I/J: collision precedes second prior read; exact owned patch and illegal foreign path",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "921fda7a5e6c28008445cb4e94d90331810ea3a33785d5b3dc0a86ba83a40ac8",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "be93b438d99c18b234d757561439e57a4b0b2d7aad992572ba14ef6d2635166e",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0d0b18e60623f261c37fb67fb4a9582ef0e1d72a903002404d8ccaf252247b26",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "56a37afad8cf604547eeed9399ee9239751f4a3df6a551c96136eac09abdc0e0",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ff56becb8fa8d936fbb3919d4a8740b7d9bb65d2745a275ff64ddde4d81a847b",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "42764855b95ccf7fc1ca0a3075de0d29976176900fc4d3aecfcd94aa7a2faae9",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "51db4857acf7c2702b80389712abde0ee754cf01e4a7a9f48feb7f25b763b292",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cd8c2b846c0870ef81eb7d269460ec3e790e87128accc463866780fe2a42724d",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b68dad1f04f9a6a8654ffa6ac5bdb58380c847deb7f8a235d307cad6a307b986",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/3/pattern"
+      },
+      "text": "public prediction, independent memory",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "eb8d8be22e7188e6114218fc3f0e6f0362299660b6acd0419cd15ebb61737d6d",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "public prediction, independent memory, exact actual reads and prefix continuation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4b7b0084d0c6ad5e37c546393407c42b647e9da7557206d69fca183ea68fc97a",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/3/tests/0/errors/0"
+      },
+      "text": "same-instant work cannot emit into an earlier phase",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a1f0eaae9be7146654cf039773ce61ba231e731bb4eee059b958b4b940db1911",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/4/pattern"
+      },
+      "text": "public prediction, independent memory",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "109da186224ab91d218e23d18c6c21281e0c7103568b5b40a1b77a0cc47c5c36",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/4/tests/0/name"
+      },
+      "text": "public prediction, independent memory, exact actual reads and prefix continuation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "694d65b3657ed7b88561097f18d663d09a96cab86b3fa469c77539c27654e74e",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/mutants/4/tests/0/errors/0"
+      },
+      "text": "prediction application emitted semantic output",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "63e12060374f780c6fb9582c7ad2a0de59549da1c804a43f3004aa79cd32c5b6",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Generic/component interventions and public profile controls are named separately.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9274e4ad0a3ae37869ce4a2f6f254ab86440920ff18f4b66239d4b13fcbc5c29",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Only the listed source substitutions are claimed detected.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1f5f85d42a3a9eecccfc7f04aaac64a44f8f8d065bbd6d922522a837a48079db",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "sourceSha256": "2c7ebc309b709d3b59e858bb07c38bf54c2401125b36b8e23af656c148c3ffb6",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No immediate phase30 producer, calibrated uncertainty, reward or full Campaign2 topology is qualified.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dfa9a49fe2e94166d6746f2942b4104e15caaf0305d9b3e4c0c689d35922792d",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE; NOT WHOLE QUALIFICATION",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "13ce1586a42ccf1d6f5dd9578014d3f05445f1626a92012699e24db51b84cb21",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "PRED-C/F: held-safe-input hidden D cannot change operands; owner comes from IDN, absent roster blocks prior access",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ce1b8ad99ebc2dcb516798c49afdfe27a8c2c77f9bf7d7bc2c4bd65c6a17642c",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "59a115a8e7139fec2c278ef77ddb38bc6b8295d26a1e75af402a0ef65274ba88",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "219476ebdc4f37fdfd0bbce01c7b23096ef10566b444c3c81664674af98fc828",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "PRED-G: source-domain alternatives fail before any prediction state access",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1ff2c7dfafc969be607c5d05eea5c5c78d140c951e2b8c409cd2470083b13851",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "PRED-I/J: collision precedes second prior read; exact owned patch and illegal foreign path",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1d90793d2db0183db4786880afbd31661f7e6896360c45aac8145bd324f26cf4",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bf5b6a25fb04c802eca405645574d01f0d88bf3e13d93a799d130f149d7e82c0",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "578231a512da108a5eb28f37bf0005c0768013c16521e1332ee0c5bdf1cb5de1",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "PRED-P: later read returns committed5 before its instant updates mean to11/2",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b745b53eb5309cf4666494229b1dd01d5d7995f65b8a11da1812d538c6873940",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1c356d0e2be190cf47520c586bae2497ad2ed87627e8dcb592129a5c019720af",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1deec1094057f69bd3519a9900b890b964cd63970688cca8bfe2b21248e2eb8e",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a31273c91bec35c47cb0626fed7c577a8831bbc00f33f1b8335e4f6347301ef7",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "PRED-D/H/K: actual generated points, exact mean, original-observation freshness and support limit",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "72db763d0cf6eb4758c3bd84624e5396fb41f9fb04204cc2f77ddf80e2339eb1",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6e86aa6a29c8c73dfc3bfe4d0070d7d2066f3e4b74155278d4d4c5c58f7f6e20",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/3/pattern"
+      },
+      "text": "public prediction, independent memory",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "21ff70c20741ac5695d24d391915c6d0d53dbbfa66703d904fae41fe63554a30",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "public prediction, independent memory, exact actual reads and prefix continuation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c5c5c55eec8bfff8dac4cdff2818d54bc452f19bf790b5c7cce505b586c65927",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/3/tests/0/errors/0"
+      },
+      "text": "same-instant work cannot emit into an earlier phase",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7dc8bc6bdf21433f964ddfb4009ca108dcefd04ef279cd4452bb7daca2f2d327",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/4/pattern"
+      },
+      "text": "public prediction, independent memory",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "29b6474025d7e12a4c8d3cd57331301dfe78c37404b2b654cd3756860233e438",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/4/tests/0/name"
+      },
+      "text": "public prediction, independent memory, exact actual reads and prefix continuation",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5dd5bcac091181ddb0518fd9084ae4ec4409f19638f2c4a44396b1acc733656c",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/mutants/4/tests/0/errors/0"
+      },
+      "text": "prediction application emitted semantic output",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cc37a8a0b7e69dc4d387791a4a7c6a12eb3fb80c483f3b55bdc28b7a3f28438f",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Generic/component interventions and public profile controls are named separately.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b9c2e808df93a08471ee04b4b2a316bd2fd3c615f6530e94b889cabd7977492c",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Only the listed source substitutions are claimed detected.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "77b0baabc97de8e84d2a7482727f33579eed844c0a42dea8a9e253f0886a9a27",
+      "source": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "sourceSha256": "3ca51097502e1706430a8979e059116e4134f17b2e54bbd6990e5d6fb65d0e42",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "No immediate phase30 producer, calibrated uncertainty, reward or full Campaign2 topology is qualified.",
+      "category": "NARRATIVE"
+    }
+  ],
+  "exactBindings": [
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "original": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "original": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "original": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      },
+      "actual": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV1.json",
+      "original": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionExecution.ts",
+        "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/predictionExecution.ts",
+        "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684.ts",
+        "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/campaign2/traceBinding.ts",
+        "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-prediction-runtime-rev1/historical-24396c9019e4-traceBinding.ts",
+        "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      },
+      "actual": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_PROOF_REV2.json",
+      "original": {
+        "path": "scripts/prove-measurement-prediction.mjs",
+        "sha256": "a58582b28c994ba37495b89cb471dca6e700cc8ba661ef97a9631e401087497f"
+      },
+      "actual": {
+        "path": "scripts/prove-measurement-prediction.mjs",
+        "sha256": "a58582b28c994ba37495b89cb471dca6e700cc8ba661ef97a9631e401087497f"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      },
+      "actual": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/test/campaign2PredictionStage.test.ts",
+        "sha256": "d2120f6d74b70289e783fa6deac7a8366ef73c9f9d70d8147c0fc50356dc4d4d"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionStage.test.ts",
+        "sha256": "d2120f6d74b70289e783fa6deac7a8366ef73c9f9d70d8147c0fc50356dc4d4d"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "src/test/campaign2PredictionPersistence.test.ts",
+        "sha256": "aa8ceddd955d0add38ad24193ccf261f362f0aceb7464327c87719e6859bb9e0"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionPersistence.test.ts",
+        "sha256": "aa8ceddd955d0add38ad24193ccf261f362f0aceb7464327c87719e6859bb9e0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_WRITE_BOUNDARY_PROOF_REV6.json",
+        "sha256": "c276acb2e68522927863bf44f92654bba8ee610ed7b750bc4d2dd9c6f61163aa"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_WRITE_BOUNDARY_PROOF_REV6.json",
+        "sha256": "c276acb2e68522927863bf44f92654bba8ee610ed7b750bc4d2dd9c6f61163aa"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF_REV2.json",
+        "sha256": "5ca4d9d01c0222149adead177ebecc175cfa38fc822b783e2ae626a4fafc04d0"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF_REV2.json",
+        "sha256": "5ca4d9d01c0222149adead177ebecc175cfa38fc822b783e2ae626a4fafc04d0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+        "sha256": "7177fe293f42c9fd8f0d9287e8d17515efe5b5c50a3ad09c62a52f16225a41e8"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+        "sha256": "7177fe293f42c9fd8f0d9287e8d17515efe5b5c50a3ad09c62a52f16225a41e8"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF_REV2.json",
+        "sha256": "175ddcdd9d6f94790bdb2b736f90c550c2a8cec83c0ddbd4ef0b23303f5372df"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF_REV2.json",
+        "sha256": "175ddcdd9d6f94790bdb2b736f90c550c2a8cec83c0ddbd4ef0b23303f5372df"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_RULE_OVERLAP_PROOF_REV2.json",
+        "sha256": "e40d00a4813a8fd78ab0e754016fd9fd351fa3e1c35edb3e848458a82096cef7"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_RULE_OVERLAP_PROOF_REV2.json",
+        "sha256": "e40d00a4813a8fd78ab0e754016fd9fd351fa3e1c35edb3e848458a82096cef7"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV3.json",
+        "sha256": "56db88ea604a6c293713e51af288510b25c5199e1e3afe72e97a2b6176659367"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV3.json",
+        "sha256": "56db88ea604a6c293713e51af288510b25c5199e1e3afe72e97a2b6176659367"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+        "sha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+        "sha256": "9a6a9d8a15edd25a46ee7669c59daaa62bafdaaf5bf1debed10d750587e6e52b"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV3.json",
+        "sha256": "10b12c6fba872d9b829d54760acf6905dde527353f9f84affab2c072f5dd1d53"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV3.json",
+        "sha256": "10b12c6fba872d9b829d54760acf6905dde527353f9f84affab2c072f5dd1d53"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF_REV2.json",
+        "sha256": "9dbf8259e9065818ab46a867cf31edfe5870ecfe214485e7f1019ca61da8f2bd"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF_REV2.json",
+        "sha256": "9dbf8259e9065818ab46a867cf31edfe5870ecfe214485e7f1019ca61da8f2bd"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF_REV4.json",
+        "sha256": "788de892f2fdd30180c551cfd40201e8d33efd6867caea31a29303159d5853e6"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF_REV4.json",
+        "sha256": "788de892f2fdd30180c551cfd40201e8d33efd6867caea31a29303159d5853e6"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV3.json",
+        "sha256": "b7e42913fa583b8b7c4a3ac29c222c82d8d2a40bf2468c0c3e79c891923b8b9a"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV3.json",
+        "sha256": "b7e42913fa583b8b7c4a3ac29c222c82d8d2a40bf2468c0c3e79c891923b8b9a"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_EVID_REG_CONSTRUCTION_PROOF_REV5.json",
+        "sha256": "3deabc1f85b429baedccb0dfe022316eb9162536729f41edef0e30bfc93c9c6d"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_EVID_REG_CONSTRUCTION_PROOF_REV5.json",
+        "sha256": "3deabc1f85b429baedccb0dfe022316eb9162536729f41edef0e30bfc93c9c6d"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+        "sha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+        "sha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ROUTE_SEPARATION_PROOF.json",
+        "sha256": "0cb656a4868839027fba990d9e9af311ee69e4077cfcb148c1ac11b7a48deeb0"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ROUTE_SEPARATION_PROOF.json",
+        "sha256": "0cb656a4868839027fba990d9e9af311ee69e4077cfcb148c1ac11b7a48deeb0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+        "sha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+        "sha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REG_KEY_PRESERVATION_PROOF.json",
+        "sha256": "31727bda41fc4e8235e348cce1b4818bf2286955413797a350fcee7aca49cf90"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REG_KEY_PRESERVATION_PROOF.json",
+        "sha256": "31727bda41fc4e8235e348cce1b4818bf2286955413797a350fcee7aca49cf90"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF_REV2.json",
+        "sha256": "11fd0c275a74143573621a9111cffa189c84f9b01cd7b45c3d287de13ccc9648"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF_REV2.json",
+        "sha256": "11fd0c275a74143573621a9111cffa189c84f9b01cd7b45c3d287de13ccc9648"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV1.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+        "sha256": "07aa0b580aa1e9f33628d533c762aef4bcfc211979106ae3178626a6b70bce87"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+        "sha256": "07aa0b580aa1e9f33628d533c762aef4bcfc211979106ae3178626a6b70bce87"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionExecution.ts",
+        "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/predictionExecution.ts",
+        "sha256": "50d46d496e8e160d3cb6a5be9c51674bec90dba933209b7f0cbb97e15ecbc15c"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionModel.ts",
+        "sha256": "623663b22e448a57ac224d0f940d5a5e3c8a6e897a7158b61e5ce75401b69792"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      },
+      "actual": {
+        "path": "src/campaign2/predictionFactory.ts",
+        "sha256": "98364085c605603d6f02c027fd9cc2c1fe66e48842acf8a7ccd659bdfa747e69"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684.ts",
+        "sha256": "24266f0e72dbb007b62499c71427d5b00c94e458ab3f5012db07d79d0808d684"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/campaign2/traceBinding.ts",
+        "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-prediction-runtime-rev1/historical-24396c9019e4-traceBinding.ts",
+        "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      },
+      "actual": {
+        "path": "src/test/campaign2Prediction.test.ts",
+        "sha256": "634498c7ebfe0b48a4310a4d767cc40035e43472d4609b660f0797c6e7dbe7b9"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionComponent.test.ts",
+        "sha256": "b6c95a30e362adc0808841b32d691341178661f628e3ba929b14bd354f779c2b"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "scripts/prove-measurement-prediction.mjs",
+        "sha256": "a58582b28c994ba37495b89cb471dca6e700cc8ba661ef97a9631e401087497f"
+      },
+      "actual": {
+        "path": "scripts/prove-measurement-prediction.mjs",
+        "sha256": "a58582b28c994ba37495b89cb471dca6e700cc8ba661ef97a9631e401087497f"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/test/campaign2PredictionStage.test.ts",
+        "sha256": "d2120f6d74b70289e783fa6deac7a8366ef73c9f9d70d8147c0fc50356dc4d4d"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionStage.test.ts",
+        "sha256": "d2120f6d74b70289e783fa6deac7a8366ef73c9f9d70d8147c0fc50356dc4d4d"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "src/test/campaign2PredictionPersistence.test.ts",
+        "sha256": "aa8ceddd955d0add38ad24193ccf261f362f0aceb7464327c87719e6859bb9e0"
+      },
+      "actual": {
+        "path": "src/test/campaign2PredictionPersistence.test.ts",
+        "sha256": "aa8ceddd955d0add38ad24193ccf261f362f0aceb7464327c87719e6859bb9e0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_WRITE_BOUNDARY_PROOF_REV6.json",
+        "sha256": "c276acb2e68522927863bf44f92654bba8ee610ed7b750bc4d2dd9c6f61163aa"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_WRITE_BOUNDARY_PROOF_REV6.json",
+        "sha256": "c276acb2e68522927863bf44f92654bba8ee610ed7b750bc4d2dd9c6f61163aa"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF_REV2.json",
+        "sha256": "5ca4d9d01c0222149adead177ebecc175cfa38fc822b783e2ae626a4fafc04d0"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_BATCH_MUTATION_PROOF_REV2.json",
+        "sha256": "5ca4d9d01c0222149adead177ebecc175cfa38fc822b783e2ae626a4fafc04d0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+        "sha256": "7177fe293f42c9fd8f0d9287e8d17515efe5b5c50a3ad09c62a52f16225a41e8"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_APPLICABILITY_PROOF_REV3.json",
+        "sha256": "7177fe293f42c9fd8f0d9287e8d17515efe5b5c50a3ad09c62a52f16225a41e8"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF_REV2.json",
+        "sha256": "175ddcdd9d6f94790bdb2b736f90c550c2a8cec83c0ddbd4ef0b23303f5372df"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_INDEPENDENT_GATE_PROOF_REV2.json",
+        "sha256": "175ddcdd9d6f94790bdb2b736f90c550c2a8cec83c0ddbd4ef0b23303f5372df"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_RULE_OVERLAP_PROOF_REV2.json",
+        "sha256": "e40d00a4813a8fd78ab0e754016fd9fd351fa3e1c35edb3e848458a82096cef7"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_RULE_OVERLAP_PROOF_REV2.json",
+        "sha256": "e40d00a4813a8fd78ab0e754016fd9fd351fa3e1c35edb3e848458a82096cef7"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV3.json",
+        "sha256": "56db88ea604a6c293713e51af288510b25c5199e1e3afe72e97a2b6176659367"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_MAGNITUDE_BOUNDARY_PROOF_REV3.json",
+        "sha256": "56db88ea604a6c293713e51af288510b25c5199e1e3afe72e97a2b6176659367"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV4.json",
+        "sha256": "293c3768ca7151e94ac98759eb997a32f6d974f1a4ea85e43a1d3ec2693467be"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV4.json",
+        "sha256": "293c3768ca7151e94ac98759eb997a32f6d974f1a4ea85e43a1d3ec2693467be"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV4.json",
+        "sha256": "15001bdb424715759002cddffeb2dade30655362be05b445d041a4c1f7a40e55"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV4.json",
+        "sha256": "15001bdb424715759002cddffeb2dade30655362be05b445d041a4c1f7a40e55"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF_REV2.json",
+        "sha256": "9dbf8259e9065818ab46a867cf31edfe5870ecfe214485e7f1019ca61da8f2bd"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_STATE_INVARIANT_PROOF_REV2.json",
+        "sha256": "9dbf8259e9065818ab46a867cf31edfe5870ecfe214485e7f1019ca61da8f2bd"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF_REV4.json",
+        "sha256": "788de892f2fdd30180c551cfd40201e8d33efd6867caea31a29303159d5853e6"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_PRJ_SUBSTITUTION_PROOF_REV4.json",
+        "sha256": "788de892f2fdd30180c551cfd40201e8d33efd6867caea31a29303159d5853e6"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV3.json",
+        "sha256": "b7e42913fa583b8b7c4a3ac29c222c82d8d2a40bf2468c0c3e79c891923b8b9a"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_BRIDGE_SUBSTITUTION_PROOF_REV3.json",
+        "sha256": "b7e42913fa583b8b7c4a3ac29c222c82d8d2a40bf2468c0c3e79c891923b8b9a"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_EVID_REG_CONSTRUCTION_PROOF_REV5.json",
+        "sha256": "3deabc1f85b429baedccb0dfe022316eb9162536729f41edef0e30bfc93c9c6d"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_EVID_REG_CONSTRUCTION_PROOF_REV5.json",
+        "sha256": "3deabc1f85b429baedccb0dfe022316eb9162536729f41edef0e30bfc93c9c6d"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV5.json",
+        "sha256": "fde8d142845cdef530c0deb6cf334e9f665370519389df4551a198c338a854e3"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV5.json",
+        "sha256": "fde8d142845cdef530c0deb6cf334e9f665370519389df4551a198c338a854e3"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ROUTE_SEPARATION_PROOF.json",
+        "sha256": "0cb656a4868839027fba990d9e9af311ee69e4077cfcb148c1ac11b7a48deeb0"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ROUTE_SEPARATION_PROOF.json",
+        "sha256": "0cb656a4868839027fba990d9e9af311ee69e4077cfcb148c1ac11b7a48deeb0"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV3.json",
+        "sha256": "a851f4699d6124088bc74930289929c184e346b374bfd0e30164d553077f02ba"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV3.json",
+        "sha256": "a851f4699d6124088bc74930289929c184e346b374bfd0e30164d553077f02ba"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_REG_KEY_PRESERVATION_PROOF.json",
+        "sha256": "31727bda41fc4e8235e348cce1b4818bf2286955413797a350fcee7aca49cf90"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_REG_KEY_PRESERVATION_PROOF.json",
+        "sha256": "31727bda41fc4e8235e348cce1b4818bf2286955413797a350fcee7aca49cf90"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF_REV2.json",
+        "sha256": "11fd0c275a74143573621a9111cffa189c84f9b01cd7b45c3d287de13ccc9648"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_READ_EVIDENCE_PROOF_REV2.json",
+        "sha256": "11fd0c275a74143573621a9111cffa189c84f9b01cd7b45c3d287de13ccc9648"
+      }
+    },
+    {
+      "receipt": "docs/planning/MEASUREMENT_PREDICTION_RUNTIME_AUDIT_REV2.json",
+      "original": {
+        "path": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV4.json",
+        "sha256": "9e08ac7b8af5c36fdb43f03bdcd82bc2ac0a6659d64b1f56a2044a6ceeb0f47f"
+      },
+      "actual": {
+        "path": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV4.json",
+        "sha256": "9e08ac7b8af5c36fdb43f03bdcd82bc2ac0a6659d64b1f56a2044a6ceeb0f47f"
+      }
+    }
+  ],
+  "schema": {
+    "path": "docs/planning/campaign3-history-prediction-runtime-rev1/schema.json",
+    "sha256": "fbca4336e0eb2b66a6b7224e9c35d414bb634221101ecab03e2fc10da1faac6b"
+  },
+  "preservedArtifacts": [
+    {
+      "path": "docs/planning/campaign3-history-prediction-runtime-rev1/historical-24396c9019e4-traceBinding.ts",
+      "sha256": "24396c9019e43e05dd8e3585b7e654c5d705e350fe274e8e122169ac501ab21a",
+      "method": "Exact Git 9e1e169ceb3d1aff85da952bccb6bdf0513320fb src/campaign2/traceBinding.ts raw"
+    }
+  ],
+  "unresolved": {
+    "path": "docs/planning/campaign3-history-prediction-runtime-rev1/unresolved.json",
+    "sha256": "1de8b7d3e7299d6a6af159df352697f56b7fdd63fdf792077e10a683ec132646"
+  },
+  "limits": [
+    "Proof revisions share all result rows but different source bindings; not two independent behavioral findings.",
+    "Audit counters record separate test runs, not raw execution logs or newly rerun tests.",
+    "Six exact source groups unresolved after bounded search, including three previously known; one trace source recovered.",
+    "No runtime/model/law/allocation/verdict/corpus/obligation status change; independent adequacy open."
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

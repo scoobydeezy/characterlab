@@ -1,0 +1,134 @@
+{
+  "status": "PASS; CURRENT AND PINNED HISTORICAL SOURCE WITNESSES; THREE ORIGINAL MUTANTS DETECTED",
+  "checker": {
+    "path": "scripts/replay-history-ga-allocation-production.mjs",
+    "sha256": "a6ffdea4cde7805d6c08c934637a7df907ce8fbc9a14f325e7108e64e1b96c39"
+  },
+  "archive": {
+    "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/f91568689006686f-localReserveSource.ts",
+    "sha256": "f91568689006686f00882444cb6313858a07da8c98cbb6f483f6bf9baa059b08",
+    "originalPath": "src/campaign3/localReserveSource.ts",
+    "commit": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+    "method": "Exact git-show bytes matching original replenishment reviewer SHA"
+  },
+  "inputs": [
+    {
+      "path": "src/test/generalOutputAllocation.test.ts",
+      "sha256": "f1948e5f38634b74401b61388d2df327b86915f3789c4c3d5e08107188a28194"
+    },
+    {
+      "path": "src/test/localReserveReplenishmentProduction.test.ts",
+      "sha256": "061cc0738fbc807ea2e8319b9f21903b2d6b14676d0c28e0b627053e04df30fd"
+    },
+    {
+      "path": "src/campaign3/localReserveSource.ts",
+      "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+    },
+    {
+      "path": "scripts/review-ga-replenishment-production.mjs",
+      "sha256": "16db15146b1e12ba67c72d29963058e67e1f93ca61ff8aea75779a55f9250eed"
+    },
+    {
+      "path": "docs/planning/GA_REPLENISHMENT_PRODUCTION_REVIEW_REV1.json",
+      "sha256": "3dbff491600d9a635f15cd6642292ea3c4b01825b7d9d0d5662da7ce73099a2b"
+    }
+  ],
+  "rows": [
+    {
+      "name": "current",
+      "pinned": false,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/current.json",
+        "sha256": "c4047c81d7ec35d859ea9895ba6696365783a3ad19112bf9a604de08a508f679"
+      },
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "failedNames": [],
+      "mutation": null
+    },
+    {
+      "name": "historical-source",
+      "pinned": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/historical-source.json",
+        "sha256": "d129f36f527ff11b260f825a7bfe6f2ab3690b21cb3a2137edd6daa66bc90dcd"
+      },
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "failedNames": [],
+      "mutation": null
+    },
+    {
+      "name": "stored-anchor-is-materialized",
+      "pinned": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/stored-anchor-is-materialized.json",
+        "sha256": "ff7b9db45067d2f6463d517a36aa06a8d9ecd56e21557aef849515d68b6a0d47"
+      },
+      "total": 3,
+      "passed": 2,
+      "failed": 1,
+      "failedNames": [
+        "LRP-A: result distinguishes stored prior anchor from materialized before; exact overflow and sibling preservation"
+      ],
+      "mutation": [
+        "stored-anchor-is-materialized",
+        "src/campaign3/localReserveSource.ts",
+        "src/test/localReserveReplenishmentProduction.test.ts",
+        "prior:{amount:copy(d.amount),anchoredAt:d.anchoredAt}",
+        "prior:{amount:copy(before),anchoredAt:d.anchoredAt}",
+        "LRP-A"
+      ]
+    },
+    {
+      "name": "zero-reanchor-dropped",
+      "pinned": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/zero-reanchor-dropped.json",
+        "sha256": "fb5a0d9fbd214d080d431ce30ebf9b31ded15903d9751949f72c2dd26a8ff084"
+      },
+      "total": 3,
+      "passed": 2,
+      "failed": 1,
+      "failedNames": [
+        "LRP-B: zero delivery produces a real reanchor and result; public safe sample shape stays narrow"
+      ],
+      "mutation": [
+        "zero-reanchor-dropped",
+        "src/campaign3/localReserveSource.ts",
+        "src/test/localReserveReplenishmentProduction.test.ts",
+        "next:{amount:copy(result.after),anchoredAt:at}",
+        "next:{amount:copy(result.after),anchoredAt:delivery.numerator===0n?d.anchoredAt:at}",
+        "LRP-B"
+      ]
+    },
+    {
+      "name": "mutate-prior-source",
+      "pinned": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-allocation-production-rev1/mutate-prior-source.json",
+        "sha256": "16a4758fe05c4b704880963b4125c0776167236b842c61370b333859e91a9de9"
+      },
+      "total": 3,
+      "passed": 2,
+      "failed": 1,
+      "failedNames": [
+        "LRP-A: result distinguishes stored prior anchor from materialized before; exact overflow and sibling preservation"
+      ],
+      "mutation": [
+        "mutate-prior-source",
+        "src/campaign3/localReserveSource.ts",
+        "src/test/localReserveReplenishmentProduction.test.ts",
+        "const reserves=new Map(f.reserves);",
+        "const reserves=f.reserves;",
+        "LRP-A"
+      ]
+    }
+  ],
+  "limits": [
+    "Historical source is pinned; other imported modules are current. This does not reproduce the complete old dependency environment.",
+    "Five component assertions per source version; no native scheduler, public slot admission or full current source suite rerun. Original failed fixture reports remain separate evidence."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "original": "docs/planning/ATTENTION_DECLARATION_CLOSURE_REVIEW_REV1.json",
+  "originalSha256": "909707106cedbd0c42c507b5ad7029724e8232dcb685c5ffb888929ea1a46547",
+  "checker": {
+    "path": "scripts/replay-history-attention-declaration-closure.mjs",
+    "sha256": "41bae043abd7bc49eaabbcc6b02e4bca6eaf32f164f8d864c2202541a4d12d54"
+  },
+  "comparison": "Whole original review receipt equal. Historical preservation hashes use exact older archives, not current-source attestation. Current modules execute substantive declaration checks.",
+  "sourceMappings": [
+    {
+      "path": "src/campaign3/embodiedRuntime.ts",
+      "currentSha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313",
+      "historicalPath": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/embodiedRuntime.ts",
+      "historicalSha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+    },
+    {
+      "path": "src/campaign2/occurrenceIdentity.ts",
+      "currentSha256": "cfe01d8314b5932ea81a92c2f0a3c4334eb7b2898a2aae64d93967b4f8eb6dd4",
+      "historicalPath": "docs/planning/campaign3-history-embodied-freeze-rev1/historical/src/campaign2/occurrenceIdentity.ts",
+      "historicalSha256": "fbd7b6390a6da94c785efdee77a468628481c54b184f3c9df0e4bb93e0641b7b"
+    }
+  ]
+}

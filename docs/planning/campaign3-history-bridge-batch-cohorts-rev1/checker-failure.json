@@ -1,0 +1,17 @@
+{
+  "status": "PRESERVED CHECKER FAILURE; NO HISTORICAL RUNTIME FAILURE",
+  "checker": {
+    "path": "docs/planning/campaign3-history-bridge-batch-cohorts-rev1/checker-before-current-binding-fix.py",
+    "sha256": "cfd6f62b0d2c54d0d5fdc17277f65d66a969eb854b45cbf6c1d0fed34afee355"
+  },
+  "exception": "KeyError: '0c56a8dc3c694052f87be8d61f377b7a63f4bd6a597b02d168bf5d2f90679e1b'",
+  "location": "line 61: archive-only lookup for source anchor",
+  "finding": "Source binding had already resolved the exact current bridgeObservation.ts bytes. The new anchor checker incorrectly assumed every resolved source must be an indexed archive.",
+  "repair": "Use the exact current source when its hash matches, otherwise use the indexed archive. Do not claim a missing source or a runtime defect.",
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

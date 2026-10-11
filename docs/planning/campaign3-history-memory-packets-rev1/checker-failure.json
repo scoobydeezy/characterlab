@@ -1,0 +1,16 @@
+{
+  "status": "PRESERVED READ-ONLY CHECKER FAILURE",
+  "checker": {
+    "path": "docs/planning/campaign3-history-memory-packets-rev1/checker-before-byte-view-fix.mjs",
+    "sha256": "20613d69a786685c709f10e3a7c704ba40f8099b2c28536011391c3c00154d5b"
+  },
+  "exception": "ERR_ASSERTION at checker line30: decoded bytes serialized as Buffer {type,data}, frozen readable bytes use numeric-index Uint8Array object.",
+  "finding": "Checker fed Node Buffer to shared decoder and copied the byte view into JSON, invoking Buffer.toJSON. Canonical bytes matched; mismatch was checker readable presentation.",
+  "repair": "Render byte values explicitly as numeric-index entries, matching historical readable format. Keep canonical equality and digest checks unchanged.",
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

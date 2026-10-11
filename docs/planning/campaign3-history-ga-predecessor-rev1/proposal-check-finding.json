@@ -1,0 +1,8 @@
+{
+  "status": "AUDIT HARNESS FAILURE PRESERVED",
+  "source": {
+    "path": "docs/planning/campaign3-history-ga-predecessor-rev1/proposal-check-rejected.mjs",
+    "sha256": "233564dee86ebc2f664d6dd613bac8a1ef922d8fe23209c6e7191d69fb179d52"
+  },
+  "finding": "Checker assumed old proposal had a separate registrations file. Rev1 has six image fields;rev2 adds separate registrations. Compare actual registry slot2 to successor registrations instead. TypeError occurred before receipt publication;no original evidence changed."
+}

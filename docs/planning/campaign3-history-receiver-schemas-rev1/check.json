@@ -1,0 +1,44 @@
+{
+  "status": "THREE RECEIVER FAMILIES AUTHENTICATED AND SCHEMA-REVIEWED; HQ011 OPEN",
+  "sources": 1952,
+  "archives": 480,
+  "originalBackingOccurrences": 53656,
+  "allStringLeaves": 1218294,
+  "omittedStringLeaves": 1164638,
+  "totals": {
+    "routine": {
+      "receivers": 504,
+      "joined": 4,
+      "receiverPrefixes": 8568,
+      "faultReceipts": 12,
+      "stringLeaves": 260465
+    },
+    "habit": {
+      "receivers": 960,
+      "joined": 4,
+      "receiverPrefixes": 16320,
+      "faultReceipts": 12,
+      "stringLeaves": 739036
+    },
+    "personal-loss": {
+      "receivers": 480,
+      "joined": 0,
+      "receiverPrefixes": 6240,
+      "faultReceipts": 8,
+      "stringLeaves": 218793
+    }
+  },
+  "rejectedSchemaMutations": [
+    "routine:new-prose",
+    "routine:unknown-status",
+    "routine:numeric-prose",
+    "habit:new-prose",
+    "habit:unknown-status",
+    "habit:numeric-prose",
+    "personal-loss:new-prose",
+    "personal-loss:unknown-status",
+    "personal-loss:numeric-prose"
+  ],
+  "reviewSha256": "dd2138ac3f50b28a9949a66c7f5df976e23ec584b7b33412116e0d441ba219bc",
+  "checkerSha256": "05cf3af61c311e440fc29a9968c86e81c31cad580b25cbb16daee22fe05f8411"
+}

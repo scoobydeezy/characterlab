@@ -1,0 +1,35 @@
+{
+  "scope": "Read-only specification checks; historical probe adapter preserves original checks and exact report equality. No runtime qualification.",
+  "rows": [
+    {
+      "command": [
+        "node",
+        "scripts/audit-campaign2-allocation.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"campaign2-allocation/0.2-candidate\",\n  \"gates\": {\n    \"A\": \"PASS: exact complete Markdown/JSON parity\",\n    \"B\": \"PASS: direct accepted observation declaration\"\n  },\n  \"checks\": 60,\n  \"observationAnchor\": {\n    \"source\": \"docs/formal/OBSERVATION_AND_EVIDENCE.md\",\n    \"acceptanceLine\": 3,\n    \"acceptance\": \"**Status:** accepted bounded-measurement seam with restricted semantic-token control, version `observation/0.1-candidate` (accepted 2026-09-01; immutable candidate-era identifier retained)\",\n    \"seamIdLine\": 5,\n    \"declaration\": \"**SeamId:** `seam/truth-to-permitted-evidence`\",\n    \"sourceSha256\": \"76621450d9e65f844414f35795e2ed1036be945e096b195b9eb4dfe96f70feb9\"\n  }\n}\n",
+      "stderr": "",
+      "scriptSha256": "d72772f48a8819f73c9e4ff92f1a19019ea9dd0c4ec389cf0c096c52a08d0e36"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/audit-val-allocation.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS: PERMANENT AND FROZEN; FINAL MACHINE GATE PASSED\",\n  \"counts\": {\n    \"records\": 2,\n    \"fields\": 2,\n    \"members\": 2,\n    \"bindings\": 2,\n    \"newNamespaces\": 0\n  },\n  \"checks\": 40\n}\n",
+      "stderr": "",
+      "scriptSha256": "d044ebee6fa0938945b19eab9fca0c7925dba379cffa5c566d0a5f959aed49d0"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-history-probe-allocation.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "240 allocation checks PASS. No runtime verdict.\n",
+      "stderr": "",
+      "scriptSha256": "243c3999dd49ba1f38f094e8bb22d2b8f439fa4d1cc2dc2b4ebd76d5b377be97"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/check-defining-acquisition.mjs",
+      "exitCode": 0,
+      "stdout": "PASS internal native acquisition checks; no new verdict/public continuation claim\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-acquisition.mjs",
+        "sha256": "15117d800728c7de25dfdae1d8d2d9f8733fec4dc1b8a5a0637952e51318e205"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-continuation-inputs.mjs",
+      "exitCode": 0,
+      "stdout": "PASS defining continuation input/owner development; no native qualification claim\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-continuation-inputs.mjs",
+        "sha256": "b63786bc1f0501aa34f33ade07aca8dbaab63c9055245a9268ce7c09c1705416"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-native-lifecycle.mjs",
+      "exitCode": 0,
+      "stdout": "PASS native defining lifecycle development; full continuation/public gate OPEN;1487/3\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-native-lifecycle.mjs",
+        "sha256": "f52ca012ac9c90694a63dd0fdf675aac02546746239f4bd8802981c9120cda65"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-native-memory-owner.mjs",
+      "exitCode": 0,
+      "stdout": "PASS native meaning/memory-owner development; full gate OPEN;1489/5\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-native-memory-owner.mjs",
+        "sha256": "84885b572d97a4919271d6db34f177a3c2ddbeae26548164a456139dd74e93e8"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-native-current.mjs",
+      "exitCode": 0,
+      "stdout": "PASS native current assessment; full gate OPEN;1490/6\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-native-current.mjs",
+        "sha256": "3ee54f5374717260fa54e629241ba8b68954ef89a2355f643560ef8c38d65490"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-native-rehearsal.mjs",
+      "exitCode": 0,
+      "stdout": "PASS native rehearsal/final recall; full gate OPEN;1492/8\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-native-rehearsal.mjs",
+        "sha256": "c7b1c24e39898b5f8aaf445bcf58c9f80fc6abea4af6e72a2d4c671526a96575"
+      }
+    }
+  ],
+  "scope": "Read-only reconstruction of historical six implementation receipts. No fresh tests, build or native execution."
+}

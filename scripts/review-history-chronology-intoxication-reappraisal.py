@@ -1,0 +1,44 @@
+"""Bind six dated coverage entries to scoped qualification and successor evidence."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-chronology-intoxication-reappraisal-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+    p=O/n
+    if p.exists():assert load(p)==v,p
+    else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+roles={x['path']:x for x in load(P/'campaign3-history-source-roles-rev313/index.json')['roleAssignments']}
+def evidence(*names):
+    result=[]
+    for name in names:
+        p=P/name;r=roles[p.as_posix()]
+        assert ref(p)['sha256']==r['sha256']
+        for x in r.get('evidence',[]):assert ref(x['path'])['sha256']==x['sha256']
+        result.append(dict(**ref(p),sourceRole=r))
+    return result
+sections=[
+ (5192,5226,'INTOXICATION QUALIFICATION RUNNING',evidence('INTOXICATION_CONTROL_FINDINGS.md','CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md'),'Five models/20 runs/55 selected prefixes are frozen work in progress here,not yet qualification. Worker commands are historical routing,not current live processes or authorization to refreeze. First12 focused tests passed; masking and threshold scope were specified before freeze,not a suppressed failing cohort. Existing biological laws and wrappers remain unchanged. Later closure supplies the native selected-prefix receipts.'),
+ (5227,5266,'INTOXICATION QUALIFIED',evidence('INTOXICATION_CONTROL_FINDINGS.md','CAMPAIGN3_INTOXICATION_CONTROL_QUALIFICATION.md'),'Constitution-only clearance100/400 under identical exposure separates sensed control from execution at fixed competence300 and inhibition threshold800. Execution needs challenge strictly below competence; inhibition includes equality. Slow execution recovers10,inhibition11,burden remains300 at12; functional recovery is not complete clearance. SKILL inclusive boundary remains a different admitted candidate. External exposure7 affects probe8; reward action catalog label does not imply intoxicant delivery. All seeds0..3 and original nonzero prelude identity remain; later identity learning disabled proves no automatic rewrite,not lifelong immunity. NoControl and competence850 are independent controls. FalseSober is known biased zero,not Unknown. Whole blind equality requires masking intoxication and downstream reward/pleasure/withdrawalReward. Competence pair need not have equal later sensations. Inert withholding interference equality does not generalize to all failed actions.55 selected prefixes are not exhaustive all-run prefix coverage; no clinical or Task-join claim.'),
+ (5267,5301,'CHOSEN REAPPRAISAL RUNNING',evidence('CHOSEN_REAPPRAISAL_FINDINGS.md','CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md'),'Four models/43 runs/387 component prefixes are frozen and executing; historical worker instruction does not establish current liveness.13 focused tests/reference/build precede full receipt closure. Actual chosen strategy composes inherited reason/dice with conditional frames. The old instructed profile remains separate and unchanged. No native Failed lifecycle,public authority or Save132 claim follows from component transaction faults.'),
+ (5302,5340,'CHOSEN REAPPRAISAL COMPONENT',evidence('CHOSEN_REAPPRAISAL_FINDINGS.md','CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md','CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md'),'Catalogue instructionId identifies an available strategy,not an instruction to choose it. Fixed threat concern differs from optional safety/regulation goal; removing regulation does not erase threat or alter beliefs. BenefitRelative uses prior positive conditional benefit; KnowledgeOnly can choose known ineffective/harmful frames. Balanced probabilities1/2 retain all8 seeds:1/4/5/6 reappraise,0/2/3/7 work. Interrupted completion and NoReappraisal separate choice,attempt,completion and frame installation. Frame4 changes appraisal5,not earlier4; consequence4 knowledge cannot enable choice4. Hypothetical conditional relief is neither physical protection nor outcome evidence. Hidden harm and denied catalogue controls preserve safe views. Work lacks enacted external outcome; no general planning,goal discovery or identity/physiology join.387 component prefixes qualify transaction restore,not native scheduler admission.'),
+ (5341,5383,'NATIVE REAPPRAISAL IMPLEMENTATION',evidence('CAMPAIGN3_CHOSEN_REAPPRAISAL_QUALIFICATION.md','CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md'),'Allocation1459..1467 and accepted public contract mark native work pending,not an extra verdict or native qualification. Repeated4/43/387 component roster remains component evidence. Later native source,disjoint writers,actual stages,original lineage,RNG and Save132 are separate integration work; predecessor50/53 wrapper inventory must extend without changing frozen earlier profiles.'),
+ (5384,5418,'NATIVE REAPPRAISAL QUALIFIED',evidence('CAMPAIGN3_CHOSEN_REAPPRAISAL_PUBLIC_QUALIFICATION.md'),'Four native models/43 runs/387 prefixes and21 focused tests establish twelve actual stages with separate goal/learning/frame owners and component row/RNG correspondence. Restore reexecutes original inputs,Failed stays Failed and wrapper publication is guarded. Preserve first test-helper failure separately from passing component first cohort.51/54 wrappers are the bounded new inventory. No new law,physical protection,general planning or Task/Biological join; subsequent embarrassment intake is future routing,not an already-qualified phenotype.'),
+]
+common=evidence('MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json','CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md')
+ss=[dict(startLine=a,endLine=b,role=k,disposition=n,acceptanceChain=e+common,obligations=['RO-C3-019','RO-C3-020','RO-C3-021']) for a,b,k,e,n in sections]
+cpath=P/'campaign3-history-chronology-candidates-rev1/occurrences.json';candidate=load(cpath);rows=[]
+for item in candidate['rows']:
+    u=item['original'];s=[x for x in ss if x['startLine']<=u['location']['startLine']<=x['endLine']]
+    if not s:continue
+    assert len(s)==1 and u['location']['endLine']<=s[0]['endLine']
+    rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],sectionStartLine=s[0]['startLine'],disposition='DATED CLAIM/ROUTING; bound section specifies scoped acceptance and supersession'))
+priorPaths=[P/f'campaign3-history-chronology-{n}-rev1/review.json' for n in ['tail','integration','cognition','coverage','development-audits','development-workers','development-scope','defining-public','defining-owners','embarrassment-bridge']]
+prior=[r for p in priorPaths for r in load(p)['rows']]
+ids=[r['occurrenceId'] for r in prior+rows];assert len(ids)==len(set(ids))
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='SIX INTOXICATION/REAPPRAISAL ENTRIES RECONCILED; WHOLE LOG OPEN',checker=ref('scripts/review-history-chronology-intoxication-reappraisal.py'),candidates=ref(cpath),resolvedSource=candidate['resolvedSource'],sections=ss,rows=rows,priorReviews=[ref(p) for p in priorPaths],limits=['No runtime tests or original writer rerun. Historical counts are not fresh execution.','No whole-log assignment or HQ011 closure. Original bytes and occurrence identities preserved.']))
+save('findings.json',{'status': 'OWNED LIMITS PRESERVED', 'findings': [{'owner': 'RO-C3-020', 'distinction': 'Sensed control,physical execution and residual burden recover separately.', 'blockedClaim': 'Functional recovery proves complete bodily clearance,or SKILL equality semantics replace biological semantics.', 'reopen': 'New impairment or recovery laws must preserve independent control/competence and exact threshold comparisons.'}, {'owner': 'RO-C3-020', 'distinction': 'Hidden perturbation can lawfully change later admitted sensations through action outcomes.', 'blockedClaim': 'Masking only intoxication guarantees whole safe-history equality.', 'reopen': 'A new masking claim must cover all causally affected admitted channels or scope equality narrowly.'}, {'owner': 'RO-C3-020', 'distinction': 'Optional regulation goal,prior conditional knowledge,chosen operation and later frame are distinct.', 'blockedClaim': 'Relief is outcome evidence,or a known strategy is necessarily beneficial or physically protective.', 'reopen': 'New planning/control consumers require independent goal,evidence,completion and frame interventions.'}]})
+save('check.json',dict(status='PASS SCOPED CHRONOLOGY ACCOUNTING; HQ011 OPEN',sections=len(ss),newOccurrences=len(rows),priorOccurrences=len(prior),cumulativeReviewed=len(ids),remainingOriginalOccurrences=len(candidate['rows'])-len(ids),review=ref(O/'review.json')))
+assert all(p.stat().st_size<50_000_000 for p in O.iterdir())
+print(json.dumps(load(O/'check.json')))

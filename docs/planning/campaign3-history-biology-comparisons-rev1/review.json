@@ -1,0 +1,275 @@
+{
+  "status": "BOTH HISTORICAL COMPARISON METADATA SOURCES RECONCILED; HQ011 OPEN",
+  "sourceRoles": [
+    {
+      "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "sha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2",
+      "role": "WHOLE CANONICAL COMPARISON METADATA",
+      "judgment": "REV1 late ComparisonCase packaging remains disclosed; exact derivation binds the original REV2 roster but does not retroactively establish pre-execution wrapper publication.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/BIOLOGY_PUBLIC_CLOSURE_REV2.json",
+          "sha256": "210e276859d79f6bcccb51df3b337c13f02f37c71561b014c771a00dae8eb43d"
+        },
+        {
+          "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+          "sha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2"
+        }
+      ],
+      "canonicalEvidence": {
+        "path": "docs/planning/campaign3-history-biology-comparisons-rev1/canonical-check.json",
+        "sha256": "2d0364ccb26dc8559e1b7fe2ed639c6f1c9aebc5bbec737f5aedcc6f9d1408ca"
+      }
+    },
+    {
+      "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "sha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f",
+      "role": "WHOLE CANONICAL COMPARISON METADATA",
+      "judgment": "REV2 final wrapper binds REV3 roster; pre-execution timing is the historical disclosure, not independently proven by deterministic reconstruction.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/BIOLOGY_PUBLIC_CLOSURE_REV2.json",
+          "sha256": "210e276859d79f6bcccb51df3b337c13f02f37c71561b014c771a00dae8eb43d"
+        },
+        {
+          "path": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+          "sha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f"
+        }
+      ],
+      "canonicalEvidence": {
+        "path": "docs/planning/campaign3-history-biology-comparisons-rev1/canonical-check.json",
+        "sha256": "2d0364ccb26dc8559e1b7fe2ed639c6f1c9aebc5bbec737f5aedcc6f9d1408ca"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "3935289c65eaa7908461a234953ea6bd28cc369f0578ba4a08d2c8dd3cb43009",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "sourceSha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "DERIVED FROM FROZEN ROSTER; NO EXECUTION OR SELECTION",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "Derivation is not execution or selection; no fresh trajectory claim."
+    },
+    {
+      "occurrenceId": "9208fd77bee2c5337e113c22f6793f922af91a4476e20271de16fca55fccec8b",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "sourceSha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2",
+      "location": {
+        "pointer": "/coupling"
+      },
+      "text": "biology-public-comparison/0.1-candidate: preserve exactly the ordered models/runs/prefix sets in the pre-execution REV2 plan. Every baseline is compared timestep-for-timestep with its frozen component counterpart at identical config/source/seed. MatchedOn/Off share admitted learned outcomes/cue history/goals while physiological adaptation differs; MatchedNoCue changes current cue only. HiddenA/B hold all admitted sensing fixed while execution/body differ. All eight main/noLoad seeds retained; no outcome-based selection.",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "Same original config/source/seed for component match; deliberate equal-learning dependence contrast, cue-only access and safe-observation hidden-state controls. All eight main/noLoad seeds retained; no inferred unbiased acquisition or causal population estimate."
+    },
+    {
+      "occurrenceId": "b0412719069d9bb0631a1e9a2e72addf7f0116e2800604633a286423d77b3217",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "sourceSha256": "2f476c266b9504839c8eafcbb62d26ca52698ff84cf88b25e42c7f8e7fbf72b2",
+      "location": {
+        "pointer": "/disclosure"
+      },
+      "text": "The named ComparisonCase wrapper was added during qualification. Its entire ordered cohort and coupling operands were already committed by the pre-execution plan; no model, source, run, seed or prefix was added or removed.",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "REV1 late ComparisonCase packaging remains disclosed; exact derivation binds the original REV2 roster but does not retroactively establish pre-execution wrapper publication."
+    },
+    {
+      "occurrenceId": "e906cd5910ac88b32323237eb2d239d16b6b1f217a5f2fb6561cff9ed06fb131",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "sourceSha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "DERIVED FROM FROZEN ROSTER; NO EXECUTION OR SELECTION",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "Derivation is not execution or selection; no fresh trajectory claim."
+    },
+    {
+      "occurrenceId": "006fa86ca4f26ab2100d15cefaad27711164512ce4d7ead31ccb36806ad0c862",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "sourceSha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f",
+      "location": {
+        "pointer": "/coupling"
+      },
+      "text": "biology-public-comparison/0.1-candidate: preserve exactly the ordered models/runs/prefix sets in the pre-execution REV3 plan. Every baseline is compared timestep-for-timestep with its frozen component counterpart at identical config/source/seed. MatchedOn/Off share admitted learned outcomes/cue history/goals while physiological adaptation differs; MatchedNoCue changes current cue only. HiddenA/B hold all admitted sensing fixed while execution/body differ. All eight main/noLoad seeds retained; no outcome-based selection.",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "Same original config/source/seed for component match; deliberate equal-learning dependence contrast, cue-only access and safe-observation hidden-state controls. All eight main/noLoad seeds retained; no inferred unbiased acquisition or causal population estimate."
+    },
+    {
+      "occurrenceId": "1637a492b6329c362e516fb9302f7cd1ec6292d30874f4a8e5985e9e81ba9de2",
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "sourceSha256": "acdde28a8a154840a1bfcd9262fbca11ee74aa2be7f30188584cd2a16f9abc4f",
+      "location": {
+        "pointer": "/disclosure"
+      },
+      "text": "The final ComparisonCase is recorded before REV3 cohort execution. Prior REV2 late wrapper is separately preserved; no model, source, run, seed or prefix selection changed.",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "judgment": "REV2 final wrapper binds REV3 roster; pre-execution timing is the historical disclosure, not independently proven by deterministic reconstruction."
+    }
+  ],
+  "allStringLeaves": [
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/status",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "DERIVED FROM FROZEN ROSTER; NO EXECUTION OR SELECTION",
+      "valueSha256": "b9cfd8a78955687e41e018539d983b682f74c605d21e6a0b64ba585c8a199851",
+      "stringLength": 53,
+      "judgment": "Derivation is not execution or selection; no fresh trajectory claim."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/version",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "biology-public-comparison/0.1-candidate",
+      "valueSha256": "b36d8f23083f5a7064b694a1579260510e91d0a90730ae01f5c40fa9a8381eaa",
+      "stringLength": 39,
+      "judgment": "Exact version label, not independent scientific acceptance."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/planSha256",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "b7a5a0b329dcf99e673c8c09d1eb878d534c8509e10be06a8be55a8341153a25",
+      "valueSha256": "6b17716506a3d69f8cab352e8f18be78dc3e330f45731b533aacc9596182c08d",
+      "stringLength": 64,
+      "judgment": "Exact historical cohort plan commitment."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/harnessSha256",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "0cfa6fd41d220c46dae4e8af866ad7eaa36df18b239526c18b91121f752d8d12",
+      "valueSha256": "77e6849610984b727730a6887f1eba4818dd4e7ea2f867a8874c769b84f3be33",
+      "stringLength": 64,
+      "judgment": "Exact preserved producer bytes; REV1 uses archived producer, REV2 current unchanged producer."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/experimentIdentity",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "0a6901030101050d636f727075732f302e32392e300201051c62696f6c6f67792d7075626c69632f302e312d63616e6469646174650301052462696f6c6f67792d7075626c69632d6861726e6573732f302e312d63616e646964617465",
+      "valueSha256": "4d3b660591c98bcfb975f3bc8c063f3f0cc7d5418c60d49aebb4f79133220887",
+      "stringLength": 186,
+      "judgment": "Matches the named plan; identity equality does not prove timing."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/comparisonCase",
+      "role": "TYPED CANONICAL BACKING",
+      "value": null,
+      "valueSha256": "31db6cf29e9d7a9d309e827a68cc8c9438eaa2ff08150d701726190112d6e161",
+      "stringLength": 72616,
+      "judgment": "Reconstructed ordered model/run/coupling bytes exactly; four mutation controls reject reordered runs or altered coupling."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/coupling",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "biology-public-comparison/0.1-candidate: preserve exactly the ordered models/runs/prefix sets in the pre-execution REV2 plan. Every baseline is compared timestep-for-timestep with its frozen component counterpart at identical config/source/seed. MatchedOn/Off share admitted learned outcomes/cue history/goals while physiological adaptation differs; MatchedNoCue changes current cue only. HiddenA/B hold all admitted sensing fixed while execution/body differ. All eight main/noLoad seeds retained; no outcome-based selection.",
+      "valueSha256": "d379fc54e124b59da73aed5e5f48e7abcdd7ea9fde06f8cbe6883e9f968e9a8e",
+      "stringLength": 525,
+      "judgment": "Same original config/source/seed for component match; deliberate equal-learning dependence contrast, cue-only access and safe-observation hidden-state controls. All eight main/noLoad seeds retained; no inferred unbiased acquisition or causal population estimate."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV1.json",
+      "pointer": "/disclosure",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "The named ComparisonCase wrapper was added during qualification. Its entire ordered cohort and coupling operands were already committed by the pre-execution plan; no model, source, run, seed or prefix was added or removed.",
+      "valueSha256": "e17820f17839170e6d4d4002c42a46dbb761746ef82d5d8b51f72702bad38583",
+      "stringLength": 222,
+      "judgment": "REV1 late ComparisonCase packaging remains disclosed; exact derivation binds the original REV2 roster but does not retroactively establish pre-execution wrapper publication."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/status",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "DERIVED FROM FROZEN ROSTER; NO EXECUTION OR SELECTION",
+      "valueSha256": "b9cfd8a78955687e41e018539d983b682f74c605d21e6a0b64ba585c8a199851",
+      "stringLength": 53,
+      "judgment": "Derivation is not execution or selection; no fresh trajectory claim."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/version",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "biology-public-comparison/0.1-candidate",
+      "valueSha256": "b36d8f23083f5a7064b694a1579260510e91d0a90730ae01f5c40fa9a8381eaa",
+      "stringLength": 39,
+      "judgment": "Exact version label, not independent scientific acceptance."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/planSha256",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "6bad71a385c28d1d2c39ce568c3940ebcc69e230699934e78dbd5333a9ed0e04",
+      "valueSha256": "099f70ba9d9b9eea67917ffa3a4735a44c1ae00f6ddae65cbc94473c2e0c7bf2",
+      "stringLength": 64,
+      "judgment": "Exact historical cohort plan commitment."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/harnessSha256",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "1518b7580dee193e6bdd317eef371fdab89d102ebfd2bf427369964fb80ccf58",
+      "valueSha256": "1e851c369aa8c0e88c9dac2f39d20bb4f17565acc8938df4b528e34806624b1d",
+      "stringLength": 64,
+      "judgment": "Exact preserved producer bytes; REV1 uses archived producer, REV2 current unchanged producer."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/experimentIdentity",
+      "role": "TYPED CANONICAL BACKING",
+      "value": "0a6901030101050d636f727075732f302e32392e300201051c62696f6c6f67792d7075626c69632f302e312d63616e6469646174650301052462696f6c6f67792d7075626c69632d6861726e6573732f302e312d63616e646964617465",
+      "valueSha256": "4d3b660591c98bcfb975f3bc8c063f3f0cc7d5418c60d49aebb4f79133220887",
+      "stringLength": 186,
+      "judgment": "Matches the named plan; identity equality does not prove timing."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/comparisonCase",
+      "role": "TYPED CANONICAL BACKING",
+      "value": null,
+      "valueSha256": "05f6e85cbbf8414665e01fccd84f03c02e10ec8c0ca366dbca3a616245e451c1",
+      "stringLength": 72616,
+      "judgment": "Reconstructed ordered model/run/coupling bytes exactly; four mutation controls reject reordered runs or altered coupling."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/coupling",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "biology-public-comparison/0.1-candidate: preserve exactly the ordered models/runs/prefix sets in the pre-execution REV3 plan. Every baseline is compared timestep-for-timestep with its frozen component counterpart at identical config/source/seed. MatchedOn/Off share admitted learned outcomes/cue history/goals while physiological adaptation differs; MatchedNoCue changes current cue only. HiddenA/B hold all admitted sensing fixed while execution/body differ. All eight main/noLoad seeds retained; no outcome-based selection.",
+      "valueSha256": "441bdb169d1df9e79d72a3546b8c5abd83f99369e432471af2e8af068ebbb3ef",
+      "stringLength": 525,
+      "judgment": "Same original config/source/seed for component match; deliberate equal-learning dependence contrast, cue-only access and safe-observation hidden-state controls. All eight main/noLoad seeds retained; no inferred unbiased acquisition or causal population estimate."
+    },
+    {
+      "source": "docs/planning/BIOLOGY_PUBLIC_COMPARISON_REV2.json",
+      "pointer": "/disclosure",
+      "role": "NARRATIVE CLAIM / LIMIT",
+      "value": "The final ComparisonCase is recorded before REV3 cohort execution. Prior REV2 late wrapper is separately preserved; no model, source, run, seed or prefix selection changed.",
+      "valueSha256": "12b3dfadf28c64f6a744d060f7b605293ff2297862ee4b48276db5c1d99d6698",
+      "stringLength": 172,
+      "judgment": "REV2 final wrapper binds REV3 roster; pre-execution timing is the historical disclosure, not independently proven by deterministic reconstruction."
+    }
+  ],
+  "canonicalEvidence": {
+    "path": "docs/planning/campaign3-history-biology-comparisons-rev1/canonical-check.json",
+    "sha256": "2d0364ccb26dc8559e1b7fe2ed639c6f1c9aebc5bbec737f5aedcc6f9d1408ca"
+  },
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021",
+    "RO-C3-022"
+  ],
+  "limits": [
+    "Canonical derivation verifies bytes, not independent historical timestamps or outcome truth.",
+    "REV1 late packaging is not relabeled as prospectively frozen; final REV2 retains its distinct source/plan identity.",
+    "Plan and trajectory fields are not whole-reviewed by identity reconstruction; source-role adequacy remains open."
+  ]
+}

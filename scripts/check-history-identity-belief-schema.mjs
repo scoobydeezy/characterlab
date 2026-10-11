@@ -1,0 +1,31 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer} from 'vite';
+const P='docs/planning/',O=P+'campaign3-history-identity-belief-rev1/',read=f=>JSON.parse(fs.readFileSync(f)),sha=b=>createHash('sha256').update(b).digest('hex'),ref=path=>({path,sha256:sha(fs.readFileSync(path))});
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try{
+ const e=await server.ssrLoadModule('/src/campaign3/identityBelief.ts'),ids=await server.ssrLoadModule('/src/substrate/identity.ts'),c=await server.ssrLoadModule('/src/substrate/canonicalEncoding.ts'),bd=await server.ssrLoadModule('/src/campaign3/biologyPublicData.ts'),math=await server.ssrLoadModule('/src/substrate/exactMath.ts');
+ const {list,text,unsigned:u,canonicalEncode:enc}=c,{data}=bd,Q=math.ExactRational,F=s=>Q.of(...s.split('/').map(BigInt)),str=q=>`${q.numerator}/${q.denominator}`,holders=['self','observer-a','observer-b'];let rows=0,views=0;
+ const plans=[1,2].map(rev=>read(P+`IDENTITY_BELIEF_PLAN_REV${rev}.json`));
+ for(const rev of [1,2]){
+  const plan=plans[rev-1],registry=list(plan.artifacts.map(a=>list([text(a.path),text(a.sha256)]))),models=new Map();
+  for(const entry of plan.models){const model=await ids.createModelIdentity({rulesVersion:e.IDENTITY_BELIEF_VERSION,contentSchemaVersion:'identity-belief-content/0.1',contentManifest:await ids.commitManifest(list([text('target'),text('positive-task-fidelity'),list(holders.map(text))])),parameterSchemaVersion:'identity-belief-parameters/0.1',parameterSet:await ids.commitManifest(list([text(entry.law),text('Threshold-source'),text('SplitExposure-consumer')])),numericProfileVersion:'identity-belief-exact/0.1',randomAlgorithmVersion:'rng/identity-eligibility-routed-sha256/0.1-candidate',registrySchemaVersion:'identity-belief-component-registry/0.1',registryManifest:await ids.commitManifest(registry)});assert.equal(Buffer.from(model.canonicalBytes).toString('hex'),entry.modelIdentity);models.set(entry.law,model);}
+  const completed=[];for(let part=0;part<4;part++){const w=read(P+`IDENTITY_BELIEF_PART${part}_REV${rev}.json`);assert.equal(w.status,'PASS');assert.equal(w.planSha256,sha(fs.readFileSync(P+`IDENTITY_BELIEF_PLAN_REV${rev}.json`)));assert.deepEqual(w.completed,plan.runs.filter(r=>r.index%4===part).map(r=>P+`IDENTITY_BELIEF_RUN_${r.index}_REV${rev}.json`));completed.push(...w.completed);}assert.equal(new Set(completed).size,37);
+  for(const input of plan.runs){
+   const identity=await ids.createRunIdentity({modelIdentity:models.get(input.law),initialState:await ids.commitManifest(e.createIdentityBeliefRun(input.law,input.seed,input.input).snapshot()),orderedInputSequence:await ids.commitManifest(e.identityBeliefInputValue(input.input)),runSeed:new Uint8Array(32).fill(input.seed)});assert.equal(Buffer.from(identity.canonicalBytes).toString('hex'),input.runIdentity);
+   const r=read(P+`IDENTITY_BELIEF_RUN_${input.index}_REV${rev}.json`);assert.equal(r.status,'PASS');for(const k of ['index','law','scenario','seed','runIdentity'])assert.deepEqual(r[k],input[k]);assert.equal(r.planSha256,sha(fs.readFileSync(P+`IDENTITY_BELIEF_PLAN_REV${rev}.json`)));assert.equal(r.rows.length,5);assert.equal(r.prefixes.length,6);
+   for(let i=0;i<6;i++){assert.equal(r.prefixes[i].at,i);assert.equal(r.prefixes[i].nextSha256,r.prefixes[Math.min(i+1,5)].sha256);}assert.equal(r.saveSha256,r.prefixes[5].sha256);
+   const histories=holders.map(()=>[]);let accepted=0;
+   for(const [i,row] of r.rows.entries()){
+    rows++;assert.equal(row.at,i+1);assert.deepEqual(row.goals,input.input.goals[i]);const contribution=F(row.source.contribution),polarity=contribution.numerator>0n?1:contribution.numerator<0n?-1:0;if(polarity)accepted++;
+    const observations=holders.map((holder,h)=>{const mode=input.input.channels[i][h];return !polarity||mode==='Absent'?null:{holder,target:'target',proposition:'positive-task-fidelity',ticket:i+1,polarity:mode==='Neutral'?0:mode==='Opposite'?-polarity:polarity};});assert.deepEqual(row.observations,observations);
+    for(let h=0;h<3;h++)if(input.law!=='NoLearning'&&observations[h])histories[h].push(observations[h].polarity);
+    const estimates=histories.map(history=>({value:history.length?str(input.law==='Latest'?Q.of(BigInt(history.at(-1))):Q.of(BigInt(history.reduce((a,b)=>a+b,0)),BigInt(history.length))):null,evidence:history.length}));
+    if(input.law==='StandingAlias')estimates[0]={value:row.source.strength,evidence:accepted};
+    if(input.law==='PrivateOracle')for(const h of [1,2])estimates[h]={...estimates[0]};assert.deepEqual(row.estimates,estimates);
+    const appraisals=estimates.map((x,h)=>{if(x.value===null)return {adverse:null,affect:null};const p=Q.of(1n).add(F(x.value)).divide(Q.of(2n)),adverse=str(row.goals[h]===1?Q.of(1n).subtract(p):p);return {adverse,affect:[adverse,adverse]};});assert.deepEqual(row.appraisals,appraisals);
+   }
+   for(let h=0;h<3;h++){const view=enc(list(r.rows.map(row=>list([u(row.at),data(row.observations[h]),data(row.estimates[h]),data(row.goals[h]),data(row.appraisals[h])]))));assert.equal(sha(view),r.observerSha256[h]);views++;}
+  }
+ }
+ for(let i=0;i<37;i++){const a=plans[0].runs[i],b=plans[1].runs[i];for(const k of ['index','law','scenario','seed','input'])assert.deepEqual(a[k],b[k]);assert.notEqual(a.runIdentity,b.runIdentity);const ar=read(P+`IDENTITY_BELIEF_RUN_${i}_REV1.json`),br=read(P+`IDENTITY_BELIEF_RUN_${i}_REV2.json`);for(const k of ['rows','prefixes','saveSha256','observerSha256'])assert.deepEqual(ar[k],br[k]);}
+ assert.equal(rows,370);assert.equal(views,222);const receipt={status:'PASS',scope:'Read-only two-cohort identity recomputation, independent report/learning/appraisal arithmetic and complete observer-view byte reconstruction; no source simulation or prefix replay.',modelsPerCohort:5,runsPerCohort:37,workers:74,rows,observerViews:views,historicalPrefixes:444,finalCases:37,finalPrefixes:222,checker:ref('scripts/check-history-identity-belief-schema.mjs')};fs.writeFileSync(O+'schema-check.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(receipt));
+}finally{await server.close();}

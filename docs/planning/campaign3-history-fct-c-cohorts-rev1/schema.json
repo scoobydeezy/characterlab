@@ -1,0 +1,3042 @@
+{
+  "shortStringsIncluded": true,
+  "leaves": [
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/status",
+      "text": "FCT-C PASS — split-scope qualification",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "cb6adb0fb43cfdaab2acecbdb493bf21865b78aa68267efe014f60c5b00be93a",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/evidExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "285aac632f246c604f3e07d835c047423f24e552538353909032e472d2601f49",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/campaign2/transitionIngressV04.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "d38c64052d6589ef013cc7228571aed677b762912950df5ac228ed320a946643",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/3/path",
+      "text": "src/campaign2/requiredProjection.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/3/sha256",
+      "text": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/4/path",
+      "text": "src/substrate/state.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/4/sha256",
+      "text": "f2a98ed156d20eeabe5af20313d89e3daa1713657e87e13440ac4dd8fd90c662",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/5/path",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/5/sha256",
+      "text": "32f749c7cd45565c65913b9beee9b709c855f8edd304f4b0e123209a1fd307ba",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/6/path",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/6/sha256",
+      "text": "7282d80e7c8ad4e95e575685ed662ee4a7a6c43069d2c13cd4b4fc13917c59d7",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/7/path",
+      "text": "src/test/fixtures/campaign2RosterModel.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/sourceFingerprints/7/sha256",
+      "text": "f037e11f2f27bd601ce19d81ef61e22951b28e4ebff5b2ee947c476174d1ea6d",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/tests/1/name",
+      "text": "FCT-C2: exact accepted IDN subject requirement is rejected by the EVID empty ReadDomain",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/genericBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/0/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/1/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/2/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/3/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/4/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/5/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/6/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/7/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/8/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/9/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/10/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/projectionRejections/11/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/test",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/tests/0/name",
+      "text": "FCT-C scope: valid generic IDN roster declarations cannot enter the bounded no-read-only profile",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/tests/1/name",
+      "text": "FCT-C scope: roster initial state and restored state reject before bounded runtime construction",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/boundedBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/priorFailure/status",
+      "text": "PRESERVED SUPERSEDED CAPABILITY FAILURE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/priorFailure/source",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/priorFailure/description",
+      "text": "Original inline semantic code could read context.state directly; guarded PRJ alone rejected but direct access completed successfully. Fixed by separating production semantic execution from the host context.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/expected",
+      "text": "Inner ILLEGAL_READ; outer TRANSITION_FAILURE; zero roster reads and whole-instant rollback for A/B/absent rosters, independently in both stages.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Generic harness is not an admitted bounded factory profile.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Handler read evidence is observed directly; no generic canonical trace profile is invented.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "Twelve explicit expected-rejection substitutions, not merely arbitrary test failures.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/limitations/3",
+      "text": "Host admission/allocation/state validation remains outside the isolated semantic executor.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF.json",
+      "pointer": "/limitations/4",
+      "text": "No global factory/VAL/ADAPT/Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/status",
+      "text": "FCT-C refreshed split-scope evidence / AD-E11",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/evidExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "285aac632f246c604f3e07d835c047423f24e552538353909032e472d2601f49",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/campaign2/transitionIngressV04.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "cfb297935516f618d1b68ee9e6b58f45dcbe5cb6017ec387e48adfd7f00ad778",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/3/path",
+      "text": "src/campaign2/requiredProjection.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/3/sha256",
+      "text": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/4/path",
+      "text": "src/substrate/state.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/4/sha256",
+      "text": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/5/path",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/5/sha256",
+      "text": "32f749c7cd45565c65913b9beee9b709c855f8edd304f4b0e123209a1fd307ba",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/6/path",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/6/sha256",
+      "text": "7282d80e7c8ad4e95e575685ed662ee4a7a6c43069d2c13cd4b4fc13917c59d7",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/7/path",
+      "text": "src/test/fixtures/campaign2RosterModel.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/sourceFingerprints/7/sha256",
+      "text": "f037e11f2f27bd601ce19d81ef61e22951b28e4ebff5b2ee947c476174d1ea6d",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/tests/1/name",
+      "text": "FCT-C2: exact accepted IDN subject requirement is rejected by the EVID empty ReadDomain",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/genericBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/0/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/1/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/2/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/3/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/4/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/5/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/field",
+      "text": "identityOrdinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/6/attempt",
+      "text": "void (input as any).identityOrdinal;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/field",
+      "text": "traceAncestry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/7/attempt",
+      "text": "void (input as any).traceAncestry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/field",
+      "text": "perceivedSuccess",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/8/attempt",
+      "text": "void (input as any).perceivedSuccess;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/9/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/10/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/11/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/12/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/13/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/14/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/field",
+      "text": "identityOrdinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/15/attempt",
+      "text": "void (input as any).identityOrdinal;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/field",
+      "text": "traceAncestry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/16/attempt",
+      "text": "void (input as any).traceAncestry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/field",
+      "text": "perceivedSuccess",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/projectionRejections/17/attempt",
+      "text": "void (input as any).perceivedSuccess;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/test",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/tests/0/name",
+      "text": "FCT-C scope: valid generic IDN roster declarations cannot enter the bounded no-read-only profile",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/tests/1/name",
+      "text": "FCT-C scope: roster initial state and restored state reject before bounded runtime construction",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/boundedBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/priorFailure/status",
+      "text": "PRESERVED SUPERSEDED CAPABILITY FAILURE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/priorFailure/source",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/priorFailure/description",
+      "text": "Original inline semantic code could read context.state directly; guarded PRJ alone rejected but direct access completed successfully. Fixed by separating production semantic execution from the host context.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/expected",
+      "text": "Inner ILLEGAL_READ; outer TRANSITION_FAILURE; zero roster reads and whole-instant rollback for A/B/absent rosters, independently in both stages.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/0",
+      "text": "Generic harness is not an admitted bounded factory profile.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/1",
+      "text": "Handler read evidence is observed directly; no generic canonical trace profile is invented.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/2",
+      "text": "Eighteen explicit expected-rejection substitutions, not merely arbitrary test failures.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/3",
+      "text": "Host admission/allocation/state validation remains outside the isolated semantic executor.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/4",
+      "text": "Occurrence payload remains a carried identity: named hidden-operand exclusion is not proof against arbitrary trusted host inspecting every nested byte.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+      "pointer": "/limitations/5",
+      "text": "No global factory/VAL/ADAPT/Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/status",
+      "text": "FCT-C refreshed split-scope evidence / AD-E11",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "59b67856ea06a9705a22b20fb203bbbf4718e289ea265ed4e18531e002865ae0",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/evidExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "285aac632f246c604f3e07d835c047423f24e552538353909032e472d2601f49",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/campaign2/transitionIngressV04.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "cfb297935516f618d1b68ee9e6b58f45dcbe5cb6017ec387e48adfd7f00ad778",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/3/path",
+      "text": "src/campaign2/requiredProjection.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/3/sha256",
+      "text": "c412b63894a075e56f1bec91fc5b6b078678618c1a4c75babd5a4609f47dbf64",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/4/path",
+      "text": "src/substrate/state.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/4/sha256",
+      "text": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/5/path",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/5/sha256",
+      "text": "32f749c7cd45565c65913b9beee9b709c855f8edd304f4b0e123209a1fd307ba",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/6/path",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/6/sha256",
+      "text": "7282d80e7c8ad4e95e575685ed662ee4a7a6c43069d2c13cd4b4fc13917c59d7",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/7/path",
+      "text": "src/test/fixtures/campaign2RosterModel.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/sourceFingerprints/7/sha256",
+      "text": "f037e11f2f27bd601ce19d81ef61e22951b28e4ebff5b2ee947c476174d1ea6d",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/tests/1/name",
+      "text": "FCT-C2: exact accepted IDN subject requirement is rejected by the EVID empty ReadDomain",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/genericBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/0/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/1/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/2/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/3/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/4/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/5/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/field",
+      "text": "identityOrdinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/6/attempt",
+      "text": "void (input as any).identityOrdinal;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/field",
+      "text": "traceAncestry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/7/attempt",
+      "text": "void (input as any).traceAncestry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/stage",
+      "text": "evaluation",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/field",
+      "text": "perceivedSuccess",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/8/attempt",
+      "text": "void (input as any).perceivedSuccess;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/field",
+      "text": "state",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/9/attempt",
+      "text": "const x=input.evaluation?input.payload:(input.payload as any).fields.get(2n);const observer=(x as any).fields.get(2n);const state=(input as any).state;const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:observer}]});if(binding.presence)binding.value.fields.get(1n);",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/field",
+      "text": "event",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/10/attempt",
+      "text": "void (input as any).event;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/field",
+      "text": "trace",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/11/attempt",
+      "text": "void (input as any).trace;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/field",
+      "text": "parent",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/12/attempt",
+      "text": "void (input as any).parent;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/field",
+      "text": "content",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/13/attempt",
+      "text": "void (input as any).content;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/field",
+      "text": "registry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/14/attempt",
+      "text": "void (input as any).registry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/field",
+      "text": "identityOrdinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/15/attempt",
+      "text": "void (input as any).identityOrdinal;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/field",
+      "text": "traceAncestry",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/16/attempt",
+      "text": "void (input as any).traceAncestry;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/test",
+      "text": "src/test/campaign2GenericRoster.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/mode",
+      "text": "EXACT REJECTION WITNESS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/tests/0/name",
+      "text": "FCT-C1: shared production EVID is invariant under valid A/B/absent rosters with fixed X and allocation",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/stage",
+      "text": "learning",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/field",
+      "text": "perceivedSuccess",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/projectionRejections/17/attempt",
+      "text": "void (input as any).perceivedSuccess;",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/test",
+      "text": "src/test/campaign2RosterScope.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/mode",
+      "text": "BASELINE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/tests/0/name",
+      "text": "FCT-C scope: valid generic IDN roster declarations cannot enter the bounded no-read-only profile",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/tests/1/name",
+      "text": "FCT-C scope: roster initial state and restored state reject before bounded runtime construction",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/boundedBaseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/priorFailure/status",
+      "text": "PRESERVED SUPERSEDED CAPABILITY FAILURE",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/priorFailure/source",
+      "text": "src/campaign2/adaptationRuntime.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/priorFailure/description",
+      "text": "Original inline semantic code could read context.state directly; guarded PRJ alone rejected but direct access completed successfully. Fixed by separating production semantic execution from the host context.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/expected",
+      "text": "Inner ILLEGAL_READ; outer TRANSITION_FAILURE; zero roster reads and whole-instant rollback for A/B/absent rosters, independently in both stages.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/0",
+      "text": "Generic harness is not an admitted bounded factory profile.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/1",
+      "text": "Handler read evidence is observed directly; no generic canonical trace profile is invented.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/2",
+      "text": "Eighteen explicit expected-rejection substitutions, not merely arbitrary test failures.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/3",
+      "text": "Host admission/allocation/state validation remains outside the isolated semantic executor.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/4",
+      "text": "Occurrence payload remains a carried identity: named hidden-operand exclusion is not proof against arbitrary trusted host inspecting every nested byte.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+      "pointer": "/limitations/5",
+      "text": "No global factory/VAL/ADAPT/Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    }
+  ],
+  "scope": "All three JSON exports including short statuses and exact mutation code strings. No new execution or source fingerprint inferred from labels."
+}

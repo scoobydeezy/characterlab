@@ -1,0 +1,73 @@
+{
+  "status": "PASS;SIX CURRENT DECISION WITNESSES",
+  "checker": {
+    "path": "scripts/replay-history-ga-memory-decisions.mjs",
+    "sha256": "e097c5a49ed714a9dbdef3633af555ef67d56a4e0d0b314b93313ffef6bbec2a"
+  },
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-memory-decisions-rev1/current-tests.json",
+    "sha256": "4e987357e2242d98bd6c82a1fa782c1ec4b29c59ee5ebf2370af794c2579f121"
+  },
+  "inputs": [
+    {
+      "path": "src/test/retentionAssociationBoundary.test.ts",
+      "sha256": "f13943688180186906b7f43ee40eadc39eb019e042c2b3a9c677a39fd9880641"
+    },
+    {
+      "path": "src/test/recallKindCompetition.test.ts",
+      "sha256": "ef47ee97d33ef371d76ecb292af01557a585bbf3bbf4155f3df33710e251ac0c"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/campaign3/retentionFragmentation.ts",
+      "sha256": "d10923ab0862c2b283941e0335be7e44b4ba75756fcfdb6f0812640fcb6c2e9c"
+    }
+  ],
+  "sourcePaths": [
+    "docs/planning/GENERAL_ATTENTION_ACQUIRED_PROTECTION_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_ASSOCIATION_RETENTION_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_ASSOCIATION_RETENTION_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_DIRECT_CUE_MEMBERSHIP_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_LOSS_UNIT_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_LOSS_UNIT_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_PRIORITY_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_PRIORITY_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_SCOPE_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_RETENTION_SCOPE_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_RETRIEVAL_PARTITION_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_RETRIEVAL_PARTITION_RESOLUTION.md",
+    "docs/planning/RECALL_KIND_COMPETITION_TESTS_REV1.json",
+    "docs/planning/RETENTION_ASSOCIATION_BOUNDARY_TESTS_REV1.json",
+    "docs/planning/RETENTION_ASSOCIATION_BOUNDARY_TESTS_REV2.json"
+  ],
+  "reused": [
+    {
+      "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/replay.json",
+      "sha256": "4a4b8a4cff261a1e710777b3e7f6fb07e318ad7487b226f39e303b43388f335e"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-graph-decisions-rev1/replay.json",
+      "sha256": "57f4a619486c3e6f46123dc560f51b3b6cbd0c0a60ea5bebf373fe38d0176907"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-recall-contracts-rev1/replay.json",
+      "sha256": "e7150384b5bd407c5c523c59988578ae0ba6035c15fabd69276e4df25b69f8aa"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/replay.json",
+      "sha256": "7e3a7a95eee51dff4a436a86686fb671de3ce5bde6e6d0e0f365ce266968f783"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_USE_PROTECTION_RESOLUTION.md",
+      "sha256": "ce33fb2097d004db9f8924155489edca69d96bd43291f53a32b798ea84d57326"
+    }
+  ],
+  "limits": [
+    "Supplied component hypotheses,not public cue production,physiological calibration,familiarity or chosen action. Ranking reversal keeps both targets in topK2.",
+    "Earlier60 retention/24 graph/29 recall and37 memory-publication tests are reused in their scope,not freshly rerun. No exact old implementation claim from test name equality."
+  ]
+}

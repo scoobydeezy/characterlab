@@ -1,0 +1,31 @@
+{
+  "status": "EXACT CLOSURE AND ORIGINAL STORED RESULT ASSERTIONS PASS",
+  "runs": 26,
+  "prefixes": 127,
+  "plan": {
+    "path": "docs/planning/SOCIAL_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+    "sha256": "195ebda76a59a95baf09428256319413f2922402453196f0d11e8cb4535245a2"
+  },
+  "result": {
+    "path": "docs/planning/SOCIAL_PUBLIC_EXPERIMENT_REV1.json",
+    "sha256": "8802c63a46c7e44943a3d649d7d6b205f6af9e7fe2e852c376d4465e40df3a36"
+  },
+  "failedTests": [
+    {
+      "path": "docs/planning/SOCIAL_PUBLIC_TESTS_REV1.json",
+      "sha256": "b8bc9593bff62c683ea19ca5faf1910aabb684fc5327aca08313f7a7f49da674",
+      "failedTests": 1
+    },
+    {
+      "path": "docs/planning/SOCIAL_PRESERVATION_TESTS_REV1.json",
+      "sha256": "047ce7a19d60f3994a7d4cd2466677cde9052ad1999261896f53aae93c22782f",
+      "failedTests": 1
+    }
+  ],
+  "failedEvaluator": {
+    "path": "docs/planning/SOCIAL_PUBLIC_EXPERIMENT_FAILURE_REV1.json",
+    "sha256": "3e737b7eae4f904c03528a2b58e405ed69f238d8f0d954b92d2f0f1224ec39a6"
+  },
+  "scope": "Original closure source/file/intervention checks and stored26-run assertions reproduced. Six reverse-order comparisons use semantic views;private-truth and nonrecipient contrasts use full views. No fresh public replay/test/rollback.",
+  "checkerSha256": "38f3698ac4f0237846c8f782fa33c18d2a099e5096638e7a5be5bead76124ecd"
+}

@@ -1,0 +1,78 @@
+{
+  "revisions": [
+    {
+      "reports": {
+        "added": [
+          "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+          "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json"
+        ],
+        "removed": [
+          "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+          "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV2.json",
+          "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV2.json",
+          "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV2.json",
+          "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json"
+        ],
+        "changed": []
+      },
+      "productionSources": {
+        "added": [
+          "src/campaign2/predictionCodecs.ts",
+          "src/campaign2/predictionExecution.ts",
+          "src/campaign2/predictionFactory.ts",
+          "src/campaign2/predictionModel.ts",
+          "src/campaign2/predictionModelReview.ts"
+        ],
+        "removed": [],
+        "changed": [
+          "src/campaign2/adaptationRuntime.ts",
+          "src/campaign2/traceBinding.ts",
+          "src/substrate/scheduler.ts"
+        ]
+      }
+    },
+    {
+      "reports": {
+        "added": [
+          "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV4.json",
+          "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV4.json",
+          "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV4.json",
+          "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV5.json"
+        ],
+        "removed": [
+          "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+          "docs/planning/CAMPAIGN2_FCT_C_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_REFERENCE_SETTLEMENT_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_REG_PERSISTENCE_MUTATION_PROOF_REV3.json",
+          "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json"
+        ],
+        "changed": []
+      },
+      "productionSources": {
+        "added": [
+          "src/campaign2/taskBootstrap.ts",
+          "src/campaign2/taskCodecs.ts",
+          "src/campaign2/taskDeclarations.ts",
+          "src/campaign2/taskExecution.ts",
+          "src/campaign2/taskFactory.ts",
+          "src/campaign2/taskModel.ts",
+          "src/campaign2/taskModelReview.ts"
+        ],
+        "removed": [],
+        "changed": [
+          "src/campaign2/adaptationRuntime.ts",
+          "src/campaign2/memoryExecution.ts",
+          "src/campaign2/orderedInputs.ts",
+          "src/campaign2/predictionExecution.ts",
+          "src/campaign2/traceBinding.ts",
+          "src/substrate/scheduler.ts"
+        ]
+      }
+    }
+  ],
+  "scope": "Exact inventory changes, not new executed tests."
+}

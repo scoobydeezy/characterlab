@@ -1,0 +1,12 @@
+{
+  "status": "AUDIT COUNT REPRESENTATION CORRECTED BEFORE PUBLICATION",
+  "failedCheckerSha256": "27376ed144e02ddd6c9aebb0c3c117b0b37cc405f0b98f55d29cb2f888cfea26",
+  "guard": "131 active files /1132 assertions",
+  "finding": "A set of file/fullName/status triples deduplicated repeated parameterized assertion names and therefore could not represent assertion count.",
+  "disposition": "Use a multiset for comparison and total multiplicity for counts. Preserve every original assertion row; no original report or reported count changed.",
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

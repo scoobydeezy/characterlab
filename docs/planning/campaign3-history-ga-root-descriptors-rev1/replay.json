@@ -1,0 +1,392 @@
+{
+  "status": "PASS;SEVEN EXACT SYMBOLIC REPLAYS/40 STRUCTURAL FAULTS/SIX ORIGINAL COMPONENT MUTATIONS/SEVEN CURRENT TESTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-root-descriptors.mjs",
+    "sha256": "625cbcdf887761cb6cadfb70ba99ea2531d8b6f28eaa85283f5bb572ffe1cf5f"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/build-ga-state-root-key-inventory.mjs",
+        "sha256": "f2ce67a30efffacee277b22d0cac9606a696316bcacd703c4fa7e28085eb68de"
+      },
+      "output": {
+        "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV1.json",
+        "sha256": "99b76cf1c0671c1baa43fc18dc28d97aae2b97f194a5036332306880e338c0f1"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/build-ga-state-root-key-inventory-rev2.mjs",
+        "sha256": "6a48d0662d6be804f3e951bc77b3af2573acb7457ce109f5a46c087a92bd0677"
+      },
+      "output": {
+        "path": "docs/planning/GA_STATE_ROOT_KEY_INVENTORY_REV2.json",
+        "sha256": "f27ab088683cea8c44c0ba108ba7123f68f1e5f8467e73ea137640c630757ddf"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/build-ga-formation-protocol-carrier.mjs",
+        "sha256": "e6b646913cfdfb62fafd268bf8b180f7f6712d77f426cc14d60e1391852bdc6a"
+      },
+      "output": {
+        "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REV2.json",
+        "sha256": "f1749ec448eed234cf5bfd72a6b55f96c019592266f6fa238ba70bc5d4d775b8"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-state-root-key-inventory.mjs",
+        "sha256": "51b406526747926385d101ab27be6727192be3d58eccc91ed2f42a859aaf0f80"
+      },
+      "output": {
+        "path": "docs/planning/GA_STATE_ROOT_KEY_REVIEW_REV1.json",
+        "sha256": "54db72a23a2208f228c3f92d46ddc2ecc235d2683d5ae66ba57871e40358d0b3"
+      },
+      "faults": [
+        {
+          "name": "missing-root-key-role",
+          "detected": true
+        },
+        {
+          "name": "character-key-without-domain",
+          "detected": true
+        },
+        {
+          "name": "observer-key-as-character",
+          "detected": true
+        },
+        {
+          "name": "protocol-as-cognitive-map",
+          "detected": true
+        },
+        {
+          "name": "perception-as-learning",
+          "detected": true
+        },
+        {
+          "name": "old-selection-ledger",
+          "detected": true
+        },
+        {
+          "name": "delete-empty-root",
+          "detected": true
+        },
+        {
+          "name": "graph-cannot-be-empty",
+          "detected": true
+        },
+        {
+          "name": "silent-graph-bound-truncation",
+          "detected": true
+        },
+        {
+          "name": "tracking-payload-history",
+          "detected": true
+        },
+        {
+          "name": "permanent-active-context",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-state-root-key-inventory-rev2.mjs",
+        "sha256": "5aa9f7e4042c208dff52e1efd5007cd6f226c1f3f957f2dc663ba01dca629e90"
+      },
+      "output": {
+        "path": "docs/planning/GA_STATE_ROOT_KEY_REVIEW_REV2.json",
+        "sha256": "24c251d09bbbe38a7461d21d68476986ea794e27e8b903d104378f7d80da63f8"
+      },
+      "faults": [
+        {
+          "name": "missing-root-key-role",
+          "detected": true
+        },
+        {
+          "name": "character-key-without-domain",
+          "detected": true
+        },
+        {
+          "name": "observer-key-as-character",
+          "detected": true
+        },
+        {
+          "name": "protocol-as-cognitive-map",
+          "detected": true
+        },
+        {
+          "name": "perception-as-learning",
+          "detected": true
+        },
+        {
+          "name": "old-selection-ledger",
+          "detected": true
+        },
+        {
+          "name": "delete-empty-root",
+          "detected": true
+        },
+        {
+          "name": "graph-cannot-be-empty",
+          "detected": true
+        },
+        {
+          "name": "silent-graph-bound-truncation",
+          "detected": true
+        },
+        {
+          "name": "tracking-payload-history",
+          "detected": true
+        },
+        {
+          "name": "permanent-active-context",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-formation-protocol-carrier.mjs",
+        "sha256": "c2716b827c1563095c15763a082add31561b1d854c3bab4f400a66fbddf51925"
+      },
+      "output": {
+        "path": "docs/planning/GA_FORMATION_PROTOCOL_CARRIER_REVIEW_REV2.json",
+        "sha256": "7b676990c33cb6317550cc1130ba9cd7437907f0642bca8355e0606a599f8188"
+      },
+      "faults": [
+        {
+          "name": "cognitive-classification",
+          "rejected": true
+        },
+        {
+          "name": "cognitive-read-grant",
+          "rejected": true
+        },
+        {
+          "name": "cognitive-write-grant",
+          "rejected": true
+        },
+        {
+          "name": "removable-history",
+          "rejected": true
+        },
+        {
+          "name": "unbounded-domain",
+          "rejected": true
+        },
+        {
+          "name": "missing-projection",
+          "rejected": true
+        },
+        {
+          "name": "kind-duplicated-in-success",
+          "rejected": true
+        },
+        {
+          "name": "source-is-acquisition",
+          "rejected": true
+        },
+        {
+          "name": "payload-in-owner-result",
+          "rejected": true
+        },
+        {
+          "name": "numeric-root",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-formation-hook-inventory.mjs",
+        "sha256": "d92ee18ed88b5c2349a20f8fd3a2e8ff9c309d59d6b991d7df6d82d034af225a"
+      },
+      "output": {
+        "path": "docs/planning/FORMATION_HOOK_INVENTORY_REV1.json",
+        "sha256": "365ae2f6bd40f10fe5a2525685c9473cfb0ece2d1d4ceb427b6688f13807f258"
+      },
+      "faults": [
+        {
+          "name": "memory-classification",
+          "detected": true
+        },
+        {
+          "name": "cognitive-read",
+          "detected": true
+        },
+        {
+          "name": "producer-write",
+          "detected": true
+        },
+        {
+          "name": "empty-source-escape",
+          "detected": true
+        },
+        {
+          "name": "missing-source-enroll",
+          "detected": true
+        },
+        {
+          "name": "trace-as-authority",
+          "detected": true
+        },
+        {
+          "name": "copied-owner-result",
+          "detected": true
+        },
+        {
+          "name": "payload-in-result",
+          "detected": true
+        }
+      ]
+    }
+  ],
+  "delta": [
+    {
+      "name": "AssociationMassRow",
+      "field": "Masses",
+      "from": 27,
+      "to": 30
+    },
+    {
+      "name": "AssociationGraph",
+      "field": "Nodes",
+      "from": 27,
+      "to": 30
+    },
+    {
+      "name": "AssociationGraph",
+      "field": "Rows",
+      "from": 27,
+      "to": 30
+    }
+  ],
+  "mutations": [
+    {
+      "name": "erase-additions",
+      "removed": "add(r,families.get(key(r.family)));",
+      "inserted": "void r;",
+      "witness": "AFR-A",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-erase-additions.json",
+        "sha256": "8c28ae9e766363a7071aeb282b03008e6409fbd77aa678fa5fb4fac75c382ef7"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-A: old and new memory roots classify together while protocol stays separate",
+        "additive physical roots preserve logical families AFR-B: root collision, duplicate leaf and undeclared family reject",
+        "additive physical roots preserve logical families AFR-D: descriptor permutation and later mutation cannot alter classification",
+        "additive physical roots preserve logical families AFR-E: malformed ordinals, duplicate fields and wrong identity roles reject",
+        "additive physical roots preserve logical families AFR-F: shared logical family does not widen an existing physical mutation authority"
+      ]
+    },
+    {
+      "name": "allow-family-root-overwrite",
+      "removed": "if(roots.has(extent.root))fail('DUPLICATE_ROOT');",
+      "inserted": "",
+      "witness": "AFR-B",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-allow-family-root-overwrite.json",
+        "sha256": "8b3b88a8e305e45f2ebdf8d03814a0484d9821d17d5eb55c6748ef763c8b5707"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-B: root collision, duplicate leaf and undeclared family reject"
+      ]
+    },
+    {
+      "name": "allow-protocol-overlap",
+      "removed": "if(roots.has(p.root))fail('DUPLICATE_ROOT');",
+      "inserted": "",
+      "witness": "AFR-C",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-allow-protocol-overlap.json",
+        "sha256": "7771b5a7abe4e2d6ce78dcf72b5edb12dc3969e788e95632817d7c37689ce93e"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-B: root collision, duplicate leaf and undeclared family reject",
+        "additive physical roots preserve logical families AFR-C: additive declaration cannot override route or classify protocol as a family by overlap"
+      ]
+    },
+    {
+      "name": "ignore-route-override",
+      "removed": "if(Object.keys(r).some(k=>!['family','root','leaves'].includes(k)))fail('ADDITIVE_FIELDS');",
+      "inserted": "",
+      "witness": "AFR-C",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-ignore-route-override.json",
+        "sha256": "eed3d82221037e3ccf5e25182993eaa617ebfd13ac28413ff157a05e523f6364"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-C: additive declaration cannot override route or classify protocol as a family by overlap"
+      ]
+    },
+    {
+      "name": "return-live-identity",
+      "removed": "family:copy(result!.family),route:copy(result!.route),leaf:copy(result!.leaf)",
+      "inserted": "family:result!.family,route:result!.route,leaf:result!.leaf",
+      "witness": "AFR-D",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-return-live-identity.json",
+        "sha256": "984300f2806777fe726a3a94d7bf028d5a2e2f6e9631c1db0b0a4e107ec1301e"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-D: descriptor permutation and later mutation cannot alter classification"
+      ]
+    },
+    {
+      "name": "drop-composed-root-bound",
+      "removed": "if(roots.size>32)fail('BOUND');",
+      "inserted": "",
+      "witness": "AFR-G",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/fault-drop-composed-root-bound.json",
+        "sha256": "97723757d8e312644152e2c39abbb2571cca12ed20e5bdf01f47c1ed2b1cde73"
+      },
+      "failed": [
+        "additive physical roots preserve logical families AFR-G: bounds apply across base, additive and protocol roots, including sparse descriptors"
+      ]
+    }
+  ],
+  "componentOriginal": {
+    "path": "docs/planning/ADDITIVE_FAMILY_ROOT_REVIEW_REV1.json",
+    "sha256": "57ffa13832ec8781ed04f15c613670f465fc0cfd1fc5bbb3a42b10cee62ec9f9"
+  },
+  "componentInputs": [
+    {
+      "path": "src/campaign3/additiveFamilyRoots.ts",
+      "sha256": "352a435bcadbd9bba890ba0985a55dc64ae3761d81f7dac8c87262861aa4b8b8"
+    },
+    {
+      "path": "src/test/additiveFamilyRoots.test.ts",
+      "sha256": "4161a605898b64c5282b31e4b0c3b0d9c6d7ffd0e86b7d62bdd027c54ea76fe1"
+    },
+    {
+      "path": "scripts/review-additive-family-roots.mjs",
+      "sha256": "14fe88d61aabab23cd6e7d7734ff93386d0cd1070e7662b3f264edc0f46e0c97"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-root-descriptors-rev1/current-tests.json",
+    "sha256": "1d027d80ed351bc57fe510a0778d3161e7a802783a565d33a92ab412ae994fa2"
+  },
+  "limits": [
+    "All original component source/test/reviewer hashes match; imported state substrate and dependencies execute current versions,not a reconstructed entire historical tree.",
+    "Symbolic inventory checks do not execute public compiler joins,protocol monotonicity,holder equality,actual state initialization or persistence.",
+    "Classification gives neither read nor mutation authority;AFR-F checks an actual old-authority denial and separately permitted new owner."
+  ]
+}

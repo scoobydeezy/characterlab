@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Original read-only closure checkers, no write flag. Historical test/build evidence authenticated, not rerun.",
+  "checks": [
+    {
+      "path": "scripts/check-affect-retrieval-closure.mjs",
+      "sha256": "bb1d7d10d0c6da0ee69e2693b75b2f9ad338be47323892cb12ea935ecd678405",
+      "original": "docs/planning/AFFECT_RETRIEVAL_CLOSURE_REV1.json",
+      "originalSha256": "f5a2781c76345d90cd3358fd41abe49ce028bfdf984bba2de81a944658e6ce7c",
+      "output": "PASS affect retrieval:4 models/56 runs/280 prefixes;24+328 tests/build;1508/0."
+    },
+    {
+      "path": "scripts/check-vivid-closure.mjs",
+      "sha256": "2109b6bed4669f52ce6075f9d5d84872d6a3fb1aea6d5a5602af63ec2ceec7a7",
+      "original": "docs/planning/VIVID_CLOSURE_REV1.json",
+      "originalSha256": "920a8847b143a3c871b66ac4528fb1b3813644dfe738beb82fef3db1557000d4",
+      "output": "PASS vivid recollection:4 models/44 runs/308 prefixes;17+328 tests/build;1508/0."
+    },
+    {
+      "path": "scripts/check-recollection-closure.mjs",
+      "sha256": "0838cad29aac982b40920e73cbf82c604c67afbef77279d323db7bdd1e521c93",
+      "original": "docs/planning/RECOLLECTION_CLOSURE_REV1.json",
+      "originalSha256": "58c4cf263ced64d71f07b5eac22263e997636f53801737032146d2aeff328ad1",
+      "output": "PASS recollection:5 models/20 runs/159 prefixes;15+328 tests; counters1054/0."
+    }
+  ],
+  "checkerSha256": "0db714851b2f63c9789eefe4b299b6dd4f104918dab3d9b1ab302c87bcb827e1"
+}

@@ -1,0 +1,52 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/qualify-defining-memory.mjs --verify",
+      "exitCode": 0,
+      "stdout": "PASS4/288/864 deterministic component stage comparisons\n",
+      "diagnostic": "",
+      "checker": {
+        "path": "scripts/qualify-defining-memory.mjs",
+        "sha256": "22960c671f72499a96ca07a00cfe5bb5aeadad54582848b59687f17c83168dce"
+      },
+      "scope": "Fresh repeated component continuations; exact whole original result equality."
+    },
+    {
+      "command": "node scripts/qualify-defining-meaning.mjs --verify",
+      "exitCode": 0,
+      "stdout": "PASS 4/68/308\n",
+      "diagnostic": "WebSocket server error: Port is already in use\n",
+      "checker": {
+        "path": "scripts/qualify-defining-meaning.mjs",
+        "sha256": "bea11cb0abbc31e18e19de502c7e10c1e27138033aa9d977cbd4adb234d84aee"
+      },
+      "scope": "Fresh repeated component continuations; exact whole original result equality. Port warning did not prevent completion."
+    },
+    {
+      "command": "node scripts/check-history-defining-training.mjs",
+      "exitCode": 0,
+      "stdout": "PASS exact original GA acquisition including identities, S0, inputs,37/38 state/output/trace\n",
+      "diagnostic": "",
+      "checker": {
+        "path": "scripts/check-history-defining-training.mjs",
+        "sha256": "25709b4cc07d7736f6c232f04e618e46baa0d4297f7b64e5dae40694e28207a2"
+      },
+      "scope": "Fresh original acquisition through38; exact whole original training equality; no successor continuation."
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/DEFINING_MEMORY_TRAINING_REV1.json",
+      "sha256": "0e00f897c40bf9ea93116c369d64171c977fad4c5be8ab6ca094d23adaf8d5f7"
+    },
+    {
+      "path": "docs/planning/DEFINING_MEMORY_RESULT_REV1.json",
+      "sha256": "ee95ba91c5237c4fe16af662255b46ced8be96e6dfd4646082e06e1991a4b15d"
+    },
+    {
+      "path": "docs/planning/DEFINING_MEANING_RESULT_REV1.json",
+      "sha256": "2ee18bf83315856bc7fda3aa5888d85b1de3ff80c146eec2790e51ba7be21646"
+    }
+  ],
+  "scope": "Fresh exact acquisition plus repeated component result verification; no native defining continuation or public persistence matrix rerun."
+}

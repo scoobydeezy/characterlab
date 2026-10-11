@@ -1,0 +1,106 @@
+{
+  "status": "SOURCE AUDIT; UNAVAILABLE INTERMEDIATE IMPLEMENTATIONS EXPLICIT",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/recover-history-ga-source-branch.py",
+    "sha256": "2995983852727ba641746264c6969c1df88ef69a98075d3c059cdc4606a4848b"
+  },
+  "rows": [
+    {
+      "source": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+        "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+      },
+      "original": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.md",
+        "sha256": "2c0261a1d1c3e450a4f889765b80f04e69ac956e4806dc7fa32e27b90317d1cb"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.md",
+        "sha256": "2c0261a1d1c3e450a4f889765b80f04e69ac956e4806dc7fa32e27b90317d1cb"
+      },
+      "method": "CURRENT",
+      "origin": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.md",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+        "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+      },
+      "original": {
+        "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+        "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+        "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+      },
+      "method": "CURRENT",
+      "origin": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+        "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+      },
+      "original": {
+        "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+        "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+        "sha256": "1194c2a442640397e117e47907b4287984e913dad62ee261bfd71c0103af15c8"
+      },
+      "method": "CURRENT",
+      "origin": "docs/formal/EMBODIED_RESERVE_ALLOCATION_TABLE.json",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/GA_LOCAL_RESERVE_PUBLIC_CARRIER_REV1.json",
+        "sha256": "728b71dff5a2d743ff61236a57d0ea797a3615d1ade755e8591ab22ceb7ac923"
+      },
+      "original": {
+        "path": "src/campaign3/localReserveSource.ts",
+        "sha256": "e75a4987d153a532a5de42daee85cb146e0b5afcfdec83930dda3c3a01fa29b5"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6aa4c1947adf4c2997bb40eb0fbf5e22a51903a0",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "f91568689006686f00882444cb6313858a07da8c98cbb6f483f6bf9baa059b08"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    }
+  ],
+  "preservedArtifacts": [],
+  "limits": [
+    "Path-directed local filename search and all-ref Git path histories plus known exact archives. No claim of exhaustive forensic reconstruction of every unreferenced object."
+  ]
+}

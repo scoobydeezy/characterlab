@@ -1,0 +1,4650 @@
+{
+  "status": "41 COMMON FREEZE COHORTS RECOMPILED",
+  "rows": [
+    {
+      "original": "docs/planning/campaign3-affect-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-affect-model-rev1/FREEZE.json",
+      "sha256": "43475f8a7ab42137a1be57f1e56f01cbbe0e3aa414d82559cd81177afa1d8889",
+      "writer": {
+        "path": "scripts/freeze-affect-models.mjs",
+        "sha256": "23f3460d34083f6a6c91a5233836db610b9df23e56d959d3b2f502f156c388b0"
+      },
+      "module": {
+        "path": "src/campaign3/affectModel.ts",
+        "sha256": "45743ec9a1cbfee908ba97514db125d8a5fb9a48be8e82fc8d5922086825bfd9"
+      },
+      "models": [
+        {
+          "name": "candidate-1-feedback-false",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-feedback-true",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": true,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-feedback-false",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-feedback-true",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": true,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-feedback-false",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-feedback-true",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": true,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "severity-0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 0,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "severity-0.5",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 0.5,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "obligation-0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 0,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "obligation-0.1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 0.1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "obligation-10",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 10,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "learning-2",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 2,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "learning-3",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 3,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "absolute-control",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 2,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "no-safety-base",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 0,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "blocked-execution",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 1,
+              "obligation": 1,
+              "safety": 1,
+              "execution": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-severity-half",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 0.5,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-severity-half",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "controlLaw": 1,
+              "learningLaw": 1,
+              "feedback": false,
+              "severity": 0.5,
+              "obligation": 1,
+              "safety": 1,
+              "execution": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-agency-model-rev3/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-agency-model-rev3/FREEZE.json",
+      "sha256": "130e272765ec7220c7d3e74cb95860bddab86b42d5814b59014193e811abe9a3",
+      "writer": {
+        "path": "scripts/freeze-agency-models.mjs",
+        "sha256": "7e09857aa5624dadbe609b8b1acaeee4c49a5f1041b049de7da940e430de2279"
+      },
+      "module": {
+        "path": "src/campaign3/agencyModel.ts",
+        "sha256": "f10ce593b6c4ce58dce5bd9883e6b9e56068a74a76b3ce9f4af87877827e2889"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5",
+          "claims": {
+            "law": 5
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-attachment-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-attachment-model-rev1/FREEZE.json",
+      "sha256": "2a5c6cbe1343358e2197b9a2e36614dc902c0b53b6a622695b4860ca33a3f44f",
+      "writer": {
+        "path": "scripts/freeze-attachment-models.mjs",
+        "sha256": "f86cceed222121bd23df3f8ee948e481eb3098a20a9c13b192ee612ef29dd4b9"
+      },
+      "module": {
+        "path": "src/campaign3/attachmentModel.ts",
+        "sha256": "3fc269ed2c269eb21e8f3fc83bb655abc1180726bb269e0912f1b315b4e8d0f4"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-attributed-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-attributed-model-rev1/FREEZE.json",
+      "sha256": "77ab0fb4e147a98a8be93279514f31eb4c2248b2647f0cc05553fd701de4c566",
+      "writer": {
+        "path": "scripts/freeze-attributed-models.mjs",
+        "sha256": "ebdca666e40d0f497eaddcd7d6906aa0ef96a5bfcf9fbf2533f8848583be36b4"
+      },
+      "module": {
+        "path": "src/campaign3/attributedModel.ts",
+        "sha256": "4ac548a4dfb0f19d5d84ca07cac277bcb7e5eaa84fb196aaf55c2600448eebfb"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1",
+          "claims": {
+            "law": 1,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2",
+          "claims": {
+            "law": 1,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3",
+          "claims": {
+            "law": 1,
+            "pressure": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-1",
+          "claims": {
+            "law": 2,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-1",
+          "claims": {
+            "law": 3,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-1",
+          "claims": {
+            "law": 4,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-belief-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-belief-model-rev1/FREEZE.json",
+      "sha256": "29472b3dad9c126948e7db504950ad4071b61cb99128aa00ea8f2f2d30259c10",
+      "writer": {
+        "path": "scripts/freeze-belief-models.mjs",
+        "sha256": "1758d557a2bfa742124056a86d2996eff59c0fc839b5fd6aba7f56f29fca13e3"
+      },
+      "module": {
+        "path": "src/campaign3/beliefModel.ts",
+        "sha256": "20e20ce38409c602e3004c5c22ae9afbe8fb8b43865f8c3dbf904349f4a1becd"
+      },
+      "models": [
+        {
+          "name": "law-1-goal--1",
+          "claims": {
+            "law": 1,
+            "goal": -1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-0",
+          "claims": {
+            "law": 1,
+            "goal": 0
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal--1",
+          "claims": {
+            "law": 2,
+            "goal": -1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-0",
+          "claims": {
+            "law": 2,
+            "goal": 0
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal--1",
+          "claims": {
+            "law": 3,
+            "goal": -1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-0",
+          "claims": {
+            "law": 3,
+            "goal": 0
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-betrayal-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-betrayal-model-rev1/FREEZE.json",
+      "sha256": "5c33bde793bb6bc23e0db0c563df842fd1a7ab1a65190a663b17a1435f37eefa",
+      "writer": {
+        "path": "scripts/freeze-betrayal-models.mjs",
+        "sha256": "e840dd71b43ce03af5b691b3ab92bee58e5efb5dffcbeceb841d04445d30fbf1"
+      },
+      "module": {
+        "path": "src/campaign3/betrayalModel.ts",
+        "sha256": "0edf70f238bf82018881af4a8620051942d5cfc5460dda09429bc08c9b85d042"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-commit-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-commit-model-rev1/FREEZE.json",
+      "sha256": "3d326cee1399c9d692c4b88e0b451c41896e58c6f44d32c16219c8af6b0d9a6f",
+      "writer": {
+        "path": "scripts/freeze-commit-models.mjs",
+        "sha256": "78a1c30ab212dad05ae434aaad9b18387ce86778d107693d04d43a3283eb3013"
+      },
+      "module": {
+        "path": "src/campaign3/commitModel.ts",
+        "sha256": "9b60e69ffc0ef164602e3e8eaaab54f084dc3468612cd85a832574a2713538fb"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-communication-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-communication-model-rev1/FREEZE.json",
+      "sha256": "8f68a492e7983f686efb948ed754ca2c1cb44720e6c39c54098e59f13663312d",
+      "writer": {
+        "path": "scripts/freeze-communication-models.mjs",
+        "sha256": "5d174a101a0be73ba2d9a22055815b74219b19521c09366b36a34a02d873ab92"
+      },
+      "module": {
+        "path": "src/campaign3/communicationModel.ts",
+        "sha256": "8300523b991bcb03e67f24d9a2eac4971cf5f3594a79c47f4260c92bde39a490"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1",
+          "claims": {
+            "law": 1,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2",
+          "claims": {
+            "law": 1,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3",
+          "claims": {
+            "law": 1,
+            "pressure": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-1",
+          "claims": {
+            "law": 2,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-1",
+          "claims": {
+            "law": 3,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-2",
+          "claims": {
+            "law": 3,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-1",
+          "claims": {
+            "law": 4,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-pressure-1",
+          "claims": {
+            "law": 5,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-control-model-rev2/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-control-model-rev2/FREEZE.json",
+      "sha256": "e8361804fb9379620ca36068a9a23209305dd3949d9bbf60bfa29014736beebb",
+      "writer": {
+        "path": "scripts/freeze-control-models.mjs",
+        "sha256": "fe4f8fa9e0889725b58d4d5979470fc35c824f6fda01d4eb4c9ddbc111f00c35"
+      },
+      "module": {
+        "path": "src/campaign3/controlModel.ts",
+        "sha256": "45f1296e5db26fd57ad4a3ab238a6eceeaa992f65091d6a8765d8dfd7f00ae2c"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1",
+          "claims": {
+            "candidate": 1,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-2-law-1",
+          "claims": {
+            "candidate": 2,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-3-law-1",
+          "claims": {
+            "candidate": 3,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-4-law-1",
+          "claims": {
+            "candidate": 4,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-5-law-1",
+          "claims": {
+            "candidate": 5,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-6-law-1",
+          "claims": {
+            "candidate": 6,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-1-law-2",
+          "claims": {
+            "candidate": 1,
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-decision-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-decision-model-rev1/FREEZE.json",
+      "sha256": "cd802a5eeee1e680ee15db67190d7848ca0b45be84fae1a747a811fa89bbdd8d",
+      "writer": {
+        "path": "scripts/freeze-decision-models.mjs",
+        "sha256": "fc6699d73bcdabdf520e89217255ffcb2d5ff79a48b987c198aaf30e174437a2"
+      },
+      "module": {
+        "path": "src/campaign3/decisionModel.ts",
+        "sha256": "80c7ff8ee622e590858ba1dc6f0ef3067e1d7f109301c483265aba95790cfbd2"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5",
+          "claims": {
+            "law": 5
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6",
+          "claims": {
+            "law": 6
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-delayed-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-delayed-model-rev1/FREEZE.json",
+      "sha256": "f695db0895ca1c0b5cb4d0485d9d1fe86006f4d4048bf9539583f134b81ea316",
+      "writer": {
+        "path": "scripts/freeze-delayed-models.mjs",
+        "sha256": "4e4b27b82f29c32898d43d8a9cf29d4b302ddfd03e85e95b1195271ec10bf485"
+      },
+      "module": {
+        "path": "src/campaign3/delayedModel.ts",
+        "sha256": "bb9387b97f7698d46760090c1e9404cae65731d3ba7b23e1fe2ca329396f5c12"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-emotional-display-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-emotional-display-model-rev1/FREEZE.json",
+      "sha256": "8d4d2e21a8643ce7b6363a882227a84e632f0fb41e45d3837004fb2377bb4e09",
+      "writer": {
+        "path": "scripts/freeze-emotional-display-models.mjs",
+        "sha256": "26df3c36a4f479d0fb9b3e5065e59fa89bb54fbae90239b19291aca43ddda5d6"
+      },
+      "module": {
+        "path": "src/campaign3/emotionalDisplayModel.ts",
+        "sha256": "ab33af1fa819c8dda5321d6cef1e4f714e1bd8a011b5617a50122034eb483955"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1-severity-2",
+          "claims": {
+            "law": 1,
+            "pressure": 1,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2-severity-2",
+          "claims": {
+            "law": 1,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3-severity-2",
+          "claims": {
+            "law": 1,
+            "pressure": 3,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-2-severity-2",
+          "claims": {
+            "law": 2,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-2-severity-2",
+          "claims": {
+            "law": 3,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-2-severity-2",
+          "claims": {
+            "law": 4,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-pressure-2-severity-2",
+          "claims": {
+            "law": 5,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6-pressure-2-severity-2",
+          "claims": {
+            "law": 6,
+            "pressure": 2,
+            "severity": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2-severity-0",
+          "claims": {
+            "law": 1,
+            "pressure": 2,
+            "severity": 0
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2-severity-1",
+          "claims": {
+            "law": 1,
+            "pressure": 2,
+            "severity": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-epi-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-epi-model-rev1/FREEZE.json",
+      "sha256": "08bd78414677b55de8b0099a2cf46aeac1df30f8d080f9c82407bcb77cd0933e",
+      "writer": {
+        "path": "scripts/freeze-epi-models.mjs",
+        "sha256": "bfb58fc0935ca0d25e4a6aac5d75c4df696b07d380ecb08e1dc108498acfe1ca"
+      },
+      "module": {
+        "path": "src/campaign3/epiModel.ts",
+        "sha256": "4566b3f7aacaf24d4014ef28d286126f796be63724b899d2a1d978ac457ddcd4"
+      },
+      "models": [
+        {
+          "name": "law-1-numeric-1",
+          "claims": {
+            "law": 1,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-numeric-2",
+          "claims": {
+            "law": 1,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-numeric-1",
+          "claims": {
+            "law": 2,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-numeric-2",
+          "claims": {
+            "law": 2,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-numeric-1",
+          "claims": {
+            "law": 3,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-numeric-2",
+          "claims": {
+            "law": 3,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-familiar-valence-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-familiar-valence-model-rev1/FREEZE.json",
+      "sha256": "64bb41ebde7fa4709387dab91c106fd4a41b380f9ee42dbc944e6e5d20388aa2",
+      "writer": {
+        "path": "scripts/freeze-familiar-valence-models.mjs",
+        "sha256": "0ec428fe34e022a3961a1e5c6066677c3477d226468da4656d1d9366501a1226"
+      },
+      "module": {
+        "path": "src/campaign3/familiarValenceModel.ts",
+        "sha256": "b9e2ef1fd42608bae2b57e71262a1557c75377dd9490f976db5871482de77401"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6-goal-1",
+          "claims": {
+            "law": 6,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-familiarity-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-familiarity-model-rev1/FREEZE.json",
+      "sha256": "7c66c5eab740a85497f7d71013aad1f1da2aa5c6c459a88a1ebf8f1e65d777f2",
+      "writer": {
+        "path": "scripts/freeze-familiarity-models.mjs",
+        "sha256": "17756d64658a914111398fc7166c4d9a4dbb69099acc577ae328488d811476a0"
+      },
+      "module": {
+        "path": "src/campaign3/familiarityModel.ts",
+        "sha256": "5589e7dc01412a324fbec7ebc6d95c3a90bcdbe151eb1f787090c8e4c04c1fc3"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5",
+          "claims": {
+            "law": 5
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-fatigue-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-fatigue-model-rev1/FREEZE.json",
+      "sha256": "dcc4eac4c08cb9914d4e332f1e3f8ffe824d6f87cc5c3f5df15d3a12a5a0e403",
+      "writer": {
+        "path": "scripts/freeze-fatigue-models.mjs",
+        "sha256": "4301b016179e96310e37eb31c5bd15f3af1a0d10b890cdfbd9ad486887d4e164"
+      },
+      "module": {
+        "path": "src/campaign3/fatigueModel.ts",
+        "sha256": "6f27813c30ee5d5c71eb958144197ac9dd3b59f02f2a21f012c48659cf62dcce"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1",
+          "claims": {
+            "candidate": 1,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-2-law-1",
+          "claims": {
+            "candidate": 2,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-3-law-1",
+          "claims": {
+            "candidate": 3,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-4-law-1",
+          "claims": {
+            "candidate": 4,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-fear-guilt-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-fear-guilt-model-rev1/FREEZE.json",
+      "sha256": "08ed3b41048042e5d3ce82c3d8fab7953f1f0523a6729c5367339c2a6f1ca3bf",
+      "writer": {
+        "path": "scripts/freeze-fear-guilt-models.mjs",
+        "sha256": "ed0d1d524c4467d7df01396cc6d695c638b73a72983c4bb49572a997546995eb"
+      },
+      "module": {
+        "path": "src/campaign3/fearGuiltModel.ts",
+        "sha256": "0acd3856134ce32805c43f65ff8f44eb485ca15cdd97bc1b61f7297b3a9e4b18"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-goal-strategy-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-goal-strategy-model-rev1/FREEZE.json",
+      "sha256": "5b2fa84641f8d6261bc6bf60a2c302b49f8ed178cb67eddf49dbdc1cb03370d6",
+      "writer": {
+        "path": "scripts/freeze-goal-strategy-models.mjs",
+        "sha256": "c809e17b914aaf13a95d8f32d9ff8a23b596f40d1967767e9e7e936f0368f921"
+      },
+      "module": {
+        "path": "src/campaign3/goalStrategyModel.ts",
+        "sha256": "7c9310d930048fc05cd73aa939186aca25f4e35a436023aa15acece615b40578"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-grief-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-grief-model-rev1/FREEZE.json",
+      "sha256": "4bb158e3e8f52a5654c475517581e306df651e8b5e175e281e97ede6b6d47690",
+      "writer": {
+        "path": "scripts/freeze-grief-models.mjs",
+        "sha256": "b8cfc00ee0fa8064ea2661ba847ea2d8424eacaf1673193f93d8cd68ffb4503d"
+      },
+      "module": {
+        "path": "src/campaign3/griefModel.ts",
+        "sha256": "316a9451818b5134020e76ffd70e3e54f541e0c60fdf3e65ed98616d26a8d1d5"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6-goal-1",
+          "claims": {
+            "law": 6,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-habit-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-habit-model-rev1/FREEZE.json",
+      "sha256": "331109d6b774d7239a0678f5caea864a94915ca62eb2955a54a87f5ff88103c2",
+      "writer": {
+        "path": "scripts/freeze-habit-models.mjs",
+        "sha256": "944e6853ed640fc496fb9247aa3606b3a2a7138a092343ad5d5c89827d18ed87"
+      },
+      "module": {
+        "path": "src/campaign3/habitModel.ts",
+        "sha256": "f3883a6f07330f2c61c68fe66a4616696f2b488df3aca40f474e326ff1c2d64d"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-2",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 2
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-3",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 3
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-2",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 2
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-3",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 3
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-law-1",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "law": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-law-2",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "law": 2
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3-law-3",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "law": 3
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-4-law-1",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "law": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-4-law-2",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "law": 2
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-4-law-3",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "law": 3
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-hearsay-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-hearsay-model-rev1/FREEZE.json",
+      "sha256": "2d35f39ac2b488a6039ed7624bf8c0034a34d89e3081a29c9b3f89690a568f48",
+      "writer": {
+        "path": "scripts/freeze-hearsay-models.mjs",
+        "sha256": "c52657b28c9d8f9213170611980b630f62060576152f244b3803aea70662a220"
+      },
+      "module": {
+        "path": "src/campaign3/hearsayModel.ts",
+        "sha256": "4333e34b730ae44fe9ca023da0b7677988a323274d31d84f2ffa823255151f23"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-interpretation-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-interpretation-model-rev1/FREEZE.json",
+      "sha256": "429e20dcb583f3bc2ccd7c9721e46c4e4f8db71c51bfc8928e603b3864db1387",
+      "writer": {
+        "path": "scripts/freeze-interpretation-models.mjs",
+        "sha256": "21b1ae7ee7fec9539fddaaa569f8abc873c215020551a2421f654410462109c1"
+      },
+      "module": {
+        "path": "src/campaign3/interpretationModel.ts",
+        "sha256": "819cb7b1cd4f63c44b7355568e37a21bb87c1f079889084baa3b8dd1ffbe5bde"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1",
+          "claims": {
+            "law": 1,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2",
+          "claims": {
+            "law": 1,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3",
+          "claims": {
+            "law": 1,
+            "pressure": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-1",
+          "claims": {
+            "law": 2,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-1",
+          "claims": {
+            "law": 3,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-1",
+          "claims": {
+            "law": 4,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-pressure-1",
+          "claims": {
+            "law": 5,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6-pressure-1",
+          "claims": {
+            "law": 6,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-learn-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-learn-model-rev1/FREEZE.json",
+      "sha256": "6773b55da13422fe671360e40b0fea429d7df7fa271fe3940b6cbadcc4570918",
+      "writer": {
+        "path": "scripts/freeze-learn-models.mjs",
+        "sha256": "e40b6de7bc5d1db6e2c7bb0143aa354ee54392e3331fb8e02d75a65aec1d8748"
+      },
+      "module": {
+        "path": "src/campaign3/learnModel.ts",
+        "sha256": "4b0c7162061df8ad272a2a7798c8fb30b7fdf60e535bb83ea53b26b2f52e8fab"
+      },
+      "models": [
+        {
+          "name": "law-1-numeric-1",
+          "claims": {
+            "law": 1,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-numeric-2",
+          "claims": {
+            "law": 1,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-numeric-1",
+          "claims": {
+            "law": 2,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-numeric-2",
+          "claims": {
+            "law": 2,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-numeric-1",
+          "claims": {
+            "law": 3,
+            "numeric": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-numeric-2",
+          "claims": {
+            "law": 3,
+            "numeric": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-longitudinal-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-longitudinal-model-rev1/FREEZE.json",
+      "sha256": "470fd95267f2454ffb4a8351d216b94f4c97fe4353b1e32c1d3fb0de2a090a4c",
+      "writer": {
+        "path": "scripts/freeze-longitudinal-models.mjs",
+        "sha256": "e0eddbe2a3b9a089ff9f44da694aab44a4dd1d0d454b51b0265837086a4bde00"
+      },
+      "module": {
+        "path": "src/campaign3/longitudinalModel.ts",
+        "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+      },
+      "models": [
+        {
+          "name": "representation-1-law-1",
+          "claims": {
+            "settings": {
+              "representation": 1,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-1-law-2",
+          "claims": {
+            "settings": {
+              "representation": 1,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-2-law-1",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-2-law-2",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-3-law-1",
+          "claims": {
+            "settings": {
+              "representation": 3,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-3-law-2",
+          "claims": {
+            "settings": {
+              "representation": 3,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-4-law-1",
+          "claims": {
+            "settings": {
+              "representation": 4,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-4-law-2",
+          "claims": {
+            "settings": {
+              "representation": 4,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "keep-all",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 0,
+              "retention": 2,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "rust",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 1,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "standing-off",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-1",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 1,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-2",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 2,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-3",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 3,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-4",
+          "claims": {
+            "settings": {
+              "representation": 2,
+              "family": 4,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-longitudinal-model-rev2/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-longitudinal-model-rev2/FREEZE.json",
+      "sha256": "5d72e471a1ec9ebfc6199029c42b29b8c9b2f052e1ce30d8e7db75890ad0e6c5",
+      "writer": {
+        "path": "scripts/freeze-longitudinal-models.mjs",
+        "sha256": "e0eddbe2a3b9a089ff9f44da694aab44a4dd1d0d454b51b0265837086a4bde00"
+      },
+      "module": {
+        "path": "src/campaign3/longitudinalModel.ts",
+        "sha256": "30e9fb70d40fba6a9b6e329916ab16fac173b1779928688798318c2d14dc5b70"
+      },
+      "models": [
+        {
+          "name": "representation-1-law-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 1,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-1-law-2",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 1,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-2-law-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-2-law-2",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-3-law-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 3,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-3-law-2",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 3,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-4-law-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 4,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "representation-4-law-2",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 4,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 2,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "keep-all",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 0,
+              "retention": 2,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "rust",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 1,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "standing-off",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 0,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 1,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-2",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 2,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-3",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 3,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "family-4",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "representation": 2,
+              "family": 4,
+              "retention": 1,
+              "rust": 0,
+              "law": 1,
+              "standing": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-lying-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-lying-model-rev1/FREEZE.json",
+      "sha256": "ae85949a07a41062951cd91fbb0ef38c99eea31a78376e6457811ab8d1bbc66c",
+      "writer": {
+        "path": "scripts/freeze-lying-models.mjs",
+        "sha256": "5d1958e1948e7c1ee43ddf4ddd4a91aa60b86f3475a1e70f26bcd3fa56cef908"
+      },
+      "module": {
+        "path": "src/campaign3/lyingModel.ts",
+        "sha256": "85e25ae8f17a63bd207d78ac5490b1ae6db1bc3f67edbd514f9b3f5048f48cd9"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1",
+          "claims": {
+            "law": 1,
+            "pressure": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2",
+          "claims": {
+            "law": 1,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3",
+          "claims": {
+            "law": 1,
+            "pressure": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-2",
+          "claims": {
+            "law": 2,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-2",
+          "claims": {
+            "law": 3,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-2",
+          "claims": {
+            "law": 4,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-pressure-2",
+          "claims": {
+            "law": 5,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-6-pressure-2",
+          "claims": {
+            "law": 6,
+            "pressure": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-performance-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-performance-model-rev1/FREEZE.json",
+      "sha256": "909962264007cbebbb4ce13bb0583af3bbb2be9fb2b8441f9b00616d6a27c55f",
+      "writer": {
+        "path": "scripts/freeze-performance-models.mjs",
+        "sha256": "a87b11960d4aff3b2d829d79f25fc1cc7c5710bfab38ca9e4d659fa49239b2cf"
+      },
+      "module": {
+        "path": "src/campaign3/performanceModel.ts",
+        "sha256": "e29d50b5767e75bc5fc2e8b69e2613697b19f82ff7c1e52303f9c5d13e541820"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-person-goal-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-person-goal-model-rev1/FREEZE.json",
+      "sha256": "4f51d17bf50b37dc8b74aaf31ca28787826fd266cde50dfe848c2ad72d46832a",
+      "writer": {
+        "path": "scripts/freeze-person-goal-models.mjs",
+        "sha256": "da08d17be0920876a0da0013c5bd4c0ad31e079b24ba9026ef541ebbfa537552"
+      },
+      "module": {
+        "path": "src/campaign3/personGoalModel.ts",
+        "sha256": "a4222a41e447d4424f5dec12aa49037b6dbbfaaa10ed5625804c260fd2d0409a"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-personstate-model-rev2/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-personstate-model-rev2/FREEZE.json",
+      "sha256": "852233e6afd0c759e141945b8a5f3d6e67da00082a15cbf54ffbddcf063c23dc",
+      "writer": {
+        "path": "scripts/freeze-personstate-models.mjs",
+        "sha256": "c0700e0a3a6bc977289b0de80fb5ca03606374148fb41f9b925c46b4ba799eda"
+      },
+      "module": {
+        "path": "src/campaign3/personstateModel.ts",
+        "sha256": "d289842a86622e5fe6829d8af281c9d1abe7d2ca89f4e201b22b8e37e0f4ce3e"
+      },
+      "models": [
+        {
+          "name": "law-1-pressure-1-goal-1",
+          "claims": {
+            "law": 1,
+            "pressure": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-2-goal-1",
+          "claims": {
+            "law": 1,
+            "pressure": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-3-goal-1",
+          "claims": {
+            "law": 1,
+            "pressure": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-pressure-1-goal-2",
+          "claims": {
+            "law": 1,
+            "pressure": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-pressure-1-goal-1",
+          "claims": {
+            "law": 2,
+            "pressure": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-pressure-1-goal-1",
+          "claims": {
+            "law": 3,
+            "pressure": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-pressure-1-goal-1",
+          "claims": {
+            "law": 4,
+            "pressure": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-pressure-1-goal-1",
+          "claims": {
+            "law": 5,
+            "pressure": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-procrastination-model-rev2/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-procrastination-model-rev2/FREEZE.json",
+      "sha256": "1d0e24565af2069abf64b5d6d32a31590a7bcb2cdceccb372ef7a9a764ebac0d",
+      "writer": {
+        "path": "scripts/freeze-procrastination-models.mjs",
+        "sha256": "acf93c39e2a31795822c25aec3a0c644cb1deb94e18b9925f8d1b9e947ccd35d"
+      },
+      "module": {
+        "path": "src/campaign3/procrastinationModel.ts",
+        "sha256": "5a39dbcec967df7f3e7b2e7ef29cd7eb893eb1be6396ab25f4b845f19a63b85f"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1",
+          "claims": {
+            "candidate": 1,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-2-law-1",
+          "claims": {
+            "candidate": 2,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-3-law-1",
+          "claims": {
+            "candidate": 3,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-4-law-1",
+          "claims": {
+            "candidate": 4,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-reappraisal-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-reappraisal-model-rev1/FREEZE.json",
+      "sha256": "129a3865a465566d1cadd50c298c7133cd58ed14e0d28b869fa7ae7ade98c1b9",
+      "writer": {
+        "path": "scripts/freeze-reappraisal-models.mjs",
+        "sha256": "9ca3096bb73711e1a3ca38dffbcf0272b4340c4a043c340265bfde2e7cfa56c5"
+      },
+      "module": {
+        "path": "src/campaign3/reappraisalModel.ts",
+        "sha256": "9c0ccb7eb9a0354200593c572e38f6b979c8c37817b8813cea5956512c3a1d80"
+      },
+      "models": [
+        {
+          "name": "law-1-projection-1",
+          "claims": {
+            "law": 1,
+            "projection": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-projection-2",
+          "claims": {
+            "law": 1,
+            "projection": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-projection-1",
+          "claims": {
+            "law": 2,
+            "projection": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-projection-1",
+          "claims": {
+            "law": 3,
+            "projection": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-projection-1",
+          "claims": {
+            "law": 4,
+            "projection": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-reason-model-rev3/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-reason-model-rev3/FREEZE.json",
+      "sha256": "8170191010e89e8cf70d1dddf508116f1d059b7454d8f1edbf6ff31c951f11d8",
+      "writer": {
+        "path": "scripts/freeze-reason-models.mjs",
+        "sha256": "2a76f4c55d90599c12ec2388518aa27e8d13de1454b5e88da02d78a985a4841e"
+      },
+      "module": {
+        "path": "src/campaign3/reasonModel.ts",
+        "sha256": "bf1fb1ffd3596917363aa934bf1536b69731977b2950d8c582e5728950d45959"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5",
+          "claims": {
+            "law": 5
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-recollection-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-recollection-model-rev1/FREEZE.json",
+      "sha256": "4ed448971f147df3dfd79db57c1c42c2e30b5162abeb662a5eab82b291f30834",
+      "writer": {
+        "path": "scripts/freeze-recollection-models.mjs",
+        "sha256": "44654aca0e2b4db7a972e5adeca5d97c003afdf732d338d3265684018bf6e23f"
+      },
+      "module": {
+        "path": "src/campaign3/recollectionModel.ts",
+        "sha256": "2bc3a63efb2e877f8b064e30fb67a5dca54ba2d95c168b122a36cf498154a5ca"
+      },
+      "models": [
+        {
+          "name": "law-1",
+          "claims": {
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2",
+          "claims": {
+            "law": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3",
+          "claims": {
+            "law": 3
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4",
+          "claims": {
+            "law": 4
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5",
+          "claims": {
+            "law": 5
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-rel-attribution-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-rel-attribution-model-rev1/FREEZE.json",
+      "sha256": "b3f6276b80a629a2f6916dbaadf8afc9043ad930995e159763f01ecb3eee7fc8",
+      "writer": {
+        "path": "scripts/freeze-rel-attribution-models.mjs",
+        "sha256": "2c5239ca3f7ea41b89572bd0a5b954a83e338c9bafd52c1d4e1a753d49408626"
+      },
+      "module": {
+        "path": "src/campaign3/relAttributionModel.ts",
+        "sha256": "08eb1356c56ddcf8b9e49eb9c707af2870801d642ea613eb3705de6e2a7ee854"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-rel-dimensions-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-rel-dimensions-model-rev1/FREEZE.json",
+      "sha256": "75b17fa07fd3bdb70bca6e4e9a35af18cf60259f202969066568e5ef465a7a75",
+      "writer": {
+        "path": "scripts/freeze-rel-dimensions-models.mjs",
+        "sha256": "9a20b4ceb741727c289a0754f709594953e1e0cd85d00dc61535b5eec9767076"
+      },
+      "module": {
+        "path": "src/campaign3/relDimensionsModel.ts",
+        "sha256": "b960adcbc7b0b483ef2b86fd545dcf1ba383e46802a9e2e96a6d0a75e045da5b"
+      },
+      "models": [
+        {
+          "name": "law-1-goal-1",
+          "claims": {
+            "law": 1,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-2-goal-1",
+          "claims": {
+            "law": 2,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-3-goal-1",
+          "claims": {
+            "law": 3,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-4-goal-1",
+          "claims": {
+            "law": 4,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-5-goal-1",
+          "claims": {
+            "law": 5,
+            "goal": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "law-1-goal-2",
+          "claims": {
+            "law": 1,
+            "goal": 2
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-relationship-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-relationship-model-rev1/FREEZE.json",
+      "sha256": "e29962ae0a66b51bc895e11a5a281c3068b1f175986df63176935327c30aeb29",
+      "writer": {
+        "path": "scripts/freeze-relationship-models.mjs",
+        "sha256": "ec509c2847239cdd80a21cc36d20b50f37aa6d0c5b3fa70d2c85367130d553a9"
+      },
+      "module": {
+        "path": "src/campaign3/relationshipModel.ts",
+        "sha256": "5d8fdafc350626923995d3409e377ac0a2423154f37aeb3fd11de449e77bbdf7"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "law": 2,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "law": 2,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-4",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-5",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-relationship-model-rev2/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-relationship-model-rev2/FREEZE.json",
+      "sha256": "fc7378f44fa30658860ce77088c5b5725b68e7f5023df33f2561db3e566ff0b9",
+      "writer": {
+        "path": "scripts/freeze-relationship-models.mjs",
+        "sha256": "ec509c2847239cdd80a21cc36d20b50f37aa6d0c5b3fa70d2c85367130d553a9"
+      },
+      "module": {
+        "path": "src/campaign3/relationshipModel.ts",
+        "sha256": "5d8fdafc350626923995d3409e377ac0a2423154f37aeb3fd11de449e77bbdf7"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 1,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 1,
+              "law": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 1,
+              "law": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-1-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 1,
+              "law": 2,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 2,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 2,
+              "law": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 2,
+              "law": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-2-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 2,
+              "law": 2,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-3",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 3,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-4",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 4,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "candidate-5",
+          "claims": {
+            "settings": {
+              "revision": 2,
+              "candidate": 5,
+              "law": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-rumination-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-rumination-model-rev1/FREEZE.json",
+      "sha256": "dc7bbecc166510031225f73840c392deeedf490ae51bee2505d9e5a1bcf3ac28",
+      "writer": {
+        "path": "scripts/freeze-rumination-models.mjs",
+        "sha256": "445c2deae0d4d43128ddfe04236807956dd85d913ad2b44eb6d9a5409317262b"
+      },
+      "module": {
+        "path": "src/campaign3/ruminationModel.ts",
+        "sha256": "62f03a0c13d192edd8dee8406220059b30e8dbef8b3286c2f3d4ab3751af9c70"
+      },
+      "models": [
+        {
+          "name": "candidate-1-law-1",
+          "claims": {
+            "candidate": 1,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-2-law-1",
+          "claims": {
+            "candidate": 2,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-3-law-1",
+          "claims": {
+            "candidate": 3,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        },
+        {
+          "name": "candidate-4-law-1",
+          "claims": {
+            "candidate": 4,
+            "law": 1
+          },
+          "files": 4,
+          "initialStateChecked": false
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-skill-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-skill-model-rev1/FREEZE.json",
+      "sha256": "4d06e05c7615bdb25ed65b5d31db08f54c991a51ab3a3fccd6305c9dfc3d20b8",
+      "writer": {
+        "path": "scripts/freeze-skill-models.mjs",
+        "sha256": "c462c7af0d7d92d94464ae1c55aa9ff1dc9528304c7b4f5b32b91a8820df9e85"
+      },
+      "module": {
+        "path": "src/campaign3/skillModel.ts",
+        "sha256": "2261371c5d2be2679d017c8a97a3af357a1e464b6937d33388f73127da554fee"
+      },
+      "models": [
+        {
+          "name": "k0-p1-e1",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-p1-e2",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 1,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-p2-e1",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 2,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-p2-e2",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 2,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-p3-e1",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 3,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-p3-e2",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 3,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p1-e1",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p1-e2",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p2-e1",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 2,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p2-e2",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 2,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p3-e1",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 3,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-p3-e2",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 3,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p1-e1",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p1-e2",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 1,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p2-e1",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 2,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p2-e2",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 2,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p3-e1",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 3,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-p3-e2",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 3,
+              "executionLaw": 2,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-bad-e3",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 1,
+              "executionLaw": 3,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0-bad-e4",
+          "claims": {
+            "settings": {
+              "initial": 0,
+              "practiceLaw": 1,
+              "executionLaw": 4,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-bad-e3",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 3,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k0.5-bad-e4",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 4,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-bad-e3",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 1,
+              "executionLaw": 3,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "k1-bad-e4",
+          "claims": {
+            "settings": {
+              "initial": 1,
+              "practiceLaw": 1,
+              "executionLaw": 4,
+              "permanent": false,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "permanent-impairment",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": true,
+              "beliefLaw": 1
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "last-observation",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 2
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "no-learning",
+          "claims": {
+            "settings": {
+              "initial": 0.5,
+              "practiceLaw": 1,
+              "executionLaw": 1,
+              "permanent": false,
+              "beliefLaw": 3
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-social-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-social-model-rev1/FREEZE.json",
+      "sha256": "395e56d977d6f6a1fac0c4386fccb5f62bfeea024b75ca06db5d7a0b7776706c",
+      "writer": {
+        "path": "scripts/freeze-social-models.mjs",
+        "sha256": "99c3486bbe1a31eb8bac4157770f2a7fdba438a90bbb5238f8073534f51768c6"
+      },
+      "module": {
+        "path": "src/campaign3/socialModel.ts",
+        "sha256": "b7e524c04edbc9cfe06696c61db48588de4ef7b664a6f7c59dabc6a56092edf9"
+      },
+      "models": [
+        {
+          "name": "private-0-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 1,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 1,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 2,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 2,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-law-3-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 3,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-law-3-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 3,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-1-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 1,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-1-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 1,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-2-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 2,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-2-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 2,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-3-reverse-0",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 3,
+              "control": 1,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-law-3-reverse-1",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 3,
+              "control": 1,
+              "reverse": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-control-2",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 1,
+              "control": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-control-3",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 1,
+              "control": 3,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-0-control-4",
+          "claims": {
+            "settings": {
+              "privateCommitment": false,
+              "learningLaw": 1,
+              "control": 4,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-control-2",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 1,
+              "control": 2,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-control-3",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 1,
+              "control": 3,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "private-1-control-4",
+          "claims": {
+            "settings": {
+              "privateCommitment": true,
+              "learningLaw": 1,
+              "control": 4,
+              "reverse": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    },
+    {
+      "original": "docs/planning/campaign3-work-model-rev1/FREEZE.json",
+      "archive": "docs/planning/public-wrapper-quiescence-rev1/docs/planning/campaign3-work-model-rev1/FREEZE.json",
+      "sha256": "1e2023794a90f322aedae452fa9bf115e2d63eb86fd9d78e7a76daffbf57a406",
+      "writer": {
+        "path": "scripts/freeze-work-models.mjs",
+        "sha256": "4f346fe3db5c9a728d9be1fa0acad98cb4e109db0239e2e5e87757908cf1386f"
+      },
+      "module": {
+        "path": "src/campaign3/workModel.ts",
+        "sha256": "8a702014a0d57b2d2973f256ef201931b44231396494e3aa82acf4c116b60361"
+      },
+      "models": [
+        {
+          "name": "c1-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c1-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 1,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c2-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 2,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c3-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 3,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c4-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 4,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c5-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 5,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k0-s0",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 0,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k0-s1",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 0,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k1-s0",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 1,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k1-s1",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 1,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k2-s0",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 2,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k2-s1",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 2,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k3-s0",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 3,
+              "support": false
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        },
+        {
+          "name": "c6-k3-s1",
+          "claims": {
+            "settings": {
+              "candidate": 6,
+              "capacity": 3,
+              "support": true
+            }
+          },
+          "files": 5,
+          "initialStateChecked": true
+        }
+      ]
+    }
+  ],
+  "models": 362,
+  "initialStates": 175,
+  "scope": "Exact frozen file hashes,compiled identities,declared settings and included initial states. No fresh behavioral trajectory,public restore matrix,independent chronology or universal model uniqueness claim.",
+  "checkerSha256": "a1d0e37a2c2f827d2230ea0414f97fd2fffe154cc287480719fc88dd679a15ef"
+}

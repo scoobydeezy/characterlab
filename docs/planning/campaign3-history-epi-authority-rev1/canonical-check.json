@@ -1,0 +1,42 @@
+{
+  "status": "PASS; HQ011 OPEN",
+  "scope": "Exact original closure rechecked;72 ordered stored result/input joins and24 fully decoded input-only pairs verified. Original240prefix/49affected/328reference evidence remains historical;no fresh settlement,rollback or tests.",
+  "runs": 72,
+  "prefixes": 240,
+  "inputPairs": 24,
+  "failedAdmissionTests": 16,
+  "sources": [
+    {
+      "path": "scripts/check-epi-closure.mjs",
+      "sha256": "27f8d313ba5931d6f7a569afab1683fd7164447d6b437cf4111acf2cc9d03d79"
+    },
+    {
+      "path": "scripts/qualify-epi-public.mjs",
+      "sha256": "50c65c3535ddee34551048a0f9110fdf8266129d8995e608189f74ada33f9109"
+    },
+    {
+      "path": "docs/planning/EPI_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+      "sha256": "68b23645b42d7b37deb436e77d21b6a24c2d50651923e93142ceac9099b0ee34"
+    },
+    {
+      "path": "docs/planning/EPI_PUBLIC_EXPERIMENT_REV1.json",
+      "sha256": "cc7dc37e4592d1750c448a69e8f012ab873c6beb8390bb097b0f071b39628e11"
+    },
+    {
+      "path": "docs/planning/EPI_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "dd7d217563338e68aca86144336b5133f7a59419327b57f7d2c21ef3037fbf17"
+    },
+    {
+      "path": "docs/planning/EPI_PUBLIC_TESTS_REV1.json",
+      "sha256": "7637085c5d4a62a3b164d7a8c50007baf18783516260f714a6a6b39638f89a4b"
+    },
+    {
+      "path": "src/campaign3/epiCodecs.ts",
+      "sha256": "0a3d4a5799241715a9c256e4b1937dab4071adb44391244ba0f8c4ea5f402a6b"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-epi-authority.mjs",
+    "sha256": "44f9284b87ecfec5a92c4fa6994c14f5aacd7df68b0780b99a2ab1574f1e81bd"
+  }
+}

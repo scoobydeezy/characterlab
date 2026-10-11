@@ -1,0 +1,711 @@
+{
+  "status": "HQ011 CENSORED LEARNING HISTORY REVIEWED; WIDER AUDIT OPEN",
+  "source": {
+    "path": "reference/RESEARCH.md",
+    "frozenSha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3"
+  },
+  "rows": [
+    {
+      "occurrenceId": "dbc0f1dbf26005d8f194b4740aa9aeb8556e2ad6dea32b752d742d0cc686ae6f",
+      "location": {
+        "startLine": 463,
+        "endLine": 463
+      },
+      "text": "## Phase 2.5a — Saturated Satisfaction & Censored Learning\n",
+      "claim": "STATUS",
+      "disposition": "Capacity/applied/overflow retained; Correction2 supersedes original precision gate in four bounded cases.",
+      "limits": "RESOLVED label not exact posterior or general mean/precision sufficiency; source historical first-pass status remains.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "9d6bafcfed8c8d43d440101782479f463ce2581c4f0f791686d8243ad8937d6e",
+      "location": {
+        "startLine": 465,
+        "endLine": 475
+      },
+      "text": "**Status: RESOLVED — see \"Correction 2\" near the end of this entry.** The Capacity/Applied/Overflow\ndecomposition and the dual-mode compatibility strategy were solid from the start and are kept\nunchanged. The one-sided censored-evidence update rule below was originally a useful *baseline* that\nfalsifies naive point-learning from clipped deltas, but external review (recorded in the Correction\nsection immediately below) found it was not the right final model: it grew confidence from\nobservations that carried no discriminating information, which likely explained why its\ncounterfactual result stalled well short of the true effect. That open question — deferred at the\ntime, pending Phase 2.5b/2.5c — is resolved in Correction 2: `updateExpectation`'s gating logic was\nthe bug, not the `(μ, τ)` representation itself, and the fix is validated against the four cases\nCorrection point 6 specified plus real updated counterfactual numbers. Not yet gated by a second\nimplementer/reviewer, same caveat as every prior entry.\n",
+      "claim": "STATUS",
+      "disposition": "Capacity/applied/overflow retained; Correction2 supersedes original precision gate in four bounded cases.",
+      "limits": "RESOLVED label not exact posterior or general mean/precision sufficiency; source historical first-pass status remains.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "8979d89a13066b80cf51a0aabfa1b1ca8f822f2b343d88b53fff35ad7adfdad1",
+      "location": {
+        "startLine": 477,
+        "endLine": 480
+      },
+      "text": "This phase originates from a collaborator-authored follow-up brief responding directly to two\nfindings already on record above: Phase 1's Connection ceiling artifact and Phase 2's Avoidance\nfloor artifact are the same phenomenon at both boundaries of a bounded scalar Need, and this phase\nasks whether a learning rule can be built that does not fall into it.\n",
+      "claim": "STATUS",
+      "disposition": "Capacity/applied/overflow retained; Correction2 supersedes original precision gate in four bounded cases.",
+      "limits": "RESOLVED label not exact posterior or general mean/precision sufficiency; source historical first-pass status remains.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "6396cffbd4db2f3ddd643273bbead816797e40679e84826b2396ba2ab2c22938",
+      "location": {
+        "startLine": 482,
+        "endLine": 482
+      },
+      "text": "### Correction (post-implementation review, before Phase 2.5b)\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "7e8ed34b525932ce06ea504567cfc5b1d1e4683b2927eaaebcd827d22f2ee23d",
+      "location": {
+        "startLine": 484,
+        "endLine": 488
+      },
+      "text": "The findings below were written immediately after implementation and are kept as originally\nrecorded (CharacterLab's convention: correct forward, don't quietly rewrite history — see the\navoidance-experiment redesign in the Phase 2 entry for the precedent). A review of this entry before\nstarting Phase 2.5b identified a real problem with the censored-update rule as built, deeper than\nthe \"17% divergence reduction, not a full fix\" framing originally given it credit for.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "4d4f265a7349795ceeb449d56cf24922ebbb48aff4d529be698accccbefea252",
+      "location": {
+        "startLine": 490,
+        "endLine": 500
+      },
+      "text": "1. **Growing precision (τ) on every observation — accepted or rejected — is not epistemically\n   justified, and this is a bug, not a rounding error.** Consider Mina with an established belief\n   μ≈0.40 who then experiences a saturated Experience where only Applied=+0.10 lands. The rule as\n   built keeps μ at 0.40 (correct — it must not slide the wrong way) but still grows τ as if this\n   were ordinary evidence *for* 0.40. It is not: the observation says only \"the effect was at least\n   +0.10,\" which is equally consistent with a true effect of +0.42 or +0.90. Nothing about this\n   observation discriminates in favor of 0.40 specifically, so confidence in 0.40 should not rise\n   from it. The failure is starker at the extreme: if μ=0 and the Need is already at its ceiling\n   (Applied=0, fully saturated), the observation carries essentially **zero** magnitude information\n   — yet the rule as built raises τ anyway, mechanically becoming *more confident in zero* from an\n   observation that says nothing about the true effect at all. That is backwards.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "67c0554c4c7915dc02e1191b05be150f7c379de4832ed1330800832e0c2051c3",
+      "location": {
+        "startLine": 502,
+        "endLine": 509
+      },
+      "text": "2. **This is almost certainly why the counterfactual's censored Timeline B stalled at μ≈0.22\n   instead of climbing further toward the true ~0.42 effect.** One genuine unclipped observation\n   established μ≈0.22; the five subsequent censored (rejected) observations then piled precision\n   onto that estimate without contradicting OR supporting it — cementing a weak estimate rather than\n   correctly reflecting that confidence in it should not have grown from evidence that never tested\n   it. The 17% divergence reduction reported below is real, but it is very likely an understatement\n   of what a correctly-specified censored model would achieve, not evidence that censoring itself has\n   limited power.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6e97bafb091c704f12064390912d555bc2c08c640f195a25558e4a44a080f2d5",
+      "location": {
+        "startLine": 511,
+        "endLine": 523
+      },
+      "text": "3. **Retracted: do not build the \"magnitude-aware, uses Overflow's size\" update this entry\n   originally floated as the natural next step (see the struck text in Next-phase justification\n   below).** `Overflow` is a simulator-omniscient quantity — the authored ground-truth effect minus\n   what actually landed — not necessarily something the character's Experience gives her access to.\n   From Need-state movement alone, Mina can observe only \"the effect was at least Applied\"; she\n   cannot distinguish a true effect of +0.11 from +0.42 from +0.90, since all three would saturate\n   her identically. Feeding Overflow's magnitude into `NeedExpectation`'s update would leak\n   authored world-truth across the Experience boundary Brief §11 establishes (\"no subsystem gets a\n   private interpretation of what happened\" cuts both ways — it also means no subsystem gets\n   information beyond what the Experience actually contains). Overflow remains fully valid to trace,\n   and may be legitimate input to a future, explicitly-justified perceptual mechanism if one is ever\n   built and demonstrated to be something the character can actually access — but not as direct\n   learning evidence, absent that demonstration.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "49761655dd99c3265fda257c4bd9c850188a612d7391a580bf66295568b18d30",
+      "location": {
+        "startLine": 525,
+        "endLine": 535
+      },
+      "text": "4. **The success criterion this entry originally used was itself wrong, and is now corrected.**\n   \"Does censored learning converge close to the true effect even when most observations are\n   clipped\" asks for something information-theoretically impossible: a sequence of observations\n   reading \"effect ≥ 0.10,\" \"effect ≥ 0.08,\" \"effect ≥ 0.05\" is equally consistent with a true effect\n   of 0.15, 0.42, or 0.90, and no learning rule — censored or otherwise — can resolve that ambiguity\n   from this evidence alone without smuggling in information the character doesn't have. Remaining\n   uncertain in that situation is *correct* inference, not a shortfall. **The corrected criterion:**\n   does the model retain exactly the uncertainty warranted by the evidence it actually received,\n   without mistaking \"this observation was clipped\" for \"the effect is weak\"? Under this criterion,\n   the built rule still fails (point 1 above), even though it already succeeds on the narrower\n   \"never slide μ the wrong way\" criterion this entry originally credited it for.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "507d92c9dac1517950e949a632e325d8bfeb5440695d7cb870fc6ed2d1104cb3",
+      "location": {
+        "startLine": 537,
+        "endLine": 547
+      },
+      "text": "5. **Open research question, deferred to a return visit after Phase 2.5b:** is `(μ, τ)` a\n   sufficient representation for both point evidence (\"effect ≈ x\") and one-sided evidence\n   (\"effect ≥ x\" / \"effect ≤ x\"), or does `NeedExpectation` need a representation that keeps\n   confidence-in-a-point-estimate and confidence-in-an-inequality-constraint as distinct quantities —\n   something in the shape of a `Mean`/`PointPrecision` pair plus separate accumulated\n   `LowerBoundEvidence`/`UpperBoundEvidence` state, or another representation entirely? This is not\n   pre-decided; it is now the concrete research question Phase 2.5a leaves open. The finding worth\n   carrying forward regardless of which representation wins: **what happened** (the realized effect),\n   **what could be observed** (Applied, bounded by the Need's capacity), and **what that observation\n   logically permits the character to believe** (a point estimate vs. an inequality constraint) are\n   three separable things, and the original `(μ, τ)` update conflated the second and third.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "7fc70c1709bacfea5ddc1f5bab2752dde42e3b3894e5ea40af77149ab2bdc7a8",
+      "location": {
+        "startLine": 549,
+        "endLine": 566
+      },
+      "text": "6. **Four validation cases to run before this question is considered resolved** (specified now,\n   deliberately not yet run — this phase does not stop to rebuild the rule; see Next-phase\n   justification):\n   - **Case A — established belief, weak lower bound.** High-precision μ=0.40, then one new\n     observation \"effect ≥ 0.10.\" Expected: must not materially raise confidence in 0.40 — it fails\n     to contradict the belief, it does not reinforce it.\n   - **Case B — belief inconsistent with the bound.** μ=0.05, then \"effect ≥ 0.10.\" Expected: the\n     model MUST update — the current belief is logically inconsistent with the observation (this\n     case should already pass under the built rule's accept branch; worth confirming directly rather\n     than assuming).\n   - **Case C — zero-information saturation.** Need already at its ceiling, Applied=0 (\"effect ≥ 0,\"\n     true of every non-negative real number). Expected: essentially no change in confidence about\n     the efficacy estimate. The built rule currently fails this case (see point 1) and raises τ\n     regardless.\n   - **Case D — genuine evidence after a long censored history.** Many \"effect ≥ 0.10\"-style\n     observations, then one genuine unclipped \"effect = 0.42.\" Expected: the accumulated (and, per\n     point 1, currently unjustified) precision from the censored run must not artificially suppress\n     how much this new genuine observation moves the belief.\n",
+      "claim": "CORRECTION",
+      "disposition": "Reject unjustified precision growth and truth-side Overflow learning; retire efficacy-recovery success criterion unsupported by censored data.",
+      "limits": "Mechanism conjecture about stalled timeline not controlled causal estimate: A/B addresses differ. Compatible bounds may constrain distributions; zero point movement not universal zero information.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "30383a5a378fcd3385c8e28524c7cf56aaad90571c416fb1ecadcf630a380179",
+      "location": {
+        "startLine": 568,
+        "endLine": 568
+      },
+      "text": "### Psychological findings\n",
+      "claim": "ORIGINAL-RESULTS",
+      "disposition": "Original naive/censored fresh means equal; original point-confidence rule and17percent result preserved as historical predecessor.",
+      "limits": "Correction2 supersedes total-saturation confidence equality. Counterfactual improvement is actual bounded numeric result, not pure timing intervention or truth recovery proof.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "edcada0a6cb5cc2459fe939b629a70422fe748dbd48f94d133d03494da38a30a",
+      "location": {
+        "startLine": 570,
+        "endLine": 585
+      },
+      "text": "**A single fresh-prior observation makes censoring provably a no-op — and that null result is\nitself the finding that motivates the counterfactual design.** Sweeping `ACTION_VISIT_GLEN`'s\nexisting +0.40 Connection effect against five starting Need levels (0.10 → 1.00), naive and censored\nlearningMode produce **bit-for-bit identical** μ, confidence, Applied, and Overflow at every single\nlevel (`experiments/saturatedSatisfaction.ts`, `test/phase2_5Saturation.test.ts`). The reason is\nstructural, not a bug: a brand-new `NeedExpectation` starts at μ=0, and every Applied value this\nsatisfier can produce is non-negative, so the naive candidate is always ≥ the fresh prior and the\none-sided rule's \"reject only a decrease\" condition never fires. **Censoring has nothing to protect\nuntil a real expectation has already been established from prior evidence** — a distinction the\nsweep alone cannot demonstrate and the counterfactual below was specifically designed to isolate.\nSeparately, the sweep reproduces Phase 1/Phase 2's boundary-saturation finding a third time, now\nthrough the named Capacity/Applied/Overflow decomposition rather than an inferred μ shift: Applied\nfalls from 0.4204 (Level 0.10, unsaturated) to 0.3000 (Level 0.70) to 0.1000 (Level 0.90) to exactly\n0.0000 (Level 1.00, zero headroom) — Overflow rising in exact lockstep (0 → 0.1205 → 0.3205 →\n0.4204) — confirming `applyBoundedEffect`'s identity `Applied + Overflow = effect` holds on real\noutcome-table data, not just hand-picked test cases.\n",
+      "claim": "ORIGINAL-RESULTS",
+      "disposition": "Original naive/censored fresh means equal; original point-confidence rule and17percent result preserved as historical predecessor.",
+      "limits": "Correction2 supersedes total-saturation confidence equality. Counterfactual improvement is actual bounded numeric result, not pure timing intervention or truth recovery proof.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "b0413ba5baec0b02e6a9b5f84ff1ca044e1655079a5eb90ac489e2da68baa04c",
+      "location": {
+        "startLine": 587,
+        "endLine": 604
+      },
+      "text": "**Once a real prior exists, censoring measurably narrows — but does not eliminate — a naive\nlearning rule's exposure-timing artifact (Brief §22).** The required counterfactual\n(`experiments/saturationCounterfactual.ts`) runs the identical satisfier through two timelines that\nshare the exact same true effect: Timeline A always visits while Connection is comfortably\nunsaturated; Timeline B is MOSTLY near the ceiling (5 of 6 repetitions clip) with one deliberate\nunsaturated dip, so genuine information about the true effect exists in both timelines but is rare\nin B. Naive converges to μ≈0.3999 in Timeline A (correctly tracking the true ~0.42 effect) but only\nμ≈0.1855 in Timeline B — a **naiveDivergence of 0.2145** purely attributable to when the satisfier\nhappened to be tried, exactly the failure mode Brief §27 names. Censored narrows this to\n**0.1780** (`censoredDivergence`, about 17% smaller) by refusing to let the five clipped\nobservations pull μ down from the level the one genuine observation established. This is a real,\nreproducible improvement, but it is **partial, not a fix**: censored Timeline B still converges to\nμ≈0.2219, well below the true ~0.42 — the rule can only *protect* an already-good belief from\nerosion by systematically-clipped evidence, it cannot *recover* the true effect's magnitude from\nOverflow alone, since the update rule only ever compares the naive candidate's *direction* against\nthe current prior, never uses the clipped observation's *size* as a lower-bound magnitude in its own\nright. Reported honestly rather than rounded up: this is a meaningful but incomplete answer to\nBrief §22's question.\n",
+      "claim": "ORIGINAL-RESULTS",
+      "disposition": "Original naive/censored fresh means equal; original point-confidence rule and17percent result preserved as historical predecessor.",
+      "limits": "Correction2 supersedes total-saturation confidence equality. Counterfactual improvement is actual bounded numeric result, not pure timing intervention or truth recovery proof.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "9880710e40a9c1c15a94e51b38059c960f68411766ae61c5cb7da52207642a1b",
+      "location": {
+        "startLine": 606,
+        "endLine": 606
+      },
+      "text": "### Mathematical findings\n",
+      "claim": "MATH",
+      "disposition": "Exact applied+overflow decomposition retained; unconditional precision rationale explicitly retracted.",
+      "limits": "CDF incompatibility concerns exact transcendental output, not a proof that every rational probabilistic alternative is impossible. No law selected.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "961394c345138d1a4ad42195fe0adf4763b86139e115258fbd4b7a3fca99e76b",
+      "location": {
+        "startLine": 608,
+        "endLine": 614
+      },
+      "text": "**The Capacity/Applied/Overflow decomposition is an exact algebraic identity, not an approximation,\nconfirmed against both hand-picked and real outcome-table cases.** `applyBoundedEffect`\n(`model/needs.ts`) computes `Applied = Clamp(effect, -L, 1-L)` and `Overflow = effect - Applied`\ndirectly from exact-rational inputs already on the D=10⁶ lattice, so `Applied + Overflow === effect`\nholds bit-for-bit (`test/needs.test.ts`), and the quantized `after` Level this produces is\nidentical, cycle-for-cycle, to the inline clamp `cycle.ts` used before this phase — confirmed by the\nfull 76-test pre-2.5 suite passing unchanged.\n",
+      "claim": "MATH",
+      "disposition": "Exact applied+overflow decomposition retained; unconditional precision rationale explicitly retracted.",
+      "limits": "CDF incompatibility concerns exact transcendental output, not a proof that every rational probabilistic alternative is impossible. No law selected.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "b9fdeb08bab0494bbfb1a28558930995c5ed9e89f2e1293258074159281ffaff",
+      "location": {
+        "startLine": 616,
+        "endLine": 631
+      },
+      "text": "**The one-sided censored update rule is monotonic, deterministic, and needs no transcendental\nmath** — deliberately, since a textbook truncated-Gaussian treatment of censored evidence needs the\nnormal CDF, incompatible with the exact-rational-arithmetic contract (Brief §3.1). The rule\n(`model/expectation.ts::updateExpectation`, new `evidenceKind` parameter) computes the ordinary\nprecision-weighted candidate first, then accepts or rejects only the *mean* change based on its\n*direction* relative to the current prior — precision (τ) always grows by the same amount\nregardless of acceptance, since a real observation, even a rejected one, still adds confidence that\nthe truth is at least what was already believed. **Retracted — see the Correction section above\n(point 1): this is exactly the epistemically wrong step.** τ growing regardless of whether the\nobservation discriminated among hypotheses is not a harmless simplification; it is measurably why\nthe counterfactual result below undershoots. This is a deliberate, named simplification (documented\nin `expectation.ts`'s module comment, same spirit as `associations.ts`'s self-association-exclusion\nnote) rather than a claimed \"correct Bayesian censored update\" — and the counterfactual finding\nabove is direct evidence of exactly where the simplification's power ends: it is a one-bit\naccept/reject decision, not a magnitude-aware one, AND it grows confidence on evidence that may\ncarry no magnitude information at all.\n",
+      "claim": "MATH",
+      "disposition": "Exact applied+overflow decomposition retained; unconditional precision rationale explicitly retracted.",
+      "limits": "CDF incompatibility concerns exact transcendental output, not a proof that every rational probabilistic alternative is impossible. No law selected.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5fba1a2178ed4ac3ffd8c40a1c956f02d2cb095fb986b88aeab80cef970579be",
+      "location": {
+        "startLine": 633,
+        "endLine": 633
+      },
+      "text": "### Architectural findings\n",
+      "claim": "COMPATIBILITY",
+      "disposition": "Legacy point defaults preserve old tests; speculative Applied+kappaOverflow reward was trace-only.",
+      "limits": "76 tests dated, not every untested behavior; trace visibility does not earn consumer or safe perceptual access. Later biology independent source semantics.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "45f45541d5289c4ce95199f9473fbf04e53043ca731bb4d547ce56cf988e3f43",
+      "location": {
+        "startLine": 635,
+        "endLine": 642
+      },
+      "text": "**Dual-mode compatibility held exactly as designed: every one of the 76 pre-2.5 tests passed\nunchanged, with zero adjustment, because every new parameter defaults to today's exact behavior.**\n`updateExpectation`'s new `evidenceKind` parameter defaults to `'point'`; `CycleParams.saturation`\ndefaults to `{learningMode: 'naive', kappa: 1/2}`; `'naive'` mode's expectation update is\nbyte-for-byte the pre-2.5 computation (`applyBoundedEffect`'s `Applied` is algebraically identical\nto the old inline clamp's delta). This is the load-bearing property that let 15 new tests be added\nwithout touching a single pre-existing assertion — the same \"opt-in, default-legacy\" pattern this\nbrief's Phase 2.5 request specifically asked for, now validated rather than assumed.\n",
+      "claim": "COMPATIBILITY",
+      "disposition": "Legacy point defaults preserve old tests; speculative Applied+kappaOverflow reward was trace-only.",
+      "limits": "76 tests dated, not every untested behavior; trace visibility does not earn consumer or safe perceptual access. Later biology independent source semantics.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "5faa53bc176c4c4929d7db96ddfdeb54396e7cec153ba611d5d7d07d4ca20467",
+      "location": {
+        "startLine": 644,
+        "endLine": 653
+      },
+      "text": "**Experienced Reward (`Applied + κ·Overflow`) is wired as trace-only, exactly as instructed, and\nthis phase deliberately does not classify it as necessary.** Every cycle now traces Applied,\nOverflow, `saturated`, and Reward for every Need effect (`cycle.ts`'s new `saturation_analysis` step\nand `CycleResult.saturationAnalysis`), visible live in the new `SaturationPanel`, but Reward is never\nadded to Need state, Score(a), or any learning update. No experiment in this phase tests whether\nReward changes any observable behavior, so — per the brief's explicit caution against assuming\nModel C's necessity — it is classified **DEFERRED**, not DERIVED or REQUIRES MECHANISM: the question\n\"does a character need something like Experienced Reward to explain any behavior CharacterLab can't\nalready explain\" remains genuinely open, not quietly answered by giving it a slider and a trace\ncolumn.\n",
+      "claim": "COMPATIBILITY",
+      "disposition": "Legacy point defaults preserve old tests; speculative Applied+kappaOverflow reward was trace-only.",
+      "limits": "76 tests dated, not every untested behavior; trace visibility does not earn consumer or safe perceptual access. Later biology independent source semantics.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "58ddb9435bd0ce881b638dc4a26570045befd08ecb1166c99fb8e14145470a18",
+      "location": {
+        "startLine": 655,
+        "endLine": 655
+      },
+      "text": "### Vivarium comparison\n",
+      "claim": "VIVARIUM",
+      "disposition": "Architecture-hosting question replaces research gated by play-frequency.",
+      "limits": "Learning observed clipped delta is not inherently a bug if target is experienced effect; do not fix by leaking true efficacy. No executed Vivarium parity proof.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "b6b13bd61eb67cfb6e205ef19ca5bebe17c3240691045c3287fae947e771144a",
+      "location": {
+        "startLine": 657,
+        "endLine": 666
+      },
+      "text": "**Does Vivarium's stat/need system separate \"what happened\" from \"what the character believes a\nsatisfier does,\" or does it — like this codebase before Phase 2.5a — implicitly conflate them via a\nshared clamp?** Phase 1 and Phase 2's ceiling/floor artifacts and this phase's Timeline-B finding are\nall one underlying bug pattern: any system that learns from a bounded stat's *observed* delta rather\nthan the *interaction's* true effect will silently mis-learn whenever the stat is near a boundary\nwhen the interaction happens. If Vivarium's own preference/relationship learning (if any) reads\ndirectly from a clamped stat delta the same way this codebase's pre-2.5a `NeedExpectation` did, it\nlikely has an undetected version of exactly this artifact — worth checking directly, the same way\nprior entries recommended checking NeedExpectation's representation and the precondition/\naccessibility separation against Vivarium's actual code.\n",
+      "claim": "VIVARIUM",
+      "disposition": "Architecture-hosting question replaces research gated by play-frequency.",
+      "limits": "Learning observed clipped delta is not inherently a bug if target is experienced effect; do not fix by leaking true efficacy. No executed Vivarium parity proof.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "89b3f8c65022d6d1613bfdec3f64e3e689491ad875de542ba064006aa7ba5488",
+      "location": {
+        "startLine": 668,
+        "endLine": 680
+      },
+      "text": "**Struck (see the standing methodological correction at the top of this file):** this entry\noriginally asked whether \"mostly, not always\" saturating exposure is common enough in Vivarium's\nactual play patterns to make resolving this worth it, and suggested checking real playtraces before\ntreating censored learning as \"worth porting.\" That question is retired — it gates CharacterLab's\nown research on Vivarium's current tuning, exactly backwards from this project's purpose.\nCharacterLab's job is to resolve what the epistemically correct learning model is when a bounded\nNeed creates censored observations, on its own terms; only once that model exists does it become\nVivarium's question whether its own architecture needs to change to support it, and separately, a\nproduction-cost question whether that's worth doing given how often the regime actually occurs. The\nquestion worth asking instead: **once CharacterLab has a validated censored-evidence representation,\nwhat would Vivarium's Need/stat system need to expose (e.g., a way to represent \"at least X\" belief\nstate, distinct from a point estimate) to host it?** — a question about what the architecture must\nprovide, not whether the problem is worth having an architecture for.\n",
+      "claim": "VIVARIUM",
+      "disposition": "Architecture-hosting question replaces research gated by play-frequency.",
+      "limits": "Learning observed clipped delta is not inherently a bug if target is experienced effect; do not fix by leaking true efficacy. No executed Vivarium parity proof.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "242c732dfccc9538a7b5718251627bbb413e811e58dfc495c17d51e6e4470189",
+      "location": {
+        "startLine": 682,
+        "endLine": 682
+      },
+      "text": "### Next-phase justification\n",
+      "claim": "ROUTING",
+      "disposition": "Overflow-magnitude route withdrawn; representational revisit followed salience/interpretation and now has bounded correction.",
+      "limits": "Historical PARTIAL is superseded for four fixtures only, not general inequality inference or posterior representation.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "cc592f12ca3d6f3a126105b74039d63c8705e263ddfea8d5a5dfa3ab56695016",
+      "location": {
+        "startLine": 684,
+        "endLine": 687
+      },
+      "text": "**Struck:** this entry originally proposed a \"magnitude-aware\" censored update using Overflow's\nsize as the natural next step. That is retracted — see Correction point 3: Overflow is not\nestablished to be something the character can perceive, and using it directly would leak authored\nworld-truth across the Experience boundary. It is not the next step.\n",
+      "claim": "ROUTING",
+      "disposition": "Overflow-magnitude route withdrawn; representational revisit followed salience/interpretation and now has bounded correction.",
+      "limits": "Historical PARTIAL is superseded for four fixtures only, not general inequality inference or posterior representation.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "89cc70c858e22149aee426326208d7f77af0597b859d9782bed3dfc8a9937a1f",
+      "location": {
+        "startLine": 689,
+        "endLine": 696
+      },
+      "text": "The actual next step for saturated-satisfaction research is the representation question Correction\npoint 5 leaves open — whether `(μ, τ)` can correctly host both point and one-sided evidence, or\nwhether inequality evidence needs its own accumulator distinct from point-estimate confidence —\nvalidated against the four cases in Correction point 6. This is deliberately **not** undertaken\nimmediately: Phase 2.5b (Semantic Salience) is a largely independent problem from the same brief and\nproceeds first, per the brief's own sequencing and the \"answer one well-scoped question at a time\"\ndiscipline this log has followed since Phase 0. Phase 2.5a is explicitly left PARTIAL rather than\nclosed, and is revisited after Phase 2.5b ships with its own real traced numbers.\n",
+      "claim": "ROUTING",
+      "disposition": "Overflow-magnitude route withdrawn; representational revisit followed salience/interpretation and now has bounded correction.",
+      "limits": "Historical PARTIAL is superseded for four fixtures only, not general inequality inference or posterior representation.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "8b935998d394b37c88f9fbfd00cedeedabcb6b97835463ef45fc163c8ece48c2",
+      "location": {
+        "startLine": 698,
+        "endLine": 701
+      },
+      "text": "**Resolved in Correction 2 (near the end of this entry), after Phase 2.5b/2.5c shipped:** the answer\nturned out to be \"yes, `(μ, τ)` is sufficient for the censored-evidence behaviors tested so far\" — see\nthat section for the fix, the validation numbers, and the one deliberately-still-open simplification\n(the accepted-bound branch's precision crediting) that phrasing is careful not to paper over.\n",
+      "claim": "ROUTING",
+      "disposition": "Overflow-magnitude route withdrawn; representational revisit followed salience/interpretation and now has bounded correction.",
+      "limits": "Historical PARTIAL is superseded for four fixtures only, not general inequality inference or posterior representation.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "1f6a6c0676c976053e9789cf30e3e7efa4ee8e924386ad47f2fb196223abfe6b",
+      "location": {
+        "startLine": 703,
+        "endLine": 703
+      },
+      "text": "### Three-part output (Brief §36) for the Saturated Satisfaction / Censored Learning findings\n",
+      "claim": "SUMMARY",
+      "disposition": "Point confidence and bound evidence differ; keeping speculative trace outside cognition preserves comparison.",
+      "limits": "Summary open status historical; correction supplies narrow update fix, not universal rejection of richer posterior.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "ab1a65dc012384153f84dbe89f3ed28793888afec5e0f537724c4df6f9219724",
+      "location": {
+        "startLine": 705,
+        "endLine": 706
+      },
+      "text": "*(Revised per the Correction section above — the original version of this section credited the\nbuilt rule with more than it earned; this version reflects the corrected understanding.)*\n",
+      "claim": "SUMMARY",
+      "disposition": "Point confidence and bound evidence differ; keeping speculative trace outside cognition preserves comparison.",
+      "limits": "Summary open status historical; correction supplies narrow update fix, not universal rejection of richer posterior.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "63c1758c12e460b9d8451e7edc781a28ee8c0eba2994b638aa7c078a122d0008",
+      "location": {
+        "startLine": 708,
+        "endLine": 717
+      },
+      "text": "**Psychological finding.** What happened (a satisfier's true effect), what could be observed (the\nNeed's Applied delta, bounded by its remaining capacity), and what that observation logically\npermits a character to believe (a point estimate vs. a mere inequality constraint) are three\nseparable things that a naive learning rule collapses into one — and, this phase discovered, an\nunder-specified \"censored\" rule can still collapse two of them even while correctly handling the\nthird: refusing to let μ slide the wrong way (handled) is a different, weaker property than\ncorrectly declining to grow confidence in an estimate the evidence never actually tested (not yet\nhandled). A character reasoning correctly under saturation should end up MORE uncertain, not falsely\nmore confident, when most of its evidence about a satisfier is boundary-clipped — remaining\nappropriately uncertain is the correct outcome, not a failure to converge.\n",
+      "claim": "SUMMARY",
+      "disposition": "Point confidence and bound evidence differ; keeping speculative trace outside cognition preserves comparison.",
+      "limits": "Summary open status historical; correction supplies narrow update fix, not universal rejection of richer posterior.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "2a5a35e3281d1eac74e850a65ef8e7d2251ca2cd9359ef5d949055f6074318e7",
+      "location": {
+        "startLine": 719,
+        "endLine": 726
+      },
+      "text": "**Computational finding.** A single scalar precision (τ) is not obviously the right currency for\nboth point evidence (\"effect ≈ x\") and one-sided evidence (\"effect ≥ x\"): the two make different,\nnon-interchangeable epistemic claims, and accumulating both into one number let this phase's rule\ngrow spuriously confident from evidence that never discriminated between hypotheses. Whether\n`NeedExpectation` needs a richer representation — separate accumulators for point-precision and\nbound-evidence — or whether a more careful, but still `(μ, τ)`-shaped, update can respect the\ndistinction is now an open, concretely testable research question (Correction points 5-6), not a\nsolved one.\n",
+      "claim": "SUMMARY",
+      "disposition": "Point confidence and bound evidence differ; keeping speculative trace outside cognition preserves comparison.",
+      "limits": "Summary open status historical; correction supplies narrow update fix, not universal rejection of richer posterior.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "1112c05642368a09c826d191d9b3e071193ac643c808a1f8a7246297befd6b3d",
+      "location": {
+        "startLine": 728,
+        "endLine": 739
+      },
+      "text": "**Architectural implication.** A \"dual-mode, opt-in, default-legacy\" parameter design (new\n`evidenceKind`/`SaturationParams` fields defaulting to prior behavior) let this phase's entire new\nmechanism ship alongside 76 pre-existing findings with zero regressions — validating, not just\nassuming, the compatibility strategy this brief's own Phase 2.5 request specified, and that part of\nthe phase's delivery is unaffected by the Correction above. Separately: a trace-only speculative\nquantity (Experienced Reward) can be fully instrumented and made visible to a researcher (traced\nevery cycle, shown live in the UI) without being prematurely wired into any behavior-affecting\npathway — keeping \"is this mechanism necessary\" answerable by future evidence rather than settled by\nits mere presence in the codebase. And, more generally: a research log entry's own success framing\ncan itself be wrong in a way that only a second reader catches — this phase's real lesson may be\nmethodological as much as technical, which is exactly why this correction is recorded in place\nrather than silently folded into a rewritten \"clean\" version of the original findings.\n",
+      "claim": "SUMMARY",
+      "disposition": "Point confidence and bound evidence differ; keeping speculative trace outside cognition preserves comparison.",
+      "limits": "Summary open status historical; correction supplies narrow update fix, not universal rejection of richer posterior.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "161274cbbb2b10c338b1621a5b6dc1c33b624decb23a6c4c2f5aeb4067a74b04",
+      "location": {
+        "startLine": 741,
+        "endLine": 741
+      },
+      "text": "### Correction 2 (post-Phase-2.5c review) — the (μ, τ) representation question, resolved\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "939d15a8cf335666bb0e5328c0dd329b4789ba5c7dba8f1c2a2c4c90cf531f6f",
+      "location": {
+        "startLine": 743,
+        "endLine": 748
+      },
+      "text": "Phase 2.5c's own review (\"Experience Interpretation,\" see below) closed its three targeted gaps and\nthen returned to this entry's still-open question: is `(μ, τ)` sufficient for both point and\none-sided evidence, or does `NeedExpectation` need a richer representation? Correction point 6's four\nvalidation cases were run, and the finding is: **`(μ, τ)` is sufficient for the censored-evidence\nbehaviors tested so far. The bug was in the informativeness gate that decided when τ was allowed to\ngrow, not in what the two-number representation could express.**\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "65267159012e904b227e21510a2bbcac225ec16beae066a3845885dd7f316e70",
+      "location": {
+        "startLine": 750,
+        "endLine": 760
+      },
+      "text": "That phrasing is deliberately narrower than \"sufficient all along.\" The accepted-bound branch (an\ninformative `lower_bound`/`upper_bound` observation) still credits itself with the full observation\nprecision ρ, exactly as if the bound were a point measurement — but a genuine inequality is a weaker\nclaim than a point value, and a *sequence* of distinct inequality bounds (\"effect ≥ 0.10,\" then later\n\"effect ≥ 0.20,\" then \"effect ≥ 0.30\") is not mathematically identical to three point observations at\nthose values, even though the corrected rule currently treats each accepted one that way. `(μ, τ)`\ncannot represent the exact posterior that sequence of inequalities actually implies. Per this\nproject's \"don't generalize until an experiment demands it\" principle: none of the four validation\ncases, nor the Brief §21/§22 experiments, currently behave incorrectly because of this — so it stays\na documented approximation, not a TODO, until some future experiment's behavior actually depends on\nthe distinction.\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "1ee28b882aaefc5fce3c8a51e44b25472186809d4243bfacfe2b740f9e9bb537",
+      "location": {
+        "startLine": 762,
+        "endLine": 771
+      },
+      "text": "**The fix.** `updateExpectation` (`model/expectation.ts`) now grows τ by the full observation\nprecision ρ only when a censored bound is genuinely informative — its naive candidate strictly moves\npast the current μ in the direction the bound asserts (`lower_bound`: `μ_naive > μ`; `upper_bound`:\n`μ_naive < μ`). Otherwise the bound is uninformative — \"the truth is at least r\" when r is already ≤\nthe current belief proves nothing new — and τ freezes at its merely-decayed τ⁻, gaining zero\nprecision, exactly like μ gaining zero movement. The strict inequality (not `≥`/`≤`) is load-bearing:\na naive candidate landing EXACTLY on the current μ is classified as uninformative too, which is what\nstops a long run of *identical* repeated bounds from being treated as fresh confirming evidence every\nsingle time (see Case D below). Point evidence, and every pre-existing call site, is completely\nunaffected — this touches only the `lower_bound`/`upper_bound` gating logic.\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "d18f396fe39d784ee14de632ea180f79693b54ab8480d138edd9461d25e4960b",
+      "location": {
+        "startLine": 773,
+        "endLine": 773
+      },
+      "text": "**All four validation cases pass, encoded directly as tests** (`test/phase2_5aRepresentation.test.ts`):\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "633807426f470479dd3d6b9be05ade7840f5fb1d26aaa2bcba19c6dfb2170faf",
+      "location": {
+        "startLine": 775,
+        "endLine": 796
+      },
+      "text": "- **Case A (established belief, weak lower bound).** μ=0.40 at high precision (τ=50), then one new\n  observation \"effect ≥ 0.10\" (well below the belief). Result: exactly zero change to both μ and τ —\n  not merely \"not material,\" which is what the original wording asked for; the corrected rule\n  achieves the stronger exact-no-op property.\n- **Case B (belief inconsistent with the bound).** μ=0.05, then \"effect ≥ 0.10\" (above the belief).\n  Result: the model updates — μ rises above 0.05 and τ grows from the decayed prior, exactly as Case\n  B required.\n- **Case C (zero-information saturation).** A Need at its ceiling, Applied=0 exactly (\"effect ≥ 0\" —\n  true of every non-negative belief). Result: exactly zero change in both μ and τ, whether starting\n  from a fresh μ=0 prior or an already-established positive belief — \"essentially no change\" from the\n  original wording is, again, achieved exactly rather than approximately.\n- **Case D (genuine evidence after a long censored history).** Six identical \"effect ≥ 0.10\"\n  observations from a fresh prior, then one genuine unclipped \"effect = 0.42\" point observation.\n  Under the OLD rule (reproduced inline in the test for direct comparison, since the buggy code no\n  longer exists to call), τ grows by ρ on every single repetition regardless of informativeness,\n  reaching 6ρ by the end; under the CORRECTED rule, τ grows once (the first, genuinely informative\n  observation) and then plateaus at exactly 1ρ, because every subsequent identical bound lands\n  exactly on the already-established μ=0.10 and is correctly read as adding nothing. Applying the\n  same genuine 0.42 observation afterward: the corrected trajectory's α (`ρ/(τ+ρ)`) is markedly larger\n  than the buggy trajectory's, and the corrected μ lands measurably closer to the true 0.42 than the\n  buggy one does — precisely the \"accumulated precision must not artificially suppress how much a new\n  genuine observation moves the belief\" property Case D was written to demand.\n",
+      "claim": "CORRECTION2",
+      "disposition": "Strict informative-bound gate handles weak, inconsistent, zero and fresh-prior repeated bounds without new state.",
+      "limits": "Full point-like precision on accepted bound remains approximation. Repeated established below-bound observations can still grow precision; equality/fresh-prior witness not deduplication.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "dbc480774ac93fb4733fae05b82cdf70bd590d10e81b59f57aee93a11e6b70b2",
+      "location": {
+        "startLine": 798,
+        "endLine": 812
+      },
+      "text": "**Real consequences, measured by re-running the exact Brief §21/§22 experiments this entry already\nreported on.** The sweep (`experiments/saturatedSatisfaction.ts`) previously read as \"naive and\ncensored produce bit-for-bit identical output at every level\" — under the corrected rule this is true\neverywhere **except exactly at total saturation** (Level=1.00, Applied=0 exactly): naive's confidence\nstill rises to 0.4000 there (it always uses `'point'` evidence regardless of saturation, so it\ntreats \"effect was exactly 0\" as if it were a genuine measurement), while censored's confidence\ncorrectly stays at 0.0000 — Case C demonstrated live inside the sweep, not just in a unit test. The\ncounterfactual (`experiments/saturationCounterfactual.ts`) shows the larger effect: naive is\nuntouched by this fix (`naiveDivergence` is still exactly **0.2145**, unchanged from the original\nrecording, since 'naive' mode never exercises the corrected gating logic at all), but\n`censoredDivergence` drops from the originally-recorded **0.1780** (~17% smaller than naive) to\n**0.1108** — a **~48% reduction** versus naive, not 17%. Timeline B's censored `finalMu` rises from\nthe original ≈0.2219 to **≈0.2891** against the true ~0.40-0.42 effect — substantially closer, though\nstill an honest undershoot, not a full recovery (see \"what remains open\" below). The corrected rule\ndid not just fix an edge case; it materially changed the phase's own headline result.\n",
+      "claim": "UPDATED-RESULTS",
+      "disposition": "Corrected total-saturation confidence stays0; revised censored divergence0.1108 retained versus original0.1780.",
+      "limits": "Numeric improvement not guaranteed true-efficacy identification or matched timing-only causal effect. Unknown overflow information remains inaccessible.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "0e0f5fb8ac7072241bb17b351d608269f415f64f2524b13f09b1eb8e10162497",
+      "location": {
+        "startLine": 814,
+        "endLine": 825
+      },
+      "text": "**What remains open, stated plainly rather than rounded up.** This correction fixes the\n*uninformative-bound* half of the rule; the *informative-bound* half is unchanged and still credits\nan accepted censored observation with the full ρ, exactly as if it were an ordinary point\nobservation — a deliberate, already-documented simplification relative to a literal truncated-normal\ntreatment (still avoiding the transcendental normal CDF the exact-rational-arithmetic contract\nforbids), not something this correction claims to have solved. And Timeline B's censored estimate\nstill undershoots the true effect: the rule *protects* an established belief from erosion by\nsystematically-clipped evidence and, as of this correction, no longer manufactures false confidence\nfrom that same evidence — but it still cannot *recover* magnitude information that Overflow alone\nwould carry, since Correction point 3 (above) already ruled out using Overflow directly as leaking\nsimulator-omniscient information across the Experience boundary. That retraction still stands; a\ngenuinely magnitude-aware update remains a documented non-goal, not a future TODO.\n",
+      "claim": "UPDATED-RESULTS",
+      "disposition": "Corrected total-saturation confidence stays0; revised censored divergence0.1108 retained versus original0.1780.",
+      "limits": "Numeric improvement not guaranteed true-efficacy identification or matched timing-only causal effect. Unknown overflow information remains inaccessible.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "de2245c0d4ec0c75a4bbd94da7666fd2390dba7dcdbbc9d60d51f6b345e68247",
+      "location": {
+        "startLine": 827,
+        "endLine": 827
+      },
+      "text": "#### Three-part output (Brief §36) for Correction 2\n",
+      "claim": "CORRECTION2-SUMMARY",
+      "disposition": "Named fixtures protect bounded gate regressions and demonstrate an update fix can suffice without extra fields.",
+      "limits": "Compatibility-never-teaches wording only this candidate point gate; not general Bayesian principle.48percent result does not prove minimal sufficient state for all future queries.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "bf9d1b165f0427f55b98022dab65f057e3a0b537d30af53c9e10960acb9c912b",
+      "location": {
+        "startLine": 829,
+        "endLine": 835
+      },
+      "text": "**Psychological finding.** A character reasoning correctly under saturation should grow confident\nonly in proportion to how much a censored observation actually discriminated between competing\nbeliefs — an observation fully compatible with what she already believed, however many times it\nrepeats, teaches her nothing new and must leave her exactly as uncertain as before. The original\nrule's mistake was treating \"I received an observation\" as inherently confidence-building, when the\ncorrect standard is \"I received an observation that could have gone differently and didn't\" —\ncompatibility with an existing belief is not the same thing as evidence for it.\n",
+      "claim": "CORRECTION2-SUMMARY",
+      "disposition": "Named fixtures protect bounded gate regressions and demonstrate an update fix can suffice without extra fields.",
+      "limits": "Compatibility-never-teaches wording only this candidate point gate; not general Bayesian principle.48percent result does not prove minimal sufficient state for all future queries.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "4bfc551ca197363a08b8adc25d11cd618547819d02af4648e4cd2e0f409f61b5",
+      "location": {
+        "startLine": 837,
+        "endLine": 844
+      },
+      "text": "**Computational finding.** The representation `(μ, τ)` was never the bottleneck; the update rule\nattached to it was. This is worth stating as its own finding because the natural assumption, when a\nmodel under-performs, is \"the representation is too poor to express what's needed\" — here, a much\nsmaller, more surgical fix (a strict-inequality informativeness gate on when τ is allowed to grow)\nrecovered most of the missing performance (naive-relative divergence reduction: 17% → 48%) without\nadding a single new field to `NeedExpectation` or a new accumulator type. Reaching for a richer\nrepresentation before checking whether the existing one's update rule was even correctly specified\nwould have been the more complex, and in this case wrong, fix.\n",
+      "claim": "CORRECTION2-SUMMARY",
+      "disposition": "Named fixtures protect bounded gate regressions and demonstrate an update fix can suffice without extra fields.",
+      "limits": "Compatibility-never-teaches wording only this candidate point gate; not general Bayesian principle.48percent result does not prove minimal sufficient state for all future queries.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5b34bc830d1050eb6654698eef7574c706e9ec6a4daced02d7f79fdb7c62f189",
+      "location": {
+        "startLine": 846,
+        "endLine": 854
+      },
+      "text": "**Architectural implication.** Encoding the four validation cases as literal, named tests\n(`phase2_5aRepresentation.test.ts`) — rather than trusting that \"the counterfactual numbers look\nbetter now\" was sufficient evidence — is what makes this correction falsifiable by a future change\nthe same way every other claim in this log is: any future edit to `updateExpectation` that\nregresses Case A, C, or D fails a named test immediately, not just a downstream experiment's\naggregate number. Writing the validation cases down at review time (Correction point 6, months\nbefore this fix) and only then implementing against them is the same \"specify success before\nbuilding\" discipline this project used for Brief §13's six salience scenarios and Brief §14's eight\nsuccess criteria — deferred specification, not skipped specification.\n",
+      "claim": "CORRECTION2-SUMMARY",
+      "disposition": "Named fixtures protect bounded gate regressions and demonstrate an update fix can suffice without extra fields.",
+      "limits": "Compatibility-never-teaches wording only this candidate point gate; not general Bayesian principle.48percent result does not prove minimal sufficient state for all future queries.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+      "sha256": "ed49b68e9dc01817619a0427d75acfc474e86d7c7bf1c4461f2068cb010105af"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md",
+      "sha256": "7807990b30f6f2c6110232b5e0403c5a24e7c462ee81259bfc94589eb100473d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ001_002_CHECKPOINT.md",
+      "sha256": "bd31002df3986af89bc9a996d26b7fcb0114862e559f7414ecef60d59d453638"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md",
+      "sha256": "bc9503f12b52bac74cbbd595623cfd6f4c8dd1c48e7398288dd3b6f3ca085539"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+      "sha256": "4391fcc8f218a4e92a2a68e3daa6f6cfe5ffdbaf5eeb6809a6d0c1b43a8d4462"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+      "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_UNCERTAINTY_QUALIFICATION.md",
+      "sha256": "8b9b54d1a1b4231878f108f9b58f159aaa28f91f1bb1c7f0f1b699131eb950cf"
+    }
+  ],
+  "obligations": [
+    "RO-C3-001",
+    "RO-C3-008",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-011",
+    "RO-C3-012",
+    "RO-C3-013",
+    "RO-C3-014",
+    "RO-C3-015",
+    "RO-C3-016",
+    "RO-C3-017",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "No fresh production simulation, test suite or build. Receipt bindings do not assert current source freshness for every old receipt.",
+    "Eleven reviewed claim groups retain independent public/component, law and historical correction scopes."
+  ],
+  "nextGate": "Reference RESEARCH856 onward: salience, interpretation and consolidation."
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "date": "2026-10-07",
+  "command": "npm run test:reference -- reference/src/test/discreteDistribution.test.ts reference/src/test/phase2_5Saturation.test.ts reference/src/test/phase2_95ReasonConsolidation.test.ts",
+  "files": 3,
+  "tests": 27,
+  "counts": [
+    19,
+    3,
+    5
+  ],
+  "sourceBindings": [
+    {
+      "path": "reference/src/test/discreteDistribution.test.ts",
+      "sha256": "109765b98d6ca933e0f423406a8f7e73d4033dfa4c08e7988482e25828eb753f"
+    },
+    {
+      "path": "reference/src/test/phase2_5Saturation.test.ts",
+      "sha256": "2407b20053e62ccfc8d79bd96d211fd5038e7eafc335a01285e4a1812e28b05b"
+    },
+    {
+      "path": "reference/src/test/phase2_95ReasonConsolidation.test.ts",
+      "sha256": "cd61512ad3e1cdfb357450925b3bcf1e93aa65ac4a3c529617c3dcda45f7b48e"
+    },
+    {
+      "path": "vite.reference.config.ts",
+      "sha256": "af4af2d7d4c1aa30e82c9c6a14e20e11fd0e06206a8a4cc43b2939e2196b100e"
+    }
+  ],
+  "rejectedAttempt": {
+    "stage": "CONFIGURATION LOAD BEFORE TEST EXECUTION",
+    "reason": "Sandbox esbuild directory traversal Access is denied; config could not resolve. No scientific assertion ran.",
+    "disposition": "Same command passed under approved unsandboxed execution."
+  },
+  "limitation": "Focused run only; no fresh whole-reference-suite or Campaign3 matrix claim."
+}

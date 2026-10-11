@@ -1,0 +1,17 @@
+{
+  "status": "CURRENT-SOURCE CLOSURE AND PLAN REPLAY REJECTED BEFORE TRAJECTORY REPLAY",
+  "expectedHistorical": {
+    "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/embodiedRuntime.ts",
+    "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+  },
+  "actualCurrent": {
+    "path": "src/campaign3/embodiedRuntime.ts",
+    "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+  },
+  "rejectedChecker": {
+    "path": "docs/planning/campaign3-history-craving-rev1/rejected-checker.mjs",
+    "sha256": "e3be67b516cfc07ff8ed2629000fd440378ec839c20108ddb6c35d04dbd48e79"
+  },
+  "finding": "Closure rejected the frozen embodiedRuntime hash. Replay rejected complete regenerated plan equality before sources() or component loops. No passing receipt written. Exact historical bytes already preserved by wrapper repair; scope resolution must not relabel current code as old identity.",
+  "resolution": "Validate historical artifact against preservation manifest. Recompute component identities using authenticated historical artifact commitment, then independently require complete current BODY source outputs and all component results to equal original evidence. Report current-source compatibility separately from historical source identity."
+}

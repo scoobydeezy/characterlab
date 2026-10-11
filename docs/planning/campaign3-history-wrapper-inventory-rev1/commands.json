@@ -1,0 +1,20 @@
+{
+  "command": "node scripts/check-history-wrapper-inventory.mjs",
+  "exitCode": 0,
+  "result": "PASS49 historical producers:15 inapplicable/30 guarded/4 repaired;52 original factory routes. Current directory completeness not asserted.",
+  "checker": {
+    "path": "scripts/check-history-wrapper-inventory.mjs",
+    "sha256": "18779dc4d0b132117bd95e0f0016cf0b0ef37425a68d3fd613f1a15074d8b9a6"
+  },
+  "originalCheckers": [
+    {
+      "path": "scripts/check-public-wrapper-inventory.mjs",
+      "sha256": "460ce5130dd81b627b7722249b92d3b843c19c04597dca946c0265ef7c871dc1"
+    },
+    {
+      "path": "scripts/check-public-wrapper-routing.mjs",
+      "sha256": "05fecc08fcfe109b77dfcab6e1d8122807115f21bef3e8392db6a6d3d21ea54e"
+    }
+  ],
+  "scope": "Read-only original-source/probe reconstruction, no fresh boundary execution. Archived graph determines47 native candidates; saved52 factories determine route scope."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Read-only decoding and independent qualification arithmetic of104 historical worker records;52 same cases with distinct successor identities and identical rows/prefixes. No fresh runtime/tests/build.",
+  "workers": 104,
+  "rows": 520,
+  "prefixChecksRepresented": 624,
+  "finalCases": 52,
+  "finalPrefixes": 312,
+  "checker": {
+    "path": "scripts/check-history-identity-eligibility.mjs",
+    "sha256": "2111e219316a83170c498ae7f21e611b51f9ccd728d4bc6ab0043641dfccee94"
+  },
+  "plans": [
+    {
+      "path": "docs/planning/IDENTITY_ELIGIBILITY_PLAN_REV1.json",
+      "sha256": "0ddb98182adf472d36039b0809e5cb943c8fbf8af24d834483019f24f2ecd395"
+    },
+    {
+      "path": "docs/planning/IDENTITY_ELIGIBILITY_PLAN_REV2.json",
+      "sha256": "f89bf037e89a27a91bad8a3a264e3e74e22226036f06f639395e782197866863"
+    }
+  ]
+}

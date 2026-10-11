@@ -1,0 +1,25 @@
+{
+  "status": "PASS HISTORICAL SCOPE",
+  "scope": "Original native disposition result/closure assertions and predecessor closures pass. Wrapper extension receipt, guard/source hashes and historical50-producer53-factory membership checked against independently authenticated predecessor49/52 inventory, routing and repair matrix. Current-directory exhaustiveness is not asserted; no fresh native replay/tests/build.",
+  "models": 9,
+  "runs": 15,
+  "historicalNativePrefixes": 285,
+  "historicalProducers": 50,
+  "historicalFactories": 53,
+  "checker": {
+    "path": "scripts/check-history-disposition-public-closure.mjs",
+    "sha256": "e08b703e19c0784e3e80146fa1fca14499e44b710ce8b043a4b49f3515d7161d"
+  },
+  "originalClosure": {
+    "path": "docs/planning/DISPOSITION_PUBLIC_CLOSURE_REV1.json",
+    "sha256": "6cdd5c787cc0d1758a620af30f616e965a5b1051f3f9924c1bbd5894e9cb0be3"
+  },
+  "historicalInventoryChecker": {
+    "path": "scripts/check-history-wrapper-inventory.mjs",
+    "sha256": "18779dc4d0b132117bd95e0f0016cf0b0ef37425a68d3fd613f1a15074d8b9a6"
+  },
+  "historicalRepairChecker": {
+    "path": "scripts/check-history-wrapper-repair-matrix.mjs",
+    "sha256": "33c019dfebe9ea1c90458c27bfbc19c300cc85176f39d051001c5bcda5576577"
+  }
+}

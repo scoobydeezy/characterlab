@@ -1,0 +1,959 @@
+{
+  "status": "HQ011 DEPENDENCE AND BIOLOGY CLAIMS REVIEWED; WIDER AUDIT OPEN",
+  "source": {
+    "path": "docs/planning/VERDICT_LEDGER.md",
+    "frozenSha256": "cc7407cbd87bfb3ceece985172593ac9c155157a7919eb3f64b1ad410b2968d4"
+  },
+  "rows": [
+    {
+      "occurrenceId": "31a81ccc8e3050de6f34d3a550d7bed89173eeea97c434bf459eeb4b2fdcdf2d",
+      "location": {
+        "startLine": 2136,
+        "endLine": 2136
+      },
+      "text": "## VER-C3-FEAR-GUILT-001 — bounded fear/guilt attribution, 2026-09-24\n",
+      "claim": "FEAR-GUILT",
+      "disposition": "Innocent nervousness can mislead guilt attribution; admitted context revises it.",
+      "limits": "ContextOdds weights are not calibrated causal likelihoods; no enacted response or guilt detection.",
+      "evidence": [
+        "CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "a064019da3bae87c93e371ae3f854975c8acdce79ac8e1ae4c99eed3873875a2",
+      "location": {
+        "startLine": 2138,
+        "endLine": 2148
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under fear-guilt-public/0.1-candidate.\nFive models,19 runs,95 complete prefixes (76 advancing/19 terminal),21 new and328\nreference tests; production build passed. RETAIN private appraisal, produced cue,\nobserver evidence, guilt attribution and goal-relative appraisal separately. Innocent\nnervousness can support a mistaken judgment that revises with admitted context.\nContextOdds/CueOnly/NoLearning and TruthOracle remain distinct; weights are not\ncalibrated causal likelihoods. Whole later observer views preserve hidden truth/cause\nand other-observer noninterference; Oracle violates the boundary. No downstream\naction, moral identity or general guilt-detection claim. See CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md,\nFEAR_GUILT_CLOSURE_REV1.json and FEAR_GUILT_PRESERVATION_REV1.json.\nRO-C3-011/014/019/020 carry all material limits; none closes. Counters1177/0.\n",
+      "claim": "FEAR-GUILT",
+      "disposition": "Innocent nervousness can mislead guilt attribution; admitted context revises it.",
+      "limits": "ContextOdds weights are not calibrated causal likelihoods; no enacted response or guilt detection.",
+      "evidence": [
+        "CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6a4799d17f50c16d0bf2303a22ffb21d44005bdc8fc0c33b389522e1fdd57b00",
+      "location": {
+        "startLine": 2150,
+        "endLine": 2150
+      },
+      "text": "## VER-C3-PERSON-GOAL-001 — bounded person-goal inference, 2026-09-24\n",
+      "claim": "PERSON-GOAL",
+      "disposition": "Route/outcome evidence supports goal inference, including failed attempts; shared routes need not mean shared goals.",
+      "limits": "Fixed catalogue and factors not learned affordances or independent likelihoods; no observer action.",
+      "evidence": [
+        "CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "3f6a17275afbdfa6df0d0a6fa2e8a90ebd2e2c5cb17931399a077ab8c6d6b949",
+      "location": {
+        "startLine": 2152,
+        "endLine": 2164
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under person-goal-public/0.1-candidate.\n5 models/21 runs/126 exact prefixes (105 advancing/21 terminal);24 new+328 reference\ntests and build passed. RETAIN adopted goal, ordinary strategy, attempt, outcome,\nobserver evidence, inferred goal and observer appraisal. A shared route can serve\ndifferent goals; different routes can serve the same goal. Misclassified attempted\nmotion can mislead and later evidence revise inference; failed attempts inform\nRouteAndOutcome while OutcomeOnly stays unknown. NoLearning and GoalOracle remain\nexplicit controls. Full later-view hidden-goal/nonrecipient comparisons pass lawfully\nand fail for Oracle. Catalogue and factor weights are controls, not learned affordances\nor calibrated independent evidence. No Decision, identity reduction or observer action\nclaim. See CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md, PERSON_GOAL_CLOSURE_REV1.json and\nPERSON_GOAL_IMPLEMENTATION_FINDINGS.md. RO-C3-014/019/020 retain all material limits;\nnone closes. Counters1194/0.\n",
+      "claim": "PERSON-GOAL",
+      "disposition": "Route/outcome evidence supports goal inference, including failed attempts; shared routes need not mean shared goals.",
+      "limits": "Fixed catalogue and factors not learned affordances or independent likelihoods; no observer action.",
+      "evidence": [
+        "CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "8a31ecf70a680c7a423fbd880b37498ff40296a777f6390e02475174c98bc892",
+      "location": {
+        "startLine": 2166,
+        "endLine": 2166
+      },
+      "text": "## VER-C3-HEARSAY-001 — bounded hearsay versus direct observation, 2026-09-24\n",
+      "claim": "HEARSAY",
+      "disposition": "Channel-labelled testimony/direct perception remain separate, with visible ticket dedup and valid delayed first receipt.",
+      "limits": "Direct perception can be wrong; no learned trust, independent corroboration, chosen speech or global reputation.",
+      "evidence": [
+        "CAMPAIGN3_HEARSAY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "7eb4008a4a394a3661df11d64209e795dbccf169153a922f5758e8f79d339a40",
+      "location": {
+        "startLine": 2168,
+        "endLine": 2179
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under hearsay-public/0.1-candidate.\n5 models/23 runs/138 exact prefixes (115 advancing/23 terminal);23 new+328 reference\ntests and build passed. RETAIN target conduct, speaker evidence/belief/report, recipient\ntestimony, direct perception and resulting estimate separately. DirectPriority and\nLatestEvidence differ with the same channel-labelled history; direct perception can\nstill be wrong. Visible speaker/ticket duplicates add no second testimony; delayed\nfirst receipt remains valid. NoLearning and TruthOracle remain controls. Whole later\nviews preserve hidden conduct, denied private changes and nonrecipient information;\nOracle violates the boundary. No chosen speech, learned trust, independent corroboration\nor global reputation claim. CAMPAIGN3_HEARSAY_QUALIFICATION.md, HEARSAY_CLOSURE_REV1.json\nand HEARSAY_IMPLEMENTATION_FINDINGS.md preserve evidence/limits. RO-C3-014/019/020;\nnone closes. Counters1206/0.\n",
+      "claim": "HEARSAY",
+      "disposition": "Channel-labelled testimony/direct perception remain separate, with visible ticket dedup and valid delayed first receipt.",
+      "limits": "Direct perception can be wrong; no learned trust, independent corroboration, chosen speech or global reputation.",
+      "evidence": [
+        "CAMPAIGN3_HEARSAY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "cfca40e2a5d563e8f81b6df69a75a9049c18dc510eb23a4401d02c99e781f1d2",
+      "location": {
+        "startLine": 2181,
+        "endLine": 2181
+      },
+      "text": "## VER-C3-REL-DIMENSIONS-001 — bounded relationship dimensions, 2026-09-24\n",
+      "claim": "REL-DIMENSIONS",
+      "disposition": "Independent histories discriminate affection/respect/trust/comfort and prospective response distributions.",
+      "limits": "7/9 versus2/9 are prospective probabilities, not sampled/executed behavior. Initial assumptions preserved; no universal dimension law.",
+      "evidence": [
+        "CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "dbbfdd152fb327fcee53e3e468ff941917f48a3d38db15ae0ab76a56a477a886",
+      "location": {
+        "startLine": 2183,
+        "endLine": 2196
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under rel-dimensions-public/0.1-candidate.\n6 models/23 runs/161 exact prefixes (138 advancing/23 terminal);23 new+328 reference\ntests and build passed. RETAIN dyadic history, person evidence, current context and\nderived relational appraisals. Assistance/competence/commitment/threat sources yield\naffection without respect, respect without affection, and trust without comfort.\nSelective interventions selectively change inherited reason/dice response distributions\n(7/9 versus2/9 at extremes); modifier-disabled control leaves1/2. This is prospective\ndistribution qualification, not sampled or executed behavior. SingleScore/PersonOnly/\nNoRetention/TruthOracle retained. Whole later hidden/denied/nonrecipient privacy passes\nlawfully and fails for Oracle. Initial test assumptions and unchanged production cohort\nare preserved in REL_DIMENSIONS_PRESERVATION_REV1.json. See\nCAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md and REL_DIMENSIONS_CLOSURE_REV1.json.\nRO-C3-014/016/019/020 retain broad derivation/calibration/interaction limits; none closes.\nCounters1220/0.\n",
+      "claim": "REL-DIMENSIONS",
+      "disposition": "Independent histories discriminate affection/respect/trust/comfort and prospective response distributions.",
+      "limits": "7/9 versus2/9 are prospective probabilities, not sampled/executed behavior. Initial assumptions preserved; no universal dimension law.",
+      "evidence": [
+        "CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "c961ad1e4fae6d5d0b894f1fdf558c8a9bc36d799760cf8a6cf91b6d966a5de7",
+      "location": {
+        "startLine": 2198,
+        "endLine": 2198
+      },
+      "text": "## VER-C3-REL-ATTRIBUTION-001 - bounded relationship attribution, 2026-09-24\n",
+      "claim": "REL-ATTRIBUTION",
+      "disposition": "Event-linked false explanation changes caution without erasing harm; current willingness changes a separate probe.",
+      "limits": "Not enacted behavior, verified cause, calibrated blame, forgiveness or relationship repair.",
+      "evidence": [
+        "CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "40bc070939bc21c924089cbfef206c5a75b7e1e863b4216d3f203c2650db7537",
+      "location": {
+        "startLine": 2200,
+        "endLine": 2212
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under rel-attribution-public/0.1-candidate.\n6 models/25 runs/225 exact prefixes (200 advancing/25 terminal);23 new+328 reference\ntests and build passed. RETAIN experienced dyadic harm, event-linked attribution,\ncurrent willingness and current appraisal separately. A later false explanation\nchanges cause/caution and prospective contact while preserving harm and prior\njudgments; willingness-only changes affect a separate cooperation probe.\nAbsent/denied/unlinked/foreign explanations do not correct the original incident.\nInitialCause/CurrentBeliefOnly/NoLearning/TruthOracle remain controls; no state\nreduction. Whole later hidden/denied/nonrecipient views pass lawfully; Oracle fails.\nNo enacted behavior, verified alternative cause, calibrated blame, forgiveness or\nrelationship-repair claim. CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md,\nREL_ATTRIBUTION_CLOSURE_REV1.json and REL_ATTRIBUTION_IMPLEMENTATION_FINDINGS.md\npreserve evidence and limits. RO-C3-014/016/019/020; none closes. Counters1234/0.\n",
+      "claim": "REL-ATTRIBUTION",
+      "disposition": "Event-linked false explanation changes caution without erasing harm; current willingness changes a separate probe.",
+      "limits": "Not enacted behavior, verified cause, calibrated blame, forgiveness or relationship repair.",
+      "evidence": [
+        "CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5b4d24e73814ff3d51ebc647f0ad1f60365c874af4fa282adb751d1737ca4499",
+      "location": {
+        "startLine": 2214,
+        "endLine": 2214
+      },
+      "text": "## VER-C3-RELIANCE-001 - bounded reliance after commitment history, 2026-09-24\n",
+      "claim": "RELIANCE",
+      "disposition": "Commitment history changes estimate and entrust probability; missing opportunity differs from failure and unknown from mixed evidence.",
+      "limits": "Equal distribution is not equal knowledge; no enacted delegation. Timeout/unexecuted plan retained.",
+      "evidence": [
+        "CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5f74b57309d12b468e39931fdc58a1daf8613dd1b2d1de5ecf831350870dec56",
+      "location": {
+        "startLine": 2216,
+        "endLine": 2229
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED. reliance-history-experiment/0.1-candidate\nuses six unchanged rel-dimensions-public/0.1-candidate models:22 public runs,\n176 exact prefixes (154 advancing/22 terminal);7 new+328 reference tests/build.\nNo new allocation, model or production law. Fulfillment then failure changes the\nreliability estimate1 to1/2 and prospective entrust probability7/9 to1/2; reverse\norder converges at equal counts. Missing opportunity is not failure; unknown is\nnot known mixed evidence despite an equal distribution. Own participation and\ntarget keys govern history. SplitLenses separates commitment from task evidence;\nSingleScore/PersonOnly/NoRetention/TruthOracle and modifier-disabled controls remain.\nWhole later privacy passes lawfully and fails for Oracle. No enacted delegation\nor general trust/commitment/repair claim. See CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md,\nRELIANCE_HISTORY_CLOSURE_REV1.json and RELIANCE_HISTORY_IMPLEMENTATION_FINDINGS.md.\nPreserve first timeout/unexecuted plan via RELIANCE_HISTORY_PRESERVATION_REV1.json.\nRO-C3-014/016/019/020; none closes. Counters1234/0.\n",
+      "claim": "RELIANCE",
+      "disposition": "Commitment history changes estimate and entrust probability; missing opportunity differs from failure and unknown from mixed evidence.",
+      "limits": "Equal distribution is not equal knowledge; no enacted delegation. Timeout/unexecuted plan retained.",
+      "evidence": [
+        "CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6738d4df1eebb76c54c54b3c144ea7804241162ff73d9f4c89b3a79a5ea4a168",
+      "location": {
+        "startLine": 2231,
+        "endLine": 2231
+      },
+      "text": "## VER-C3-FAMILIAR-VALENCE-001 - bounded familiarity without liking, 2026-09-25\n",
+      "claim": "FAMILIAR-VALENCE",
+      "disposition": "Matched familiarity with different outcome histories yields different signed appraisal; appearance does not transfer identity/history.",
+      "limits": "Not enacted interaction, general liking or attachment; TruthValence violates epistemic boundary.",
+      "evidence": [
+        "CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "9f9303ae1b16dd5cf8bc9857a01f13d1c412cf324aa17ecdc3dab624c8faaf34",
+      "location": {
+        "startLine": 2233,
+        "endLine": 2245
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under familiar-valence-public/0.1-candidate.\n7 models/27 runs/216 exact prefixes (189 advancing/27 terminal);23 new+328 reference\ntests/build. RETAIN appearance memory, identity channel, own outcome history and\nsigned appraisal separately. Neutral, positive and adverse histories preserve\nmatched familiarity while contact distributions differ1/2,7/9,2/9. Appearance\nchanges preserve outcome appraisal; cross-target familiar appearance transfers\nneither identity nor interaction history. FamiliarityAsLiking loses adverse appraisal;\nValenceOnly/NoMemory/ExactOnly/TruthValence and modifier-disabled controls remain.\nWhole later hidden/denied/nonrecipient views pass lawfully; Oracle fails.\nNo instance-recognition, general liking law, enacted interaction or attachment claim.\nCAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md and FAMILIAR_VALENCE_CLOSURE_REV1.json\nbind evidence. Preserve FAMILIAR_VALENCE_IMPLEMENTATION_FINDINGS.md and prior cohorts.\nRO-C3-007/016/017/019/020; none closes. Counters1249/0.\n",
+      "claim": "FAMILIAR-VALENCE",
+      "disposition": "Matched familiarity with different outcome histories yields different signed appraisal; appearance does not transfer identity/history.",
+      "limits": "Not enacted interaction, general liking or attachment; TruthValence violates epistemic boundary.",
+      "evidence": [
+        "CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5b0cc0b4549d283696686cb22ee426c998258e4ac988a6f63375c9c3feb95aba",
+      "location": {
+        "startLine": 2247,
+        "endLine": 2247
+      },
+      "text": "## VER-C3-ATTACHMENT-001 - bounded perceived-dependence attachment, 2026-09-25\n",
+      "claim": "ATTACHMENT",
+      "disposition": "Meaningful dependence supports reconnection response despite adequate alternatives or absent current demand.",
+      "limits": "Mean contradiction resistance retained; not authored attachment meter, enacted search, physiological distress or universal counting law.",
+      "evidence": [
+        "CAMPAIGN3_ATTACHMENT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "8a7639b36512817c79882a38bc186bbea6c13653bc0424df0d7b1229bb07cbb6",
+      "location": {
+        "startLine": 2249,
+        "endLine": 2261
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under attachment-public/0.1-candidate.\n6 models/25 runs/200 exact prefixes (175 advancing/25 terminal);23 new+328 reference\ntests/build. RETAIN perceived meaningful-dependence history, expected relief,\ncurrent practical demand/alternatives, target presence and missing-contact appraisal.\nRepeated history supports a prospective reconnection-information response despite\nan adequate alternative or no current demand. PositiveHistory and CurrentUtilityOnly\nlose different required distinctions; NoHistory/TruthOracle/modifier disabling remain.\nMEC-001/EXP-001 mean-learning contradiction resistance is preserved, not replaced\nby an authored attachment meter. No universal counting law, actual caregiving,\nphysiological distress, grief or enacted search claim. Whole later privacy passes\nlawfully and fails for Oracle. CAMPAIGN3_ATTACHMENT_QUALIFICATION.md,\nATTACHMENT_CLOSURE_REV1.json and ATTACHMENT_IMPLEMENTATION_FINDINGS.md bind limits.\nRO-C3-010/011/016/019/020; none closes. Counters1263/0.\n",
+      "claim": "ATTACHMENT",
+      "disposition": "Meaningful dependence supports reconnection response despite adequate alternatives or absent current demand.",
+      "limits": "Mean contradiction resistance retained; not authored attachment meter, enacted search, physiological distress or universal counting law.",
+      "evidence": [
+        "CAMPAIGN3_ATTACHMENT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "9dc700c09c13fed9bbc2f182471327d41421d38708cf0606ca8a2ded073bf418",
+      "location": {
+        "startLine": 2263,
+        "endLine": 2263
+      },
+      "text": "## VER-C3-BETRAYAL-001 - bounded betrayal versus failed commitment, 2026-09-25\n",
+      "claim": "BETRAYAL",
+      "disposition": "Prior promise, experienced failure and incident intent/control differ from present willingness.",
+      "limits": "Late/simultaneous promise cannot become prior commitment; corrected prospective modifier is not repair or restored cooperation.",
+      "evidence": [
+        "CAMPAIGN3_BETRAYAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "ed1100b3e2f3037a2d8da769547b23da571d660cc357ff4512084efe8a70a749",
+      "location": {
+        "startLine": 2265,
+        "endLine": 2279
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under betrayal-public/0.1-candidate.\n6 models/32 runs/288 exact prefixes (256 advancing/32 terminal);27 new+328 reference\ntests/build. RETAIN prior observer-admitted promise, experienced failure, incident\nintent/control, present willingness and current appraisal separately. Missing,\nsimultaneous or late promise cannot fabricate prior commitment. Same failure with\nchanged admitted intent/control changes appraisal; false explanation can mislead.\nOutcomeOnly/CurrentPersonBeliefOnly preserve journals but lose distinct contrasts;\nNoLearning/TruthOracle/modifier-disabled controls remain. Correction removes a\nprospective information-seeking modifier without repairing history or restoring\ncooperation. Whole later privacy passes lawfully, fails for Oracle. No general\nmoral/blame law, natural recognition, verified explanation or enacted response.\nCAMPAIGN3_BETRAYAL_QUALIFICATION.md and BETRAYAL_CLOSURE_REV1.json bind evidence.\nBETRAYAL_IMPLEMENTATION_FINDINGS.md and preservation inventory retain first build\nfailure, type-only correction and scope limits. RO010/011/014/016/019/020;\nnone closes, no reduction or owner ruling. Counters1277/0.\n",
+      "claim": "BETRAYAL",
+      "disposition": "Prior promise, experienced failure and incident intent/control differ from present willingness.",
+      "limits": "Late/simultaneous promise cannot become prior commitment; corrected prospective modifier is not repair or restored cooperation.",
+      "evidence": [
+        "CAMPAIGN3_BETRAYAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "70b4ecf7089cd7b4e0fdcaf34be9a59511d01d66453f6816d34702a379b24131",
+      "location": {
+        "startLine": 2281,
+        "endLine": 2281
+      },
+      "text": "## VER-C3-GRIEF-001 - bounded grief after believed loss, 2026-09-25\n",
+      "claim": "GRIEF",
+      "disposition": "Believed future-contact loss changes appraisal at matched absence/history; substitute need not erase loss.",
+      "limits": "Missing report not known uncertainty/no contact; no clinical course, physical death or enacted mourning.",
+      "evidence": [
+        "CAMPAIGN3_GRIEF_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "53bffd77eaa7174647b3e6384cf778d3b9cee05e37e1d92ecb331ee1f56655b2",
+      "location": {
+        "startLine": 2283,
+        "endLine": 2297
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under grief-public/0.1-candidate.\n7 models/31 runs/279 exact prefixes (248 advancing/31 terminal);27 new+328 reference\ntests/build. RETAIN acquired dependence history, current absence, future-contact\nbelief, practical utility and loss/reunion appraisal coordinates separately.\nMatched absence/history with temporary, uncertain or enduring-loss reports changes\nprospective keepsake/reunion-information responses. An adequate substitute does not\nerase loss; false reports/corrections remain possible under fixed truth. Missing\nreport is not known uncertainty or no future contact. History and past judgments\nare immutable. TemporaryAbsenceOnly/CurrentUtilityOnly preserve journals but lose\ndifferent comparisons; NoHistory/NoReturnInference/TruthOracle/modifier controls\nremain. Whole later privacy passes lawfully and fails for Oracle. No general grief\nlaw, clinical time course, physical death model or enacted mourning/search.\nCAMPAIGN3_GRIEF_QUALIFICATION.md and GRIEF_CLOSURE_REV1.json bind evidence;\nGRIEF_IMPLEMENTATION_FINDINGS.md and preservation inventory retain source limits.\nRO010/011/016/019/020; none closes. No reduction or owner ruling. Counters1291/0.\n",
+      "claim": "GRIEF",
+      "disposition": "Believed future-contact loss changes appraisal at matched absence/history; substitute need not erase loss.",
+      "limits": "Missing report not known uncertainty/no contact; no clinical course, physical death or enacted mourning.",
+      "evidence": [
+        "CAMPAIGN3_GRIEF_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "f3ed8e217707da8067674dd38344c3cce29fe1419ec13fe30b100c2296c9f19a",
+      "location": {
+        "startLine": 2299,
+        "endLine": 2299
+      },
+      "text": "## VER-C3-PERFORMANCE-001 - bounded performance monitoring, 2026-09-25\n",
+      "claim": "PERFORMANCE",
+      "disposition": "Repeated admitted failure changes later plan and actual attempt; false feedback can prompt switch after success.",
+      "limits": "Blocker-removal confounds improvement; no proved superior alternative, causal diagnosis or universal threshold.",
+      "evidence": [
+        "CAMPAIGN3_PERFORMANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "05c4a694ac9c5c63bf276364b8869c57efac7bf392196a71ae16492b8991e7b6",
+      "location": {
+        "startLine": 2301,
+        "endLine": 2312
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under performance-public/0.1-candidate.\n4 models/22 runs/198 exact prefixes (176 advancing/22 terminal);19 new+328 reference\ntests/build. RETAIN goal, route visit, attempt/execution, admitted performance and\nmonitoring diagnostic separately. At fixed goal/availability, two admitted failures\nchange the later ordinary plan and actual route attempt. Single/transient failure,\nmissing feedback and fresh-visit controls discriminate. OutcomeBlind/AnyFailure/\nTruthOracle remain explicit. False feedback can prompt a switch after real success;\nwhole later hidden/denied views pass lawfully and fail for Oracle. No alternative\nsuperiority, causal diagnosis, new Decision law or universal threshold claim.\nCAMPAIGN3_PERFORMANCE_QUALIFICATION.md and PERFORMANCE_CLOSURE_REV1.json bind evidence;\nPERFORMANCE_IMPLEMENTATION_FINDINGS.md preserves the blocker-removal confound for\nany improvement claim. RO010/012/013/019/020; none closes. Counters1310/0.\n",
+      "claim": "PERFORMANCE",
+      "disposition": "Repeated admitted failure changes later plan and actual attempt; false feedback can prompt switch after success.",
+      "limits": "Blocker-removal confounds improvement; no proved superior alternative, causal diagnosis or universal threshold.",
+      "evidence": [
+        "CAMPAIGN3_PERFORMANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "44468fbe0ab9e52aaf9a3fa6ceaf2e0bb14c861d609010631c64812cbf44f2d4",
+      "location": {
+        "startLine": 2314,
+        "endLine": 2314
+      },
+      "text": "## VER-C3-RUMINATION-001 - bounded recurrent concern, 2026-09-25\n",
+      "claim": "RUMINATION",
+      "disposition": "Recurrent access occupies workspace and changes control without new evidence; interruption/rebound/resolution preserve history.",
+      "limits": "22 distinct runs/198 prefixes versus23 executions/207 checks due to duplicate, not extra coverage. No clinical recurrence or chosen regulation.",
+      "evidence": [
+        "CAMPAIGN3_RUMINATION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "e01289aef3c3fc020371f92071cdec679e59b3fdcd681b1f5b96b7ad19ef084d",
+      "location": {
+        "startLine": 2316,
+        "endLine": 2328
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under rumination-public/0.1-candidate.\n4 models/22 distinct runs/198 distinct prefixes;23 executions/207 replay checks\ninclude one preserved duplicate case, not extra coverage.25 new+328 reference tests/build.\nRETAIN original evidence, retained concern, recurrent access, workspace occupancy,\ncontrol opportunity and actual behavior. Repeated access changes inhibition without\nnew evidence; interruption/rebound and admitted resolution preserve history.\nNoRecurrence, StaticLoad, Alternating and external-card controls remain. Whole later\nhidden/denied/nonrecipient views and all-prefix restores pass. No general recurrence,\nfatigue, clinical law, natural concern source or self-chosen regulation claim.\nCAMPAIGN3_RUMINATION_QUALIFICATION.md / RUMINATION_CLOSURE_REV1.json bind evidence;\nRUMINATION_IMPLEMENTATION_FINDINGS.md and RUMINATION_DUPLICATE_CASE_FINDING_REV1.json\npreserve limits and accounting flaw. RO010/011/012/017/019/020; none closes.\nCounters1331/0. No reduction or owner ruling.\n",
+      "claim": "RUMINATION",
+      "disposition": "Recurrent access occupies workspace and changes control without new evidence; interruption/rebound/resolution preserve history.",
+      "limits": "22 distinct runs/198 prefixes versus23 executions/207 checks due to duplicate, not extra coverage. No clinical recurrence or chosen regulation.",
+      "evidence": [
+        "CAMPAIGN3_RUMINATION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "292346b7fb8fe4b09a2db131f1eefb9e751b925d873205c58b1a7e3b5ed9ea11",
+      "location": {
+        "startLine": 2330,
+        "endLine": 2330
+      },
+      "text": "## VER-C3-FATIGUE-001 - bounded experienced fatigue, 2026-09-25\n",
+      "claim": "FATIGUE",
+      "disposition": "Experienced condition impairs inhibition separately from motor failure; missing evidence persists until admitted rest.",
+      "limits": "Unknown not rested; no endogenous accumulation or universal resource law.",
+      "evidence": [
+        "CAMPAIGN3_FATIGUE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "ab75e120776ab294dcabd472b7c56c96f0f81662500e8f5f6b5e56a26d8621d3",
+      "location": {
+        "startLine": 2332,
+        "endLine": 2343
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under fatigue-public/0.1-candidate.\n4 models/20 distinct runs/180 exact prefixes (160 advancing/20 terminal);\n25 new+328 reference tests/build. RETAIN physical condition, sensor evidence,\nretained experience, workload, control effectiveness and motor execution separately.\nSevere experienced fatigue impairs actual inhibition with fixed goal/habit/load;\nmissing feedback persists and admitted rest releases next40. Unknown differs from\nrested. NoFatigue/MotorOnly/AnyFatigue remain. Motor challenge preserves prior intent\nwhile physical execution fails. False/hidden/denied whole later views and all-prefix\nrestores pass. No endogenous accumulation, clinical or universal resource law.\nCAMPAIGN3_FATIGUE_QUALIFICATION.md / FATIGUE_CLOSURE_REV1.json bind evidence;\nFATIGUE_IMPLEMENTATION_FINDINGS.md preserves source and motor/control limits.\nRO008/011/012/013/019/020; none closes. Counters1352/0; no owner ruling or reduction.\n",
+      "claim": "FATIGUE",
+      "disposition": "Experienced condition impairs inhibition separately from motor failure; missing evidence persists until admitted rest.",
+      "limits": "Unknown not rested; no endogenous accumulation or universal resource law.",
+      "evidence": [
+        "CAMPAIGN3_FATIGUE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "91ac8962fb27700bd838a535d620014875d045c9aa23f3e12f62dbe93354f60a",
+      "location": {
+        "startLine": 2345,
+        "endLine": 2345
+      },
+      "text": "## VER-C3-PROCRASTINATION-001 - bounded retained-goal postponement, 2026-09-25\n",
+      "claim": "PROCRASTINATION",
+      "disposition": "Positive work reason survives actual defer choice; access, feasibility, immediate motive and lifecycle remain distinct.",
+      "limits": "Available later does not establish sufficient completion capacity. Original0.1 missed late adoption;0.2 rejects at/after deadline.",
+      "evidence": [
+        "CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6d6067fe72f5d02ff94f4921e594ceb854df5de0cf99b8a012bb2243e50e63a7",
+      "location": {
+        "startLine": 2347,
+        "endLine": 2359
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under procrastination-public/0.2-candidate.\n4 models/20 distinct runs/180 exact prefixes;26 new+328 reference tests/build.\nRETAIN active goal, maintained access, current feasibility, future expectation,\nindependent immediate motive, exact reasons/dice and actual choice/execution.\nA positive work reason survives actual defer choices; missing access and inability\nare separate controls. NoTemporalBias/PresentFocused/NoImmediateMotive remain.\nProgress, fulfillment, cancellation and deadline failure are distinct. Whole later\nhidden/denied views and all-prefix replay pass. No universal temporal valuation,\nclinical or optimal scheduling claim. Available later is not sufficient completion\ncapacity. Preserve original0.1 cohort and PROCRASTINATION_ADOPTION_FAILURE_REV1.json:\nfirst tests missed late adoption; corrected0.2 rejects adoption at/after deadline.\nCAMPAIGN3_PROCRASTINATION_QUALIFICATION.md / PROCRASTINATION_CLOSURE_REV1.json bind\nthe evidence. RO010/012/014/019/020; none closes. Counters1376/0; no owner ruling.\n",
+      "claim": "PROCRASTINATION",
+      "disposition": "Positive work reason survives actual defer choice; access, feasibility, immediate motive and lifecycle remain distinct.",
+      "limits": "Available later does not establish sufficient completion capacity. Original0.1 missed late adoption;0.2 rejects at/after deadline.",
+      "evidence": [
+        "CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "4db8492950cf2525025d975274460250665d753970d07ad2844b06ff991c092f",
+      "location": {
+        "startLine": 2361,
+        "endLine": 2361
+      },
+      "text": "## VER-C3-DELAYED-001 - bounded delayed gratification, 2026-09-25\n",
+      "claim": "DELAYED",
+      "disposition": "Actual wait/choice, physical promise delivery and learned receipt differ; three discount candidates retained.",
+      "limits": "Not calibrated discount/trust/cross-benefit exchange or later adaptive choice; rejected schema preserved.",
+      "evidence": [
+        "CAMPAIGN3_DELAYED_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5ca477402d5fde4acc2a5a5287cb70d5fecae51c6c39df6872ecda3fcc44561c",
+      "location": {
+        "startLine": 2363,
+        "endLine": 2374
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED under delayed-public/0.1-candidate.\n3 models/26 distinct runs/234 exact prefixes;27 new+328 reference tests/build.\nRETAIN admitted offer, anticipation, actual choice/wait, physical delivery and\nlearned receipt. Hyperbolic/NoDiscount/Exponential remain candidates; exact reason\ndice mediate actual now/later choice for the same benefit task. Failed promise and\nmissing/false/late receipts preserve earlier expression. Duplicate receipt does not\nadd evidence; hidden/denied whole safe views and all-prefix replay pass.\nNo calibrated discount curve, trust learning, cross-benefit exchange rate, optimal\npatience or later adaptive-choice claim. Preserve DELAYED_SCHEMA_REJECTED_REV1.json\nand DELAYED_IMPLEMENTATION_FINDINGS.md. CAMPAIGN3_DELAYED_QUALIFICATION.md /\nDELAYED_CLOSURE_REV1.json bind evidence. RO010/012/014/019/020 retained; none closes.\nCounters1400/0; no owner ruling or reduction.\n",
+      "claim": "DELAYED",
+      "disposition": "Actual wait/choice, physical promise delivery and learned receipt differ; three discount candidates retained.",
+      "limits": "Not calibrated discount/trust/cross-benefit exchange or later adaptive choice; rejected schema preserved.",
+      "evidence": [
+        "CAMPAIGN3_DELAYED_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "3ab4fb153928a60bd74e9031b6fc972047883e709a3016388256d865d9f09c88",
+      "location": {
+        "startLine": 2376,
+        "endLine": 2376
+      },
+      "text": "## VER-C3-INTENTION-001 - bounded intention forgetting, 2026-09-26\n",
+      "claim": "INTENTION",
+      "disposition": "Reminder recovers surviving action content, not removed content; adopted goal/access/opportunity differ.",
+      "limits": "Component only, no public save API; failed zero-score recall assertion and identity successor preserve original behavior.",
+      "evidence": [
+        "CAMPAIGN3_INTENTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "11554d53c539973c10ac3bcdf6d05e9c7a90ff232bc440a4a4cf28be46bcd3cb",
+      "location": {
+        "startLine": 2378,
+        "endLine": 2387
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, intention-forgetting-component/0.1-candidate.\nComposed component scope:3 models/54 runs/486 component prefixes;15+328 tests/build.\nRETAIN adopted goal, prospective action content, access, cue, opportunity and execution.\nReminder recovers surviving instruction for actual action, but not removed content.\nNoLoss/PersistentAccess remain. Cancellation/expiry and hidden physical failure remain\nseparate. Preserve zero-score recall test failure and superseded identity cohort;\nREV2 binds exact content and reproduces every prior behavior hash. No public scheduler/\nsave API or universal forgetting law. CAMPAIGN3_INTENTION_QUALIFICATION.md /\nINTENTION_CLOSURE_REV1.json. RO005/006/007/012/014/019/020 remain; none closes.\nCounters1400/0; no new allocation, reduction or owner ruling.\n",
+      "claim": "INTENTION",
+      "disposition": "Reminder recovers surviving action content, not removed content; adopted goal/access/opportunity differ.",
+      "limits": "Component only, no public save API; failed zero-score recall assertion and identity successor preserve original behavior.",
+      "evidence": [
+        "CAMPAIGN3_INTENTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "e3a8e88ad801da8a31efbb314689d14e724fc36eac1383662e0c7cc35aba1af4",
+      "location": {
+        "startLine": 2389,
+        "endLine": 2389
+      },
+      "text": "## VER-C3-TEMPORAL-001 - independent temporal goal conflict, 2026-09-26\n",
+      "claim": "TEMPORAL",
+      "disposition": "Losing goal survives contested choice for later pursuit; cancellation/expiry selective.",
+      "limits": "NoTemporalBias shares primary choices despite probability change; two faulty lifecycle comparators coincide, not unique diagnosis. Component only.",
+      "evidence": [
+        "CAMPAIGN3_TEMPORAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "2f4ed45f9456891010e8eecf1902565c7b48f790c6c23f69084ac0448e3f7f35",
+      "location": {
+        "startLine": 2391,
+        "endLine": 2402
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, temporal-goal-conflict-component/0.1-candidate.\n4 models/27 runs/243 exact component saves,216 advancing/27 terminal;16+328 tests/build.\nRETAIN independent adoption, reasons, horizon, progress and lifecycle. A genuine\ncontested choice preserves the losing goal for later actual pursuit; selective\ncancellation/expiry removes only its own pressure. Full inherited arbitration and\nfrozen expression execute; physical and perceived progress remain distinct.\nNoTemporalBias changes distributions but shares the primary choice sequence.\nDropLoser/SharedRetirement fail the baseline witness and coincide in that primary case;\nno unique diagnosis or general lifecycle reduction follows. Hidden/denied whole views,\ntransaction rollback and prefix continuation pass. CAMPAIGN3_TEMPORAL_QUALIFICATION.md /\nTEMPORAL_CLOSURE_REV1.json bind evidence. RO001/010/012/014/019/020 remain; none closes.\nCounters1400/0; no allocation, public scheduler admission or owner ruling.\n",
+      "claim": "TEMPORAL",
+      "disposition": "Losing goal survives contested choice for later pursuit; cancellation/expiry selective.",
+      "limits": "NoTemporalBias shares primary choices despite probability change; two faulty lifecycle comparators coincide, not unique diagnosis. Component only.",
+      "evidence": [
+        "CAMPAIGN3_TEMPORAL_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "be816213af84c72a35877a2e05e0dc3d96a104860a84cc448c7b134d53df2568",
+      "location": {
+        "startLine": 2404,
+        "endLine": 2404
+      },
+      "text": "## VER-C3-HABIT-RESIST-001 - habit resistance reconciliation, 2026-09-26\n",
+      "claim": "HABIT-RESIST",
+      "disposition": "Existing frozen CONTROL runs support habit resistance clause without new behavior/model.",
+      "limits": "Separate FATIGUE qualification is not joint model or universal control. Stale family omission corrected only for named clause.",
+      "evidence": [
+        "CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6310372573fcf6ec9660d141e98aac3f51fd3cfcfb78bcf351039ffe40953d15",
+      "location": {
+        "startLine": 2406,
+        "endLine": 2417
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, Brief12.9 clause3 under existing\ncontrol-public/0.2-candidate.7 existing models/17 replayed runs/142 exact prefixes\n(125 advancing/17 terminal), all frozen result hashes unchanged. No new model/run.\nRETAIN acquired history, cue, maintained goal, inhibitory operation and execution.\nActual idle under control, target under load and target after goal retirement occur\nin one public run without post-training history change. NoInhibition/LoadBlind/\nRetainedEqualsMaintained/EraseHistory/NoHistory and Residual/Linear remain.\nFATIGUE's frozen closure separately preserves impairment versus motor failure;\nno new combined model or universal control law. The stale family coverage omission\nis corrected; only clause3 advances. CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md and\nHABIT_RESISTANCE_CLOSURE_REV1.json bind evidence. RO012/015/019/020 remain; none closes.\nCounters1400/0; no new allocation, production code, reduction or owner ruling.\n",
+      "claim": "HABIT-RESIST",
+      "disposition": "Existing frozen CONTROL runs support habit resistance clause without new behavior/model.",
+      "limits": "Separate FATIGUE qualification is not joint model or universal control. Stale family omission corrected only for named clause.",
+      "evidence": [
+        "CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "94bdbff1727adf6ab2977340f45895e908e3f173494e57142bf968882726ba28",
+      "location": {
+        "startLine": 2419,
+        "endLine": 2419
+      },
+      "text": "## VER-C3-HABIT-ACQUIRE-001 - habit acquisition reconciliation, 2026-09-26\n",
+      "claim": "HABIT-ACQUIRE",
+      "disposition": "Admitted practice supports actual later free cue response after expectation correction.",
+      "limits": "Initial wrapper assumed nonexistent RunIdentity field; correction does not alter old commitments. Not automaticity/addiction/history reduction.",
+      "evidence": [
+        "CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "07c1846cfb70a4373bc1f90d656beed15a745d8bebedf96648161998d88ebff0",
+      "location": {
+        "startLine": 2421,
+        "endLine": 2434
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, Brief12.9 clause1 under habit-public/0.1-candidate.\n12 existing models/23 replayed runs/291 exact prefixes (268 advancing/23 terminal);\nall original result rows unchanged. No new model/run/production code or allocation.\nThree admitted successful practices from empty history support a later actual free\nresponse after reward-expectation correction; unobserved/unrewarded/other-cue controls\ndo not. False positive reports match safe behavior despite physical nonreward.\nRETAIN acquired history versus expectation versus cue availability versus execution.\nResidual/Linear/NoHistory, derived/cache and belief/truth diagnostics remain.\nPreserve HABIT_ACQUISITION_AUDIT_FINDING_REV1.json: the first wrapper expected a\nnonexistent legacy RunIdentity field; corrected replay preserves original commitments\nand compares exact result/prefix hashes. No production/behavioral failure inferred.\nCAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md / HABIT_ACQUISITION_CLOSURE_REV1.json.\nRO012/015/019/020 remain; no automaticity, addiction or general memory reduction.\nCounters1400/0; no owner ruling. Next DEPENDENCE_SUBSTITUTES_READINESS.md.\n",
+      "claim": "HABIT-ACQUIRE",
+      "disposition": "Admitted practice supports actual later free cue response after expectation correction.",
+      "limits": "Initial wrapper assumed nonexistent RunIdentity field; correction does not alter old commitments. Not automaticity/addiction/history reduction.",
+      "evidence": [
+        "CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "bc78a4f953bf70a0cdfafe795fb404c8e5eadb5010d7ba1194b4699525db941a",
+      "location": {
+        "startLine": 2436,
+        "endLine": 2436
+      },
+      "text": "## VER-C3-SUBSTITUTION-001 - concentrated reliance and substitutes, 2026-09-26\n",
+      "claim": "SUBSTITUTION",
+      "disposition": "Diversified training or information supports actual alternative relief after loss of A.",
+      "limits": "ExpectationOnly also explains primary witness; history not necessary there. NoActiveReasons at zero estimates gives no action. Both failed cohorts retained.",
+      "evidence": [
+        "CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "addeba277af69d339978d025c6dfae4cdd3cd9eab6022d72289aed44503bb472",
+      "location": {
+        "startLine": 2438,
+        "endLine": 2454
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, dependence-substitutes-component/0.2-candidate.\nBrief12.9 clauses4/5:5 models/29 runs/261 exact component prefixes (232 advancing/\n29 terminal);15 scoped/328 reference tests and production build pass. Same total\nsuccessful training concentrates on A or diversifies A/B. Removing A strands the\nconcentrated learner while the diversified learner actually uses B and receives relief.\nInformation alone can establish a substitute. ExpectationOnly explains the primary\ncontrast too; acquired history is not necessary for that witness. HistoryOnly misses\nthe informational route; MeanHistory/LatestHistory retain different correction laws.\nRETAIN learned relief, acquired cue history, current demand/availability, actual\nchoice/delivery and safe feedback. Matched zero estimates retain different candidate\nsets but NoActiveReasons yields no action: no downstream necessity claim or replacement\nof HABIT neutral-choice control. Preserve both failed development cohorts (assumed\nchosen idle; excessive three-option domain). Corrected0.2 freezes before experiment;\nno old kernel/codec changes. CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md and\nSUBSTITUTION_CLOSURE_REV1.json bind evidence. RO008/010/012/015/019/020 remain.\nCounters1400/0; no allocation, public scheduler admission, reduction or owner ruling.\nNo withdrawal/craving/tolerance/escalation/addiction claim. Next reinforcement intake.\n",
+      "claim": "SUBSTITUTION",
+      "disposition": "Diversified training or information supports actual alternative relief after loss of A.",
+      "limits": "ExpectationOnly also explains primary witness; history not necessary there. NoActiveReasons at zero estimates gives no action. Both failed cohorts retained.",
+      "evidence": [
+        "CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "f61bc8aefe145bc128ade0f756d39c8843add677835bf03ff5a9dc3ff87132ce",
+      "location": {
+        "startLine": 2456,
+        "endLine": 2456
+      },
+      "text": "## VER-C3-REINFORCEMENT-001 - experienced reinforcement feedback, 2026-09-26\n",
+      "claim": "REINFORCEMENT",
+      "disposition": "Admitted chosen outcomes change belief, later reasons and later action; withholding receipt breaks learning despite delivery.",
+      "limits": "Six sequence divergences/two equal; no monotonic repetition or objective reward escalation. LatestHistory serious; no new habit die.",
+      "evidence": [
+        "CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "dcd3e77249a388b4a0c1eb7804fdf00234842fc943c2da5181b9da57b9c6508f",
+      "location": {
+        "startLine": 2458,
+        "endLine": 2473
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, reinforcement-feedback-experiment/0.1-candidate.\nBrief12.9 clause6:5 reused models/31 runs/279 exact component prefixes (248 advancing/\n31 terminal);8 new/328 reference tests and build pass. No new production law/model.\nActual chosen success gates admitted learning, raises mean expectation and later reason\nprobability, then changes later action and its future evidence. Matched withheld\nreceipts retain physical delivery and break the learning route. All seeds0..7 retained:\nsix later sequence divergences, two equal sequences; some changed sequences have equal\naggregate counts. No universal monotonic repetition or increasing objective reward.\nLatestHistory reaches1 after practice and remains a serious nonaccumulating comparator.\nNoLearning, missing practice/demand/access and failure feedback preserve mechanism\nboundaries. Whole safe false/denied pairs and exact RNG prefix continuations pass.\nREINFORCEMENT_FINDINGS.md / CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md /\nREINFORCEMENT_CLOSURE_REV1.json bind the evidence. BIO identity feedback and HABIT\nneutral-choice policy remain distinct; no new habit-strength die. RO008/009/010/015/\n019/020 remain; none closes.1400/0, no allocation/public admission/owner ruling.\nNext TOLERANCE_READINESS.md; no tolerance, craving, withdrawal or general addiction claim.\n",
+      "claim": "REINFORCEMENT",
+      "disposition": "Admitted chosen outcomes change belief, later reasons and later action; withholding receipt breaks learning despite delivery.",
+      "limits": "Six sequence divergences/two equal; no monotonic repetition or objective reward escalation. LatestHistory serious; no new habit die.",
+      "evidence": [
+        "CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "e01c778481d2485750525e2aba05a6a327f68149aceceb1cb7ed7ffc5ca0b34a",
+      "location": {
+        "startLine": 2475,
+        "endLine": 2475
+      },
+      "text": "## VER-C3-TOLERANCE-001 - physical effect attenuation, 2026-09-26\n",
+      "claim": "TOLERANCE",
+      "disposition": "Exposure changes tolerance and equal later stimulus has attenuated physical potential effect.",
+      "limits": "Prior R0+D was not effect consumer. World component, not perceived tolerance/recovery/public integration or universal law.",
+      "evidence": [
+        "CAMPAIGN3_TOLERANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "39fff8bbae364f1ff54026dee667a20135b64d71939069952c4b1774b7376093",
+      "location": {
+        "startLine": 2477,
+        "endLine": 2489
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, tolerance-effect-component/0.1-candidate.\nBrief12.9 clause7:3 component models/18 runs/90 prefix comparisons (72 advancing/\n18 terminal), reusing four public ADAPT input/state conditions.4 scoped/328 reference\ntests and build pass. Repeated actual exposure changes tolerance; equal later stimulus\nhas lower potential effect under Reciprocal and Linear. Unattenuated preserves the\nstate update but removes its effect. Naive/spaced/key/other-leaf/saturation controls\nseparate exposure, tolerance, efficacy and current reserve. No unique universal law.\nTOLERANCE_FINDINGS.md preserves the prior gap: R0+D probe was not a tolerance consumer.\nCAMPAIGN3_TOLERANCE_QUALIFICATION.md / TOLERANCE_CLOSURE_REV1.json bind evidence.\nWorld-only component challenge, no new public transition or character truth read.\nNo recovery, perceived tolerance, compensation or addiction claim. RO008/010/015/019/\n020 remain;021 historical gate unsatisfied.1400/0, no allocation or owner ruling.\nNext ABSENCE_DEFICIT_READINESS.md.\n",
+      "claim": "TOLERANCE",
+      "disposition": "Exposure changes tolerance and equal later stimulus has attenuated physical potential effect.",
+      "limits": "Prior R0+D was not effect consumer. World component, not perceived tolerance/recovery/public integration or universal law.",
+      "evidence": [
+        "CAMPAIGN3_TOLERANCE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "7ef72db1ce9052202b66b52f73d0855c0dafd1e9bf952c1e2104784a005fd933",
+      "location": {
+        "startLine": 2491,
+        "endLine": 2491
+      },
+      "text": "## VER-C3-ABSENCE-001 - adaptation-dependent absence deficit, 2026-09-26\n",
+      "claim": "ABSENCE",
+      "disposition": "Acquired reference displacement creates excess absence deficit; support removes gap without erasing adaptation.",
+      "limits": "Not subjective distress, recovery or action. Wrong-reference and build failures preserved; no public consumer.",
+      "evidence": [
+        "CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "fbb0260876bec27e17226380c9e2f921c9986c25c35b55f9f56a507da988f80f",
+      "location": {
+        "startLine": 2493,
+        "endLine": 2505
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, absence-deficit-component/0.1-candidate.\nBrief12.9 clause8:3 component models/27 runs/135 prefix comparisons (108 advancing/\n27 terminal);4 scoped/328 reference tests and corrected build pass. Four underlying\npublic ADAPT conditions reused; no new public consumer. Acquired displacement shifts\nreference while current baseline/support remain separate. Same absence yields acquired\nexcess deficit; support4 removes the gap without erasing D4. LinearGap/ThresholdGap\nremain serious alternatives; FixedReference ablates adaptation use. Ordinary shortfall,\nother leaves and unrelated-key controls preserve distinctions. No universal law,\nsubjective distress, craving, recovery or action claim. Preserve initial wrong-reference\ndraft and build annotation failure under ABSENCE_FINDINGS.md; corrected REV2 frozen\nbefore execution. CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md / ABSENCE_CLOSURE_REV1.json\nbind evidence. RO008/010/011/015/019/020 remain;021 unsatisfied.1400/0, no owner ruling,\nallocation or retirement. Next CRAVING_READINESS.md.\n",
+      "claim": "ABSENCE",
+      "disposition": "Acquired reference displacement creates excess absence deficit; support removes gap without erasing adaptation.",
+      "limits": "Not subjective distress, recovery or action. Wrong-reference and build failures preserved; no public consumer.",
+      "evidence": [
+        "CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "9e70dab77dfa1de07daaadb28be1a9917a5e9eea6987efa28b8776ec12df6c0f",
+      "location": {
+        "startLine": 2507,
+        "endLine": 2507
+      },
+      "text": "## VER-C3-CRAVING-001 - represented relief-directed urge, 2026-09-26\n",
+      "claim": "CRAVING",
+      "disposition": "Pressure and learned relief yield urge distinct from cue access, availability and restraint.",
+      "limits": "56 identities/60 comparisons/280 distinct component prefixes not60 unique; aliases not salted. No action/earned control or relapse.",
+      "evidence": [
+        "CAMPAIGN3_CRAVING_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "ef225100d69ad0419670ad884cf074a3337589dc9d4dc98be2dd91c6c636179e",
+      "location": {
+        "startLine": 2509,
+        "endLine": 2522
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, craving-component/0.1-candidate.\nBrief12.9 clause9:4 candidates/56 distinct component runs/60 comparison rows/300\nprefix checks (280 distinct tuples);5 public BODY runs/15 source prefixes.7 scoped/\n328 reference tests and build pass. Admitted pressure and learned mean/latest relief\nproduce current urge separately from cue access, availability and restraint. Product/\nbottleneck laws remain serious alternatives; NoLearning preserves unknown. Known zero,\nunavailable body, unknown belief and inaccessible content remain separate. False-report\nand hidden-body whole safe views agree. No action, earned control or relapse claim.\nPreserve CRAVING_DEVELOPMENT_FINDING_REV1.json: initial60-unique assumption rejected\nbecause hidden-body aliases share safe inputs;56 identities retained without salting\ncase names. No failed plan/result was written. CRAVING_FINDINGS.md /\nCAMPAIGN3_CRAVING_QUALIFICATION.md / CRAVING_CLOSURE_REV1.json bind evidence.\nRO008/010/011/012/015/019/020 remain;021 unsatisfied.1400/0, no allocation, reduction,\nnew public consumer or owner ruling. Next RELAPSE_READINESS.md.\n",
+      "claim": "CRAVING",
+      "disposition": "Pressure and learned relief yield urge distinct from cue access, availability and restraint.",
+      "limits": "56 identities/60 comparisons/280 distinct component prefixes not60 unique; aliases not salted. No action/earned control or relapse.",
+      "evidence": [
+        "CAMPAIGN3_CRAVING_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "82e5694a46a561e8b12d4f6809a74bceaf42291bc6f7012def8b0ff71b133b86",
+      "location": {
+        "startLine": 2524,
+        "endLine": 2524
+      },
+      "text": "## VER-C3-RELAPSE-001 - actual return after goal-supported adjustment, 2026-09-26\n",
+      "claim": "RELAPSE",
+      "disposition": "Actual return under load in seeds1/7 after withholding; all resume withholding afterward.",
+      "limits": "Transient lapse, not sustained relapse/population rate or physiological recovery. Buffer rejection and same-identity successor retained.",
+      "evidence": [
+        "CAMPAIGN3_RELAPSE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "b132c594499148c5fab71e5b27cfb0a762c30c91eb6f809c9d85ada6e0ddbdf1",
+      "location": {
+        "startLine": 2526,
+        "endLine": 2540
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, relapse-experiment/0.1-candidate on unchanged\ncontrol-public/0.2-candidate. Brief12.9 clause10:7 reused models/31 new public runs/\n279 prefixes (248 advancing/31 terminal);5 scoped/328 reference tests and build pass.\nThree actual withholding opportunities precede load7; retained/maintained goal and\nlearned history remain unchanged. Seeds1/7 return target, six others retain idle;\nall resume withholding at8. Matched noLoad withholds4..8 for all seeds. No inevitable\nreturn or population-rate claim. Cue, acquisition, contrary belief, denied card,\nretired goal and lost maintenance controls retain distinct explanations. Serious\nLinear/Residual/control comparators preserved. No new trait or production law.\nRELAPSE_FINDINGS.md preserves Buffer rejection before any settlement; corrected\nplain-byte wrapper freezes REV2 with all REV1 model/run/input identities unchanged.\nCAMPAIGN3_RELAPSE_QUALIFICATION.md / RELAPSE_CLOSURE_REV1.json bind evidence.\nTransient lapse only, no physiological recovery, learned control, sustained relapse\nor joint addiction qualification. RO008/010/011/012/015/019/020 remain;021 unsatisfied.\n1400/0, no allocation or owner ruling. Next ADDICTION_INTEGRATION_READINESS.md.\n",
+      "claim": "RELAPSE",
+      "disposition": "Actual return under load in seeds1/7 after withholding; all resume withholding afterward.",
+      "limits": "Transient lapse, not sustained relapse/population rate or physiological recovery. Buffer rejection and same-identity successor retained.",
+      "evidence": [
+        "CAMPAIGN3_RELAPSE_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "68270c62db3ea3e281223eb4b144b416972105bcda11059b54150a6864b9be36",
+      "location": {
+        "startLine": 2542,
+        "endLine": 2542
+      },
+      "text": "## VER-C3-COSTLY-REWARD-001 - acquired costly reward-seeking, 2026-09-26\n",
+      "claim": "COSTLY-REWARD",
+      "disposition": "Learned benefit/harm compete under maintained protection;7/8 repeat under load, all restore withholding.",
+      "limits": "Feedback not pathwise harm reducing; primary repetition not habit necessity. Preserve99 exploration trajectories; not full biology/public admission.",
+      "evidence": [
+        "CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "ef7db507f4fb7ca9b85a706d08fa4960af56d398f68e99814b09cd74bd441036",
+      "location": {
+        "startLine": 2544,
+        "endLine": 2558
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED BOUNDED, costly-reward-component/0.1-candidate.\nBrief12.9 clause11:6 component models/50 distinct runs/650 prefix continuations;\n17 scoped/328 reference tests/build. Separate learned benefit and harm support actual\ncompeting reward/protection reasons against a maintained goal. Seven of eight seeds\nrepeat costly action under load; all resume withholding. NoLoad withholds throughout\nfree opportunities. Feedback changes four seed sequences, preserves four, and does\nnot universally reduce harm. False/denied reports preserve whole safe views despite\nhidden world differences. NoLearning, LatestHistory, BeliefAccess, NoControl and\nRewardOnly remain; primary repetition does not prove habit-history necessity.\nCOSTLY_REWARD_FINDINGS.md retains compatibility audit, all99 exploration trajectories\nand non-monotonic counterexamples. CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md /\nCOSTLY_REWARD_CLOSURE_REV1.json bind evidence. No full biological addiction, natural\nacquisition, clinical claim or public scheduler admission. RO008/010/011/012/015/019/\n020 remain;021 unsatisfied.1400/0. No allocation or owner ruling.\nNext IDENTITY_EVIDENCE_READINESS.md. Campaign3 NOT EXIT-READY.\n",
+      "claim": "COSTLY-REWARD",
+      "disposition": "Learned benefit/harm compete under maintained protection;7/8 repeat under load, all restore withholding.",
+      "limits": "Feedback not pathwise harm reducing; primary repetition not habit necessity. Preserve99 exploration trajectories; not full biology/public admission.",
+      "evidence": [
+        "CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "520ec63d2e422d1b10a6fe2c464433e69dde3831dce07bbd2adb947ba514e830",
+      "location": {
+        "startLine": 2560,
+        "endLine": 2560
+      },
+      "text": "## VER-C3-BIOLOGY-001 - continuous functional biology, 2026-09-26\n",
+      "claim": "BIOLOGY",
+      "disposition": "18 work-order behaviors integrate continuous body, safe sensing, learned pleasure/relief/harm, goals/control, actual effects and delayed stress.",
+      "limits": "53 distinct runs/2389 prefixes versus54 execution rows/2438 checks; distinct domains not proven irreducible/calibrated. Component only.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "309257e49d1a4a331256e532e53d70efce07cd5586a6a5a6abbb0e531187dc5e",
+      "location": {
+        "startLine": 2562,
+        "endLine": 2580
+      },
+      "text": "LOCAL DISPOSITION / QUALIFIED bounded expressibility of the18 owner-directed work-order\nbehaviors. biological-integration/0.1-candidate composes versioned biology and multi-ground\nchoice.25 models/53 distinct runs/54 execution rows/2389 distinct prefixes (2438 checks);\n33 scoped/328 reference tests/build. Main package24 models/52 runs/2340 prefixes;\nconstitutional pair adds one model/run and49 unique prefixes, rechecking one existing run.\nPhysical resources, sleep/phase, damage, intoxicant burden and reward/stress/arousal\nwith independent adaptation now feed safe observations, separate pleasure/relief/harm\nlearning, maintained goals/control, exact reason dice, intent and actual effects.\nMotive shifts toward withdrawal relief within one history; Latest can pursue with\nlearned pleasure0. Four of eight seeds return under load; all resume avoidance.\nAlternative relief/recovery/retained history and delayed appraisal-to-stress are actual.\nDomain distinctions are testable, not proven irreducible meters or calibrated biology.\nNo new public scheduler admission, clinical diagnosis, natural exploration or whole\nCampaign3 exit. Earlier AFFECT/identity/recognition profiles remain separately scoped.\nPreserve BIOLOGICAL_SYSTEM_DOMAIN_FINDINGS.md, both development source cohorts and\nall exploratory results. CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md /\nBIOLOGICAL_SYSTEM_CLOSURE_REV1.json bind evidence. RO008/009/010/011/012/015/019/020\nremain;021 mandatory.1400/0, no allocation or owner ruling. Declared functional\ncheckpoint complete; next review exact broader coverage/public-integration gates.\n",
+      "claim": "BIOLOGY",
+      "disposition": "18 work-order behaviors integrate continuous body, safe sensing, learned pleasure/relief/harm, goals/control, actual effects and delayed stress.",
+      "limits": "53 distinct runs/2389 prefixes versus54 execution rows/2438 checks; distinct domains not proven irreducible/calibrated. Component only.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "3e8f3a6d1ffbaa32ce8272a8af6c360680a156c261f742899e6cf9a056dd4b85",
+      "location": {
+        "startLine": 2582,
+        "endLine": 2582
+      },
+      "text": "## VER-C3-BIOLOGY-PUBLIC-001 — native biological integration — 2026-09-26\n",
+      "claim": "BIOLOGY-PUBLIC",
+      "disposition": "Typed sources and disjoint owners reproduce53 component trajectories; intent70/expression80/sensing120/adaptation140.",
+      "limits": "58 distinct runs/270 unique prefixes versus59 rows/273 checks; redundant writer excluded. Large-save byte failure retained. No general forecasting, clinical biology or Addicted trait.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "2dc41fc16f8244e378a90c5a0f57ce65d295e4b947242f642abf41f00e8979ba",
+      "location": {
+        "startLine": 2584,
+        "endLine": 2590
+      },
+      "text": "QUALIFIED BOUNDED / LOCAL DISPOSITION. biology-public/0.1-candidate admits the18\nowner-directed functional behaviors through typed native sources, ownership, phases\nand Save132.28 models/58 distinct runs/270 unique selected public prefixes (212\nadvancing/58 terminal);59 row executions/273 checks include one excluded redundant\nwriter. All53 prior continuous trajectories match timestep-for-timestep.56 scoped\n(23 native+33 preserved biology)/328 reference tests and build pass. Records1401..1426,\nnamespace1156; counters1426/0. No owner ruling, root retirement or reference import.\n",
+      "claim": "BIOLOGY-PUBLIC",
+      "disposition": "Typed sources and disjoint owners reproduce53 component trajectories; intent70/expression80/sensing120/adaptation140.",
+      "limits": "58 distinct runs/270 unique prefixes versus59 rows/273 checks; redundant writer excluded. Large-save byte failure retained. No general forecasting, clinical biology or Addicted trait.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "61b453635475ade1237b747cd7872bdec43f448f4bb73ce39481d17b843ab61a",
+      "location": {
+        "startLine": 2592,
+        "endLine": 2597
+      },
+      "text": "Homeostatic, hedonic, adopted-goal and protective sources remain distinct from private\ntask-shaped numerical intermediates. Native intent70/expression80, execution110,\nconsequence sensing120 and learning/adaptation140 preserve causality. Matched admitted\nbeliefs/cue history/goals isolate adaptation-driven withdrawal and actual choice;\nmissing cue access retains dependence. Whole safe views survive hidden body/execution\nchanges. Alternative relief and all original candidates remain. No law is canonized.\n",
+      "claim": "BIOLOGY-PUBLIC",
+      "disposition": "Typed sources and disjoint owners reproduce53 component trajectories; intent70/expression80/sensing120/adaptation140.",
+      "limits": "58 distinct runs/270 unique prefixes versus59 rows/273 checks; redundant writer excluded. Large-save byte failure retained. No general forecasting, clinical biology or Addicted trait.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "10edf7e3cea6952773790d0bd3a9a9dea035c09d85814c27bfa078486b0da555",
+      "location": {
+        "startLine": 2599,
+        "endLine": 2607
+      },
+      "text": "See CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md, BIOLOGY_PUBLIC_SCOPE_AND_FINDINGS.md and\nBIOLOGY_PUBLIC_CLOSURE_REV2.json. Preserve both public development cohorts, the\nlarge-save byte-enumeration failure and redundant-writer receipt. The local intrinsic\nbyte adapter fixes native admission without changing legacy helpers. General future-\nabstinence forecasting, identity eligibility/update, natural exploration, general\nrecognition/control and calibrated/organ-level biology remain outside this closure.\nNo Addicted trait, global Craving primitive or whole Campaign3 PASS. RO008/009/010/\n011/012/015/019/020 persist;021 historical gate remains. Next IDENTITY_EVIDENCE_READINESS.md.\nNo broader Brief clause is automatically promoted.\n",
+      "claim": "BIOLOGY-PUBLIC",
+      "disposition": "Typed sources and disjoint owners reproduce53 component trajectories; intent70/expression80/sensing120/adaptation140.",
+      "limits": "58 distinct runs/270 unique prefixes versus59 rows/273 checks; redundant writer excluded. Large-save byte failure retained. No general forecasting, clinical biology or Addicted trait.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/CAMPAIGN3_ABSENCE_DEFICIT_QUALIFICATION.md",
+      "sha256": "1e477e22a94cd9b92ad21dcdd6fb3678be99bcf052bd0ed89b6e4b6bee9ff46a"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_ATTACHMENT_QUALIFICATION.md",
+      "sha256": "c6e4e1ec23c554d9d561260a5c8e3a989f92ec213005d248c575a6210b30b1fc"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_BETRAYAL_QUALIFICATION.md",
+      "sha256": "9337ca48364475207496ff8b1d517257b4a49f1a73858732ab9c7101aa7cb55b"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_BIOLOGICAL_SYSTEM_QUALIFICATION.md",
+      "sha256": "dbe6703e2c8deadaa3031ab289eaf541cb2401d7a968b0bd02ecb3897b7bea01"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+      "sha256": "ed49b68e9dc01817619a0427d75acfc474e86d7c7bf1c4461f2068cb010105af"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_COSTLY_REWARD_QUALIFICATION.md",
+      "sha256": "de968f7caa5b8b2a16d7427e05dc1214e06eb4641297e8407c691d6e93314919"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_CRAVING_QUALIFICATION.md",
+      "sha256": "1f1713a4fe07715c019937dae5a651339b5ac1a4b78443ca8302439f4fbd4f05"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_DELAYED_QUALIFICATION.md",
+      "sha256": "1bc67846005f0d1bf281e60d8da98d790a0ce7e2e3378e6292f89b3709462d58"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md",
+      "sha256": "df8ebb21dfcace4b62c97c8735af950624d7cc8ead58a3576ef8653662567cfe"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_FATIGUE_QUALIFICATION.md",
+      "sha256": "23e3cc60e2fb040a74e5c6da701e1f48087626232a3da0c1149bb203b60b89f8"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_FEAR_GUILT_QUALIFICATION.md",
+      "sha256": "eb57f5dcbe3bdf15142aedb6d4217b6d76a335ef67a987b0853cc8e890043744"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_GRIEF_QUALIFICATION.md",
+      "sha256": "2fefcde064c21ea6fb486a35f350c6f2e94a4873a60f05ddeae0473a0f1cb3f6"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HABIT_ACQUISITION_QUALIFICATION.md",
+      "sha256": "98c6aa23ca365c0533302cedf58e874737b7061f923c53cb208048e6e5d481c4"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HABIT_RESISTANCE_QUALIFICATION.md",
+      "sha256": "835d5eef54cfd4becb143fa6bf6a13d5ebe05c582ef3ff8943fda9a1509312e8"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HEARSAY_QUALIFICATION.md",
+      "sha256": "7ec8553fb3a327cb6564914d02a9bdead2356c47db4104312b76d8ab14495de7"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_INTENTION_QUALIFICATION.md",
+      "sha256": "7b6e52d4e12bd42cea7e28f8683a4ce92ce67a3a374cd91ff4cb86bdf45558af"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_PERFORMANCE_QUALIFICATION.md",
+      "sha256": "b6a778275ef56f3790b4a07bcef4b652a8897689cbaedc5d68f730236abd399b"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_PERSON_GOAL_QUALIFICATION.md",
+      "sha256": "626a077d3c1aa79fbfde54f1d491a9f0f8ec233fe6136343014e3efd993f4ff5"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_PROCRASTINATION_QUALIFICATION.md",
+      "sha256": "410c66a573874bf0c66f339e626b9883c6004f11f338b09b0c477788eac0b2be"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_REINFORCEMENT_QUALIFICATION.md",
+      "sha256": "d2bb3be81871d0c42c542412852c5f11e65c47d9124785aedaa6709a72b2d278"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_RELAPSE_QUALIFICATION.md",
+      "sha256": "7072b4b5340e4aa7ecfdb1a0edf98b4c12d227e963f1267446fac4766af97243"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_RELIANCE_HISTORY_QUALIFICATION.md",
+      "sha256": "06f54ce31c322b2de947eb15717ab5e379484d48fe5da78ff6892618a9128d91"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md",
+      "sha256": "f8700dccb45e7c89943e11e9673e509d0ac4ab3bdabfdbf3241ea5694b2ac7ac"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_REL_DIMENSIONS_QUALIFICATION.md",
+      "sha256": "94f3b1b52379bd7ebcc5e59d2ec19584fe6553af8ca25d15a4912307f62df7d6"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_RUMINATION_QUALIFICATION.md",
+      "sha256": "db9ac16c95de803b541ebcfeab8eefa2418c43dee2986c44e136aadb5c472d3d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_SUBSTITUTION_QUALIFICATION.md",
+      "sha256": "84d842752d01a611eec0dee9295f6ac8f94f759e9647efd11b2a36fb642de35a"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_TEMPORAL_QUALIFICATION.md",
+      "sha256": "56d16fb43cad93dc4088cdf8059933a2bcf84abaff97e1de7a8077b45b03f605"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_TOLERANCE_QUALIFICATION.md",
+      "sha256": "3af21aa844834283405687f0761cef3d602c9a058e447d2e9133e2492bd4e28b"
+    }
+  ],
+  "obligations": [
+    "RO-C3-001",
+    "RO-C3-005",
+    "RO-C3-006",
+    "RO-C3-007",
+    "RO-C3-008",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-011",
+    "RO-C3-012",
+    "RO-C3-013",
+    "RO-C3-014",
+    "RO-C3-015",
+    "RO-C3-016",
+    "RO-C3-017",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "No fresh production simulation, test suite or build. Receipt bindings do not assert current source freshness for every old receipt.",
+    "Twenty-eight reviewed claim groups retain independent public/component, law and historical correction scopes."
+  ],
+  "nextGate": "Ledger2609 onward: identity, development and residual coverage."
+}

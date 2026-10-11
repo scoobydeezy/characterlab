@@ -1,0 +1,29 @@
+"""Reconcile VAL acceptance, rejected deferral and corrected validation order."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');B=P/'campaign3-history-universe-rev1';O=P/'campaign3-history-topology-plans-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+ p=O/n
+ if p.exists():assert load(p)==v,p
+ else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+notes={'docs/planning/CAMPAIGN2_TOPOLOGY_INVENTORY.md': 'Accepted working inventory0.5 is not a seam contract or implementation authority. Ten logical families/route declarations do not imply ten stored roots; unmaterialized extent empty, no dummy roots/authorities. Every materialized leaf requires sole ownership even without current writer. Only procedural/regulatory rows materialized in original ADAPT scope, not claim about later campaigns. Actual procedural competence belongs automatic adaptation; believed competence/outcome belongs character learning. Same legitimate event requires separate records/provenance for both, never implicit conversion. Belief state differs from evidence occurrence; person-model belief differs from recognition knowledge. Four association/value/habit/relationship authorities remain distinct, no producer-named consolidation authority; regulatory authority can own several separately addressable leaf families. Hidden-exposure proof requires no other-authority mutation AND no other-leaf mutation within target authority. Witness obligation is existential, not every event must write memory/identity/adaptation. PORT/CANDIDATE entries preserve comparison duties, not adopted laws or RETAINED verdicts. Commitments upstream motive/lifecycle, not acquired identity or immortal Core Need. Preserve retired overflow-to-belief/salience, truth-provenance copying, pairwise-max discount, independent identity die/trait bonus and historical recalibration distinctions. Same-time phase availability grants no belief read; original ORD/DEC blocking dependencies scoped to actual admitted consumer. Later bounded completion supersedes old missing-writer chronology only for explicit traversable profile; general memory/social/learning/attention laws not proved by inventory.', 'docs/planning/CAMPAIGN2_REMAINING_TOPOLOGY_WORKPLAN.md': 'Historical autonomous sequence distinguishes authored actual-fact inputs from generated psychological causal path. Belief140/later-cycle use can precede current-lane ORD001; explicit sequencing correction rejects a universal ORD prerequisite. Task lifecycle qualification does not qualify workspace/appraisal/motive/dice/identity; external live-list harness remains instrumentation. Shape/allocation/frozen-model/component/runtime gates are separate; no hand-authored reasons or task-status shortcut. Historical23/32 and32/32 hypothetical identity modes,270dice/11history and7oracle checks remain bounded components, not generated-path or PERSIST proof. Internal adversarial acceptance under user authorization is not external planning review. Draft59/184 and77/247 counts superseded by exact cognitive allocation377..452/244fields with373schema2, preserving373schema1 and older allocations; removed CoverageContribution wrapper not retired psychological distinction. Final completion supersedes earlier OPEN/power-cycle entries only in thin scaffold scope.21models/17source substitutions/18predecessor assays/public64/65 and27/26 are separate denominators.24receipts/446fingerprints describe historical snapshot, not fresh bindings; known source gaps remain. RNG successor prefix PASS does not erase original absent-consumer obligation, separately addressed by later module-graph proof. Broader ORD/DEC/context modulation and expanded phenomenon obligations not closed by this plan; subsequent Campaign3 evidence must be evaluated in its own accepted scope.'}
+ip=P/'campaign3-history-source-roles-rev245/index.json';ix=load(ip);entries={e['path']:e for e in load(B/'manifest.json')['entries']}
+chain=[ref(p) for p in [P/'CAMPAIGN2_COMPLETION_REVIEW.md',P/'CAMPAIGN2_COGNITIVE_QUALIFICATION.md',P/'campaign3-history-persist-i-rev1/proof.json',P/'campaign3-history-state-ordering-authority-rev1/review.json']]
+sources=[]
+for p,n in notes.items():
+ assert p in ix['unassignedCandidatePaths'] and ref(p)['sha256']==entries[p]['sha256']
+ sources.append(dict(**ref(p),role='HISTORICAL TOPOLOGY PLAN WITH SCOPED LATER COMPLETION',judgment=n,acceptanceChain=chain))
+rows=[]
+with (B/'units.jsonl').open(encoding='utf-8') as f:
+ for line in f:
+  u=json.loads(line)
+  if u['source'] not in notes:continue
+  assert u['sourceSha256']==entries[u['source']]['sha256']
+  rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],category='NARRATIVE'))
+assert len({r['occurrenceId'] for r in rows})==len(rows)
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='TWO TOPOLOGY PLANS RECONCILED',checker=ref(__file__),sourceIndex=ref(ip),sourceRoles=sources,rows=rows,preservedArtifacts=[],limits=['Logical inventory does not authorize storage or prove behavior; proposed mechanisms retain comparison obligations.','Later bounded completion supersedes routing only within named profiles, not all ideal-loop phenomena.','No runtime/test/build rerun, source gap closure, law/model/verdict/corpus/obligation status change or historical adequacy claim.'],obligations=['RO-C3-008','RO-C3-019','RO-C3-020','RO-C3-021']))
+save('check.json',dict(status='PASS TOPOLOGY PLANNING HISTORY',sources=len(sources),originalNarrativeOccurrences=len(rows),originalBackingOccurrences=0,review=ref(O/'review.json')))
+print(json.dumps(load(O/'check.json')))

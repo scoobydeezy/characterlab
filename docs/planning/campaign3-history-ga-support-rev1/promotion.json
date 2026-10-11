@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Read-only replay of original promotion transformation and canonical commitments; no corpus publication or runtime execution.",
+  "members": 21,
+  "preservedMembers": 20,
+  "attentionRequirementsPreserved": true,
+  "original": {
+    "path": "docs/planning/CORPUS_0_29_0_PROMOTION_REV1.json",
+    "sha256": "718af786f36e488284dff4c252f7c51e1231ab62bdb94d522da19cfb0ee78408"
+  },
+  "sources": [
+    {
+      "path": "docs/planning/CORPUS_0_28_0_PRESERVED_AT_GA.md",
+      "sha256": "833a6d5c398db320003a41ea8171dfa233e7c84b8e8b9926dd64107d9ca4a9d3"
+    },
+    {
+      "path": "docs/planning/PHENOMENON_CORPUS.md",
+      "sha256": "bc4e295593d7bba1aa367bef7217f1a7741c36449274e7479bca52b4dddc25bd"
+    },
+    {
+      "path": "docs/planning/GA_CORPUS_FIXTURE_1_0_0.md",
+      "sha256": "ff7ad8c6c12c5078b466dbc4aa222a42f98d5fd85e80386eb3cad8ab8eb5224f"
+    },
+    {
+      "path": "scripts/promote-ga-corpus-0-29-0.mjs",
+      "sha256": "20dfabe9be64f8bc953f854c3bb4d2f7d77cbc3841195883f7a9d863e28b4873"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-ga-promotion.mjs",
+    "sha256": "2ac69a8f01c7d6676cd40d0cc6369acd877012889d0d960b1b3368c339f1348e"
+  }
+}

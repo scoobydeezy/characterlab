@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "scope": "Five paired direct witnesses:role alias,sparse raw,sharedone,sharedzero,andtracking rejection boundary. Original snapshots SHA-authenticated; no production changes.",
+  "before": {
+    "condition": "original",
+    "roleMutation": true,
+    "laterRoleStrength": "0/1",
+    "sparse": {
+      "accepted": true,
+      "length": 1,
+      "hasFirst": false
+    },
+    "oneMutation": true,
+    "afterOne": "1/100",
+    "zeroMutation": true,
+    "afterZero": "99/1",
+    "trackingError": "TypeError: Cannot read properties of undefined (reading 'glyph')",
+    "trackingUnchangedAfterFailure": true,
+    "emptyRetryAccepted": true,
+    "sourceBindings": [
+      {
+        "originalPath": "src/campaign3/encodingAccessMath.ts",
+        "path": "docs/planning/campaign3-history-ga-corrections-rev1/c3c5c098006e37e6-encodingAccessMath.ts",
+        "sha256": "c3c5c098006e37e689c5dccae69aac5d5c9e1ab9c76cc4bfbcc0c0ba509118ee"
+      },
+      {
+        "originalPath": "src/campaign3/selectedEncoding.ts",
+        "path": "docs/planning/campaign3-history-ga-corrections-rev1/aa40340b1832eb82-selectedEncoding.ts",
+        "sha256": "aa40340b1832eb82539d1a52f6fea88c930aa85de884aa91d4b612948ad78150"
+      },
+      {
+        "originalPath": "src/campaign3/observedMarkerTracking.ts",
+        "path": "docs/planning/campaign3-history-ga-corrections-rev1/a16b421cfd570e1f-observedMarkerTracking.ts",
+        "sha256": "a16b421cfd570e1f7997aa32d6e0a2fd2d4c665c323c505793db37828f51fc5c"
+      },
+      {
+        "originalPath": "src/substrate/exactMath.ts",
+        "path": "src/substrate/exactMath.ts",
+        "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+      },
+      {
+        "originalPath": "src/semanticBinding/perceptualContinuantFiles.ts",
+        "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+        "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+      },
+      {
+        "originalPath": "src/test/attentionFixtures.ts",
+        "path": "src/test/attentionFixtures.ts",
+        "sha256": "df55fe21fc0edea4406f845ce981beffd40e0eadab6ee222d5ed9fc29309ef21"
+      }
+    ],
+    "attention": {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  },
+  "after": {
+    "condition": "corrected",
+    "roleMutation": true,
+    "laterRoleStrength": "243/1243",
+    "sparse": {
+      "accepted": false,
+      "error": "RangeError: encoding-access math: plain dense array"
+    },
+    "oneMutation": false,
+    "afterOne": "1/2",
+    "zeroMutation": false,
+    "afterZero": "0/1",
+    "trackingError": "Error: observed marker tracking: dense detection array",
+    "trackingUnchangedAfterFailure": true,
+    "emptyRetryAccepted": true,
+    "sourceBindings": [
+      {
+        "originalPath": "src/campaign3/encodingAccessMath.ts",
+        "path": "src/campaign3/encodingAccessMath.ts",
+        "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+      },
+      {
+        "originalPath": "src/campaign3/selectedEncoding.ts",
+        "path": "src/campaign3/selectedEncoding.ts",
+        "sha256": "77ab07998dad545d8fdd5b53513b4a96251d79a9b7a2a0cea94c83d2a4ce50f3"
+      },
+      {
+        "originalPath": "src/campaign3/observedMarkerTracking.ts",
+        "path": "src/campaign3/observedMarkerTracking.ts",
+        "sha256": "ae8129e4ba3058db7ad1f64f8791ef14eb3ebca96191f33b981bd8c21f606ebb"
+      },
+      {
+        "originalPath": "src/substrate/exactMath.ts",
+        "path": "src/substrate/exactMath.ts",
+        "sha256": "49791bf7a51ca1bb4012eb343bb4e5e27d8c3ec16e0d19d9db818505ab1b5c51"
+      },
+      {
+        "originalPath": "src/semanticBinding/perceptualContinuantFiles.ts",
+        "path": "src/semanticBinding/perceptualContinuantFiles.ts",
+        "sha256": "5ab014ec50f03d8d265fd8d6f37e68041e7d943c3521bd2d7708f76e8469562d"
+      },
+      {
+        "originalPath": "src/test/attentionFixtures.ts",
+        "path": "src/test/attentionFixtures.ts",
+        "sha256": "df55fe21fc0edea4406f845ce981beffd40e0eadab6ee222d5ed9fc29309ef21"
+      }
+    ],
+    "attention": {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  },
+  "sourceRecovery": {
+    "path": "docs/planning/campaign3-history-ga-corrections-rev1/source-recovery.json",
+    "sha256": "b76030001e8416f961915d846c29533f7e49bda4d137d10b6b677d4a61346fc0"
+  },
+  "checker": {
+    "path": "scripts/probe-history-ga-isolation-corrections.mjs",
+    "sha256": "ff85210ec0e42e70895397fe57132aea1905692ac56dcc13b1abbae40ebc0c3a"
+  }
+}

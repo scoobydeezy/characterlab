@@ -1,0 +1,124 @@
+{
+  "status": "PASS; REQUESTED CARRIER BUILDER AND TWO ORIGINAL REVIEWERS",
+  "checker": {
+    "path": "scripts/replay-history-ga-carriers.mjs",
+    "sha256": "9cab96369758095431618f4c2231592dba879e42caee1e1141c65f4d7249adad"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/build-ga-requested-source-carrier.mjs",
+        "sha256": "71bd67f1d4fd9091d1bb74010209008b79cae6e153694a975960d7836dd0df5d"
+      },
+      "output": {
+        "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REV1.json",
+        "sha256": "f65e255afee4765ecc0c07223cf45c1a66506d361e686ace93c134cbd8f0faf5"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-requested-source-carrier.mjs",
+        "sha256": "8aef4d299e1cec021f7ec8e41e0fa8dedd9d3ce09db8a3af7cf3f5b9f14c39ce"
+      },
+      "output": {
+        "path": "docs/planning/GA_REQUESTED_SOURCE_CARRIER_REVIEW_REV1.json",
+        "sha256": "7ee161ed4c8fcb2100e195ea252c1eb5435428b049300e5f97ae3c1126823efc"
+      },
+      "faults": [
+        {
+          "name": "absence-reason",
+          "detected": true
+        },
+        {
+          "name": "mandatory-unsampled-panel",
+          "detected": true
+        },
+        {
+          "name": "drop-request-binding",
+          "detected": true
+        },
+        {
+          "name": "premature-experience",
+          "detected": true
+        },
+        {
+          "name": "truth-access",
+          "detected": true
+        },
+        {
+          "name": "new-wrapper-identity",
+          "detected": true
+        },
+        {
+          "name": "event-as-feature",
+          "detected": true
+        },
+        {
+          "name": "zero-request-body",
+          "detected": true
+        },
+        {
+          "name": "unsampled-clears-context",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-visual-pipeline-carrier.mjs",
+        "sha256": "47e09d84d4573ece449688cf19abafd477a99449c85cfef8fb2f75a2914903ba"
+      },
+      "output": {
+        "path": "docs/planning/GA_VISUAL_PIPELINE_REVIEW_REV1.json",
+        "sha256": "b52cd2d9a84218bf30331aad019190e3b8bbd7c4140b10720b5bd7545a81ca47"
+      },
+      "faults": [
+        {
+          "name": "outcome-gates-immediate-encoding",
+          "detected": true
+        },
+        {
+          "name": "full-source-encoder-grant",
+          "detected": true
+        },
+        {
+          "name": "zero-strength-retained",
+          "detected": true
+        },
+        {
+          "name": "copied-initial-envelope",
+          "detected": true
+        },
+        {
+          "name": "multiple-role-claims",
+          "detected": true
+        },
+        {
+          "name": "empty-selection-forced-child",
+          "detected": true
+        },
+        {
+          "name": "cue-gated-on-encoding",
+          "detected": true
+        },
+        {
+          "name": "cue-sample-resolver",
+          "detected": true
+        },
+        {
+          "name": "missing-position-as-zero",
+          "detected": true
+        },
+        {
+          "name": "misidentified-sem-record",
+          "detected": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "19 symbolic faults only. Visual builder is not replayed because its three old component dependencies are unavailable; visual reviewer reads the exact preserved packet and unchanged SEM registry.",
+    "Successor reservation and Claims fields are separately inspected,not covered by REV1 reviewers."
+  ]
+}

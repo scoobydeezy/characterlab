@@ -1,0 +1,147 @@
+{
+  "status": "PASS READ-ONLY IDENTITY ABLATION",
+  "pairs": 4,
+  "historyEntriesPerPair": 3,
+  "sharedDrawsPerPair": 6,
+  "summaryRows": [
+    {
+      "seed": 0,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 1,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 2,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    },
+    {
+      "seed": 3,
+      "historyEntriesPreservedBeforeProbe": 3,
+      "priorEntriesRemainByteIdenticalAfterProbe": true,
+      "sharedAddresses": 6,
+      "intact": {
+        "mode": "PlayerFacingRoll",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "1/2"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/2"
+          }
+        ],
+        "chosen": "definition/protocol-contact-one"
+      },
+      "ablated": {
+        "mode": "Auto",
+        "probabilities": [
+          {
+            "action": "definition/protocol-contact-one",
+            "probability": "0/1"
+          },
+          {
+            "action": "definition/protocol-contact-two",
+            "probability": "1/1"
+          }
+        ],
+        "chosen": "definition/protocol-contact-two"
+      }
+    }
+  ],
+  "checkerSha256": "5769fcb334d6c249c0142784797e9b3e672a61386c79ac27cc537d52814bfb9b",
+  "sourceSha256": "052e9e7e960869806005204f9102fb74bbd53a7b49c9ecb406dc6a3b094a2a52",
+  "scope": "Stored prefixes, full shared draw records, old history and decoded decisions checked; no original runtime or writer rerun."
+}

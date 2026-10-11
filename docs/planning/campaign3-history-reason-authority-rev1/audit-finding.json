@@ -1,0 +1,7 @@
+{
+  "status": "CURRENT AUDIT ASSERTION REJECTED; HISTORICAL QUALIFICATION UNCHANGED",
+  "checkerSha256": "37ae33c656ae8479607f7d4e59207ce8c51a452d859b5c95b34297088c2e5cff",
+  "failure": "assert(get('avoidStanding',law).nuclei.some(n=>n.base.startsWith('-')))",
+  "cause": "Audit incorrectly generalized lawful Aggregate avoidance assertion to all diagnostic profiles. PerFactDie has no active nucleus;IdentityIndependentDie instead yields positive standing-only nucleus.",
+  "correction": "Preserve all5 stored outcomes;original qualified avoidance claim is Aggregate scope. No historical source or result change."
+}

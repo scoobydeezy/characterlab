@@ -1,0 +1,16 @@
+// Recheck image commitments under current compiler; preserve unresolved old source separately.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),read=p=>JSON.parse(fs.readFileSync(p));
+let source=fs.readFileSync('scripts/freeze-embodied-model-review-rev2.mjs','utf8');
+function replaceOnce(from,to){assert.equal(source.split(from).length,2);source=source.replace(from,to);}
+replaceOnce("from 'vite'","from "+JSON.stringify(import.meta.resolve('vite')));
+replaceOnce('assert(!fs.existsSync(folder));','assert(fs.existsSync(folder));');
+replaceOnce('for(const f of [...report.artifacts,...report.sources])assert.deepEqual(fp(f.path),f);',"for(const f of report.artifacts)assert.deepEqual(fp(f.path),f);for(const f of report.sources){if(f.path==='src/campaign2/requiredProjection.ts'){assert.equal(f.sha256,'d2ca7f74b9dbb3a89619c01c0b1ab1a86ab1f768fca045998c4f0245075b1618');assert.equal(fp(f.path).sha256,'4eb6ed7de51df48837d406ad0a08065632c3678342444e85aa9c8b21ae74b89c');}else assert.deepEqual(fp(f.path),f);}");
+const start=source.indexOf(" const frozen=JSON.parse(fs.readFileSync('docs/planning/COGNITIVE_QUALIFICATION_EVIDENCE_REV1.json'));");assert(start>0);const end=source.indexOf('}finally{await server.close();}',start);assert(end>start);
+source=source.slice(0,start)+" console.log('7 model identities,5 exact registry variants,work7 and7 run commitments verified under current compiler');\n"+source.slice(end);assert(!source.includes('writeFileSync')&&!source.includes('copyFileSync')&&!source.includes('mkdirSync'));
+try{await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+ const file='docs/planning/campaign3-embodied-model-rev2/FREEZE.json',v=read(file),review=read(v.reviewedManifest.path);assert.equal(sha(v.reviewedManifest.path),v.reviewedManifest.sha256);assert.deepEqual(v.models,review.models);assert.deepEqual(v.runs,review.runs);assert.deepEqual(v.versions,review.versions);
+ for(const f of v.artifacts){assert.equal(sha(f.path),f.sha256);const old=review.artifacts.find(x=>x.path.replace('campaign3-embodied-model-review-rev2','campaign3-embodied-model-rev2')===f.path);assert(old);assert.equal(f.sha256,old.sha256);}
+ const result={status:'EMB IMAGE COMMITMENTS VERIFIED; HISTORICAL SOURCE PROVENANCE OPEN',models:7,runs:7,registryVariants:5,imageFiles:v.artifacts.length,freeze:{path:file,sha256:sha(file)},sourceMismatch:read('docs/planning/campaign3-history-embodied-freeze-rev1/source-recovery.json'),scope:'Original image/variant/run/calendar assertions executed with current compiler,explicitly retaining old requiredProjection hash mismatch. No full historical freeze receipt equality,446 predecessor fingerprint claim,runtime work7 execution or public qualification.',checkerSha256:sha('scripts/check-history-embodied-images.mjs')};
+ const dest='docs/planning/campaign3-history-embodied-freeze-rev1/canonical-check.json';if(fs.existsSync(dest))assert.deepEqual(read(dest),result);else fs.writeFileSync(dest,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(result.status);
+}catch(e){console.error(e.message);process.exitCode=1;}

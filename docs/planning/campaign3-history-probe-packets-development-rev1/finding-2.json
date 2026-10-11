@@ -1,0 +1,10 @@
+{
+  "status": "SECOND REJECTED AUDIT CHECKER; NO PACKET RECEIPT",
+  "checker": {
+    "path": "docs/planning/campaign3-history-probe-packets-development-rev1/rejected-checker-2.mjs",
+    "sha256": "58eed6ed2622cabfa436f34951405f789b7d36d556e5853d6d73c2d9bd0beac6"
+  },
+  "failure": "TypeError reading map from undefined at check-history-probe-packets.mjs:58",
+  "cause": "Checker assumed every registry slot was a collection with items; identical phase-registry slot is a record.",
+  "disposition": "For identical slots compare complete canonical bytes and require empty added array; compute set additions/removals only for changed collection slots. No original artifact or production code changed."
+}

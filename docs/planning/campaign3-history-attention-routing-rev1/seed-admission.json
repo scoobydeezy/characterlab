@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "Current factory seed-length admission only; no settlement, historical failed-script recovery or new public matrix.",
+  "acceptedSeedBytes": 32,
+  "rejected": [
+    {
+      "length": 0,
+      "name": "RangeError",
+      "message": "run seed must be exactly 32 bytes"
+    },
+    {
+      "length": 4,
+      "name": "RangeError",
+      "message": "run seed must be exactly 32 bytes"
+    },
+    {
+      "length": 31,
+      "name": "RangeError",
+      "message": "run seed must be exactly 32 bytes"
+    },
+    {
+      "length": 33,
+      "name": "RangeError",
+      "message": "run seed must be exactly 32 bytes"
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/campaign3-attention-model-rev2/FREEZE.json",
+      "sha256": "a237acf2b6a023f48c0386ca66df611c6e198d67471773bb7aeaea7ee6528348"
+    },
+    {
+      "path": "src/campaign3/attentionFactory.ts",
+      "sha256": "b8a4efbb5f1f09b8f410ce0142f979d60de238f169dba30dca768f4b85feed85"
+    },
+    {
+      "path": "src/substrate/identity.ts",
+      "sha256": "8e7c27aa4c95b35b8f100ffc7553991b0e893d1f82c0c4d0c9e7fe276430216a"
+    },
+    {
+      "path": "scripts/check-history-attention-seed-admission.mjs",
+      "sha256": "4ec8de7906a62469bb77297fa203a28508f2c07af3f3be55d532260abbcc4c89"
+    }
+  ]
+}

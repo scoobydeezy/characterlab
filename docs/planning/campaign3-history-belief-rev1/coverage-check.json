@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "command": "node scripts/check-belief-partial-coverage.mjs",
+  "exitCode": 0,
+  "stdout": "PASS: LEARN closure integrity:6 models,39 runs,580 prefix continuations; 44+328 tests\nPASS inference correction:5 reused models/15 runs/120 prefixes;7+328 tests; no allocation.\nPASS reinforcement:5 reused models/31 runs/279 component prefixes;8+328 tests;1400/0.\nPASS belief coverage: repeated error bounded; uncertainty/accuracy and hidden cause partial.\n",
+  "stderr": "",
+  "inputs": [
+    {
+      "path": "scripts/check-belief-partial-coverage.mjs",
+      "sha256": "3d7f9b46789412cb61bd11bdd0ee5d9c2dcab5d924f4d77ee57ebf3006855b3f"
+    },
+    {
+      "path": "docs/planning/BELIEF_PARTIAL_COVERAGE_CHECK_REV1.json",
+      "sha256": "42248e76d55af7c0f05f4ff45c99bfc02e44cee22c7a268df46f18212c91deda"
+    }
+  ],
+  "scope": "Read-only prior closure and residual checks; not new simulations."
+}

@@ -1,0 +1,6 @@
+{
+  "status": "CORRECTED FAILURE DIAGNOSIS",
+  "supersedes": "finding.json cause/disposition only; rejected checker and exact assertion unchanged",
+  "cause": "Every registryDelta row has added; none has removed. Failure at line60 was comparison of the computed empty removed set with nonexistent removed metadata, including changed slots.",
+  "disposition": "Require removed field absent and independently verify zero actual removals in every slot. Do not synthesize or rewrite original metadata."
+}

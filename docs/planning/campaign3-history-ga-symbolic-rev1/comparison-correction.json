@@ -1,0 +1,417 @@
+{
+  "status": "CORRECT-FORWARD METADATA AUDIT; FROZEN SOURCE UNCHANGED",
+  "source": {
+    "path": "docs/planning/GA_COHORT_SOURCE_RECONCILIATION_REV1.json",
+    "sha256": "a0936be0aa3fb6983dd73c4cc5541a4be2655a0d858e2b12848063aeb9470b57"
+  },
+  "rows": [
+    {
+      "control": "baseline",
+      "candidate": "budget-Independent-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": [
+        "encoding.law"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-disabled",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "actualChanged": [
+        "encoding.allocation"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-spatial",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "actualChanged": [
+        "encoding.allocation"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-encoding",
+      "changed": [
+        "feedback.encoding"
+      ],
+      "actualChanged": [
+        "feedback.encoding"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-retrieval",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "actualChanged": [
+        "feedback.retrieval"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-encoding",
+      "candidate": "feedback-both",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "actualChanged": [
+        "feedback.retrieval"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "local-access",
+      "changed": [
+        "access.beta"
+      ],
+      "actualChanged": [
+        "access.beta"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "association-decay",
+      "changed": [
+        "association.decay"
+      ],
+      "actualChanged": [
+        "association.decay"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "presentation-no-decay",
+      "changed": [
+        "access.decay"
+      ],
+      "actualChanged": [
+        "access.decay"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k0",
+      "changed": [
+        "access.capacity"
+      ],
+      "actualChanged": [
+        "access.capacity"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k1",
+      "changed": [
+        "access.capacity"
+      ],
+      "actualChanged": [
+        "access.capacity"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k0",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k1",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k2",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": [
+        "selection.capacity"
+      ]
+    },
+    {
+      "control": "select-k2",
+      "candidate": "select-equal-k2",
+      "changed": [
+        "selection.algorithm"
+      ],
+      "actualChanged": [
+        "selection.algorithm"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-capacity1",
+      "changed": [
+        "source.capacity"
+      ],
+      "actualChanged": [
+        "source.capacity"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-prediction-access",
+      "changed": [
+        "source.predictionAccess"
+      ],
+      "actualChanged": [
+        "source.predictionAccess"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-task-access",
+      "changed": [
+        "source.taskAccess"
+      ],
+      "actualChanged": [
+        "source.taskAccess"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-denied-probe",
+      "changed": [
+        "source.probePermitted"
+      ],
+      "actualChanged": [
+        "source.probePermitted"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-zero-concern",
+      "changed": [
+        "source.regReference"
+      ],
+      "actualChanged": [
+        "source.effectiveProbeNumerator",
+        "source.initialDisplacement"
+      ],
+      "missingDeclaredPaths": [
+        "source.regReference"
+      ],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-above-target",
+      "changed": [
+        "source.regReference"
+      ],
+      "actualChanged": [
+        "source.effectiveProbeNumerator",
+        "source.initialDisplacement"
+      ],
+      "missingDeclaredPaths": [
+        "source.regReference"
+      ],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "denied-port",
+      "changed": [
+        "source.ports.0.detected"
+      ],
+      "actualChanged": [
+        "source.ports.0.detected"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "unresolved-role",
+      "changed": [
+        "source.ports.0.role"
+      ],
+      "actualChanged": [
+        "source.ports.0.role"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-glyph",
+      "changed": [
+        "source.ports.0.glyph"
+      ],
+      "actualChanged": [
+        "source.ports.0.glyph"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-position",
+      "changed": [
+        "source.ports.0.position"
+      ],
+      "actualChanged": [
+        "source.ports.0.position"
+      ],
+      "missingDeclaredPaths": [],
+      "overdeclaredUnchanged": []
+    }
+  ],
+  "scope": "31 declared comparisons remain historical;actual scalar diffs expose stale source.regReference in two rows and redundant unchanged axes in five. Does not change model behavior or select a law. Actual producer consumes probeAuthoredReference and initialDisplacement in generalInheritedSource.ts.",
+  "producer": {
+    "path": "src/campaign3/generalInheritedSource.ts",
+    "sha256": "f8b22b1afcf77250688ddf01007925d3b0102cc7f63793b615bec88220b5798f"
+  }
+}

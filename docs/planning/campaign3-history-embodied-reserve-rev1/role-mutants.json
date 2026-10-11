@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "original": "docs/planning/EMBODIED_ROLE_MUTANTS_REV1.json",
+  "originalSha256": "f58a22f72bb867976b78d171af9138984c1224761769751296078503c093118e",
+  "comparison": "Whole behavioral receipt equal; current source hashes retained separately from historical sources.",
+  "historicalSources": [
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "07ed740a3a9c9b4de439af7f062b5270721b8f563c5d99cf9dd973b82da6928d"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "scripts/review-embodied-role-mutants.mjs",
+      "sha256": "c1dcb9a7306b48d5dfe48cc7be4b56dd75dd29ae87b639768f64dd5abaca5767"
+    }
+  ],
+  "currentSources": [
+    {
+      "path": "src/campaign3/embodiedModel.ts",
+      "sha256": "07ed740a3a9c9b4de439af7f062b5270721b8f563c5d99cf9dd973b82da6928d"
+    },
+    {
+      "path": "src/campaign2/stateModel.ts",
+      "sha256": "1ebeee65357a37a1655649c8454f413db944e4a06f8c95820d7d375c84d956d7"
+    },
+    {
+      "path": "scripts/review-embodied-role-mutants.mjs",
+      "sha256": "c1dcb9a7306b48d5dfe48cc7be4b56dd75dd29ae87b639768f64dd5abaca5767"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-embodied-reserve-role-mutants.mjs",
+    "sha256": "039cc9fc0186d514be88840cb77b60f14dd49f6144af1804228f66aa0ff12966"
+  }
+}

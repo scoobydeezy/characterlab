@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),O='docs/planning/campaign3-history-affect-authority-rev1/';fs.mkdirSync(O,{recursive:true});const rows=[];
+for(const [script,varname,resultName,guard]of [['scripts/compare-affect-factors.mjs','destination','result','assert(!fs.existsSync(destination));'],['scripts/audit-affect-closure.mjs','output','result',"assert(!fs.existsSync(output),'immutable receipt exists');"]]){
+ let source=fs.readFileSync(script,'utf8');const once=(a,b)=>{assert.equal(source.split(a).length,2);source=source.replace(a,b);};
+ once(guard,`assert(fs.existsSync(${varname}));`);if(source.includes("from 'vite'"))once("from 'vite'",'from '+JSON.stringify(import.meta.resolve('vite')));
+ once(`fs.writeFileSync(${varname},JSON.stringify(${resultName},null,2)+'\\n',{flag:'wx'});`,`assert.deepEqual(${resultName},JSON.parse(fs.readFileSync(${varname})));`);assert(!source.includes('writeFileSync'));
+ try{await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));rows.push({script,sha256:sha(script),status:'EXACT HISTORICAL RECEIPT REPRODUCED'});}catch(e){rows.push({script,sha256:sha(script),status:'CHECK FAILED',message:e.message});}
+}
+const result={status:rows.every(r=>r.status.startsWith('EXACT'))?'PASS':'PRESERVED CHECK FAILURE',rows,scope:'Read-only reexecution of arithmetic and closure assertions. Stored runtime/test results are checked,not freshly replayed by closure audit.',checkerSha256:sha('scripts/check-history-affect-authority.mjs')},file=O+'canonical-check.json';if(fs.existsSync(file))assert.deepEqual(JSON.parse(fs.readFileSync(file)),result);else fs.writeFileSync(file,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));

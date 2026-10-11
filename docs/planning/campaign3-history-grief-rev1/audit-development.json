@@ -1,0 +1,7 @@
+{
+  "status": "PRESERVED AUDIT HELPER FAILURE",
+  "failedCheckerSha256": "821e239c5c2c71efd45fff81df7b84ddc69b661fe22866cae9da9b52540fa68f",
+  "error": "Digest method not supported: broad 25-to-31 adaptation changed sha256 to sha316, before semantic decoding.",
+  "correction": "Restore hash algorithm and receipt field names to sha256/Sha256; original evidence untouched; no success receipt existed.",
+  "downstream": "Review and index attempts then failed for absent prerequisite receipts; no partial review/index registered."
+}

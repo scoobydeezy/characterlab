@@ -1,0 +1,354 @@
+{
+  "status": "PASS;37 CURRENT TESTS/EIGHT ORIGINAL PUBLICATION MUTATIONS/TEN ORIGINAL STRUCTURAL FAULTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-memory-recall.mjs",
+    "sha256": "38a1a3f80a474cce9f76b48322c59b491c11a4f40603f38ab13214d434e608db"
+  },
+  "symbolic": [
+    {
+      "script": {
+        "path": "scripts/build-ga-recollection-carrier.mjs",
+        "sha256": "7cb7cd509f8333992495a1ee7d2da9fb407eddcca494385aa10756f84d881237"
+      },
+      "output": {
+        "path": "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+        "sha256": "09dc3db27ca7a0b9b25c86283cca15640a2fb6a1d1eb7aa8e2c77dc01e7ae5a5"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-recollection-carrier.mjs",
+        "sha256": "890c618a6797e2633f783a87418d9215c9ae7b3038e9f5d0b8a2ac1293f73aad"
+      },
+      "output": {
+        "path": "docs/planning/GA_RECOLLECTION_CARRIER_REVIEW_REV3.json",
+        "sha256": "affec828d1d421ba71d2d91e467d15c1a7148a70f887a1c7494f4fd718ee3aa5"
+      },
+      "faults": [
+        {
+          "name": "source-selection-as-memory-id",
+          "rejected": true
+        },
+        {
+          "name": "body-numeric-score",
+          "rejected": true
+        },
+        {
+          "name": "retention-credit-as-recollection",
+          "rejected": true
+        },
+        {
+          "name": "initial-formation-as-recall",
+          "rejected": true
+        },
+        {
+          "name": "old-two-winner-bound",
+          "rejected": true
+        },
+        {
+          "name": "empty-recall-allocates-winner",
+          "rejected": true
+        },
+        {
+          "name": "selection-history-key",
+          "rejected": true
+        },
+        {
+          "name": "unbounded-history",
+          "rejected": true
+        },
+        {
+          "name": "extra-acquisition-identity",
+          "rejected": true
+        },
+        {
+          "name": "premature-record-number",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "name": "reuse-acquisition-as-recollection",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "const occurrence=allocate();",
+      "inserted": "const occurrence=content.winner.id;",
+      "witness": "RP-A",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-reuse-acquisition-as-recollection.json",
+        "sha256": "6b105d58b3cdce0ca324435a04d26034b0c167f4287d1b49cebd2deea3b6bc2b"
+      },
+      "failed": [
+        "RP-A: actual body rank winners allocate once each and preserve non-cued surviving groups",
+        "RP-D: event winners come from the actual direct/associative rank kernel",
+        "RP-F: forged, replayed, closed and failed-allocation capabilities reject",
+        "RP-H: presentation requires the actual event publication, remains narrow and cannot replay"
+      ]
+    },
+    {
+      "name": "replay-recollection-capability",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "views.delete(view);\n const seen",
+      "inserted": "\n const seen",
+      "witness": "RP-F",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-replay-recollection-capability.json",
+        "sha256": "3a67c473efce04c24453b0eb0f7f24978938cf1b5216dc58f599797331b1e511"
+      },
+      "failed": [
+        "RP-F: forged, replayed, closed and failed-allocation capabilities reject"
+      ]
+    },
+    {
+      "name": "publication-follows-mutable-evaluation",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "contents:structuredClone(contents)",
+      "inserted": "contents",
+      "witness": "RP-E",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-publication-follows-mutable-evaluation.json",
+        "sha256": "242ea75ed599267004938251c738c0a37f97e24a3aa45a254b2ac35d9ba54072"
+      },
+      "failed": [
+        "RP-E: source memory and returned evaluation cannot alter staged content"
+      ]
+    },
+    {
+      "name": "absent-body-reads-state",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "evaluation=cue.kind==='Absent'?empty:recallBodyByAcquisitionRecency(read(),cue,at,slots)",
+      "inserted": "evaluation=recallBodyByAcquisitionRecency(read(),cue,at,slots)",
+      "witness": "RP-B",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-absent-body-reads-state.json",
+        "sha256": "0d3f0e9894a977293f2365cf8a79dd814eea17d12d1ba1a0a8d9270b4fde5734"
+      },
+      "failed": [
+        "RP-B: absent cues read no state and publish no occurrences in either partition"
+      ]
+    },
+    {
+      "name": "absent-event-reads-state",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "const operands=cue.kind==='Absent'?{memory:[],graph:{keys:[],weights:[]},presentations:new Map()}:read();",
+      "inserted": "const operands=read();",
+      "witness": "RP-B",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-absent-event-reads-state.json",
+        "sha256": "70b26b6702d760ddfe6d012f1e767d4142dc3e8a781fd3a5376341594b1832d0"
+      },
+      "failed": [
+        "RP-B: absent cues read no state and publish no occurrences in either partition"
+      ]
+    },
+    {
+      "name": "repeat-presentation",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "published.delete(publication);",
+      "inserted": "void publication;",
+      "witness": "RP-H",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-repeat-presentation.json",
+        "sha256": "809369b4970d96e1dfe422cec76b80b20952e4dfc5eb62af53d269a776dba738"
+      },
+      "failed": [
+        "RP-H: presentation requires the actual event publication, remains narrow and cannot replay"
+      ]
+    },
+    {
+      "name": "body-presentation-admitted",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "stored.kind!=='EventContinuant'?null:",
+      "inserted": "false?null:",
+      "witness": "RP-H",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-body-presentation-admitted.json",
+        "sha256": "800a7099b4962eb5bfa97b56d29082e8894bf62f8416600d994703536d1361e5"
+      },
+      "failed": [
+        "RP-H: presentation requires the actual event publication, remains narrow and cannot replay"
+      ]
+    },
+    {
+      "name": "recollection-subject-from-observer",
+      "file": {
+        "path": "src/campaign3/recollectionProduction.ts",
+        "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+      },
+      "test": {
+        "path": "src/test/recollectionProduction.test.ts",
+        "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+      },
+      "removed": "subject:stored.subject.character",
+      "inserted": "subject:stored.subject.observer",
+      "witness": "RP-A",
+      "detected": true,
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/fault-recollection-subject-from-observer.json",
+        "sha256": "5d6589444f109b378809d3caad9209eca28f892f80d86284896af2683bb0e638"
+      },
+      "failed": [
+        "RP-A: actual body rank winners allocate once each and preserve non-cued surviving groups"
+      ]
+    }
+  ],
+  "originalReviewer": {
+    "path": "scripts/review-ga-recollection-production.mjs",
+    "sha256": "778a5a7af2670255ab0802cf749d6f2d73bdfb56409adc880b44f0098b3c45ae"
+  },
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/current-tests.json",
+    "sha256": "91cd0fe15348917e2194362f2c3515dc608837e047dd987d449375b5bcf8107e"
+  },
+  "sourcePaths": [
+    "docs/formal/EVENT_PRESENTATION_SETTLEMENT_COMPONENT.md",
+    "docs/formal/ORDINARY_MEMORY_BATCH_COMPONENT.md",
+    "docs/formal/ORDINARY_MEMORY_BATCH_CONTROLS_COMPONENT.md",
+    "docs/formal/RECOLLECTION_PRODUCTION_COMPONENT.md",
+    "docs/formal/SIGNIFICANT_FORMATION_SETTLEMENT_COMPONENT.md",
+    "docs/planning/GA_OBSERVED_ASSOCIATION_RECALL_REV1.md",
+    "docs/planning/GA_PRESENTATION_OWNER_TESTS_REV1.json",
+    "docs/planning/GA_PRESENTATION_OWNER_TESTS_REV2.json",
+    "docs/planning/GA_RECOLLECTION_CARRIER_REV3.json",
+    "docs/planning/GA_RECOLLECTION_CARRIER_REV3.md",
+    "docs/planning/GA_RECOLLECTION_CARRIER_REVIEW_REV3.json",
+    "docs/planning/GA_RECOLLECTION_PRODUCER_TESTS_REV1.json",
+    "docs/planning/GA_RECOLLECTION_PRODUCER_TESTS_REV2.json",
+    "docs/planning/GA_RECOLLECTION_PRODUCER_TESTS_REV3.json",
+    "docs/planning/GA_RECOLLECTION_PRODUCER_TESTS_REV4.json",
+    "docs/planning/GA_RECOLLECTION_PRODUCTION_REVIEW_REV1.json",
+    "docs/planning/GA_RETAINED_FOCAL_BINDING_REV1.md",
+    "docs/planning/GA_RETAINED_FOCAL_BINDING_TESTS_REV1.json",
+    "docs/planning/GA_RETAINED_FOCAL_BINDING_TESTS_REV2.json",
+    "docs/planning/OBSERVED_ASSOCIATION_RECALL_REVIEW_REV1.json",
+    "docs/planning/OBSERVED_ASSOCIATION_RECALL_TESTS_REV1.json",
+    "docs/planning/OBSERVED_ASSOCIATION_RECALL_TESTS_REV2.json",
+    "docs/planning/ORDINARY_MEMORY_BATCH_TESTS_REV1.json",
+    "docs/planning/ORDINARY_MEMORY_BATCH_TESTS_REV2.json",
+    "docs/planning/SIGNIFICANT_FORMATION_SETTLEMENT_TESTS_REV1.json",
+    "docs/planning/SIGNIFICANT_FORMATION_SOURCE_COMPOSITION_TESTS_REV1.json"
+  ],
+  "inputs": [
+    {
+      "path": "src/test/ordinaryMemoryBatch.test.ts",
+      "sha256": "2e75c97a4fd526ead07aab218e8af3574e4dbf2a6887897788c3affe8e30b4ea"
+    },
+    {
+      "path": "src/test/significantFormationSettlement.test.ts",
+      "sha256": "d4e28df46b9dd71f6b967c2e6ae0a24fb5087500860c09131215bd7704528074"
+    },
+    {
+      "path": "src/test/eventPresentationSettlement.test.ts",
+      "sha256": "d47b326b7eca8097b6d32913281250fd9615a696e6bc9587ad6a271f45dd1d10"
+    },
+    {
+      "path": "src/test/recollectionProduction.test.ts",
+      "sha256": "70dd2533d4e6f2c0c9ba09746573aa135267d4fdf39808bf7b85d52e6fb2fc33"
+    },
+    {
+      "path": "src/test/observedAssociationRecall.test.ts",
+      "sha256": "7ecf547018d87ad272b543b8c82ad0657d8d2ab8b79f5ad8ee1d335a9d6050db"
+    },
+    {
+      "path": "src/campaign3/ordinaryMemoryBatch.ts",
+      "sha256": "3b1d9c2ee8bbabf20810f412ba3d3124296b0968b05593dd99f088e8dd1e3a09"
+    },
+    {
+      "path": "src/campaign3/significantFormationSettlement.ts",
+      "sha256": "83e07536918e3fd670e0fcfcafa4dece897dd2c7ae6b3e05021fce3827a3f622"
+    },
+    {
+      "path": "src/campaign3/eventPresentationSettlement.ts",
+      "sha256": "5e182a08ac77a732506523c3fd293a533ac683bb605687768b0615bf9e209cd3"
+    },
+    {
+      "path": "src/campaign3/recollectionProduction.ts",
+      "sha256": "ecb07d50cd3da8f852c7cd6c7cbbd46492b08064a63d8978a6c891be4b806140"
+    },
+    {
+      "path": "src/campaign3/directAssociativeAccess.ts",
+      "sha256": "dad4f528969758fd8d0926ca49c477e3d6922ddf85768c088b088fa55be03478"
+    },
+    {
+      "path": "src/campaign3/canonicalEventRecall.ts",
+      "sha256": "7f45b389daf7c8ed111ea26dbb9fa9b9f358ab37a63de9d5c7a25a994e516244"
+    }
+  ],
+  "reused": [
+    {
+      "path": "docs/planning/campaign3-history-ga-protocol-settlement-rev1/current-tests.json",
+      "sha256": "3340e3adc250e69f8c283d5c12be5fb9c899ae1e8eeeb1be25da19de6f1c8e35"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/current-tests.json",
+      "sha256": "8ef666a2f158b1aa83ec5264eaa8d1c9b3bc0ffbc3e90bd4e4e18c6db2f4219e"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-source-branch-rev1/current-tests.json",
+      "sha256": "b7b1225f4ffddd573f2dd4bb6b6ea6fb4832d2b5b5ea51fbc37bee7b768dd86e"
+    }
+  ],
+  "limits": [
+    "Original recollection source/test commitments match;other dependencies execute current versions. Three separately cited old integration-test versions remain unavailable.",
+    "Four older observed-association mutations are report-only;current seven-case behavioral suite is fresh,not that old mutation run.",
+    "Prior44 protocol/42 goal-composition/31 source-read suites reused without rerun;remaining historical tests explicitly report-only. No public save/restart,read authentication or actual persistent owner qualification."
+  ]
+}

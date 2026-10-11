@@ -1,0 +1,20 @@
+{
+  "status": "PASS READ-ONLY SEMANTIC RECORD ALLOCATION PARITY",
+  "records": 50,
+  "fields": 252,
+  "sources": [
+    {
+      "path": "docs/formal/EVENT_SEMANTIC_NUMERIC_REGISTRY.md",
+      "sha256": "f350070cc455f02ba72e6a2cb32e4185d60de20e236b89ce51406706a5bdfd08"
+    },
+    {
+      "path": "src/semanticBinding/semanticSchemaRegistry.ts",
+      "sha256": "5d4c5943e0f6eea5ef3c40a0a1c35930c9cf9856ddfd4f91cab4deed310689dd"
+    },
+    {
+      "path": "scripts/check-history-semantic-allocation.mjs",
+      "sha256": "0d46ff5e42a8929cad6b837363ea9e201193045e6a8c32772f465b3fbaf46c06"
+    }
+  ],
+  "scope": "All 50 accepted record names, schema versions, field numbers/names and required flags match exported metadata. Does not check namespace/union tables, execution, codec behavior or full semantic qualification."
+}

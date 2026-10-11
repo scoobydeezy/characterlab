@@ -1,0 +1,23 @@
+{
+  "status": "PRESERVED CHECKER ASSERTION FAILURE; NO SOURCE CHANGE",
+  "checker": {
+    "path": "docs/planning/campaign3-history-habit-rejected-cohort-development-rev1/review-history-habit-rejected-cohort.py",
+    "sha256": "d1b7e5ddfeecfca775db7cf74d074f2aa51cb6b8ab4c79dd28b0a313c25b6999"
+  },
+  "failure": "assert len(old)==250 and len(new.keys()-old.keys())==3 and len(old.keys()-new.keys())==2: AssertionError",
+  "cause": "Checker confused 250 artifact occurrences with139 unique paths. Repeated path commitments agree; no conflicting source hashes.",
+  "counts": [
+    {
+      "entries": 250,
+      "uniquePaths": 139,
+      "duplicateOccurrences": 111
+    },
+    {
+      "entries": 251,
+      "uniquePaths": 140,
+      "duplicateOccurrences": 111
+    }
+  ],
+  "correction": "Verify occurrence counts and unique-path counts separately; preserve all occurrence-level source bindings. Shared path subset is137, not250.",
+  "limits": "Failure happened before review outputs or index registration. Original plans and execution receipts unchanged."
+}

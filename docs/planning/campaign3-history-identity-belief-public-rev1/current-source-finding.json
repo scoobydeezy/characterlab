@@ -1,0 +1,34 @@
+{
+  "status": "ORIGINAL CURRENT-SOURCE CLOSURE REJECTED",
+  "finding": "Original closure stopped at identityBiologyRuntime hash. Full plan audit finds two repaired inherited runtime sources. Exact historical bytes and preservation manifest authenticate both. No original artifact changed; scoped closure below is historical evidence authentication, not fresh current-runtime compatibility.",
+  "drift": [
+    {
+      "source": "src/campaign3/identityBiologyRuntime.ts",
+      "expectedHistorical": "06af47efb3d5d3860cacf8230df906ca3ce937dacca37a75da9644450a28d8db",
+      "current": {
+        "path": "src/campaign3/identityBiologyRuntime.ts",
+        "sha256": "a619e6891b3cdb5cced05ce90273fca445c07bd065340157b44faee099bbd5db"
+      },
+      "archive": {
+        "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/identityBiologyRuntime.ts",
+        "sha256": "06af47efb3d5d3860cacf8230df906ca3ce937dacca37a75da9644450a28d8db"
+      }
+    },
+    {
+      "source": "src/campaign3/identityTaskRuntime.ts",
+      "expectedHistorical": "d7c10c8c5d2b075eff9db5413a584691ea46424598a753a06586fda9391c36c2",
+      "current": {
+        "path": "src/campaign3/identityTaskRuntime.ts",
+        "sha256": "5cf7d6bcaecb258da546a5d3a9997b18254fafeecc0bdc26b5430e1ba94c9b4f"
+      },
+      "archive": {
+        "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/identityTaskRuntime.ts",
+        "sha256": "d7c10c8c5d2b075eff9db5413a584691ea46424598a753a06586fda9391c36c2"
+      }
+    }
+  ],
+  "preservation": {
+    "path": "docs/planning/public-wrapper-quiescence-rev1/PRESERVATION.json",
+    "sha256": "d327125ef03a5f2281b43e3a725dc6072b5c00aa205d4a0b79718c0109ff9e2b"
+  }
+}

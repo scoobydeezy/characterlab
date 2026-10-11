@@ -1,0 +1,10 @@
+{
+  "status": "PRESERVED AUDIT CHECKER FAILURE BEFORE RESULT PUBLICATION",
+  "checker": {
+    "path": "docs/planning/campaign3-history-affect-evidence-rev1/rejected-reviewer-rev1.py",
+    "sha256": "daf583855c031272253d48e48177cf12affedacd17de0e2546a270a57b850e25"
+  },
+  "command": "python -X utf8 scripts/review-history-affect-evidence.py",
+  "failure": "AssertionError at line77: actual==expected(r['input'])",
+  "scope": "Independent Python arithmetic checker rejected map equality. No original source, experiment or report changed; investigate candidate names before drawing scientific inference."
+}

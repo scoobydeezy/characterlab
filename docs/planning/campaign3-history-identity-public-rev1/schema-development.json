@@ -1,0 +1,10 @@
+{
+  "status": "AUDIT HELPER ASSERTION FAILED BEFORE ROW VALIDATION",
+  "error": "16 !== 16n",
+  "cause": "The helper expected BigInt for compiled standingDenominator, but its declared compiler field is Number(1|16). Scientific profile bytes and runtime behavior were not changed.",
+  "correction": "Compare the compiled number directly with the numeric frozen plan unit. Rerun complete schema check; initial failure produced no passing receipt.",
+  "preserved": {
+    "path": "docs/planning/campaign3-history-identity-public-rev1/schema-before-number-fix.mjs",
+    "sha256": "0f27de331e86cd891a2604a94182ad85b2944de1e87d4c16b0b757f7cf9fed7e"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "AUDIT ASSUMPTIONS CORRECTED; ORIGINAL EVIDENCE UNCHANGED",
+  "findings": [
+    {
+      "failedAssertion": "run initial/original byte digest equals frozen .cenc.hex file digest",
+      "reason": "The frozen image commitment hashes the text file, whereas the run digest hashes decoded canonical bytes. These are distinct representations.",
+      "correction": "Check the original file hash, decode its hexadecimal contents, then compare the decoded byte digest against the run receipt for all 43 models."
+    },
+    {
+      "failedAssertion": "Every recall score equals base plus pull",
+      "witness": "feedback-retrieval at7: base1/4, pull51/100, score241/250; admitted retrieval omega7/5 gives1/4+(7/5)*(51/100)=241/250.",
+      "reason": "The new audit incorrectly ignored the separately represented retrieval modulation. The original numerical qualification audit already preserves this distinction.",
+      "correction": "The schema review validates exact rational fields without inventing a universal score law; original qualification reconstruction checks measured feedback contrasts. No production formula or historical result is altered."
+    }
+  ],
+  "scope": "Failures occurred while developing this read-only history audit, not during original or fresh GA runtime execution. No original artifact or assertion was weakened."
+}

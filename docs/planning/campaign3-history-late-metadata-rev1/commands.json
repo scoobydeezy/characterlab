@@ -1,0 +1,72 @@
+[
+  {
+    "command": [
+      "node",
+      "scripts/check-longitudinal-goal-closure.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "PASS bounded longitudinal goals:5 models/120 runs/2040 restored prefixes; prior8+328 tests reverified/fresh build;1508/0.\n",
+    "stderr": "",
+    "checker": {
+      "path": "scripts/check-longitudinal-goal-closure.mjs",
+      "sha256": "510ae278a8dc54393dc1e4ca50749614809dff1b5ad28f9bcd65ef9b6c7f0d96"
+    },
+    "scope": "READ-ONLY STORED EVIDENCE VALIDATION; CONSOLE FRESH BUILD LABELS ARE HISTORICAL"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/check-longitudinal-routine-closure.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "PASS routine closure {\"storedPairs\":96,\"retentionPairs\":24,\"maintainedResumed\":8,\"withdrawnResumed\":8,\"opposedResumed\":0,\"firstMaintained\":7,\"firstWithdrawn\":2,\"goalActionContrasts\":5,\"goalProbabilityContrasts\":8,\"scheduledActionContrasts\":8};504 receivers/8568 prefixes;4 fresh joined runs/8 restores;1508/0.\n",
+    "stderr": "",
+    "checker": {
+      "path": "scripts/check-longitudinal-routine-closure.mjs",
+      "sha256": "65281bf86655b8ebd6102d823c253f9b44cd43269aca17fa8d754f91d0eec037"
+    },
+    "scope": "READ-ONLY STORED EVIDENCE VALIDATION; CONSOLE FRESH BUILD LABELS ARE HISTORICAL"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/check-longitudinal-habit-closure.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "PASS bounded habit/relearning {\"storedPairs\":192,\"retentionPairs\":480,\"releaseActions\":4,\"relearnedAvailable\":8,\"relearnedActions\":4,\"hiddenAvailable\":0,\"unavailableAvailable\":0};960 receivers/16320 prefixes;4 fresh joined horizons/8 restores;1508/0.\n",
+    "stderr": "",
+    "checker": {
+      "path": "scripts/check-longitudinal-habit-closure.mjs",
+      "sha256": "9178ee0eb6718008b866d9cbbe8580307b8216dac1e16d1b459da030f9703422"
+    },
+    "scope": "READ-ONLY STORED EVIDENCE VALIDATION; CONSOLE FRESH BUILD LABELS ARE HISTORICAL"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/check-longitudinal-personal-loss-closure.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "{\"status\":\"PASS\",\"runs\":480,\"prefixes\":6240,\"comparisons\":{\"hiddenPairs\":40,\"falsePairs\":40,\"recoveryPairs\":40,\"executionPairs\":40,\"contrasts\":[{\"seed\":0,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":false,\"affectAblationActions\":false,\"competingMotiveActions\":false,\"lossSupportActions\":2,\"noLossSupportActions\":2},{\"seed\":1,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":true,\"affectAblationActions\":true,\"competingMotiveActions\":true,\"lossSupportActions\":3,\"noLossSupportActions\":1},{\"seed\":2,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":true,\"affectAblationActions\":true,\"competingMotiveActions\":true,\"lossSupportActions\":3,\"noLossSupportActions\":2},{\"seed\":3,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":false,\"affectAblationActions\":false,\"competingMotiveActions\":true,\"lossSupportActions\":2,\"noLossSupportActions\":2},{\"seed\":4,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":false,\"affectAblationActions\":false,\"competingMotiveActions\":true,\"lossSupportActions\":2,\"noLossSupportActions\":2},{\"seed\":5,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":true,\"affectAblationActions\":true,\"competingMotiveActions\":true,\"lossSupportActions\":2,\"noLossSupportActions\":1},{\"seed\":6,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":true,\"affectAblationActions\":true,\"competingMotiveActions\":true,\"lossSupportActions\":3,\"noLossSupportActions\":1},{\"seed\":7,\"lossVersusNoLossProbability\":true,\"lossVersusNoLossActions\":true,\"affectAblationActions\":true,\"competingMotiveActions\":true,\"lossSupportActions\":1,\"noLossSupportActions\":0}]}}\n",
+    "stderr": "",
+    "checker": {
+      "path": "scripts/check-longitudinal-personal-loss-closure.mjs",
+      "sha256": "f3c8bf951d9e20ae396531d71debb768b22fc9e37b64d6061fd98e996c9eac3b"
+    },
+    "scope": "READ-ONLY STORED EVIDENCE VALIDATION; CONSOLE FRESH BUILD LABELS ARE HISTORICAL"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/check-affect-regulatory.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "{\"status\":\"PASS\",\"bodyHistoryCollisions\":8,\"comparison\":[{\"law\":\"FullAffect\",\"matches\":64,\"total\":64},{\"law\":\"ScalarThreat\",\"matches\":64,\"total\":64},{\"law\":\"ScalarStress\",\"matches\":56,\"total\":64},{\"law\":\"ScalarPain\",\"matches\":48,\"total\":64},{\"law\":\"ScalarRewardDeviation\",\"matches\":56,\"total\":64}],\"componentPrefixes\":832,\"nativePrefixes\":16}\n",
+    "stderr": "",
+    "checker": {
+      "path": "scripts/check-affect-regulatory.mjs",
+      "sha256": "17e87504109a52346f8157fe26d156d6c4d68458fd9ec970e22456796cc5bda7"
+    },
+    "scope": "READ-ONLY STORED EVIDENCE VALIDATION; CONSOLE FRESH BUILD LABELS ARE HISTORICAL"
+  }
+]

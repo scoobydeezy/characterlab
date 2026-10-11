@@ -1,0 +1,21 @@
+// Historical wrapper scope is authenticated separately from today's exhaustive inventory.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+assert(!process.argv.includes('--write'));
+const P='docs/planning/',O=P+'campaign3-history-disposition-public-rev1/',read=p=>JSON.parse(fs.readFileSync(p)),sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),ref=path=>({path,sha256:sha(path)});
+fs.mkdirSync(O,{recursive:true});
+for(const script of ['check-disposition-public','check-history-wrapper-inventory','check-history-wrapper-repair-matrix','check-disposition-closure','check-identity-recovery-closure'])execFileSync(process.execPath,['scripts/'+script+'.mjs'],{stdio:'inherit'});
+let source=fs.readFileSync('scripts/check-disposition-wrapper-extension.mjs','utf8');
+const a=source.indexOf('const actual='),b=source.indexOf('\nassert.deepEqual(actual',a);assert(a>=0&&b>a);
+source=source.slice(0,a)+"const actual=[...read(old+'INVENTORY.json').inventory.map(r=>r.path),producer].sort();"+source.slice(b);
+const c=source.indexOf('const factories='),d=source.indexOf(';assert.deepEqual(factories',c);assert(c>=0&&d>c);
+source=source.slice(0,c)+"const factories=[...routing.factories.map(r=>r.factory),factory].sort()"+source.slice(d);
+const e=source.indexOf('execFileSync(process.execPath,'),f=source.indexOf('\nconsole.log(',e);assert(e>=0&&f>e);
+source=source.slice(0,e)+'/* Historical inventory/routing and full repair matrix already checked above. */'+source.slice(f);
+source=source.replace("console.log('PASS current50 producers/53 public factories; predecessor49 unchanged.');","console.log('PASS authenticated historical50/53 membership, addition guard/source hashes and receipt; current directory completeness not asserted.');");
+await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+source=fs.readFileSync('scripts/check-disposition-public-closure.mjs','utf8');
+const line="for(const script of ['check-disposition-public.mjs','check-disposition-wrapper-extension.mjs','check-disposition-closure.mjs','check-identity-recovery-closure.mjs'])execFileSync(process.execPath,['scripts/'+script],{stdio:'inherit'});";
+assert.equal(source.split(line).length,2);source=source.replace(line,'/* All child evidence checked above; wrapper inventory uses explicitly historical scope. */');
+await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const receipt={status:'PASS HISTORICAL SCOPE',scope:'Original native disposition result/closure assertions and predecessor closures pass. Wrapper extension receipt, guard/source hashes and historical50-producer53-factory membership checked against independently authenticated predecessor49/52 inventory, routing and repair matrix. Current-directory exhaustiveness is not asserted; no fresh native replay/tests/build.',models:9,runs:15,historicalNativePrefixes:285,historicalProducers:50,historicalFactories:53,checker:ref('scripts/check-history-disposition-public-closure.mjs'),originalClosure:ref(P+'DISPOSITION_PUBLIC_CLOSURE_REV1.json'),historicalInventoryChecker:ref('scripts/check-history-wrapper-inventory.mjs'),historicalRepairChecker:ref('scripts/check-history-wrapper-repair-matrix.mjs')};
+const out=O+'closure-check.json';if(fs.existsSync(out))assert.deepEqual(read(out),receipt);else fs.writeFileSync(out,JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});

@@ -1,0 +1,46 @@
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-familiar-valence-rev1';B=P/'campaign3-history-universe-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def walk(v,p=''):
+ if isinstance(v,dict):
+  for k,x in v.items():yield from walk(x,p+'/'+k)
+ elif isinstance(v,list):
+  for i,x in enumerate(v):yield from walk(x,p+'/'+str(i))
+ elif isinstance(v,str):yield p,v
+specs={'docs/formal/FAMILIAR_VALENCE_PUBLIC_CONTRACT.md': 'Accepted familiar-valence-public0.1: separate feature-memory and own-outcome history owners; controlled identity independent of cross-target appearance similarity. Two-feature maximum familiarity and target-specific signed benefit/harm mean, unknown/neutral/adverse distinct. Current appraisal40 precedes acquisition140; no self-match. Split/FamiliarityAsLiking/ValenceOnly/NoMemory/TruthValence/ExactOnly retained. Prospective contact only, no forgetting or general recognition.', 'docs/planning/FAMILIARITY_VALENCE_READINESS.md': 'Prospective joint independence not supplied by earlier familiarity or nonnegative affection alone. Require neutral exposure, positive/adverse matched appearance, feature intervention with fixed valence and explicit negative operands. No identity/global reputation inference or new state merely for a fixture; response distributions prospective.', 'docs/planning/CAMPAIGN3_FAMILIAR_VALENCE_QUALIFICATION.md': 'VER-C3-FAMILIAR-VALENCE-001:7 models27 runs216 prefixes189 advancing27 terminal;23/328 tests/build historical. Familiarity1 with valence0/+1/-1 and contact1/2,7/9,2/9. New identified target familiar before own history; prior valence not transferred. Partial1/2 FamiliarDifferent versus ExactOnly Novel. Missing/history/comparison/status distinctions retained; no detail-loss, calibrated feeling or enacted action claim.', 'docs/planning/FAMILIAR_VALENCE_IMPLEMENTATION_FINDINGS.md': 'First23 tests/build pass, no failed cohort. Earlier contracts individually insufficient for joint signed valence/familiarity. Full stored observations can change in both journals under field intervention; independence is field projection/consumer, not whole-record equality. Privacy still exact whole views. Internal person boolean selects memory root, not person-belief owner. Unknown/neutral same1/2 consumer do not imply state equivalence; no forgetting/natural identity.', 'docs/planning/FAMILIAR_VALENCE_PUBLIC_PLAN_REV1.json': 'Prospective27 original runs/seven models with exact source/contract/test and ExperimentIdentity/ComparisonCase bindings. Seed32 bytes13, no draws. Authored target identity distinct from appearance comparison; no source-name shortcut to liking.', 'docs/planning/FAMILIAR_VALENCE_PUBLIC_RESULT_REV1.json': 'Complete27-row216-prefix aggregate from four disjoint workers. Fresh decoded stored assertions verify independent familiarity/valence, cross-target history isolation, status distinctions, comparators and whole later privacy.189 advances27 terminal historical, not fresh runtime replay.', 'docs/planning/FAMILIAR_VALENCE_CLOSURE_REV1.json': 'Original closure freshly authenticates all source/model/allocation/plan/result/workers, preservation and23/328 tests/build. Records1235..1249 namespace1179;1249/0 historical. Integrity check not216 fresh restores or fault suite.', 'docs/planning/FAMILIAR_VALENCE_PRESERVATION_REV1.json': 'Exact artifact inventory preserves first passing test, semantic limits and frozen model evidence. No failed new scientific/public cohort; old FAMILIAR/REL_DIMENSIONS failures remain separate. Does not transfer their detail-loss claim into this profile.', 'docs/planning/FAMILIAR_VALENCE_TESTS_REV1.json': 'Historical23 initial PASS includes13 stages plus commit rollback during updates, timing, owner/foreign-target/malformed ingress/save/handles. Prospective probabilities only; not fresh execution.', 'docs/planning/FAMILIAR_VALENCE_REFERENCE_TESTS_REV1.json': 'Historical328 reference assertions PASS; labels/paths/timings backing to reviewed mechanisms, not new familiarity findings or fresh suite execution.', 'docs/planning/FAMILIAR_VALENCE_BUILD_REV1.json': 'Historical final build PASS with exact source artifacts authenticated, not fresh build or full active-suite claim.', 'docs/planning/familiarValence-public-workers-rev1/0.json': 'Worker partition0: modulo4 roster, unique original identities, output/two observer-view hashes and aggregate authenticated. Fresh27 stored-view original contrasts, not216-prefix runtime replay. Negative valence requires admitted harm, familiarity does not supply identity or liking; whole later privacy retained.', 'docs/planning/familiarValence-public-workers-rev1/1.json': 'Worker partition1: modulo4 roster, unique original identities, output/two observer-view hashes and aggregate authenticated. Fresh27 stored-view original contrasts, not216-prefix runtime replay. Negative valence requires admitted harm, familiarity does not supply identity or liking; whole later privacy retained.', 'docs/planning/familiarValence-public-workers-rev1/2.json': 'Worker partition2: modulo4 roster, unique original identities, output/two observer-view hashes and aggregate authenticated. Fresh27 stored-view original contrasts, not216-prefix runtime replay. Negative valence requires admitted harm, familiarity does not supply identity or liking; whole later privacy retained.', 'docs/planning/familiarValence-public-workers-rev1/3.json': 'Worker partition3: modulo4 roster, unique original identities, output/two observer-view hashes and aggregate authenticated. Fresh27 stored-view original contrasts, not216-prefix runtime replay. Negative valence requires admitted harm, familiarity does not supply identity or liking; whole later privacy retained.'}
+entries={e['path']:e for e in load(B/'manifest.json')['entries']};roles=[];strings={}
+chain=[ref(O/'closure-check.json'),ref(O/'view-check.json'),ref(P/'FAMILIAR_VALENCE_CLOSURE_REV1.json'),ref('scripts/qualify-familiar-valence-public.mjs')]
+for p,j in specs.items():
+ assert ref(p)['sha256']==entries[p]['sha256'];roles.append(dict(**ref(p),role='FAMILIAR_VALENCE AUTHORITY / FINDING / TYPED EVIDENCE',judgment=j,acceptanceChain=chain))
+ if p.endswith('.json'):
+  for ptr,s in walk(load(p)):strings[p,ptr]=s
+v=load(P/'FAMILIAR_VALENCE_PUBLIC_RESULT_REV1.json');plan=load(P/'FAMILIAR_VALENCE_PUBLIC_PLAN_REV1.json')
+assert v['planSha256']==ref(P/'FAMILIAR_VALENCE_PUBLIC_PLAN_REV1.json')['sha256']
+assert len(v['results'])==len(plan['runs'])==27 and sum(r['prefixes'] for r in v['results'])==216
+for i,r in enumerate(v['results']):
+ assert set(r)==set('law goal name modelIdentity runIdentity orderedInputs prefixes saveSha256 stateSha256 outputSha256 observerSha256'.split())
+ for k,val in plan['runs'][i].items():assert r[k]==val
+ assert len(r['observerSha256'])==2
+for n,count in [('FAMILIAR_VALENCE_TESTS_REV1.json',23),('FAMILIAR_VALENCE_REFERENCE_TESTS_REV1.json',328)]:
+ t=load(P/n);assert t['success'] and t['numPassedTests']==count
+ leaves=[a for f in t['testResults'] for a in f['assertionResults']];assert len(leaves)==count and all(a['status']=='passed' and not a['failureMessages'] for a in leaves)
+for a in load(P/'FAMILIAR_VALENCE_BUILD_REV1.json')['artifacts']:assert ref(a['path'])==a
+for a in load(P/'FAMILIAR_VALENCE_PRESERVATION_REV1.json')['artifacts']:assert ref(a['path'])==a
+rows=[]
+with (B/'units.jsonl').open(encoding='utf-8') as f:
+ for line in f:
+  u=json.loads(line)
+  if u['source'] not in specs:continue
+  assert u['sourceSha256']==entries[u['source']]['sha256'];ptr=u['location'].get('pointer','')
+  if u['source'].endswith('.json'):assert strings[u['source'],ptr]==u['text']
+  narrative=u['source'].endswith('.md') or '/failureMessages/' in ptr or ptr.startswith(('/status','/reason','/claims','/limits','/limitations','/error','/gates','/scope'))
+  rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],role='NARRATIVE AUTHORITY/FINDING' if narrative else 'TYPED EVIDENCE BACKING',judgment=specs[u['source']]))
+obs=['RO-C3-007','RO-C3-016','RO-C3-017','RO-C3-019','RO-C3-020','RO-C3-021']
+v=dict(status='FIFTEEN FAMILIARITY/VALENCE SOURCES REVIEWED; HQ011 OPEN',sourceRoles=roles,rows=rows,stringLeaves=len(strings),obligations=obs,limits=['Fresh27 stored-view contrasts, not27-run/216-prefix runtime replay or23/328 tests/build.','Feature similarity not identity; familiar target does not inherit another target outcome history.','Field projection independence not equality of raw records with changed fields; privacy remains whole bytes.','No forgetting/detail-loss, natural recognition, general valence law, attachment or enacted contact.'])
+for n,x in [('review.json',v),('check.json',dict(status='PASS; HQ011 OPEN',sources=len(specs),originalNarrativeOccurrences=sum(r['role'].startswith('NARRATIVE') for r in rows),originalBackingOccurrences=sum(r['role'].startswith('TYPED') for r in rows),stringLeaves=len(strings),checker=ref(__file__)))]:
+ f=O/n
+ if f.exists():assert load(f)==x
+ else:f.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+print(json.dumps(load(O/'check.json')))

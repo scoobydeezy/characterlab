@@ -1,0 +1,42 @@
+"""Bind six dated coverage entries to scoped qualification and successor evidence."""
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-chronology-audit-learn-epi-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def save(n,v):
+    p=O/n
+    if p.exists():assert load(p)==v,p
+    else:p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+roles={x['path']:x for x in load(P/'campaign3-history-source-roles-rev313/index.json')['roleAssignments']}
+def evidence(*names):
+    result=[]
+    for name in names:
+        p=P/name;r=roles[p.as_posix()]
+        assert ref(p)['sha256']==r['sha256']
+        for x in r.get('evidence',[]):assert ref(x['path'])['sha256']==x['sha256']
+        result.append(dict(**ref(p),sourceRole=r))
+    return result
+sections=[
+ (1937, 1973, 'ORIGINAL EXIT AUDIT',evidence('CAMPAIGN3_EXIT_AUDIT_2026_09_21.md'),'Documentation audit11 bounded3 prior6 partial1 blocked across21 corpus members,all15 broader families none wholly qualified. Exact clauses include setup,interventions,comparisons,horizon/trace,not just observable obligation. Accepted prior is not fresh execution;untested/missing proof is not behavioral failure. LEARN blocked scalar experiment and joined EPI/REASON/DECISION/COMMIT debts remain at this date,subsequent separately bound qualifications supersede only scoped gaps. Zero unowned does not prove exhaustive historical/scientific completeness. Derived/cache equality remains query/history/horizon relative;no architecture reduction or Campaign4 ranking authorized. Current audit file appends later dated entries;this disposition refers original2026-09-21 portion.'),
+ (1974, 2013, 'EXTERNAL AUDIT REVIEW',evidence('CAMPAIGN3_FINAL_HISTORY_GATE.md'),'External acceptance retains original NOT EXIT-READY and adds RO021 mandatory canonical historical gate,conditional on final exit rather than immediate implementation blocker. Define enumerable authority-aware universe;extract occurrence inventory independently of RO including prose;reconcile material distinctions with owned blocked claims and exact later evidence;preserve occurrence IDs through deduplication;check hashes/freshness/exclusions and independently assess scientific adequacy. Not every obsolete line required;metadata checks alone insufficient.21 corpus/all15families keep separate gates;no conditional waiver or retrospective rewriting. This chronology batch does not satisfy final gate by itself.'),
+ (2014, 2049, 'LEARN QUALIFIED',evidence('CAMPAIGN3_LEARN_QUALIFICATION.md'),'Six models39 runs580 prefixes exact/lattice Gated,UnconditionalPrecision,PointOnly use public-acquired priors from emptyS0,25point samples precision2=>50. Compatible bound preserves entire leaf;informative bound updates;fresh zero remains unknown;fresh repeated bound credited once then finalpoint. Established mean below bound may accept six repeats endingprecision62,so not universal deduplication/calibration. Accepted bounds use full point-like precision approximation. Lattice raw27/520 committed51923/1000000;generic trace quantization empty by contract while application892 records rounding. Initial18/19 lattice assertion failure corrected without model/contract/input change. Hidden potential alias invariance/all6 models;denied not zero;later50 after140 only. Upper bounds,currentlane,general inference unresolved;not all learning family.'),
+ (2050, 2085, 'EPI QUALIFIED',evidence('CAMPAIGN3_EPI_QUALIFICATION.md'),'Six models72 runs240 prefixes exact19/20 before with potentials1/10,4/5 gives same applied1/20 different overflow1/20,3/4. Exact finite safe roster and two state owners equal;raw researchtruth912 differs. Encoding130 freezes prior before independent140writers; informative prior1/100 yieldssurprise1/25,26/51strength,learned3/100precision4 whileencoding retainsoldprior. Compatible2/5 no surprise/update;zero-information may retain encoding1/2 whilebeliefunknown,denied neither. Prior acquiredonepointprecision2,not LEARNprecision50 requirement. Permittedmeasurement contrast changes outputs so invariance not inertia. PotentialLeak/OverflowLeak diagnostic violations not serious lawful sensors or proof of unique surprise law. Read-domain correction and short-seed rejection preserved before publicfreeze. Latest-slot not GA forgetting/general memory;new consumers reopen finite roster.'),
+]
+common=evidence('MOTIVE_AUDIT_VALIDATION_FINDING_REV1.json','CAMPAIGN3_EXIT_RECONCILIATION_READINESS.md')
+ss=[dict(startLine=a,endLine=b,role=k,disposition=n,acceptanceChain=e+common,obligations=['RO-C3-019','RO-C3-020','RO-C3-021']) for a,b,k,e,n in sections]
+cpath=P/'campaign3-history-chronology-candidates-rev1/occurrences.json';candidate=load(cpath);rows=[]
+for item in candidate['rows']:
+    u=item['original'];s=[x for x in ss if x['startLine']<=u['location']['startLine']<=x['endLine']]
+    if not s:continue
+    assert len(s)==1 and u['location']['endLine']<=s[0]['endLine']
+    rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],sectionStartLine=s[0]['startLine'],disposition='DATED CLAIM/ROUTING; bound section specifies scoped acceptance and supersession'))
+priorPaths=[P/f'campaign3-history-chronology-{n}-rev1/review.json' for n in ['tail','integration','cognition','coverage','development-audits','development-workers','development-scope','defining-public','defining-owners','embarrassment-bridge','intoxication-reappraisal','disposition-sleep','belief-wrapper-recovery','identity-admission-belief','eligibility-capability','biology-public','biology-work-order','tolerance-relapse','habit-reinforcement','prospective-goals','grief-control','relationship-history','social-attribution','personstate-fear','interpretation-attribution','lying-display','recollection-communication','control-reappraisal','agency-goal','agency-intake','commit-body-biography','reason-decision']]
+prior=[r for p in priorPaths for r in load(p)['rows']]
+ids=[r['occurrenceId'] for r in prior+rows];assert len(ids)==len(set(ids))
+O.mkdir(exist_ok=True)
+save('review.json',dict(status='FOUR AUDIT LEARN EPI ENTRIES RECONCILED; WHOLE LOG OPEN',checker=ref('scripts/review-history-chronology-audit-learn-epi.py'),candidates=ref(cpath),resolvedSource=candidate['resolvedSource'],sections=ss,rows=rows,priorReviews=[ref(p) for p in priorPaths],limits=['No runtime tests or original writer rerun. Historical counts are not fresh execution.','No whole-log assignment or HQ011 closure. Original bytes and occurrence identities preserved.']))
+save('findings.json',{'status': 'OWNED LIMITS PRESERVED', 'findings': [{'owner': 'RO-C3-021', 'distinction': 'Registry closure and metadata coverage differ from historical scientific adequacy.', 'blockedClaim': 'Zero unowned or completed partial chronology proves final exit.', 'reopen': 'Complete authority-aware universe,occurrences,independent adequacy and separate coverage gates.'}, {'owner': 'RO-C3-010', 'distinction': 'Fresh-prior repeated-bound rejection does not generalize to established priors.', 'blockedClaim': 'Gated learning deduplicates all repeated bounds or precision is calibrated correctness.', 'reopen': 'New censored inference requires explicit source correlation and accepted-credit comparisons.'}, {'owner': 'RO-C3-020', 'distinction': 'Numeric family labels and empty generic quantization traces do not imply unrounded commits.', 'blockedClaim': 'Lattice results are exact unquantized values.', 'reopen': 'Numeric claims must inspect committed profile and application witnesses.'}, {'owner': 'RO-C3-020', 'distinction': 'Encoding freezes prior separately from later learned belief; safe roster excludes truth outputs.', 'blockedClaim': 'Whole research output is character-safe or finite roster proves all consumers.', 'reopen': 'New consumers/sources require actual downstream noninterference and temporal controls.'}]})
+save('check.json',dict(status='PASS SCOPED CHRONOLOGY ACCOUNTING; HQ011 OPEN',sections=len(ss),newOccurrences=len(rows),priorOccurrences=len(prior),cumulativeReviewed=len(ids),remainingOriginalOccurrences=len(candidate['rows'])-len(ids),review=ref(O/'review.json')))
+assert all(p.stat().st_size<50_000_000 for p in O.iterdir())
+print(json.dumps(load(O/'check.json')))

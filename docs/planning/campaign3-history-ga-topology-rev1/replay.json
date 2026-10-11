@@ -1,0 +1,284 @@
+{
+  "status": "PASS; FOUR ORIGINAL STRUCTURAL REVIEWERS AND REV2 BUILDER REPRODUCED",
+  "checker": {
+    "path": "scripts/replay-history-ga-topology.mjs",
+    "sha256": "bf8be2e02696622563b4dbeb1ebf550925a2a5fc1c68d4a31c0bae9675d48ed9"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/review-ga-logical-topology.mjs",
+        "sha256": "174f27a892426a4fea12fefd922183f39f83aea231ac7b100705d4b2d23440f2"
+      },
+      "output": {
+        "path": "docs/planning/GA_LOGICAL_TOPOLOGY_REVIEW_REV1.json",
+        "sha256": "a448146182d71710a823bacece73ba7392279d6ca49401535584d6f97815009d"
+      },
+      "faults": [
+        {
+          "name": "owner-emits-child",
+          "rejected": true
+        },
+        {
+          "name": "unschedulable-phase",
+          "rejected": true
+        },
+        {
+          "name": "backward-current-feedback",
+          "rejected": true
+        },
+        {
+          "name": "instant-cycle",
+          "rejected": true
+        },
+        {
+          "name": "baseline-coupled-to-recall",
+          "rejected": true
+        },
+        {
+          "name": "baseline-becomes-presentation",
+          "rejected": true
+        },
+        {
+          "name": "graph-follows-episode-loss",
+          "rejected": true
+        },
+        {
+          "name": "presentation-writes-use",
+          "rejected": true
+        },
+        {
+          "name": "presentation-from-body",
+          "rejected": true
+        },
+        {
+          "name": "template-count-claimed-as-work-bound",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-logical-topology-rev2.mjs",
+        "sha256": "c9bf42f841f40b081b96717dcfaa78f6e60bf9c28180ba04bdfa74aaad8e604e"
+      },
+      "output": {
+        "path": "docs/planning/GA_LOGICAL_TOPOLOGY_REVIEW_REV2.json",
+        "sha256": "9fc3e497ff19276198538003cf784a49c04a6ca60b02fbfb221a5565ca9d0338"
+      },
+      "faults": [
+        {
+          "name": "physical-writes-memory",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-learning",
+          "rejected": true
+        },
+        {
+          "name": "owner-emits-child",
+          "rejected": true
+        },
+        {
+          "name": "unschedulable-phase",
+          "rejected": true
+        },
+        {
+          "name": "backward-current-feedback",
+          "rejected": true
+        },
+        {
+          "name": "instant-cycle",
+          "rejected": true
+        },
+        {
+          "name": "baseline-coupled-to-recall",
+          "rejected": true
+        },
+        {
+          "name": "baseline-becomes-presentation",
+          "rejected": true
+        },
+        {
+          "name": "graph-follows-episode-loss",
+          "rejected": true
+        },
+        {
+          "name": "presentation-writes-use",
+          "rejected": true
+        },
+        {
+          "name": "presentation-from-body",
+          "rejected": true
+        },
+        {
+          "name": "template-count-claimed-as-work-bound",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-output-declarations.mjs",
+        "sha256": "ca7aaa7b92b4862669ddb5cc986cd48631bbd638a263c661f963206ea6efa5d4"
+      },
+      "output": {
+        "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REVIEW_REV1.json",
+        "sha256": "436ab8affa2ac04d90ba502105da2ab139d1c5f2b3df4d691102b03ef85dca5a"
+      },
+      "faults": [
+        {
+          "name": "unknown-parallel-family",
+          "rejected": true
+        },
+        {
+          "name": "freeze-reallocates",
+          "rejected": true
+        },
+        {
+          "name": "empty-selector-skips-identity",
+          "rejected": true
+        },
+        {
+          "name": "empty-recall-placeholder",
+          "rejected": true
+        },
+        {
+          "name": "missing-baseline-producer",
+          "rejected": true
+        },
+        {
+          "name": "owner-emits",
+          "rejected": true
+        },
+        {
+          "name": "transport-own-identity",
+          "rejected": true
+        },
+        {
+          "name": "unavailable-result-dropped",
+          "rejected": true
+        },
+        {
+          "name": "source-omits-observation-slot",
+          "rejected": true
+        },
+        {
+          "name": "hidden-truth-bindings-omitted",
+          "rejected": true
+        },
+        {
+          "name": "per-child-acquisition",
+          "rejected": true
+        },
+        {
+          "name": "work-count-inferred",
+          "rejected": true
+        },
+        {
+          "name": "permanent-allocation-slipped-in",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-output-declarations-rev2.mjs",
+        "sha256": "2cc1ed3f7c8f34d2b19adc164ccac3f3f81b5017ca74e0a283df35f87a671377"
+      },
+      "output": {
+        "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REVIEW_REV2.json",
+        "sha256": "6cf40baddbced9da43157aa1e49152c0ba023ca9e4c133d8e691931c8cdcbb20"
+      },
+      "faults": [
+        {
+          "name": "replenishment-invents-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "unknown-parallel-family",
+          "rejected": true
+        },
+        {
+          "name": "freeze-reallocates",
+          "rejected": true
+        },
+        {
+          "name": "empty-selector-skips-identity",
+          "rejected": true
+        },
+        {
+          "name": "empty-recall-placeholder",
+          "rejected": true
+        },
+        {
+          "name": "missing-baseline-producer",
+          "rejected": true
+        },
+        {
+          "name": "owner-emits",
+          "rejected": true
+        },
+        {
+          "name": "transport-own-identity",
+          "rejected": true
+        },
+        {
+          "name": "unavailable-result-dropped",
+          "rejected": true
+        },
+        {
+          "name": "source-omits-observation-slot",
+          "rejected": true
+        },
+        {
+          "name": "hidden-truth-bindings-omitted",
+          "rejected": true
+        },
+        {
+          "name": "per-child-acquisition",
+          "rejected": true
+        },
+        {
+          "name": "work-count-inferred",
+          "rejected": true
+        },
+        {
+          "name": "permanent-allocation-slipped-in",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/build-ga-output-declarations.mjs",
+        "sha256": "8b3326b6a2dde9a6f5df11a15fba4b5529818d1ce0c6ac1bed28078dba32e644"
+      },
+      "output": {
+        "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REV2.json",
+        "sha256": "ab20e568ee58ab5f8c5ab001e417fe61e582feb469aca1e053a49e5c387f1d2f"
+      },
+      "faults": []
+    }
+  ],
+  "recoveredBuilder": {
+    "path": "docs/planning/campaign3-history-ga-topology-rev1/c5a9e959abb5232c-build-ga-output-declarations.mjs",
+    "sha256": "c5a9e959abb5232cecf169bd008a49b9221b51dd1d565dbd1e230fe26c243191",
+    "originalPath": "scripts/build-ga-output-declarations.mjs",
+    "method": "Reverse eight declaration-name substitutions and output destination; SHA exactly matches the original REV1 commitment. Not a Git recovery or chronology proof."
+  },
+  "names": {
+    "WorldEventId": "WorldEventOccurrenceId",
+    "EventBindingId": "EventBindingOccurrenceId",
+    "DetectionOccurrenceId": "CurrentDetectionId",
+    "EventDetectionOccurrenceId": "CurrentEventDetectionId",
+    "PerceivedBindingId": "PerceivedBindingOccurrenceId",
+    "CausalRoleEvidenceId": "CausalRoleClaimId",
+    "WorkspaceOccurrenceId": "TaskWorkspaceOccurrenceId",
+    "AppraisalOccurrenceId": "TaskAppraisalOccurrenceId"
+  },
+  "limits": [
+    "49 symbolic fault executions do not execute runtime scheduling, branch predicates, allocation slots, future-time checks, joins, physical patches or rollback.",
+    "The superseded REV1 builder bytes are authenticated; it is not rerun as a public implementation."
+  ]
+}

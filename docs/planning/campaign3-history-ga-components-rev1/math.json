@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "scope": "Fresh original fault probes with SHA-exact historical attention/tracking code pinned; not public runtime execution.",
+  "baseline": {
+    "independent": "1/2",
+    "shared": "1/2",
+    "round": "4",
+    "mass": "0,1,2,2",
+    "beta": true,
+    "future": true,
+    "pull": "1/1",
+    "substitutions": 0
+  },
+  "faults": [
+    {
+      "name": "independent-footprint",
+      "removed": "return values.map(boundedEncodingResponse)",
+      "inserted": "return values.map(x=>x.divide(one.add(sum(values))))",
+      "baseline": "1/2",
+      "actual": "1/3",
+      "detected": true
+    },
+    {
+      "name": "shared-reinterpreted",
+      "removed": "return values.map(x=>denom.numerator?x.divide(denom):zero);",
+      "inserted": "return values.map(x=>denom.numerator?x.multiply(budget).divide(denom):zero);",
+      "baseline": "1/2",
+      "actual": "1/10",
+      "detected": true
+    },
+    {
+      "name": "truncation",
+      "removed": "roundEven(x.numerator*p.scale,x.denominator)",
+      "inserted": "x.numerator*p.scale/x.denominator",
+      "baseline": "4",
+      "actual": "3",
+      "detected": true
+    },
+    {
+      "name": "remainder-tie",
+      "removed": "compareKeys(labels[a.j],labels[b.j])",
+      "inserted": "compareKeys(labels[b.j],labels[a.j])",
+      "baseline": "0,1,2,2",
+      "actual": "0,2,2,1",
+      "detected": true
+    },
+    {
+      "name": "beta-endpoint",
+      "removed": "if(beta.compare(one)>=0)fail('beta must be below one');",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "future-history",
+      "removed": "at>now||",
+      "inserted": "",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "summed-pull",
+      "removed": ".divide(Q.of(BigInt(e.retainedKeys.length)))",
+      "inserted": "",
+      "baseline": "1/1",
+      "actual": "2/1",
+      "detected": true
+    }
+  ],
+  "original": {
+    "path": "docs/planning/ENCODING_ACCESS_MATH_REVIEW_REV2.json",
+    "sha256": "1f41582706308f3614377411d5b8e1ee24823059959763b38534f44ac174d57d"
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/encodingAccessMath.test.ts",
+      "sha256": "ff6053709ebb4da8729ac08cdd9d08b24913dd12f3fbc6216e4026028e58d5f2"
+    },
+    {
+      "path": "docs/formal/ENCODING_ACCESS_MATH.md",
+      "sha256": "85df022afbe9031aa46c0242e713b4c35f5bd1838b1c91f52fab395752e28239"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_CLOSURE_PLAN.md",
+      "sha256": "73ed5558148cbdc4a3b0f118a62e52777e65bb6065e5f5acececfac0b46fd67d"
+    },
+    {
+      "path": "scripts/review-encoding-access-math-forward.mjs",
+      "sha256": "326d0c1a74b9776de4a16d9cf0a419b6c2c339914f1f4fd99594f648343f9d70"
+    }
+  ],
+  "pinnedSources": [
+    {
+      "path": "docs/planning/campaign3-history-ga-components-rev1/observedMarkerTracking.pre-successors.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2"
+    },
+    {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-ga-component-math.mjs",
+    "sha256": "88d1e8e54b18dc95416a186355254998e1847dd6f006752f9acf7e30c10f15e5"
+  }
+}

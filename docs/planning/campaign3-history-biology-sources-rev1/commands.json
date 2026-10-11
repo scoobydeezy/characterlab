@@ -1,0 +1,35 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/check-biological-system-closure.mjs",
+      "exitCode": 0,
+      "stdout": "PASS biological system:25 models/53 distinct runs/2389 distinct prefixes (2438 checks);33+328 tests/build;1400/0.\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-biological-system-closure.mjs",
+        "sha256": "80acad5e21e76c7172584ceacfb91334e2caded0471484680e110cf9887d9adc"
+      }
+    },
+    {
+      "command": "node scripts/check-biology-public-closure.mjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: src/campaign3/biologyPublicRuntime.ts\n+ actual - expected\n\n+ '811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4'\n- '7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751'\n\n    at file:///C:/Users/scoob/Documents/GitHub/characterlab/scripts/check-biology-public-closure.mjs:3:87\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: '811c9a0d4f111c64a26e6f4e29da8c9c8113a5d685d2c10527f7083802b626f4',\n  expected: '7d0f7b46b1b9d952e7a5fa0330ce87a012ac2d84a6da199b3dfe46c099177751',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.20.0\n",
+      "checker": {
+        "path": "scripts/check-biology-public-closure.mjs",
+        "sha256": "e6957359cada1814e973e05c910d928ac7ae5257093d71bad3f5ccab66180d31"
+      }
+    },
+    {
+      "command": "node scripts/check-preserved-public-wrapper-evidence.mjs",
+      "exitCode": 0,
+      "stdout": "PASS identity public:16 models/84 runs/428 native prefixes;3/8 biological probability contrasts,8/8 equal sampled sequences.\nPASS native identity closure:119 affected/328 reference tests; build;1442/0.\nPASS biological public integration:28 models/58 runs/270 complete prefixes;56+328 tests/build;1426/0.\nPASS identity belief native:5 models/37 runs/222 prefixes; component correspondence, whole views and causal phases.\nPASS native identity belief closure:69 affected/328 reference tests; build;1450/0.\nPASS preserved-source evidence only. Current repaired behavior requires separate repair receipts.\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-preserved-public-wrapper-evidence.mjs",
+        "sha256": "9d2c2b92c670d18df66606aac4ec76c2e35c6a9e67640388daf85bfadc44e698"
+      }
+    }
+  ],
+  "scope": "Read-only original receipt verification. Historical public mismatch intentionally retained, then verified against actual preserved source. No fresh simulation, test suite or build."
+}

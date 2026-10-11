@@ -1,0 +1,9 @@
+{
+  "status": "PRESERVED AUDIT HELPER FAILURE",
+  "finding": "Whole-test-leaf count assumed every collected test executed. TARGETED_TESTS_REV1 has two passes and28 explicitly skipped leaves; historical success is only the two selected tests. Assertion failed before any review/index output; original evidence unchanged.",
+  "correction": "Count all30 leaves with28 pending/skipped separately; retain the two-pass scope and require no failure messages on skipped leaves.",
+  "archive": {
+    "path": "docs/planning/campaign3-history-identity-belief-public-rev1/review-before-skipped-test-fix.py",
+    "sha256": "b44b142f6d28146781ac3c7f193438de1fb4bd06c4abb8ad0f5182b5401dfb9f"
+  }
+}

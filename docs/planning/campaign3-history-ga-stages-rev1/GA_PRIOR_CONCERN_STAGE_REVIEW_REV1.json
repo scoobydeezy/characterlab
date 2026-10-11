@@ -1,0 +1,80 @@
+{
+  "status": "PASS; SYMBOLIC DECLARATION REPLAY ONLY",
+  "original": {
+    "path": "docs/planning/GA_PRIOR_CONCERN_STAGE_REVIEW_REV1.json",
+    "sha256": "f95cd74d26df0c42985f56b92c5c4b49431b9646475afd4ba923a170858e8591"
+  },
+  "checker": {
+    "path": "scripts/replay-history-ga-prior-concern-stages.mjs",
+    "sha256": "314bab1a3a70c74d02931afeef6039010ca95c5742410dd19ddb676ab7a9c887"
+  },
+  "helper": {
+    "path": "scripts/replay-history-ga-stage-helpers.mjs",
+    "sha256": "28ab46c25311d972cc51d644d37615de13f711bc6b2e42a840609ed7b1d10251"
+  },
+  "bindingInventory": {
+    "path": "docs/planning/campaign3-history-ga-stages-rev1/bindings.json",
+    "sha256": "ad9c416dea546cbf0693def9ea73575d415385f4091a09410c8ab62beaddf3ec"
+  },
+  "faults": [
+    {
+      "name": "workspace-phase-drift",
+      "rejected": true
+    },
+    {
+      "name": "invent-feedback-occurrence",
+      "rejected": true
+    },
+    {
+      "name": "source-reads-physiology",
+      "rejected": true
+    },
+    {
+      "name": "affect-state-write",
+      "rejected": true
+    },
+    {
+      "name": "late-delivery",
+      "rejected": true
+    },
+    {
+      "name": "allocated-parent-is-completed",
+      "rejected": true
+    },
+    {
+      "name": "shared-consumed-delivery",
+      "rejected": true
+    },
+    {
+      "name": "encoder-full-workspace",
+      "rejected": true
+    },
+    {
+      "name": "unavailable-recall-reads",
+      "rejected": true
+    },
+    {
+      "name": "carry-as-learning",
+      "rejected": true
+    },
+    {
+      "name": "cached-save-proof",
+      "rejected": true
+    },
+    {
+      "name": "identity-before-authentication",
+      "rejected": true
+    },
+    {
+      "name": "replay-numeric-disabled",
+      "rejected": true
+    },
+    {
+      "name": "claim-whole-work-ceiling",
+      "rejected": true
+    }
+  ],
+  "limits": [
+    "No scheduler, public admission or runtime component execution. Unavailable old component bytes remain excluded, not replaced by current implementations."
+  ]
+}

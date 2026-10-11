@@ -1,0 +1,41 @@
+{
+  "status": "PASS HISTORICAL SOURCE SCOPE; HQ011 OPEN",
+  "scope": "Original entire BODY closure equality with only embodiedRuntime hash resolved to exact preserved historical bytes.16 stored rows/79 prefix counts and original scientific assertions rechecked;no current-runtime equivalence,fresh simulation or tests claimed.",
+  "sourceRuns": 16,
+  "componentCandidates": 5,
+  "sourcePrefixes": 79,
+  "historicalRuntime": {
+    "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/embodiedRuntime.ts",
+    "sha256": "d8103b0b9d9a6e16e00ba1d1c05ca4ed803deb8cbb2075fe8de974d713307fbe"
+  },
+  "currentRuntime": {
+    "path": "src/campaign3/embodiedRuntime.ts",
+    "sha256": "617be10d59927fb8f49fbdd4fc18fc23caa043c21e63c228224922ede1121313"
+  },
+  "sources": [
+    {
+      "path": "scripts/check-body-ownership-closure.mjs",
+      "sha256": "ab624496513ba66870e435321d3a35ba6d91358278d627b6824718a9ede9e952"
+    },
+    {
+      "path": "scripts/qualify-body-ownership.mjs",
+      "sha256": "605d481f0c83c902c7d7e6460970e8e68fdca248fefa78b69483ca0695bf3189"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_PLAN_REV1.json",
+      "sha256": "b5f41e96041f93a95c830de26485269de4ca809f09fca9268745084edf4502ca"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_RESULT_REV1.json",
+      "sha256": "0cad832706f55cb81e3b201818756d2414bd60ec06fde6d4de4e5438d143b095"
+    },
+    {
+      "path": "docs/planning/BODY_OWNERSHIP_CLOSURE_REV1.json",
+      "sha256": "415d0b7873050d8f3fec430935cd7bc69cbf3383aab8dc35f3f7ff8bce641f2c"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-body-ownership.mjs",
+    "sha256": "001da261a4962d28d5d96492f0c53806835e333278905418564010ac83e556b5"
+  }
+}

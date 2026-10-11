@@ -1,0 +1,51 @@
+{
+  "status": "PASS; FOUR EXPECTED MUTANTS DETECTED",
+  "original": {
+    "path": "docs/planning/GOAL_QUALIFICATION_PROJECTION_REVIEW_REV1.json",
+    "sha256": "6270a77ffa56326a2f0813fb9c3be2a14baf8eb66a8bab62f5a26ac8c0f3cdee"
+  },
+  "checker": {
+    "path": "scripts/replay-history-ga-goal-projection-faults.mjs",
+    "sha256": "3cf10752216a94baaa6b38a84093e2bbccb6c9e02a41eb6bbc5f44c90aa35169"
+  },
+  "faults": [
+    {
+      "name": "copy-numeric-assessment",
+      "witness": "GQP-A",
+      "detected": true
+    },
+    {
+      "name": "erase-deterioration",
+      "witness": "GQP-A",
+      "detected": true
+    },
+    {
+      "name": "collapse-absence",
+      "witness": "GQP-C",
+      "detected": true
+    },
+    {
+      "name": "indeterminate-is-no-change",
+      "witness": "GQP-B",
+      "detected": true
+    }
+  ],
+  "reports": [
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/fault-copy-numeric-assessment.json",
+      "sha256": "98c64dbff989bd28f34d6acb04d34bef8eba4238370b3fde400fa399730833a9"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/fault-erase-deterioration.json",
+      "sha256": "f446080169e5b2ed10119a0921f80f997b73a76c66aa794d74e2b0969a9f1fd9"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/fault-collapse-absence.json",
+      "sha256": "29c9ec7d480a3cacea3a3574f9e98d7140d86d0e6702be89bb78edaae19cbd59"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/fault-indeterminate-is-no-change.json",
+      "sha256": "1a85553907e915c00cab62aadc2cf80d25b6b2a0766b45e56d15c245a93d32d0"
+    }
+  ]
+}

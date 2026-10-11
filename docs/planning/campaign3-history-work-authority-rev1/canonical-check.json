@@ -1,0 +1,31 @@
+{
+  "status": "EXACT CLOSURE AND ORIGINAL RESULT ASSERTIONS PASS",
+  "rows": [
+    {
+      "plan": {
+        "path": "docs/planning/WORK_PUBLIC_EXPERIMENT_PLAN_REV1.json",
+        "sha256": "23124a51c0fc43e92ab3c935caebc801cd835661a605de167e7eb51190d84e12"
+      },
+      "result": {
+        "path": "docs/planning/WORK_PUBLIC_EXPERIMENT_REV1.json",
+        "sha256": "0fe6ed0a17a4bbcc79208f617cb143cfefab49063407ce9f66bdbbcff0f873cc"
+      },
+      "runs": 70,
+      "prefixRestores": 560
+    },
+    {
+      "plan": {
+        "path": "docs/planning/WORK_DISTRACTOR_PLAN_REV1.json",
+        "sha256": "31d8cde4df00aa0882d1d866be51e80cdf9746683f2f55295cdd8756a9ef14ef"
+      },
+      "result": {
+        "path": "docs/planning/WORK_DISTRACTOR_REV1.json",
+        "sha256": "dc78dd41d45ddda252aab4aea6f8ade6d7c17ef19c119158a8354c6fffca1192"
+      },
+      "runs": 8,
+      "prefixRestores": 64
+    }
+  ],
+  "scope": "Reexecute original closure and stored-result scientific assertions. No fresh public runtime,rollback,test-suite or prefix restore execution.",
+  "checkerSha256": "e490b280f74dfafb9853287da897ae3207482bc8039196c129f7a2a31e83cb7a"
+}

@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "scope": "Fresh original pre-correction fault probes with SHA-exact historical source overrides; no production file change.",
+  "baseline": {
+    "target": "243/1243",
+    "disabled": "27/127",
+    "flat": "1/1",
+    "revoked": true,
+    "need": "Disabled",
+    "substitutions": 0
+  },
+  "faults": [
+    {
+      "name": "flatten-role",
+      "file": "selectedEncoding.ts",
+      "removed": "['causal-role/target',Q.of(9n,10n)]",
+      "inserted": "['causal-role/target',Q.of(1n)]",
+      "baseline": "243/1243",
+      "actual": "3/13",
+      "detected": true
+    },
+    {
+      "name": "ignore-attention-ablation",
+      "file": "selectedEncoding.ts",
+      "removed": "attentionLaw === 'disabled-attention' ? Q.of(1n)",
+      "inserted": "attentionLaw === 'disabled-attention' ? role",
+      "baseline": "27/127",
+      "actual": "243/1243",
+      "detected": true
+    },
+    {
+      "name": "ignore-budget-law",
+      "file": "selectedEncoding.ts",
+      "removed": ",budgetLaw,Q.of(1n),",
+      "inserted": ",'independent',Q.of(1n),",
+      "baseline": "1/1",
+      "actual": "3/13",
+      "detected": true
+    },
+    {
+      "name": "retain-selection-capability",
+      "file": "attentionSelection.ts",
+      "removed": "views.delete(view);\n    const seen",
+      "inserted": "// fault: retain capability\n    const seen",
+      "baseline": true,
+      "actual": false,
+      "detected": true
+    },
+    {
+      "name": "infer-need-zero",
+      "file": "selectedEncoding.ts",
+      "removed": "need:'Disabled' as const",
+      "inserted": "need:'ObservedZero' as const",
+      "baseline": "Disabled",
+      "actual": "ObservedZero",
+      "detected": true
+    }
+  ],
+  "original": {
+    "path": "docs/planning/SELECTED_ENCODING_REVIEW_REV1.json",
+    "sha256": "579fe5de91bb516233bcbcc2f3a5a96ea8631f75193526306fd3ac4ab510f024"
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/selectedEncoding.ts",
+      "sha256": "77ab07998dad545d8fdd5b53513b4a96251d79a9b7a2a0cea94c83d2a4ce50f3"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "11662e718d419ecce120768f1faea6caefbf48951408a0c75ae84987a831c32e"
+    },
+    {
+      "path": "src/campaign3/encodingAccessMath.ts",
+      "sha256": "26fa97f915bfe2724ee2a80d8541e97b3ed631b2192ef27f9ced92a35ff6d447"
+    },
+    {
+      "path": "src/test/selectedEncoding.test.ts",
+      "sha256": "abcdd2354e571ee00188df8d0bd3923acba8705d40942d6aaf310b0124547325"
+    },
+    {
+      "path": "docs/formal/SELECTED_ENCODING_COMPONENT.md",
+      "sha256": "ad9fdbd2a17ba6168f9df3331ee8a916ef4c6690eab81e29e900a00fdeffe850"
+    },
+    {
+      "path": "scripts/review-selected-encoding.mjs",
+      "sha256": "d5f3fd73cf5017fc4b6640722a1b8f9988566bf09829231b866f78e25c37687f"
+    }
+  ],
+  "pinnedSources": [
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/c3c5c098006e37e6-encodingAccessMath.ts",
+      "sha256": "c3c5c098006e37e689c5dccae69aac5d5c9e1ab9c76cc4bfbcc0c0ba509118ee"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/aa40340b1832eb82-selectedEncoding.ts",
+      "sha256": "aa40340b1832eb82539d1a52f6fea88c930aa85de884aa91d4b612948ad78150"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-corrections-rev1/a16b421cfd570e1f-observedMarkerTracking.ts",
+      "sha256": "a16b421cfd570e1f7997aa32d6e0a2fd2d4c665c323c505793db37828f51fc5c"
+    },
+    {
+      "path": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts",
+      "sha256": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-ga-initial-selected.mjs",
+    "sha256": "669cb7f84157d86612c765f3a8aa6d539baa91dc45182886627133fa67c0f696"
+  }
+}

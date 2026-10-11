@@ -1,0 +1,21 @@
+{
+  "status": "EXACT CASE/CALIBRATION EQUALITY; CURRENT ARTIFACT REFERENCES MATCH",
+  "source": {
+    "path": "docs/planning/BIO_COMPARISON_PLAN_REV3.json",
+    "sha256": "172301d5e38cc38352e3cf4111bf59d73efeb5148252c15e6b3651ad9e4c0b98"
+  },
+  "predecessor": {
+    "path": "docs/planning/BIO_COMPARISON_PLAN_REV2.json",
+    "sha256": "98a7f03e5bde94010c01a7f722dbe8a02c764d8d60bda36c1efeaa7e67b9e724"
+  },
+  "changedKeys": [
+    "status",
+    "artifacts",
+    "predecessor"
+  ],
+  "changedArtifactPaths": [
+    "docs/formal/BIO_COMPARISON_CONTRACT.md",
+    "scripts/qualify-bio-comparison.mjs"
+  ],
+  "scope": "Editorial successor retains all13 cases and calibration data. This comparison does not claim old/current executable byte equality or rerun BIO qualification."
+}

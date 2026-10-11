@@ -1,0 +1,22 @@
+// Current focused verification; does not overwrite historical Campaign2 receipts.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {startVitest} from 'vitest/node';
+const root='docs/planning/campaign3-history-cognitive-qualification-rev1/';
+const output=root+'tests.json',manifest=root+'test-sources.json';
+assert(!fs.existsSync(output));assert(!fs.existsSync(manifest));
+const files=fs.readdirSync('src/test').filter(x=>/^campaign2Cognitive.*\.test\.ts$/.test(x)).sort().map(x=>'src/test/'+x);
+assert.equal(files.length,7);
+const paths=fs.readdirSync('src',{recursive:true}).filter(x=>x.endsWith('.ts')||x.endsWith('.tsx')).map(x=>'src/'+x.replaceAll('\\','/')).sort();
+paths.push('scripts/replay-history-cognitive-tests.mjs');
+const fingerprint=()=>paths.map(path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')}));
+const before=fingerprint();
+const ctx=await startVitest('test',files,{config:false,include:files,run:true,watch:false,minWorkers:1,maxWorkers:1,testTimeout:60000,reporters:['json'],outputFile:output},{server:{hmr:false}});
+assert(ctx);
+await ctx.close();
+assert.deepEqual(fingerprint(),before);
+const report=JSON.parse(fs.readFileSync(output,'utf8'));
+assert(report.success);assert.equal(report.numFailedTests,0);assert.equal(report.numPendingTests,0);
+fs.writeFileSync(manifest,JSON.stringify({status:'PASS; CURRENT FOCUSED TESTS, NOT HISTORICAL SUITE REEXECUTION',files,sourceFingerprints:before,result:{path:output,sha256:createHash('sha256').update(fs.readFileSync(output)).digest('hex')},passed:report.numPassedTests},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({files:files.length,passed:report.numPassedTests,status:'PASS'}));

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "command": "node scripts/check-identity-eligibility-closure.mjs",
+  "exitCode": 0,
+  "stdout": "PASS identity eligibility:6 models/52 runs/312 component prefixes; 4/8 matched probes differ.\nPASS identity eligibility closure:60 affected/328 reference tests; build;1426/0.",
+  "scope": "Fresh original read-only source/identity/row/partition/old-new-cohort assertions; historical runtime/tests/build not rerun.",
+  "originalClosure": {
+    "path": "docs/planning/IDENTITY_ELIGIBILITY_CLOSURE_REV2.json",
+    "sha256": "5235f88aaa2a4633383a3d70f042c1d808754a18a88a0a4e53718dbc794c66c3"
+  }
+}

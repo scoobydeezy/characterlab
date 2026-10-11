@@ -1,0 +1,26 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {createServer as originalCreateServer} from 'vite';
+const pins={"/src/campaign3/encodingAccessMath.ts": "docs/planning/campaign3-history-ga-corrections-rev1/c3c5c098006e37e6-encodingAccessMath.ts", "/src/campaign3/selectedEncoding.ts": "docs/planning/campaign3-history-ga-corrections-rev1/aa40340b1832eb82-selectedEncoding.ts", "/src/campaign3/observedMarkerTracking.ts": "docs/planning/campaign3-history-ga-corrections-rev1/a16b421cfd570e1f-observedMarkerTracking.ts", "/src/campaign3/attentionSelection.ts": "docs/planning/campaign3-history-attention-public-rev1/attentionSelection.original.ts"};
+const createServer=options=>originalCreateServer({...options,plugins:[{name:'exact-pre-correction-source',enforce:'pre',load(id){const pair=Object.entries(pins).find(([suffix])=>id.replaceAll('\\','/').endsWith(suffix));if(pair)return fs.readFileSync(pair[1],'utf8');}},...(options.plugins??[])]});
+
+const output='docs/planning/OBSERVED_MARKER_TRACKING_REVIEW_REV1.json';
+const changes=[
+ ['current-collision','&&detections.filter(x=>x.glyph===d.glyph).length===1','','current'],
+ ['previous-collision','old.length===1','old.length>=1','previous'],
+ ['observation-replay',"if(used.has(input.observationId))fail('replayed observation');",'','replay'],
+ ['horizon','f.sweeps>=8','f.sweeps>8','horizon'],
+ ['early-private-mutation','const f=get(token);own(input','const f=get(token);f.sweeps++;own(input','atomic'],
+];
+async function probe(change){let substitutions=0;const server=await createServer({configFile:false,server:{middlewareMode:true},appType:'custom',plugins:change?[{name:'marker-fault',enforce:'pre',transform(code,id){if(id.replaceAll('\\','/').endsWith('/src/campaign3/observedMarkerTracking.ts')){assert.equal(code.split(change[1]).length-1,1);substitutions++;return code.replace(change[1],change[2]);}}}]:[]});try{const m=await server.ssrLoadModule('/src/campaign3/observedMarkerTracking.ts'),newTracker=()=>m.createMarkerTracker('observer/a'),sweep=(n,g)=>({observerId:'observer/a',observationId:BigInt(n*10),occurredAt:BigInt(n),detections:g.map((glyph,i)=>({detectionId:BigInt(n*10+i+1),glyph:BigInt(glyph)}))});
+ const a=newTracker();m.applyMarkerSweep(a,sweep(1,[1]));const current=new Set(m.applyMarkerSweep(a,sweep(2,[1,1])).map(x=>x.perceptualReferentId.observerTrackSequence)).size;
+ const b=newTracker();m.applyMarkerSweep(b,sweep(1,[1,1]));const previous=m.applyMarkerSweep(b,sweep(2,[1]))[0].continuityKind;
+ const c=newTracker();m.applyMarkerSweep(c,sweep(1,[1]));let replay=false;try{m.applyMarkerSweep(c,{...sweep(2,[2]),observationId:10n});}catch{replay=true;}
+ const d=newTracker();let accepted=0;for(let i=0;i<9;i++)try{m.applyMarkerSweep(d,sweep(i,[]));accepted++;}catch{}const horizon=accepted;
+ const e=newTracker(),before=m.markerTrackingSnapshot(e).sweeps;try{m.applyMarkerSweep(e,sweep(1,[9]));}catch{}const atomic=m.markerTrackingSnapshot(e).sweeps===before;
+ return {current,previous,replay,horizon,atomic,substitutions};
+ }finally{await server.close();}}
+const baseline=await probe();assert.deepEqual(baseline,{current:2,previous:'NewTrack',replay:true,horizon:8,atomic:true,substitutions:0});const results=[];for(const change of changes){const actual=await probe(change);assert.equal(actual.substitutions,1);assert.notDeepEqual(actual[change[3]],baseline[change[3]]);results.push({name:change[0],removed:change[1],inserted:change[2],baseline:baseline[change[3]],actual:actual[change[3]],detected:true});}
+const fp=p=>({path:p,sha256:createHash('sha256').update(fs.readFileSync(p)).digest('hex')}),tests=JSON.parse(fs.readFileSync('docs/planning/OBSERVED_MARKER_TRACKING_TESTS_REV1.json'));assert(tests.success&&tests.numPassedTests===8);
+const reconstructed={status:'OMT-A..H QUALIFIED AT COMPONENT SCOPE',tests:8,faults:results,baseline,sources:['src/campaign3/observedMarkerTracking.ts','src/test/observedMarkerTracking.test.ts','src/semanticBinding/perceptualContinuantFiles.ts','docs/formal/OBSERVED_MARKER_TRACKING_COMPONENT.md','scripts/review-observed-marker-tracking.mjs'].map(fp),evidence:fp('docs/planning/OBSERVED_MARKER_TRACKING_TESTS_REV1.json'),limits:['No public world/observation source, authenticated ingress, persistent encoding/access state or corpus verdict. Actual SEM transitions are used; marker observations remain component inputs pending source contract.']};
+const original=JSON.parse(fs.readFileSync(output));assert.deepEqual(reconstructed.baseline,original.baseline);assert.deepEqual(reconstructed.faults,original.faults);
+const audit={status:'PASS',scope:'Fresh original pre-correction fault probes with SHA-exact historical source overrides; no production file change.',baseline:reconstructed.baseline,faults:reconstructed.faults,original:fp(output),sources:reconstructed.sources,pinnedSources:Object.values(pins).map(fp),checker:fp('scripts/replay-history-ga-initial-tracking.mjs')};
+const destination='docs/planning/campaign3-history-ga-corrections-rev1/tracking.json';if(fs.existsSync(destination))assert.deepEqual(JSON.parse(fs.readFileSync(destination)),audit);else fs.writeFileSync(destination,JSON.stringify(audit,null,2)+'\n');console.log(JSON.stringify({status:'PASS',component:'tracking',faults:audit.faults.length}));

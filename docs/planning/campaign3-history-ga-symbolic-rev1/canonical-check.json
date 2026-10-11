@@ -1,0 +1,31 @@
+{
+  "status": "TOPOLOGY AND OUTPUT STATIC REVIEWS REPRODUCED",
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/review-ga-logical-topology-rev2.mjs",
+        "sha256": "c9bf42f841f40b081b96717dcfaa78f6e60bf9c28180ba04bdfa74aaad8e604e"
+      },
+      "receipt": {
+        "path": "docs/planning/GA_LOGICAL_TOPOLOGY_REVIEW_REV2.json",
+        "sha256": "9fc3e497ff19276198538003cf784a49c04a6ca60b02fbfb221a5565ca9d0338"
+      },
+      "stageTemplates": 67,
+      "faults": 12
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-output-declarations-rev2.mjs",
+        "sha256": "2cc1ed3f7c8f34d2b19adc164ccac3f3f81b5017ca74e0a283df35f87a671377"
+      },
+      "receipt": {
+        "path": "docs/planning/GA_OUTPUT_DECLARATIONS_REVIEW_REV2.json",
+        "sha256": "6cf40baddbced9da43157aa1e49152c0ba023ca9e4c133d8e691931c8cdcbb20"
+      },
+      "stageTemplates": 67,
+      "faults": 14
+    }
+  ],
+  "scope": "Full original static assertions/mutation controls and exact receipt equality;not runtime branch predicates,join-once behavior,source admission or work ceiling.",
+  "checkerSha256": "60dbc9b652d9afee7be43533b82e6262a6436ebe0286fc4a3ac6311b4c07c762"
+}

@@ -1,0 +1,103 @@
+{
+  "status": "HISTORICAL TEST-COUNT CORRECTION; ORIGINAL RECEIPT PRESERVED",
+  "original": {
+    "path": "docs/planning/MULTISOURCE_VALIDATION_CLOSURE_REV1.json",
+    "sha256": "c08d627b5385b4b10e850260e63c868032491b2dba0ebfdfe4f12d8450e747e3"
+  },
+  "full": {
+    "path": "docs/planning/MULTISOURCE_FULL_TESTS_REV1.json",
+    "sha256": "b164d203630b6ab575d66cc90b87d24ed2571e387a8183802ae9c3d2b61245f2"
+  },
+  "focused": {
+    "path": "docs/planning/MULTISOURCE_FINAL_FOCUSED_TESTS_REV2.json",
+    "sha256": "130e0c38e85a499461458714db11c89b4fde61b834356510ac2875c4f0a754e3"
+  },
+  "finding": "latestEvidenceCoverage.tests/passed=2191 equals distinct file/fullName/status keys, not2236actual assertion occurrences. Parameterized display names repeat.",
+  "correction": "Report2236passing assertion occurrences in282files after replacing onlyfive affected suites with22targeted passes. Original broad process remains2235passed/one codec regression failure, notPASS.",
+  "assertionOccurrences": 2236,
+  "distinctDisplayKeys": 2191,
+  "duplicateOccurrences": 45,
+  "duplicates": [
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, false, false, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 4
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ true, false, false, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 4
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, true, false, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 4
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ true, true, false, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, false, true, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 4
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ true, false, true, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, true, true, false, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ Array(6) ]",
+      "status": "passed",
+      "occurrences": 25
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, false, false, true, …(2) ]",
+      "status": "passed",
+      "occurrences": 4
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ true, false, false, true, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, true, false, true, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    },
+    {
+      "file": "src/test/campaign2TaskModel.test.ts",
+      "fullName": "closed task model construction matches frozen model 'overlapping' / [ false, false, true, true, …(2) ]",
+      "status": "passed",
+      "occurrences": 2
+    }
+  ],
+  "obligations": [
+    "RO-C3-001",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "No historical test result modified and no fresh2236test suite claimed. Exact scientific conclusions depend on scoped experiments, not aggregate test counts."
+  ]
+}

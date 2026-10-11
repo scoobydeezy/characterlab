@@ -1,0 +1,23 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/check-preserved-public-wrapper-evidence.mjs",
+      "exitCode": 0,
+      "result": "PASS all three preserved identity/biology/identity-belief closure checkers; preserved-source evidence only, not current repaired behavior.",
+      "checker": {
+        "path": "scripts/check-preserved-public-wrapper-evidence.mjs",
+        "sha256": "9d2c2b92c670d18df66606aac4ec76c2e35c6a9e67640388daf85bfadc44e698"
+      }
+    },
+    {
+      "command": "node scripts/check-history-wrapper-repair-matrix.mjs",
+      "exitCode": 0,
+      "result": "PASS original closure equality:49 producers,4 repairs,149 cases/747 prefixes,74 affected/328 reference tests/build;1450/0. Historical matrix/closure only; current directory inventory/routing not requalified.",
+      "checker": {
+        "path": "scripts/check-history-wrapper-repair-matrix.mjs",
+        "sha256": "33c019dfebe9ea1c90458c27bfbc19c300cc85176f39d051001c5bcda5576577"
+      }
+    }
+  ],
+  "scope": "Read-only receipt reconstruction; no fresh simulation, tests, restore or build. Historical inventory/routing checks deliberately excluded from the matrix adapter; neither old inventory nor current inventory is requalified here."
+}

@@ -1,0 +1,46 @@
+from pathlib import Path
+import json,hashlib
+P=Path('docs/planning');O=P/'campaign3-history-rel-attribution-rev1';B=P/'campaign3-history-universe-rev1'
+def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ref(p):return dict(path=Path(p).as_posix(),sha256=hashlib.sha256(Path(p).read_bytes()).hexdigest())
+def walk(v,p=''):
+ if isinstance(v,dict):
+  for k,x in v.items():yield from walk(x,p+'/'+k)
+ elif isinstance(v,list):
+  for i,x in enumerate(v):yield from walk(x,p+'/'+str(i))
+ elif isinstance(v,str):yield p,v
+specs={'docs/formal/REL_ATTRIBUTION_PUBLIC_CONTRACT.md': 'Accepted rel-attribution-public0.1: two observers/targets/tokens; own linked harm history separate from incident cause claims and target-wide willingness. Controlled admitted token equality, not natural linking. Latest harm*cause yields caution, unknown operands preserved. Learning140 changes later40; prospective contact/cooperation probes60, no sampled action/repair. LinkedLatest/InitialCause/CurrentBeliefOnly/NoLearning/TruthOracle retained.', 'docs/planning/RELATIONSHIP_ATTRIBUTION_READINESS.md': 'Prospective later explanation must address same perceived incident without rewriting event or earlier judgment. Requires false explanation, current-willingness-only control, foreign/missing links, observers and later privacy. No automatic corrected-attribution equals repair. Accepted source is report-supported proposition, not causal discovery.', 'docs/planning/CAMPAIGN3_REL_ATTRIBUTION_QUALIFICATION.md': 'VER-C3-REL-ATTRIBUTION-001:6 models25 runs225 prefixes200 advancing25 terminal;23/328 tests/build historical. Harm1/willingness1 fixed while linked cause/caution1→0; byte-identical harm history. Contact probability2/9→7/9, cooperation stays7/9; willingness-only changes other probe. Hidden truth still deliberate withholding, so revision becomes less accurate. No alternative-cause discovery, forgiveness or enacted repair.', 'docs/planning/REL_ATTRIBUTION_IMPLEMENTATION_FINDINGS.md': 'No failed scientific/public cohort. Preparation Python alias and prose encoding issues affected packaging, not model bytes. Positive current willingness cannot replace incident explanation; InitialCause/CurrentBeliefOnly retain real alternatives. Foreign event correction leaves original cause and foreign harm unknown. Latest claim is candidate authority, not source reliability/truth rule. Prospective distributions not interaction.', 'docs/planning/REL_ATTRIBUTION_PUBLIC_PLAN_REV1.json': 'Prospective25 unique original runs/six models, frozen ExperimentIdentity/ComparisonCase and all source/test/contract bindings. Eight requests/seed32 bytes13, no draws. Controlled same-incident tokens admit linking, not omniscient causal ancestry.', 'docs/planning/REL_ATTRIBUTION_PUBLIC_RESULT_REV1.json': 'Complete25-row225-prefix aggregate from four disjoint workers. Fresh stored decoding/original assertions check immutable history, earlier judgments, linked correction versus willingness, foreign/absent evidence and whole later privacy.200 advances25 terminal historical, not fresh scheduler replay.', 'docs/planning/REL_ATTRIBUTION_CLOSURE_REV1.json': 'Original closure freshly verifies source/model/allocation/plan/result/workers and preservation plus23/328 tests/build. Records1221..1234 namespace1178;1234/0 historical. Integrity does not rerun225 restores or faults.', 'docs/planning/REL_ATTRIBUTION_PRESERVATION_REV1.json': 'Three exact references bind first passing test cohort, semantic findings and model freeze. Explicit rationale: no failed scientific/public cohort to archive; older REL_DIMENSIONS failures remain separately preserved. Not a waiver of historical debt.', 'docs/planning/REL_ATTRIBUTION_TESTS_REV1.json': 'Historical23 initial PASS:13 stages plus commit during real history/person updates, phases/immutability, foreign-target/owner and malformed model/input/save/handles. No new failed cohort; no fresh suite execution or enacted social behavior.', 'docs/planning/REL_ATTRIBUTION_REFERENCE_TESTS_REV1.json': 'Historical328 reference assertions PASS. Labels/paths/timings backing to reviewed mechanisms, not new attribution findings or fresh suite execution.', 'docs/planning/REL_ATTRIBUTION_BUILD_REV1.json': 'Historical final build PASS with source bindings authenticated, not fresh build or full active-suite claim.', 'docs/planning/relAttribution-public-workers-rev1/0.json': 'Worker partition0: exact modulo4 membership, unique original identities, output/two observer-view hashes and aggregate. Fresh25 stored-view original contrasts preserve harm, incident linkage, separate willingness and prospective response effects;225 prefixes remain historical, not runtime replay.', 'docs/planning/relAttribution-public-workers-rev1/1.json': 'Worker partition1: exact modulo4 membership, unique original identities, output/two observer-view hashes and aggregate. Fresh25 stored-view original contrasts preserve harm, incident linkage, separate willingness and prospective response effects;225 prefixes remain historical, not runtime replay.', 'docs/planning/relAttribution-public-workers-rev1/2.json': 'Worker partition2: exact modulo4 membership, unique original identities, output/two observer-view hashes and aggregate. Fresh25 stored-view original contrasts preserve harm, incident linkage, separate willingness and prospective response effects;225 prefixes remain historical, not runtime replay.', 'docs/planning/relAttribution-public-workers-rev1/3.json': 'Worker partition3: exact modulo4 membership, unique original identities, output/two observer-view hashes and aggregate. Fresh25 stored-view original contrasts preserve harm, incident linkage, separate willingness and prospective response effects;225 prefixes remain historical, not runtime replay.'}
+entries={e['path']:e for e in load(B/'manifest.json')['entries']};roles=[];strings={}
+chain=[ref(O/'closure-check.json'),ref(O/'view-check.json'),ref(P/'REL_ATTRIBUTION_CLOSURE_REV1.json'),ref('scripts/qualify-rel-attribution-public.mjs')]
+for p,j in specs.items():
+ assert ref(p)['sha256']==entries[p]['sha256'];roles.append(dict(**ref(p),role='REL_ATTRIBUTION AUTHORITY / FINDING / TYPED EVIDENCE',judgment=j,acceptanceChain=chain))
+ if p.endswith('.json'):
+  for ptr,s in walk(load(p)):strings[p,ptr]=s
+v=load(P/'REL_ATTRIBUTION_PUBLIC_RESULT_REV1.json');plan=load(P/'REL_ATTRIBUTION_PUBLIC_PLAN_REV1.json')
+assert v['planSha256']==ref(P/'REL_ATTRIBUTION_PUBLIC_PLAN_REV1.json')['sha256']
+assert len(v['results'])==len(plan['runs'])==25 and sum(r['prefixes'] for r in v['results'])==225
+for i,r in enumerate(v['results']):
+ assert set(r)==set('law goal name modelIdentity runIdentity orderedInputs prefixes saveSha256 stateSha256 outputSha256 observerSha256'.split())
+ for k,val in plan['runs'][i].items():assert r[k]==val
+ assert len(r['observerSha256'])==2
+for n,count in [('REL_ATTRIBUTION_TESTS_REV1.json',23),('REL_ATTRIBUTION_REFERENCE_TESTS_REV1.json',328)]:
+ t=load(P/n);assert t['success'] and t['numPassedTests']==count
+ leaves=[a for f in t['testResults'] for a in f['assertionResults']];assert len(leaves)==count and all(a['status']=='passed' and not a['failureMessages'] for a in leaves)
+for a in load(P/'REL_ATTRIBUTION_BUILD_REV1.json')['artifacts']:assert ref(a['path'])==a
+for a in load(P/'REL_ATTRIBUTION_PRESERVATION_REV1.json')['artifacts']:assert ref(a['path'])==a
+rows=[]
+with (B/'units.jsonl').open(encoding='utf-8') as f:
+ for line in f:
+  u=json.loads(line)
+  if u['source'] not in specs:continue
+  assert u['sourceSha256']==entries[u['source']]['sha256'];ptr=u['location'].get('pointer','')
+  if u['source'].endswith('.json'):assert strings[u['source'],ptr]==u['text']
+  narrative=u['source'].endswith('.md') or '/failureMessages/' in ptr or ptr.startswith(('/status','/reason','/claims','/limits','/limitations','/error','/gates','/scope'))
+  rows.append(dict(occurrenceId=u['id'],source=u['source'],sourceSha256=u['sourceSha256'],location=u['location'],text=u['text'],role='NARRATIVE AUTHORITY/FINDING' if narrative else 'TYPED EVIDENCE BACKING',judgment=specs[u['source']]))
+obs=['RO-C3-011','RO-C3-014','RO-C3-016','RO-C3-019','RO-C3-020','RO-C3-021']
+v=dict(status='FIFTEEN RELATIONSHIP ATTRIBUTION SOURCES REVIEWED; HQ011 OPEN',sourceRoles=roles,rows=rows,stringLeaves=len(strings),obligations=obs,limits=['Fresh25 stored-view contrasts, not25-run/225-prefix runtime replay or23/328 tests/build.','False exculpatory claim reduces accuracy at fixed truth; no causal discovery/innocence/forgiveness proof.','Original harm/history and earlier appraisals preserved; willingness distinct from linked incident cause.','Prospective response probabilities, not enacted interaction or repair; controlled tokens not natural linking.'])
+for n,x in [('review.json',v),('check.json',dict(status='PASS; HQ011 OPEN',sources=len(specs),originalNarrativeOccurrences=sum(r['role'].startswith('NARRATIVE') for r in rows),originalBackingOccurrences=sum(r['role'].startswith('TYPED') for r in rows),stringLeaves=len(strings),checker=ref(__file__)))]:
+ f=O/n
+ if f.exists():assert load(f)==x
+ else:f.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+print(json.dumps(load(O/'check.json')))

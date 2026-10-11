@@ -1,0 +1,8 @@
+{
+  "status": "CHECKER INPUT-COMMITMENT ASSUMPTION REJECTED",
+  "source": {
+    "path": "docs/planning/campaign3-history-values-development-rev1/rejected-input-equality-checker.py",
+    "sha256": "1461b89f9a91bb2a29a101f27b73a38f28bb5bd327a14d55aa8d438709662bc5"
+  },
+  "finding": "Same receipt originals and six contexts do not imply identical input commitment: corrected gapInstant65 to64 changes the committed input manifest. Preserve both original input hashes and distinct run identities. This is a new reconciliation-checker failure, not a failed historical experiment."
+}

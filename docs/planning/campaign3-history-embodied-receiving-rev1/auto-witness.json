@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "revision": 1,
+      "mode": "3",
+      "source": {
+        "path": "docs/planning/embodied-receiving-execution-rev1/auto/outputs.cenc.hex",
+        "sha256": "e1ba6cb2a5a51c744927ac1836ef311966aac77f2915918822d09647fc91dd50"
+      }
+    },
+    {
+      "revision": 4,
+      "mode": "1",
+      "source": {
+        "path": "docs/planning/embodied-receiving-execution-rev4/auto/outputs.cenc.hex",
+        "sha256": "2049c621576acfe0be6c568880064e4eff5084520ebc5b62015d570fbb74f2c0"
+      }
+    }
+  ],
+  "meaning": "Preserved first witness actually chose PlayerFacingRoll(3); corrected admitted asymmetric witness chose Auto(1). Original failed whole packet is not qualified.",
+  "sources": [
+    {
+      "path": "scripts/check-history-embodied-receiving-auto.mjs",
+      "sha256": "3183f0733b8ee96f05204c1278f78b200fb74ccd72eba4a52c1c73084c7d6a7c"
+    },
+    {
+      "path": "scripts/review-embodied-receiving-execution.mjs",
+      "sha256": "d95cd725c00800732b6c49a011f76d3a31a2a202530f96e310d635459dd3c8d5"
+    },
+    {
+      "path": "docs/planning/embodied-receiving-execution-rev1/DISPOSITION.md",
+      "sha256": "1cb3cd2023e789bb6098d7c8f2292361978f564abcb1f77aad1107a3bfe0eae4"
+    }
+  ]
+}

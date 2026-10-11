@@ -1,0 +1,12 @@
+{
+  "status": "AUDIT ASSUMPTION CORRECTED; NO PRODUCTION CHANGE",
+  "failure": "assert expected==new in archived component test comparison",
+  "cause": "Component DEV1 uses LF; DEV2 uses CRLF throughout. Initial reviewer inserted CRLF into otherwise LF bytes and incorrectly assumed exact equality.",
+  "disposition": "Compare normalized text for the two intended test edits; retain exact original archive SHA256 and record the whole-file newline conversion separately. Public test keeps CRLF in both cohorts.",
+  "rejectedCheckerSha256": "cb7201a5760452c7cddb8d0d08cc83098148df753eb7f1f6553cf47753420204",
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

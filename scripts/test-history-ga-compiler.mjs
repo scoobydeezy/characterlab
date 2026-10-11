@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {startVitest} from 'vitest/node';import {createHash} from 'node:crypto';
+const dir='docs/planning/campaign3-history-ga-compiler-rev1';fs.mkdirSync(dir,{recursive:true});
+const files=['src/test/generalDeclarationProfile.test.ts','src/test/generalSourceDeclarations.test.ts'],output=dir+'/current-tests.json';assert(!fs.existsSync(output));
+const ctx=await startVitest('test',files,{config:false,include:files,run:true,watch:false,minWorkers:1,maxWorkers:1,reporters:['json'],outputFile:output});assert(ctx);await ctx.close();
+const r=JSON.parse(fs.readFileSync(output));assert(r.numTotalTests>=74);assert.equal(r.numFailedTests,0);assert.equal(r.numPassedTests,r.numTotalTests);
+const fp=path=>({path,sha256:createHash('sha256').update(fs.readFileSync(path)).digest('hex')});
+fs.writeFileSync(dir+'/tests.json',JSON.stringify({status:'PASS; CURRENT CONCRETE DECLARATION/SOURCE CONTROLS',total:r.numTotalTests,report:fp(output),checker:fp('scripts/test-history-ga-compiler.mjs'),sources:[...files,...['generalAttentionCodecs','generalAccessors','generalBindingProfile','generalDefinitionProfile','generalDeclarations','generalSourceDeclarations','generalProtocolDeclarations'].map(n=>'src/campaign3/'+n+'.ts')].map(fp),limits:['Current implementation and recipe set; historical 30 recipe/52-test compiler environment not reconstructed.','No full-suite,reference-suite,build or native public runtime rerun.']},null,2)+'\n');

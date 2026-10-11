@@ -1,0 +1,638 @@
+{
+  "status": "TWELVE DEVELOPMENT METADATA SOURCES RECONCILED; HQ011 OPEN",
+  "sourceRoles": [
+    {
+      "path": "docs/planning/development-component-dev1/MANIFEST.json",
+      "sha256": "1bc972d444154bf7217bb127a12731e289cfa9de0b645d5d5361bdab43f3757d",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "First component source freeze; archive hash preserves original test timeout source, not passing all13 tests.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_COMPONENT_CLOSURE_REV1.json",
+          "sha256": "d0fa5613ef19b89faa7c01bdb1819a30f32eab2ff1419a40f87a0362484e423c"
+        },
+        {
+          "path": "docs/planning/development-component-dev1/MANIFEST.json",
+          "sha256": "1bc972d444154bf7217bb127a12731e289cfa9de0b645d5d5361bdab43f3757d"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-component-dev2/MANIFEST.json",
+      "sha256": "62162fc788d98e484d35405f8b3ee89d22b6a7165a980e6b3b6ee38a6cc9213c",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Second component source freeze; existing shared production files match first cohort. Test-only timeout changed; new identity/roster files do not imply a changed kernel.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_COMPONENT_CLOSURE_REV1.json",
+          "sha256": "d0fa5613ef19b89faa7c01bdb1819a30f32eab2ff1419a40f87a0362484e423c"
+        },
+        {
+          "path": "docs/planning/development-component-dev2/MANIFEST.json",
+          "sha256": "62162fc788d98e484d35405f8b3ee89d22b6a7165a980e6b3b6ee38a6cc9213c"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-public-dev1/MANIFEST.json",
+      "sha256": "47fc25e95c83aa3e7b33824d96f054c65405e8a67934f5bdf63ce88213184d6a",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "First native source freeze;21 test passes remain distinct from test-only compiler failure. No retrospective source correction.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/development-public-dev1/MANIFEST.json",
+          "sha256": "47fc25e95c83aa3e7b33824d96f054c65405e8a67934f5bdf63ce88213184d6a"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-public-dev2/MANIFEST.json",
+      "sha256": "1ca1c85d3db50fa073e515fd26157ecad94169bf990ab6d84d3e5947b5680083",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Second native source freeze; exact test fixture assignment correction only. Original production files match; no changed mathematics.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/development-public-dev2/MANIFEST.json",
+          "sha256": "1ca1c85d3db50fa073e515fd26157ecad94169bf990ab6d84d3e5947b5680083"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-component-dev1/FINDING.json",
+      "sha256": "462926563ae400e207e8bddfc61dbbe8cce20768c5287b1cfe1d0a5ac2d0a871",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Six passes/seven timeouts; increasing timeout is not removing failed psychological assertions. Startup denial ran no tests.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_COMPONENT_CLOSURE_REV1.json",
+          "sha256": "d0fa5613ef19b89faa7c01bdb1819a30f32eab2ff1419a40f87a0362484e423c"
+        },
+        {
+          "path": "docs/planning/development-component-dev1/FINDING.json",
+          "sha256": "462926563ae400e207e8bddfc61dbbe8cce20768c5287b1cfe1d0a5ac2d0a871"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-public-dev1/PREFLIGHT.json",
+      "sha256": "dbb346ec83530a85cc450819c355865cd029c193f77ff45719f612c2c7787e81",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Startup denial precedes execution; TS2540 is test-only readonly payload assignment. Successful21-test run does not imply typecheck success.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/development-public-dev1/PREFLIGHT.json",
+          "sha256": "dbb346ec83530a85cc450819c355865cd029c193f77ff45719f612c2c7787e81"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_COMPONENT_BUILD_REV1.json",
+      "sha256": "95474b7f481550eb7136fe91d41b4ee9db9935339d598f7349206892ad9f38cd",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Historical boundary/tsc/Vite success with13 focused/328 reference; not full active suite or fresh build.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_COMPONENT_CLOSURE_REV1.json",
+          "sha256": "d0fa5613ef19b89faa7c01bdb1819a30f32eab2ff1419a40f87a0362484e423c"
+        },
+        {
+          "path": "docs/planning/DEVELOPMENT_COMPONENT_BUILD_REV1.json",
+          "sha256": "95474b7f481550eb7136fe91d41b4ee9db9935339d598f7349206892ad9f38cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_PUBLIC_BUILD_REV1.json",
+      "sha256": "391d44c50a7b9c8ad051b34beeab479769d0c5086e4dfd4aa2eef5151983ae46",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Historical boundary/tsc/Vite success with21 focused/328 reference; no whole active-suite or new build claim.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_BUILD_REV1.json",
+          "sha256": "391d44c50a7b9c8ad051b34beeab479769d0c5086e4dfd4aa2eef5151983ae46"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_REV1.json",
+      "sha256": "fb7d7e6631d8009f185acf61a6b5abfd822e3eeb3dafa3466e898ffafbdbbb14",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Operational memory-pressure stop at173 prefixes;1536MB cap is attempted recovery, not qualification of low-memory operation. Exit1 here is intentional stop.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_REV1.json",
+          "sha256": "fb7d7e6631d8009f185acf61a6b5abfd822e3eeb3dafa3466e898ffafbdbbb14"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json",
+      "sha256": "e670d6f423060733b35b4204e8053e3d654c6692a677e610702f3b7369ced104",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "1536MB allocation failure preserves280 completed prefixes. Summary explicitly incomplete for some stacks; complete captured outputs only parts8..11. No behavioral failure or supported scaling claim.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json",
+          "sha256": "e670d6f423060733b35b4204e8053e3d654c6692a677e610702f3b7369ced104"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+          "sha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/development-public-batch-rev1/STATUS.json",
+      "sha256": "2febdfa306f844d06dd1336c9d4be4890cfd666172157633307720eb5e128ef5",
+      "role": "WHOLE DEVELOPMENT PRESERVATION / OPERATIONAL METADATA",
+      "judgment": "Twelve partitions completed using four concurrent workers with4096MB cap. Operational start/finish times are metadata, not deterministic simulation time or benchmark guarantee.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/DEVELOPMENT_PUBLIC_CLOSURE_REV1.json",
+          "sha256": "f48e4e936003e1566bdc3d8bc3b9a884aef58c58576b57f9e36dce4c9b9fb39d"
+        },
+        {
+          "path": "docs/planning/development-public-batch-rev1/STATUS.json",
+          "sha256": "2febdfa306f844d06dd1336c9d4be4890cfd666172157633307720eb5e128ef5"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "fd52ca013040cd22475a0e44784520c80d075411cae39d17aed696ffee77c120",
+      "source": "docs/planning/DEVELOPMENT_COMPONENT_BUILD_REV1.json",
+      "sourceSha256": "95474b7f481550eb7136fe91d41b4ee9db9935339d598f7349206892ad9f38cd",
+      "location": {
+        "pointer": "/command"
+      },
+      "text": "npm run build",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Historical boundary/tsc/Vite success with13 focused/328 reference; not full active suite or fresh build."
+    },
+    {
+      "occurrenceId": "bf576c0f00d878d60e4ae6411d2c1e70889202296307e9d40aa655fad2a9daf0",
+      "source": "docs/planning/DEVELOPMENT_COMPONENT_BUILD_REV1.json",
+      "sourceSha256": "95474b7f481550eb7136fe91d41b4ee9db9935339d598f7349206892ad9f38cd",
+      "location": {
+        "pointer": "/note"
+      },
+      "text": "Boundary checker, tsc -b and Vite build passed; no full active-suite claim.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Historical boundary/tsc/Vite success with13 focused/328 reference; not full active suite or fresh build."
+    },
+    {
+      "occurrenceId": "bca8b841be47959b509be86dd9865739de20dbc2472e1da9f434b91ff912422a",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_BUILD_REV1.json",
+      "sourceSha256": "391d44c50a7b9c8ad051b34beeab479769d0c5086e4dfd4aa2eef5151983ae46",
+      "location": {
+        "pointer": "/command"
+      },
+      "text": "npm run build",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Historical boundary/tsc/Vite success with21 focused/328 reference; no whole active-suite or new build claim."
+    },
+    {
+      "occurrenceId": "b445a6ba226f32cd3bbd89872b22a744672ce29df8e09fb3ce743592db68970a",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_BUILD_REV1.json",
+      "sourceSha256": "391d44c50a7b9c8ad051b34beeab479769d0c5086e4dfd4aa2eef5151983ae46",
+      "location": {
+        "pointer": "/note"
+      },
+      "text": "Boundary checker, tsc-b and Vite build passed. Standalone typecheck passed; no full active suite claim.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Historical boundary/tsc/Vite success with21 focused/328 reference; no whole active-suite or new build claim."
+    },
+    {
+      "occurrenceId": "e5135538e9a41155ab13747ad8f4c11f808e086d49da1430e675e0daf40c245b",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/0/value/output"
+      },
+      "text": "PASS prefix 12:16\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "868fbfd865c2c998560af4bae072f8b2d69666ea852616ad8709e146551cd5df",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/1/value/output"
+      },
+      "text": "PASS prefix 13:16\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "3421485ba4126b14b9482e889aafdf69a682a812d4c5ac1aed143f93cc8c14eb",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/2/value/output"
+      },
+      "text": "PASS prefix 14:16\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "844ee687ed46259c9b2fed7fa96f21caccfb50e64ba61a42adedb25ece2496a1",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/3/value/output"
+      },
+      "text": "PASS prefix 15:16\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "91461c2518e8729aea37dfa773e7f276ed255301bae8df2b53f6e2eee78af86b",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/4/value/output"
+      },
+      "text": "\r\n<--- Last few GCs --->\r\n\r\n[9968:0000017BD1A04000]  1289906 ms: Scavenge (interleaved) 1476.1 (1491.8) -> 1472.1 (1491.8) MB, pooled: 4 MB, 0.79 / 0.00 ms  (average mu = 0.482, current mu = 0.471) allocation failure; \r\n[9968:0000017BD1A04000]  1291248 ms: Mark-Compact 1666.8 (1682.4) -> 1535.7 (1562.6) MB, pooled: 0 MB, 1239.69 / 0.00 ms  (average mu = 0.476, current mu = 0.472) allocation failure; scavenge might not succeed\r\n\r\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7D0FB1E1F node::OnFatalError+1343\r\n 2: 00007FF7CFBC3617 v8::Function::NewInstance+423\r\n 3: 00007FF7CF9C3E57 X509_STORE_get_lookup_certs+54423\r\n 4: 00007FF7CF9C1AF6 X509_STORE_get_lookup_certs+45366\r\n 5: 00007FF7CF9DC17A X509_STORE_set_cleanup+5098\r\n 6: 00007FF7CF9E8616 uv_timer_set_repeat+20694\r\n 7: 00007FF7CF5B9277 v8::CodeEvent::GetFunctionName+131959\r\n 8: 00007FF7D11859BA node::AsyncResource::CallbackScope::CallbackScope+752522\r\n 9: 00007FF7D10DE844 node::AsyncResource::CallbackScope::CallbackScope+68116\r\n10: 0000017B80197716 \r\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "ae711e675f7594eed3748b54597551c35fb0a097aee5cdfe35e2d6b1651a01be",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/5/value/output"
+      },
+      "text": "\r\n<--- Last few GCs --->\r\n\r\n[15884:0000027518DC4000]  1289337 ms: Scavenge (interleaved) 1475.8 (1492.8) -> 1471.8 (1492.8) MB, pooled: 0 MB, 0.91 / 0.00 ms  (average mu = 0.533, current mu = 0.511) allocation failure; \r\n[15884:0000027518DC4000]  1290699 ms: Mark-Compact 1666.4 (1683.4) -> 1535.3 (1559.6) MB, pooled: 0 MB, 1255.62 / 0.00 ms  (average mu = 0.486, current mu = 0.457) allocation failure; scavenge might not succeed\r\n\r\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7D0FB1E1F node::OnFatalError+1343\r\n 2: 00007FF7CFBC3617 v8::Function::NewInstance+423\r\n 3: 00007FF7CF9C3E57 X509_STORE_get_lookup_certs+54423\r\n 4: 00007FF7CF9C1AF6 X509_STORE_get_lookup_certs+45366\r\n 5: 00007FF7CF9DC17A X509_STORE_set_cleanup+5098\r\n 6: 00007FF7CF9E8616 uv_timer_set_repeat+20694\r\n 7: 00007FF7CF5B9277 v8::CodeEvent::GetFunctionName+131959\r\n 8: 00007FF7D11859BA node::AsyncResource::CallbackScope::CallbackScope+752522\r\n 9: 00007FF7D11D7517 node::AsyncResource::CallbackScope::CallbackScope+1087207\r\n10: 000002753180409C \r\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "5d8cc0984ef93eacf531f4fcd9b3e626ee0652a5e8a98f75f742a47a29949faa",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/6/value/output"
+      },
+      "text": "\r\n<--- Last few GCs --->\r\n\r\n[26136:0000021ECA5E8000]  1291736 ms: Scavenge (interleaved) 1488.1 (1511.8) -> 1472.1 (1511.8) MB, pooled: 0 MB, 0.94 / 0.00 ms  (average mu = 0.616, current mu = 0.591) allocation failure; \r\n[26136:0000021ECA5E8000]  1292752 ms: Mark-Compact 1678.8 (1702.4) -> 1535.7 (1606.8) MB, pooled: 0 MB, 932.05 / 0.00 ms  (average mu = 0.488, current mu = 0.375) allocation failure; scavenge might not succeed\r\n\r\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7D0FB1E1F node::OnFatalError+1343\r\n 2: 00007FF7CFBC3617 v8::Function::NewInstance+423\r\n 3: 00007FF7CF9C3E57 X509_STORE_get_lookup_certs+54423\r\n 4: 00007FF7CF9C1AF6 X509_STORE_get_lookup_certs+45366\r\n 5: 00007FF7CF9DC17A X509_STORE_set_cleanup+5098\r\n 6: 00007FF7CF9E8616 uv_timer_set_repeat+20694\r\n 7: 00007FF7CF5B9277 v8::CodeEvent::GetFunctionName+131959\r\n 8: 00007FF7D11859BA node::AsyncResource::CallbackScope::CallbackScope+752522\r\n 9: 0000021E804E6850 \r\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "a71f53737467a3a0bdf3cd3123f92e9e61017b1ce05d24113cbe91e740ca3a06",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_MEMORY_STOP_OUTPUTS_REV1.json",
+      "sourceSha256": "5fa58b2739645a488d50e1c6a7cb0ff84af4ea8012cb1351880e11349f6c40f1",
+      "location": {
+        "pointer": "/7/value/output"
+      },
+      "text": "\r\n<--- Last few GCs --->\r\n\r\n[6248:00000248F683F000]  1287625 ms: Scavenge (interleaved) 1475.8 (1491.8) -> 1471.8 (1491.8) MB, pooled: 0 MB, 1.11 / 0.00 ms  (average mu = 0.522, current mu = 0.484) allocation failure; \r\n[6248:00000248F683F000]  1288916 ms: Mark-Compact 1666.4 (1682.4) -> 1535.3 (1558.3) MB, pooled: 1 MB, 1195.82 / 0.00 ms  (average mu = 0.492, current mu = 0.474) allocation failure; scavenge might not succeed\r\n\r\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7D0FB1E1F node::OnFatalError+1343\r\n 2: 00007FF7CFBC3617 v8::Function::NewInstance+423\r\n 3: 00007FF7CF9C3E57 X509_STORE_get_lookup_certs+54423\r\n 4: 00007FF7CF9C1AF6 X509_STORE_get_lookup_certs+45366\r\n 5: 00007FF7CF9DC17A X509_STORE_set_cleanup+5098\r\n 6: 00007FF7CF9E8616 uv_timer_set_repeat+20694\r\n 7: 00007FF7CF5B9277 v8::CodeEvent::GetFunctionName+131959\r\n 8: 00007FF7D11859BA node::AsyncResource::CallbackScope::CallbackScope+752522\r\n 9: 00007FF7D116521F node::AsyncResource::CallbackScope::CallbackScope+619503\r\n10: 00007FF7D10D8C46 node::AsyncResource::CallbackScope::CallbackScope+44566\r\n11: 000002489036C1BF \r\n",
+      "role": "OPERATIONAL BACKING",
+      "judgment": "Captured tool outputs: parts0..3 show last successful prefix before stop; parts8..11 show fatal heap limits. Promise fulfilled is tool delivery status, not process success. No complete stderr claim for uncaptured parts4..7."
+    },
+    {
+      "occurrenceId": "0384e8b009b4e025b598dc129e4a8e24a77a178b866bf0dd2d7783ff267c9882",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json",
+      "sourceSha256": "e670d6f423060733b35b4204e8053e3d654c6692a677e610702f3b7369ced104",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "V8 ALLOCATION FAILURE UNDER OPERATIONAL HEAP CAP",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "1536MB allocation failure preserves280 completed prefixes. Summary explicitly incomplete for some stacks; complete captured outputs only parts8..11. No behavioral failure or supported scaling claim."
+    },
+    {
+      "occurrenceId": "c0269746778469e7cda019ae103cde622c3563c5039ee82f8b52673c7eb52dbe",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json",
+      "sourceSha256": "e670d6f423060733b35b4204e8053e3d654c6692a677e610702f3b7369ced104",
+      "location": {
+        "pointer": "/diagnosticSummary"
+      },
+      "text": "Last Mark-Compact collections left approximately1535MB live with1536MB old-space cap. Node exited with allocation-failure/fatal-error stack; no behavioral assertion failed. Tool output truncated some stack lines, so this file preserves the observed diagnostic summary, not a claimed complete stderr capture.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "1536MB allocation failure preserves280 completed prefixes. Summary explicitly incomplete for some stacks; complete captured outputs only parts8..11. No behavioral failure or supported scaling claim."
+    },
+    {
+      "occurrenceId": "e002b790e3000d0fca77f3fe0648b38eeb91fe4ba8d324fcd676c8c5c872414b",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_FAILURE_REV1.json",
+      "sourceSha256": "e670d6f423060733b35b4204e8053e3d654c6692a677e610702f3b7369ced104",
+      "location": {
+        "pointer": "/nextDisposition"
+      },
+      "text": "Resume unchanged frozen REV3 script in fewer concurrent workers with4096MB old-space cap. All completed original-source restore receipts remain; resumed hashes must match. Do not infer supported long-horizon scaling.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "1536MB allocation failure preserves280 completed prefixes. Summary explicitly incomplete for some stacks; complete captured outputs only parts8..11. No behavioral failure or supported scaling claim."
+    },
+    {
+      "occurrenceId": "64392cab6513992fb111f5f8cff945d2aa0274500d8d604b5a2b5b035eb16c33",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_REV1.json",
+      "sourceSha256": "fb7d7e6631d8009f185acf61a6b5abfd822e3eeb3dafa3466e898ffafbdbbb14",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "OPERATIONAL RESUME; NO SOURCE OR MODEL CHANGE",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Operational memory-pressure stop at173 prefixes;1536MB cap is attempted recovery, not qualification of low-memory operation. Exit1 here is intentional stop."
+    },
+    {
+      "occurrenceId": "02f583fbea0a2f16a1b46cfe78bababe12965bc98dffa86c5b0f1d1f4e6317e9",
+      "source": "docs/planning/DEVELOPMENT_PUBLIC_WORKER_MEMORY_REV1.json",
+      "sourceSha256": "fb7d7e6631d8009f185acf61a6b5abfd822e3eeb3dafa3466e898ffafbdbbb14",
+      "location": {
+        "pointer": "/reason"
+      },
+      "text": "Twelve Node workers used roughly23GB resident memory and left roughly2GB free. Stop workers and resume unchanged frozen REV3 harness with1536MB V8 old-space cap; completed prefix receipts retained and exact replay rechecked. No native assertion failure.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Operational memory-pressure stop at173 prefixes;1536MB cap is attempted recovery, not qualification of low-memory operation. Exit1 here is intentional stop."
+    },
+    {
+      "occurrenceId": "130604a525b9c8a515a80d0a4129abb3f06309d231163b9405540897aa588fb9",
+      "source": "docs/planning/development-component-dev1/FINDING.json",
+      "sourceSha256": "462926563ae400e207e8bddfc61dbbe8cce20768c5287b1cfe1d0a5ac2d0a871",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "6 PASSED;7 TIMEOUTS AT DEFAULT5000MS",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Six passes/seven timeouts; increasing timeout is not removing failed psychological assertions. Startup denial ran no tests."
+    },
+    {
+      "occurrenceId": "ceebbbad0d113ac2c38b9c45be40654ecc3de4a7dc39b09d4dd39c3358aa6e80",
+      "source": "docs/planning/development-component-dev1/FINDING.json",
+      "sourceSha256": "462926563ae400e207e8bddfc61dbbe8cce20768c5287b1cfe1d0a5ac2d0a871",
+      "location": {
+        "pointer": "/change"
+      },
+      "text": "Test timeout raised; production mathematics unchanged. Typecheck passed. Initial sandbox Vite startup denial had no executed tests.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Six passes/seven timeouts; increasing timeout is not removing failed psychological assertions. Startup denial ran no tests."
+    },
+    {
+      "occurrenceId": "557665e5c130e86afb1e51d72c5a11de668b8af6b350ccdb677a406222394e1d",
+      "source": "docs/planning/development-component-dev1/MANIFEST.json",
+      "sourceSha256": "1bc972d444154bf7217bb127a12731e289cfa9de0b645d5d5361bdab43f3757d",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "FROZEN BEFORE FIRST TEST EXECUTION",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "First component source freeze; archive hash preserves original test timeout source, not passing all13 tests."
+    },
+    {
+      "occurrenceId": "69ad6714be9e6dd8895be68aa4794a9b5f7265cb4d2809c53b20485bddb602b2",
+      "source": "docs/planning/development-component-dev2/MANIFEST.json",
+      "sourceSha256": "62162fc788d98e484d35405f8b3ee89d22b6a7165a980e6b3b6ee38a6cc9213c",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "FROZEN BEFORE SECOND TEST EXECUTION",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Second component source freeze; existing shared production files match first cohort. Test-only timeout changed; new identity/roster files do not imply a changed kernel."
+    },
+    {
+      "occurrenceId": "f12e95a2e583df06a8383dc85e5ae07018957c99b51502a02934e49ba98af260",
+      "source": "docs/planning/development-public-batch-rev1/STATUS.json",
+      "sourceSha256": "2febdfa306f844d06dd1336c9d4be4890cfd666172157633307720eb5e128ef5",
+      "location": {
+        "pointer": "/scope"
+      },
+      "text": "Operational driver for unchanged frozen REV3 harness",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Twelve partitions completed using four concurrent workers with4096MB cap. Operational start/finish times are metadata, not deterministic simulation time or benchmark guarantee."
+    },
+    {
+      "occurrenceId": "4f974775be2e1cbb8c775817a49b19ad05dbd4d86c331998c890f2869d5dfb2c",
+      "source": "docs/planning/development-public-dev1/MANIFEST.json",
+      "sourceSha256": "47fc25e95c83aa3e7b33824d96f054c65405e8a67934f5bdf63ce88213184d6a",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "FROZEN BEFORE TEST EXECUTION",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "First native source freeze;21 test passes remain distinct from test-only compiler failure. No retrospective source correction."
+    },
+    {
+      "occurrenceId": "93e6bc6bd46aa00ffe8d6e5d01524fb4d0abe1b1cf376a390621e84f9d49d46d",
+      "source": "docs/planning/development-public-dev1/PREFLIGHT.json",
+      "sourceSha256": "dbb346ec83530a85cc450819c355865cd029c193f77ff45719f612c2c7787e81",
+      "location": {
+        "pointer": "/sandboxStartup"
+      },
+      "text": "Vite config access denied; no tests executed. Retried with required access.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Startup denial precedes execution; TS2540 is test-only readonly payload assignment. Successful21-test run does not imply typecheck success."
+    },
+    {
+      "occurrenceId": "252707f02b05d327f121e10669af84bf61795f20d57103edf570570b53692ac1",
+      "source": "docs/planning/development-public-dev1/PREFLIGHT.json",
+      "sourceSha256": "dbb346ec83530a85cc450819c355865cd029c193f77ff45719f612c2c7787e81",
+      "location": {
+        "pointer": "/typecheck/diagnostic"
+      },
+      "text": "src/test/developmentPublic.test.ts(44,70): TS2540 Cannot assign to payload because it is a read-only property.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Startup denial precedes execution; TS2540 is test-only readonly payload assignment. Successful21-test run does not imply typecheck success."
+    },
+    {
+      "occurrenceId": "1b0bf769f35ca6c1bc8aae76d3f96323faa31d038c27416f27e710ae124972ac",
+      "source": "docs/planning/development-public-dev1/PREFLIGHT.json",
+      "sourceSha256": "dbb346ec83530a85cc450819c355865cd029c193f77ff45719f612c2c7787e81",
+      "location": {
+        "pointer": "/typecheck/scope"
+      },
+      "text": "Test-only forged-event fixture; native production typechecked before test addition.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Startup denial precedes execution; TS2540 is test-only readonly payload assignment. Successful21-test run does not imply typecheck success."
+    },
+    {
+      "occurrenceId": "fb2f64d9de85a87436de6d2564fdc2bc31f28f58bd0356e946f627ff443920ee",
+      "source": "docs/planning/development-public-dev2/MANIFEST.json",
+      "sourceSha256": "1ca1c85d3db50fa073e515fd26157ecad94169bf990ab6d84d3e5947b5680083",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "FROZEN BEFORE TEST EXECUTION",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Second native source freeze; exact test fixture assignment correction only. Original production files match; no changed mathematics."
+    },
+    {
+      "occurrenceId": "5d44dc335723baad83e131d337a62ef39a33071706fdbc65acbcfdb30cd478fc",
+      "source": "docs/planning/development-public-dev2/MANIFEST.json",
+      "sourceSha256": "1ca1c85d3db50fa073e515fd26157ecad94169bf990ab6d84d3e5947b5680083",
+      "location": {
+        "pointer": "/change"
+      },
+      "text": "Test-only forged payload mutation uses Object.assign; production and mathematics unchanged.",
+      "role": "PRESERVED FINDING / SCOPE",
+      "judgment": "Second native source freeze; exact test fixture assignment correction only. Original production files match; no changed mathematics."
+    }
+  ],
+  "stringLeaves": 160,
+  "preservedArtifacts": [
+    {
+      "path": "docs/planning/development-component-dev1/developmentComponent.ts",
+      "sha256": "8c1f404a24d90f401bd5c3d86f3924c5c5ddc8c9a18735b4b88fc836cf08222f"
+    },
+    {
+      "path": "docs/planning/development-component-dev1/developmentFixtures.ts",
+      "sha256": "9163d3b4a30e009712972ff560d3bcd3cc712b7a57402ed9b2f348562cbf4133"
+    },
+    {
+      "path": "docs/planning/development-component-dev1/developmentComponent.test.ts",
+      "sha256": "a44a59f5a9e0b18b83940d80b7290b4aaae9289fb94d3bcfd4c871f003d07b26"
+    },
+    {
+      "path": "docs/planning/development-component-dev1/DEVELOPMENT_COMPONENT_CONTRACT.md",
+      "sha256": "4cfd3c2fdaf5e38246c3e581252193c8ffbd54975ecc648a9c9c8a8fb97226cd"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/developmentComponent.ts",
+      "sha256": "8c1f404a24d90f401bd5c3d86f3924c5c5ddc8c9a18735b4b88fc836cf08222f"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/developmentIdentity.ts",
+      "sha256": "4cbbaefbbd0b3333a2da5283fe716fa0b9848467d60f4ed5bc1f8c71e46b8b16"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/developmentFixtures.ts",
+      "sha256": "9163d3b4a30e009712972ff560d3bcd3cc712b7a57402ed9b2f348562cbf4133"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/developmentRoster.ts",
+      "sha256": "201f2751edebd09b1a6a3c92d5533db5f5abb3c3d8ddf71e121dc8cd4a2874ce"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/developmentComponent.test.ts",
+      "sha256": "3f22530dafac08bb714e8f4a1d69ed7e5077c92c63d51c34dff03c4fa2e05725"
+    },
+    {
+      "path": "docs/planning/development-component-dev2/DEVELOPMENT_COMPONENT_CONTRACT.md",
+      "sha256": "4cfd3c2fdaf5e38246c3e581252193c8ffbd54975ecc648a9c9c8a8fb97226cd"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicCodecs.ts",
+      "sha256": "b9e668562c11a2222ac863bda1a35b97c01a23417b0d413e7afce94114031d3f"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicFactory.ts",
+      "sha256": "8005345971ff99bc552923d46fe7863fc1b8d574bda5c11844cccaa10add503d"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicModel.ts",
+      "sha256": "edeb56da10287976fd73bedcb30ab3e6818f59809f46a30ca5561c68c0138853"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicProjection.ts",
+      "sha256": "01bfd1d972fd7451f85a51aea8fb178ee02905f5eee5a9a67db586fd36387091"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicRuntime.ts",
+      "sha256": "6e12dd9fe201cd7f00853badebf516d9d64456e8ad8f2e7db1319d1149f7ac81"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublic.test.ts",
+      "sha256": "04df9cba8adca29323643736d36149228dd94c1a49d909bfdcce8691e350ca7c"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/developmentPublicFixtures.ts",
+      "sha256": "e22c684c78121a494358cbf47f3ed0a65c4fb02b47d8b5e18597e8ba7dfa3447"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/DEVELOPMENT_PUBLIC_CONTRACT.md",
+      "sha256": "e184291bc23592e6d117a7d7ac172ef7a938e2444014ee6c7b257ff08a7e1bcd"
+    },
+    {
+      "path": "docs/planning/development-public-dev1/DEVELOPMENT_PUBLIC_ALLOCATION_TABLE.json",
+      "sha256": "38633660b1cc967089f73ebed9326e9499a0fc78d1d1d2e454cab8bcb0922a78"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicCodecs.ts",
+      "sha256": "b9e668562c11a2222ac863bda1a35b97c01a23417b0d413e7afce94114031d3f"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicFactory.ts",
+      "sha256": "8005345971ff99bc552923d46fe7863fc1b8d574bda5c11844cccaa10add503d"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicModel.ts",
+      "sha256": "edeb56da10287976fd73bedcb30ab3e6818f59809f46a30ca5561c68c0138853"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicProjection.ts",
+      "sha256": "01bfd1d972fd7451f85a51aea8fb178ee02905f5eee5a9a67db586fd36387091"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicRuntime.ts",
+      "sha256": "6e12dd9fe201cd7f00853badebf516d9d64456e8ad8f2e7db1319d1149f7ac81"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublic.test.ts",
+      "sha256": "acaff6a866d67a6e29bb3a6915f9a2d26b735759d9325cc5c71ad973f3a5c95d"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/developmentPublicFixtures.ts",
+      "sha256": "e22c684c78121a494358cbf47f3ed0a65c4fb02b47d8b5e18597e8ba7dfa3447"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/DEVELOPMENT_PUBLIC_CONTRACT.md",
+      "sha256": "e184291bc23592e6d117a7d7ac172ef7a938e2444014ee6c7b257ff08a7e1bcd"
+    },
+    {
+      "path": "docs/planning/development-public-dev2/DEVELOPMENT_PUBLIC_ALLOCATION_TABLE.json",
+      "sha256": "38633660b1cc967089f73ebed9326e9499a0fc78d1d1d2e454cab8bcb0922a78"
+    }
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-013",
+    "RO-C3-017",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021",
+    "RO-C3-022"
+  ],
+  "limits": [
+    "Component test LF-to-CRLF conversion is normalized only for textual comparison; exact archive hashes remain distinct. Exact test-only diffs preserve production hashes; new second-cohort support sources retain their distinct identities.",
+    "Captured tool output is not complete diagnostics for every failed worker. Historical elapsed times do not establish a scaling guarantee.",
+    "No fresh build, tests, simulation or restore. Referenced archives are not wholesale narrative acceptance."
+  ]
+}

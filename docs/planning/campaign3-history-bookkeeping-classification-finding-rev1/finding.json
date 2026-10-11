@@ -1,0 +1,30 @@
+{
+  "status": "REJECTED BEFORE AUTHORITATIVE ADOPTION",
+  "finding": "Prepared REV266 and bookkeeping review REV1 duplicated a census source as outside-census backing.",
+  "path": "docs/planning/longitudinal-personal-loss-bookkeeping-rev1/CURRENT.md",
+  "cause": "Artifact selection checked assigned sources but not the full census; this source was being assigned in the same batch.",
+  "scope": "No source bytes, original occurrences or scientific disposition changed. No failure of the historical experiment.",
+  "correction": "Review REV2 excludes every manifest entry from outside-census backing and asserts that invariant. Authoritative successor REV267 extends accepted REV265; prepared REV266 remains rejected.",
+  "preserved": [
+    {
+      "path": "docs/planning/campaign3-history-bookkeeping-findings-rev1/review.json",
+      "sha256": "44614e298cb384e092d91f4de1e3fdeb59ad9c4a81981bb2a1d6b92fe0442dfb"
+    },
+    {
+      "path": "docs/planning/campaign3-history-bookkeeping-findings-rev1/check.json",
+      "sha256": "4e17e3229faae20c1581abf723d43c096e2eb774e4e9ed704643208b4332b978"
+    },
+    {
+      "path": "docs/planning/campaign3-history-source-roles-rev266/check.json",
+      "sha256": "d2fdae64a5abc5f728930411a3e8e245f4ae59a212e00f8df7d1a2655bf9cf68"
+    },
+    {
+      "path": "docs/planning/campaign3-history-source-roles-rev266/index.json",
+      "sha256": "d4cee2a5a1e77728b6c9ff8e3de63628e152456399ae96b34b92f6b806704d1c"
+    }
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-021"
+  ]
+}

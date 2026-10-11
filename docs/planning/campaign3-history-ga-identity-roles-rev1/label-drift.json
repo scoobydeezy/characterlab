@@ -1,0 +1,51 @@
+{
+  "status": "PASS; BOTH WRONG NAMESPACES REJECT",
+  "rows": [
+    {
+      "revision": 9,
+      "namespace": 1129,
+      "rejected": true
+    },
+    {
+      "revision": 9,
+      "namespace": 1132,
+      "rejected": true
+    },
+    {
+      "revision": 17,
+      "namespace": 1129,
+      "rejected": true
+    },
+    {
+      "revision": 17,
+      "namespace": 1132,
+      "rejected": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/review-ga-identity-role-closure-rev9.mjs",
+      "sha256": "d558d85314f8cd53941c4ee3b708a97f994a443c8c486aca752930da1f6fd84e"
+    },
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV9.json",
+      "sha256": "f433b2859dd38b96af8f5788e5914e489a6d8501b50d094d0517ff280019e387"
+    },
+    {
+      "path": "scripts/review-ga-identity-role-closure-rev17.mjs",
+      "sha256": "3af6819ea143be87f7ae804031414bbcf46470ad364256ccaeef0a96eb7bb1df"
+    },
+    {
+      "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV17.json",
+      "sha256": "0bedc30632eac0336c65edecf1626bcfc1eff03bfd03f76a62d05b792c8e42a8"
+    }
+  ],
+  "checker": {
+    "path": "scripts/probe-history-ga-role-label-drift.mjs",
+    "sha256": "f850e5a2f829390fe426d192ed333a4a3273487bed1b9b9b571de6dd3f82831e"
+  },
+  "finding": "The reuse-appraisal-id-for-concern mutation uses1129 in REV3..9 and1132 in REV10..17. Both remain wrong for Concern1130. The original label is preserved; its later body must not be described as the same appraisal-specific injection. Direct probes show both inspected validators reject both values.",
+  "limits": [
+    "Symbolic declaration check, not execution of a public identity validator."
+  ]
+}

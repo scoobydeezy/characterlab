@@ -1,0 +1,215 @@
+{
+  "status": "HQ011 COMPLETION NOT PROVEN; HQ012 HANDOFF WITHHELD",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/audit-history-hq011-adequacy.py",
+    "sha256": "190cc5958b640d0a2f271c1258615010f8263fdac05608d7d2855601a9993f32"
+  },
+  "authority": [
+    {
+      "path": "docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md",
+      "sha256": "98bc011ef8cd1c9bedeeeceb4f6b4c14146045f9dbdb5dd4744ca55df5754e40"
+    },
+    {
+      "path": "docs/planning/HISTORY_AUTHORITY_RECONCILIATION_READINESS.md",
+      "sha256": "5a74d3910e2f039501af8e36d27730109a309eb4810b18d5c4c2b57609712678"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "HG1-CENSUS",
+      "requirement": "Enumerable deterministic candidate universe selected independently of RO status.",
+      "result": "SATISFIED FOR FROZEN CENSUS",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-universe-rev1/manifest.json",
+          "sha256": "e947295eb33194087559f70d42d34023c9f9fa3edfc878807e8992ab605c4303"
+        },
+        {
+          "path": "docs/planning/campaign3-history-source-roles-rev315/index.json",
+          "sha256": "ef5dc8b54d449d6c70aaf306392115d2f2f3bbe334fda2974bfdb818a1d5edfb"
+        }
+      ],
+      "reason": "11373 exact source hashes and role paths revalidated. Candidate selection is not equivalent to acceptance of every embedded historical claim."
+    },
+    {
+      "id": "HG1-AUTHORITY",
+      "requirement": "Explicit authority/acceptance/supersession with unresolved references accounted.",
+      "result": "SCOPED ROLES COMPLETE; HISTORICAL DEPENDENCY ADEQUACY OPEN",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-source-roles-rev315/index.json",
+          "sha256": "ef5dc8b54d449d6c70aaf306392115d2f2f3bbe334fda2974bfdb818a1d5edfb"
+        },
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        }
+      ],
+      "reason": "Every frozen source has an evidence-backed role.208 unavailable historical versions have explicit restrictions. Missing contents are not accepted or proven immaterial by those restrictions."
+    },
+    {
+      "id": "HG2-OCCURRENCES",
+      "requirement": "Exact marked and unmarked occurrences, independently extracted; short JSON/schema boundary considered.",
+      "result": "DECLARED EXTRACTION AND CONTENT ROLES VERIFIED",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-hq011-rev1/review.json",
+          "sha256": "5eef17126e576cda97dfbd07c18066a37bf9398c31d569c5433226f23f3121ec"
+        },
+        {
+          "path": "docs/planning/campaign3-history-source-roles-rev315/index.json",
+          "sha256": "ef5dc8b54d449d6c70aaf306392115d2f2f3bbe334fda2974bfdb818a1d5edfb"
+        },
+        {
+          "path": "docs/planning/campaign3-history-root-accounting-rev1/review.json",
+          "sha256": "dfa6ac8e808978d6e0410f72397157d0654367d0ab0cb8c67639f022069fcb3a"
+        }
+      ],
+      "reason": "Original413894-unit extraction remains byte-identical; prior independent reconstruction and explicit schema/content reviews address lexical limits.4739 root/navigation links are retained; this is not a claim that413894 units are material findings."
+    },
+    {
+      "id": "HG3-DISPOSITIONS",
+      "requirement": "Material unresolved distinctions owned with blocked claims/reopen conditions; no reduction by metadata.",
+      "result": "REVIEWED AVAILABLE MATERIAL ACCOUNTED; MISSING-CONTENT COMPLETENESS UNPROVEN",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        },
+        {
+          "path": "docs/planning/campaign3-history-chronology-consolidated-rev1/review.json",
+          "sha256": "3d12d076f06eacc6b52140b716252a7c8185bcc4ff4233ffcd26b30eb5986863"
+        },
+        {
+          "path": "docs/planning/campaign3-history-post-cutoff-join-rev1/review.json",
+          "sha256": "98755303b56836fb686df910bf3c3b3b0ce01cfde68292c04d4c8b547646211b"
+        }
+      ],
+      "reason": "Original chronology, failure cohorts, candidate equalities and scoped reductions retain dispositions. Unavailable historical narrative content, especially the named legacy companion log, has no recovered content inventory or independent proof of material supersession."
+    },
+    {
+      "id": "HG4-INTEGRITY",
+      "requirement": "Fail missing/changed required artifacts, omitted IDs, orphan dispositions and unsupported source substitutions.",
+      "result": "AVAILABLE ARTIFACT INTEGRITY VERIFIED; GAPS PREVENT UNQUALIFIED PASS",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-source-roles-rev315/index.json",
+          "sha256": "ef5dc8b54d449d6c70aaf306392115d2f2f3bbe334fda2974bfdb818a1d5edfb"
+        },
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        }
+      ],
+      "reason": "All11373 frozen source bodies and indexed role/backing bindings validate. Required missing-version dependencies remain explicit rather than silently replaced. A preserved reference is not preserved referenced content."
+    },
+    {
+      "id": "HG4-ADDITIONS",
+      "requirement": "Reconcile named post-cutoff formula/Values/verdict additions and subsequent audit findings.",
+      "result": "NAMED ADDITIONS JOINED; FINAL FRESHNESS REMAINS",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-post-cutoff-join-rev1/review.json",
+          "sha256": "98755303b56836fb686df910bf3c3b3b0ce01cfde68292c04d4c8b547646211b"
+        },
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        },
+        {
+          "path": "docs/planning/campaign3-history-recovered-content-rev1/review.json",
+          "sha256": "49a7ca9d0bc17c69d9cfe95356e27f947933bee5c36bdb619f4dd1eb28539219"
+        }
+      ],
+      "reason": "343 formula paragraphs,90 Values paragraphs,94036 backing strings and exact106-to108 ledger delta are joined. Correct-forward73-to74 subset finding preserved. This is not automatic inclusion of every generated audit document or final HQ012 freshness."
+    },
+    {
+      "id": "HG4-SCIENTIFIC",
+      "requirement": "Independently establish universe and scientific adequacy before zero unreconciled material findings.",
+      "result": "NOT DEMONSTRATED",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        },
+        {
+          "path": "docs/planning/campaign3-history-hq009-rev1/review.json",
+          "sha256": "22804ecfc9a65abf46395265b7341e8705f6b454a3e7a92167804b35be23da61"
+        }
+      ],
+      "reason": "Available evidence cannot establish the contents or material supersession of the missing legacy log and all relevant unavailable historical narratives. Later passing results and complete role counts do not prove no findings were lost. No broad historical completeness claim is accepted."
+    },
+    {
+      "id": "HG5-COVERAGE",
+      "requirement": "Keep historical accounting separate from21-member corpus/15-family/native acceptance.",
+      "result": "SEPARATION PRESERVED; HQ012 NOT STARTED",
+      "evidence": [
+        {
+          "path": "docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md",
+          "sha256": "98bc011ef8cd1c9bedeeeceb4f6b4c14146045f9dbdb5dd4744ca55df5754e40"
+        },
+        {
+          "path": "docs/planning/HISTORY_AUTHORITY_RECONCILIATION_READINESS.md",
+          "sha256": "5a74d3910e2f039501af8e36d27730109a309eb4810b18d5c4c2b57609712678"
+        }
+      ],
+      "reason": "No corpus member, family, model, law or runtime acceptance is promoted by this audit. Stronger Values cases2/3/autonomous7 remain unexecuted; conditional debt is not coverage."
+    },
+    {
+      "id": "GOAL-HANDOFF",
+      "requirement": "Hand off to HQ012 only after authority and source adequacy demonstrated.",
+      "result": "WITHHELD",
+      "evidence": [
+        {
+          "path": "docs/planning/campaign3-history-gap-consequences-rev1/review.json",
+          "sha256": "21c18fa0f4d364a740ff9e7eee9d758e36616a1871c613ad7db0ae7e8cc58df2"
+        }
+      ],
+      "reason": "Necessary source adequacy is not established. Original objective remains open; no replacement with a smaller available-files-only success criterion."
+    }
+  ],
+  "integrity": {
+    "frozenSourceHashes": 11373,
+    "roleAndBackingBindings": 50825,
+    "originalOccurrences": 413894,
+    "rootNavigationOccurrenceLinks": 4739,
+    "outsideBackingResources": 2825,
+    "unresolvedKnownHashTargets": 208,
+    "unresolvedExitInventoryVersions": 74
+  },
+  "externalEvidenceNeeded": {
+    "subject": "Missing legacy companion log and unavailable historical narrative provenance",
+    "namedSource": "claude/characterlab-research-log.md",
+    "requested": "An archive/backup/earlier location or authenticated source/supersession evidence that permits its material findings to be reconciled. A similarly named later log or blanket permission to ignore unknown findings is not equivalent evidence.",
+    "searches": [
+      {
+        "path": "docs/planning/campaign3-history-hq009-rev1/review.json",
+        "sha256": "22804ecfc9a65abf46395265b7341e8705f6b454a3e7a92167804b35be23da61"
+      },
+      {
+        "path": "docs/planning/campaign3-history-git-object-recovery-rev1/review.json",
+        "sha256": "6d482442af9e247cce32614b9982823793400e1c259e6ea48c6266ba45b3a795"
+      },
+      {
+        "path": "docs/planning/campaign3-history-temporary-object-recovery-rev1/review.json",
+        "sha256": "ab46d1f49f0f5d0394febc1c2095205054471ebdf88a2faf2e7745f4474167b5"
+      },
+      {
+        "path": "docs/planning/campaign3-history-sister-object-recovery-rev1/review.json",
+        "sha256": "c6e4d1c5174a0616d57825dcf349515adb26e54c9badad36da46fac5510fa539"
+      }
+    ],
+    "condition": "If no further independent local evidence can resolve this after the remaining adequacy review, HQ011 requires external input. No architectural ontology/law decision has been identified."
+  },
+  "limits": [
+    "This audit tests completion rather than presuming it from green metadata checks.",
+    "No historical writer/runtime/test/build rerun, no source mutation, and no waiver of the final-history gate.",
+    "No global absence claim; read-only local searches have explicit boundaries.",
+    "Requested external location information does not pause the goal or establish a completed blocked audit."
+  ],
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

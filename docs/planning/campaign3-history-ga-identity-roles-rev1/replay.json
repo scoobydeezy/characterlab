@@ -1,0 +1,2049 @@
+{
+  "status": "PASS; 17 SYMBOLIC INVENTORY RECONSTRUCTIONS AND 390 ORIGINAL FAULT EXECUTIONS",
+  "checker": {
+    "path": "scripts/replay-history-ga-identity-roles.mjs",
+    "sha256": "a36d04a526f52e172b229edb0ac2c139e0c4ee4a3f97a9bbf649c2d4cd4aa389"
+  },
+  "rows": [
+    {
+      "revision": 1,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV1.json",
+          "sha256": "d9a4f3912d119e9c35106943835c6ff42c7d377d617c4f2b2d9efcbf731900bc"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure.mjs",
+          "sha256": "a810c707d60239943dc3e57002be7975cfcf9010902df959b0c955ee731461bb"
+        }
+      },
+      "records": 66,
+      "positions": 72,
+      "boundaries": 82,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV1.json",
+          "sha256": "5ce8f3701e8956623c2923d3e330d156d0f79468b402122d6e86ffda79c8df31"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure.mjs",
+          "sha256": "dce9d4e4ef83aacb9a7f74ef8559a709397321ea5237bcfefa8dcf75ce691cc3"
+        }
+      },
+      "faults": [
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV2.json",
+          "sha256": "55cfdbde7e06fcb1beb6d46a59d70eb7ab901ef95a1f74be90687f44d693b6f0"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev2.mjs",
+          "sha256": "92848e33e33decb92e75df21893304fa93350c77bb933e0533bac86e6a21d945"
+        }
+      },
+      "records": 82,
+      "positions": 86,
+      "boundaries": 116,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV2.json",
+          "sha256": "46cfdd6149a8622af6cb41f72996779a21efb937a683444f7ff9ec831060516c"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev2.mjs",
+          "sha256": "ef642d51ead96d88e1e35e977982c74054a0d4f97858234854def0442c0d020a"
+        }
+      },
+      "faults": [
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV3.json",
+          "sha256": "2bf8253f1ee8906c6df598ac9288fa1e84848af51817baa0dd0efc8f1e078c78"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev3.mjs",
+          "sha256": "47da3ace4d918c2e653d4a8b8e8b2554d9522bf2725191a59fff7b5a86bb163c"
+        }
+      },
+      "records": 102,
+      "positions": 98,
+      "boundaries": 141,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV3.json",
+          "sha256": "40268aa9e3590f1bce297c73d606aa5fa382d139f60d94066b6ad1383686833c"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev3.mjs",
+          "sha256": "aae20f399e2d4ef8ef8f6563b2d45c5cde9a5dd75f6d8e54d09a191d9a071ce9"
+        }
+      },
+      "faults": [
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 4,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV4.json",
+          "sha256": "8223cefa8511d0e50a9d64533226eb1d9d84f2ba621f8735268a19810996e3e5"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev4.mjs",
+          "sha256": "ff10b0be66b1743d646f0023579caf59b0e5ab072d6207ce37fa5350cc535d43"
+        }
+      },
+      "records": 111,
+      "positions": 106,
+      "boundaries": 152,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV4.json",
+          "sha256": "b158b5be0cc6416870a24221a512d36e7674449f7f4d6b88d61d013e3a581775"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev4.mjs",
+          "sha256": "434cc9dc33439b1310a2de3bc09eeedd674ac06724ff14a3e351bccf6ddbbf0a"
+        }
+      },
+      "faults": [
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 5,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV5.json",
+          "sha256": "150c5720c92b606259a495ba38cf63911e37fb899744dd6062790927c8a638f6"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev5.mjs",
+          "sha256": "b8524c7959e873ecee0e2ffc241700690a3f3214092f170a6b8eda7e76ca21b8"
+        }
+      },
+      "records": 116,
+      "positions": 112,
+      "boundaries": 162,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV5.json",
+          "sha256": "dfad25b84d3b0f39d593350765908f9702ebcfdee80299ce8b00f378b46281ee"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev5.mjs",
+          "sha256": "32f528e4124c15170f425f592e17fd9e388897b9941259c22614789fcb93774f"
+        }
+      },
+      "faults": [
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 6,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV6.json",
+          "sha256": "9300f2e8f29f565dfb629cc53254201a5d816ded55e1bbaff5a0df8b7d3224fe"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev6.mjs",
+          "sha256": "1f13f7daae8c3b507c7bb67f26e26cdd6f1337f00c69e93f92c1d59e9a6c5ad8"
+        }
+      },
+      "records": 124,
+      "positions": 122,
+      "boundaries": 168,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV6.json",
+          "sha256": "a24a09fce4c4c6a2c89391ec5a39777c8d1c99b8663cbb22358176acb1ec00f3"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev6.mjs",
+          "sha256": "a14d6143783831883584ad4e9ab1823675287c7151fd731b6effaa1c4b0aa34d"
+        }
+      },
+      "faults": [
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 7,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV7.json",
+          "sha256": "c05c3c774b308c1747e9051f4abdb52ade0c2b3f459d87448644c4b464032904"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev7.mjs",
+          "sha256": "69ab3b6ec87f746c5ab25df166f41202c01d0a724a8b0d5a0c217b10b76b075c"
+        }
+      },
+      "records": 129,
+      "positions": 127,
+      "boundaries": 185,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV7.json",
+          "sha256": "1d7677138be16602cabfc8735529b7f35b1b7c577a634e4eba807419bd00cd3e"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev7.mjs",
+          "sha256": "d0ddc0ca6bc8c8b840a61d6e97be78bfcb07c47fdf897602e2ca27367c3b31fe"
+        }
+      },
+      "faults": [
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 8,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV8.json",
+          "sha256": "c9a6a75594c19f4e0a37571b02b3507238203676b8bef2be9b4647221c02cb6e"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev8.mjs",
+          "sha256": "fc33629a07e806e949e93aeef42f9cc205a6ee21486179dfc7ae354ca4b96873"
+        }
+      },
+      "records": 129,
+      "positions": 127,
+      "boundaries": 186,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV8.json",
+          "sha256": "9e5be95d4535bc915bd217da633026785fc36e3c97ab3e4a5fdb9c8359c8f240"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev8.mjs",
+          "sha256": "0f1c3d46c45d55184773125b1e700ad3dc1fe6c12a3f47ca38640e44c125666b"
+        }
+      },
+      "faults": [
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 9,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV9.json",
+          "sha256": "f433b2859dd38b96af8f5788e5914e489a6d8501b50d094d0517ff280019e387"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev9.mjs",
+          "sha256": "e6f0e57a1315d83a3cccb78696fab745ed558b1718d24f8b2467457bb4fc92b2"
+        }
+      },
+      "records": 129,
+      "positions": 128,
+      "boundaries": 186,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV9.json",
+          "sha256": "93574d2bce6c7c50483610c4fdbb7bf78692bf608b02e7604abaabc12ca5e00a"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev9.mjs",
+          "sha256": "d558d85314f8cd53941c4ee3b708a97f994a443c8c486aca752930da1f6fd84e"
+        }
+      },
+      "faults": [
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 10,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV10.json",
+          "sha256": "dcbe49f9166c7824450589789a389c2185057eb5c560ef55df1f7f5da83feaa4"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev10.mjs",
+          "sha256": "4875fe07d3cd0c949bec0d6cda65da644b01710ad9be45f9585fc98184ee4244"
+        }
+      },
+      "records": 132,
+      "positions": 131,
+      "boundaries": 189,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV10.json",
+          "sha256": "27354264d96fd3ceac738b7c3f376cfd8edd107271e69ce9c3c945fbcbb874f7"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev10.mjs",
+          "sha256": "36e4d3208da75f29e52f1f54b2d7ccc0d84d142d625331ac1e3c17aef2848a78"
+        }
+      },
+      "faults": [
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 11,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV11.json",
+          "sha256": "cacdc0f2fd25d84981048eaeb95d5f1509e76e49d58779cf4ae03a27006907d7"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev11.mjs",
+          "sha256": "f6e4524b3e07241cdf17c83fede5919955b74d11355222111fb35d1efb304b4f"
+        }
+      },
+      "records": 135,
+      "positions": 134,
+      "boundaries": 192,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV11.json",
+          "sha256": "19e99f60d50ae16ca8912afaf7fe845277cd4a96429230d4bbc9828dd328dbe6"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev11.mjs",
+          "sha256": "b0a15979720dad8c1cfdce7baba00a7b6de6bde3f6184b5d3120aaef4effbc5b"
+        }
+      },
+      "faults": [
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 12,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV12.json",
+          "sha256": "cb996298d770d23c94d8dadfa5bff77f9a84d15a747a1098d9a8d8aace1da5a9"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev12.mjs",
+          "sha256": "7736291b70cdcdb14c2bf627cf3a1fb59efd9afdcdd937ae2b9512e2514a8b7a"
+        }
+      },
+      "records": 145,
+      "positions": 148,
+      "boundaries": 201,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV12.json",
+          "sha256": "7a3d0654af552f4b087ff47a7c0e0434587bc5b56048e47a75af13a56dc85061"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev12.mjs",
+          "sha256": "700f1695b299e785e8719de30aa77eb31fc7fa8550a8905f14d766b15d450a02"
+        }
+      },
+      "faults": [
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 13,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV13.json",
+          "sha256": "e0c38f9853e54dc97c620c0793640bd407db872a15b8b2c0f394b582f59126b3"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev13.mjs",
+          "sha256": "5cb12d894f2496c02c61d789d82c3a102df14fd5b282b0f4075560508c230b8b"
+        }
+      },
+      "records": 157,
+      "positions": 157,
+      "boundaries": 201,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV13.json",
+          "sha256": "5a02dca4a749b2e17abc9c3b9a891b19a917bfca1b6fd770219ada5f87446446"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev13.mjs",
+          "sha256": "c527dd73cb978648b07a203ea7a84fbd3aac33022470d4a8879c979f5097f7f6"
+        }
+      },
+      "faults": [
+        {
+          "name": "policy-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "baseline-policy-erased",
+          "rejected": true
+        },
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 14,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV14.json",
+          "sha256": "b40e98fa238076688b8bfa0bc7778d7cde331266bffd2823fcb1f9425c460e32"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev14.mjs",
+          "sha256": "8fe97eb9e57bd22d596e82a348b04634f4de53f32ee048ba29284b0530fd6f82"
+        }
+      },
+      "records": 159,
+      "positions": 162,
+      "boundaries": 201,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV14.json",
+          "sha256": "315a5a0384aaa36147235c762459bdabd54c4e09e4db6cf4589984c7b6841a36"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev14.mjs",
+          "sha256": "29fbed519de8ccf69750511460087882e789553c6fc1c9743b938f4837fa280f"
+        }
+      },
+      "faults": [
+        {
+          "name": "retention-authored-survivor",
+          "rejected": true
+        },
+        {
+          "name": "policy-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "baseline-policy-erased",
+          "rejected": true
+        },
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 15,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV15.json",
+          "sha256": "89094e53f85f0ddccda9c3e3f0ff38a57a5916d06a8905be56f128bcebb45a21"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev15.mjs",
+          "sha256": "a0239723eeb833e28def7e1ef4c444c80f8d55b1dcbcafec0ae680d4329d8ac9"
+        }
+      },
+      "records": 160,
+      "positions": 162,
+      "boundaries": 201,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV15.json",
+          "sha256": "6244f16e2b382cf3b60fdfa3c58ba655bddfa734309edacbe1f3f46da0c98c0d"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev15.mjs",
+          "sha256": "224f4c541d18c5382b90d9003fc6db5a2a1016123f464ce7a75c57c090a873b5"
+        }
+      },
+      "faults": [
+        {
+          "name": "retention-authored-survivor",
+          "rejected": true
+        },
+        {
+          "name": "policy-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "baseline-policy-erased",
+          "rejected": true
+        },
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 16,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV16.json",
+          "sha256": "f074a3a05140c7417646b6189503ff86bbdd343e57fd64256f881e904442fb5b"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev16.mjs",
+          "sha256": "e3f810efc6a75b90b929e05db5b4c73a238b7dabad06d0dbf52031c73e831ec9"
+        }
+      },
+      "records": 163,
+      "positions": 165,
+      "boundaries": 208,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV16.json",
+          "sha256": "7f422e02626a69361f1c34a14c034328fa890be0377eaf032121691ead4ed056"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev16.mjs",
+          "sha256": "efd04d4b8b91edb242614c23218528a06d1418f1bafd14a2135961521cf32fe7"
+        }
+      },
+      "faults": [
+        {
+          "name": "registration-event-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "registration-replaces-idn",
+          "rejected": true
+        },
+        {
+          "name": "retention-authored-survivor",
+          "rejected": true
+        },
+        {
+          "name": "policy-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "baseline-policy-erased",
+          "rejected": true
+        },
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "revision": 17,
+      "build": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_CLOSURE_REV17.json",
+          "sha256": "0bedc30632eac0336c65edecf1626bcfc1eff03bfd03f76a62d05b792c8e42a8"
+        },
+        "script": {
+          "path": "scripts/build-ga-identity-role-closure-rev17.mjs",
+          "sha256": "91884f46b243ace3823e8dcdd76ae0e7cc78ed4a8c5ac108511829c29b424899"
+        }
+      },
+      "records": 163,
+      "positions": 165,
+      "boundaries": 208,
+      "review": {
+        "original": {
+          "path": "docs/planning/GA_IDENTITY_ROLE_REVIEW_REV17.json",
+          "sha256": "d6184e0923d38ced43a0c656c1dac4347459371b87eaaabcadf2e9e1b070ad47"
+        },
+        "script": {
+          "path": "scripts/review-ga-identity-role-closure-rev17.mjs",
+          "sha256": "3af6819ea143be87f7ae804031414bbcf46470ad364256ccaeef0a96eb7bb1df"
+        }
+      },
+      "faults": [
+        {
+          "name": "registration-event-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "registration-replaces-idn",
+          "rejected": true
+        },
+        {
+          "name": "retention-authored-survivor",
+          "rejected": true
+        },
+        {
+          "name": "policy-is-occurrence",
+          "rejected": true
+        },
+        {
+          "name": "baseline-policy-erased",
+          "rejected": true
+        },
+        {
+          "name": "focal-source-is-assessment-id",
+          "rejected": true
+        },
+        {
+          "name": "replace-recalled-operands",
+          "rejected": true
+        },
+        {
+          "name": "replace-task-appraisal-boundary",
+          "rejected": true
+        },
+        {
+          "name": "owner-input-replaces-evidence",
+          "rejected": true
+        },
+        {
+          "name": "late-or-wrong-reservation",
+          "rejected": true
+        },
+        {
+          "name": "claim-transport-as-world",
+          "rejected": true
+        },
+        {
+          "name": "world-without-inherited-roles",
+          "rejected": true
+        },
+        {
+          "name": "source-observer-is-observation",
+          "rejected": true
+        },
+        {
+          "name": "opaque-source-use-plan",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-file",
+          "rejected": true
+        },
+        {
+          "name": "event-role-as-cause",
+          "rejected": true
+        },
+        {
+          "name": "scene-object-as-character",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "physical-as-signal",
+          "rejected": true
+        },
+        {
+          "name": "parallel-anchor",
+          "rejected": true
+        },
+        {
+          "name": "state-key-as-record-field",
+          "rejected": true
+        },
+        {
+          "name": "reuse-appraisal-id-for-concern",
+          "rejected": true
+        },
+        {
+          "name": "opaque-retained-encoding",
+          "rejected": true
+        },
+        {
+          "name": "unit-key-as-namespace",
+          "rejected": true
+        },
+        {
+          "name": "character-is-observer",
+          "rejected": true
+        },
+        {
+          "name": "namespace-only-character",
+          "rejected": true
+        },
+        {
+          "name": "goal-is-generic-referent",
+          "rejected": true
+        },
+        {
+          "name": "observation-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "collection-as-scalar-role",
+          "rejected": true
+        },
+        {
+          "name": "allocate-new-result-as-old-evid",
+          "rejected": true
+        },
+        {
+          "name": "event-file-as-scalar",
+          "rejected": true
+        },
+        {
+          "name": "drop-composite-source-key",
+          "rejected": true
+        },
+        {
+          "name": "claim-unresolved-state-key-roles",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Exact symbolic builder/reviewer outputs only. No production handler, state ownership enforcement, numeric allocation or public admission is executed.",
+    "33 distinct fault labels include a namespace mutation change under the same concern/appraisal label; source scripts retain the actual mutations."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "BOUNDED SOURCE RECOVERY COMPLETE",
+  "found": [
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_CLOSURE_PLAN.md",
+      "sha256": "f06c6c07e34d5c15467b5b01fb3b77bc59ae6fd1488e9cd56a2558e290de92fc",
+      "commit": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+      "method": "exact Git blob",
+      "resolvedPath": "docs/planning/campaign3-history-ga-components-rev1/f06c6c07e34d5c15-GENERAL_ATTENTION_CLOSURE_PLAN.md"
+    },
+    {
+      "path": "src/campaign3/observedMarkerTracking.ts",
+      "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2",
+      "method": "SHA-exact reverse of separate nine/ten-sweep factory extensions; LF bytes, not recovered Git blob",
+      "resolvedPath": "docs/planning/campaign3-history-ga-components-rev1/observedMarkerTracking.pre-successors.ts",
+      "derivation": "Remove fixed successor factories and horizon/max-detection fields; restore original8/8 constructor and limits. No numerical or tracking update law changed.",
+      "currentSourceSha256": "ae8129e4ba3058db7ad1f64f8791ef14eb3ebca96191f33b981bd8c21f606ebb",
+      "boundedGitSearch": {
+        "path": "src/campaign3/observedMarkerTracking.ts",
+        "sha256": "ecf458328d2b49c562c3bc539f5fd325a90a3b80a7c92d0f120d70ae9f7a1ec2",
+        "versionsInspected": 1,
+        "scope": "Bounded local exact-path all-ref Git blobs and explicit LF/CRLF transformations; no remote/all-object exhaustion."
+      }
+    }
+  ],
+  "unavailable": []
+}

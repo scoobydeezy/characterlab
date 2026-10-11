@@ -1,0 +1,80 @@
+{
+  "status": "PASS; SYMBOLIC DECLARATION REPLAY ONLY",
+  "original": {
+    "path": "docs/planning/GA_GOAL_ATTRIBUTION_STAGE_REVIEW_REV1.json",
+    "sha256": "530b8d423d2187290dd0e79a0ca0b8277e37914131d3a565644bfb22a2802ba9"
+  },
+  "checker": {
+    "path": "scripts/replay-history-ga-goal-attribution-stages.mjs",
+    "sha256": "30e1e408653fdbac2e7a5bdb11161babdf107ee406e8ba696df13701e41f1afd"
+  },
+  "helper": {
+    "path": "scripts/replay-history-ga-stage-helpers.mjs",
+    "sha256": "28ab46c25311d972cc51d644d37615de13f711bc6b2e42a840609ed7b1d10251"
+  },
+  "bindingInventory": {
+    "path": "docs/planning/campaign3-history-ga-stages-rev1/bindings.json",
+    "sha256": "ad9c416dea546cbf0693def9ea73575d415385f4091a09410c8ab62beaddf3ec"
+  },
+  "faults": [
+    {
+      "name": "assessment-physical-read",
+      "rejected": true
+    },
+    {
+      "name": "attribution-unselected-read",
+      "rejected": true
+    },
+    {
+      "name": "early-assessment",
+      "rejected": true
+    },
+    {
+      "name": "deadline-from-owner",
+      "rejected": true
+    },
+    {
+      "name": "reuse-old-evid-identity",
+      "rejected": true
+    },
+    {
+      "name": "delivery-allocates-again",
+      "rejected": true
+    },
+    {
+      "name": "terminal-output",
+      "rejected": true
+    },
+    {
+      "name": "authored-focal-child",
+      "rejected": true
+    },
+    {
+      "name": "metric-in-focal-delivery",
+      "rejected": true
+    },
+    {
+      "name": "missing-qualification-parent",
+      "rejected": true
+    },
+    {
+      "name": "recompute-withdrawn-goal",
+      "rejected": true
+    },
+    {
+      "name": "namespace-only-subject",
+      "rejected": true
+    },
+    {
+      "name": "pretend-whole-ceiling",
+      "rejected": true
+    },
+    {
+      "name": "claim-absent-consequence-closed",
+      "rejected": true
+    }
+  ],
+  "limits": [
+    "No scheduler, public admission or runtime component execution. Unavailable old component bytes remain excluded, not replaced by current implementations."
+  ]
+}

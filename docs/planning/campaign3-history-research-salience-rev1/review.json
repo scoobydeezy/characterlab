@@ -1,0 +1,1174 @@
+{
+  "status": "HQ011 SALIENCE AND INTERPRETATION HISTORY REVIEWED; WIDER AUDIT OPEN",
+  "source": {
+    "path": "reference/RESEARCH.md",
+    "frozenSha256": "bb0dde27fa64b34836ea5c182e2d96ad9aff6606c4dec8868556ddd703ea55e3"
+  },
+  "rows": [
+    {
+      "occurrenceId": "eb1d1f1327013531ce04aa478b8f538a86e34fea409d58502ead9247101cbb15",
+      "location": {
+        "startLine": 856,
+        "endLine": 856
+      },
+      "text": "## Phase 2.5b — Semantic Salience\n",
+      "claim": "SALIENCE-STATUS",
+      "disposition": "Role/category, relevance, surprise and budgets qualified from authored inputs before interpretation correction.",
+      "limits": "Historical PARTIAL superseded only in later bounded pipeline; default independent does not select universal law.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "286a2dcce1f6ce9229897fd2769e07c5016ba66189a68b4dccde4ccc3e216c11",
+      "location": {
+        "startLine": 858,
+        "endLine": 874
+      },
+      "text": "**Status: PARTIAL, corrected by Phase 2.5c below.** The core mechanism — role dominating category,\nNeed relevance and surprise both moving encoding in the predicted direction, all three budget models\nbounded and exact — is validated and kept. External review (recorded in the Correction section\nimmediately below) found this entry still hand-authored three of the pipeline's own *inputs* even\nthough the *weights* were genuinely derived: causal role was set directly on each scenario's\n`PerceivedConcept` rather than following from what actually, causally happened; attention was gated\nby an authored `unattended: true` flag rather than derived from role and scene composition; and\nsurprise used the raw `|r-μ|` prediction error even when that observation was boundary-clipped,\ndisagreeing with Phase 2.5a's own censored-evidence semantics. Phase 2.5c closes all three gaps\nwithout touching the validated multiplicative core. Every result below is written from actual\n`computeSemanticSalience` output (`experiments/semanticSalience.ts`'s six scenarios) and one real\n20-step-cycle comparison, not predicted numbers, and is kept as originally recorded (correct\nforward, don't quietly rewrite history) even where Phase 2.5c's rebuilt scenarios now produce\ndifferent numbers for the same qualitative claims. Not yet gated by a second implementer/reviewer,\nsame caveat as every prior entry — and, per the standing methodological correction at the top of\nthis file, every Vivarium-facing claim below is phrased as \"what would Vivarium's architecture need\nto expose this,\" never \"is this common enough in Vivarium to be worth it.\"\n",
+      "claim": "SALIENCE-STATUS",
+      "disposition": "Role/category, relevance, surprise and budgets qualified from authored inputs before interpretation correction.",
+      "limits": "Historical PARTIAL superseded only in later bounded pipeline; default independent does not select universal law.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "6b1f45df7c4e134335a280a116f417c6f53e0b3683bf37890197bcd861c02805",
+      "location": {
+        "startLine": 876,
+        "endLine": 883
+      },
+      "text": "This phase answers the other half of the same brief that produced Phase 2.5a: Phase 2's own\nRESEARCH.md entry found that `W[context.evening][action.visit_glen]` caps at exactly 1/2 because\nevery Experience tagged its concepts with a flat co-activation weight of 1.0, letting them compete\nfor the same row-substochastic budget regardless of how central each concept actually was to what\nhappened. That flat 1.0 was an artifact of `cycle.ts`'s original `semanticConcepts` construction, not\na deliberate psychological claim. This phase replaces it with a derived encoding strength z_i,\ncomputed from a fixed, global, non-scenario-specific set of rules (Brief §5.1: \"The system must not\nrequire authored instructions such as 'Glen = 0.92, Bakery = 0.24, Lamp = 0.03.'\").\n",
+      "claim": "SALIENCE-STATUS",
+      "disposition": "Role/category, relevance, surprise and budgets qualified from authored inputs before interpretation correction.",
+      "limits": "Historical PARTIAL superseded only in later bounded pipeline; default independent does not select universal law.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "a84a70f781f92067ed4214737dd9d273e0b39ce5dd959c048c2027901a4c7904",
+      "location": {
+        "startLine": 885,
+        "endLine": 885
+      },
+      "text": "### Correction (post-implementation review, before Phase 2.5c)\n",
+      "claim": "SALIENCE-CORRECTION",
+      "disposition": "Three input flaws preserved: directly assigned roles, unattended flag, uncensored surprise.",
+      "limits": "Provenance slot mapping relocates authoring; does not prove source truthful, perceived or immune to misauthoring. Need relevance remains separate.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "4d0bb4da5397643a0d821c9163485588d846105afb1558dd7b5a4001875dc484",
+      "location": {
+        "startLine": 887,
+        "endLine": 892
+      },
+      "text": "The findings below were written immediately after implementation and are kept as originally\nrecorded. A review of this entry before starting Phase 2.5c found that the pipeline's *weights*\n(BASE_SALIENCE, ROLE_WEIGHT, DEFAULT_ATTENTION_BY_ROLE) were genuinely derived — a real, validated\nresult — but three of the pipeline's own *inputs to those weights* were still hand-authored per\nscenario, which is the same class of mistake Brief §5.1 rules out, just one level upstream of where\n2.5b actually looked:\n",
+      "claim": "SALIENCE-CORRECTION",
+      "disposition": "Three input flaws preserved: directly assigned roles, unattended flag, uncensored surprise.",
+      "limits": "Provenance slot mapping relocates authoring; does not prove source truthful, perceived or immune to misauthoring. Need relevance remains separate.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "c068a858506ac4a3777339bf04c44dba24695793d27b63838ad04ce63eba9853",
+      "location": {
+        "startLine": 894,
+        "endLine": 924
+      },
+      "text": "1. **Causal role was authored directly, not derived from what causally happened.** 2.5b's\n   `WorldEventDescriptor` required whoever wrote a scenario to set `role: 'Cause'` on the Lamp by\n   hand once it started the injury. That is a real fact about the event, but nothing in the code\n   *derived* it from anything — a scenario author could just as easily have typed `'Incidental'` for\n   the same falling lamp and nothing would have caught it. **Fixed in 2.5c**: a new `EffectProvenance`\n   type describes only what physically/causally happened (who acted, on whom, with what, what\n   actually caused the observed effect); `deriveWorldEventDescriptor` is now the *only* place in the\n   codebase permitted to assign a `CausalRole`, and it does so mechanically from which provenance\n   slot named a concept. Separately, `ActionDef.subjectRole` now declares an Action's own semantic\n   argument structure (Conversation-like Actions bind their subject as `'Participant'`; an\n   Attack-like or Betrayal-like Action binds it as `'Cause'`) as a fact about the verb, not a\n   psychological weight on whichever specific Person fills that slot this time.\n2. **Attention was authored per concept via `unattended: true`, not derived.** This correctly\n   demonstrated that perception ≠ attention (a real finding, kept), but it moved the hand-authoring\n   problem rather than eliminating it — \"Lamp salience = 0.02\" became \"Lamp unattended = true,\"\n   still a per-scenario toggle. **Fixed in 2.5c**: non-Incidental roles keep a fixed default\n   attention value; Incidental-role concepts now derive their attention by splitting a fixed residual\n   pool among however many Incidental concepts the Experience actually has — attention competition is\n   now a computation over how many things are in the scene, not a flag any caller sets.\n3. **Surprise used the raw prediction error even for boundary-clipped observations, disagreeing with\n   Phase 2.5a's own semantics.** A saturated/censored observation being far from μ does not mean\n   something surprising happened — it means the observation couldn't measure the full effect — and\n   Phase 2.5a's censored-learning correction (this file, above) already established that distinction\n   for *learning*; 2.5b's salience computation used `|r-μ|` regardless, silently disagreeing with it\n   for *encoding*. **Fixed in 2.5c**: surprise now branches on the same `EvidenceKind` vocabulary\n   (`point`/`lower_bound`/`upper_bound`) Phase 2.5a's `expectation.ts` already defines — `point` keeps\n   `|r-μ|`; `lower_bound` (a ceiling-saturated positive effect) uses `max(0, L-μ)`, i.e. \"did the\n   evidence prove something incompatible with my belief\"; `upper_bound` is the mirror. Need relevance\n   is deliberately left unchanged — it is a genuinely different question (\"how much did this matter to\n   the Need I was experiencing,\" using the realized regulatory effect) from efficacy/surprise, and the\n   review confirmed that boundary does not need correcting.\n",
+      "claim": "SALIENCE-CORRECTION",
+      "disposition": "Three input flaws preserved: directly assigned roles, unattended flag, uncensored surprise.",
+      "limits": "Provenance slot mapping relocates authoring; does not prove source truthful, perceived or immune to misauthoring. Need relevance remains separate.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "fb047b22c261fa03069065a98004071d4437543276a28ad7851400fa631f003f",
+      "location": {
+        "startLine": 926,
+        "endLine": 929
+      },
+      "text": "One further open item the review raised without treating as a defect: the salience-budget model\n(independent/shared/hybrid) was left a three-way choice. The review locks `'independent'` (Model A)\nas the reference default going forward — see Phase 2.5c's Mathematical findings for the reasoning —\nuntil a dedicated attention-capacity experiment specifically motivates the shared/hybrid models.\n",
+      "claim": "SALIENCE-CORRECTION",
+      "disposition": "Three input flaws preserved: directly assigned roles, unattended flag, uncensored surprise.",
+      "limits": "Provenance slot mapping relocates authoring; does not prove source truthful, perceived or immune to misauthoring. Need relevance remains separate.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "58a84ee147276c6725fafffa3a749e55d0ebaa43f4fe49e09f69a42927fdb1e1",
+      "location": {
+        "startLine": 931,
+        "endLine": 931
+      },
+      "text": "### Psychological findings\n",
+      "claim": "SALIENCE-RESULTS",
+      "disposition": "Role changes and surprise-only contrast produce reported salience changes; zero-attention differs from small relevance.",
+      "limits": "Argument fixture changes need and surprise together, not isolated need proof; later dedicated contrast required.63x describes reported raw ratio approximately.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "cfb7e6b0faa3dcfde81b3cf9cb70cf58e24a78c2d73f1b069b13f437abfe8708",
+      "location": {
+        "startLine": 933,
+        "endLine": 944
+      },
+      "text": "**A concept's causal role in a specific event, not its ontological category, is what should\ndominate its salience — and the model now demonstrates this quantitatively, not just structurally.**\nThe same `object.lamp` concept, same category (`Object`, base salience prior B=0.30) throughout:\ntagged `Incidental` at an ordinary dinner (Scenario A) it lands at raw=0.006, z≈0.006 — genuinely\nnegligible next to Glen's z≈0.44 or the dinner Action's z≈0.52. Tag the *identical* concept `Cause`\nonce it causally injures Mina (Scenario C) and it jumps to raw=0.602, z≈0.376 — a roughly 63×\nincrease in raw salience from a single-field change (role, not category), with the concept's base\nsalience prior held byte-for-byte identical both times. The same swing reproduces for a Location\n(Scenario D: `location.bakery`, `Cause` role, z≈0.434 versus an ordinary `Location`-role Home's\nz≈0.088 in Scenario A) — confirming Brief §7's claim (\"the same Object category must be capable of\nreceiving dramatically different salience because its causal role changed\") generalizes across\ncategories, not just for the brief's own worked Table example.\n",
+      "claim": "SALIENCE-RESULTS",
+      "disposition": "Role changes and surprise-only contrast produce reported salience changes; zero-attention differs from small relevance.",
+      "limits": "Argument fixture changes need and surprise together, not isolated need proof; later dedicated contrast required.63x describes reported raw ratio approximately.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "1defc7b1fdad1d23a3b1a720a14831a9cbfbe07a72667d47e328ce9f70a74140",
+      "location": {
+        "startLine": 946,
+        "endLine": 955
+      },
+      "text": "**Need relevance and surprise both move salience in the predicted direction, and do so without any\nscenario-specific tuning of Glen, Mina, or any other named entity.** Ordinary dinner (Scenario A: a\npositive delta=0.30, urgency=0.60, low prediction error=0.05) gives Glen z≈0.439. The *identical*\ndescriptor and causal-role assignment, only with a larger, more surprising negative delta (Scenario\nB, \"argument\": delta=-0.60, prediction error=0.90) raises Glen to z≈0.547 and the Action concept to\nz≈0.627 — Brief §14 criterion 4 (\"Need-relevant concepts receive greater salience\") and criterion 3\n(\"prediction error increases encoding\") both hold. Isolating surprise alone (Scenario E, holding the\ndescriptor, roles, and Need impact fixed and varying only the prediction error from 0.01 to 0.95):\nGlen's z rises from ≈0.430 to ≈0.526, and the Action's from ≈0.512 to ≈0.607 — a clean, monotonic\neffect of the *one* factor that changed, with nothing else in the computation touched.\n",
+      "claim": "SALIENCE-RESULTS",
+      "disposition": "Role changes and surprise-only contrast produce reported salience changes; zero-attention differs from small relevance.",
+      "limits": "Argument fixture changes need and surprise together, not isolated need proof; later dedicated contrast required.63x describes reported raw ratio approximately.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "80fe3d0cfbdf8524e52d0f31c612ee219648b4ac1a0458304419e6158bdca770",
+      "location": {
+        "startLine": 957,
+        "endLine": 966
+      },
+      "text": "**Attention gating is a real, separate mechanism from perception, and the model distinguishes \"never\nperceived\" from \"perceived but not registered.\"** Scenario F places three concepts (`location.home`,\n`object.lamp`, `object.painting`) as objectively present (`perceived: true`) but explicitly\n`unattended` alongside an ordinary Glen interaction: all three land at raw=0, z=0 exactly — not\nmerely small, but exactly zero, because `unattended` forces attention A_i to 0 and every downstream\nfactor is multiplicative. This is deliberately a *different* mechanism from Scenario A's \"negligible\"\nLamp, which reaches z≈0.006 through its low category/role product alone, with ordinary (not\nzero-forced) attention. Both land near zero, by different routes — which is itself informative: a\nsystem can suppress an irrelevant-but-noticed concept (low B·R) and an unnoticed-but-present concept\n(A=0) through the same multiplicative pipeline without needing two different suppression mechanisms.\n",
+      "claim": "SALIENCE-RESULTS",
+      "disposition": "Role changes and surprise-only contrast produce reported salience changes; zero-attention differs from small relevance.",
+      "limits": "Argument fixture changes need and surprise together, not isolated need proof; later dedicated contrast required.63x describes reported raw ratio approximately.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "96ca068017ebdcefade8eaed8cb4b6cc0671f8f10d1e58e8b6933e30a361a4fc",
+      "location": {
+        "startLine": 968,
+        "endLine": 968
+      },
+      "text": "### Mathematical findings\n",
+      "claim": "SALIENCE-MATH",
+      "disposition": "Exact product and three bounded budgets retain factors and exclude unperceived entries from denominator.",
+      "limits": "Transient recomputation explains no persistent normalization reuse; not blanket ban on quantization or cumulative cost.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "69aa7e96cf2788146270f19777aa6f0135949d2ce5d8fc9a19231765d0ee22f3",
+      "location": {
+        "startLine": 970,
+        "endLine": 975
+      },
+      "text": "**The raw-salience product `B_i·R_i·A_i·(1+α_N·N_i)·(1+α_S·S_i)` (Brief §11) is exact-rational\nthroughout and every factor survives independently in the trace** — `salience.test.ts` checks the\nformula against a hand-computed product directly, and the `'semantic_salience'` trace step\n(`phase2_5Salience.test.ts`'s criterion-8 test) round-trips every one of B, R, A, N, S, Raw, and z\nback out of the recorded trace exactly, satisfying Brief §27's Trace Completeness obligation without\napproximation.\n",
+      "claim": "SALIENCE-MATH",
+      "disposition": "Exact product and three bounded budgets retain factors and exclude unperceived entries from denominator.",
+      "limits": "Transient recomputation explains no persistent normalization reuse; not blanket ban on quantization or cumulative cost.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "4e398bb3d695c138d2f8a0060d91a930f2e115c484a17510933c335f91282094",
+      "location": {
+        "startLine": 977,
+        "endLine": 988
+      },
+      "text": "**All three candidate salience-budget models (Brief §12) are bounded in [0,1] by construction, not\nby a separate clamp.** Model A (independent, `z_i=g(Raw_i)`) inherits boundedness directly from the\nexisting `Rational.boundedResponse` kernel primitive (Phase 0) — no new bounding function was\nneeded. Model B (shared budget, `z_i=Raw_i/max(B,ΣRaw_j)`) is bounded because, for nonnegative raw\nscores, the denominator is always at least as large as any individual numerator once that\nnumerator's own term is part of the sum — an algebraic guarantee, checked directly in\n`salience.test.ts` rather than merely observed. Model C (hybrid) composes both and inherits both\nguarantees on its respective partition. Perception exclusion (Brief §27) is enforced structurally,\nnot just as an emergent multiplicative near-zero: a concept with `perceived: false` is given z_i=0\nbefore it ever enters a budget-model computation, and is excluded from any Σ_j Raw_j the budget\nmodels use — Brief §8's \"cannot receive semantic salience merely because it existed in the same\nworld space\" means such a concept never competed for encoding capacity, not merely that it lost.\n",
+      "claim": "SALIENCE-MATH",
+      "disposition": "Exact product and three bounded budgets retain factors and exclude unperceived entries from denominator.",
+      "limits": "Transient recomputation explains no persistent normalization reuse; not blanket ban on quantization or cumulative cost.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "f4d83ca1e07d32530a9665083a8ac5367e0e3304dafa719fbaad229827ffefb0",
+      "location": {
+        "startLine": 990,
+        "endLine": 1002
+      },
+      "text": "**A genuinely open design question was resolved by NOT reusing existing machinery, and the reasoning\nis worth recording because it could easily have gone the other way.** `associations.ts`'s\n`updateAssociations` already has a BigInt lattice-quantization + largest-remainder reallocation\nalgorithm for normalizing a row of nonnegative Rationals against a shared cap (Σ_j W_ij ≤ 1 exactly)\n— structurally similar to what Salience Budget Models B/C need. This phase deliberately does *not*\nfactor that machinery out for reuse here: that algorithm exists specifically to prevent quantization\ndrift from compounding across thousands of future incremental updates to *persisted* state (W is\nmutated every Experience, forever). Semantic salience z is recomputed from scratch every single\nExperience — nothing about it persists or accumulates — so a plain exact `Rational` division already\nsatisfies the exact-arithmetic contract (Brief §3.1) with no drift to guard against, and Brief §12\nnever requires Σz_i to equal any particular total (only that each z_i is bounded). Reusing the\nlattice/BigInt path would have added real complexity in service of a persistence problem this module\ndoes not have — a case where the \"obviously reusable\" answer was the wrong one.\n",
+      "claim": "SALIENCE-MATH",
+      "disposition": "Exact product and three bounded budgets retain factors and exclude unperceived entries from denominator.",
+      "limits": "Transient recomputation explains no persistent normalization reuse; not blanket ban on quantization or cumulative cost.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "3e5950ae9c517d7ce270a12655533616985b0706802ef5a95fe87ce0424d33d8",
+      "location": {
+        "startLine": 1004,
+        "endLine": 1004
+      },
+      "text": "### Architectural findings\n",
+      "claim": "SALIENCE-INTEGRATION",
+      "disposition": "Legacy opt-in equality and one-cycle weighted associations are bounded integration evidence.",
+      "limits": "One cycle does not establish arbitrary tag-count invariance. Participant/Target default corrected later; tests dated.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "2a2f6b302484933b01991e00533ac58352ca7635129297a07d0013878f4d59d4",
+      "location": {
+        "startLine": 1006,
+        "endLine": 1011
+      },
+      "text": "**The dual-mode, opt-in, default-legacy discipline held for a second, structurally different phase\nwithout needing to be reinvented.** `salienceMode: 'legacy' | 'derived'` on `CycleParams` (mirroring\nPhase 2.5a's `SaturationParams.learningMode`) means every one of the 117 tests that predate this\nphase — all of Phase 0 through 2.5a — passes byte-for-byte unchanged, because `'legacy'` reproduces\n`cycle.ts`'s exact original flat-1.0 `semanticConcepts`/`experienceActivation` construction verbatim,\njust moved into an `else` branch. `'derived'` is purely additive.\n",
+      "claim": "SALIENCE-INTEGRATION",
+      "disposition": "Legacy opt-in equality and one-cycle weighted associations are bounded integration evidence.",
+      "limits": "One cycle does not establish arbitrary tag-count invariance. Participant/Target default corrected later; tests dated.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "486876f2f5ae94a9114b67422db2a9620d83d8d4542527c4a577d666f7622b62",
+      "location": {
+        "startLine": 1013,
+        "endLine": 1022
+      },
+      "text": "**The Action-key concept and the Experience's subject needed an explicit default causal-role mapping\nto make derived mode usable without an authored `WorldEventDescriptor` on every call site** —\n`defaultWorldEventDescriptor` assigns the chosen Action `'Cause'` (it is literally the mechanism that\nproduced the observed Need effect) and the subject `'Target'` (the ordinary \"acted upon\" case), with\nLocation→`'Location'` and active Context concepts→`'Context'`, exactly reproducing what every\npre-2.5b Experience implicitly meant. This is a documented authoring choice, not a brief mandate —\nBrief §7's own worked examples use different role labels for illustration (`Participant` for an\nordinary dinner companion) — but it is a *general, fixed* rule applied identically regardless of\nwhich Person/Action fills the slot, preserving the \"no scenario-specific weights\" property while\nstill giving ordinary Experiences sensible defaults.\n",
+      "claim": "SALIENCE-INTEGRATION",
+      "disposition": "Legacy opt-in equality and one-cycle weighted associations are bounded integration evidence.",
+      "limits": "One cycle does not establish arbitrary tag-count invariance. Participant/Target default corrected later; tests dated.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "b97b4fd6e9ab01b60b6c45ad039009858c251d2f5d929d77091a0d831ae2e791",
+      "location": {
+        "startLine": 1024,
+        "endLine": 1033
+      },
+      "text": "**One integration measurement makes the claimed effect concrete, not merely structural.** Running\nthe exact same forced Experience (visit Glen, evening Context active, same seed/character/clock)\nonce under each mode: `'legacy'` gives `W[context.evening][action.visit_glen] = 0.300` and\n`W[person.glen][action.visit_glen] = 0.300` — identical weights, because both concepts got the same\nflat co-activation regardless of relevance. `'derived'` gives `W[context.evening][...] ≈ 0.0014` (a\n~212× reduction) and `W[person.glen][...] ≈ 0.092` — Glen, who is actually central to what happened,\nkeeps a meaningfully larger share than the ambient evening Context, without either weight being\nhand-tuned. This is Brief §14 criterion 7 (\"association strength is no longer primarily determined\nby arbitrary tag count\") demonstrated with real numbers from one real cycle, not asserted from the\nformula alone.\n",
+      "claim": "SALIENCE-INTEGRATION",
+      "disposition": "Legacy opt-in equality and one-cycle weighted associations are bounded integration evidence.",
+      "limits": "One cycle does not establish arbitrary tag-count invariance. Participant/Target default corrected later; tests dated.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "efbb4a90e8b2c8099766d701e681f0f8dc8950cab5317710df433fe3db23c994",
+      "location": {
+        "startLine": 1035,
+        "endLine": 1035
+      },
+      "text": "### Vivarium comparison\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "064740d3e41f66d31d1aa951f09f030ebbe5e73a6a727a5c294a0333b91add7b",
+      "location": {
+        "startLine": 1037,
+        "endLine": 1041
+      },
+      "text": "Per the standing methodological correction: the question here is not whether Vivarium's current\nevent/perception system already resembles this pipeline, or whether semantic-salience-driven\nassociation weighting is common/valuable enough in Vivarium's actual play patterns to be worth\nporting. Those are production-cost and prevalence questions that come after CharacterLab has a\nvalidated model, not before.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "ede0776e3443c08c0c59992a07d50ef9c05eacba13657bcb198bad443cde50dd",
+      "location": {
+        "startLine": 1043,
+        "endLine": 1056
+      },
+      "text": "The question worth asking now: **what would Vivarium's world-event and perception representation\nneed to provide for this pipeline to run against it?** This phase's `WorldEventDescriptor` needs,\nfor every perceived entity in a moment: (1) an ontological category (Vivarium likely already has an\nentity-type system that could supply this directly); (2) a causal role *specific to the event*, not\na fixed property of the entity (Vivarium would need something that can say \"this specific lamp was\nthe Cause this time,\" not just \"lamps are Objects\" — i.e., causal-role assignment has to happen at\nevent-resolution time, not at entity-definition time); (3) a perception/attention signal separate\nfrom \"the entity exists in the world state\" (Brief §8's exclusion principle — if Vivarium's\nevent log includes everything objectively present rather than only what a character actually\nnoticed, salience-driven learning would need a perception filter layered in front of it, which does\nnot yet exist in this codebase's own outcome-resolution pipeline either — Phase 0-2's `WorldOutcomeTable`\nresolves effects without a distinct perception step, an open gap on *both* sides worth flagging\nrather than papering over). None of these are claims about whether Vivarium has them today — they\nare the concrete list of representational obligations this model's success surfaces.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "0d01cc56005ceb23f39c6c0cbfb44092ee1e2e925b2ee88e671720376c90d54f",
+      "location": {
+        "startLine": 1058,
+        "endLine": 1058
+      },
+      "text": "### Next-phase justification\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "46d8dc1b4c8bfaa50233224dee1b66895b6ce392117338e9250b8152eb8d4122",
+      "location": {
+        "startLine": 1060,
+        "endLine": 1060
+      },
+      "text": "Two threads are now open simultaneously, and neither blocks the other:\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "5711cb3284ecc5b654f145fb5044366f14fcc49c28b6854bc9ebd5966e6f9de1",
+      "location": {
+        "startLine": 1062,
+        "endLine": 1076
+      },
+      "text": "1. **Return to Phase 2.5a's deferred representation question** (RESEARCH.md's Correction section,\n   points 5-6): does `(μ, τ)` suffice for both point and one-sided evidence, or does\n   `NeedExpectation` need a richer `Mean`/`PointPrecision` + `LowerBoundEvidence`/`UpperBoundEvidence`\n   representation? The four validation Cases A-D specified in that Correction section are still\n   unrun and still the concrete next step there.\n2. **Brief §24's interaction question, now buildable but not yet built**: this phase and Phase 2.5a\n   were implemented independently (Phase 2.5b's salience computation never reads\n   `SaturationAnalysisEntry`, and Phase 2.5a's censored-evidence classification never reads z_i) —\n   deliberately, to keep each phase's own correctness argument clean. Brief §24 asks whether a\n   heavily-saturated (low-information) Experience should also encode *less* semantically — i.e.,\n   whether z_i should itself depend on Applied/Overflow, not just on B/R/A/N/S. This is a genuine\n   open research question, not an oversight: coupling salience to saturation before both mechanisms\n   are independently validated would make it impossible to attribute a wrong result to either one.\n   Worth a dedicated small experiment once Phase 2.5a's representation question above is resolved,\n   not before.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "05587b84695054f2a30f383b199bc7fe12cf05afa88b601c1458789e051174fc",
+      "location": {
+        "startLine": 1078,
+        "endLine": 1079
+      },
+      "text": "Neither thread is Phase 2.5b's own responsibility to close — recording them here so they are not\nlost, per this project's standing discipline of writing the next question down before moving on.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "0c5df8d0fa98ece789dfeffc7c496aee50f7dc588a3f422e7608980528e72040",
+      "location": {
+        "startLine": 1081,
+        "endLine": 1081
+      },
+      "text": "### Three-part output (Brief §36) for the Semantic Salience findings\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "04ce71652addc1fccbdca4ee218172f2fe47b59e393c1522f9e06e6ba1517eed",
+      "location": {
+        "startLine": 1083,
+        "endLine": 1092
+      },
+      "text": "**Psychological finding.** Salience — how strongly an event encodes into memory and association —\nshould not be a property of *what kind of thing* something is, but of *what role it played in this\nspecific event*, modulated by whether it was actually noticed, whether it mattered for a current\ngoal, and whether it violated expectation. A Lamp is not \"low-salience\"; a Lamp that merely sat on\nthe table is low-salience, and the same Lamp that fell and caused harm is not — the model must\nrecompute this per-event from role and context, never bake a fixed importance into the entity\nitself. This distinction — ontological kind versus causal role in a specific event — sits alongside\nPhase 2.5a's \"what happened / what could be observed / what that observation permits belief to be\"\nas the same family of finding: CharacterLab keeps discovering that a single collapsed quantity\n(salience, or a Need's observed delta) was hiding two or three logically separate things.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "e4c2516d03378ea53d6b8cc4f1910b1fd9dd813352c51971a7d3fd9f77911321",
+      "location": {
+        "startLine": 1094,
+        "endLine": 1102
+      },
+      "text": "**Computational finding.** A small, fixed, globally-authored set of category and role weights,\ncombined multiplicatively with deterministic, bounded, already-existing per-Experience signals (Need\nrelevance from `actualNeedResult`, surprise from `NeedExpectation`'s own δ=r-μ), is sufficient to\nreproduce every qualitative pattern Brief §13's six scenarios require — role overriding category,\nNeed-relevance and surprise increasing encoding, attention gating suppressing unregistered concepts\n— without a single per-scenario authored number. The salience-budget question (independent vs.\nshared vs. hybrid) remains genuinely open at the level of \"which model best matches an eventual\nproduction need\"; this phase validates that all three are mathematically sound (bounded, exact,\ndeterministic) candidates, not that one is correct.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "6d122f758ac5f9aa662bdae4c41fa1369653565f33933df6b0ee4239628b59ad",
+      "location": {
+        "startLine": 1104,
+        "endLine": 1114
+      },
+      "text": "**Architectural implication.** The same `salienceMode: 'legacy' | 'derived'` opt-in pattern that\nPhase 2.5a used for `SaturationParams.learningMode` transferred directly to a structurally different\nmechanism (a full multi-factor derivation pipeline rather than a single evidence-classification\nbranch) with zero adaptation needed to the pattern itself — evidence that this project's \"new\nmechanism, opt-in, default-legacy\" discipline is a reusable architectural template, not something\nthat happened to fit Phase 2.5a by coincidence. Separately: choosing *not* to reuse\n`associations.ts`'s lattice-quantization machinery, after concretely identifying why it solves a\ndifferent problem (persisted-state drift versus recomputed-every-Experience values), is itself a\nfinding worth recording — this codebase's own prior work is a source of temptingly-reusable\nmachinery that is not always actually the right tool, and checking that explicitly before reusing it\nis now a standing habit, not a one-off.\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "c1c93fd6ef402827a1cfe41fc50ea0dc82fae7f69a5ed8b8be3be46b44ee4e80",
+      "location": {
+        "startLine": 1116,
+        "endLine": 1116
+      },
+      "text": "---\n",
+      "claim": "SALIENCE-ROUTING",
+      "disposition": "World/perception/source hosting requirements and follow-up questions distinguished from measured parity.",
+      "limits": "Raw prediction error later replaced for bounds; saturation interaction later tested. Default budget remains comparison candidate.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "4c0151dbc9cf3a840b4c32dae992d39ef98f29cdbfe5fe3116ec28a4bda21266",
+      "location": {
+        "startLine": 1118,
+        "endLine": 1118
+      },
+      "text": "## Phase 2.5c — Experience Interpretation\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "cc87016c38af35ba89f91c8d77f9c064e8fa249b393d7d2bc3886bd341744fdb",
+      "location": {
+        "startLine": 1120,
+        "endLine": 1129
+      },
+      "text": "**Status: implemented, tested, and delivered.** This is deliberately a small integration phase, not\nanother giant one: Phase 2.5b's own review found its multiplicative core sound but three of its\n*inputs* still hand-authored (see the Correction section under Phase 2.5b, immediately above). This\nphase closes exactly those three gaps — mechanical causal-role derivation, mechanical residual-\nattention derivation, evidence-kind-aware surprise — locks the independent salience-budget model as\nthe reference default, and adds the one isolated Need-relevance test the factor-isolation suite was\nmissing. Every number below is written from actual `computeSemanticSalience`/`runScriptedExperience`\noutput against the rebuilt pipeline (`experiments/semanticSalience.ts`'s six scenarios, rebuilt to\nconstruct `EffectProvenance` instead of a hand-set `WorldEventDescriptor`), not predicted numbers.\nNot yet gated by a second implementer/reviewer, same caveat as every prior entry.\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "07474f8a415d1ad77bdd5aa174788c3bef015547ad447ac37ffe6e5875957cc1",
+      "location": {
+        "startLine": 1131,
+        "endLine": 1131
+      },
+      "text": "### Psychological findings\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "302d6377a83c647a6b32510776078f1bc4ebd5eb62de9b2ed56edf3f3c8d20c5",
+      "location": {
+        "startLine": 1133,
+        "endLine": 1144
+      },
+      "text": "**A concept's role can now only ever come from what actually, causally happened — and enforcing that\nmechanically, rather than trusting a scenario author to type the right label, still reproduces every\n2.5b qualitative finding.** The same `object.lamp` concept: `incidentalConcepts` in an ordinary\ndinner's `EffectProvenance` (Scenario A) derives to `Incidental` and lands at raw=0.0060, z≈0.0060 —\nstill genuinely negligible next to Glen's z≈0.2511 or the dinner Action's z≈0.5116. Naming the\nidentical concept in `EffectProvenance.cause` once it injures Mina (Scenario C) derives it to\n`Cause` and it jumps to raw=0.6024, z≈0.3760 — a ≈62.7× increase in raw salience from a single\nprovenance-field change, base salience prior held byte-for-byte identical both times, and this time\nno code path anywhere lets a scenario author simply mistype the role. The same swing reproduces for\na Location (Scenario D: `location.bakery` named in `EffectProvenance.cause`, z≈0.4342) against an\nordinary `Location`-role Home (z≈0.0876 in Scenario A) — the mechanism, not just the numbers,\ngeneralizes across categories.\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "36e1fc68bc47a516363c4f098e7ed38b8cb7bba68b45d416f837f9b9ea0a5f1f",
+      "location": {
+        "startLine": 1146,
+        "endLine": 1159
+      },
+      "text": "**The overly generic \"subject → Target\" default the review specifically flagged is gone, and the\ncharacter-level swing it enables is real but appropriately smaller than the Lamp's.** Every ordinary\nConversation-like Action in `defaultActions()` (`ACTION_VISIT_GLEN`, `ACTION_VISIT_PRIYA`,\n`ACTION_STAY_HOME`) now declares `subjectRole: 'Participant'`, not `'Target'` — running a full\nscripted `visit_glen` cycle in `'derived'` mode gives Glen z≈0.3204 as a `Participant`. Betrayal's\n`subjectRole: 'Cause'` (an Attack-like Action whose subject directly causes the sharp negative Need\neffect) instead gives Glen z≈0.4831 in the betrayal Experience — roughly a 1.5× swing, not the\nLamp's 62.7×, because Person already carries a high category prior (B=0.80) and both `Participant`\n(R=0.60) and `Cause` (R=1.00) role weights are already high for people; the role component still\nmoves the number in the right direction, it just has less room to work with when the category prior\nis already large. This is itself informative: causal role's leverage is largest exactly where the\ncategory prior is otherwise uninformative (an Object could mean anything from a lamp to a table),\nand smallest where category prior already carries most of the signal (a Person is usually going to\nmatter).\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "dabaac3cc341e4c5974803917889d97d889940d448827eca5b2e2232b5a1ee15",
+      "location": {
+        "startLine": 1161,
+        "endLine": 1173
+      },
+      "text": "**Attention gating is now a computation over how crowded the scene is, not a flag any scenario\nauthor sets — and it produces the same qualitative suppression 2.5b's `unattended` flag did, through\na mechanism that cannot be authored per concept.** Scenario F's residual Incidental pool\n(`DEFAULT_ATTENTION_BY_ROLE.Incidental = 0.20`) splits evenly among however many Incidental concepts\nprovenance actually lists: with one Incidental object (the Lamp alone), it gets the whole pool,\nattention=0.2000, z≈0.0060; add two more Incidental fixtures to the identical scene (a Painting, a\nCoat) and the Lamp's share drops to exactly 0.0667 (a three-way split of the same 0.20 pool),\nz≈0.0020 — a 3× reduction in encoding purely from how many other background objects happened to be\npresent, with nothing in any scenario file setting the Lamp's attention directly. Non-Incidental\nroles are unaffected by scene clutter: Glen (`Participant`) holds attention=0.6000 identically in\nboth the one- and three-Incidental variants — confirming the derivation is scoped to exactly the\n\"residual competition among Incidental concepts\" the review asked for, not a global renormalization\nthat would have diluted Glen too.\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "3c950b900ed86098745c1dc2dc4685efe1976cd553843a4cc2fea2cc90308336",
+      "location": {
+        "startLine": 1175,
+        "endLine": 1190
+      },
+      "text": "**Evidence-kind-aware surprise reproduces the review's own worked example exactly: a saturated\nobservation far from μ can be *zero* surprise, not the large surprise a naive `|r-μ|` would report.**\nBelieving an effect of +0.40 and then observing a ceiling-saturated Applied=+0.05 (a `lower_bound`\nobservation — the true effect is *at least* +0.05) yields `surpriseMagnitude = max(0, 0.05-0.40) = 0`\nexactly — the observation proves nothing incompatible with the existing belief, so nothing about it\nshould read as surprising. Treating the identical numbers as unsaturated `point` evidence (the 2.5b\nbehavior) would have reported `|0.05-0.40| = 0.35`, a large and entirely spurious \"this was\nunexpected\" signal driven purely by where the boundary happened to clip the observation. The mirror\ndirection confirms the formula discriminates correctly rather than just always returning zero: a\n`lower_bound` observation of +0.15 against a *low* prior belief of +0.02 yields `max(0, 0.15-0.02) =\n0.13` — genuinely positive surprise, because this observation *does* prove something incompatible\nwith the prior belief. `cycle.ts` now classifies this \"objective evidence kind\" unconditionally, from\nthe same Capacity/Applied/Overflow decomposition Phase 2.5a already computes, regardless of whether\n`SaturationParams.learningMode` is `'naive'` or `'censored'` — salience's surprise measure is always\nepistemically correct about what kind of observation this was, independent of what the separate\n*learning* algorithm chooses to do with that fact.\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "fd64aff4f72051350fc618d3577c8eaabba1193836cf9b68a685faec870cac14",
+      "location": {
+        "startLine": 1192,
+        "endLine": 1199
+      },
+      "text": "**Need relevance now has the clean factor-isolation test the review pointed out was missing, and it\nconfirms the mechanism works exactly as claimed once every other factor is actually held fixed.**\nHolding causal role (`Participant`), attention (1.0000, unaffected by the isolation setup), and\nsurprise (0.0099, identical low-surprise evidence in both runs) exactly constant and varying only the\nNeed impact (urgency×|delta|): a low-Need-relevance run (delta=0.05, urgency=0.20) gives\nN=0.0099, z≈0.4786; a high-Need-relevance run (delta=0.90, urgency=0.90) gives N=0.4475, z≈0.5682 —\nz_B > z_A, confirming the factor drives salience upward on its own, not merely alongside surprise as\nScenario B's combined conflict test could suggest by itself.\n",
+      "claim": "INTERPRETATION",
+      "disposition": "Fixed slot table, incidental residual attention and evidence-aware surprise replace independently authored downstream inputs.",
+      "limits": "Role cannot be mistyped claim limited to eliminated role field; wrong provenance still possible. Cause role only lawful when admitted, not omniscient causal truth.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "921bd5a677d85d6e84465b0b64657698ae3134045dc7ccb81ccb8880b9016a7a",
+      "location": {
+        "startLine": 1201,
+        "endLine": 1201
+      },
+      "text": "### Mathematical findings\n",
+      "claim": "INTERPRETATION-MATH",
+      "disposition": "Attention1/5 divided by3 exactly1/15; one-sided residual bounded by absolute residual.",
+      "limits": "Exact attention ratio not exact bounded-response salience ratio. First-slot priority deterministic, not causal identification. Independent default preserves serious shared/hybrid comparisons.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "a706a64c4a38db0efe6e9f6ccaa4398969bd3294b0e9aa3e828783e9630d4cf2",
+      "location": {
+        "startLine": 1203,
+        "endLine": 1211
+      },
+      "text": "**Mechanical derivation from a fixed slot-mapping table is exactly as exact-rational and\ndeterministic as the hand-authored version it replaced, with the added property that misauthoring a\nrole is no longer representable.** `deriveWorldEventDescriptor` processes a small ordered\n`ROLE_SLOTS` table (`activeContext`→Context, `sourceAction`/`cause`→Cause, `actor`→Actor,\n`target`→Target, `recipient`→Recipient, `instrument`→Instrument, `affectedEntity`→AffectedEntity,\n`location`→Location, `participants`→Participant, `incidentalConcepts`→Incidental) with first-slot-\nwins tie-breaking for a concept named by more than one field — deterministic, side-effect-free, and\nbecause `EffectProvenance`'s fields are typed to specific slots, there is no longer a `role: string`\nanywhere in the codebase a caller could set to an arbitrary/incorrect value.\n",
+      "claim": "INTERPRETATION-MATH",
+      "disposition": "Attention1/5 divided by3 exactly1/15; one-sided residual bounded by absolute residual.",
+      "limits": "Exact attention ratio not exact bounded-response salience ratio. First-slot priority deterministic, not causal identification. Independent default preserves serious shared/hybrid comparisons.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "bad9868e9f8b378fe79668da904288481e0d8ba6705af9714db7ddcb8a2cb6cc",
+      "location": {
+        "startLine": 1213,
+        "endLine": 1219
+      },
+      "text": "**Residual-attention derivation is exact division, not an approximation of \"sharing.\"**\n`deriveAttention` computes `DEFAULT_ATTENTION_BY_ROLE.Incidental / count(Incidental concepts\nperceived)` using exact `Rational` division — the three-Incidental Scenario F variant's 0.0667 is\nliterally `1/5 ÷ 3 = 1/15` computed exactly, not a floating-point approximation, so the \"1/3 of the\none-Incidental value\" relationship holds as an exact algebraic identity\n(`lampAttentionOne.equals(lampAttentionThree.mul(ratOf(3)))`), verified directly in\n`phase2_5cExperienceInterpretation.test.ts` rather than merely observed as approximately true.\n",
+      "claim": "INTERPRETATION-MATH",
+      "disposition": "Attention1/5 divided by3 exactly1/15; one-sided residual bounded by absolute residual.",
+      "limits": "Exact attention ratio not exact bounded-response salience ratio. First-slot priority deterministic, not causal identification. Independent default preserves serious shared/hybrid comparisons.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "208346bfb1fc4d1722714f47b43084e7dcc8cd72468efb3887984e5cb45393d1",
+      "location": {
+        "startLine": 1221,
+        "endLine": 1228
+      },
+      "text": "**`surpriseMagnitude`'s censored-evidence formulas are provably bounded by the unsaturated formula\nthey replace, never the reverse — censoring can only reduce reported surprise, never inflate it.**\nFor any fixed (priorMu, observed) pair, `max(0, observed-priorMu) ≤ |observed-priorMu|` and\n`max(0, priorMu-observed) ≤ |observed-priorMu|` hold algebraically (the clamp to 0 only ever removes\nmagnitude the absolute-value version would have counted), so a `lower_bound`/`upper_bound`\nclassification can never manufacture surprise a `point` reading of the identical numbers would not\nalready show — it can only correctly suppress surprise that was never actually warranted. This\ninequality is checked directly (`salience.test.ts`), not just asserted from the formula's shape.\n",
+      "claim": "INTERPRETATION-MATH",
+      "disposition": "Attention1/5 divided by3 exactly1/15; one-sided residual bounded by absolute residual.",
+      "limits": "Exact attention ratio not exact bounded-response salience ratio. First-slot priority deterministic, not causal identification. Independent default preserves serious shared/hybrid comparisons.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "496d1209fc4ac13f3d56e6bcf2ba7c039ce0cf732c520573556f64e3558b2a38",
+      "location": {
+        "startLine": 1230,
+        "endLine": 1242
+      },
+      "text": "**Locking `budgetMode: 'independent'` as the reference default is a methodological choice with a\nconcrete justification, not an arbitrary pick among three equally-plausible options.**\n`associations.ts` already enforces a competitive budget downstream of salience (`Σ_j W_ij ≤ 1` per\nrow, exactly), so normalizing salience itself against a *second* shared Experience-level budget (the\n`'shared'`/`'hybrid'` models) would let an irrelevant extra concept dilute the important ones before\nthey even reach association learning — quietly reintroducing, one level up the pipeline, the same\n\"arbitrary tag count\" problem Phase 2.5b exists to eliminate downstream. \"Limited attention\" (the now-\nderived residual-pool competition above) and \"limited associative capacity\" (already `associations.\nts`'s job) are two different constraints that this project has not yet run an experiment\ndistinguishing; conflating them by defaulting to a shared salience budget would have been premature.\n`'shared'`/`'hybrid'` remain fully implemented and tested (both are bounded, exact, deterministic —\n`salience.test.ts` checks both directly), available for exactly the dedicated attention-capacity\nexperiment this finding defers, not deleted.\n",
+      "claim": "INTERPRETATION-MATH",
+      "disposition": "Attention1/5 divided by3 exactly1/15; one-sided residual bounded by absolute residual.",
+      "limits": "Exact attention ratio not exact bounded-response salience ratio. First-slot priority deterministic, not causal identification. Independent default preserves serious shared/hybrid comparisons.",
+      "evidence": [
+        "GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+        "CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "2721b2b312040dbf92154632ad4c428b53b085891abc077106bd16a97cb16ec9",
+      "location": {
+        "startLine": 1244,
+        "endLine": 1244
+      },
+      "text": "### Architectural findings\n",
+      "claim": "INTERPRETATION-ARCHITECTURE",
+      "disposition": "One provenance input consistently derives descriptor/connectivity; evidence classification separate from learning choice.",
+      "limits": "Safe classification must itself follow admitted evidence. Collapsed override not permission to merge world authority and character interpretation.139 dated tests not current whole suite.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "d497af72b85d514d11c2cad021ea19a0bd06efb2ff16438a42c5979eec6840b3",
+      "location": {
+        "startLine": 1246,
+        "endLine": 1253
+      },
+      "text": "**The dual-mode, opt-in, default-legacy discipline extended cleanly to a *correction* of an already-\nopt-in mechanism, not just to new mechanisms.** No test written before this phase needed to change\nits assertions about *whether* salience is computed — `salienceMode: 'legacy' | 'derived'` is\nuntouched: `'legacy'`'s exact byte-for-byte Phase 0-2.5a behavior is unaffected by any of this phase's\nchanges, and every one of Phase 2.5b's own tests needed only its *inputs* rewritten (hand-set\n`PerceivedConcept.role`/`unattended` → `EffectProvenance`; raw prediction-error `Rational[]` →\n`SurpriseEvidence[]`), never its assertions about the *shape* of the derived-mode contract. All 139\ntests (117 pre-2.5c plus 22 new) pass.\n",
+      "claim": "INTERPRETATION-ARCHITECTURE",
+      "disposition": "One provenance input consistently derives descriptor/connectivity; evidence classification separate from learning choice.",
+      "limits": "Safe classification must itself follow admitted evidence. Collapsed override not permission to merge world authority and character interpretation.139 dated tests not current whole suite.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "a68ad07d238f1601f658ac1126bdbdce169628b05b9b86c137fa67eb844b2ffb",
+      "location": {
+        "startLine": 1255,
+        "endLine": 1266
+      },
+      "text": "**`ExperienceContext.worldEventOverride` collapsed from two separate override fields to one,\nbecause 2.5c's own correction made the second one redundant by construction.** 2.5b's design (per\nthe original implementation plan) anticipated a `worldEventOverride?: WorldEventDescriptor` plus a\nseparate `causalConceptsOverride?: ReadonlySet<ConceptKey>` — two independent things a caller could\noverride. Once role and causal-connectedness are BOTH mechanically derived from one `EffectProvenance`\nvalue (`deriveWorldEventDescriptor` and `causallyConnectedFromProvenance` are pure functions of the\nsame input), a second override field would only ever invite the two to silently disagree — so\n`ExperienceContext` now carries exactly one `worldEventOverride?: EffectProvenance` field, and\n`cycle.ts` derives both descriptor and causal-connectedness from it. This is the same \"collapse\nredundant state into one derived source of truth\" instinct the association-weight and Need-\nexpectation designs already followed elsewhere in this codebase, applied to a design that hadn't yet\nbeen built when the instinct would have prevented it.\n",
+      "claim": "INTERPRETATION-ARCHITECTURE",
+      "disposition": "One provenance input consistently derives descriptor/connectivity; evidence classification separate from learning choice.",
+      "limits": "Safe classification must itself follow admitted evidence. Collapsed override not permission to merge world authority and character interpretation.139 dated tests not current whole suite.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "02ea70cfbdda6278fe827490abf01c7da5fd3aa80e301146125626e4eac7d808",
+      "location": {
+        "startLine": 1268,
+        "endLine": 1280
+      },
+      "text": "**The \"objective evidence kind\" now computed unconditionally in `cycle.ts` is a small but structurally\nimportant addition: it makes an epistemic fact (what kind of observation this was) independent of an\nalgorithmic choice (what the learning rule does with that fact).** Before this phase, `EvidenceKind`\nclassification only happened inside the `learningMode === 'censored'` branch — meaning if a user ran\nwith `learningMode: 'naive'`, no `EvidenceKind` was ever computed at all, and salience (which now\nneeds one for every Need observation, every Experience, regardless of learning mode) would have had\nnothing to consume. `cycle.ts`'s Step-13 loop now always classifies `objectiveEvidenceKind` from the\nCapacity/Applied/Overflow decomposition, traces it alongside the (possibly different) gated\n`learningEvidenceKind` the actual learning update uses, and feeds only the objective one to salience —\nso a user toggling `learningMode` for a learning-mechanics experiment can no longer silently change\nwhat salience believes about the same Experience, which is exactly the \"2.5a and 2.5b privately\ndisagreed about surprise\" bug the review identified, closed by construction rather than by\nconvention.\n",
+      "claim": "INTERPRETATION-ARCHITECTURE",
+      "disposition": "One provenance input consistently derives descriptor/connectivity; evidence classification separate from learning choice.",
+      "limits": "Safe classification must itself follow admitted evidence. Collapsed override not permission to merge world authority and character interpretation.139 dated tests not current whole suite.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md"
+      ]
+    },
+    {
+      "occurrenceId": "f2d23664e43d292651e472d4374f38d9f7da0a7a4d6a14d68c63ac4b9ae6f1ac",
+      "location": {
+        "startLine": 1282,
+        "endLine": 1282
+      },
+      "text": "### Vivarium comparison\n",
+      "claim": "INTERPRETATION-TRANSFER",
+      "disposition": "Named producer/perception/classification obligations preserve character boundary in intended architecture.",
+      "limits": "Production hosting proposals not executed Vivarium parity. Later typed public contracts, not old source-truth provenance, govern cognition.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "d12645df4db679372562224a262c02a20479e61220a69e19f11704470d579f6c",
+      "location": {
+        "startLine": 1284,
+        "endLine": 1289
+      },
+      "text": "Per the standing methodological correction: the question is not whether Vivarium's engine already\nhas an `EffectProvenance`-shaped record, or whether provenance-driven role assignment is common\nenough in Vivarium's current content to be worth porting. **The question worth asking now: what would\na production architecture need to preserve for this phase's corrected pipeline to be portable at\nall?** Four concrete obligations, sharper than Phase 2.5b's own list because this phase's corrections\nmake the gaps more specific:\n",
+      "claim": "INTERPRETATION-TRANSFER",
+      "disposition": "Named producer/perception/classification obligations preserve character boundary in intended architecture.",
+      "limits": "Production hosting proposals not executed Vivarium parity. Later typed public contracts, not old source-truth provenance, govern cognition.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "49787d718fcf347b7656b3850481cc050428bbfe84e5f4b13e8ee64b507dbcd3",
+      "location": {
+        "startLine": 1291,
+        "endLine": 1312
+      },
+      "text": "1. **Causal provenance as a first-class, structured record of what actually happened** — not merely\n   an event log of world-state deltas, but something with named slots for actor/target/instrument/\n   cause/etc. that a role-derivation function can read mechanically. Vivarium's outcome/effect\n   resolution would need to produce this shape, not just \"Need X changed by Y.\"\n2. **Character-relative perception and attention as a distinct layer from world truth** — this\n   phase's residual-attention-pool derivation only works if \"how many things is this character\n   currently perceiving\" is itself a queryable, character-relative quantity, not a global fact about\n   the scene. A production engine that only tracks objective world state (not per-character perceptual\n   fields) would need to add this layer before any residual-competition model could run against it.\n3. **Evidence semantics (point vs. bound) surfaced at the point where any subsystem consumes an\n   observation, not just at the point where the outcome was computed.** This phase's central fix was\n   discovering that TWO subsystems (2.5a's learning, 2.5b's salience) had each independently\n   reinvented — and briefly disagreed about — what a saturated observation means. A production\n   architecture should compute evidence-kind classification once, per observation, and hand it to\n   every downstream consumer, rather than let each consumer infer it (or fail to) on its own.\n4. **A character-relative semantic Experience layer sitting between world truth and learning** — the\n   throughline across Phase 2.5a, 2.5b, and 2.5c: what a character can learn from should never be\n   \"what objectively happened in the simulation,\" but \"what this character's Experience of what\n   happened logically permits her to conclude,\" with causal role, attention, and evidence semantics\n   all mediating that boundary. Whether Vivarium implements this as one unified layer or several\n   coordinating subsystems is an implementation choice for later; that some such layer must exist is\n   what these three phases jointly demonstrate.\n",
+      "claim": "INTERPRETATION-TRANSFER",
+      "disposition": "Named producer/perception/classification obligations preserve character boundary in intended architecture.",
+      "limits": "Production hosting proposals not executed Vivarium parity. Later typed public contracts, not old source-truth provenance, govern cognition.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6e5c34d5ef7acc2e6271cf993f72b13b99191c414b2271d923978b0ece3c044b",
+      "location": {
+        "startLine": 1314,
+        "endLine": 1314
+      },
+      "text": "### Next-phase justification\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "3c455f6316348db6f21cd013615d161c23c2b9b1ffed8c8d00c5232b8c718d82",
+      "location": {
+        "startLine": 1316,
+        "endLine": 1327
+      },
+      "text": "With Phase 2.5c's corrections landed, the path is now clear to return to the one substantive\nquestion Phase 2.5a left open (its Correction section's point 5, deferred pending this phase): **is\n`(μ, τ)` a sufficient representation for both point evidence and one-sided (`lower_bound`/\n`upper_bound`) evidence, or does `NeedExpectation` need a richer representation that keeps\nconfidence-in-a-point-estimate and confidence-in-an-inequality-constraint as distinct quantities?**\nThe four validation Cases A-D specified in that Correction section (established belief vs. weak lower\nbound; belief inconsistent with the bound; zero-information saturation; genuine evidence after a long\ncensored history) are still unrun and are the concrete next step. Phase 2.5c's own Brief §24 question\n— whether z_i should itself depend on Applied/Overflow, not just on B/R/A/N/S — remains deliberately\ndeferred for the same reason Phase 2.5b left it deferred: coupling salience to saturation before\n2.5a's representation question is resolved would make it impossible to attribute a wrong result to\neither mechanism.\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "66a7b104f3886be46c623b93be260c8cd6809bc5547d301fde7b02e1ecdecbe3",
+      "location": {
+        "startLine": 1329,
+        "endLine": 1333
+      },
+      "text": "**Both since resolved.** The representation question above was run and closed in Phase 2.5a's\n\"Correction 2\" section (earlier in this document) immediately after this entry shipped. Brief §24's\nsalience/saturation question, sharpened by that same post-2.5c review into \"does saturation provide\nany salience information not already available through realized Need relevance and evidence-aware\nsurprise?\", is answered directly below in Phase 2.5d.\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "294462d1cbcb85724608f0edf1ba7773d5c4bd7119d01261051efdf3bde7c0e7",
+      "location": {
+        "startLine": 1335,
+        "endLine": 1335
+      },
+      "text": "### Three-part output (Brief §36) for the Experience Interpretation findings\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "b3480de813d096586a1840487a47e71f1b41907a0853ab75f38d8d3ec56a1dd7",
+      "location": {
+        "startLine": 1337,
+        "endLine": 1345
+      },
+      "text": "**Psychological finding.** A believable character's encoding of an event depends on three genuinely\nseparate character-relative facts — what causal role each present concept actually played (derived\nfrom what happened, not assigned by fiat), how much of her limited attention that concept actually\nreceived (a scarce, shared resource that background objects compete for, not a switch any one object\ncan be flagged with), and whether the evidence she received actually contradicted what she already\nbelieved (which a boundary-clipped observation may not do, however far its raw number sits from her\nprior) — and collapsing any of these three into an authored per-scenario fact, even one that happens\nto be correct for that one scenario, reintroduces exactly the \"Glen = 0.92\" authoring problem Brief\n§5.1 rules out, just moved one level upstream of the salience weights themselves.\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "864014d6d9ba1939ce1fd4d10a442cf2635d7006fe6a43511451e1974bc2524a",
+      "location": {
+        "startLine": 1347,
+        "endLine": 1353
+      },
+      "text": "**Computational finding.** Every one of Phase 2.5b's validated multiplicative-weight results survives\nunchanged once its *inputs* are made mechanical: role from `EffectProvenance` via a fixed slot table,\nattention from a fixed residual pool divided by a count, surprise from a fixed evidence-kind-branching\nformula. None of the three fixes required touching `rawSalience`, `BASE_SALIENCE`, `ROLE_WEIGHT`, or\nany of the three budget models — the correction was entirely about how those already-correct weights\nreceive their per-Experience inputs, evidence that a phase's mathematical core and its integration\nplumbing can be validated and debugged as genuinely separate concerns.\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "0184f049e142f38f03b460792c788bcccd99c2d1afed52bc2fd39b446a97b0d3",
+      "location": {
+        "startLine": 1355,
+        "endLine": 1364
+      },
+      "text": "**Architectural implication.** Sharing one vocabulary (`EvidenceKind`) between a learning subsystem\n(Phase 2.5a) and an encoding subsystem (Phase 2.5b/c) — computed once, unconditionally, and handed to\nboth — is what actually closed the \"these two phases silently disagree\" bug, not a special-case patch\nin either subsystem. This generalizes: whenever two independently-built subsystems both need to\ninterpret the same underlying observation, the fix is a shared, unconditionally-computed\nclassification both consume, not a bespoke reinterpretation in each. Phase 2.5a, 2.5b, and 2.5c\njointly demonstrate that \"the character's Experience of an event\" is itself a coherent, reusable\narchitectural layer — causal role, attention, and evidence semantics all mediate world-truth into\ncharacter-relative belief the same way, whether the consumer is a Need-satisfaction learner or a\nsalience/association-weighting mechanism — not three unrelated bolt-on features.\n",
+      "claim": "INTERPRETATION-SUMMARY",
+      "disposition": "Correction2 and saturation interaction supersede historical next-step routing in their declared scope.",
+      "limits": "General character-relative causal role must remain fallible; shared vocabulary does not establish every consumer law or universal necessity.",
+      "evidence": [
+        "CAMPAIGN3_LEARN_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "5dd57f19e51f013e1bd63155b731786bc05a639e4878a5f0c645483e72fabe84",
+      "location": {
+        "startLine": 1366,
+        "endLine": 1366
+      },
+      "text": "## Phase 2.5d — Saturation/Salience Interaction\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "5830bc85029a5777b9f37a452f421eedc5230ffe7ec3c4ddbde0b66f2fc7c8e0",
+      "location": {
+        "startLine": 1368,
+        "endLine": 1369
+      },
+      "text": "**Status: RESOLVED. Brief §24's remaining Phase 2.5 question is classified DERIVED. Phase 2.5 is\nCLOSED.**\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "989c6006e1a7d2923abcc4326b2d6ee9ce94ac097a2030463a488a1302c06cce",
+      "location": {
+        "startLine": 1371,
+        "endLine": 1375
+      },
+      "text": "Post-2.5c external review sharpened Phase 2.5c's own deferred Brief §24 question from \"should\nsalience z_i depend on Applied/Overflow?\" to a cleaner, falsifiable form: **does saturation provide\nany salience information that is not already available through the character's experienced Need\nrelevance and evidence semantics?** The reviewer's own starting hypothesis, stated before anything\nbelow was built or run, per this project's \"specify success before building\" discipline:\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "3aba2bcb529fe205eb4fe34cd975ed5994300f3cb645583eb8fd031ce22d358b",
+      "location": {
+        "startLine": 1377,
+        "endLine": 1379
+      },
+      "text": "> Saturation does not require an independent salience mechanism. Its psychologically observable\n> effects are already mediated by realized Need relevance and evidence-aware surprise. Hidden\n> Overflow must not affect salience.\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "863619978f2a86c55d6add476c681ed3d8e59b4c55071e4f7cd7ec6ac3d7ff0b",
+      "location": {
+        "startLine": 1381,
+        "endLine": 1390
+      },
+      "text": "A static read of `model/salience.ts` already suggested this structurally: `rawSalience`'s formula\n(`Raw = BaseSalience x RoleWeight x Attention x (1+alphaN*NeedRelevance) x (1+alphaS*Surprise)`) has\nno Overflow or `SaturationFactor` term, and `cycle.ts::applyChosenAction` only ever threads Overflow\ninto the trace-only `saturationAnalysis`/Experienced-Reward computation — never into `needImpacts` or\n`surpriseEvidenceRecords`, salience's only two inputs beyond role/attention. But per this project's\n\"don't trust code inspection where a runnable test is possible\" norm (the same reasoning that caught\nPhase 2.5a's Correction and Phase 2.5b's Correction), the hypothesis was run, not merely read off the\nsource — four cases, each fixing Mina/Glen/Connection and varying exactly one thing, through the real\n`runScriptedExperience` pipeline end-to-end (`experiments/saturationSalienceInteraction.ts`), not\n`computeSemanticSalience` called directly with hand-picked inputs, which would beg the question.\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "5215ac532ed60e62b9ece0884f7fe9b12121c993d019a7d78bf4d9476228ead6",
+      "location": {
+        "startLine": 1392,
+        "endLine": 1392
+      },
+      "text": "**All four cases pass, encoded directly as tests** (`test/phase2_5dSaturationSalienceInteraction.test.ts`):\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "b3d01aaccd1a262915141808f33a9af788755ea97102ecf86a61cd00a1c51fe2",
+      "location": {
+        "startLine": 1394,
+        "endLine": 1422
+      },
+      "text": "- **Case 1 — Observational equivalence.** Connection starts at 0.95 (Capacity+ = 0.05) in both\n  timelines. Timeline A's true effect is +0.10 (Overflow 0.05); Timeline B's is +0.80 (Overflow\n  0.75) — radically different hidden Overflow, identical Applied (+0.05) and evidence kind\n  (`lower_bound`). Result: Glen's Need relevance (0.000000 both — Connection's Level, 0.95, is already\n  above its 0.80 set point, so `needDeficit`'s own clamp makes Connection's urgency exactly 0 in both\n  timelines regardless of Applied), surprise (0.047619 both), raw (0.301714 both), and z (0.231782\n  both) are **byte-for-byte identical** between timelines. Mina has no epistemic access to Overflow,\n  and none leaked across the Experience boundary.\n- **Case 2 — Saturation versus unsaturated utility.** Same true effect (+0.40) both times; only\n  Mina's starting Connection Level differs. Starved (Level 0.10, high urgency, Applied lands\n  unclipped at +0.40): Need relevance = 0.234450, surprise = 0.285714, z = 0.313705. Near/over-\n  satisfied (Level 0.90, above the 0.80 set point — `needDeficit`'s own `max(0, ...)` clamp makes\n  urgency exactly 0, Applied clips to +0.10): Need relevance = **0.000000 exactly**, surprise =\n  0.090909, z = 0.239070. The starved Experience is strictly more Need-relevant and strictly more\n  salient overall — with no additional `SaturationFactor`; `needRelevance` already folds in both the\n  larger realized delta and the higher urgency multiplying it.\n- **Case 3 — Surprising censored evidence.** Connection at 0.85 (Capacity+ = 0.15); true effect +0.50\n  clips to a `lower_bound` observation of exactly +0.15 in both variants. Against an established\n  belief of only +0.02 (\"surprising\"): surprise = 0.115044, z = 0.243074. Against an established\n  belief of +0.20, which the same +0.15 bound does not contradict (\"consistent\"): surprise =\n  **0.000000 exactly**, z = 0.223602. Saturation does not merely suppress salience — an informative\n  censored bound that genuinely contradicts a character's belief stays highly salient, exactly as\n  `surpriseMagnitude`'s evidence-kind-aware formula (`max(0, L-mu)`) predicts.\n- **Case 4 — Total saturation.** Connection already at 1.0 exactly; Glen produces an otherwise\n  ordinary +0.40 effect that is entirely Overflow (Applied = 0 exactly). Need relevance and surprise\n  both land at exactly 0.000000 — but Category x Role x Attention alone (Person x Participant x\n  Participant's fixed 0.6 attention) still yields raw = 0.288000, z = 0.223602. Saturation drives the\n  Need-relevance and evidence-aware-surprise factors to zero without making the entire Experience\n  disappear, exactly as the multiplicative form (`1 + 0 = 1`, not `x 0`) guarantees by construction.\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "087852fa655606afc5d63640b332a7f39f59f3f0e02414397c2587667afa4eb2",
+      "location": {
+        "startLine": 1424,
+        "endLine": 1431
+      },
+      "text": "**Verdict.** All four cases behave exactly as the stated hypothesis predicted, using the architecture\nthat already existed going into this phase — no new field, table, or mechanism was added anywhere in\n`model/salience.ts` or `model/cycle.ts` to make these pass. Per the reviewer's own explicit branching\ninstruction, Brief §24's question is classified **DERIVED**: saturation's psychologically observable\neffects on salience are fully mediated by realized Need relevance (which already consumes the Applied,\nboundary-clipped delta — never the satisfier's true, un-clipped magnitude) and evidence-aware surprise\n(which already consumes the objective `EvidenceKind` Phase 2.5a's censored-learning correction uses),\nwith no direct Overflow or saturation term required or added. **Phase 2.5 is closed.**\n",
+      "claim": "SATURATION-INTERACTION",
+      "disposition": "Four end-to-end cases show equal safe saturation evidence/equal encoding, relevance contrast, informative bound and nonzero base at total saturation.",
+      "limits": "DERIVED scoped to fixed pipeline/horizon/query set; Case2 changes urgency and applied magnitude together. No universal absence of hedonic channel.",
+      "evidence": [
+        "CAMPAIGN3_EPI_QUALIFICATION.md",
+        "CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md"
+      ]
+    },
+    {
+      "occurrenceId": "9521aba4b5df01986ba586526e61effee4f94f40453c33f604e6a1a25fff8cb8",
+      "location": {
+        "startLine": 1433,
+        "endLine": 1446
+      },
+      "text": "**A standing architectural prohibition, locked in for later phases.** `PotentialEffect`/`Applied`/\n`Overflow` stay fully traced — Overflow is valuable world-truth for a researcher inspecting the trace,\nand nothing above retracts that. But two paths remain, and must remain, prohibited: **Overflow ↛\nSalience** (this phase's finding) and **Overflow ↛ NeedExpectation** (Phase 2.5a's Correction point 3)\n— Overflow is simulator-omniscient information no character has epistemic access to. This matters\nbeyond Phase 2.5: if a future phase (addiction/acquired Needs, Brief §26) demonstrates that a\ncharacter experiences something beyond ordinary Need regulation — pleasure, hedonic reward,\nintoxication, a \"high\" that outlasts or exceeds what the regulated Need itself accounts for — that\nmust be introduced as an explicit, new, experimentally-demonstrated \"Experienced Reward\" signal with\nits own derivation, tested the same way this phase tested salience. It must never be smuggled in as\ndisguised access to Overflow just because Overflow is already sitting there in the trace, fully\ncomputed and numerically convenient. The distinction between \"world truth we record\" and \"world truth\na character can act, learn, or feel from\" is this project's central discipline, and addiction is\nexactly the phase where it would be easiest to quietly violate.\n",
+      "claim": "SATURATION-BOUNDARY",
+      "disposition": "Overflow remains research truth; direct learning/encoding routes prohibited absent admitted sensing.",
+      "limits": "Independent experienced pleasure may be introduced lawfully and later biology does so; not relabelled Overflow or universal irrelevance of reward.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "b137b45db7706bb38d628e79dfb6a911b3286074341f685deaf7486108e2ae83",
+      "location": {
+        "startLine": 1448,
+        "endLine": 1454
+      },
+      "text": "**What stays exactly as it was, not revisited.** Per the same review's explicit sign-off: 2.5c's\nattention mechanism (fixed values by role, residual-pool splitting for Incidental) and the `(μ, τ)`\nrepresentation (see Correction 2 above, with its own honestly-scoped limitation) both clear every\nbehavioral test asked of them so far and are not touched by this phase. This project's own meta-\npattern, restated because it is what let this phase stay genuinely tiny: find the smallest\ndeterministic representation that clears the behavioral tests, document where it's an approximation,\nand only enrich it when another phenomenon actually breaks it. Nothing here broke it.\n",
+      "claim": "SATURATION-BOUNDARY",
+      "disposition": "Overflow remains research truth; direct learning/encoding routes prohibited absent admitted sensing.",
+      "limits": "Independent experienced pleasure may be introduced lawfully and later biology does so; not relabelled Overflow or universal irrelevance of reward.",
+      "evidence": [
+        "CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+        "CAMPAIGN3_EPI_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "e825474e81f36c964d7b4df09e38613c505784ba9dc133e71d8a5b84fcb4b10f",
+      "location": {
+        "startLine": 1456,
+        "endLine": 1456
+      },
+      "text": "### Next-phase justification\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "6ca9d34697ca922871ec6e867420d239bf7f7e0ee67b94863081709b68665a97",
+      "location": {
+        "startLine": 1458,
+        "endLine": 1464
+      },
+      "text": "With Phase 2.5's three sub-phases (a/b/c) and this closing interaction check all landed, every\nquestion this brief's Phase 2.5 request raised (Brief §16-27) is now DEFERRED (Experienced Reward,\ndeliberately not wired into behavior), RESOLVED (the `(μ, τ)` representation, Correction 2), or\nDERIVED (this entry). Phase 3 (personality/belief/social appraisal, per the Brief's own phase\nordering) is the next open phase gate — not scoped here, since scoping it before Phase 2.5 actually\nclosed would be exactly the \"generalize before an experiment demands it\" mistake this log has spent\nthree sub-phases correcting itself out of.\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "2d8d01665d1195da95b8b0653a0e502e5e07445167be5b8a2adf7bf2b4fe45eb",
+      "location": {
+        "startLine": 1466,
+        "endLine": 1466
+      },
+      "text": "### Three-part output (Brief §36) for the Saturation/Salience Interaction findings\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "cc307c249403cecd76f4604026ace17df82b22df481220cdfe4ca204a3176a03",
+      "location": {
+        "startLine": 1468,
+        "endLine": 1474
+      },
+      "text": "**Psychological finding.** What determines how memorable an event is to a character is not \"how much\nof the world actually changed\" but \"how much of that change she could actually attribute to something,\nand how much it discriminated against what she already believed\" — both of which are already fully\ndetermined by her own Experience (realized Need effect, evidence semantics), with no separate\naccounting for how much of the world's effect she never got to register at all. A saturated character\nis not thereby a less-encoding character; she is a character whose Need relevance and surprise happen\nto be small for this particular Experience, for reasons her own Experience already fully explains.\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "995c5e74d7cd1f1086593fc7c475560a080c40f0dbba09a30c4c73beee1a0a5d",
+      "location": {
+        "startLine": 1476,
+        "endLine": 1483
+      },
+      "text": "**Computational finding.** Four independently-varying cases, run through the same unmodified\nmultiplicative formula, reproduced every qualitative prediction the hypothesis made — including the\none case (Case 4) where two of the formula's three modulating factors both collapse to exactly zero\nwithout collapsing the raw score to zero, purely because the formula multiplies `(1 + factor)` terms\nrather than the factors themselves. That structural property — not a special-cased floor or minimum —\nis what Brief §24 asked whether saturation would need, and it turns out the multiplicative-with-1-plus\nform Phase 2.5b chose for unrelated reasons (bounding non-negative modulation) already provides it for\nfree.\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    },
+    {
+      "occurrenceId": "1bc799181fdaf0025b1278c8c411110a7ea80cd4640823de5be77fd9cf50accd",
+      "location": {
+        "startLine": 1485,
+        "endLine": 1492
+      },
+      "text": "**Architectural implication.** This is the cleanest confirmation yet of this project's core operating\nprinciple across all of Phase 2.5: a character-relative Experience layer (causal role, attention, Need\nrelevance, evidence-aware surprise) mediating between world-truth (Capacity/Applied/Overflow) and every\ndownstream consumer (learning, salience) is sufficient by itself — extending either consumer with a\ndirect world-truth shortcut (a `SaturationFactor` here, direct Overflow access there) was never\nnecessary, and this phase is the first in the sequence to test that absence directly rather than merely\navoid adding the shortcut. The `Overflow ↛ Salience` / `Overflow ↛ NeedExpectation` prohibition this\nentry restates is now empirically grounded twice over, not just architecturally asserted once.\n",
+      "claim": "SATURATION-SUMMARY",
+      "disposition": "Closing declared four comparisons leaves informative-bound approximation and alternative budgets intact.",
+      "limits": "Trace truth versus character evidence is durable; old phase gate and constructive minimalism superseded by current research method, not automatic Campaign3 exit.",
+      "evidence": [
+        "CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+        "CAMPAIGN3_LEARN_QUALIFICATION.md"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/planning/CAMPAIGN3_BIOLOGY_PUBLIC_QUALIFICATION.md",
+      "sha256": "ed49b68e9dc01817619a0427d75acfc474e86d7c7bf1c4461f2068cb010105af"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_EPI_QUALIFICATION.md",
+      "sha256": "7807990b30f6f2c6110232b5e0403c5a24e7c462ee81259bfc94589eb100473d"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ006_CHECKPOINT.md",
+      "sha256": "aad33c18af8886b0abc138ea6c8411eb326b05d56f84272f455155405e20a92e"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ007_CHECKPOINT.md",
+      "sha256": "82628f9ff3b25a213ee35c6b7b3bcb8a645c87d173cd0c523ee8f07a0bf4e625"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ008_CROSSWALK.md",
+      "sha256": "bc9503f12b52bac74cbbd595623cfd6f4c8dd1c48e7398288dd3b6f3ca085539"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ009_CHECKPOINT.md",
+      "sha256": "4391fcc8f218a4e92a2a68e3daa6f6cfe5ffdbaf5eeb6809a6d0c1b43a8d4462"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_HQ010_CHECKPOINT.md",
+      "sha256": "21de91f368ee1905f7b1430bd5d3da24679439369621f8dc6720b06e45530abf"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_LEARN_QUALIFICATION.md",
+      "sha256": "6dff4ce8d98804ea529f43a6f1f2708b0805aa0b77a5d24ae7f8128d34655e63"
+    },
+    {
+      "path": "docs/planning/GENERAL_ATTENTION_QUALIFICATION_2026_09_20.md",
+      "sha256": "175b8fcbfb3b7a3ce74e6f985aa947f31462ac598b72b1dc08206176c412fb0d"
+    }
+  ],
+  "obligations": [
+    "RO-C3-001",
+    "RO-C3-004",
+    "RO-C3-005",
+    "RO-C3-006",
+    "RO-C3-007",
+    "RO-C3-008",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-011",
+    "RO-C3-012",
+    "RO-C3-013",
+    "RO-C3-014",
+    "RO-C3-015",
+    "RO-C3-016",
+    "RO-C3-017",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "limits": [
+    "No fresh production simulation, test suite or build. Receipt bindings do not assert current source freshness for every old receipt.",
+    "Fourteen reviewed claim groups retain independent public/component, law and historical correction scopes."
+  ],
+  "nextGate": "Reference RESEARCH1494 onward: rebaseline, identity and reason nuclei."
+}

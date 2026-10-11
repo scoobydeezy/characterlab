@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "commands": [
+    "node scripts/check-habit-resistance-closure.mjs",
+    "node scripts/check-habit-acquisition-closure.mjs"
+  ],
+  "exitCodes": [
+    0,
+    0
+  ],
+  "scope": "Fresh original read-only closures and semantic receipt checks; no new runtime replay/tests.",
+  "artifacts": [
+    {
+      "path": "docs/planning/HABIT_RESISTANCE_CLOSURE_REV1.json",
+      "sha256": "f8fe33b94b18fefe4204cabcaa534a3406dcb1b570d207505f17d3e12580e21c"
+    },
+    {
+      "path": "docs/planning/HABIT_ACQUISITION_CLOSURE_REV1.json",
+      "sha256": "55365e28932779e0319b02204e40182d5ae15a615a3bf9d1ed54a2b7f85dacda"
+    }
+  ]
+}

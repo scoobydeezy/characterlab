@@ -1,0 +1,17 @@
+{
+  "status": "PRESERVED AUDIT CHECKER FAILURE",
+  "checker": {
+    "path": "docs/planning/campaign3-history-memory-qualification-rev1/checker-before-manifest-key-fix.py",
+    "sha256": "6c22e888f5b13d92f31d083305c1c1aacc9765b358c4afceddaa7c6bccf78417"
+  },
+  "exception": "KeyError: 'referenceDigest'",
+  "location": "line49 blocked review manifest check",
+  "finding": "The audit incorrectly used the production proof field referenceDigest for a historical review manifest whose field is modelDigest. No runtime or historical source failed.",
+  "repair": "Use the observed manifest schema modelDigest; retain the exact expected blocked digest and original bytes.",
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

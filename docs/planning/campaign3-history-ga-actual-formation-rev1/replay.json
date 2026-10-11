@@ -1,0 +1,485 @@
+{
+  "status": "PASS;24 CURRENT TESTS/17 ORIGINAL MUTATIONS ON CURRENT SOURCES/ONE DEFENDED REPLAY CONTROL",
+  "checker": {
+    "path": "scripts/replay-history-ga-actual-formation.mjs",
+    "sha256": "4e850e04c9c438165d9b9e6ba38bcf13b241d5dbe0823a714146d43c8344a9d4"
+  },
+  "originalReviewer": {
+    "path": "scripts/review-formation-evidence-rev3.mjs",
+    "sha256": "aa3b05bedfc00ef18bbb3a2b15881645f3ce06112730697575b3a12aa03244f1"
+  },
+  "rows": [
+    {
+      "name": "empty-selector-skips-occurrence",
+      "file": {
+        "path": "src/campaign3/bodySelectionOccurrence.ts",
+        "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+      },
+      "test": {
+        "path": "src/test/bodySelectionOccurrence.test.ts",
+        "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+      },
+      "removed": "const selectionId=allocate();",
+      "inserted": "const selectionId=selected.audit.every(r=>r.disposition!=='Selected')?0n:allocate();",
+      "witness": "BO-A",
+      "detected": true,
+      "failed": [
+        "BO-A: exactly one1143 and shared view identity for present zero, zero capacity and absence"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-empty-selector-skips-occurrence.json",
+        "sha256": "4f3fa18c393e1cdecd1f07eb29396ba51a8fae06ba139b9bd85380a678902a5c"
+      }
+    },
+    {
+      "name": "missing-sample-is-unavailable",
+      "file": {
+        "path": "src/campaign3/bodySelectionOccurrence.ts",
+        "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+      },
+      "test": {
+        "path": "src/test/bodySelectionOccurrence.test.ts",
+        "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+      },
+      "removed": "||input.samples.length!==input.declarations.length",
+      "inserted": "",
+      "witness": "BO-C",
+      "detected": true,
+      "failed": [
+        "BO-C: missing, duplicate, foreign and empty sample/declaration batches reject before allocation"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-missing-sample-is-unavailable.json",
+        "sha256": "58fe2efc547d882fdad35a1a5191a79cb536d579a45b94562f72a10ba5285bae"
+      }
+    },
+    {
+      "name": "view-uses-experience-identity",
+      "file": {
+        "path": "src/campaign3/bodySelectionOccurrence.ts",
+        "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+      },
+      "test": {
+        "path": "src/test/bodySelectionOccurrence.test.ts",
+        "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+      },
+      "removed": "views.set(view,{selectionId,view:selected.view})",
+      "inserted": "views.set(view,{selectionId:input.opportunityId??0n,view:selected.view})",
+      "witness": "BO-A",
+      "detected": true,
+      "failed": [
+        "BO-A: exactly one1143 and shared view identity for present zero, zero capacity and absence",
+        "BO-D: audit edits cannot replace consumed data, and forged/reused/closed views reject"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-view-uses-experience-identity.json",
+        "sha256": "20d03fb054af72737d1acfca19d5a72ea3b61d8a1d6b1b4e29cf348bf113eb5e"
+      }
+    },
+    {
+      "name": "wrong-panel-support-accepted",
+      "file": {
+        "path": "src/campaign3/perceivedTrialContext.ts",
+        "sha256": "caa8151a893e972e5df956ace3549d72cc9f23a167bdcc8ded387ba2f729f9a6"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "||!e.supportingObservationIds.some(id=>id.observerId===e.observerId&&id.observationId===c.panel.observation)",
+      "inserted": "",
+      "witness": "CB-B",
+      "detected": true,
+      "failed": [
+        "CB-B: wrong context experience/event/support/time/observer rejects before allocation"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-wrong-panel-support-accepted.json",
+        "sha256": "7c0dea2f93491f9990a588201c94e45090c5155f7f0638f11f8780167181a72c"
+      }
+    },
+    {
+      "name": "undeclared-context-fields-carried",
+      "file": {
+        "path": "src/campaign3/perceivedTrialContext.ts",
+        "sha256": "caa8151a893e972e5df956ace3549d72cc9f23a167bdcc8ded387ba2f729f9a6"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "exact(c,['experience','context','panel']);",
+      "inserted": "",
+      "witness": "CB-E",
+      "detected": true,
+      "failed": [
+        "CB-E: undeclared context fields and executable properties never reach retained evidence"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-undeclared-context-fields-carried.json",
+        "sha256": "19ab2299844a7af735f69ad43067245ab9745dfbd916e0d00a34180675bd60a2"
+      }
+    },
+    {
+      "name": "accept-unfrozen-experience-producer",
+      "file": {
+        "path": "src/campaign3/perceivedTrialContext.ts",
+        "sha256": "caa8151a893e972e5df956ace3549d72cc9f23a167bdcc8ded387ba2f729f9a6"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "e.transformationVersion!=='semantic-binding/0.1-candidate#SEM-001H'||",
+      "inserted": "",
+      "witness": "CB-B",
+      "detected": true,
+      "failed": [
+        "CB-B: wrong context experience/event/support/time/observer rejects before allocation"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-accept-unfrozen-experience-producer.json",
+        "sha256": "bb81eabb862b6402d37a6d3a1a70dfe6afcafafcfa5a1daf8680b4fc24614617"
+      }
+    },
+    {
+      "name": "empty-selection-forms-acquisition",
+      "file": {
+        "path": "src/campaign3/bodyFormationEvidence.ts",
+        "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "if(!selected.groups.length)return {kind:'NoFormation' as const,selectionId:selected.selectionId};",
+      "inserted": "",
+      "witness": "BF-B",
+      "detected": true,
+      "failed": [
+        "BF-B: zero capacity and missing body evidence allocate no acquisition despite context"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-empty-selection-forms-acquisition.json",
+        "sha256": "49d5a7eaf83174c06ba526d88c797a2af0c7bae1da09174d7bcfd6b73b7da25f"
+      }
+    },
+    {
+      "name": "selection-reused-as-acquisition",
+      "file": {
+        "path": "src/campaign3/bodyFormationEvidence.ts",
+        "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "const acquisitionId=allocate();",
+      "inserted": "const acquisitionId=selected.selectionId;",
+      "witness": "BF-A",
+      "detected": true,
+      "failed": [
+        "BF-A: selected signal views produce one later identity and preserve the actual source",
+        "BF-D: failed allocation consumes no persistent source and evidence is detached"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-selection-reused-as-acquisition.json",
+        "sha256": "31c37abb2ab325ed8a9d3b041fcae83a9150f1e6d86ebdb4883fe2985e965057"
+      }
+    },
+    {
+      "name": "one-acquisition-per-view",
+      "file": {
+        "path": "src/campaign3/bodyFormationEvidence.ts",
+        "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+      },
+      "test": {
+        "path": "src/test/contextualBodySelection.test.ts",
+        "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+      },
+      "removed": "const acquisitionId=allocate();",
+      "inserted": "const acquisitionId=selected.groups.flatMap(g=>g.samples).map(()=>allocate()).at(-1)!;",
+      "witness": "BF-A",
+      "detected": true,
+      "failed": [
+        "BF-A: selected signal views produce one later identity and preserve the actual source"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-one-acquisition-per-view.json",
+        "sha256": "b7483b2394113d1584688ea8f6accafb48f4db4a996ab279459fb860ad53b336"
+      }
+    },
+    {
+      "name": "visual-empty-forms",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "if(!facts.candidate.units.length)return {kind:'NoFormation' as const,selectionId:facts.selectionId};",
+      "inserted": "",
+      "witness": "VF-B",
+      "detected": true,
+      "failed": [
+        "VF-B: empty selection, known zero and unavailable role form no acquisition",
+        "VF-H: canonical equal and unlimited controls reuse frozen policy forms and actual eligible content"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-empty-forms.json",
+        "sha256": "4bdc2ff6437873caedf99889f1b403f1f7aed0ba3178b92470b90012db71fd8b"
+      }
+    },
+    {
+      "name": "visual-selection-becomes-acquisition",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "const acquisitionId=allocate();",
+      "inserted": "const acquisitionId=facts.selectionId;",
+      "witness": "VF-A",
+      "detected": true,
+      "failed": [
+        "VF-A: actual selected positive children share one later acquisition and bound context",
+        "VF-E: context rejects before selector allocation; failed evidence allocation publishes nothing",
+        "VF-F: actual earlier concern modulates selected peripheral encoding without changing selection or acquisition count",
+        "VF-H: canonical equal and unlimited controls reuse frozen policy forms and actual eligible content"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-selection-becomes-acquisition.json",
+        "sha256": "e99613b095f7e693ceb169896450bdd85127a32420a8503076ab92c6cc0e1332"
+      }
+    },
+    {
+      "name": "visual-per-child-identity",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "const acquisitionId=allocate();",
+      "inserted": "const acquisitionId=facts.candidate.units.map(()=>allocate()).at(-1)!;",
+      "witness": "VF-A",
+      "detected": true,
+      "failed": [
+        "VF-A: actual selected positive children share one later acquisition and bound context",
+        "VF-F: actual earlier concern modulates selected peripheral encoding without changing selection or acquisition count",
+        "VF-H: canonical equal and unlimited controls reuse frozen policy forms and actual eligible content"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-per-child-identity.json",
+        "sha256": "33c689c73f54ce85a7af9d42da3a67c77ad9b7193f4036074140d3ef18ab1fb4"
+      }
+    },
+    {
+      "name": "visual-encoded-cap-replayed",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "encoded.delete(view);\n if(!facts.candidate",
+      "inserted": "\n if(!facts.candidate",
+      "witness": "VF-C",
+      "detected": true,
+      "failed": [
+        "VF-C: raw, forged, consumed and closed capabilities cannot skip a stage",
+        "VF-E: context rejects before selector allocation; failed evidence allocation publishes nothing"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-encoded-cap-replayed.json",
+        "sha256": "cf981f5ad347238f80f196c4dc4b4f702853c764010cbba29dff90cda4272b46"
+      }
+    },
+    {
+      "name": "visual-context-dropped",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "context:companion,prepared",
+      "inserted": "context:undefined,prepared",
+      "witness": "VF-A",
+      "detected": true,
+      "failed": [
+        "VF-A: actual selected positive children share one later acquisition and bound context",
+        "VF-D: context/source/evaluation edits cannot add unselected content or alter private candidate"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-context-dropped.json",
+        "sha256": "79a71c57077df53e73137a5225acd4c1a3ddff354539e5d9592749d439d18ac7"
+      }
+    },
+    {
+      "name": "visual-zero-positive",
+      "file": {
+        "path": "src/campaign3/positiveSpatialCandidate.ts",
+        "sha256": "23c523f9b8490b9c1cdf1be621cee0eb8aa58e3ef448167fe2ef2b65e2af6291"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "filter(r=>r.status==='Positive')",
+      "inserted": "filter(r=>r.status!=='UnavailableAllocation')",
+      "witness": "VF-B",
+      "detected": true,
+      "failed": [
+        "VF-B: empty selection, known zero and unavailable role form no acquisition"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-visual-zero-positive.json",
+        "sha256": "78a3ee4807103e9507ac606018dd337ad64bc7669a60384b4d64230b348e7454"
+      }
+    },
+    {
+      "name": "modulate-focal",
+      "file": {
+        "path": "src/campaign3/selectedSpatialEncoding.ts",
+        "sha256": "3feb071f5f4483a8a1f447e53b051b9a774ad01962d5f4e8375755edd8a2ae91"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "if(row.witness.spatialClass!=='SpatialPeripheral')return row;",
+      "inserted": "",
+      "witness": "VF-F",
+      "detected": true,
+      "failed": [
+        "VF-F: actual earlier concern modulates selected peripheral encoding without changing selection or acquisition count"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-modulate-focal.json",
+        "sha256": "df477443d1e0aa1174a194794460ac8985abe049630738458d5a2c076509a77f"
+      }
+    },
+    {
+      "name": "permit-current-concern",
+      "file": {
+        "path": "src/campaign3/priorConcernFeedback.ts",
+        "sha256": "79893414cdbf74f54e8d454534a2ca236566ee98acf7978f2d759f21ff2d8251"
+      },
+      "test": {
+        "path": "src/test/visualFormationEvidence.test.ts",
+        "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+      },
+      "removed": "carry.sourceAt>=at",
+      "inserted": "carry.sourceAt>at",
+      "witness": "VF-G",
+      "detected": true,
+      "failed": [
+        "VF-G: unavailable delivered concern is explicit; current feedback fails and consumes the stage"
+      ],
+      "report": {
+        "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/fault-permit-current-concern.json",
+        "sha256": "f8c629e465384482ec60cfe6489671096e794a99c895a14042797580cb414422"
+      }
+    }
+  ],
+  "inapplicable": [
+    {
+      "name": "context-aliases-supplied-object",
+      "file": {
+        "path": "src/campaign3/perceivedTrialContext.ts",
+        "sha256": "caa8151a893e972e5df956ace3549d72cc9f23a167bdcc8ded387ba2f729f9a6"
+      },
+      "removed": "return structuredClone(c);",
+      "inserted": "return c;",
+      "witness": "CB-C",
+      "status": "ORIGINAL MUTATION NOT APPLICABLE TO CURRENT SOURCE; NOT EXECUTED"
+    },
+    {
+      "name": "skip-prior-concern",
+      "file": {
+        "path": "src/campaign3/visualFormationEvidence.ts",
+        "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+      },
+      "removed": "encodePreparedPositiveSpatialWithPriorConcern(facts.prepared,law,carry,subject,enabled)",
+      "inserted": "encodePreparedPositiveSpatialWithPriorConcern(facts.prepared,law,carry,subject,false)",
+      "witness": "VF-F",
+      "status": "ORIGINAL MUTATION NOT APPLICABLE TO CURRENT SOURCE; NOT EXECUTED"
+    }
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/current-tests.json",
+    "sha256": "ddc0665f4ffc0f0864a3935878e856dab1b65afc0ff50894b3d49e1bf6b91760"
+  },
+  "inputs": [
+    {
+      "path": "src/test/bodySelectionOccurrence.test.ts",
+      "sha256": "bb1fb3d31738d78603842da4de519cc58629fe88878633883be0a0a8b89ec9f6"
+    },
+    {
+      "path": "src/test/contextualBodySelection.test.ts",
+      "sha256": "ef04fdd82ede79f0980e16091c4de5d1717be3fc7e6ba96947d834d7f49d75a0"
+    },
+    {
+      "path": "src/test/visualFormationEvidence.test.ts",
+      "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+    },
+    {
+      "path": "src/campaign3/bodySelectionOccurrence.ts",
+      "sha256": "d2b05c9b62b9e18e844489ad9f69bd255e1f83e2e70519369be841f19c1970a5"
+    },
+    {
+      "path": "src/campaign3/contextualBodySelection.ts",
+      "sha256": "7cb8f282ad34c4bd949e1eabbc9ca476dea0b2051a383103a05f006823d9cb24"
+    },
+    {
+      "path": "src/campaign3/bodyFormationEvidence.ts",
+      "sha256": "b4397ef54fee24dcdaca2f5aac3c183bb2b570f7e6e086e6c2c8f915e64f9ad2"
+    },
+    {
+      "path": "src/campaign3/perceivedTrialContext.ts",
+      "sha256": "caa8151a893e972e5df956ace3549d72cc9f23a167bdcc8ded387ba2f729f9a6"
+    },
+    {
+      "path": "src/campaign3/visualFormationEvidence.ts",
+      "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+    }
+  ],
+  "defended": {
+    "file": {
+      "path": "src/campaign3/visualFormationEvidence.ts",
+      "sha256": "f53009b2717ace0867c2a3976c77da1f3f780eaa6babe4d08d82fbe1ca26df71"
+    },
+    "test": {
+      "path": "src/test/visualFormationEvidence.test.ts",
+      "sha256": "33fbd5abf08cde53b378dba1c41a62e0e7d76ee2828bffc361caa2139891483a"
+    },
+    "removed": "export function encodeVisualFormation(view:SelectedVisualFormation,law:EncodingBudget){\n const facts=selected.get(view);if(!facts)throw Error('VISUAL_FORMATION_SELECTED');selected.delete(view);",
+    "inserted": "export function encodeVisualFormation(view:SelectedVisualFormation,law:EncodingBudget){\n const facts=selected.get(view);if(!facts)throw Error('VISUAL_FORMATION_SELECTED');",
+    "report": {
+      "path": "docs/planning/campaign3-history-ga-actual-formation-rev1/defended-outer-map.json",
+      "sha256": "97a2b93c89e8f899f058368d1aa8bdea9b9849f927882adf22cf37fe20d2b378"
+    },
+    "scope": "Only base encodeVisualFormation outer map deletion removed;VF-C still rejects replay because inner prepared capability is consumed. Other encoding adapters not mutated/tested by this control;not a detected fault."
+  },
+  "reused": {
+    "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/current-tests.json",
+    "sha256": "8ef666a2f158b1aa83ec5264eaa8d1c9b3bc0ffbc3e90bd4e4e18c6db2f4219e"
+  },
+  "limits": [
+    "Two original mutations no longer textually applicable;not replaced with easier mutants or counted as passed.",
+    "Historical source versions are separately audited;current tests/mutations do not reproduce unavailable old bytes.",
+    "Earlier169-test affected suite is report-only here;no full current regression or public scheduler/PRJ/codec/persistence qualification."
+  ]
+}

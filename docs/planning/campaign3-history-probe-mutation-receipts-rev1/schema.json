@@ -1,0 +1,2556 @@
+{
+  "shortStringsIncluded": true,
+  "backingRationale": "Test titles, assertion errors, state labels and mutant names are diagnostic experimental backing; their actual failure boundaries interpreted in source judgments, not promoted from labels.",
+  "leaves": [
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/probeExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/probeReadout.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/test/campaign2ProbeRuntime.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "44f58c7a3abf5d21b50734aa75e2f38e7055e140bffc980331e95d513c16a314",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/name",
+      "text": "ignore-retained-displacement",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/errors/0",
+      "text": "expected { kind: 'signed', value: 50n } to deeply equal { kind: 'signed', value: 51n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/name",
+      "text": "normalize-without-scale",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/errors/0",
+      "text": "expected { kind: 'rational', …(2) } to deeply equal { kind: 'rational', …(2) }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/name",
+      "text": "availability-always-true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/1/errors/0",
+      "text": "expected 1 to be +0 // Object.is equality",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/3/errors/0",
+      "text": "expected 12 to be 8 // Object.is equality",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/11/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/11/errors/0",
+      "text": "expected 1 to be +0 // Object.is equality",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/name",
+      "text": "permission-ignored",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/1/errors/0",
+      "text": "expected 5 to be 1 // Object.is equality",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/4/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/4/errors/0",
+      "text": "expected 12 to be 8 // Object.is equality",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/name",
+      "text": "skip-padding-advance",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/1/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/1/errors/0",
+      "text": "expected { kind: 'unsigned', value: 0n } to deeply equal { kind: 'unsigned', value: 5n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/name",
+      "text": "wrong-truth-family",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/errors/0",
+      "text": "invalid archived probe truth",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/7/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/12/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/name",
+      "text": "borrow-adapt-accessor",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/name",
+      "text": "actual probe .2 factory: permitted scalar diverges, X/E/L remain equal, restore continues exactly",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/errors/0",
+      "text": "invalid archived probe accessor",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/1/name",
+      "text": "all committed permission branches preserve later sentinel identities and exact budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/1/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/2/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/2/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/3/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission false/true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/3/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/4/name",
+      "text": "hidden D stays observer-inaccessible for availability/permission true/false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/4/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/5/name",
+      "text": "historical probe .1 cannot activate successor trace semantics",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/5/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/6/name",
+      "text": "probe restore rejects changed archived accessor, channel, provenance and union tag",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/6/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/7/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-target-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/7/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/7/errors/0",
+      "text": "promise resolved \"true\" instead of rejecting",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/8/name",
+      "text": "ACCESSOR-A/C: substituted accessor/adaptation-gate-prior rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/8/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/9/name",
+      "text": "ACCESSOR-A/C: substituted ResolvedCharacterSubject rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/9/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/10/name",
+      "text": "ACCESSOR-A/C: substituted accessor/wrong rejects and rolls back the probe instant",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/10/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/11/name",
+      "text": "ACCESSOR-A/B: availability false has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/11/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/12/name",
+      "text": "ACCESSOR-A/B: availability true has exact actual-read cardinality and identity",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/12/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/12/errors/0",
+      "text": "expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/13/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=true",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/13/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/14/name",
+      "text": "PROBE-K: late trace failure rolls back real/padded ordinals, permitted=false",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/14/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Fifteen probe factory controls; seven substitutions do not exhaust all frozen probe adversarial obligations.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_RUNTIME_MUTATION_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "No global factory, VAL, ADAPT or Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/probeExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/campaign2/probeReadout.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/2/path",
+      "text": "src/test/campaign2ProbeScalarIsolation.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/2/sha256",
+      "text": "ba8efccdbd891c60619d657efc479e417f8f61fa68e5689d12647015ec931552",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/name",
+      "text": "wrong-map-1",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/name",
+      "text": "wrong-map-2",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/name",
+      "text": "wrong-map-4",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/name",
+      "text": "arbitrary-root",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/name",
+      "text": "unselected-map-root",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/4/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/name",
+      "text": "other-character",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/5/tests/0/errors/0",
+      "text": "referent origin requires a typed identifier",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/name",
+      "text": "other-variable",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/6/tests/0/errors/0",
+      "text": "projection binding requests a path outside its registered ReadDomain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/7/name",
+      "text": "duplicate-logical-read",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/7/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/7/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/7/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/7/tests/0/errors/0",
+      "text": "probe trace read count",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/8/name",
+      "text": "embed-scalar-in-support",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/8/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/8/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/8/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/8/tests/0/errors/0",
+      "text": "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/9/name",
+      "text": "hash-scalar-in-support",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/9/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/9/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/9/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/9/tests/0/errors/0",
+      "text": "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/10/name",
+      "text": "branch-support-on-scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/10/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/10/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/10/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/10/tests/0/errors/0",
+      "text": "expected Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ] to deeply equal Uint8Array[ 7, 3, 10, 227, 1, 1, …(624) ]",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/11/name",
+      "text": "embed-scalar-in-experience-version",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/11/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/11/tests/0/name",
+      "text": "PROBE-M matched observation/support allocation: scalar difference cannot enter X/E/L",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/11/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/mutants/11/tests/0/errors/0",
+      "text": "contract version semantic-binding/0.1-candidate#SEM-001H50 is not an admitted seam contract",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Focused matched-allocation scalar isolation; wrong-read and scalar-carriage substitutions are test-only.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_ISOLATION_MUTATION_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "No global factory, VAL, ADAPT or Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/status",
+      "text": "COMPONENT PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/path",
+      "text": "src/campaign2/probeReadout.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/0/sha256",
+      "text": "5c07b062c20dbef7314c2f580ffb7370b27e55fd426a0b437561a879d915f3aa",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/path",
+      "text": "src/test/campaign2ProbeNumericDomain.test.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/sourceFingerprints/1/sha256",
+      "text": "54a4e7cca594150d83d9e3cd26d7e0a1344a19a4f3d1b944e7453654acced211",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/baseline/name",
+      "text": "baseline",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/baseline/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/name",
+      "text": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/baseline/tests/0/state",
+      "text": "pass",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/name",
+      "text": "clip-negative-level",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/name",
+      "text": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/0/tests/0/errors/0",
+      "text": "expected { kind: 'signed', value: 0n } to deeply equal { kind: 'signed', value: -100n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/name",
+      "text": "saturate-at-half-range",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/name",
+      "text": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/1/tests/0/errors/0",
+      "text": "expected { kind: 'signed', value: 50n } to deeply equal { kind: 'signed', value: 99n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/name",
+      "text": "threshold-instead-of-readout",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/name",
+      "text": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/2/tests/0/errors/0",
+      "text": "expected { kind: 'signed', value: 0n } to deeply equal { kind: 'signed', value: -100n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/name",
+      "text": "response-gain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/status",
+      "text": "DETECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/name",
+      "text": "PROBE-G generic signed domain: exact negative/zero/fraction/endpoints, no clipping, frozen profile excludes widened domain",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/state",
+      "text": "fail",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/mutants/3/tests/0/errors/0",
+      "text": "expected { kind: 'signed', value: -200n } to deeply equal { kind: 'signed', value: -100n }",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/limitations/0",
+      "text": "Test-only in-memory interpreter substitutions; frozen declarations unchanged.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/limitations/1",
+      "text": "Generic accepted signed REG domain with production probe consumer; frozen public profile excludes the broader declarations.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_NUMERIC_MUTATION_PROOF.json",
+      "pointer": "/limitations/2",
+      "text": "No global factory, VAL, ADAPT or Campaign-2 verdict.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/scope",
+      "text": "PROBE-N/O private void padding source qualification; executable branch budgets and later sentinel require separate runtime witnesses.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/source/path",
+      "text": "src/campaign2/probeExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/source/sha256",
+      "text": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/checks/0",
+      "text": "void, zero-argument, private capability",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/checks/1",
+      "text": "allocator result discarded as expression only",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/checks/2",
+      "text": "exact fixed slot budget",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/checks/3",
+      "text": "only two statement-only consumption sites",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/0/name",
+      "text": "capture ordinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/0/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/1/name",
+      "text": "return ordinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/1/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/2/name",
+      "text": "compare ordinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/2/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/3/name",
+      "text": "expose ordinal",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/3/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/4/name",
+      "text": "change fixed budget",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/4/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/5/name",
+      "text": "calculate budget from allocator",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_PADDING_AUDIT.json",
+      "pointer": "/mutants/5/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/status",
+      "text": "PASS",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/scope",
+      "text": "PROBE-M source qualification of this closed first-profile SEM constructor; paired public runtime and admitted EVID controls remain separate evidence.",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/source/path",
+      "text": "src/campaign2/probeExecution.ts",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/source/sha256",
+      "text": "f61e751a5f7fd602b52aa62e98d48a1e1a9cbf00d5d5a07b2ddf025978bda13e",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/checks/0",
+      "text": "one fixed SEM assembly call",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/checks/1",
+      "text": "exact declared fields",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/checks/2",
+      "text": "empty classification/event/binding surfaces",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/checks/3",
+      "text": "support identity only, without scalar lookup",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/checks/4",
+      "text": "fixed provenance version",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/0/name",
+      "text": "classify scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/0/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/1/name",
+      "text": "classify event scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/1/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/2/name",
+      "text": "dereference scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/2/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/3/name",
+      "text": "hash scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/3/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/4/name",
+      "text": "embed scalar",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/4/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/5/name",
+      "text": "encode scalar in version",
+      "role": "BACKING"
+    },
+    {
+      "source": "docs/planning/CAMPAIGN2_PROBE_SEM_ISOLATION_AUDIT.json",
+      "pointer": "/mutants/5/status",
+      "text": "REJECTED",
+      "role": "NARRATIVE"
+    }
+  ]
+}

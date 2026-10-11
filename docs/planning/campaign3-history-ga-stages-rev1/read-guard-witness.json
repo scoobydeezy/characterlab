@@ -1,0 +1,47 @@
+{
+  "status": "PASS; HISTORICAL VALIDATOR COVERAGE CORRECTION REPRODUCED",
+  "packet": {
+    "path": "docs/planning/GA_ACQUISITION_RECALL_STAGE_CLOSURE_REV1.json",
+    "sha256": "7e11885d9d87b326e4b6a2c87c5fa3b5cc31faf30f7613322a2b0f557b2e6bed"
+  },
+  "reviewers": [
+    {
+      "path": "scripts/review-ga-acquisition-recall-stage-closure.mjs",
+      "sha256": "c222436a656d2bc0a316ec64256050dfd856b6c97a623ff3b397bce7d0302cdf"
+    },
+    {
+      "path": "scripts/review-ga-acquisition-recall-stage-closure-rev2.mjs",
+      "sha256": "e90625c904b24bb924eaf5fd0c25393d34652d6ce4c883735ea301e5beb192bf"
+    }
+  ],
+  "checker": {
+    "path": "scripts/probe-history-ga-stage-read-guard.mjs",
+    "sha256": "9bb3db5112ce360ff39e7024f917df1d72f5dcf084372ded6b37a8cd46f2852a"
+  },
+  "rows": [
+    {
+      "reviewer": "scripts/review-ga-acquisition-recall-stage-closure.mjs",
+      "field": "reads",
+      "rejected": false
+    },
+    {
+      "reviewer": "scripts/review-ga-acquisition-recall-stage-closure.mjs",
+      "field": "writes",
+      "rejected": true
+    },
+    {
+      "reviewer": "scripts/review-ga-acquisition-recall-stage-closure-rev2.mjs",
+      "field": "reads",
+      "rejected": true
+    },
+    {
+      "reviewer": "scripts/review-ga-acquisition-recall-stage-closure-rev2.mjs",
+      "field": "writes",
+      "rejected": true
+    }
+  ],
+  "finding": "The REV1 fault label says read but mutates writes. A real encoder physical read passes REV1 and is rejected by REV2. Both reject writes. This is a symbolic validator coverage gap, not evidence that the runtime allowed physical reads.",
+  "limits": [
+    "No historical receipt rewritten. Identical fault names and PASS status do not imply identical exercised boundaries."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/check-defining-native-cohort.mjs",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"ALL68 INTERNAL NATIVE CASES PASS\",\"scope\":\"Internal native execution and component correspondence; selected-stage hashes, not public Save132 or all-prefix restore qualification.\",\"runs\":68,\"models\":68,\"runIdentities\":68,\"selectedStages\":376,\"settledInstants\":1612,\"coverage\":{\"law\":{\"SignificanceFirst\":56,\"SharedProtection\":4,\"UseOnly\":4,\"AgeOnly\":4},\"goal\":{\"High\":17,\"Low\":17,\"Wide\":17,\"Absent\":17},\"rehearsals\":{\"0\":56,\"3\":12},\"capacity\":{\"0\":8,\"1\":52,\"8\":8},\"now\":{\"50\":56,\"400\":4,\"4000\":8},\"cue\":{\"matching\":64,\"absent\":4},\"report\":{\"original\":52,\"contrary\":12,\"missing\":4},\"worldAfter\":{\"20\":8,\"30\":60}},\"retained35NotSelected\":[8,9,16,25,26,33,42,50,59,67],\"counters\":{\"highestAllocated\":1492,\"sinceVerdict\":8},\"diagnosticPairs\":[[0,12],[10,13],[17,29],[27,30],[34,46],[44,47],[51,63],[61,64]]}\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-native-cohort.mjs",
+        "sha256": "3697b57eea2a2b1b94afeb5a414b88c7481f3a047df8aaabfdd5f8fbb24c7b4a"
+      }
+    },
+    {
+      "command": "node scripts/check-defining-public-matrix.mjs",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"ALL68 PUBLIC PROGRAMS AND1680 RESTORES PASS\",\"scope\":\"Every S0/settled prefix restored through original-input public API; exact Save132/observer bytes and one actual successor or terminal exhaustion. Not full-tail continuation from every prefix.\",\"programs\":68,\"models\":68,\"runIdentities\":68,\"restorePrefixes\":1680,\"advancingSuccessorChecks\":1612,\"terminalExhaustionChecks\":68,\"nativeStateOutputStageComparisons\":376,\"wholeObserverDiagnosticPairs\":[[0,12],[10,13],[17,29],[27,30],[34,46],[44,47],[51,63],[61,64]],\"productionChanges\":0,\"countersAtExecution\":{\"highestAllocated\":1492,\"sinceVerdict\":8}}\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/check-defining-public-matrix.mjs",
+        "sha256": "e944b8e02a2b5ebe1ae995d863e2d35ec338e5485f9a6f7f302805d64f11c3dc"
+      }
+    },
+    {
+      "command": "node scripts/identify-defining-public-matrix.mjs",
+      "exitCode": 0,
+      "stdout": "PASS explicit experiment/comparison and68 model/run identities.\n",
+      "stderr": "",
+      "checker": {
+        "path": "scripts/identify-defining-public-matrix.mjs",
+        "sha256": "1fe5d0a69eb4ecca2b83bde629514f85c8660c1965f4a68cfe346ed084af3640"
+      }
+    }
+  ],
+  "scope": "Read-only checks of stored receipts and identities; no fresh simulation, build or tests."
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS; HQ011 OPEN",
+  "scope": "Original closure and exact canonical model/run/experiment/comparison manifest freshly reconstructed using original constructors;13 stored row joins checked. Original13 separate behavioral reruns and260 component prefixes remain historical,no fresh simulation or tests. Twelve unique run identities include intentional repeated case.",
+  "models": 6,
+  "orderedRuns": 13,
+  "uniqueRunIdentities": 12,
+  "componentPrefixes": 260,
+  "sources": [
+    {
+      "path": "scripts/check-bio-closure.mjs",
+      "sha256": "5bfb917a27fcdbd163af9e54fe4d0c4a1674c483d20344eadf29fcddc3a6e390"
+    },
+    {
+      "path": "scripts/bind-bio-identities.mjs",
+      "sha256": "856e48320ee8c2d752cb601e85cfd492beb4ca350e6521c6048bd0786e44d819"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_PLAN_REV3.json",
+      "sha256": "172301d5e38cc38352e3cf4111bf59d73efeb5148252c15e6b3651ad9e4c0b98"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_RESULT_REV3.json",
+      "sha256": "0e683a321f19bc0034ecd903432be44422814ca7fcdca6d505bb442e05ac5770"
+    },
+    {
+      "path": "docs/planning/BIO_IDENTITY_PLAN_REV1.json",
+      "sha256": "16c777b71e832099156104ea9bcae021d0eba094898107021a22b87b0599fc3c"
+    },
+    {
+      "path": "docs/planning/BIO_IDENTITY_RERUN_REV1.json",
+      "sha256": "849f693e3d93a714ae66c43e4d362dd4158d9692ae2d8d95a8c5e4d00f7b68c5"
+    },
+    {
+      "path": "docs/planning/BIO_COMPARISON_CLOSURE_REV1.json",
+      "sha256": "3a041d184567f948004930db80ad7739ab4a016b54329a017f6c9989219d6392"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-bio-authority.mjs",
+    "sha256": "35b810dca6d25d24512ceb2e2a4af0ae9f95800d126d5a02029a6ae86bd4b77f"
+  }
+}

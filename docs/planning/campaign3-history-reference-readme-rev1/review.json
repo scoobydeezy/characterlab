@@ -1,0 +1,313 @@
+{
+  "status": "PARTIAL REFERENCE README REVIEW; NO WHOLE-SOURCE ASSIGNMENT",
+  "sources": [
+    {
+      "path": "reference/README.md",
+      "sha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018"
+    },
+    {
+      "path": "reference/IMPLEMENTATION_README.md",
+      "sha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e"
+    }
+  ],
+  "reviewedLineRanges": {
+    "reference/README.md": [
+      [
+        1,
+        13
+      ]
+    ],
+    "reference/IMPLEMENTATION_README.md": [
+      [
+        1,
+        128
+      ],
+      [
+        721,
+        1067
+      ]
+    ]
+  },
+  "remainingLineRanges": {
+    "reference/IMPLEMENTATION_README.md": [
+      [
+        129,
+        720
+      ],
+      [
+        1068,
+        1227
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "occurrenceId": "470d86d3776accacfffcc73e68853508ec26ab45103bd26dea385ef605566cbf",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 1,
+        "endLine": 1
+      },
+      "text": "# CharacterLab\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "9b47572690f26b27647a4839bf9dbd4172b88bcba419bf2b6f60b8cdd6e598cc",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 3,
+        "endLine": 3
+      },
+      "text": "> **Active direction:** CharacterLab has begun a ground-zero architectural refoundation around the Ideal Character North Star. The active source tree is `src/`. The complete pre-refoundation implementation has moved to `reference/src/` and is historical evidence only; it must not be imported into new work. Read `AGENTS.md` before implementing. The detailed account below documents the preserved reference implementation and its findings.\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "66b90426ba949bcdb42c9df2d9a13dc395bc709b1c86e250cdef3c0f46f5615b",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "text": "## Preserved reference implementation\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "b397d5e5d97612610fee2b3af84995f64805dc87c61bd9d2faf5a27d9b10f189",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 7,
+        "endLine": 11
+      },
+      "text": "A standalone, deterministic reference implementation of the cognitive model described in\n*CharacterLab — Deterministic Cognitive Reference Model Brief*. This is a **research tool**, not a\ngame and not a Vivarium prototype: its job is to make the brief's mathematics runnable,\ninspectable, and falsifiable, so findings from it can inform (but not dictate) Vivarium's\nproduction architecture.\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "8a1a84ff14910b37e6339f0b1632b6210f161c859ee60cb8a5e9223cddd3beda",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 13,
+        "endLine": 95
+      },
+      "text": "This build covers **Phase 0 (Mathematical Kernel)**, **Phase 1 (Need-Satisfaction Learning)**,\n**Phase 2 (Associative Accessibility & Episodic Memory)**, **Phase 2.5 (Experience Encoding,\nSemantic Salience, and Saturated Satisfaction) — CLOSED**, in six sub-phases: **2.5a (Saturated\nSatisfaction & Censored Learning — RESOLVED)**, **2.5b (Semantic Salience — PARTIAL, corrected by\n2.5c)**, **2.5c (Experience Interpretation)**, **2.5d (Saturation/Salience Interaction — RESOLVED,\nDERIVED)**, **2.5e (Architecture Consolidation & Behavioral Re-baseline — RESOLVED)**, and now\n**Phase 2.9 (Decision Authorship, Acquired Identity, and the Role of Dice — RESOLVED)** — plus an\ninteractive SPA for running experiments against them. Phase 2.5c is a small integration phase: it\nmakes causal role (`EffectProvenance`/`deriveWorldEventDescriptor`), attention (residual-pool\nderivation), and surprise (evidence-kind-aware `SurpriseEvidence`) fully mechanical, closing the three\nhand-authored-input gaps 2.5b's own review found in an otherwise-validated multiplicative core, and\nthen resolves Phase 2.5a's own long-open question (\"Correction 2\" in RESEARCH.md): `(μ, τ)` is\nsufficient for the censored-evidence behaviors tested so far — the bug was in `updateExpectation`'s\ninformativeness gate, not the representation — though the accepted-bound branch still credits an\ninformative inequality with a full point observation's precision, a documented approximation left\nalone per \"don't generalize until an experiment demands it.\" Fixing the gate raises the required Brief\n§22 counterfactual's divergence reduction from ~17% to ~48%. Phase 2.5d then closes the phase's last\nopen question — whether saturation needs to influence salience directly — by running four targeted\ncases through the real cycle and finding no: hidden Overflow never changes salience once perceived\nApplied and evidence kind are held fixed, classified **DERIVED**, with `Overflow ↛ Salience` /\n`Overflow ↛ NeedExpectation` now locked in as standing prohibitions for later phases. Phase 2.5e then\nre-baselines the whole project onto one canonical execution path: `defaultCycleParams()` now runs\ncensored learning and derived salience by default (the superseded naive/flat-weight behavior is\nretired to explicitly-named `legacySaturationParams()`/`legacyCycleParams()` control conditions, not\ndeleted), every historical finding was re-run against that single path (6 of 8 SURVIVE unchanged, 2 —\nHabit and Avoidance's floor-boundary extension — are REFINED, zero RETRACTED outright), and\n`SemanticExperience` (`model/semanticExperience.ts`, new) formalizes the character-relative record\nPhase 3 should consume, with Overflow deliberately excluded from it by design. See RESEARCH.md's Phase\n2.5a Correction 2, Phase 2.5b Correction, Phase 2.5c entry, Phase 2.5d entry, and Phase 2.5e entry for\nthe full account. Phase 2.9 then adds a genuinely new construct on top of that consolidated\nfoundation, motivated by a gameplay loop discovered ahead of Vivarium's own use of this model: a\n`Decision` (`model/decision.ts`, new) — a small, explicitly-authored set of Options, each backed by\ndice calibrated from existing Need/accessibility/identity pressures — with an exact pre-roll\nprobability calculus (Margin, Contest, Stake, AuthorshipPotential) telling us how unresolved and how\nmeaningful a Decision is *before* any die is thrown, and a biographical-evidence loop\n(`model/identity.ts`, new) by which repeated meaningful choices — never an authored trait assignment —\nconsolidate into durable acquired identity, which then feeds back as one more (never dictating)\npressure on future Decisions. `runDecisionCycle` (`model/cycle.ts`) is a new, parallel entry point to\nordinary autonomous cycles, sharing their existing outcome/learning/memory/association tail rather\nthan replacing any of it. All eleven of the brief's required lettered experiments (A–K) run against\nreal output; the most notable finding is a proven mathematical impossibility (identity cannot rescue\nan Option raw Need pressure has already ruled out) rather than a tuning limitation — see RESEARCH.md's\nPhase 2.9 entry for the full account, including the `winProbabilities` fair-tie-share proof, the\ndie-ratio/consolidation-ceiling finding, self-stabilization and its contradiction-resisting mirror\nimage, and the seed-divergence flagship demonstration. **Phase 2.95 (Reason Consolidation & Identity\nFault Lines — RESOLVED)** then corrects two of Phase 2.9's own findings after an external review\nidentified their real cause: identity's contribution was assembled into its own separately-floored\nInfluence, so it could never combine with an already-present but individually sub-floor Need signal on\nthe same topic to jointly clear `thetaInfluenceFloor` — Phase 2.9's own Experiment I write-up had\nalready, unknowingly, proven this \"all-or-nothing\" behavior mathematically. `model/decision.ts`'s new\n`sumRawBySemanticChannel`/`boundAndFloorChannels`/`boundAllChannels` and `model/identity.ts`'s new\n`identityFeedbackRawInfluences` fold identity's raw per-channel pull into the SAME consolidation pool\nas Need/accessibility, bound-and-floored together exactly once, while a separate, non-floor-filtered\nmap preserves Brief §23's no-double-counting rule for identity's own evidence generation. All five of\nthe review's required target behaviors (A–E) — gradual influence, weak-signal combination, a real\n(narrowing, not cancelling or flipping) identity fault line, transformation under sustained\ncontradiction with feedback active, and canonical trait acquisition with feedback on from zero — now\nrun against real output; see RESEARCH.md's Phase 2.95 entry for the fix's architecture, every target's\nreal numbers, and the honest scoping of what a five-band discrete die scale still cannot make perfectly\ncontinuous. **Phase 2.97 (Reason Nuclei, Deterministic Cognitive Compilation, and Dice Grammar —\nRESOLVED, then CLOSURE-AUDITED)** then replaces Phase 2.9/2.95's pooled semantic-channel consolidation\nwith a `MotiveChannel × ReferentKey × MotiveDirection` compiler (`model/reasonNucleus.ts`/\n`cognitiveSignals.ts`/`diceCompiler.ts`, new) — several independently-intelligible motives about the\nsame person, or the same motive about several people, now coexist as separately-legible Reason Nuclei\ninstead of being merged or hand-authored around, with correlated evidence (a memory's dual derivation,\nidentity's own overlap) discounted by measured provenance overlap rather than left to stack as if\nindependent. All fourteen required experiments (A–N) ran against real output, followed by a three-round\nclosure audit (a real Commitment-pressure source correctly modeled as its own `MotiveGenerating` family\nrather than a synthetic Need, a correlation-consolidator blind spot to collective redundancy, referent\nattribution generalized beyond the single-participant case, and a Commitment-lifecycle closure test) —\nsee RESEARCH.md's Phase 2.97 entry for the full account, every experiment's real numbers, and the\nAuto-mode-lock finding a naive commitment-lifecycle wiring produced. A post-closure-audit re-baseline\nthen promoted `'reasonNuclei'` from opt-in to `defaultDecisionParams()`'s canonical default — the same\npolicy move Phase 2.5e made for `salienceMode`/`learningMode` once THEIR investigation concluded —\nretiring `'legacy'` to explicitly-named `legacyDecisionParams()`/`legacyDecisionCycleParams()` control\nconditions (mirroring `legacySaturationParams()`/`legacyCycleParams()`), with every Phase 2.9/2.95\nexperiment whose published numbers are frozen-pipeline facts re-pointed at that explicit name rather than\nleft to ride a default that no longer means what it used to. The former Phases 3–6\n(personality/belief/social appraisal, derived Values, acquired Needs/addiction, and distillation) are\nintentionally not built yet. Their additive sequence is now paused: the governing next deliverable is\nthe thin, end-to-end **North-Star Reference Scaffold**, followed by controlled subtractive refinement.\nSee [the Ideal Character Architecture North Star](../CharacterLab%20%E2%80%94%20Ideal%20Character%20Architecture%20North%20Star.md),\n[the architecture map](../CHARACTER_ARCHITECTURE.md), and [the historical research record](./RESEARCH.md).\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "96b335b4ba7efad1954541a01256c6dc5f967b6e1106e5a1bb2026dbfbce6dc9",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 97,
+        "endLine": 97
+      },
+      "text": "## Why this architecture\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "2e4881bb237274d7d6e5c0f071c8a1110a33a3f692be0e33ec57cfe32b27fba4",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 99,
+        "endLine": 127
+      },
+      "text": "- **TypeScript, single language, fully client-side.** The kernel, the model, the experiments, and\n  the UI are all TypeScript, running entirely in the browser with no backend. That keeps the\n  \"read the trace, change a slider, re-run, read the trace again\" research loop as fast as\n  possible, and it means the whole thing runs from a static file server or `npm run dev` — no\n  services to stand up.\n- **Exact arithmetic, not floats.** Brief §3.1 forbids \"unspecified floating-point behavior\" in\n  anything authoritative. `kernel/rational.ts` implements exact rationals over `BigInt`; every\n  authoritative calculation (Need levels, expectations, scores, probabilities) is exact rational\n  arithmetic until it is deliberately quantized onto the versioned lattice (`kernel/lattice.ts`,\n  Brief §5.2) at an explicit, named step. There is no `Math.random()`, no wall-clock read, and no\n  reliance on object/Map iteration order anywhere in `kernel/` or `model/`.\n- **Deterministic replay is a first-class, testable claim**, not an aspiration. The random oracle\n  (`kernel/random.ts`) is a pure function of `(seed, eventId, purposeId, drawIndex)` — Brief §7 —\n  with no mutable global RNG stream. `reference/src/test/determinism.test.ts` runs the same cycle twice from\n  identical inputs and asserts the full causal-trace hashes match; the UI's \"Verify determinism\"\n  button (`DeterminismPanel`) does the same check live, side-effect-free, against whatever state\n  you've gotten Mina into.\n- **The causal trace is not debug logging.** Brief §30 calls trace generation \"a product\n  requirement.\" Every cycle (`model/cycle.ts`) builds a `CognitiveCycleTrace`\n  (`kernel/trace.ts`) recording every intermediate value — Need urgency, per-Need contribution to\n  Score, choice weights, the probability distribution, the random draw, the realized outcome, the\n  expectation update, spreading activation, accessibility filtering, memory retrieval, association\n  updates — and the UI's trace log renders it, expandable, for every single button press.\n- **Exact linear algebra, not numerical approximation, for spreading activation.** Phase 2's\n  `a = (I - βW)⁻¹b` (§16) is solved by Gaussian elimination over the same auto-reduced `Rational`\n  type everything else uses (`kernel/linalg.ts`) — a fixed pivot rule, a typed `SingularMatrixError`\n  naming the failing column if one ever occurs, and a documented (and tested) proof that it never\n  will in practice, since `(I - βW)` is strictly diagonally dominant whenever `W` is\n  row-substochastic and `β < 1`.\n",
+      "judgment": "Historical authority and chronology,not current topology. Reference-only/no imports. Phase2.5a gate correction retained full-point precision approximation;overflow salience invariance finite safe-evidence scope. Old floor-rescue impossibility is corrected by2.95 andbounded further by2.97,not universal. Legacy laws preserved namedcontrols,not deleted. Old unbuilt3..6/scaffold routing dated. Exactarithmetic includes explicit latticecommit;researchtrace notcharacterknowledge. Spectral invertibility assumes row-substochastic graph andbeta<1."
+    },
+    {
+      "occurrenceId": "4e8510547a6c4c89f66b782cc5f31fbdf808175c686b78dcfc39bef2b750051a",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 721,
+        "endLine": 721
+      },
+      "text": "## Scope decisions worth knowing about\n",
+      "judgment": "Need-onlyScore is historical limited implementation,not absenceofothermotives;accessibility eligibility !=desirability. Needsexcludedcoactivation/selfedges authoredcontrols. Semanticfootprint competesforrowbudget;derivedsalience changesweights,not abolitionofnormalization. Legacy-default statement superseded bylater2.5e paragraph;preserveoriginaltext."
+    },
+    {
+      "occurrenceId": "008d2cb3d0d01f514bafcf4fda5d9f31514b447210507b64ae5a03476a3b2f13",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 1,
+        "endLine": 1
+      },
+      "text": "# Historical CharacterLab implementation\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "55d9824feaa53bc0f27bea53ebd9b71cd4e6ee904a7a37ae9bb3c301066277eb",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 3,
+        "endLine": 3
+      },
+      "text": "This directory contains the complete CharacterLab source tree as it existed immediately before the North-Star architectural refoundation.\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "c64ec6381c9858970df2384bafad861c684a35f14cbc8f6b4186a41ccbb4773e",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "text": "Its purpose is historical inspection, reproducibility, comparison, and use as an explicit control implementation. It is not the active architecture and must not be imported by the fresh implementation under `../src/`.\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "72e930c080d886130eb8f56c9aaed905def3e1e1359e06ee3d12623425a277dd",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "text": "Run the preserved test suite from the repository root:\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "7a497ac90bf1edf15e40f27d092b5331b0ca77988f7c9427cc5ea354cdaf459a",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 9,
+        "endLine": 11
+      },
+      "text": "```text\nnpm run test:reference\n```\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "7819cda84ff4ab4c48216738b8cf95df788e9bdade5ca98a90f97cad3898af80",
+      "source": "reference/README.md",
+      "sourceSha256": "4a60004c650a0d083014ad4c5a75515983d8d66e0865d70945a2cc87a3a76018",
+      "location": {
+        "startLine": 13,
+        "endLine": 13
+      },
+      "text": "The original phase briefs, research log, and implementation README are preserved in this directory because they are research evidence and hypothesis/control sources, not current architecture.\n",
+      "judgment": "Historical source boundary andreference-suite command;hypothesis/control evidence only,not activearchitectural authority."
+    },
+    {
+      "occurrenceId": "f1e38cde6ea48f7ea512ef1b3472b53f8aebc3004dfdb1cd0a87ce828b1f5586",
+      "source": "reference/IMPLEMENTATION_README.md",
+      "sourceSha256": "cb0eb2acf9bbaee65f826fe25a233beb1e780562c6f73ba8a806cb696f5ae56e",
+      "location": {
+        "startLine": 723,
+        "endLine": 1066
+      },
+      "text": "- **Score(a) is Need-term-only in this build.** Brief §23 defines Score(a) as the sum of Need,\n  Value, Personality, Social, and Context terms. Value (§21) needs derived Values (Phase 4);\n  Personality (§9) and Social (§18–19) need latent personality and belief models (Phase 3);\n  Context needs a Context representation this build doesn't have. Rather than stub those terms at\n  zero silently, `model/actions.ts` says so explicitly in comments — this build's results should be\n  read as \"what Need-satisfaction learning plus associative accessibility alone produce,\" not as a\n  claim that the other terms don't matter. Finding out whether they do is exactly what Phases 3–4\n  are for. Brief §23 is explicit that accessibility affects *which* Actions are considered, never\n  how desirable a considered Action seems — Phase 2 does not add a second scoring term.\n- **The associative graph and episodic memory are now built (Phase 2), but Needs deliberately do\n  not participate in Hebbian co-activation.** Needs only seed spreading activation's base vector\n  (§16) — they never become graph nodes that co-activate with Actions/People/Context. This was a\n  deliberate choice (`associations.ts`'s module comment) to keep \"habit\" (graph-driven\n  accessibility) and \"Need-satisfaction learning\" experimentally separable; see RESEARCH.md's\n  Phase 2 entry for the isolation test that confirms it works.\n  Self-association (`W_ii`) is likewise excluded as an authored simplification.\n- **Fraction-free linear algebra is built and validated (`kernel/linalg.ts`, `test/linalg.test.ts`,\n  `test/activation.test.ts`)** — see RESEARCH.md's Phase 2 entry for what \"validated\" actually\n  covers (exactness against hand-derived systems, and a stress test confirming `(I - βW)` never\n  hits a singular pivot across many real learned graphs).\n- **An Experience's semantic footprint — how many concepts it tags — directly caps how strong any\n  one learned association can become**, since the associative graph is row-substochastic (§14) and\n  concepts tagged together compete for the same fixed row budget. `model/cycle.ts` tags every\n  ordinary Experience with its Action, subject, Location (if any), and active Context concepts;\n  RESEARCH.md's Phase 2 entry documents a concrete case (the Habit experiment) where this caps a\n  single edge at exactly 1/2 rather than 1. This is a real, generalizable property of\n  row-substochastic Hebbian learning, not a bug — but it means \"how many things does one Experience\n  involve\" is a modeling decision with measurable downstream consequences, not a free choice. **Phase\n  2.5b's `salienceMode: 'derived'` is the fix**: instead of every tagged concept getting a flat\n  co-activation weight of 1.0 regardless of relevance, each gets a derived z_i from its category,\n  causal role, attention, Need relevance, and evidence-aware surprise — see RESEARCH.md's Phase\n  2.5b/2.5c entries for a real measured comparison (the same forced Experience's Context→Action\n  weight drops from 0.300 flat to ≈0.0014 derived). `salienceMode` defaults to `'legacy'`, so this\n  finding and every prior one stay reproducible byte-for-byte until you opt in. As of Phase 2.5c,\n  causal role, attention, and surprise are all mechanically derived (`EffectProvenance`, residual-\n  pool attention, `SurpriseEvidence`) rather than any of them being authored per scenario — see\n  RESEARCH.md's Phase 2.5b Correction section for exactly what that closed.\n- **The default scenario's Need decay is tuned to avoid a ceiling artifact, not to flatter the\n  result — and the same tuning concern recurs, mirrored, for Phase 2's Avoidance experiment.**\n  `model/scenario.ts` sets Connection's passive decay rate equal to Glen's outcome magnitude\n  specifically so repeated visits don't run the Need level into the `[0,1]` clamp — see the comment\n  there for the arithmetic. The Avoidance experiment's aversive outcome deliberately targets Rest\n  instead of Connection for the same reason in the opposite direction: Connection's decay rate\n  combined with ANY negative outcome floor-clamps within 1-2 repetitions (since decay and the\n  aversive effect both push the same direction), destroying the learning signal exactly the way an\n  under-tuned positive scenario would saturate at the ceiling. See RESEARCH.md's Phase 2 entry for\n  the traced numbers.\n- **Betrayal is its own Action, not a parameter on Visit Glen.** It shares Glen's `subject`\n  (`person.glen`) so it updates the exact same `NeedExpectation` entries ordinary visits do — that\n  shared identity is what makes it a real test of \"a high-confidence positive expectation receives\n  sharply negative evidence\" (§28) rather than a different relationship entirely.\n- **Censored learning is dual-mode and opt-in; 'naive' is still the default and reproduces every\n  Phase 0-2 finding byte-for-byte.** `model/expectation.ts`'s new `evidenceKind` parameter defaults\n  to `'point'`; `CycleParams.saturation` defaults to `{learningMode: 'naive', kappa: 1/2}`. Switching\n  to 'censored' changes how a boundary-clipped Need effect is learned from: it can no longer pull an\n  established expectation the wrong way, and (as of Correction 2, post-2.5c) it also no longer grows\n  confidence from observations that carry no discriminating information about the true effect — the\n  original post-implementation review found exactly that bug, and it is now fixed: τ only grows on a\n  censored bound whose naive candidate strictly moves past the current μ; an uninformative bound\n  (including one landing exactly on the current μ) freezes τ instead. **This mechanism is RESOLVED**\n  — see RESEARCH.md's Phase 2.5a entry (Correction 2) for the fix, the four validation cases it\n  satisfies, and the real counterfactual numbers (divergence reduction rises from ~17% to ~48%).\n- **Experienced Reward (`Applied + κ·Overflow`) is traced every cycle but never used.** It is not\n  added to Need state, Score(a), or any learning update this phase — the brief explicitly cautions\n  against assuming this quantity (Model C) is necessary, so it is fully instrumented (visible in the\n  trace and the `SaturationPanel`) without being wired into any behavior-affecting pathway. See\n  RESEARCH.md's Phase 2.5a entry for why this is classified DEFERRED, not DERIVED.\n- **Semantic Salience's category/role/attention tables are global and fixed, never per-scenario —\n  and, as of Phase 2.5c, so are every one of the pipeline's per-Experience inputs.** `BASE_SALIENCE`\n  (by `ConceptCategory`), `ROLE_WEIGHT`, and `DEFAULT_ATTENTION_BY_ROLE` (by `CausalRole`) in\n  `model/salience.ts` are the only authored numbers in the whole pipeline, applied identically\n  regardless of which specific Person/Object/Location fills a category or role — no named entity\n  (Glen, the Lamp, the Bakery) ever gets its own hand-tuned weight, per Brief §5.1.\n  `categoryFromConceptKey` derives category from a concept's own `namespace.slug` identity (the same\n  rule for every concept in a namespace); causal role is now derived mechanically by\n  `deriveWorldEventDescriptor` from an `EffectProvenance` describing what causally happened (Phase\n  2.5b let a scenario author set a concept's role directly — legitimate as an event description, but\n  too easy to mistake for \"the role itself was derived,\" which Phase 2.5c actually closes); and\n  attention for Incidental-role concepts is derived by `deriveAttention` splitting a fixed residual\n  pool by how many Incidental concepts are present, replacing Phase 2.5b's authored `unattended`\n  flag.\n- **Semantic Salience deliberately does not reuse `associations.ts`'s BigInt lattice-quantization\n  machinery**, even though both compute a bounded normalization over nonnegative Rationals. That\n  machinery exists to stop quantization drift compounding across thousands of future updates to\n  *persisted* state (the association graph); salience z is recomputed from scratch every single\n  Experience with nothing to persist, so plain exact `Rational` division already satisfies the\n  exact-arithmetic contract with no drift to guard against. See RESEARCH.md's Phase 2.5b entry\n  (Mathematical findings) for the full reasoning — recorded because reusing the machinery would have\n  been the more obvious, and wrong, choice.\n- **Salience and Saturation share one evidence-kind classification (Phase 2.5c), and Phase 2.5d\n  closed the question of whether they need anything more than that.** `cycle.ts` classifies an\n  objective `EvidenceKind` (`point`/`lower_bound`/`upper_bound`) unconditionally from the\n  Capacity/Applied/Overflow decomposition and feeds it to both `updateExpectation` (learning, gated by\n  `SaturationParams.learningMode`) and `computeSemanticSalience`'s surprise (always) — closing the gap\n  where 2.5a and 2.5b could privately disagree about what a saturated observation means. Brief §24\n  asked whether `raw`/`z_i` should also read Applied/Overflow directly — Phase 2.5d ran four targeted\n  cases (`experiments/saturationSalienceInteraction.ts`) through the real cycle and found no: hidden\n  Overflow never changes salience when perceived Applied and evidence kind are held fixed\n  (Observational Equivalence), a Need-starved Experience is already more Need-relevant with no extra\n  factor (Saturation vs. Unsaturated Utility), a censored bound that genuinely contradicts an\n  established belief stays salient (Surprising Censored Evidence), and total saturation drives Need\n  relevance/surprise to zero without erasing the Experience's baseline Category x Role x Attention\n  salience (Total Saturation). Classified **DERIVED** — see RESEARCH.md's Phase 2.5d entry — and\n  `Overflow ↛ Salience` / `Overflow ↛ NeedExpectation` are now locked in as standing prohibitions for\n  every later phase, addiction (Brief §26) included.\n- **Phase 2.5e re-baselined the project onto one canonical path instead of two co-equal, dual-mode\n  architectures.** Every prior sub-phase (2.5a-d) deliberately kept its new mechanism opt-in, off by\n  default, while it was still being validated — the right discipline mid-investigation, but a growing\n  risk once Phase 2.5d's DERIVED classification actually closed the investigation: `defaultCycleParams()`\n  was, by that point, quietly running the KNOWN-WORSE, already-superseded rule. Phase 2.5e flips both\n  defaults (`censored` learning, `derived` salience) and retires the old behavior to two explicitly-named\n  functions, `legacySaturationParams()`/`legacyCycleParams()` — not deleted, kept for exactly the\n  historical/control comparisons that still need \"the old architecture\" on demand (Brief §21/§22's\n  required sweep and counterfactual, and any future canonical-vs-`FlatSalienceBaseline`-style control).\n  Every previously-published finding was then re-run against the single canonical path: 6 of 8 SURVIVE\n  unchanged, 2 (Habit, Avoidance's floor-boundary extension) are REFINED — their qualitative claim\n  survives, their exact numbers were an artifact of the retired architecture — and zero are RETRACTED\n  outright. See RESEARCH.md's Phase 2.5e entry for the full canonical-pipeline diagram and every\n  re-run's real numbers.\n- **`SemanticExperience` (`model/semanticExperience.ts`) formalizes the boundary object Phases\n  2.5a-d each discovered one field of.** `ConceptEncoding[]` (Phase 2.5b/c's causal role/attention/\n  salience) and `NeedObservation[]` (Phase 2.5a's `EvidenceKind`, Phase 2.5c's evidence-aware surprise)\n  bundle into one immutable per-Experience record, built once in `cycle.ts::applyChosenAction` from data\n  it already computes — a packaging change, not a new computation. It deliberately has no `overflow`\n  field anywhere: Phase 2.5d's `Overflow ↛ Salience`/`Overflow ↛ NeedExpectation` findings mean a\n  character-relative boundary type structurally has no legitimate place for that quantity. `Overflow`\n  keeps its own home (`CycleResult.saturationAnalysis`), and `semanticSalience` remains on `CycleResult`\n  unchanged for research/UI granularity — `semanticExperience` is the new consumer-facing consolidation,\n  and the interface Phase 3's belief/appraisal system should read instead of inspecting raw world data.\n- **Phase 2.9 deliberately builds no latent personality vector (P).** The master Brief assigns P to\n  Phase 3, bundled with beliefs/social appraisal; none of Experiments A–K need it as a\n  DecisionInfluence source. Brief §35's \"no legal transition mutates the 7-dimensional personality\n  vector\" obligation is recorded as **vacuously satisfied** — the vector doesn't exist yet — rather\n  than tested against nonexistent state, and Brief §23's \"avoid double-counting personality\" warning\n  is preserved as a documented future constraint in `decision.ts`'s own module comment for whenever\n  Phase 3 adds P and a personality-sourced Influence becomes possible.\n- **`Decision` is a new, parallel front-end to Action selection, never a replacement for\n  `choice.ts`'s softmax pipeline.** Ordinary autonomous cycles keep choosing among accessibility-\n  filtered candidates exactly as before Phase 2.9; `runDecisionCycle` is a sibling entry point used\n  only for an explicitly-authored small-Option dilemma, sharing the same `applyChosenAction` tail\n  (now exported) once a winning Option resolves — the one real visibility change this phase made to\n  pre-existing code. An Option's identity is its backing `ActionDef.actionKey` (no new branded\n  `OptionId`); a `DecisionId` reuses `SimEvent.eventId` directly, exactly how `Experience`/`Memory`\n  already reuse `event.eventId` rather than minting a parallel scheme.\n- **`identityFeedbackEnabled` is a same-seed, same-sequence ablation switch, not a final-product\n  toggle.** Because `runDecisionCycle` shares `applyChosenAction`'s tail, repeatedly choosing the same\n  Option also strengthens ordinary Hebbian association accessibility for that Option — a second,\n  pre-existing reinforcement pathway running alongside the new IdentityConsistency influence. Setting\n  `identityFeedbackEnabled: false` re-runs an identical seeded Decision sequence with the\n  IdentityConsistency influence channel omitted, so every \"identity specifically causes this\" claim in\n  RESEARCH.md's Phase 2.9 entry is a measured difference between two real runs, never an assumption —\n  the same paired-timeline discipline `experiments/counterfactual.ts` established for Glen-vs-Priya,\n  applied to a new independent variable.\n- **Identity's own `Alignment` formula has a proven ceiling: it can never exceed an Option's own raw\n  tagged pressure.** Because `Alignment(o,k) = boundedResponse(TaggedPressure(o,k) − Σ_others)` and\n  `boundedResponse(x) < x` for all `x > 0`, no identity strength — however large — can ever add a\n  surviving die to an Option whose own raw Need pressure already sits below `thetaInfluenceFloor`.\n  This was discovered empirically while building Experiment I (see RESEARCH.md's Phase 2.9 entry) and\n  is now a directly-checked invariant (`identityCannotRescueAFlooredOption`), not merely an assumption\n  behind that experiment's design. **Phase 2.95 narrows this claim's scope**: it was a true\n  architectural fact under Phase 2.9's independent-per-source-floor design, but Target B is a direct\n  counterexample to it as a UNIVERSAL claim — two individually-sub-floor signals CAN now jointly clear\n  the floor when they land on the same semantic channel and are consolidated together before either is\n  checked against `thetaInfluenceFloor`. Experiment I's own specific numbers are unaffected (its\n  obvious-baseline setup still resolves to `Contest=0` with or without identity feedback — verified\n  directly, not assumed, after the architecture change), because that experiment's particular\n  RiskAcceptance/Recognition combination still doesn't cross the floor even combined — but the general\n  mathematical impossibility argument itself no longer holds as an architectural invariant, only as an\n  empirical fact about that one parameter regime.\n- **Phase 2.95 folds identity's raw per-channel pull into the SAME semantic-channel consolidation pool\n  as Need/accessibility, rather than assembling it as its own separately-floored Influence** — the fix\n  for the \"all-or-nothing\" behavior an external review traced Phase 2.9's own floor-rescue-impossibility\n  proof to. The key design insight is a two-map separation: a Need/accessibility-only bounded (never\n  floor-filtered) map is used exclusively for identity's own expression/evidence generation (preserving\n  Brief §23's no-double-counting rule — identity's own feedback must never feed back into producing MORE\n  identity evidence for the same channel), while a separate, per-option merged raw pool (Need/\n  accessibility plus identity's raw pull, when enabled) is bound-and-floored exactly once for the\n  DecisionInfluence[] that actually drives dice and resolution. See RESEARCH.md's Phase 2.95 entry for\n  all five of the review's required target behaviors, verified against real output.\n- **Die-bracket quantization is inherent to this reference model and Phase 2.95 does not remove it.**\n  The pre-bracket consolidated Rational value is, by construction, a smooth, continuous, monotonically\n  saturating sum run through one shared `boundedResponse` call — but `strengthToDie`'s five authored\n  discrete bands (Brief §8) mean resolved PROBABILITY still jumps at bracket boundaries. What Phase 2.95\n  changes is which side of an existing boundary a combined signal lands on (making a previously-\n  unreachable combination reachable at all), never \"make dice continuous\" — Target A's own sweep is\n  the direct empirical demonstration of this honest limit.\n- **An established identity's resistance to behavioral contradiction (Phase 2.9's Experiment J finding)\n  survives Phase 2.95 unchanged as a general phenomenon — only the specific bias level needed to\n  overcome it changed.** Running Experiment J's own contradiction bias with feedback left on still\n  produces rising, not falling, strength under Phase 2.95 (confirmed directly, not assumed) — the\n  consolidation fix does not make identity weaker or less self-protective. What it does is let a\n  MODEST (one die-bracket, not an order-of-magnitude) increase in the contradiction's own raw pressure\n  win consistently enough to actually erode a consolidated trait with feedback active throughout, where\n  under Phase 2.9's architecture no feedback-on parameter regime achieved this at all. See RESEARCH.md's\n  Phase 2.95 entry, Target D, for the round-by-round finding.\n- **Phase 2.95's `SemanticReasonChannelId` consolidation is frozen as the historical baseline, never\n  deleted.** `DecisionParams.compilationMode: 'legacy' | 'reasonNuclei'` ran `'legacy'`-by-default\n  throughout Phase 2.97 itself — the same opt-in-by-default discipline `salienceMode`/`learningMode`\n  used during Phase 2.5 — so every pre-2.97 experiment, test, and UI panel kept running the exact old\n  pipeline unless a call site explicitly opted in, while Reason Nuclei was still under active\n  investigation. `resolveDecision`'s Margin/Contest/Stake/AuthorshipPotential/rolling logic was\n  extracted, behavior-preservingly, into a shared `resolveDecisionCore` both pipelines call verbatim —\n  Experiment M runs the identical input through both side by side and finds the underlying math\n  genuinely unchanged (identical dice counts and Rational-exact probabilities), confirming the two\n  pipelines really are alternate front-ends to the same resolution core, not two competing\n  probability models. **Post-closure-audit re-baseline:** once all four Brief §64 classification\n  targets came back DERIVED and the closure audit itself concluded, `compilationMode`'s default was\n  promoted to `'reasonNuclei'` — the identical policy move Phase 2.5e made for `salienceMode`/\n  `learningMode` once THEIR investigation concluded, and for the identical stated reason (\"keep the new\n  thing opt-in\" and \"keep the OLD thing as the default forever\" are different policies, and conflating\n  them past validation is itself technical debt). `'legacy'` is retired to explicitly-named\n  `legacyDecisionParams()`/`legacyDecisionCycleParams()`, used by Experiment M's own comparison and by\n  every Phase 2.9/2.95 decision experiment (`decisionResolution.ts`, `identityFormation.ts`'s\n  `cycleParamsWith`/`runRepeatedRounds` harness — which `seedDivergence.ts` also reuses,\n  `reasonConsolidation.ts`) whose already-published numbers are frozen-pipeline facts that must keep\n  reproducing regardless of which pipeline is canonical going forward. Found the honest way: flipping\n  the default and running the full suite surfaced 32 failures on the first pass, all one root cause\n  (four files silently relying on the implicit default rather than requesting `'legacy'` by name); a\n  second pass over Phase 2.97's own files caught three more of the identical shape (two experiments'\n  own legacy-mode setup rounds, one test whose entire premise the re-baseline inverted). All fixed,\n  full 328-test suite green, `tsc`/`vite build` clean, and a Playwright smoke test confirmed the live\n  UI's toggle now renders checked by default with zero console errors.\n- **Referent and Motive attribution are exact by construction in every signal source this phase\n  actually has, never fractional or threshold-based.** The Brief's general continuous-attribution\n  machinery (`dominantReferent`, θ_referent/θ_dominance) is implemented and unit-tested against\n  synthetic ambiguous input, but no real Need- or memory-sourced signal in this build ever needs it: a\n  Need's referent is always its own subject with weight 1. This is recorded as a deliberate deferred\n  generalization, not a gap discovered too late to fix.\n- **Closure audit, Check 3 (review agent finding): a memory's referents are attributed by\n  salience-weighted SHARE among its participants, not flat equal membership in the participant list.**\n  The original claim above — \"a memory's referents are always its own recorded participant list,\"\n  each implicitly weight 1 — was true of the code but wrong as psychology: a memory naming Glen and\n  Priya where only Glen is actually salient to the remembered event should not attribute equal\n  motivational weight to both just because both are named. `MemoryEpisode` gained a `conceptSalience:\n  ReadonlyMap<ConceptKey, Rational>` field (populated in `cycle.ts` from the already-computed\n  `experienceActivation` map — no new computation), and `cognitiveSignals.ts::attributedReferents`\n  now attributes each situational signal across participants with recorded nonzero salience, weighted\n  by that participant's share of the TOTAL salience present in the memory (so a lone salient\n  participant still gets weight exactly 1, preserving every pre-fix numeric result; only genuinely\n  multi-participant memories split weight proportionally, e.g. Glen 4/5-salience + Priya 1/5-salience\n  over a memory splits an outcome's signed strength 4:1, not 1:1). A participant with no recorded\n  salience data at all (or an incidental non-participant object in the same memory) falls back to no\n  attribution, and a memory with zero salient participants falls back to the pre-fix flat behavior via\n  the option's own subject at weight 1 — so this is a strict refinement of the old rule, not a\n  replacement of it, and it was arrived at only after an un-normalized first draft (raw salience used\n  directly as weight) was caught breaking Experiments D/E/J's calibrated numbers and corrected to the\n  normalized-share design actually shipped.\n- **Closure audit, Check 1 second correction: a one-time Commitment is a `MotiveGenerating` source, not a\n  Core Need.** Check 1's original fix (a `NEED_COMMITMENT` Core Need satisfied by keeping the dinner\n  promise) solved the right problem — CommitmentFidelity needed a real motive to modify — through the\n  wrong semantic layer: a Need models a recurring appetite with satisfaction and decay dynamics, while a\n  specific one-time obligation has neither, and seeding the Need only for Glen wrongly makes the\n  stakeholder the nucleus's referent rather than the obligation itself, which cannot distinguish two\n  independent commitments about the same person. `NEED_COMMITMENT` is removed; `model/commitment.ts`'s\n  `CommitmentDef`/`commitmentSignal(s)` is a real, static, non-Need `MotiveGenerating` source referented\n  to `COMMITMENT_DINNER_WITH_GLEN` (the commitment concept itself). Fixing this surfaced a genuine\n  referent-mismatch bug along the way: the existing `standingIdentitySignals` always emits every identity\n  channel's Standing signal at the option's own subject (Glen), so CommitmentFidelity's Standing signal\n  was landing in a dead group at referent=Glen that never actually reached the real Commitment nucleus —\n  fixed with a parallel `commitmentStandingIdentitySignals` builder keyed at the commitment's own\n  referent. This also proves out the Brief's own claim that `MotiveGenerating` is a genuinely open family\n  of sources (Need pressure, Commitment pressure, and later Goal/Value pressure) rather than a family of\n  one — see RESEARCH.md's Phase 2.97 entry for the real verification numbers, and for a serious,\n  structural finding this correction surfaced: wiring a constant (non-decaying) Commitment source into\n  `identityFormation.ts`'s repeated-round harnesses permanently locks Decision resolution into\n  deterministic `'Auto'` mode, so `defaultCommitments()` is deliberately excluded from\n  `seedDivergenceReasonNuclei.ts` (Experiment N) even though it is wired into `identityAsModifier.ts`\n  (Experiment H).\n- **Closure audit, Check 1 third pass: a Commitment's `MotiveGenerating` pressure is conditional on it\n  being live, not a permanent fact of having once authored it.** A further review judged the Auto-lock\n  finding above \"test-scenario incompatibility, expected behavior\" and the architecture itself sound, but\n  named one small remaining obligation: a `CommitmentDef` may be static authored content, but the pressure\n  it generates must disappear once the commitment reaches a terminal state (Fulfilled/Relinquished/Missed/\n  Cancelled), and a recurring obligation (\"dinner Monday,\" \"dinner Tuesday\") must be independent concrete\n  instances, never one immortal pressure. No new lifecycle/state machinery was added — no experiment needs\n  a commitment that transitions mid-run, and building that ahead of a concrete need would repeat the same\n  \"generalize before an experiment demands it\" mistake this project keeps correcting itself out of.\n  Instead, `test/phase2_97CommitmentLifecycle.test.ts` proves, on real pipeline output, that the mechanism\n  already in place satisfies the obligation: `runDecisionCycle`'s `commitments` list is supplied fresh per\n  call rather than carried on `CharacterState`, so \"live\" is simply \"present in this call's list.\" Four\n  cases: no commitment -> no nucleus; DinnerWithGlen active on an identity-invested character -> the real\n  nucleus appears; that SAME commitment retired on the SAME identity-rich character -> the nucleus is\n  absent again (isolating retirement, not weak identity, as the cause — the Activation Rule's \"a modifier\n  cannot create meaning from nothing\" wall holding across a lifecycle transition, not just at a nucleus\n  that was never live); a new commitment instance -> a new nucleus at a new referent, never resurrecting\n  the retired one.\n- **Two observations from the same review, recorded but explicitly not acted on this phase.** First:\n  referent attribution (Check 3 above) is proven only over a memory's `participants` — a future scenario\n  needing an arbitrary causal-object referent that is never itself a participant (e.g. \"a lamp falls and\n  injures Mina\" needing a `Safety × Lamp × Avoid` nucleus) isn't yet supported, and is recorded here as a\n  real future limitation rather than silently assumed away. Second: `ReasonNucleusKey` may be more\n  cleanly understood as `Option × Motive × Referent`, with `ResolvedReason = ReasonNucleusKey +\n  Direction` as a distinct, later-resolved concept — on rereading `reasonNucleus.ts`/`diceCompiler.ts`\n  in light of this, it's arguably the more honest description of what `groupSignalsByTriple`/\n  `resolvedNucleusKey` already do (Check 4's own finding). Neither was treated as required before Phase\n  3 by the review itself, and neither is acted on here — see RESEARCH.md's Phase 2.97 closure-audit\n  section for the fuller writeup of both.\n- **`EvidenceBasis` provenance is scoped to the two signal families that already carry a concrete\n  identifier, not retrofitted onto every aggregated Bayesian scalar in the codebase.** `NeedExpectation`\n  and `IdentityEvidenceState` are already-aggregated scalars with no per-source-experience list, and\n  retrofitting full provenance onto them would be a materially larger, unjustified expansion — none of\n  Experiments A-N actually needs to know which past experiences built up a given NeedExpectation's μ or\n  an identity channel's Support. Provenance is populated only for memory-sourced `SituationalEvidence`\n  signals (`{[memoryEpisode.experienceId]: weight}`, directly off real `ScoredMemory` data) and\n  identity-sourced `StandingDisposition` signals (a single-element `{'identity:<channel>': 1}` tag,\n  present purely so the consolidator's canonical-ordering machinery has a uniform input shape — overlap\n  is not meaningfully exercised there, since identity's own internal Support/Opposition aggregation is\n  Phase 2.9's separate, already-verified mechanism).\n- **The new `MotiveChannel` vocabulary is the Brief's own 10-entry controlled list, plus one justified\n  11th: `'Habit'`.** `REASON_CHANNEL_ACCESSIBILITY`'s associative-accessibility pull is a real,\n  already-validated Phase 2.9/2.95 motive-generating contributor with no honest home among the Brief's\n  10 — dropping it would silently regress the seed-divergence/biography-authorship behavior Phase Gate\n  item 15 requires to survive. `MotiveDirection` stays `'Pursue' | 'Avoid'` only; the Brief's own\n  illustrative `Preserve`/`Reject` extensions are not added, since no experiment A-N needs them and\n  generalizing ahead of an experiment that demands it is a mistake this project has corrected itself\n  out of before.\n- **Base-die thresholds and modifier-family unit/maxMagnitude are new, separately-versioned constants\n  — never inherited from Phase 2.9's `dieScale`.** Modifiers here are additive integers on top of a die,\n  not another scaled die, so the two scales are not interchangeable even though they share a shape.\n  They are explicit, unvalidated-until-measured research knobs: `experiments/calibrationSweeps.ts`\n  (Experiment L) measures their real win-probability effects via the exact same `winProbabilities`\n  math every real Decision resolution uses, and found a genuine, previously-unknown miscalibration —\n  at this build's shipped defaults (modifier-family unit = 1/4), a single +1 modifier step at d8\n  (ΔP(win)≈0.1172) is slightly LOUDER than moving a whole base-die bracket, d8→d10 (ΔP(win)≈0.1000) —\n  the opposite of \"a modifier strengthens; it does not replace the die.\" This is recorded as an\n  explicit calibration recommendation in RESEARCH.md's Phase 2.97 entry rather than silently\n  self-corrected, so the finding stays visible; `DecisionPanel.tsx` exposes both the base-die\n  thresholds and the two modifier-family units as live sliders for exploring the fix.\n- **Standing/Situational raw contributions are NOT individually pre-bounded per-source before\n  consolidation, unlike legacy's already-per-Influence-bounded shape** — a raw Need contribution has no\n  fixed range, so `diceCompiler.ts::consolidateSigned` sums raw magnitudes within each signed partition\n  (positive support and negative modulation are never allowed to cancel before the correlation\n  discount), applies the Reference Correlation Consolidator, nets the two partitions, and only THEN\n  applies `Rational.boundedResponse` — the same \"sum raw, then bound\" discipline\n  `decision.ts::boundAndFloorChannels`/`identity.ts::identityConsistency` already use throughout this\n  codebase, extended to the new pipeline rather than reinvented for it.\n- **What Phase 2.97 deliberately does not build**, mirroring the Brief's own exclusion list: no\n  `ContextModulating` source role (nothing in the current scenario models fatigue/intoxication/time-\n  pressure; adding the role with no real signal source would be dead code), no `SocialAppraisal`/Belief\n  modifier families, no latent-personality interaction, no reputation/culture/status/drunkenness/\n  addiction/Observer/self-concept modifiers of any kind. These remain named, deferred hooks in code\n  comments exactly as Phase 2.9's plan deferred the personality vector — later mechanisms must earn\n  their place in this compilation grammar experimentally, not be added because the new grammar could\n  technically support them.\n",
+      "judgment": "Historical scope block: individual findings below preserve limits and supersession;not current all-domain qualification."
+    }
+  ],
+  "obligations": [
+    "RO-C3-004",
+    "RO-C3-009",
+    "RO-C3-010",
+    "RO-C3-014",
+    "RO-C3-018",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "acceptanceChain": [
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_LEARN_AUTHORITY_CHECKPOINT.md",
+      "sha256": "bc7d25befdfe9239068e07c973b7de755bf1b9793feba87fac73eb18f00836e0"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_EPI_AUTHORITY_CHECKPOINT.md",
+      "sha256": "dae620076bd56b5df7aecdf86dbbc883ec66a553bf6a34c45135e16225965840"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_REASON_AUTHORITY_CHECKPOINT.md",
+      "sha256": "4287d7d520f21e1c2f215d8297864bdb04f7d42ce5860bf129be9539f50b6d65"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_DECISION_AUTHORITY_CHECKPOINT.md",
+      "sha256": "107ebfa9cb082ef5e83a489c19e3a1f5291daf8647467f3f58378cb733a3efd9"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_HISTORY_COMMIT_AUTHORITY_CHECKPOINT.md",
+      "sha256": "cd7032ddb6efabd9a9c4ba7d22487696b1a9c91d02e53bde52116cb99583b796"
+    }
+  ],
+  "limits": [
+    "Partial read only;no entire1227line source-role assignment.",
+    "Historical numericalclaims notfreshlyreexecuted;referenceRESEARCH/ledger review joins remain required.",
+    "Referencesource layout/testing sections andsix phasebriefs still require review."
+  ],
+  "scopeFindings": [
+    {
+      "lines": [
+        723,
+        759
+      ],
+      "judgment": "Need-only score and no Need Hebbian nodes are historical controls;eligibility differs desirability. Rowbudget footprint limits persist;derivedsalience reweights,not abolishesnormalization. Legacy-default prose superseded bylater2.5e."
+    },
+    {
+      "lines": [
+        760,
+        811
+      ],
+      "judgment": "Ceiling/floor avoiding fixturecalibration andsharedsubject betrayal bounded. Naive-default prose superseded;acceptedbound fullpointprecision approximation remains. Applied+kOverflow reward DEFERRED diagnosticunused,not DERIVED orpermittedtruthknowledge. Governedrole/category derivation notlearnedrecognition;exactephemeral salience vsquantizedpersistedgraph distinct."
+    },
+    {
+      "lines": [
+        812,
+        851
+      ],
+      "judgment": "Four-case overflow/salience equivalence fixedadmittedmeasurement/evidencekind,not generalphysiology. Researchclassification provenance notnewtruthpermission. Rebaseline6survive2refined0retracted historical;SemanticExperience excludesoverflow despite researchdiagnostics retainingit."
+    },
+    {
+      "lines": [
+        852,
+        901
+      ],
+      "judgment": "Absentpersonality invariant vacuous,notqualifiedstate. Decision parallelsoftmax frontend andfeedbackablation scoped. Floor-rescueimpossibility specific2.9 architecture;2.95counterexample retractsuniversalclaim whileoldfixture stillsame. Separatefeedback andevidence maps preventself-authorship."
+    },
+    {
+      "lines": [
+        902,
+        944
+      ],
+      "judgment": "Smoothprebracketstrength notcontinuousprobability;contradictioncalibration notuniversal learninglaw. Sharedresolutioncore notsamefrontendsemantics. Legacydefaults retained namedcontrols.32then3historicaldefault-dependent failures and328success preserved,notfresh."
+    },
+    {
+      "lines": [
+        945,
+        969
+      ],
+      "judgment": "Continuousattribution onlysynthetic;actualsources governed. Normalizedparticipantshare correction preservesoneparticipant,notarbitrarycausalobject. Rawunnormalized draft brokeD/E/J;fallbacktosubject whenzerosalience explicit."
+    },
+    {
+      "lines": [
+        970,
+        1008
+      ],
+      "judgment": "Commitment nonNeed concreteobligation;standing referent mismatch repaired. Constantcommitment Auto-lock expectedfixtureeffect. Historicalretirement means removingfromfreshcalllist,notmidrunownertransition;newpublicCOMMIT proof separate. Recurrence concreteinstance notstakeholder orseries."
+    },
+    {
+      "lines": [
+        1009,
+        1038
+      ],
+      "judgment": "Nonparticipantcausalobject anddirection-aftergrouping remainunresolved. Memoryexperience provenance andstandingchannelplaceholder notper-sourceaggregatebelief/identity history. Habitcontrolledvocabulary/accessibility contributor notgeneralhabitnecessity."
+    },
+    {
+      "lines": [
+        1039,
+        1066
+      ],
+      "judgment": "Modifierstep strongerthandiebracket historicalcalibration recommendation retained,not silentlyfixed. Signedraw discountedbeforecancel/bound. Missingcontext/social/personality etcarehistoricaldeferrals,notcurrentabsenceorirrelevance."
+    }
+  ],
+  "extractionFinding": "Original extractor groups lines723..1066 into one large occurrence. Preserve that full identity/text and subrange findings;do not discard block because it spans multiple reviewed categories."
+}

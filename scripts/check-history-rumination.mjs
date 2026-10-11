@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {createServer} from 'vite';
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const p='docs/planning/',planPath=p+'RUMINATION_PUBLIC_PLAN_REV1.json';
+const plan=JSON.parse(fs.readFileSync(planPath)),result=JSON.parse(fs.readFileSync(p+'RUMINATION_PUBLIC_RESULT_REV1.json'));
+const server=await createServer({configFile:false,server:{middlewareMode:true,hmr:false},appType:'custom'});
+try {
+const m=await server.ssrLoadModule('/src/campaign3/ruminationModel.ts'),codec=await server.ssrLoadModule('/src/campaign3/ruminationCodecs.ts'),data=await server.ssrLoadModule('/src/campaign2/canonicalData.ts'),canonical=await server.ssrLoadModule('/src/substrate/canonicalEncoding.ts');
+const fx=await server.ssrLoadModule('/src/test/ruminationFixtures.ts');
+const views=new Map(),stored=JSON.parse(fs.readFileSync(p+'RUMINATION_PUBLIC_VIEWS_REV1.json'));
+assert.equal(stored.planSha256,hash(fs.readFileSync(planPath)));
+for(const [k,v] of stored.views){assert(!views.has(k));const bytes=Uint8Array.from(Buffer.from(v.outputs,'hex')),obs=v.observerViews.map(x=>Uint8Array.from(Buffer.from(x,'hex')));
+const r=result.results.find(r=>r.candidate+'/'+r.law+'/'+r.name===k);assert(r);assert.equal(hash(bytes),r.outputSha256);assert.deepEqual(obs.map(hash),r.observerSha256);
+views.set(k,{outputs:data.dataItems(codec.decodeRumination(bytes),'list'),observerViews:obs});}
+assert.equal(views.size,23);assert.equal(result.results.length,23);assert.equal(new Set(result.results.map(r=>r.runIdentity)).size,22);
+  const get=(name,candidate=1,law=1)=>views.get(candidate+'/'+law+'/'+name),f=data.dataField,rec=data.dataRecord,items=data.dataItems;
+  const records=(name,type,candidate=1,law=1)=>get(name,candidate,law).outputs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===type).map(v=>rec(v,type));
+  const inhibit=(name,c=1)=>records(name,1318n,c).map(v=>f(v,5n));
+  assert.deepEqual(inhibit('main'),[false,false,false,false,true,false,false,true]);
+  const access=(name,c=1)=>records(name,1318n,c).map(v=>f(v,7n));
+  assert.deepEqual(access('main'),[false,false,false,true,false,true,true,false]);
+  assert(access('main',2).every(x=>x===false));assert(access('main',3).every(x=>x===false));
+  assert.deepEqual(access('main',4),[false,false,false,true,false,true,false,false]);
+  assert.equal(inhibit('main',2)[3],true);assert.equal(inhibit('main',3)[4],false);
+  assert.deepEqual(inhibit('unbroken'),inhibit('unbroken',3));
+  assert.equal(inhibit('externalLoad',2)[4],false);assert.equal(inhibit('main')[4],true);
+  for(const [a,b] of [['main','hiddenTruth'],['main','hiddenReward'],['main','falseResolution'],['absent','denied'],['absent','nonrecipient'],['unresolved','hiddenResolution']])assert.deepEqual(get(a).observerViews,get(b).observerViews);
+  for(const h of records('main',837n).slice(3))assert.deepEqual(f(h,4n),f(h,5n));
+  const ev=records('main',1318n);for(const i of [4,5,6])assert.deepEqual(f(ev[i],6n),f(ev[3],6n));
+  for(const c of [2,3,4])for(let i=0;i<8;i++)assert.deepEqual(f(records('main',1318n,c)[i],6n),f(ev[i],6n));
+  assert.equal(items(f(records('main',827n)[3],3n),'list').length,2);assert.equal(items(f(records('main',827n)[4],3n),'list').length,1);
+  const execution=records('main',1327n);assert.equal(f(execution[4],3n),false);assert.equal(f(execution[7],3n),false);assert(execution.slice(3).some(x=>f(x,3n)===true));
+  assert.equal(f(records('main',1328n)[2],2n).value,3n);assert.equal(items(f(data.dataRecord(f(ev[2],6n),1329n),1n),'list').length,0);
+const O=p+'campaign3-history-rumination-rev1';
+const receipt={status:'PASS',scope:'Fresh decode and original assertions over23 stored case views,22 distinct identities; no fresh simulation or prefix restore.',runs:22,caseViews:23,storedPrefixes:198,storedChecks:207,checkerSha256:hash(fs.readFileSync('scripts/check-history-rumination.mjs')),resultSha256:hash(fs.readFileSync(p+'RUMINATION_PUBLIC_RESULT_REV1.json'))};
+fs.writeFileSync(O+'/view-check.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+console.log('PASS23 stored rumination case views (22 distinct runs) and original contrasts.');
+}finally{await server.close();}

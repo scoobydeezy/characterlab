@@ -1,0 +1,2387 @@
+{
+  "calibrationFields": [
+    "EncodingEvaluation.Calibration",
+    "RetainedEncoding.Calibration",
+    "SpatialPreparation.Calibration"
+  ],
+  "wrapperFieldDelta": [
+    [
+      "/14/fields/2/type/name",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ],
+    [
+      "/16/fields/3/type/name",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ],
+    [
+      "/33/fields/3/type/name",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ]
+  ],
+  "roleFieldDelta": [
+    [
+      "/50/validation/family",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ],
+    [
+      "/50/validation/requirement",
+      "existing GovernedContentDefinitionId role unchanged",
+      "existing DefinitionId role unchanged"
+    ],
+    [
+      "/60/validation/family",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ],
+    [
+      "/60/validation/requirement",
+      "existing GovernedContentDefinitionId role unchanged",
+      "existing DefinitionId role unchanged"
+    ],
+    [
+      "/108/validation/family",
+      "GovernedContentDefinitionId",
+      "DefinitionId"
+    ],
+    [
+      "/108/validation/requirement",
+      "existing GovernedContentDefinitionId role unchanged",
+      "existing DefinitionId role unchanged"
+    ]
+  ],
+  "comparisons": [
+    {
+      "control": "baseline",
+      "candidate": "budget-Independent-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor"
+      ],
+      "declaredButUnchanged": [
+        "encoding.law"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "declaredButUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalShared-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "declaredButUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-HistoricalHybrid-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/5",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.law"
+      ],
+      "declaredButUnchanged": [
+        "encoding.floor"
+      ]
+    },
+    {
+      "control": "baseline",
+      "candidate": "budget-RetiredFlat-1/1",
+      "changed": [
+        "encoding.law",
+        "encoding.floor"
+      ],
+      "actualChanged": [
+        "encoding.floor",
+        "encoding.law"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-disabled",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "actualChanged": [
+        "encoding.allocation"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "allocation-spatial",
+      "changed": [
+        "encoding.allocation"
+      ],
+      "actualChanged": [
+        "encoding.allocation"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-encoding",
+      "changed": [
+        "feedback.encoding"
+      ],
+      "actualChanged": [
+        "feedback.encoding"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "feedback-retrieval",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "actualChanged": [
+        "feedback.retrieval"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-encoding",
+      "candidate": "feedback-both",
+      "changed": [
+        "feedback.retrieval"
+      ],
+      "actualChanged": [
+        "feedback.retrieval"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "local-access",
+      "changed": [
+        "access.beta"
+      ],
+      "actualChanged": [
+        "access.beta"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "association-decay",
+      "changed": [
+        "association.decay"
+      ],
+      "actualChanged": [
+        "association.decay"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "presentation-no-decay",
+      "changed": [
+        "access.decay"
+      ],
+      "actualChanged": [
+        "access.decay"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k0",
+      "changed": [
+        "access.capacity"
+      ],
+      "actualChanged": [
+        "access.capacity"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "recall-k1",
+      "changed": [
+        "access.capacity"
+      ],
+      "actualChanged": [
+        "access.capacity"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k0",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k1",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "baseline",
+      "candidate": "select-k2",
+      "changed": [
+        "selection.algorithm",
+        "selection.capacity"
+      ],
+      "actualChanged": [
+        "selection.algorithm"
+      ],
+      "declaredButUnchanged": [
+        "selection.capacity"
+      ]
+    },
+    {
+      "control": "select-k2",
+      "candidate": "select-equal-k2",
+      "changed": [
+        "selection.algorithm"
+      ],
+      "actualChanged": [
+        "selection.algorithm"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-capacity1",
+      "changed": [
+        "source.capacity"
+      ],
+      "actualChanged": [
+        "source.capacity"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-prediction-access",
+      "changed": [
+        "source.predictionAccess"
+      ],
+      "actualChanged": [
+        "source.predictionAccess"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-no-task-access",
+      "changed": [
+        "source.taskAccess"
+      ],
+      "actualChanged": [
+        "source.taskAccess"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-denied-probe",
+      "changed": [
+        "source.probePermitted"
+      ],
+      "actualChanged": [
+        "source.probePermitted"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-zero-concern",
+      "changed": [
+        "source.regReference"
+      ],
+      "actualChanged": [
+        "source.regReference"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "feedback-both",
+      "candidate": "source-above-target",
+      "changed": [
+        "source.regReference"
+      ],
+      "actualChanged": [
+        "source.regReference"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "denied-port",
+      "changed": [
+        "source.ports.0.detected"
+      ],
+      "actualChanged": [
+        "source.ports.0.detected"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "unresolved-role",
+      "changed": [
+        "source.ports.0.role"
+      ],
+      "actualChanged": [
+        "source.ports.0.role"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-glyph",
+      "changed": [
+        "source.ports.0.glyph"
+      ],
+      "actualChanged": [
+        "source.ports.0.glyph"
+      ],
+      "declaredButUnchanged": []
+    },
+    {
+      "control": "allocation-spatial",
+      "candidate": "missing-position",
+      "changed": [
+        "source.ports.0.position"
+      ],
+      "actualChanged": [
+        "source.ports.0.position"
+      ],
+      "declaredButUnchanged": []
+    }
+  ],
+  "branchCases": [
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 0,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 0,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 7,
+      "outputs": 7,
+      "runtimeSlots": 6
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 14,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 14,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 16,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 16,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 16,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 17,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 17,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 17,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 18,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 18,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 18,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 18,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 19,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 19,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 19,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 19,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "formation",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 1,
+        "w": 0
+      },
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 0,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 0,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 7,
+      "outputs": 6,
+      "runtimeSlots": 5
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 11,
+      "runtimeSlots": 9
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 11,
+      "runtimeSlots": 9
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 12,
+      "runtimeSlots": 10
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 1,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 13,
+      "runtimeSlots": 11
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 14,
+      "runtimeSlots": 12
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 2,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 15,
+      "runtimeSlots": 13
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 0,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 16,
+      "runtimeSlots": 14
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 1,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 17,
+      "runtimeSlots": 15
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 2,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 0,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 1,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 2,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 0
+      },
+      "events": 13,
+      "outputs": 18,
+      "runtimeSlots": 16
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 1
+      },
+      "events": 14,
+      "outputs": 19,
+      "runtimeSlots": 17
+    },
+    {
+      "purpose": "cue",
+      "operands": {
+        "n": 3,
+        "q": 3,
+        "newTracks": 3,
+        "positive": 1,
+        "retains": 0,
+        "w": 2
+      },
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    }
+  ],
+  "maxima": {
+    "emptyFormation": {
+      "events": 7,
+      "outputs": 7,
+      "runtimeSlots": 6
+    },
+    "positiveFormation": {
+      "events": 16,
+      "outputs": 20,
+      "runtimeSlots": 17
+    },
+    "emptyCue": {
+      "events": 7,
+      "outputs": 6,
+      "runtimeSlots": 5
+    },
+    "positiveCue": {
+      "events": 14,
+      "outputs": 20,
+      "runtimeSlots": 18
+    }
+  },
+  "wholeRunDraft": {
+    "events": 139,
+    "outputs": 172,
+    "slots": 152,
+    "maxInstant": 16
+  },
+  "scope": "Fresh read-only arithmetic and exact JSON delta verification; no old writer or runtime execution."
+}

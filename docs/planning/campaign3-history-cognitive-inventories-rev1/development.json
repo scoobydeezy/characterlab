@@ -1,0 +1,27 @@
+{
+  "status": "CHECKER DEVELOPMENT ERRORS; NOT SCIENTIFIC MUTANT DETECTION",
+  "attempts": [
+    {
+      "source": {
+        "path": "docs/planning/campaign3-history-cognitive-inventories-rev1/initial-checker.py",
+        "sha256": "7e5a9cb98d5e93b827a7eff0a0ec4b0579c4441767a6d6dc925ed94cd74b0e9f"
+      },
+      "failure": "SyntaxError: unclosed parenthesis at changes.append; no checker assertions executed."
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-history-cognitive-inventories-rev1/union-order-checker.py",
+        "sha256": "f069e4d6aae0d5853bf37c26b2f8cd3de47b56d7e26da4d1a9d21c7f571aba58"
+      },
+      "failure": "AssertionError comparing sorted forbidden-field lists to schema-ordered historical lists. Corrected comparison requires exact record/variant/required order and equal forbidden membership; original reports retain their order."
+    },
+    {
+      "source": {
+        "path": "docs/planning/campaign3-history-cognitive-inventories-rev1/enum-graph-checker.py",
+        "sha256": "cad600f85e28db2d046e76f294b06bc6719ca127251a004a4a6ed3cbf3b0654d"
+      },
+      "failure": "Graph regex confused enum(WorkspaceForecast) with a same-named record edge. Enum and identity references excluded before following actual record/collection references."
+    }
+  ],
+  "originalSourcesChanged": false
+}

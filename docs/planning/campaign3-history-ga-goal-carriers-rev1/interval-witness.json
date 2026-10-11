@@ -1,0 +1,34 @@
+{
+  "status": "PASS; REPRESENTATION DISTINCTION",
+  "zeroWidthPhysicalInterval": {
+    "accepted": false,
+    "error": "embodied codec: interval must have positive width"
+  },
+  "positiveWidthPhysicalInterval": {
+    "accepted": true
+  },
+  "pointGoalInterval": {
+    "accepted": true
+  },
+  "sources": [
+    {
+      "path": "src/campaign3/embodiedCodecs.ts",
+      "sha256": "29a519c6569150546bd841a020a0e12443aa8099aa2b3ad5cd92e23b3f5762a0"
+    },
+    {
+      "path": "src/campaign3/bodilyMaintenanceGoal.ts",
+      "sha256": "85d74fc284a7b616af83f6e629ef892ffca171855824a029ff8ec4f0efa80205"
+    },
+    {
+      "path": "src/campaign2/orderedInputs.ts",
+      "sha256": "b4b320728d49dad8b4f8fc31d85187c4686671934a9e51ecd2d0e01d11f97c4f"
+    },
+    {
+      "path": "scripts/probe-history-ga-goal-interval.mjs",
+      "sha256": "d7d4ab21b6fd92110147f950345a3ca0d79662a1412accf1091f18821454ea47"
+    }
+  ],
+  "limits": [
+    "Current decoder/component witness for the documented distinction; no new public goal admission or historical complete-module identity claim."
+  ]
+}

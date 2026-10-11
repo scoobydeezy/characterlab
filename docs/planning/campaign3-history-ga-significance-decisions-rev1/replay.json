@@ -1,0 +1,98 @@
+{
+  "status": "PASS;27 CURRENT COMPONENT TESTS;HISTORICAL CLAIMS SCOPED SEPARATELY",
+  "checker": {
+    "path": "scripts/finalize-history-ga-significance-decisions-rev2.mjs",
+    "sha256": "ce83b6929a87ec118f6da995ce293268976c1ea04da1aef3ea8af5841bc7f9d6"
+  },
+  "failedFinalizer": {
+    "path": "scripts/finalize-history-ga-significance-decisions.mjs",
+    "sha256": "5340d0fa188f79126ebdb643d145166e29854b5d01acb3ef93722672f5f7ef2f"
+  },
+  "finalizerFinding": "First finalizer referenced nonexistent goal-carriers replay.json;no replay artifact was written. Corrected to actual reviewed goal-carrier evidence,without rerunning tests.",
+  "initialChecker": {
+    "path": "scripts/replay-history-ga-significance-decisions.mjs",
+    "sha256": "45720d5688b4e8cf6456173d85e6869a42e8e4f09f7579d603d67bb004544750"
+  },
+  "developmentFinding": {
+    "kind": "AUDIT_WRAPPER_COUNT_MISMATCH",
+    "expected": 24,
+    "actual": 27,
+    "failedAssertion": "27 !== 24 after baseline wrote a successful27-test receipt",
+    "disposition": "Retain original checker and receipt;validate27 without rerunning. Qualification has seven current cases,including three projection controls,not four."
+  },
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-significance-decisions-rev1/current-tests.json",
+    "sha256": "98c714957a2543e522d3d88d86900022a30354cedb4f1780f9f1bdfb13f8e095"
+  },
+  "inputs": [
+    {
+      "path": "src/test/attributedChildBoundary.test.ts",
+      "sha256": "18ef56dacbac5c01d41625ca4be3f306c7d9b93221fa6e97cef40c5347b1237d"
+    },
+    {
+      "path": "src/test/focalAttribution.test.ts",
+      "sha256": "e0ea7d42b3cf1996e87752f6bf322609a36565f0950654d297876f3725a75f3a"
+    },
+    {
+      "path": "src/test/retainedAttributionUse.test.ts",
+      "sha256": "0be8f45d22c99fc438fb9f40c68a2a0882be4c01dc3a0f28679f1cbf60a13927"
+    },
+    {
+      "path": "src/test/goalOutcomeQualification.test.ts",
+      "sha256": "8155a55a5678baea76b6384e1ad9c1268727ddfa8828cf36aa8628c0d995af53"
+    },
+    {
+      "path": "src/campaign3/attributedChildBoundary.ts",
+      "sha256": "d62ee7cebe1d9bdcaa9a1a7fdb879546ad9f6016b52792290dc65df840ff44ac"
+    },
+    {
+      "path": "src/campaign3/focalAttribution.ts",
+      "sha256": "468596517c699bee46ebd8ddb4a3b642aa2d4b580486c0e81cc3f150b1fba12a"
+    },
+    {
+      "path": "src/campaign3/retainedAttributionUse.ts",
+      "sha256": "5e178168562cf906cd6d1f763ff1372935d1cdca71753a462db852d4c38a50cc"
+    },
+    {
+      "path": "src/campaign3/goalOutcomeQualification.ts",
+      "sha256": "34e5bd4df6933a0e6ad626e5c4c3b1b7fb998670585ed51c9636e36d47cb018a"
+    }
+  ],
+  "sourcePaths": [
+    "docs/formal/ATTRIBUTED_CHILD_BOUNDARY_COMPONENT.md",
+    "docs/formal/FOCAL_ATTRIBUTION_COMPONENT.md",
+    "docs/planning/ATTRIBUTED_CHILD_BOUNDARY_TESTS_REV1.json",
+    "docs/planning/ATTRIBUTED_CHILD_BOUNDARY_TESTS_REV2.json",
+    "docs/planning/FOCAL_ATTRIBUTION_TESTS_REV1.json",
+    "docs/planning/GENERAL_ATTENTION_ATTRIBUTION_FOCUS_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_ATTRIBUTION_FOCUS_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_OUTCOME_SIGNIFICANCE_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_OUTCOME_SIGNIFICANCE_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_QUALIFICATION_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_QUALIFICATION_RESOLUTION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_TARGET_DECISION.md",
+    "docs/planning/GENERAL_ATTENTION_SIGNIFICANCE_TARGET_RESOLUTION.md"
+  ],
+  "reused": [
+    {
+      "path": "docs/planning/campaign3-history-ga-goal-carriers-rev1/review.json",
+      "sha256": "54d199aea3e0b281be925d67f7a806d612cbc7fdb3b4a44cd30397a3a4bb17bc"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-memory-recall-rev1/replay.json",
+      "sha256": "7e3a7a95eee51dff4a436a86686fb671de3ce5bde6e6d0e0f365ce266968f783"
+    },
+    {
+      "path": "docs/planning/campaign3-history-ga-retention-policies-rev1/replay.json",
+      "sha256": "4a4b8a4cff261a1e710777b3e7f6fb07e318ad7487b226f39e303b43388f335e"
+    },
+    {
+      "path": "docs/planning/GOAL_OUTCOME_QUALIFICATION_REVIEW_REV1.json",
+      "sha256": "440fc83ccfdb6566aa0532c4b3c4617684b33516e5242664e44933f060a1cf84"
+    }
+  ],
+  "limits": [
+    "Current component tests separately identified;old receipts do not supply exact historical implementation commitments. Original qualification mutations are report-only in this batch.",
+    "Supplied focus and normalized retained addresses are not authenticated causal-target production. No public source/owner/Save132 or old-important-memory closure follows from these historical decisions."
+  ]
+}

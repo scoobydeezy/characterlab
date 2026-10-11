@@ -1,0 +1,409 @@
+{
+  "status": "PASS;44 CURRENT COMPONENT/SUBSTRATE/SCHEDULER TESTS;HISTORICAL FAILURES PRESERVED",
+  "checker": {
+    "path": "scripts/replay-history-ga-protocol-settlement.mjs",
+    "sha256": "d1b2fdfa7a750b191ca3d0917bf875f4a34c0f8f7e2a6ab0a25d58e62a346c37"
+  },
+  "sourcePaths": [
+    "docs/formal/FORMATION_GOVERNANCE_COMPONENT.md",
+    "docs/formal/FORMATION_PROTOCOL_TRANSITION_COMPONENT.md",
+    "docs/formal/FORMATION_SOURCE_DOMAIN_COMPONENT.md",
+    "docs/planning/ATTENTION_ACQUISITION_FORMATION_PROTOCOL_REV1.md",
+    "docs/planning/ATTENTION_ACQUISITION_FORMATION_TESTS_REV1.json",
+    "docs/planning/ATTENTION_ACQUISITION_FORMATION_TESTS_REV2.json",
+    "docs/planning/FORMATION_GOVERNANCE_COMPONENT_CHECKPOINT.md",
+    "docs/planning/FORMATION_GOVERNANCE_TESTS_REV1.json",
+    "docs/planning/FORMATION_GOVERNANCE_TESTS_REV2.json",
+    "docs/planning/FORMATION_OWNER_JOIN_TESTS_REV1.json",
+    "docs/planning/FORMATION_OWNER_JOIN_TESTS_REV2.json",
+    "docs/planning/FORMATION_OWNER_PROTOCOL_SETTLEMENT_CHECKPOINT.md",
+    "docs/planning/FORMATION_PROTOCOL_ADMISSION_JOIN_REV1.md",
+    "docs/planning/FORMATION_PROTOCOL_AUTHORITY_TESTS_REV1.json",
+    "docs/planning/FORMATION_PROTOCOL_AUTHORITY_TESTS_REV2.json",
+    "docs/planning/FORMATION_PROTOCOL_ROOT_SYMBOLIC_REV1.md",
+    "docs/planning/FORMATION_PROTOCOL_SCHEDULER_TESTS_REV1.json",
+    "docs/planning/FORMATION_PROTOCOL_STATE_PLACEMENT_DECISION.md",
+    "docs/planning/FORMATION_PROTOCOL_STATE_PLACEMENT_RESOLUTION.md",
+    "docs/planning/FORMATION_PROTOCOL_TRANSITION_CHECKPOINT.md",
+    "docs/planning/FORMATION_PROTOCOL_TRANSITION_TESTS_REV1.json",
+    "docs/planning/FORMATION_PROTOCOL_TRANSITION_TESTS_REV2.json",
+    "docs/planning/FORMATION_SOURCE_DOMAIN_BINDING_REV1.md",
+    "docs/planning/FORMATION_SOURCE_DOMAIN_TESTS_REV1.json",
+    "docs/formal/FORMATION_SETTLEMENT_COMPONENT.md"
+  ],
+  "tests": {
+    "path": "docs/planning/campaign3-history-ga-protocol-settlement-rev1/current-tests.json",
+    "sha256": "3340e3adc250e69f8c283d5c12be5fb9c899ae1e8eeeb1be25da19de6f1c8e35"
+  },
+  "inputs": [
+    {
+      "path": "src/test/attentionAcquisitionFormation.test.ts",
+      "sha256": "0fae1bcc1bace4d1cac25967d2d2d1a07710bed520c77b578db05c9f7d7f59b4"
+    },
+    {
+      "path": "src/test/formationGovernance.test.ts",
+      "sha256": "14c90d2ad2a9c420b5194b79322373c9d66fe7e01e0da41d8b08ac52db84f792"
+    },
+    {
+      "path": "src/test/formationSourceDomain.test.ts",
+      "sha256": "825777bff7c3851375b0a23c5c3d2266fa1c2a80458ff64772b26227ed24bac6"
+    },
+    {
+      "path": "src/test/formationProtocolAuthority.test.ts",
+      "sha256": "745157dee3bb90250bbc1cdfd536d1512b6b78521bdca192e5140457179526e5"
+    },
+    {
+      "path": "src/test/formationProtocolTransition.test.ts",
+      "sha256": "27e5353faca0b760952ee1666a4e6a5763b8a6e471a312ea1d54b1da79672fa1"
+    },
+    {
+      "path": "src/test/formationSettlement.test.ts",
+      "sha256": "8d51ad476be23279c98672bb3611854adb573c33fee431803af71900e3ecf130"
+    },
+    {
+      "path": "src/test/formationProtocolScheduler.test.ts",
+      "sha256": "40606c964fcabd366cdd180e20ba199e6fc61f575ced7b4c390f297fa2a8b34e"
+    },
+    {
+      "path": "src/campaign3/formationGovernance.ts",
+      "sha256": "4e4595adbfef4ce923f8cb06e3672ad9e2a2de82942e7349e3eaaeef5ce708cd"
+    },
+    {
+      "path": "src/campaign3/formationSourceDomain.ts",
+      "sha256": "0d1c696a57570140db8ef548e1e805ba549975392d6c9ccbc8ac88e5446008cb"
+    },
+    {
+      "path": "src/campaign3/formationProtocolTransition.ts",
+      "sha256": "8a04bfb9206110053e41af647020673118f7e31c321c4959b392e18e87f917b5"
+    },
+    {
+      "path": "src/campaign3/formationSettlement.ts",
+      "sha256": "d6309170ed4244b1a02c7116677d222aa2eaea885b05cc3af046c88799aab313"
+    },
+    {
+      "path": "src/campaign3/recencyRetention.ts",
+      "sha256": "b518edfe73152ee448ff6bb0f14c0f305d33a920306b8d46270c5334c1a1b92a"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    },
+    {
+      "path": "src/substrate/state.ts",
+      "sha256": "2df06663411d9f7d79527b8a2575f7ae14ef260eef979c6c444a16ab3fbb9761"
+    }
+  ],
+  "historical": [
+    {
+      "path": "docs/planning/ATTENTION_ACQUISITION_FORMATION_TESTS_REV1.json",
+      "sha256": "7f5192e6166ac21bcaf796279a150f611467e81370538bfee7c67e7d3ef40b8d",
+      "total": 6,
+      "passed": 5,
+      "failed": 1,
+      "matchedNames": [
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-A: one positive candidate commits exactly one acquisition and the same output identity",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-B: no candidate emits no acquisition output, memory or generated work",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-C: both same-instant acquisitions survive reconciliation with B0-only member reads",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-E: duplicate source in one batch rejects without committed candidates",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-F: replayed source at a later instant preserves the first committed acquisition"
+      ],
+      "unmatched": [
+        {
+          "name": "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-D: late failure rolls back candidate identities and retry matches a clean commit",
+          "status": "failed",
+          "failureMessages": [
+            "SchedulerContractError: failed runs cannot continue or retry\n    at fail (C:\\Users\\scoob\\Documents\\GitHub\\characterlab\\src\\substrate\\scheduler.ts:667:9)\n    at DeterministicScheduler.#settleNextInstant (C:\\Users\\scoob\\Documents\\GitHub\\characterlab\\src\\substrate\\scheduler.ts:333:36)\n    at DeterministicScheduler.settleNextInstant (C:\\Users\\scoob\\Documents\\GitHub\\characterlab\\src\\substrate\\scheduler.ts:324:17)\n    at C:\\Users\\scoob\\Documents\\GitHub\\characterlab\\src\\test\\attentionAcquisitionFormation.test.ts:66:37\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/@vitest/runner/dist/index.js:533:5\n    at runTest (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/@vitest/runner/dist/index.js:1056:11)\n    at runSuite (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/@vitest/runner/dist/index.js:1205:15)\n    at runSuite (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/@vitest/runner/dist/index.js:1205:15)\n    at runFiles (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/@vitest/runner/dist/index.js:1262:5)"
+          ],
+          "disposition": "Rejected historical expectation of in-place retry. Current AF-D explicitly requires terminal failed run;no rename used to erase the old failure."
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/ATTENTION_ACQUISITION_FORMATION_TESTS_REV2.json",
+      "sha256": "d65d263e1ef919276b62b7ae4b304cdf5e0d35abcc48089714437bf65e4e0837",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "matchedNames": [
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-A: one positive candidate commits exactly one acquisition and the same output identity",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-B: no candidate emits no acquisition output, memory or generated work",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-C: both same-instant acquisitions survive reconciliation with B0-only member reads",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-D: late failure rolls back candidate identities and the failed run remains terminal",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-E: duplicate source in one batch rejects without committed candidates",
+        "ordinary acquisition phase130/140 protocol: scheduler fixture scope AF-F: replayed source at a later instant preserves the first committed acquisition"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_GOVERNANCE_TESTS_REV1.json",
+      "sha256": "ff658de9e4a9089f9e4028620b8e46b39cedc1dd742f1b8687bf1d3606697cf2",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_GOVERNANCE_TESTS_REV2.json",
+      "sha256": "3375f647e1d03b71aad3e4fdcc252c8d42f383ee148a3243f3de72a74e2e6431",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_OWNER_JOIN_TESTS_REV1.json",
+      "sha256": "f7a37677900085d0993fe2042c7359d459ae4aee6f424a7208b0cd8fdce4fa02",
+      "total": 14,
+      "passed": 13,
+      "failed": 1,
+      "matchedNames": [
+        "protocol transition exact candidate validation PT-A: unchanged state and owner-reported complete loss are accepted",
+        "protocol transition exact candidate validation PT-B: replacing a nonremoved root with empty maps or dropping successful history rejects",
+        "protocol transition exact candidate validation PT-C: arbitrary changed immutable metadata cannot pass generic record validity",
+        "protocol transition exact candidate validation PT-D: governance cannot claim survival or loss contrary to supplied owner result",
+        "protocol transition exact candidate validation PT-E: enrollment without formation is required and cannot be silently skipped",
+        "protocol transition exact candidate validation PT-F: extra private state fields reject and prior state stays unchanged",
+        "protocol transition exact candidate validation PT-G: current enrollment cannot repair an invalid prior history/domain relationship",
+        "actual memory owner result binding component OJ-A: actual retention result determines partial and complete loss metadata",
+        "actual memory owner result binding component OJ-B: copied and cross-transaction handles reject even with matching data",
+        "actual memory owner result binding component OJ-C: successful consumption, close and repeated resolve cannot replay a result",
+        "actual memory owner result binding component OJ-D: empty admitted source enrolls without a successful formation",
+        "actual memory owner result binding component OJ-E: altered time/kind or missing fresh acquisition rejects before result issuance",
+        "actual memory owner result binding component OJ-F: input mutation after preparation cannot change the result",
+        "actual memory owner result binding component OJ-G: prior content cannot contradict governance survival or original metadata"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_OWNER_JOIN_TESTS_REV2.json",
+      "sha256": "a252db90753095ddc84c3981002545b99a69ef813878c636893785965f5b7156",
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "matchedNames": [
+        "protocol transition exact candidate validation PT-A: unchanged state and owner-reported complete loss are accepted",
+        "protocol transition exact candidate validation PT-B: replacing a nonremoved root with empty maps or dropping successful history rejects",
+        "protocol transition exact candidate validation PT-C: arbitrary changed immutable metadata cannot pass generic record validity",
+        "protocol transition exact candidate validation PT-D: governance cannot claim survival or loss contrary to supplied owner result",
+        "protocol transition exact candidate validation PT-E: enrollment without formation is required and cannot be silently skipped",
+        "protocol transition exact candidate validation PT-F: extra private state fields reject and prior state stays unchanged",
+        "protocol transition exact candidate validation PT-G: current enrollment cannot repair an invalid prior history/domain relationship",
+        "actual memory owner result binding component OJ-A: actual retention result determines partial and complete loss metadata",
+        "actual memory owner result binding component OJ-B: copied and cross-transaction handles reject even with matching data",
+        "actual memory owner result binding component OJ-C: successful consumption, close and repeated resolve cannot replay a result",
+        "actual memory owner result binding component OJ-D: empty admitted source enrolls without a successful formation",
+        "actual memory owner result binding component OJ-E: altered time/kind or missing fresh acquisition rejects before result issuance",
+        "actual memory owner result binding component OJ-F: input mutation after preparation cannot change the result",
+        "actual memory owner result binding component OJ-G: prior content cannot contradict governance survival or original metadata"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_AUTHORITY_TESTS_REV1.json",
+      "sha256": "643be26363aff04a0818e1fd5da992073cb1b363268a8d07e36899de013af906",
+      "total": 19,
+      "passed": 19,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only",
+        "formation protocol generic authority substrate PA-A: explicit protocol authority updates the root; cognitive producer cannot",
+        "formation protocol generic authority substrate PA-B: cognitive read domains exclude direct and indirect protocol reads",
+        "formation protocol generic authority substrate PA-C: absent, admitted/no-success and successful/lost remain distinct canonical states",
+        "formation protocol generic authority substrate PA-D: canonical authoritative state reconstructs protocol facts without trace or output input",
+        "formation protocol generic authority substrate PA-E: removal and stale preconditions cannot clear enrolled state",
+        "bounded qualified source-domain enrollment SD-A: never-successful sources consume the distinct domain bound",
+        "bounded qualified source-domain enrollment SD-B: revisiting an admitted source costs no new slot but successful replay still rejects",
+        "bounded qualified source-domain enrollment SD-C: cognitive loss and continuation do not free source capacity",
+        "bounded qualified source-domain enrollment SD-D: source qualification includes subject and kind must remain stable",
+        "bounded qualified source-domain enrollment SD-E: whole incoming domain is admitted atomically, canonical ordering is permutation invariant",
+        "bounded qualified source-domain enrollment SD-F: zero domain permits no new address; invalid bounds and duplicate batch declarations reject"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_AUTHORITY_TESTS_REV2.json",
+      "sha256": "8877406eb82e7e66a2c0cfd1d4f013682fdbd6154151a56c30e0afd93e406e8d",
+      "total": 19,
+      "passed": 19,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only",
+        "formation protocol generic authority substrate PA-A: explicit protocol authority updates the root; cognitive producer cannot",
+        "formation protocol generic authority substrate PA-B: cognitive read domains exclude direct and indirect protocol reads",
+        "formation protocol generic authority substrate PA-C: absent, admitted/no-success and successful/lost remain distinct canonical states",
+        "formation protocol generic authority substrate PA-D: canonical authoritative state reconstructs protocol facts without trace or output input",
+        "formation protocol generic authority substrate PA-E: removal and stale preconditions cannot clear enrolled state",
+        "bounded qualified source-domain enrollment SD-A: never-successful sources consume the distinct domain bound",
+        "bounded qualified source-domain enrollment SD-B: revisiting an admitted source costs no new slot but successful replay still rejects",
+        "bounded qualified source-domain enrollment SD-C: cognitive loss and continuation do not free source capacity",
+        "bounded qualified source-domain enrollment SD-D: source qualification includes subject and kind must remain stable",
+        "bounded qualified source-domain enrollment SD-E: whole incoming domain is admitted atomically, canonical ordering is permutation invariant",
+        "bounded qualified source-domain enrollment SD-F: zero domain permits no new address; invalid bounds and duplicate batch declarations reject"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_SCHEDULER_TESTS_REV1.json",
+      "sha256": "9dd9481fea977be87216fa60a7c2b8647315316e8377d31c1772ea331af00ad2",
+      "total": 19,
+      "passed": 19,
+      "failed": 0,
+      "matchedNames": [
+        "formation protocol actual scheduler composition PJ-A: successful empty branch enrolls without evidence, acquisition or terminal work",
+        "formation protocol actual scheduler composition PJ-B: immediate loss commits exact protocol success and no memory",
+        "formation protocol actual scheduler composition PJ-C: late failure rolls back empty enrollment and positive formation alike",
+        "formation protocol actual scheduler composition PJ-D: lifetime overflow rejects without committed output or cognitive mutation",
+        "formation protocol actual scheduler composition PJ-E: positive survival is owned by actual retention and recorded as live",
+        "protocol transition exact candidate validation PT-A: unchanged state and owner-reported complete loss are accepted",
+        "protocol transition exact candidate validation PT-B: replacing a nonremoved root with empty maps or dropping successful history rejects",
+        "protocol transition exact candidate validation PT-C: arbitrary changed immutable metadata cannot pass generic record validity",
+        "protocol transition exact candidate validation PT-D: governance cannot claim survival or loss contrary to supplied owner result",
+        "protocol transition exact candidate validation PT-E: enrollment without formation is required and cannot be silently skipped",
+        "protocol transition exact candidate validation PT-F: extra private state fields reject and prior state stays unchanged",
+        "protocol transition exact candidate validation PT-G: current enrollment cannot repair an invalid prior history/domain relationship",
+        "actual memory owner result binding component OJ-A: actual retention result determines partial and complete loss metadata",
+        "actual memory owner result binding component OJ-B: copied and cross-transaction handles reject even with matching data",
+        "actual memory owner result binding component OJ-C: successful consumption, close and repeated resolve cannot replay a result",
+        "actual memory owner result binding component OJ-D: empty admitted source enrolls without a successful formation",
+        "actual memory owner result binding component OJ-E: altered time/kind or missing fresh acquisition rejects before result issuance",
+        "actual memory owner result binding component OJ-F: input mutation after preparation cannot change the result",
+        "actual memory owner result binding component OJ-G: prior content cannot contradict governance survival or original metadata"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_TRANSITION_TESTS_REV1.json",
+      "sha256": "228b2b554fe6290512cf7f579230a48794f59e7691659617f848770f388176d9",
+      "total": 25,
+      "passed": 25,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only",
+        "formation protocol generic authority substrate PA-A: explicit protocol authority updates the root; cognitive producer cannot",
+        "formation protocol generic authority substrate PA-B: cognitive read domains exclude direct and indirect protocol reads",
+        "formation protocol generic authority substrate PA-C: absent, admitted/no-success and successful/lost remain distinct canonical states",
+        "formation protocol generic authority substrate PA-D: canonical authoritative state reconstructs protocol facts without trace or output input",
+        "formation protocol generic authority substrate PA-E: removal and stale preconditions cannot clear enrolled state",
+        "protocol transition exact candidate validation PT-A: unchanged state and owner-reported complete loss are accepted",
+        "protocol transition exact candidate validation PT-B: replacing a nonremoved root with empty maps or dropping successful history rejects",
+        "protocol transition exact candidate validation PT-C: arbitrary changed immutable metadata cannot pass generic record validity",
+        "protocol transition exact candidate validation PT-D: governance cannot claim survival or loss contrary to supplied owner result",
+        "protocol transition exact candidate validation PT-E: enrollment without formation is required and cannot be silently skipped",
+        "protocol transition exact candidate validation PT-F: extra private state fields reject and prior state stays unchanged",
+        "bounded qualified source-domain enrollment SD-A: never-successful sources consume the distinct domain bound",
+        "bounded qualified source-domain enrollment SD-B: revisiting an admitted source costs no new slot but successful replay still rejects",
+        "bounded qualified source-domain enrollment SD-C: cognitive loss and continuation do not free source capacity",
+        "bounded qualified source-domain enrollment SD-D: source qualification includes subject and kind must remain stable",
+        "bounded qualified source-domain enrollment SD-E: whole incoming domain is admitted atomically, canonical ordering is permutation invariant",
+        "bounded qualified source-domain enrollment SD-F: zero domain permits no new address; invalid bounds and duplicate batch declarations reject"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_PROTOCOL_TRANSITION_TESTS_REV2.json",
+      "sha256": "2ca580e557bfdc756d9837d987fe452bb990e3c00c7488d723c1d4e84acdf8ec",
+      "total": 26,
+      "passed": 26,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only",
+        "formation protocol generic authority substrate PA-A: explicit protocol authority updates the root; cognitive producer cannot",
+        "formation protocol generic authority substrate PA-B: cognitive read domains exclude direct and indirect protocol reads",
+        "formation protocol generic authority substrate PA-C: absent, admitted/no-success and successful/lost remain distinct canonical states",
+        "formation protocol generic authority substrate PA-D: canonical authoritative state reconstructs protocol facts without trace or output input",
+        "formation protocol generic authority substrate PA-E: removal and stale preconditions cannot clear enrolled state",
+        "protocol transition exact candidate validation PT-A: unchanged state and owner-reported complete loss are accepted",
+        "protocol transition exact candidate validation PT-B: replacing a nonremoved root with empty maps or dropping successful history rejects",
+        "protocol transition exact candidate validation PT-C: arbitrary changed immutable metadata cannot pass generic record validity",
+        "protocol transition exact candidate validation PT-D: governance cannot claim survival or loss contrary to supplied owner result",
+        "protocol transition exact candidate validation PT-E: enrollment without formation is required and cannot be silently skipped",
+        "protocol transition exact candidate validation PT-F: extra private state fields reject and prior state stays unchanged",
+        "protocol transition exact candidate validation PT-G: current enrollment cannot repair an invalid prior history/domain relationship",
+        "bounded qualified source-domain enrollment SD-A: never-successful sources consume the distinct domain bound",
+        "bounded qualified source-domain enrollment SD-B: revisiting an admitted source costs no new slot but successful replay still rejects",
+        "bounded qualified source-domain enrollment SD-C: cognitive loss and continuation do not free source capacity",
+        "bounded qualified source-domain enrollment SD-D: source qualification includes subject and kind must remain stable",
+        "bounded qualified source-domain enrollment SD-E: whole incoming domain is admitted atomically, canonical ordering is permutation invariant",
+        "bounded qualified source-domain enrollment SD-F: zero domain permits no new address; invalid bounds and duplicate batch declarations reject"
+      ],
+      "unmatched": []
+    },
+    {
+      "path": "docs/planning/FORMATION_SOURCE_DOMAIN_TESTS_REV1.json",
+      "sha256": "853b6f72a1e34461c0d1458735ba36217a8938caa2aa6e6dcb2e656d628573c4",
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "matchedNames": [
+        "bounded formation governance FG-A: immediate loss preserves exact source history and no content",
+        "bounded formation governance FG-B: absence is no successful formation, not ordinal finalization or failed-attempt history",
+        "bounded formation governance FG-C: fixed source universe excludes novel sources even when no successes exist",
+        "bounded formation governance FG-D: continuation and later loss retain metadata and prevent resurrection",
+        "bounded formation governance FG-E: subject/kind mismatch, reused identities and unknown survivors reject",
+        "bounded formation governance FG-F: extra payload fields are rejected and outputs detached immutable",
+        "bounded formation governance FG-G: failed plan does not modify prior; canonical result ignores supplied row order",
+        "bounded formation governance FG-H: domain itself is bounded, unique and metadata-only",
+        "bounded qualified source-domain enrollment SD-A: never-successful sources consume the distinct domain bound",
+        "bounded qualified source-domain enrollment SD-B: revisiting an admitted source costs no new slot but successful replay still rejects",
+        "bounded qualified source-domain enrollment SD-C: cognitive loss and continuation do not free source capacity",
+        "bounded qualified source-domain enrollment SD-D: source qualification includes subject and kind must remain stable",
+        "bounded qualified source-domain enrollment SD-E: whole incoming domain is admitted atomically, canonical ordering is permutation invariant",
+        "bounded qualified source-domain enrollment SD-F: zero domain permits no new address; invalid bounds and duplicate batch declarations reject"
+      ],
+      "unmatched": []
+    }
+  ],
+  "limits": [
+    "Current44 tests include11 actual scheduler fixtures,not a public registered producer/factory or Save132 restart matrix.",
+    "Historical test reports record path/name/result,not an exact whole implementation checkout. Current execution is separately hashed and is not attributed to an unspecified old source version.",
+    "Failed AF-D retry premise and OJ-F positional lookup premise remain rejected historical evidence;type-only changes in other revisions are documented historical reports,not fresh TypeScript runs."
+  ]
+}

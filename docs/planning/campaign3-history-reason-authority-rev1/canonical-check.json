@@ -1,0 +1,150 @@
+{
+  "status": "PASS; HQ011 OPEN",
+  "scope": "Original closure and all3 model-image cohorts verified;115ordered stored result joins,350prefix count,5hidden-output/state pairs,failed tests and exact contract corrections checked. No fresh simulation,rollback,prefix replay or test execution. Historical raw-source equality and full-save bytes remain scoped to their original evidence.",
+  "runs": 115,
+  "prefixes": 350,
+  "hiddenPairs": 5,
+  "failures": [
+    {
+      "source": {
+        "path": "docs/planning/REASON_PUBLIC_TESTS_REV1.json",
+        "sha256": "9b778f589151c04ec2e9cd6033345004399bddf25d1432ee14246e8e2c6bfb6f"
+      },
+      "passed": 8,
+      "failed": 11,
+      "failures": [
+        {
+          "name": "merges exact semantic keys and keeps separate motives, referents and options",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "distinguishes pooled, pairwise and per-fact alternatives on the required corpus",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "acquires standing from actual qualification and distinguishes zero-base from weak-motive rescue",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "keeps situation/context roles separate and permits rescue without creating base motives",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "resolves opposing base signs before threshold and applies Avoid to the whole expression",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "preserves exact admitted observation support and rejects rather than invents unavailable sources",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "canonical source permutation preserves the compiler and duplicate description IDs reject",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "rollback at source preserves learned state, outputs and addressed RNG",
+          "firstLine": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "name": "rollback at freeze preserves learned state, outputs and addressed RNG",
+          "firstLine": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "name": "rejects authored identity, invalid context, foreign schema and unrelated writer",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        },
+        {
+          "name": "restores continuing addressed history and rejects edited RNG ledger or originals",
+          "firstLine": "SchedulerContractError: event phase is not registered"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REASON_PUBLIC_TESTS_REV2.json",
+        "sha256": "75af526906bb909c3d9d1d8205318486a195721d502fe642d2229ef3d8c1f0c4"
+      },
+      "passed": 16,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "merges exact semantic keys and keeps separate motives, referents and options",
+          "firstLine": "AssertionError: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1"
+        },
+        {
+          "name": "distinguishes pooled, pairwise and per-fact alternatives on the required corpus",
+          "firstLine": "AssertionError: expected [ { kind: 'record', …(2) } ] to have a length of 2 but got 1"
+        },
+        {
+          "name": "restores continuing addressed history and rejects edited RNG ledger or originals",
+          "firstLine": "AssertionError: expected 0 to be greater than 0"
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REASON_PRESERVATION_TESTS_REV1.json",
+        "sha256": "9b9681ad45c34076f7bd0d76d7c6d8536f4ddd843191fd93df6a11f4cf7a327b"
+      },
+      "passed": 66,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "restores continuing addressed history and rejects edited RNG ledger or originals",
+          "firstLine": "Error: Test timed out in 5000ms."
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "docs/planning/REASON_REPLAY_RETRY_REV1.json",
+        "sha256": "efd2ad0b0656b8804fafeda29306ad4048ac516d0f7731a29720b3ed668c2ef3"
+      },
+      "passed": 1,
+      "failed": 0,
+      "failures": []
+    }
+  ],
+  "composite": {
+    "path": "docs/planning/REASON_PRESERVATION_TESTS_REV2.json",
+    "sha256": "168b1c0d760f1177282399ee24a6c37af61223ee2128a9398ed13d0d827f2b7f"
+  },
+  "sources": [
+    {
+      "path": "scripts/check-reason-closure.mjs",
+      "sha256": "1258bd83e72d2822f502e17b8221051282ddd439162c952604ebf288b872d63a"
+    },
+    {
+      "path": "scripts/qualify-reason-public.mjs",
+      "sha256": "d372d459bfc47877b9c7ff5d12ce89e923d7d9b71615e71969f8c0e75a4a9359"
+    },
+    {
+      "path": "docs/planning/REASON_PUBLIC_EXPERIMENT_PLAN_REV3.json",
+      "sha256": "9c174cf009a9490612f849834da0dd5900096ae5f4d1515e4fd93ec99f5a7aa1"
+    },
+    {
+      "path": "docs/planning/REASON_PUBLIC_EXPERIMENT_REV3.json",
+      "sha256": "86cd02b2b85be46b1b632dc509f1bbfc91cb021368ea086ba76192b5f879cb3a"
+    },
+    {
+      "path": "docs/planning/REASON_VALIDATION_CLOSURE_REV1.json",
+      "sha256": "bf54378a115857a0c48b098f4ce3a2424694a0ff9472c1221f26f3434c3a1c6b"
+    },
+    {
+      "path": "docs/formal/REASON_PUBLIC_CONTRACT_REV1.md",
+      "sha256": "ce5f6e2e958aa5600ff50a3bbf6f9535865b443a362df5a8a4d44d1b93595b6c"
+    },
+    {
+      "path": "docs/formal/REASON_PUBLIC_CONTRACT_REV2.md",
+      "sha256": "8039bd46205a0e626c1e769c6d04aa5cf813bb67ce2c7d03089567962e6f4b98"
+    },
+    {
+      "path": "docs/formal/REASON_PUBLIC_CONTRACT.md",
+      "sha256": "ebe2cd7998e7f1f4743427c54946b4a413528af2143ee692b8f5256f0f7cd726"
+    }
+  ],
+  "checker": {
+    "path": "scripts/check-history-reason-authority.mjs",
+    "sha256": "72559f035c6f20531440b0d16937ae9599646d20ca31f4e94023ca5e4319e490"
+  }
+}

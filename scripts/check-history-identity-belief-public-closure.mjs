@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const P='docs/planning/',O=P+'campaign3-history-identity-belief-public-rev1/',read=f=>JSON.parse(fs.readFileSync(f)),sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex'),ref=path=>({path,sha256:sha(path)});
+fs.mkdirSync(O,{recursive:true});const save=(name,v)=>{const p=O+name;if(fs.existsSync(p))assert.deepEqual(read(p),v);else fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});};
+const plan=read(P+'IDENTITY_BELIEF_PUBLIC_PLAN_REV2.json'),manifest=read(P+'public-wrapper-quiescence-rev1/PRESERVATION.json'),drift=plan.artifacts.filter(a=>sha(a.path)!==a.sha256),mapping={};
+assert.deepEqual(drift.map(a=>a.path),['src/campaign3/identityBiologyRuntime.ts','src/campaign3/identityTaskRuntime.ts']);
+for(const a of drift){const found=manifest.artifacts.find(x=>x.original===a.path&&x.sha256===a.sha256);assert(found,a.path);assert.equal(sha(found.archive),a.sha256);mapping[a.path]=found.archive;}
+save('current-source-finding.json',{status:'ORIGINAL CURRENT-SOURCE CLOSURE REJECTED',finding:'Original closure stopped at identityBiologyRuntime hash. Full plan audit finds two repaired inherited runtime sources. Exact historical bytes and preservation manifest authenticate both. No original artifact changed; scoped closure below is historical evidence authentication, not fresh current-runtime compatibility.',drift:drift.map(a=>({source:a.path,expectedHistorical:a.sha256,current:ref(a.path),archive:ref(mapping[a.path])})),preservation:ref(P+'public-wrapper-quiescence-rev1/PRESERVATION.json')});
+const needle="sha=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex')";
+for(const file of ['scripts/check-identity-belief-public.mjs','scripts/check-identity-belief-public-closure.mjs']){
+ let s=fs.readFileSync(file,'utf8');assert.equal(s.split(needle).length,2);s=s.replace(needle,"sha=f=>createHash('sha256').update(fs.readFileSync(("+JSON.stringify(mapping)+")[f]??f)).digest('hex')");
+ if(file.endsWith('-closure.mjs')){const call="execFileSync(process.execPath,['scripts/check-identity-belief-public.mjs'],{stdio:'inherit'});";assert.equal(s.split(call).length,2);s=s.replace(call,'/* Original checker already executed above under identical historical source resolution. */');}
+ await import('data:text/javascript;base64,'+Buffer.from(s).toString('base64'));
+}
+save('closure-check.json',{status:'PASS HISTORICAL SOURCE SCOPE; HQ011 OPEN',scope:'Original full identity-belief-public result/closure assertions with two inherited source hashes resolved to authenticated pre-repair archives; no fresh native replay/tests/build or current-runtime equivalence claim.',models:5,runs:37,nativePrefixes:222,historicalExecutions:74,historicalPrefixChecks:444,sourceResolution:drift.map(a=>({original:a.path,...ref(mapping[a.path])})),checker:ref('scripts/check-history-identity-belief-public-closure.mjs'),originalClosure:ref(P+'IDENTITY_BELIEF_PUBLIC_CLOSURE_REV1.json')});
+console.log('PASS: historical native identity-belief source scope authenticated; current-runtime replay not claimed.');

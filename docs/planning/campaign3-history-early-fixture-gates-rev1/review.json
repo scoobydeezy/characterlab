@@ -1,0 +1,831 @@
+{
+  "status": "EARLY FIXTURE GATE AUTHORITY RECONCILED",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/review-history-early-fixture-gates.py",
+    "sha256": "7e16f14321f69f30bccf4e5db95f51e79cec0353630d01b3a648be96f8c5cd43"
+  },
+  "sourceIndex": {
+    "path": "docs/planning/campaign3-history-source-roles-rev302/index.json",
+    "sha256": "26088a6489dc3e9a45133440a558280ded6f269b3ab7b2e1719287e566097004"
+  },
+  "sourceRoles": [
+    {
+      "path": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "role": "ACCEPTED BOUNDED GATE OR FIXTURE AUTHORITY; DATED EVIDENCE CLAIMS",
+      "judgment": "Accepted Campaign0 vector requirements and dated execution claims:39 distinct vector rows preserve complete inspectable inputs/expected structures, independent encoding/hash/arithmetic oracles, named negative failures, addressed randomness and research/execution identity separation. Test-only candidate injection is not runtime authority. Actual versus permitted reads, unique ownership versus one-authority-per-leaf, exact patches, terminal whole-instant rollback, quiescence and full continuation remain distinct. Earlier ORD003/004 pending prose is historical and is superseded by the same document final gate and OPEN_DECISIONS closure, not an active owner ruling. Candidate version suffixes remain immutable. Dated PASS assertions do not independently establish present whole-runtime or later public-wrapper correctness; source/test review and final adequacy remain separate.",
+      "acceptanceChain": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66"
+        },
+        {
+          "path": "docs/planning/campaign3-history-foundation-decisions-rev1/review.json",
+          "sha256": "bfe419a980a14a8e386725de68a663f32dd2e70b1a7227ee5aadc4cc9b838a88"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/review.json",
+          "sha256": "bafc6c67b8d08cf2dcd78e1c16e6cd4f4180f99df832043a556c332f5ab1bddc"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/stored-check.json",
+          "sha256": "c052b5d2dbace0689e4c7c632b73f8ba610dd1b92b496f2a022b23b115d32f04"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json",
+          "sha256": "dd1fa6aa51441b0f0113b0d55f6b9ede89c65862f3b2fe5807b4c8ebc72f90f0"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_FIXTURE_AMENDMENT_AUDIT.json",
+          "sha256": "14a856766be9b3bdc2d0a909d20e8b02399638ba60f058650e98f650a792e8ff"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md",
+          "sha256": "98bc011ef8cd1c9bedeeeceb4f6b4c14146045f9dbdb5dd4744ca55df5754e40"
+        }
+      ]
+    },
+    {
+      "path": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "role": "ACCEPTED BOUNDED GATE OR FIXTURE AUTHORITY; DATED EVIDENCE CLAIMS",
+      "judgment": "Accepted bounded observation manifest:8 distinct CV-OBS/EPI rows. Exact19/20 baseline plus1/10 versus4/5 potential effect yields common1/20 applied effect and equal admitted evidence despite unequal hidden overflow. Missing observation remains distinct from observed zero and lower/upper/point bounds. Visible-slot closure, canonical slot priority, invalid-input rollback, thin experience and same-instant consumer equality constrain five forbidden comparators. MATH006 closure is bounded to registered exact known-bound scalar channels; token projection does not establish general event binding, referent recognition, noisy sensors, uncertain bounds or learning. SEM001 vector family and later admission remain separate. Historical test PASS labels are not fresh test executions.",
+      "acceptanceChain": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66"
+        },
+        {
+          "path": "docs/planning/campaign3-history-foundation-decisions-rev1/review.json",
+          "sha256": "bfe419a980a14a8e386725de68a663f32dd2e70b1a7227ee5aadc4cc9b838a88"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/review.json",
+          "sha256": "bafc6c67b8d08cf2dcd78e1c16e6cd4f4180f99df832043a556c332f5ab1bddc"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/stored-check.json",
+          "sha256": "c052b5d2dbace0689e4c7c632b73f8ba610dd1b92b496f2a022b23b115d32f04"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json",
+          "sha256": "dd1fa6aa51441b0f0113b0d55f6b9ede89c65862f3b2fe5807b4c8ebc72f90f0"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_FIXTURE_AMENDMENT_AUDIT.json",
+          "sha256": "14a856766be9b3bdc2d0a909d20e8b02399638ba60f058650e98f650a792e8ff"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md",
+          "sha256": "98bc011ef8cd1c9bedeeeceb4f6b4c14146045f9dbdb5dd4744ca55df5754e40"
+        }
+      ]
+    },
+    {
+      "path": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "role": "ACCEPTED BOUNDED GATE OR FIXTURE AUTHORITY; DATED EVIDENCE CLAIMS",
+      "judgment": "Accepted correct-forward fixture amendment explicitly resolves the one-rule prose versus four-rule frozen model conflict without changing N-rule grammar, runtime, allocations or frozen model. Both timelines use the same nonempty rule set; each rule owns one exact path; independently specified changed subsets are empty at count0 and allfour paths at count1. Duplicate targets reject even for no-op results. Control3 leaf-family complement is non-discriminating here; exact-path3a, wrong-key7g/7g-prime, ownership and collision controls carry isolation. D-only diagnostic read mediates5 versus51/10 through337/342/retention/352; state dependency is not a fabricated scheduler-parent edge. Three historical corpus commitments remain distinct; accepted0.27/1.11 is dated, not current0.29. Prior parent/manifest read-only review supplies bounded corroboration; no new behavioral run, general ADAPT/factory/VAL, PHEN-MEM or campaign completion claim.",
+      "acceptanceChain": [
+        {
+          "path": "docs/formal/OPEN_DECISIONS.md",
+          "sha256": "2a9aa6bb116df1016327de6f9a399ffbe8245fa2574641d4bfcd04ba199f1c66"
+        },
+        {
+          "path": "docs/planning/campaign3-history-foundation-decisions-rev1/review.json",
+          "sha256": "bfe419a980a14a8e386725de68a663f32dd2e70b1a7227ee5aadc4cc9b838a88"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/review.json",
+          "sha256": "bafc6c67b8d08cf2dcd78e1c16e6cd4f4180f99df832043a556c332f5ab1bddc"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adapt-parent-pair-rev1/stored-check.json",
+          "sha256": "c052b5d2dbace0689e4c7c632b73f8ba610dd1b92b496f2a022b23b115d32f04"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json",
+          "sha256": "dd1fa6aa51441b0f0113b0d55f6b9ede89c65862f3b2fe5807b4c8ebc72f90f0"
+        },
+        {
+          "path": "docs/planning/PHEN_ADAPT_FIXTURE_AMENDMENT_AUDIT.json",
+          "sha256": "14a856766be9b3bdc2d0a909d20e8b02399638ba60f058650e98f650a792e8ff"
+        },
+        {
+          "path": "docs/planning/CAMPAIGN3_FINAL_HISTORY_GATE.md",
+          "sha256": "98bc011ef8cd1c9bedeeeceb4f6b4c14146045f9dbdb5dd4744ca55df5754e40"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "705e92024fa6bd58f01bc57873e53cd6ceaba6d4c4a81bdf5b703c7a1951d7df",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 1,
+        "endLine": 1
+      },
+      "text": "# Campaign 1 Observation/Evidence Conformance Vectors\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "593133248407936a925065b7d8bc63fdce5f4fe56e65be5bcd2ad372b07154f0",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 3,
+        "endLine": 3
+      },
+      "text": "**Status:** accepted observation-seam manifest, version `campaign1-observation-vectors/0.1-candidate` (accepted 2026-09-01)\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d33457c8515a457d9360d010bc92dc729f48a472861d728786fabdec0d7267bc",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "text": "These vectors govern the accepted bounded-measurement scope of `observation/0.1-candidate` and `MATH-006`. Campaign 0 vectors remain mandatory substrate controls. They do not prove general event bindings, perceptual-referent identity, or recognition; those are governed by `SEM-001` and `CAMPAIGN1_SEMANTIC_BINDING_VECTORS.md`.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d9daaaa7b100be578deec2c0d4d42b5cb1b3dacd07ab7c68ee03fac1584b2060",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 7,
+        "endLine": 16
+      },
+      "text": "| Vector | Required proof | Current evidence |\n|---|---|---|\n| `CV-OBS-001` | Exact point, lower-bound, upper-bound, and polarity-specific zero-bound classification uses permitted state change and known bounds, never hidden Overflow. | PASS in `src/test/observation.test.ts` |\n| `CV-OBS-002` | Exact-at-boundary and different-overflow truths with the same permitted projection produce byte-identical evidence. | PASS |\n| `CV-OBS-003` | Missing observation is structurally distinct from observed point/bound evidence at zero. | PASS |\n| `CV-OBS-004` | Output record closure excludes truth record types and concepts in invisible provenance slots. | PASS through compiler and capability-limited scheduler seam |\n| `CV-OBS-005` | Slot priority, duplicate resolution, and concept ordering are permanent and canonical. | PASS |\n| `CV-OBS-006` | Invalid decomposition, precision, polarity, mode, visibility, duplicates, and unnamed omniscient controls fail before evidence emission. | PASS at compiler boundary and whole-instant rollback |\n| `CV-EPI-001` | The exact `PHEN-EPI-001` pair (`19/20`, potential effects `1/10` and `4/5`, common Applied `1/20`) has unequal truth and byte-identical permitted evidence. | PASS through compiler, accepted scheduler/trace transaction, thin `SemanticExperience`, and same-instant immediate consumer |\n| `CV-EPI-002` | `OverflowLeak`, `TruthSaturationClassifier`, `FullProvenanceCopy`, `MissingAsZero`, and `AlwaysPoint` each fail their declared structural or paired-timeline control. | PASS with exact first-divergence field/consequence and record-closure rejection |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7902cf8c8c59aa381dda7aa852ee673603e752383e23103367b0a059413f8ebe",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 18,
+        "endLine": 18
+      },
+      "text": "## Acceptance gate\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "334d890127a796fc416fb28d7efb23848a78ae7a171b8728320dc9fae7612b5e",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 20,
+        "endLine": 20
+      },
+      "text": "`MATH-006` closes only when every row is fully `PASS`, the compiler runs through the accepted scheduler/read-domain/trace transaction, `SemanticExperience` contains only permitted records, the complete paired timeline remains equal through immediate downstream consumers, and first divergence identifies each prohibited control's first illegal field or consequence.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "da9ca2b3e4582187c7fcd995e5efcd741f1df7b47fca3f7ba50eddeb54f3213a",
+      "source": "docs/formal/CAMPAIGN1_CONFORMANCE_VECTORS.md",
+      "sourceSha256": "026fdb02943a1e18692643c51fb464fc67db2f1f3779869220dbba0826bd2b1c",
+      "location": {
+        "startLine": 22,
+        "endLine": 22
+      },
+      "text": "Acceptance result (2026-09-01): all rows pass within the declared bounded-effect domain. The exact rational compiler and permanent numeric registries are implemented in `src/observation/observation.ts`. Unit controls cover exact interval classification, hidden-Overflow invariance, missingness, restricted visible-slot projection, canonical priority/order, record closure, invalid inputs, round-trip restoration, and all five prohibited models with named first divergence. `observationIntegration.test.ts` runs the exact `PHEN-EPI-001` pair through capability-limited channel reads, canonical event allocation, omniscient trace, thin measurement experience, a same-instant read-only consumer, byte-identical character outputs/state after the truth-side divergence, and whole-instant invalid-truth rollback. `MATH-006` is closed. Token projection is a restricted identity-establishing-channel control; `SEM-001` blocks general semantic experience and later encoding/learning.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bd878db5973615ccaeefa394af771a7c660eb813f5517d19dd7947b47aa8fa9a",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 1,
+        "endLine": 1
+      },
+      "text": "# Campaign 0 Conformance Vectors\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "204da4b6b0b5394f4fdfd59fe41f18a8bccdfdfb6ace22c9f2ca5c59b920c6ec",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 3,
+        "endLine": 3
+      },
+      "text": "**Status:** passing accepted Campaign 0 manifest, version identifier `campaign0-vectors/0.1-candidate` (accepted 2026-09-01)\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b3d784ffa5a4cfd151e61c5e92baf86942a55abc5225ee4e53efc26ecd5af10f",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 5,
+        "endLine": 5
+      },
+      "text": "**Purpose:** convert the accepted Campaign 0 design into executable proof. No `P0` decision closes from prose agreement or from code merely selecting a default.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cecefac43e3fcfdb7545b2eb6467683ed14dbbe9c0ae878a32218459de3f5bca",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 7,
+        "endLine": 7
+      },
+      "text": "## Vector artifact contract\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d376c62deb36e68c0716446ac656a700dd9158e9043471b90c7f5407845a28cd",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 9,
+        "endLine": 9
+      },
+      "text": "Every executable vector is a canonical record containing:\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a8c5291f06b4e2696fb4798c808e6482c876961121226c8dab90769510b90ea1",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 11,
+        "endLine": 23
+      },
+      "text": "```text\nConformanceVector = (\n  VectorId,\n  VectorSchemaVersion,\n  GoverningContractVersions[],\n  ExactInputs,\n  ExpectedOutputsOrFailure,\n  RequiredStructuralComparisons[],\n  ForbiddenDifferences[],\n  OracleMethod,\n  ReopenConditions\n)\n```\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3008c5260e49aa9a0498506e4188595ff321dc06a7c258a359b938869b5990f3",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 25,
+        "endLine": 25
+      },
+      "text": "Fixtures must store complete inputs and expected structures. Digests may accompany them but never replace expected canonical bytes, state, events, trace, or failure. A vector is `PASS` only when its checked-in expected result is independently inspectable, the reference implementation matches it, and every required negative control fails for the stated reason.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6efbd1d17639508669f16386fcdd3d298439af7174531ffb85349e86f7dcf26f",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 27,
+        "endLine": 27
+      },
+      "text": "Candidate-generator injection used to force rare rejection/fallback paths is test-only oracle plumbing. It must exercise the production range mapper but can never become an authoritative runtime input or alternate random source.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "63d967848d7f25000bf57d7ec1a5a42af35f9361252356014f88cb915170d336",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 29,
+        "endLine": 29
+      },
+      "text": "## 0A — Canonical encoding and identity\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3e734dceb74f72176539e3929d20d987638dde2d751bfae7be84715e48c104bf",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 31,
+        "endLine": 31
+      },
+      "text": "Implementation evidence (2026-09-01): `CV-ENC-001` through `CV-ENC-003` and `CV-ID-001` through `CV-ID-005` execute in `src/test/`. Exact model, governed-content, registry, and populated phenomenon-corpus manifest bytes and SHA-256 digests are checked in. Every governed authoritative field changes the content commitment; presentation does not. Deterministic semantic-kind validators reject out-of-domain content, and duplicate/unknown references, cycles, and malformed registries fail. The 0B fixtures prove research-identity/random-stream separation and carry a typed `ComparisonDrawMap` through ordered input, `RunIdentity`, and `ComparisonCase`. `CONTENT-001` is resolved.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e4d3cfc0920182bf926d3377961df667251834e3a17fdaee5a3e4e2aae68c28e",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 33,
+        "endLine": 42
+      },
+      "text": "| Vector | Required proof |\n|---|---|\n| `CV-ENC-001` | Golden `cenc/1` bytes for booleans, unsigned/signed boundary integers, UTF-8 NFC text, bytes, reduced rationals, lists, typed IDs, and optional record fields. |\n| `CV-ENC-002` | Maps and sets with different construction orders encode identically in canonical key/item order. |\n| `CV-ENC-003` | Reject non-minimal LEB128, non-NFC text, unreduced/negative-denominator rationals, duplicate keys/items/fields, invalid presence bytes, unknown fields, and noncanonical order. |\n| `CV-ID-001` | Identical structural model manifests produce identical bytes and `ModelDigest`. |\n| `CV-ID-002` | Changing exactly one rules, content-schema, content-manifest, parameter-schema, parameter-manifest, numeric-profile, random-algorithm, registry-schema, or registry-manifest field changes `ModelIdentity` and `ModelDigest`. |\n| `CV-ID-003` | Presentation-only text excluded by the content schema changes neither content manifest nor model identity. Moving an authoritative threshold into “presentation” is rejected by content validation. |\n| `CV-ID-004` | Changing corpus, comparison specification, harness, or comparison-case membership changes research identity only; model/run execution and natural random candidates remain identical. |\n| `CV-ID-005` | Changing initial state, ordered input, explicit coupling map, or seed changes `RunIdentity`; complete structures remain available for first-difference reporting. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "af82488878ec61a794d2d355dfd10d3ef28b05976450fa3b1dba452872276161",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 44,
+        "endLine": 44
+      },
+      "text": "## 0B — Addressed randomness and coupling\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3ece98375ac5abddd64d2f5bbc590acf0574114fe4b2c440dd3a7ce629bea94b",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 46,
+        "endLine": 46
+      },
+      "text": "Acceptance evidence (2026-09-01): `CV-RNG-001` through `CV-RNG-008` execute against `src/substrate/random.ts`. Checked-in candidate-input bytes and SHA-256 output were independently reproduced with the platform cryptographic oracle; reduced-width enumeration and exact integer inequalities verify threshold uniformity and the published rejection/fallback bounds. Preserved historical controls and full `PHEN-DET-001` also pass. `RND-001` and `MATH-005` are closed.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "64f230f3da44452d92a80dbb7201aacc9dbe15d5d91229e9348e059d198724ce",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 48,
+        "endLine": 57
+      },
+      "text": "| Vector | Required proof |\n|---|---|\n| `CV-RNG-001` | Golden SHA-256 and first-128-bit vectors for fixed 256-bit seeds, natural addresses, purposes, subjects, draw indexes, and internal candidate indexes. |\n| `CV-RNG-002` | Range boundary vectors for `m = 1`, `2`, `2^32-1`, and `2^32`; reject `m = 0` and `m > 2^32`. |\n| `CV-RNG-003` | Test-only injected candidates force acceptance at indexes 0 and 1 and fallback at index 2; expected candidate, rejection, fallback, and result records are exact. |\n| `CV-RNG-004` | Exhaustive reduced-width analogues and symbolic arithmetic verify threshold uniformity plus the published rejection, fallback, and total-variation bounds. |\n| `CV-RNG-005` | Positive weighted choices normalize to the declared integer total and select exact cumulative intervals; zero/negative weights, duplicate IDs, and overflow fail. |\n| `CV-RNG-006` | Inserting any number of unrelated draws leaves every pre-existing natural address, candidate, and result unchanged. A mutable sequential RNG must fail this control. |\n| `CV-RNG-007` | Equal seed/address produces natural coupling across different `ModelIdentity` values; changing `RandomAlgorithmVersion`, seed, or semantic address changes the candidate stream at or downstream of that address only. |\n| `CV-RNG-008` | Explicit `ComparisonDrawMap` couples different local addresses through one comparison key, changes ordered input and `RunIdentity`, appears in trace, and replays exactly. Duplicate/non-injective, late, or purpose-incompatible mappings fail. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a1e83975ad0b827b41aa8e4116834ece85c5fbe305583ef9f92aabf699176d2",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 59,
+        "endLine": 59
+      },
+      "text": "## 0C — Time and analytical advancement\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "75715336fe1476d8c38101bec2588e9a803f317fedafbbcf4f63b125461e732a",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 61,
+        "endLine": 61
+      },
+      "text": "Acceptance evidence (2026-09-01): `CV-TIME-001` through `CV-TIME-006` execute against `src/substrate/time.ts` and `exactMath.ts`. Fixtures cover positive and negative partition invariance, a deliberately failing truncation/re-anchor control, non-mutating reads, explicit semantic parameter changes, same-time T-forward behavior, checked time/value failures, and rejection of ambient-float or hidden-microtick nonlinear declarations. Preserved exact-rational controls and full continuation pass. `TIME-001` and `MATH-001` are closed.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3878384a45c38c2e74cb1236def593c6df34d59b8671e44a7b48ed5789cb3697",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 63,
+        "endLine": 70
+      },
+      "text": "| Vector | Required proof |\n|---|---|\n| `CV-TIME-001` | For positive and negative linear rates, direct `A→C` equals incidental-query `A→B→C`, including exact retained remainder. A truncating/re-anchoring control fails. |\n| `CV-TIME-002` | Reading an analytical value at `B` changes no authoritative anchor, remainder, trace mutation, or later value. |\n| `CV-TIME-003` | A semantic parameter/state change at `T` materializes the old anchor through `T`, applies the mutation, and establishes the exact new anchor at `T`. |\n| `CV-TIME-004` | Multiple same-time events observe earlier canonical phase/sequence results with zero elapsed duration; none affects the interval ending at that timestamp retroactively. |\n| `CV-TIME-005` | Negative instants, negative advancement duration, `Int64` instant overflow/underflow, and bounded-representation overflow produce typed failures with no wrap or saturation. |\n| `CV-TIME-006` | Every nonlinear candidate supplies an exact/versioned algorithm, quantization and error fixture; a candidate using ambient platform floating point or hidden microticks is rejected. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "53827e747dd55cb80a1053621b7851c599d7c77c4748049ff9aec91c1b22a98a",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 72,
+        "endLine": 72
+      },
+      "text": "## 0D — Ordering, transaction, quiescence, and persistence\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3ba6c78e614300cf54c22325be5e2ef8194a166be6c6a7fc6eac7b98f69f0c1b",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 74,
+        "endLine": 74
+      },
+      "text": "Implementation progress (2026-09-01): `CV-ORD-001` through `CV-ORD-004` and `CV-SAVE-001` through `CV-SAVE-002` execute against `src/substrate/scheduler.ts` and `src/substrate/persistence.ts`. Both the generic harness and the concrete 0E seam harness pass every before/after state, event, trace, invariant, and commit failure-injection boundary required by `CV-TXN-001`. Canonical continuation preserves structural model/run identities, clock, analytical anchor/remainder, random-relevant IDs, explicit `ComparisonDrawMap` input, runtime/event/sequence allocators, dependencies, pending queue, trace, and outputs. The integrated `PHEN-DET-001` fixture continues real canonical state/patch/trace work across save/load with byte-identical results; the historical deterministic-replay control also passes. `ORD-003` and `ORD-004` have their required proof but remain open until the Campaign 0 contracts are accepted together at the final gate.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "68c4675228bc4cc44687331783495a4d54db92e3e6577f6a55234fd2baa68c18",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 76,
+        "endLine": 84
+      },
+      "text": "| Vector | Required proof |\n|---|---|\n| `CV-ORD-001` | Permuting event construction and collection insertion produces the same execution order under `(DueAt, Phase, EventSequence)`. |\n| `CV-ORD-002` | Same-time same-phase emissions receive later sequences; later-phase emission succeeds; earlier-phase emission fails transactionally. |\n| `CV-ORD-003` | Scheduled events and reactions settle to quiescence before external read/save; a newly emitted same-time chain executes in exact order. |\n| `CV-ORD-004` | Exceeding the versioned cascade limit fails loudly, commits no work from the instant, and never defers a remainder. |\n| `CV-TXN-001` | Inject failure before and after every staged mutation/event/trace validation boundary; each case restores pre-instant state, scheduler, and allocators structurally exactly, emits only a diagnostic, marks the run failed, and never retries. |\n| `CV-SAVE-001` | Saving/loading at a quiescent boundary preserves full state, anchors, IDs, allocators, pending queue, sequences, coupling input, and model identity structurally. |\n| `CV-SAVE-002` | Save immediately before event `E`, load, and continue is structurally state/output/trace-equivalent to uninterrupted continuation. Mid-transition save fails. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "47f45186d5bfbf595faf772181fc366d388571c3a6a7f5ea4509ab92758ce4be",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 86,
+        "endLine": 86
+      },
+      "text": "## 0E — Read domains, mutation authority, patches, and trace\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6a114b25b4e91d6fc573074d4e1ada50e8ae21e693ed36ebb17c448203fb7e21",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 88,
+        "endLine": 99
+      },
+      "text": "| Vector | Required proof |\n|---|---|\n| `CV-OWN-001` | Model construction rejects overlapping ownership patterns and every uncovered writable state leaf. One authority may own a declared structured family without ambiguity. |\n| `CV-OWN-002` | `MutationAuthorityId` has exactly one accepted global semantic namespace (`1025`); equal payloads under other typed namespaces are unequal; every registered authority resolves through that namespace; unknown, wrong-namespace, and non-owning authorities fail; authority identity, owned path family, removal permission, and leaf value grammar all contribute to `RegistryIdentity`/`ModelIdentity`; and declaration order does not. |\n| `CV-READ-001` | Forbidden state is absent from `ContractReadProjection`; attempted illegal access cannot be expressed through the typed interface and forged paths fail validation. |\n| `CV-READ-002` | Allowed accessor use records exact concrete paths/values; unused allowed fields remain possible reads but not actual reads. Derived projection values retain source/transformation provenance. |\n| `CV-PATCH-001` | A legal patch writes only owned paths and produces the exact canonical structural diff. Patch construction order cannot alter encoded patch or result. |\n| `CV-PATCH-002` | Wrong authority, stale expected value, duplicate/overlapping paths, invalid type/domain, mutable alias, and illegal emitted event each fail before commit. |\n| `CV-PATCH-003` | Deep counterfactual copies share no mutable authoritative alias; applying a patch to one changes neither the other nor its canonical encoding. |\n| `CV-TRC-001` | Identical runs produce byte-identical canonical committed traces and structurally identical decoded records. Hashes are checked only as accelerators. |\n| `CV-TRC-002` | Failed instant data appears only in `FailureDiagnostic`; committed trace ends at the prior successful instant and has no causal reference to aborted records. |\n| `CV-TRC-003` | Comparison reports the first differing record, field/path, old/new value, and causal ancestry for identity, random, time, event, read, patch, and output divergences. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e9e0114005350d192445e41436b914983886fcd9e6670aec5ddf0ba85acf8b1d",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 101,
+        "endLine": 101
+      },
+      "text": "Acceptance evidence (2026-09-01): all `CV-OWN-*`, `CV-READ-*`, `CV-PATCH-*`, and `CV-TRC-*` vectors execute against `src/substrate/state.ts`, `trace.ts`, and `transition.ts`. They prove exhaustive non-overlapping ownership, inaccessible forbidden reads, actual/derived read provenance, order-independent canonical patches, exact diffs, stale/wrong/invalid/overlapping-write rejection, deep-copy isolation, byte-identical committed traces, unknown-schema rejection, aborted-diagnostic separation, transitive causal ancestry, and structural first-divergence locations. The concrete 0E harness repeats all nine rollback boundaries after real reads, patches, event allocation, and trace construction. `TRC-001` and `TRC-002` are closed.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3e3d21fd3e2dd4adeb2505dfa19af9fddeaa2a0112c047746bc09d3219db73ed",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 103,
+        "endLine": 103
+      },
+      "text": "## Final Campaign 0 gate\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "707e6bd85b9e67203140e9ebba70db7888c851273112d2ea7be3ff702811f880",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 105,
+        "endLine": 105
+      },
+      "text": "`PHEN-DET-001` is materialized from the vectors above as executable fixtures. Campaign 0 closes only when:\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d61b10438e9ac74115e024553a317b2f46a1866ba12d9eeac77ebc27d7754a42",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 107,
+        "endLine": 112
+      },
+      "text": "1. every applicable vector is `PASS` against the reference implementation;\n2. independent oracle calculations verify canonical bytes, SHA-256 truncation, threshold arithmetic, bias bounds, and exact time arithmetic;\n3. all negative controls fail for their declared reason;\n4. build/test executes the reference-boundary guard;\n5. `CONTENT-001`, `RND-001`, `TIME-001`, `MATH-001`, `MATH-005`, `ORD-003`, `ORD-004`, `TRC-001`, and `TRC-002` are closed in the same change that records the passing evidence; and\n6. no unresolved decision can alter Campaign 1 authoritative inputs or verdicts.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c472319655e61c11d48f88acf5d6675fefb9c5d96ed2233df866ba8fec69e975",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 114,
+        "endLine": 114
+      },
+      "text": "Before that gate passed, every listed decision remained open. Acceptance retains the candidate-era identifiers as immutable canonical version strings; their status is now governed by the resolution record rather than inferred from the identifier suffix.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3100976f19e63d5108528dac4ecce5e94b6cf7764a9ebd81b6dbc79486f034d2",
+      "source": "docs/formal/CONFORMANCE_VECTORS.md",
+      "sourceSha256": "8e740c287dd082e340ea23b395e19fa49732008370c97f300261ab3363d7e49c",
+      "location": {
+        "startLine": 116,
+        "endLine": 116
+      },
+      "text": "**Gate result (2026-09-01): PASS.** All applicable vectors pass against the reference implementation; independent encoding, SHA-256, exact-arithmetic, and bias oracles pass; negative controls fail for their declared reasons; build and reference-boundary checks pass; `PHEN-DET-001` continues canonical state/event/output/trace across save/load; and no unresolved decision can alter Campaign 1 inputs. The nine Campaign 0 P0 decisions are closed in the accompanying resolution record. Candidate-era version strings remain immutable identifiers and are not renamed on acceptance.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bcda2938d1641fbe07acee2d0ae8f66dbd4e3d4bbe4ba237997614cc0a0ce5ad",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 1,
+        "endLine": 1
+      },
+      "text": "# PHEN-ADAPT fixture alignment — amendment revision 1\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c2ae3fc47428e939a8ea9de03b837346c18a59e91d4545bc4ff0e493414ffc16",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 3,
+        "endLine": 10
+      },
+      "text": "Date: 2026-09-08. **Status: ACCEPTED; PHEN-ADAPT-001 PASS in bounded frozen-model scope.**\nThe user APPROVES the coherent current promotion: `PHEN-ADAPT-001/1.11.0`, `corpus/0.27.0`,\nand digest `3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`.\n[The accepted promotion](../planning/PHEN_ADAPT_CORPUS_PROMOTION_ACCEPTED.json) freezes the exact\nmanifest bytes; reconciliation is CLOSED.\nThe reviewed serialization was `1.11.0-draft` in `corpus/0.27.0-draft`; it remains preserved.\nThis amendment changes research-fixture obligations only. It does not change executable\n`adaptation-input/0.31-candidate`, its N-rule grammar, schemas, allocations, runtime, model or profiles.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b2d8fb60e79452fe4bf7f3afcb443d78206833d155311c57460f0c8a78f44727",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 12,
+        "endLine": 12
+      },
+      "text": "## Authority and correct-forward scope\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9a0fa9577182918a519fb97de534cede1783caaa9ddfc1b497b1feeb4f8ea27f",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 14,
+        "endLine": 16
+      },
+      "text": "The user accepted the joined same-S0 parent witness and ADAPT-9a/9b/control9. The user identified\none specification conflict and found the composed PHEN-ADAPT evidence otherwise sufficient.\nConcrete model freeze did not silently repeal an accepted fixture restriction.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "777fbe38d1ccb0f8650a5d125297b3e13f3b096ed4bdaa17dd9c0515d4d44ca1",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 18,
+        "endLine": 19
+      },
+      "text": "Historical [ADAPT acceptance §2.7](../planning/ADAPT_001_DRAFT_RESOLUTION.md#27-rule-cardinality-and-one-result-per-rule)\nstates:\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d52c34a417746aede61c2963b3334da2172d789631283edc1057b501059d9469",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 21,
+        "endLine": 24
+      },
+      "text": "> `ADAPT-001` v0.1 additionally constrains the fixture — not the grammar — to exactly one\n> applicable rule per admitted input, so `PHEN-ADAPT-001`'s comparison has one unambiguous target\n> path. The 0/N cases remain expressible and are not foreclosed; they are simply not exercised by the\n> first fixture, and a phenomenon that needs them does not require a grammar change.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8e9d51b513ccbe21c27da51e341033390e2d754282b8a206f2ceca68ea49ad7a",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 26,
+        "endLine": 31
+      },
+      "text": "PHEN-ADAPT `1.10.0-draft` repeated the one-rule restriction. The already frozen production model\ninstead resolves four independent single-path exposure rules, and the accepted witness executes\nthem. That historical discrepancy is retained here and in the unchanged ADAPT acceptance source.\nThe fixture-specific clauses and control interpretations listed below are now governed\nby this accepted explicit addendum; other contract clauses remain unchanged. The current corpus\nserialization uses the accepted suffix-free member; the reviewed draft remains historical.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "55f81b7093fe1e833dcc80a037f76a9f1ad64bb0c870de8513b51088925bb395",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 33,
+        "endLine": 33
+      },
+      "text": "## Replacement fixture rule\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b902d7d0d95ee49bd9b2999d377aed974ee24a9e0c29fed63f266f0be6a6b078",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 35,
+        "endLine": 37
+      },
+      "text": "Both timelines resolve the same exact **nonempty** ApplicableRules set from the committed model.\nAuthored ActualContactCount may change evaluation results, but may not change that rule set.\nThe zero-count source and its dispatch/evaluations must execute at matching allocator positions.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "47caf5dac4bc0216359fb3df08e30a4fdaa0344b0e80f2c69e33e32339de70af",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 39,
+        "endLine": 41
+      },
+      "text": "Let `P(r)` be the exact StatePath derived from applicable rule `r` and the admitted semantic key.\nLet `ExpectedTargetPaths = { P(r) | r in ApplicableRules }`. Each rule targets exactly one path.\nDuplicate targets reject before evaluation, including targets of eventual NoStateChange results.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8a8c38e02bf2393e6da01b5bf0cdaa2001827aa1b57db1e9ee6ab238edd3404c",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 43,
+        "endLine": 46
+      },
+      "text": "For each timeline, the fixture independently states the expected state-changing subset\n`ExpectedChangedPaths ⊆ ExpectedTargetPaths`. The actual committed adaptation mutation-path set\nmust equal **exactly ExpectedChangedPaths**; every path outside it stays byte-identical.\nDo not infer the expected subset from observed patches: that would make the isolation check circular.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9ef8cc82fc8ce55082647b1cc51e8aaec294dde23ff62db56890258da197969a",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 48,
+        "endLine": 48
+      },
+      "text": "For the frozen positive exposure fixture, with governed subject C and variable V:\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "90868ea42f70b26653ea5f01a313a282979021e52ffd4fd35a9bd2b38ed8d62c",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 50,
+        "endLine": 55
+      },
+      "text": "| Rule target | Exact expected path | Count0 | Count1 |\n|---|---|---|---|\n| Tolerance | 302/1/mapKey(ToleranceKey(C,C,V)) | NoStateChange | StateChange to1 |\n| Sensitization | 302/2/mapKey(SensitizationKey(C,C,V)) | NoStateChange | StateChange to1 |\n| Regulatory displacement D | 302/3/mapKey(RegulatoryAdaptationKey(C,V)) | NoStateChange | StateChange to1 |\n| Accumulated load | 302/4/mapKey(AccumulatedLoadKey(C,load/fixture-load)) | NoStateChange | StateChange to1 |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0a5281e19599cceed63bb288be5420fa2ed4bbe44bc15eddebf0198acc1d07dc",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 57,
+        "endLine": 60
+      },
+      "text": "C is the existing governed character/bridge-subject identity; V is variable/fixture-regulation.\nThese are references to frozen vocabulary, not new allocations. Both initial states are identical\ncanonical baseline states. Count0's expected changed set is empty; count1's is all four paths.\nFour rule evaluations do not authorize a single multi-leaf rule or extra mutation.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "314c72561fb0ddaf5ed081296073121d3b0760e9066ffe279fa2157a3a1f2817",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 62,
+        "endLine": 62
+      },
+      "text": "## Distinguished response-mediating path and control9\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ef6e014027305049a6fa06a2712df986a060f6f694705cffe361fe74b7233bc2",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 64,
+        "endLine": 67
+      },
+      "text": "`P* = 302/3/mapKey(RegulatoryAdaptationKey(C,V))` is the distinguished response-mediating path.\nThe earlier intervention must create its D difference. The later diagnostic challenge must read\nexactly P*, with its read equal to the earlier retained D result: absent baseline0 versus present1.\nThe probe may not read tolerance, sensitization or load as alternative adaptation inputs.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c61ee634cb8f4529f8291f6e36c0a48d34a641dc428d6c17271381d43add557d",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 69,
+        "endLine": 73
+      },
+      "text": "The later permitted measurement difference must descend through that read, and the first cognitive\ndivergence must descend through the permitted observation. The accepted fixture demonstrates\n5 versus51/10, exact337→342→episode retention, and later352. Keep scheduler ancestry separate from\nstate-write/read dependency; neither exposure→independent probe nor formation→cue is a fabricated\nscheduler-parent edge. Recall's IDN/episode reads are distinct from the probe's D-only read.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "18653a6e76630649cb48378844742c5fe073af848ec45513d0ae2735958f1923",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 75,
+        "endLine": 75
+      },
+      "text": "## Exact clause/control substitutions\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7bfc770b8d6216f0dd04203b9cd468dc56a4d168e932247989229c335f8b4739",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 77,
+        "endLine": 86
+      },
+      "text": "| Historical location | Fixture interpretation after acceptance |\n|---|---|\n| ADAPT §2.7 final one-rule fixture paragraph | Replace with the same nonempty ApplicableRules/ExpectedTargetPaths/ExpectedChangedPaths definition above. Preserve the surrounding 0/1/N grammar. |\n| ADAPT §2.8 matched no-op fixture singular “same rule” | Same applicable rule set, one independently traceable result per rule. |\n| ADAPT §2.9 and PHEN exact mutation equality | Equality is to the independently specified expected state-changing subset for that timeline, not every evaluated/no-op target. |\n| ADAPT §6 control1 whole-exposure “the target leaf” | Exactly the expected rule-derived changed target-path set differs. |\n| ADAPT §6 control3 | Mechanically satisfied but non-discriminating at leaf-family granularity in this four-leaf fixture. |\n| ADAPT §6 control3a | Committed mutation paths equal exactly ExpectedChangedPaths; no extra fifth path or missing expected path. |\n| ADAPT §6 control9 | Name P* and require the exact earlier-result/later-read join and observation-mediated cognitive response. |\n| ADAPT §6 fixture-version reference and PHEN manifest/body | Use accepted PHEN-ADAPT1.11.0/corpus0.27.0 for this amended fixture; retain1.10/0.26 as historical evidence. |\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "66f269c09daca385684d33f367b92d946f275b225d53a236b2e4ccff5a795ae8",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 88,
+        "endLine": 89
+      },
+      "text": "Singular language about an individual rule, key, path, dispatch occurrence or diagnostic D read\nremains singular. Only descriptions of the whole exposure transaction become path-set language.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "710eefa2b2ba250831f01584b6e98a1a761ae350bf60a238f43cafa914f4997b",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 91,
+        "endLine": 95
+      },
+      "text": "All four regulatory leaf families are targets, so control3 alone cannot discriminate a spill in\nthis fixture. Isolation rests on exact-path equality3a, wrong-exposure-key7g, wrong-variable-key7g′,\nsole-owner/exact-path WRT and collision controls. Those obligations are retained, not replaced by\nthe vacuous leaf-family complement. Same-rule-set, same-S0/seed/input topology, route-closure,\nobservation, no-op, frozen snapshot, rollback and persistence requirements are unchanged.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e2999584b0a7f8b8c5ed71134da2a7d9a2af2c131e68d0f52b3db21170c2fed4",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 97,
+        "endLine": 97
+      },
+      "text": "## Existing evidence and acceptance boundary\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5fb9f547489e494a92c44ed6d88fad02de5aaa031f19ca15ab20cc05a4df26d9",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 99,
+        "endLine": 102
+      },
+      "text": "[The accepted parent-pair report](../planning/CAMPAIGN2_ADAPT_PARENT_PAIR_PROOF.json) already checks\nthe identical four-rule dispatch set, four exact evaluated paths, count0 no-op/count1 state-change\nresults, exact four-path mutation set, non-target equality and distinguished D read/write join.\nThe user accepted that witness. No new behavioral witness is required or claimed by this amendment.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "92715396b27eadf82b2ef0102434547bce4a107849b52462ac16f7349c2a8108",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 104,
+        "endLine": 107
+      },
+      "text": "[Consolidation](../planning/CAMPAIGN2_PHEN_ADAPT_CONSOLIDATION_REVIEW.md) records the inherited and\nmemory proof composition. The user finds that corpus sufficient subject only to this alignment.\nThe user has accepted this alignment and the bounded PHEN-ADAPT PASS.\nBlanket ADAPT/factory/VAL qualification, PHEN-MEM and Campaign2 completion are not inferred.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b5700e181285b091108b397cbb8194f5f9de163b531a6e9207133a2c5008674a",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 109,
+        "endLine": 110
+      },
+      "text": "SUB-011 correct-forward accounting applies: the historical one-rule statement, old manifest\ncommitment and original implementation evidence remain available. No frozen artifact is rewritten.\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6265d52eab31289c8c0a0b8221735c45799ef3216d201bc51f15903989db4038",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 112,
+        "endLine": 112
+      },
+      "text": "## Corpus commitment accounting\n",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "03b5d6ead2865410f0233782295facc049d1d18882e49cc65bbb054dce0870ae",
+      "source": "docs/formal/PHEN_ADAPT_FIXTURE_AMENDMENT.md",
+      "sourceSha256": "c7917ef65eba385b2955a1afbfe68c6809ff68e488a8d6e09783805805453f8f",
+      "location": {
+        "startLine": 114,
+        "endLine": 123
+      },
+      "text": "The reviewed draft aggregate changed exactly one of ten members: PHEN-ADAPT1.10→1.11-draft. Its\nhistorical digest is `181ce5711aee0eef8e7089e914906098e1183f7a592bce7d9096192993a57315`.\nThe accepted promotion changes only that member string to1.11.0, yielding current digest\n`3cb09115d90485d5975968ffca419a4960a398326b6b6339a5b1e8e8fdcec276`.\nThis is status/version promotion, not new fixture semantics. No alias relates the commitments.\nHistorical corpus0.26 digest remains `42dc63048912b666c8d7cd4b4c58273f698f1f1950b3a1714c1b12bc7eaa46fc`.\n[The amendment audit](../planning/PHEN_ADAPT_FIXTURE_AMENDMENT_AUDIT.json) retains both exact canonical\nmanifests and the sole member delta, compiled through the existing corpus-manifest substrate.\nThe historical contentGovernance golden remains unchanged. Neither corpus commitment enters\nthe frozen model's execution or changes its ModelIdentity.\n",
+      "category": "NARRATIVE"
+    }
+  ],
+  "exactBindings": [],
+  "preservedArtifacts": [],
+  "schema": {
+    "path": "docs/planning/campaign3-history-early-fixture-gates-rev1/schema.json",
+    "sha256": "feebe6b29ae183efed44ce117d361bdfa8bfe074c6f63823d0564e89a2042b82"
+  },
+  "unresolved": {
+    "path": "docs/planning/campaign3-history-early-fixture-gates-rev1/unresolved.json",
+    "sha256": "8e6f53750ee4cec2064d504837a723158c5459d4979b4d7331796b4156a8f7b7"
+  },
+  "limits": [
+    "Normative vectors and dated acceptance claims reviewed; no runtime/test suite or original writer rerun.",
+    "Prior stored-timeline/manifest read-only evidence reverified by exact commitment, not freshly reproduced. Missing full traces/saves/source manifest remain prior report limitations.",
+    "No blanket later-runtime adequacy, public wrapper, family or campaign closure."
+  ],
+  "vectorInventory": {
+    "path": "docs/planning/campaign3-history-early-fixture-gates-rev1/vectors.json",
+    "sha256": "e38e22f5f7f40005792c9e91c16cd5d066ad694d4b71e1d195307ea141c90117"
+  },
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-017",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

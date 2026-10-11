@@ -1,0 +1,17 @@
+{
+  "status": "AUDIT ASSERTION CORRECTED BEFORE REVIEW PUBLICATION",
+  "finding": "Direct equality compared symbolic schema names with allocated numeric schema references. These are different representations; the original assertion rejected.",
+  "failedCheckerSha256": "9c252c43a3e00f0ea288871e855b510f592f792f807b7b767d35754bec8bba63",
+  "disposition": "Resolve each original schema name through the exact frozen allocation, then require whole alias-map equality including schemaVersion. No source or allocation changed.",
+  "obligations": [
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ],
+  "secondAuditFailure": {
+    "failedCheckerSha256": "877ca18dabac5074794a1a5445dfe642e06afc8227b9d35a5fbc2b1faaeaaa6e",
+    "error": "TypeError: unhashable type: list",
+    "cause": "Allocated union member payloads are tuples represented as JSON lists; the reviewer incorrectly assumed every payload was scalar.",
+    "disposition": "Use typed namespace plus complete JSON payload as the exact comparison key. Preserve both textual and union members; no string-only filter or source change."
+  }
+}

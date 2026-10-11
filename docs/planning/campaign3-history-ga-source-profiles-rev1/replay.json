@@ -1,0 +1,86 @@
+{
+  "status": "PASS; EXACT SYMBOLIC SOURCE PROFILE RECONSTRUCTION AND NINE ORIGINAL FAULTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-source-profiles.mjs",
+    "sha256": "4f13dd499870334ce9e80fd5946abd133898ce13e300cf403e5315a5a867f03b"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/build-ga-source-profile-declarations.mjs",
+        "sha256": "d103dc7f83a5e26cd7365b0a76cd64817c2277566ed2f35de0a0ea209da0162c"
+      },
+      "output": {
+        "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV1.json",
+        "sha256": "d7127a41408b9cac25f800af283abbb1d0325a37daf67be5f5ffaf53a7b3fc72"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-source-profile-declarations.mjs",
+        "sha256": "763610f022644b91ba19e8c67fb56010262201d69056225b9c402cb4f4bfe42a"
+      },
+      "output": {
+        "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REVIEW_REV1.json",
+        "sha256": "f4aa9d3991a77e6b1fac6d08a784bc8a9d22d76dde0f4902a8f5e098ec0d9783"
+      },
+      "faults": [
+        {
+          "name": "truth-marker-as-file",
+          "detected": true
+        },
+        {
+          "name": "role-as-cause",
+          "detected": true
+        },
+        {
+          "name": "default-actor-on-absence",
+          "detected": true
+        },
+        {
+          "name": "omit-competitor-bound",
+          "detected": true
+        },
+        {
+          "name": "couple-body-cue-to-selection",
+          "detected": true
+        },
+        {
+          "name": "authored-assessment-result",
+          "detected": true
+        },
+        {
+          "name": "new-frame-identity",
+          "detected": true
+        },
+        {
+          "name": "callback-source",
+          "detected": true
+        },
+        {
+          "name": "hidden-identity-order",
+          "detected": true
+        }
+      ]
+    }
+  ],
+  "successor": {
+    "path": "docs/planning/GA_SOURCE_PROFILE_DECLARATIONS_REV2.json",
+    "sha256": "c979835f8841d3b283814ec87c3085b1f2ccdd517a8ff016cd65af05f8903649"
+  },
+  "delta": {
+    "addedField": {
+      "name": "ExecutionPolicy",
+      "type": {
+        "kind": "ref",
+        "name": "DefinitionId"
+      }
+    },
+    "executionPolicy": "Immutable ObservationExecutionPolicy registry definition transported through Use; compiler checks every purpose and instantiates the exact corresponding stage registration. Original time alone cannot choose hidden capacity or calibration."
+  },
+  "limits": [
+    "Original REV1 reviewer does not validate the successor ExecutionPolicy field. Exact delta inspection is separate evidence.",
+    "No source runtime or public admission executed; prior current87 declaration/source tests are separately retained."
+  ]
+}

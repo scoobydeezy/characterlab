@@ -1,0 +1,29 @@
+{
+  "status": "ORIGINAL VERIFIER REJECTED CURRENT SOURCE; RECONCILIATION OPEN",
+  "command": "node scripts/verify-attention-public-qualification.mjs",
+  "exitCode": 1,
+  "firstMismatch": {
+    "path": "src/campaign3/attentionSelection.ts",
+    "expected": "48aee9c0e57d825ad3d1c9829d1bd11b5ade16e2025df2ba7422420a1af3943d",
+    "actual": "11662e718d419ecce120768f1faea6caefbf48951408a0c75ae84987a831c32e"
+  },
+  "artifacts": [
+    {
+      "path": "scripts/verify-attention-public-qualification.mjs",
+      "sha256": "bc875d417fe1c7890096b2583215fb88634d501f301ac5f4cc07bed61dfbc7bd"
+    },
+    {
+      "path": "docs/planning/ATTENTION_PUBLIC_QUALIFICATION_REV1.json",
+      "sha256": "b8a393f1e27d30821e5dca6981cbe1846929640d2b3e89adeb1a4682110aacb8"
+    },
+    {
+      "path": "src/campaign3/attentionSelection.ts",
+      "sha256": "11662e718d419ecce120768f1faea6caefbf48951408a0c75ae84987a831c32e"
+    },
+    {
+      "path": "docs/planning/public-wrapper-quiescence-rev1/src/campaign3/attentionSelection.ts",
+      "sha256": "11662e718d419ecce120768f1faea6caefbf48951408a0c75ae84987a831c32e"
+    }
+  ],
+  "scope": "First failure only; verifier aborted before remaining hashes. No original receipt modified; current quiescence archive has current hash, so it does not recover the older bytes. Follow source history and correct-forward evidence before acceptance."
+}

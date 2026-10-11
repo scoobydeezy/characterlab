@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "original": {
+    "path": "docs/planning/EMBODIED_RECEIVING_SCHEDULING_REV1.json",
+    "sha256": "f5a61f097b1d60f6ed939dd988d43f3e5f70245eec92bb78bcc53fc057aef857"
+  },
+  "scope": "Original calculations and assertions retained; source metadata drift explicitly bound to exact historical bytes. No original writes or semantic public qualification.",
+  "bindings": [
+    {
+      "path": "scripts/explore-embodied-receiving-scheduling.mjs",
+      "sha256": "4839d7f7b62562bb7db970f6c724faefbd4d5ceeeb288e87ddec616b11562b50",
+      "resolvedPath": "scripts/explore-embodied-receiving-scheduling.mjs"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32",
+      "resolvedPath": "src/substrate/scheduler.ts"
+    }
+  ],
+  "currentSources": [
+    {
+      "path": "scripts/explore-embodied-receiving-scheduling.mjs",
+      "sha256": "4839d7f7b62562bb7db970f6c724faefbd4d5ceeeb288e87ddec616b11562b50"
+    },
+    {
+      "path": "src/substrate/scheduler.ts",
+      "sha256": "d82c1e44cc25064eeb635e9773793d84d18efabd24860bde2f25ca011f86ad32"
+    }
+  ],
+  "checker": {
+    "path": "scripts/replay-history-receiving-machinery-scheduling.mjs",
+    "sha256": "e7d7240cd4d2d229a1de083009e75c909b8bbf516915c5bfa589b60e662f2ec1"
+  }
+}

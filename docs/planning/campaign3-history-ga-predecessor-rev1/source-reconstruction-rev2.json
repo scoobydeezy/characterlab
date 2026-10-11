@@ -1,0 +1,68 @@
+{
+  "status": "SECOND DIGEST-CONSTRAINED RECONSTRUCTION",
+  "predecessor": {
+    "path": "docs/planning/campaign3-history-ga-predecessor-rev1/source-reconstruction.json",
+    "sha256": "3a0d584852414fc5b9ac87e59cad1363622794e2e119f0a88e692b4723ab8b5e"
+  },
+  "rows": [
+    {
+      "source": {
+        "path": "src/campaign3/generalDefinitionProfile.ts",
+        "sha256": "b34c7334ab2fb6407818633287755e720a5919eb4e4451ceaa85af5e90bf3754"
+      },
+      "attempts": [
+        {
+          "method": "parenthesized",
+          "newline": "LF",
+          "sha256": "82bc493d01525d5af6349c2c7daca3f2cc466e74a1ac92e5b9f4a461777e30b9",
+          "bytes": 7651
+        },
+        {
+          "method": "parenthesized",
+          "newline": "CRLF",
+          "sha256": "d67f1f66c0fd45e3f46c58876474e561cd5d829cf3e96d6dfb68cdae9d07a14b",
+          "bytes": 7714
+        },
+        {
+          "method": "original conditional grouping",
+          "newline": "LF",
+          "sha256": "3ce602d40dc62b43aae0728dfd33593bb17dea3a2dd3f023dd4688227a13e451",
+          "bytes": 7653
+        },
+        {
+          "method": "original conditional grouping",
+          "newline": "CRLF",
+          "sha256": "65f746edfc77ac987f41785bd0e306001df44615ae13478aba3891b6eccdd29d",
+          "bytes": 7716
+        }
+      ],
+      "recovered": null
+    },
+    {
+      "source": {
+        "path": "scripts/freeze-general-attention-models.mjs",
+        "sha256": "405507c187f403ad196f685fe18df0b3af2748dbf831e367a5df196b9a38bc22"
+      },
+      "attempts": [
+        {
+          "method": "remove later preservation field",
+          "newline": "LF",
+          "sha256": "405507c187f403ad196f685fe18df0b3af2748dbf831e367a5df196b9a38bc22",
+          "bytes": 2410
+        },
+        {
+          "method": "remove later preservation field",
+          "newline": "CRLF",
+          "sha256": "25430f9cff157cebe4ded648cfab3d65ad22360ac6339fc4f45c0d23558987f8",
+          "bytes": 2424
+        }
+      ],
+      "recovered": {
+        "path": "docs/planning/campaign3-history-ga-predecessor-rev1/freeze-general-attention-models.mjs",
+        "sha256": "405507c187f403ad196f685fe18df0b3af2748dbf831e367a5df196b9a38bc22",
+        "bytes": 2410
+      }
+    }
+  ],
+  "scope": "Exact original digest required. Neither Git chronology nor current production replacement is claimed."
+}

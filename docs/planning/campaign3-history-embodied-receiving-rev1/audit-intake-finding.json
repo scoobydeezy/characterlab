@@ -1,0 +1,8 @@
+{
+  "status": "AUDIT HELPER PATH CLASSIFICATION CORRECTED",
+  "failure": "Historical test composition assertion1132 failed before any review/index output.",
+  "cause": "Audit helper matched /src/ anywhere, admitting reference/src and collapsing it onto current src paths.",
+  "correction": "Normalize after repository root characterlab, then require relative src/ exactly, matching the original preservation script.",
+  "scope": "Test-receipt accounting only; no production code, original artifact, assertion threshold or test behavior changed.",
+  "owner": "RO-C3-021"
+}

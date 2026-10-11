@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+assert(!process.argv.includes('--write'));
+const P='docs/planning/',O=P+'campaign3-history-chosen-reappraisal-public-rev1/',sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),ref=path=>({path,sha256:sha(path)});
+execFileSync(process.execPath,['scripts/check-history-chosen-reappraisal-closure.mjs'],{stdio:'inherit'});
+let source=fs.readFileSync('scripts/check-chosen-reappraisal-wrapper-extension.mjs','utf8');
+let a=source.indexOf('const actual='),b=source.indexOf('\nassert.deepEqual(actual',a);assert(a>=0&&b>a);source=source.slice(0,a)+"const actual=[...read(old+'INVENTORY.json').inventory.map(r=>r.path),'src/campaign3/dispositionPublicRuntime.ts',producer].sort();"+source.slice(b);
+a=source.indexOf('const factories=');b=source.indexOf(';assert.deepEqual(factories',a);assert(a>=0&&b>a);source=source.slice(0,a)+"const factories=[...routing.factories.map(r=>r.factory),'src/campaign3/dispositionPublicFactory.ts',factory].sort()"+source.slice(b);
+a=source.indexOf('execFileSync(process.execPath,');b=source.indexOf('\nconsole.log(',a);assert(a>=0&&b>a);source=source.slice(0,a)+'/* Independently authenticated historical predecessor50/53 checked above. */'+source.slice(b);
+source=source.replace('PASS current51 producers/54 public factories; predecessor50 and original49 unchanged.','PASS historical51/54 membership and addition guard/source receipt; current completeness not asserted.');
+await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+source=fs.readFileSync('scripts/check-chosen-reappraisal-public-closure.mjs','utf8');
+const line="execFileSync(process.execPath,['scripts/check-chosen-reappraisal-wrapper-extension.mjs'],{stdio:'inherit'});";assert.equal(source.split(line).length,2);source=source.replace(line,'/* Historical wrapper extension checked above. */');
+a=source.indexOf("execFileSync(process.execPath,['--import'");b=source.indexOf('\n',a);assert(a>=0&&b>a);source=source.slice(0,a)+'/* Component/predecessor closure already checked above. */'+source.slice(b);
+await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const result={status:'PASS HISTORICAL SCOPE',scope:'Original native chosen-reappraisal closure and result, component/predecessor closures and historical51/54 wrapper addition/hash/guard/receipt. Current55/58 completeness and tests/build are not freshly checked.',checker:ref('scripts/check-history-chosen-reappraisal-public-closure.mjs'),original:ref(P+'CHOSEN_REAPPRAISAL_PUBLIC_CLOSURE_REV1.json'),predecessor:ref(P+'campaign3-history-chosen-reappraisal-rev1/closure-check.json')};const out=O+'closure-check.json';if(fs.existsSync(out))assert.deepEqual(JSON.parse(fs.readFileSync(out)),result);else fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n',{flag:'wx'});

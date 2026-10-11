@@ -1,0 +1,441 @@
+{
+  "status": "SOURCE AUDIT; UNAVAILABLE INTERMEDIATE IMPLEMENTATIONS EXPLICIT",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/recover-history-ga-reserve-bridge.py",
+    "sha256": "6a140fabdbeca7a8359e2731f2bb9a1432e03b9cb3617d95297179ce79ca034f"
+  },
+  "rows": [
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SOURCE_REVIEW_REV1.json",
+        "sha256": "7c50e8f5bf51f6faa956d0429c7085dfebb7bfd37fad1b40661d388ad5534a1f"
+      },
+      "original": {
+        "path": "src/campaign3/localReserveSource.ts",
+        "sha256": "42bad04835eb28d05af97054092f6210f698751eeac03e5754743928d258c695"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6aa4c1947adf4c2997bb40eb0fbf5e22a51903a0",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "f91568689006686f00882444cb6313858a07da8c98cbb6f483f6bf9baa059b08"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SOURCE_REVIEW_REV1.json",
+        "sha256": "7c50e8f5bf51f6faa956d0429c7085dfebb7bfd37fad1b40661d388ad5534a1f"
+      },
+      "original": {
+        "path": "src/test/localReserveSource.test.ts",
+        "sha256": "5a612a286c0739b52c2f6a544053f3f5d1412bdc8ea99eaff9ba4394cd127319"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "src/test/localReserveSource.test.ts",
+        "sha256": "5a612a286c0739b52c2f6a544053f3f5d1412bdc8ea99eaff9ba4394cd127319"
+      },
+      "method": "CURRENT",
+      "origin": "src/test/localReserveSource.test.ts",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SOURCE_REVIEW_REV1.json",
+        "sha256": "7c50e8f5bf51f6faa956d0429c7085dfebb7bfd37fad1b40661d388ad5534a1f"
+      },
+      "original": {
+        "path": "src/campaign3/embodiedMath.ts",
+        "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "src/campaign3/embodiedMath.ts",
+        "sha256": "b7c2a25f3e9a157669962ed4c50b633eb1027edc67f00f73cd49b543156bf83d"
+      },
+      "method": "CURRENT",
+      "origin": "src/campaign3/embodiedMath.ts",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SOURCE_REVIEW_REV1.json",
+        "sha256": "7c50e8f5bf51f6faa956d0429c7085dfebb7bfd37fad1b40661d388ad5534a1f"
+      },
+      "original": {
+        "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+        "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+        "sha256": "b338f4ac9e4239e08c832592138ffc5b7d380485ea43129210db7492af91693e"
+      },
+      "method": "CURRENT",
+      "origin": "docs/formal/LOCAL_RESERVE_SOURCE_COMPONENT.md",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SOURCE_REVIEW_REV1.json",
+        "sha256": "7c50e8f5bf51f6faa956d0429c7085dfebb7bfd37fad1b40661d388ad5534a1f"
+      },
+      "original": {
+        "path": "scripts/review-local-reserve-source.mjs",
+        "sha256": "6a7070d4d1d4f9bb3f939ff4b351304d47bbc3aeca40a64ee6488b9a74f15cd4"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "scripts/review-local-reserve-source.mjs",
+        "sha256": "6a7070d4d1d4f9bb3f939ff4b351304d47bbc3aeca40a64ee6488b9a74f15cd4"
+      },
+      "method": "CURRENT",
+      "origin": "scripts/review-local-reserve-source.mjs",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "d8c4a35e123b5407968e5ab41c48982ead6d6d38db3beb97312c284f0884181c"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "src/campaign3/localReserveSource.ts",
+        "sha256": "e75a4987d153a532a5de42daee85cb146e0b5afcfdec83930dda3c3a01fa29b5"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\localReserveSource.ts",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6aa4c1947adf4c2997bb40eb0fbf5e22a51903a0",
+          "sha256": "6304ae3b6d231409a15e5e2bd2bd641484c35ea7935a40b563ce6fcb5127c1ca"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "f91568689006686f00882444cb6313858a07da8c98cbb6f483f6bf9baa059b08"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "src/campaign3/bodySignalCue.ts",
+        "sha256": "c2b5e8fe89e43f55edbb2605e565600aba4102e8fc3e150a3618e814569d9657"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/bodySignalCue.ts",
+          "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\bodySignalCue.ts",
+          "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\bodySignalCue.ts",
+          "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "src/campaign3/interoceptiveSignalSelection.ts",
+        "sha256": "373a75482eaa03ed3bc7e38631331d3a418d2d35468c15e094f2f30521a13914"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/interoceptiveSignalSelection.ts",
+          "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\interoceptiveSignalSelection.ts",
+          "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\interoceptiveSignalSelection.ts",
+          "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "src/test/localReserveObservation.test.ts",
+        "sha256": "a1dd2440ea5be4611a2274d02a1744eae63a9c13f57e1ce1a995d368fb0449ca"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/test/localReserveObservation.test.ts",
+          "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\test\\localReserveObservation.test.ts",
+          "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\test\\localReserveObservation.test.ts",
+          "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_SAMPLE_BRIDGE_REVIEW_REV1.json",
+        "sha256": "1fafdc3328b7c83d820c3aac2b430c9d72bf57f3ab3ce36e55d7a05f8aa79fb0"
+      },
+      "original": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "scripts/review-local-reserve-observation.mjs",
+        "sha256": "bc64c6a286a1fa75620af0e71835755e12252b05c0de319cbb3055dccade5df1"
+      },
+      "method": "CURRENT",
+      "origin": "scripts/review-local-reserve-observation.mjs",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "src/campaign3/localReserveObservation.ts",
+        "sha256": "151130c093228f197e25846e1a9c8b5db2f146bbe9c23f63267c0d4437cba7e5"
+      },
+      "status": "UNAVAILABLE",
+      "searched": [
+        {
+          "method": "CURRENT",
+          "origin": "src/campaign3/localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "src\\campaign3\\localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "LOCAL_FILE",
+          "origin": "docs\\planning\\public-wrapper-quiescence-rev1\\src\\campaign3\\localReserveObservation.ts",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        },
+        {
+          "method": "GIT",
+          "origin": "6d54d35f3c612154658c6f9316f6f7e04071865b",
+          "sha256": "d62a95a15b1e6f232519876376f3d2b3aceb583ee1a6525bfdba8da949bf1296"
+        }
+      ],
+      "disposition": "Exclude exact historical implementation-content claim; preserve reported historical validation as report-only. Current tests are separately identified,not substitutes."
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "src/campaign3/interoceptiveSignalSelection.ts",
+        "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "src/campaign3/interoceptiveSignalSelection.ts",
+        "sha256": "83a35e72665627e48106667fcb4de0a2fc2688292d802f6f82f189f67f92a076"
+      },
+      "method": "CURRENT",
+      "origin": "src/campaign3/interoceptiveSignalSelection.ts",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "src/campaign3/bodySignalCue.ts",
+        "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "src/campaign3/bodySignalCue.ts",
+        "sha256": "d048bff33707c8158b1480b76d831e7e7a8bb9a01585c4d39873aa0ebf5af9fc"
+      },
+      "method": "CURRENT",
+      "origin": "src/campaign3/bodySignalCue.ts",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "src/test/localReserveObservation.test.ts",
+        "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "src/test/localReserveObservation.test.ts",
+        "sha256": "6e74c732907744876a4bdc707a73c1b620ef0883988cfd9185ab4462db605639"
+      },
+      "method": "CURRENT",
+      "origin": "src/test/localReserveObservation.test.ts",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "scripts/review-local-reserve-opportunity.mjs",
+        "sha256": "dc06a86b2d2ceecf88c28a890a022d59fa0a97a8ceba17f1b6b70070cdb0312e"
+      },
+      "method": "CURRENT",
+      "origin": "scripts/review-local-reserve-opportunity.mjs",
+      "newline": "exact"
+    },
+    {
+      "source": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_REVIEW_REV1.json",
+        "sha256": "17972eaf0229d6abde189d1a85b4bdf9dd3c914ca0d3fb743e3f55999fd86cac"
+      },
+      "original": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+        "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd"
+      },
+      "status": "EXACT",
+      "resolved": {
+        "path": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+        "sha256": "5bbc862ec95654c2c58ad3a2390a0eb1626bb64aae324660ab2f75ff584cabbd"
+      },
+      "method": "CURRENT",
+      "origin": "docs/planning/LOCAL_RESERVE_OPPORTUNITY_TESTS_REV1.json",
+      "newline": "exact"
+    }
+  ],
+  "preservedArtifacts": [],
+  "limits": [
+    "Path-directed local filename search and all-ref Git path histories plus known exact archives. No claim of exhaustive forensic reconstruction of every unreferenced object."
+  ]
+}

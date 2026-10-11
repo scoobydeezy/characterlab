@@ -1,0 +1,2899 @@
+{
+  "status": "SIX ADAPT ROLLBACK/STAGE PROOFS RECONCILED; FOUR ADDITIONAL SOURCE GAPS",
+  "checker": {
+    "path": "C:/Users/scoob/Documents/GitHub/characterlab/scripts/review-history-adaptation-rollback-proofs.py",
+    "sha256": "955b70f7437035a441616063524b190738b355820690faf786dfe04a8445adba"
+  },
+  "sourceIndex": {
+    "path": "docs/planning/campaign3-history-source-roles-rev207/index.json",
+    "sha256": "bb4a8e7bb3d8bfcfb42ad55a09c75da75225cf2bb7c1dd307e98b861ed374f89"
+  },
+  "sourceRoles": [
+    {
+      "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Six stages:after reads,later out-of-range,staged outputs,patch union,final trace,work ceiling. Four leak substitutions affect state,queue,allocators and trace/outputs. Failed working-state publication is detected only at final trace;the other three fail all six witnesses. Every mutant includes final-trace detection. REV1/2 payloads equal except source fingerprints;terminal Failed status is not Active recovery or continuing a failed run.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Six stages:after reads,later out-of-range,staged outputs,patch union,final trace,work ceiling. Four leak substitutions affect state,queue,allocators and trace/outputs. Failed working-state publication is detected only at final trace;the other three fail all six witnesses. Every mutant includes final-trace detection. REV1/2 payloads equal except source fingerprints;terminal Failed status is not Active recovery or continuing a failed run.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Phase140 stage rejection remains distinct from later ingress failure. Original four-test/two-mutant cohort expands to five/three with InputOnly handler emission and then seven/four with missing/duplicate execution. Positive one-batch/exact-once witness remains;duplicate rejects without extra reads. Forbidden late child is detected by attempted continuation count,not by assuming a later error is sufficient. Internal injections are not public scheduling authority. REV3/4 payloads equal except source fingerprints. Later script also guards Task deadlines;that added source condition is not retroactively in these original receipts.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Phase140 stage rejection remains distinct from later ingress failure. Original four-test/two-mutant cohort expands to five/three with InputOnly handler emission and then seven/four with missing/duplicate execution. Positive one-batch/exact-once witness remains;duplicate rejects without extra reads. Forbidden late child is detected by attempted continuation count,not by assuming a later error is sufficient. Internal injections are not public scheduling authority. REV3/4 payloads equal except source fingerprints. Later script also guards Task deadlines;that added source condition is not retroactively in these original receipts.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Phase140 stage rejection remains distinct from later ingress failure. Original four-test/two-mutant cohort expands to five/three with InputOnly handler emission and then seven/four with missing/duplicate execution. Positive one-batch/exact-once witness remains;duplicate rejects without extra reads. Forbidden late child is detected by attempted continuation count,not by assuming a later error is sufficient. Internal injections are not public scheduling authority. REV3/4 payloads equal except source fingerprints. Later script also guards Task deadlines;that added source condition is not retroactively in these original receipts.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "role": "HISTORICAL ADAPT MUTATION COHORT; EXACT SOURCE GAPS RETAINED",
+      "judgment": "Recorded historical fault/mutation receipt,not fresh execution or exhaustive host-failure proof. Test names,states,errors and injection strings preserved verbatim. Partial source manifest is not a full dependency closure; source gaps cannot be repaired by unchanged result rows. Phase140 stage rejection remains distinct from later ingress failure. Original four-test/two-mutant cohort expands to five/three with InputOnly handler emission and then seven/four with missing/duplicate execution. Positive one-batch/exact-once witness remains;duplicate rejects without extra reads. Forbidden late child is detected by attempted continuation count,not by assuming a later error is sufficient. Internal injections are not public scheduling authority. REV3/4 payloads equal except source fingerprints. Later script also guards Task deadlines;that added source condition is not retroactively in these original receipts.",
+      "acceptanceChain": [
+        {
+          "path": "docs/planning/campaign3-history-adaptation-boundaries-rev1/review.json",
+          "sha256": "31045a0fcbd3dd59c7fe846336ebe9b2aab19fa8a29851268c70f5b57ceba5e6"
+        },
+        {
+          "path": "docs/planning/campaign3-history-adaptation-proof-cohorts-rev1/review.json",
+          "sha256": "bd8a61fdf87890a937a7dd3a7d0194dee6091a73209350c8fe2b054db526f614"
+        },
+        {
+          "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/review.json",
+          "sha256": "e9c2ca5ee5aa7861ff8ea0f61f214e36c19f6da57c93396fcaca6c493bd7d6cd"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "occurrenceId": "3c27ef606c5cebffe80b5f392a5a69a2c4c1e4188f9bbeda1f831795b41b28db",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "08d362be62bf1720d1cca431dd514fae5f73dc38120f9d7e8f251f33a33e9b0b",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "264a95498eaba02acabf7f2024399035c1a254cdbb7aa77636fdf00b3c704d8d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dcb146566518baff74cab57a2c98a97b1f584ed7ac8937bcc6feb932e9edbab0",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e5f37477c030e7e14264c8a2eebe7777b8163b9ec5124efe5afbbd7a998372e4",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36ed0b6f0b3e31af629646071125f4257f2fbb183735a63c196774260f966bf7",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "aeb9706ec37ca16fe6b97a2f0b7ff6e40e8a773b10cb862c4bd0a072da5c323c",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fa2a4bafcd4fde30443a896569615f3424540295259b7610dd94c65c13bf7dc2",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ff8c63711aabf40170246f817232f896a0df9947008b1ba0f021ccbac5cace76",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a37d479b9d70407df2dd7a1c7b60d7d5d6e5e4fb955829a6732d20d3a39a7d00",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f7402cb989518c47ce9b7fd84fceec2cd7d4584a85cfeacb29003b20b2ec31d3",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "12041399a19c153aecbbbc94e6c23072a6b09ff7e9fad81b7b4587f83796dcb1",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "269e3a7f60d4017d78122fc781ea196859bb1576db58c031f84ce3e4f8cb2570",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/4/errors/0"
+      },
+      "text": "expected Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ] to deeply equal Uint8Array[ 9, 0 ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "88963402f63f81484b8292bde913dce8edd95d678ebddafb5d5de81be04c2711",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4f63b64111196ad5b1d353e0e0438ce21f552f9450d3931a4fcabc224524a625",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "41fca70b76a7a462489216306a56d038b273c77ec01f8350bee5337afc164e29",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1d38b8af842c41a9f9bc49380481524290e953086d67b4d77306639ff396ba4c",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a9e05831d6df6d0be498b95e3b32d015782697bc2522bc393ec502a87bd43be7",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7521eb1cb52c06abb8644ed1ff73492524b4db29ab984bd30048d2261464b8fd",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a07adb1512988bb522db43e7b17907edbe0a93108d9e756d416a2ffc99fad680",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/2/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8cc0f34429a798da2c8ad4201807f3f271ab59bad02da3a91ad83d491e54695b",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d9c042a27e56a469a32cb84322f4a832a374737d4ef5ff2c3ecfa25d266c6ce1",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/3/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a129f74c84a6f9811f7a819e096067ab9f7f8997ba943c62dde72d75ae196cc2",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "df8a531d7dbb5c0dfcdbb8e4409e03e9c49ffc51b3aa3b61c1ebd03bdb187ff1",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/4/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e7089f75e333504191d51015a6a7e6396e8986bc44cdffa66841eeb7b811cf80",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6c3598c793a2e7ed6c43b9214ea21b7af429ee0425e21188d4a3f260b7cb7d65",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/1/tests/5/errors/0"
+      },
+      "text": "expected [ …(2) ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "25c5d293f433e897df38da85ec5f1bcd1c287350fb3c3189d7f6e8d1efd38727",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9d97fbc520a8d137c403e4f6a948e753d2984a15faeb1033f6113abff56a2897",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 7n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2b16cc4a4aacba64023f8ee28763821124b5fde05c30d9875e318d90292718a4",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "305f3ba09e7c91443779724525e1aa004a94ed018b6f651ea3a006e8a1aa9a49",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/1/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 9n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5a44328aa271bc406fe3893346e038eb0dad40103c3aaf956b50fd78f10db560",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7ed05388f58528e343cc4665afd6885aa14a8891efff1bb9172b5a526730c8ae",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/2/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1ad69c4e3481a0ed8a4843270b4e1ff4fba717761382feff4e6e28c80f34eede",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "515b884233b2166fba635aefe0be8c49273fc385ceebf5affb59eb3f77ff3c14",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/3/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "46d3a6448a39c542be9cf4baf7cbfd4917444b88c4f98568a11750c44219f948",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b3168886dac9a8137c1422dccf9e8798b17fb3d3940a7963a92a968af6513950",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/4/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a721242e93f3422c64d9e2cd53998ef845ba20853a1feab0db694e4c94c49218",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "66934f5c4750202148e11d08a1a0bf4a47d7838f20a964dda0e896fb718e889a",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/2/tests/5/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 6n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8616399fe06ef90c36e5efb337c2ce9ed3815f52684e90dac4e9b23e66438172",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "af49bae3c5eaac016645e2ddb181be48ae2a0ce3db261107b28305549fbe8d2a",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/0/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "461b99c25a8dfafcbea4f78c28dca0611e16d6001d6f5e0b7fc218a67df220c5",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4deb87317c5591abd599c3c7c1a1a65cdfd61586b9ff8efc1224c4d1d4c55971",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/1/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ad515951bda65b237e3e3733104e3b656b34ae63b1a56cddcbc000eae6cbd3f1",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "439d2a394ed1d051b6cfade9abf58661b43502014b77cc17da2ec8e125dd012a",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/2/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b748dee21fcb09b039ba91f1c5bb6ec0c50db404c1de48830c0611e6087eba27",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1af17a07ee4c67f37a0ab5f0e10ed3a5e1bf8d67b20f26ce65f77f557ef1300f",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/3/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9021be27b621f394e6a393fe25fb4749effcb219340d6df6db09e847f65b0347",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8670a4907b2378eaa70bea15596f26514b3e082ef4b8c837b08babfd3f1af129",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/4/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d0476cb54049765e774e2c7c388f87e1dd5b7b2b7d1e8012ddbd997e0cb10191",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a237fcdc1e4c117652c53c5f7f43b079e262a068e37529ba9509edfa123d4f71",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/mutants/3/tests/5/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0d9748f41c3152458b65c9358f2c0251b7f432f4e8aa01ecf282119abeb63a93",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Six explicit failure stages and four publication-leak substitutions; not all possible host failures.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "925c12316723a6c76ff57ba3bfcc739d583d3be7bd6097c5dc754e34a19895b5",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sourceSha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No semantic contract widening or whole B/FCT qualification.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "5c4ef5484c5783fa234dea0c860266172222264cf7bf11062e6de95d235b07e6",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d397e06f7c5bf61cdc33b6712e25a848d5b78268714762b24fd38be7c66c7264",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "950fcdfe7bdc6343f531ed8ac5162862bc7181a14abd9ec34f748f23b0786164",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b4b5c5e1bee1c835a448be45c95bf3d6aa0e7f71d06c053aecbcf8390573957d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "47980ff3ec6ac8e5b3dc89d2bc5ee7be7755bde31424c8a9a58e7afbe3cf6665",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "55327b18107d9772307710f02520f36e0932a1038737137e3dea18fd28bd3a39",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e2e1e5542e03e1a2fd502114d9479520f1bdacceecd852cd32dcff05385d0b70",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7088b51b45f3a831a1489d070701c18e9975ea40b1e7a20264c607669e12923d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2dfa71c6f47a1d996fe649f8acf0c24ebd272c7f6d61184611f1033336f86954",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0bd6fe32426d663ba17a9987bfc6b0cba5bb657c1d8563f8620bca8b513d2056",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0d91b62a14418f1bba6409e6ceb76e4586a88e6736626728f3cfd35b6f9ee698",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6c041e5b962c36f085e77b9b1bd3eb641b013944e7289123383e2e3d3e689360",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e72d937a35a7098f39c8ebfde80dcdd6b0394b8a2ba2538d272446982ccb10ac",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/4/errors/0"
+      },
+      "text": "expected Uint8Array[ 9, 4, 10, 151, 1, 1, …(541) ] to deeply equal Uint8Array[ 9, 0 ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3d37e8ecd35f6ad546d4a6cb61a47f027a238e4458e2d2932b051fcf54ae197d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "79d1df416171294ea90b43326fa6dbc486743b1258185c0e1de61a90a5dd5d2a",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "59a3202f2b6f3bdfacfd23965b9379e4adc9249306c918d046a1ac9af90e85ae",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1a6f4e6bfe1d0d3eaaeaf82fcd49876186438148dd1c992cd30c90f28bbecf68",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "883f3c68f4871ce5922a91c178a63711b8b3e62b00eacf8439571c4699659907",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/1/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b82366032475b628df1225f042884ffb4ffb702aae18dc9f918afaefacf4d2e5",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9bec2aa358a82388870bb072493f690f40159065bb0006ca33fe30b33d00a4c6",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/2/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "97c1a2429190659e1be0cda93ca3cbcf615af1d1072844d264e8b6dd34416ca9",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9bfb1d9892e869ae4b8abe4abbe8d3ab21cd00715ab70a29dc888c9baedffcec",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/3/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "826d065369cf323a6e25484d7d4ebb594d41a2a54ec5b7fadcdf619731462d57",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "82ee8780a4175d5bfca4301f3c987ec36422dafabb541cc904de6affbdf53e07",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/4/errors/0"
+      },
+      "text": "expected [ { dueAt: 4n, phase: 110n, …(6) } ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0a23365198472aa3117a2cacf16b41578f16da26852e2c218c3a693241bd8d10",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "60229457a0920a512f82818dacb9031d8a546aaf0e70aa77f17d31b152261dcf",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/1/tests/5/errors/0"
+      },
+      "text": "expected [ …(2) ] to deeply equal [ …(2) ]",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d0500c1cea809fdf96a750d60915a34d11345c6d72e8ef447ccd0a51f21740f9",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a8ac9378af121302cee4775e8355267ecef6aa1d30df8bc6abbd5ca4b08f26b2",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 7n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cb584ff56c7c50f9860d541e98eea8b12116aa196a2bad12e864d06af50d17d4",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d63fcfb7599255189678c8a3b6c24974f50342112710810c9e9d987882cb8e35",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/1/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 9n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b430498f03f73cbffc577e2434410729d2dbee363789d7485ab98bc486838ebf",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8b5f861637ad9095d4b3f245f45125f30ea4b0f643f347c4aa7473538f33659b",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/2/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7042e49726350a3b68b1910ffa1b384b96c4505ea00608c062ec1d55f1cd4f4a",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dd909d8510ff6129bf845a1f850f0906401960ff7b909360b0483c7ed7b79b21",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/3/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3209b259d53dce72ead32c4853b9f4bf2762a0b546a06f4dad82778b92fd8c6d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9f9fd2a431e3ade43201ed18b23641ab5c8b6ea664c9c37f993b9dbb2632eb5e",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/4/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 11n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "67e8d1175c852e49637ffe9e94647fe5181f401f86745e3b2f6704b727d72e2d",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "14bbcbcec318231b3d560c0e5d183e1e37970259eef6f6f70c30f914f2d23bdd",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/2/tests/5/errors/0"
+      },
+      "text": "expected { nextRuntimeId: 6n, …(2) } to deeply equal { nextRuntimeId: 0n, …(2) }",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ed9d175227fe697961c14a9a6e9410e96d69bdd91d2fb3d93bacfb372a0c49c5",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "AD-E12 after-reads restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1820ccd24c390c9f6b1540732da89060c1a1ec995ac0be0af5abb6c1a49b4f30",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/0/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ca03b21a58d31357d995815e645fd2bd9f7e9b2dbddcb5f184cf0b817a6996b6",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/1/name"
+      },
+      "text": "AD-E12 later-out-of-range restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6395633811468aa76e410eb3418ce22ba0aa61d934bb81937d6323ce0bf93ec9",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/1/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "42b6d2bb083c3eb951e52e03da6f991f9112258a9fa254b5de80d3c1dcfcad9f",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/2/name"
+      },
+      "text": "AD-E12 after-staged-outputs restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "03ed56758ebf9ad7f5ff955e435736a3d8cfae6f3c79ca0f3d5ef6121b521461",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/2/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9100cbfe6bc4e49f2eb0bda18cc217d23ca7e9c15b33e5c93824b31a3ae73ca5",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/3/name"
+      },
+      "text": "AD-E12 after-patch-union restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c8cfbf3f9b14422076e78e1e5887cfa57bcd07a0e3468717729c23f2d69e5ea0",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/3/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "3a81055431f79fa5cd68b8c81d6b91611030681b3a6c4df0c2a7be50edb825d1",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/4/name"
+      },
+      "text": "AD-E12 final-trace restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0a8d0ac9329f1d5b5dc01c2b0e1c0e23b564fd75c636914213afe4a3134ab8c3",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/4/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(9) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "90c974a375a5814d4edf8de886f22793dadf2c7c5ca242297fcec6212bb67efd",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/5/name"
+      },
+      "text": "AD-E12 work-limit restores the complete public instant",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e86002c4f65345268ddef61ac6d14816f7fe5de820a1b4f01683ad4bb9dd3dde",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/mutants/3/tests/5/errors/0"
+      },
+      "text": "expected [ { kind: 'record', …(2) }, …(4) ] to deeply equal []",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8adc66d782c83e0bb1185ecde59f4e9dd49af5539fc4e95d39a207a71d76e82c",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Six explicit failure stages and four publication-leak substitutions; not all possible host failures.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a6059ee22e769ee0fce18b815583ae2527bdf7026f4fe47641ae7b9667bf6d72",
+      "source": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sourceSha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "No semantic contract widening or whole B/FCT qualification.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "987686b761e5627d83dc0e70fc85f9773e0003552c12f0ad50b596d9cf4ed782",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "194a0510c48c341f8f3131a16ce30d84931871ddf372acadb55243fde74704b6",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4ee7d299060d0fd23d935e57ac91a997814ef63a267d6f16ce977c1ec9fab92e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f61261ec0721333f4de0f7604f886c3ece52ae51b6e1b9dea6bd284e6bea591e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d4000cf03e4beac4ccf36e5c658ef4d111b9f86046b0187e97e758693bc3b495",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "55b322338d6c18e067d16112af86b8f347e4c521aa5660dd47e2d7fd8b78823e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/from"
+      },
+      "text": "for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "b90115f4744d54b06e89046b6bd62ca0ea2d8da2e706a6129cd5dc87db32489e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1376060ce506ecb1054efcb7381e58f36da13706d5289d354531d026064d3ccb",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7b4ca850cc3a5562700710b034c11b0a24441b0731579ee4c3b87241d679bee1",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2dd199f1282589b9cd5e1bf28173358ace7b9f930cd67d754f15ae7a01c0b717",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e8bb85d58d16fba3f7f54a83d6d40252f67a9f5ca91cc11dd4cc35841f685561",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e4985c9d29507ef3c0c2e051ed94f31e962f73d0cf9b41614f6a98cf93cd9e11",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/from"
+      },
+      "text": "if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "88f43550b4e3f91a4839bdd246f9fe7901f8c29df70b0cf7182f6f4514435f9d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "36ddab726612fa90041044f003f581d9d20e58dea628bdaf550258c4cafd1fbf",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "274fe4a33c88fb46402b0046c13b76d4721d12f657a26459977ef6607342f530",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "449915f8b9574aff7b45670a46efa080261a9e6082af5af2fcc0e8e5dfa4fc05",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/tests/2/errors/0"
+      },
+      "text": "expected 1 to be +0 // Object.is equality",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1d44f4c91484d30bff61ec68f9153c8d5fc30e78b40036a84c8952a4b494a837",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b7de0f24b55b8c70290ec5089aa981a03a099849d9313a9588336094520bb1dc",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Internal fault injection into real public-factory runtime; not public scheduling authority.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "219ad15894d9c1e287ffe06c5bf4d27cfaa333415a4cc85e7664230cbfd9f7a8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Ordinary event exclusion and forbidden late-child stage are distinguished from later ingress failure.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "470fbb2b2eaed2531cd56b948da100394c139c2c4ee5a34b3640d30d766179e8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sourceSha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Positive witness checks one batch and exactly one execution per original event.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f2e382f23fc09b9063888cec7caa72c8b8e6e5b6fbac9ed2fd80d2eaa5343a9c",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1f465dcb4263ada9edff096b0f68c4e80d1036633c8c1a100a0b23d7187f0e1f",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "06e9013e043441b68e27c86d40d546e7ab3e3cc1f9bf602a0f057f2fa7298065",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a204af9ef41b58ebd7cb8ec3a1ea26e2c13f914866bae18ab6694ccab68d0f94",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "852d321eba8d789f9d04adcfac93eb84fc2b09d34f37ada0ded72a42fdf451b2",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ea02810f2e5c06459c4635e021ca6323697aac86d5530cf0d8cde09088ca853d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "28c8eb1366667e4409349c9e01c2370fafa35436f8049a65995eb48234aaebd7",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/from"
+      },
+      "text": "if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "2fd70ceab6cac61385f4c74a0414151699244f4811935e08252bfd1e5596e39a",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9a76bd580599d7a2cc040bbbe9d738ac84028bb19e33dbee71e3d78ae1f4cd01",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "48677efec497fc41f00dddeb1e172540c8f65584e93338a8aa702f9a4de2cefe",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "399e5ee486c9ee85a6249497775774030ebcf47c0010c027d05c81ec32777d2f",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9919d25531ab2fe6692886c90b21ebcf7d3662c7c977025218b512e73d52791e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/3/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c3bfa9334ac4215073e8ece987707c3fb98601c1f1f8ade9d7a0ff74e71f1819",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c3fa2e42c87c2391920ed8daaab13c7be570f480f781a5320342fd2658eaa718",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/from"
+      },
+      "text": "for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "8ac8d769dfd39506fe2d897c4a245f1f7b478b9842f81101ca9f3f6c998d471e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "eeb43a1093c0dae36b82308a5749f337fc60ee2e1b1f708070aef010cba083e9",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4d4888797d0041c6b86e079875721e725385ce9bd8dc96a5ca4c7a28b61121dc",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "647c22a48b39aebf5a924e58a134a1b142751bf5568a868d369c5456e252f314",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c3c88c50e2dac862da142bcb0402d0c00d7c75a2e9da933175fa97f7d9ec4c24",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "50c33b446e0a27fa21bbe15b39ae44a633f9ff51f0aaf6037fdb031f833ca0f1",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "70c403de6cece1cd0ef40951a5416e900892f67254def671c2f0d90f382c1075",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/from"
+      },
+      "text": "if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "fdbb814c6ac805282cfa68309ac6567798cfaa82a91597e5cd1adb69288b1d83",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2327f5297fdc3296c69a04f81c3cc1c97664ca727a3e5598461c95f9e1cd20f8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d887bee1f248183abb1c69d0b6cab3cc444bc89939d0268afe2b2f3bbf132602",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "da23572b5493bdc5418801d205edc26a470b99717f13921374639cbcd1029972",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/2/errors/0"
+      },
+      "text": "expected 1 to be +0 // Object.is equality",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d2e575ec5ffc4efad88d26e4afc30d65238dd8591eddddbbda84a46fe859550b",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "76ec2e6895029b33b0396d7f721e3e7e98116ff956c82a7c684f6b7731c1ab71",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8e76e2f82cb97b888b9070d7df4d7106988741ab4fa75b7e5d263b1b019b2656",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Internal fault injection into real public-factory runtime; not public scheduling authority.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fe426b597e79782b525a40a0d5d64c81d73d4cf028c86cc6c1fc854dd89093cc",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Ordinary event exclusion, forbidden late-child stage and InputOnly emission are distinguished from later ingress failure.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "16f4dcfac0bbad3ca76b6798329f673ead03ba6494795fc7723300d70e5e582d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sourceSha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Positive witness checks one batch and exactly one execution per original event.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4226ca3052dbf0357626b48de9436be9087e3947406d712983884e0a4c5b1235",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "02993e886292fea9264c80aac4371360fafc611f7501d58058ea9e5c3136c723",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a90a4682b3a300c4abd16143ce31311db982c6ea2638a97725c498bd32c1c71b",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d7bcddacf365983429eebea45f8300434bdf5bc8c3809a9014e544b807fa61d6",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2afd03d0ee46946a5a93a24b27b63ac5574d21eca9e08dd65edc55369d94661c",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cd5d5c21686dfab28cf89bf9976d22e6c99a81abebd0ad0a8a1b2375eddde01e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ef1a0cbbd0c37846e7224c73fa48f82f576c7b464676ce6e1bb41dfd56cf78f4",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a3f31491280ea20dd676381b83132086563838394b2e131bcd841ad80a6a4988",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "58e23a38ab93e68adb7b4e4bd2aeb59d5ab6a9ebfd1d34585fad511f1569b2ee",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "413f1b8eb88d71cc444e2ed2de5b64ca1a117fadf8ce75c4c19435406295b84e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0c6958e9d4945c88f49798729d5b65183d659d553e6fb6911ec1f51c5bd70de8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "34b0feac54c0c46439f4e536219e2be481f0f4f789ac4d80392ce62f56b276c3",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9e1fe502d9930053bb2b199ad91e08767211152e567e543945dff0cf2c83bb1a",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8ee832fe704fbea1997878b6e43206257b283844b791fd3468c282128a29bf98",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/4/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6f47404a334399a12c3f484792b2f90e3f9495a3f01a120c7add9bdc582124e4",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b469b3763fa227e7d4d3f8a4e78c6f79b21c08dfd9236d51cf721715f549c602",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dd64cbd9dbad110030112523dcbb884d0c52ead93ecf498d1a2e331e6519d3b9",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/from"
+      },
+      "text": "if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "d523d2a5fc1941034236368bd403d94689b06cdf4de2c4e6ed0d27fd00617bf4",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "eb598baf2d27e63852e1220e22e773d9fcb0d3138264fc090738f1f9972498ba",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "be84a5bb5fc79ba5d2e5e048c637c717cf5745ebf5c90eb6ce162db167458f91",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9edc91aac67b4ea2667272f1ea5377e91ac0c048956d2a242345fd6eacc4b96a",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c21bdd9a674495846ddcbd9d4f738c8fe22f103a3a22f9029b6a6265c5b91fc2",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/3/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d1c847edc455c62b78413ad51b9c61e6197865d2283b91ec3fde608f62a9b736",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "6c2d43246276afc13e1d616007f5da7c104cb6184aaa358acd455476d7712281",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c5a2360edc0238a47e8f16effade95948f98d5f1409540bdf5c80a539b0a7992",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b01a15aca2ae5f42d06ccc54a66b09da688c8d1dd8ed48c796c08bae1ff1eb63",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/from"
+      },
+      "text": "for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "859dbef4bffdaf9c943fa583636b73ddce108ac667241eac8e995abbb6d27551",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1effc78044fd9887f20e5aa461afeaea9c8717a7bf93e0461908a25d70674e43",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ed13fbd8ffc2b06e7118f0e1ed361b402bb2d48cdba420c84ad4571ad1a2ab46",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "30a5aa60a0a3fe86b1da403ff6f6b3a7afb0b1502c982549b48227f1c68c8525",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "fc130c9d9106075e8bd076c84617f81dd2f4a5bf9374086648a894d96533a756",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c0e4d55223b654dbb9091c4edd2fe5ac5ae4f5e0ce17bdc955641ca0823f8cee",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8ce160a8fd3542516051fcaef2179660758a2b8dbd05cc8c6166a3e7a5479eb2",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9e3031565608cdb96ca4798c12682482c2b34dc2ab86c0bb1efa7e63e8c548c3",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/2/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "198788d693cc670379068f28cc1841fa1e26b9aa6b9b6b7a4cb34d47fd2dee81",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/from"
+      },
+      "text": "if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "9bd7854cd32e0a76fdfbc76ab9883fc5d6d526052e7de43f7a6e920084680e44",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f79a69ee711e09551a341bcf466f89b5ef3eddb34a8930ed7dbdd5d301ffd22d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "eb8264664e534a49dda974013b02f52c1c8fd23207d9700a846ee058e1d10c7a",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f4978aef9b399e7e393f9f15bd8bb76f7f3e8476052fb5709da3a624ef409212",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/2/errors/0"
+      },
+      "text": "expected 1 to be +0 // Object.is equality",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0dd44c0bb201f7a47b33e6bb49e7ea1ead98b71f2be97b0b2e6a401c79f21e1e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "268b20d3334b36c4c743f542e8d49432dabab3922ce515bff0220338ad399aa3",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "eccd8d2553d916c6ca655afe3b521d69ea986c43939376511a49b263e7dc12c8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "87decc37e702d1290e776e532eaf87c624c40662b7b8a36980315abc41073cd8",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/mutants/3/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bbab26d6a12afd41ffbde85b6da85c16d29d899d72efcc8f99ea681e3f7fc151",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Internal fault injection into real public-factory runtime; not public scheduling authority.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a7d1699bcf1f446fb8c070d8a223eb287c3240cfa29c3745b99e8cbeb2116932",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Ordinary event exclusion, forbidden late-child stage, missing consumption and InputOnly emission are distinguished from later ingress failure.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7ce6bce8951a37431ab7da937f2703cb4543bf84911dad62857cc82dc6b2887b",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sourceSha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Positive witness checks one batch and exactly one execution per original event; duplicate execution also rejects with no extra reads.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0170d12cfe15729de4f807fb3aaae6f5f484b2180d644933c1db6a20996d7e4b",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/status"
+      },
+      "text": "EXECUTED BOUNDED EVIDENCE",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "64faa66108064c3a7b1a9af04bc0dd71399f9165e9d8732469731044626ddfcd",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1d476e28401ad48173df01e69da85c631e9501e5f9a053fdd75414d408f132b9",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "717e30d2f56c4c390eb4a9e9e875ebb70a69261f723644b20d25adafb24e8296",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "719b1b6ba5501c2c7641cccae992aec1e4e75d55ae4dc4d73fd2b70463299782",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "74bd17b2114742f73305be3aa627378ff2a9b36e88999427d9122fc110a57518",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1cbbd41e9bd7ce6879855dbba9b3981f3aa71385fab3b9cac194a00b7e0282c6",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b3961d36a8991285d22b44a88db13e6d9282365a325421e96b19339394d0dc09",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/baseline/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "cf586f970d95a741b989fbd0c87a1d4629bce6bbeaeef74acde3a3b32fbe42d4",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "30c01f293dbc9cf15f3a070cbead556ae685cd43b677eab82cc4a839c46b9d7e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "e1da1bf216be396be5bd07c97f2dc67755c4e0782cdb7c2abb6b5bfc7fd47bad",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "33c29d22f57f246c34b606dd074c824685b2a7f193c01561c6ae2e7fb6c39b7e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "167af682efe9e1417aed8c38e84831f41c55f8a61856c6a5fab4ddc8dcb804af",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "72f7bb05cfc4112aac5563dab576dfe87c2e8288ee4274eed27d6379c3722830",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/4/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2fae86acd44ae2a65c30def0493d221a465514e54a6032bd74a33cfc1c32b517",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ffada5085cdbaf0f8c83bb10d252a8ef264c5abd144380e5b18c7be7c59295a9",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/0/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d1e171d180562fdd033bc9dcadeedcec614747bb2e4e18b18016070ba41defa1",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/from"
+      },
+      "text": "if(key(event.eventTypeId)===key(AUTHORED_FACT_EVENT)||key(event.eventTypeId)===key(PROBE_SOURCE_EVENT))throw new SchedulerContractError('INPUT_ONLY_EVENT_ORIGIN_VIOLATION','sources are compiler-only inputs');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "d35a252dd3860c8d1d1778ed9b2f8be8cdfd46403829117fa16d6353463efa88",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a1289132b69359ee2a3d03a9b7b78f5ee91f6e6b58539c331b745564af14204f",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "06427e400d9b605412f62c6d1879345eb030be45f50d80491cc17ec63dffd6a3",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "9d151e0a9acc9efcf1d6d9bcb1cc717150d6cd4f40114305d8f001fbffe92863",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "281cc4ad897d9cf22b1f6b9c14488760dea007514c302a7a767cfc52af051a32",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/3/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "f5f32eff818af6c722d01c74dafb11bac7bca3ab318e9a0e8233840b418a514c",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b2b5348b873f001b39f3ba5193d40e3845880c3361b795be9da0aeb80cddec61",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "d0e8ab311bc43dd7b05c51177e398e01f94d5cc8d23506a51222a370e5602e6d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/1/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b507aed32175ec565b123ec49ff6e3d1566fb7a1fa8dc9a4f5349f7c9ceac4da",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/from"
+      },
+      "text": "for(const event of events)if(!shared.registrationForEvent(event.eventTypeId))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','undeclared phase-140 event');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "5a2844a606c02e735d042a15f204f479f334d997bae570bdd493605310eea48e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "930cda78c07c3f3f997ea03e45b0a413bf86f44e22d7b8e2cb87d5e06f1de4ec",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/0/errors/0"
+      },
+      "text": "expected error to match asymmetric matcher",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "800ed4cc5729950433ddb05e3e0788ead3b690edf13ad7967c8f1d108316f099",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "7f7446606d1aae30af3325a2bd6a8bd0f8ec04ea093c74622f10170e47de2208",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "0857008470b8625a5cba6d45b95e6f5defd1816dd52798c7ad84979119cd0e26",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "073413902bc4ae1d827d3d55959e9ea441e38db67b7a689b285695b0b7580819",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "bc49730307ba76b78889e50faef1e381f3e69269764ad91f5246b1459d3cd98c",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "42a3384533109574d791581de882c6095c887ef6f884b3cdc174b9f9dc12b25f",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/2/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "4f70155914380067bcb7b746f3342b09c66e219126ffa7537c9f1764414338a5",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/from"
+      },
+      "text": "if(batch&&currentEvent.phase===140n&&result.emittedEvents.length)fail('ADAPTATION_STAGE_VIOLATION','automatic outputs are terminal');",
+      "category": "BACKING"
+    },
+    {
+      "occurrenceId": "7eb050cd7160e82fab19119fd4abe564b6118b58e62690b1a6aa1dcd17a6807c",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/0/name"
+      },
+      "text": "AC-I phase140 stage boundary: ordinary-event",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c2465f6e7313a29808383c50e8750264acfdd4462edf76d198844229211b6baa",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/1/name"
+      },
+      "text": "AC-I phase140 stage boundary: forged-consumer",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "a60e602d837ce2e62c80f75a54cd60cc3811556f56586c65b5c5e00a40577144",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/2/name"
+      },
+      "text": "AC-I phase140 stage boundary: late-child",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "c95abc192e406e5ce2d1c1417f3a13f07358d368937798947a36aa62879deeaa",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/2/errors/0"
+      },
+      "text": "expected 1 to be +0 // Object.is equality",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "1243b50e8405ec4b455de546fdbfa02e7eaab580ce75c428659b76bf1d39d07e",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/3/name"
+      },
+      "text": "AC-I phase140 stage boundary: input-only-emission",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "dce9c398416e05d886a73b81b247d2c9a8747f9a286b0ca276cbc8ce4b951f5f",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/4/name"
+      },
+      "text": "AC-I phase140 stage boundary: skip-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "ba20c962d7329ea5f1c050738af821f935994ca3d05a8e9be6cbb2d1193e0102",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/5/name"
+      },
+      "text": "AC-I phase140 stage boundary: duplicate-execute",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "2981a9214dd3ea1f03e72c7f8caf59ee9b05626087eb2fca71fc64b60148916d",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/mutants/3/tests/6/name"
+      },
+      "text": "AC-I phase140 stage boundary: valid",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "70279ec067694211c7c9e7239d1bc69117976cfcc75873d42f783dcb6a7cc004",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/limitations/0"
+      },
+      "text": "Internal fault injection into real public-factory runtime; not public scheduling authority.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "8bc245af3c8316c119fcb5ba96e25a8b45bd5af898981560cbe1b2413f3b7771",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/limitations/1"
+      },
+      "text": "Ordinary event exclusion, forbidden late-child stage, missing consumption and InputOnly emission are distinguished from later ingress failure.",
+      "category": "NARRATIVE"
+    },
+    {
+      "occurrenceId": "b274b3fe4fe6bcd71b14f019c127625f97f48660b68eb3ee018334133fa90f78",
+      "source": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sourceSha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "location": {
+        "pointer": "/limitations/2"
+      },
+      "text": "Positive witness checks one batch and exactly one execution per original event; duplicate execution also rejects with no extra reads.",
+      "category": "NARRATIVE"
+    }
+  ],
+  "recordedReceipts": [
+    {
+      "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+      "sha256": "4268a6658d14f58eb2301f4c0fe8f6a1e34b87f3dd76d484c4e5f2c2ebe8347f",
+      "baselineTests": 6,
+      "mutants": [
+        {
+          "name": "publish-failed-working-state",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "publish-failed-working-queue",
+          "status": "DETECTED",
+          "failedTests": 6
+        },
+        {
+          "name": "burn-failed-working-allocators",
+          "status": "DETECTED",
+          "failedTests": 6
+        },
+        {
+          "name": "publish-failed-working-trace-and-outputs",
+          "status": "DETECTED",
+          "failedTests": 6
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+      "sha256": "fcaa150d39b31237f9dc3cdbc3fdc4169c3185f0bca62dd3625b2ea6cb2a346a",
+      "baselineTests": 6,
+      "mutants": [
+        {
+          "name": "publish-failed-working-state",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "publish-failed-working-queue",
+          "status": "DETECTED",
+          "failedTests": 6
+        },
+        {
+          "name": "burn-failed-working-allocators",
+          "status": "DETECTED",
+          "failedTests": 6
+        },
+        {
+          "name": "publish-failed-working-trace-and-outputs",
+          "status": "DETECTED",
+          "failedTests": 6
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+      "sha256": "6fa75384aef595ace4fa9ef834649fd386f22c5e4e845e00415f5561900f7244",
+      "baselineTests": 4,
+      "mutants": [
+        {
+          "name": "omit-ordinary-phase140-exclusion",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-late-phase140-child",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+      "sha256": "1b3e774e76791a0278c3c3434493601b0c227aba8119b15b1f2e4b5f8bb63539",
+      "baselineTests": 5,
+      "mutants": [
+        {
+          "name": "permit-handler-input-only-origin",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "omit-ordinary-phase140-exclusion",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-late-phase140-child",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+      "sha256": "b02da8471cb374db9c269db104db952411e41a21a604e4744dc685cd360fe212",
+      "baselineTests": 7,
+      "mutants": [
+        {
+          "name": "omit-unconsumed-batch-barrier",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-handler-input-only-origin",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "omit-ordinary-phase140-exclusion",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-late-phase140-child",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+      "sha256": "8e388a71995b2d174e2b83b13d08e1a120849fcde33d3faa1d1abe807897eb77",
+      "baselineTests": 7,
+      "mutants": [
+        {
+          "name": "omit-unconsumed-batch-barrier",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-handler-input-only-origin",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "omit-ordinary-phase140-exclusion",
+          "status": "DETECTED",
+          "failedTests": 1
+        },
+        {
+          "name": "permit-late-phase140-child",
+          "status": "DETECTED",
+          "failedTests": 1
+        }
+      ]
+    }
+  ],
+  "exactBindings": [
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF.json",
+        "path": "src/test/campaign2AdaptRollbackStages.test.ts",
+        "sha256": "832bde2059e523d1f060cf7724f7df36dd020ddc13f806349284d66a56220a0c"
+      },
+      "actual": {
+        "path": "src/test/campaign2AdaptRollbackStages.test.ts",
+        "sha256": "832bde2059e523d1f060cf7724f7df36dd020ddc13f806349284d66a56220a0c"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_ADAPT_ROLLBACK_PROOF_REV2.json",
+        "path": "src/test/campaign2AdaptRollbackStages.test.ts",
+        "sha256": "832bde2059e523d1f060cf7724f7df36dd020ddc13f806349284d66a56220a0c"
+      },
+      "actual": {
+        "path": "src/test/campaign2AdaptRollbackStages.test.ts",
+        "sha256": "832bde2059e523d1f060cf7724f7df36dd020ddc13f806349284d66a56220a0c"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV2.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+        "path": "src/campaign2/adaptationRuntime.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345.ts",
+        "sha256": "97a109c586b19ac78cca93ff4de982fe05a0c30b40ca6c6721222e1291a4a345"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV3.json",
+        "path": "src/test/campaign2StageBoundary.test.ts",
+        "sha256": "85c1677c011b6f01dcccffb4f49bf5ce8cce83393e132acfc4d1e4003d6dfd4b"
+      },
+      "actual": {
+        "path": "src/test/campaign2StageBoundary.test.ts",
+        "sha256": "85c1677c011b6f01dcccffb4f49bf5ce8cce83393e132acfc4d1e4003d6dfd4b"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+        "path": "src/campaign2/adaptationEvaluation.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      },
+      "actual": {
+        "path": "docs/planning/campaign3-history-cognitive-preservation-rev1/historical/477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1.ts",
+        "sha256": "477956dc41cbfc5a140b29a3b9b5f26da30710343139b6a576855efe5a394dc1"
+      }
+    },
+    {
+      "original": {
+        "owner": "docs/planning/CAMPAIGN2_STAGE_BOUNDARY_PROOF_REV4.json",
+        "path": "src/test/campaign2StageBoundary.test.ts",
+        "sha256": "85c1677c011b6f01dcccffb4f49bf5ce8cce83393e132acfc4d1e4003d6dfd4b"
+      },
+      "actual": {
+        "path": "src/test/campaign2StageBoundary.test.ts",
+        "sha256": "85c1677c011b6f01dcccffb4f49bf5ce8cce83393e132acfc4d1e4003d6dfd4b"
+      }
+    }
+  ],
+  "preservedArtifacts": [],
+  "schema": {
+    "path": "docs/planning/campaign3-history-adaptation-rollback-proofs-rev1/schema.json",
+    "sha256": "482cf887d69739aa2b693a80a1502205150f39ca0efe5158f725a0503fd0f305"
+  },
+  "unresolved": {
+    "path": "docs/planning/campaign3-history-adaptation-rollback-proofs-rev1/unresolved.json",
+    "sha256": "67a6088b8202d60bdb08231f90710c18b1eb82bb84b3b6f5368dc51c6eea4632"
+  },
+  "limits": [
+    "21 historical detected mutant instances across six reports; revisions are not independent mechanisms.",
+    "No runtime,mutant,test,build or writer rerun; original receipts unchanged.",
+    "Five unresolved source groups include one previously recorded ADAPT runtime and four additional scheduler/test identities; total ADAPT-associated groups now twelve.",
+    "No model,law,allocation,verdict,corpus or obligation status change; independent adequacy remains open."
+  ],
+  "obligations": [
+    "RO-C3-008",
+    "RO-C3-019",
+    "RO-C3-020",
+    "RO-C3-021"
+  ]
+}

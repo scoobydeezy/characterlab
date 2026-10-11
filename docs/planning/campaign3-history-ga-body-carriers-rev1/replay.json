@@ -1,0 +1,168 @@
+{
+  "status": "PASS; THREE EXACT CARRIER BUILDERS AND22 ORIGINAL STRUCTURAL FAULTS",
+  "checker": {
+    "path": "scripts/replay-history-ga-body-carriers.mjs",
+    "sha256": "cf524f937cfa8d65e90305e890c7953a035a23bc3445a1152e571e69f126daf6"
+  },
+  "rows": [
+    {
+      "script": {
+        "path": "scripts/build-ga-body-pipeline-carrier.mjs",
+        "sha256": "004615d7ab42823dd99e06c5c7a6d86b4c740202a00f1311c521ad34577a3a0a"
+      },
+      "output": {
+        "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV2.json",
+        "sha256": "aaff326e6345bd40727032d6d8099f070f65941e3b2ae49502ae3b6abe2fe001"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/build-ga-body-pipeline-carrier-rev3.mjs",
+        "sha256": "8c51c8d25fea52d8fc040765ca1765ad5659883f3e894a2da5dfbeea91890ad7"
+      },
+      "output": {
+        "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REV3.json",
+        "sha256": "96812d46d96ac96be4381f3cd9644985da5e44d7c12561095bb863bf65e80b48"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/build-ga-surviving-child-carrier.mjs",
+        "sha256": "a4edd3b8ea3bba323d33cb5ef7f190c708a7534ed031af1faf6769c6fd6afe70"
+      },
+      "output": {
+        "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REV3.json",
+        "sha256": "c79412a5dbed9aae083faf1131d7ab635b4dd93e4d6f2c05ff62367f83630b82"
+      },
+      "faults": []
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-body-pipeline-carrier.mjs",
+        "sha256": "4aa9c10b4b75b2063297faf0070856028c1aaad3a7c7f596cbe7e1252bc6fd29"
+      },
+      "output": {
+        "path": "docs/planning/GA_BODY_PIPELINE_CARRIER_REVIEW_REV3.json",
+        "sha256": "e778b821ad63295c91a677e5cb6de305e325425f51462589dcd7e3aad6064134"
+      },
+      "faults": [
+        {
+          "name": "missing-context-attachment",
+          "rejected": true
+        },
+        {
+          "name": "force-experience-for-absence",
+          "rejected": true
+        },
+        {
+          "name": "selection-gates-cue",
+          "rejected": true
+        },
+        {
+          "name": "selection-is-experience",
+          "rejected": true
+        },
+        {
+          "name": "no-empty-selection",
+          "rejected": true
+        },
+        {
+          "name": "selection-retains-source-archive",
+          "rejected": true
+        },
+        {
+          "name": "cue-carries-samples",
+          "rejected": true
+        },
+        {
+          "name": "physical-key-in-safe-declaration",
+          "rejected": true
+        },
+        {
+          "name": "widen-source-bound",
+          "rejected": true
+        },
+        {
+          "name": "premature-record-number",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "script": {
+        "path": "scripts/review-ga-surviving-child-carrier.mjs",
+        "sha256": "82e7ce9515b274ed7b694940af952c3f80b2cbb97b1a378b0b43e0f2abace87e"
+      },
+      "output": {
+        "path": "docs/planning/GA_SURVIVING_CHILD_CARRIER_REVIEW_REV3.json",
+        "sha256": "60428b0eb19295cc1c0999fdd848a6d59b84aa3b09e1bd076745b57e71284c4a"
+      },
+      "faults": [
+        {
+          "name": "initial-envelope-archive",
+          "rejected": true
+        },
+        {
+          "name": "parallel-episode-identity",
+          "rejected": true
+        },
+        {
+          "name": "selection-is-acquisition",
+          "rejected": true
+        },
+        {
+          "name": "fresh-self-credit",
+          "rejected": true
+        },
+        {
+          "name": "body-encoding-strength",
+          "rejected": true
+        },
+        {
+          "name": "retain-unavailable-sample",
+          "rejected": true
+        },
+        {
+          "name": "no-empty-memory",
+          "rejected": true
+        },
+        {
+          "name": "direction-list-count",
+          "rejected": true
+        },
+        {
+          "name": "open-content-union",
+          "rejected": true
+        },
+        {
+          "name": "unbounded-entries",
+          "rejected": true
+        },
+        {
+          "name": "premature-numeric-record",
+          "rejected": true
+        },
+        {
+          "name": "batch-bound-exceeds-horizon",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "delta": {
+    "name": "Context",
+    "type": {
+      "kind": "optional",
+      "value": {
+        "kind": "ref",
+        "name": "PerceivedTrialContextEvidence"
+      }
+    }
+  },
+  "limits": [
+    "Symbolic field/reachability checks only. No source authenticity,owner write,loss enforcement or public persistence is executed.",
+    "Missing context transport is repaired by exact field addition; source relationship cannot be inferred from equal-looking context or occurrence identity."
+  ]
+}
