@@ -39,8 +39,8 @@ describe('Bounded workbench batch sessions', () => {
   it('rejects resource overflow and duplicate jobs before execution', () => {
     expect(() => new BatchSession([])).toThrow();
     expect(() => new BatchSession([job(), job()])).toThrow();
-    expect(() => new BatchSession(Array.from({length: 241}, (_, i) => ({...job(), id: String(i)})))).toThrow();
-    expect(() => new BatchSession([{...job(), expectedSaveHashes: Array(18).fill(hashes[0])}])).toThrow();
+    expect(() => new BatchSession(Array.from({length: 352}, (_, i) => ({...job(), id: String(i)})))).toThrow();
+    expect(() => new BatchSession([{...job(), expectedSaveHashes: Array(34).fill(hashes[0])}])).toThrow();
   });
   it('rejects early termination and terminal mutation without a passing receipt', async () => {
     const early = new BatchSession([job()], async () => ({view: fakeRun().view, advance: async () => false}));

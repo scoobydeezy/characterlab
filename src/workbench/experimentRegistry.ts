@@ -1,7 +1,7 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.6';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.7';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn';
-export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'epi' | 'learn'>;
+export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
@@ -45,11 +45,23 @@ export interface InspectableBatchRun {
 }
 export interface BatchJob {
   id: string; experimentId: BatchExperimentId; name: string; seed: number;
-  law: string | number; appraisal?: string;
+  law: string | number; appraisal?: string; numeric?: number;
   expectedSaveHashes: string[];
 }
 /** The common transport intentionally exposes no mutable runtime or private evaluator. */
 export async function createBatchRun(job: BatchJob): Promise<InspectableBatchRun> {
+  if(job.experimentId==='epi'||job.experimentId==='learn'){
+    if(job.seed!==(job.experimentId==='epi'?19:0)||![1,2].includes(job.numeric!)||job.appraisal!==undefined)throw Error('Invalid frozen batch profile');
+    const {canonicalDecode,RecordSchemaRegistry}=await import('../substrate/canonicalEncoding'),{fromHex}=await import('./canonical');
+    const isEpi=job.experimentId==='epi';
+    const plan=isEpi?(await import('../../docs/planning/EPI_PUBLIC_EXPERIMENT_PLAN_REV1.json')).default:(await import('../../docs/planning/LEARN_PUBLIC_EXPERIMENT_PLAN_REV1.json')).default;
+    const row=plan.runs.find(r=>r.name===job.name&&r.law===job.law&&r.numeric===job.numeric);if(!row)throw Error('Unknown frozen batch program');
+    const schemas=isEpi?(await import('../campaign3/epiCodecs')).epiSupportedSchemas():(await import('../campaign3/learnCodecs')).learnSupportedSchemas();
+    const inputs=canonicalDecode(fromHex(row.orderedInputs),new RecordSchemaRegistry(schemas));if(typeof inputs==='boolean'||inputs.kind!=='list')throw Error('Invalid original calendar');
+    const total=inputs.items.length,program=`${row.law}/${row.numeric}/${row.name}`;
+    const run=isEpi?await (await import('./epiAdapter')).EpiWorkbenchRun.create(program):await (await import('./learnAdapter')).LearnWorkbenchRun.create(program);
+    return {advance:()=>run.advance(),view:()=>{const {prefix,complete,clock,modelHash,runHash,stateHash,saveHash}=run.snapshot();return {prefix,total,complete,clock,modelHash,runHash,stateHash,saveHash};}};
+  }
   if (job.experimentId === 'values') {
     const [{ValuesWorkbenchRun}, {default: fixtures}] = await Promise.all([import('./valuesAdapter'), import('./valuesFixtures.json')]);
     const fixture = fixtures.cases.find(f => f.name === job.name);

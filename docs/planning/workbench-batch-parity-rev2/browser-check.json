@@ -1,0 +1,29 @@
+{
+  "status": "PASS COMPLETE LEARN AND EPI BROWSER BATCHES WITH LEARN PAUSE/RESUME",
+  "programs": 111,
+  "prefixes": 820,
+  "pausedPrefixes": 51,
+  "artifacts": [
+    {
+      "path": "browser-paused.json",
+      "sha256": "a06bf47a5c9b825942a0c4a6213d7b576026f0f2c7dd8d7fb551ff3f75aa3819"
+    },
+    {
+      "path": "browser-resumed.json",
+      "sha256": "2762d60754ccaa052462f90a9b5b337aa2957d08c3a40cf707e76999f43b902e"
+    },
+    {
+      "path": "browser-epi-complete.json",
+      "sha256": "4959a5f6da071449db9e1c65ce77543faa23d38f489e9d80a785ec4d8771f04f"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "e6054fe7d576b1e35f72b5fb026c13c9077037b2698323854c0232be050f0966"
+    }
+  ],
+  "verifier": {
+    "path": "scripts/check-workbench-batch-v2-browser.mjs",
+    "sha256": "8818d3e7bef03cf02a30eed4e0e354fb59394d10b6aad94cec90a4b285d29585"
+  },
+  "scope": "All39 LEARN and72 EPI jobs in browser workers agree with the complete shared batch native receipt. No all351-program browser claim."
+}
