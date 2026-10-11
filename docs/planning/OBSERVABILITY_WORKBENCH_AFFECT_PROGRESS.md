@@ -34,10 +34,10 @@ Verification completed so far:
   `workbench-affect-browser-rev1/`; receipt.json binds both UI versions and captures.
   Corrected preview equals the first64000 report characters; desktop width794 has
   no horizontal overflow. Screenshot inspection passes.
-- Full91-program/1236-prefix native parity audit is IN PROGRESS under
-  `scripts/check-workbench-affect.mjs`. A passing receipt is required before claiming
-  complete main-cohort adapter qualification. Do not launch a duplicate audit while
-  the existing process is running.
+- Full91-program/1236-prefix native parity audit PASS. The receipt under
+  workbench-affect-parity-rev1 binds every adapter prefix to direct native state,
+  outputs, complete trace (including addressed draws) and save; all terminal hashes
+  and prefix counts match the four retained qualification shards.
 
 Development observations and limits:
 
@@ -51,8 +51,9 @@ transport remains unverified. No frozen evidence was truncated or overwritten.
 An accidental copied heading was corrected before the retained screenshot.
 
 LOCAL DISPOSITION: reuse exact frozen native semantics and retain every candidate.
-Still due: completion of the main parity audit; supplementary eight prefix-timing and
-six interior-feedback executions; broader controlled comparison UI, language audit,
+Supplementary eight prefix-timing and six interior-feedback executions now PASS;
+see OBSERVABILITY_WORKBENCH_AFFECT_SUPPLEMENTS_PROGRESS.md. Still due: broader
+controlled comparison UI, language audit,
 batch enrollment, export transport qualification, remaining corpus adapters and the
 integrated Campaign4 entry demonstration. This implementation does not close the full
 PHEN-AFFECT scope or the workbench goal. Campaign4 entry remains gated.

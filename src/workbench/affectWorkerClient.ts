@@ -1,4 +1,4 @@
-import type {AffectSnapshot, AffectCheckpoint} from './affectAdapter';
+import type {AffectSnapshot, AffectCheckpoint} from './affectSession';
 export class AffectWorkerClient {
   #worker = new Worker(new URL('./affectWorker.ts', import.meta.url), {type: 'module'});
   #next = 0; #busy = false; #disposed = false; #snapshot!: AffectSnapshot;

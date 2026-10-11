@@ -1,0 +1,82 @@
+{
+  "status": "PASS EVERY PREFIX IN DECLARED EQUALITY WINDOWS",
+  "references": [
+    {
+      "path": "docs/planning/workbench-affect-parity-rev1/receipt.json",
+      "sha256": "12eb49a5aef60eb7ab84826f1fefebc013ba36076465daa98a78b45a928fa47d"
+    },
+    {
+      "path": "docs/planning/workbench-affect-supplements-rev1/receipt.json",
+      "sha256": "9d768172c67a24e5413e6f3d8ecd32c1577db24c7f97fc6cb8162186facac85e"
+    },
+    {
+      "path": "docs/planning/AFFECT_PREFIX_CONTRAST_PLAN_REV1.json",
+      "sha256": "dc26ea13634e0fe6f91809abe07560484ea077310eea409eb75812c2d823ca4d"
+    },
+    {
+      "path": "scripts/check-workbench-affect-prefix-alignment.mjs",
+      "sha256": "fcc90e0990b92ca76810f705a7bbd573ca0a2823e0aac1cc3291dd6b25ca2c7d"
+    }
+  ],
+  "pairs": 8,
+  "prefixPairs": 89,
+  "results": [
+    {
+      "id": "hidden-world",
+      "a": "baseline",
+      "b": "hidden",
+      "equalThrough": 11,
+      "checkedPrefixPairs": 12
+    },
+    {
+      "id": "timing/likelihood",
+      "a": "timing/likelihood/a",
+      "b": "timing/likelihood/b",
+      "equalThrough": 3,
+      "checkedPrefixPairs": 4
+    },
+    {
+      "id": "timing/control",
+      "a": "timing/control/a",
+      "b": "timing/control/b",
+      "equalThrough": 9,
+      "checkedPrefixPairs": 10
+    },
+    {
+      "id": "timing/feedback",
+      "a": "timing/feedback/a",
+      "b": "timing/feedback/b",
+      "equalThrough": 10,
+      "checkedPrefixPairs": 11
+    },
+    {
+      "id": "timing/vulnerability-relief",
+      "a": "timing/vulnerability-relief/a",
+      "b": "timing/vulnerability-relief/b",
+      "equalThrough": 9,
+      "checkedPrefixPairs": 10
+    },
+    {
+      "id": "interior/1",
+      "a": "interior/candidate-1-feedback-false",
+      "b": "interior/candidate-1-feedback-true",
+      "equalThrough": 13,
+      "checkedPrefixPairs": 14
+    },
+    {
+      "id": "interior/2",
+      "a": "interior/candidate-2-feedback-false",
+      "b": "interior/candidate-2-feedback-true",
+      "equalThrough": 13,
+      "checkedPrefixPairs": 14
+    },
+    {
+      "id": "interior/3",
+      "a": "interior/candidate-3-feedback-false",
+      "b": "interior/candidate-3-feedback-true",
+      "equalThrough": 13,
+      "checkedPrefixPairs": 14
+    }
+  ],
+  "scope": "Complete state and admitted-output equality at every committed prefix in each declared window, including initial state. Based on the native parity receipts; distinct saves and model identities remain distinct. No post-window or necessity claim."
+}

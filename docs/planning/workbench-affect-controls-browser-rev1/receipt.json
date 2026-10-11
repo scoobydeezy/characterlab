@@ -1,0 +1,80 @@
+{
+  "status": "PASS AFFECT INTERIOR FEEDBACK BROWSER CONTROL",
+  "sources": [
+    {
+      "path": "src/workbench/affectSupplementAdapter.ts",
+      "sha256": "b5a7fbeec8c80d8fd2997edac59876677bea485e0abb37b96dbaba20174498f5"
+    },
+    {
+      "path": "src/workbench/affectSupplementFixtures.json",
+      "sha256": "10ad14cca63165f4baf9625c400fad5c3b22e4a3d294e0cb47ab67837f8cc777"
+    },
+    {
+      "path": "src/workbench/affectSession.ts",
+      "sha256": "0af3115cfa1083bbb52966aeeb0ea4bf9e0fe5c3fede968c95b84ac0b39bfb00"
+    },
+    {
+      "path": "src/workbench/affectComparison.ts",
+      "sha256": "8141c8b7dcd2fb1e9d8db856f0d53763bdbe9955d9d0f4582e2f3da1a3895efe"
+    },
+    {
+      "path": "src/workbench/affectWorker.ts",
+      "sha256": "c18a12e333de4a388ea32c7fe71c6d296c17c279ba74b8afe3517d0063dd1463"
+    },
+    {
+      "path": "src/workbench/affectWorkerClient.ts",
+      "sha256": "a1acf258e1de7509f98974641836738864d174fea8068a4008984398ad2dc0d4"
+    },
+    {
+      "path": "src/workbench/AffectWorkbench.tsx",
+      "sha256": "fe3214caf4015216732bd211b1e36fe806a5a9214d4e496b8410b82e7441b69c"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "863d31d53a766555809e2795ad09053f1649f3f2410c4f0b7ca1139854c78112"
+    },
+    {
+      "path": "src/test/workbenchAffectControls.test.ts",
+      "sha256": "2e55c82fae89db2cfe10bda9334f0c4568d3b2c219e712d9ceef8a357f6dc1ec"
+    },
+    {
+      "path": "scripts/check-workbench-affect-controls-browser.mjs",
+      "sha256": "bb273918844b9996fbb19dfb15f2adea447c5964ef8ef13b78fb4243349d9acd"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/before.json",
+      "sha256": "4affa78b78f01a6e0875c71b05e0cecb17ec96e1349a789a21f4f14db0abb126"
+    },
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/unequal.json",
+      "sha256": "c6309bd6c230c78893bb0d81440bd6e11e0738c9b32a8ce41dddd21b195a4c15"
+    },
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/after.json",
+      "sha256": "47003e49f6fe94172980db105fd8356faf98d0e1c2194016c87b50111b52e41d"
+    },
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/comparison.png",
+      "sha256": "0479d2b778cf00db8fb7056c9bb824cf9c4227a803e1b797b63e5bc212bdc75a"
+    },
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/mobile.png",
+      "sha256": "f69322c24660fd774483c67dcb285d5c2d5f7538ca96763794f04e76a3401bd7"
+    },
+    {
+      "path": "docs/planning/workbench-affect-controls-browser-rev1/layout.json",
+      "sha256": "bdd6e10fa6eabd3f2d009ffc501aae2742216ae7b4dbd1c1b0b6a5392f6ae6df"
+    }
+  ],
+  "comparisonVersion": "affect-pair-inspection/0.2",
+  "summaryVersion": "affect-comparison-summary/0.1",
+  "before": 13,
+  "after": 14,
+  "scope": "One supplementary model-control family, ScalarUncontrolled candidate3. Browser summaries exactly equal native-backed adapter comparisons before, across unequal horizons and after feedback. Compact export is complete JSON; full Blob download transport remains unverified. Other declarations tested separately; no broad language or integrated entry claim."
+}
