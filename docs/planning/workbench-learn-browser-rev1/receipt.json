@@ -1,0 +1,57 @@
+{
+  "status": "PASS BOUNDED LEARN BROWSER PAIR AND REPLAY",
+  "sources": [
+    {
+      "path": "src/workbench/learnAdapter.ts",
+      "sha256": "6d50f907d2185e0005f4cb2efb815ae0df37b4c719cd0ce2a01ffca61eaf05d4"
+    },
+    {
+      "path": "src/workbench/learnWorker.ts",
+      "sha256": "82c04f1b1c39b342c7e2e45e4d128c47427dfd5d3f807b3263fb95ef78e4f982"
+    },
+    {
+      "path": "src/workbench/learnWorkerClient.ts",
+      "sha256": "6e606e57d8e8ea507739d7af8718faa482a30ef04524319cfa0051fb514f1978"
+    },
+    {
+      "path": "src/workbench/learnComparison.ts",
+      "sha256": "8b920afc6ef67ec0381924a5c89ba20df6e2e64f70ed3732bd32e0123c9e034c"
+    },
+    {
+      "path": "src/workbench/LearnWorkbench.tsx",
+      "sha256": "535349ff5244d15bded19c486b8a0b755b214f4ddda3691a94c600a37b6aef36"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "f93674d63f29dffc7658dd528364bb1064e24191abaa2dfc156ef0e7bffbd3ca"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "603d810fdce52d6ca6e899bc8a2c84e83fd0c5a36894768e6e7b8ad697966ba2"
+    },
+    {
+      "path": "scripts/check-workbench-learn-browser.mjs",
+      "sha256": "f3738430c3dd803f5f59f165fe3d547e045f3d937210474a2629fd04377e2bb5"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "checkpoint.json",
+      "sha256": "59dfcadf16b9f9629bef0a2f90b22bf5bcd1caf15ebac61fc170c4aa812df1ef"
+    },
+    {
+      "path": "comparison.json",
+      "sha256": "b7b36356443acc8e0165c3bc82cc0ec897d99434b1eeed133c7a8bd17737377f"
+    },
+    {
+      "path": "restored-final.json",
+      "sha256": "6cc02e657216be2819e9a1723090c4cbfa2d3e89853fd2dd3c357b6c507ab65a"
+    }
+  ],
+  "programs": [
+    "1/1/repeated",
+    "1/1/hidden"
+  ],
+  "prefix": 8,
+  "scope": "Gated exact repeated/hidden pair; complete browser export equals native adapter output, replay from prefix1 to terminal8. Separate39-program native cohort retained; no all-program browser or language claim."
+}

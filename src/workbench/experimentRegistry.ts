@@ -1,7 +1,7 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.4';
-export type ExperimentId = 'values' | 'reason' | 'general' | 'epi';
-export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'epi'>;
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.5';
+export type ExperimentId = 'values' | 'reason' | 'general' | 'epi' | 'learn';
+export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'epi' | 'learn'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
@@ -17,6 +17,7 @@ export interface ExperimentDescriptor {
 const noIntervention = {supported: false as const, reason: 'The public contract admits original inputs on a fresh run; it exposes no runtime intervention ingress.'};
 const checkpoint = {supported: true as const, authentication: 'Exact public save, original inputs, model, seed and complete prefix.'};
 export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
+  {id:'learn',label:'LEARN · censored evidence',seamVersion:'learn-public/0.1-candidate',corpusScope:'PHEN-LEARN-001; 39 frozen public programs',capabilities:{committedStep:{supported:true,boundary:'One complete native instant.'},checkpoint,runtimeIntervention:noIntervention,graph:{supported:false,reason:'Scalar belief leaves; no native graph.'},matrix:{supported:false,reason:'No native matrix representation.'},explanation:{supported:false,scope:'Researcher learning records only',qualification:'No observer-safe narrative renderer qualified.'}}},
   {id: 'values', label: 'Values integration', seamVersion: 'values-integration-public/0.1-candidate', corpusScope: 'Values integrated qualification successor', capabilities: {
     committedStep: {supported: true, boundary: 'One whole instant, including all 13 native stages.'}, checkpoint, runtimeIntervention: noIntervention,
     graph: {supported: false, reason: 'This profile does not expose a memory or belief graph.'}, matrix: {supported: false, reason: 'This profile has no embedding or matrix representation.'},

@@ -55,8 +55,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
 Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
-Start OBSERVABILITY_WORKBENCH_LEARN_PROGRESS.md:39 programs/580 prefixes PASS.
-LEARN researcher adapter; browser/language/batch integration next.
+Start OBSERVABILITY_WORKBENCH_LEARN_UI_PROGRESS.md: bounded browser pair/replay PASS.
+Prior LEARN adapter39 programs/580 prefixes PASS.
+LEARN worker-backed researcher inspection; language/batch integration next.
 Prior OBSERVABILITY_WORKBENCH_EPI_LANGUAGE_PROGRESS.md:30 encoding descriptions,
 72-program/240-prefix invariance PASS. Full narrative/corpus/entry gates remain open.
 OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md retains shared batch240/975 PASS.

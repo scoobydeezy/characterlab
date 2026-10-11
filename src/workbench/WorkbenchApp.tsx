@@ -6,6 +6,7 @@ const Values = lazy(() => import('./Workbench').then(m => ({default: m.Workbench
 const Reason = lazy(() => import('./ReasonWorkbench').then(m => ({default: m.ReasonWorkbench})));
 const Batch = lazy(() => import('./BatchWorkbench').then(m => ({default: m.BatchWorkbench})));
 const Epi = lazy(() => import('./EpiWorkbench').then(m => ({default: m.EpiWorkbench})));
+const Learn = lazy(() => import('./LearnWorkbench').then(m => ({default: m.LearnWorkbench})));
 const General = lazy(() => import('./GeneralWorkbench').then(m => ({default: m.GeneralWorkbench})));
 export function WorkbenchApp() {
   const [experiment, setExperiment] = useState<ExperimentId | 'batch'>('values');
@@ -16,5 +17,6 @@ export function WorkbenchApp() {
     {visited.has('batch') && <div hidden={experiment !== 'batch'}><Suspense fallback={<p role="status">Loading batch tools…</p>}><Batch active={experiment === 'batch'}/></Suspense></div>}
     {visited.has('general') && <div hidden={experiment !== 'general'}><Suspense fallback={<p role="status">Loading graph inspection…</p>}><General active={experiment === 'general'}/></Suspense></div>}
     {visited.has('epi') && <div hidden={experiment !== 'epi'}><Suspense fallback={<p role="status">Loading EPI…</p>}><Epi active={experiment === 'epi'}/></Suspense></div>}
+    {visited.has('learn') && <div hidden={experiment !== 'learn'}><Suspense fallback={<p role="status">Loading LEARN…</p>}><Learn active={experiment === 'learn'}/></Suspense></div>}
   </>;
 }
