@@ -55,7 +55,9 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 **Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
 Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
 Six-mode local UI; Values parity125/625 and joined REASON inspection implemented.
-Start OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md:933 descriptions/
+Start OBSERVABILITY_WORKBENCH_AFFECT_PROGRESS.md: adapter/UI implemented;
+main91-program parity audit running; supplementary controls/language/batch open.
+Prior OBSERVABILITY_WORKBENCH_BELIEF_LANGUAGE_PROGRESS.md:933 descriptions/
 48 programs/381 prefixes PASS; full narrative/corpus/batch/entry remain.
 Prior BELIEF14 contrasts/
 18 programs/207 prefixes PASS. Prior BELIEF adapter48/381 PASS.

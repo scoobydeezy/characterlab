@@ -1,0 +1,89 @@
+{
+  "status": "PASS BOUNDED AFFECT BROWSER REPLAY AND HIDDEN-WORLD PAIR",
+  "sources": [
+    {
+      "path": "src/workbench/affectAdapter.ts",
+      "sha256": "63320b89a57e83010ca6220a8a2695f411a8021fefed38d632e46c36ad3f28aa"
+    },
+    {
+      "path": "src/workbench/affectFixtures.json",
+      "sha256": "047aaf397de040c7ca208ff3a43d9fdd847820badcbae4c84101bc637dd6b926"
+    },
+    {
+      "path": "src/workbench/affectComparison.ts",
+      "sha256": "d1e5ab3009b8755ade80f95b612d1d5c0fa42407812e9d526005988bd526ea6a"
+    },
+    {
+      "path": "src/workbench/affectWorker.ts",
+      "sha256": "022a9342d139bfb1ac68c97492f4305641fc68e8d71706ee08de25b42b970109"
+    },
+    {
+      "path": "src/workbench/affectWorkerClient.ts",
+      "sha256": "bd6c7d65a287c2402882364f36035a1bdd9c15fbc57ce618882fe052494cd23e"
+    },
+    {
+      "path": "src/workbench/AffectWorkbench.tsx",
+      "sha256": "01706644560e645bcb28dd7ba0ab5b0a92f6d08595eebcba6cef4f05a5a24fcf"
+    },
+    {
+      "path": "src/workbench/PreparedExport.tsx",
+      "sha256": "4cf14eca7746d3260ce84c7d28532a6e795f4728889080f1cb2115531ed93e19"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "0719c20ae9652829a5cac8fcfc58ff87d0ca4ef0780e75a887daac122b2d0c79"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "14db887463ee0dba96cfe1dbeea881b6d779f7ec0f240e9af89eaa484876ba9f"
+    },
+    {
+      "path": "src/test/workbenchAffectComparison.test.ts",
+      "sha256": "7dd1abd28714f38faa686370bfc0a8becd00c5430a98ac1e412c889c0884b42c"
+    },
+    {
+      "path": "scripts/check-workbench-affect-browser.mjs",
+      "sha256": "b585d3879e6bd5b1c61ea2a6245e22b6f34ed2db3f15b6e5ad32b363e8415d9f"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/prefix1-checkpoint.json",
+      "sha256": "3d8defb547133554d36314714ff4e3df7d4ee93d5e2e7d8bb789318b572523ce"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/completed-checkpoint.json",
+      "sha256": "417b947d14e15cc204c96b048197576af5d690ff4bd613e21ff985a892b71f8e"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/comparison.json",
+      "sha256": "923a326f0f42b58defc8a1d93d77e880518d078a5e42234a357f685a6378e2d9"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/comparison.png",
+      "sha256": "1b8c0dbfe4b6a831fb75f85a55630dd6dff5f0f28cee86ad277ed1ef5cfa5f17"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/preview.txt",
+      "sha256": "0289c3abd28db228fb63f02128ece2f7064904cd27c22d289700574f114d37de"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/display.json",
+      "sha256": "c2e9bafe45e2d1c866c7cab31c15149fed42d862c1824d1cabe216e749484cc4"
+    },
+    {
+      "path": "docs/planning/workbench-affect-browser-rev1/prior-sources/AffectWorkbench.tsx",
+      "sha256": "88d3bfa7c503ab1faddac9898011a0eef3097694c1f10e4f51f645a3bcb13e3c"
+    }
+  ],
+  "programs": [
+    "baseline",
+    "hidden"
+  ],
+  "restoredPrefix": 1,
+  "completedPrefix": 11,
+  "admittedOutputsEqual": true,
+  "stateEqual": true,
+  "exactSaveEqual": false,
+  "scope": "Two declared frozen programs only. Full browser export captured before preview bounding equals direct adapter comparison. Corrected UI preview equals its first64000 characters; complete-file download transport remains unverified after browser download timeouts. Prior UI source is retained. Native parity is qualified separately. No language, all-controls, supplementary timing, batch or integrated entry claim."
+}
