@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: EPI browser views, matched safe/violating pair reports and replay
+Latest continuation: versioned EPI encoding descriptions pass the72-program/240-prefix
+audit; see OBSERVABILITY_WORKBENCH_EPI_LANGUAGE_PROGRESS.md. Full language gates remain.
+
+Prior continuation: EPI browser views, matched safe/violating pair reports and replay
 are described in OBSERVABILITY_WORKBENCH_EPI_UI_PROGRESS.md; full entry remains open.
 
 Prior continuation: the EPI adapter passes all72 retained public programs/240 prefixes;

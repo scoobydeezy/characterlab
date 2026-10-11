@@ -1,0 +1,33 @@
+{
+  "status": "PASS BOUNDED EPI ENCODING LANGUAGE AUDIT",
+  "sources": [
+    {
+      "path": "src/workbench/epiAdapter.ts",
+      "sha256": "f69bd2d10371c56e46535c460d02d387ffa35ccef1ea3f1a8736d05d0b5cd704"
+    },
+    {
+      "path": "src/workbench/epiExplanations.ts",
+      "sha256": "bb044aacfb3ab74f9eb244312666c57e59588dbbda893ad676c9621c1c626521"
+    },
+    {
+      "path": "src/workbench/EpiWorkbench.tsx",
+      "sha256": "624c40f4cdd511eca87dab3d74e7535de9eb637ca2e031d904fb4981c128c919"
+    },
+    {
+      "path": "scripts/check-workbench-epi-language.mjs",
+      "sha256": "cecce88150a8af5ec905ea91c48e6497eaa1bbba9454098c186b042101b2c1e8"
+    }
+  ],
+  "reference": {
+    "path": "docs/planning/workbench-epi-parity-rev1/receipt.json",
+    "sha256": "b34abfd0f3724efc480bd6e9585b7413b7512e8bc2b75757a03b56faea831504"
+  },
+  "programs": 72,
+  "prefixes": 240,
+  "explanations": 30,
+  "limits": [
+    "Encoding descriptions only; not decision reasons or full corpus narrative qualification.",
+    "Frozen native EPI evidence only; no general trace redaction claim.",
+    "Violating controls have no character narrative."
+  ]
+}

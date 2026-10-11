@@ -7,6 +7,7 @@ import {epiRecipe,EPI_VERSION} from '../campaign3/epiModel';
 import {prepareEpiModel,createEpiRun,restoreEpiRun} from '../campaign3/epiFactory';
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
 import {nativeTimeline} from './nativeTimeline';
+import {explainEpi,type EpiExplanation} from './epiExplanations';
 export const EPI_PROGRAMS = plan.runs.map(row=>({id:`${row.law}/${row.numeric}/${row.name}`,name:row.name,law:row.law,numeric:row.numeric}));
 const registry=new RecordSchemaRegistry(epiSupportedSchemas());
 const decode=(bytes:Uint8Array)=>canonicalDecode(bytes,registry);
@@ -19,7 +20,7 @@ export class EpiWorkbenchRun {
   #run:Run; #program:string; #prefix=0; #busy=false;
   #view!: {program:string;seamVersion:string;projection:string;lawfulCharacterAccess:boolean;prefix:number;complete:boolean;clock:string;
     modelHash:string;runHash:string;stateHash:string;saveHash:string;characterStateHash:string;characterOutputsHash:string;
-    characterOutputs:string;researchOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
+    characterOutputs:string;researchOutputs:string;explanations:EpiExplanation[];fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
   private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
   static async create(program='1/1/establishedA') {
     const row=plan.runs.find(r=>`${r.law}/${r.numeric}/${r.name}`===program);if(!row)throw Error('Unknown frozen EPI program');
@@ -43,6 +44,6 @@ export class EpiWorkbenchRun {
     const row=plan.runs.find(r=>`${r.law}/${r.numeric}/${r.name}`===this.#program)!,s=this.#run.snapshot(),save=this.#run.save(),character=this.#run.characterView();
     this.#view={program:this.#program,seamVersion:EPI_VERSION,projection:['','Safe applied measurement','VIOLATING potential-leak control','VIOLATING overflow-leak control'][row.law],lawfulCharacterAccess:row.law===1,prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),
       modelHash:await digest(fromHex(row.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),characterStateHash:await digest(character.state),characterOutputsHash:await digest(character.outputs),
-      characterOutputs:exactText(decode(character.outputs)),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+      explanations:explainEpi(items(decode(character.outputs),'list'),row.law===1),characterOutputs:exactText(decode(character.outputs)),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
   }
 }

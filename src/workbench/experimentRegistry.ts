@@ -1,5 +1,5 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.3';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.4';
 export type ExperimentId = 'values' | 'reason' | 'general' | 'epi';
 export type BatchExperimentId = Exclude<ExperimentId, 'general' | 'epi'>;
 export interface InspectionCapabilities {
@@ -32,7 +32,7 @@ export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
     graph: {supported: true, reason: 'Actual directed Record625 association cells; layout distance is diagnostic.'}, matrix: {supported: true, reason: 'Exact association matrix and three selected target columns; no personality embedding.'},
     explanation: {supported: false, scope: 'Raw committed reads, diffs and outputs only', qualification: 'No observer-safe narrative renderer qualified for this profile.'},
   }},
-  {id: 'epi', label: 'EPI · evidence boundary', seamVersion: 'epi-public/0.1-candidate', corpusScope: 'PHEN-EPI-001; 72 frozen public programs', capabilities: {committedStep: {supported: true, boundary: 'One whole native instant.'}, checkpoint, runtimeIntervention: noIntervention, graph: {supported: false, reason: 'This profile has belief and encoding leaves, no graph.'}, matrix: {supported: false, reason: 'No native matrix representation.'}, explanation: {supported: false, scope: 'Native evaluation records only', qualification: 'Narrative renderer not qualified; leakage controls explicitly violating.'}}},
+  {id: 'epi', label: 'EPI · evidence boundary', seamVersion: 'epi-public/0.1-candidate', corpusScope: 'PHEN-EPI-001; 72 frozen public programs', capabilities: {committedStep: {supported: true, boundary: 'One whole native instant.'}, checkpoint, runtimeIntervention: noIntervention, graph: {supported: false, reason: 'This profile has belief and encoding leaves, no graph.'}, matrix: {supported: false, reason: 'No native matrix representation.'}, explanation: {supported: true, scope: 'Safe-profile encoding descriptions only', qualification: 'epi-encoding-explanation/0.1; frozen 72-program audit. Violating controls suppressed; full decision narrative remains unqualified.'}}},
 ];
 export interface BatchRunView {
   prefix: number; total: number; complete: boolean; clock: string;

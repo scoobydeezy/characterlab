@@ -1,0 +1,934 @@
+[
+  {
+    "program": "1/1/establishedA",
+    "lawful": true,
+    "saveHash": "c048487639ae1961e2c140f511ab3ab6d9a94b24613b6dbf07d9e71220daebbb",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 2/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 2/5, raw encoding score 7/5, and retained encoding strength 7/12. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "2/5",
+        "kind": "Point",
+        "surprise": "2/5",
+        "raw": "7/5",
+        "strength": "7/12",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"2/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"2/5\",\n  \"Raw [5]\": \"7/5\",\n  \"Strength [6]\": \"7/12\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 2/5. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"2/5\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/establishedB",
+    "lawful": true,
+    "saveHash": "4461f37e4dd06b00261b2536d5632476be544f1ed22d3c6835c23016a7e73931",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 2/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 2/5, raw encoding score 7/5, and retained encoding strength 7/12. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "2/5",
+        "kind": "Point",
+        "surprise": "2/5",
+        "raw": "7/5",
+        "strength": "7/12",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"2/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"2/5\",\n  \"Raw [5]\": \"7/5\",\n  \"Strength [6]\": \"7/12\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 2/5. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"2/5\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/informativeA",
+    "lawful": true,
+    "saveHash": "7482966db0e6b0de8e9a9115425a4e15f0c5bb82eafae49bb34dcf43b08c9ec2",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/100 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/100, raw encoding score 101/100, and retained encoding strength 101/201. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/100",
+        "kind": "Point",
+        "surprise": "1/100",
+        "raw": "101/100",
+        "strength": "101/201",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/100\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/100\",\n  \"Raw [5]\": \"101/100\",\n  \"Strength [6]\": \"101/201\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 1/100. Recorded surprise is 1/25, raw encoding score 26/25, and retained encoding strength 26/51. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/25",
+        "raw": "26/25",
+        "strength": "26/51",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"1/100\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"1/25\",\n  \"Raw [5]\": \"26/25\",\n  \"Strength [6]\": \"26/51\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/informativeB",
+    "lawful": true,
+    "saveHash": "27c2b7187dbfb397c8ed0451ac6a82b3186f67fec5d2603f3f3adc4c063f7bc6",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/100 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/100, raw encoding score 101/100, and retained encoding strength 101/201. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/100",
+        "kind": "Point",
+        "surprise": "1/100",
+        "raw": "101/100",
+        "strength": "101/201",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/100\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/100\",\n  \"Raw [5]\": \"101/100\",\n  \"Strength [6]\": \"101/201\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 1/100. Recorded surprise is 1/25, raw encoding score 26/25, and retained encoding strength 26/51. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/25",
+        "raw": "26/25",
+        "strength": "26/51",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"1/100\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"1/25\",\n  \"Raw [5]\": \"26/25\",\n  \"Strength [6]\": \"26/51\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/freshA",
+    "lawful": true,
+    "saveHash": "a8a5030e48e4bdd2a5d4b4a8c178802902e2088091a60fce458508b4e8e931f9",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/freshB",
+    "lawful": true,
+    "saveHash": "b0e2e7f6ad4fc0b3971ec496ec8dcd2cb2e9c8891d18f5a61e28cccd575a65c8",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/permittedA",
+    "lawful": true,
+    "saveHash": "e14a0b02d33fd68358e0fd6df83833f6bb8dfa1adac19dbcee59b3ae554665db",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/10 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/10, raw encoding score 11/10, and retained encoding strength 11/21. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/10",
+        "kind": "Point",
+        "surprise": "1/10",
+        "raw": "11/10",
+        "strength": "11/21",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/10\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/10\",\n  \"Raw [5]\": \"11/10\",\n  \"Strength [6]\": \"11/21\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/permittedB",
+    "lawful": true,
+    "saveHash": "73c924f115651659faca338d59f113438a660ea2dff1cef36ee46f890aa2ca3e",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 4/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 4/5, raw encoding score 9/5, and retained encoding strength 9/14. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "4/5",
+        "kind": "Point",
+        "surprise": "4/5",
+        "raw": "9/5",
+        "strength": "9/14",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"4/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"4/5\",\n  \"Raw [5]\": \"9/5\",\n  \"Strength [6]\": \"9/14\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/missingA",
+    "lawful": true,
+    "saveHash": "7a0a42e9e18d8bed8ccd7f1a6ef71aecf9975320157745e9ca482c41fe47c3e4",
+    "explanations": []
+  },
+  {
+    "program": "1/1/missingB",
+    "lawful": true,
+    "saveHash": "7d67f8a789d6c0f235a5f59a34141ad71a9ac1c6c205131fdee37806436e5871",
+    "explanations": []
+  },
+  {
+    "program": "1/1/zero",
+    "lawful": true,
+    "saveHash": "f66e870b423710016409106b9fa3bfda68991007775617479e9910ce9adcc6c9",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 0/1; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "0/1",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"0/1\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/1/twoTargets",
+    "lawful": true,
+    "saveHash": "63b3bcfc3ae4974272387f4b8d06efc5feb5a15005e937fa42fa7f1aeab62405",
+    "explanations": [
+      {
+        "id": "0b87090207",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"7\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      },
+      {
+        "id": "0b87090209",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d622d6f7574636f6d65",
+        "sample": "0bdb080203",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"9\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"3\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-b-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/establishedA",
+    "lawful": true,
+    "saveHash": "1c748cf661127a70f47c8da13b7f9500539f86c22df804600373e70e2dad7ab0",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 2/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 2/5, raw encoding score 7/5, and retained encoding strength 7/12. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "2/5",
+        "kind": "Point",
+        "surprise": "2/5",
+        "raw": "7/5",
+        "strength": "7/12",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"2/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"2/5\",\n  \"Raw [5]\": \"7/5\",\n  \"Strength [6]\": \"7/12\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 2/5. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"2/5\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/establishedB",
+    "lawful": true,
+    "saveHash": "8e3495ade811443e3c05c828bd87dc802cccd7634343c8ca849b7a7dbf4ae97c",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 2/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 2/5, raw encoding score 7/5, and retained encoding strength 7/12. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "2/5",
+        "kind": "Point",
+        "surprise": "2/5",
+        "raw": "7/5",
+        "strength": "7/12",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"2/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"2/5\",\n  \"Raw [5]\": \"7/5\",\n  \"Strength [6]\": \"7/12\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 2/5. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"2/5\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/informativeA",
+    "lawful": true,
+    "saveHash": "d78ee93daa300192d91e75f4f9f3d2dc1f841e106eacf6bd93f5ec61c84dfebc",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/100 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/100, raw encoding score 101/100, and retained encoding strength 101/201. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/100",
+        "kind": "Point",
+        "surprise": "1/100",
+        "raw": "101/100",
+        "strength": "101/201",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/100\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/100\",\n  \"Raw [5]\": \"101/100\",\n  \"Strength [6]\": \"101/201\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 1/100. Recorded surprise is 1/25, raw encoding score 26/25, and retained encoding strength 26/51. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/25",
+        "raw": "26/25",
+        "strength": "26/51",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"1/100\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"1/25\",\n  \"Raw [5]\": \"26/25\",\n  \"Strength [6]\": \"26/51\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/informativeB",
+    "lawful": true,
+    "saveHash": "3fc695317224a6754787a3d55bc7e9674d67804ccb7dbaf7bf3f3c3dc5f758be",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/100 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/100, raw encoding score 101/100, and retained encoding strength 101/201. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/100",
+        "kind": "Point",
+        "surprise": "1/100",
+        "raw": "101/100",
+        "strength": "101/201",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/100\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/100\",\n  \"Raw [5]\": \"101/100\",\n  \"Strength [6]\": \"101/201\"\n}"
+      },
+      {
+        "id": "0b8709020e",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "2",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb08020a",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. The earlier estimate was 1/100. Recorded surprise is 1/25, raw encoding score 26/25, and retained encoding strength 26/51. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": true,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/25",
+        "raw": "26/25",
+        "strength": "26/51",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"14\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"10\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"2\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Prior [3]\": {\n    \"record\": \"EpiEstimate#902/1\",\n    \"Mean [1]\": \"1/100\",\n    \"Precision [2]\": \"2/1\",\n    \"Support [3]\": [\n      {\n        \"namespace\": \"1115\",\n        \"identity\": \"2\"\n      }\n    ]\n  },\n  \"Surprise [4]\": \"1/25\",\n  \"Raw [5]\": \"26/25\",\n  \"Strength [6]\": \"26/51\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/freshA",
+    "lawful": true,
+    "saveHash": "30e3ca28aba17ab978ac084fdabf83a2217427ec9503e8d11db3b52de3c62855",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/freshB",
+    "lawful": true,
+    "saveHash": "0e589d3599e080820467fcedec590a72523c686a0b46a46008276fbc3e8b854d",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/permittedA",
+    "lawful": true,
+    "saveHash": "7e080d046c8ed5ded41421b0f75bff3d0e8cf986fccf248510ee2c8ec1a5f2f5",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 1/10 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/10, raw encoding score 11/10, and retained encoding strength 11/21. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/10",
+        "kind": "Point",
+        "surprise": "1/10",
+        "raw": "11/10",
+        "strength": "11/21",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/10\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/10\",\n  \"Raw [5]\": \"11/10\",\n  \"Strength [6]\": \"11/21\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/permittedB",
+    "lawful": true,
+    "saveHash": "8c9c79c427d163a84b93776561180fd4f0a5f10b7387107cef9cd64e74e31560",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation reports 4/5 as a point measurement. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 4/5, raw encoding score 9/5, and retained encoding strength 9/14. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "4/5",
+        "kind": "Point",
+        "surprise": "4/5",
+        "raw": "9/5",
+        "strength": "9/14",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"4/5\",\n    \"Kind [6]\": \"1\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"4/5\",\n  \"Raw [5]\": \"9/5\",\n  \"Strength [6]\": \"9/14\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/missingA",
+    "lawful": true,
+    "saveHash": "e81e184604c8ca23717ef08d89173834b8ba8c2d9da4f2d6c2cd50d1bad7bcfb",
+    "explanations": []
+  },
+  {
+    "program": "1/2/missingB",
+    "lawful": true,
+    "saveHash": "ae674b952ca6b6ac414e9cd49391d8b20604dc78a785d1acba67ea7fd0c1c29e",
+    "explanations": []
+  },
+  {
+    "program": "1/2/zero",
+    "lawful": true,
+    "saveHash": "f5b6917dda36d30609aeb34406fae7babf7d8511ea47ad94402e4ed40a83d8b7",
+    "explanations": [
+      {
+        "id": "0b87090206",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 0/1; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 0/1, raw encoding score 1/1, and retained encoding strength 1/2. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "0/1",
+        "kind": "Lower bound",
+        "surprise": "0/1",
+        "raw": "1/1",
+        "strength": "1/2",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"6\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"0/1\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"0/1\",\n  \"Raw [5]\": \"1/1\",\n  \"Strength [6]\": \"1/2\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "1/2/twoTargets",
+    "lawful": true,
+    "saveHash": "d64c7034afe187f4cae574f5adc4de146f2aa253cb5acf89eda822c14859dcde",
+    "explanations": [
+      {
+        "id": "0b87090207",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d612d6f7574636f6d65",
+        "sample": "0bdb080202",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"7\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"2\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-a-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      },
+      {
+        "id": "0b87090209",
+        "renderer": "epi-encoding-explanation/0.1",
+        "at": "1",
+        "observer": "0be80705126f627365727665722f6570692d747269616c",
+        "proposition": "0b8308051b70726f706f736974696f6e2f747269616c2d622d6f7574636f6d65",
+        "sample": "0bdb080203",
+        "human": "The observation provides a lower bound of 1/20; it does not identify an exact value. No earlier estimate was available. This numeric candidate uses a zero reference for surprise, without storing a zero belief. Recorded surprise is 1/20, raw encoding score 21/20, and retained encoding strength 21/41. Encoding strength is not confidence that the proposition is true.",
+        "priorKnown": false,
+        "measurement": "1/20",
+        "kind": "Lower bound",
+        "surprise": "1/20",
+        "raw": "21/20",
+        "strength": "21/41",
+        "provenance": "{\n  \"record\": \"EpiEncoding#910/1\",\n  \"Occurrence [1]\": {\n    \"namespace\": \"1159\",\n    \"identity\": \"9\"\n  },\n  \"Sample [2]\": {\n    \"record\": \"EpiSafeSample#900/1\",\n    \"SampleId [1]\": {\n      \"namespace\": \"1115\",\n      \"identity\": \"3\"\n    },\n    \"Observer [2]\": {\n      \"namespace\": \"1000\",\n      \"identity\": \"observer/epi-trial\"\n    },\n    \"Proposition [3]\": {\n      \"namespace\": \"1027\",\n      \"identity\": \"proposition/trial-b-outcome\"\n    },\n    \"At [4]\": \"1\",\n    \"Measurement [5]\": \"1/20\",\n    \"Kind [6]\": \"2\",\n    \"Precision [7]\": \"2/1\"\n  },\n  \"Surprise [4]\": \"1/20\",\n  \"Raw [5]\": \"21/20\",\n  \"Strength [6]\": \"21/41\"\n}"
+      }
+    ]
+  },
+  {
+    "program": "2/1/establishedA",
+    "lawful": false,
+    "saveHash": "6dfe9d20686789385b9dd17efae195307380c01d743193317b7d76dcba09786f",
+    "explanations": []
+  },
+  {
+    "program": "2/1/establishedB",
+    "lawful": false,
+    "saveHash": "83267455e63b6f11f2cc5260f4f331c7529adf3490f0f7338fac55bad1d502d3",
+    "explanations": []
+  },
+  {
+    "program": "2/1/informativeA",
+    "lawful": false,
+    "saveHash": "c431008acc0ff95829d6af289e130fc5513ade70f1c06de6ff878354050e467a",
+    "explanations": []
+  },
+  {
+    "program": "2/1/informativeB",
+    "lawful": false,
+    "saveHash": "0edec8722d07a590f258c97ee4222ef0e5e502ca8f3a29947d5b543949adb989",
+    "explanations": []
+  },
+  {
+    "program": "2/1/freshA",
+    "lawful": false,
+    "saveHash": "bd77c7cf0342c902d78534c320a7be4eb6b378742a485e674bf311d124f6a5c5",
+    "explanations": []
+  },
+  {
+    "program": "2/1/freshB",
+    "lawful": false,
+    "saveHash": "8f757b44883cc77e7348ebc6918d29d3e247000c9fe11edd8bf53c252c9964f8",
+    "explanations": []
+  },
+  {
+    "program": "2/1/permittedA",
+    "lawful": false,
+    "saveHash": "00451e98e463b7af3fd10374f73fa348988f747e54c1a4c0e5a9622788aadf97",
+    "explanations": []
+  },
+  {
+    "program": "2/1/permittedB",
+    "lawful": false,
+    "saveHash": "9d22d2033953c1cc6b3076bbba557ffe8afc39eb28492d88e6b8d42eb9b30259",
+    "explanations": []
+  },
+  {
+    "program": "2/1/missingA",
+    "lawful": false,
+    "saveHash": "7f0fd5a1e0682e7935ab32a20835e6ee9069ac068e69ac79a11c4d2fba3d157a",
+    "explanations": []
+  },
+  {
+    "program": "2/1/missingB",
+    "lawful": false,
+    "saveHash": "96f3e6187bd720462fd5e999891bb5d08af37da0d5d44d412c519d81b096bc86",
+    "explanations": []
+  },
+  {
+    "program": "2/1/zero",
+    "lawful": false,
+    "saveHash": "0b2f713f4bff80e7954033cd799ea37e0ca23a85626416e72e3abc32e27f5667",
+    "explanations": []
+  },
+  {
+    "program": "2/1/twoTargets",
+    "lawful": false,
+    "saveHash": "a51bf52ca370ebabd582200d8f4bf39797df9f6de38fbe29beac0ada972812d4",
+    "explanations": []
+  },
+  {
+    "program": "2/2/establishedA",
+    "lawful": false,
+    "saveHash": "a89fb4815483d9fce123ad0dc51afd7ae5bfe00351f5d7f483ee925f3bca111e",
+    "explanations": []
+  },
+  {
+    "program": "2/2/establishedB",
+    "lawful": false,
+    "saveHash": "ae621de34e71996f67cf65669eecb533245587dc82256aa8e3834355e051e01f",
+    "explanations": []
+  },
+  {
+    "program": "2/2/informativeA",
+    "lawful": false,
+    "saveHash": "cc82f83babd8f7d260b67a7d1b78ac972f502cffeb359bc11e625f5da724d916",
+    "explanations": []
+  },
+  {
+    "program": "2/2/informativeB",
+    "lawful": false,
+    "saveHash": "87d6ce074e7752af3f018c46da2ab006973c223f9bb017895105b5e01fda20ee",
+    "explanations": []
+  },
+  {
+    "program": "2/2/freshA",
+    "lawful": false,
+    "saveHash": "41209b2f2c01cf69dbd7e42429ba67582dae72d0ea8f11a3e2af19e05d6638bd",
+    "explanations": []
+  },
+  {
+    "program": "2/2/freshB",
+    "lawful": false,
+    "saveHash": "ea2c6a9a99dc8b4b14292feb666003e89da8b2c44fe3566d6815a11aae3d5b80",
+    "explanations": []
+  },
+  {
+    "program": "2/2/permittedA",
+    "lawful": false,
+    "saveHash": "e0e9334fa33c04085602482197685d86007556d374e2d23601628e2849d6c338",
+    "explanations": []
+  },
+  {
+    "program": "2/2/permittedB",
+    "lawful": false,
+    "saveHash": "964ede97cf3ce3589c276cdadf099dac9ac1aa1e6ebf1b79313ad78c9d205078",
+    "explanations": []
+  },
+  {
+    "program": "2/2/missingA",
+    "lawful": false,
+    "saveHash": "e509b3e2f509e0f41761bca13cb810fca78f2489c09a71ee2dc8d36e41f10cfe",
+    "explanations": []
+  },
+  {
+    "program": "2/2/missingB",
+    "lawful": false,
+    "saveHash": "c56bccc46169b4febd8f5ab48551bb3e1dc0c11a1304b2517dc0862f4bc6b5ce",
+    "explanations": []
+  },
+  {
+    "program": "2/2/zero",
+    "lawful": false,
+    "saveHash": "87c0b45d84f4379c9441c28506d2db29b1a8ddf8ce6db7dae6da77f6aecae3bd",
+    "explanations": []
+  },
+  {
+    "program": "2/2/twoTargets",
+    "lawful": false,
+    "saveHash": "ddbb8dc3f3ca23e9cee1322cc026603ef5624726583cbd5d16e6f6ff67e6f7df",
+    "explanations": []
+  },
+  {
+    "program": "3/1/establishedA",
+    "lawful": false,
+    "saveHash": "002ed07a4a9c0c437d645af072b38ce21ab594daff940c0dbe11b79436324746",
+    "explanations": []
+  },
+  {
+    "program": "3/1/establishedB",
+    "lawful": false,
+    "saveHash": "0a91269e1c6e821cac9867655b8fbb397efeaa0018fd1239d42ab4f913a6d556",
+    "explanations": []
+  },
+  {
+    "program": "3/1/informativeA",
+    "lawful": false,
+    "saveHash": "df380802d35f4ac3c1fd88d3ab18070f3b4f13ff25e0a71b6e1464e9dc6426dd",
+    "explanations": []
+  },
+  {
+    "program": "3/1/informativeB",
+    "lawful": false,
+    "saveHash": "c1c68ce2339efc9bc386fad527744777563b7b0720d6aebe9e62ceda4beb1124",
+    "explanations": []
+  },
+  {
+    "program": "3/1/freshA",
+    "lawful": false,
+    "saveHash": "3b8e239d13fce738bdd79c8a4c154207a7a9f1c6ef26e4a2e7ef83e876bfad22",
+    "explanations": []
+  },
+  {
+    "program": "3/1/freshB",
+    "lawful": false,
+    "saveHash": "3dfcfa6841f6b83f1ad552df93137360c96afc9fb4d1a6c9fe28e08459775d6e",
+    "explanations": []
+  },
+  {
+    "program": "3/1/permittedA",
+    "lawful": false,
+    "saveHash": "a042d2b2192d3b83ca91082a6c907e5865b619364004eab61973b36b1fdb4c96",
+    "explanations": []
+  },
+  {
+    "program": "3/1/permittedB",
+    "lawful": false,
+    "saveHash": "6cbb45b7b2edb6879085bbacecf2d951ba6e07c6f16c22643395e1d0bf25793f",
+    "explanations": []
+  },
+  {
+    "program": "3/1/missingA",
+    "lawful": false,
+    "saveHash": "07b119dc5dcc2f74c5f9885138d489d8ef8594ac532a944b05b588e4ee6238c9",
+    "explanations": []
+  },
+  {
+    "program": "3/1/missingB",
+    "lawful": false,
+    "saveHash": "c27d50bd397e8e546871f83af810f6e7d0a44d71d9ac09a9e01975d941f6ce72",
+    "explanations": []
+  },
+  {
+    "program": "3/1/zero",
+    "lawful": false,
+    "saveHash": "ad8e017de8e42762baf134619e69a98c7ebd72dde29edfd8c948277d0a838484",
+    "explanations": []
+  },
+  {
+    "program": "3/1/twoTargets",
+    "lawful": false,
+    "saveHash": "0e787eafc003b7539c509b0b824168f6edf277e6bd1e910e2a88e9301a2a0289",
+    "explanations": []
+  },
+  {
+    "program": "3/2/establishedA",
+    "lawful": false,
+    "saveHash": "e560a41b7d0d97c2693172952fece289e712a60e04aa5a9bb3d2f71fc28be7d3",
+    "explanations": []
+  },
+  {
+    "program": "3/2/establishedB",
+    "lawful": false,
+    "saveHash": "3e30e1db57e61358e246969dcaefae0dc21322e00b5efb6fe5571eb228e9bc79",
+    "explanations": []
+  },
+  {
+    "program": "3/2/informativeA",
+    "lawful": false,
+    "saveHash": "61b8fc26c13320c190aeee44509af28c6c39582c75d2c451f5acd25919dce0a9",
+    "explanations": []
+  },
+  {
+    "program": "3/2/informativeB",
+    "lawful": false,
+    "saveHash": "deb4e85ea5127930f94c20b30ef7490d2f1010a93baea3adcde0afeb248c853b",
+    "explanations": []
+  },
+  {
+    "program": "3/2/freshA",
+    "lawful": false,
+    "saveHash": "bca42fc36b9f237e5cb82189ec97f3a6c8b207aa3bc30971ecc572be50c4c183",
+    "explanations": []
+  },
+  {
+    "program": "3/2/freshB",
+    "lawful": false,
+    "saveHash": "d60e0a07dc54f221314375ba0ba6a01f3fdf0c2cd1b5f2800fad0af42c5b634e",
+    "explanations": []
+  },
+  {
+    "program": "3/2/permittedA",
+    "lawful": false,
+    "saveHash": "641954dd70273965e3a6eaf35fa664263a26cce1423c463f2d05cf1039d95984",
+    "explanations": []
+  },
+  {
+    "program": "3/2/permittedB",
+    "lawful": false,
+    "saveHash": "98f8bab96bee7284dd511670f04a930904659825d52f2723cff3302be5f437a9",
+    "explanations": []
+  },
+  {
+    "program": "3/2/missingA",
+    "lawful": false,
+    "saveHash": "cf4c9f9a5eb68bf8a9b4642c26880fa2e0a25bd8e11d4f4a8bf682ebb706c62b",
+    "explanations": []
+  },
+  {
+    "program": "3/2/missingB",
+    "lawful": false,
+    "saveHash": "3a5994f7f5892869a2664f465689f019bb9da8965c06d04e3ccaccae2f1b91b5",
+    "explanations": []
+  },
+  {
+    "program": "3/2/zero",
+    "lawful": false,
+    "saveHash": "911cd49aa7cd4b2add90c275fbb97caf02f81cd799510c68cfd7f960bfc9cb2e",
+    "explanations": []
+  },
+  {
+    "program": "3/2/twoTargets",
+    "lawful": false,
+    "saveHash": "5ff4f3a0518ec6b85bbbc4ab66903f00a2490fa521d5468e6b77cd2ffaaa26c9",
+    "explanations": []
+  }
+]
