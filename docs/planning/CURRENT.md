@@ -32,7 +32,9 @@ Prior: OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md; shared sessions/capabilities a
 worker-backed batch execution; native240 programs/975 prefix checks PASS.
 Prior: OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; actual association graph/matrix
 and three-axis inspection,2 frozen recipes/24 exact prefixes PASS; wider coverage due.
-Latest: OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md; common registry and
+Prior: OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md; common registry and
 authenticated graph export/import with browser/native continuation PASS in bounded scope.
+Latest: OBSERVABILITY_WORKBENCH_PARTICIPATION_PROGRESS.md; linked exact state-path
+read/mutation/change census:12 prefixes/153 events/21 paths PASS; causal audit still due.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.

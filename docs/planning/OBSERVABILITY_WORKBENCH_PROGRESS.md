@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: registry integration and authenticated durable graph export/import
+Latest continuation: searchable recorded state participation and exact event links are
+described in OBSERVABILITY_WORKBENCH_PARTICIPATION_PROGRESS.md; baseline12 prefixes pass.
+
+Prior continuation: registry integration and authenticated durable graph export/import
 are described in OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md. Full entry is open.
 
 Prior continuation: native General-attention association heatmap, directed graph and
