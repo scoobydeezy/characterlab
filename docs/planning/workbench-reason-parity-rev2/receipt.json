@@ -1,0 +1,2823 @@
+{
+  "status": "PASS REASON WORKBENCH INSTRUMENT PARITY",
+  "sources": [
+    {
+      "path": "src/workbench/reasonAdapter.ts",
+      "sha256": "a49dcf943540993929f25199c93fc9f508cc7e99c3057129e87d3a2c3d9969ec"
+    },
+    {
+      "path": "src/workbench/nativeTimeline.ts",
+      "sha256": "ceed75f534e8158a2172ac962cab89aa9ffa5fcbaaf71e0d62347fd01a9c6775"
+    },
+    {
+      "path": "src/workbench/canonical.ts",
+      "sha256": "f80f4a8353ea7604432d5ffcf0d4628f8b7bf13b82a06b4807445e9a9ba97bde"
+    },
+    {
+      "path": "src/workbench/reasonFixtures.json",
+      "sha256": "9ae947053d1255d61afe928a96a5b0152778239b3d76163598b468eb35824301"
+    },
+    {
+      "path": "scripts/check-workbench-reason.mjs",
+      "sha256": "7defeea90f2c31a134d935764e292a2862c72b59a3d72c36a2d73a10cbd799d4"
+    }
+  ],
+  "planPath": "docs/planning/REASON_PUBLIC_EXPERIMENT_PLAN_REV3.json",
+  "planSha256": "9c174cf009a9490612f849834da0dd5900096ae5f4d1515e4fd93ec99f5a7aa1",
+  "referencePath": "docs/planning/REASON_PUBLIC_EXPERIMENT_REV3.json",
+  "referenceSha256": "86cd02b2b85be46b1b632dc509f1bbfc91cb021368ea086ba76192b5f879cb3a",
+  "runs": 115,
+  "prefixes": 350,
+  "limitations": [
+    "Public native parity and exact output projection only; no new psychological verdict.",
+    "Checkpoint continuation, observer safety and command isolation tested separately.",
+    "Human language adequacy, generic corpus coverage and full Campaign 4 entry acceptance remain open."
+  ],
+  "results": [
+    {
+      "law": 1,
+      "name": "same",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "393c6343e0a363d586ea793e55d44297128df2c2028b43e6316059baeebaddf8",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "97e914686bbe43d360ced91d9d9436dde0673dcc85e6cf83b4feea62de7f23cd",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "4b14cf28deeb4609babcc595d1ee8848cd6996e30fcdbf39cde3c1adc6695bea",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "motive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "959663a8bc36d40fe2143d98f4fefbc86675abb4d819593088c05953dcbd7d99",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "8504457ce6993f14dbb29d2060135cc716da8d1bfb3d9734b5d1bb955284d943",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b4eff002678e4de9935b2ca1bcaf6b9121ed410d1a367aadfba562a9656ec123",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "referent",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "003c773b1c5b79ba721d52f666b317345291a2c841e28709959862d3344dc370",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "7403623e978e4f7a44475949141f438391159223a1d398ce67a114aeb64bac22",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f7ccdd9eaf06e70f0c473b6519ca561120efa11070fcc21b32001fe8cb4fc138",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "collective",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9d0d0b7bccfec57cc44408fe64cbeeb76ecb0cc1a26456b0e53e6432c261ac97",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a88ea401c31abf9869cc8cde05b56ce4036db832b59f4b018690bfd0bdb75e8c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c107ea58f92d62c11795f77312fd8eedd6bbeebb2d1a6fc1a2168140c32265b9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "duplicate",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "a0f5b403b73eebdda48bce1e768a3ff2ff83d274d3ad8c07df83c60db5102e9d",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "acca93ab4fcd403c893cdb03e302f6cc558c4a9fd64ce9e1e2fed7d593d09aad",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "20e687f02a0b8a4bd93a4abe0e536a4113bdb2701c86f4f459f5e9995ce9d4fa",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "signed",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "317f8e169a1517812ca78f262688684fccd4d9f041c0dd7213cd465bf9aa7dc9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f40f8a0671a18cd5ddd7816eeacd9bd967b8e5a3b69ea79758b6d78ec7e54bef",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7ea775dd91a0e0d908c7336773aa33dde8cdb280ac0f0de65547ef1d938e8f66",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 1,
+      "name": "cancel",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "21725abe01cb8b2e40c4dffc0d90bb6ea1b81836e01c3b191e7cca02968c34c0",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "76237ee7558bdc4fe9d50d0e958fa082797addb1b21687c56c1c5336bd290e07",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "48bf241e8b04ddedbabb256fdac44f1e6bc148ce371fddcf19c34c3cf7aa7362",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 1,
+      "name": "positive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "672d5282f47ebbd9da0dbc10d30a9cd7fcdff2d7c27cabd659d54e9da2ee735b",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3a3a3a7d29c98101ec1114db5ccd52a0d9ce3ba9cbf57f38ed9ded7d436b2255",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "430e1120daeaa1612102c73f9fbf0ceb653c0a53b8ea64ca10851860e97352f4",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "negative",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f9fcaab929ba3cd6e820a216470c5ca33424ddd27eb79047e65bc5ec3c680bda",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "00eb69a01bec69cf4a8283ed769e426561b490307d373f3afbf122c522519878",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "26443ef813706dbf89d077ab98afd9e0dde5aa31d4ffc0e654fa527e9e53c46f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "weak",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "05dde2a36bcef07944d4bc4bd16ac0d8c9e28c5d39b73c3aea1e630fd80c3c58",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "13c3d7e6a3481b12814da1f6591e17903370e3006a3d34ff92764dc46074fffd",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "1d68caf5ba1e1c06ba46f785a5f5faba3c3706ac7d94cf17c4af2764b21b6d85",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 1,
+      "name": "weakStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "bd0f16c5d169cfc0a6514acf41020e7a5e5d51bb2085d9c8f32e148017f30b9f",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "af4d4da358c678ee9825d9ebb377d92e757f3b73aad9b701871a40f26644281d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8d20ffb557f3df6037a066557822e166d95ff5d56cbdc20bf3e2947b12118209",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "zeroStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f8ea8fa4917b3de10060d5e47cbe17f73f09af7f088ab9616fd608591695aff7",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "53631d1e648e19ff8bc78f71c2e3d1d1449d879a625c6170122075534d0355c7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "341892065d696069810afb803fb0d242ff2cc5c1ecf0d099289cf64facc39caf",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 1,
+      "name": "strongStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "82339abc716699a8079a008345bd0a741ee3c77c3f6b2f15f4e4aaf64e5dbd95",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "33822aa9e9c052ad5a3c70182b61736fcba1850c463714fe93c161189d52b8c9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "004e7c09cb5efa53cd1bff3b5696e1398d4b30fb727b5466d197a3c52e1bd027",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "weakSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "774af0a4eaeb855587236347995660b280063b6ec0ffd63eee169612e2b6e1d3",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3021beeecefc1245d0f60f80cb550ea4125b2168508a58f109fde6eae5491031",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "4fd6769ab27b0dc73029c804133da290f61604c1034df2f195febfd5f9668285",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "zeroSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "b92a97055df7378b7416d2f86ad92f875d770ea4707d069ba33d5def236a4594",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "27f356b6ec70176b32fab5d5ff52f2943422b9340d051c8e8b17ff2f4f83216f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b0b25c6aa1ae2bba399b55f7efe3126dc2c411a8251f5439ab1e0ba9056d7e61",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 1,
+      "name": "weakContext",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "bfc7e0acd32ae7e87b56c2ef6368b81137acee66515532be912b8938729f326a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "2f3b76d2d443299200cfb7f7898cf01445451627d05ca3d5cdcffb00edb59dd8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "11db8cc146c13a69cb5a2c30aad52cb9117ebb5ecd2a9cf3a6cda5fd276976c7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "mismatch",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "b3adc016f910b7c3500788f2e58a88169fab292fcf9f683cfdaddaca3c74c075",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "c257051b14f44a1fd7b9b127671dc746280126bd9e67160afd5941a4ccb9fa5d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "bb8a3e755d100323598622666bf2ae676d6a4a1c5df1339e553c772c61498f85",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 1,
+      "name": "otherOption",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "95e35b259bb7a7964051c53449f5f03d7309edbf67b22aa157135891c5e23753",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "086fa558bac73f02be93c93c1ad972fee7c12e8201d3a66c53ae67051148af22",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "12630dc223a7b0ec09d10f2379e6be23da47b5d275c47ebec48de0b1fc119f26",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "avoidStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "4c7873d2caff0d03299950a3e1c27d371b2365011e41a0fba4bed43a9d0eff64",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0a25ef5d451360e0d80bdc9e64b800e9dc4988b5225b6d3ef8fe5e4320d4a534",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5b26642c32ad8f824652809926d957dd1845983f9e945c166fd23a43cafc54f6",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "hidden",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "e94d4ddb0d40ca0347b561620f82c1f2b6237374d40165f6b6bb25c22a0add22",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a6d9ef0992a1fe93665c5cc45e6b612ae4239debba40515dcc80d112f587093e",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "0df41f1010801c67044c49e906bf25b9ac1f768afa11bc6673a4c17518a316c8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 1,
+      "name": "denied",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "a70024039d975eea5b00636c9649cc3b1ffe08ca50fe7bb24136f71cc14beaaa",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0ad8a9a1264ab09bcfb3db64743c8f3236c832a2a795b8673b43437e172ab481",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "fdc501693d02645b9956d5158ac4b78a9f679b911aafa02104428616bfb77e99",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 3
+    },
+    {
+      "law": 1,
+      "name": "untrained",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "14361570cb28dfdb2a7e94ef95a4849a479fc675653db7fe88b2d8829a265fcc",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "59d69bf64c3b385d62da3bdef85d9d8e04eef3e47490f8d197325dc6b6ed7404",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 1,
+      "name": "continued",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "4e8308f330f4dcf472dc31941d597a23085abbfffe8f6a7d97618b204a97a289",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "5b55695c0836997f2f5bacd173366bb69df4f0c1edbf76519f38895e08edba5c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "95bcd5c2f573eaea25e524be8ab88282155ebc4da6c2273339602557e1a2a203",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "d3ef95db35de5b5985d257c1c718984aa410e7aecdc107996800378229dd20b7",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "ae1e0247d2d1e3a4909ebc759e6066a2675d14bf129adf83322f067643aae4f2",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        }
+      ],
+      "probes": 2,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "same",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9debd877c35ba5435fbbcd79fc0421d569b496d56988a2fd4069c58f6081272c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6e8d138e386ef84e5c32f7a981c89ad5a487a335fec232b875b96ef26554f6d5",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "cf29fe59530fe3b5310cfe31fc0fae7d63ac51742b653652dd0f7da2c9ad22bc",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "motive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "bc3cfaf25cbe75e9a26eb483f585ffee79965822f2d341993e8ca5a1834d21e9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "460ddc165313396357b81b0e95ee91361a98b84ec518f8cf73e1e4332532abb6",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "86b2b1925bfa6963a170866a5ff6864938425f22453ccded7973350b9b5bf2c9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "referent",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9ceb662f9aac55e00dbd47767551b7663dc48b661e07e5f23b97738defdc144a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3e8b1baff6885f9ce082165a40ffd0f398d032babf781afaa9b90dac646e1993",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b778d2f51db7165429b32dd82e1ae8abff1cda66e146ca0ce2469cdba359c46d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "collective",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9acb0df278286d127d5675187dcbd1145f00467b1f8e992d4cf112aca877c349",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0b99c416c720c07037e51e50422bc98e908ed3b8807214f91577e12073c93ea8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "97b2224cbe7be3f8599aaa1599d3ce8f1cd9bf3ab57fd134eb420643e9fe7f03",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "duplicate",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9672d0a3c89981e9a7d984e831c22d93aa34fb9602a3fb3b728cac522ee29349",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "59de1637bf0f454069f10a3dce4951d6489637e39fcfbb5aa7fe93017f582d46",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "097e7f1880c671c222fb474c4ce4b32f44aa71b52d4c7267d43899e3f68c63bf",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "signed",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "d76b5bfc6624f81f808928c1e466ddbe5472f93f03d11d02c28b08e234755915",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fb5bd1288cabe52059d934d40d367d6dcd4b4d0112106c80539c1b40817e5cc0",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "fdb75dcf766bb5101464f739fb7e22ac809adef0b682f424880c3bed415219aa",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 2,
+      "name": "cancel",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f026b868533a5e85977faa770c43b09f7619a2ed6bdcaa49fee2344af84333ab",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "ab931ee4b64f1b7a939664c0eb1d30ebfdcb9fff65ada6d988f64eef6eb43146",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7f92ffdf59e6d27a2a7805128214652118351440644048bf5d7e2b00b412283f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 2,
+      "name": "positive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "358b306ae4bde10c01a0f6cf0d0b70fcd5c2ab45a9355d752c4cac35a7b41bf5",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a0c0af936c5fb44377920e996f73726a55ccad593d5e9b3940f519564752baf7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "83d9331fdea7b21398ce5de501d682c66323d5ebccd9e3b14e371ba3d90f34c9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "negative",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "a88ddb81360466ebad6e3e1e0e03e058d26a46803ecb36bb84f0db679682eed3",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "58841a40d6e696a5e9aa6b6f85420bea34b849e1a7b81490b92e1fdec67b33b3",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "cdda1c0752589cad3d39e5d99d74e2aca88d362a0509f76a3152bc1c5b98c5f9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "weak",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "58b49201f521e14746063ac1c3b80095a76984c09c580f34bac7440196d5d45f",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6c282bc6ea1b23fc1a5ac0bd5c73141a1e0d5d8c05e5dfdb14bd53f7070b67e3",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "d1b7c45628739b5892e56364e4953f54dd3cfbbba6bb1de7c9038c86ccd7821e",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 2,
+      "name": "weakStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9ac3e97086bb254352a5c49178a30a60930391affde8cc920727578156288901",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "90b8aae0c9d10d7c7d82b8e10f9edc25415a3d776b76081dfb4a8b63f5f89b74",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "0d39632329b7436d7c8497d97cd9602d0b458381fb07c920adf0e9ec9fa6627b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "zeroStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "d819f9ffc362c7fd6a50e902c4b023475520621d3d2696c1bcb81446cc2c1bbb",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a931424a61aae5d9a98c0d4f0913c9e7a5cb57889ca96eac5bc51c2c9b65d8b5",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "4ca3c1ddbfbe87d608150576e9ebe03d617191678b24313adc4aa8c11a30b78f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 2,
+      "name": "strongStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "da1759aeb0a9c26a934e1888fe18b34643182e4ae1086dce5dd6828fbb986d2a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "93ab117d6b5395c55f5573b82db866a3ce09dee518520c3a8e36ebb686ddd4a3",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5c89c5bb7e79714eefff1661983dcaa63c5cb0617cbff4fa500650a6400d0d9b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "weakSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "2eb2062b40c58e84e383a99a53c1605ae5df68634b4a7f03dd5c539b8f53ca3d",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e60ce1a46b25b39ebac21cb1bd1cfcf39846da8437ec77575ee00b5247d1482c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7e784e37d20adc0d3229d6350a9dd17c1be03cfdecb94b06caf7620f0398f4e0",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "zeroSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "17ae487a3b3b7d34a0462897bfe82f36b6bad427a6f663d3bb97c453ef3ce5be",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f3318260f060d509f0832252e57f94415f87ab3b078901ad07e83d72d0df56fd",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b144d757d3c8173cc6962b5c10b9b4228785cf7544bd8d4f1f9f774c9ab1c90f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 2,
+      "name": "weakContext",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "c3e8ee6c06347cbb2308371582f6b4055d6620209e85d59f8d2b777fd945b1e9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "ce1d24b79163d329aa99d85806e3e50a23b3d5fca3445c7e8b2fef89ace36fb4",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "856d29fb00da4caadac3b40c00765d43c19d0a87e3b47a08ebaee439971566f7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "mismatch",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f475b15608d8aa23556989b987b481878677d31c83f1fe249bdff523124a4852",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "618a7f31ba55a38220217aa80efd1962899d7663ef96ce151f6162a22e8693e0",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7d16e3e8a7358d27f86a19713083509aa5078fc07dcf415a47d4eb5a37a4363a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "otherOption",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "796f95342552512f8b65cba7a05145d1eafa1c6e2e221f1c386ef512e893be4a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e36af2792e788839728ac62e5eeebe917c617cf79cdfffd76b08656e3fafd8ab",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c9ce82310d710c6df5cb7dcf74a3b2cc86e6d436b77a684d0db9c3fde1215fdb",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "avoidStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "7ff37e4a495faacb5d8197289d2dc2c2911078137135964e6be7381953ce923e",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "4654bbd247f1e8b15c5db6888037d926ef6a5bb4800c6cfb67958fcf24dfaa9a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "743649b5ec55e0d23b2f540f75518d3f98a78c0e54d96f25200c5a7a6f6d1254",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "hidden",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "6de02e80314c268189027b7b6c09c5a639c3cc5daa39e3715af267b9a6a598a9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "16b68b5fd257d74ad30cc8945f8df48d8278b9639e286950dd094d6f111abff5",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f99baf0fe27dd292de340c8e1507c53d0ceb9a78746420884b00debc6d8681fe",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 2,
+      "name": "denied",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "198a81488a88e074e31c7203a0c7eb9c22e22b2777fb4077d8eb8d058d41003e",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "16d79f5fc3e5c14ecc86d1f391367ababf86cfe06b83632ac8429d4b40138d8d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3a013f85fa2893a33409dcaa2e38a1eafcf88801298fac37a3c160eee36b9b88",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 3
+    },
+    {
+      "law": 2,
+      "name": "untrained",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "1bfcfba0b97ece2ae61203c59d596ddaa2672ad66a0d6cec8ad43a086e5564db",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b330c17f405683c96ab9a9d764577c168a2451f3606272cd4096acb232fd5cbe",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 2,
+      "name": "continued",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "fa72891150a37fe078c4f35e76c6b2af0235fd7938c0d8690b0ce5a1d888ee0a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3dbc167e3d65e682634aacb88e3d90cda6c3671286f0339ae80c83d58dc6845e",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a5a01bd5ba58744cd4ce0fd2bd7d45d600233b6b1d0f3f0369d229dd7ca0cd34",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "4c06226a4fbddafe032df30b10a030fd3929e100e76ee97044e3fb96f1368e1b",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "eddb9232d260876807a70552964ac76aa3aee8c798627dc6cfa2830612701990",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        }
+      ],
+      "probes": 2,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "same",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "929f72eac97af754a496ff3abaa02c47a8fe5827124f289dcea50a04ee6377a2",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fe44bdc2fe16a7df5c02eef9928e188baff56d51a05e03775d7fb19a0fdcfddb",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3083652479ed13e5c0495f4307adb3b7c36836a15038da476abad7b98ff13154",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "motive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "4b5b044acb0d77099f0277e9f1da9118f234adbdc7d924d2e907975c77267770",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3820d328859bcd2bf811c55fd39597f6ee1f6641733aad7fb121ca3d7a2fde31",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8f8f4e86a6f5a72d1252dc1b19f23a8e337b323bd775f545381372d9433b873a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "referent",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "c779547a160051eac6a8881426baf321970e05145038bdfedb66d2e6547c9888",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "688e4e591e15b68d9ee46dea74c8738d51eb9c72347fc9d0568818765fb8c578",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "aa5d61d474c8b893fc2d61effa8c88b9378eca2fb20b1bb9002cfc7fcd9f87fe",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "collective",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "c1753b3b0d55edbf3b4da46cc51376b6c1cee11c6112164d878dfbaec2933776",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b6a2ef5399a3c10a4b6a28fabeff58781d33e10ba5a6a20aba31ebed81cfd06a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9193b14442f7319b939b5d5acbea0a7b9e03fdfa080bf6a675685ecfbe52882b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "duplicate",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "40e61cac8c3dca17114b0a244aafc2e1089b5748709c33bc888daf8f19d62379",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "5e483ad4dd9bb99e935c4dee28ca3a381deb9073daca117e1ea0c6c842ad2c39",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f675f3cfafc7358f052127b50a53a87bfc08fcfaf56dc9b44a6265ce0144f444",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "signed",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "76ff3b937a1ee72ed698f2de062ce06d4a4876ebb1d064af4c28d950aa4af736",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "05e8d7c414c156f36073b3631ccba5fc5b423ca70e8c50364a7672f22729034c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "e3c5fbcbe12cdf460a9383add014e8e61a4e660663fdbd63a55d4083ed87fb59",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 3,
+      "name": "cancel",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "65e5c9217ad8c1deacb9010a401880b7130dffeba9b470e559fade4f3db38a77",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0d8236c529039f3889741b60eb0993be43b50a2bc48e36d6895a0112a64ba445",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "589c6db526e4806ffe1863795a7c7329fd8acbd9f7205cef98b75cab44ac28cb",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 3,
+      "name": "positive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "a7e39c6783c4521748738c741140cf52f607a94fd338a19a2e98a0af6335d8ff",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "ee086a87b5e79dfbb5926770d9338deae8546976bf5be9a155bae168c31e47b8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5b44a14cb699c09840b292640c7dfc6c0b5d612839d57eb64edde7e4f74b66e7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "negative",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "646252d0d3fb6e7035e6a73f6eac24bd182e2bb182cd28dc734b4b243b7147c9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "74501594cfe589edd85f3a6244dcba2b284a98243e859469f0d77ab7e18ce154",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "95b10123bf94b79aee8f8299f1d2dca170707a7ded10a4194341b26f74392bac",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "weak",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "37d7de21feabcf849780f7599be90581e459a3e4843395105cfa0675cf50061c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b771b1d36d30d5ca934586a8c24260fc18b71c07b96ac84f5d4e059fecd31d1c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9aa40f18bcdfd02841654575cb6d69a5c7af0055925fd26c4674e349533c5f31",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 3,
+      "name": "weakStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "304d60dba02501404910732b385a6c28fb3d8b7d15547cfad28b8205204d5945",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "14e8ea8e73a66c8f8cb432aeda2c6e4c8f6c229962433a78415056b1e7c95160",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "edcf752c7f1c05aa26627ba14a4fc49157b5021856d1dc65d797b62c59b48056",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "zeroStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "237cae560bf70c33f5ec261163a6fb271b480730e399cad1d212c3dd307613b4",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "c4c1e92a1cca844a2e251930e827bafd365dcec5415f34dc87bcb385eca8b058",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "1495ad874a363fc5978585d96c048a2b539eae245c7186bee0ea34b0d2cfc69d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 3,
+      "name": "strongStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "eaf638179774bb5490c32727142ac4cdce87b6cf502ff1e885fdc73ecefd4041",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "143d00ee3aad66648b0599e7e234126fd655d4781880ac545c8bf97cc5f7a602",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c96194cf8edae368e3e57307b2830a3fb1099f0ba2dc37db459e8f5c6fa1d02c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "weakSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "cd006c559b5db5ce3df622a2255af9a3a34815cc554f340d2f0e50ba03c771c3",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "c881aaca1b1d0011b4bfc5cd93951031911b666b9d914d06b02ddd73d163ae74",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "bb6f7ca26b8bf97983bcd7f71d0f67769e5d8d3e5ca15b457414afc3d8ddeea1",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "zeroSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "8e7a90664efe0ef935e84271481698c934b164de10024931131c4bd051a5b7bc",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "5386e0e491ac29ce1ffd5641cad2c4c998b63336abae098b7bebf58d77ac5c66",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a7b8d258374133cec9749326534a0fa27df8cbfcee7a47cb83e38f5574e916c8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 3,
+      "name": "weakContext",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9b7bc5023a20f483fa43da556fd6adf8a5cb3bec80ee8ecb1df228293c9bba70",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "4e626e52e2143ab334439ca38245274a7315d4cf3a12cd3aca7698fece675867",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5c8398b5d8955871a31df978e98ea4add46069ca0d0c480ecbe195ed27877bdb",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "mismatch",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "1032c864bb9d82d9b288eb15ec6e294eea8423f1e4c211f59db5e7d82faa0a19",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "4eea6f0c095f0147f4357dd21cf3da01590f1977894677c55938541722c70d59",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8cd4949aab39c4733e47921f5021727f5f148b7e80d973e3fa75dd1d5746a5f9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 3,
+      "name": "otherOption",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "772000f4a337fa29f7d52a33b5de4eee83ab19d936398101fdc7f93c16c4530a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "9b600df45d3e39945b13773df2bb3776ecb6ae922255bcb077749ed99d6740e9",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "579aa1f9ffa742ba202946ef308585a4af51a9976d7c954df33e79538167a5a1",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "avoidStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "ec38bb9b278ac8911f029515ce00114c71ae8a7fcd7d728c0c6bd8e92e29cce8",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "435cc30efab3a763a08a5a73bd3fbb6054498c8f2002949197de686475c8116b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b215ae1e1a5cb24a986e0dd991d81f4f3449b73013053e598292bcb72da95189",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "hidden",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "53370dbca3742fb33411e6a009bc76b5f6b1b6afbf747dbefedc35acaa8df692",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b81fb750deaace7031cce97dd2cfa176c106e6f48e707410c8c2f7988de4a0af",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f038141fbded9bbdd4c9cc091126f1358c61393a8056c4e5b9e722e589cb3a5d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 3,
+      "name": "denied",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "b89f2b4ac9dacd3eaecc44d5feee5881a71eec4a9fe2f4f439867d5987104b5b",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6d146006232b67ef17b159728bc13527eddd1f317ccba3e05951948db6027897",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "5c0474c9c9a8ffdf1e70840520a7591d1ce7ad8cfb438c7e3fea623ebfb4d895",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 3
+    },
+    {
+      "law": 3,
+      "name": "untrained",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "de0a3c2d3d76305e8cdf8f6c267a4e901cce0597226ae79d229d467b9c72dcd9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "78d4bd50339eab4bd06ffe29a069c0f84319cd35670dd75e6e8f39b1557ba53e",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 3,
+      "name": "continued",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "1e746c09b456f245d16b40ec03f78b40d78b3777c09e7e0b3af9dc1637f6e95a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a3ad799a831407d3d39808bdc69ea3c305c70cd8e86b2a0b5cc711544ef820f7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9af3b22eac32da48af5cbcccd4b7bd663489d3867c818a816f3c98451c8f5cb8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "2e9119adc215c06c1fb791d33490f7577c858b0e42a31b180ad7c21c5aafeb8f",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "2bd5580d9fe0f75335501ade49fc8371b143e1963fc06b2fbb2f54cdaaa34a80",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        }
+      ],
+      "probes": 2,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "same",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "c872c83f7f6ff1e5f77611470380eacd4d5f30e703d7cd455694527a39c643c4",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "dbebfca6cb14f9d70727d9b5c0de7b3f0586ff6a957dc6789ce90b2ec786b7c7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3d13df6e484b0e9efe96a3fa3a710a1235b2aa89bd6d53730a34d7ad6218c7ea",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "motive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9a8a67d4c6c9d53b6d41cc2e8fc31a24d669f1e622305020c1b5538eb8ce4025",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "07b8d35291a6831fdc94245cff05b09f034f28df8d34dc9fc6f1174b2fbb1ee3",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "fde8fcf12e5e0f25c04006298d342cbf8f943fc35ce90aeb42fefb833fec6b66",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "referent",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "c8a998f8c746cc4a3f94e9ded483c3d44b68563ad46a1e46b1aa016132e7f12d",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "5684f950dfc72b4cb65295a31c8c21d066b42eefbad57f04bfd49b7f410bbd8f",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9cc51cd7cd1e840b02eb0a2a02122a4495512f96e2871958ff7f8d6751ad789d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "collective",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f1d7bdced099da3d6c87420f033e12b689bea06aa74fcce7f5797e7df1bc704c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1b65f5ed521a3fbc9b306dce654ff67bbf121f166fb58ff756ed036f2327a8aa",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f5cd6118d5585003f7a18bd2637a32d8e463e757b0a99799802c2c514dc70b50",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 1
+    },
+    {
+      "law": 4,
+      "name": "duplicate",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "17a505361dc225e56fa7c08aaf0634858c9877760ee773fdb61936b62461d5e3",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "62c9187150a717b7330e7caef896ad5c36f301a987e786ceb9b59c830ea57a97",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "6a8744e7af6395f7aaed30085ed8a39324b40d309f87c84a115ad90da35cbd9b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "signed",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "5e4b6f06c20e8b4d8dd9f8b238cb72d8c2da11a6f3409e5ca18632d128cf13c5",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b73cedcc70687a17da2dab950284fa04e3a27f06ed2c73dcce7a0a93f997cbf6",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "10febdde151a0d956d64e1e758c834fb20fe500b6f9b9a0e16ba95b20e0a2dcc",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "cancel",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "e73ef45364bd7fde2d53ba48ea4af64027d9d6bff5dee9e734e667708a74ebb4",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "79108a94ff7f868dae802c5fa24b8b93af09dea39b0a69d406ef4c0b6ba9426b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "078655dcbac773bc1bdac038bef20725410e43e7054e8d88378df85b6c49c936",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "positive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "28e9102c7eee7e5201be339c396943a62c9b8be809bb00a7d8c3f54c822b5832",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6f0352acf151fe6ad213b11697e5bca34fdf9a1e8bfe4f640299ca983c415f89",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "988d633ff5048d3b2bda22c3a9d9f4eb56a953b26a3f941dacaffdc0b57cfe55",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "negative",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "6818ed0b3cfed385b831a209f1b24cc231699ced7b549747c3432e723ba55301",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "5993014d2b794ed860068f1a778298e3366df1f9d446651a7165baaa2539c731",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "9b06745fbdb6af31907c4f1c8e28ab58bf6fff27963c06bd284e4ee4a25d2384",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "weak",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "0902dcf3cc22b7b14e997855a9091f8e9f0bb3673b80ca919363889f15cbcba9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "bbe5e3f2e924382b770d4c53b5f2ed1891a8b65430342f380f2a5f83b68f6c0c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "214716770760863180e8418771e1ff69ae7ef7b9458f1f4884317c06bea7b5e0",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 4,
+      "name": "weakStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "1ff1d56ef4bb8607460dbd59b0cf26c648ef5591c3bf90abf8b99b2c83601caa",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1c9dca9bf70c9838628ff910d3837bd4ab76b4f4835c836d7fe7f69cc9c9bb8b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "bee59f4f9b86eb2482f5dc075089a8c4220e18583b1c9740e64221555bb8aae2",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "zeroStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "00e133505391834243e13cfa755f4f4ea409bd41c0957e6770fcac1d0735fe0f",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "64ebcfbcffbe41400c900b9d62c679f5ee89b4c898f315e95b760398abb1babe",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "793614c3567bf2e0920d8f9920875c42dcef9ec427ea7bc5d4588875a117bf0d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "strongStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "8761e584338e8c4df516812d4770b2a704b894bfd273b3ac55d69d9bbfee82e4",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6cb1f8048dfebeef3806f9d5d2075212c266af45da25f52b4523edc67393fecc",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "6fd97c2d1479bdee0470371c1bb00bab5389e9dedf1032b579e97ab9c67b329c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "weakSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "2df04fd69574ff7d607f4fa6beb048c088034429d5a3ef078f0c66059e84a636",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "f7b2d75316e7c1bde1e94a8fa5c14fb1680ab34f5808a8cdde4afcda14459d52",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "6c9fad6b71ad0f67f60684f149b798c5d55cf521a0f6609ea3b95c6493f3a252",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "zeroSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "96c91cec51c2ed11763bc9691c62e8837208dd7842f1fcb74d1aaa8503ceaa72",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e90f25a932a27c9ac068decaf4415ff0fe053825ee5d4a1414fb978d71128a5b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f57604c37ea553786b36812ae687a3ab99fb5f208f5db508b7e034e8f056664a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "weakContext",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "cf4b03ec8045fb064efc9bb9f7b9343ebc7036721d81aec5d553319ae035a22c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "af68b293d64b14c9786bbba363be80bd52c3dc4d3c0450d5d9243ecc73f13ecf",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8f8a5c2031275bbe402413cad901ce6d2b032a65d838a3ba989e8600e78626f7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "mismatch",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "67f4f641f1d4448f02d011c944653f19bcef89c7024269dcc336c56ec18bacec",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "2d023a0922779ad66658102d8ce005b79fd11d91a11cadcba798aeb0022c62a2",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "0dd6759b393058ca788968d35711931fbcfbec9a7b510bd093d0701d0b0e5f7a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "otherOption",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f004de03184c8f677e08f8892f35f8c41e5dd122dbd56cc60602771714a3cdff",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "fd24515f84a096f236e6cf67d01841ad0143035bce8539e84c084f220cc130b0",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7f62d79242406f76c2e3fa60d3aec152095bdf41402be1f90b5599c7d0b0bd70",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 4,
+      "name": "avoidStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "62aad7038e48d8653c1925b1f1ca9bc5e7cd2a4d18d9c7a3f168a526f7fce5bf",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "c9943e14a43fd04ee66fe3bb8bb29b298bfc8e1b669d38211a4279abe3a560ce",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8d7f35ddedea42d3c22d0d9f922aaaf807589a0594af9d78a6d0a69973c5308b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "hidden",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "0b412b9ae9067958abd0bdaf50c92e26edcc944e80a8c35a14c1a75012f3da77",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "6b15c70b78712287a89a0ec02ef580b6f124d41373af1440aa25c1aeefa39aa1",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3b1e8fdcb33dc99b558dff090cb1dab54838e481048010f855167535227f9b0d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 1
+    },
+    {
+      "law": 4,
+      "name": "denied",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "acfe15619642c1ae47b7fc4bd603b9aa2d94f35b115d9f330db1f82d7a9df9e9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "988963e1de80634820ac99e0e2a5099c229047b8476deeb85d6a2f410e2753ee",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "6a590d79b6b8beb8ca021aff0347c067c1513f45f66c15aee73fe84f2902ea3a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 3
+    },
+    {
+      "law": 4,
+      "name": "untrained",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "1aea7e053991822f2337ff78351852bb6da4ef2e40da6e4caad6cebeedeff53f",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e03b550297d5e9d7d28ebe33f8e75f75a3cd73a8768b91e726325013d886fa3f",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 4,
+      "name": "continued",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "2a69fd1232938ae9701a36f5d7fe952d164f0e8c521f601d75b7c79053279982",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b1d32470d5c46c48d37b6c26a86b885c8e72a52c998888f86d7b204300fded28",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "123c16a586d8406d17111acb7b0e7e963fbe3315526ec105aaaa65e86ca0c53d",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "b0e2a240e0a0f274280cd86312a03dc0232a2ac740990eafa87ea9dd923e9eb3",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "eecc1e4a1de53f5937b5fb0a7bf6f1edfc46fe3794de6059c36ca5c7777b980d",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        }
+      ],
+      "probes": 2,
+      "activeReasons": 0,
+      "rejected": 4
+    },
+    {
+      "law": 5,
+      "name": "same",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "aa6260b430b63a0c7b392071e4cddd9aaf95a9e476c286958182d1d53affab1c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "00ec150d69baf39b276d4500359d2b97499508c817b14b2031b20888d39e4007",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b11e5439f9e9640418e7d6fe1eab288011d2b5af99a79f5cfb2450f6971333f5",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "motive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "aabd0ea91e76b0f91f5c49099eb0b59a864ae770c89b9bad092c7d4334389144",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e139c0044212414cac7d870f2e4f915d59740d20b7e30de148b27666d127db1c",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "a9969648208e3fefa9871771fce5e27e539d771e84081175ff5c3db37eec0951",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "referent",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "56ed493342853292ae2337a41af515739b348a2a6d12754a05b91f1096864daf",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "502dbbdc2026972c4463275fd544717ef38d4f3e21beee26217a9eaf1cfaf445",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7bdacab00570ce94c6ce1f2cfcfe21ab10ba25ae5cfe4fb66ad034a72022da78",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "collective",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f51b77ef61fe8f5844271aeacf5dc09aa1f8508aac7d115d473490139818176c",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b9b23a98dc204a1b112d1066e8861dcdf4f4b2910fd1875b691668d4cd133ccf",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b798b192b71bfb7f6d850b72f0307b4f0b3d274340562fadeb11ae5b798baf59",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "duplicate",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "9e23abed5d14eb0d80f4fe922f1a6295344f07a3b15039ee4e0ccb04b2da6a5e",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3d6e743c92ffc18c8813847d8b104e977567351e4d9d2cc4806370fe8d95b874",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "f39cc9ed949f84d92bffda666b7a4e14155438325c81a55fafd503d9c3659811",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "signed",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "00062e0690de2cd4d1182a97d4e70181a2848e2653e1c663296c8edf5ca4f0fc",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "1b0d421df60617c27cb89c63262271c049a760ccb8997808a6117c36b2a07c6b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "eb8697b4883b44905c257757c05b9e207b25cc2980fb74811e1b7ea08ce1f02e",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "cancel",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "8827f155117c78598e8834271f3c75480a983e3b5c076ec890763c2d16c1c635",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "a137772935b9543180c63d28451cae7a8eb43c9dd81f71259c20b8d009ccc671",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "da856e394e4194053950bd8a7656483c33dcc15678a4205e4e4b504944900af6",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "positive",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "76c7565f30ba16c34a2dfb4f64d7d805f757a4d937f703aef1c547293ae0a083",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "cf06de7c9841957bb6434b3a800433d0eb5dccad6dd0e2046d3336842d3c62f3",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b62c02a87bbccf99f1c5f0e49489a477057b05f4c107408c1d55349d267445bb",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "negative",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "6bf5dc61574963c8f04de768ef3747a5e9b9da6233e156c65627071e92a1d2a8",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "387c06a15a5c2e52e4d4b43675e671783ca0d271b9733798017303453d72c562",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "babb89443468c4bd3bcbc8e8b2872fd80fd6ccab8b23165ea748f407cb5e7c92",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "weak",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "bd931663d5d825cb0dfb819052bd47678405831898f85c2cac171ac9ae56a9c9",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "d36f85cb043502fa83e4bcef1e879b668218d68788b0f50e220fd720541bebb8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7003633405dbd62bc0f00287dc4ef358aa682730d50cfd20ca3fb1969e570bc7",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "weakStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "45778f887805763f599449a59cf1bd311377ef2a9da540f4e46bfbd6e7fd75b7",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "68405c8ca8c6b04ddd69505fc07d43d5c99fe95b1a8aa763793be6fd6c92f062",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "7919f91195aeeac557d811d86546a63e452daf0e82b4d73108451feac3bb0907",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "zeroStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "b8e556f6001c9454c5ba0e8490b9a4257a97e83393427d6fe3e3b9aa909685fd",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "b563d37e691513210dcbdbc71af75166839eb27821df7f25ab91eae964fe8e3b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b9133c1c41b99dbecff11da1abf2e208f830941bf96f8b816e62b6530b297af8",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "strongStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "822e4f54a642b46a564e531629f9b2163a1464f09554c6078d7df90a08dc6625",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "9b0f72f674ceb08f90322c60648e175d84f5dafa6da86cb3dc514bf857f64776",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "c15cb33f7f1dccf532efbc3426a279c73de803068dd733c2ddd35fb3b099d246",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "weakSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "5db9da9b61a14236cada794d84e60b863ba30e3a13ef0a514c748be824a4e1d8",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e4467be4906db2183c9b14433990831921eda147ccf2c26d029d4a95b48e8132",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b62fb6578e02b4ef1e330f049c7f5415689ae36d086b543eedd7a7451c5053b1",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "zeroSituation",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "f39a05fb451372a80d9114607f145f4984ee3d30f0632ebb7cabd73380e90c35",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "3f5fdc126366c4c85c870cf043764c852866e7504495b99cad3b00a5c5daa26b",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "66b6a0e15529006b1fcaab5182d45724a3a065ae4bcd7e0567bff65c2d9ccaf4",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 5,
+      "name": "weakContext",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "722ecef50e71e9ffa7826c947c3a1f3885e2b8594d6564e6fb8591f8a04c8137",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "deae9bd6668b37541a861d20524cac9a7eff50faba33db6e9c11c2670f8f0971",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "089713d1ea07e644590d087de3260d50220a8d06ecf09a590ea01c1d4fc48a0a",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "mismatch",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "be810a18921ffe3eccba3270f7e55208ad1b7a6d56427c94a2cf62704e43c716",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "726574c51a8363f1ff87b056ae26e040f19e98fcee7dc97100d6e0564173b909",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "b987cba0cbe1e384e56c87799c6c290e0e16aae75cfd76d39d96588238133c58",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "otherOption",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "5f46ad36e34b77982d22391bc741086cfc1c5ff11df017ad1cf2876a402c0f09",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "0ac0ee201386d652257969c1d165db09fbe954fad6676857fd9d4835e918d907",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "8d0624912ed9cbe6dcd9db0e6d0e140f5a2c052fde35dee22706c7a2b612d543",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 2,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "avoidStanding",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "92b7256fc0fa4d2dd08fba6998d1f94fe7a8a270151a28d0cbb506f70f3372ad",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "046ce961cea625779afad85dd64a96c6da8c2b76f0d4dbd919540d0676301dbe",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "3c6470685d2eee825909338b4ab41134438e5f42b1b6298c91ddc44ceca6ad26",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 1
+    },
+    {
+      "law": 5,
+      "name": "hidden",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "dca73fa107292a086cdef02439080bae95625e7205b54b7d94202d17f7bb582e",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "e9a69b53f5d545525b45d373d4b985700d33a460f7c1ff6f0d1e23919e8918fd",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "2d4beb29331ff2e919e9648f13c259eb671e0f41944b6cd262c171db14956f09",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 1,
+      "rejected": 0
+    },
+    {
+      "law": 5,
+      "name": "denied",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "18549e59d23b23388bb0d7262f60c8e4577791c718f357f19d19b63e0540a2f0",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "110b673a75fbbed845be8374bfa5e58db679e4551184fb0578f1a2557b844808",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "599b57059a8665d836c48a72d29299144cc80784bad563f596cb3ae5086cab41",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 3
+    },
+    {
+      "law": 5,
+      "name": "untrained",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "0dd8813fa6ed0f14aad713290fe8814747c676bbffc2f0c34e43beadb865600a",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "bebe0b657d81f51ee264b12d305ae17651cdf4561f9e517f79ebdf39340f11a8",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        }
+      ],
+      "probes": 1,
+      "activeReasons": 0,
+      "rejected": 2
+    },
+    {
+      "law": 5,
+      "name": "continued",
+      "prefixes": [
+        {
+          "prefix": 0,
+          "saveHash": "60c37b102bf5db9ee1d1186221e30ad954b459409c07d4c8904a3711c651fa96",
+          "stateHash": "a2c4aed1cf757cd9a509734a267ffc7b1166b55f4c8f9c3e3550c56e743328fc"
+        },
+        {
+          "prefix": 1,
+          "saveHash": "9d2354b6c1ef77e218fb6da5a4dafdb814b2999f1d604cbb22acbdeca58b5067",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 2,
+          "saveHash": "e5d98e571e8e0180d44c0a8649cf6b5ae5aa5d8a1a81cf7f82abf4e453addbff",
+          "stateHash": "a80317269277d5b3ef5db5eea048dff806bf039b5b9d864a0a14b224d56c016f"
+        },
+        {
+          "prefix": 3,
+          "saveHash": "0866169cb8852b9826ede3b10a7949b21ee70e33246fdfad02ec2f335ac653ab",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        },
+        {
+          "prefix": 4,
+          "saveHash": "2960336d4ebc398da11ec38c48119249e68d112cc3f4babc1450914eb4015a91",
+          "stateHash": "056fc8ec045d710245c926238d4e32b624edbec52624cdd74987d47e66c94b41"
+        }
+      ],
+      "probes": 2,
+      "activeReasons": 2,
+      "rejected": 2
+    }
+  ]
+}

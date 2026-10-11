@@ -7,6 +7,11 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
+Latest continuation: joined REASON inspection now runs through the unchanged
+`reason-public/0.3-candidate` factory. See OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md
+for its exact scope, development corrections and verification. The Values receipt
+remains unchanged. Full workbench acceptance is still open.
+
 - Active React/Vite UI replaces the placeholder, with Character, Experiment, Reasoning,
   Timeline, Compare and Architecture views over the same selected native run.
 - `src/workbench/valuesAdapter.ts` calls the unchanged public Values integration

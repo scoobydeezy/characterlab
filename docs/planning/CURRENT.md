@@ -26,5 +26,7 @@ HQ011 source restrictions, all18 conditional obligations and all21 corpus scopes
 The dedicated inspection UI is now IN PROGRESS under OBSERVABILITY_WORKBENCH_PLAN.md,
 authorized by the owner on 2026-10-11 after review of OBSERVABILITY_WORKBENCH_BRIEF.md.
 Start OBSERVABILITY_WORKBENCH_PROGRESS.md for implementation, verification and next work.
+Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 native
+programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
