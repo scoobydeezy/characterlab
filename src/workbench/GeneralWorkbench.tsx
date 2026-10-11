@@ -3,6 +3,7 @@ import type {GeneralSnapshot, GeneralCheckpoint} from './generalAdapter';
 import {GeneralWorkerClient as GeneralWorkbenchRun, GENERAL_RECIPES} from './generalWorkerClient';
 import {AssociationInspector} from './AssociationInspector';
 import {ParticipationInspector} from './ParticipationInspector';
+import {ParticipationCohort} from './AuditCohortInspector';
 export function GeneralWorkbench({active = true}: {active?: boolean}) {
   const run = useRef<GeneralWorkbenchRun>(), lock = useRef(false), stop = useRef(false);
   const [snapshot, setSnapshot] = useState<GeneralSnapshot>(), [recipe, setRecipe] = useState('baseline');
@@ -22,6 +23,7 @@ export function GeneralWorkbench({active = true}: {active?: boolean}) {
     {snapshot?.graph ? <AssociationInspector graph={snapshot.graph}/> : <p>No association state is available in this snapshot.</p>}
     <section id="general-transitions" className="card"><h2>Recorded transitions</h2><label>Committed event<select value={event?.id ?? ''} onChange={e => setSelectedEvent(e.target.value)}>{snapshot?.timeline.map(e => <option key={e.id} value={e.id}>Instant {e.instant} · {e.stage} · event {e.id}</option>)}</select></label>{event && <><p>Phase {event.phase} · parents {event.parents.join(', ') || 'original input'}</p><details><summary>Actual reads</summary><pre className="exact">{JSON.stringify(event.reads, null, 2)}</pre></details><details><summary>Before / after changes</summary><pre className="exact">{JSON.stringify(event.diffs, null, 2)}</pre></details><details><summary>Recorded output</summary><pre className="exact">{event.output}</pre></details></>}</section>
     {snapshot && <ParticipationInspector snapshot={snapshot} onEvent={id => {setSelectedEvent(id); document.getElementById('general-transitions')?.scrollIntoView({block: 'start'});}}/>}
+    {snapshot && <ParticipationCohort snapshot={snapshot}/>}
     <section className="card"><h2>Exact state and provenance</h2><p className="caption">Graph path, model/run hashes and committed revision identify the displayed matrix. Other roots are retained as diagnostic records; this panel does not classify all state as character knowledge.</p><pre className="exact">{snapshot?.graphPath}</pre>{snapshot?.fields.map(field => <details key={field.path}><summary>State root {field.root}</summary><pre className="exact">{field.path}</pre><pre className="exact">{field.exact}</pre></details>)}</section>
     <footer><div className="identity-grid">{(['modelHash','runHash','stateHash','saveHash'] as const).map(key => <div className="hash" key={key}><span>{key}</span><code>{snapshot?.[key]}</code></div>)}</div><p>Read/change instrumentation does not establish causal necessity. Specialized inspection is diagnostic only.</p></footer>
   </div></main>;

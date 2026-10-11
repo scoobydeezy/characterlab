@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: searchable recorded state participation and exact event links are
+Latest continuation: named-run participation aggregation preserves per-model identity,
+missing observations and one prefix per run; see OBSERVABILITY_WORKBENCH_COHORT_PROGRESS.md.
+
+Prior continuation: searchable recorded state participation and exact event links are
 described in OBSERVABILITY_WORKBENCH_PARTICIPATION_PROGRESS.md; baseline12 prefixes pass.
 
 Prior continuation: registry integration and authenticated durable graph export/import

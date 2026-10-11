@@ -1,0 +1,40 @@
+{
+  "status": "PASS BOUNDED NAMED-RUN AGGREGATION",
+  "sources": [
+    {
+      "path": "src/workbench/participationCohort.ts",
+      "sha256": "68868f25acad8c10bf2746e2c0bec7676dc1cc69f869cc68d59de25b2c9f5ac0"
+    },
+    {
+      "path": "src/workbench/AuditCohortInspector.tsx",
+      "sha256": "5e8da60a9b0e9acf9611a8276c7da9610965120bb1843420a22da9727a7f0e11"
+    },
+    {
+      "path": "src/workbench/participation.ts",
+      "sha256": "e3cef7cf06a9345d2bbad757921d5cbccfa3a61028b7f5eb653a908e2ed0661b"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "f53cb74849cd302df6042ca2ccd24dfe0f11b2bd601a9bf2254511ab6f3adcc2"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "8913695d015b5f6e9c3164dfe7f5085d00cffcb698d06cd1b23028fde8f2ef77"
+    },
+    {
+      "path": "scripts/check-workbench-cohort.mjs",
+      "sha256": "be1152edfeb50fa790b340c560e38d4a08d62ebdbe1f8f316eff139726e6272b"
+    }
+  ],
+  "baseline": {
+    "path": "docs/planning/workbench-participation-rev1/report.json",
+    "sha256": "4a2cc9c454e374f5d23387a27c0459524882c91ad337286c1aee67eed8ff329e"
+  },
+  "associationDecayPrefixes": 12,
+  "runs": 2,
+  "modelGroups": 2,
+  "limitations": [
+    "Two General attention recipes only; no full corpus acceptance",
+    "Cross-model path equivalence intentionally not inferred; causal contribution unknown"
+  ]
+}
