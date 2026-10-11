@@ -7,6 +7,7 @@ import {learnRecipe,LEARN_VERSION} from '../campaign3/learnModel';
 import {prepareLearnModel,createLearnRun,restoreLearnRun} from '../campaign3/learnFactory';
 import {digest,exactText,exactKey,fromHex,equalBytes} from './canonical';
 import {nativeTimeline} from './nativeTimeline';
+import {explainLearn,type LearnExplanation} from './learnExplanations';
 
 export const LEARN_PROGRAMS = plan.runs.map(row=>({id:`${row.law}/${row.numeric}/${row.name}`,name:row.name,law:row.law,numeric:row.numeric}));
 const registry=new RecordSchemaRegistry(learnSupportedSchemas());
@@ -20,7 +21,7 @@ export class LearnWorkbenchRun {
   #run:Run; #program:string; #prefix=0; #busy=false;
   #view!: {program:string;seamVersion:string;projection:string;prefix:number;complete:boolean;clock:string;
     modelHash:string;runHash:string;stateHash:string;saveHash:string;outputsHash:string;
-    researchOutputs:string;fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
+    researchOutputs:string;explanations:LearnExplanation[];fields:{path:string;root:string;exact:string}[];timeline:ReturnType<typeof nativeTimeline>};
   private constructor(run:Run,program:string){this.#run=run;this.#program=program;}
   static async create(program='1/1/compatible') {
     const row=plan.runs.find(r=>`${r.law}/${r.numeric}/${r.name}`===program);if(!row)throw Error('Unknown frozen LEARN program');
@@ -44,6 +45,6 @@ export class LearnWorkbenchRun {
     const row=plan.runs.find(r=>`${r.law}/${r.numeric}/${r.name}`===this.#program)!,s=this.#run.snapshot(),save=this.#run.save();
     this.#view={program:this.#program,seamVersion:LEARN_VERSION,projection:'Researcher diagnostics only',prefix:this.#prefix,complete:items(f(rec(decode(save),132n),7n),'list').length===0,clock:String(s.clock),
       modelHash:await digest(fromHex(row.modelIdentity)),runHash:await digest(this.#run.runIdentity()),stateHash:await digest(s.state),saveHash:await digest(save),outputsHash:await digest(s.outputs),
-      researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
+      explanations:explainLearn(items(decode(s.outputs),'list'),row.law,row.numeric),researchOutputs:exactText(decode(s.outputs)),fields:restoreAuthoritativeState(decode(s.state)).entries().map(e=>({path:exactKey(statePathValue(e.path)),root:String(e.path.rootStateTypeId),exact:exactText(e.value)})),timeline:nativeTimeline(items(decode(s.trace),'list'))};
   }
 }
