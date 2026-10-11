@@ -1,15 +1,13 @@
+import {createElement} from 'react';
+import {createRoot} from 'react-dom/client';
+import {Workbench} from './workbench/Workbench';
+
 const root = document.getElementById('root');
 
 if (!root) {
   throw new Error('#root element not found');
 }
 
-const heading = document.createElement('h1');
-heading.textContent = 'CharacterLab';
-
-const statusMessage = document.createElement('p');
-statusMessage.textContent = 'North-Star architectural refoundation in progress.';
-
-root.append(heading, statusMessage);
+createRoot(root).render(createElement(Workbench));
 
 export {};

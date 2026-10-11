@@ -1369,3 +1369,15 @@ record bounded exit acceptance after final source freshness and the three Values
 All21 corpus scopes/15 families/132 bounded clauses and18 conditional debts remain.
 109 verdicts;1529/0;56/59 publication inventory. No law or comparator retired.
 Dedicated inspection UI is next between Campaigns3 and4; reduction ranking is separate.
+
+## Observability Workbench — owner-authorized 2026-10-11
+
+The dedicated inspection step is now active under
+docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and its retained product brief.
+The owner accepted the six-mode workbench and review amendments: scoped instrumentation,
+observer-safe historical reason semantics, separate input/model comparisons, quiescent
+stepping, explicit corpus coverage and meaningful state visualizations. All six milestones
+and the integrated demonstration are required before Campaign4 reduction work begins.
+The workbench is presentation/experimental tooling over authoritative public seams,
+not a new simulation owner. No Campaign3 qualification scope is enlarged by this step.
+Current implementation and limits are in OBSERVABILITY_WORKBENCH_PROGRESS.md.

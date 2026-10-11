@@ -52,7 +52,14 @@ Authority is also scoped by subject. The Research Program Brief outranks formal 
 
 ## Active direction
 
-**Current routing (2026-10-11):** Values integrated native qualification COMPLETE;
+**Current routing (2026-10-11):** Observability Workbench IN PROGRESS, owner-authorized.
+Start docs/planning/OBSERVABILITY_WORKBENCH_PLAN.md and OBSERVABILITY_WORKBENCH_PROGRESS.md.
+Six-mode local UI; first native Values adapter under verification. Full corpus coverage,
+reason qualification, specialized visualization and final entry receipt remain required.
+Campaign3 bounded acceptance and all18 conditional obligations/source restrictions survive.
+No Campaign4 reduction, law selection or mechanism retirement. No owner ruling pending.
+
+**Prior routing (2026-10-11):** Values integrated native qualification COMPLETE;
 Campaign3 bounded exit acceptance (final validation receipt required).
 Start CURRENT.md, CAMPAIGN3_VALUES_INTEGRATION_QUALIFICATION.md and
 CAMPAIGN3_VALUES_EXIT_REFRESH.md. VER-C3-VALUES-INTEGRATION-001:5 models/125 runs/

@@ -23,5 +23,8 @@ Stored/Refold and overlap equalities remain; no law selected or comparator retir
 The frozen phase41 test failure and corrected50 receipt both remain accounted.
 Final acceptance is bound by campaign3-values-exit-refresh-rev1/validation.json.
 HQ011 source restrictions, all18 conditional obligations and all21 corpus scopes survive.
-Next dedicated inspection UI between Campaigns3 and4; no UI or reduction work started.
+The dedicated inspection UI is now IN PROGRESS under OBSERVABILITY_WORKBENCH_PLAN.md,
+authorized by the owner on 2026-10-11 after review of OBSERVABILITY_WORKBENCH_BRIEF.md.
+Start OBSERVABILITY_WORKBENCH_PROGRESS.md for implementation, verification and next work.
+Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.
