@@ -1,4 +1,5 @@
 import type {GeneralSnapshot, GeneralCheckpoint} from './generalAdapter';
+import type {GeneralExport} from './generalExport';
 import freeze from '../../docs/planning/campaign3-general-attention-model-rev2/FREEZE.json';
 export const GENERAL_RECIPES = freeze.models.map(m => m.name);
 export class GeneralWorkerClient {
@@ -19,6 +20,8 @@ export class GeneralWorkerClient {
   }
   static async create(recipe = 'baseline') {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('create', {recipe}); return client;} catch (e) {client.dispose(); throw e;}}
   static async restore(checkpoint: GeneralCheckpoint) {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('restore', {checkpoint}); return client;} catch (e) {client.dispose(); throw e;}}
+  static async import(text: string) {const client = new GeneralWorkerClient(); try {client.#snapshot = await client.#call('import', {text}); return client;} catch (e) {client.dispose(); throw e;}}
+  export() {return this.#call<GeneralExport>('export');}
   snapshot() {return structuredClone(this.#snapshot);}
   async advance() {const result = await this.#call<{moved: boolean; snapshot: GeneralSnapshot}>('advance'); this.#snapshot = result.snapshot; return result.moved;}
   checkpoint() {return this.#call<GeneralCheckpoint>('checkpoint');}

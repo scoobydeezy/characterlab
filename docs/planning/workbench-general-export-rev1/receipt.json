@@ -1,0 +1,52 @@
+{
+  "status": "PASS BROWSER EXPORT AUTHENTICATION AND CONTINUATION",
+  "sources": [
+    {
+      "path": "src/workbench/generalExport.ts",
+      "sha256": "676dbd98af8ff2e0ea4eea703994d1ae465cae854275757be04e52ac399e3fbe"
+    },
+    {
+      "path": "src/workbench/generalAdapter.ts",
+      "sha256": "8913695d015b5f6e9c3164dfe7f5085d00cffcb698d06cd1b23028fde8f2ef77"
+    },
+    {
+      "path": "src/workbench/generalWorker.ts",
+      "sha256": "5a96f89375596663d26ea4366320d3cc5d241cef104f555b70039d415d1cfc02"
+    },
+    {
+      "path": "src/workbench/generalWorkerClient.ts",
+      "sha256": "9d174d6a32311e8bf76946b0b85bd9f8c785fea342586dce9c8681c9505774a0"
+    },
+    {
+      "path": "src/workbench/GeneralWorkbench.tsx",
+      "sha256": "ffd599da790aa7b50a8afa966be3ebad80903d84831a10019aeaef80717e2474"
+    },
+    {
+      "path": "src/workbench/experimentRegistry.ts",
+      "sha256": "317a2a5257bea0031537607faabb522b9c364c9d368a1fd2f5f2012cad9996bf"
+    },
+    {
+      "path": "src/workbench/WorkbenchApp.tsx",
+      "sha256": "6c91d882c343e729c9f703f44f0ba010b41d4057e594bd86eb0920f2405ceadd"
+    },
+    {
+      "path": "src/workbench/BatchWorkbench.tsx",
+      "sha256": "b5c8963ff21ecc9233e2fad2c605b3be04761f87989ab2b0c38d1a66c7530e5e"
+    },
+    {
+      "path": "scripts/check-workbench-general-export.mjs",
+      "sha256": "28f0c6c4e757cc3123c3bb1a70344137b36d6656d89686a429d3ab1582c68cd9"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "browser-export.json",
+      "sha256": "5b1aecb68065aab06bbbd6d73587982adfc103e39140fb69c38e5f00f2e63c93"
+    },
+    {
+      "path": "browser-check.json",
+      "sha256": "14dd14d73250a320b5c8b266471fc6383328650018c3d84007d1271adfb900d3"
+    }
+  ],
+  "scope": "Baseline prefix1 export/import and next prefix2; no all-recipe or full-corpus claim."
+}

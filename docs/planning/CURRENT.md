@@ -30,7 +30,9 @@ Joined REASON continuation: OBSERVABILITY_WORKBENCH_REASON_PROGRESS.md;115 nativ
 programs/350 prefixes pass; Values125/625 retained. Full workbench acceptance remains open.
 Prior: OBSERVABILITY_WORKBENCH_BATCH_PROGRESS.md; shared sessions/capabilities and
 worker-backed batch execution; native240 programs/975 prefix checks PASS.
-Latest: OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; actual association graph/matrix
+Prior: OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md; actual association graph/matrix
 and three-axis inspection,2 frozen recipes/24 exact prefixes PASS; wider coverage due.
+Latest: OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md; common registry and
+authenticated graph export/import with browser/native continuation PASS in bounded scope.
 Campaign4 entry remains gated by the full workbench plan; no reduction work has started.
 Counters1529/0; no owner ruling.

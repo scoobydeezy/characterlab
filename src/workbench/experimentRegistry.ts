@@ -1,13 +1,14 @@
 /** Versioned diagnostic capabilities; none of these objects is simulation authority. */
-export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.1';
-export type ExperimentId = 'values' | 'reason';
+export const EXPERIMENT_REGISTRY_VERSION = 'workbench-experiments/0.2';
+export type ExperimentId = 'values' | 'reason' | 'general';
+export type BatchExperimentId = Exclude<ExperimentId, 'general'>;
 export interface InspectionCapabilities {
   committedStep: {supported: true; boundary: string};
   checkpoint: {supported: true; authentication: string};
   runtimeIntervention: {supported: false; reason: string};
-  graph: {supported: false; reason: string};
-  matrix: {supported: false; reason: string};
-  explanation: {supported: true; scope: string; qualification: string};
+  graph: {supported: boolean; reason: string};
+  matrix: {supported: boolean; reason: string};
+  explanation: {supported: boolean; scope: string; qualification: string};
 }
 export interface ExperimentDescriptor {
   id: ExperimentId; label: string; seamVersion: string; corpusScope: string;
@@ -26,6 +27,11 @@ export const EXPERIMENTS: readonly ExperimentDescriptor[] = [
     graph: {supported: false, reason: 'Source provenance is available, but this profile has no memory or belief graph.'}, matrix: {supported: false, reason: 'This profile has no embedding or matrix representation.'},
     explanation: {supported: true, scope: 'Recorded source roles, overlap, grouping and rejection', qualification: 'Native parity verified; complete language audit remains open.'},
   }},
+  {id: 'general', label: 'General attention · graph inspection', seamVersion: 'rules/campaign3-general-attention/0.1-candidate', corpusScope: 'General-attention association inspection; two recipes qualified, corpus mapping incomplete', capabilities: {
+    committedStep: {supported: true, boundary: 'One whole public instant; worker-owned execution.'}, checkpoint, runtimeIntervention: noIntervention,
+    graph: {supported: true, reason: 'Actual directed Record625 association cells; layout distance is diagnostic.'}, matrix: {supported: true, reason: 'Exact association matrix and three selected target columns; no personality embedding.'},
+    explanation: {supported: false, scope: 'Raw committed reads, diffs and outputs only', qualification: 'No observer-safe narrative renderer qualified for this profile.'},
+  }},
 ];
 export interface BatchRunView {
   prefix: number; total: number; complete: boolean; clock: string;
@@ -36,7 +42,7 @@ export interface InspectableBatchRun {
   view(): BatchRunView;
 }
 export interface BatchJob {
-  id: string; experimentId: ExperimentId; name: string; seed: number;
+  id: string; experimentId: BatchExperimentId; name: string; seed: number;
   law: string | number; appraisal?: string;
   expectedSaveHashes: string[];
 }

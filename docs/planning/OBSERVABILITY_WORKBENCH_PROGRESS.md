@@ -7,7 +7,10 @@ OBSERVABILITY_WORKBENCH_BRIEF.md, SHA256
 
 ## Implemented first slice
 
-Latest continuation: native General-attention association heatmap, directed graph and
+Latest continuation: registry integration and authenticated durable graph export/import
+are described in OBSERVABILITY_WORKBENCH_GENERAL_EXPORT_PROGRESS.md. Full entry is open.
+
+Prior continuation: native General-attention association heatmap, directed graph and
 selected three-axis inspection are described in OBSERVABILITY_WORKBENCH_GENERAL_PROGRESS.md.
 Two frozen recipes/24 exact prefixes pass; full workbench acceptance remains open.
 
